@@ -1,7 +1,7 @@
-
-
 ---
-
+name: seo-geo-audit
+---
+---
 name: seo-geo-audit
 
 description: >
@@ -17,32 +17,18 @@ hoặc khi cần baseline trước khi build content/strategy mới. Output là 
 classification (Critical/Warning/Pass), root cause, và prioritized action list bám North Star
 
 Organic Traffic + Web2App.
-
 category: marketing-sales
 
 tags:
-
 - seo
-
 - geo
-
 - audit
-
 - technical-seo
-
 - aeo
-
 - momo
-
 - web2app
-
 author: klaus-momo
-
 version: 1.0.0
-
----
-
-  
 
 # SEO/GEO Audit Skill
 
@@ -61,7 +47,6 @@ Skill này thực hiện audit cấu trúc 4 trục cho 1 URL/domain/Use Case. *
 - 1 URL cụ thể, hoặc danh sách URL, hoặc 1 Use Case (ví dụ: QLCT, Vay Nhanh)
 
 - Optional: target keywords, competitor reference, business goal
-
   
 
 **Output:**
@@ -70,13 +55,9 @@ Skill này thực hiện audit cấu trúc 4 trục cho 1 URL/domain/Use Case. *
 
 - Root cause analysis cho mỗi finding Critical/Warning
 
-- Action list prioritized theo Impact/Effort, gắn với [[Organic-Traffic]] và [[Web2App-Pipeline]]
-
-  
 
 ## Non-negotiable Principles
 
-  
 
 1. **Zero-Hallucination**: Không bịa số liệu. Mọi finding phải có data source rõ ràng (Ahrefs/GSC/PageSpeed/manual check). Không có data → mark `[cần verify]`
 
@@ -90,20 +71,13 @@ Skill này thực hiện audit cấu trúc 4 trục cho 1 URL/domain/Use Case. *
 
 6. **Vietnamese pro, không em dash**
 
-  
 
 ## 4 Audit Axes
 
-  
-
 ### Axis 1: Technical SEO Foundation
 
-  
-
 Mục đích: đảm bảo crawler + AI bot có thể access và hiểu được page.
-
   
-
 | Check | Tool | Pass criteria |
 
 |---|---|---|
@@ -472,17 +446,11 @@ Format theo Pyramid Principle (xem `pyramid-principle` skill):
 
 - [[jtbd-analysis]] (optional - nếu cần hiểu sâu user job trước khi đánh giá content)
 
-- [[03_Use-Cases/...]] (Use Case context)
-
   
 
 **Outputs to:**
 
-- [[content-brief]] (nếu finding chỉ ra cần rewrite/new content)
-
 - [[use-case-document]] (nếu finding impact strategy level)
-
-- [[web-tracking]] (nếu finding chỉ ra tracking gap)
 
 - Project notes (nếu là one-off audit)
 
@@ -494,10 +462,6 @@ Format theo Pyramid Principle (xem `pyramid-principle` skill):
 
 - [[jtbd-analysis]] - đánh giá content match job
 
-- [[frameworks#Systems-Thinking]] - tìm leverage point thay vì fix symptom rời rạc
-
 - [[First-Principles.md]] - challenge "best practice" không có evidence
-
-- [[critical-thinking]] - prompt 7 câu hỏi tự challenge trước khi finalize report
 
 - [[pyramid-principle]] - structure output report

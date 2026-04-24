@@ -1,5 +1,4 @@
 
-
 ## Liên kết
 - Skill này là một phần của hệ thống MoMo Web Growth
 - Xem tổng thể: [[SKILL]]
