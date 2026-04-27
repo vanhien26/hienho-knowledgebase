@@ -11,7 +11,55 @@
 4. [Quy trình làm việc](#4-quy-trình-làm-việc)
 5. [Dự án đang triển khai](#5-dự-án-đang-triển-khai)
 6. [Leadership Intelligence](#6-leadership-intelligence)
-7. [Changelog](#7-changelog)
+7. **[Decision Hub & Knowledge Management](#0-decision-hub--knowledge-management)** ⭐ NEW
+8. [Changelog](#7-changelog)
+
+---
+
+## 0. DECISION HUB & KNOWLEDGE MANAGEMENT ⭐
+
+> This Knowledge Base is evolving from static documentation into a **Living Decision Hub** to support strategic thinking and faster decision-making.
+
+### 📊 Key Resources
+
+| Resource | Purpose | Updated |
+|----------|---------|---------|
+| **[[Decision-Log-2026]]** | Central log of all strategic decisions with full reasoning (Context + Options + Decision + Reasoning) | Weekly |
+| **[[Decision-Documentation-Standard]]** (Principles) | How to document decisions properly - frameworks and examples | Reference |
+| **[[Team-Capability-Matrix]]** | Current team capacity, capabilities, and how to work with each person | Monthly |
+| **[[Meeting-Notes-Template]]** (Skills) | Standard format for capturing meeting insights, decisions, blockers, learnings | Reference |
+| **[[Quarterly-Reviews/Q2-2026-Review]]** | Strategic review of decisions made, learnings captured, wins + challenges | End of quarter |
+| **[[Use-Case-Status-Template]]** (Use-Cases) | Live status format for each project (metrics, decisions, blockers) | Weekly |
+
+### 🔄 How to Use This Hub
+
+**For Decision-Making**:
+1. Check [[Decision-Log-2026]] to see similar decisions made before
+2. Review past assumptions and outcomes
+3. Use [[Decision-Documentation-Standard]] format for new decisions
+4. Reference [[Team-Capability-Matrix]] to understand who to involve
+
+**For Project Tracking**:
+1. Each Use-Case has a "Live Status" section (see [[Use-Case-Status-Template]])
+2. Updated weekly with metrics, decisions, blockers
+3. Linked to [[Decision-Log-2026]] for strategic context
+
+**For Team Management**:
+1. Check [[Team-Capability-Matrix]] before assigning work
+2. Understand how to approach each person effectively
+3. Updated monthly with capacity + capability shifts
+
+**For Learning**:
+1. Review [[Quarterly-Reviews/Q2-2026-Review]] to see what worked/didn't
+2. Check [[Decision-Log-2026]] to see reasoning behind past decisions
+3. Build decision muscle by seeing patterns over time
+
+### 📝 Weekly Maintenance Rhythm
+
+- **Monday**: Review previous week's decisions, update Decision Log
+- **Friday**: Update project status, synthesize learnings, capture blockers
+- **End of Month**: Monthly review of decisions and team capacity shifts
+- **End of Quarter**: Comprehensive [[Quarterly-Reviews]] capturing learnings
 
 ---
 
