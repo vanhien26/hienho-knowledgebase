@@ -271,11 +271,6 @@ Mục đích: domain/page có đủ trust signal để compete.
 - Map mỗi action vào ma trận Impact (High/Med/Low) × Effort (High/Med/Low)
 
 - Prioritize: High Impact + Low Effort = P0, High Impact + High Effort = P1, ...
-
-- Mỗi action gắn nhãn impact tới [[Organic-Traffic]] hoặc [[Web2App-Pipeline]] hoặc cả hai
-
-  
-
 ### Step 5: Output report
 
 Format theo Pyramid Principle (xem `pyramid-principle` skill):

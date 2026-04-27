@@ -479,11 +479,11 @@ C. Content Brief Template
 
 ## Integration
 
-|Skill|Khi nào|
-|---|---|
-|`jtbd-analysis`|Part 1.2 - import summary|
-|`pyramid-principle`|Executive summary & presentation|
-|`web-tracking`|Tracking spec riêng|
+| Skill               | Khi nào                          |
+| ------------------- | -------------------------------- |
+| `jtbd-analysis`     | Part 1.2 - import summary        |
+| `pyramid-principle` | Executive summary & presentation |
+| `web-tracking`      | Tracking spec riêng              |
 
 	**Workflow:** brainstorming → jtbd-analysis → use-case-document → pyramid-principle → web-tracking  
 
@@ -494,4 +494,4 @@ C. Content Brief Template
 - Xem tổng thể: [[SKILL]]
 - Workflow: [[SKILL#Workflow Chuẩn cho 1 Use Case Mới]]
 - Skill trước: [[jtbd-analysis]]
-- Skill sau: [[pyramid-principle]] và [[web-tracking]]
+- Skill sau: [[pyramid-principle]]

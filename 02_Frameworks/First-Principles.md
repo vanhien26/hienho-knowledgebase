@@ -3,7 +3,7 @@
 - Skill này là một phần của hệ thống MoMo Web Growth
 - Xem tổng thể: [[SKILL]]
 - Workflow: [[SKILL#Workflow Chuẩn cho 1 Use Case Mới]]
-- Skill trước: [[brainstorming]], [[critical-thinking]]
+- Skill trước: [[brainstorming]],
 - Skill sau: [[jtbd-analysis]], [[use-case-document]]
 
 ---
@@ -78,13 +78,12 @@ Trong bối cảnh MoMo Web Growth: Ngừng copy best practice SEO generic, ng�
 
 ## Liên kết với Skills khác
 
-| Skill                     | Mối quan hệ | Flow |
-|---|---|---|
-| **[[critical-thinking]]** | First-principles là subset chuyên sâu hơn | Critical thinking dùng hàng ngày; First-principles dùng khi problem stuck |
-| **[[brainstorming]]**     | First-principles cung cấp "truth base" cho brainstorming | First-principles → Truth statements → Brainstorm solutions từ truths đó |
-| **[[jtbd-analysis]]**           | JTBD là một dạng first-principles cho user behavior | JTBD hỏi "user job là gì" (truth) trước khi hỏi "content gì" (solution) |
-| **[[use-case-document]]** | First-principles dùng trong Phase 1 Foundation | Trước khi viết strategy, hỏi: "Use Case này dựa trên truth gì về user?" |
-| **[[pyramid-principle]]** | First-principles cung cấp logic cho governing idea | Governing idea phải dựa trên truth, không phải assumption |
+| Skill                     | Mối quan hệ                                              | Flow                                                                      |
+| ------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------- |
+| **[[brainstorming]]**     | First-principles cung cấp "truth base" cho brainstorming | First-principles → Truth statements → Brainstorm solutions từ truths đó   |
+| **[[jtbd-analysis]]**     | JTBD là một dạng first-principles cho user behavior      | JTBD hỏi "user job là gì" (truth) trước khi hỏi "content gì" (solution)   |
+| **[[use-case-document]]** | First-principles dùng trong Phase 1 Foundation           | Trước khi viết strategy, hỏi: "Use Case này dựa trên truth gì về user?"   |
+| **[[pyramid-principle]]** | First-principles cung cấp logic cho governing idea       | Governing idea phải dựa trên truth, không phải assumption                 |
 
 ---
 

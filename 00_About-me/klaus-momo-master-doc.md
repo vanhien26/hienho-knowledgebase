@@ -1,5 +1,5 @@
 # MASTER DOC - Văn Hiến @ MoMo
-> Version: 1.2 | Last updated: 2026-04-15 | Maintained by: Văn Hiến
+> Version: 2.2 | Last updated: 2026-04-27 | Maintained by: Văn Hiến
 
 ---
 
@@ -82,10 +82,9 @@ Khi có nhiều workstream cạnh tranh bandwidth, Hiến ưu tiên theo 2 tiêu
 | Analytics | GA4 (G-02G70QKZ26), GSC, Looker Studio |
 | Tag Management | GTM OutApp (GTM-P9JDDJZ), GTM InApp (GTM-5TCGRPX) |
 | Attribution | Appsflyer (momoapp.onelink.vn) |
-| Product Analytics | PostHog (momovn-dev.mservice.io) |
-| CMS | [CẦN ĐIỀN] |
+| CMS | CMS, Admin Tool (Sắp ra mắt: MoSpark = CMS + Admin Tool) |
 | Deployment | GitHub Org + Vercel Team, Google Apps Script Web App |
-| Tracking standard | Dual-Stack: GA4+GTM (marketing attribution) + PostHog (product behavior, session replay, A/B test) |
+| Tracking standard | GA4 + GTM (marketing attribution) + Appsflyer (attribution) - synced to BigQuery |
 
 ---
 
@@ -93,12 +92,47 @@ Khi có nhiều workstream cạnh tranh bandwidth, Hiến ưu tiên theo 2 tiêu
 
 ### 2.1 Org Chart - GPD
 
-```
-Công (Vice President)
-├── Tuệ (Head of User Engagement) -> Nghỉ phép tháng 4
-│   └── Văn Hiến (SEO & GEO Lead - Out-App Traffic) -> Báo cáo trực tiếp Bảo (trong T4)
-└── Bảo (Production Manager - Web Platform)
-    └── Back-end & Front-end Dev
+```mermaid
+flowchart TD
+    %% Define styles
+    classDef leadership fill:#fef08a,stroke:#eab308,stroke-width:2px,color:#9a3412
+    classDef hien fill:#bfdbfe,stroke:#3b82f6,stroke-width:3px,color:#1e3a8a
+    classDef tech fill:#e5e7eb,stroke:#9ca3af,stroke-width:2px,color:#374151
+    classDef inbound fill:#dcfce7,stroke:#10b981,stroke-width:2px,color:#065f46
+    classDef bu fill:#f3e8ff,stroke:#a855f7,stroke-width:2px,color:#581c87
+    
+    subgraph Leadership[GPD Leadership Team]
+        Cong[Anh Công - VP\nExpect: Framework & Market Scale]:::leadership
+        Tue[Anh Tuệ - Head of User Engagement\nExpect: MAU, DLU Uplift]:::leadership
+        Bao[Anh Bảo - Web Platform Manager\nExpect: Technical & Web-to-App]:::tech
+        
+        Cong --> Tue
+        Cong --> Bao
+    end
+
+    subgraph OutApp[Out-App Traffic Team - Nắm Domain momo.vn]
+        Hien[Văn Hiến\nSEO & GEO Lead]:::hien
+    end
+    
+    %% Reporting lines
+    Tue -->|Trực tiếp| Hien
+    Hien -.->|Báo cáo trực tiếp T4/2026| Bao
+
+    subgraph Stakeholders[Đối tác phối hợp]
+        Inbound[Team Inbound - Mai\nThực thi On-page & Off-page]:::inbound
+        BU[Cell Teams / Business Units\nFS, Insurtech, MDS...]:::bu
+    end
+
+    %% Interactions
+    Hien ===|Technical Requests & SEO Tools| Bao
+    Hien ===|Set Standard & Audit Checklist| Inbound
+    Hien ===|Consult SEO/GEO, Prioritize| BU
+    
+    BU -.->|Yêu cầu thực thi| Inbound
+    
+    %% Note
+    note1>Nguyên tắc lõi: Inbound/BU KHÔNG làm việc trực tiếp với Web Platform. Mọi thứ phải đi qua Hiến để Audit & Set Standard]
+    Hien -.-> note1
 ```
 
 **Lưu ý quan hệ (Tháng 4/2026):**
@@ -179,15 +213,15 @@ Mỗi Cell Team tiếp cận Hiến theo framework: **Research → Build Web/Fun
 | Vay & Cho vay | Vay Nhanh | Chủ lực | 6% | 4.375.800 |
 | BNPL | Ví Trả Sau | Chủ lực - Market Leader | 54% | 135.290 |
 | Bảo hiểm | BH xe máy | Chủ lực - Mua trực tiếp | 38% | 58.810 |
-| Bảo hiểm | BH ô tô vật chất | Chủ lực - Mua trực tiếp | - | 74.000 |
-| Bảo hiểm | BH y tế (BHYT) | Chủ lực - Mua trực tiếp | - | 1.415.740 |
+| Bảo hiểm | BH ô tô vật chất | Chủ lực - Mua trực tiếp | 0% | 74.000 |
+| Bảo hiểm | BH y tế (BHYT) | Chủ lực - Mua trực tiếp | 0% | 1.415.740 |
 | Bảo hiểm | BH xã hội (BHXH) | Chủ lực - Sắp ra mắt | - | 938.090 |
 | Bảo hiểm | BH nhân thọ & các loại khác | Cổng thanh toán | - | ~19.780 |
 | Tín dụng | Mở thẻ tín dụng | Sản phẩm phụ | - | 600.900 |
-| CIC | CIC Score / Điểm tín dụng | Đang xây dựng | - | 96.790 |
-| Đầu tư | Chứng khoán (hợp tác CVS) | Chủ lực - Mini App + Landing page | - | 3.000.000 |
+| CIC | CIC Score / Điểm tín dụng | Đang xây dựng | 0% | 96.790 |
+| Đầu tư | Chứng khoán (hợp tác CVS) | Chủ lực - Mini App + Landing page | 0% | 3.000.000 |
 | Đầu tư | Chứng chỉ quỹ | Chủ lực | - | ~12.000 |
-| Tiết kiệm | Gửi tiết kiệm (Bản Việt) | Chủ lực | - | 209.000 |
+| Tiết kiệm | Gửi tiết kiệm (Bản Việt) | Chủ lực | 0% | 209.000 |
 | Dịch vụ công | Phạt nguội | Cổng thanh toán - Tiềm năng traffic | - | ~1.500.000 |
 
 ---
@@ -245,44 +279,63 @@ Mỗi Cell Team tiếp cận Hiến theo framework: **Research → Build Web/Fun
 
 ## 4. QUY TRÌNH LÀM VIỆC
 
-### 4.1 Workflow Chain (Skill-based)
+### 4.1 Web Build Workflow — 9 Bước (v3.0)
 
-```
-use-case-document
-    → jtbd-analysis
-    → momo-seo-content-brief
-    → content-aeo
-    → web-tracking
-    → web-growth-analysis
-```
+**Tài liệu gốc:** MoMo_WebBuild_Workflow_2026.docx | Out-App Traffic, Growth Platform Division
 
-### 4.2 Cell Team Engagement Flow
+**Cấu trúc team:**
+- **Out-App Traffic (Hiến):** Product Owner + SEO/GEO - dẫn dắt toàn bộ quy trình từ research đến post-launch
+- **Cell Team:** PO Cell, Growth/Business, Dev, DA - thực thi và bàn giao sản phẩm
 
-Khi Cell Team tiếp cận Hiến:
+**3 giai đoạn:**
 
-```
-Research (Hiến consult: Sitemap, Content Structure, pSEO, JTBD)
-    → Build Web / Function (Hiến → Bảo: technical request)
-    → Content Production (Hiến brief → Inbound execute nếu applicable)
-    → Tracking (Hiến setup GTM/GA4/Appsflyer)
-    → Evaluation (Hiến + DA: monitoring, experiment)
-```
+| Giai đoạn | Step | Tên | Output chính | Phụ trách |
+|-----------|------|-----|-------------|-----------|
+| Chuẩn bị | 01 | Research & Discovery | Keyword map, competitor report, market sizing | Out-App Traffic |
+| Chuẩn bị | 02 | Thiết lập Mục tiêu | KPI doc: Traffic target, CR benchmark | Out-App Traffic + PO Cell |
+| Chuẩn bị | 03 | Product Brief + Tracking Plan | Brief sản phẩm (Out-App) + Event spec (PO Cell) | Out-App Traffic + PO Cell |
+| Chuẩn bị | 03.5 | Feasibility Sync với Cell Team | Scope v1 xác nhận, phasing & quick win | Out-App Traffic + PO Cell |
+| Xây dựng | 04 | Build Demo Website | Live demo trên Vercel - visualize User Flow | Out-App Traffic |
+| Xây dựng | 05 | Sprint Planning & Coding | Timeline sprint, Dev bắt đầu build | PO Cell + Dev |
+| QA & Launch | 06 | SEO Review + QA Testing | SEO checklist pass, luồng QA approved | Out-App Traffic + Dev |
+| QA & Launch | 07 | Staging & Sign-off | Staging approved, tracking verified, PO Cell ký | Out-App Traffic + PO Cell + Dev |
+| QA & Launch | 08 | Roll Out (Production) | Site live, sitemap submitted, index requested | Out-App Traffic + Dev |
+| QA & Launch | 09 | Post-Launch Monitoring | Báo cáo 30/60/90 ngày, OnPage optimization | Out-App Traffic |
 
-### 4.3 Web Growth Process (9 bước)
+**Tracking ownership:**
+- Web Layer events: PO Cell define, Dev gắn, Hiến tư vấn user flow
+- Web → App UTM: PO Cell + Out-App Traffic verify
+- App Layer (sau CTA click): DA Cell Team (Hải/Hoàng) - Out-App Traffic không execute
+- Hiến và Bảo: hướng dẫn, define standard, observe - không execute tracking
 
-| Bước | Hoạt động | Owner |
-|------|-----------|-------|
-| 1 | Use Case scoping + JTBD mapping | Hiến + PO |
-| 2 | Keyword/Query research + Intent clustering | Hiến |
-| 3 | Content angle governance (tránh overlap Inbound/GPD) | Hiến |
-| 4 | Content brief writing | Hiến |
-| 5 | On-page SEO/GEO production | Inbound (brief từ Hiến) |
-| 6 | GEO Checklist review - GATE trước publish | Hiến (sign-off) |
-| 7 | Tracking setup (GTM/GA4/Appsflyer) | Hiến + DA |
-| 8 | Web Ads (Balloon/Popup) deployment | Hiến + Dev |
-| 9 | Post-publish monitoring + experiment | Hiến + DA |
+**Key gates:**
+- Gate 1 (Step 06): SEO checklist pass toàn bộ + QA report clear → mới vào Staging
+- Gate 2 (Step 07): CWV pass (LCP<2.5s, INP<200ms, CLS<0.1) + tracking verified + PO Cell ký
+- Roll Out thứ tự: Hub → Spoke → Blog (không hard launch toàn bộ cùng lúc)
 
-### 4.4 Tracking Architecture
+**RACI tóm tắt:**
+
+| Hoạt động | Out-App Traffic | PO Cell | Dev | DA |
+|-----------|----------------|---------|-----|----|
+| Research & Brief | R/A | C | I | I |
+| Define Event Tracking | C | R/A | C | C |
+| Build Demo | R/A | C | I | I |
+| Sprint Coding | C | A | R | I |
+| SEO Review | R/A | I | C | I |
+| Web2App Tracking Handoff | C | R | R | A |
+| Staging Sign-off | C | A | R | C |
+| Post-Launch Monitoring | R/A | I | C | C |
+
+### 4.2 Tracking Architecture
+
+**Tracking stack:**
+
+| Công cụ | Dùng cho | Owner |
+|---------|----------|-------|
+| GA4 + GTM | Marketing attribution, web events, funnel | DA (Hải/Hoàng) execute, Hiến define standard |
+| GSC | Organic performance, indexing, keyword ranking | Hiến monitor |
+| Appsflyer / Onelink | Web-to-App attribution | DA (Hải/Hoàng) execute |
+| BigQuery | Data warehouse - GA4 + các nguồn đã sync | DA (Hải/Hoàng) đang follow |
 
 **Onelink Tracks:**
 
@@ -291,17 +344,12 @@ Research (Hiến consult: Sitemap, Content Structure, pSEO, JTBD)
 | Track 1 | onelink.momo.vn | Existing users | Open + Action |
 | Track 2 | momoapp.onelink.vn | New users | Store → Install → Register → KYC → Cashin → MAU |
 
-**Web Ads Event Schema (GA4):**
+**Tracking ownership:**
+- **DA Cell Team (Hải/Hoàng):** setup và execute toàn bộ tracking
+- **Hiến:** define standard, tư vấn user flow để PO Cell define event đúng, observe kết quả
+- **Bảo:** observe, hướng dẫn kỹ thuật khi cần
 
-| Event | Parameters |
-|-------|-----------|
-| `webads_impression` | variant, use_case, webads_campaign |
-| `webads_cta_click` | variant, use_case, webads_campaign |
-| `webads_dismiss` | variant, use_case, webads_campaign |
-
-**UTM Pattern (Web Ads):** `creative_id = {format}-{use_case}-{date}`
-
-### 4.5 URL Governance - Intervention Framework
+### 4.3 URL Governance - Intervention Framework
 
 | Level | Action | Trigger |
 |-------|--------|---------|
@@ -310,13 +358,13 @@ Research (Hiến consult: Sitemap, Content Structure, pSEO, JTBD)
 | 3 | 410 Gone | Non-financial Use Cases gây dilution |
 | 4 | Mandatory content update | Outdated YMYL content, AI Overview citation risk |
 
-### 4.6 A/B Testing Standard
+### 4.4 A/B Testing Standard
 
 - **Assignment:** Cookie-based variant assignment (14-day TTL, keyed by Use Case slug)
 - **Rationale:** Tránh round-robin contamination
 - **Tracking:** GA4 event schema với variant parameter
 
-### 4.7 SEO Inventory - Tiêu chuẩn đánh giá Market Share
+### 4.5 SEO Inventory - Tiêu chuẩn đánh giá Market Share
 
 Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của MoMo trong từng thị trường tìm kiếm:
 
@@ -342,15 +390,22 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 | Balloon Ads | Done | Hiến | - |
 | Popup Ads - Billpay | Done | Hiến | 22 pages, tiered placement |
 | Zero-Traffic URL Audit | On Track | Hiến | 3,670 URLs / 16 Use Cases |
-| Web2App Tracking + PostHog | On Track | Hiến + DA | Dual-stack model |
+| Web2App Tracking (GA4/GTM/BigQuery) | On Track | DA (Hải/Hoàng) | GA4 synced to BigQuery |
 | Onelink Standardization | Discuss | Hiến | Legacy link audit needed |
 | PLG High-CTR Products | Pending | Hiến | CIC checker, Loan calc, Insurance comparison |
 | GEO/AEO QLCT Pillar/Cluster + GEO Checklist | Brainstorming | Hiến | v2 HTML master plan built |
 | MoMo Credit Ecosystem (Vay Nhanh/Ví Trả Sau/CIC) | Active | Hiến + Inbound | KPI committed: Top 1 / 10 seed keywords |
 | Auto Insurance (Bảo Hiểm Ô Tô Vật Chất) | Active | Hiến | Target: 200K organic traffic 2026 |
-| SEO Inventory - Financial & Payment | In Progress | Hiến | Deadline thứ 5, v3 đã build |
-| SEO/GEO Content AI Platform | Planning | Hiến | Chuẩn hóa Content Production cho Inbound & Out-App |
-| Phạt Nguội (Traffic fines) | Active | Hiến | Xây dựng Mini Web tra cứu & Blog Content |
+| SEO Inventory - Financial & Payment | In Progress | Hiến | v3 built, mở rộng scope Thanh toán/Giải trí |
+| SEO/GEO Content AI Platform | Planning | Hiến + Trọng | Batch 1 done, Batch 2 planned |
+| Phạt Nguội (Traffic fines) | Active | Hiến | BRD v1.2 done, 7 growth tactics |
+| MoSpark Migration (MoLanding V2) | In Progress | Hiến + Bảo | Pre-publish gate BRD v1.1 in review |
+| VTS SEO/GEO Growth | Active | Hiến + Inbound | 3 thị trường, SoV targets đã define |
+| Cinema SEO/GEO | Passive | Hiến | 1M traffic/quý, 959 zero-traffic URLs cần xử lý |
+| Merchant Page / Đối tác (VTS Cross-Sale) | Active | Hiến | BRD v4 done |
+| Off-Page Strategy & Backlink Governance | Active | Hiến (standard) | BRD v2 done, Inbound execute |
+| Tech Foundation Gate + Angle Governance SOP | Planning | Hiến | Framework defined, cần formalize |
+| MoSpark SEO/GEO Scoring BRD | In Review | Hiến + Trọng | BRD v1.1, 3 issues cần fix |
 
 ---
 
@@ -385,8 +440,8 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 **North Star Metric:** 100% Use Case pages có đủ event tracking (impression → CTA click → App install)
 
 **Framework:**
-- GA4 + GTM: Marketing attribution, channel performance
-- PostHog: Product behavior, session replay, A/B testing (demo: momovn-dev.mservice.io)
+- GA4 + GTM: Marketing attribution, channel performance (DA execute, synced to BigQuery)
+- Appsflyer: Web-to-App attribution tracking
 
 **Infrastructure đã giải quyết:**
 - GA4 custom dimension naming collision (fixed: `webads_campaign` rename)
@@ -407,11 +462,11 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 
 **Vision:** Loại bỏ crawl waste, tăng crawl budget efficiency, nâng topical authority cho financial domain
 
-**North Star Metric:** Giảm zero-traffic URLs xuống < [CẦN ĐIỀN target %] trong Q2/2026
+**North Star Metric:** Xử lý zero-traffic URLs (Đang triển khai, đã xử lý được OA, Bus, Hourly Hours hơn 70%)
 
 **Scope:** 3,670 URLs / 16 Use Cases
 
-**Framework:** Xem mục 4.5 (4 levels)
+**Framework:** Xem mục 4.3 (4 levels)
 
 **Meeting log:**
 > [CẦN BỔ SUNG]
@@ -548,7 +603,7 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 - Còn lại: chưa đo (sản phẩm chưa triển khai đủ)
 
 **Data còn thiếu cho Phase 2:**
-- SoV: BH y tế, BH ô tô, Chứng khoán, Gửi tiết kiệm, CIC
+- SoV: BH y tế, BH ô tô, Chứng khoán, Gửi tiết kiệm, CIC (Đã check: Chưa có, 0%)
 - BHXH: breakdown intent mua vs tra cứu
 - Phạt nguội: phân tích intent và khả năng conversion
 - eSIM/Telco: chưa có market sizing
@@ -614,6 +669,290 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 
 ---
 
+### 5.12 Dự án: MoSpark Migration (MoLanding V2)
+
+**Tên cũ:** MoLanding | **Tên mới:** MoSpark
+
+**Vision:** Nâng cấp nền tảng quản lý nội dung Web từ Admin Tool (V1) sang MoSpark (V2) - linh hoạt hơn, giảm dependency backend, marketing team tự vận hành được.
+
+**Kiến trúc V2:**
+- Web Frontend: `ldp.mservice.io` - React + Next.js App Router (giữ nguyên)
+- CMS mới: `ldp.mservice.io/cms` - Refine v6 (thay React Vite cũ)
+- Backend mới: Supabase Self-host (Postgres + PostgREST + GoTrue + Kong)
+- .NET 8: giữ vai trò API Gateway (YARP Proxy) - bảo vệ Supabase khỏi truy cập trực tiếp
+
+**Bản chất migration:**
+- Cùng URL (ví dụ: `momo.vn/chuyen-tien`) - không đổi
+- Source code/nền tảng thay đổi: Admin Tool → MoSpark
+- Nội dung/data/hình ảnh được migrate sang
+
+**Vai trò của Hiến:**
+- Set chuẩn SEO/GEO Technical Foundation cho mọi page được migrate
+- Pre-Publish Gate Checklist: chạy khi page ở trạng thái Draft trên MoSpark, trước khi "Replace" (switch live từ Admin Tool)
+- Risk chính cần kiểm soát: ranking drop nếu Technical SEO thay đổi dù URL không đổi
+
+**Pre-Publish Gate - các block cần validate:**
+- Block 1: Technical SEO Parity (URL, canonical, robots, title, H1, internal links, images, page speed)
+- Block 2: On-page Content Integrity (nội dung đầy đủ, không mất section, không mất CTA)
+- Block 3: GEO minimum viable (structured data + entity signal đủ để LLM nhận diện)
+
+**Touchpoint với Bảo:** Hiến align trực tiếp - spec SEO requirements trước khi Dev implement.
+
+**Status:** In Progress - kiến trúc V2 đã được thiết kế, Landing Page Builder đang onboard User Growth team.
+
+**Meeting log:**
+> [CẦN BỔ SUNG]
+
+---
+
+### 5.13 Dự án: Ví Trả Sau SEO/GEO Growth
+
+**Vision:** Mở rộng bao phủ SEO/GEO trên 3 thị trường liên quan đến tín dụng tiêu dùng, đưa MoMo trở thành trusted source được AI Overview cite.
+
+**North Star Metrics (SoV targets):**
+
+| Thị trường | Market Volume | SoV hiện tại | Target |
+|-----------|--------------|-------------|--------|
+| Trả Sau (VTS) | 180.000 | ~54% | Maintain 70% |
+| Trả Góp / BNPL | 200.000 | ~10% | 40% |
+| Tín dụng / CIC | 700.000 | ~40% | 80% |
+
+**SEO/GEO Activities:**
+- Content Blog: Topical authority trên 4 nhóm VTS, BNPL, Tín dụng/CIC, Trả góp (Hub & Spoke)
+- Mini Web VTS: Revamp `/vi-tra-sau` + sub-page trả góp + Simulator monthly payment + sub-page theo use case
+- Merchant Page: Build trang merchant chấp nhận VTS - internal link hỗ trợ authority + capture intent "trả góp tại [merchant]"
+
+**Scope của Hiến:**
+- Brief & Research: Phân tích đối thủ, SERP, viết brief per page
+- Content Structure & On-page SEO/GEO: Review trước publish, GEO checklist
+- Technical SEO: Schema, internal link, canonical, sitemap, CWV
+- Phối hợp Web Platform: Build Mini Web, Sub-page, Simulator, Merchant Page
+- Admin Tool Training: Training Cell Team vận hành blog → bàn giao Inbound
+
+**Collaboration:**
+- Inbound + BU: Sản xuất content blog và merchant page content
+- Inbound: Off-page SEO
+- Web Platform (Bảo): Build và revamp pages
+
+**Status:** Active
+
+**Meeting log:**
+> [CẦN BỔ SUNG]
+
+---
+
+### 5.14 Content Governance Framework (cập nhật)
+
+**Vision:** Ngăn overlap content angles giữa Inbound và Out-App Traffic. Định nghĩa rõ ownership theo search intent.
+
+**Decision Tree - Ownership:**
+
+```mermaid
+flowchart TD
+    classDef gate fill:#fee2e2,stroke:#ef4444,stroke-width:2px,color:#991b1b
+    classDef hien fill:#bfdbfe,stroke:#3b82f6,stroke-width:2px,color:#1e3a8a
+    classDef inbound fill:#dcfce7,stroke:#10b981,stroke-width:2px,color:#065f46
+    classDef process fill:#f3f4f6,stroke:#9ca3af,stroke-width:1px
+    
+    Start([Keyword/Topic Mới xuất hiện]) --> IntentCheck{Xác định\nSearch Intent?}
+    
+    %% Phân luồng
+    IntentCheck -- "Informational\n(How-to, Tips, News)" --> InboundOwn[INBOUND Sở hữu & Thực thi]:::inbound
+    IntentCheck -- "Transactional\n(Mua, Tra cứu, Đăng ký)" --> GPD[OUT-APP TRAFFIC Sở hữu]:::hien
+    IntentCheck -- "Mixed / Khó xác định" --> Sync[Sync Meeting:\nHiến + Mai quyết định]:::process
+    IntentCheck -- "Navigational\n(Brand Search)" --> GPD
+    
+    %% Thực thi
+    InboundOwn --> ContentProduction[Sản xuất nội dung (Bản Draft)]:::process
+    GPD --> ContentProduction
+    
+    %% Gatekeeper
+    ContentProduction --> Checkgate{Pre-Publish Gate\nSEO/GEO Checklist\n(MoSpark Scoring)}:::gate
+    
+    Checkgate -- Lỗi Technical / Thiếu CTA --> Reject[Bị Block / Yêu cầu sửa]:::process
+    Reject -.-> ContentProduction
+    
+    Checkgate -- Điểm > 80\nPass CWV & Schema --> Publish([Publish Live trên momo.vn])
+    
+    Publish --> Tracking[Setup Tracking (GTM/GA4/Appsflyer)]:::hien
+    Tracking --> Monitor[GA4 / BigQuery Monitoring]:::hien
+```
+
+**North Star Metric:** 0 content conflict incidents per quarter
+
+**Status:** Framework đã define, đang áp dụng
+
+**Meeting log:**
+> [CẦN BỔ SUNG]
+
+---
+
+### 5.15 Dự án: Cinema SEO/GEO Growth
+
+**Vision:** Duy trì và mở rộng vị thế organic leadership cho vertical Cinema - Use Case đã chứng minh được (15x growth từ 40K → 600K sessions).
+
+**North Star Metric:** Duy trì top 1 từ khóa "vé xem phim" và cluster liên quan. Target: duy trì 1M+ organic sessions/quý.
+
+**Hiện trạng:**
+- 1M organic traffic/3 tháng - đang passive monitor
+- Top 1 các từ khóa "vé xem phim"
+- ~959 zero-traffic URLs từ review pages cần xử lý
+
+**Sitemap hiện tại:**
+- `/cinema` - homepage
+- `/rap`, `/lich-chieu`, `/phim-chieu` - trang thông tin
+- `/rap/{tên rạp}`, `/rap/{tên rạp}/{chi tiết}` - cụm rạp và địa chỉ
+- `/lich-chieu/(phim-dang-chieu|phim-sap-chieu)` - đang/sắp chiếu
+- `/blog`, `/tin-tuc` - blog và news
+- `/{tên phim}`, `/{tên phim}/review` - phim chi tiết và review
+- `/top-phim`, `/top-phim/{slug}` - tổng hợp phim hay
+
+**Zero-Traffic URL Strategy (959 review pages):**
+- Group A (traffic > 20 sessions/tháng): Preserve + optimize content
+- Group B (traffic 5-20 sessions): Evaluate - giữ hoặc merge
+- Group C (traffic = 0, phim đã hết chiếu): 410 Gone hoặc 301 về phim detail
+- Quyết định: phụ thuộc vào chất lượng auto-generated review content (cần audit)
+
+**Sunset rule cho pSEO Cinema:**
+- Suất chiếu hết + không có suất chiếu mới trong 30 ngày → trigger 410
+- Review page thin content (<200 từ) → noindex trước, quyết định sau
+
+**Status:** Passive (đang thả nổi) - cần kickoff plan xử lý zero-traffic URLs
+
+**Meeting log:**
+> [CẦN BỔ SUNG]
+
+---
+
+### 5.16 Dự án: Merchant Page / Đối tác (VTS Cross-Sale)
+
+**Vision:** Build Brand Detail pages cho Ví Trả Sau - capture intent user search "{Brand} có thanh toán Ví Trả Sau không", enhance VTS conversion và tạo relationship giữa user yêu thích brand và MoMo web.
+
+**JTBD:** "Muốn ăn ngon nhưng chưa có lương → tìm quán ngon có cho xài Ví Trả Sau không"
+
+**URL Pattern:** `/thanh-toan-momo-{tên-brand}` (URL độc lập vì page phục vụ nhiều mục đích: ưu đãi + hình thức thanh toán + thông tin brand - không chỉ riêng VTS)
+
+**Hub & Spoke Architecture:**
+```
+Hub: /vi-tra-sau → Section "Đối tác chấp nhận VTS" → filter ngành → link brand cards
+Spoke: /thanh-toan-momo-{brand} → Breadcrumb về VTS Hub → Related merchants
+```
+
+**Scope:**
+- Brand Detail Page: Hero banner (dynamic theo VTS status) + VTS promotion module + deals + merchant info
+- Internal link hỗ trợ authority cho Mini Web VTS
+- VTS module xuất hiện tại 2 vị trí cố định - không dominant
+
+**Content production:** Inbound + BU phối hợp. Hiến set standard và review pre-publish.
+
+**BRD Status:** v4 đã hoàn thành
+
+**Status:** Active - BRD done, cần align với Web Platform về timeline build
+
+**Meeting log:**
+> [CẦN BỔ SUNG]
+
+---
+
+### 5.17 Task: Off-Page Strategy & Backlink Governance
+
+**Loại:** Task governance - Hiến set standard, Inbound/Agency execute
+
+**Vision:** Đảm bảo hoạt động off-page (backlink, entity building, PR) của mọi Use Case tuân theo một bộ tiêu chuẩn thống nhất, tránh rủi ro Google penalty và negative SEO.
+
+**Hiện trạng đã verify:**
+- momo.vn có backlink profile bất thường: tỷ lệ backlinks/referring domain cực cao (~96K backlinks/domain)
+- Có toxic anchor text nghiêm trọng trong backlink profile (cần disavow liên tục)
+- Nhiều BU đang thuê agency off-page riêng lẻ - thiếu coordination
+
+**Scope của Hiến:**
+- Set Off-Page Standard: tiêu chí chất lượng backlink (DR, relevance, anchor text policy)
+- Disavow Maintenance: SOP hàng tháng - audit backlink mới, flag toxic, submit disavow
+- Multi-agency Conflict Resolution: quy trình khi nhiều vertical thuê agency riêng
+- Alert triggers: DR drop bất thường, toxic link spike
+
+**Off-Page Components cần kiểm soát (27 items bao gồm):**
+- Backlink quality (DR, dofollow ratio, anchor compliance)
+- Google Stack Assets (Drive, Sites, Maps, YouTube)
+- Social signals
+- Content syndication
+- Entity building
+- AI citation monitoring (GEO signal)
+
+**BRD Status:** v2 đã hoàn thành
+
+**Owner thực thi:** Inbound (execute) + Agency (qua Inbound). Hiến audit và set standard.
+
+**Status:** Active - BRD done, cần align với Inbound về SOP vận hành
+
+**Meeting log:**
+> [CẦN BỔ SUNG]
+
+---
+
+### 5.18 Task: Tech Foundation Gate & Content Angle Governance SOP
+
+**Loại:** SOP vận hành - tích hợp vào quy trình publish của mọi Use Case
+
+**Vision:** Chuẩn hóa 2 quy trình kiểm soát chất lượng trước khi publish, tránh technical debt và content cannibalization.
+
+**SOP 1 - Tech Foundation Gate (3 tầng):**
+
+| Tầng | Tên | Action nếu fail |
+|------|-----|----------------|
+| P0 | Crawl & Index Integrity | Block publish |
+| P1 | Structured Data & Entity Signal | Block publish |
+| P2 | Performance & UX Signal (CWV) | Warning, không block |
+
+- P0 items: robots meta, canonical, URL slug, HTTP 200, sitemap inclusion
+- P1 items: Schema markup hợp lệ, entity mention, FAQ structured data
+- P2 items: LCP < 2.5s, CLS < 0.1, INP < 200ms
+
+**SOP 2 - Content Angle Governance (5 bước):**
+1. Angle Registration: mỗi keyword/angle chỉ được owned bởi 1 Use Case
+2. Overlap Detection (3 cấp): exact match, near-match, intent overlap
+3. Conflict Resolution: meeting Hiến + Inbound Lead quyết định
+4. Brief Governance: Hiến sign-off brief trước khi viết
+5. Monthly Audit: review toàn bộ published content vs registry
+
+**Owner:** Hiến (set + audit). Inbound + Cell Team (tuân thủ).
+
+**Status:** Framework đã define - cần formalize thành document chính thức và brief cho Inbound
+
+**Meeting log:**
+> [CẦN BỔ SUNG]
+
+---
+
+### 5.19 Dự án: MoSpark SEO/GEO Scoring & Checklist BRD
+
+**Vision:** Xây dựng scoring system cho tất cả pages được tạo từ MoSpark - đảm bảo pre-publish quality gate có thể đo được bằng điểm số.
+
+**Bối cảnh:** Tích hợp vào MoSpark CMS như một built-in gate trước khi publish. Internal team (SEO Lead, PO, Content) dùng để evaluate và xem score.
+
+**Scoring Model (5 blocks, tổng 100 điểm):**
+- Block 1: Metadata (Critical - block nếu fail)
+- Block 2: On-Page Content Integrity
+- Block 3: GEO minimum viable (structured data + entity signal)
+- Block 4: Performance signals
+- Block 5: Kiểm duyệt thủ công
+
+**Ngưỡng pass:** Điểm > 80 + pass CWV + Schema hợp lệ
+
+**BRD Status:** v1.1 đã review, 3 issues đã identify:
+1. Scoring tổng lệch (conditional points cần clarify)
+2. Blog wordcount ngưỡng trần 1,500 từ không hợp lý - đề xuất bỏ trần, giữ sàn 800 từ
+3. CTA detection instruction mờ - cần spec rõ attribute name
+
+**PIC:** Hiến (SEO spec) + Trọng/Web Platform (implement trong MoSpark)
+
+**Status:** BRD In Review - cần fix 3 issues và brief Dev
+
+**Meeting log:**
+> [CẦN BỔ SUNG]
+
+---
+
 ## 6. LEADERSHIP INTELLIGENCE
 
 > Lưu trữ behavior patterns, decision style, priorities và triggers của lãnh đạo trực tiếp để tối ưu stakeholder management.
@@ -630,8 +969,8 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 | Decision style | Framework-oriented: cần package dự án thành case study mới thuyết phục được |
 | Communication preference | Doc hoặc slide report |
 | Trigger tích cực | Kết quả đóng gói thành case study replicable; số liệu rõ ràng |
-| Trigger tiêu cực | [CẦN BỔ SUNG] |
-| Thói quen ra quyết định | [CẦN BỔ SUNG] |
+| Trigger tiêu cực | Không có |
+| Thói quen ra quyết định | Không có |
 | Ý định chiến lược 2026 | Uplift MAU/DLU từ Web channel thông qua Out-App Traffic |
 | Ghi chú | Escalation path: Hiến → Tuệ → Công cho policy/resource decisions |
 
@@ -646,7 +985,7 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 | KPI quan tâm nhất | Web là trusted source về tài chính - đóng góp vào Organic Traffic và Web-to-App |
 | Communication preference | Framework + case study có thể scale (giống Tuệ) |
 | Trigger tích cực | Dự án được đóng gói thành case study replicable; bức tranh thị trường rõ ràng có con số |
-| Trigger tiêu cực | [CẦN BỔ SUNG] |
+| Trigger tiêu cực | Thích Framework, cơ chế Sandbox (Có thể sai nhưng phải làm) |
 | Ghi chú | Hiến không direct với Công - mọi escalation đi qua Tuệ |
 
 ### 6.3 Bảo - Production Manager (Web Platform)
@@ -658,8 +997,8 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 | Reporting line | Under Công (VP) trực tiếp |
 | Quan hệ với Hiến | Đồng cấp GPD - align trực tiếp, không qua Tuệ |
 | Touchpoint | Technical issues, new web requests, SEO/GEO potential projects |
-| Working style | [CẦN BỔ SUNG] |
-| Priority trigger | [CẦN BỔ SUNG] |
+| Working style | Giống anh Công (Framework, Sandbox) và cực kỳ thực chiến, xác định rõ JTBD trước khi làm |
+| Priority trigger | Xác định rõ JTBD trước khi làm |
 
 ---
 
@@ -676,7 +1015,9 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 | 2026-04-18 | 1.6 | Update 5.10: bổ sung PIC Trọng (Web Platform), Hiến own AI Skill Hub gồm SEO/GEO Checklist (source: momo-geo-scoring.vercel.app) + Blog Prompt Role (pending) |
 | 2026-04-18 | 1.7 | Update 5.10: bổ sung Batch roadmap - Batch 1 Done (Skills + Prompts), Batch 2 Planned (Business Context Layer: Target Audience, Value Prop, Promotion Scheme theo Project/Use Case) |
 | 2026-04-19 | 1.8 | Clarify vai trò lõi: Hiến là Govern không Execute. Agency không access trực tiếp momo.vn, mọi hoạt động qua Inbound. Update Ownership map và Out-App Traffic scope |
-| 2026-04-19 | 1.9 | Tracking ownership chuyển sang DA (setup đến execute), Hiến chỉ set standard. Dự án chiến lược từ Công: Web Platform + Out-App Traffic cùng triển khai, vẫn phải tuân theo Tech & Content Foundation của Hiến |
+| 2026-04-24 | 2.0 | Bổ sung từ các session khác: 5.12 MoSpark Migration (kiến trúc V2, pre-publish gate SEO), 5.13 VTS SEO/GEO Growth (SoV targets 3 thị trường, activities, scope), 5.14 Content Governance Framework (decision tree ownership Inbound vs Out-App Traffic). Cập nhật MoLanding = MoSpark tên cũ/mới |
+| 2026-04-27 | 2.2 | Update quy trình làm việc theo WebBuild Workflow v3.0: thay Cell Team Engagement Flow bằng 9-step workflow đầy đủ với RACI, gates, roll out order; xóa 4.1 Workflow Chain (skill-based, personal use only); loại bỏ PostHog khỏi tracking stack (không khả thi) - chỉ dùng GA4/GTM/Appsflyer/BigQuery; tracking ownership chuyển về DA (Hải/Hoàng); xóa 4.4 Web Ads Event Schema (dự án Ads Manager, Hiến không tham gia); renumber sections 4.x |
+| 2026-04-27 | 2.1 | Bổ sung bản chỉnh sửa của Hiến (Leadership Intelligence Công + Bảo đã điền); thêm 5 dự án/task mới: 5.15 Cinema (1M traffic, zero-traffic URL strategy), 5.16 Merchant Page/Đối tác VTS (BRD v4), 5.17 Off-Page Governance (BRD v2, disavow SOP), 5.18 Tech Foundation Gate + Angle Governance SOP, 5.19 MoSpark SEO Scoring BRD (v1.1, 3 issues); update Status Board với 19 items |
 
 ---
 
@@ -693,13 +1034,4 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 - Action items: [owner - deadline]
 - Blockers surfaced: [nếu có]
 - Thay đổi direction so với trước: [nếu có]
-```
-
-**Checklist các mục còn trống:**
-- [ ] CMS tool name (1.5)
-- [ ] MEU tracking source (3.3)
-- [ ] Zero-Traffic Audit target % (5.4)
-- [ ] Tuệ: trigger tiêu cực, thói quen ra quyết định (6.1)
-- [ ] Công: trigger tiêu cực (6.2)
-- [ ] Bảo: working style, priority trigger (6.3)
-- [ ] SoV cho: BH y tế, BH ô tô, Chứng khoán, Gửi tiết kiệm, CIC (2.6 + 5.9)
+``
