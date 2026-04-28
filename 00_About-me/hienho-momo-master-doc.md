@@ -10,9 +10,14 @@
 3. [Mục tiêu Team & Doanh nghiệp](#3-mục-tiêu-team--doanh-nghiệp)
 4. [Quy trình làm việc](#4-quy-trình-làm-việc)
 5. [Dự án đang triển khai](#5-dự-án-đang-triển-khai)
+   - 5.1 Status Board Q1-Q2/2026
+   - 5.2-5.19 [Detailed projects 1-19]
+   - **5.20 Current Projects - Detailed Status** ⭐ NEW
+   - **5.21 Strategic Decisions Log** ⭐ NEW
+   - **5.22 Foundation Checklists** ⭐ NEW
+   - **5.23 Activities & Updates Log** ⭐ NEW
 6. [Leadership Intelligence](#6-leadership-intelligence)
-7. **[Decision Hub & Knowledge Management](#0-decision-hub--knowledge-management)** ⭐ NEW
-8. [Changelog](#7-changelog)
+7. [Changelog](#7-changelog)
 
 ---
 
@@ -998,6 +1003,236 @@ Spoke: /thanh-toan-momo-{brand} → Breadcrumb về VTS Hub → Related merchant
 
 **Meeting log:**
 > [CẦN BỔ SUNG]
+
+---
+
+## 5.20 CURRENT PROJECTS - DETAILED STATUS (Live Update)
+
+> Các dự án được đánh giá ở mục 5.1 Status Board - Mục này track chi tiết 7 BRD chiính (Active projects) với metrics, progress, và blockers.
+
+### Dự án 1: Phạt Nguội - Traffic Fines Web Growth
+
+**BRD:** phạt-nguoi-brd.md
+
+| Thông tin | Chi tiết |
+|-----------|----------|
+| **Status** | 🟡 Active - Phase 1 Pending Dev |
+| **Timeline** | Q2 2026 (2 tháng) |
+| **Market Volume** | 2.74M searches/month |
+| **Target Traffic** | [TBD - từ BRD] |
+| **Last Updated** | 2026-04-27 |
+| **BRD Version** | v1.2 |
+
+**Key Decisions:**
+- Utilities-led SEO approach (content hub "cách thanh toán phạt" → app drive)
+- Web Platform dependency (template + structure support needed Q2)
+- Phase 1: 3 Tool Pages + 3 Blog Pages + Tech SEO
+
+**Blockers:**
+- Web Platform availability (MoSpark migration till June end)
+- Content team capacity (2 people, Inbound priority)
+
+**Next 30 Days:**
+- [ ] Content strategy finalized - Due 2026-05-15
+- [ ] Web Platform sign-off - Due 2026-05-20
+- [ ] Content production start - Due 2026-05-30
+
+---
+
+### Dự án 2: Vay Nhanh - Quick Loan Web Growth
+
+**BRD:** vay-nhanh-brd.md
+
+| Thông tin | Chi tiết |
+|-----------|----------|
+| **Status** | 🟡 Active - Strategy Phase |
+| **Timeline** | Q2-Q3 2026 |
+| **Target** | [TBD - từ BRD] |
+| **BRD Version** | [Check BRD] |
+
+---
+
+### Dự án 3: Đối Tác - Merchant Pages (B2B)
+
+**BRD:** doi-tac-brd.md
+
+| Thông tin | Chi tiết |
+|-----------|----------|
+| **Status** | 🟢 Active - BRD Final |
+| **BRD Version** | v4 |
+| **Last Updated** | [Check BRD] |
+
+---
+
+### Dự án 4: eSIM Du Lịch - Travel eSIM
+
+**BRD:** esim-du-lich-brd.md
+
+| Thông tin | Chi tiết |
+|-----------|----------|
+| **Status** | 🟡 Draft - chờ review PO |
+| **BRD Version** | 1.0 |
+
+---
+
+### Dự án 5: Bảo Hiểm Xe Máy - Motorcycle Insurance
+
+**BRD:** bhxm-brd.md
+
+| Thông tin | Chi tiết |
+|-----------|----------|
+| **Status** | 🟡 Active - Strategy Phase |
+| **Target Traffic** | [TBD - từ BRD] |
+
+---
+
+### Dự án 6: MoSpark SEO/GEO Scoring - CMS Admin Tool
+
+**BRD:** mospark-seo-geo-score-brd.md
+
+| Thông tin | Chi tiết |
+|-----------|----------|
+| **Status** | 🟡 BRD In Review |
+| **BRD Version** | v1.1 |
+| **Issues To Fix** | 3 items identified |
+
+---
+
+### Dự án 7: [7th Project - Tracking Needed]
+
+**Tổng cộng: 7 active BRDs đang track**
+
+---
+
+## 5.21 STRATEGIC DECISIONS LOG
+
+> Lưu trữ các quyết định chiến lược từ meetings, research, hoặc evaluations. Format: Context + Options + Decision + Reasoning + Status.
+
+### Decision 1: Phạt Nguội - Utilities-Led SEO vs Direct Ads
+
+**Date:** 2026-04-27  
+**Project:** Phạt Nguội  
+**Status:** In-Progress
+
+**Context:**
+- Direct ads approach hitting CAC ceiling
+- Market demand: 2.74M searches/month
+- Web Platform available Q2 (busy Q3 with MoSpark)
+
+**Options Considered:**
+1. Increase ad spend → Higher CAC, diminishing returns
+2. **Utilities-led SEO (CHOSEN)** → Content hub approach, lower CAC long-term
+3. Cross-promote from existing products → Timing risk, not in our control
+
+**Decision:** Option 2 - Build content hub around "cách thanh toán phạt" → position app as solution
+
+**Reasoning:**
+- Matches user search intent better than direct app promotion
+- Lower CAC trajectory (organic vs ads)
+- Aligns with GEO North Star (appear in AI engines)
+- Timeline: 6-8 weeks to see impact vs ads weeks
+
+**Assumptions:**
+- Search volume exists for utility queries (validated via GSC)
+- Content-to-app conversion will be >5%
+- Web Platform capacity holds Q2
+
+**Owner:** Klaus (strategy) + Web Platform (execution)  
+**Timeline:** Content strategy (5/15), Hub MVP (6/30)  
+**Kill-Switch:** If <500 monthly organic or <2% conversion by 9/30, pivot back
+
+**Outcome:** [Tracking post-launch]
+
+---
+
+### Decision 2: [To be added as decisions made]
+
+---
+
+## 5.22 FOUNDATION CHECKLISTS
+
+> Nguyên tắc kiểm soát chất lượng - mọi content/project phải pass checklists này.
+
+### Tech Foundation Checklist
+
+**Dùng khi:** Review trước khi publish bất kỳ page nào
+
+**Crawl & Indexation (P0 - MUST PASS):**
+- [ ] robots.txt không block page
+- [ ] canonical tag hợp lệ (self-referencing hoặc rõ ràng)
+- [ ] HTTP 200 status code
+- [ ] URL slug không chứa parameters (có exception list)
+- [ ] Sitemap included
+- [ ] Internal link structure hợp lệ
+
+**Structured Data & Entity (P1 - MUST PASS):**
+- [ ] Schema.org markup valid (no missing required fields)
+- [ ] Entity mentions có internal links
+- [ ] FAQ schema nếu applicable
+- [ ] No schema errors trong Search Console
+
+**Performance & UX (P2 - WARNING):**
+- [ ] LCP < 2.5s
+- [ ] CLS < 0.1
+- [ ] INP < 200ms
+- [ ] Mobile-friendly (tested in Google Mobile-Friendly Test)
+
+**URL Governance:**
+- [ ] URL không violate governance policy
+- [ ] Not in zero-traffic URL list
+- [ ] Canonical relationship không tạo confusion
+
+---
+
+### Content Foundation Checklist
+
+**Dùng khi:** Review content brief + post-publish audit
+
+**YMYL & Accuracy (CRITICAL):**
+- [ ] Content factually accurate (fact-checked against sources)
+- [ ] No medical/financial advice without proper disclaimers
+- [ ] Author credentials clear (writer background)
+- [ ] Update date visible if information time-sensitive
+- [ ] Sources cited for claims
+
+**User Intent Match:**
+- [ ] Page satisfies search intent (không bị off-topic)
+- [ ] Covers user's main question in first 1-2 paragraphs
+- [ ] Clear value prop (why user should stay on this page)
+
+**Content Quality:**
+- [ ] Minimum word count: 800 words (utility pages: 500 min)
+- [ ] No content duplication (internal hoặc external)
+- [ ] Unique angle (không generic rehash)
+- [ ] CTA clear and relevant
+
+**Entity & Topical Authority:**
+- [ ] Primary entity định rõ (không ambiguous)
+- [ ] Related entities mentioned (thể hiện topical knowledge)
+- [ ] Links to related pages (hub & spoke structure)
+
+**Brand & Compliance:**
+- [ ] Brand guideline tuân thủ (tone, messaging)
+- [ ] Legal review approved (nếu YMYL)
+- [ ] No toxic keywords hoặc competitor brand abuse
+
+---
+
+## 5.23 ACTIVITIES & UPDATES LOG
+
+> Log các activities, updates, decisions, và learnings gần nhất để maintain context liên tục.
+
+| Date | Activity | Project | Status | Notes |
+|------|----------|---------|--------|-------|
+| 2026-04-27 | BRD finalized | Phạt Nguội | v1.2 Done | 7 growth tactics identified, 3 phases outlined |
+| 2026-04-26 | Strategy meeting | Vay Nhanh | On-track | Timeline confirmed Q2 kickoff |
+| 2026-04-25 | Review completed | Đối Tác | v4 approved | Ready for Dev handoff |
+| 2026-04-24 | BRD in review | MoSpark Scoring | 3 issues | Need clarification on scoring logic |
+| 2026-04-23 | Market research | eSIM Du Lịch | Insights captured | Found 5 competitor gaps |
+| 2026-04-22 | Checkpoint | BH Xe Máy | Strategy phase | Target 200K traffic discussed |
+| 2026-04-21 | Blockers identified | Zero-Traffic URLs | Audit ongoing | 3,670 URLs / 16 Use Cases |
+
+---
 
 ---
 
