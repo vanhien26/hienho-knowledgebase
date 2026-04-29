@@ -10,18 +10,16 @@ description: "You MUST use this before any creative work - creating features, bu
 
 ## Liên kết
 - Skill này là một phần của hệ thống MoMo Web Growth
-- Xem tổng thể: [[SKILL]]
-- Workflow: [[SKILL#Workflow Chuẩn cho 1 Use Case Mới]]
+- Xem tổng thể: [[SKILL_REGISTRY]]
+- Workflow: [[PROJECT_ORCHESTRATOR]]
 - Skill đầu vào (trước khi dùng brainstorming):
-  - [[first-principles]] - nếu problem đang stuck, cần deconstruct trước khi brainstorm
-  - [[critical-thinking]] - để challenge assumptions trước khi generate ideas
+  - [[First-Principles]] - nếu problem đang stuck, cần deconstruct trước khi brainstorm
 - Skill đầu ra (sau khi brainstorming xong):
-  - [[JTBD.md]] - để phân tích user job sâu hơn sau khi có hướng tiếp cận
+  - [[jtbd-analysis]] - để phân tích user job sâu hơn sau khi có hướng tiếp cận
   - [[use-case-document]] - để document strategy sau khi design được approve
-  - [[momo-seo-content-brief]] - để tạo content brief sau khi có design
 - Skill đồng hành (dùng trong quá trình brainstorming):
   - [[pyramid-principle]] - để cấu trúc design document logical
-  - [[seo-geo-audit]] - để kiểm tra hiện trạng trước khi brainstorm giải pháp
+  - [[Seo-Geo-audit]] - để kiểm tra hiện trạng trước khi brainstorm giải pháp
 
 ---
 

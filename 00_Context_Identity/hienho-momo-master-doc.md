@@ -5,13 +5,17 @@
 
 ## MỤC LỤC
 
-1. [Thông tin cá nhân & Bộ phận](#1-thông-tin-cá-nhân--bộ-phận)
-2. [Các Team làm việc chung](#2-các-team-làm-việc-chung)
-3. [Mục tiêu Team & Doanh nghiệp](#3-mục-tiêu-team--doanh-nghiệp)
-4. [Quy trình làm việc](#4-quy-trình-làm-việc)
-5. [Dự án đang triển khai](#5-dự-án-đang-triển-khai)
-6. [Leadership Intelligence](#6-leadership-intelligence)
-7. [Changelog](#7-changelog)
+1. [[hienho-momo-master-doc|Thông tin cá nhân & Bộ phận]]
+2. [[SKILL_REGISTRY|Danh mục Kỹ năng (Registry)]]
+3. [[PROJECT_ORCHESTRATOR|Điều phối dự án (Orchestrator)]]
+4. [[Zero-Hallucination|Nguyên tắc Chống ảo giác]]
+5. [[pyramid-principle|Nguyên tắc Kim tự tháp]]
+6. [[jtbd-analysis|Phân tích JTBD]]
+7. [[brd-momo|Kỹ năng viết BRD]]
+8. [[momo-html-formatting-skill|Kỹ năng HTML MoMo]]
+9. [[Seo-Geo-audit|Kỹ năng Audit SEO/GEO]]
+10. [[Web2App-Pipeline|Kỹ năng Web-to-App]]
+11. [Changelog](#7-changelog)
 
 ---
 
@@ -53,6 +57,26 @@
 - Organic Traffic, Keyword Ranking, New User, MAU, MEU từ web channel (momo.vn)
 - Web-to-App pipeline: Organic Traffic → Onelink → App Install → Register → KYC → Cashin → MAU
 - GEO/AEO: MoMo được cite trong Google AI Overview, ChatGPT, Perplexity cho target queries tài chính
+
+### 1.3 Collaboration Model: GOVERN - BUILD - EXECUTE
+
+Hệ thống vận hành dựa trên tam giác phối hợp chặt chẽ:
+
+1.  **Hiến (GOVERN Standard):**
+    *   Đầu vào kỹ thuật: Define SEO/GEO requirements, Brief sản phẩm.
+    *   Kiểm soát chất lượng: Review trước khi live, Sign-off Foundation Checklist.
+    *   Điều phối Stakeholders: Là điểm kết nối duy nhất giữa Inbound và Web Platform.
+
+2.  **Web Platform (BUILD Product):**
+    *   Nhận spec trực tiếp từ Hiến và thực thi (Sprint → Build → Deploy).
+    *   Không làm việc trực tiếp với Inbound/Agency.
+
+3.  **Inbound Team - Mai & team (EXECUTE Content):**
+    *   Sản xuất nội dung (Blog, Off-page) theo Brief của Hiến.
+    *   Thực hiện submit content lên hệ thống.
+    *   Agency (nếu có) phải qua Inbound review trước khi Hiến audit cuối cùng.
+
+> **Rule:** Inbound không làm việc trực tiếp với Web Platform - mọi yêu cầu kỹ thuật PHẢI qua Hiến.
 
 ### 1.3 Ownership map
 

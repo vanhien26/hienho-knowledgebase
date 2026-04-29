@@ -7,7 +7,7 @@ description: "Viết Business Requirements Document (BRD) chuẩn cho Use Case /
 
 ## Mục tiêu
 
-Từ 3 input (Business Context + Keyword Research CSV + Direction brief), skill khai thác đủ context để viết BRD hoàn chỉnh. BRD power-driven bởi **keyword research + search intent analysis** để định hình JTBD chính xác, và **define success metrics concrete** (Organic traffic via GSC, Web2app %CR via Onelink+Appsflyer, Ranking keywords high-volume). BRD phục vụ: PO, Eng Lead, Stakeholder/Management.
+Từ 3 input (Business Context + Keyword Research CSV + Direction brief), skill khai thác đủ context để viết BRD hoàn chỉnh. BRD power-driven bởi **[[jtbd-analysis|keyword research + search intent analysis]]** để định hình JTBD chính xác, và **define success metrics concrete** (Organic traffic via GSC, Web2app %CR via Onelink+Appsflyer, Ranking keywords high-volume). Sử dụng **[[pyramid-principle|Pyramid Principle]]** để cấu trúc nội dung. BRD phục vụ: PO, Eng Lead, Stakeholder/Management.
 
 Hỗ trợ **2 loại dự án:**
 - **Use Case** (Vay Nhanh / Cinema / Bus) — acquisition-focused, content-heavy

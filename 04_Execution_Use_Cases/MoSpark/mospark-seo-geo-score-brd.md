@@ -5,6 +5,7 @@
 **Stakeholder:** Văn Hiến (SEO/GEO Lead)
 **Status:** Draft - chờ confirm từ Dev
 **Last updated:** Tháng 4/2026
+**System Context:** [[PROJECT_ORCHESTRATOR]] | [[Seo-Geo-audit]]
 
 ---
 

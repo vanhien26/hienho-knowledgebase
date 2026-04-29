@@ -1,12 +1,13 @@
+---
 name: jtbd-analysis
-description: >
-Phân tích Jobs-to-be-Done (JTBD) để kick-off bất kỳ dự án web nào cho MoMo.vn (Fintech & Financial
+role: Strategy & Research
+version: 2.1.0
+---
 
-Assistant). Dùng khi cần hiểu động lực thực sự đằng sau hành vi người dùng trước khi lên brief,
-
-thiết kế page, hoặc plan content. Trigger ngay khi user nhắc đến: JTBD, kick-off dự án mới,
-
-phân tích vertical, user insight, search intent mapping, schema strategy, UX SEO, conversion design,
+## 🧭 Điều phối
+- Tổng thể: [[SKILL_REGISTRY]]
+- Quy trình: [[PROJECT_ORCHESTRATOR]]
+- Kỹ năng liên quan: [[critical-thinking]], [[First-Principles]]
 
 pain point, switch triggers, churn insight, SGE/AI Overview signals, content opportunity,
 

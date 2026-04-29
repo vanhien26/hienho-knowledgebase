@@ -1,10 +1,13 @@
 ---
-name: seo-geo-audit
+name: Seo-Geo-audit
+role: Audit & Quality Control
+version: 1.1.0
 ---
----
-name: seo-geo-audit
 
-description: >
+## 🧭 Điều phối
+- Tổng thể: [[SKILL_REGISTRY]]
+- Quy trình: [[PROJECT_ORCHESTRATOR]]
+- Công cụ hỗ trợ: [[critical-thinking]]
 
 Use this skill khi cần audit toàn diện một website/page MoMo (hoặc competitor) trên 4 trục
 

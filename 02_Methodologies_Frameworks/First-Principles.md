@@ -1,9 +1,9 @@
 
 ## Liên kết
 - Skill này là một phần của hệ thống MoMo Web Growth
-- Xem tổng thể: [[SKILL]]
-- Workflow: [[SKILL#Workflow Chuẩn cho 1 Use Case Mới]]
-- Skill trước: [[brainstorming]],
+- Xem tổng thể: [[SKILL_REGISTRY]]
+- Workflow: [[PROJECT_ORCHESTRATOR]]
+- Skill trước: [[brainstorming]]
 - Skill sau: [[jtbd-analysis]], [[use-case-document]]
 
 ---

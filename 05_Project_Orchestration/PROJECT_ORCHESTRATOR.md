@@ -10,17 +10,17 @@
 
 Dưới đây là bản đồ điều hướng dự án. Agent phải xác định dự án đang ở bước nào để "load" các tài liệu tương ứng.
 
-| Bước | Tên Giai Đoạn | Skill/Methodology Cần Dùng | Output Cần Đạt | Gate Check (Core Principle) |
+| Bước | Tên Giai Đoạn | Stakeholder Chủ Trì | Skill/Methodology | Gate Check (Core Principle) |
 |:---:|---|---|---|---|
-| **01** | **Research & Discovery** | `02_Methodologies_Frameworks/jtbd-analysis.md` | Keyword Map, Competitor Report | [ ] JTBD Mapping chính xác |
-| **02** | **Thiết lập Mục tiêu** | `03_Operational_Skills/brd-momo.md` | KPI Doc: Traffic, W2A target | [ ] Pyramid Principle (SCR) |
-| **03** | **Product Brief + Tracking** | `03_Operational_Skills/brd-momo.md` | Final BRD + Event Tracking Spec | [ ] Zero Hallucination (Data source) |
-| **04** | **Build Demo Website** | `03_Operational_Skills/momo-html-formatting-skill.md` | Live Demo (Vercel/HTML) | [ ] MoMo Design Standard |
-| **05** | **Coding & Sprint** | `00_Context_Identity/hienho-momo-master-doc.md` (Section 2) | Staging URL | [ ] Technical SEO Foundation |
-| **06** | **SEO Review & QA** | `03_Operational_Skills/Seo-Geo-audit.md` | QA Report, SEO Checklist Pass | [ ] Mobile-First UX |
-| **07** | **Staging & Sign-off** | `03_Operational_Skills/Web2App-Pipeline.md` | Tracking Verified, PO Sign-off | [ ] Attribution Chain Integrity |
-| **08** | **Roll Out** | `03_Operational_Skills/use-case-document.md` | Production Live, Sitemap Submitted | [ ] URL Governance Level 1-4 |
-| **09** | **Monitoring** | `00_Context_Identity/hienho-momo-master-doc.md` (Section 5) | 30/60/90 Days Report | [ ] Organic Traffic Growth |
+| **01** | **Research & Discovery** | Hiến + Inbound | [[jtbd-analysis]] | [ ] [[jtbd-analysis|JTBD Mapping]] |
+| **02** | **Thiết lập Mục tiêu** | Hiến | [[brd-momo]] | [ ] [[pyramid-principle|Pyramid Principle]] |
+| **03** | **Product Brief** | Hiến | [[momo-seo-content-brief]] | [ ] [[critical-thinking|Logic Check]] |
+| **04** | **Sprint & Build** | Web Platform | [[momo-html-formatting-skill]] | [ ] Technical Standard |
+| **05** | **Build Demo** | Web Platform | [[hienho-momo-master-doc]] | [ ] Internal Link Integrity |
+| **06** | **SEO Review (Gate 1)** | Hiến | [[Seo-Geo-audit]] | [ ] **Gate 1: SEO/GEO Score** |
+| **07** | **Sign-off (Gate 2)** | Hiến | [[Web2App-Pipeline]] | [ ] **Gate 2: Foundation Checklist** |
+| **08** | **Roll Out & Content** | Inbound | [[use-case-document]] | [ ] [[mospark-seo-geo-score-brd|Publish Gate]] |
+| **09** | **Monitoring** | Hiến + Inbound | [[web-tracking]] | [ ] Organic Traffic Growth |
 
 ---
 
