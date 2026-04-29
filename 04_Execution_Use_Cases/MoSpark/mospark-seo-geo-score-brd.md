@@ -2,8 +2,9 @@
 
 **Document type:** Business Requirements Document
 **Team Owner:** Out-App Traffic & Web Platform · GPD
-**Stakeholder:** Văn Hiến (SEO/GEO Lead)
-**Status:** Draft - chờ confirm từ Dev
+**Product Manager:** Anh Bảo (Web Platform Manager)
+**Governance & Standards:** Văn Hiến (SEO & GEO Lead)
+**Status:** Active - Governance Gate for all MoSpark Output
 **Last updated:** Tháng 4/2026
 **System Context:** [[PROJECT_ORCHESTRATOR]] | [[Seo-Geo-audit]]
 

@@ -26,11 +26,11 @@ author: hienho-momo
 version: 1.0.0
 ---
 
-# Web-to-App Pipeline — MoMo Conversion Skill
+# Web-to-App Pipeline - MoMo Conversion Skill
 
 ## Mục tiêu
 
-Chuyển đổi **Organic Traffic từ momo.vn thành New User & MAU trong App** — đo được từ đầu đến cuối funnel.
+Chuyển đổi **Organic Traffic từ momo.vn thành New User & MAU trong App** - đo được từ đầu đến cuối funnel.
 
 Output dùng để:
 
@@ -41,7 +41,7 @@ Output dùng để:
 
 ---
 
-## MANDATORY — Pre-flight Check
+## MANDATORY - Pre-flight Check
 
 Trước khi thiết kế hoặc audit W2A cho bất kỳ Use Case nào, xác nhận đủ 4 thông tin sau:
 
@@ -62,16 +62,16 @@ Trước khi thiết kế hoặc audit W2A cho bất kỳ Use Case nào, xác nh
 
 ```
 [Organic Traffic]
-    ↓ GSC — Impression → Click → Landing
+    ↓ GSC - Impression → Click → Landing
 [momo.vn / Use Case Page]
-    ↓ GA4 — Session → CTA Click → Deeplink Fire
+    ↓ GA4 - Session → CTA Click → Deeplink Fire
 [Onelink / momoapp.onelink.vn]
-    ↓ Appsflyer — Store Redirect
+    ↓ Appsflyer - Store Redirect
 [App Store / CH Play]
-    ↓ Appsflyer — Install → Register → KYC → Cashin
+    ↓ Appsflyer - Install → Register → KYC → Cashin
 [MoMo App]
     ↓ Appsflyer / BigQuery
-[MAU — Monthly Active User]
+[MAU - Monthly Active User]
 ```
 
 **Mỗi bước có 1 tool đo:** Không được để bất kỳ bước nào untracked.
@@ -98,7 +98,7 @@ Track 1 chỉ dùng khi page rõ ràng phục vụ Existing User (ví dụ: tran
 | Register → KYC | KYC Rate | 40–60% | Appsflyer |
 | KYC → Cashin (MAU) | Activation Rate | 20–40% | Appsflyer |
 
-> **Nguồn:** Benchmark nội bộ MoMo (ước tính — ghi `[EST]` nếu dùng trong report). Luôn so sánh với baseline thực tế từ Use Case đang chạy.
+> **Nguồn:** Benchmark nội bộ MoMo (ước tính - ghi `[EST]` nếu dùng trong report). Luôn so sánh với baseline thực tế từ Use Case đang chạy.
 
 ---
 
@@ -110,7 +110,7 @@ Track 1 chỉ dùng khi page rõ ràng phục vụ Existing User (ví dụ: tran
 |------------|--------|---------|----------|
 | **Smart Banner** | Top of page / cố định | Luôn hiển thị trên mobile | "Mở MoMo để [job]" |
 | **Inline CTA** | Sau info/trust section | Sau khi user đọc đủ context | "So sánh xong? Làm ngay trong MoMo" |
-| **Sticky Bar** | Bottom of page | Luôn on — mobile only | "[Action ngắn] → Mở MoMo" |
+| **Sticky Bar** | Bottom of page | Luôn on - mobile only | "[Action ngắn] → Mở MoMo" |
 
 **Hierarchy ưu tiên:**
 - Mobile: Sticky Bar + Smart Banner (Inline CTA là bonus)
@@ -124,7 +124,7 @@ Track 1 chỉ dùng khi page rõ ràng phục vụ Existing User (ví dụ: tran
 
 | Use Case | CTA Example |
 |----------|-------------|
-| Vay Nhanh | "Vay ngay trong MoMo — không cần thế chấp" |
+| Vay Nhanh | "Vay ngay trong MoMo - không cần thế chấp" |
 | BH Xe Máy | "Mua bảo hiểm 2 phút trong MoMo" |
 | Phạt Nguội | "Nộp phạt ngay trong MoMo" |
 | Cinema | "Đặt vé phim trong MoMo" |
@@ -186,7 +186,7 @@ Tracking từ Appsflyer sau khi user rời web:
 
 **Ownership:** DA Cell Team (Hải/Hoàng) execute setup. Hiến define standard và verify xem events có fire đúng sau launch không.
 
-### 3.3 Looker Studio Dashboard — W2A View
+### 3.3 Looker Studio Dashboard - W2A View
 
 ```
 Nguồn dữ liệu: GSC + GA4 + Appsflyer → BigQuery
@@ -226,7 +226,7 @@ Filter theo: Use Case | Page Slug | Date Range | Device
 [ ] Dashboard: funnel hiển thị đúng theo Use Case?
 ```
 
-### 4.3 Conversion Diagnostic — Drop-off Framework
+### 4.3 Conversion Diagnostic - Drop-off Framework
 
 Khi CR thấp hơn benchmark, trace theo thứ tự:
 
@@ -239,7 +239,7 @@ Khi CR thấp hơn benchmark, trace theo thứ tự:
 6. Install → Register thấp → Vấn đề: Onboarding friction → Fix: App team issue
 ```
 
-**Rule:** Hiến sở hữu bước 1-4 (Web layer). Bước 5-6 là App team issue — không tự sửa.
+**Rule:** Hiến sở hữu bước 1-4 (Web layer). Bước 5-6 là App team issue - không tự sửa.
 
 ---
 
@@ -247,7 +247,7 @@ Khi CR thấp hơn benchmark, trace theo thứ tự:
 
 ### 5.1 Assignment method
 
-- **Cookie-based** variant assignment — 14-day TTL, keyed by Use Case slug
+- **Cookie-based** variant assignment - 14-day TTL, keyed by Use Case slug
 - Không dùng round-robin (contamination risk)
 - Minimum sample: 1,000 CTA impressions per variant trước khi đọc kết quả
 
@@ -258,7 +258,7 @@ Khi CR thấp hơn benchmark, trace theo thứ tự:
 tăng [Z%] vì [lý do dựa trên JTBD]"
 
 Ví dụ:
-"Nếu thay CTA từ 'Tải MoMo ngay' thành 'Vay ngay trong MoMo — không thế chấp'
+"Nếu thay CTA từ 'Tải MoMo ngay' thành 'Vay ngay trong MoMo - không thế chấp'
 trên /vay-nhanh thì CTA Click Rate tăng 20% vì CTA mới reflect đúng Job
 'tôi muốn vay tiền nhanh không cần thủ tục phức tạp'"
 ```
@@ -321,7 +321,7 @@ Khi dùng skill này, output gồm:
 
 | Skill | Khi nào |
 |-------|---------|
-| `jtbd-analysis` | Trước khi viết CTA text — cần biết Job để viết đúng |
+| `jtbd-analysis` | Trước khi viết CTA text - cần biết Job để viết đúng |
 | `use-case-document` | Part 2.4 dùng output của skill này |
 | `Seo-Geo-audit` | Audit technical foundation trước khi setup CTA |
 | `brd-momo` | Section 7 Success Metrics dùng W2A CR target từ đây |
@@ -334,4 +334,4 @@ Khi dùng skill này, output gồm:
 
 - Xem tổng thể: [[SKILL]]
 - Skill liên quan: [[jtbd-analysis]], [[use-case-document]], [[Seo-Geo-audit]]
-- Context: [[hienho-momo-master-doc]] — Mục 4.2 Tracking Architecture
+- Context: [[hienho-momo-master-doc]] - Mục 4.2 Tracking Architecture

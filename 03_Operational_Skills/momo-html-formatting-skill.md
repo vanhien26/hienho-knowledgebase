@@ -417,7 +417,7 @@ font-weight: 600;
 <div class="sidebar-footer">
   Out-App Traffic · GPD<br>
   Last updated: [Tháng/Năm]<br>
-  MoMo — momo.vn
+  MoMo - momo.vn
 </div>
 ```
 

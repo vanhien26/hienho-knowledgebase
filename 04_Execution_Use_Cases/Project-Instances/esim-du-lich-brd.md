@@ -1,7 +1,7 @@
-# BRD — Web Growth: eSIM Du Lịch
+# BRD - Web Growth: eSIM Du Lịch
 **MoMo (MService) · Out-App Traffic Team**
 **Phiên bản:** 1.0 · **Ngày:** Tháng 4/2026 · **Author:** Hiến (SEO & GEO Lead)
-**Status:** Draft — chờ review PO + Dev
+**Status:** Draft - chờ review PO + Dev
 
 ---
 
@@ -89,12 +89,12 @@ Tổng keyword pool 380 từ khóa, 38,050 SV/tháng. Top clusters theo SV:
 ### Objective
 Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu quả, convert được traffic thành lượt mở app và mua hàng.
 
-### Key Results — 6 tháng sau full launch Sprint 1
+### Key Results - 6 tháng sau full launch Sprint 1
 
 | KR | Metric | Target | Tool đo |
 |---|---|---|---|
-| KR1 | Organic Clicks — `/esim-du-lich/*` | +40% vs baseline | GSC |
-| KR2 | Average Position — 5 keywords P0 | Top 10 | GSC |
+| KR1 | Organic Clicks - `/esim-du-lich/*` | +40% vs baseline | GSC |
+| KR2 | Average Position - 5 keywords P0 | Top 10 | GSC |
 | KR3 | AI Overview Appearances | ≥3 FAQ queries cited | GSC / Manual check |
 | KR4 | Click-to-App Rate (web → app, mobile) | >3% | GA4 + Appsflyer |
 | KR5 | New Users từ eSIM Funnel | Grow MoM | Appsflyer |
@@ -127,7 +127,7 @@ Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu q
 
 ### 5.1 Trong scope
 
-- **Hub Page:** `/esim-du-lich` — 1 trang, full component build
+- **Hub Page:** `/esim-du-lich` - 1 trang, full component build
 - **Destination Pages:** 10 trang theo URL pattern `/esim-du-lich/{country-slug}`
 - **Blog Cluster:** ~10 bài theo 3 tiers (xem mục 10)
 - **Deep Link Integration:** Web → MoMo App (iOS + Android), fallback App Store / CH Play nếu chưa cài
@@ -142,109 +142,109 @@ Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu q
 - App-side UI/UX cho màn hình eSIM trong MoMo App (đã tồn tại)
 - Hệ thống inventory / fulfillment phía Gohub
 - Social media / paid campaign cho eSIM cluster
-- Đa ngôn ngữ (EN, TH, ZH) — chỉ tiếng Việt + bilingual title/H2 theo nhu cầu
+- Đa ngôn ngữ (EN, TH, ZH) - chỉ tiếng Việt + bilingual title/H2 theo nhu cầu
 - Trang so sánh competitor trực tiếp (cần approval riêng, nằm ngoài scope Sprint 1-2)
 
 ### 5.3 Out-of-scope explicit
 
-- Không build trang landing page dạng SPA riêng cho eSIM — tất cả nằm trong cấu trúc `momo.vn` hiện có
-- Không tạo subdomain `esim.momo.vn` — dùng subdirectory `/esim-du-lich/` để giữ domain authority
+- Không build trang landing page dạng SPA riêng cho eSIM - tất cả nằm trong cấu trúc `momo.vn` hiện có
+- Không tạo subdomain `esim.momo.vn` - dùng subdirectory `/esim-du-lich/` để giữ domain authority
 
 ---
 
 ## 6. Yêu cầu chức năng
 
-### 6.1 Hub Page — `/esim-du-lich`
+### 6.1 Hub Page - `/esim-du-lich`
 
-**FR-HUB-01 — Hero Section**
+**FR-HUB-01 - Hero Section**
 - H1: "Mua eSIM Du Lịch Quốc Tế - Kết Nối Ngay Khi Hạ Cánh"
 - Sub-headline: 3 trust signals dạng inline (QR code · 150+ quốc gia · Hoàn tiền nếu lỗi)
 - CTA Primary: Deep link → màn hình eSIM trong app. Copy: "Mua eSIM Ngay"
 - CTA Secondary: Anchor scroll xuống Destination Grid. Copy: "Xem Gói Theo Điểm Đến ↓"
 - Breadcrumb: Trang chủ > eSIM Du Lịch
 
-**FR-HUB-02 — Answer Block (AEO Gate)**
+**FR-HUB-02 - Answer Block (AEO Gate)**
 - H2: "eSIM Du Lịch Là Gì?"
 - Đoạn text 60-80 từ, câu đầu = definition trực tiếp, không marketing fluff
-- Comparison table 3 cột: eSIM vs SIM vật lý vs Chuyển vùng — tối thiểu 5 tiêu chí (giá, setup time, coverage, giữ số VN, phù hợp cho)
+- Comparison table 3 cột: eSIM vs SIM vật lý vs Chuyển vùng - tối thiểu 5 tiêu chí (giá, setup time, coverage, giữ số VN, phù hợp cho)
 - Schema FAQPage markup cho block này
 
-**FR-HUB-03 — Destination Grid**
+**FR-HUB-03 - Destination Grid**
 - H2: "Chọn eSIM Theo Điểm Đến"
 - Grid 10 card, mỗi card: Flag emoji + Tên quốc gia + Giá từ [X]đ + Số ngày phổ biến + Button → `/esim-du-lich/{country}`
 - Giá fetch từ Gohub API (không hardcode)
 - Responsive: 2 cột mobile → 4-5 cột desktop
 
-**FR-HUB-04 — How-to Section**
+**FR-HUB-04 - How-to Section**
 - H2: "Cách Mua Và Kích Hoạt eSIM Trên MoMo"
 - 4 bước dạng numbered list: Mở app → Chọn gói → Thanh toán → Nhận QR/kích hoạt
 - Mỗi bước có icon, tiêu đề ngắn, mô tả 1-2 câu
 - Schema HowTo markup
 
-**FR-HUB-05 — FAQ Block**
+**FR-HUB-05 - FAQ Block**
 - 8 câu hỏi AEO priority (xem Appendix A)
 - Accordion collapse/expand, default closed
-- Schema FAQPage markup — validate 0 error trên Google Rich Results Test
+- Schema FAQPage markup - validate 0 error trên Google Rich Results Test
 
-**FR-HUB-06 — Cross-sell Block**
+**FR-HUB-06 - Cross-sell Block**
 - "Chuẩn bị thêm cho chuyến đi": Link đến Bảo hiểm du lịch, Đổi ngoại tệ (nếu có trên MoMo)
 - "Cẩm nang eSIM": 4-6 card blog dạng thumbnail + title + category tag
 
-### 6.2 Destination Pages — `/esim-du-lich/{country}`
+### 6.2 Destination Pages - `/esim-du-lich/{country}`
 
-*Áp dụng cho tất cả 10 trang — 1 template chung, data thay đổi theo country.*
+*Áp dụng cho tất cả 10 trang - 1 template chung, data thay đổi theo country.*
 
-**FR-DEST-01 — Hero**
+**FR-DEST-01 - Hero**
 - H1 pattern: "eSIM Du Lịch [Quốc Gia] ([EN Name] eSIM) - [Ngày phổ biến] / [Dung lượng] / Từ [Giá]đ"
 - Breadcrumb: Trang chủ > eSIM Du Lịch > [Quốc Gia]
 - Schema BreadcrumbList
 
-**FR-DEST-02 — Product Table**
+**FR-DEST-02 - Product Table**
 - Cột: Thời hạn (3/5/7/15/30 ngày) · Dung lượng · Tốc độ (4G/5G) · Giá · [Mua Ngay]
-- Giá: fetch real-time từ Gohub API — nếu API lỗi, hiển thị "Xem giá trong app"
+- Giá: fetch real-time từ Gohub API - nếu API lỗi, hiển thị "Xem giá trong app"
 - Highlight row "Bán chạy nhất" cho gói phổ biến nhất
 - Button "Mua Ngay" trong mỗi row → deep link vào app với pre-selected gói tương ứng
 - Schema Product + AggregateOffer + PriceSpecification
 
-**FR-DEST-03 — Country Context + FAQ**
+**FR-DEST-03 - Country Context + FAQ**
 - Đoạn context 100-150 từ về đặc thù kết nối tại quốc gia đó
 - 5-7 FAQ riêng theo country (xem content spec tại mục 10)
 - Schema FAQPage
 
-**FR-DEST-04 — Related Destinations**
+**FR-DEST-04 - Related Destinations**
 - 3-4 trang destination liên quan về địa lý / use case (ví dụ: Nhật → Singapore, Hàn Quốc, Đài Loan)
-- Không cross-link random — phải có logic địa lý hoặc trip pattern
+- Không cross-link random - phải có logic địa lý hoặc trip pattern
 
-**FR-DEST-05 — Sticky CTA**
+**FR-DEST-05 - Sticky CTA**
 - Floating button visible toàn bộ scroll
 - Copy: "[Flag emoji] Mua eSIM [Quốc Gia]"
 - Deep link + UTM: `utm_source=web&utm_medium=esim-dest&utm_campaign={country}&utm_content=sticky`
 
-**FR-DEST-06 — Critical Flag: Trang Trung Quốc**
+**FR-DEST-06 - Critical Flag: Trang Trung Quốc**
 - Bắt buộc có disclaimer rõ về Great Firewall: eSIM thông thường KHÔNG bypass GFW
-- Xác nhận với Gohub gói nào có VPN support trước khi publish — ghi rõ trong trang
+- Xác nhận với Gohub gói nào có VPN support trước khi publish - ghi rõ trong trang
 - Không publish trang `/esim-du-lich/trung-quoc` trước khi có thông tin này từ Gohub
 
 ### 6.3 Smart Banner / Deep Link
 
-**FR-DL-01 — Smart Banner**
+**FR-DL-01 - Smart Banner**
 - Hiển thị trên tất cả trang eSIM khi user truy cập từ mobile browser
 - Copy: "Mở trong MoMo để mua eSIM nhanh hơn"
 - Tap → deep link vào app; nếu chưa cài → fallback App Store (iOS) / CH Play (Android)
 
-**FR-DL-02 — Deep Link Spec**
+**FR-DL-02 - Deep Link Spec**
 - Mỗi destination page có deep link riêng dẫn thẳng vào màn hình eSIM của quốc gia tương ứng trong app, không phải homepage
 - Test required: iOS + Android, cả trường hợp đã cài và chưa cài app
 - Fallback URL nếu deep link fail: `momo.vn/esim-du-lich/{country}`
 
 ### 6.4 Gohub API Integration
 
-**FR-API-01 — Giá và gói cước**
+**FR-API-01 - Giá và gói cước**
 - Fetch danh sách gói cước (tên, thời hạn, dung lượng, tốc độ, giá) từ Gohub API
 - Cache: 15 phút (giá không thay đổi real-time từng giây nhưng cần tương đối fresh)
 - Fallback nếu API timeout (>3s): hiển thị "Xem giá trong app" thay vì error state
 
-**FR-API-02 — Availability**
+**FR-API-02 - Availability**
 - Nếu Gohub API báo sold out hoặc unavailable cho quốc gia cụ thể → ẩn product table, hiển thị "Tạm thời không có gói cho điểm đến này"
 - Không để trang hiển thị giá nhưng CTA không hoạt động
 
@@ -261,7 +261,7 @@ Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu q
 | FID / INP | < 200ms | |
 | TTI (Time to Interactive) | < 3.5s | Mobile |
 
-> **Lưu ý API:** Gohub API response phải không block render. Load giá async sau khi trang render xong — tránh CLS khi giá load vào bảng.
+> **Lưu ý API:** Gohub API response phải không block render. Load giá async sau khi trang render xong - tránh CLS khi giá load vào bảng.
 
 ### 7.2 SEO Technical
 
@@ -269,7 +269,7 @@ Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu q
 - Hreflang: không áp dụng (chỉ tiếng Việt)
 - Robots: allow tất cả trang trong cluster (không noindex)
 - Sitemap: tất cả URL phải có trong XML sitemap, submit GSC sau khi publish
-- Pagination: nếu có phân trang trong bảng gói — dùng `rel="next/prev"` hoặc AJAX không thay đổi URL
+- Pagination: nếu có phân trang trong bảng gói - dùng `rel="next/prev"` hoặc AJAX không thay đổi URL
 
 ### 7.3 Schema Validation
 
@@ -286,13 +286,13 @@ Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu q
 
 - Layout: mobile-first responsive. Tất cả component phải usable trên màn 375px
 - CTA sticky: visible và không bị overlap bởi browser chrome (trên iOS Safari đặc biệt)
-- Bảng gói cước: scroll ngang trên mobile — không collapse column, không ẩn thông tin quan trọng
+- Bảng gói cước: scroll ngang trên mobile - không collapse column, không ẩn thông tin quan trọng
 
 ### 7.5 Bảo mật & Compliance
 
 - Giá và dữ liệu gói fetch từ API không cache ở phía client (không localStorage giá)
 - Deep link không expose Gohub API key ở phía client
-- Không hiển thị giá đối thủ nếu không có quy trình verify — tuân thủ nguyên tắc commercial content của MoMo
+- Không hiển thị giá đối thủ nếu không có quy trình verify - tuân thủ nguyên tắc commercial content của MoMo
 
 ---
 
@@ -300,34 +300,34 @@ Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu q
 
 ```
 momo.vn/
-└── esim-du-lich/                          [Hub Pillar — SV: 8,510+]
-    ├── trung-quoc/                         [P0 — SV: 7,850] ⚠️ GFW
-    ├── thai-lan/                           [P0 — SV: 3,930]
-    ├── nhat-ban/                           [P1 — SV: 1,950]
-    ├── singapore/                          [P1 — SV: 1,530]
-    ├── han-quoc/                           [P1 — SV: 1,160]
-    ├── chau-au/                            [P2 — SV: 1,090]
-    ├── my/                                 [P2 — SV: 900]
-    ├── uc/                                 [P2 — SV: 790]
-    ├── dai-loan/                           [P3 — SV: 700]
-    └── malaysia/                           [P3 — SV: 610]
+└── esim-du-lich/                          [Hub Pillar - SV: 8,510+]
+    ├── trung-quoc/                         [P0 - SV: 7,850] ⚠️ GFW
+    ├── thai-lan/                           [P0 - SV: 3,930]
+    ├── nhat-ban/                           [P1 - SV: 1,950]
+    ├── singapore/                          [P1 - SV: 1,530]
+    ├── han-quoc/                           [P1 - SV: 1,160]
+    ├── chau-au/                            [P2 - SV: 1,090]
+    ├── my/                                 [P2 - SV: 900]
+    ├── uc/                                 [P2 - SV: 790]
+    ├── dai-loan/                           [P3 - SV: 700]
+    └── malaysia/                           [P3 - SV: 610]
 
 momo.vn/tin-tuc/
-    ├── esim-la-gi/                         [Blog Tier 1 — P0]
-    ├── esim-vs-chuyen-vung-quoc-te/        [Blog Tier 1 — P0, intercept 1,260 SV]
-    ├── cach-mua-esim-tren-momo/            [Blog Tier 1 — P0]
-    ├── dien-thoai-ho-tro-esim-2026/        [Blog Tier 1 — P1]
-    ├── esim-trung-quoc-co-vao-google-khong/ [Blog Tier 2 — P0]
-    ├── esim-thai-lan-ais-vs-true-move/     [Blog Tier 2 — P1]
-    ├── kinh-nghiem-esim-nhat-ban/          [Blog Tier 2 — P1]
-    ├── esim-chau-au-1-goi-bao-nhieu-nuoc/  [Blog Tier 2 — P2]
-    ├── klook-esim-vs-momo-esim/            [Blog Tier 3 — Cần approval]
-    └── airalo-vs-gohub-vs-momo-esim/       [Blog Tier 3 — Cần approval]
+    ├── esim-la-gi/                         [Blog Tier 1 - P0]
+    ├── esim-vs-chuyen-vung-quoc-te/        [Blog Tier 1 - P0, intercept 1,260 SV]
+    ├── cach-mua-esim-tren-momo/            [Blog Tier 1 - P0]
+    ├── dien-thoai-ho-tro-esim-2026/        [Blog Tier 1 - P1]
+    ├── esim-trung-quoc-co-vao-google-khong/ [Blog Tier 2 - P0]
+    ├── esim-thai-lan-ais-vs-true-move/     [Blog Tier 2 - P1]
+    ├── kinh-nghiem-esim-nhat-ban/          [Blog Tier 2 - P1]
+    ├── esim-chau-au-1-goi-bao-nhieu-nuoc/  [Blog Tier 2 - P2]
+    ├── klook-esim-vs-momo-esim/            [Blog Tier 3 - Cần approval]
+    └── airalo-vs-gohub-vs-momo-esim/       [Blog Tier 3 - Cần approval]
 ```
 
 **URL Rules:**
 - Lowercase, hyphenated, không dấu tiếng Việt
-- Không trailing slash không nhất quán — chọn 1 convention, redirect cái kia
+- Không trailing slash không nhất quán - chọn 1 convention, redirect cái kia
 - Không dùng query params trong URL cấu trúc (filter, sort dùng AJAX nếu cần)
 - Độ dài URL: tối đa 75 ký tự (không tính domain)
 
@@ -335,7 +335,7 @@ momo.vn/tin-tuc/
 
 ## 9. Page Specs
 
-### 9.1 Hub Page — `/esim-du-lich`
+### 9.1 Hub Page - `/esim-du-lich`
 
 **JTBD:** "Tôi sắp đi du lịch nước ngoài, muốn có internet ngay khi xuống máy bay, không muốn xếp hàng mua SIM ở sân bay và không muốn trả phí roaming đắt đỏ."
 
@@ -347,15 +347,15 @@ momo.vn/tin-tuc/
 |---|---|---|---|
 | C1 | Hero + CTA | Convert immediate intent | WebPage, BreadcrumbList |
 | C2 | Answer Block "eSIM là gì?" | AEO citation gate | FAQPage |
-| C3 | Destination Grid | Hub → Spoke navigation | — |
+| C3 | Destination Grid | Hub → Spoke navigation | - |
 | C4 | How-to 4 bước | GEO How-to citation | HowTo |
 | C5 | FAQ Block (8 câu) | AEO long-tail coverage | FAQPage |
-| C6 | Cross-sell + Blog links | Ecosystem / retention | — |
+| C6 | Cross-sell + Blog links | Ecosystem / retention | - |
 
 **Title tag:** `Mua eSIM Du Lịch Quốc Tế - Kết Nối Ngay Khi Hạ Cánh | MoMo` (≤60 ký tự)
 **Meta description:** `Mua eSIM du lịch 150+ quốc gia trên MoMo - kích hoạt bằng QR code, có mạng ngay khi hạ cánh. Tiết kiệm đến 80% so với chuyển vùng quốc tế.` (120-155 ký tự)
 
-### 9.2 Destination Pages — `/esim-du-lich/{country}`
+### 9.2 Destination Pages - `/esim-du-lich/{country}`
 
 **Component sequence:**
 
@@ -364,8 +364,8 @@ momo.vn/tin-tuc/
 | C1 | Hero + Breadcrumb | Keyword relevance signal | Product, BreadcrumbList |
 | C2 | Product Table + CTA | Direct conversion | AggregateOffer, PriceSpecification |
 | C3 | Country Context (100-150 từ) + FAQ | AEO country-specific | FAQPage |
-| C4 | Related Destinations | Internal link equity | — |
-| [Sticky] | Floating CTA button | Capture intent bất kỳ lúc nào | — |
+| C4 | Related Destinations | Internal link equity | - |
+| [Sticky] | Floating CTA button | Capture intent bất kỳ lúc nào | - |
 
 **Title tag pattern:** `eSIM Du Lịch [Quốc Gia] ([EN Name] eSIM) - Gói Cước & Mua Ngay | MoMo`
 
@@ -374,7 +374,7 @@ momo.vn/tin-tuc/
 | Destination | Title tag | H2 bilingual trong body |
 |---|---|---|
 | Thái Lan | "eSIM Thái Lan (Thailand eSIM) - Gói Cước & Mua Ngay" | "Thailand eSIM Plans for Vietnamese Travelers" |
-| Trung Quốc | "eSIM Trung Quốc (China eSIM) - Kết Nối Không Giới Hạn" | "China eSIM — What You Need to Know" |
+| Trung Quốc | "eSIM Trung Quốc (China eSIM) - Kết Nối Không Giới Hạn" | "China eSIM - What You Need to Know" |
 | Hàn Quốc | "eSIM Hàn Quốc (Korea eSIM) - Mua Nhanh Kích Hoạt Ngay" | "Korea eSIM - Compare Plans" |
 | Singapore | "eSIM Singapore - Gói Data & Giá Tốt Nhất 2026" | "Singapore eSIM Options Compared" |
 | Châu Âu | "eSIM Châu Âu (Europe eSIM) - 1 Gói Cho Cả Schengen" | "Europe eSIM - Cover Multiple Countries" |
@@ -411,16 +411,16 @@ MoMo được định vị là **người bạn hiểu công nghệ đang giúp 
 
 ### 10.3 Blog Roadmap
 
-**Tier 1 — Must-have (P0, Sprint 1-2):**
+**Tier 1 - Must-have (P0, Sprint 1-2):**
 
 | Bài | Target keyword | Est. SV | Ghi chú |
 |---|---|---|---|
 | eSIM Là Gì? Hướng Dẫn Từ A Đến Z | `esim du lịch là gì`, `cách kích hoạt esim` | ~200 | AEO priority, HowTo schema |
-| Chuyển Vùng vs eSIM: Cái Nào Rẻ Hơn? | `cách chuyển vùng quốc tế viettel/mobi` | 1,260 | Intercept competitor query — P0 |
-| Cách Mua eSIM Trên MoMo — Bước Bước | `mua esim du lịch`, `cách dùng esim du lịch` | ~200 | How-to focus |
+| Chuyển Vùng vs eSIM: Cái Nào Rẻ Hơn? | `cách chuyển vùng quốc tế viettel/mobi` | 1,260 | Intercept competitor query - P0 |
+| Cách Mua eSIM Trên MoMo - Bước Bước | `mua esim du lịch`, `cách dùng esim du lịch` | ~200 | How-to focus |
 | Điện Thoại Nào Hỗ Trợ eSIM? 2026 | `điện thoại hỗ trợ esim`, `1 esim dùng mấy máy` | ~50 | Update 6 tháng/lần |
 
-**Tier 2 — Destination-specific (P0-P1, Sprint 2-3):**
+**Tier 2 - Destination-specific (P0-P1, Sprint 2-3):**
 
 | Bài | Target keyword | Est. SV |
 |---|---|---|
@@ -429,14 +429,14 @@ MoMo được định vị là **người bạn hiểu công nghệ đang giúp 
 | Kinh Nghiệm Dùng eSIM Nhật Bản | `esim nhật bản`, `kinh nghiệm mua sim nhật` | ~340 |
 | eSIM Châu Âu: 1 Gói Hay Mua Từng Nước? | `esim du lịch châu âu`, `sim châu âu` | ~220 |
 
-**Tier 3 — Competitor comparison (cần approval, Sprint 3+):**
+**Tier 3 - Competitor comparison (cần approval, Sprint 3+):**
 
 | Bài | Target keyword | Yêu cầu trước khi viết |
 |---|---|---|
 | Klook eSIM vs MoMo eSIM | `klook esim`, `mua sim klook` | Approval pháp lý + commercial |
 | Airalo vs Gohub vs MoMo eSIM | `esim airalo` | Verify giá đối thủ ngày publish + approval |
 
-### 10.4 AEO Priority Questions (8 câu — bắt buộc có trong Hub FAQ)
+### 10.4 AEO Priority Questions (8 câu - bắt buộc có trong Hub FAQ)
 
 1. eSIM du lịch là gì? Khác SIM vật lý thế nào?
 2. Nên mua eSIM hay chuyển vùng quốc tế?
@@ -464,14 +464,14 @@ MoMo được định vị là **người bạn hiểu công nghệ đang giúp 
 
 ## 11. Tracking & Analytics
 
-### 11.1 GA4 Events — Required
+### 11.1 GA4 Events - Required
 
 | Event name | Trigger | Parameters |
 |---|---|---|
 | `esim_cta_click` | Click bất kỳ CTA trong cluster | `page_type` (hub/dest/blog), `country`, `cta_position` (hero/sticky/inline/end), `destination_url` |
 | `esim_deeplink_click` | Click deep link → app | `country`, `package_id` (nếu có), `source_page` |
 | `esim_faq_expand` | Expand FAQ accordion item | `question_id`, `page_type` |
-| `esim_product_view` | User scroll đến product table | `country`, `packages_loaded` (true/false — kiểm tra API load) |
+| `esim_product_view` | User scroll đến product table | `country`, `packages_loaded` (true/false - kiểm tra API load) |
 | `esim_blog_cta_click` | Click CTA trong bài blog | `blog_slug`, `cta_position` |
 
 ### 11.2 UTM Naming Convention
@@ -494,7 +494,7 @@ utm_content=[hero-cta | sticky | inline | end-cta | table-row]
 
 - Dashboard: Organic clicks + impressions + avg position theo page (GSC data)
 - Dashboard: Click-to-App Rate = `esim_deeplink_click` / `session` (GA4)
-- Segment: Mobile vs Desktop riêng — conversion pattern khác nhau đáng kể
+- Segment: Mobile vs Desktop riêng - conversion pattern khác nhau đáng kể
 - Review cadence: Weekly trong 30 ngày đầu sau mỗi sprint publish → Monthly sau đó
 
 ---
@@ -516,10 +516,10 @@ utm_content=[hero-cta | sticky | inline | end-cta | table-row]
 | Rủi ro | Likelihood | Impact | Mitigation |
 |---|---|---|---|
 | Gohub API không stable, timeout thường xuyên | Medium | High | Implement fallback "Xem giá trong app" + cache 15 phút |
-| Gói Gohub không bypass GFW — user TQ bị disappointed | High | High | Disclaimer rõ ràng trong trang TQ trước khi publish. Confirm với Gohub trước. |
+| Gói Gohub không bypass GFW - user TQ bị disappointed | High | High | Disclaimer rõ ràng trong trang TQ trước khi publish. Confirm với Gohub trước. |
 | CMS không support schema injection | Medium | Medium | Dev inject qua code, không dùng CMS plugin |
 | Deep link fail trên thiết bị cụ thể (iOS/Android version cũ) | Low | Medium | Test matrix đủ device trước launch, có fallback URL |
-| Competitor publish trang tốt hơn trong thời gian build | Medium | Medium | Ưu tiên P0 trước — Hub + TQ + Thái Lan phải live trước đối thủ |
+| Competitor publish trang tốt hơn trong thời gian build | Medium | Medium | Ưu tiên P0 trước - Hub + TQ + Thái Lan phải live trước đối thủ |
 | Giá eSIM thay đổi → hardcode bị stale | High (nếu hardcode) | Medium | Bắt buộc dùng API, không hardcode giá bất kỳ đâu |
 
 ---
@@ -528,13 +528,13 @@ utm_content=[hero-cta | sticky | inline | end-cta | table-row]
 
 > **Giả định:** 1 Frontend Dev + 1 Content Writer + SEO Lead review. Không bao gồm thời gian legal review (Tier 3 blogs) và Gohub API integration time.
 
-### Sprint 1 — P0 Core (Tuần 1-3)
+### Sprint 1 - P0 Core (Tuần 1-3)
 
 | Deliverable | Owner | Ghi chú |
 |---|---|---|
 | Hub page `/esim-du-lich` | Dev + Content | Cần Gohub API + deep link scheme trước khi start |
 | Destination `/esim-du-lich/thai-lan` | Dev + Content | Template base cho các trang sau |
-| Blog: "Chuyển vùng vs eSIM" | Content | Intercept 1,260 SV — priority cao nhất về organic value |
+| Blog: "Chuyển vùng vs eSIM" | Content | Intercept 1,260 SV - priority cao nhất về organic value |
 | GA4 event tracking setup | Dev + Data | Phải có trước khi publish để có baseline |
 | UTM implementation | Dev | Tất cả CTA |
 | Schema validation | SEO | 0 error trước publish |
@@ -542,7 +542,7 @@ utm_content=[hero-cta | sticky | inline | end-cta | table-row]
 
 **Blocker Sprint 1:** Gohub API spec + Deep link scheme phải ready trước ngày Dev bắt đầu.
 
-### Sprint 2 — P0 Remaining + P1 (Tuần 4-6)
+### Sprint 2 - P0 Remaining + P1 (Tuần 4-6)
 
 | Deliverable | Owner | Ghi chú |
 |---|---|---|
@@ -554,7 +554,7 @@ utm_content=[hero-cta | sticky | inline | end-cta | table-row]
 | Blog: "Điện thoại hỗ trợ eSIM 2026" | Content | |
 | Blog: "eSIM Trung Quốc: Có vào Google không?" | Content | Publish đồng thời với trang /trung-quoc |
 
-### Sprint 3 — P2/P3 + Blog Tier 2 (Tuần 7-10)
+### Sprint 3 - P2/P3 + Blog Tier 2 (Tuần 7-10)
 
 | Deliverable | Owner | Ghi chú |
 |---|---|---|
@@ -577,7 +577,7 @@ Một page/blog được coi là **Done** khi đáp ứng toàn bộ các tiêu 
 - [ ] Title tag: 50-60 ký tự, có keyword + "MoMo"
 - [ ] Meta description: 120-155 ký tự, có CTA ngầm
 - [ ] URL: lowercase, hyphenated, không dấu, ≤75 ký tự
-- [ ] Schema markup pass Google Rich Results Test — 0 error
+- [ ] Schema markup pass Google Rich Results Test - 0 error
 - [ ] Canonical tag: self-referencing
 - [ ] Deep link: test pass trên iOS + Android (cả installed và not installed)
 - [ ] LCP < 2.5s, CLS < 0.1 trên mobile Lighthouse
@@ -602,7 +602,7 @@ Một page/blog được coi là **Done** khi đáp ứng toàn bộ các tiêu 
 
 ---
 
-## Appendix A — 8 AEO Priority Questions (Full Answer Text)
+## Appendix A - 8 AEO Priority Questions (Full Answer Text)
 
 *Dùng làm nội dung FAQ block trên Hub page. Format chuẩn: 40-60 từ per answer, câu đầu = answer chính.*
 
@@ -632,7 +632,7 @@ Sau khi mua: (1) Vào Cài đặt → Điện thoại → Thêm eSIM; (2) Chọn
 
 ---
 
-## Appendix B — Destination-specific FAQ Samples
+## Appendix B - Destination-specific FAQ Samples
 
 ### `/esim-du-lich/trung-quoc`
 - eSIM Trung Quốc có bypass được Great Firewall (Google, Facebook) không?
@@ -664,4 +664,4 @@ Sau khi mua: (1) Vào Cài đặt → Điện thoại → Thêm eSIM; (2) Chọn
 
 ---
 
-*BRD này được compile từ Web Growth Strategy Document v2.0 — eSIM Du Lịch. Mọi thay đổi scope cần approval từ PO và SEO Lead trước khi cập nhật document.*
+*BRD này được compile từ Web Growth Strategy Document v2.0 - eSIM Du Lịch. Mọi thay đổi scope cần approval từ PO và SEO Lead trước khi cập nhật document.*

@@ -17,7 +17,7 @@ tags:
 author: klaus-momo  
 version: 3.0.0
 
-# Use Case Document — MoMo Web Growth Strategy Generator
+# Use Case Document - MoMo Web Growth Strategy Generator
 
 ## Mục tiêu
 
@@ -31,7 +31,7 @@ Output đủ để:
 4. Replicate pattern sang Use Case khác
 
 ---
-## MANDATORY — Pre-flight Check (KHÔNG ĐƯỢC BỎ QUA)
+## MANDATORY - Pre-flight Check (KHÔNG ĐƯỢC BỎ QUA)
 
 Trước khi generate document, hỏi user 6 câu sau. **Hỏi từng câu một, không hỏi cùng lúc.**
 
@@ -59,7 +59,7 @@ Part 4: Growth Loop (Measurement + Cross-sell + Experiments + Scaling)
 Appendix (Keyword Universe + URL Inventory + Content Brief Templates)
 ```
 
-**Mỗi phần tối đa 500 từ** — không fluff, không giải thích khái niệm.
+**Mỗi phần tối đa 500 từ** - không fluff, không giải thích khái niệm.
 
 ---
 
@@ -206,7 +206,7 @@ momo.vn/blog/[topic]/         → Blog (2-3 cái)
 | Week | Piece | Type | Keyword | Angle |
 ```
 
-### 3.3 GEO/AEO Checklist — **GATE. KHÔNG PUBLISH NẾU KHÔNG PASS.**
+### 3.3 GEO/AEO Checklist - **GATE. KHÔNG PUBLISH NẾU KHÔNG PASS.**
 
 ```markdown
 **PRE-PUBLISH (bắt buộc):**
@@ -465,15 +465,15 @@ C. Content Brief Template
 
 ## Rules & Constraints
 
-1. **Hỏi 6 câu pre-flight trước** — không generate nếu thiếu
-2. **Scrape SERP và momo.vn thật** — không lý thuyết
-3. **Số liệu phải có nguồn** — không source → `[CẦN VERIFY]`
-4. **OKR outcome-based** — output-based không được chấp nhận
-5. **GEO checklist là GATE** — thiếu item = không publish
-6. **Mỗi phần tối đa 500 từ** — cắt fluff
-7. **Dùng "Use Case"** — không dùng "Vertical"
-8. **Không giải thích khái niệm** — nếu user không biết, họ sẽ hỏi
-9. **Không chào hỏi rườm rà** — đi thẳng vào vấn đề
+1. **Hỏi 6 câu pre-flight trước** - không generate nếu thiếu
+2. **Scrape SERP và momo.vn thật** - không lý thuyết
+3. **Số liệu phải có nguồn** - không source → `[CẦN VERIFY]`
+4. **OKR outcome-based** - output-based không được chấp nhận
+5. **GEO checklist là GATE** - thiếu item = không publish
+6. **Mỗi phần tối đa 500 từ** - cắt fluff
+7. **Dùng "Use Case"** - không dùng "Vertical"
+8. **Không giải thích khái niệm** - nếu user không biết, họ sẽ hỏi
+9. **Không chào hỏi rườm rà** - đi thẳng vào vấn đề
 
 ---
 

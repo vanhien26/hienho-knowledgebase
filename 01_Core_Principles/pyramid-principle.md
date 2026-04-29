@@ -1,6 +1,6 @@
 
 
-# Pyramid Principle — Logical Writing & Thinking Skill
+# Pyramid Principle - Logical Writing & Thinking Skill
 
 Based on Barbara Minto's *The Pyramid Principle: Logic in Writing, Thinking and Problem Solving*.
 
@@ -20,7 +20,7 @@ Never make the reader work to find the "so what."
 
 The Pyramid Principle rests on one insight:
 
-> Ideas in writing should always form a pyramid — one governing thought supported by a grouped,
+> Ideas in writing should always form a pyramid - one governing thought supported by a grouped,
 
 > ordered set of arguments, each of which is itself supported by further arguments below.
 
@@ -172,7 +172,7 @@ A critical quality test for grouping ideas:
 
   
 
-**Test:** Can you add a fourth bucket that is meaningfully different? If yes — not exhaustive. Do any two buckets overlap? If yes — not exclusive.
+**Test:** Can you add a fourth bucket that is meaningfully different? If yes - not exhaustive. Do any two buckets overlap? If yes - not exclusive.
 
   
 
@@ -220,7 +220,7 @@ The single most important sentence in any document. Must:
 
 - Be **assertive** (not a topic, not a question)
 
-- Be **actionable or insightful** — something the reader couldn't conclude alone
+- Be **actionable or insightful** - something the reader couldn't conclude alone
 
   
 
@@ -242,7 +242,7 @@ The single most important sentence in any document. Must:
 
   
 
-### Step 1 — Identify the task type
+### Step 1 - Identify the task type
 
 - **Writing from scratch**: Use SCR opening + pyramid body
 
@@ -252,7 +252,7 @@ The single most important sentence in any document. Must:
 
   
 
-### Step 2 — Clarify the governing idea
+### Step 2 - Clarify the governing idea
 
 Ask: *"If the reader reads only one sentence from this document, what must they take away?"*
 
@@ -260,7 +260,7 @@ Draft a single assertive sentence. Test it: is it obvious? If yes, sharpen it.
 
   
 
-### Step 3 — Build the supporting arguments
+### Step 3 - Build the supporting arguments
 
 - Generate all supporting points (brainstorm freely)
 
@@ -272,7 +272,7 @@ Draft a single assertive sentence. Test it: is it obvious? If yes, sharpen it.
 
   
 
-### Step 4 — Write the SCR opening (for documents/memos/presentations)
+### Step 4 - Write the SCR opening (for documents/memos/presentations)
 
 - **Situation**: 1–2 sentences of shared context
 
@@ -282,7 +282,7 @@ Draft a single assertive sentence. Test it: is it obvious? If yes, sharpen it.
 
   
 
-### Step 5 — Write the body top-down
+### Step 5 - Write the body top-down
 
 - Start each section with its key point (not a topic sentence)
 
@@ -292,7 +292,7 @@ Draft a single assertive sentence. Test it: is it obvious? If yes, sharpen it.
 
   
 
-### Step 6 — Quality check
+### Step 6 - Quality check
 
 See the checklist in `references/quality-checklist.md`
 
@@ -314,7 +314,7 @@ See the checklist in `references/quality-checklist.md`
 
 | "This is hard to follow" | Ideas in chronological or brain-dump order | Regroup by logic, not by the order you thought of them |
 
-| "The sections feel disconnected" | No pyramid — each section is a silo | Ensure each section heading is a key point that supports the governing idea |
+| "The sections feel disconnected" | No pyramid - each section is a silo | Ensure each section heading is a key point that supports the governing idea |
 
 | "There's too much detail upfront" | Bottom-up writing without top-down rewriting | Flip: state conclusion first, then support |
 

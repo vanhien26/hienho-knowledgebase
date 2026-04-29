@@ -13,7 +13,7 @@ pain point, switch triggers, churn insight, SGE/AI Overview signals, content opp
 
 hoặc bất kỳ lúc nào cần "hiểu user trước khi làm". LUÔN scrape momo.vn và SERP thực tế trước khi
 
-phân tích — không chấp nhận phân tích thuần lý thuyết. Nếu user cung cấp URL cụ thể, hỏi ngược
+phân tích - không chấp nhận phân tích thuần lý thuyết. Nếu user cung cấp URL cụ thể, hỏi ngược
 
 lại bằng tư duy Critical Thinking trước khi tiến hành. Cũng trigger khi cần: contextual schema
 
@@ -53,7 +53,7 @@ version: 2.0.0
 
   
 
-# JTBD Analysis — MoMo Web Growth Edition v2.0
+# JTBD Analysis - MoMo Web Growth Edition v2.0
 
   
 
@@ -61,7 +61,7 @@ version: 2.0.0
 
   
 
-Biến "người dùng muốn gì" thành "tại sao người dùng hire/fire một giải pháp" — với output dùng trực tiếp để:
+Biến "người dùng muốn gì" thành "tại sao người dùng hire/fire một giải pháp" - với output dùng trực tiếp để:
 
   
 
@@ -81,7 +81,7 @@ Biến "người dùng muốn gì" thành "tại sao người dùng hire/fire m�
 
   
 
-Skill này **không phải user research tool thuần túy**. Nó là **strategic translation layer** giữa user insight và execution — kết hợp live data từ momo.vn, SERP, và SGE signals.
+Skill này **không phải user research tool thuần túy**. Nó là **strategic translation layer** giữa user insight và execution - kết hợp live data từ momo.vn, SERP, và SGE signals.
 
   
 
@@ -97,7 +97,7 @@ Nếu user cung cấp URL hoặc vertical cụ thể, thực hiện ngay Step 0A
 
   
 
-### Step 0A — Scrape & Audit momo.vn
+### Step 0A - Scrape & Audit momo.vn
 
   
 
@@ -127,7 +127,7 @@ Fetch URL user cung cấp (hoặc URL liên quan nhất trên momo.vn):
 
   
 
-### Step 0B — Critical Thinking Interrogation
+### Step 0B - Critical Thinking Interrogation
 
   
 
@@ -151,7 +151,7 @@ Gap về content hay gap về product? Cần confirm với PO không?"
 
 "Vertical này có YMYL sensitivity không? E-E-A-T signals hiện tại
 
-đủ mạnh chưa — Author, citation, trust signal ở đâu?"
+đủ mạnh chưa - Author, citation, trust signal ở đâu?"
 
 ```
 
@@ -227,13 +227,13 @@ Viết Job Statement theo format Ulwick/Klement:
 
 I want to [motivation / functional job],
 
-So I can [desired outcome — emotional or social]."
+So I can [desired outcome - emotional or social]."
 
 ```
 
   
 
-Dùng placeholder generic — không hardcode ví dụ cho một vertical cụ thể. Một vertical có thể có **2-4 Job Statements** (các segment khác nhau). Label `[HYPOTHESIS]` nếu chưa có data validate.
+Dùng placeholder generic - không hardcode ví dụ cho một vertical cụ thể. Một vertical có thể có **2-4 Job Statements** (các segment khác nhau). Label `[HYPOTHESIS]` nếu chưa có data validate.
 
   
 
@@ -559,21 +559,21 @@ Conversion Goal: [App install / Form submit / CTA click]
 
 ABOVE THE FOLD:
 
-H1: [Phản ánh Functional Job — không nhồi nhét keyword]
+H1: [Phản ánh Functional Job - không nhồi nhét keyword]
 
 Sub: [Address top Anxiety]
 
-CTA: [Action verb + Outcome — e.g. "Đăng ký ngay — 3 phút là xong"]
+CTA: [Action verb + Outcome - e.g. "Đăng ký ngay - 3 phút là xong"]
 
 Trust: [User count / Partner logos / Rating]
 
-SECTION 1 — PAIN AGITATION:
+SECTION 1 - PAIN AGITATION:
 
 Hook: [Nhắc Pain = Push Force]
 
 Bridge: [Giải pháp MoMo = Pull Force]
 
-SECTION 2 — SOLUTION SHOWCASE:
+SECTION 2 - SOLUTION SHOWCASE:
 
 Content: [Functional Job satisfaction]
 
@@ -581,7 +581,7 @@ Format: [HowTo step-by-step / Feature table / Comparison]
 
 Schema: [HowTo / ItemList]
 
-SECTION 3 — TRUST & ANXIETY RESOLUTION:
+SECTION 3 - TRUST & ANXIETY RESOLUTION:
 
 Content: [Address top 2-3 Anxieties với proof points]
 
@@ -589,9 +589,9 @@ Format: [FAQ accordion → FAQPage schema]
 
 Proof: [Certification / Data / Testimonial / Guarantee]
 
-SECTION 4 — CONVERSION BLOCK:
+SECTION 4 - CONVERSION BLOCK:
 
-CTA: [Contextual — match Consumption Job]
+CTA: [Contextual - match Consumption Job]
 
 Micro-copy: [Reduce friction]
 
@@ -599,7 +599,7 @@ Deep link: [app://momo → Web-to-App trigger]
 
 FOOTER:
 
-Related: [Hub & Spoke links — same Job cluster]
+Related: [Hub & Spoke links - same Job cluster]
 
 Schema: [BreadcrumbList]
 
@@ -637,9 +637,9 @@ Copy: "Mở MoMo để [complete the job]"
 
 CONSIDERATION: Contextual CTA sau comparison section
 
-Copy: "So sánh xong? Mua ngay trên app — nhanh hơn"
+Copy: "So sánh xong? Mua ngay trên app - nhanh hơn"
 
-DECISION: Sticky CTA bar — luôn hiển thị khi scroll
+DECISION: Sticky CTA bar - luôn hiển thị khi scroll
 
 Deep link → mở thẳng flow trong app
 
@@ -665,7 +665,7 @@ Date: [Date] | Version: 1.0
 
 Analysis Goal: [Description]
 
-URL Analyzed: [momo.vn URL — đã scrape Step 0A]
+URL Analyzed: [momo.vn URL - đã scrape Step 0A]
 
 Critical Thinking Flags: [Issues phát hiện từ Step 0B]
 
@@ -709,7 +709,7 @@ Critical Thinking Flags: [Issues phát hiện từ Step 0B]
 
 1. Immediate: Feed vào momo-seo-content-brief
 
-2. Sprint: Implement Schema blueprint — verify với Dev
+2. Sprint: Implement Schema blueprint - verify với Dev
 
 3. Next sprint: A/B test CTA theo JTBD matrix
 
@@ -733,7 +733,7 @@ Critical Thinking Flags: [Issues phát hiện từ Step 0B]
 
 3. **JTBD phải dựa trên evidence**. Hypothesis được, nhưng phải label `[HYPOTHESIS]`.
 
-4. **Phân biệt User Job vs. MoMo Business Job**. Focus User Job — nhưng map về business outcome.
+4. **Phân biệt User Job vs. MoMo Business Job**. Focus User Job - nhưng map về business outcome.
 
 5. **Một page = một primary Job**. Nhiều Jobs cho một URL → signal tách page. Flag PO.
 

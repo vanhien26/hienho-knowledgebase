@@ -1,4 +1,4 @@
-# BRD: Bảo Hiểm Xe Máy — Web Growth
+# BRD: Bảo Hiểm Xe Máy - Web Growth
 
 > **Project:** Bảo Hiểm Xe Máy Web Growth   
 > **Main URL:** momo.vn/bao-hiem-xe-may         
@@ -52,13 +52,13 @@ Xây dựng cluster Bảo Hiểm Xe Máy theo kiến trúc Hub & Spoke đầy đ
 | Khía cạnh | Mô tả |
 |---|---|
 | URL | momo.vn/bao-hiem-xe-may |
-| Trạng thái | Đang hoạt động — có hero form mua BH, so sánh CÓ/KHÔNG BH, hướng dẫn bồi thường 4 bước |
+| Trạng thái | Đang hoạt động - có hero form mua BH, so sánh CÓ/KHÔNG BH, hướng dẫn bồi thường 4 bước |
 | Content hiện có | TOFU cơ bản: hero + trust bar + so sánh + hướng dẫn quy trình |
 | Thiếu | Bảng giá theo phân khối, widget tra cứu, cluster nhà BH, cluster loại xe, blog hub, FAQ schema, AggregateRating schema |
 | Organic traffic | ~4-79K/tháng (biến động theo mùa, đỉnh tháng 1 do Nghị định 168) |
 | Vấn đề cốt lõi | Không có evergreen content cluster → traffic sụt 95% sau spike tháng 1 |
 
-### 2.2. Keyword Data — 7 Pillar Clusters
+### 2.2. Keyword Data - 7 Pillar Clusters
 
 Dữ liệu từ file BHXM Inbound Plan 2026 (519 keywords, 2 snapshot: T3/2025 và T10/2025):
 
@@ -71,23 +71,23 @@ Dữ liệu từ file BHXM Inbound Plan 2026 (519 keywords, 2 snapshot: T3/2025 
 | Kiến thức / Giải thích | ~4,000/tháng | Rải rác, không có hub | Blog hub + FAQ schema |
 | Tra cứu / Kiểm tra hạn | ~2,500/tháng | Chưa có | /bao-hiem-xe-may/tra-cuu + widget biển số |
 | Nhà BH Branded | ~2,000/tháng | Chưa có | Landing page per nhà BH |
-| Xe máy điện | ~[cần verify]/tháng, +40% YoY | Chưa có | /bao-hiem-xe-may/xe-may-dien — whitespace |
+| Xe máy điện | ~[cần verify]/tháng, +40% YoY | Chưa có | /bao-hiem-xe-may/xe-may-dien - whitespace |
 
 **Insight quan trọng từ data:**
 
-- Cluster "Phạt" có CPC = ₫0 vào tháng 10/2025 — không ai bid, organic gần như free. ~60 biến thể keyword, tổng ~12,000 vol/tháng. Đây là nhóm nên publish đầu tiên (FOMO conversion cao nhất, ranking dễ nhất).
-- Cluster "Địa điểm" (4K vol): user tìm offline nhưng thực ra có thể mua online ngay — cơ hội bridge content lớn.
+- Cluster "Phạt" có CPC = ₫0 vào tháng 10/2025 - không ai bid, organic gần như free. ~60 biến thể keyword, tổng ~12,000 vol/tháng. Đây là nhóm nên publish đầu tiên (FOMO conversion cao nhất, ranking dễ nhất).
+- Cluster "Địa điểm" (4K vol): user tìm offline nhưng thực ra có thể mua online ngay - cơ hội bridge content lớn.
 - Traffic mất 95% sau spike: chỉ có content cho 1/7 cluster → thiếu 6 cluster evergreen.
 
 ### 2.3. Phân tích cạnh tranh
 
 | Đối thủ | Cluster đang chiếm | Điểm yếu | Cơ hội MoMo |
 |---|---|---|---|
-| royalhelmet.com.vn | Phạt · Giá · Kiến thức — Top 3-5 | Không có sản phẩm — zero conversion | Cùng content depth + inline form. Thắng bằng trust 2.3M hợp đồng |
-| ibaohiem.vn / tasco.vn / opes.com.vn | Kiến thức · Tra cứu — DA tốt | UX kém, không mobile-first, không có widget tra cứu thực | Beat Core Web Vitals + widget tra cứu biển số thực tế |
-| Điện Máy Xanh / TGDĐ | Cluster Mua + Địa điểm | BH chỉ là phụ trợ, không có cluster giá hay tra cứu | MoMo chuyên sâu hơn — tra cứu, tái tục, cluster giá 2/3 năm |
+| royalhelmet.com.vn | Phạt · Giá · Kiến thức - Top 3-5 | Không có sản phẩm - zero conversion | Cùng content depth + inline form. Thắng bằng trust 2.3M hợp đồng |
+| ibaohiem.vn / tasco.vn / opes.com.vn | Kiến thức · Tra cứu - DA tốt | UX kém, không mobile-first, không có widget tra cứu thực | Beat Core Web Vitals + widget tra cứu biển số thực tế |
+| Điện Máy Xanh / TGDĐ | Cluster Mua + Địa điểm | BH chỉ là phụ trợ, không có cluster giá hay tra cứu | MoMo chuyên sâu hơn - tra cứu, tái tục, cluster giá 2/3 năm |
 | MIC / PVI / PTI trực tiếp | Branded cluster của chính họ (~260-390/brand) | Chỉ push 1 nhà BH, không có trang so sánh đa bên | MoMo = trung lập đa nhà BH → trang so sánh capture toàn cluster branded |
-| ZaloPay / ViettelMoney | Branded search nhỏ | Web SEO rất yếu, không có content cluster | Duy trì lợi thế content depth — không cần phòng thủ, tấn công thôi |
+| ZaloPay / ViettelMoney | Branded search nhỏ | Web SEO rất yếu, không có content cluster | Duy trì lợi thế content depth - không cần phòng thủ, tấn công thôi |
 
 ### 2.4. Seasonality & Trend
 
@@ -98,7 +98,7 @@ Dữ liệu từ file BHXM Inbound Plan 2026 (519 keywords, 2 snapshot: T3/2025 
 - Tháng 6-7: Mùa học mới, học sinh/sinh viên mua xe → cluster 50cc/xe điện học sinh
 
 **Emerging trend:**
-- Xe máy điện: +40% YoY. VinFast, Yamaha Neo, Yadea tạo cluster keyword mới "xe máy điện có cần bảo hiểm không" — whitespace ít cạnh tranh, nên chiếm trước.
+- Xe máy điện: +40% YoY. VinFast, Yamaha Neo, Yadea tạo cluster keyword mới "xe máy điện có cần bảo hiểm không" - whitespace ít cạnh tranh, nên chiếm trước.
 - GCN điện tử: Sau Nghị định 03/2021, hợp pháp 100% nhưng user vẫn search "giấy chứng nhận điện tử có hợp lệ không" → cần content trust-building.
 - Mobile-first purchase: Search query ngày càng conversational hơn, MoMo là Super App có lợi thế tự nhiên.
 
@@ -110,28 +110,28 @@ Dữ liệu từ file BHXM Inbound Plan 2026 (519 keywords, 2 snapshot: T3/2025 
 
 **Xây dựng cluster Bảo Hiểm Xe Máy như một Organic Growth Engine phục vụ 3 mục tiêu:**
 
-**① Acquisition — Capture toàn bộ funnel bảo hiểm xe máy**
+**① Acquisition - Capture toàn bộ funnel bảo hiểm xe máy**
 
 User đang search từ nhiều entry point (mua, giá, tra cứu, địa điểm, pháp lý) nhưng MoMo chỉ có 1 trang cha phủ được cluster transactional. Cần xây đủ 7 cluster để không để traffic rơi vào tay đối thủ không có conversion value (royalhelmet, ibaohiem).
 
-**② Retention & Renewal — Tra cứu và Gia hạn như utility**
+**② Retention & Renewal - Tra cứu và Gia hạn như utility**
 
-User đã mua BH trên MoMo cần tra cứu hạn, gia hạn hàng năm. Xây `/bao-hiem-xe-may/tra-cuu` và `/bao-hiem-xe-may/gia-han` như utility tools — vừa phục vụ user hiện tại, vừa capture organic traffic tra cứu từ user chưa mua trên MoMo (convert về mua ngay).
+User đã mua BH trên MoMo cần tra cứu hạn, gia hạn hàng năm. Xây `/bao-hiem-xe-may/tra-cuu` và `/bao-hiem-xe-may/gia-han` như utility tools - vừa phục vụ user hiện tại, vừa capture organic traffic tra cứu từ user chưa mua trên MoMo (convert về mua ngay).
 
-**③ GEO/AI Visibility — Trở thành nguồn trích dẫn cho AI engines**
+**③ GEO/AI Visibility - Trở thành nguồn trích dẫn cho AI engines**
 
 FAQ + HowTo + AggregateRating Schema trên trang cha và trang sản phẩm inject câu trả lời vào Google AI Overview, Gemini, Perplexity khi user hỏi "mua bảo hiểm xe máy ở đâu uy tín?" hay "bảo hiểm xe máy MoMo có tốt không?". Đây là GEO moat dài hạn vì cần entity authority mạnh (số hợp đồng, đối tác nhà BH, dữ liệu thực).
 
 ### 3.2. Dự án này KHÔNG phải
 
-- Không phải xây lại trang marketing campaign — đây là evergreen content cluster phục vụ organic traffic
+- Không phải xây lại trang marketing campaign - đây là evergreen content cluster phục vụ organic traffic
 - Không phải CMS cho nhà BH tự quản lý content
 - Không phải store locator hay agent directory
-- Không phải thay thế Deep Link / App flow — web chỉ là entry point, conversion vẫn xảy ra trong App
+- Không phải thay thế Deep Link / App flow - web chỉ là entry point, conversion vẫn xảy ra trong App
 
 ---
 
-## 4. JTBD Analysis — User Đang Cần Gì?
+## 4. JTBD Analysis - User Đang Cần Gì?
 
 ### Job #1: Xác Nhận Nghĩa Vụ Pháp Lý
 
@@ -171,7 +171,7 @@ FAQ + HowTo + AggregateRating Schema trên trang cha và trang sản phẩm inje
 |---|---|
 | Functional | Nhập biển số → biết ngay xe còn hạn không. Gia hạn ngay trong 1-2 click nếu hết hạn |
 | Emotional | Tránh lo lắng, không chắc xe còn hạn không trước khi lên đường. Tự tin khi ra đường |
-| Social | Trách nhiệm với gia đình — không để xe hết BH mà không biết |
+| Social | Trách nhiệm với gia đình - không để xe hết BH mà không biết |
 | Trigger | Chuẩn bị đi xa · CSGT đang kiểm tra · Nhớ ra BH có thể hết hạn rồi |
 
 **Serve bằng:** /bao-hiem-xe-may/tra-cuu (widget biển số, kết quả contextual: Còn hạn → "Gia hạn", Hết hạn → "Mua ngay")
@@ -180,13 +180,13 @@ FAQ + HowTo + AggregateRating Schema trên trang cha và trang sản phẩm inje
 
 ### Job #4: Mua BH Nhanh, Không Cần Ra Ngoài
 
-> "Tôi biết cần mua rồi — làm sao mua online nhanh nhất, nhận GCN ngay?"
+> "Tôi biết cần mua rồi - làm sao mua online nhanh nhất, nhận GCN ngay?"
 
 | Dimension | Nội dung |
 |---|---|
 | Functional | Mua xong trong dưới 3 phút, trên điện thoại. Nhận GCN điện tử hợp lệ ngay sau thanh toán |
 | Emotional | Không mất thời gian ra bưu điện, đại lý. Cảm giác hiệu quả, tiện lợi |
-| Social | MoMo là Super App — mua BH ở đây như các việc khác: nhanh và tin |
+| Social | MoMo là Super App - mua BH ở đây như các việc khác: nhanh và tin |
 | Trigger | Đang cầm điện thoại, sắp đi ra đường · Bạn bị phạt vừa nhắc nhở |
 
 **Serve bằng:** Trang cha /bao-hiem-xe-may (hero form) + Blog "Không cần ra bưu điện" bridge content
@@ -195,7 +195,7 @@ FAQ + HowTo + AggregateRating Schema trên trang cha và trang sản phẩm inje
 
 ### Job #5: Được Bồi Thường Đúng Khi Xảy Ra Tai Nạn
 
-> "Bị tai nạn rồi — làm thế nào để được nhà BH bồi thường? Cần giấy tờ gì?"
+> "Bị tai nạn rồi - làm thế nào để được nhà BH bồi thường? Cần giấy tờ gì?"
 
 | Dimension | Nội dung |
 |---|---|
@@ -208,12 +208,12 @@ FAQ + HowTo + AggregateRating Schema trên trang cha và trang sản phẩm inje
 
 ---
 
-## 5. Kiến Trúc Web — Site Architecture
+## 5. Kiến Trúc Web - Site Architecture
 
 ### 5.1. Sitemap Hub & Spoke
 
 ```
-momo.vn/bao-hiem-xe-may [Hub — P1]
+momo.vn/bao-hiem-xe-may [Hub - P1]
 │
 ├── TRANG SẢN PHẨM
 │   ├── /bao-hiem-xe-may/bat-buoc           ← BH TNDS bắt buộc [hiện có]
@@ -257,25 +257,25 @@ momo.vn/bao-hiem-xe-may [Hub — P1]
 - Spoke → Spoke: Trang xe điện link sang trang dưới 50cc; trang Bảo Việt link sang trang PVI (comparison)
 - Không để trang nào bị orphan
 
-### 5.2. Content Structure — Trang Cha `/bao-hiem-xe-may`
+### 5.2. Content Structure - Trang Cha `/bao-hiem-xe-may`
 
 | # | Component | Ghi chú |
 |---|---|---|
-| 1 | Hero Section | H1 + Form chọn phân khối → CTA "Mua ngay". Hiện có — giữ nguyên, tối ưu UX copy |
+| 1 | Hero Section | H1 + Form chọn phân khối → CTA "Mua ngay". Hiện có - giữ nguyên, tối ưu UX copy |
 | 2 | Trust Bar | 2.3M hợp đồng · X nhà BH uy tín · GCN điện tử hợp pháp · Nhắc gia hạn tự động |
-| 3 | So sánh CÓ vs KHÔNG mua BH | 2 cột: FOMO + benefit. Hiện có — content cực mạnh, giữ nguyên |
+| 3 | So sánh CÓ vs KHÔNG mua BH | 2 cột: FOMO + benefit. Hiện có - content cực mạnh, giữ nguyên |
 | 4 | Grid nhà BH | Logo + tên 6 nhà BH + CTA link tới trang riêng |
 | 5 | Hướng dẫn 3 bước (HowTo) | Chọn phân khối → Chọn nhà BH → Thanh toán & nhận GCN điện tử. HowTo Schema |
-| 6 | Hướng dẫn bồi thường 4 bước | Hiện có — thêm CTA link sang /bao-hiem-xe-may/boi-thuong |
+| 6 | Hướng dẫn bồi thường 4 bước | Hiện có - thêm CTA link sang /bao-hiem-xe-may/boi-thuong |
 | 7 | Blog feed | 6 bài mới nhất, link "Xem tất cả" |
 | 8 | FAQ 10+ câu | Accordion, FAQPage Schema bắt buộc |
-| 9 | Review / Đánh giá | Tối thiểu 10 reviews thực. AggregateRating Schema (4.x/5 sao) — quan trọng cho E-E-A-T và GEO |
+| 9 | Review / Đánh giá | Tối thiểu 10 reviews thực. AggregateRating Schema (4.x/5 sao) - quan trọng cho E-E-A-T và GEO |
 
 **Schema bắt buộc trang cha:** FAQPage · HowTo · Product · AggregateRating · BreadcrumbList
 
 ### 5.3. GEO/AEO Strategy
 
-Bảo hiểm xe máy là YMYL — Google yêu cầu E-E-A-T cao. Các AI engines (Google AI Overview, Gemini, Perplexity) ưu tiên cite nguồn có structured data, FAQ rõ ràng, và authority signals.
+Bảo hiểm xe máy là YMYL - Google yêu cầu E-E-A-T cao. Các AI engines (Google AI Overview, Gemini, Perplexity) ưu tiên cite nguồn có structured data, FAQ rõ ràng, và authority signals.
 
 | Nền tảng AI | Behavior | Chiến lược tối ưu |
 |---|---|---|
@@ -295,11 +295,11 @@ Bảo hiểm xe máy là YMYL — Google yêu cầu E-E-A-T cao. Các AI engines
 
 ## 6. Functional Requirements
 
-### 6.1. Trang cha `/bao-hiem-xe-may` — Tối ưu
+### 6.1. Trang cha `/bao-hiem-xe-may` - Tối ưu
 
 | Requirement | Priority | Ghi chú |
 |---|---|---|
-| Hero form chọn phân khối hoạt động đúng | P1 | Hiện có — QA lại flow |
+| Hero form chọn phân khối hoạt động đúng | P1 | Hiện có - QA lại flow |
 | Trust bar cập nhật số hợp đồng thực tế (≥ 2.3M) | P1 | |
 | Grid nhà BH: logo + link tới trang riêng từng nhà BH | P1 | |
 | FAQ 10+ câu, accordion format, FAQPage Schema | P1 | |
@@ -366,20 +366,20 @@ Organic session → muangay_click → App open → Purchase (via Appsflyer)
 
 | Dependency | Owner | Mô tả | Blocker? |
 |---|---|---|---|
-| Widget tra cứu biển số — API kết nối CSDL BH | BH Product team + BE | Cần API để widget /tra-cuu hoạt động thực. Không có API → fallback hướng dẫn cách tra cứu thủ công | Có - cho /tra-cuu |
+| Widget tra cứu biển số - API kết nối CSDL BH | BH Product team + BE | Cần API để widget /tra-cuu hoạt động thực. Không có API → fallback hướng dẫn cách tra cứu thủ công | Có - cho /tra-cuu |
 | Dữ liệu phí bảo hiểm chính xác per nhà BH | BH Product team | Phí BH bắt buộc = quy định nhà nước. Phí tự nguyện khác nhau per nhà BH → cần data thực | Có - cho /bang-gia |
 | Deep Link per nhà BH và per phân khối xe | App team | CTA "Mua ngay" cần deep link đúng destination trong App | Có - cho landing page nhà BH |
 | AggregateRating data (rating + số review thực) | BH Product team | Cần số liệu rating thực từ hợp đồng đã mua. Không được dùng rating không có nguồn gốc | Có - YMYL + legal |
 | Review / Approve nội dung pháp lý | Legal team | Mọi số liệu mức phạt, mức bồi thường, điều kiện bắt buộc phải có legal sign-off | Có - YMYL |
 | Số liệu 2.3M hợp đồng và trust bar data | BH Product team | Cần xác nhận số liệu chính xác nhất tính đến ngày publish | Không - có thể update sau |
-| Content production | SEO team | 9 blog posts + 15+ landing pages — cần GenAI template + editorial workflow | Không - team tự build |
+| Content production | SEO team | 9 blog posts + 15+ landing pages - cần GenAI template + editorial workflow | Không - team tự build |
 
 ### Constraints
 
-- Content pháp lý (mức phạt, điều kiện BH, mức bồi thường) PHẢI qua legal review trước khi publish — không auto-publish
-- AggregateRating Schema chỉ được dùng khi có data review thực — không dùng fake rating
+- Content pháp lý (mức phạt, điều kiện BH, mức bồi thường) PHẢI qua legal review trước khi publish - không auto-publish
+- AggregateRating Schema chỉ được dùng khi có data review thực - không dùng fake rating
 - Số liệu Nghị định phải cite đúng số hiệu và năm ban hành, không viết chung "theo quy định pháp luật"
-- Widget tra cứu biển số không được lưu trữ biển số sau query — privacy constraint
+- Widget tra cứu biển số không được lưu trữ biển số sau query - privacy constraint
 - Khi có Nghị định mới về mức phạt hoặc phí BH → update content trong vòng 7 ngày
 
 ---
@@ -391,7 +391,7 @@ Organic session → muangay_click → App open → Purchase (via Appsflyer)
 | R1 | Content pháp lý lỗi thời sau khi có Nghị định mới → Google penalize hoặc user complaint | Cao (Nghị định cập nhật định kỳ) | Cao | Quy trình review định kỳ, alert khi có Nghị định mới, update trong 7 ngày |
 | R2 | API tra cứu biển số không khả dụng hoặc delay → trang /tra-cuu không có giá trị thực | Trung | Trung | Fallback: hướng dẫn 4 cách tra cứu thủ công thay thế. Không block launch trang cha |
 | R3 | Rating/Review data không đủ hoặc chất lượng thấp → không implement được AggregateRating Schema đúng chuẩn | Trung | Trung | Gate: chỉ implement schema khi có đủ 10+ reviews thực. Không dùng placeholder |
-| R4 | Content production bottleneck — 15+ trang cần viết đồng thời → delay launch | Cao | Trung | Phân phase: P1 (3-4 trang cốt lõi) launch trước, P2 follow sau 4-6 tuần |
+| R4 | Content production bottleneck - 15+ trang cần viết đồng thời → delay launch | Cao | Trung | Phân phase: P1 (3-4 trang cốt lõi) launch trước, P2 follow sau 4-6 tuần |
 | R5 | Keyword "xe máy điện" đang tăng → đối thủ (ibaohiem, royalhelmet) build trang trước MoMo | Trung | Trung | Speed-to-market: /xe-may-dien là trang P1, ưu tiên publish sớm |
 | R6 | Deep link per nhà BH chưa sẵn sàng → landing page nhà BH không có CTA đúng | Thấp | Thấp | Fallback: CTA link về trang cha trong khi chờ deep link |
 | R7 | Blog posts YMYL không đạt E-E-A-T → không rank hoặc bị manual action | Thấp | Cao | Template strict: cite Nghị định, author byline, legal review bắt buộc |
@@ -404,7 +404,7 @@ BRD này define Why (bối cảnh, vấn đề, cơ hội) và What (scope, requ
 
 | Deliverable | Owner | Mô tả |
 |---|---|---|
-| **Content Audit** | SEO team | Audit toàn bộ content hiện có trong cluster /bao-hiem-xe-may, trang blog cũ — xác định cần update, redirect, hay tạo mới |
+| **Content Audit** | SEO team | Audit toàn bộ content hiện có trong cluster /bao-hiem-xe-may, trang blog cũ - xác định cần update, redirect, hay tạo mới |
 | **Keyword Mapping** | SEO team | Map từng keyword cluster vào URL cụ thể, xác định primary/secondary keyword per trang |
 | **Content Template** | SEO team | GenAI prompt template per content type (landing page nhà BH, landing page loại xe, blog TOFU, blog MOFU). Cần legal checklist nhúng vào template |
 | **PRD** | SEO team + Web Platform | Chi tiết technical specs: API tra cứu biển số, deep link per nhà BH, schema injection, widget calculator, GA4 event spec |
@@ -413,7 +413,7 @@ BRD này define Why (bối cảnh, vấn đề, cơ hội) và What (scope, requ
 
 ---
 
-## Appendix A: Growth Tactics — Đề Xuất (Out of Scope BRD)
+## Appendix A: Growth Tactics - Đề Xuất (Out of Scope BRD)
 
 Các tactics sau đây là đề xuất bổ sung thuộc phạm vi Growth Strategy, không nằm trong scope yêu cầu BRD này. Sẽ được prioritize riêng sau khi launch core cluster:
 
@@ -446,4 +446,4 @@ Theo Nghị định 67/2023/NĐ-CP (cần verify với Legal trước khi publis
 | Xe trên 175cc | 135,000đ |
 | Xe ba bánh | 219,000đ |
 
-⚠️ *Số liệu trên là tham khảo từ strategy document. Phải verify lại với BH Product team và Legal trước khi publish lên bất kỳ trang nào trên momo.vn. YMYL content — sai data = legal risk.*
+⚠️ *Số liệu trên là tham khảo từ strategy document. Phải verify lại với BH Product team và Legal trước khi publish lên bất kỳ trang nào trên momo.vn. YMYL content - sai data = legal risk.*

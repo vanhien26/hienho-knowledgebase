@@ -23,7 +23,7 @@ author: klaus-momo
 version: 1.0.0
 ---
 
-# Zero-Hallucination — Fintech Factual Integrity Skill
+# Zero-Hallucination - Fintech Factual Integrity Skill
 
 ## Liên kết
 - Skill này là một phần của hệ thống MoMo Web Growth

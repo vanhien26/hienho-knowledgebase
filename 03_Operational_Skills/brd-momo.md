@@ -1,6 +1,6 @@
 ---
 name: momo-brd-enhanced
-description: "Viết Business Requirements Document (BRD) chuẩn cho Use Case / Project của MoMo Out-App Traffic / GPD. BRD define Why (bối cảnh, vấn đề, cơ hội từ keyword research + business insight), What (scope, JTBD, requirements, success metrics dựa trên organic traffic / W2A conversion / ranking keywords) để align stakeholder. Trigger: 'viết BRD', 'BRD cho dự án', 'kick-off use case', 'align stakeholder', hoặc user muốn đóng gói use case/project thành BRD chính thức. Skill hỏi khai thác trước khi viết — không tự viết ngay khi thiếu context. Input: Business Context (slide/text), Keyword CSV, Direction brief. Output: `.md` file."
+description: "Viết Business Requirements Document (BRD) chuẩn cho Use Case / Project của MoMo Out-App Traffic / GPD. BRD define Why (bối cảnh, vấn đề, cơ hội từ keyword research + business insight), What (scope, JTBD, requirements, success metrics dựa trên organic traffic / W2A conversion / ranking keywords) để align stakeholder. Trigger: 'viết BRD', 'BRD cho dự án', 'kick-off use case', 'align stakeholder', hoặc user muốn đóng gói use case/project thành BRD chính thức. Skill hỏi khai thác trước khi viết - không tự viết ngay khi thiếu context. Input: Business Context (slide/text), Keyword CSV, Direction brief. Output: `.md` file."
 ---
 
 # MoMo BRD Enhanced Skill
@@ -10,8 +10,8 @@ description: "Viết Business Requirements Document (BRD) chuẩn cho Use Case /
 Từ 3 input (Business Context + Keyword Research CSV + Direction brief), skill khai thác đủ context để viết BRD hoàn chỉnh. BRD power-driven bởi **[[jtbd-analysis|keyword research + search intent analysis]]** để định hình JTBD chính xác, và **define success metrics concrete** (Organic traffic via GSC, Web2app %CR via Onelink+Appsflyer, Ranking keywords high-volume). Sử dụng **[[pyramid-principle|Pyramid Principle]]** để cấu trúc nội dung. BRD phục vụ: PO, Eng Lead, Stakeholder/Management.
 
 Hỗ trợ **2 loại dự án:**
-- **Use Case** (Vay Nhanh / Cinema / Bus) — acquisition-focused, content-heavy
-- **Project** (Merchant Page / CMS feature) — product/platform, limited scope
+- **Use Case** (Vay Nhanh / Cinema / Bus) - acquisition-focused, content-heavy
+- **Project** (Merchant Page / CMS feature) - product/platform, limited scope
 
 ---
 
@@ -34,7 +34,7 @@ Trước khi hỏi user, kiểm tra conversation đã có:
 
 ### Bước 2: Khai Thác Thông Tin (Interview)
 
-Sau khi đọc input, xác định **gap** — thông tin còn thiếu. Hỏi **tối đa 1 lần**, gom tất cả câu hỏi vào 1 message.
+Sau khi đọc input, xác định **gap** - thông tin còn thiếu. Hỏi **tối đa 1 lần**, gom tất cả câu hỏi vào 1 message.
 
 **Thông tin bắt buộc phải có trước khi viết BRD:**
 
@@ -77,7 +77,7 @@ Sau khi đọc input, xác định **gap** — thông tin còn thiếu. Hỏi **
 
 ---
 
-## Cấu Trúc BRD — 2 Variants
+## Cấu Trúc BRD - 2 Variants
 
 ### **Variant A: Use Case BRD** (Vay Nhanh / Cinema / Bus / eSIM)
 Dành cho acquisition-focused, content-heavy, long-term growth.
@@ -127,7 +127,7 @@ Viết theo cấu trúc **SCR (Situation - Complication - Resolution)**:
 - **Complication:** Vấn đề cốt lõi. Tại sao hiện trạng chưa đủ? Số liệu chứng minh. Gap là gì?
 - **Resolution:** Dự án này làm gì để giải quyết? Kết quả kỳ vọng ở mức cao.
 
-*Giữ trong 3-5 đoạn. Đây là phần stakeholder đọc đầu tiên — phải đủ sharp để họ hiểu toàn bộ Why mà không cần đọc tiếp.*
+*Giữ trong 3-5 đoạn. Đây là phần stakeholder đọc đầu tiên - phải đủ sharp để họ hiểu toàn bộ Why mà không cần đọc tiếp.*
 
 ---
 
@@ -136,7 +136,7 @@ Viết theo cấu trúc **SCR (Situation - Complication - Resolution)**:
 Trình bày evidence cho Complication. Bao gồm:
 
 - **Hiện trạng:** Table mô tả trạng thái hiện tại của dự án/tính năng/URL
-- **Data/Metrics hiện có:** Số liệu baseline (traffic, conversion, volume, thị phần — tùy use case)
+- **Data/Metrics hiện có:** Số liệu baseline (traffic, conversion, volume, thị phần - tùy use case)
 - **Phân tích cạnh tranh (nếu relevant):** Đối thủ đang làm gì? Cơ hội chênh lệch?
 - **Trend/Seasonality (nếu relevant):** Dữ liệu thay đổi theo thời gian, emerging trend
 
@@ -148,9 +148,9 @@ Trình bày evidence cho Complication. Bao gồm:
 
 Trả lời 3 câu:
 
-1. **Dự án này phục vụ điều gì?** — Business objective cụ thể (Acquisition / Retention / Revenue / GEO...)
-2. **Ai được phục vụ?** — User segment mục tiêu
-3. **Dự án này KHÔNG phải là gì?** — Out of scope explicit. Quan trọng để tránh scope creep.
+1. **Dự án này phục vụ điều gì?** - Business objective cụ thể (Acquisition / Retention / Revenue / GEO...)
+2. **Ai được phục vụ?** - User segment mục tiêu
+3. **Dự án này KHÔNG phải là gì?** - Out of scope explicit. Quan trọng để tránh scope creep.
 
 ---
 
@@ -342,7 +342,7 @@ Choose **1 North Star** per BRD. Thường cho Use Case = Organic traffic (volum
 | # | Rủi ro | Loại | Khả năng | Impact | Mitigation |
 |---|---|---|---|---|---|
 
-**MoMo Growth Project — Risk Patterns:**
+**MoMo Growth Project - Risk Patterns:**
 
 | Risk Type | Common Risks | Mitigation Strategy |
 |---|---|---|
@@ -397,7 +397,7 @@ Dùng khi có thông tin bổ sung không phù hợp đưa vào body BRD:
 ### Về Data & Metrics
 
 - **Số liệu bắt buộc có nguồn:** GSC (organic traffic), Appsflyer (W2A), SEO tool (ranking)
-- **Baseline & Target phải có logic rõ ràng.** Không đặt target random — phải explain "tại sao target này?"
+- **Baseline & Target phải có logic rõ ràng.** Không đặt target random - phải explain "tại sao target này?"
   - Ví dụ: "GSC hiện tại 1K sessions/month từ keyword cluster 'vay nhanh'. Keyword cluster này có tổng 50K search/month. Target 15% CTR = 7.5K sessions (150% growth)"
 - **Nếu chưa có data → ghi rõ "[cần đo]" hoặc "[cần verify]".** Không hallucinate metrics.
 
@@ -405,7 +405,7 @@ Dùng khi có thông tin bổ sung không phù hợp đưa vào body BRD:
 
 - **JTBD phải anchor từ keyword research.** Không generic "user muốn trải nghiệm tốt"
 - **Functional JTBD = gì mà user search?** Trigger JTBD = tại sao search lúc này?
-- **Nếu không có user research → ghi "Hypothesis — cần validate với user testing"**
+- **Nếu không có user research → ghi "Hypothesis - cần validate với user testing"**
 - **Emotional/Social infer từ product context:** Finance products → trust, speed, simplicity, privacy are key
 
 ### Về Scope & Out of Scope
@@ -416,7 +416,7 @@ Dùng khi có thông tin bổ sung không phù hợp đưa vào body BRD:
 ### Về Priority
 
 - **P1 = launch blocker.** Nếu không có toàn bộ P1 items → không nên launch
-- **Không để toàn bộ là P1 — dấu hiệu chưa prioritize.** Rule of thumb: 40% P1, 40% P2, 20% P3
+- **Không để toàn bộ là P1 - dấu hiệu chưa prioritize.** Rule of thumb: 40% P1, 40% P2, 20% P3
 - **P3 mà không có timeline → cân nhắc move ra Appendix hoặc skip**
 
 ---
@@ -431,7 +431,7 @@ Dùng khi có thông tin bổ sung không phù hợp đưa vào body BRD:
 | **Project quá nhỏ (1 page, 1 feature)** | Viết BRD rút gọn: bỏ Section 5 (JTBD), Section 8-9 nếu không có deps/risks |
 | **Use Case quá lớn (toàn bộ Finance cluster)** | Viết BRD cluster-level (không per-page), detail sẽ trong PRD. Hoặc chia thành multi-BRD per sub-use-case |
 | **User cung cấp slide + text + CSV mixed** | Đọc tất cả, extract thông tin, fill gaps với khai thác từ user. Không duplicate hỏi. |
-| **W2A funnel không setup sẵn** | BRD sẽ include "W2A tracking setup" trong Dependencies hoặc Section 10 (Next Steps) — note blocker level |
+| **W2A funnel không setup sẵn** | BRD sẽ include "W2A tracking setup" trong Dependencies hoặc Section 10 (Next Steps) - note blocker level |
 | **Competitor có ranking cao, user không biết tại sao** | Suggest: "Analyze competitor content (content depth, freshness, backlinks). Add to Section 2 (Context)" → inform JTBD & content strategy |
 | **Seasonality / event impact lớn** | Flag trong Risk + Success Metrics (adjust baseline/target for seasonality factor). Ví dụ: "Cinema traffic peak Dec → target adjusted +50% for that month" |
 

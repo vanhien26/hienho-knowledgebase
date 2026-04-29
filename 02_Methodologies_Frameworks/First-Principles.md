@@ -28,7 +28,7 @@ author: klaus-momo
 version: 1.0.0
 ---
 
-# First-Principles Thinking — Problem Deconstruction Skill
+# First-Principles Thinking - Problem Deconstruction Skill
 
 Based on the reasoning method used by Aristotle, Elon Musk, and other systematic problem solvers.
 
@@ -36,8 +36,8 @@ Based on the reasoning method used by Aristotle, Elon Musk, and other systematic
 
 ## Core Philosophy
 
-> "I think it's important to reason from first principles rather than by analogy. The normal way we conduct our lives is we reason by analogy — we are doing this because it's like something else that was done, or it is like what other people are doing. With first principles, you boil things down to the most fundamental truths and say, 'What are we sure is true?' ... and then reason up from there."
-> — Elon Musk
+> "I think it's important to reason from first principles rather than by analogy. The normal way we conduct our lives is we reason by analogy - we are doing this because it's like something else that was done, or it is like what other people are doing. With first principles, you boil things down to the most fundamental truths and say, 'What are we sure is true?' ... and then reason up from there."
+> - Elon Musk
 
 **First-principles thinking** = breaking down a problem into its fundamental, undeniable truths, then rebuilding solutions from the ground up.
 
@@ -53,13 +53,13 @@ Trong bối cảnh MoMo Web Growth: Ngừng copy best practice SEO generic, ng�
 |---|---|
 | **Problem đã tồn tại lâu, nhiều giải pháp thử nhưng không giải quyết được** | "Chúng ta đã thử A/B/C, vẫn không cải thiện Web-to-App CR" |
 | **Team đang copy competitor mà không rõ lý do** | "Cinema page của VPBank có feature X, mình cũng làm" |
-| **Best practice được nhắc đi nhắc lại nhưng không có evidence** | "Schema giúp tăng CTR" — có thật không? |
-| **Assumption cũ đang được coi là truth** | "Người dùng không muốn click CTA ở đầu page" — ai nói? |
+| **Best practice được nhắc đi nhắc lại nhưng không có evidence** | "Schema giúp tăng CTR" - có thật không? |
+| **Assumption cũ đang được coi là truth** | "Người dùng không muốn click CTA ở đầu page" - ai nói? |
 | **Cần thiết kế giải pháp cho vấn đề mới chưa có precedent** | Use Case mới chưa ai làm, không có benchmark |
-| **Performance plateau — growth stuck** | Traffic/Conversion không tăng dù đã tối ưu mọi thứ |
-| **Mâu thuẫn nội bộ — stakeholder disagreement** | "SEO muốn A, Product muốn B, UX muốn C" → quay về truth |
+| **Performance plateau - growth stuck** | Traffic/Conversion không tăng dù đã tối ưu mọi thứ |
+| **Mâu thuẫn nội bộ - stakeholder disagreement** | "SEO muốn A, Product muốn B, UX muốn C" → quay về truth |
 
-**Rule of thumb:** Nếu câu trả lời cho "tại sao chúng ta làm việc này?" là "vì ai đó cũng làm" hoặc "vì đây là best practice" — đó là signal để chạy first-principles.
+**Rule of thumb:** Nếu câu trả lời cho "tại sao chúng ta làm việc này?" là "vì ai đó cũng làm" hoặc "vì đây là best practice" - đó là signal để chạy first-principles.
 
 ---
 
@@ -67,10 +67,10 @@ Trong bối cảnh MoMo Web Growth: Ngừng copy best practice SEO generic, ng�
 
 | Tình huống | Lý do |
 |---|---|
-| **Vấn đề đã có solution rõ ràng, low-risk** | Không cần deconstruct "thêm canonical tag" — đã được chứng minh |
+| **Vấn đề đã có solution rõ ràng, low-risk** | Không cần deconstruct "thêm canonical tag" - đã được chứng minh |
 | **Cần execution nhanh, không có thời gian** | First-principles tốn thời gian, không dùng cho hotfix |
 | **User đã xác nhận assumption đúng** | Đã có data từ GSC/GA4/User interview → dùng data đó, không cần deconstruct |
-| **Vấn đề là do lỗi kỹ thuật đơn thuần** | 404 page, broken links — fix thôi, không cần triết lý |
+| **Vấn đề là do lỗi kỹ thuật đơn thuần** | 404 page, broken links - fix thôi, không cần triết lý |
 
 **First-principles là công cụ chiến lược, không phải operational default.**
 
@@ -96,15 +96,15 @@ Viết ra tất cả assumptions đang được coi là "truth" trong vấn đ�
 **Cách làm:**
 - Hỏi: "Chúng ta đang giả định điều gì là đúng?"
 - Hỏi: "Chúng ta đang làm việc này vì lý do gì?"
-- Không đánh giá đúng/sai ở bước này — chỉ liệt kê.
+- Không đánh giá đúng/sai ở bước này - chỉ liệt kê.
 
 **Output format:**
 ```markdown
 ## Current Assumptions (cần kiểm tra)
-1. [Assumption 1] — VD: "Người dùng không muốn click CTA ở đầu trang vì chưa đủ trust"
-2. [Assumption 2] — VD: "FAQ schema giúp tăng AI Overview citation"
-3. [Assumption 3] — VD: "Content càng dài càng tốt cho SEO"
-4. [Assumption 4] — VD: "Phải có smart banner thì mới convert web-to-app"
+1. [Assumption 1] - VD: "Người dùng không muốn click CTA ở đầu trang vì chưa đủ trust"
+2. [Assumption 2] - VD: "FAQ schema giúp tăng AI Overview citation"
+3. [Assumption 3] - VD: "Content càng dài càng tốt cho SEO"
+4. [Assumption 4] - VD: "Phải có smart banner thì mới convert web-to-app"
 ```
 
 ### Step 2: Break Down to Fundamental Truths
@@ -125,10 +125,10 @@ Hỏi liên tục "tại sao" và "có thật không" cho đến khi chạm đ�
 **Output format:**
 ```markdown
 ## Fundamental Truths (verified hoặc không thể bác bỏ)
-1. [Truth 1] — VD: "User đến trang web với một job cần hoàn thành. Nếu job không được serve, họ rời đi."
-2. [Truth 2] — VD: "AI Overview citations dựa trên khả năng page trả lời câu hỏi một cách trực tiếp và đáng tin cậy."
-3. [Truth 3] — VD: "Web-to-App conversion xảy ra khi user thấy value của việc mở app > friction của việc mở app."
-4. [Truth 4] — VD: "Google xếp hạng page dựa trên khả năng đáp ứng search intent, không phải số lượng schema hay từ khóa."
+1. [Truth 1] - VD: "User đến trang web với một job cần hoàn thành. Nếu job không được serve, họ rời đi."
+2. [Truth 2] - VD: "AI Overview citations dựa trên khả năng page trả lời câu hỏi một cách trực tiếp và đáng tin cậy."
+3. [Truth 3] - VD: "Web-to-App conversion xảy ra khi user thấy value của việc mở app > friction của việc mở app."
+4. [Truth 4] - VD: "Google xếp hạng page dựa trên khả năng đáp ứng search intent, không phải số lượng schema hay từ khóa."
 ```
 
 **Cách phân biệt Truth vs Assumption:**
@@ -138,10 +138,10 @@ Hỏi liên tục "tại sao" và "có thật không" cho đến khi chạm đ�
 | "Đã được chứng minh bằng data của MoMo" | Truth (có evidence) |
 | "Được Google/Search Central xác nhận" | Truth (external authority) |
 | "Logic không thể bác bỏ" | Truth (first-principles) |
-| "Ai cũng biết thế" | Assumption — cần kiểm tra |
-| "Best practice trong SEO" | Assumption — cần kiểm tra |
-| "Competitor làm thế" | Assumption — cần kiểm tra |
-| "Team SEO cũ nói thế" | Assumption — cần kiểm tra |
+| "Ai cũng biết thế" | Assumption - cần kiểm tra |
+| "Best practice trong SEO" | Assumption - cần kiểm tra |
+| "Competitor làm thế" | Assumption - cần kiểm tra |
+| "Team SEO cũ nói thế" | Assumption - cần kiểm tra |
 
 ### Step 3: Identify Contradictions & Gaps
 
@@ -153,9 +153,9 @@ So sánh assumptions (Step 1) với fundamental truths (Step 2). Tìm chỗ nào
 
 | Assumption | Fundamental Truth | Contradiction? | Implication |
 |------------|------------------|----------------|-------------|
-| "User không click CTA ở đầu page" | "User muốn hoàn thành job nhanh nhất có thể" | YES — nếu CTA ở đầu giúp hoàn thành job nhanh, user sẽ click | Cần A/B test CTA sớm, không assume auto-bad |
-| "Schema = AI citation" | "AI citation dựa trên answer quality + trust signals" | PARTIAL — schema helps parsing nhưng không phải cause | Schema là điều kiện cần, không đủ. Content quality mới là truth |
-| "Content dài = tốt" | "Google xếp hạng dựa trên intent match, không phải word count" | YES — nếu content dài nhưng không answer intent, vẫn fail | Focus on coverage, not length |
+| "User không click CTA ở đầu page" | "User muốn hoàn thành job nhanh nhất có thể" | YES - nếu CTA ở đầu giúp hoàn thành job nhanh, user sẽ click | Cần A/B test CTA sớm, không assume auto-bad |
+| "Schema = AI citation" | "AI citation dựa trên answer quality + trust signals" | PARTIAL - schema helps parsing nhưng không phải cause | Schema là điều kiện cần, không đủ. Content quality mới là truth |
+| "Content dài = tốt" | "Google xếp hạng dựa trên intent match, không phải word count" | YES - nếu content dài nhưng không answer intent, vẫn fail | Focus on coverage, not length |
 
 **Critical signal:** Nếu assumption và truth mâu thuẫn hoàn toàn → assumption sai, phải loại bỏ khỏi strategy.
 
@@ -184,7 +184,7 @@ Dựa trên fundamental truths (Step 2) và gaps (Step 3), thiết kế giải p
 ...
 ```
 
-**Ví dụ cụ thể — Web-to-App Conversion:**
+**Ví dụ cụ thể - Web-to-App Conversion:**
 
 | Assumption cũ | Truth | Solution mới |
 |---|---|---|
@@ -220,51 +220,51 @@ First-principles không kết thúc ở lý thuyết. Mọi rebuilt solution ph�
 
 **Problem:** Team đang debate có nên implement schema trên mọi page không. "Best practice là phải có schema."
 
-**Step 1 — Assumptions:**
+**Step 1 - Assumptions:**
 1. Schema giúp tăng CTR
 2. Schema giúp được AI Overview cite
 3. Thiếu schema = Google đánh giá thấp hơn
 
-**Step 2 — Truths:**
+**Step 2 - Truths:**
 1. Google sử dụng schema để hiểu content, không phải để xếp hạng trực tiếp (Google Search Central đã confirm)
 2. AI Overview citations dựa trên content quality + trust signals + answer-first format
 3. Schema giúp AI parse structured data (fact, date, price) nhưng không guarantee citation
 
-**Step 3 — Contradictions:**
+**Step 3 - Contradictions:**
 - Assumption #2 bị bác bỏ một phần: schema helps nhưng không phải cause
 - Assumption #3 sai hoàn toàn: Google không "đánh giá thấp" vì thiếu schema
 
-**Step 4 — Rebuilt solution:**
+**Step 4 - Rebuilt solution:**
 - **Stop:** Implement schema vì "phải có"
 - **Start:** Implement schema CHỈ KHI nó serve một job cụ thể (FAQ schema cho anxiety resolution, HowTo cho step-by-step, Product cho transaction page)
 - **Truth-based:** Schema là công cụ, không phải mục tiêu
 
-**Step 5 — Test:**
+**Step 5 - Test:**
 - Compare pages có schema vs không schema (cùng intent, cùng content quality) → có差異 gì trong AI Overview citation rate?
 
 ### Example 2: "Content Length for SEO"
 
 **Problem:** Content team đang được yêu cầu viết bài 2000+ từ vì "content dài rank tốt hơn."
 
-**Step 1 — Assumptions:**
+**Step 1 - Assumptions:**
 1. Content dài = rank cao hơn
 2. Competitor viết dài → mình phải dài hơn
 3. User muốn đọc content dài
 
-**Step 2 — Truths:**
+**Step 2 - Truths:**
 1. Google rank dựa trên search intent match + content coverage, không phải word count
-2. User có consumption job: "Tôi muốn tìm câu trả lời nhanh" hoặc "Tôi muốn deep dive" — tùy intent
+2. User có consumption job: "Tôi muốn tìm câu trả lời nhanh" hoặc "Tôi muốn deep dive" - tùy intent
 3. Bounce rate và time on page phản ánh intent match
 
-**Step 3 — Contradictions:**
+**Step 3 - Contradictions:**
 - Assumption #1 sai: correlation không phải causation. Content dài thường đi kèm coverage tốt hơn, nhưng coverage mới là truth
 
-**Step 4 — Rebuilt solution:**
+**Step 4 - Rebuilt solution:**
 - **Stop:** Set KPI theo word count
 - **Start:** Set KPI theo "does this page answer the primary question in first 100 words?" + "does it cover all subtopics user needs?"
 - **Truth-based:** Coverage > Length
 
-**Step 5 — Test:**
+**Step 5 - Test:**
 - A/B test: short but comprehensive (800 words) vs long (2000 words) for same intent → compare rank + conversion
 
 ---
@@ -339,7 +339,7 @@ Trigger: [User nói gì để kích hoạt skill này]
 
 3. **Không dùng first-principles cho mọi quyết định.** Chỉ dùng khi problem thực sự stuck hoặc assumption đang gây sai lệch.
 
-4. **Rebuilt solutions phải actionable.** Không dừng ở "nhận ra assumption sai" — phải có giải pháp thay thế cụ thể.
+4. **Rebuilt solutions phải actionable.** Không dừng ở "nhận ra assumption sai" - phải có giải pháp thay thế cụ thể.
 
 5. **Luôn có validation plan.** First-principles không phải "tôi nghĩ vậy nên đúng". Phải test.
 
@@ -351,15 +351,15 @@ Trigger: [User nói gì để kích hoạt skill này]
 
 ## Anti-Patterns (đừng làm)
 
-1. **Dùng first-principles để biện minh cho ý kiến cá nhân** — "Theo first-principles thì solution của tôi đúng" mà không qua Step 2 (fundamental truths)
+1. **Dùng first-principles để biện minh cho ý kiến cá nhân** - "Theo first-principles thì solution của tôi đúng" mà không qua Step 2 (fundamental truths)
 
-2. **Bỏ qua evidence hiện có** — Có data từ GSC rồi mà vẫn deconstruct → phí thời gian
+2. **Bỏ qua evidence hiện có** - Có data từ GSC rồi mà vẫn deconstruct → phí thời gian
 
-3. **Không phân biệt được assumption và truth** — "User thích content ngắn" là assumption, không phải truth
+3. **Không phân biệt được assumption và truth** - "User thích content ngắn" là assumption, không phải truth
 
-4. **Rebuild solution mà không test** — First-principles xong, implement ngay mà không validate → nguy cơ sai vẫn cao
+4. **Rebuild solution mà không test** - First-principles xong, implement ngay mà không validate → nguy cơ sai vẫn cao
 
-5. **Áp dụng cho vấn đề quá nhỏ** — "Nên dùng H1 hay title tag nào trước" không cần first-principles
+5. **Áp dụng cho vấn đề quá nhỏ** - "Nên dùng H1 hay title tag nào trước" không cần first-principles
 
 ---
 
@@ -367,7 +367,7 @@ Trigger: [User nói gì để kích hoạt skill này]
 
 - **YMYL truth:** Trong tài chính, trust là fundamental truth. Mọi giải pháp phải tăng (hoặc ít nhất không giảm) trust signal.
 - **Web-to-App truth:** User không muốn chuyển app nếu web đã solve được job. Đây là truth cốt lõi.
-- **GEO truth:** AI Overview ưu tiên câu trả lời trực tiếp, ngắn gọn, có nguồn — không phải content dài.
+- **GEO truth:** AI Overview ưu tiên câu trả lời trực tiếp, ngắn gọn, có nguồn - không phải content dài.
 - **Negative SEO truth:** momo.vn từng bị tấn công backlink → truth: "Cần monitor backlink profile thường xuyên" là truth, không phải "có backlink là tốt" (assumption cũ).
 
 ---

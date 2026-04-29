@@ -22,14 +22,18 @@ Khi nhận yêu cầu cụ thể, hãy kích hoạt (load) các Skill tương �
 
 ### 2. Soạn thảo & Tài liệu
 *   **[[brd-momo]]**: Kỹ năng viết BRD chuẩn MoMo (Situation - Complication - Resolution).
-*   **[[momo-seo-content-brief]]**: Tạo Content Brief chuẩn cho Inbound/Agency.
+*   **[[genai-prompt-engineering]]**: Kỹ thuật điều khiển AI tạo nội dung chuẩn SEO/GEO.
+*   **[[momo-blog-prompt-1-outline]]**: Prompt Master cho việc lên Outline bài viết.
+*   **[[momo-blog-prompt-2-writer]]**: Prompt Master cho việc viết nội dung chi tiết.
 *   **[[use-case-document]]**: Cấu trúc tài liệu chi tiết cho từng Use Case.
 *   **[[momo-html-formatting-skill]]**: Design System cho các báo cáo HTML nội bộ.
 *   **[[web-tracking]]**: Setup và audit tracking chuẩn GTM/GA4/Appsflyer.
 
 ### 3. Audit & Chất lượng
-*   **[[Seo-Geo-audit]]**: Quy trình kiểm soát chất lượng SEO và GEO (AI Engine Optimization).
-*   **[[mospark-seo-geo-score-brd|MoSpark SEO/GEO Scoring]]**: Hệ thống chấm điểm và kiểm soát nội dung trước khi Publish trên MoSpark.
+*   **[[Seo-Geo-audit]]**: Quy trình kiểm soát chất lượng SEO và GEO chung.
+*   **[[momo-seo-geo-guideline]]**: Guideline chi tiết về mật độ từ khóa và AI Search.
+*   **[[momo-ymyl-guideline]]**: Nguyên tắc an toàn nội dung tài chính/pháp lý.
+*   **[[mospark-seo-geo-score-brd|MoSpark SEO/GEO Scoring]]**: Hệ thống chấm điểm tự động.
 *   **[[Zero-Hallucination]]**: Nguyên tắc kiểm soát dữ liệu, không được bịa đặt thông tin.
 
 ---

@@ -304,7 +304,7 @@ Mỗi Cell Team tiếp cận Hiến theo framework: **Research → Build Web/Fun
 
 ## 4. QUY TRÌNH LÀM VIỆC
 
-### 4.1 Web Build Workflow — 9 Bước (v3.0)
+### 4.1 Web Build Workflow - 9 Bước (v3.0)
 
 **Tài liệu gốc:** MoMo_WebBuild_Workflow_2026.docx | Out-App Traffic, Growth Platform Division
 
@@ -679,7 +679,7 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 | Batch | Nội dung | Status |
 |-------|----------|--------|
 | Batch 1 | SEO/GEO Guideline + YMYL Guideline + Blog Prompt (Outline + Writer) | Done - sẵn sàng integrate |
-| Batch 2 | Business Context Layer: Business Model, Target Audience, Value Proposition, Promotion Scheme theo từng Use Case/Project — mỗi lần Create New Article sẽ tự động pull context này để output chính xác hơn | Planned |
+| Batch 2 | Business Context Layer: Business Model, Target Audience, Value Proposition, Promotion Scheme theo từng Use Case/Project - mỗi lần Create New Article sẽ tự động pull context này để output chính xác hơn | Planned |
 
 ---
 

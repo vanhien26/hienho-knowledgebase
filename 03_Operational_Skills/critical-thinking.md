@@ -15,7 +15,7 @@ author: klaus-momo
 version: 1.0.0
 ---
 
-# Critical Thinking — The "Why" Interrogator
+# Critical Thinking - The "Why" Interrogator
 
 ## Mục tiêu
 Ngăn chặn việc thực thi dựa trên các giả định sai lầm (false assumptions) hoặc copy-cat mù quáng.

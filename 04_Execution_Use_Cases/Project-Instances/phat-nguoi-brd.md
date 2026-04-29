@@ -13,12 +13,12 @@
 
 | Item | Status | Ghi chú |
 |------|--------|---------|
-| Launch timeline | **Q2/2026 - trong 2 tháng** | Hard deadline |
-| Web Dev resource | **Confirmed - Dedicated full-time** | Available ngay |
-| API TTDK cho Web | **Confirmed - Available** | Cần validate response time |
-| Web platform | Pending | Open question #2 |
-| Product ownership | Pending | Open question #3 |
-| Legal review | Pending | Open question #4 |
+| Launch timeline | **P0 - Live trước 05/2026** | Foundation Phase |
+| Web Dev resource | **Confirmed - Dedicated full-time** | Sẵn sàng thực thi |
+| API TTDK cho Web | **Confirmed - Available** | Đã sẵn sàng kết nối |
+| Web platform | **MoSpark (MoBase V2)** | Đã quyết định platform |
+| Product ownership | **Hiến (Governance) + Bảo (Lead)** | Đã phân vai rõ ràng |
+| Legal review | In Progress | Đang review mức phạt ND168 |
 
 > **Implication của Q2/2026 deadline:** Với 2 tháng và dedicated Dev, Phase 1 hoàn toàn khả thi nếu quyết định platform và ownership trong tuần đầu tiên. Mọi scope creep vào Phase 1 phải được cut - chỉ giữ 3 Tool Pages + 3 Blog P1 + Technical SEO setup.
 

@@ -14,7 +14,7 @@ Dưới đây là bản đồ điều hướng dự án. Agent phải xác đị
 |:---:|---|---|---|---|
 | **01** | **Research & Discovery** | Hiến + Inbound | [[jtbd-analysis]] | [ ] [[jtbd-analysis|JTBD Mapping]] |
 | **02** | **Thiết lập Mục tiêu** | Hiến | [[brd-momo]] | [ ] [[pyramid-principle|Pyramid Principle]] |
-| **03** | **Product Brief** | Hiến | [[momo-seo-content-brief]] | [ ] [[critical-thinking|Logic Check]] |
+| **03** | **Product Brief** | Hiến | [[genai-prompt-engineering]] | [ ] [[critical-thinking|Logic Check]] |
 | **04** | **Sprint & Build** | Web Platform | [[momo-html-formatting-skill]] | [ ] Technical Standard |
 | **05** | **Build Demo** | Web Platform | [[hienho-momo-master-doc]] | [ ] Internal Link Integrity |
 | **06** | **SEO Review (Gate 1)** | Hiến | [[Seo-Geo-audit]] | [ ] **Gate 1: SEO/GEO Score** |
@@ -44,9 +44,11 @@ Khi tiếp nhận yêu cầu về dự án, Agent thực hiện theo quy trình 
 
 | Dự án | Giai đoạn hiện tại | PIC | Status | Link tài liệu |
 |---|---|---|---|---|
-| **Phạt Nguội** | Step 08: Roll Out | Hiến | P0 - Live đầu T5 | [phat-nguoi-brd.md](file:///Users/hienhv/HienHv/from%20Klaus/hovanhien_knowledgebase_momo/04_Execution_Use_Cases/Project-Instances/phat-nguoi-brd.md) |
-| **Ads Manager** | Step 03: Product Brief | Thuận/Hiến | In Review | [ads-manager-brd-final.md](file:///Users/hienhv/Downloads/ads-manager-brd-final.md) |
-| **VTS Merchant** | Step 01: Research | Hiến | Active | [doi-tac-brd.md](file:///Users/hienhv/HienHv/from%20Klaus/hovanhien_knowledgebase_momo/04_Execution_Use_Cases/Project-Instances/doi-tac-brd.md) |
+| **Phạt Nguội** | Step 08: Roll Out | Hiến | **P0 - Live đầu T5** | [[phat-nguoi-brd]] |
+| **Ads Manager** | Step 09: Monitoring | Thuận/Hiến | **Balloon Ads Deployed (Pilot)** | [[ads-manager-brd]] |
+| **MoSpark Migration** | Step 01: Research | Bảo/Hiến | Active - Mapping Phase | [[mospark-migration-brd]] |
+| **GenAI Content** | Step 03: Build | Trọng/Hiến | Claude API Integration | [[genai-content-brd]] |
+| **LP Builder** | Step 09: Monitoring | Web Platform | Q2 Onboarding GPD | [[mospark-migration-brd]] |
 
 ---
 
