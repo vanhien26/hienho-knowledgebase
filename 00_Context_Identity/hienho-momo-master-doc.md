@@ -1,5 +1,5 @@
 # MASTER DOC - Văn Hiến @ MoMo
-> Version: 2.3 | Last updated: 2026-04-29 | Maintained by: Văn Hiến
+> Version: 2.4 | Last updated: 2026-05-01 | Maintained by: Văn Hiến
 
 ---
 
@@ -128,7 +128,7 @@ flowchart TD
     subgraph Leadership[GPD Leadership Team]
         Cong[Anh Công - VP\nExpect: Framework & Market Scale]:::leadership
         Tue[Anh Tuệ - Head of User Engagement\nExpect: MAU, DLU Uplift]:::leadership
-        Bao[Anh Bảo - Web Platform Manager\nExpect: Technical & Web-to-App]:::tech
+        Bao[Anh Bảo - Web Platform Senior Manager\nExpect: Technical & Web-to-App]:::tech
         
         Cong --> Tue
         Cong --> Bao
@@ -180,12 +180,20 @@ flowchart TD
 
 | Field | Detail |
 |-------|--------|
-| Lead | Bảo (Production Manager) |
+| Lead | Bảo (Senior Manager) |
 | Reporting | Trực tiếp Công (VP) |
 | Scope | Quản lý, tư vấn Cell Team xây dựng sản phẩm trên Web theo tiêu chuẩn product design |
 | Trách nhiệm | Vận hành nền tảng web, tăng trưởng Web-to-App, standardize tracking (truth of source) |
 | Tools | Xây dựng công cụ cho Out-App Traffic / Cell Team / Inbound vận hành nội dung |
 | KPI chính | Web-to-App conversion, New User, MAU, MEU (chung với GPD) |
+
+**Cấu trúc team:**
+
+| Người | Vai trò | Thành viên |
+|-------|---------|-----------|
+| Bảo | Senior Manager | - |
+| Hiếu | Back-end Team Leader | Hoài Anh (Tech Solution Lead), Duy (Senior Software Engineer) |
+| Hùng | Front-End Team Leader | Thuận, Lộc, Nhật, Trọng (Senior Software Engineer) |
 
 ### 2.4 Inbound Marketing (Mai - thuộc BMC)
 
@@ -413,6 +421,7 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 | Dự án | Status | Owner | Ghi chú |
 |-------|--------|-------|---------|
 | Balloon Ads | Done | Hiến | - |
+| Ads Manager | Step 09: Monitoring | Hiến + Thuận | Balloon Ads deployed 01/04/2026 |
 | Popup Ads - Billpay | Done | Hiến | 22 pages, tiered placement |
 | Zero-Traffic URL Audit | On Track | Hiến | 3,670 URLs / 16 Use Cases |
 | Full Funnel Tracking Pipeline | In Progress | DA (Hải/Hoàng) + Hiến observe | GA4 done, GSC+Appsflyer đang triển khai |
@@ -430,7 +439,7 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 | Merchant Page / Đối tác (VTS Cross-Sale) | Active | Hiến | BRD v4 done |
 | Off-Page Strategy & Backlink Governance | Active | Hiến (standard) | BRD v2 done, Inbound execute |
 | Tech Foundation Gate + Angle Governance SOP | Planning | Hiến | Framework defined, cần formalize |
-| MoSpark SEO/GEO Scoring BRD | In Review | Hiến + Trọng | BRD v1.1, 3 issues cần fix |
+| MoSpark SEO/GEO Scoring BRD | In Review | Hiến + Nhật | BRD v1.1, 3 issues cần fix |
 
 ---
 
@@ -983,7 +992,7 @@ Spoke: /thanh-toan-momo-{brand} → Breadcrumb về VTS Hub → Related merchant
 2. Blog wordcount ngưỡng trần 1,500 từ không hợp lý - đề xuất bỏ trần, giữ sàn 800 từ
 3. CTA detection instruction mờ - cần spec rõ attribute name
 
-**PIC:** Hiến (SEO spec) + Trọng/Web Platform (implement trong MoSpark)
+**PIC:** Hiến (SEO spec) + Nhật/Web Platform (implement trong MoSpark)
 
 **Status:** BRD In Review - cần fix 3 issues và brief Dev
 
@@ -1027,12 +1036,12 @@ Spoke: /thanh-toan-momo-{brand} → Breadcrumb về VTS Hub → Related merchant
 | Trigger tiêu cực | Thích Framework, cơ chế Sandbox (Có thể sai nhưng phải làm) |
 | Ghi chú | Hiến không direct với Công - mọi escalation đi qua Tuệ |
 
-### 6.3 Bảo - Production Manager (Web Platform)
+### 6.3 Bảo - Senior Manager (Web Platform)
 
 | Field | Detail |
 |-------|--------|
 | Tên | Bảo |
-| Vai trò | Production Manager - Web Platform |
+| Vai trò | Senior Manager - Web Platform |
 | Reporting line | Under Công (VP) trực tiếp |
 | Quan hệ với Hiến | Đồng cấp GPD - align trực tiếp, không qua Tuệ |
 | Touchpoint | Technical issues, new web requests, SEO/GEO potential projects |
@@ -1058,6 +1067,7 @@ Spoke: /thanh-toan-momo-{brand} → Breadcrumb về VTS Hub → Related merchant
 | 2026-04-18 | 1.7 | Update 5.10: bổ sung Batch roadmap - Batch 1 Done (Skills + Prompts), Batch 2 Planned (Business Context Layer: Target Audience, Value Prop, Promotion Scheme theo Project/Use Case) |
 | 2026-04-19 | 1.8 | Clarify vai trò lõi: Hiến là Govern không Execute. Agency không access trực tiếp momo.vn, mọi hoạt động qua Inbound. Update Ownership map và Out-App Traffic scope |
 | 2026-04-24 | 2.0 | Bổ sung từ các session khác: 5.12 MoSpark Migration (kiến trúc V2, pre-publish gate SEO), 5.13 VTS SEO/GEO Growth (SoV targets 3 thị trường, activities, scope), 5.14 Content Governance Framework (decision tree ownership Inbound vs Out-App Traffic). Cập nhật MoLanding = MoSpark tên cũ/mới |
+| 2026-05-01 | 2.4 | Cập nhật cấu trúc team Web Platform: Bảo = Senior Manager; Hiếu = Back-end TL (Hoài Anh - Tech Solution Lead, Duy - Senior SE); Hùng = Front-End TL (Thuận, Lộc, Nhật, Trọng - Senior SE). Cập nhật PIC dự án: SEO/GEO Scoring = Hiến + Nhật; Ads Manager = Hiến + Thuận |
 | 2026-04-29 | 2.3 | Cập nhật từ Web Platform OKR 2026: Org Chart T4 (Hiến report Bảo+Công, Bảo = Project Lead Out-App Traffic từ 10/04); T5 Out-App Traffic thành team cross-functional riêng; Phạt Nguội nâng P0 (CEO mandate, target live đầu T5); GenAI Content đang tích hợp Claude API, pilot Phạt Nguội; Full Funnel Tracking Pipeline status (GA4 done, GSC+Appsflyer đang triển khai, Hiến observe); bổ sung OKR alignment và role mới cho Bảo |
 | 2026-04-27 | 2.2 | Update quy trình làm việc theo WebBuild Workflow v3.0: thay Cell Team Engagement Flow bằng 9-step workflow đầy đủ với RACI, gates, roll out order; xóa 4.1 Workflow Chain (skill-based, personal use only); loại bỏ PostHog khỏi tracking stack (không khả thi) - chỉ dùng GA4/GTM/Appsflyer/BigQuery; tracking ownership chuyển về DA (Hải/Hoàng); xóa 4.4 Web Ads Event Schema (dự án Ads Manager, Hiến không tham gia); renumber sections 4.x |
 | 2026-04-27 | 2.1 | Bổ sung bản chỉnh sửa của Hiến (Leadership Intelligence Công + Bảo đã điền); thêm 5 dự án/task mới: 5.15 Cinema (1M traffic, zero-traffic URL strategy), 5.16 Merchant Page/Đối tác VTS (BRD v4), 5.17 Off-Page Governance (BRD v2, disavow SOP), 5.18 Tech Foundation Gate + Angle Governance SOP, 5.19 MoSpark SEO Scoring BRD (v1.1, 3 issues); update Status Board với 19 items |
