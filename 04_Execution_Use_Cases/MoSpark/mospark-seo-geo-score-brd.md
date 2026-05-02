@@ -126,11 +126,11 @@ Các field editor phải nhập trước khi Scoring chạy. Map với field hi�
 
 ### 5.2 Ngưỡng publish
 
-| Ngưỡng | Điều kiện |
-|--------|-----------|
-| **Blocked** | Có ít nhất 1 Hard Block item fail - bất kể tổng score bao nhiêu |
-| **Warning** | Score 60-79 và không có Hard Block fail |
-| **Pass** | Score ≥ 80 và không có Hard Block fail |
+| Ngưỡng | Điều kiện | Behavior |
+|--------|-----------|----------|
+| **Blocked** | Có ít nhất 1 Hard Block item fail - bất kể tổng score bao nhiêu | Nút Publish bị disable hoàn toàn |
+| **Warning** | Score 60-79 và không có Hard Block fail | Nút Publish enabled với badge "⚠ Warning" - vẫn publish được |
+| **Pass** | Score ≥ 80 và không có Hard Block fail | Nút Publish enabled bình thường |
 
 ---
 

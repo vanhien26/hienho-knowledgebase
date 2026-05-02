@@ -3,24 +3,25 @@
 > **Role:** Master Controller / Project Lifecycle Engine
 > **Purpose:** Điều phối việc áp dụng Principles, Methodologies và Skills vào 9 bước Web Build Workflow.
 > **Owner:** Văn Hiến
+> **Operational Engine:** [[OPERATIONAL_ROUTINE]]
 
 ---
 
 ## 1. Web Build Workflow Engine
 
-Dưới đây là bản đồ điều hướng dự án. Agent phải xác định dự án đang ở bước nào để "load" các tài liệu tương ứng.
+Dưới đây là bản đồ điều hướng dự án. Agent phải xác định dự án thuộc `04_Execution_Use_Cases` đang ở bước nào (hoặc hỏi User).
 
 | Bước | Tên Giai Đoạn | Stakeholder Chủ Trì | Skill/Methodology | Gate Check (Core Principle) |
 |:---:|---|---|---|---|
 | **01** | **Research & Discovery** | Hiến + Inbound | [[jtbd-analysis]] | [ ] [[jtbd-analysis|JTBD Mapping]] |
 | **02** | **Thiết lập Mục tiêu** | Hiến | [[brd-momo]] | [ ] [[pyramid-principle|Pyramid Principle]] |
-| **03** | **Product Brief** | Hiến | [[genai-prompt-engineering]] | [ ] [[critical-thinking|Logic Check]] |
-| **04** | **Sprint & Build** | Web Platform | [[momo-html-formatting-skill]] | [ ] Technical Standard |
-| **05** | **Build Demo** | Web Platform | [[hienho-momo-master-doc]] | [ ] Internal Link Integrity |
-| **06** | **SEO Review (Gate 1)** | Hiến | [[Seo-Geo-audit]] | [ ] **Gate 1: SEO/GEO Score** |
-| **07** | **Sign-off (Gate 2)** | Hiến | [[Web2App-Pipeline]] | [ ] **Gate 2: Foundation Checklist** |
-| **08** | **Roll Out & Content** | Inbound | [[use-case-document]] | [ ] [[mospark-seo-geo-score-brd|Publish Gate]] |
-| **09** | **Monitoring** | Hiến + Inbound | [[web-tracking]] | [ ] Organic Traffic Growth |
+| **03** | **Product Brief + Tracking Plan** | Hiến + PO Cell | [[genai-prompt-engineering]] | [ ] [[critical-thinking|Logic Check]] |
+| **03.5** | **Feasibility Sync với Cell Team** | Hiến + PO Cell | [[brd-momo]] | [ ] Scope v1 xác nhận |
+| **05** | **Sprint Planning & Coding** | PO Cell + Dev | [[momo-html-formatting-skill]] | [ ] Technical Standard |
+| **06** | **SEO Review + QA Testing (Gate 1)** | Hiến + Dev | [[Seo-Geo-audit]] | [ ] **Gate 1: SEO/GEO Score** |
+| **07** | **Staging & Sign-off (Gate 2)** | Hiến + PO Cell + Dev | [[Web2App-Pipeline]] | [ ] **Gate 2: Foundation Checklist** |
+| **08** | **Roll Out (Production)** | Hiến + Dev | [[use-case-document]] | [ ] [[mospark-seo-geo-score-brd|Publish Gate]] |
+| **09** | **Post-Launch Monitoring** | Hải/Hoàng (DA) + Hiến | [[web-tracking]] | [ ] Organic Traffic Growth |
 
 ---
 
@@ -49,6 +50,10 @@ Khi tiếp nhận yêu cầu về dự án, Agent thực hiện theo quy trình 
 | **MoSpark Migration** | Step 01: Research | Bảo/Hiến | Active - Mapping Phase | [[mospark-migration-brd]] |
 | **GenAI Content** | Step 03: Build | Trọng/Hiến | Claude API Integration | [[genai-content-brd]] |
 | **LP Builder** | Step 09: Monitoring | Web Platform | Q2 Onboarding GPD | [[mospark-migration-brd]] |
+| **VTS/Đối Tác** | Step 01: Research | Hiến | Active - BRD done, chờ Legacy Audit + align VTS PO | [[doi-tac-brd]] |
+| **Vay Nhanh** | Step 02: Thiết lập Mục tiêu | Hiến + Inbound | Pending stakeholder review - Keyword/GSC/Ranking baseline done | [[vay-nhanh-brd]] |
+| **BHXM** | Step 01: Research | Hiến | Draft - chưa có growth plan post-spike | [[bhxm-brd]] |
+| **eSIM Du Lịch** | Step 01: Research | Hiến | Draft - chờ PO + Dev review | [[esim-du-lich-brd]] |
 
 ---
 

@@ -1,10 +1,15 @@
-# BRD: Bảo Hiểm Xe Máy - Web Growth
+# BRD: Bảo Hiểm Xe Máy - Web Growth (SEO/GEO Project)
 
 > **Project:** Bảo Hiểm Xe Máy Web Growth   
 > **Main URL:** momo.vn/bao-hiem-xe-may         
+> **Division:** FS (Financial Services)
+> **Use Case:** InsurTech
+> **Product:** FS - InsurTech
+> **SEO/GEO Project ID:** `bao-hiem-xe-may`
 > **Owner:** GPD - Out-App Traffic  
-> **Version:** 1.0 · March 2026         
-> **Status:** Draft 
+> **Governance:** Văn Hiến (SEO & GEO Lead)
+> **Version:** 1.1 · March 2026         
+> **Status:** Draft - Division/Product Metadata 
 
 ---
 

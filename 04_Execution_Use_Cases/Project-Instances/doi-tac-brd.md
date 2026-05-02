@@ -1,10 +1,15 @@
-# BRD: Đối Tác MoMo - Business/Merchant Page
+# BRD: Đối Tác MoMo - Business/Merchant Page (SEO/GEO Project)
 
-> **Project:** Business/Merchat Page         
+> **Project:** Business/Merchant Page         
 > **Main URL:** momo.vn/doi-tac     
+> **Division:** GPD (Growth & Product Development)  
+> **Use Case:** Merchant Pages  
+> **Product:** GPD - Web Platform  
+> **SEO/GEO Project ID:** `doi-tac`  
 > **Owner:** GPD    
-> **Version:** 1.0 · April 2026  
-> **Status:** Draft
+> **Governance:** Văn Hiến (SEO & GEO Lead)  
+> **Version:** 1.1 · April 2026  
+> **Status:** On Progress - Division/Product Metadata  
 
 ---
 
@@ -459,7 +464,7 @@ graph LR
 |---|---|---|---|---|
 | R1 | Legacy migration gây traffic drop > 30% | Cao | Cao | Phased rollout, audit kỹ trước, content parity trên trang mới |
 | R2 | VTS merchant list outdated → badge sai | Trung | Trung | Verify trực tiếp với PO team, không dựa blog 2023 |
-| R3 | Content governance conflict với Inbound (VTS angle) | Thấp | Trung | Align sớm với Inbound theo SOP hiện tại |
+| R3 | Content governance với Inbound (VTS là dự án của Inbound) | Thấp | Thấp | Hiến set standard SEO/GEO & audit. Inbound execute content production |
 | R4 | MoSpark chưa support schema markup cần thiết | Trung | Cao | Early validation với Web Platform |
 | R5 | GenAI content quality không đạt yêu cầu E-E-A-T | Trung | Trung | Review workflow bắt buộc, template strict |
 | R6 | ZaloPay mở rộng merchant directory trước MoMo | Trung | Trung | Speed-to-market: P1 launch nhanh với GenAI + MoSpark |

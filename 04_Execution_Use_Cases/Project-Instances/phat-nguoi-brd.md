@@ -1,11 +1,16 @@
 # BRD - Phạt Nguội Web Growth
-## Business Requirements Document
+## Business Requirements Document (SEO/GEO Project)
 
 **Dự án:** Tra Cứu Phạt Nguội - Web Growth Platform  
 **URL Hub:** momo.vn/phat-nguoi  
+**Division:** PS (Payment Services)  
+**Use Case:** Phạt Nguội  
+**Product:** PS - Phạt Nguội  
+**SEO/GEO Project ID:** `phat-nguoi`  
 **Prepared by:** Out-App Traffic · GPD  
+**Governance:** Văn Hiến (SEO & GEO Lead)  
 **Last updated:** Tháng 4/2026  
-**Status:** Draft v1.1 - 3/5 assumptions confirmed  
+**Status:** Draft v1.3 - Division/Product Metadata  
 
 ---
 

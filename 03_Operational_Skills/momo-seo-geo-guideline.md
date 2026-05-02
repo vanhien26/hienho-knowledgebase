@@ -19,6 +19,22 @@ Skill này là chuẩn bắt buộc cho mọi bài Blog trên momo.vn. Áp dụn
 
 ---
 
+## 0. URL HIERARCHY & PAGE TYPES
+
+Mọi nội dung phải được phân loại vào đúng cụm trang (Cluster) trong hệ thống MoSpark để đảm bảo cấu trúc URL và quản trị dữ liệu:
+
+| URL Pattern | Loại trang | Đặc điểm SEO |
+|-------------|------------|--------------|
+| `/blog*` | **Growth Articles** | Bài viết sâu, target cụm từ khóa (Keywords cluster). |
+| `/tin-tuc*` | **Communications** | News, Asset truyền thông cho Cell Team. |
+| `/hoi-dap*` | **Help Center** | FAQ, Self-service guide. |
+| `/huong-dan*` | **Interactive Guides** | Có Image Carousel, hướng dẫn tính năng App. |
+| `/doi-tac*` | **Merchant Page** | Brand Pages, thông tin đối tác & ưu đãi. |
+| `/{mini-web}` | **Basic LP** | Landing Page giới thiệu sản phẩm. |
+| `/{mini-web}*` | **Advanced Mini Web** | Cấu trúc phức tạp, nhiều sub-page để capture traffic. |
+
+---
+
 ## 1. INTENT & STRUCTURE
 
 ### 1.1 Xác định Search Intent trước khi viết

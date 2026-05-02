@@ -1,11 +1,16 @@
 # BRD - Vay Nhanh Web Growth 2026
-## Business Requirements Document
+## Business Requirements Document (SEO/GEO Project)
 
 **Dự án:** Vay Nhanh Web Growth & Conversion Platform  
 **URL Hub:** momo.vn/vay-nhanh  
+**Division:** FS (Financial Services)  
+**Use Case:** Loan  
+**Product:** FS - Loan  
+**SEO/GEO Project ID:** `vay-nhanh`  
 **Prepared by:** Out-App Traffic (GPD) · Inbound Marketing
+**Governance:** Văn Hiến (SEO & GEO Lead)  
 **Last updated:** Tháng 4/2026  
-**Status:** Draft v1.0 - Pending stakeholder review  
+**Status:** Draft v1.1 - Division/Product Metadata  
 **Effort allocation:** ~10% bandwidth Out-App Traffic · Cross-functional với Web Platform / Inbound / BU / BMC
 
 ---
@@ -21,7 +26,7 @@
 | Simulator spec | 🟡 In Progress | Amortization + deep link spec chờ Web Platform |
 | Sub-page briefs | 🟡 In Progress | 6/12 done |
 | Backlink plan 2026 | ✅ Done | Budget confirmed · Vendor: Hapodigital |
-| Onelink / Web-to-App tracking | 🟠 Pending | GA4 event setup chưa done |
+| Onelink / Web-to-App tracking | ✅ Done | DA (Hải/Hoàng) đã setup GA4 events. Hiến observe và support |
 | BU/Legal content approval flow | 🟠 Pending | Cần confirm SLA |
 | CMS platform cho blog | 🟠 Pending | Web Platform cần confirm |
 

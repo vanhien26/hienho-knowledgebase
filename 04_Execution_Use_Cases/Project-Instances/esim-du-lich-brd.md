@@ -1,7 +1,13 @@
-# BRD - Web Growth: eSIM Du Lịch
+# BRD - Web Growth: eSIM Du Lịch (SEO/GEO Project)
 **MoMo (MService) · Out-App Traffic Team**
-**Phiên bản:** 1.0 · **Ngày:** Tháng 4/2026 · **Author:** Hiến (SEO & GEO Lead)
-**Status:** Draft - chờ review PO + Dev
+
+**Division:** PS (Payment Services)
+**Use Case:** Telco
+**Product:** PS - Telco
+**SEO/GEO Project ID:** `esim-du-lich`
+**Phiên bản:** 1.1 · **Ngày:** Tháng 4/2026 · **Author:** Hiến (SEO & GEO Lead)
+**Governance:** Văn Hiến (SEO & GEO Lead)
+**Status:** Draft - Division/Product Metadata - chờ review PO + Dev
 
 ---
 
