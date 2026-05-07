@@ -53,15 +53,17 @@ Ads Manager là module thứ hai được đưa vào production. Trong khi Landi
 
 MoSpark quản lý 7 loại trang chiến lược trên momo.vn. Ads Manager có thể phủ lên toàn bộ hệ sinh thái này:
 
-| URL Pattern | Loại trang | Vai trò của Ads Manager |
-|---|---|---|
-| `/{mini-web}` | Mini Web Use Case | High priority - intent transactional, gần điểm convert |
-| `/{mini-web}*` | Advanced Mini Web | High priority - traffic lớn, multi sub-page |
-| `/blog*` | Growth Articles | Medium - Awareness và soft nudge |
-| `/tin-tuc*` | Communications | Medium - Awareness |
-| `/hoi-dap*` | Help Center | Low - không interrupt khi user đang cần hỗ trợ |
-| `/huong-dan*` | Interactive Guides | Low - không interrupt trong luồng hướng dẫn |
-| `/doi-tac*` | Merchant Page | Medium - cross-sell opportunity |
+| URL Pattern | Loại trang | Vai trò của Ads Manager | Placement Type |
+|---|---|---|---|
+| `/{mini-web}` | Mini Web Use Case | Intent transactional cao | Use Case-specific |
+| `/{mini-web}*` | Advanced Mini Web | Traffic lớn, multi sub-page | Use Case-specific |
+| `/` | Trang chủ | High traffic, awareness | **Shared-source (GPD)** |
+| `/doi-tac*` | Merchant Page | Cross-sell opportunity | **Shared-source (GPD)** |
+| `/blog*` | Growth Articles | Awareness và soft nudge | Mixed (Global/UC) |
+| `/tin-tuc*` | Communications | Awareness | Shared-source (GPD) |
+| `/hoi-dap*` | Help Center | Low interrupt | Shared-source (GPD) |
+| `/huong-dan*` | Interactive Guides | Low interrupt | Shared-source (GPD) |
+| `/about-us*` | Corporate Pages | Brand trust | Shared-source (GPD) |
 
 ### 2.3. Quan hệ với Athena (App Ads)
 
@@ -163,15 +165,22 @@ Multi-tenant per Division + Extended Formats + Umami Dashboard
 
 **Placement Registry:**
 
-Toàn bộ ad slots trên Web MoMo được đăng ký vào registry tập trung. Mỗi placement xác định: URL pattern áp dụng, format được phép tại vị trí đó, Division có quyền ưu tiên, số lượng Ad active tối đa cùng lúc.
+Toàn bộ ad slots trên Web MoMo được đăng ký vào registry tập trung, phân thành 2 loại:
+1.  **Use Case Placements:** Thuộc sở hữu của từng Division (Insurance, BNPL, etc.). Chỉ hiện Ads liên quan đến Use Case đó.
+2.  **Shared-source Placements (GPD):** Các slot trên trang dùng chung (Homepage, Merchant Page, Category...). GPD quản lý việc phân bổ traffic cho các Division dựa trên độ ưu tiên cấp công ty.
 
-**URL/Segment Mapping:**
+Mỗi placement xác định: URL pattern áp dụng, format được phép, Division/Team có quyền ưu tiên, số lượng Ad active tối đa cùng lúc.
 
-PM/PO có thể nhìn thấy bản đồ tổng thể - trang nào đang có placement nào, placement nào đang được sử dụng bởi campaign nào, placement nào còn trống.
+**URL/Segment/Use Case Mapping:**
+
+PM/PO có thể nhìn thấy bản đồ tổng thể - trang nào thuộc Use Case nào, placement nào đang được sử dụng, slot nào còn trống trong "kho" Shared-source của GPD.
 
 **Conflict Resolution:**
 
-Khi nhiều campaign match cùng một placement, hệ thống resolve theo thứ tự: Priority level (High/Medium/Low) → Division ownership của placement → Campaign có start_at gần nhất trong cùng priority. Global guardrail cứng: tối đa 1 Popup active per session, tối đa 2 Balloon cùng lúc.
+Khi nhiều campaign match cùng một placement, hệ thống resolve theo thứ tự: 
+- Đối với Shared-source: GPD Priority Level → Campaign start_at.
+- Đối với Use Case-specific: Division ownership → Priority Level.
+Global guardrail cứng: tối đa 1 Popup active per session, tối đa 2 Balloon cùng lúc.
 
 **Inventory Dashboard:**
 
@@ -195,6 +204,77 @@ Module 3 enable thêm Inline Banner (phù hợp Blog/News) và Sticky Bar (phù 
 **Umami Dashboard per Division:**
 
 Mỗi Division có dashboard riêng - Campaign performance (Impression, Click, CTR, Dismiss Rate), top performing placements, comparison theo thời gian. Umami chạy song song với GA4 và Appsflyer, không thay thế.
+
+---
+
+### 4.5. Module 4 & 5 - SEO Inventory & Use Case Performance Tracking
+
+**Mục tiêu:** Cung cấp cho PM/PO từng Cell Team visibility vào Market Sizing và Web Traffic Performance của từng Use Case. Hệ thống sử dụng **"Use Case" làm đơn vị gom nhóm (Grouping)** duy nhất cho mọi loại trang (Page Type), giúp đồng bộ hóa từ khâu xây dựng nội dung đến khi thiết lập Ads placement và đo lường Reach Estimate.
+
+#### Module 4 - SEO Inventory Dashboard
+
+**Định nghĩa:** Dashboard hiển thị Market Sizing (Volume Search) cho mỗi Use Case, giúp PM/PO hiểu tổng thể Market opportunity trước khi allocate Ads budget.
+
+**Nguyên tắc Grouping:**
+- Một **Use Case** (ví dụ: Phạt Nguội) bao gồm nhiều **Page Types** (Mini Web, Blog bài viết, FAQ, Landing Page).
+- Khi tạo bất kỳ nội dung nào trên MoSpark, PM/PO bắt buộc phải gán Use Case tương ứng.
+- Metadata `use_case_id` là sợi chỉ đỏ kết nối các module.
+
+**Data source:**
+- Keyword Research input từ Hiến hoặc Inbound team (Market name + Search Volume)
+- Database được Thuận build - form nhập + AppScript formula tính toán
+
+**Data structure (Thuận build):**
+- Input: market_name + volume (searches/month)
+- Storage: Database (schema để Thuận confirm)
+- Output: Dashboard visualization per Use Case
+
+**Dashboard visualization:**
+- Card view: Total volume per Use Case | Number of markets | Markets breakdown
+- Bar chart: Volume by individual market (sorted descending)
+- Filter: By Use Case selector
+
+**Example layout:** (Reference hình user provide)
+```
+FS: 106.9M (29 markets)
+MDS: 9.8M (7 markets)
+PS: 18.2M (18 markets)
+[Bar chart] Volume theo thị trường
+```
+
+**Scope Phase 1:** Focus Phạt Nguội (Phạt Nguội market data sẵn sàng hoặc sắp ready)
+
+#### Module 5 - Use Case Performance by Umami
+
+**Định nghĩa:** Dashboard tracking Visitor + Pageview từ Umami, grouped by Use Case (ví dụ: tất cả URL under /phat-nguoi/* = 1 group Phạt Nguội). Khi PM setup Ads placement, thấy Reach Estimate để forecast Ads impact.
+
+**Integration point:**
+- Khi PM chọn Use Case để setup campaign trên Ads Manager, hệ thống tự động quét toàn bộ Page Types (URLs) thuộc Use Case đó trong Inventory.
+- System show Reach Estimate = Total Unique Visitors của toàn bộ cụm Use Case (bao gồm Blog, Tool, FAQ...) trong 28 days gần nhất.
+- Metric: Visitor count + Pageview count của toàn Use Case Group.
+
+**Data source:**
+- Umami tracking setup trên momo.vn
+- URL pattern mapping per Use Case (ví dụ: /phat-nguoi, /phat-nguoi/blog/*, etc.)
+
+**Status:**
+- Demo: Umami đã gắn trên Demo environment
+- Live: Cuối tuần sắp tới sẽ lên Live cho Phạt Nguội
+- Verification: Check data accuracy trước khi show trên Ads Manager
+
+**Dashboard content:**
+- URL group performance: Visitor, Pageview, per Use Case
+- Time range: 28 days rolling window
+- Show in Ads Manager: Reach Estimate when PM select placement
+
+**Scope Phase 1:** Focus Phạt Nguội (align với Umami Live timeline)
+
+---
+
+**Timeline:**
+- **SEO Inventory:** Database schema + form nhập by Thuận → Hiến/Inbound input data → Dashboard live
+- **Use Case Performance by Umami:** Umami Live cuối tuần → URL mapping → Integration to Ads Manager
+- **Integration:** Reach Estimate feature in Ads Manager campaign creation flow (Module 2-3)
 
 ---
 
@@ -237,30 +317,54 @@ Thay vì targeting theo Screen (như Athena), Ads Manager targeting theo loại 
 
 ### 6.1. Workflow vận hành campaign
 
-```
-PM/PO Division có nhu cầu chạy Ads
-        |
-        v
-Check Placement Registry (Module 2+)
-Trang mình muốn đặt có slot nào? Đang trống hay đã chiếm?
-        |
-        v
-Tạo Campaign trên MoSpark - Ads Manager
-Chọn placement → chọn format → điền content → set Onelink → set frequency
-        |
-        v
-Preview và self-check
-Preview mobile + desktop · Test Onelink · Tự review Content Standards
-        |
-        v
-Submit - Thuận approve và publish
-        |
-        v
-Campaign live
-        |
-        v
-Monitor qua Umami Dashboard (Module 3)
-Pause nếu có vấn đề - không cần Dev
+```mermaid
+graph TD
+    %% Định nghĩa các bước trong quy trình
+    Start((Bắt đầu)) --> Demand[PM/PO Division có nhu cầu chạy Ads]
+    
+    Demand --> CheckRegistry{Check Placement Registry<br/>Module 2+}
+    
+    CheckRegistry -- "Slot trống?" --> CreateCampaign[Tạo Campaign trên MoSpark]
+    CheckRegistry -- "Đã bị chiếm" --> Negotiate[Thương lượng / Chọn Slot khác]
+    Negotiate --> CreateCampaign
+
+    subgraph Create_Flow [Cấu hình Campaign]
+        CreateCampaign --> SetPlacement[Chọn Placement]
+        SetPlacement --> SetFormat[Chọn Format]
+        SetFormat --> SetContent[Điền Content & Ảnh]
+        SetContent --> SetOnelink[Set Onelink/Deeplink]
+        SetOnelink --> SetFrequency[Thiết lập Tần suất & Cooldown]
+    end
+
+    SetFrequency --> SelfCheck[Preview & Self-check]
+    
+    subgraph Self_Check_List [Nội dung Self-check]
+        SelfCheck -.-> |"Mobile/Desktop View"| Check1[Preview Viewport]
+        SelfCheck -.-> |"Test Link"| Check2[Verify Onelink]
+        SelfCheck -.-> |"Brand/UX"| Check3[Content Standards]
+    end
+
+    Check1 & Check2 & Check3 --> Submit[Submit Campaign]
+    
+    Submit --> Approval{Thuận Approve<br/>& Publish}
+    
+    Approval -- "Reject (Sửa lại)" --> CreateCampaign
+    Approval -- "Approved" --> Live[Campaign LIVE]
+    
+    Live --> Monitor[Monitor qua Umami Dashboard]
+    
+    Monitor --> Analysis{Hiệu quả?}
+    Analysis -- "Tiếp tục" --> Monitor
+    Analysis -- "Có vấn đề / Xong" --> Pause[Tự Pause Campaign<br/>Không cần Dev]
+    
+    Pause --> End((Kết thúc))
+
+    %% Định nghĩa Style
+    style Start fill:#f9f,stroke:#333,stroke-width:2px
+    style Live fill:#00ff00,stroke:#333,stroke-width:2px
+    style Create_Flow fill:#f0f0f0,stroke:#666,stroke-dasharray: 5 5
+    style Approval fill:#fff4dd,stroke:#d4a017,stroke-width:2px
+    style Pause fill:#ffcccb,stroke:#a00,stroke-width:2px
 ```
 
 ### 6.2. Phân vai rõ ràng
@@ -388,6 +492,8 @@ User đã có app nhưng inactive → vào web tìm kiếm → thấy Ads nhắc
 | Module 1 | Done - Q2/2026 onboarding thêm Division | Mở rộng pilot từ User Growth sang GPD |
 | Module 2 | Q2/2026 | Placement Registry MVP + Conflict Resolution + Inventory Dashboard |
 | Module 3 | Q3/2026 | Multi-tenant, Umami Dashboard, Extended Formats |
+| Module 4 - SEO Inventory | Q2/2026 (concurrent with M2) | Database schema + form nhập by Thuận + Hiến/Inbound input data + Dashboard visualization |
+| Module 5 - Use Case Performance by Umami | Q2/2026 (End of week) | Umami Live (Phạt Nguội) + URL mapping + Integration to Ads Manager (Reach Estimate) |
 | Native Component | Q4/2026+ | Widget/Form tích hợp tự nhiên vào trang - align từng Cell Team |
 
 ### Next Steps sau khi BRD được align
@@ -399,6 +505,11 @@ User đã có app nhưng inactive → vào web tìm kiếm → thấy Ads nhắc
 | Permission Model | Bảo + Thuận | Role definition per Division cho Module 3 |
 | Umami Setup Plan | Lộc + Thuận | Integration plan và dashboard template per Division |
 | PM/PO Playbook | Bảo + Hiến advise | Workflow, format guide, content checklist cho Division operator |
+| **SEO Inventory - Database Schema** | **Thuận** | **Build form nhập + AppScript formula + Database design (market_name + volume)** |
+| **SEO Inventory - Dashboard** | **Thuận + Bảo** | **Visualization: Total volume per Use Case, Markets breakdown, Bar chart volume by market** |
+| **SEO Inventory - Data Entry** | **Hiến / Inbound team** | **Input market sizing data for Phạt Nguội Use Case** |
+| **Umami - URL Mapping** | **Lộc + Thuận** | **Define URL pattern per Use Case (/phat-nguoi, /phat-nguoi/blog/*, etc.) for grouping** |
+| **Umami - Integration to Ads Manager** | **Thuận** | **Show Reach Estimate (28 days Visitor/Pageview) when PM setup campaign** |
 
 ---
 

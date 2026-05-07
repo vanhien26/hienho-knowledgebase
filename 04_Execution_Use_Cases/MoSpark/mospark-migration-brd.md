@@ -2,7 +2,7 @@
 
 > **Project Manager:** Anh Bảo (Web Platform Manager)
 > **Governance & SEO Strategy:** Văn Hiến (SEO & GEO Lead)
-> **System Architect / Migration Mapper:** [Cần xác định - Hiến & Thuận] - Người chịu trách nhiệm định nghĩa cấu trúc dữ liệu, sơ đồ chuyển dịch và liên kết hệ thống.
+> **System Architect / Migration Mapper:**  [Cần xác định] Người chịu trách nhiệm định nghĩa cấu trúc dữ liệu, sơ đồ chuyển dịch và liên kết hệ thống.
 > **Lead Engineers:** Võ Minh Thuận, Lê Đăng Lộc
 > **Status:** Active - Structure & Mapping Phase
 
@@ -82,20 +82,6 @@ MoSpark sử dụng **Project** như một cơ chế phân loại và phân ph�
 *   **SEO preservation:** Giữ nguyên URL authority đã build
 *   **No cannibalization:** Mỗi Use Case có URL space riêng
 *   **Future-proof:** Dễ thêm special case mới
-
-#### URL Routing Logic
-```javascript
-// Blog Path Configuration (admin-configurable)
-{
-  "defaultBlogPath": "/blog",
-  "specialCases": [
-    { "project": "VayNhanh", "customBlogPath": "/vay-nhanh/blog", "active": true },
-    { "project": "Cinema", "customBlogPath": "/cinema/blog", "active": true },
-    { "project": "BaoHiemOTo", "customBlogPath": "/bao-hiem-o-to/blog", "active": true },
-    { "project": "BaoHiemXeMay", "customBlogPath": "/bao-hiem-xe-may/blog", "active": true }
-  ]
-}
-```
 
 **User Flow:**
 1. Editor tạo Blog Post → Chọn Project

@@ -1,12 +1,13 @@
 # BRD: SEO/GEO Scoring Checklist - MoSpark Admin
 
-**Document type:** Business Requirements Document
-**Team Owner:** Out-App Traffic & Web Platform · GPD
-**Product Manager:** Anh Bảo (Web Platform Manager)
-**Governance & Standards:** Văn Hiến (SEO & GEO Lead)
-**Status:** Active - Governance Gate for all MoSpark Output
-**Last updated:** Tháng 4/2026
-**System Context:** [[PROJECT_ORCHESTRATOR]] | [[Seo-Geo-audit]]
+**Document type:** Business Requirements Document     
+**Team Owner:** Out-App Traffic & Web Platform · GPD        
+**Product Manager:** Anh Bảo (Web Platform Manager)       
+**Governance & Standards:** Văn Hiến (SEO & GEO Lead)       
+**Technical Owner:** Nhật (Web Platform Developer)        
+**Status:** Active - Governance Gate for all MoSpark Output       
+**Last updated:** Tháng 4/2026          
+**System Context:** [[PROJECT_ORCHESTRATOR]] | [[Seo-Geo-audit]]      
 
 ---
 
@@ -49,7 +50,7 @@
 
 ## 1. Objective
 
-Tích hợp SEO/GEO Checklist Scoring vào MoSpark Admin để validate chất lượng SEO/GEO của mỗi page trước khi Publish. Mục tiêu: đảm bảo không có page nào được publish khi chưa đạt ngưỡng tối thiểu về Technical SEO, On-Page Content, và GEO readiness.
+Tích hợp SEO/GEO Checklist Scoring trực tiếp vào **Section SEO** của MoSpark Admin để validate chất lượng của mỗi page trước khi Publish. Mục tiêu: biến khu vực nhập dữ liệu SEO thành một "trạm kiểm soát" chất lượng, đảm bảo không có page nào được publish khi chưa đạt ngưỡng tối thiểu về Technical SEO, On-Page Content, và GEO readiness.
 
 ---
 
@@ -308,7 +309,11 @@ Nút Publish bị **disabled** cho đến khi Editor bấm "Run CWV Check" và n
 
 ## 8. UI Requirements
 
-### Score Panel layout
+### 8.1 Vị trí tích hợp (Integration Point)
+
+Score Panel không nằm riêng lẻ mà được tích hợp trực tiếp bên dưới các trường nhập liệu trong **Section SEO** của trình soạn thảo. Khi Editor cuộn đến phần cấu hình SEO, bảng điểm sẽ tự động hiển thị để cung cấp feedback ngay lập tức.
+
+### 8.2 Score Panel layout
 
 ```
 ┌─────────────────────────────────────────┐

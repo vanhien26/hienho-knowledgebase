@@ -77,7 +77,7 @@ Appendix (Keyword Universe + URL Inventory + Content Brief Templates)
 
 ### 1.2 JTBD Analysis (Summary)
 
-**CHỈ lấy từ output của skill `[[[[jtbd-analysis]]]]`.** Không tự phân tích.
+**ChỈ lấy từ output của skill `[[[[jtbd-analysis]]]]`.** Không tự phân tích.
 
 Nếu chưa có → chạy `[[[[jtbd-analysis]]]]` trước, rồi import summary.
 
@@ -491,7 +491,5 @@ C. Content Brief Template
 
 ## Liên kết
 - Skill này là một phần của hệ thống MoMo Web Growth
-- Xem tổng thể: [[SKILL]]
-- Workflow: [[SKILL#Workflow Chuẩn cho 1 Use Case Mới]]
 - Skill trước: [[jtbd-analysis]]
 - Skill sau: [[pyramid-principle]]

@@ -10,6 +10,7 @@
 *   **Audit Real-time**: Kiểm tra nhanh các nội dung mới xuất bản qua biến `Project` trên MoSpark.
 *   **Gatekeeper Alert**: Tiếp nhận các yêu cầu Review từ team Inbound/Agency thông qua SEO/GEO Scoring.
 *   **Critical Monitoring**: Observe tình trạng Indexing và Search Console của các dự án P0 (Phạt Nguội, Vay Nhanh).
+*   **AI Crawler Check**: Spot-check server logs cho OAI-SearchBot, Claude-SearchBot, PerplexityBot trên các page mới golive.
 
 ---
 
@@ -23,10 +24,12 @@
 ### Thứ 4: Quality Audit
 *   Audit chuyên sâu 1 Use Case cụ thể (Ví dụ: Tuần 1: Cinema, Tuần 2: Vay Nhanh...).
 *   Check lỗi Tech debt: Schema, Redirect 301, CWV (LCP < 2.5s).
+*   Verify robots.txt đang allow đúng các AI search crawlers (OAI-SearchBot, Claude-SearchBot, PerplexityBot).
 
 ### Thứ 6: Governance & Support
 *   Review bộ **GenAI Prompts**: Hiệu chỉnh Outline/Writer prompts dựa trên kết quả Ranking thực tế.
 *   Support team **DA (Hải/Hoàng)**: Kiểm tra tính đúng đắn của Tracking Plan cho các Landing Page mới.
+*   Check **llms.txt** các use case đang live: URLs có còn 200 OK không, có product mới cần add không.
 
 ---
 
@@ -36,6 +39,8 @@
 *   **SEO Inventory Audit**: Cập nhật SoV (Share of Voice) của MoMo so với đối thủ (Ví dụ: Vay Nhanh 6% -> Mục tiêu 10%).
 *   **Migration Cleanup**: Rà soát các URLs cũ đã chuyển sang MoSpark, đảm bảo 100% Link Integrity.
 *   **Standard Update**: Cập nhật **momo-seo-geo-guideline** và **YMYL Guideline** dựa trên các thuật toán mới của Google/AI Search.
+*   **AI Citation Audit**: Test monthly - hỏi ChatGPT/Perplexity/Claude về các sản phẩm MoMo, kiểm tra AI đang describe đúng chưa. Nếu sai lệch → review llms.txt + Long Content nguồn.
+*   **llms.txt Quarterly Review**: Verify toàn bộ URLs trong llms.txt trả về 200 OK. Update nếu có product mới hoặc URL thay đổi.
 
 ---
 
@@ -61,4 +66,4 @@ Mỗi khi có một Use Case mới (Ví dụ: `Dịch vụ công`), Routine th�
 | Sai lệch Tracking | **Consult**: Support team DA tìm ra "Truth of Source". |
 
 ---
-*Last Updated: 30/04/2026*
+*Last Updated: 05/05/2026*

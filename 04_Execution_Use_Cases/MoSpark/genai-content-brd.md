@@ -5,118 +5,121 @@
 > **Integration Support:** Bùi Minh Nhật (Senior Software Engineer)
 > **Governance & Prompts:** Văn Hiến (SEO & GEO Lead)
 > **Start Date:** May 2026
-> **Status:** Kicking Off - CEO Mandate (Phạt Nguội Pilot)
+> **Status:** Claude API on Production - Enhanced Prompts Live - MoSpark Blog Auto-Create Integrated
 
 ---
 
-## 1. Tổng quan Kiến trúc (Architecture Overview)
+## 6. Workflow Content - 7 Bước + Role & Responsibility
 
-**GenAI Content** là một module trong hệ sinh thái **SEO/GEO Project** của MoSpark, đảm nhận vai trò sản xuất nội dung tự động từ Keyword và Business Context.
+### 6.0. Workflow Diagram - Horizontal Flow with 7 Steps
 
-### 1.1. Mối quan hệ với SEO/GEO Project
+Xem diagram ở trên - 7 bước với 3 approval gates:
+- **Gate 1:** Business Context Complete (Step 2)
+- **Gate 2:** Outline Final (Step 5)
+- **Gate 3:** Publish (Step 7)
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    SEO/GEO Project                          │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │              Business Context                        │   │
-│  │  (Mô tả lĩnh vực, mục tiêu, đối tượng của Project)  │   │
-│  └──────────────────────┬──────────────────────────────┘   │
-│                         │                                   │
-│                         ▼                                   │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │           GenAI Content Module                       │   │
-│  │  ┌─────────────┐    ┌─────────────┐                 │   │
-│  │  │  Outline    │───▶│   Writer    │                 │   │
-│  │  │  (Claude)   │    │  (Claude)   │                 │   │
-│  │  └─────────────┘    └─────────────┘                 │   │
-│  └──────────────────────┬──────────────────────────────┘   │
-│                         │                                   │
-│                         ▼                                   │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │              Blog Editor                             │   │
-│  │         (Xuất bản & Quản lý bài viết)               │   │
-│  └─────────────────────────────────────────────────────┘   │
-│                         │                                   │
-│                         ▼                                   │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │         Google Search Console API                    │   │
-│  │         (Performance Tracking - Future)             │   │
-│  └─────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
-```
+### 6.1. Workflow Chi tiết
 
-### 1.2. Một SEO/GEO Project = Một Use Case
+| Bước | Tên | Hành động | Input/Output | Owner | Role |
+|------|-----|----------|-------------|----|------|
+| 1 | Tạo Project | Nhập tên Use Case (ví dụ: "Vay Nhanh", "Ví Trả Sau") | Project ID + metadata | PM/Growth (Cell Team) | Khởi tạo & xác nhận |
+| 2 | Business Context | Nhập Business Model, Target Audience, Value Prop, Promotion Scheme (11 fields bắt buộc). **PM/Growth chịu trách nhiệm về tính pháp lý & Information Gain liên quan sản phẩm/dịch vụ** | Context Layer - inject vào Prompt 1 & 2 | PM/Growth + SEO/GEO Lead | PM/Growth: Xác nhận nội dung. SEO/GEO: Validate framework |
+| 3 | Create Primary Keyword | Nhập Primary keyword + Secondary keywords (5-10 từ) | Keyword mapping, intent analysis | Content Team | Triển khai keyword research |
+| 4 | Draft Outline AI | Claude AI generate outline dựa trên Context + Keywords | Outline draft (3-5 sections) | AI (Claude API) | Auto-generate |
+| 5 | Manual Edit Outline | **Content Team chỉnh sửa outline, điều chỉnh structure, add angle độc đáo. Outline final approval từ PM/Growth** | Outline final approved | Content Team + PM/Growth | Content: Edit & submit. PM/Growth: Approve |
+| 6 | Blog Detail AI | Claude AI generate full Blog Detail từ Outline approved. Check SEO/GEO Scoring tự động | Blog Detail draft (ready for publish) | AI (Claude API) | Auto-generate & auto-check |
+| 7 | Blog Editor (Publish) | **SEO/GEO verify Blog Detail, sync qua Blog Editor. Content Team click "Sync create" → Auto publish to momo.vn** | Blog live on momo.vn | Content Team + SEO/GEO Lead | Content: Click publish. SEO/GEO: Verify & sign-off |
 
-Mỗi Project tương ứng với một Use Case (Phạt Nguội, Vay Nhanh, Cinema...) gồm:
-- **Nhiều bài viết** (nhiều keywords) được tổng hợp từ Business Context
-- **Kiến thức lĩnh vực** làm đầu vào cho AI xử lý đúng thông tin
-- **Hệ thống phân phối** nội dung qua Project System
+**Key Enhancement:** Tách Blog Detail AI (Step 6) và Blog Editor Publish (Step 7) - rõ ràng hóa ownership verify (SEO/GEO) vs publish action (Content).
 
----
+### 6.2. Role & Responsibility Detail
 
-## 2. Mục tiêu (Goals)
+#### PM/Growth (Cell Team)
+**Trách nhiệm chính:** Xác nhận nội dung, chịu trách nhiệm pháp lý, bổ sung thông tin sản phẩm/dịch vụ
 
-Xây dựng pipeline sản xuất nội dung SEO/GEO chuẩn bằng AI thay thế quy trình viết tay thủ công:
-*   **Scale**: Sản xuất hàng loạt bài viết chất lượng cao trong thời gian ngắn.
-*   **Standard**: Đảm bảo 100% bài viết đạt tiêu chuẩn E-E-A-T và YMYL.
-*   **SEO/GEO Ready**: Cấu trúc nội dung tối ưu cho việc trích dẫn (Citation) trên AI Search (Gemini, AI Overview).
-*   **Context-Aware**: Nội dung được tạo ra phải phù hợp với Business Context của Project.
+- **Bước 1:** Khởi tạo Project (tên Use Case)
+- **Bước 2:** **Xác nhận Business Context đầy đủ - chịu trách nhiệm pháp lý & Information Gain**
+  - Confirm tất cả 11 fields: Value Prop, Trust Signals, Disclaimer, Blacklist terms
+  - Verify không có information sai, không recommend competitor, không overpromise tính năng
+  - Ensure tất cả "thông tin lợi ích" (benefit/gain) đều chính xác về sản phẩm/dịch vụ MoMo
+- **Bước 5:** Approve Outline final trước khi Claude tạo Blog Detail
+  - Review outline có align với strategy & positioning của Use Case
+  - Từ chối outline nếu có sai lệch, request Content chỉnh sửa
+  - Max 1 lần return - không quá 2 vòng lặp
 
----
+#### Content Team
+**Trách nhiệm chính:** Triển khai quy trình, tạo outline, chỉnh sửa, publish blog
 
-## 3. Pilot Use Case: Phạt Nguội (CEO Mandate)
+- **Bước 3:** Create Primary Keyword + Secondary keywords (triển khai từ keyword research)
+- **Bước 5:** Chỉnh sửa Outline
+  - Adjust structure, add unique angle, verify keyword integration
+  - Submit Outline final cho PM/Growth approve
+- **Bước 7:** Publish Blog Detail
+  - Kiểm tra Blog Detail từ AI (nhanh)
+  - Nếu SEO/GEO pass gate → Click "Sync create" để publish to momo.vn
+  - Nếu fail → Request SEO/GEO fix & verify lại
 
-*   **Current State**: Đang triển khai tích hợp Claude API vào MoSpark. Đang xây dựng bộ **Content Skills** (Prompt templates) chuẩn hóa.
-*   **Objective**: Đạt mục tiêu **Top of Mind** cho dự án Phạt Nguội.
-*   **Deadline**: Foundation live trước đầu tháng 5/2026.
+#### SEO/GEO Lead (Văn Hiến)
+**Trách nhiệm chính:** Đảm bảo Skill/Prompt apply, verify quality, ownership publish gate
 
----
+- **Bước 2:** Validate Business Context framework
+  - Confirm 11 fields đầy đủ, context tương thích với Prompt
+  - Alert nếu có risk về SEO/GEO impact
+- **Bước 6:** Check SEO/GEO Scoring (auto tự động)
+  - Monitor AI output quality
+  - Flag nếu có issues: E-E-A-T fail, YMYL risk, content violation
+- **Bước 7:** **OWNERSHIP - Verify & Sign-off Publish**
+  - Final verify content đạt tiêu chuẩn E-E-A-T, YMYL, SEO/GEO
+  - Ensure OnPage chuẩn bị (metadata, structured data, CTA placement)
+  - Sync Blog Detail vào Blog Editor nếu cần chỉnh sửa OnPage
+  - Sign-off → Content Team proceed to publish
+  - Chịu trách nhiệm chất lượng final output
 
-## 4. Tech Stack & Master Assets
+### 6.3. Approval Gates
 
-Hệ thống sử dụng Claude API tích hợp MoSpark, vận hành dựa trên bộ "vũ khí" tiêu chuẩn của Hiến:
-
-### 4.1. Kỹ năng Quản trị (Governance Skills)
-*   **[[momo-seo-geo-guideline]]**: Tiêu chuẩn về mật độ từ khóa, cấu trúc AI Search và GEO Citation.
-*   **[[momo-ymyl-guideline]]**: Quy tắc an toàn nội dung tài chính/pháp lý và tiêu chuẩn E-E-A-T.
-
-### 4.2. Bộ Prompt thực thi (Execution Prompts)
-*   **[[momo-blog-prompt-1-outline]]**: Điều khiển AI phân tích Intent và lên cấu trúc Outline chuẩn SEO/GEO.
-*   **[[momo-blog-prompt-2-writer]]**: Điều khiển AI chấp bút nội dung chi tiết dựa trên Outline đã duyệt.
-
-### 4.3. Quality Gate
-Nội dung sau khi được AI sản xuất sẽ được kiểm tra tự động qua [[mospark-seo-geo-score-brd]] để đảm bảo không có sai sót trước khi xuất bản.
+| Gate | Step | Owner | Condition |
+|------|------|-------|-----------
+| **Business Context Complete** | 2 | PM/Growth + SEO/GEO | Đủ 11 fields, information verify, pháp lý clear, no red flags |
+| **Outline Final** | 5 | PM/Growth | Content submit → PM/Growth approve (max 1 return, không > 2 vòng) |
+| **Publish** | 7 | SEO/GEO Lead | Blog Detail pass SEO/GEO scoring + E-E-A-T/YMYL check → SEO/GEO sign-off → Content click "Sync create" → auto publish momo.vn |
 
 ---
 
-## 5. Vai trò & Trách nhiệm
+## 7. Business/Product Context - 11 Fields bắt buộc
 
-*   **Trọng (Tech Lead)**: 
-    *   Quản lý nội dung theo Primary Keyword.
-    *   Tích hợp Claude API và đảm bảo hệ thống không phát sinh lỗi.
-    *   Chuẩn hóa PRD cho module này.
-*   **Nhật (Integration)**: 
-    *   Hỗ trợ Trọng trong Pipeline xuất bản.
-    *   Kết nối đầu ra của GenAI với module SEO/GEO Score.
-*   **Hiến (Governance)**:
-    *   Thiết kế quy trình triển khai (Workflow).
-    *   Xây dựng và tối ưu bộ Skill/Prompt Standard cho AI.
+> **Owner:** Văn Hiến
+> **Thời điểm nhập:** Bắt buộc hoàn thành TRƯỚC khi generate bất kỳ bài viết nào trong Project
+> **Mục đích:** Làm nền tảng context cho cả Prompt 1 (Outline) và Prompt 2 (Writer) - đảm bảo AI luôn viết đúng về sản phẩm MoMo, không recommend competitor, không bịa đặt tính năng
 
----
+### 7.1. 11 Fields bắt buộc
 
-## 6. Lộ trình (Roadmap)
-
-### Phase 1: Foundation (Hiện tại)
-1.  **Tuần 1 T5/2026**: Hoàn thiện Foundation cho dự án Phạt Nguội.
-2.  **Tuần 2 T5/2026**: Test run và hiệu chỉnh Prompt dựa trên kết quả SEO/GEO Score thực tế.
-3.  **Tuần 3 T5/2026**: Scale hàng loạt các Use Case khác trên MoSpark.
-
-### Phase 2: Performance Tracking (Future)
-*   **Google Search Console API Integration**: Kết nối để theo dõi hiệu suất bài viết theo Project
-*   **Metrics per Project**: Organic traffic, impressions, CTR, average position cho từng Project
-*   **Automated Insights**: Gợi ý tối ưu nội dung dựa trên performance data
+1. **Tên sản phẩm** - Tên chính xác như hiển thị trong App/Web
+2. **URL Web** - URL canonical của trang chính
+3. **Mô tả sản phẩm** - 3-5 câu, phân biệt Web vs App
+4. **Đối tượng sử dụng** - Persona chính (ai, ở đâu, job gì)
+5. **Đối tác** - Tên đối tác cung cấp data/dịch vụ (nếu có)
+6. **Điều kiện sử dụng** - Giới hạn, yêu cầu user cần biết
+7. **Value Prop / USPs** - Danh sách điểm giá trị nổi bật (AI phải integrate tự nhiên)
+8. **Trust Signals** - Yếu tố tạo độ tin cậy so với competitor
+9. **Khác biệt vs đối thủ** - So sánh trực tiếp, honest (bao gồm cả điểm chưa bằng)
+10. **Disclaimer** - Pháp lý/tài chính (theo YMYL guideline)
+11. **Từ ngữ bị cấm** - Blacklist terms (sai sản phẩm, pháp lý risk, competitor)
 
 ---
 
-*Document: BRD-MoSpark-GenAI-Content · v2.0*
+## 8. Lộ trình (Roadmap)
+
+### Phase 1: Foundation & Scaling (May 2026)
+1. ✅ **7-Step Workflow live:** Blog Detail AI + Blog Editor Publish separation
+2. ✅ **Phạt Nguội pilot:** Foundation complete
+3. ✅ **Scale Financial products:** Vay Nhanh, Ví Trả Sau, CIC
+
+### Phase 2: Performance Tracking & Optimization (June 2026+)
+- **Google Search Console API Integration:** Theo dõi hiệu suất per Project
+- **Metrics per Project:** Organic traffic, impressions, CTR, avg position
+- **Automated Insights:** Gợi ý tối ưu nội dung dựa trên data
+- **Content Refresh Automation:** Identify underperforming articles - suggest updates
+
+---
+
+*Document: BRD-MoSpark-GenAI-Content · v3.4 (7-Step Workflow with Blog Detail + Blog Editor separation)*

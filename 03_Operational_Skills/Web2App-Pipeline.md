@@ -5,7 +5,7 @@ version: 1.0.0
 ---
 
 ## 🧭 Điều phối
-- Tổng thể: [[SKILL_REGISTRY]]
+
 - Quy trình: [[PROJECT_ORCHESTRATOR]]
 - Kỹ năng bổ trợ: [[web-tracking]]
   Trigger khi user nhắc: web2app, w2a, deeplink, onelink, CTA placement, conversion rate,
@@ -332,6 +332,5 @@ Khi dùng skill này, output gồm:
 
 ## Liên kết
 
-- Xem tổng thể: [[SKILL]]
 - Skill liên quan: [[jtbd-analysis]], [[use-case-document]], [[Seo-Geo-audit]]
 - Context: [[hienho-momo-master-doc]] - Mục 4.2 Tracking Architecture

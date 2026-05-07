@@ -470,7 +470,7 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 | Auto Insurance (Bảo Hiểm Ô Tô Vật Chất) | Active | Hiến | Target: 200K organic traffic 2026 |
 | SEO Inventory - Financial & Payment | In Progress | Hiến | v3 built, mở rộng scope Thanh toán/Giải trí |
 | SEO/GEO Content AI Platform | Planning | Hiến + Trọng | Batch 1 done, Batch 2 planned |
-| Phạt Nguội (Traffic fines) | P0 Active | Hiến | CEO mandate, target live đầu T5 |
+| Phạt Nguội (Traffic fines) | P0 Active - Partial Live | Hiến + Hùng (FE) + Hoài Anh (API) | Trang chủ golive, đang index. Next: Tool tra cứu + Sub-pages (/o-to, /xe-may) + Sitemap + llms.txt |
 | MoSpark Migration (MoLanding V2) | Platform Ready - Pending Migration | Hiến + Bảo | V2 production, LP Builder live (Q2 onboard GPD). Chưa migrate page nào từ V1. BRD Scoring Gate v1.1 resolved - chờ brief Dev |
 | VTS SEO/GEO Growth | Active | Hiến + Inbound | 3 thị trường, SoV targets đã define |
 | Cinema SEO/GEO | Passive | Hiến | 1M traffic/quý, 959 zero-traffic URLs cần xử lý |
@@ -479,6 +479,7 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 | Tech Foundation Gate + Angle Governance SOP | Planning | Hiến | Framework defined, cần formalize |
 | MoSpark SEO/GEO Scoring BRD | BRD Done | Hiến + Nhật | BRD v1.1 hoàn chỉnh - 3 issues resolved. Cần brief Dev + align timeline MoSpark V2 |
 | Vay Nhanh | Active - SEO/GEO Implementation | Hiến + Inbound | BRD done. Keyword/GSC/Ranking baseline confirmed. Đang triển khai SEO/GEO |
+| LLMs.txt & Robots.txt | In Progress | Hiến + Bảo | BRD done. Lớp 1 DEPLOYED: `Disallow: /*?` - block toàn bộ parameterized URLs. Next: AI crawler policy + llms.txt pilot trên Phạt Nguội |
 | BHXM | Draft | Hiến | BRD Draft - cần growth plan post-spike |
 | eSIM Du Lịch | Draft | Hiến | BRD Draft - chờ PO + Dev review |
 
@@ -716,13 +717,24 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 ### 5.11 Dự án: Phạt Nguội (Traffic Fines)
 
 **Vision:** Cung cấp công cụ tra cứu phạt nguội trên Mini Web kết hợp nội dung Blog thu hút User qua kênh Out-App.
-**Status:** Active (Tháng 4/2026).
+**Status:** P0 Active - Partial Live (Tháng 5/2026).
 **Scope:**
 - Xây dựng Mini Web có chức năng tra cứu vi phạm.
 - Sản xuất Blog Content liên quan đến lĩnh vực Giao thông/Phạt nguội.
 
+**Team:**
+- Hiến: Governance, SEO/GEO spec, sign-off
+- Hùng (Front-end, Web Platform): Build UI trên MoSpark
+- Hoài Anh (Tech Solution Lead, Web Platform): API integration + database (TTDK)
+
 **Priority:** P0 - CEO Tường chỉ đạo trực tiếp, mục tiêu Top of Mind
-**Target:** Foundation momo.vn/phat-nguoi live trước đầu tháng 5/2026
+**Target:** ~~Foundation momo.vn/phat-nguoi live trước đầu tháng 5/2026~~ **DONE - Trang chủ đã golive, đang để Google index**
+
+**Next steps (Phase 1 còn lại):**
+- Triển khai Tool tra cứu (API TTDK đã confirmed)
+- Build Sub-pages: `/phat-nguoi/o-to`, `/phat-nguoi/xe-may`
+- Sitemap + Schema setup
+- Deploy llms.txt cho /phat-nguoi (pilot đầu tiên)
 **Lợi thế MoMo:** Dữ liệu chính thống từ TTDK, hỗ trợ đủ 3 loại phương tiện, tích hợp hệ sinh thái
 
 **Meeting log:**
@@ -735,6 +747,35 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
   - Triển khai kickoff dự án Phạt Nguội.
 - Action items:
   - Hiến: Lên kế hoạch/wireframe cho Mini Web tra cứu và Blog Content chiến lược cho Phạt Nguội.
+
+---
+
+### 5.11b Dự án: LLMs.txt & Robots.txt (AI Crawler Policy)
+
+**Vision:** Kiểm soát chủ động cách AI systems crawl, index và hiểu momo.vn - nền tảng cho GEO/AEO visibility.
+
+**Owner:** Hiến (spec + governance) + Bảo (Web Platform implement)
+
+**Tài liệu:** [[llms-robots-txt-brd]]
+
+**Hai deliverable song song:**
+
+| File | Mục đích | Status |
+|------|---------|--------|
+| `robots.txt` nâng cấp | Fix param waste + AI crawler policy | **Lớp 1 DEPLOYED** |
+| `llms.txt` | Structured context cho AI inference | Pending - pilot trên Phạt Nguội trước |
+
+**robots.txt - Progress:**
+- **Lớp 1 DEPLOYED:** `Disallow: /*?` - block toàn bộ URL có query string. Thay thế và cover hết các param rules cũ (`/*fromType=`, `/*flightType=`, `/*fbclid=`, `?date=`). Không ảnh hưởng tracking campaign (UTM là client-side, không liên quan Googlebot).
+- **Lớp 2 - Pending:** Block aggressive scrapers (Bytespider, CCBot)
+- **Lớp 3 - Pending:** AI training crawler policy (cần quyết định từ Product/Legal - Option A/B/C/D)
+
+**llms.txt - Roadmap:**
+- Phase 1: Pilot `/phat-nguoi/llms-full.txt` + master `momo.vn/llms.txt`
+- Phase 2: Expand per-product (Vay Nhanh, Bảo hiểm, eSIM)
+- Phase 3: Per-page Markdown endpoint
+
+**Status:** In Progress - Lớp 1 deployed, cần align Bảo về Lớp 2+3 và llms.txt timeline
 
 ---
 
@@ -1165,6 +1206,8 @@ Spoke: /thanh-toan-momo-{brand} → Breadcrumb về VTS Hub → Related merchant
 | 2026-04-27 | 2.1 | Bổ sung bản chỉnh sửa của Hiến (Leadership Intelligence Công + Bảo đã điền); thêm 5 dự án/task mới: 5.15 Cinema (1M traffic, zero-traffic URL strategy), 5.16 Merchant Page/Đối tác VTS (BRD v4), 5.17 Off-Page Governance (BRD v2, disavow SOP), 5.18 Tech Foundation Gate + Angle Governance SOP, 5.19 MoSpark SEO Scoring BRD (v1.1, 3 issues); update Status Board với 19 items |
 | 2026-05-01 | 2.7 | Resolve Conflict #1 - Clarify GOVERN Model: Hiến executes Research/Keyword/Brief/Specification/Audit, không execute Product Implementation/Deployment. Remove Demo Website step từ section 4.1 (workflow giờ 8 steps thay vì 9). Update RACI table - remove "Build Demo" row. Add GenAI Skill Hub ownership vào 1.4 Ownership map. |
 | 2026-05-01 | 2.8 | Resolve Conflict #8 - Remove Vercel References: MoMo Web không dùng Vercel, không phải scope của Hiến. Remove vercel.app URL từ section 5.10. Update changelog entries v1.6 và v2.6. Clarify: AI Skill Hub = Hiến specify SEO/GEO Checklist logic, không manage hosting/deployment. |
+| 2026-05-05 | 2.9 | Sync từ session làm việc: (1) Phạt Nguội - trang chủ golive, next step tool tra cứu + sub-pages + sitemap + llms.txt pilot. (2) Thêm dự án LLMs.txt & Robots.txt (5.11b) - BRD done, Lớp 1 `Disallow: /*?` đã deployed - thay thế toàn bộ param rules cũ, không ảnh hưởng campaign tracking. (3) Sync README, PROJECT_ORCHESTRATOR, OPERATIONAL_ROUTINE, SKILL_REGISTRY với trạng thái mới. |
+| 2026-05-05 | 2.10 | Cập nhật team Phạt Nguội: Hùng (Front-end, MoSpark) + Hoài Anh (API + database TTDK). Sync vào Status Board và section 5.11. |
 
 ---
 

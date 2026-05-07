@@ -29,9 +29,12 @@ Các bộ khung tư duy để phân tích thị trường và người dùng (JT
 Thư viện kỹ năng (Plugins) để thực thi các tác vụ cụ thể: BRD, Audit, HTML Coding.
 *   👉 [[brd-momo|Kỹ năng BRD]] | [[Seo-Geo-audit|Audit SEO/GEO]] | [[momo-html-formatting-skill|HTML Format]] | [[Web2App-Pipeline|Web-to-App]]
 
-### [[04_Execution_Use_Cases|Execution (Use Cases)]]
-Lưu trữ hồ sơ thực tế và kết quả của các dự án đã/đang triển khai.
+
+**Project Instances:**
 *   👉 [[phat-nguoi-brd]] | [[doi-tac-brd]] | [[vay-nhanh-brd]]
+
+**MoSpark Platform:**
+*   👉 [[llms-robots-txt-brd|LLMs.txt & Robots.txt BRD]] | [[mospark-product-roadmap]] | [[seo-geo-project-playbook]] | [[telecom-brd]] | [[cinema-brd]] | [[vi-tra-sau-brd]]
 
 ### [[05_Project_Orchestration|Project Orchestration]]
 **Bộ não điều phối.** Nơi kết nối tất cả các tầng trên để vận hành 9 bước Web Build Workflow.
@@ -49,4 +52,4 @@ Nếu bạn là một AI Agent tiếp nhận Repo này, hãy tuân thủ quy tr�
 4.  **Execute via Skills**: Sử dụng các template và instruction trong folder `03`.
 
 ---
-*Maintained by Văn Hiến | Last Updated: April 2026*
+*Maintained by Văn Hiến | Last Updated: May 2026*

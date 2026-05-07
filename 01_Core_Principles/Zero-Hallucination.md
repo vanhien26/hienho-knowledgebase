@@ -27,8 +27,6 @@ version: 1.0.0
 
 ## Liên kết
 - Skill này là một phần của hệ thống MoMo Web Growth
-- Xem tổng thể: [[SKILL]]
-- Workflow: [[SKILL#Workflow Chuẩn cho 1 Use Case Mới]]
 - Skill liên quan (phải dùng cùng):
   - [[Seo-Geo-audit]] - audit page có hallucination không
   - [[use-case-document]] - strategy document phải dựa trên truth

@@ -45,11 +45,12 @@ Khi tiếp nhận yêu cầu về dự án, Agent thực hiện theo quy trình 
 
 | Dự án | Giai đoạn hiện tại | PIC | Status | Link tài liệu |
 |---|---|---|---|---|
-| **Phạt Nguội** | Step 08: Roll Out | Hiến | **P0 - Live đầu T5** | [[phat-nguoi-brd]] |
+| **Phạt Nguội** | Step 08: Roll Out (Partial) | Hiến + Hùng (FE) + Hoài Anh (API) | **Trang chủ golive - đang index. Next: Tool tra cứu + Sub-pages (/o-to, /xe-may) + Sitemap + llms.txt** | [[phat-nguoi-brd]] |
 | **Ads Manager** | Step 09: Monitoring | Thuận/Hiến | **Balloon Ads Deployed (Pilot)** | [[ads-manager-brd]] |
 | **MoSpark Migration** | Step 01: Research | Bảo/Hiến | Active - Mapping Phase | [[mospark-migration-brd]] |
 | **GenAI Content** | Step 03: Build | Trọng/Hiến | Claude API Integration | [[genai-content-brd]] |
 | **LP Builder** | Step 09: Monitoring | Web Platform | Q2 Onboarding GPD | [[mospark-migration-brd]] |
+| **LLMs.txt & Robots.txt** | Step 02: Thiết lập Mục tiêu | Hiến + Bảo | **BRD done - Pending: robots.txt nâng cấp + deploy llms.txt trước tiên trên Phạt Nguội** | [[llms-robots-txt-brd]] |
 | **VTS/Đối Tác** | Step 01: Research | Hiến | Active - BRD done, chờ Legacy Audit + align VTS PO | [[doi-tac-brd]] |
 | **Vay Nhanh** | Step 02: Thiết lập Mục tiêu | Hiến + Inbound | Pending stakeholder review - Keyword/GSC/Ranking baseline done | [[vay-nhanh-brd]] |
 | **BHXM** | Step 01: Research | Hiến | Draft - chưa có growth plan post-spike | [[bhxm-brd]] |

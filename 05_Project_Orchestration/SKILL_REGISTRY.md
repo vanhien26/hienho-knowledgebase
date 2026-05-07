@@ -35,6 +35,7 @@ Khi nhận yêu cầu cụ thể, hãy kích hoạt (load) các Skill tương �
 *   **[[momo-ymyl-guideline]]**: Nguyên tắc an toàn nội dung tài chính/pháp lý.
 *   **[[mospark-seo-geo-score-brd|MoSpark SEO/GEO Scoring]]**: Hệ thống chấm điểm tự động.
 *   **[[Zero-Hallucination]]**: Nguyên tắc kiểm soát dữ liệu, không được bịa đặt thông tin.
+*   **[[llms-robots-txt-brd|LLMs.txt & Robots.txt]]**: AI Crawler Policy - robots.txt nâng cấp + llms.txt deployment. Lớp 1 (`Disallow: /*?`) đã DEPLOYED.
 
 ---
 
@@ -48,6 +49,6 @@ Mọi hành động phải luôn tuân thủ:
 
 ## 🚀 Cách sử dụng cho AI
 1.  **Nhận yêu cầu** từ người dùng.
-2.  **Tra cứu SKILL.md** để tìm kỹ năng hoặc quy trình phù hợp.
+2.  **Tra cứu file này** để tìm kỹ năng hoặc quy trình phù hợp.
 3.  **Truy cập vào file chi tiết** để lấy bộ Instructions/Templates.
 4.  **Thực hiện và kiểm tra chéo** với Principles trước khi phản hồi.
