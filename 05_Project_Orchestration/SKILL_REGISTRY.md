@@ -5,8 +5,9 @@ Chào mừng bạn đến với hệ thống **Agent Harness** của Văn Hiến
 ---
 
 ## 🧭 Điều Phối Dự Án (Project Orchestrator)
-Dùng file này để biết dự án đang ở đâu và cần làm gì tiếp theo:
-👉 **[[PROJECT_ORCHESTRATOR]]**
+Dùng các file này để điều phối và chuẩn hóa bối cảnh dự án:
+*   👉 **[[PROJECT_ORCHESTRATOR]]**: Master Controller / Lifecycle Engine.
+*   👉 **[[business-context]]**: Template bối cảnh dự án (11 fields) - "Linh hồn" của mọi Use Case.
 
 ---
 
@@ -22,7 +23,7 @@ Khi nhận yêu cầu cụ thể, hãy kích hoạt (load) các Skill tương �
 
 ### 2. Soạn thảo & Tài liệu
 *   **[[brd-momo]]**: Kỹ năng viết BRD chuẩn MoMo (Situation - Complication - Resolution).
-*   **[[genai-prompt-engineering]]**: Kỹ thuật điều khiển AI tạo nội dung chuẩn SEO/GEO.
+*   **[[genai-content-brd]]**: Kỹ thuật điều khiển AI tạo nội dung chuẩn SEO/GEO.
 *   **[[momo-blog-prompt-1-outline]]**: Prompt Master cho việc lên Outline bài viết.
 *   **[[momo-blog-prompt-2-writer]]**: Prompt Master cho việc viết nội dung chi tiết.
 *   **[[use-case-document]]**: Cấu trúc tài liệu chi tiết cho từng Use Case.

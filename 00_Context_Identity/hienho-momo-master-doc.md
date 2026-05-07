@@ -1,5 +1,5 @@
 # MASTER DOC - Văn Hiến @ MoMo
-> Version: 2.8 | Last updated: 2026-05-01 | Maintained by: Văn Hiến
+> Version: 3.0 | Last updated: 2026-05-07 | Maintained by: Văn Hiến
 
 ---
 
@@ -75,6 +75,8 @@
 - Hiến đảm bảo Tech Foundation và Content Foundation được tuân thủ chặt chẽ
 
 **Scope quản lý:**
+- **Phạt Nguội (CEO Mandate):** Use Case duy nhất Hiến sở hữu toàn diện từ Research đến Content Execution.
+- **Publish Gate (Standardization):** Chuẩn hóa và Audit mọi trang được publish trên momo.vn (dù do Inbound hay Cell Team thực hiện).
 - Technical Foundation: On-page, Technical SEO, Schema, URL governance, Crawl quality, Sitemap
 - Content Foundation: Foundation Checklist, SEO/GEO Guideline, YMYL Guideline - áp dụng cho Inbound và Agency (qua Inbound)
 - Tracking: Define standard, observe và support team DA (Hải/Hoàng) thực hiện setup chuẩn cho mọi Use Case
@@ -126,6 +128,9 @@ Hệ thống vận hành dựa trên tam giác phối hợp chặt chẽ:
 | Web Platform liaison (technical request) | Văn Hiến → align trực tiếp Bảo | |
 | SEO Inventory - chuẩn đánh giá market share | Văn Hiến | |
 | GenAI Skill Hub - prompts, checklist, scoring | Văn Hiến | Own toàn bộ SEO/GEO prompts + checklist cho AI Content Platform |
+| Content Ownership - Phạt Nguội | Văn Hiến | CEO Mandate - Use Case duy nhất Hiến thực thi nội dung |
+| Content Ownership - Use Cases khác | Inbound | Vay Nhanh, VTS, Insurance... đều do Inbound thực thi |
+| Publish Gate | Văn Hiến | Sign-off cuối cùng cho mọi trang trước khi Live |
 
 ### 1.5 Prioritization Framework
 
@@ -228,6 +233,7 @@ flowchart TD
 | Field | Detail |
 |-------|--------|
 | Lead | Mai (SEO & Inbound Team Leader) |
+| Team Structure | **Ngọc Hạnh (Senior SEO):** Phụ trách SEO cho Ví Trả Sau, Vay Nhanh; Technical Audit; Off-Page |
 | Division | BMC (Brand & Marketing Center) - không thuộc GPD |
 | Scope | SEO tư vấn (Plan / Blog / Off-page) - tiền thân của Out-App Traffic |
 | Cơ chế | BU reach tới Inbound để tư vấn, Inbound chọn Use Case theo chiến lược BMC |
@@ -460,26 +466,26 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 |-------|--------|-------|---------|
 | Balloon Ads | Done | Hiến | - |
 | Popup Ads - Billpay | Closed | Hiến | - |
-| Ads Manager | Active | Hiến + Thuận | - |
+| Ads Manager | Active | Bảo (Lead) + Thuận + Hiến (Advisor) | v3.0 - Đang triển khai Module 2-5 |
 | Zero-Traffic URL Audit | On Track | Hiến | 3,670 URLs / 16 Use Cases |
 | Full Funnel Tracking Pipeline | In Progress | DA (Hải/Hoàng) + Hiến observe | GA4 done, GSC+Appsflyer đang triển khai |
 | Onelink Standardization | Discuss | Hiến | Legacy link audit needed |
 | PLG High-CTR Products | Pending | Hiến | CIC checker, Loan calc, Insurance comparison |
 | GEO/AEO QLCT Pillar/Cluster + GEO Checklist | Planning/Blocked | Hiến | v2 HTML master plan built. Blocked: named author policy, legal review SLA, Dev resource cho tool portfolio |
-| MoMo Credit Ecosystem (Vay Nhanh/Ví Trả Sau/CIC) | Active | Hiến + Inbound | KPI committed: Top 1 / 10 seed keywords |
+| MoMo Credit Ecosystem (Vay Nhanh/Ví Trả Sau/CIC) | Active | Hiến + Inbound (Hạnh) | KPI committed: Top 1 / 10 seed keywords |
 | Auto Insurance (Bảo Hiểm Ô Tô Vật Chất) | Active | Hiến | Target: 200K organic traffic 2026 |
-| SEO Inventory - Financial & Payment | In Progress | Hiến | v3 built, mở rộng scope Thanh toán/Giải trí |
-| SEO/GEO Content AI Platform | Planning | Hiến + Trọng | Batch 1 done, Batch 2 planned |
-| Phạt Nguội (Traffic fines) | P0 Active - Partial Live | Hiến + Hùng (FE) + Hoài Anh (API) | Trang chủ golive, đang index. Next: Tool tra cứu + Sub-pages (/o-to, /xe-may) + Sitemap + llms.txt |
-| MoSpark Migration (MoLanding V2) | Platform Ready - Pending Migration | Hiến + Bảo | V2 production, LP Builder live (Q2 onboard GPD). Chưa migrate page nào từ V1. BRD Scoring Gate v1.1 resolved - chờ brief Dev |
-| VTS SEO/GEO Growth | Active | Hiến + Inbound | 3 thị trường, SoV targets đã define |
+| SEO Inventory - Financial & Payment | In Progress | Hiến | Module 4 Ads Manager integrated - v4 built |
+| SEO/GEO Content AI Platform | Production | Bảo + Trọng + Hiến | v3.4 - 7-step workflow live, Claude API production |
+| Phạt Nguội (Traffic fines) | P0 Active - Partial Live | Hiến + Hùng (FE) + Hoài Anh (API) | Trang chủ live. Next: Tool tra cứu, sub-pages, sitemap, llms.txt |
+| MoSpark Migration (MoLanding V2) | Platform Ready - Pending Migration | Hiến + Bảo | V2 production, LP Builder live (Q2 onboard GPD). Ads Manager & GenAI integrated |
+| VTS SEO/GEO Growth | Active | Hiến + Inbound (Hạnh) | 3 thị trường, SoV targets đã define |
 | Cinema SEO/GEO | Passive | Hiến | 1M traffic/quý, 959 zero-traffic URLs cần xử lý |
 | Merchant Page / Đối tác (VTS Cross-Sale) | Active | Hiến | BRD v4 done, chờ Legacy Audit + VTS PO align |
-| Off-Page Strategy & Backlink Governance | Active | Hiến (standard) | BRD v2 done, Inbound execute |
+| Off-Page Strategy & Backlink Governance | Active | Hiến (standard) | BRD v2 done, Inbound (Hạnh) execute |
 | Tech Foundation Gate + Angle Governance SOP | Planning | Hiến | Framework defined, cần formalize |
-| MoSpark SEO/GEO Scoring BRD | BRD Done | Hiến + Nhật | BRD v1.1 hoàn chỉnh - 3 issues resolved. Cần brief Dev + align timeline MoSpark V2 |
-| Vay Nhanh | Active - SEO/GEO Implementation | Hiến + Inbound | BRD done. Keyword/GSC/Ranking baseline confirmed. Đang triển khai SEO/GEO |
-| LLMs.txt & Robots.txt | In Progress | Hiến + Bảo | BRD done. Lớp 1 DEPLOYED: `Disallow: /*?` - block toàn bộ parameterized URLs. Next: AI crawler policy + llms.txt pilot trên Phạt Nguội |
+| MoSpark SEO/GEO Scoring BRD | BRD Done | Hiến + Nhật | BRD v1.1 hoàn chỉnh - 3 issues resolved. Cần brief Dev |
+| Vay Nhanh | Active - SEO/GEO Implementation | Hiến + Inbound (Hạnh) | BRD done. Ranking baseline confirmed |
+| LLMs.txt & Robots.txt | In Progress | Hiến + Bảo | robots.txt Lớp 1 DEPLOYED. Next: llms.txt pilot Phạt Nguội |
 | BHXM | Draft | Hiến | BRD Draft - cần growth plan post-spike |
 | eSIM Du Lịch | Draft | Hiến | BRD Draft - chờ PO + Dev review |
 
@@ -691,26 +697,31 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 
 **Vision:** Công cụ ứng dụng AI Foundation (Claude/Gemini) để chuẩn hóa hoạt động Content Production trên Website cho cả Inbound (BMC) và Out-App Traffic (GPD).
 
+**Version:** 3.4 (May 2026)
+
 **Owner:**
-- Web Platform: Trọng (PIC build công cụ)
-- Out-App Traffic: Hiến (owner Skill/Prompt Hub - SEO/GEO layer)
+- Project Manager: Anh Bảo (Web Platform Manager)
+- Tech Lead: Trọng (Software Engineer II)
+- Governance & Prompts: Văn Hiến (SEO & GEO Lead)
 
-**Scope & Workflow:**
-- Quản lý BU Input: Lưu trữ các thông tin dự án, Business Model, Target Audience, Value Prop, Promotion,... (tự động update theo thời gian thực)
-- Workflow Content: Keyword → Secondary keyword → Draft Outline by AI → Manual edit → Content Detail by AI → Manual Edit on Demo → Public
-- AI Skill Hub: Hiến own - gồm 2 thành phần:
-  - SEO/GEO Checklist Skills: Hiến specify checklist, chuẩn hoá scoring logic
-  - Prompt với Role viết Blog: [CẦN BỔ SUNG - Hiến update sau]
-- Dashboard Output: Quản trị nội dung và pull Ranking/Impression từ GSC API
+**Status:** Claude API on Production - Enhanced Prompts Live - MoSpark Blog Auto-Create Integrated.
 
-**Status:** Đang tích hợp Claude API để testing. Pilot use case đầu tiên: Phạt Nguội content. GenAI Content pipeline đang trong giai đoạn integrate vào Web Platform.
+**Workflow Content - 7 Bước:**
+1. Tạo Project (PM/Growth)
+2. Business Context (11 fields bắt buộc - PM/Growth + Hiến validate)
+3. Create Primary Keyword (Content Team)
+4. Draft Outline AI (Claude API)
+5. Manual Edit Outline (Content Team + PM/Growth approve - Gate 2)
+6. Blog Detail AI (Claude API + Auto SEO Scoring)
+7. Blog Editor/Publish (Hiến verify & sign-off - Gate 3 → Content Team publish)
 
-**Roadmap theo Batch:**
+**Roadmap:**
+- Phase 1 (May 2026): 7-Step Workflow live, Phạt Nguội pilot, Scaling Financial products.
+- Phase 2 (June 2026+): GSC API Integration, Automated Insights, Content Refresh Automation.
 
-| Batch | Nội dung | Status |
-|-------|----------|--------|
-| Batch 1 | SEO/GEO Guideline + YMYL Guideline + Blog Prompt (Outline + Writer) | Done - sẵn sàng integrate |
-| Batch 2 | Business Context Layer: Business Model, Target Audience, Value Proposition, Promotion Scheme theo từng Use Case/Project - mỗi lần Create New Article sẽ tự động pull context này để output chính xác hơn | Planned |
+**Meeting log:**
+- **[2026-05-07]**: Cập nhật workflow 7 bước và 3 approval gates. Phân định rõ ownership verify (Hiến) vs publish action (Content Team).
+
 
 ---
 
@@ -835,7 +846,29 @@ Xây dựng nền tảng quản lý nội dung Web thế hệ mới thay thế A
 - **SEO/GEO Standard:** Set technical foundation cho mọi page trên MoSpark - dù ai tạo
 - **Pre-Publish Gate:** Sign-off checklist 3 blocks trước khi page Replace từ V1 sang V2
 - **AI Skill Hub:** Own toàn bộ SEO/GEO prompts và checklist skill trong GenAI Pipeline
+- **Ads Manager Advisor:** Quan sát, tư vấn về SEO/GEO impact cho các chiến dịch quảng cáo trên Web
 - **Touchpoint:** Align trực tiếp với Bảo về spec và timeline
+
+---
+
+#### Ads Manager Module (v3.0)
+
+**Mục tiêu:** Nền tảng phân phối promotional content đúng context trên Web MoMo (Web-to-App pipeline).
+
+**Status:** On Progress (May 2026).
+
+**Lộ trình 5 Module:**
+- **Module 1:** Campaign Operations (Production) - Balloon, Popup, URL targeting.
+- **Module 2:** Traffic Inventory Management (Q2/2026) - Placement Registry, Conflict Resolution.
+- **Module 3:** Ads Distribution Platform (Q3/2026) - Multi-tenant, Umami Dashboard.
+- **Module 4:** **SEO Inventory Dashboard (Q2/2026)** - Market Sizing (Search Volume) per Use Case. Thuận build, Hiến input data.
+- **Module 5:** **Use Case Performance by Umami (Q2/2026)** - Tracking Visitor/Pageview, Reach Estimate integration.
+
+**Team:**
+- **Bảo:** Project Lead
+- **Thuận:** Technical Owner
+- **Hiến:** SEO/GEO Advisor (Governance, Content Standards, SEO/GEO impact monitoring)
+- **Lộc:** Umami Tracking setup
 
 ---
 
@@ -882,7 +915,15 @@ Xây dựng nền tảng quản lý nội dung Web thế hệ mới thay thế A
 
 ### 5.14 Content Governance Framework (cập nhật)
 
-**Vision:** Ngăn overlap content angles giữa Inbound và Out-App Traffic. Định nghĩa rõ ownership theo search intent.
+**Vision:** Loại bỏ hoàn toàn khả năng overlap content. Hiến tập trung vào Phạt Nguội và vai trò Gatekeeper.
+
+**Ownership Logic:**
+
+| Nhóm | Phụ trách | Phạm vi |
+|---|---|---|
+| **Out-App Traffic (Hiến)** | **Phạt Nguội (Chủ lực)** | CEO Mandate: Tra cứu + Blog Giao thông |
+| **Inbound Team (Mai/Hạnh)** | **Tất cả Use Case khác** | Vay Nhanh, Ví Trả Sau, Bảo hiểm, Billpay, Cinema... |
+| **Gatekeeper (Hiến)** | **Toàn bộ momo.vn** | Chuẩn hóa Technical & SEO/GEO Scoring trước khi Live |
 
 **Decision Tree - Ownership:**
 
@@ -1167,7 +1208,7 @@ Spoke: /thanh-toan-momo-{brand} → Breadcrumb về VTS Hub → Related merchant
 | Working style | Cần direction rõ ràng trước khi triển khai. Responsive với data-backed brief |
 | Trigger tích cực | Được cung cấp content direction + template UI rõ ràng |
 | Scope phụ trách | Blog content production, competitor audit, off-page execution (agency coordination), content calendar |
-| Ghi chú | Agency (nếu có) chạy qua Mai review trước khi Hiến audit cuối cùng. Rule: Inbound không làm việc trực tiếp với Web Platform |
+| Ghi chú | **Ngọc Hạnh (Senior SEO)** mới tuyển dụng, phụ trách trực tiếp SEO cho VTS/Vay Nhanh, Technical Audit và Off-Page. Agency (nếu có) chạy qua Mai review trước khi Hiến audit cuối cùng. Rule: Inbound không làm việc trực tiếp với Web Platform |
 
 ### 6.5 Trọng - Web Platform Developer
 
@@ -1208,6 +1249,10 @@ Spoke: /thanh-toan-momo-{brand} → Breadcrumb về VTS Hub → Related merchant
 | 2026-05-01 | 2.8 | Resolve Conflict #8 - Remove Vercel References: MoMo Web không dùng Vercel, không phải scope của Hiến. Remove vercel.app URL từ section 5.10. Update changelog entries v1.6 và v2.6. Clarify: AI Skill Hub = Hiến specify SEO/GEO Checklist logic, không manage hosting/deployment. |
 | 2026-05-05 | 2.9 | Sync từ session làm việc: (1) Phạt Nguội - trang chủ golive, next step tool tra cứu + sub-pages + sitemap + llms.txt pilot. (2) Thêm dự án LLMs.txt & Robots.txt (5.11b) - BRD done, Lớp 1 `Disallow: /*?` đã deployed - thay thế toàn bộ param rules cũ, không ảnh hưởng campaign tracking. (3) Sync README, PROJECT_ORCHESTRATOR, OPERATIONAL_ROUTINE, SKILL_REGISTRY với trạng thái mới. |
 | 2026-05-05 | 2.10 | Cập nhật team Phạt Nguội: Hùng (Front-end, MoSpark) + Hoài Anh (API + database TTDK). Sync vào Status Board và section 5.11. |
+| 2026-05-07 | 3.0 | **Major Update**: Cập nhật toàn bộ trạng thái dự án MoSpark (v3.0), Ads Manager (v3.0) và GenAI Content (v3.4). Bổ sung lộ trình 5 Module của Ads Manager và 7-step workflow của GenAI. Cập nhật vai trò Bảo (Project Lead) và các PIC kỹ thuật mới (Trọng, Thuận, Lộc). |
+| 2026-05-07 | 3.1 | **Inbound Team Update**: Cập nhật nhân sự mới **Ngọc Hạnh (Senior SEO)** phụ trách Ví Trả Sau, Vay Nhanh, Technical Audit và Off-Page. |
+| 2026-05-07 | 3.2 | **Ownership Refinement**: Làm rõ chỉ thị CEO - Hiến chỉ thực thi nội dung **Phạt Nguội**, toàn bộ Use Case khác do Inbound sở hữu. Hiến đóng vai trò **Publish Gate** để chuẩn hóa toàn bộ hệ thống. |
+
 
 ---
 

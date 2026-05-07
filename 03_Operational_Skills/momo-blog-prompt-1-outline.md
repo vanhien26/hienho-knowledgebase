@@ -67,12 +67,15 @@ Before creating outline, AI analyzes internally:
 - MOFU (Commercial)? → 5-7 H2 sections, 1200-2000 words
 - BOFU (Transactional)? → 3-5 H2 sections, 600-1000 words
 
-**1.3 Target Reader:**
-Who searches this keyword? What's their pain point? What do they need to know?
-
 **1.4 Information Gain:**
 Which features from Business Context are unique vs competitors?
 → These become key sections
+
+**1.5 Phân tích JTBD (Jobs to be Done):**
+Dựa vào Primary Keyword + Business Context, xác định:
+- **Job to be Done:** User muốn đạt được điều gì cuối cùng?
+- **Nỗi đau/Vấn đề (Pains):** User đang lo lắng, gặp khó khăn gì?
+- **Giải pháp:** Sản phẩm trong Business Context giải quyết điều đó như thế nào?
 
 (Think internally - **DO NOT OUTPUT**)
 
@@ -111,67 +114,71 @@ If all pass → Output outline. Done.
 ```
 ---
 
-## INPUT SUMMARY
+## TỔNG QUAN ĐẦU VÀO
 
-- **Business Context:** [Brief product summary, e.g., "MoMo Phạt Nguội - Tra cứu phạt + Auto-warning"]
-- **Primary Keyword:** {{input.primary_keyword}}
-- **Secondary Keywords:** {{input.secondary_keywords}}
-
----
-
-## META INFORMATION
-
-- **Title Tag:** [50-60 characters, includes entity + keyword]
-- **H1:** [Different from title, answers intent directly]
-- **Meta Description:** [150-160 characters, includes CTA]
-- **Word Count:** [Estimated range based on intent]
-- **Content Type:** [Use Case: Tài chính / Bảo hiểm / Dịch vụ công / Giải trí]
-- **Compliance:** [Disclaimer requirement if YMYL]
+- **Bối cảnh sản phẩm:** [Tóm tắt sản phẩm, ví dụ: "MoMo Phạt Nguội - Tra cứu + Cảnh báo tự động"]
+- **Từ khóa chính:** {{input.primary_keyword}}
+- **Từ khóa phụ:** {{input.secondary_keywords}}
+- **Phân tích JTBD:**
+    *   **Vấn đề của user:** [Nêu nỗi đau/nỗi lo của user liên quan đến từ khóa này]
+    *   **Công việc cần làm (Job):** [User muốn giải quyết việc gì?]
+    *   **Giá trị MoMo mang lại:** [Giải pháp từ Business Context giúp user như thế nào?]
 
 ---
 
-## OPENING (40-60 words)
+## THÔNG TIN META
 
-[Answer-first paragraph. No introduction. Directly answer the main question.]
+- **Tiêu đề SEO (Title Tag):** [50-60 ký tự, bao gồm thực thể + từ khóa chính]
+- **Thẻ H1:** [Khác với Title Tag, trả lời trực tiếp ý định tìm kiếm]
+- **Mô tả Meta:** [150-160 ký tự, bao gồm lời kêu gọi hành động CTA]
+- **Số lượng từ dự kiến:** [Khoảng từ tùy theo ý định tìm kiếm]
+- **Loại nội dung:** [Use Case: Tài chính / Bảo hiểm / Dịch vụ công / Giải trí]
+- **Tuân thủ pháp lý:** [Yêu cầu miễn trừ trách nhiệm nếu là YMYL]
 
 ---
 
-## BODY STRUCTURE
+## ĐOẠN MỞ ĐẦU (40-60 từ)
 
-### H2-1: [Section Title]
-- **Mục đích:** [Why this section exists]
-- **Nội dung:** [3-5 main points]
-- **Format:** [Definition / HowTo / Table / Statistic / Comparison]
-- **Keywords:** [Secondary keywords here]
+[Đoạn văn trả lời trực tiếp - Answer-first. Không dẫn dắt dài dòng. Trả lời ngay câu hỏi chính.]
 
-### H2-2: [Section Title]
+---
+
+## CẤU TRÚC NỘI DUNG CHÍNH
+
+### H2-1: [Tiêu đề mục]
+- **Mục đích:** [Lý do phần này tồn tại]
+- **Nội dung:** [3-5 ý chính cần triển khai]
+- **Định dạng:** [Định nghĩa / Hướng dẫn (HowTo) / Bảng / Số liệu / So sánh]
+- **Từ khóa:** [Chèn các từ khóa phụ liên quan]
+
+### H2-2: [Tiêu đề mục]
 - **Mục đích:**
 - **Nội dung:**
-- **Format:**
-- **Keywords:**
+- **Định dạng:**
+- **Từ khóa:**
 
-### H2-3: [Section Title]
-[Continue...]
+### H2-3: [Tiêu đề mục]
+[Tiếp tục...]
 
-[Continue H2-4, H2-5, H2-6 as needed]
-
----
-
-## FAQ (5-8 questions)
-
-1. [Question]? - [Flag: verify if needed]
-2. [Question]? - [Flag]
-3. [Question]? - [Flag]
-4. [Question]? - [Flag]
-5. [Question]? - [Flag]
-
-[Continue...]
+[Tiếp tục H2-4, H2-5, H2-6 nếu cần]
 
 ---
 
-## DISCLAIMER
+## CÂU HỎI THƯỜNG GẶP (5-8 câu)
 
-[1-2 sentences, template from YMYL Guideline. Only if Use Case is not Giải trí/Lifestyle.]
+1. [Câu hỏi]? - [Ghi chú: xác minh thông tin nếu cần]
+2. [Câu hỏi]? - [Ghi chú]
+3. [Câu hỏi]? - [Ghi chú]
+4. [Câu hỏi]? - [Ghi chú]
+5. [Câu hỏi]? - [Ghi chú]
+
+[Tiếp tục...]
+
+---
+
+## MIỄN TRỪ TRÁCH NHIỆM
+
+[1-2 câu, lấy mẫu từ YMYL Guideline. Chỉ áp dụng nếu Use Case không phải Giải trí/Lifestyle.]
 
 ---
 ```
@@ -180,113 +187,117 @@ If all pass → Output outline. Done.
 
 # RULES FOR OUTPUT
 
-✅ **MUST DO:**
-- Output OUTLINE ONLY (không viết content)
-- Keep total length: 2-3 pages max
-- Include Input Summary (source reference)
-- Each H2: 4-6 lines, concise
-- Make purpose of each section clear
-- Flag FAQ items for verification (brief)
+✅ **PHẢI LÀM:**
+- **Ngôn ngữ:** Sử dụng 100% tiếng Việt cho toàn bộ output (bao gồm các nhãn field).
+- Output DÀN Ý (OUTLINE) DUY NHẤT (không viết nội dung bài).
+- Độ dài tổng thể: Tối đa 2-3 trang.
+- Bao gồm Tổng quan đầu vào (nguồn tham chiếu).
+- Mỗi mục H2: 4-6 dòng, súc tích.
+- Làm rõ mục đích của từng phần.
+- Đánh dấu các mục FAQ cần xác minh (brief).
 
-❌ **MUST NOT DO:**
-- Don't output internal analysis (Step 1)
-- Don't output checklist (Step 3)
-- Don't include GEO & Internal Links
-- Don't include Information Gain list (implicit)
-- Don't use "Đề xuất" annotations
-- Don't repeat information
-- Don't write full content
-- Don't include meta-commentary
-- Don't use En Dash "—"
+❌ **KHÔNG ĐƯỢC LÀM:**
+- Không xuất kết quả phân tích nội bộ (Bước 1).
+- Không xuất danh sách kiểm tra (Bước 3).
+- Không chèn GEO & Liên kết nội bộ.
+- Không liệt kê danh sách Information Gain (đã lồng ghép ngầm định).
+- Không sử dụng chú thích "Đề xuất".
+- Không lặp lại thông tin.
+- Không viết nội dung đầy đủ.
+- Không chèn các lời dẫn của AI (meta-commentary).
+- Không sử dụng gạch ngang dài En Dash "—".
 
 ---
 
-# EXAMPLE OUTPUT
+# VÍ DỤ OUTPUT MẪU
 
 ```
 ---
 
-## INPUT SUMMARY
+## TỔNG QUAN ĐẦU VÀO
 
-- **Business Context:** MoMo Phạt Nguội - Tra cứu phạt CSGT, auto-warning subscription (199-299k/tháng), NHNN cấp phép
-- **Primary Keyword:** Tra cứu phạt nguội ô tô
-- **Secondary Keywords:** Cách tra cứu phạt nguội oto, kiểm tra phạt nguội oto, tra cứu phạt nguội ô tô 2026, tra cứu phạt nguội ô tô toàn quốc, kiem tra phat nguoi oto
-
----
-
-## META INFORMATION
-
-- **Title Tag:** Tra Cứu Phạt Nguội Ô Tô Trên MoMo - Nhanh, Chính Xác (57 ký tự)
-- **H1:** Cách Tra Cứu Phạt Nguội Ô Tô Nhanh Nhất 2026 - Dữ Liệu CSGT Chính Thức
-- **Meta Description:** Tra cứu phạt nguội ô tô ngay trên MoMo - dữ liệu chính thức CSGT, không Captcha, 1-chạm. Hướng dẫn miễn phí, nhận cảnh báo tự động. (159 ký tự)
-- **Word Count:** 850-1000 từ (BOFU)
-- **Content Type:** Dịch vụ công & Thanh toán
-- **Compliance:** Disclaimer pháp lý rút gọn (Tier 3)
+- **Bối cảnh sản phẩm:** MoMo Phạt Nguội - Tra cứu phạt CSGT, đăng ký cảnh báo tự động (199-299k/tháng), NHNN cấp phép
+- **Từ khóa chính:** Tra cứu phạt nguội ô tô
+- **Từ khóa phụ:** Cách tra cứu phạt nguội oto, kiểm tra phạt nguội oto, tra cứu phạt nguội ô tô 2026, tra cứu phạt nguội ô tô toàn quốc, kiem tra phat nguoi oto
+- **Phân tích JTBD:**
+    *   **Vấn đề của user:** Lo sợ bị lừa đảo bởi web giả mạo; lo lắng bị dồn tiền phạt cao hoặc bị từ chối đăng kiểm do không biết mình có lỗi.
+    *   **Công việc cần làm (Job):** Kiểm tra lỗi vi phạm một cách nhanh chóng, chính xác và được thông báo ngay khi có lỗi mới.
+    *   **Giá trị MoMo mang lại:** Dữ liệu chính thức từ CSGT, không Captcha, cảnh báo tự động giúp user yên tâm lái xe.
 
 ---
 
-## OPENING (52 từ)
+## THÔNG TIN META
+
+- **Tiêu đề SEO (Title Tag):** Tra Cứu Phạt Nguội Ô Tô Trên MoMo - Nhanh, Chính Xác (57 ký tự)
+- **Thẻ H1:** Cách Tra Cứu Phạt Nguội Ô Tô Nhanh Nhất 2026 - Dữ Liệu CSGT Chính Thức
+- **Mô tả Meta:** Tra cứu phạt nguội ô tô ngay trên MoMo - dữ liệu chính thức CSGT, không Captcha, 1-chạm. Hướng dẫn miễn phí, nhận cảnh báo tự động. (159 ký tự)
+- **Số lượng từ dự kiến:** 850-1000 từ (BOFU)
+- **Loại nội dung:** Dịch vụ công & Thanh toán
+- **Tuân thủ pháp lý:** Miễn trừ trách nhiệm pháp lý rút gọn (Tier 3)
+
+---
+
+## ĐOẠN MỞ ĐẦU (52 từ)
 
 Tra cứu phạt nguội ô tô trên MoMo chỉ cần 3 bước: mở app → nhập biển số → xem kết quả ngay. Dữ liệu lấy trực tiếp từ Cục CSGT qua TTDK - cùng nguồn với cổng chính thức, nhưng tối ưu hoàn toàn cho mobile, không cần Captcha phức tạp.
 
 ---
 
-## BODY STRUCTURE
+## CẤU TRÚC NỘI DUNG CHÍNH
 
 ### H2-1: Phạt Nguội Ô Tô Là Gì? Tại Sao Cần Biết?
-- **Mục đích:** Provide context for first-time searchers
-- **Nội dung:** Definition (camera ghi hình), khác phạt trực tiếp, tại sao khó phát hiện, hậu quả (không đăng kiểm, tích lũy phạt)
-- **Format:** Definition block
-- **Keywords:** (context)
+- **Mục đích:** Cung cấp bối cảnh cho người dùng tìm kiếm lần đầu
+- **Nội dung:** Định nghĩa (camera ghi hình), khác phạt trực tiếp, tại sao khó phát hiện, hậu quả (không đăng kiểm, tích lũy phạt)
+- **Định dạng:** Khối định nghĩa (Definition block)
+- **Từ khóa:** (context)
 
 ### H2-2: Tra Cứu Phạt Nguội Ô Tô Trên MoMo - Hướng Dẫn Từng Bước
-- **Mục đích:** Core BOFU - answer primary intent
-- **Nội dung:** HowTo 4 bước (mở app, nhập biển số, xem kết quả, tiếp theo), miễn phí, không tài khoản, không Captcha
-- **Format:** HowTo (numbered)
-- **Keywords:** Tra cứu phạt nguội ô tô, cách tra cứu phạt nguội oto, kiểm tra phạt nguội oto
+- **Mục đích:** Core BOFU - giải quyết nhu cầu tìm kiếm chính
+- **Nội dung:** Hướng dẫn 4 bước (mở app, nhập biển số, xem kết quả, bước tiếp theo), miễn phí, không cần tài khoản, không Captcha
+- **Định dạng:** Hướng dẫn từng bước (đánh số)
+- **Từ khóa:** Tra cứu phạt nguội ô tô, cách tra cứu phạt nguội oto, kiểm tra phạt nguội oto
 
 ### H2-3: Dữ Liệu Từ Đâu? Tại Sao Nên Tin MoMo?
-- **Mục đích:** Build Trust/Authority
-- **Nội dung:** Data source (CSGT + TTDK), NHNN licensing, Performance (1.1M traffic), partners (Be, Grab, Xanh SM), warning about 3rd party apps
-- **Format:** Statistic block + Text
-- **Keywords:** Kiểm tra phạt nguội oto, tra cứu phạt nguội ô tô
+- **Mục đích:** Xây dựng niềm tin và uy tín (Trust/Authority)
+- **Nội dung:** Nguồn dữ liệu (CSGT + TTDK), giấy phép NHNN, hiệu suất (1.1M traffic), đối tác (Be, Grab, Xanh SM), cảnh báo về các app giả mạo
+- **Định dạng:** Khối số liệu (Statistic block) + Văn bản
+- **Từ khóa:** Kiểm tra phạt nguội oto, tra cứu phạt nguội ô tô
 
-### H2-4: So Sánh Các Cách Tra Cứu Phạt Nguội Ô Tô
-- **Mục đích:** Address MOFU (user evaluating options)
-- **Nội dung:** Comparison table 3 channels (CSGT / 3rd party / MoMo) on data, Captcha, auto-warning, security, UI. Honest about MoMo limitations
-- **Format:** Comparison Table
-- **Keywords:** Tra cứu phạt nguội ô tô 2026, tra cứu phạt nguội ô tô toàn quốc
+### H2-4: So Sánh Các Cách Tra Cứu Phạt Nguội Ô Tô Hiện Nay
+- **Mục đích:** Giải quyết nhu cầu MOFU (người dùng đang so sánh các lựa chọn)
+- **Nội dung:** Bảng so sánh 3 kênh (CSGT / App bên thứ 3 / MoMo) về dữ liệu, Captcha, cảnh báo tự động, bảo mật, giao diện. Thành thật về các hạn chế của MoMo.
+- **Định dạng:** Bảng so sánh (Comparison Table)
+- **Từ khóa:** Tra cứu phạt nguội ô tô 2026, tra cứu phạt nguội ô tô toàn quốc
 
 ### H2-5: Tính Năng Cảnh Báo Tự Động - Không Để Phạt Tích Lũy
-- **Mục đích:** Natural upsell; highlight unique feature
-- **Nội dung:** Definition of auto-warning, how it works, subscription tiers (199k/1 car, 299k/2 cars), pricing (9k/month = cheaper than bread), scenario
-- **Format:** Definition block + Pricing callout
-- **Keywords:** (conversion)
+- **Mục đích:** Upsell tự nhiên; làm nổi bật tính năng độc quyền
+- **Nội dung:** Định nghĩa cảnh báo tự động, cơ chế hoạt động, các gói đăng ký (199k/1 xe, 299k/2 xe), giá thành (9k/tháng = rẻ hơn ổ bánh mì), kịch bản sử dụng.
+- **Định dạng:** Khối định nghĩa + Callout về giá
+- **Từ khóa:** (conversion)
 
-### H2-6: Sau Khi Tra Cứu Thấy Bị Phạt - Phải Làm Gì?
-- **Mục đích:** Solve "next step"; reduce bounce
-- **Nội dung:** HowTo 4 bước (verify, go to DVC, pay, re-check), deadline (10 days), consequences, inline disclaimer on payment
-- **Format:** HowTo (numbered) + Inline disclaimer
-- **Keywords:** Tra cứu phạt nguội ô tô 2026
-
----
-
-## FAQ (8 câu)
-
-1. Tra cứu phạt nguội ô tô trên MoMo có mất phí không? - Verify PAA
-2. Tra cứu phạt nguội ô tô trên MoMo có chính xác không? - Verify PAA
-3. Tra cứu phạt nguội ô tô toàn quốc ở đâu nhanh nhất? - Verify PAA
-4. Bị phạt nguội ô tô bao lâu thì phải nộp phạt? - Verify NĐ 168/2024
-5. Phạt nguội ô tô có ảnh hưởng đến đăng kiểm không? - Verify PAA
-6. Làm sao biết xe ô tô bị phạt nguội mà không cần tra cứu thủ công? - Verify PAA
-7. Nộp phạt nguội ô tô ở đâu để không bị lừa đảo? - Verify PAA
-8. App MoMo có tra cứu được phạt nguội ô tô toàn quốc không? - Verify Product
+### H2-6: Sau Khi Tra Cứu Thấy Bị Phạt - Bạn Cần Phải Làm Gì?
+- **Mục đích:** Giải quyết bước tiếp theo; giảm tỷ lệ thoát (bounce rate)
+- **Nội dung:** 4 bước xử lý (xác minh, lên cổng DVC, nộp phạt, kiểm tra lại), thời hạn (10 ngày), hậu quả nếu chậm trễ, lưu ý về việc nộp phạt.
+- **Định dạng:** Hướng dẫn từng bước (đánh số) + Lưu ý miễn trừ
+- **Từ khóa:** Tra cứu phạt nguội ô tô 2026
 
 ---
 
-## DISCLAIMER
+## CÂU HỎI THƯỜNG GẶP (8 câu)
 
-Thông tin dựa trên Nghị định 168/2024/NĐ-CP, Thông tư 73/2024/TT-BCA. Mức phạt và quy trình có thể thay đổi. Thanh toán hiện qua Cổng DVC - MoMo đang phát triển thanh toán trực tiếp. Cập nhật: [Date].
+1. Tra cứu phạt nguội ô tô trên MoMo có mất phí không? - Xác minh PAA
+2. Tra cứu phạt nguội ô tô trên MoMo có chính xác không? - Xác minh PAA
+3. Tra cứu phạt nguội ô tô toàn quốc ở đâu nhanh nhất? - Xác minh PAA
+4. Bị phạt nguội ô tô bao lâu thì phải nộp phạt? - Xác minh NĐ 168/2024
+5. Phạt nguội ô tô có ảnh hưởng đến đăng kiểm không? - Xác minh PAA
+6. Làm sao biết xe ô tô bị phạt nguội mà không cần tra cứu thủ công? - Xác minh PAA
+7. Nộp phạt nguội ô tô ở đâu để không bị lừa đảo? - Xác minh PAA
+8. App MoMo có tra cứu được phạt nguội ô tô toàn quốc không? - Xác minh tính năng
+---
+
+## MIỄN TRỪ TRÁCH NHIỆM
+
+Thông tin dựa trên Nghị định 168/2024/NĐ-CP, Thông tư 73/2024/TT-BCA. Mức phạt và quy trình có thể thay đổi. Thanh toán hiện qua Cổng DVC - MoMo đang phát triển thanh toán trực tiếp. Cập nhật ngày: [Ngày].
 
 ---
 ```

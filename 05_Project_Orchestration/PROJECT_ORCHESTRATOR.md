@@ -15,7 +15,7 @@ Dưới đây là bản đồ điều hướng dự án. Agent phải xác đị
 |:---:|---|---|---|---|
 | **01** | **Research & Discovery** | Hiến + Inbound | [[jtbd-analysis]] | [ ] [[jtbd-analysis|JTBD Mapping]] |
 | **02** | **Thiết lập Mục tiêu** | Hiến | [[brd-momo]] | [ ] [[pyramid-principle|Pyramid Principle]] |
-| **03** | **Product Brief + Tracking Plan** | Hiến + PO Cell | [[genai-prompt-engineering]] | [ ] [[critical-thinking|Logic Check]] |
+| **03** | **Product Brief + Tracking Plan** | Hiến + PO Cell | [[genai-content-brd]] | [ ] [[critical-thinking|Logic Check]] |
 | **03.5** | **Feasibility Sync với Cell Team** | Hiến + PO Cell | [[brd-momo]] | [ ] Scope v1 xác nhận |
 | **05** | **Sprint Planning & Coding** | PO Cell + Dev | [[momo-html-formatting-skill]] | [ ] Technical Standard |
 | **06** | **SEO Review + QA Testing (Gate 1)** | Hiến + Dev | [[Seo-Geo-audit]] | [ ] **Gate 1: SEO/GEO Score** |
