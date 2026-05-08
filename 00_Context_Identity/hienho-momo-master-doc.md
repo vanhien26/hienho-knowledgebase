@@ -297,12 +297,16 @@ Mỗi Cell Team tiếp cận Hiến theo framework: **Research → Build Web/Fun
 
 ### 3.1 OKR 2026 - Out-App Traffic Team
 
-#### O1 - New User Growth via Organic & Web2App
+**Vision:** Scale MoMo to Vietnam's #1 financial destination (6M visitors) via an Agentic, SEO/GEO-first platform that turns underserved market needs into high-authority traffic.
 
-- **Outcome:** Tăng trưởng New User install từ web channel
-- **Priority Use Cases:** Credit, Insurance, BNPL, Telco, Cinema, OTA, eSIM
-- **Key Lever:** Use Case mini-webs với product flows + Utilities-Led SEO (simulators, tools)
-- **Tracking:** momoapp.onelink.vn → Store → Install → Register → KYC → Cashin → MAU
+**Objective 1: Accelerate MoMo’s Financial Authority to 6M Monthly Visitors**
+- **KR 1.1:** Increase MUV from 3.0 M to 6.0 M (Source: BigQuery).
+- **KR 1.2:** Top 3-5 ranking for 50+ high-intent "underserved" financial keywords.
+- **KR 1.3:** Achieve [xx]% conversion rate for Web-to-App deep-links.
+- **KR 1.4:** Measurable AI Referral Traffic (GEO) from ChatGPT/Gemini/Perplexity.
+
+*Chi tiết roadmap: [[web-momo-okrs-2026|Web MoMo OKRs 2026]]*
+
 
 #### O2 - Platform Stability & Technical Readiness
 

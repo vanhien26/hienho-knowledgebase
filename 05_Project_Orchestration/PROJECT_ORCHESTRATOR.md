@@ -52,7 +52,7 @@ Khi tiếp nhận yêu cầu về dự án, Agent thực hiện theo quy trình 
 | **LP Builder** | Step 09: Monitoring | Web Platform | Q2 Onboarding GPD | [[mospark-migration-brd]] |
 | **LLMs.txt & Robots.txt** | Step 02: Thiết lập Mục tiêu | Hiến + Bảo | **BRD done - Pending: robots.txt nâng cấp + deploy llms.txt trước tiên trên Phạt Nguội** | [[llms-robots-txt-brd]] |
 | **VTS/Đối Tác** | Step 01: Research | Hiến | Active - BRD done, chờ Legacy Audit + align VTS PO | [[doi-tac-brd]] |
-| **Vay Nhanh** | Step 02: Thiết lập Mục tiêu | Hiến + Inbound | Pending stakeholder review - Keyword/GSC/Ranking baseline done | [[vay-nhanh-brd]] |
+| **Vay Nhanh** | Step 03: Product Brief | Hiến + Ngọc Hạnh (Inbound) | **Hiến support Product · Hạnh handle SEO Execution · Đang clone Money Pages để BU input content** | [[vay-nhanh-brd]] |
 | **BHXM** | Step 01: Research | Hiến | Draft - chưa có growth plan post-spike | [[bhxm-brd]] |
 | **eSIM Du Lịch** | Step 01: Research | Hiến | Draft - chờ PO + Dev review | [[esim-du-lich-brd]] |
 

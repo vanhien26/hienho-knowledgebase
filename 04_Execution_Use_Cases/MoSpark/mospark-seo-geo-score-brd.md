@@ -66,31 +66,19 @@ Tích hợp SEO/GEO Checklist Scoring trực tiếp vào **Section SEO** của M
 
 ```mermaid
 flowchart TD
-    A([Editor tạo / edit page]) --> B[Save Draft]
-    B --> C[Mở SEO/GEO Score Panel]
-
-    C --> D[Chạy Auto Check]
-    C --> E[Tick Manual Checklist]
-    C --> F[Bấm 'Run CWV Check'\nBắt buộc trước khi Publish]
-
-    D & E --> G
-    F -- Có kết quả --> G
-
-    G[System hiển thị Score tổng + trạng thái từng mục] --> H{CWV đã chạy?}
-
-    H -- Chưa --> Z[Publish bị Disable\nTooltip: 'Vui lòng Run CWV Check trước khi Publish']
-    Z --> F
-
-    H -- Đã có kết quả --> I{Hard Block fail?}
-
-    I -- Không --> J{Score?}
-    I -- Có --> K[Publish bị Disable\nHiển thị lý do từng item fail]
-    K --> C
-
-    J -- ≥ 80 --> L([Publish - Pass])
-    J -- 60–79 --> M([Publish - Warning])
-    J -- < 60 --> N[Cần cải thiện thêm]
-    N --> C
+    A([Bắt đầu: Tạo bài & Nhập SEO]) --> B{1. Kiểm tra\nĐiều kiện cứng}
+    
+    B -- "Thiếu Keyword / CWV / Hard Block" --> B1([CASE 1: CHẶN PUBLISH])
+    
+    B -- "Pass hết Điều kiện cứng" --> C[2. Tính điểm SEO/GEO]
+    
+    C --> D{3. Phân loại điểm?}
+    
+    D -- "Score < 60" --> B1
+    
+    D -- "Score 60 - 79" --> D1([CASE 2: CHO PHÉP PUBLISH\nTrạng thái: Cần tối ưu])
+    
+    D -- "Score ≥ 80" --> D2([CASE 2: CHO PHÉP PUBLISH\nTrạng thái: Tốt])
 ```
 
 ---
@@ -103,12 +91,123 @@ Các field editor phải nhập trước khi Scoring chạy. Map với field hi�
 |-------|--------|---------|
 | Meta Title | Field có sẵn | Dùng để check length, keyword placement |
 | Meta Description | Field có sẵn | Dùng để check length |
-| Keywords | Field có sẵn (multi, cách nhau dấu phẩy) | Từ đầu tiên = Primary Keyword, các từ còn lại = Secondary Keywords |
-| Page Type | Field mới cần thêm | Dropdown: `mini-web` / `landing-page` / `blog` - ảnh hưởng đến ngưỡng wordcount và schema khuyến nghị |
+| **Primary Keyword** | Field Keywords - phần tử đầu tiên | 1 từ khóa duy nhất, bắt buộc nhập, không để trống |
+| **Secondary Keywords** | Field Keywords - phần tử 2..n | Danh sách từ khóa phụ, cách nhau dấu phẩy, optional |
 
 > **Lưu ý:** Field Keywords hiện tại nhập multi cách nhau dấu phẩy. System sẽ parse: `keywords[0]` = Primary, `keywords[1..n]` = Secondary. Không cần thêm field mới cho việc này.
 
 ---
+
+## 4.1 Primary Keyword
+
+### Định nghĩa
+
+**Primary Keyword** là **1 từ khóa duy nhất** mà page được thiết kế để rank chính. Đây là từ khóa có priority cao nhất, thường có search volume cao, intent rõ ràng, và value conversion cao nhất.
+
+**Ví dụ:** "vay tiền", "bảo hiểm", "chuyển tiền", "lãi suất"
+
+### Validation Rules
+
+| Quy tắc | Chi tiết | Error message |
+|--------|---------|---------------|
+| **Bắt buộc** | Không được để trống | "Primary Keyword bắt buộc phải nhập. Vui lòng nhập từ khóa chính cho trang này." |
+| **Trim** | Auto remove leading/trailing space | (Internal - không cần error) |
+| **Min length** | Tối thiểu 2 ký tự | "Primary Keyword phải có ít nhất 2 ký tự." |
+| **Max length** | Tối đa 50 ký tự | "Primary Keyword không được vượt quá 50 ký tự." |
+| **Ký tự hợp lệ** | Tiếng Việt (có dấu), chữ, số, dấu cách. Không chứa: `!@#$%^&*(){}[]<>|?` | "Primary Keyword không được chứa ký tự đặc biệt. Chỉ chữ, số, và dấu cách được phép." |
+| **Không phải toàn số** | Không accept "123" (phải có ít nhất 1 chữ) | "Primary Keyword phải chứa ít nhất 1 ký tự chữ." |
+
+### UI/UX
+
+- **Label:** "Primary Keyword *" (asterisk đánh dấu bắt buộc)
+- **Placeholder:** "Nhập từ khóa chính (ví dụ: vay tiền, bảo hiểm)"
+- **Helper text:** "1 từ khóa duy nhất, cao nhất priority của trang. Dùng để check placement trong Title, H1, và On-Page Content."
+- **Input type:** Text, single-line
+- **Character counter:** Hiển thị "X/50 ký tự" (real-time)
+- **Validation trigger:** On blur hoặc on input (real-time feedback)
+
+---
+
+## 4.2 Secondary Keywords
+
+### Định nghĩa
+
+**Secondary Keywords** là danh sách các từ khóa phụ, bổ trợ cho Primary. Chúng giúp trang cover thêm nhiều keyword variants, long-tail searches, và synonym liên quan.
+
+**Ví dụ:** Nếu Primary = "vay tiền", Secondary có thể là: "vay nhanh, vay online, vay ngân hàng, vay tiền mặt"
+
+### Validation Rules
+
+| Quy tắc | Chi tiết | Error message |
+|--------|---------|---------------|
+| **Optional** | Được phép để trống | (Không error nếu trống) |
+| **Format** | Cách nhau bởi dấu phẩy + space (", ") | Auto-fix: nếu user gõ "keyword1,keyword2" (không space), system tự thêm space: "keyword1, keyword2" |
+| **Max từ khóa** | Tối đa 10 từ khóa phụ | "Tối đa 10 từ khóa phụ. Vui lòng xóa bớt." |
+| **Min length mỗi từ** | Mỗi từ tối thiểu 2 ký tự | "Từ khóa '{word}' quá ngắn (tối thiểu 2 ký tự). Vui lòng xóa hoặc sửa." |
+| **Max length mỗi từ** | Mỗi từ tối đa 50 ký tự | "Từ khóa '{word}' quá dài (tối đa 50 ký tự)." |
+| **Ký tự hợp lệ** | Tiếng Việt (có dấu), chữ, số, dấu cách. Không chứa: `!@#$%^&*(){}[]<>|?` | "Secondary Keywords chứa ký tự không hợp lệ. Chỉ chữ, số, dấu cách được phép." |
+| **Không trùng Primary** | Kiểm tra: mỗi Secondary keyword có chứa đầy đủ từ Primary không? Nếu có → warning, không block | **Warning (non-blocking):** "Từ khóa '{secondary_word}' chứa Primary Keyword '{primary}'. Bạn có thể xóa nó khỏi Secondary để tránh redundancy." |
+| **Không trùng lẫn nhau** | Không cho phép 2 Secondary keywords giống hệt nhau | "Từ khóa '{word}' bị trùng lặp. Vui lòng xóa một bản." |
+
+### UI/UX
+
+- **Label:** "Secondary Keywords"
+- **Placeholder:** "Nhập từ khóa phụ cách nhau bằng dấu phẩy (ví dụ: vay nhanh, vay online, vay ngân hàng)"
+- **Helper text:** "Danh sách từ khóa bổ trợ. Giúp trang cover thêm keyword variants và long-tail searches. Optional - nhưng khuyến khích điền đầy đủ."
+- **Input type:** Textarea hoặc comma-separated input field
+- **Word counter:** Hiển thị "X từ / 10 tối đa"
+- **Chip/Tag display:** Sau khi user nhập xong, hiển thị từng Secondary keyword dưới dạng tag/chip, cho phép xóa từng cái bằng cách click "×"
+- **Validation trigger:** On blur hoặc on input (real-time feedback)
+
+---
+
+## 4.3 Integration với SEO/GEO Scoring
+
+### Primary Keyword - Điểm được dùng trong:
+
+| Block | Items | Cách dùng |
+|-------|-------|----------|
+| **Block 1 - Technical SEO** | 1.6 (H1) | Check H1 có chứa Primary Keyword không |
+| **Block 2 - On-Page** | 2.2 (Density), 2.3 (Placement) | Tính keyword density, check placement trong Title/H1/150 từ đầu/H2 |
+| **Block 3 - GEO Signals** | 3.4 (Entity) | Gián tiếp - dùng Primary để xác định entity context của trang |
+
+### Secondary Keywords - Điểm được dùng trong:
+
+| Block | Items | Cách dùng |
+|-------|-------|----------|
+| **Block 2 - On-Page** | 2.4 (Keyword frequency) | Check mỗi Secondary keyword xuất hiện 2-5 lần trong body |
+
+### Behavior khi Primary/Secondary thay đổi:
+
+- Nếu editor thay đổi Primary hoặc Secondary **sau khi đã Run SEO/GEO Score** → hệ thống tự động **reset Score về trạng thái "Chưa chạy"** và hiển thị tooltip: "Bạn vừa thay đổi Keywords. Vui lòng Run SEO/GEO Score lại để cập nhật điểm."
+- Nút Publish vẫn enabled (nếu trước đó đã pass), nhưng Score Panel hiển thị badge "⚠ Keywords đã thay đổi - chạy lại để verify"
+
+---
+
+## 4.4 Lưu ý cho Dev
+
+1. **Parse keywords field:** Sau khi user nhập Keywords và bấm Save, Dev parse field này:
+   ```
+   input = "vay tiền, vay nhanh, vay online"
+   split by ", " → ["vay tiền", "vay nhanh", "vay online"]
+   primary = keywords[0] = "vay tiền"
+   secondary = keywords[1..n] = ["vay nhanh", "vay online"]
+   ```
+
+2. **Validation timing:**
+   - Real-time validation **on blur** - show error message cạnh field, không block save
+   - Non-blocking validation **on Save Draft** - hiển thị warning nhưng vẫn save được
+   - Hard validation **on Publish** - Primary bắt buộc phải có, nếu không → disable Publish button
+
+3. **Fallback khi Primary trống:**
+   - Nếu user bấm Publish mà Primary trống → nút Publish bị disable hoàn toàn
+   - Tooltip: "Primary Keyword bắt buộc. Vui lòng nhập từ khóa chính trước khi Publish."
+
+4. **Regex pattern suggestions:**
+   - Primary min/max: `/^[\p{L}\p{N}\s]{2,50}$/u` (Unicode letters + digits + spaces)
+   - Secondary split: `/,\s*(?=\S)/` (split by comma + optional spaces)
+   - Remove duplicates từ Secondary: deduplicate case-insensitive
+   - Auto-format: `keywords.map(k => k.trim()).filter(k => k.length > 0).join(", ")`
 
 ## 5. Scoring Model
 
@@ -127,11 +226,13 @@ Các field editor phải nhập trước khi Scoring chạy. Map với field hi�
 
 ### 5.2 Ngưỡng publish
 
-| Ngưỡng | Điều kiện | Behavior |
-|--------|-----------|----------|
-| **Blocked** | Có ít nhất 1 Hard Block item fail - bất kể tổng score bao nhiêu | Nút Publish bị disable hoàn toàn |
-| **Warning** | Score 60-79 và không có Hard Block fail | Nút Publish enabled với badge "⚠ Warning" - vẫn publish được |
-| **Pass** | Score ≥ 80 và không có Hard Block fail | Nút Publish enabled bình thường |
+Dựa trên kết quả Scoring, hệ thống phân loại thành 2 Case chính:
+
+| Case | Trạng thái | Điều kiện | Behavior |
+|--------|-----------|-----------|----------|
+| **CASE 1** | **Blocked** | Có Hard Block fail (Keyword, CWV, Technical) HOẶC Score < 60 | Nút Publish bị disable hoàn toàn |
+| **CASE 2** | **Warning** | Score 60-79 và không có Hard Block fail | Nút Publish enabled với badge "⚠ Cần tối ưu" |
+| **CASE 2** | **Pass** | Score ≥ 80 và không có Hard Block fail | Nút Publish enabled với trạng thái "Tốt" |
 
 ---
 
@@ -176,7 +277,7 @@ Dev implement rule: nếu visible text wordcount của trang **không đạt ng�
 
 | # | Hạng mục | Điểm | Validate method | Hard Block |
 |---|----------|------|----------------|------------|
-| 2.1 | Wordcount đạt ngưỡng theo Page Type | 6 | Auto: đếm visible text, so sánh với threshold theo `page_type` field | NO |
+| 2.1 | Wordcount đạt ngưỡng theo Page Type | 6 | Auto: đếm visible text, so sánh với threshold theo loại trang (Page Type) | NO |
 | 2.2 | Primary Keyword density: 1-2% | 5 | Auto: `(keyword_count / total_words) * 100`, cờ nếu < 1% hoặc > 2% | NO |
 | 2.3 | Primary Keyword trong Title + H1 + 150 từ đầu + ≥ 1 H2 | 6 | Auto: parse DOM, check keyword placement | NO |
 | 2.4 | Secondary Keywords: mỗi từ xuất hiện 2-5 lần | 4 | Auto: đếm frequency từng keyword trong `keywords[1..n]` | NO |
@@ -362,6 +463,7 @@ Tổng hợp các điều kiện **disable nút Publish**:
 
 | Điều kiện | Lý do |
 |-----------|-------|
+| **Primary Keyword trống** | Không có từ khóa chính để tính toán mật độ và vị trí SEO - bắt buộc nhập |
 | **CWV chưa được Run** | Bắt buộc có kết quả CWV trước khi Publish - không có ngoại lệ |
 | **1.1 Canonical không tồn tại** | Googlebot không xác định được URL chính thống |
 | **1.2 Canonical sai URL** | Google index sai URL, trang mới không tích lũy được signal |

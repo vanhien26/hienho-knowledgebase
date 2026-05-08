@@ -9,9 +9,9 @@
 **SEO/GEO Project ID:** `vay-nhanh`  
 **Prepared by:** Out-App Traffic (GPD) · Inbound Marketing
 **Governance:** Văn Hiến (SEO & GEO Lead)  
-**Last updated:** Tháng 4/2026  
-**Status:** Draft v1.1 - Division/Product Metadata  
-**Effort allocation:** ~10% bandwidth Out-App Traffic · Cross-functional với Web Platform / Inbound / BU / BMC
+**Last updated:** 08/05/2026  
+**Status:** In Progress - Execution Phase  
+**Effort allocation:** Hiền (Product Support) · Inbound - Ngọc Hạnh under Mai (SEO Execution) · Web Platform / BU / BMC
 
 ---
 
@@ -24,7 +24,7 @@
 | Keyword ranking baseline | ✅ Confirmed | vay nhanh: #2 · vay tiền online: #3 · vay tiền: #2 |
 | Ranking targets EOY 2026 | ✅ Confirmed | Top 1 toàn bộ 10 head terms |
 | Simulator spec | 🟡 In Progress | Amortization + deep link spec chờ Web Platform |
-| Sub-page briefs | 🟡 In Progress | 6/12 done |
+| Sub-page briefs | 🔵 In Progress | Ngọc Hạnh đang clone Money Pages để BU input content |
 | Backlink plan 2026 | ✅ Done | Budget confirmed · Vendor: Hapodigital |
 | Onelink / Web-to-App tracking | ✅ Done | DA (Hải/Hoàng) đã setup GA4 events. Hiến observe và support |
 | BU/Legal content approval flow | 🟠 Pending | Cần confirm SLA |
