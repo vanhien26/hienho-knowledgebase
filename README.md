@@ -1,4 +1,4 @@
-# MoMo Out-App Traffic | Knowledge Agent Harness
+# 🏁 0_Harness_System_Map
 
 > **Owner:** Văn Hiến (SEO & GEO Lead)
 > **Division:** Growth Platform Division (GPD)
@@ -11,45 +11,51 @@ Chào mừng bạn đến với hệ thống tri thức và điều hành của 
 
 ## 🗺 Bản Đồ Hệ Thống (System Map)
 
-Hệ thống được tổ chức theo 5 tầng logic để tối ưu hóa khả năng thực thi của Agent:
+Hệ thống được tổ chức theo 4 tầng phẳng để tối ưu hóa khả năng thực thi:
 
-### [[00_Context_Identity|Context & Identity]]
-Nắm bắt "Tôi là ai" và bối cảnh hoạt động tại MoMo.
-*   👉 [[hienho-momo-master-doc|Master Doc]]
+### 🎮 **00_HARNESS_CORE** (Control Center)
+Bộ não và tay lái điều hành toàn bộ hệ thống.
+*   👉 [[Hienho_MasterDoc_Step_1|Step 1: Hienho Master Doc]] (Context & Strategy)
+*   👉 [[Orchestrator_Engine_Step_2|Step 2: Operational Orchestrator]] (Workflow & Execution)
+*   👉 [[SKILL_REGISTRY]] | [[OPERATIONAL_ROUTINE]]
 
-### [[01_Core_Principles|Core Principles]]
-Các "Luật" và "Guardrails" bất biến để đảm bảo chất lượng đầu ra (Zero Hallucination, Pyramid Logic).
-*   👉 [[Zero-Hallucination]] | [[pyramid-principle]]
+### 🛠 **01_FRAMEWORKS** (Frameworks & Principles)
+Thư viện các nguyên tắc (Principles) và khung tư duy (Frameworks).
+*   👉 **Principles:** [[Zero-Hallucination]] | [[pyramid-principle]] | [[critical-thinking]]
+*   👉 **Frameworks:** [[jtbd-analysis]] | [[First-Principles]] | [[brainstorming]]
+*   👉 **Guidelines:** [[momo-seo-geo-guideline]] | [[momo-ymyl-guideline]]
 
-### [[02_Methodologies_Frameworks|Methodologies & Frameworks]]
-Các bộ khung tư duy để phân tích thị trường và người dùng (JTBD, First Principles).
-*   👉 [[jtbd-analysis]] | [[First-Principles]] | [[brainstorming]]
+### 🧪 **02_SKILLS** (Operational Skills)
+Thư viện kỹ năng thực thi tác vụ cụ thể.
+*   👉 [[brd-momo|Kỹ năng BRD]] | [[Seo-Geo-audit|Audit SEO/GEO]]
+*   👉 [[momo-html-formatting-skill|HTML Format]] | [[Web2App-Pipeline|Web-to-App]]
+*   👉 [[web-tracking|Tracking Spec]] | [[use-case-document|Strategy Doc]]
+*   👉 **Prompts:** [[momo-blog-prompt-1-outline]] | [[momo-blog-prompt-2-writer]]
 
-### [[03_Operational_Skills|Operational Skills]]
-Thư viện kỹ năng (Plugins) để thực thi các tác vụ cụ thể: BRD, Audit, HTML Coding.
-*   👉 [[brd-momo|Kỹ năng BRD]] | [[Seo-Geo-audit|Audit SEO/GEO]] | [[momo-html-formatting-skill|HTML Format]] | [[Web2App-Pipeline|Web-to-App]]
+### 🚀 **03_MOSPARK_PLATFORM** (Growth Infrastructure)
+Nền tảng thúc đẩy tăng trưởng cho tất cả Use Cases (Giống như HubSpot layer).
+*   👉 [[mospark-brd|MoSpark Master BRD]] | [[mospark-product-roadmap|Roadmap]]
+*   👉 [[genai-content-brd|GenAI Content Platform]] | [[ads-manager-brd|Ads Manager]]
+*   👉 [[seo-geo-project-playbook|Project Playbook]] | [[mospark-seo-geo-score-brd|SEO/GEO Scoring]]
+*   👉 [[llms-robots-txt|AI Crawler Policy (llms.txt)]] | [[seo-inventory-brd|SEO Inventory]]
 
-
-**Project Instances:**
-*   👉 [[phat-nguoi-brd]] | [[doi-tac-brd]] | [[vay-nhanh-brd]]
-
-**MoSpark Platform:**
-*   👉 [[llms-robots-txt-brd|LLMs.txt & Robots.txt BRD]] | [[mospark-product-roadmap]] | [[seo-geo-project-playbook]] | [[telecom-brd]] | [[cinema-brd]] | [[vi-tra-sau-brd]]
-
-### [[05_Project_Orchestration|Project Orchestration]]
-**Bộ não điều phối.** Nơi kết nối tất cả các tầng trên để vận hành 9 bước Web Build Workflow.
-*   👉 **[[PROJECT_ORCHESTRATOR]]**
-*   👉 **[[SKILL_REGISTRY]]**
+### 🎯 **04_USE_CASE_MOMO** (Product Instances)
+Các dự án thực thi cụ thể trên Website momo.vn.
+*   👉 [[phat-nguoi-brd|Tra cứu Phạt Nguội]] | [[bhxm-brd|Bảo Hiểm Xe Máy]]
+*   👉 [[vay-nhanh-brd|Vay Nhanh]] | [[vi-tra-sau-brd|Ví Trả Sau]]
+*   👉 [[esim-du-lich-brd|eSIM Du Lịch]] | [[telecom-brd|Telecom]]
+*   👉 [[cinema-brd|Cinema]] | [[doi-tac-brd|Merchant Directory]]
+*   👉 [[web-momo-okrs-2026|OKRs 2026]]
 
 ---
 
 ## 🤖 Hướng Dẫn Cho AI Agent
 
 Nếu bạn là một AI Agent tiếp nhận Repo này, hãy tuân thủ quy trình:
-1.  **Read Identity**: Đọc folder `00` để biết context của Văn Hiến.
-2.  **Load Orchestrator**: Truy cập folder `05` để xác định bước đi tiếp theo của dự án.
-3.  **Apply Principles**: Luôn kiểm tra chéo output với folder `01`.
-4.  **Execute via Skills**: Sử dụng các template và instruction trong folder `03`.
+1.  **Read Identity**: Đọc [[Hienho_MasterDoc_Step_1]] để biết context của Văn Hiến.
+2.  **Load Orchestrator**: Truy cập [[Orchestrator_Engine_Step_2]] để điều phối dự án.
+3.  **Load Principles/Frameworks**: Tra cứu **01_FRAMEWORKS** để nắm vững guardrails và tư duy.
+4.  **Execute via Skills**: Sử dụng các instruction trong **02_SKILLS**.
 
 ---
 *Maintained by Văn Hiến | Last Updated: May 2026*
