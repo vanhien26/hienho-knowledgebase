@@ -22,6 +22,13 @@ Your expertise with Knowledge:
 {{guideline.ymyl.ymyl}}
 </YMYL_GUIDELINE>
 
+<ANTI_THESIS_RULES>
+- **Blog KHÔNG phải là luận văn (Thesis):** Tuyệt đối tránh cấu trúc rập khuôn "Khái niệm -> Lợi ích -> Quy trình".
+- **Heading là Giải pháp:** Tiêu đề H2 phải mô tả một kịch bản thực tế (Scenario), một nỗi đau (Pain point) hoặc một giải pháp cụ thể (Solution).
+- **Tư duy Scenario-based:** Đặt người dùng vào một tình huống cụ thể (Ví dụ: "Lương chưa về nhưng hóa đơn đã tới" thay vì "Lợi ích của Ví Trả Sau").
+- **Hành động hóa:** Sử dụng động từ mạnh và trực diện trong các Heading.
+</ANTI_THESIS_RULES>
+
 </KNOWLEDGE>
 
 Your output is an outline only - clean, structured, ready for human review and Prompt 2.
@@ -72,11 +79,12 @@ Before creating outline, AI analyzes internally:
 Which features from Business Context are unique vs competitors?
 → These become key sections
 
-**1.5 Phân tích JTBD (Jobs to be Done):**
-Dựa vào Primary Keyword + Business Context, xác định:
-- **Job to be Done:** User muốn đạt được điều gì cuối cùng?
-- **Nỗi đau/Vấn đề (Pains):** User đang lo lắng, gặp khó khăn gì?
-- **Giải pháp:** Sản phẩm trong Business Context giải quyết điều đó như thế nào?
+**1.5 Phân tích kịch bản (Scenario Analysis):**
+Dựa vào Primary Keyword + Business Context, xác định 3-5 tình huống thực tế mà User gặp phải:
+- **Tình huống (Scenarios):** Khi nào user cần thông tin này nhất?
+- **Nỗi đau (Pain points):** Điều gì khiến họ lo lắng trong tình huống đó?
+- **Cách MoMo giải quyết:** Tính năng cụ thể nào "cứu nguy"?
+→ Mỗi H2 sẽ đại diện cho một kịch bản hoặc một bước trong hành trình giải quyết vấn đề.
 
 (Think internally - **DO NOT OUTPUT**)
 
@@ -144,12 +152,12 @@ If all pass → Output outline. Done.
 
 ---
 
-## CẤU TRÚC NỘI DUNG CHÍNH
+## CẤU TRÚC NỘI DUNG CHÍNH (SCENARIO-BASED)
 
-### H2-1: [Tiêu đề mục]
-- **Mục đích:** [Lý do phần này tồn tại]
-- **Nội dung:** [3-5 ý chính cần triển khai]
-- **Định dạng:** [Định nghĩa / Hướng dẫn (HowTo) / Bảng / Số liệu / So sánh]
+### H2-1: [Tiêu đề mục - Theo hướng Giải pháp/Kịch bản]
+- **Mục đích:** Giải quyết [Nỗi đau/Tình huống] cụ thể của User.
+- **Nội dung:** Tập trung vào giải pháp, bỏ qua định nghĩa rườm rà.
+- **Định dạng:** [Lựa chọn định dạng giúp giải quyết vấn đề nhanh nhất: Bảng/Quy trình/Checklist]
 - **Từ khóa:** [Chèn các từ khóa phụ liên quan]
 
 ### H2-2: [Tiêu đề mục]
@@ -158,10 +166,18 @@ If all pass → Output outline. Done.
 - **Định dạng:**
 - **Từ khóa:**
 
-### H2-3: [Tiêu đề mục]
-[Tiếp tục...]
+[Tiếp tục cho các mục tiếp theo. Quy tắc: Heading càng sát thực tế đời sống, bài viết càng giá trị.]
 
-[Tiếp tục H2-4, H2-5, H2-6 nếu cần]
+---
+
+## QUY TẮC ĐẶT TIÊU ĐỀ (HEADING RULES)
+
+| ❌ KHÔNG ĐƯỢC (Rập khuôn) | ✅ NÊN LÀM (Giải quyết vấn đề) |
+| :--- | :--- |
+| [Sản phẩm] là gì? | [Tình huống] - Cách [Sản phẩm] giúp bạn xử lý trong 1 phút |
+| Lợi ích của [Sản phẩm] | 3 rủi ro bạn sẽ tránh được khi dùng [Sản phẩm] |
+| Quy trình sử dụng [Sản phẩm] | Hướng dẫn nhận [Kết quả] ngay trên MoMo (Dành cho [Persona]) |
+| Các lưu ý khi dùng | Đừng để [Sai lầm] khiến bạn mất tiền khi [Hành động] |
 
 ---
 

@@ -57,4 +57,4 @@ Dưới đây là mẫu chuẩn để mô tả trọn vẹn một Business Model
 **Liên kết điều phối:**
 *   Quy trình dự án: [[Orchestrator_Engine_Step_2]]
 *   Danh mục kỹ năng: [[SKILL_REGISTRY]]
-*   Quy trình GenAI: [[genai-content-br
+*   Quy trình GenAI: [[mospark_genai_content]]

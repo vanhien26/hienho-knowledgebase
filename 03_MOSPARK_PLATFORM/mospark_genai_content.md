@@ -7,7 +7,7 @@ I Content - SEO/GEO Project Module
 > **Governance & Prompts:** Văn Hiến (SEO & GEO Lead)
 > **Start Date:** May 2026
 > **Status:** On Progress
-> **Master Strategy:** [[mospark-brd]]
+> **Master Strategy:** [[mospark_master]]
 
 ---
 
@@ -210,7 +210,7 @@ graph LR
 | Bước | Tên Bước | Hành động | Input/Output | Owner |
 | :--- | :--- | :--- | :--- | :--- |
 | **1** | **Tạo Use Case** | Khởi tạo Use Case (Tên Use Case phải là **Duy nhất**) | Use Case Name (Unique) | PM/Growth |
-| **2** | **Business Context** | Nhập bối cảnh theo template 11 fields tại [[business-context]] | Context Layer (Source of Truth) | PM/Growth + SEO Lead |
+| **2** | **Business Context** | Nhập bối cảnh theo template 11 fields tại [[mospark_business_context]] | Context Layer (Source of Truth) | PM/Growth + SEO Lead |
 | **3** | **Keyword Creation** | Tạo Primary Keyword và bộ Secondary Keywords tương ứng | Keyword Master Registry | Content Team |
 | **4** | **AI Outline** | AI generate dàn ý thô. Cho phép **Chỉnh sửa & Lưu (Edit & Save)** | Outline Draft -> Final | Content Team |
 | **5** | **AI Blog Detail** | AI viết bài chi tiết dựa trên Dàn ý đã chốt ở bước 4 | Blog Detail Draft | AI (Claude API) |
@@ -348,7 +348,7 @@ Quy trình này khớp với **Bước 4 & Bước 6** trong Workflow hệ thố
     *   **Prompt Master**: [[momo-blog-prompt-2-writer]]
 
 ### 9.3. Quality Gate Standards (SEO/GEO Score)
-Nội dung sau khi GenAI tạo ra phải được tự động chấm điểm qua [[mospark-seo-geo-score-brd]]. Các tiêu chí bắt buộc:
+Nội dung sau khi GenAI tạo ra phải được tự động chấm điểm qua [[mospark_seo_geo_score]]. Các tiêu chí bắt buộc:
 *   Mật độ từ khóa chính.
 *   Sự hiện diện của FAQ Schema.
 *   Độ dài và cấu trúc Headi

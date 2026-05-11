@@ -6,7 +6,7 @@ ark Migration - System Consolidation
 > **System Architect / Migration Mapper:**  [Cần xác định] Người chịu trách nhiệm định nghĩa cấu trúc dữ liệu, sơ đồ chuyển dịch và liên kết hệ thống.
 > **Lead Engineers:** Võ Minh Thuận, Lê Đăng Lộc
 > **Status:** Active - Structure & Mapping Phase
-> **Master Strategy:** [[mospark-brd]]
+> **Master Strategy:** [[mospark_master]]
 
 ---
 

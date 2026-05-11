@@ -16,7 +16,7 @@ Dưới đây là bản đồ điều hướng dự án. Agent phải xác đị
 |:---:|---|---|---|---|
 | **01** | **Research & Discovery** | Hiến + Inbound | [[jtbd-analysis]] | [ ] [[jtbd-analysis|JTBD Mapping]] |
 | **02** | **Thiết lập Mục tiêu** | Hiến | [[brd-momo]] | [ ] [[pyramid-principle|Pyramid Principle]] |
-| **03** | **Product Brief + Tracking Plan** | Hiến + PO Cell | [[genai-content-brd]] | [ ] [[critical-thinking|Logic Check]] |
+| **03** | **Product Brief + Tracking Plan** | Hiến + PO Cell | [[mospark_genai_content]] | [ ] [[critical-thinking|Logic Check]] |
 | **03.5** | **Feasibility Sync với Cell Team** | Hiến + PO Cell | [[brd-momo]] | [ ] Scope v1 xác nhận |
 | **05** | **Sprint Planning & Coding** | PO Cell + Dev | [[momo-html-formatting-skill]] | [ ] Technical Standard |
 | **06** | **SEO Review + QA Testing (Gate 1)** | Hiến + Dev | [[Seo-Geo-audit]] | [ ] **Gate 1: SEO/GEO Score** |
@@ -48,11 +48,11 @@ Khi tiếp nhận yêu cầu về dự án, Agent thực hiện theo quy trình 
 | Dự án | Giai đoạn hiện tại | PIC | Status | Link tài liệu |
 |---|---|---|---|---|
 | **Phạt Nguội** | Step 08: Roll Out (Partial) | Hiến + Hùng (FE) + Hoài Anh (API) | **Trang chủ golive - đang index. Next: Tool tra cứu + Sub-pages (/o-to, /xe-may) + Sitemap + llms.txt** | [[phat-nguoi-brd]] |
-| **Ads Manager** | Step 09: Monitoring | Thuận/Hiến | **Balloon Ads Deployed (Pilot)** | [[ads-manager-brd]] |
-| **MoSpark Migration** | Step 01: Research | Bảo/Hiến | Active - Mapping Phase | [[mospark-migration-brd]] |
-| **GenAI Content** | Step 03: Build | Trọng/Hiến | Claude API Integration | [[genai-content-brd]] |
-| **LP Builder** | Step 09: Monitoring | Web Platform | Q2 Onboarding GPD | [[mospark-migration-brd]] |
-| **LLMs.txt & Robots.txt** | Step 02: Thiết lập Mục tiêu | Hiến + Bảo | **Kỹ năng đã chuyển sang folder Skill - robots.txt nâng cấp + deploy llms.txt trước tiên trên Phạt Nguội** | [[llms-robots-txt]] |
+| **Ads Manager** | Step 09: Monitoring | Thuận/Hiến | **Balloon Ads Deployed (Pilot)** | [[mospark_ads_manager]] |
+| **MoSpark Migration** | Step 01: Research | Bảo/Hiến | Active - Mapping Phase | [[mospark_migration]] |
+| **GenAI Content** | Step 03: Build | Trọng/Hiến | Claude API Integration | [[mospark_genai_content]] |
+| **LP Builder** | Step 09: Monitoring | Web Platform | Q2 Onboarding GPD | [[mospark_migration]] |
+| **LLMs.txt & Robots.txt** | Step 02: Thiết lập Mục tiêu | Hiến + Bảo | **Kỹ năng đã chuyển sang folder Skill - robots.txt nâng cấp + deploy llms.txt trước tiên trên Phạt Nguội** | [[mospark_llms_robots_txt]] |
 | **VTS/Đối Tác** | Step 01: Research | Hiến | Active - BRD done, chờ Legacy Audit + align VTS PO | [[doi-tac-brd]] |
 | **Vay Nhanh** | Step 03: Product Brief | Hiến + Ngọc Hạnh (Inbound) | **Hiến support Product · Hạnh handle SEO Execution · Đang clone Money Pages để BU input content** | [[vay-nhanh-brd]] |
 | **BHXM** | Step 01: Research | Hiến | Draft - chưa có growth plan post-spike | [[bhxm-brd]] |

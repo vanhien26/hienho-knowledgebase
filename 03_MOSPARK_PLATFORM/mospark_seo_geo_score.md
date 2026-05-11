@@ -9,7 +9,7 @@ GEO Scoring Checklist - MoSpark Admin
 **Status:** Active - Governance Gate for all MoSpark Output
 **Last updated:** Tháng 4/2026
 **System Context:** [[Orchestrator_Engine_Step_2]] | [[Seo-Geo-audit]]
-**Master Strategy:** [[mospark-brd]]
+**Master Strategy:** [[mospark_master]]
 
 ---
 

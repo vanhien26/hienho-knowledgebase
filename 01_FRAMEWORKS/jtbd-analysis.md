@@ -78,5 +78,5 @@ Trước khi đưa JTBD vào [[brd-momo]], hãy tự hỏi:
 
 ## Liên kết
 - Skill dùng trước: [[critical-thinking]], [[First-Principles]]
-- Skill thực thi: [[brd-momo]], [[genai-content-brd]]
+- Skill thực thi: [[brd-momo]], [[mospark_genai_content]]
 - Xem tổng thể: [[SKILL_REGISTRY]]

@@ -6,7 +6,7 @@
 > **Owner:** Out-App Traffic · GPD · Văn Hiến
 > **Last updated:** Tháng 5/2026
 > **Status:** In Progress - robots.txt Lớp 1 DEPLOYED
-> **Master Strategy:** [[mospark-brd]]
+> **Master Strategy:** [[mospark_master]]
 
 ---
 

@@ -771,7 +771,7 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 
 **Owner:** Hiến (spec + governance) + Bảo (Web Platform implement)
 
-**Tài liệu:** [[llms-robots-txt]]
+**Tài liệu:** [[mospark_llms_robots_txt]]
 
 **Hai deliverable song song:**
 
@@ -839,7 +839,7 @@ Xây dựng nền tảng quản lý nội dung Web thế hệ mới thay thế A
 | # | Tính năng | Status | PIC | Ghi chú |
 |---|-----------|--------|-----|---------|
 | 1 | **Landing Page Builder** | Production | Bảo/Web Platform | Editor tạo page không cần Dev. Q2/2026 onboard GPD |
-| 2 | **SEO/GEO Scoring Gate** | BRD done - chờ implement | Hiến (spec) + Nhật (build) | 5 blocks, 100 điểm. Hard block disable nút Publish. Xem [[mospark-seo-geo-score-brd]] |
+| 2 | **SEO/GEO Scoring Gate** | BRD done - chờ implement | Hiến (spec) + Nhật (build) | 5 blocks, 100 điểm. Hard block disable nút Publish. Xem [[mospark_seo_geo_score]] |
 | 3 | **GenAI Content Pipeline** | Integrating | Trọng (build) + Hiến (Skill Hub) | Claude API đang tích hợp. Pilot: Phạt Nguội content. Workflow: Keyword → Outline AI → Edit → Content AI → Publish |
 | 4 | **Umami Tracking** | - | Web Platform | [Cần bổ sung thông tin] |
 

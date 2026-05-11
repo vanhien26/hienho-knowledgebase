@@ -14,7 +14,7 @@ Chào mừng bạn đến với hệ thống **Agent Harness** của Văn Hiến
 ## 🧭 Điều Phối & Bối Cảnh (Orchestration)
 Dùng các file này để điều phối dự án và nắm vững bối cảnh:
 *   👉 **[[Orchestrator_Engine_Step_2]]**: Master Controller / Lifecycle Engine.
-*   👉 **[[business-context]]**: Single Source of Truth cho bối cảnh Business (11 fields).
+*   👉 **[[mospark_business_context]]**: Single Source of Truth cho bối cảnh Business (11 fields).
 
 ---
 
@@ -39,7 +39,7 @@ Kích hoạt các kỹ năng này khi bắt tay vào làm việc cụ thể:
 *   **[[Web2App-Pipeline]]**: Tối ưu luồng chuyển đổi Web-to-App.
 
 ### 2. GenAI & Content
-*   **[[genai-content-brd]]**: Chiến lược nội dung chuẩn SEO/GEO.
+*   **[[mospark_genai_content]]**: Chiến lược nội dung chuẩn SEO/GEO.
 *   **[[momo-blog-prompt-1-outline]]**: Prompt lên Outline bài viết.
 *   **[[momo-blog-prompt-2-writer]]**: Prompt viết nội dung chi tiết.
 *   **[[momo-html-formatting-skill]]**: Chuẩn Design System cho báo cáo HTML.
@@ -47,9 +47,9 @@ Kích hoạt các kỹ năng này khi bắt tay vào làm việc cụ thể:
 ### 3. Audit & Đo lường
 *   **[[Seo-Geo-audit]]**: Quy trình kiểm soát chất lượng SEO và GEO.
 *   **[[web-tracking]]**: Setup và audit tracking GTM/GA4/Appsflyer.
-*   **[[mospark-seo-geo-score-brd]]**: Hệ thống chấm điểm tự động.
+*   **[[mospark_seo_geo_score]]**: Hệ thống chấm điểm tự động.
 *   **[[Zero-Hallucination]]**: Kiểm soát tính xác thực của dữ liệu tài chính.
-*   **[[llms-robots-txt]]**: AI Crawler Policy (llms.txt).
+*   **[[mospark_llms_robots_txt]]**: AI Crawler Policy (llms.txt).
 
 ---
 

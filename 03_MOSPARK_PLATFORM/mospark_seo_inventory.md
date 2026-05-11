@@ -1,14 +1,8 @@
-# 📄 Seo Inventory Brd
-EO Inventory
-role: Platform Architecture & Strategy
-category: strategic-document
-tags:
-  - mospark
-  - seo-inventory
-  - use-case-system
-  - geo
-author: hienho-momo
-version: 1.0.0
+---
+name: seo-inventory
+description: >
+  Hệ thống quản lý tài nguyên từ khóa, thị phần (SoV) và tiềm năng tăng trưởng. 
+  Điểm bắt đầu cho mọi dự án Web Growth trên MoSpark.
 ---
 
 # SEO Inventory
@@ -16,16 +10,22 @@ version: 1.0.0
 > **Vision:** Trở thành "Bản đồ Định vị Thị trường" duy nhất cho toàn bộ hệ sinh thái MoSpark, quyết định nơi nào đáng đổ tài nguyên và nội dung nào cần sản xuất để chiếm lĩnh Traffic.
 > **North Star:** Chấm dứt việc làm nội dung "mù mờ" – Mọi Mini Web/Blog trên MoMo đều phải gắn với Market Volume thực và Share of Voice (SoV).
 
----
-
-## 1. Tổng Quan & Vị Thế Chiến Lược của SEO Inventory
+## 1. Tổng Quan & Nhân Sự (Ownership)
 
 SEO Inventory không chỉ là một bảng tính số liệu từ khóa, nó là **Module cốt lõi đầu não** nằm ngay tầng cao nhất của MoSpark.
 
-- **Dự án thuộc quản lý của:** Internal GPD (Web Platform).
-- **Phụ trách thực thi chính:** Thuận.
-- **Định nghĩa:** Bộ dữ liệu đo lường quy mô tìm kiếm (Total Search Volume) và tỷ lệ chiếm hữu thị phần (SoV - Share of Voice) của MoMo trên từng mảng kinh doanh (Vay, Ví Trả Sau, Bảo hiểm, Thanh toán...).
+- **Đơn vị chủ quản:** Out-App Traffic (GPD).
+- **Owner (Chiến lược & Dữ liệu):** Thuận.
+- **Support (Governance):** Văn Hiến.
+- **Product Manager (Vận hành & Tính năng):** Bảo.
+- **Team thực thi:** Webplatform.
 - **Vai trò trong MoSpark:** Là cơ sở dữ liệu gốc để ưu tiên nguồn lực (Prioritization Framework) trước khi Dev bắt tay code Mini Web hoặc Content Team bắt tay viết Blog.
+
+---
+
+SEO Inventory không chỉ là một bảng tính số liệu từ khóa, nó là **Module cốt lõi đầu não** nằm ngay tầng cao nhất của MoSpark. 
+
+Nó đóng vai trò là cơ sở dữ liệu gốc để ưu tiên nguồn lực (Prioritization Framework) trước khi Dev bắt tay code Mini Web hoặc Content Team bắt tay viết Blog.
 
 ---
 

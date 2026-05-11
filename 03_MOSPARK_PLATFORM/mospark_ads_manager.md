@@ -5,7 +5,7 @@
 > **Owner kỹ thuật:** Thuận (Web Platform)
 > **Version:** 3.0 · April 2026
 > **Status:** On Progress
-> **Master Strategy:** [[mospark-brd]]
+> **Master Strategy:** [[mospark_master]]
 
 ---
 

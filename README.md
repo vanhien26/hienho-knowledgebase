@@ -35,7 +35,7 @@ Thư viện kỹ năng thực thi tác vụ cụ thể.
 ### 🚀 **03_MOSPARK_PLATFORM** (Growth Infrastructure)
 Nền tảng thúc đẩy tăng trưởng cho tất cả Use Cases (Giống như HubSpot layer).
 *   👉 [[mospark-brd|MoSpark Master BRD]] | [[mospark-product-roadmap|Roadmap]]
-*   👉 [[genai-content-brd|GenAI Content Platform]] | [[ads-manager-brd|Ads Manager]]
+*   👉 [[mospark_genai_content]]
 *   👉 [[seo-geo-project-playbook|Project Playbook]] | [[mospark-seo-geo-score-brd|SEO/GEO Scoring]]
 *   👉 [[llms-robots-txt|AI Crawler Policy (llms.txt)]] | [[seo-inventory-brd|SEO Inventory]]
 

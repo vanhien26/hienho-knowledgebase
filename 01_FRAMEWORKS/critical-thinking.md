@@ -46,7 +46,7 @@ description: >
 
 ## 🕵️ Chế độ "Hallucination Hunting" (Dành cho AI Content)
 Khi review nội dung do AI tạo ra (Claude/Gemini), luôn kiểm tra:
-- **Dữ liệu tài chính:** Lãi suất, hạn mức, quy định pháp lý có đúng với [[business-context]] không?
+- **Dữ liệu tài chính:** Lãi suất, hạn mức, quy định pháp lý có đúng với [[mospark_business_context]] không?
 - **Logic vòng vo:** AI có đang viết filler (văn mẫu) thay vì đi thẳng vào câu trả lời cho User không?
 - **Brand Voice:** Giọng văn có bị quá "robot" hay sai lệch với Core Mantra của MoMo không?
 
