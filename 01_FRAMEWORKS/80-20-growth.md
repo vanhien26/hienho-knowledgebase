@@ -47,5 +47,5 @@ Tập trung nguồn lực cao nhất cho nhóm **Quick Wins**. Đặt câu hỏi
 
 ## Liên kết
 - Skill dùng kèm: [[critical-thinking]], [[First-Principles]]
-- Ứng dụng vào: [[Orchestrator_Engine_Step_2]] (để ưu tiên dự án)
-- Xem tổng thể: [[SKILL_REGISTRY]]
+- Ứng dụng vào: [[orchestrator_engine]] (để ưu tiên dự án)
+- Xem tổng thể: [[skill_registry]]

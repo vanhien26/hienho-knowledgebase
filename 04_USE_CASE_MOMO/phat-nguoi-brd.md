@@ -25,6 +25,7 @@ t Nguội Web Growth
 | Web platform | **MoSpark (MoBase V2)** | Đã quyết định platform |
 | Product ownership | **Hiến (Governance) + Bảo (Lead)** | Đã phân vai rõ ràng |
 | Blog path | **Confirmed: /phat-nguoi/blog/*** | Topical silo, nhất quán Tier 2 pattern |
+| GenAI Content Plan | **DONE** | Xem tại [Mục 17](#17-genai-content-plan-pilot) |
 | Legal review ND168 | **Done** | Content mức phạt đã cleared |
 | Camera Map feature | **Planning** | Mini App sắp có - Web scope cần define |
 | Schema specification | **ADDED - v1.5** | JSON-LD examples + validation |
@@ -61,7 +62,7 @@ Nghị định 168/2024/NĐ-CP (hiệu lực 01/01/2025) tăng mức phạt vi p
 
 | Metric | Con số | Nguồn |
 |--------|--------|-------|
-| Total search volume toàn quốc | ~2.74M / tháng | Keyword dataset (2,663 KWs) |
+| Total search volume toàn quốc | ~3.56M / tháng | Keyword dataset (3,557,570 vol) |
 | Search volume HN + HCM | ~253K / tháng | TTDK deck |
 | Xe đang lưu hành (moto + ô tô) | 84M+ | TTDK deck |
 | MoMo users có ô tô (identified) | 700K+ | Internal data |
@@ -1008,22 +1009,65 @@ Tạo dynamic URL pattern `momo.vn/phat-nguoi?q=51K-123.45` redirect về tool v
 
 **Quick wins không cần sprint riêng:** Tactic #1, #4, #5 có thể implement trong sprint hiện tại của Phase 1 với minimal Dev effort - cộng dồn vào result screen và 1-2 blog posts.
 
+---
+
+## 17. GenAI Content Plan (Pilot)
+
+### 17.1. Phân tích Market Inventory (SEO Inventory v4)
+Dựa trên kết quả SEO Inventory và Clustering, chiến dịch Phạt Nguội được chia thành 4 cụm nội dung chính nhằm vây ráp 100% Intent của người dùng:
+
+| Cluster | Intent | Volume (Est) | Keywords tiêu biểu | Strategy |
+| :--- | :--- | :--- | :--- | :--- |
+| **Cụm 1: Phạt Nguội (Core)** | Transactional | 2.53M+ | tra cứu phạt nguội, phạt nguội toàn quốc | Dẫn link về Tool Tra Cứu (Pillar) |
+| **Cụm 2: Phương Tiện** | Transactional | 510K+ | phạt nguội ô tô, phạt nguội xe máy | Sub-pages /o-to, /xe-may |
+| **Cụm 3: Luật & Kiến thức** | Informational | 137K+ | mức phạt vượt đèn đỏ, lỗi quá tốc độ 2025, kiến thức giao thông | Bài viết E-E-A-T chuẩn GenAI |
+| **Cụm 4: Địa điểm (GEO)** | Local | 131K+ | camera phạt nguội hà nội, phạt nguội hồ chí minh | pSEO (Sản xuất theo tỉnh thành) |
+
+### 17.2. Content Strategy: Hub & Spoke Architecture
+- **Hub (Trọng tâm):** `momo.vn/phat-nguoi` (Chứa Tool tra cứu thực tế).
+- **Spoke (Vệ tinh):** Các cụm bài viết Blog chuẩn bị sản xuất qua GenAI.
+- **Internal Link Logic:** 
+  - Tất cả bài Blog thuộc Cụm 2, 3, 4 phải có ít nhất 1 Internal Link trỏ về Hub (Cụm 1).
+  - Anchor text ưu tiên: "tra cứu phạt nguội", "kiểm tra phạt nguội online".
+
+### 17.3. Lộ trình Sản xuất (Phase 1: Pilot)
+Sử dụng cỗ máy GenAI Content trên MoSpark để sản xuất 20 bài viết "mồi" trong 2 tuần đầu:
+
+**Tuần 1: Xây dựng nền tảng E-E-A-T (10 bài)**
+- Topic: Tổng hợp mức phạt mới nhất theo Nghị định 168 (Ô tô/Xe máy).
+- Topic: Hướng dẫn tra cứu phạt nguội toàn quốc (Hướng dẫn chuẩn Web MoMo).
+- Topic: Cách nộp phạt vi phạm giao thông qua Cổng DVC và MoMo.
+
+**Tuần 2: Vây ráp Long-tail & Local (10 bài)**
+- Topic: Top 5 lỗi phạt nguội dễ mắc phải nhất tại Hà Nội/TP.HCM.
+- Topic: Thời hạn nộp phạt và mức phí chậm nộp (Cảnh báo rủi ro tài chính).
+- Topic: Giải mã các loại camera phạt nguội đang triển khai tại Việt Nam.
+
+### 17.4. Business Context (Input cho GenAI)
+Để AI viết đúng, MoSpark sẽ inject bộ Context sau vào Prompt:
+- **Sản phẩm:** Tool Tra Cứu Phạt Nguội MoMo (Dữ liệu từ TTDK).
+- **Value Prop:** Kết quả chính xác, nhanh chóng, nộp phạt được ngay, nhận thông báo tự động (App).
+- **Trust Signal:** Đối tác chiến lược của TTDK, 31M người dùng tin tưởng.
+- **Disclaimer:** Thông tin mang tính tham khảo, kết quả chính xác nhất căn cứ trên văn bản thông báo của cơ quan chức năng.
+
+---
+
 ## Appendix A - Keyword Universe Summary
 
 | Cluster | Pages | Total Vol |
 |---------|-------|----------|
-| Tool Generic (core) | /phat-nguoi | 1,729,370 |
-| Tool Ô Tô | /phat-nguoi/o-to | 386,050 |
-| Tool Xe Máy | /phat-nguoi/xe-may | 150,720 |
-| Địa Phương - Toàn quốc | /phat-nguoi/blog/tra-cuu-phat-nguoi-toan-quoc | 82,850 |
-| How-to (merged) | /phat-nguoi/blog/huong-dan-tra-cuu-* | ~28,000 |
-| Camera Map | /camera | [CẦN VERIFY] |
-| Địa Phương - Tỉnh/Thành | 63 Trang Mini Web (pSEO) | ~24,680+ |
-| Feature Pages | /phat-nguoi/blog/tra-cuu-vi-pham-* | ~14,320 |
-| FAQ / Mức phạt | Merged + standalone | ~7,440 |
-| How-to per vehicle | 2 pages | ~7,280 |
-| Camera cluster (pSEO Spokes) | /camera/[tinh-thanh] | ~4,760+ |
-| **TOTAL** | **~133 pages** | **~2,435,470+** |
+| **Phạt Nguội (Core)** | /phat-nguoi | 2,536,090 |
+| **Phương Tiện** | /phat-nguoi/[o-to/xe-may] | 510,910 |
+| **Luật Giao Thông** | Blog | 79,850 |
+| **Tỉnh/Thành** | pSEO | 79,830 |
+| **Đăng Kiểm Xe** | Blog | 76,870 |
+| **Lỗi Vi Phạm** | Blog | 64,500 |
+| **Kiến Thức** | Blog | 57,400 |
+| **Camera Giao Thông** | /camera | 51,890 |
+| **Nộp Phạt Nguội** | Blog | 24,510 |
+| **Tra cứu biển số xe** | Tool | 20,450 |
+| **VNEID** | Blog | 1,070 |
+| **TOTAL** | **~133 pages** | **~3,557,570** |
 
 ---
 

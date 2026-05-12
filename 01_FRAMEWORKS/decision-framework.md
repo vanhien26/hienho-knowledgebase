@@ -53,4 +53,4 @@ Khi gặp quyết định Loại 1, hãy dùng WRAP:
 ## Liên kết
 - Skill dùng trước: [[80-20-growth]] (để chọn việc cần quyết định)
 - Skill dùng kèm: [[critical-thinking]] (cho quyết định Loại 1)
-- Xem tổng thể: [[SKILL_REGISTRY]]
+- Xem tổng thể: [[skill_registry]]

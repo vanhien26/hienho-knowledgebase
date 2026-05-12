@@ -46,7 +46,7 @@ Dựa trên SEO Inventory, hệ thống tự động phân Use Case thành 4 nh�
 4.  **Mass Traffic/Dịch vụ công:** Phạt nguội, BHXH. Mục tiêu: Kéo lượng User khổng lồ về hệ sinh thái.
 
 ### Bước 3: Business Context Sync (Cung cấp bối cảnh)
-- Sau khi chốt được Use Case và mục tiêu, PM sẽ phải điền **11 trường thông tin Business Context**.
+- Sau khi chốt được Use Case và mục tiêu, PM sẽ phải điền **Business Context**.
 - Đây là bộ thông số "linh hồn" giúp định hướng cho AI (Claude) viết content đúng chuẩn thương hiệu và đúng Intent thị trường.
 
 ### Bước 4: Kick-off (Bắt đầu sản xuất)

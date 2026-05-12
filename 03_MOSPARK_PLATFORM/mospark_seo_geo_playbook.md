@@ -40,7 +40,7 @@ graph TD
         A[Bắt đầu: Use Case/Market] --> B[SEO Inventory: Market Map]
         B --> C[Gap Analysis]
         C --> D[Umami: Performance Audit]
-        D --> E{Zero Traffic?}
+        D --> E{Start to Zero?}
         E -->|Yes| F[Xây mới hoàn toàn]
         E -->|No| G[Tính toán SoV hiện tại]
         G --> H{"SoV < 40%?"}
@@ -49,7 +49,7 @@ graph TD
     end
 
     subgraph Phase_1_Initiation [Phase 1: Thiết lập Context]
-        F --> K[11 Fields Business Context]
+        F --> K[Business Context]
         I --> K
         K --> L[MoSpark CMS: Create Project]
         L --> M[Distribution Rules: Auto-link/Widgets]
@@ -83,18 +83,26 @@ graph TD
 ## 3. Chi tiết các giai đoạn thực thi
 
 ### Giai đoạn 0: Phân tích Tiền dự án (Pre-Project Analysis)
-1. **Kiểm tra SEO Inventory:** Tra cứu Market Volume tại [[mospark_seo_inventory]]. Nếu SoV < 20% ➔ Ưu tiên triển khai.
-2. **Umami Audit:** Đánh giá traffic hiện tại. Nếu đã có traffic nhưng SoV thấp ➔ Tập trung Optimize nội dung cũ bằng AI thay vì tạo mới.
+1. **Kiểm tra SEO Inventory (Market Potential):** Tra cứu **Total Market Volume** của Use Case tại tài liệu mospark_seo_inventory.
+2. **Đo lường hiệu suất & Tính SoV (Umami Audit):** 
+   - Lọc dữ liệu trên Umami theo **URL Path** của Cluster (ví dụ: `/blog/phat-nguoi/*`).
+   - Lấy **Total Sessions (30 ngày gần nhất)**.
+   - Tính **SoV (%) = (Sessions / Market Volume) * 100**.
+3. **Quyết định thực thi (Decision Matrix):**
+   - **SoV < 1% (Start to Zero):** Dự án mới hoàn toàn ➔ Sản xuất nội dung mới ồ ạt.
+   - **SoV 1% - 20% (High Gap):** Đã có traffic nhưng chưa tương xứng tiềm năng ➔ Tạo satellite content để bao phủ thêm từ khóa phụ.
+   - **SoV 20% - 40% (Growth Phase):** Đang tăng trưởng ➔ Ưu tiên dùng tính năng **AI Enhance** để tối ưu hóa nội dung cũ lên Top 3.
+   - **SoV > 40% (Dominating):** Vị thế dẫn đầu ➔ Chỉ cần duy trì và theo dõi Content Decay.
 
 ### Giai đoạn 1: Khởi tạo Project (Initiation)
-1. **Business Context:** Điền đầy đủ 11 trường tại [[mospark_business_context]]. Đây là "linh hồn" để AI viết đúng hướng.
+1. **Business Context:** Điền đầy đủ bối cảnh tại mospark_business_context. Đây là "linh hồn" để AI viết đúng hướng.
 2. **Cấu hình CMS:** Tạo Use Case, gán bối cảnh và thiết lập Distribution Rules (Auto-embed, Cross-linking).
 
 ### Giai đoạn 2: Sản xuất Nội dung (Production)
 1. **GenAI Pipeline:** 
    - Lấy Primary Keyword từ Inventory.
    - Chạy luồng Outline ➔ Writer Prompt.
-2. **Quality Gate:** Kiểm tra tại [[mospark_seo_geo_score]]. Đảm bảo đạt **80+ điểm** mới được Publish.
+2. **Quality Gate:** Kiểm tra tại mospark_seo_geo_score. Đảm bảo đạt **80+ điểm** mới được Publish.
 
 ### Giai đoạn 3: Theo dõi & Tối ưu (Growth Loop)
 1. **Performance Tracking:** Theo dõi Organic Sessions và Ranking hàng tuần.
@@ -102,7 +110,39 @@ graph TD
 
 ---
 
-## 4. Lộ trình nâng cấp (Roadmap to HubSpot Parity)
+## 4. Cơ chế Tương tác Giữa các Module (System Interaction)
+
+Để vận hành hiệu quả, hệ thống MoSpark chia tách rõ ràng giữa khâu **Chiến lược (Planning)** và khâu **Thực thi (Execution)**. Sơ đồ dưới đây mô tả cách thức module Quản lý Project tương tác với module GenAI Content:
+
+```mermaid
+graph LR
+    %% Planning Module
+    subgraph Planning [CHIẾN LƯỢC & INVENTORY]
+        P1[SEO Inventory] --> P2[Create SEO/GEO Project]
+        P2 --> P3[Input Business Context]
+        P3 --> P4[(Keyword Master Registry)]
+    end
+
+    %% Execution Module
+    subgraph Execution [THỰC THI & GENAI]
+        E1[Article Creation] --> E2{Check Unique ID}
+        P4 -.-> E2
+        E2 -- "Hợp lệ" --> E3[Fetch Context from Project]
+        E3 --> E4[GenAI 7-Step Workflow]
+        E4 --> E5[Sync & Publish]
+    end
+
+    %% Legend
+    P4 -- "1-1 Rule" --> E1
+    
+    style Planning fill:#e3f2fd,stroke:#1565c0
+    style Execution fill:#f1f8e9,stroke:#2e7d32
+    style P4 fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+```
+
+---
+
+## 5. Lộ trình nâng cấp (Roadmap to HubSpot Parity)
 
 | Giai đoạn | Trọng tâm tính năng | Mục tiêu |
 | :--- | :--- | :--- |
@@ -112,11 +152,14 @@ graph TD
 
 ---
 
-## 5. Liên kết hệ thống
-- **Đầu tàu quản lý:** [[mospark_master]]
-- **Chấm điểm chất lượng:** [[mospark_seo_geo_score]]
-- **Sản xuất AI:** [[mospark_genai_content]]
-- **Quản trị thị trường:** [[mospark_seo_inventory]]
+- [[mospark_business_context]]
 
 ---
-*Document: mospark_seo_geo_playbook · v2.0 · Văn Hiến (SEO & GEO Lead)*
+
+### Quy tắc Dữ liệu Cốt lõi (Data Governance)
+*   **Bắt buộc có Project:** Keyword không thể tồn tại nếu không gắn với Project (để lấy bối cảnh).
+*   **Tính duy nhất (1-1):** Một Primary Keyword chỉ tương ứng với một bài viết duy nhất.
+*   **Chủ sở hữu duy nhất:** Một Primary Keyword chỉ thuộc về một Project duy nhất (để quản lý URL).
+
+---
+*Document: mospark_seo_geo_playbook · v2.1 · Văn Hiến (SEO & GEO Lead)*

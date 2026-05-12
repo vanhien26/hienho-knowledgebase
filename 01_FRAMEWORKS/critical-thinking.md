@@ -64,7 +64,7 @@ Khi được yêu cầu "Critical Thinking" cho một dự án, Agent hãy outpu
 ---
 
 ## 🚦 Gate Check (Sign-off)
-Trước khi chuyển sang [[Orchestrator_Engine_Step_2]], hãy chắc chắn:
+Trước khi chuyển sang [[orchestrator_engine]], hãy chắc chắn:
 - [ ] Đã hỏi "Tại sao" ít nhất 3 lần cho mục tiêu của dự án.
 - [ ] Đã xác định được "Single Source of Truth" cho dữ liệu.
 - [ ] Đã đề xuất được một phương án đơn giản hơn (MVP) để đạt 80% kết quả.
@@ -72,4 +72,4 @@ Trước khi chuyển sang [[Orchestrator_Engine_Step_2]], hãy chắc chắn:
 ## Liên kết
 - Skill này dùng trước: [[brainstorming]], [[First-Principles]]
 - Skill dùng kèm: [[jtbd-analysis]], [[Seo-Geo-audit]]
-- Xem tổng thể: [[SKILL_REGISTRY]]
+- Xem tổng thể: [[skill_registry]]

@@ -20,7 +20,7 @@ trigger: web2app, w2a, deeplink, onelink, CTA placement, conversion rate, app in
 
 ## 🧭 Điều phối
 
-- Quy trình: [[Orchestrator_Engine_Step_2]]
+- Quy trình: [[orchestrator_engine]]
 - Kỹ năng bổ trợ: [[web-tracking]]
 - Mục tiêu chiến lược: [[web-momo-okrs-2026]]
 
@@ -367,4 +367,4 @@ Khi dùng skill này, output gồm:
 - Skill liên quan: [[jtbd-analysis]], [[use-case-document]], [[Seo-Geo-audit]]
 - Tracking Reference: [[web-tracking]] - GTM Folder Mapping & BQ Filter Rules
 - Mục tiêu chiến lược: [[web-momo-okrs-2026]] - KR 1.1 (6M MUA) & KR 1.3 (W2A CR)
-- Context: [[Hienho_MasterDoc_Step_1]] - Mục 4.2 Tracking Architect
+- Context: [[hienho_master_doc]] - Mục 4.2 Tracking Architect

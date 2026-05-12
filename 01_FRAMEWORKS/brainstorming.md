@@ -57,4 +57,4 @@ Agent output bảng này cho User review:
 ## Liên kết
 - Skill dùng trước: [[First-Principles]], [[critical-thinking]]
 - Skill dùng sau: [[pyramid-principle]] (để trình bày), [[brd-momo]] (để đóng gói)
-- Xem tổng thể: [[SKILL_REGISTRY]]
+- Xem tổng thể: [[skill_registry]]

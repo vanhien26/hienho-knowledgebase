@@ -13,11 +13,11 @@ Chào mừng bạn đến với hệ thống tri thức và điều hành của 
 
 Hệ thống được tổ chức theo 4 tầng phẳng để tối ưu hóa khả năng thực thi:
 
-### 🎮 **00_HARNESS_CORE** (Control Center)
+### 🎮 **00_harness_core** (Control Center)
 Bộ não và tay lái điều hành toàn bộ hệ thống.
-*   👉 [[Hienho_MasterDoc_Step_1|Step 1: Hienho Master Doc]] (Context & Strategy)
-*   👉 [[Orchestrator_Engine_Step_2|Step 2: Operational Orchestrator]] (Workflow & Execution)
-*   👉 [[SKILL_REGISTRY]] | [[OPERATIONAL_ROUTINE]]
+*   👉 [[hienho_master_doc|Step 1: Hienho Master Doc]] (Context & Strategy)
+*   👉 [[orchestrator_engine|Step 2: Operational Orchestrator]] (Workflow & Execution)
+*   👉 [[skill_registry]] | [[operational_routine]]
 
 ### 🛠 **01_FRAMEWORKS** (Frameworks & Principles)
 Thư viện các nguyên tắc (Principles) và khung tư duy (Frameworks).
@@ -52,8 +52,8 @@ Các dự án thực thi cụ thể trên Website momo.vn.
 ## 🤖 Hướng Dẫn Cho AI Agent
 
 Nếu bạn là một AI Agent tiếp nhận Repo này, hãy tuân thủ quy trình:
-1.  **Read Identity**: Đọc [[Hienho_MasterDoc_Step_1]] để biết context của Văn Hiến.
-2.  **Load Orchestrator**: Truy cập [[Orchestrator_Engine_Step_2]] để điều phối dự án.
+1.  **Read Identity**: Đọc [[hienho_master_doc]] để biết context của Văn Hiến.
+2.  **Load Orchestrator**: Truy cập [[orchestrator_engine]] để điều phối dự án.
 3.  **Load Principles/Frameworks**: Tra cứu **01_FRAMEWORKS** để nắm vững guardrails và tư duy.
 4.  **Execute via Skills**: Sử dụng các instruction trong **02_SKILLS**.
 

@@ -1,4 +1,4 @@
-# 🧪 Momo Blog Prompt 1 Outline
+# Momo Blog Prompt 1 Outline
 - Blog Outline Generator
 ---
 
@@ -12,6 +12,12 @@ Your expertise with Knowledge:
 - E-E-A-T compliance for financial content
 - MoMo's product ecosystem and brand voice
 
+
+- **Blog KHÔNG phải là luận văn (Thesis):** Tuyệt đối tránh cấu trúc rập khuôn "Khái niệm -> Lợi ích -> Quy trình".
+- **Heading là Giải pháp:** Tiêu đề H2 phải mô tả một kịch bản thực tế (Scenario), một nỗi đau (Pain point) hoặc một giải pháp cụ thể (Solution).
+- **Tư duy Scenario-based:** Đặt người dùng vào một tình huống cụ thể (Ví dụ: "Lương chưa về nhưng hóa đơn đã tới" thay vì "Lợi ích của Ví Trả Sau").
+- **Hành động hóa:** Sử dụng động từ mạnh và trực diện trong các Heading.
+
 <KNOWLEDGE>
 
 <SEO_GEO_GUIDELINE>
@@ -22,17 +28,10 @@ Your expertise with Knowledge:
 {{guideline.ymyl.ymyl}}
 </YMYL_GUIDELINE>
 
-<ANTI_THESIS_RULES>
-- **Blog KHÔNG phải là luận văn (Thesis):** Tuyệt đối tránh cấu trúc rập khuôn "Khái niệm -> Lợi ích -> Quy trình".
-- **Heading là Giải pháp:** Tiêu đề H2 phải mô tả một kịch bản thực tế (Scenario), một nỗi đau (Pain point) hoặc một giải pháp cụ thể (Solution).
-- **Tư duy Scenario-based:** Đặt người dùng vào một tình huống cụ thể (Ví dụ: "Lương chưa về nhưng hóa đơn đã tới" thay vì "Lợi ích của Ví Trả Sau").
-- **Hành động hóa:** Sử dụng động từ mạnh và trực diện trong các Heading.
-</ANTI_THESIS_RULES>
 
 </KNOWLEDGE>
 
 Your output is an outline only - clean, structured, ready for human review and Prompt 2.
-
 
 ---
 
@@ -83,6 +82,7 @@ Which features from Business Context are unique vs competitors?
 Dựa vào Primary Keyword + Business Context, xác định 3-5 tình huống thực tế mà User gặp phải:
 - **Tình huống (Scenarios):** Khi nào user cần thông tin này nhất?
 - **Nỗi đau (Pain points):** Điều gì khiến họ lo lắng trong tình huống đó?
+- **Web Search:**Tìm kiếm và lấy đúng thông tin mới nhất trên Internet
 - **Cách MoMo giải quyết:** Tính năng cụ thể nào "cứu nguy"?
 → Mỗi H2 sẽ đại diện cho một kịch bản hoặc một bước trong hành trình giải quyết vấn đề.
 

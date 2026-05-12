@@ -51,8 +51,8 @@
 ---
 
 ## Liên kết vận hành
-- Điều phối dự án: [[Orchestrator_Engine_Step_2]] — Pipeline Board theo dõi tiến độ Use Cases
+- Điều phối dự án: [[orchestrator_engine]] — Pipeline Board theo dõi tiến độ Use Cases
 - Đo lường Web Layer: [[web-tracking]] — GTM Config, Umami, AI Traffic Mapping
 - Chuyển đổi Web→App: [[Web2App-Pipeline]] — CTA Design, Deeplink, Funnel CR
-- Quy trình hàng ngày: [[OPERATIONAL_ROUTINE]] — Daily/Weekly/Monthly cadence
-- Master Context: [[Hienho_MasterDoc_Step_1]] — Mục 5 (Dự án đang triển kh
+- Quy trình hàng ngày: [[operational_routine]] — Daily/Weekly/Monthly cadence
+- Master Context: [[hienho_master_doc]] — Mục 5 (Dự án đang triển kh

@@ -5,7 +5,7 @@
 
 ---
 
-## 📋 Business Model Context Template (11 Fields)
+## 📋 Business Model Context Template (12 Fields)
 
 Dưới đây là mẫu chuẩn để mô tả trọn vẹn một Business Model của Use Case MoMo. Hãy copy phần code block bên dưới để khởi tạo Context cho dự án mới.
 
@@ -36,13 +36,16 @@ Dưới đây là mẫu chuẩn để mô tả trọn vẹn một Business Model
 [Các cơ chế thúc đẩy tăng trưởng hiện hành: Cashback, Voucher, MoMo Rewards, các gói combo đặc biệt]
 
 ### 9. Bằng chứng tin cậy (Trust Signals)
-[Số liệu thực tế (Traffic/Users), giấy phép NHNN, chứng chỉ bảo mật, giải thưởng ngành]
+[Giấy phép NHNN, chứng chỉ bảo mật, giải thưởng ngành, các chứng nhận uy tín]
 
 ### 10. Pháp lý & Tuân thủ (Compliance & Disclaimer)
 [Các quy định bắt buộc phải tuân thủ và nội dung miễn trừ trách nhiệm pháp lý cho người dùng]
 
 ### 11. Giới hạn & Từ ngữ cấm (Constraints & Blacklist)
 [Những gì sản phẩm KHÔNG làm được và danh sách từ ngữ nhạy cảm/tên đối thủ tuyệt đối không được nhắc tới]
+
+### 12. Số liệu & Case Study (MoMo Data)
+[Dữ liệu thực tế: Số lượng user đang dùng, Market share, các câu chuyện thành công (Success Stories) hoặc các con số biết nói để làm bằng chứng (Information Gain)]
 ```
 
 ---
@@ -54,7 +57,16 @@ Dưới đây là mẫu chuẩn để mô tả trọn vẹn một Business Model
 3.  **Cập nhật định kỳ:** Thông tin về đối tác và ưu đãi (Scheme) cần được cập nhật ngay khi có thay đổi để các tài liệu tham chiếu (BRD) không bị lỗi thời.
 
 ---
-**Liên kết điều phối:**
-*   Quy trình dự án: [[Orchestrator_Engine_Step_2]]
-*   Danh mục kỹ năng: [[SKILL_REGISTRY]]
-*   Quy trình GenAI: [[mospark_genai_content]]
+
+## 🔗 Footer: Danh mục tham chiếu & Hệ thống
+
+**Danh mục tham chiếu:**
+*   Quy trình dự án: orchestrator_engine
+*   Danh mục kỹ năng: skill_registry
+*   Quy trình GenAI: mospark_genai_content
+
+**Liên kết hệ thống (Optional for Mapping):**
+- [[orchestrator_engine]]
+- [[skill_registry]]
+- [[mospark_genai_content]]
+- [[mospark_master]]

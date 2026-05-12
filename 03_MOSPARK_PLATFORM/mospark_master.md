@@ -43,7 +43,7 @@ MoSpark được xây dựng trên triết lý **"No Hardcode - AI Native"**:
 ## 3. Hệ Thống Cốt Lõi: Use Case System
 
 MoSpark quản trị theo **Use Case System** (Unique ID) kết nối toàn bộ hệ sinh thái:
-- **Context Layer:** 11 trường Business Context định hướng AI (Source of Truth).
+- **Context Layer:** Business Context định hướng AI (Source of Truth).
 - **Keyword Master Registry:** Quản lý tập trung Primary Keywords, đảm bảo tính duy nhất (Unique ID Check).
 - **Double Entry Sync:** Cơ chế đồng bộ ngược - xuôi giữa Editor và module Sản xuất.
 
@@ -73,7 +73,7 @@ graph TD
     end
 
     subgraph Phase_1_Production [Phase 1: Sản xuất & Kiểm soát]
-        C --> D[Business Context: 11 Fields]
+        C --> D[Business Context]
         D --> E[GenAI Pipeline: Outline -> Blog]
         E --> F{SEO/GEO Score Gate}
         F -->|Score < 80| E
@@ -133,11 +133,20 @@ Nút **Publish** bị vô hiệu hóa nếu:
 ---
 
 ## 7. Danh Mục Tài Liệu Chi Tiết (Deep-dive)
-- **Sản xuất AI:** [[mospark_genai_content]]
-- **Chấm điểm chất lượng:** [[mospark_seo_geo_score]]
-- **Quản trị thị trường:** [[mospark_seo_inventory]]
-- **Sách hướng dẫn triển khai:** [[mospark_seo_geo_playbook]]
-- **Chiến lược HubSpot Parity:** [[mospark_seo_geo_playbook]]
+- **Sản xuất AI:** mospark_genai_content
+- **Chấm điểm chất lượng:** mospark_seo_geo_score
+- **Quản trị thị trường:** mospark_seo_inventory
+- **Sách hướng dẫn triển khai:** mospark_seo_geo_playbook
+
+---
+
+## 8. Liên kết hệ thống (Optional for Mapping)
+- [[mospark_genai_content]]
+- [[mospark_seo_geo_score]]
+- [[mospark_seo_inventory]]
+- [[mospark_seo_geo_playbook]]
+- [[mospark_business_context]]
+- [[mospark_ads_manager]]
 
 ---
 *Last Updated: 11/05/2026 | Division: Growth Platform Division (GPD)*

@@ -63,4 +63,4 @@ Khi phân nhóm thông tin, các nhóm phải:
 ## Liên kết
 - Skill dùng trước: [[brainstorming]] (để tìm ý tưởng), [[critical-thinking]] (để kiểm tra logic)
 - Skill dùng sau: [[brd-momo]] (để viết tài liệu chính thức)
-- Xem tổng thể: [[SKILL_REGISTRY]]
+- Xem tổng thể: [[skill_registry]]

@@ -170,7 +170,7 @@ Logic nhận diện AI Referral Traffic:
 
 ## Liên kết
 - Skill liên quan: [[Web2App-Pipeline]]
-- Workflow: [[Orchestrator_Engine_Step_2]]
+- Workflow: [[orchestrator_engine]]
 - Mục tiêu chiến lược: [[web-momo-okrs-2026]] - KR 1.1 (6M MUA)
-- Xem tổng thể: [[SKILL_REGISTRY]]
+- Xem tổng thể: [[skill_registry]]
 - **Baseline Date:** Dữ liệu chuẩn bắt đầu từ **23/04/2026

@@ -57,4 +57,4 @@ Khi bóc tách vấn đề, hãy luôn anchor vào các sự thật này:
 ## Liên kết
 - Skill dùng trước: [[critical-thinking]]
 - Skill dùng sau: [[jtbd-analysis]], [[brainstorming]]
-- Xem tổng thể: [[SKILL_REGISTRY]]
+- Xem tổng thể: [[skill_registry]]

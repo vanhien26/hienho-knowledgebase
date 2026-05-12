@@ -13,8 +13,8 @@ Chào mừng bạn đến với hệ thống **Agent Harness** của Văn Hiến
 
 ## 🧭 Điều Phối & Bối Cảnh (Orchestration)
 Dùng các file này để điều phối dự án và nắm vững bối cảnh:
-*   👉 **[[Orchestrator_Engine_Step_2]]**: Master Controller / Lifecycle Engine.
-*   👉 **[[mospark_business_context]]**: Single Source of Truth cho bối cảnh Business (11 fields).
+*   👉 **[[orchestrator_engine]]**: Master Controller / Lifecycle Engine.
+*   👉 **[[mospark_business_context]]**: Single Source of Truth cho Business Context.
 
 ---
 
@@ -59,7 +59,7 @@ Kích hoạt các kỹ năng này khi bắt tay vào làm việc cụ thể:
 ---
 
 ## 🚀 Cách sử dụng cho AI
-1. **Identify**: Xác định dự án đang ở bước nào trong [[Orchestrator_Engine_Step_2]].
+1. **Identify**: Xác định dự án đang ở bước nào trong [[orchestrator_engine]].
 2. **Reason**: Load các **[[01_FRAMEWORKS|Frameworks]]** phù hợp để phân tích vấn đề.
 3. **Execute**: Sử dụng **[[02_SKILLS|Skills]]** để tạo ra output chất lượng cao.
 4. **Verify**: Kiểm tra chéo với [[Zero-Hallucination]] và [[pyramid-principle]].

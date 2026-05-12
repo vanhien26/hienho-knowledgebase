@@ -36,17 +36,24 @@ Kiến trúc của GenAI Content được thiết kế dựa trên sự phân t�
 **Sơ đồ Tương hỗ (Interaction Flow):**
 ```mermaid
 graph TD
-    A[Văn Hiến / SEO Tools] -->|1. Cung cấp Bản Đồ<br/>Market/Cluster & Volume| C(GenAI Content Engine)
-    B[Business Unit / PM] -->|2. Cung cấp Ranh Giới<br/>11 Fields Business Context| C
+    A[SEO/GEO] -->|1. Cung cấp Keyword<br/>Market/Cluster & Volume| C(GenAI Content Engine)
+    B[Business Unit / PM] -->|2. Cung cấp <br/>Business Context| C
     
     C -->|3. Lựa chọn Keyword ưu tiên| D[Prompt 1: Lên Dàn Ý]
-    D -->|4. Áp dụng Rule & Context| E[Prompt 2: Viết Bài Chi Tiết]
+    D -->|4. Review & Duyệt Dàn ý| R{PHÊ DUYỆT}
+    
+    %% Branching
+    R -- "Lựa chọn 1: Dùng API AI" --> E[Prompt 2: Viết Bài Chi Tiết]
+    R -- "Lựa chọn 2: Dùng AI cá nhân" --> M[BU/Content tự viết dựa trên Dàn ý]
     
     E --> F((Bài viết Final))
+    M --> F
     
     style A fill:#e1f5fe,stroke:#03a9f4,stroke-width:2px
     style B fill:#fff3e0,stroke:#ff9800,stroke-width:2px
     style C fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
+    style R fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style M fill:#f5f5f5,stroke:#757575,stroke-dasharray: 5 5
     style F fill:#e8f5e9,stroke:#4caf50,stroke-width:2px
 ```
 
@@ -72,6 +79,11 @@ Biến MoSpark thành "Production Lab" duy nhất, nơi nội dung được sả
 - **Quality:** 100% bài viết AI sinh ra phải vượt qua Hard Block của bộ lọc SEO/GEO Scoring.
 - **SOV Target:** Đạt mức độ trích dẫn (Citation) từ AI search cho các Primary Keyword của Use Case tối thiểu 30%.
 
+### 3.3. Tính năng cốt lõi (Key Features)
+- **Project Mapping Field:** Liên kết Use Case với danh mục quản lý Pages tương ứng (Ví dụ: Pick "Phạt Nguội" để auto-sync bài viết vào thư mục `/blog/phat-nguoi/*` trong Blog Editor).
+- **Keyword Master Registry:** Quản lý tập trung Primary Keywords, đảm bảo tính duy nhất (Unique ID Check).
+- **Double Entry Sync:** Cơ chế đồng bộ bài viết từ module Sản xuất sang module Quản trị (Editor).
+
 ---
 
 ## 4. Các Giả định & Nền tảng (Assumptions)
@@ -93,8 +105,8 @@ Biến MoSpark thành "Production Lab" duy nhất, nơi nội dung được sả
 
 ### 5.2. Logic tính toán
 - **Trích xuất Domain:** Hệ thống tự động tách domain từ các URL tham khảo.
-- **Thống kê:** Đếm số lần mỗi domain được trích dẫn và tính tỷ lệ phần trăm (%).
-- **Công thức:** `SOV % = (Số lần domain MoMo được trích dẫn / Tổng số trích dẫn) * 100`.
+- **Thống kê:** Đếm số lần mỗi domain được trích dẫn và tính tỷ lệ phần trăm (%) dựa trên thị trường.
+- **Công thức:** `SOV % = (Số lần domain MoMo xuất hiện / Total Volume Search) * 100`.
 
 ### 5.3. Tối ưu hóa vận hành
 - Để tiết kiệm chi phí, hệ thống gom nhóm các Secondary Keywords khi thực hiện đo lường SOV (tối đa 6 API call cho mỗi cụm từ khóa chính).
@@ -138,7 +150,17 @@ Bài viết đã tồn tại (tạo từ bất kỳ nguồn nào) đều có th�
 1.  **Cập nhật thủ công:** Tự viết hoặc paste nội dung mới trực tiếp vào Blog Editor.
 2.  **Enhance by GenAI Content:** Sử dụng nút bấm trong Blog Editor để chuyển hướng đến module GenAI Content của chính từ khóa đó để tối ưu hóa lại bằng AI.
 
-### 6.1. Operational Flow - Creation Paths (Way 1 & Way 2)
+### 5.3. Core Data Governance Rules (Xác nhận với Dev - Trọng)
+
+Để đảm bảo tính toàn vẹn dữ liệu và tránh xung đột SEO (Cannibalization), hệ thống áp dụng các quy tắc cứng sau:
+
+1.  **Project-First Requirement (Ràng buộc bối cảnh):** Mọi **Primary Keyword** bắt buộc phải thuộc về một **SEO/GEO Project** cụ thể. Keyword không được phép tồn tại "mồ côi" vì Project là nơi cung cấp *Business Context* và định nghĩa cấu trúc URL.
+2.  **Strict 1-1 Mapping (Tính duy nhất):** Quy tắc **1 Bài viết ↔ 1 Primary Keyword**. Một Primary Keyword chỉ được đại diện cho một URL Master và một nội dung duy nhất. Nếu người dùng tạo trùng, hệ thống phải chặn và yêu cầu sử dụng luồng "Update/Enhance".
+3.  **Single Ownership (Phân cấp URL):** Một Primary Keyword chỉ thuộc về **duy nhất 1 SEO/GEO Project**. Điều này đảm bảo sự nhất quán trong URL Hierarchy (ví dụ: `/phat-nguoi/` vs `/doi-tac/`) và tránh tranh chấp Authority giữa các Use Case.
+4.  **Unique ID Check (Kho định danh):** Mọi Keyword khi nhập vào phải được đối soát với *Keyword Master Registry* của toàn hệ thống trước khi cho phép đi vào luồng sản xuất nội dung.
+
+---
+
 
 Quy trình này tách biệt rõ ràng giữa việc **Nhập liệu thủ công (Way 1)** và **Sản xuất bằng AI (Way 2)** theo 7 bước chuẩn.
 
@@ -149,15 +171,21 @@ graph TD
 
     %% Way 1 path
     Choice -- "CÓ SẴN BÀI VIẾT<br/>(Way 1)" --> W1_Step1[Dán nội dung vào Blog Editor]
-    W1_Step1 --> W1_Step2[Nhập Primary Keyword]
+    W1_Step1 --> W1_Step2[Bước 3: Nhập Primary Keyword]
     W1_Step2 --> Registry
 
     %% Way 2 path
     Choice -- "DÙNG AI SẢN XUẤT<br/>(Way 2)" --> W2_Step1[Bước 3: Nhập Primary Keyword]
     W2_Step1 --> Registry
-    Registry -- "Hợp lệ" --> W2_Step2[Bước 4: AI Outline & Bước 5: AI Blog]
-    W2_Step2 --> W2_Step3[Bước 6: Review & Sign-off]
-    W2_Step3 --> W2_Step4[Bước 7: Sync MoSpark]
+    Registry -- "Hợp lệ" --> W2_Step2[Bước 4: AI Outline]
+    W2_Step2 --> Choice2{Quyết định thực thi}
+    
+    Choice2 -- "Dùng API AI" --> W2_Step3[Bước 5: AI Blog Detail]
+    Choice2 -- "Dùng AI cá nhân" --> W2_Step3_Manual[BU/Content tự viết chi tiết]
+    
+    W2_Step3 --> W2_Step4[Bước 6: Review & Sign-off]
+    W2_Step3_Manual --> W2_Step4
+    W2_Step4 --> W2_Step5[Bước 7: Sync MoSpark]
 
     %% Master Registry Hub
     subgraph Hub ["TRUNG TÂM KIỂM SOÁT (MASTER REGISTRY)"]
@@ -165,16 +193,17 @@ graph TD
     end
 
     %% Convergence to Publish
-    W2_Step4 --> Publish
+    W2_Step5 --> Publish([XUẤT BẢN - MOMO.VN])
     Registry -- "Trùng lặp" --> Error[Cảnh báo & Yêu cầu Update]
     
-    W1_Step2 --> Publish([XUẤT BẢN - MOMO.VN])
+    W1_Step2 --> Publish
 
     %% Styling
     style Hub fill:#f0f0f0,stroke:#333,stroke-dasharray: 5 5
     style Registry fill:#ff9ff3,stroke:#333,stroke-width:2px
     style Publish fill:#1dd1a1,color:#fff,stroke-width:3px
     style Error fill:#ff6b6b,color:#fff
+    style Choice2 fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
 ```
 
 ### 6.2. Operational Flow - Update & Enhance Path
@@ -209,8 +238,8 @@ graph LR
 
 | Bước | Tên Bước | Hành động | Input/Output | Owner |
 | :--- | :--- | :--- | :--- | :--- |
-| **1** | **Tạo Use Case** | Khởi tạo Use Case (Tên Use Case phải là **Duy nhất**) | Use Case Name (Unique) | PM/Growth |
-| **2** | **Business Context** | Nhập bối cảnh theo template 11 fields tại [[mospark_business_context]] | Context Layer (Source of Truth) | PM/Growth + SEO Lead |
+| **1** | **Tạo Use Case** | Khởi tạo Use Case và **Mapping Project tương ứng** (Ví dụ: Phạt Nguội) | Project Mapping ID | PM/Growth |
+| **2** | **Business Context** | Nhập bối cảnh theo template tại [[mospark_business_context]] | Context Layer (Source of Truth) | PM/Growth + SEO Lead |
 | **3** | **Keyword Creation** | Tạo Primary Keyword và bộ Secondary Keywords tương ứng | Keyword Master Registry | Content Team |
 | **4** | **AI Outline** | AI generate dàn ý thô. Cho phép **Chỉnh sửa & Lưu (Edit & Save)** | Outline Draft -> Final | Content Team |
 | **5** | **AI Blog Detail** | AI viết bài chi tiết dựa trên Dàn ý đã chốt ở bước 4 | Blog Detail Draft | AI (Claude API) |
@@ -218,7 +247,7 @@ graph LR
 | **7** | **Sync MoSpark** | Đồng bộ dữ liệu qua Blog Editor của MoSpark để xuất bản | Live on momo.vn | Content Team |
 
 > [!TIP]
-> **Business Context** là linh hồn của bài viết. Việc nhập liệu kỹ lưỡng 11 fields ở Bước 2 giúp AI hiểu sâu về sản phẩm MoMo và giảm thiểu rủi ro sai lệch thông tin (Hallucination).
+> **Business Context** là linh hồn của bài viết. Việc nhập liệu kỹ lưỡng Business Context ở Bước 2 giúp AI hiểu sâu về sản phẩm MoMo và giảm thiểu rủi ro sai lệch thông tin (Hallucination).
 
 ### 6.4. Role & Responsibility Detail
 
@@ -227,7 +256,7 @@ graph LR
 
 - **Bước 1:** Khởi tạo Use Case (tên Use Case - Duy nhất)
 - **Bước 2:** **Xác nhận Business Context đầy đủ - chịu trách nhiệm pháp lý & Information Gain**
-  - Confirm tất cả 11 fields theo template: Value Prop, Trust Signals, Disclaimer, Blacklist terms
+  - Confirm tất cả các trường theo template: Value Prop, Trust Signals, Disclaimer, Blacklist terms
   - Verify không có information sai, không recommend competitor, không overpromise tính năng
   - Ensure tất cả "thông tin lợi ích" (benefit/gain) đều chính xác về sản phẩm/dịch vụ MoMo
 - **Bước 4:** Approve Outline final trước khi AI tạo Blog Detail
@@ -249,7 +278,7 @@ graph LR
 **Trách nhiệm chính:** Đảm bảo tiêu chuẩn SEO/GEO, verify chất lượng trước khi đồng bộ
 
 - **Bước 2:** Validate Business Context framework
-  - Confirm 11 fields đầy đủ, context tương thích với Prompt
+  - Confirm các trường đầy đủ, context tương thích với Prompt
 - **Bước 6:** **Review Quality & SEO/GEO Scoring**
   - Monitor AI output quality, check điểm Scoring tự động
   - Flag nếu có issues: E-E-A-T fail, YMYL risk, content violation
@@ -259,7 +288,7 @@ graph LR
 
 | Gate | Step | Owner | Condition |
 |------|------|-------|-----------
-| **Business Context Complete** | 2 | PM/Growth + SEO/GEO | Đủ 11 fields, thông tin chính xác, pháp lý clear |
+| **Business Context Complete** | 2 | PM/Growth + SEO/GEO | Đủ các trường thông tin, chính xác, pháp lý clear |
 | **Outline Final** | 4 | PM/Growth | Content Team lưu dàn ý -> PM/Growth approve |
 | **Content Review** | 6 | SEO/GEO Lead | Bài viết pass SEO/GEO Score -> Sign-off để Sync |
 
@@ -284,13 +313,13 @@ Hệ thống quản lý nội dung dựa trên nguyên tắc **GenAI Content là
 
 ---
 
-## 7. Business/Product Context - 11 Fields bắt buộc
+## 7. Business Context - Các trường bắt buộc
 
 > **Owner:** Văn Hiến
 > **Thời điểm nhập:** Bắt buộc hoàn thành TRƯỚC khi generate bất kỳ bài viết nào trong Use Case
 > **Mục đích:** Làm nền tảng context cho cả Prompt 1 (Outline) và Prompt 2 (Writer) - đảm bảo AI luôn viết đúng về sản phẩm MoMo, không recommend competitor, không bịa đặt tính năng
 
-### 7.1. 11 Fields bắt buộc
+### 7.1. Các trường bắt buộc
 
 1. **Tên sản phẩm** - Tên chính xác như hiển thị trong App/Web
 2. **URL Web** - URL canonical của trang chính
@@ -303,6 +332,7 @@ Hệ thống quản lý nội dung dựa trên nguyên tắc **GenAI Content là
 9. **Khác biệt vs đối thủ** - So sánh trực tiếp, honest (bao gồm cả điểm chưa bằng)
 10. **Disclaimer** - Pháp lý/tài chính (theo YMYL guideline)
 11. **Từ ngữ bị cấm** - Blacklist terms (sai sản phẩm, pháp lý risk, competitor)
+12. **Số liệu của MoMo** - Data/Statistics chính thống của MoMo cho Use Case (User volume, Market share, Success stories, vv.)
 
 ---
 
@@ -322,7 +352,38 @@ Hệ thống quản lý nội dung dựa trên nguyên tắc **GenAI Content là
 
 ---
 
-*Document: BRD-MoSpark-GenAI-Content · v3.5 (Integrated Prompt Engineering Skill)*
+## 11. Danh mục Use Cases triển khai (Pipeline)
+
+Hệ thống GenAI Content sẽ phục vụ sản xuất nội dung cho các dự án chiến lược sau:
+
+1. **Dự án Phạt Nguội (Pilot):** Sản xuất 20+ bài viết Blog chuẩn E-E-A-T và pSEO địa phương.
+2. **Dự án Merchant Directory (`/doi-tac`):** 
+   - Sản xuất tự động **Thông tin mô tả Merchant** (Intro).
+   - Tạo bộ **FAQ & HowTo thanh toán** cho từng Merchant (Ví dụ: "Highlands Coffee có nhận MoMo không?").
+   - Đảm bảo tính nhất quán của thông tin ưu đãi và phương thức thanh toán (VTS/QR).
+
+---
+
+## 12. Lộ trình triển khai (Implementation Roadmap)
+
+Dự án GenAI Content được chia làm 2 giai đoạn chính để đảm bảo tính ổn định của hệ thống trước khi mở rộng tính năng đo lường:
+
+### Giai đoạn 1: Technical Flow & Workflow Standardization
+**Trọng tâm:** Hoàn thiện hạ tầng kỹ thuật và quy trình sản xuất nội dung.
+- Triển khai toàn bộ **Technical Flow** (Project Mapping, Business Context, Keyword Registry).
+- Hoàn thiện 3 luồng vận hành (**Flow 1, 2, 3**) tích hợp với MoSpark Blog Editor.
+- Tích hợp Claude API và hệ thống Prompt Master.
+- Pilot thành công cho dự án **Phạt Nguội** và **Merchant Directory**.
+
+### Giai đoạn 2: Share of Voice (SoV) & Visibility Tracking
+**Trọng tâm:** Đo lường hiệu quả và tối ưu hóa tăng trưởng.
+- Tích hợp Dashboard đo lường **SoV (Share of Voice)** theo từng Use Case.
+- Theo dõi **Visibility Index** của các bài viết GenAI trên Google Search & AI Search.
+- Hệ thống cảnh báo **Content Decay** (Nội dung giảm sút hiệu quả).
+- Tự động gợi ý từ khóa mới dựa trên Gap Analysis (SEO Inventory).
+
+---
+*Document: BRD-MoSpark-GenAI-Content · v3.6 · Văn Hiến (SEO & GEO Lead)*
 
 ---
 
@@ -342,13 +403,28 @@ Quy trình này khớp với **Bước 4 & Bước 6** trong Workflow hệ thố
 
 *   **Phase A: Outline Generator (Step 4)**
     *   **Input**: Primary Keyword + Target Audience + Key Message.
-    *   **Prompt Master**: [[momo-blog-prompt-1-outline]]
+    *   **Prompt Master:** momo-blog-prompt-1-outline
 *   **Phase B: Content Writer (Step 6)**
-    *   **Input**: Outline từ Phase A + [[momo-seo-geo-guideline]] + [[momo-ymyl-guideline]].
-    *   **Prompt Master**: [[momo-blog-prompt-2-writer]]
+    *   **Input**: Outline từ Phase A + momo-seo-geo-guideline + momo-ymyl-guideline.
+    *   **Prompt Master:** momo-blog-prompt-2-writer
 
 ### 9.3. Quality Gate Standards (SEO/GEO Score)
-Nội dung sau khi GenAI tạo ra phải được tự động chấm điểm qua [[mospark_seo_geo_score]]. Các tiêu chí bắt buộc:
+Nội dung sau khi GenAI tạo ra phải được tự động chấm điểm qua mospark_seo_geo_score. Các tiêu chí bắt buộc:
 *   Mật độ từ khóa chính.
 *   Sự hiện diện của FAQ Schema.
-*   Độ dài và cấu trúc Headi
+*   Độ dài và cấu trúc Heading.
+
+---
+
+## 10. Liên kết hệ thống (Optional for Mapping)
+- [[mospark_master]]
+- [[mospark_seo_geo_score]]
+- [[mospark_seo_inventory]]
+- [[mospark_business_context]]
+- [[momo-blog-prompt-1-outline]]
+- [[momo-blog-prompt-2-writer]]
+- [[momo-seo-geo-guideline]]
+- [[momo-ymyl-guideline]]
+
+---
+*Document: BRD-MoSpark-GenAI-Content · v3.5 (Integrated Prompt Engineering Skill)*

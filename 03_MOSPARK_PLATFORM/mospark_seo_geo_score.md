@@ -8,7 +8,7 @@ GEO Scoring Checklist - MoSpark Admin
 **Technical Owner:** Nhật (Web Platform Developer)
 **Status:** Active - Governance Gate for all MoSpark Output
 **Last updated:** Tháng 4/2026
-**System Context:** [[Orchestrator_Engine_Step_2]] | [[Seo-Geo-audit]]
+**System Context:** [[orchestrator_engine]] | [[Seo-Geo-audit]]
 **Master Strategy:** [[mospark_master]]
 
 ---

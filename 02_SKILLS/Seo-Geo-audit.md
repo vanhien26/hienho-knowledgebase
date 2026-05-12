@@ -5,8 +5,8 @@ version: 1.1.0
 ---
 
 ## 🧭 Điều phối
-- Tổng thể: [[SKILL_REGISTRY]]
-- Quy trình: [[Orchestrator_Engine_Step_2]]
+- Tổng thể: [[skill_registry]]
+- Quy trình: [[orchestrator_engine]]
 - Công cụ hỗ trợ: [[critical-thinking]]
 
 Use this skill khi cần audit toàn diện một website/page MoMo (hoặc competitor) trên 4 trục

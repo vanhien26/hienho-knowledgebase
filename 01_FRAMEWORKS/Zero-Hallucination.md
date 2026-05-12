@@ -60,4 +60,4 @@ Khi review nội dung do AI tạo ra, Agent phải:
 ## Liên kết
 - Skill dùng trước: [[First-Principles]], [[critical-thinking]]
 - Skill dùng kèm: [[Seo-Geo-audit]]
-- Xem tổng thể: [[SKILL_REGISTRY]]
+- Xem tổng thể: [[skill_registry]]

@@ -3,7 +3,7 @@
 > **Role:** Master Controller / Project Lifecycle Engine
 > **Purpose:** Điều phối việc áp dụng Principles, Methodologies và Skills vào 9 bước Web Build Workflow.
 > **Owner:** Văn Hiến
-> **Operational Engine:** [[OPERATIONAL_ROUTINE]]
+> **Operational Engine:** [[operational_routine]]
 > **Mục tiêu chiến lược:** [[web-momo-okrs-2026]] — 6M MUA (KR 1.1)
 
 ---
@@ -32,7 +32,7 @@ Khi tiếp nhận yêu cầu về dự án, Agent thực hiện theo quy trình 
 
 1.  **Identify State**: Kiểm tra dự án thuộc **04_USE_CASE_MOMO** đang ở bước nào (hoặc hỏi User).
 2.  **Load Harness**:
-    *   Đọc [[Hienho_MasterDoc_Step_1]] để nắm bối cảnh team.
+    *   Đọc [[hienho_master_doc]] để nắm bối cảnh team.
     *   Đọc Skill tương ứng với bước hiện tại trong bảng trên.
     *   Luôn tuân thủ **01_FRAMEWORKS** trong mọi phản hồi.
 3.  **Execute**: Thực thi tác vụ (Viết BRD, Audit, Tạo HTML...).
