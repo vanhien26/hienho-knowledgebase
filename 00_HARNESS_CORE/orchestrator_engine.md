@@ -3,8 +3,6 @@
 > **Role:** Master Controller / Project Lifecycle Engine
 > **Purpose:** Điều phối việc áp dụng Principles, Methodologies và Skills vào 9 bước Web Build Workflow.
 > **Owner:** Văn Hiến
-> **Operational Engine:** [[operational_routine]]
-> **Mục tiêu chiến lược:** [[web-momo-okrs-2026]] — 6M MUA (KR 1.1)
 
 ---
 
@@ -67,3 +65,14 @@ Mọi output từ Agent phải đi qua bộ lọc này:
 *   **Logic**: Trình bày theo Pyramid Principle (Summary trước, Detail sau).
 *   **Intent**: Luôn anchor vào JTBD của người dùng.
 *   **Format**: Đúng chuẩn MoMo HTML Design System (nếu output là HTM
+---
+
+
+---
+
+## Change Log
+- **Tháng 5/2026:** Khởi tạo tài liệu và chuẩn hóa cấu trúc thư mục.
+
+## References & Alignment
+- **Operational Engine:** [[operational_routine]]
+- **Mục tiêu chiến lược:** [[web-momo-okrs-2026]] — 6M MUA (KR 1.1)

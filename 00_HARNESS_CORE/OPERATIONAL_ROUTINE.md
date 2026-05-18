@@ -5,6 +5,15 @@ perational Routine (SEO & GEO Lead)
 
 ---
 
+## 0. AI Interaction Protocol (Bắt buộc)
+Trước khi xử lý bất kỳ câu hỏi hoặc yêu cầu nào, AI phải tuân thủ [[momo-thinking-protocol]] theo cấu trúc 3 bước:
+1.  **ĐỌC**: Xác định SSOT và bối cảnh trong Vault.
+2.  **DÙNG**: Chọn Framework và Skill phù hợp.
+3.  **TRẢ**: Cấu trúc câu trả lời Actionable & Strategic.
+
+---
+---
+
 ## 1. Daily Health Check (15-30 phút)
 *Mục tiêu: Đảm bảo "mạch máu" dữ liệu và hệ thống luôn thông suốt.*
 
@@ -67,4 +76,21 @@ Mỗi khi có một Use Case mới (Ví dụ: `Dịch vụ công`), Routine th�
 | Sai lệch Tracking | **Consult**: Support team DA tìm ra "Truth of Source". |
 
 ---
+
+## 6. Framework Usage (Hệ thống tư duy)
+
+Khi thực hiện các tác vụ phân tích và ra quyết định, hãy tham chiếu các Framework chuẩn trong folder `02_FRAMEWORKS`:
+
+*   **Phân tích tăng trưởng**: Sử dụng [[80-20-growth]] để xác định 20% Use Cases mang lại 80% traffic.
+*   **Giải quyết vấn đề**: Áp dụng [[First-Principles]] và [[critical-thinking]] để tìm root cause của traffic leak.
+*   **Xây dựng nội dung**: Luôn bắt đầu bằng [[jtbd-analysis]] để hiểu nỗi đau của user trước khi viết Brief.
+*   **Trình bày & Báo cáo**: Tuân thủ [[pyramid-principle]] để cấu trúc thông tin mạch lạc cho Lãnh đạo.
+*   **Ra quyết định**: Sử dụng [[decision-framework]] cho các Fork Points chiến lược (ghi nhận vào Decision Log).
+
+---
 *Last Updated: 05/05/20
+---
+
+## Change Log
+- **Tháng 5/2026:** Khởi tạo tài liệu và chuẩn hóa cấu trúc thư mục.
+

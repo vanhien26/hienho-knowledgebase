@@ -63,3 +63,8 @@ Kích hoạt các kỹ năng này khi bắt tay vào làm việc cụ thể:
 2. **Reason**: Load các **[[01_FRAMEWORKS|Frameworks]]** phù hợp để phân tích vấn đề.
 3. **Execute**: Sử dụng **[[02_SKILLS|Skills]]** để tạo ra output chất lượng cao.
 4. **Verify**: Kiểm tra chéo với [[Zero-Hallucination]] và [[pyramid-principle]].
+---
+
+## Change Log
+- **Tháng 5/2026:** Khởi tạo tài liệu và chuẩn hóa cấu trúc thư mục.
+
