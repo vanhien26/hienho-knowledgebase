@@ -1,15 +1,21 @@
-# 📄 Merchant Page BRD: Xây dựng & Vận hành Nội dung SEO/GEO
+# BRD: Merchant Detail Page - SME Digital Presence Platform
 
-> - **Project:** Business/Merchant Page         
-> - **Main URL:** momo.vn/doi-tac     
-> - **Division:** GPD (Growth Platform Division)  
-> - **Use Case:** Merchant Pages  
-> - **Product:** GPD - Web Platform  
-> - **SEO/GEO Project ID:** `doi-tac`  
-> - **Owner:** GPD    
-> - **Governance:** Văn Hiến (SEO & GEO Lead)  
-> - **Version:** 1.2 · May 2026  
-> - **Status:** Execution - Pilot Phase (32 Merchants)
+> - **Project:** Merchant Detail Page (SME Digital Presence + O2O Ecosystem)
+> - **Main URL:** momo.vn/merchant
+> - **Division:** GPD (Growth Platform Division)
+> - **Use Case:** Merchant Pages
+> - **Owner:** GPD - Out-App Traffic
+> - **Governance:** SEO & GEO Lead
+> - **PIC Build:** Nhật (Build Lead) - Hoài Anh (MoSpark Architecture)
+> - **Version:** 2.0 - May 2026
+> - **Status:** Pilot Phase - Foundation Build (100-200 Merchants)
+
+---
+
+> **Problem:** MoMo có hàng nghìn merchant nhưng không có trang web giúp user xác nhận và kích hoạt O2O - traffic intent cao đang rơi vào tay bên thứ 3. Đồng thời SME nhỏ không có Digital Presence để xuất hiện trên Web và AI - hoàn toàn vô hình khi user search.
+> **KPI Owned:** VTS Activations + O2O Engagement từ `momo.vn/merchant` (attributed via Appsflyer + Umami)
+> **Consumer Flow:** "{Merchant} có nhận MoMo không?" → `/merchant/{slug}` → O2O CTA click → App open → Activation → Transaction
+> **SME Value Prop:** Xuất hiện miễn phí trên momo.vn (Web) + AI Agent responses - Digital Assets không cần chi phí marketing
 
 ---
 
@@ -17,240 +23,247 @@
 
 ### Situation
 
-MoMo có hệ sinh thái merchant rộng lớn (hàng nghìn merchants, từ chuỗi cà phê đến TMĐT, du lịch, bảo hiểm) nhưng trên Web hiện tại không có một Merchant Directory tập trung. Thông tin về đối tác đang phân mảnh qua 2 hệ thống legacy:
+Hai vấn đề song song trong một kiến trúc.
 
-- **Merchant Landing Pages** (`/thanh-toan-momo-{merchant}`): Khoảng 50-200 trang tạo trong giai đoạn 2017-2020 khi MoMo tích hợp thanh toán với từng merchant. Content tĩnh, không cập nhật, 18K organic traffic/quý.
-- **Official Account / Thổ Địa Ăn Uống** (`/page/{id}`): Hệ thống POI (Point of Interest) ở store-level, ban đầu phục vụ F&B review nhưng data bên dưới chứa tất cả categories. 67K organic traffic/quý. Mỗi cửa hàng = 1 URL (1 merchant chain có thể có hàng trăm URLs).
+**Phía Consumer:** User search "{Merchant} có nhận Ví Trả Sau không" là nhóm có purchase intent cao nhất có thể capture trên Web - họ đã chọn merchant, đã chọn phương thức thanh toán, chỉ cần một xác nhận. MoMo không có trang nào serve được intent này ở cấp độ merchant cụ thể. 85K organic traffic/quý đang chảy vào 2 legacy systems không có conversion goal: `/thanh-toan-momo-{merchant}` (18K, content outdated 5-7 năm) và `/page/{id}` (67K, thin content không cập nhật).
 
-Tổng cộng 85K organic traffic/quý đang đi vào 2 hệ thống không có chiến lược content thống nhất, không có conversion goal rõ ràng, và không phản ánh đúng quy mô quan hệ MoMo - Merchant hiện tại.
+**Phía SME:** Merchant nhỏ - quán bún thịt nướng, tiệm cà phê, hàng chả giò - không có website, không có ngân sách digital marketing. Họ hoàn toàn vô hình trên Google Search và AI engine khi user tìm kiếm. MoMo có hạ tầng web và merchant data để tạo Digital Presence cho họ miễn phí, đổi lại merchant có động lực adopt ecosystem O2O (Soundbox + VTS + Hoàn tiền).
 
 ### Complication
 
-**Về cơ hội đang bỏ lỡ:**
+Consumer traffic với intent cao nhất đang thoát ra tay bên thứ 3 - không có conversion. SME không thể tự build Digital Presence. 2 legacy systems không chỉ không convert - chúng là gánh nặng: crawl budget waste, thin content kéo giảm site quality toàn domain, keyword cannibalization với kiến trúc mới.
 
-User có hành vi search "{Merchant} có thanh toán ví trả sau không", "{Merchant} có thanh toán qua MoMo không" - đây là bottom-funnel traffic có conversion intent cao. Hiện tại MoMo không có trang nào trả lời trực tiếp cho 1 merchant cụ thể. Traffic đang rơi vào bên thứ 3 (fptshop.com.vn, mytour.vn) hoặc blog momo.vn dạng danh sách dài không specific.
-
-Trong khi đó, ZaloPay đã build merchant directory tại `zalopay.vn/doi-tac/{merchant}` cho F&B chains - tuy chưa khai thác BNPL angle nhưng đã chiếm vị trí trước.
-
-**Về rủi ro từ legacy:**
-
-2 hệ thống legacy đang tạo ra nhiều vấn đề cho chất lượng tổng thể của momo.vn:
-
-- `/thanh-toan-momo-{merchant}`: Content cũ 5-7 năm, thông tin hợp tác có thể đã outdated, ưu đãi hết hạn vẫn hiển thị. Backlinks PR từ 2017-2020 đang trỏ vào content không còn chính xác.
-- `/page/{id}`: Hàng nghìn URLs auto-generated, phần lớn là thin content (ít review, thiếu thông tin). Gây crawl budget waste, dilute site quality signal. Nhiều trang có thông tin quán đã đóng cửa, sai giờ mở cửa, không cập nhật.
-
-Nếu tiếp tục để 2 hệ thống này tồn tại song song với `/doi-tac` mới, sẽ tạo keyword cannibalization nội bộ (3 URLs cạnh tranh cho cùng merchant query).
+ZaloPay đã build `/doi-tac/{merchant}` cho F&B chains nhưng chưa khai thác BNPL và SME angle - đây là cửa sổ cơ hội MoMo đi trước.
 
 ### Resolution
 
-Xây dựng `/doi-tac` như một Merchant Directory thống nhất ở merchant-level, đồng thời audit và xử lý 2 legacy systems. **Phần nội dung mô tả Merchant (FAQ, HowTo, Intro)** sẽ được sản xuất tự động qua hệ thống **[[mospark_genai_content]]** (do Trọng quản trị) và quản trị trên MoSpark (Landing Page Builder của Web Platform).
+`momo.vn/merchant/{slug}` là một **SME Digital Presence product**, không phải trang thông tin. Product có hai jobs song song:
+
+**Job 1 - SME:** Mỗi merchant dù nhỏ đến đâu đều có một trang truyền thông đầy đủ trên momo.vn: UI tốt, hiển thị SERP, xuất hiện trong AI responses. Miễn phí. MoMo tạo và maintain - merchant không cần tự build hay bảo trì.
+
+**Job 2 - Consumer:** User xác nhận ngay merchant có nhận MoMo/VTS không và kích hoạt O2O trong 3 bước - không cần đọc dài.
+
+4 template variants phục vụ đa dạng merchant từ brand chain đến SME cơ bản. QR code tại điểm bán kết nối offline với Digital Presence. Schema markup đảm bảo xuất hiện trong AI Overview và LLM - GEO moat dài hạn. Song song 301 redirect 2 legacy systems để consolidate authority vào 1 architecture sạch.
+
+**Value exchange:** MoMo tạo Digital Presence miễn phí cho SME → SME adopt Soundbox/VTS → Consumer có O2O trải nghiệm tốt → Transaction volume tăng.
 
 ---
 
-## 2. Bối Cảnh Hiện Tại
+## 2. Bối Cảnh Thị Trường
 
-### 2.1. Hiện trạng Merchant Landing Pages (`/thanh-toan-momo-{merchant}`)
+### 2.1 Hiện Trạng Legacy Systems
 
-| Khía cạnh | Mô tả |
-|---|---|
-| Mục đích ban đầu | Landing page PR khi MoMo tích hợp thanh toán với merchant mới |
-| Giai đoạn tạo | 2017-2020 |
-| Content type | Giới thiệu hợp tác + hướng dẫn QR + CTA mở app |
-| Số lượng ước tính | 50-200 URLs |
-| Organic traffic | 18K/quý |
-| Tình trạng content | Tĩnh, không cập nhật. Ưu đãi hết hạn vẫn hiển thị. Thông tin hợp tác có thể outdated |
-| Backlinks | Có giá trị - từ PR campaigns, báo chí |
-| Vấn đề | Content outdated gây sai lệch thông tin cho user. Không có VTS angle. Không có schema markup |
+| System | URL Pattern | Organic Traffic | Vấn đề chính |
+|---|---|---|---|
+| Merchant Landing Pages | /thanh-toan-momo-{merchant} | 18K/quý | Content outdated 5-7 năm, không có O2O angle, không có schema |
+| Thổ Địa Ăn Uống | /page/{id} | 67K/quý | Thin content quy mô lớn, thông tin sai (quán đóng cửa), crawl budget waste |
 
-### 2.2. Hiện trạng OA / Thổ Địa Ăn Uống (`/page/{id}`)
+### 2.2 Vấn Đề Chất Lượng Web Từ Legacy
 
-| Khía cạnh | Mô tả |
-|---|---|
-| Mục đích ban đầu | Hệ thống review địa điểm ăn uống (kiểu Foody mini) |
-| Granularity | Store-level: 1 cửa hàng = 1 URL |
-| Data scope | Hiện public F&B, data bên dưới chứa tất cả categories (chưa public) |
-| Số lượng ước tính | 1,000 - 10,000+ URLs |
-| Organic traffic | 67K/quý (đang optimize cho local intent) |
-| Content type | Tên quán, giờ mở cửa, review từ user MoMo, ảnh, tiện ích, địa chỉ, giá trung bình |
-| Tình trạng content | Nhiều trang thin content (ít/không có review). Thông tin quán có thể đã đóng cửa hoặc sai |
-| Vấn đề | Thin content ở quy mô lớn → dilute site quality. Auto-generated URLs → crawl budget waste. Numeric ID URL (`/page/9802125`) không SEO-friendly |
+- Google đánh giá chất lượng ở site-level (Helpful Content System). Tỷ lệ lớn thin/outdated content kéo giảm ranking toàn bộ momo.vn.
+- Crawl budget bị phân tán vào hàng nghìn trang giá trị thấp - trang mới `/merchant` bị crawl chậm hơn.
+- Keyword cannibalization: 3 URLs (legacy + /merchant mới) cạnh tranh cùng merchant query.
 
-### 2.3. Vấn đề chất lượng web từ legacy (cần Audit)
+### 2.3 Phân Tích Cạnh Tranh
 
-2 legacy systems đang tạo ra các vấn đề chất lượng cho momo.vn tổng thể:
+| Competitor | Hiện trạng | Khoảng trống MoMo có thể tận dụng |
+|---|---|---|
+| ZaloPay | Build merchant directory F&B chains. Chưa có SME angle, chưa có BNPL, chưa có FAQ/HowTo schema | MoMo đi trước: SME + O2O stack + AI citation |
+| Klarna (quốc tế) | merchant.klarna.com với "Pay in 4" per merchant | BNPL-first merchant directory model |
+| Google Business Profile | Free local listing nhưng không integrated với payment/O2O | MoMo lợi thế: O2O loop hoàn chỉnh (Soundbox + VTS + Cashback) |
 
-**Từ `/thanh-toan-momo-{merchant}`:**
-- Content outdated 5-7 năm có thể gây sai lệch (ưu đãi hết hạn, merchant đã ngừng hợp tác)
-- Không phản ánh đúng bản chất quan hệ MoMo - Merchant hiện tại (đã mở rộng hơn nhiều so với 2018)
-- Một số URL có thể đã soft-404 hoặc trả về lỗi
+### 2.4 SME Digital Gap - Core Insight
 
-**Từ `/page/{id}` (Thổ Địa):**
-- Thin content pages ở quy mô lớn gây tín hiệu low-quality cho toàn domain
-- Thông tin sai (quán đã đóng, giờ sai, giá sai) ảnh hưởng trust signal
-- Crawl budget bị tiêu tốn cho hàng nghìn trang giá trị thấp thay vì tập trung vào trang quan trọng
-- Canonical/index issues: nhiều trang tương tự nhau (cùng merchant, khác chi nhánh) có thể bị Google đánh là duplicate
+SME nhỏ chiếm phần lớn merchant base của MoMo nhưng:
+- Không có website
+- Không có ngân sách digital marketing
+- Hoàn toàn vô hình trên Google Search và AI engine
+- Không có điểm tiếp xúc digital với khách hàng ngoài mạng xã hội cá nhân
 
-**Tác động lên SEO tổng thể:**
-- Google đánh giá chất lượng ở site-level (Helpful Content System). Tỷ lệ lớn thin/outdated content kéo giảm ranking cho toàn bộ momo.vn, không chỉ cho cluster `/page/*`
-- Crawl budget bị phân tán → trang mới (ví dụ `/doi-tac`) có thể bị crawl chậm hơn
-- User landing vào trang outdated → bounce rate cao → negative engagement signal
-
-### 2.4. Đối thủ đã đi trước
-
-**ZaloPay** (`zalopay.vn/doi-tac/{merchant}`):
-- Đã build merchant directory cho F&B chains (Phúc Long, Highlands, Starbucks...)
-- Content: merchant intro + 3 bước thanh toán QR + 3 đối tác liên quan
-- Chưa khai thác BNPL angle (dù có "Tài khoản trả sau")
-- Chưa có FAQ/HowTo schema → chưa xuất hiện trong AI Overview
-- Khoảng trống: không có ưu đãi dynamic, không có conversion-focused content
-
-**BNPL players quốc tế** (tham khảo mô hình):
-- Klarna: `klarna.com/us/shopping/store/{merchant}` - merchant directory với "Pay in 4" eligibility
-- Afterpay: Shop Directory với merchant pages + schema markup
-- Affirm: `affirm.com/stores/{merchant}` - BNPL terms cụ thể cho từng merchant
-
-→ MoMo có cơ hội là BNPL-first merchant directory đầu tiên tại Việt Nam, đi trước ZaloPay ở BNPL angle.
+MoMo có đủ điều kiện giải quyết gap này: domain authority momo.vn, merchant data, platform MoSpark, GenAI content pipeline, và O2O product stack để làm value prop thuyết phục với SME.
 
 ---
 
 ## 3. Định Hướng Dự Án
 
-### 3.1. Dự án này phục vụ điều gì?
+### 3.1 Dự Án Này Phục Vụ Điều Gì?
 
-**Xây dựng `/doi-tac` như một Growth Engine phục vụ 3 mục tiêu business:**
+**Dual-sided product - 3 điểm kết nối:**
 
-**① Inbound Acquisition - Capture merchant search traffic**
+**Cho SME:** Mỗi `momo.vn/merchant/{slug}` là Digital Presence page hoàn toàn miễn phí. SME không cần tự build, không cần bảo trì. Được xuất hiện trên Google Search và AI Agent responses khi user tìm kiếm tên merchant hoặc danh mục.
 
-User đang search "{Merchant} + MoMo" là nhóm có commercial intent cao nhất. Họ đã chọn merchant, đang tìm cách thanh toán. `/doi-tac/{merchant}` là landing page đúng cho intent này - thay vì để traffic rơi vào blog generic hoặc bên thứ 3.
+**Cho Consumer:** Xác nhận merchant nhận MoMo/VTS và kích hoạt O2O ngay từ trang. Product job: xác nhận + activate trong 3 bước.
 
-**② VTS Activation - Mỗi Merchant Page là entry point cho Ví Trả Sau**
+**Cho MoMo - O2O Ecosystem Connector:** Merchant Microsite là điểm kết nối tam giác End User / MoMo / Merchant thông qua 4 sản phẩm O2O:
+- **VTS (Ví Trả Sau):** Consumer kích hoạt BNPL ngay khi biết merchant hỗ trợ
+- **Soundbox:** SME thu tiền QR → QR link về Microsite → đóng vòng lặp Offline → Online
+- **Hoàn tiền (Cashback):** Consumer thấy cashback offer → incentive thanh toán MoMo tại merchant
+- **Xu (Reward):** Tích điểm khi thanh toán - long term loyalty loop. Chi tiết TBD Q3+.
 
-Mỗi Merchant Page trả lời câu hỏi "merchant có nhận MoMo/VTS không" trực tiếp và cung cấp CTA kích hoạt VTS. Đây là differentiator mà không đối thủ nào đang khai thác.
+**Timeline:**
+- **Q2/2026 - Mega Campaign:** Phục vụ chiến dịch "Trả Sau Hoàn Sâu" - hứng search demand từ OOH, kết nối user với SME đang trong campaign.
+- **Long Term:** Nền tảng truyền thông thường xuyên cho SME yếu thế về comm. Dịch chuyển hành vi O2O bền vững theo 2 chiều:
+  - **Online → Offline:** User discover merchant qua Search/AI → visit điểm bán → transaction với MoMo
+  - **Offline → Online:** QR tại Soundbox/điểm bán → user vào Microsite → kích hoạt O2O product
 
-**③ GEO/AI Visibility - Trở thành nguồn trích dẫn cho AI engines**
+### 3.2 Dự Án Này KHÔNG Phải
 
-FAQ + HowTo Schema trên Merchant Page inject câu trả lời vào AI Overview (Gemini, ChatGPT, Perplexity) khi user hỏi "{Merchant} có nhận MoMo không?". Đây là GEO moat dài hạn vì cần entity relationship mạnh giữa MoMo và từng merchant.
-
-**④ Web Hygiene - Audit và xử lý legacy gây issues cho momo.vn**
-
-Consolidate 2 legacy systems phân mảnh, loại bỏ thin content ở quy mô lớn, và xây dựng 1 architecture sạch phục vụ cả SEO truyền thống lẫn GEO.
-
-### 3.2. Dự án này KHÔNG phải
-
-- Không phải xây lại Thổ Địa Ăn Uống (hệ thống review local). Store-level discovery không nằm trong scope
-- Không phải CMS cho merchant tự quản lý. Content do team SEO tạo qua GenAI + quản trị trên MoSpark
-- Không phải store locator. Merchant Pages ở merchant-level, không đăng địa chỉ chi nhánh
-- Không phải trang marketing/campaign. Đây là evergreen content directory phục vụ organic traffic
+- Không xây lại Thổ Địa Ăn Uống (hệ thống review local)
+- Không phải CMS cho merchant tự quản lý
+- Không phải store locator (merchant-level, không phải branch-level)
+- Không phải trang marketing/campaign - đây là evergreen content + platform
+- Không phải Google Business Profile replica - MoMo value-add là O2O stack, không phải local listing đơn thuần
 
 ---
 
+## 4. JTBD Analysis
 
+### Job #1 (SME): Được Xuất Hiện Trên Digital Assets Miễn Phí
 
-## 4. Scope & Requirements
+> "Tôi là chủ quán nhỏ. Tôi muốn khách hàng tìm thấy tôi trên mạng và biết tôi nhận MoMo."
 
-### 4.1. URL Architecture
+| Dimension | Nội dung |
+|---|---|
+| Functional | Có trang web đầy đủ trên momo.vn mà không cần tự build hay trả hosting |
+| Emotional | Cảm giác được công nhận - quán nhỏ nhưng có Digital Presence như brand lớn |
+| Social | Khách hàng có thể share link, check-in, giới thiệu người khác qua link chuẩn |
+| Trigger | Merchant thấy đối thủ cùng khu vực có trang MoMo, hoặc sales MoMo tư vấn khi lắp Soundbox |
 
-3 cấp URL. Merchant Pages dùng flat URL dưới `/doi-tac/` (không nested dưới category):
+**Giải pháp:** `momo.vn/merchant/{slug}` - MoMo tạo và maintain, merchant được xuất hiện trên Search + AI Agent.
+
+---
+
+### Job #2 (Consumer): Xác Nhận Merchant Có Nhận MoMo/VTS Không
+
+> "{Merchant} có thanh toán qua MoMo không? Có nhận Ví Trả Sau không?"
+
+| Dimension | Nội dung |
+|---|---|
+| Functional | Xác nhận ngay merchant mình chọn có nhận MoMo/VTS không |
+| Emotional | Tránh bị từ chối tại quầy thanh toán trước mặt người khác |
+| Social | Confirm trước khi đề xuất cho nhóm bạn/đồng nghiệp |
+| Trigger | Đang ở trước merchant hoặc chuẩn bị đi - cần quyết định nhanh |
+
+**Giải pháp:** `/merchant/{slug}` với payment methods rõ ràng, FAQ direct, CTA kích hoạt ngay.
+
+---
+
+### Job #3 (Consumer): Kích Hoạt VTS Khi Biết Merchant Hỗ Trợ
+
+> "Tôi muốn dùng VTS tại Highlands nhưng chưa kích hoạt - làm thế nào?"
+
+| Dimension | Nội dung |
+|---|---|
+| Functional | Biết merchant hỗ trợ VTS, hiểu điều kiện, kích hoạt ngay từ trang |
+| Emotional | Mua sắm thông minh - mua trước trả sau 0% lãi |
+| Trigger | Tại merchant, hết tiền ví, hoặc muốn dùng VTS để tích điểm |
+
+**Giải pháp:** VTS Promotion Module + CTA "Mở Ví Trả Sau" với thông tin hạn mức, phí, kỳ hạn.
+
+---
+
+### Job #4 (Consumer): Tìm Cách Thanh Toán MoMo Tại Merchant Cụ Thể
+
+> "Cách thanh toán MoMo tại FPT Shop như thế nào?"
+
+| Dimension | Nội dung |
+|---|---|
+| Functional | Hướng dẫn step-by-step tại merchant cụ thể |
+| Emotional | Không muốn mất thời gian, bị nhân viên chờ, trông ngớ ngẩn |
+| Trigger | Lần đầu dùng MoMo tại merchant hoặc merchant thay đổi quy trình |
+
+**Giải pháp:** HowTo section 3-4 bước + HowTo Schema cho AI citation.
+
+---
+
+## 5. Kiến Trúc Web
+
+### 5.1 URL Architecture - 3 Cấp + Sub-pages
 
 | Cấp | URL Pattern | Số lượng | Vai trò |
 |---|---|---|---|
-| Hub | `/doi-tac` | 1 | Discovery + Navigation |
-| Category | `/doi-tac/{ten-category}` | 15 | Consideration + Listing |
-| Merchant | `/doi-tac/{ten-merchant}` | 100-300+ | Decision + Conversion (VTS) |
+| Hub | `momo.vn/merchant` | 1 | Discovery + Navigation |
+| Category | `momo.vn/merchant/{ten-category}` | 15 | Consideration + Listing |
+| Merchant Detail | `momo.vn/merchant/{ten-merchant}-{dia-diem}-{id}` | 100-200 (pilot) → 500-1.000+ | Decision + O2O Conversion |
+| Sub-pages (Phase 2) | `momo.vn/merchant/{slug}/{sub-page}` | Per merchant | Deep content (menu, chi nhánh, ưu đãi) |
 
-### 4.2. Category List (15 danh mục)
+**Slug pattern:** `{ten-merchant}-{id}` - tên merchant kebab-case không dấu, không tỉnh thành, kết thúc bằng ID backend tự assign. Ví dụ thực tế: `momo.vn/merchant/bun-thit-nuong-chi-tuyen-44`.
 
-| # | Category Name | URL Path | VTS Hook |
+**Sub-pages scope (Phase 2 - TBD với Nhật):**
+- `/merchant/{slug}/menu` - Thực đơn/sản phẩm
+- `/merchant/{slug}/chi-nhanh` - Danh sách chi nhánh (chain merchants)
+- `/merchant/{slug}/uu-dai` - Ưu đãi đang chạy
+
+Sub-pages chỉ được tạo khi merchant có đủ data - không tạo sub-page placeholder rỗng.
+
+### 5.2 Category List (15 danh mục)
+
+| # | Category Name | URL Path | O2O Hook |
 |---|---|---|---|
-| 1 | Nhà hàng | `/doi-tac/nha-hang` | Ăn nhà hàng trả sau |
-| 2 | Quán ăn | `/doi-tac/quan-an` | Ăn uống trả sau |
-| 3 | Cà phê | `/doi-tac/ca-phe` | Uống cà phê trả sau |
-| 4 | Trà sữa | `/doi-tac/tra-sua` | Trà sữa trả sau |
-| 5 | Bách hóa | `/doi-tac/bach-hoa` | Mua đồ trả sau |
-| 6 | Cửa hàng tiện lợi | `/doi-tac/cua-hang-tien-loi` | Mua tiện lợi trả sau |
-| 7 | Siêu thị | `/doi-tac/sieu-thi` | Mua sắm siêu thị trả sau |
-| 8 | Giáo dục | `/doi-tac/giao-duc` | Học phí trả góp VTS |
-| 9 | Tài chính - Bảo hiểm | `/doi-tac/tai-chinh-bao-hiem` | Đóng phí bảo hiểm trả sau |
-| 10 | Giải trí | `/doi-tac/giai-tri` | Mua vé trả sau |
-| 11 | Du lịch - Đi lại | `/doi-tac/du-lich-di-lai` | Đặt vé/phòng trả sau |
-| 12 | Mua sắm | `/doi-tac/mua-sam` | Mua trước trả sau |
-| 13 | Làm đẹp - Sức khỏe | `/doi-tac/lam-dep-suc-khoe` | Chăm sóc trả sau |
-| 14 | Khác | `/doi-tac/khac` | - |
-| 15 | *(Reserved - mở rộng theo data)* | - | - |
+| 1 | Nhà hàng | /merchant/nha-hang | Ăn trả sau + Hoàn tiền |
+| 2 | Quán ăn | /merchant/quan-an | Ăn uống trả sau |
+| 3 | Cà phê | /merchant/ca-phe | Uống cà phê trả sau |
+| 4 | Trà sữa | /merchant/tra-sua | Trà sữa trả sau |
+| 5 | Bách hóa | /merchant/bach-hoa | Mua đồ trả sau |
+| 6 | Cửa hàng tiện lợi | /merchant/cua-hang-tien-loi | Tiện lợi trả sau |
+| 7 | Siêu thị | /merchant/sieu-thi | Mua sắm trả sau |
+| 8 | Giáo dục | /merchant/giao-duc | Học phí trả góp VTS |
+| 9 | Tài chính - Bảo hiểm | /merchant/tai-chinh-bao-hiem | Đóng phí trả sau |
+| 10 | Giải trí | /merchant/giai-tri | Mua vé trả sau |
+| 11 | Du lịch - Đi lại | /merchant/du-lich-di-lai | Đặt vé/phòng trả sau |
+| 12 | Mua sắm | /merchant/mua-sam | Mua trước trả sau |
+| 13 | Làm đẹp - Sức khỏe | /merchant/lam-dep-suc-khoe | Chăm sóc trả sau |
 
-### 4.3. Merchant Page - Content Requirements
+### 5.3 Template System - 4 Variants
 
-Merchant Page gồm 2 phần tách biệt rõ ràng:
+2 biến quyết định template: **KV (Key Visual)** và **Review** (sync được hay không).
 
-- **Merchant Content (Long Content)**: Nội dung chuyên sâu về merchant (Giới thiệu, FAQ, hướng dẫn thanh toán). Đây là phần **Nội dung dài (Long Content)** do GenAI Content sản xuất nhằm tối ưu E-E-A-T và AI Search Citation.
-- **Platform Modules**: Các module cố định của MoMo platform (Payment Methods, VTS Promotion). Inject tự động từ template, nội dung được fix cứng để đảm bảo tính chuẩn xác.
+| Template | KV | Review | Target Merchant | Use Case |
+|---|---|---|---|---|
+| A - Premium | Có KV | Có Review (sync) | Brand chain lớn (Highlands, BHX) | Brand nhận diện mạnh + review data phong phú |
+| B - Brand | Có KV | Non-review | Chain merchants chưa có review sync | Visual identity có nhưng chưa có review |
+| C - SME Review | Non-KV | Có Review (sync) | SME trending có review data | SME được biết đến, chưa có brand KV |
+| D - SME Basic | Non-KV | Non-review | SME cơ bản, mới onboard | Entry level - page tạo từ data tối thiểu |
 
-**Nguyên tắc tách biệt:**
-- Merchant Content không lồng ghép VTS một cách thái quá. Nội dung merchant page phục vụ merchant, không phải trang quảng cáo VTS
-- VTS xuất hiện ở 2 nơi duy nhất: Payment Methods list (liệt kê ngang hàng với Ví MoMo, Ngân hàng) và VTS Promotion Module (block cố định)
-- FAQ có thể chứa 1 câu liên quan VTS nếu phù hợp (ví dụ: "{Merchant} có nhận Ví Trả Sau không?"), nhưng không bắt buộc mọi FAQ đều mention VTS
+**Review Sync:** Data source cần xác nhận trước pilot - MoMo transaction rating / Google Places API / internal review system. **TBD với PO team trước khi apply Template A/C.**
 
-#### Merchant Page Structure
+**KV Eligibility:** Brand chain có logo/banner chất lượng cao. SME không có KV riêng - dùng category visual mặc định của MoSpark.
 
-| # | Thành phần | Loại | Chi tiết nội dung |
+### 5.4 Merchant Detail Page Structure
+
+**Nguyên tắc Standalone Microsite:** Mỗi `momo.vn/merchant/{slug}` là một Microsite độc lập - không cross-link sang merchant khác, không hiển thị merchant liên quan. Mỗi trang tự hoàn chỉnh về nội dung và O2O value prop. SEO strength đến từ domain authority momo.vn + schema riêng của từng trang, không phụ thuộc vào internal linking giữa các merchant.
+
+Mỗi `momo.vn/merchant/{slug}` gồm 2 phần tách biệt:
+
+- **Merchant Content (Long Content):** Nội dung giới thiệu merchant, FAQ, HowTo. Do GenAI Content Engine sản xuất và phải qua editorial review trước publish. Không auto-publish.
+- **Platform Modules:** Payment Methods, O2O Promotions. Inject tự động từ MoSpark template, fix cứng để đảm bảo tính pháp lý.
+
+| # | Thành phần | Loại | Chi tiết |
 |---|---|---|---|
-| ① | **NAP (Merchant Data)** | Platform Data | Logo, Banner, Tên Merchant, Category, Số điện thoại, Địa chỉ. (Dữ liệu hệ thống) |
-| ② | **VTS Card** | Platform Module | **Nội dung Fix cứng**: Thông tin ưu đãi 35K, 5 lợi ích cốt lõi của Ví Trả Sau và nút CTA. |
-| ③ | **Long Content** | **GenAI Content** | **Trọng tâm của GenAI**: Bài viết giới thiệu chuyên sâu về Merchant (150-300 từ), tối ưu SEO & AI Search. |
-| ④ | **FAQ & Guideline** | Platform Module | **Nội dung Fix cứng**: Bộ câu hỏi thường gặp và Hướng dẫn thanh toán chuẩn MoMo. |
-| ⑤ | Đối tác liên quan | Platform Module | Danh sách các Merchant cùng danh mục (Related Partners). |
+| 1 | NAP (Merchant Data) | Platform Data | Logo/KV (nếu có), Tên Merchant, Category, SĐT, Địa chỉ, Hours |
+| 2 | Payment Methods | Platform Module | MoMo/VTS/QR - fix từ merchant data |
+| 3 | O2O Promotion Stack | Platform Module (Fix cứng) | VTS Card + Hoàn tiền + Soundbox CTA (tùy merchant có sản phẩm tương ứng) |
+| 4 | Review Block | Platform Module (conditional) | Aggregate rating + số review - chỉ hiển thị nếu Template A hoặc C |
+| 5 | Long Content | GenAI Content | Bài viết 150-300 từ giới thiệu chuyên sâu về merchant |
+| 6 | FAQ & HowTo | GenAI + editor review | Câu hỏi thường gặp + hướng dẫn thanh toán step-by-step |
 
-#### Content Production Pipeline (7-Step Master Workflow)
+**Nguyên tắc tách biệt quan trọng:**
+- Long Content phục vụ merchant story - không lồng ghép O2O thái quá
+- O2O chỉ xuất hiện tại 2 nơi: Payment Methods list và O2O Promotion Stack module
+- Editor không được chỉnh sửa VTS/Hoàn tiền data - inject từ 1 nguồn duy nhất
 
-Quy trình sản xuất nội dung giới thiệu chuyên sâu (Long Content) cho Merchant tuân thủ nghiêm ngặt Workflow của hệ thống MoSpark GenAI Content:
+### 5.5 O2O Solution Stack
 
-```mermaid
-graph TD
-    S1[Bước 1: Tạo SEO/GEO Project - Merchant] --> S2[Bước 2: Mapping trang đích - /doi-tac]
-    S2 --> S3[Bước 3: Nhập Primary Keyword - Merchant Name]
-    S3 --> S4[Bước 4: GenAI Web Research & Profiling]
-    S4 --> S5[Bước 5: AI Draft Outline]
-    S5 --> S6[Bước 6: AI Draft Detail - Long Content]
-    S6 --> S7[Bước 7: Sync MoSpark & Publish]
-    
-    style S1 fill:#f3e8ff,stroke:#a855f7
-    style S4 fill:#d1e7dd,stroke:#0f5132
-    style S7 fill:#1dd1a1,color:#fff,stroke-width:2px
-```
+| Sản phẩm | Vai trò trên Merchant Page | Điều kiện hiển thị | CTA |
+|---|---|---|---|
+| VTS (Ví Trả Sau) | Mua trước trả sau tại merchant | Merchant có trong VTS merchant list (PO VTS verify) | "Kích hoạt Ví Trả Sau" → Onelink |
+| Hoàn tiền (Cashback) | Ưu đãi cashback khi thanh toán MoMo | Merchant đang chạy cashback campaign | "Xem ưu đãi hoàn tiền" → App |
+| Soundbox | Giải pháp thu tiền QR cho SME | Merchant là SME dùng/cân nhắc Soundbox | "Đăng ký Soundbox" → App/form |
+| Xu (Reward) | Tích điểm thưởng khi thanh toán tại merchant | TBD - Product vision Q3+ | TBD |
 
-*   **Mapping Key:** Sử dụng **Primary Keyword** (Tên Merchant) làm khóa định danh duy nhất.
-*   **Target Field:** Nội dung từ Bước 6 sẽ được đẩy vào trường `merchant_description` trên MoSpark.
-*   **Review Gate:** Biên tập viên review lần cuối trên MoSpark UI trước khi Public.
+**VTS Module Data (Fixed - YMYL):**
 
-### 4.4. Cơ chế Sync Nội dung GenAI sang Merchant Page
-
-Vì hệ thống GenAI Content hiện tại đang được tối ưu cho luồng Blog, việc đồng bộ sang trang Đối tác (Merchant Page) cần một cơ chế mapping đặc thù:
-
-1.  **Mapping Key:** Sử dụng **Primary Keyword** (Tên Merchant) làm khóa định danh duy nhất để đối soát giữa hệ thống GenAI và hệ thống Landing Page Builder (MoSpark).
-2.  **Logic đồng bộ:**
-    *   Khi người dùng bấm "Sync MoSpark" tại Bước 7, hệ thống sẽ kiểm tra Project Mapping ID (là `doi-tac`).
-    *   Hệ thống thực hiện truy vấn tìm kiếm Merchant trong database của Landing Page Builder có tên trùng với Primary Keyword.
-3.  **Target Field:** Nội dung chi tiết tại Bước 5 (Long Content) sẽ được đẩy trực tiếp vào trường dữ liệu `merchant_description` hoặc `long_content_body` của Merchant Component tương ứng.
-4.  **Quy tắc ghi đè (Overwrite):** 
-    *   Nếu Merchant đã có nội dung: Hệ thống sẽ tạo một phiên bản (Version) mới và ghi đè nội dung GenAI vào.
-    *   Nếu Merchant chưa tồn tại: Hệ thống tự động khởi tạo một bản ghi Merchant mới ở trạng thái **Draft**, điền tên Merchant và nạp nội dung GenAI vào.
-5.  **Trạng thái sau Sync:** Nội dung được đẩy sang MoSpark ở trạng thái **Ready to Review**. Biên tập viên sẽ thực hiện review cuối cùng trên UI của Landing Page Builder trước khi bấm Public toàn trang.
-
-#### MVP vs V2
-
-| Feature | Phase 1 (Hiện tại) | V2 (Kế hoạch) |
-|---|---|---|
-| Long Content (Giới thiệu) | **GenAI + review** | GenAI + review + GSC data enrichment |
-| NAP (Thông tin cơ bản) | **Dữ liệu hệ thống (Fixed)** | Sync real-time từ OA/Merchant Center |
-| VTS Card / FAQ / Guideline | **Nội dung Fix cứng (Apply All)** | Dynamic per merchant category |
-| Ưu đãi & Deal | **Không triển khai** | Tích hợp Thẻ quà / Deal API |
-| Rating & Reviews | **Không triển khai** | Kéo dữ liệu từ App Feed |
-
-### 4.5. VTS trong Merchant Page - Nguyên tắc (Fixed Data)
-
-Nội dung VTS Promotion là **Fixed Content**, được thiết kế chuẩn từ VTS PO team, KHÔNG do GenAI tạo ra để đảm bảo tính pháp lý (YMYL):
-
-| Data point | Giá trị (Confirmed by VTS PO) |
+| Data point | Giá trị |
 |---|---|
 | Lãi suất | 0% (không tính lãi) |
 | Hạn mức | Đến 20 triệu |
@@ -258,261 +271,266 @@ Nội dung VTS Promotion là **Fixed Content**, được thiết kế chuẩn t�
 | Kỳ hạn | 2/3/6/9/12 tháng |
 | Điều kiện | Xác thực CCCD + Liên kết ngân hàng |
 
-> ⚠️ **YMYL Notice:** Template inject từ 1 nguồn duy nhất, không cho phép Editor chỉnh sửa tùy ý per merchant page.
+**YMYL Notice:** Template inject từ 1 nguồn duy nhất do PO VTS approve. Editor không được chỉnh sửa tùy ý per merchant page.
 
-### 4.6. Search Intent Mapping
-
-| Keyword Pattern | Intent | Landing Page | CTA | VTS Angle |
-|---|---|---|---|---|
-| "{Merchant} có nhận MoMo không" | Navigation/BoFu | `/doi-tac/{merchant}` | Thanh toán ngay | Dùng VTS - không cần nạp tiền |
-| "{Category} nhận MoMo" | MoFu | `/doi-tac/{category}` | Xem đối tác | VTS banner inline |
-| "Ưu đãi MoMo {danh mục}" | Commercial | `/doi-tac/{category}` | Xem ưu đãi | VTS exclusive deal |
-| "MoMo giảm giá {Merchant}" | Commercial/BoFu | `/doi-tac/{merchant}` | Lấy deal ngay | Mua trước trả sau |
-| "Ví Trả Sau {Merchant}" | BoFu | `/doi-tac/{merchant}#vi-tra-sau` | Kích hoạt VTS | Core VTS conversion |
-
-### 4.7. Schema & GEO Requirements
+### 5.6 Schema & GEO Requirements
 
 | Cấp trang | Schema bắt buộc | GEO Target |
 |---|---|---|
-| Hub `/doi-tac` | ItemList · FAQPage · Organization · BreadcrumbList | FAQ → AI "MoMo có những đối tác nào" |
-| Category `/doi-tac/{cat}` | ItemList · FAQPage · HowTo · BreadcrumbList | HowTo → "Cách thanh toán MoMo tại {category}" |
-| Merchant `/doi-tac/{merchant}` | Organization · FAQPage · HowTo · Offer · BreadcrumbList | FAQ + HowTo → "{Merchant} có nhận VTS không" |
+| Hub `/merchant` | ItemList - FAQPage - Organization - BreadcrumbList | "MoMo có những đối tác nào" |
+| Category `/merchant/{cat}` | ItemList - FAQPage - HowTo - BreadcrumbList | "Cách thanh toán MoMo tại {category}" |
+| Merchant `/merchant/{slug}` | LocalBusiness - FAQPage - HowTo - Offer - BreadcrumbList | "{Merchant} có nhận VTS không" |
+| Sub-pages (Phase 2) | BreadcrumbList + type-specific (Menu/Event) | Tùy sub-page |
 
-### 4.8. Danh sách Đối tác Pilot (Phase 1)
+### 5.7 Search Intent Mapping
 
-Dự án sẽ được triển khai Pilot với danh sách 32 đối tác trọng điểm sau đây trước khi scale-up toàn bộ thị trường. Danh sách đã được phân loại theo Category để ưu tiên content:
-
-- **Siêu thị & Cửa hàng tiện lợi:** Bách Hóa Xanh, Coopmart, Emart, 711, GS25, Family Mart, Mega Martket, Circle K, Go, Lotte Mart, Ministop, Aeon.
-- **F&B (Nhà hàng, Cà phê, Trà sữa):** Pizza 4P, Katinat, Highlands, Phúc Long, Jollibee, Kichi Kichi, Manwah, Dookki, Gogi, Starbucks, Lotteria, Sasin.
-- **Sức khỏe & Làm đẹp:** Pharmacity, Long Châu.
-- **Bán lẻ chuyên biệt:** Lazada, Fahasa, Con Cưng, CellphoneS.
-- **Dịch vụ & Nền tảng:** Grab, Tiktok.
-
-### 4.9. Chiến lược Nội dung & Kế hoạch Thực thi (Content Plan)
-
-Phần này định nghĩa cách thức team Inbound vận hành để sản xuất hàng loạt nội dung Merchant mà vẫn đảm bảo chất lượng E-E-A-T. Nội dung giới thiệu Merchant (GenAI) là nội dung **Evergreen**, các thông tin khuyến mãi/chiến dịch (Mega2026) sẽ được hiển thị qua **Deal Block** riêng biệt.
-
-#### 1. Tiêu chí lựa chọn Merchant (What)
-Team Inbound ưu tiên khởi tạo Merchant dựa trên ma trận 2 yếu tố: **Tiềm năng tìm kiếm (SEO)** và **Trọng tâm kinh doanh (Business Priority)**.
-
-*   **Nhóm P1 (High Volume):** Các chuỗi Merchant lớn (Top Chains) có lượng search tự nhiên cực cao: Highlands Coffee, WinMart, Circle K, Lazada, Pharmacity...
-*   **Nhóm P2 (SME Clusters):** Các cụm Merchant theo danh mục có tỷ lệ kích hoạt Ví Trả Sau (VTS) tốt: Nhà hàng, Cà phê, Cửa hàng tiện lợi.
-*   **Nhóm P3 (GEO Targets):** Các Merchant có bộ câu hỏi FAQ người dùng thường xuyên tìm kiếm trên AI Search (ví dụ: "[Tên quán] có thanh toán MoMo không?").
-
-#### 2. Phương thức sản xuất (How)
-Sử dụng 100% công cụ **MoSpark GenAI Content** theo quy trình 7 bước đã chuẩn hóa:
-*   **Công cụ:** Claude 3.5 Sonnet (tích hợp trong MoSpark).
-*   **Context:** Sử dụng bộ bối cảnh nghiệp vụ (Business Context) của Use Case Đối tác để AI không viết sai về sản phẩm MoMo.
-*   **Prompting:** Sử dụng Prompt Master chuyên biệt cho Merchant Profiling để tạo nội dung khách quan, không mang tính quảng cáo sáo rỗng.
-
-#### 3. Quy mô & Số lượng (Quantity)
-Kế hoạch sản xuất được chia làm 3 giai đoạn để kiểm soát chất lượng:
-*   **Giai đoạn 1 (Pilot):** **32 đối tác trọng điểm** (đã liệt kê ở mục 4.8). Mục tiêu: Chốt Template và đo lường CR baseline.
-*   **Giai đoạn 2 (Scale-up):** **500+ đối tác** (Bao phủ 80% lượng giao dịch SME). Mục tiêu: Chiếm lĩnh vị trí Top 1 cho các query "{Merchant} + MoMo".
-*   **Giai đoạn 3 (Long-tail):** Tự động hóa sản xuất cho **1,000+ đối tác** thông qua cơ chế Programmatic SEO (pSEO).
-
-#### 4. Quy trình vận hành Inbound (Inbound Operation)
-Team Inbound vận hành theo chu kỳ hàng tuần (Weekly Sprint) để nạp nội dung vào hệ thống:
-*   **Bước 1 - Batching:** Chọn danh sách 50-100 Merchant cần sản xuất trong tuần từ Inventory.
-*   **Bước 2 - GenAI Production:** Chạy luồng GenAI từ Bước 1 đến Bước 6 để tạo Outline và Detail bài giới thiệu.
-*   **Bước 3 - Quality Review:** SEO Lead hoặc Senior Editor thực hiện review 100% bài viết. Đảm bảo đạt điểm **SEO/GEO Score >= 80**.
-*   **Bước 4 - Sync & Publish:** Đồng bộ sang Landing Page Builder (MoSpark) và phối hợp với Web Platform để đẩy trang live.
-*   **Bước 5 - Performance Audit:** Hàng tuần kiểm tra GSC & Umami. Những Merchant nào có traffic tăng trưởng đột biến sẽ được đưa vào danh sách **"Manual Enhancement"** để tối ưu hóa chuyên sâu.
+| Keyword Pattern | Intent | Landing Page | CTA |
+|---|---|---|---|
+| "{Merchant} có nhận MoMo không" | Navigation/BoFu | /merchant/{slug} | Thanh toán ngay |
+| "{Category} nhận MoMo" | MoFu | /merchant/{category} | Xem đối tác |
+| "Ưu đãi MoMo {danh mục}" | Commercial | /merchant/{category} | Xem ưu đãi |
+| "Ví Trả Sau {Merchant}" | BoFu | /merchant/{slug}#vi-tra-sau | Kích hoạt VTS |
+| "{Merchant} review" | Informational | /merchant/{slug} | Review block (nếu có) |
 
 ---
 
+## 6. Comm Activities
+
+3 channel song song - không phụ thuộc nhau, cộng hưởng nhau.
+
+### 6.1 SEO - Organic Search
+
+- **Cơ chế:** LocalBusiness + FAQPage + HowTo schema + Long Content + Internal Linking
+- **Target keyword:** "{Merchant} có nhận MoMo không", "{Merchant} VTS", "{Category} nhận MoMo"
+- **Gate bắt buộc:** Foundation Checklist pass trước publish. CWV gate (LCP < 2.5s, INP < 200ms, CLS < 0.1).
+- **Expected:** Top 5 cho 80% branded merchant queries trong 90 ngày post-launch.
+
+### 6.2 QR Code Tại Điểm Bán (O2O Offline-to-Digital)
+
+- **Cơ chế:** QR code dán tại quầy/Soundbox → link về `/merchant/{slug}`
+- **UTM structure:** `?utm_source=qr&utm_medium=offline&utm_campaign=soundbox&utm_content={merchant_id}`
+- **Mục tiêu:** Khách tại điểm bán scan QR → vào trang merchant → thấy O2O offers → kích hoạt
+- **Attribution:** Umami track on-site event + Appsflyer track app open sau QR scan
+- **Rollout priority:** Soundbox merchants trước - QR đã có trên máy, chỉ cần update link về /merchant/{slug}
+
+### 6.3 LLM / AI Agent Search (GEO)
+
+- **Cơ chế:** Structured data + Entity signal + FAQ content cho Google AI Overview, ChatGPT, Perplexity
+- **Target queries:** "Quán [tên] có nhận MoMo không?", "[Merchant] review", "Cách thanh toán MoMo tại [merchant]"
+- **Gate bắt buộc:** FAQPage + HowTo schema required. LocalBusiness schema với đầy đủ NAP + openingHours.
+- **Measurement:** Manual check AI responses + GSC AI Referral tracking
+
 ---
 
-## 5. Audit & Hygiene (Completed)
+## 7. Content Production Scale
 
-Dự án đã hoàn thành Audit 2 hệ thống legacy (`/thanh-toan-momo-*` và `/page/*`). Kết quả chính:
-*   **Legacy Cleanup:** Loại bỏ 80% thin content pages từ hệ thống Thổ Địa để cải thiện site-level quality.
-*   **Migration Plan:** Chuyển đổi các trang PR cũ (2017-2020) sang `/doi-tac/{merchant}` mới để bảo toàn link equity và traffic.
-*   **301 Redirect:** Đã lập bảng mapping URL để triệt tiêu Keyword Cannibalization ngay khi launch.
+**Pilot Foundation: 100-200 merchants** - chốt template và đo CR baseline trước khi scale.
+
+**Batch 1 - Top Brand Chains (32 đối tác):**
+- Siêu thị & CHTL: Bách Hóa Xanh, Coopmart, Emart, 7-11, GS25, Family Mart, Mega Market, Circle K, Go, Lotte Mart, Ministop, Aeon
+- F&B: Pizza 4P, Katinat, Highlands, Phúc Long, Jollibee, Kichi Kichi, Manwah, Dookki, Gogi, Starbucks, Lotteria, Sasin
+- Sức khỏe & Làm đẹp: Pharmacity, Long Châu
+- Bán lẻ chuyên biệt: Lazada, Fahasa, Con Cưng, CellphoneS
+- Dịch vụ: Grab, TikTok
+
+**Batch 2 - SME Soundbox - Mega 2026 OOH Comm (24 đối tác - URGENT):**
+
+24 merchant SME đang được truyền thông OOH trên 11 tỉnh trong chiến dịch "Trả Sau Hoàn Sâu" (Mega 2026). OOH đang chạy nhưng chưa có trang MoMo nào hứng search demand - mỗi ngày chậm là demand rơi vào tay bên thứ 3.
+
+| # | Merchant | Tỉnh/TP | Danh mục | Organic Volume/tháng | Trending |
+|---|---|---|---|---|---|
+| 1 | Bún thịt nướng Chị Tuyền | HCM | F&B - Bún thịt nướng | 8.100 | - |
+| 2 | Cơm tấm Ống Khói Diệu | An Giang | F&B - Cơm tấm | 4.400 | - |
+| 3 | Hủ tiếu Mỹ Tho Thanh Xuân | HCM | F&B - Hủ tiếu | 1.300 | - |
+| 4 | Bánh ướt Cây Me | Cần Thơ | F&B - Bánh ướt | 480 | - |
+| 5 | Bột chiên A Tỷ | Đồng Nai | F&B - Bột chiên | 480 | - |
+| 6 | Hủ tiếu Nam Vang Ông Hai Bầu | Đồng Nai | F&B - Hủ tiếu | 390 | Trending |
+| 7 | Quán Cơm Chú Lùn | Cần Thơ | F&B - Cơm | 320 | Trending |
+| 8 | Hương Giang Bakery | Bắc Ninh | F&B - Bánh | 320 | - |
+| 9 | Hủ tiếu Nam Vang 69 | HCM | F&B - Hủ tiếu | 110 | - |
+| 10 | Chả giò Phượng | Đồng Nai | F&B - Chả giò | 90 | - |
+| 11 | Hải sản Ngô Thơ | Hải Phòng | F&B - Hải sản | 70 | Trending |
+| 12 | Chả rươi Hằng Béo | Hà Nội | F&B - Chả rươi | 30 | - |
+| 13 | Bánh mì Hữu Liêm | Cần Thơ | F&B - Bánh mì | 20 | Trending |
+| 14 | Tiệm mì Chú Cao | HCM | F&B - Mì | 10 | - |
+| 15 | Bún cá Tư Lùn | An Giang | F&B - Bún cá | 0 | - |
+| 16 | Trà đá Mạnh Nháy | Bắc Ninh | F&B - Trà đá | 0 | - |
+| 17 | Xôi Trường | Bắc Ninh | F&B - Xôi | 0 | - |
+| 18 | Bánh mì Khánh Nạp | Hải Phòng | F&B - Bánh mì | 0 | - |
+| 19 | Cô Hường Bún Chả | Hải Phòng | F&B - Bún chả | 0 | - |
+| 20 | Bò nhúng Mắm ruốc 8 Còn | Bình Dương | F&B - Bò nhúng | 0 | - |
+| 21 | Bò lá lốt mỡ chài chị Hằng | Bình Dương | F&B - Bò lá lốt | 0 | - |
+| 22 | Bún thịt nướng cô Bế | Bình Dương | F&B - Bún thịt nướng | 0 | - |
+| 23 | Miến lươn chân cầm | Hà Nội | F&B - Miến lươn | 0 | - |
+| 24 | Mỳ Cường Thư | Thanh Hóa | F&B - Mì | 0 | - |
+| | **Tổng Batch 2** | **11 tỉnh/TP** | F&B | **16.120** | |
+
+14/24 merchants có branded search volume thực. 10 còn lại volume = 0 trong keyword tool nhưng OOH đang chạy - demand sẽ phát sinh. Launch song song OOH để capture ngay, không để rơi vào tay bên thứ 3.
+
+**Scale-up post-pilot:**
+- 500+ đối tác (phủ 80% lượng giao dịch SME)
+- 1.000+ đối tác qua pSEO
 
 ---
 
-## 6. Business KPIs
+## 8. Success Metrics
 
-**North Star Metric:** VTS Activations từ /doi-tac (attributed via Appsflyer).
+**North Star Metric:** O2O Activations từ /merchant (VTS activation + Soundbox adoption, attributed via Appsflyer).
 
 | Metric | Target (90 ngày post-launch) | Source |
 |---|---|---|
-| Organic Traffic | Duy trì ≥ 85K/quý (không giảm net) | GSC |
-| VTS Module CTR | ≥ 3% (Baseline) | Umami |
-| Top P1 Queries | ≥ 80% rank Top 5 | GSC |
+| Organic Traffic | Duy trì 85K/quý (không giảm net vs 2 legacy systems) | GSC |
+| VTS Module CTR | 3% baseline từ Pilot | Umami |
+| Soundbox inquiry từ /merchant | Baseline TBD | Umami |
+| Top queries "{Merchant} + MoMo" | 80% rank Top 5 | GSC |
+| QR scan → Page view (O2O offline signal) | Baseline từ UTM tracking | Umami |
 
 **Conversion Funnel:**
-```mermaid
-graph LR
-    A["/doi-tac page view"] --> B["vts_cta_click"]
-    B --> C["App open"]
-    C --> D["VTS activation"]
-    
-    style A fill:#f9f,stroke:#333
-    style D fill:#bbf,stroke:#333,stroke-width:3px
+```
+/merchant/{slug} page view
+  -> O2O CTA click (VTS / Hoàn tiền / Soundbox)
+    -> App open (Onelink)
+      -> Activation (VTS kích hoạt / Soundbox đăng ký)
+        -> Transaction
 ```
 
 ---
 
-### 7.3. Event Tracking & Analytics (Umami)
+## 9. Dependencies & Constraints
 
-Dự án sử dụng Umami Analytics để đo lường hiệu quả chuyển đổi. Tài liệu này không đi sâu vào đặc tả kỹ thuật từng dòng code, mà đóng vai trò định hướng các Rule và Phễu (Funnel) để Dev (Thuận) setup tracking sao cho đáp ứng đúng mục tiêu Business.
-
-**Định hướng Tracking Funnel cốt lõi:**
-Đo lường xuyên suốt hành trình người dùng từ lúc vào trang đến lúc phát sinh chuyển đổi Web-to-App. Phễu bao gồm 4 điểm chạm chính:
-
-1. **Page View:** Tổng lượt xem trang (áp dụng cho cả Category Page và Merchant Page).
-2. **Unique User:** Số lượng người dùng duy nhất (Visitor) tiếp cận trang.
-3. **Click Promotion:** Sự kiện user bấm vào các module Thẻ quà / Ưu đãi.
-4. **Click VTS Card:** Sự kiện user bấm vào module quảng bá Ví Trả Sau.
-
-**Quy tắc triển khai (Rules):**
-- **Gắn Tracking theo Data Attributes:** Dev ưu tiên sử dụng thẻ HTML `data-umami-event` thẳng vào các Component trên Landing Page Builder (MoSpark) để Tracking linh hoạt, No-Code.
-- **Property kèm theo:** Mỗi sự kiện Click (Promotion/VTS) phải đính kèm data về `brand_name` và `category` để team Data dễ dàng bóc tách xem Merchant nào đem lại tỷ lệ click cao nhất.
-- **Attribution Web-to-App:** Mọi nút CTA mở App phải truyền kèm tham số UTM để Appsflyer có thể ghi nhận chính xác nguồn (Source) khi user thực sự kích hoạt VTS thành công bên trong App.
-
-### 7.4. Dashboard & Analytics View (Umami)
-
-Dashboard báo cáo dự án trên Umami được cấu trúc thành 5 phân khu (Widget Sections) nhằm trả lời trực tiếp các câu hỏi Business và tối ưu hóa chuyển đổi (CRO):
-
-#### 1. Overview (Tổng quan sức khỏe dự án)
-- **Mục đích:** Theo dõi sức khỏe tổng thể của lượng truy cập vào hệ thống trang Đối tác.
-- **Hình thức hiển thị:** Line Chart (Biểu đồ đường) + KPI Cards.
-- **Metrics chi tiết:**
-  - `Total Pageviews`: Tổng số lượt xem toàn bộ cụm `/doi-tac/*`.
-  - `Unique Visitors`: Số lượng người dùng thực tế (không tính trùng lặp).
-  - `Bounce Rate`: Tỷ lệ thoát trang (Dùng để đánh giá xem GenAI Content có đủ sức giữ chân user đọc tiếp không).
-  - `Average Visit Time`: Thời gian trung bình trên trang (Đo lường mức độ tương tác với các FAQ, HowTo).
-
-#### 2. Web-to-App Conversion Funnel (Phễu chuyển đổi)
-- **Mục đích:** Tìm ra điểm rớt (drop-off) lớn nhất trong hành trình biến Traffic thành User mở App.
-- **Hình thức hiển thị:** Funnel Chart (Biểu đồ phễu).
-- **Các bước trong Phễu (Steps):**
-  - **Bước 1:** `Page View` (User truy cập trang Merchant).
-  - **Bước 2:** `Unique User` (Lọc trùng lặp để lấy lượng định danh).
-  - **Bước 3:** `Click Promotion` (User bấm vào thẻ quà/deal - *Event Data: placement = deal_section*).
-  - **Bước 4:** `Click VTS Card` (User bấm vào Ví Trả Sau - *Event Data: placement = vts_promotion*).
-- **Metric theo dõi:** Tỷ lệ chuyển đổi (Conversion Rate) từ Bước 1 đến Bước 4.
-
-#### 3. Top Performance (Bảng xếp hạng Đối tác)
-- **Mục đích:** Trả lời câu hỏi *"Đối tác nào đang mang lại nhiều chuyển đổi nhất?"* để dồn lực Marketing/SEO.
-- **Hình thức hiển thị:** Data Tables (Bảng dữ liệu) có Sorting.
-- **Metrics chi tiết:**
-  - **Top Pages by Traffic:** Bảng xếp hạng URL có lượt xem cao nhất (VD: `/doi-tac/highlands-coffee`).
-  - **Top Merchants by VTS Clicks:** Bảng Breakdown event `click_vts` theo property `brand_name`. (Merchant nào đang thuyết phục user mở VTS tốt nhất).
-  - **Top Merchants by Promotion Clicks:** Bảng Breakdown event `click_promotion` theo property `brand_name`. (Deal của Merchant nào đang hấp dẫn nhất).
-
-#### 4. Traffic Acquisition (Nguồn Truy Cập)
-- **Mục đích:** Đánh giá hiệu quả của các nỗ lực Inbound Marketing (SEO, Social, PR).
-- **Hình thức hiển thị:** Bar Chart (Biểu đồ cột ngang) + Pie Chart.
-- **Metrics chi tiết:**
-  - **Top Referrers:** Nguồn mang lại traffic (Google Search, Facebook, Zalo, Referral...).
-  - **UTM Campaigns:** Hiệu suất của các chiến dịch cụ thể (Bóc tách theo `utm_source`, `utm_medium`, `utm_campaign`). Ví dụ: Xem chiến dịch Push notification có mang lại click VTS cao không.
-
-#### 5. Demographic & Tech (Nhân khẩu học & Kỹ thuật)
-- **Mục đích:** Hiểu chân dung người dùng để tối ưu hóa thiết kế UI/UX trên MoSpark.
-- **Hình thức hiển thị:** Donut Charts (Biểu đồ vành khuyên).
-- **Metrics chi tiết:**
-  - **Device & OS:** Tỷ lệ Mobile vs Desktop, iOS vs Android. (Hữu ích để quyết định ưu tiên test UI trên thiết bị nào).
-  - **Location (City):** Bản đồ nhiệt (Heatmap) hoặc Top Thành phố có lượng truy cập cao nhất.
-
----
-
-## 7. Dependencies & Constraints
-
-| Dependency | Owner | Mô tả | Blocker? |
+| Dependency | Mô tả | Blocker? | PIC |
 |---|---|---|---|
-| VTS merchant list (updated) | VTS PO team | List merchants chấp nhận VTS chính xác | Có - quyết định VTS badge |
-| VTS Terms Data (lãi suất, hạn mức, phí, điều kiện) | VTS PO team | Data chính xác cho VTS Promotion Module. YMYL - sai data = legal risk | Có - không launch VTS module nếu chưa có approved data |
-| PAGE_ID → Merchant mapping | Web Platform | Export từ Thổ Địa DB cho audit | Có - cần cho legacy audit |
-| MoSpark platform readiness | Web Platform | Landing Page Builder sẵn sàng cho /doi-tac | Có - platform triển khai |
-| GenAI Content pipeline | SEO team + Web Platform | Template + prompts cho merchant content (Tier 1 only) | Không - team tự build |
-| Deal/Ưu đãi data | Growth / Cell Team POs | Data ưu đãi dynamic cho Tier 3 | Không - MVP dùng fallback static |
-| Deep Link specs per merchant | App team | Onelink URLs cho CTA | Có - CTA hoạt động đúng |
-| Content Governance alignment | Inbound team | Confirm /doi-tac owns VTS+merchant payment content | Không - cần sync |
+| VTS merchant list (updated) | List merchants chấp nhận VTS - quyết định hiển thị VTS badge | Có | PO VTS team |
+| VTS Terms Data | Lãi suất, hạn mức, phí - YMYL, sai data = legal risk | Có | PO VTS team |
+| Soundbox merchant list | Merchants dùng Soundbox để ưu tiên onboard pilot | Có | BD/Soundbox team |
+| Cashback campaign data | Merchants đang chạy hoàn tiền để inject Promotion Module | Không (có thể launch trước) | Campaign team |
+| Review sync mechanism | Source review data: MoMo internal / Google Places / other. TBD | Có nếu dùng Template A/C | PO + Hiến confirm |
+| PAGE_ID → Merchant mapping | Export từ Thổ Địa DB cho legacy audit + 301 redirect | Có | Hiến request |
+| MoSpark platform readiness | LP Builder sẵn sàng với 4 template variants | Có | Hoài Anh |
+| GenAI Content pipeline | Template + prompts cho merchant content | Không | Trọng |
+| Deep Link specs per merchant | Onelink URLs cho O2O CTAs | Có | DA team |
+| Umami tracking setup | Track page view, O2O CTA click, QR scan, scroll depth. Phải có trước launch | Có | Thuận |
+| Sub-pages data requirements | Xác nhận loại sub-pages và data source | Không - Phase 2 | Nhật + Hiến |
 
-### Constraints
-
-- Content production trên MoSpark (Landing Page Builder) - không custom development
-- GenAI Content phải qua review/edit trước publish (không auto-publish)
-- VTS badge chỉ được gắn sau khi verify với PO team (không dựa trên blog data)
-- Schema markup inject qua MoSpark template (không hardcode)
-
----
-
-## 8. Next Steps
-
-BRD này define Why (bối cảnh, vấn đề, cơ hội) và What (scope, requirements, KPIs). Các hoạt động tiếp theo:
-
-| Deliverable | Status | Owner | Mô tả |
-|---|---|---|---|
-| **PRD** | Completed | Văn Hiến + Web Platform | Chi tiết technical specs, migration execution plan, MoSpark template requirements, GenAI pipeline, timeline, dev handoff |
-| **Legacy Audit** | Completed | Văn Hiến | Crawl + GSC + Ahrefs data → URL inventory → triage decision sheet → mapping table |
-| **Content Production** | 🔄 Doing | Văn Hiến + Trọng | Làm việc với Trọng (Owner dự án `genai-content-brd.md`) để khởi tạo GenAI content (mô tả, FAQ, HowTo) cho hàng loạt Merchant, sau đó sync dữ liệu qua cho Merchant. |
-| **MoSpark Spec** | 🔄 Doing | Web Platform | Template specs cho /doi-tac trên Landing Page Builder, schema injection, dynamic modules |
-
-### 8.2. Next Stage Roadmap (Kế hoạch mở rộng)
-
-Sau khi hoàn thành Phase 1 (MVP), dự án sẽ tập trung nâng cấp các tính năng vận hành và trải nghiệm người dùng chuyên sâu:
-
-1.  **Dynamic Merchant Rating (Social Proof):**
-    *   **Cơ chế:** Tự động kéo dữ liệu Rating & Review thực tế của Merchant từ **App Feed** để hiển thị trên bản Web.
-    *   **Mục tiêu:** Tăng độ tin cậy (Trust Signal) và tối ưu E-E-A-T cho trang đối tác.
-
-2.  **Phân quyền vận hành (Role-Based Access):**
-    *   **Hệ thống quyền:** Phân tách rõ ràng giữa quyền **Tạo nội dung** (Creator - GenAI/Editor) và quyền **Phê duyệt/Xuất bản** (Approver/Submitter - PM/Growth Lead).
-    *   **Mục tiêu:** Đảm bảo quy trình Governance chặt chẽ, mọi nội dung trước khi Live đều phải qua Sign-off của người có trách nhiệm.
-
-3.  **Hệ thống thông báo (Approval Notifications):**
-    *   **Luồng vận hành:** Khi một bản ghi Merchant được Tạo và Sync thành công sang trạng thái "Ready to Review", hệ thống sẽ tự động bắn **Notification** (qua Slack/Email/Hệ thống MoSpark) đến người có quyền Phê duyệt.
-    *   **Mục tiêu:** Rút ngắn thời gian chờ đợi, đẩy nhanh tốc độ Go-live cho hàng loạt Merchant cùng lúc.
+**Constraints:**
+- Content production trên MoSpark - không custom development
+- GenAI Content phải qua review/edit trước publish - không auto-publish
+- VTS badge chỉ gắn sau khi verify với PO team - không dựa trên blog data
+- Soundbox CTA chỉ hiển thị với SME merchants được BD team xác nhận
+- Schema markup inject qua MoSpark template - không hardcode
+- Sub-pages chỉ tạo khi có đủ data - không tạo placeholder rỗng
+- Inbound không làm việc trực tiếp với Web Platform - mọi technical request qua SEO & GEO Lead
 
 ---
 
-## Appendix A: Merchant Page Template Example
+## 10. Action Plan - SME Merchant URL Migration (Batch 2)
 
-**Merchant:** Highlands Coffee  
-**URL:** `/doi-tac/highlands-coffee`  
-**Category:** Cà phê
+> **Scope:** 24 SME Soundbox merchants thuộc chiến dịch Mega 2026 OOH. Batch 1 (Top Brand Chains) xử lý riêng sau khi pilot SME hoàn tất.
+> **Nguyên tắc slug:** `{ten-merchant}-{id}` - tên merchant kebab-case không dấu, không tỉnh thành, kết thúc bằng ID backend tự assign. Ví dụ thực tế: `/merchant/bun-thit-nuong-chi-tuyen-44` (ID = 44).
+> **Redirect rule:** 308 Permanent (không dùng 301 - giữ method). Áp dụng ngay khi /merchant/{slug} live, không để 2 URL tồn tại song song quá 7 ngày.
 
-**Title:** Highlands Coffee x MoMo - Thanh toán & Ưu đãi | MoMo  
-**H1:** Highlands Coffee x MoMo - Thanh toán, ưu đãi & Ví Trả Sau
+### 10.1 Redirect & Launch Matrix - SME Batch 2
 
-**Payment Methods (Platform Module):**
-- Ví Trả Sau - Không cần trả ngay [badge: Mua trước trả sau]
-- Ví MoMo - Quét mã QR code
-- Ngân hàng liên kết - Quét mã QR code
+| # | Merchant | Tỉnh/TP | URL cũ (momo.vn) | URL mới (thực tế / đề xuất) | Action | Status |
+|---|---|---|---|---|---|---|
+| 1 | Bún thịt nướng Chị Tuyền | HCM | `/page/9819516` | `/merchant/bun-thit-nuong-chi-tuyen-44` | 308 Redirect | **Live** |
+| 2 | Cơm tấm Ống Khói Diệu | An Giang | Không có | `/merchant/com-tam-ong-khoi-dieu-{id}` | Clean launch | Chưa launch |
+| 3 | Hủ tiếu Mỹ Tho Thanh Xuân | HCM | Không có | `/merchant/hu-tieu-my-tho-thanh-xuan-{id}` | Clean launch | Chưa launch |
+| 4 | Bánh ướt Cây Me | Cần Thơ | Không có | `/merchant/banh-uot-cay-me-{id}` | Clean launch | Chưa launch |
+| 5 | Bột chiên A Tỷ | Đồng Nai | Không có | `/merchant/bot-chien-a-ty-{id}` | Clean launch | Chưa launch |
+| 6 | Hủ tiếu Nam Vang Ông Hai Bầu | Đồng Nai | Không có | `/merchant/hu-tieu-nam-vang-ong-hai-bau-{id}` | Clean launch | Chưa launch |
+| 7 | Quán Cơm Chú Lùn | Cần Thơ | Không có | `/merchant/quan-com-chu-lun-{id}` | Clean launch | Chưa launch |
+| 8 | Hương Giang Bakery | Bắc Ninh | Không có | `/merchant/huong-giang-bakery-{id}` | Clean launch | Chưa launch |
+| 9 | Hủ tiếu Nam Vang 69 | HCM | Không có | `/merchant/hu-tieu-nam-vang-69-{id}` | Clean launch | Chưa launch |
+| 10 | Chả giò Phượng | Đồng Nai | Không có | `/merchant/cha-gio-phuong-{id}` | Clean launch | Chưa launch |
+| 11 | Hải sản Ngô Thơ | Hải Phòng | Không có | `/merchant/hai-san-ngo-tho-{id}` | Clean launch | Chưa launch |
+| 12 | Chả rươi Hằng Béo | Hà Nội | `/page/9843228` | `/merchant/cha-ruoi-hang-beo-{id}` | 308 Redirect | Chưa launch |
+| 13 | Bánh mì Hữu Liêm | Cần Thơ | Không có | `/merchant/banh-mi-huu-liem-{id}` | Clean launch | Chưa launch |
+| 14 | Tiệm mì Chú Cao | HCM | Không có | `/merchant/tiem-mi-chu-cao-{id}` | Clean launch | Chưa launch |
+| 15 | Bún cá Tư Lùn | An Giang | Không có | `/merchant/bun-ca-tu-lun-{id}` | Clean launch | Chưa launch |
+| 16 | Trà đá Mạnh Nháy | Bắc Ninh | Không có | `/merchant/tra-da-manh-nhay-{id}` | Clean launch | Chưa launch |
+| 17 | Xôi Trường | Bắc Ninh | Không có | `/merchant/xoi-truong-{id}` | Clean launch | Chưa launch |
+| 18 | Bánh mì Khánh Nạp | Hải Phòng | Không có | `/merchant/banh-mi-khanh-nap-{id}` | Clean launch | Chưa launch |
+| 19 | Cô Hường Bún Chả | Hải Phòng | Không có | `/merchant/co-huong-bun-cha-{id}` | Clean launch | Chưa launch |
+| 20 | Bò nhúng Mắm ruốc 8 Còn | Bình Dương | `/page/9949928` | `/merchant/bo-nhung-mam-ruoc-8-con-{id}` | 308 Redirect | Chưa launch |
+| 21 | Bò lá lốt mỡ chài chị Hằng | Bình Dương | Không có | `/merchant/bo-la-lot-mo-chai-chi-hang-{id}` | Clean launch | Chưa launch |
+| 22 | Bún thịt nướng cô Bế | Bình Dương | Không có | `/merchant/bun-thit-nuong-co-be-{id}` | Clean launch | Chưa launch |
+| 23 | Miến lươn chân cầm | Hà Nội | Không có | `/merchant/mien-luon-chan-cam-{id}` | Clean launch | Chưa launch |
+| 24 | Mỳ Cường Thư | Thanh Hóa | Không có | `/merchant/my-cuong-thu-{id}` | Clean launch | Chưa launch |
 
-**VTS Promotion (Platform Module - data từ VTS PO, KHÔNG GenAI):**
-> Mở Ví Trả Sau - Nhận ưu đãi 35K cho giao dịch đầu  
-> ✓ 0% lãi suất - Không tính lãi  
-> ✓ Hạn mức đến 20 triệu - Tùy điểm tín dụng  
-> ✓ Phí chỉ 33.000đ/tháng - Không xài, không mất phí  
-> ✓ Kỳ hạn 2/3/6/9/12 tháng - Trả góp linh hoạt  
-> Chỉ cần: Xác thực CCCD trên MoMo + Liên kết tài khoản ngân hàng  
-> CTA: "Mở Ví Trả Sau chỉ trong 3 phút"
+### 10.3 Lưu Ý Kỹ Thuật
+
+- **GSC Verify:** SERP re-audit (site:momo.vn) lần 2 đã hoàn tất - phát hiện thêm 2 merchants có /page/. Tuy nhiên SERP chỉ trả về top kết quả, GSC Coverage Report vẫn cần verify để đảm bảo không bỏ sót, đặc biệt các merchants có volume > 0 nhưng không hiện trong SERP.
+- **Redirect timing:** Set 308 TRƯỚC hoặc CÙNG LÚC page mới live. Không để gap giữa page mới live và redirect cũ.
+- **Canonical:** Page mới `/merchant/{slug}` phải có self-referencing canonical. Page cũ sau khi redirect không cần canonical.
+- **Sitemap:** Thêm `/merchant/{slug}` vào sitemap ngay khi live. Xóa URL cũ khỏi sitemap cùng lúc set redirect.
+
+---
+
+## Appendix A: Template Examples
+
+### Template D - SME Basic (Quán Cơm Chú Lùn)
+
+**URL:** `momo.vn/merchant/quan-com-chu-lun-can-tho-24`
+**Template:** D (Non-KV, Non-review)
+**Category:** Quán ăn
+
+**Title:** Quán Cơm Chú Lùn Cần Thơ - Thanh toán MoMo & Ưu đãi | MoMo
+**H1:** Quán Cơm Chú Lùn - Thanh toán qua MoMo, xem ưu đãi Ví Trả Sau
+
+**Payment Methods:** Ví MoMo - Quét QR | Ví Trả Sau - Mua trước trả sau | Ngân hàng liên kết - Quét QR
+
+**FAQ:**
+> Q: Quán Cơm Chú Lùn có nhận thanh toán MoMo không?
+> A: Có. Quán Cơm Chú Lùn nhận thanh toán MoMo qua quét mã QR tại quầy.
 >
-> ⚠️ *Tất cả data VTS trong block này là placeholder, cần verify chính xác từ VTS PO team trước khi publish. YMYL content - sai data = legal risk.*
-
-**FAQ (Merchant Content - GenAI generated, editor reviewed):**
-
-> **Q: Highlands Coffee có nhận thanh toán qua MoMo không?**  
-> A: Có. Highlands Coffee chấp nhận thanh toán qua MoMo tại tất cả cửa hàng trên toàn quốc, bao gồm Ví MoMo, Ví Trả Sau, và quét QR qua ngân hàng liên kết.
-
-> **Q: Cách thanh toán MoMo tại Highlands Coffee?**  
+> Q: Quán Cơm Chú Lùn có nhận Ví Trả Sau không?
+> A: Có. Bạn có thể dùng Ví Trả Sau tại Quán Cơm Chú Lùn - mua trước trả sau 0% lãi suất.
+>
+> Q: Cách thanh toán MoMo tại Quán Cơm Chú Lùn?
 > A: Mở app MoMo → chọn "Mã thanh toán" → đưa mã QR cho nhân viên quét → xác nhận thanh toán.
 
-> **Q: Highlands Coffee có ưu đãi MoMo nào đang chạy?**  
-> A: [Dynamic từ CMS - fallback: "Mở app MoMo để xem ưu đãi mới nhất tại Highlands Coffee"]
+---
 
-> **Q: Thanh toán Highlands bằng MoMo có an toàn không?**  
+### Template A - Premium (Highlands Coffee)
+
+**URL:** `momo.vn/merchant/highlands-coffee`
+**Template:** A (Có KV, Có Review sync)
+**Category:** Cà phê
+
+**Title:** Highlands Coffee - Thanh toán & Ưu đãi MoMo | MoMo
+**H1:** Highlands Coffee - Thanh toán qua MoMo, xem ưu đãi & Ví Trả Sau
+
+**Payment Methods:** Ví Trả Sau - Mua trước trả sau | Ví MoMo - Quét QR | Ngân hàng liên kết - Quét QR
+
+**FAQ:**
+> Q: Highlands Coffee có nhận thanh toán qua MoMo không?
+> A: Có. Highlands Coffee chấp nhận MoMo tại tất cả cửa hàng trên toàn quốc, bao gồm Ví MoMo, Ví Trả Sau, và QR ngân hàng liên kết.
+>
+> Q: Highlands Coffee có nhận Ví Trả Sau không?
+> A: Có. Bạn có thể dùng Ví Trả Sau tại Highlands - mua trước trả sau 0% lãi, hạn mức đến 20 triệu.
+>
+> Q: Cách thanh toán MoMo tại Highlands Coffee?
+> A: Mở app MoMo → chọn "Mã thanh toán" → đưa mã QR cho nhân viên quét → xác nhận thanh toán.
+>
+> Q: Highlands Coffee có ưu đãi MoMo nào đang chạy?
+> A: Mở app MoMo để xem ưu đãi mới nhất tại Highlands Coffee.
+>
+> Q: Thanh toán Highlands bằng MoMo có an toàn không?
 > A: Có. MoMo là ví điện tử được Ngân hàng Nhà nước cấp phép, bảo mật theo chuẩn PCI DSS.
 
 ---
-*Generated by Web Platform & Inbound Team*
----
 
 ## Change Log
-- **Tháng 5/2026:** Khởi tạo tài liệu và chuẩn hóa cấu trúc thư mục.
 
+- **Tháng 5/2026 (v2.3):** Re-audit SERP toàn bộ 24 SME merchants. Phát hiện thêm 2 merchants có /page/ đang index: Chả rươi Hằng Béo (/page/9843228) và Bò nhúng Mắm ruốc 8 Còn (/page/9949928). Cập nhật Action từ "Clean launch" sang "308 Redirect" cho cả 2. Tổng merchants cần 308 redirect: 3/24.
+- **Tháng 5/2026 (v2.2):** Thêm Section 10 - Action Plan URL Migration cho 24 SME Batch 2. Redirect matrix đầy đủ: URL cũ, URL mới đề xuất, action type. Nguồn: SERP audit site:momo.vn lần 1 - phát hiện Bún thịt nướng Chị Tuyền (/page/9819516).
+- **Tháng 5/2026 (v2.1):** Confirm Standalone Microsite - gỡ Related Merchants module, bổ sung Standalone principle vào Section 5.4. Thêm Xu (Reward) vào O2O stack (TBD Q3+). Bổ sung Timeline (Q2 Mega / Long Term SME comm), O2O Behavior Shift 2 chiều (Online→Offline / Offline→Online), tam giác End User - MoMo - Merchant. Cập nhật PIC GenAI Content: Trọng.
+- **Tháng 5/2026 (v2.0):** Refactor toàn bộ theo định hướng chiến lược mới từ họp với Bảo (25/05/2026). Thêm SME Digital Presence angle, Dual-sided value prop (SME + Consumer), Template System 4 variants (KV/non-KV x Review/non-review), O2O Stack mở rộng (Hoàn tiền + VTS + Soundbox), Comm Activities 3 channels (SEO + QR + LLM/GEO), Sub-pages concept (Phase 2), Review sync (TBD). Cập nhật PIC: Nhật (Build Lead), Hoài Anh (MoSpark Architecture). Cập nhật scale pilot 100-200 merchants.
+- **Tháng 5/2026 (v1.7):** Cập nhật Tracking: Umami + PIC Thuận. Bổ sung PIC column vào Dependencies.
+- **Tháng 5/2026 (v1.6):** Xóa Tracking Event Schema + AB Test - thuộc PRD/Action Plan.
+- **Tháng 5/2026 (v1.5):** Xóa Risk Assessment - thuộc PRD/Action Plan.
+- **Tháng 5/2026 (v1.4):** Thêm Problem Statement, Tracking Event Schema, AB Test.
+- **Tháng 5/2026 (v1.3):** Tích hợp Batch 2 - 24 SME Soundbox Merchants, fix URL /doi-tac → /merchant.
+- **Tháng 5/2026 (v1.2):** Bổ sung Content Production Scale, chuẩn hóa cấu trúc.
+- **Tháng 5/2026 (v1.0):** Khởi tạo tài liệu.

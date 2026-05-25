@@ -44,18 +44,11 @@ Ads Manager được phát triển theo ba module kế tiếp nhau, từ công c
 
 ## 2. Vị Trí Trong MoSpark
 
-### 2.1. MoSpark và các module
+### 2.1. Vai trò của Ads Manager trong hệ sinh thái MoSpark
 
-MoSpark hiện đang vận hành bốn module chính:
+MoSpark là nền tảng Growth OS của MoMo Web nhằm mục đích tối ưu hóa nội dung và tăng trưởng người dùng. Trong hệ sinh thái MoSpark, **Ads Manager** đóng vai trò là động cơ khai thác hiệu quả toàn bộ traffic trên Web (bao gồm các trang Landing Page, Blog bài viết, FAQ, Merchant Page) để chuyển đổi thành hành vi mở App hoặc cài đặt App (Web-to-App). 
 
-| Module | Trạng thái | Vai trò |
-|---|---|---|
-| **Landing Page Builder** | Q1 Delivered, Q2 onboarding GPD | PM/PO tự tạo Landing Page mà không cần Dev |
-| **Ads Manager** | V1.2 Production - Pilot User Growth | Phân phối promotional content đúng context trên Web |
-| **GenAI Content** | Building - Pilot Phạt Nguội | Tạo nội dung chuẩn E-E-A-T và GEO citation tự động |
-| **Help Center** | Đăng ký Agentic Org Program | FAQ tĩnh chuyển sang AI Agent tự phục vụ |
-
-Ads Manager là module thứ hai được đưa vào production. Trong khi Landing Page Builder giải quyết bài toán tạo trang, Ads Manager giải quyết bài toán khai thác traffic đang có trên các trang đó để convert sang App.
+Module này hoạt động như một lớp phân phối thông minh, giúp PM/PO tận dụng tối đa lượng lưu lượng truy cập hiện có nhằm thúc đẩy chuyển đổi trực tiếp sang App (W2A) mà không cần sự can thiệp của đội ngũ lập trình (Dev).
 
 ### 2.2. Mối quan hệ với MoSpark Content Architecture
 
@@ -111,13 +104,30 @@ Existing user trên Web → [Ads Manager] → Reactivation message → App Open 
 
 ### 3.3. JTBD - Những việc cần được hoàn thành
 
-**User trên Web:**
+**User trên Web - Ad Format:**
 
 | Job | Context | Ads Manager serve như thế nào |
 |---|---|---|
 | "Biết MoMo có giải pháp cho việc tôi đang làm" | Đang xem trang bảo hiểm, BNPL, vay | Popup/Balloon - benefit cụ thể, CTA trực tiếp |
 | "Nhớ đến MoMo khi đang đọc nội dung" | Đang đọc blog tài chính | Balloon nhẹ, Inline Banner - không interrupt |
 | "Tìm ưu đãi để quyết định dùng MoMo" | Đang xem Landing Page khuyến mãi | Popup gắn Promotion Campaign |
+
+**User trên Web - Widget JTBD:**
+
+| Job | Context | Widget serve như thế nào |
+|---|---|---|
+| "Tôi muốn biết khoản vay sẽ trả bao nhiêu mỗi tháng" | Đang đọc bài so sánh gói vay | Loan Calculator - nhập số tiền/kỳ hạn → output ngay lập tức |
+| "Phí bảo hiểm xe tôi là bao nhiêu" | Đang tìm hiểu BH xe máy/ô tô | Insurance Calculator - nhập thông tin xe → phí ước tính |
+| "Kiểm tra xe tôi có bị phạt nguội không" | Đang đọc bài về giao thông | Phạt Nguội Lookup - nhập biển số → danh sách vi phạm + tổng tiền |
+| "Điểm tín dụng CIC của tôi là bao nhiêu" | Đang tìm hiểu điều kiện vay | CIC Score Lookup - nhập CCCD → điểm + xếp loại |
+
+**User trên Web - Component JTBD:**
+
+| Job | Context | Component serve như thế nào |
+|---|---|---|
+| "Nộp phạt nguội ngay sau khi tra cứu xong - không muốn mở App" | Vừa dùng Lookup Widget thấy có vi phạm | Nộp Phạt Component - multi-step inline: chọn khoản → xác nhận → thanh toán |
+| "Mua BH xe ngay khi đã biết phí - không cần thoát trang" | Calculator Widget vừa cho kết quả | Purchase Component - chọn gói → điền thông tin xe → thanh toán inline |
+| "Đặt vé xem phim ngay khi đang xem lịch chiếu" | Đang trên trang Cinema Use Case | Booking Component - chọn phim/suất/ghế → xác nhận → thanh toán inline |
 
 **PM/PO Division:**
 
@@ -135,18 +145,70 @@ Thay vì triển khai đồng loạt, Ads Manager được chia thành 3 Phase �
 
 ### 4.1. Tổng quan Phased Rollout
 
-```text
-Phase 1 (MVP) - Core Operations & Native Widget
-Tập trung chứng minh tỷ lệ chuyển đổi W2A với quy mô nhỏ
-        |
-        ↓ scale-up
-Phase 2 - Traffic Inventory Management
-Quản lý ad slot tập trung, tự động hóa Conflict Resolution
-        |
-        ↓ advanced
-Phase 3 - Ads Distribution & Retargeting
-Bám đuổi người dùng ẩn danh + Phân quyền Multi-tenant
+```mermaid
+graph TD
+    %% Phase 1
+    subgraph P1 ["Phase 1 (MVP): Core Operations (Q2/2026)"]
+        direction TB
+        P1_Goal["Mục tiêu: Chứng minh tỷ lệ chuyển đổi W2A ở quy mô nhỏ"]
+        P1_Deliverables["Deliverables chính:
+- Thư viện Native Widget & CMS Shortcode
+- Balloon Ads & Inline Banners
+- Context-based URL Targeting
+- Tích hợp Appsflyer/Onelink
+- Tần suất & Preview System"]
+        P1_Gate["Success Gate 1:
+- Zero P1 bug trong 2 tuần
+- CTR trung bình >= 4% (3+ campaigns)
+- Đã verify tracking click -> install"]
+        P1_Goal --> P1_Deliverables --> P1_Gate
+    end
+
+    %% Phase 2
+    subgraph P2 ["Phase 2: Traffic Inventory Management (Q3/2026)"]
+        direction TB
+        P2_Goal["Mục tiêu: Quản lý ad slot tập trung & Xử lý conflict"]
+        P2_Deliverables["Deliverables chính:
+- Placement Registry (Use Case vs Shared Placements)
+- Conflict Resolution Logic & Global Guardrails
+- Inventory Dashboard & Conflict Alerts
+- Tích hợp hiển thị Reach Estimate trong Creation Flow"]
+        P2_Gate["Success Gate 2:
+- Hoàn thiện Registry cho toàn bộ Mini Web
+- Conflict Resolution hoạt động chuẩn xác
+- Ít nhất 2 Division pilot thành công"]
+        P2_Goal --> P2_Deliverables --> P2_Gate
+    end
+
+    %% Phase 3
+    subgraph P3 ["Phase 3: Advanced Automation & Retargeting (Q4/2026)"]
+        direction TB
+        P3_Goal["Mục tiêu: Multi-tenant tự vận hành & Bám đuổi ẩn danh"]
+        P3_Deliverables["Deliverables chính:
+- Phân quyền Multi-tenant (Admin vs Operator)
+- Extended Formats (Sticky Bar, Advanced Inline)
+- On-site Retargeting (Local Storage / 1st Party Cookie)
+- Dashboard Umami riêng cho từng Division"]
+        P3_Goal --> P3_Deliverables
+    end
+
+    %% Flow transitions
+    P1_Gate -->|"Scale-up"| P2_Goal
+    P2_Gate -->|"Advanced Automation"| P3_Goal
+
+    %% Styling for better aesthetics
+    style P1 fill:#f9fafd,stroke:#3b82f6,stroke-width:2px
+    style P2 fill:#fafdf9,stroke:#10b981,stroke-width:2px
+    style P3 fill:#fffdf5,stroke:#f59e0b,stroke-width:2px
+
+    style P1_Goal fill:#eff6ff,stroke:#60a5fa,stroke-width:1px
+    style P2_Goal fill:#ecfdf5,stroke:#34d399,stroke-width:1px
+    style P3_Goal fill:#fffbeb,stroke:#fbbf24,stroke-width:1px
+
+    style P1_Gate fill:#fef2f2,stroke:#f87171,stroke-width:1px
+    style P2_Gate fill:#fef2f2,stroke:#f87171,stroke-width:1px
 ```
+
 
 ### 4.2. Phase 1 (MVP) - Core Operations (Q2/2026)
 
@@ -217,79 +279,6 @@ Mỗi Division có dashboard riêng - Campaign performance (Impression, Click, C
 
 ---
 
-### 4.5. Module 4 & 5 - SEO Inventory & Use Case Performance Tracking
-
-**Mục tiêu:** Cung cấp cho PM/PO từng Cell Team visibility vào Market Sizing và Web Traffic Performance của từng Use Case. Hệ thống sử dụng **"Use Case" làm đơn vị gom nhóm (Grouping)** duy nhất cho mọi loại trang (Page Type), giúp đồng bộ hóa từ khâu xây dựng nội dung đến khi thiết lập Ads placement và đo lường Reach Estimate.
-
-#### Module 4 - SEO Inventory Dashboard
-
-**Định nghĩa:** Dashboard hiển thị Market Sizing (Volume Search) cho mỗi Use Case, giúp PM/PO hiểu tổng thể Market opportunity trước khi allocate Ads budget.
-
-**Nguyên tắc Grouping:**
-- Một **Use Case** (ví dụ: Phạt Nguội) bao gồm nhiều **Page Types** (Mini Web, Blog bài viết, FAQ, Landing Page).
-- Khi tạo bất kỳ nội dung nào trên MoSpark, PM/PO bắt buộc phải gán Use Case tương ứng.
-- Metadata `use_case_id` là sợi chỉ đỏ kết nối các module.
-
-**Data source:**
-- Keyword Research input từ Hiến hoặc Inbound team (Market -> Cluster -> Volume)
-- Database được Thuận build - form nhập + AppScript formula tính toán
-
-**Data structure (Thuận build):**
-- **Market (Root):** Lĩnh vực chính (ví dụ: Vay).
-- **Cluster:** Nhóm hành vi tìm kiếm đa dạng được extract từ market (ví dụ: Vay tiền mặt, Vay nóng, Vay thấu chi...).
-- **Volume:** Lượng tìm kiếm/tháng cho từng Cluster.
-- Storage: Database (schema để Thuận confirm)
-- Output: Dashboard visualization per Use Case
-
-**Dashboard visualization:**
-- Card view: Total volume per Use Case | Number of markets | Markets breakdown
-- Bar chart: Volume by individual market (sorted descending)
-- Filter: By Use Case selector
-
-**Example layout:** (Reference hình user provide)
-```
-FS: 106.9M (29 markets)
-MDS: 9.8M (7 markets)
-PS: 18.2M (18 markets)
-[Bar chart] Volume theo thị trường
-```
-
-**Scope Phase 1:** Focus Phạt Nguội (Phạt Nguội market data sẵn sàng hoặc sắp ready)
-
-#### Module 5 - Use Case Performance by Umami
-
-**Định nghĩa:** Dashboard tracking Visitor + Pageview từ Umami, grouped by Use Case (ví dụ: tất cả URL under /phat-nguoi/* = 1 group Phạt Nguội). Khi PM setup Ads placement, thấy Reach Estimate để forecast Ads impact.
-
-**Integration point:**
-- Khi PM chọn Use Case để setup campaign trên Ads Manager, hệ thống tự động quét toàn bộ Page Types (URLs) thuộc Use Case đó trong Inventory.
-- System show Reach Estimate = Total Unique Visitors của toàn bộ cụm Use Case (bao gồm Blog, Tool, FAQ...) trong 28 days gần nhất.
-- Metric: Visitor count + Pageview count của toàn Use Case Group.
-
-**Data source:**
-- Umami tracking setup trên momo.vn
-- URL pattern mapping per Use Case (ví dụ: /phat-nguoi, /phat-nguoi/blog/*, etc.)
-
-**Status:**
-- Demo: Umami đã gắn trên Demo environment
-- Live: Cuối tuần sắp tới sẽ lên Live cho Phạt Nguội
-- Verification: Check data accuracy trước khi show trên Ads Manager
-
-**Dashboard content:**
-- URL group performance: Visitor, Pageview, per Use Case
-- Time range: 28 days rolling window
-- Show in Ads Manager: Reach Estimate when PM select placement
-
-**Scope Phase 1:** Focus Phạt Nguội (align với Umami Live timeline)
-
----
-
-**Timeline:**
-- **SEO Inventory:** Database schema + form nhập by Thuận → Hiến/Inbound input data → Dashboard live
-- **Use Case Performance by Umami:** Umami Live cuối tuần → URL mapping → Integration to Ads Manager
-- **Integration:** Reach Estimate feature in Ads Manager campaign creation flow (Module 2-3)
-
----
-
 ## 5. Ad Formats & Placement Strategy
 
 ### 5.1. Format theo loại trang
@@ -298,7 +287,10 @@ Thay vì targeting theo Screen (như Athena), Ads Manager targeting theo loại 
 
 | Format | Mức interrupt | Phù hợp với | Objective |
 |---|---|---|---|
-| **Native Widget (Product Component)** | Rất Thấp - Trải nghiệm tự nhiên (PLG) | Blog Article, Mini Web | Traffic (W2A Conversion siêu cao) |
+| **Widget: Calculator** | Rất Thấp - Utility tool, không interrupt | Blog Article, Mini Web Use Case | Intent Capture + PLG (anti-LLM moat) |
+| **Widget: Lookup** | Rất Thấp - Utility tool, không interrupt | Mini Web Use Case, Blog | Intent Capture + PLG (anti-LLM moat) |
+| **Component: Purchase Flow** | Thấp - Inline form trong trang, không redirect | Mini Web Use Case (BH, Phạt Nguội) | Inline Transaction (mua, nộp phạt) |
+| **Component: Booking Flow** | Thấp - Inline form trong trang, không redirect | Cinema, Bus, eSIM, OTA | Inline Transaction (đặt chỗ, đặt vé) |
 | **Balloon Standard / Float Icon** | Thấp - góc màn hình / icon nhỏ | Tất cả trang | Traffic + Awareness |
 | **Inline Banner** | Trung bình - trong content | Blog/News | Awareness |
 | **Sticky Bar** | Trung bình - dính đầu/cuối | Landing Page | Traffic |
@@ -319,6 +311,108 @@ Thay vì targeting theo Screen (như Athena), Ads Manager targeting theo loại 
 **Phase tiếp theo (Module 2-3):**
 - **Placement-based targeting:** Chọn slot từ Registry thay vì tự nhập URL pattern.
 - **On-site Retargeting (Behavior-based):** Sử dụng Local Storage / 1st Party Cookie để lưu vết Intent (Ví dụ: User từng vào `/vay-nhanh` nhưng chưa tải app). Khi user truy cập các trang dùng chung (Homepage, Blog), hệ thống tái kích hoạt Widget Vay Nhanh hoặc Sticky Bar nhắc nhở. Tính năng này giúp bám đuổi hiệu quả mà **không cần User phải Log In**, đảm bảo 100% ẩn danh và tuân thủ Data Privacy.
+
+### 5.4. Chiến lược Cross-Services & Cross-Traffic bằng Native Widget / Component
+
+Bên cạnh các định dạng hiển thị quảng cáo truyền thống (Balloon, Popup), MoSpark Ads Manager định nghĩa **Native Widget (Product Component)** là thành phần chiến lược phục vụ bài toán **phân phối chéo dịch vụ (Cross-Services)** và **điều hướng lưu lượng chéo (Cross-Traffic)**:
+
+1. **Cơ chế Cross-Services (Chuyển đổi chéo dịch vụ):**
+   - Đưa các công cụ tương tác nhỏ, có giá trị tiện ích cao (Utility Tools) vào các trang thuộc Use Case khác để thu hút người dùng một cách tự nhiên.
+   - *Ví dụ:* Sau khi người dùng hoàn thành tra cứu Phạt Nguội (trang Use Case Phạt Nguội), Ads Manager tự động phân phối **Widget Đăng ký Bảo hiểm Xe máy / Ô tô** hoặc **Widget Vay tiêu dùng** ngay bên dưới kết quả.
+
+2. **Cơ chế Cross-Traffic (Điều hướng chéo traffic):**
+   - Tận dụng lưu lượng truy cập lớn của các trang tin tức/blog hoặc các trang dùng chung (Homepage, Merchant Page) để điều hướng dòng traffic sang các Use Case chuyển đổi cao thông qua các Widget nhúng.
+   - *Ví dụ:* Người dùng đang đọc bài viết Blog về *"Kinh nghiệm mua xe máy cũ"* ➔ Ads Manager tự động phát hiện ngữ cảnh và chèn **Widget Tra cứu Phí Bảo hiểm Xe máy** hoặc **Widget Ước tính khoản vay mua xe** trực tiếp vào giữa bài viết (thông qua Shortcode động).
+
+3. **Lợi ích chiến lược:**
+   - **Zero-Interrupt Experience:** Native Widget hòa nhập hoàn hảo vào nội dung trang (Native Ad), nâng cao CTR mà không gây khó chịu hay làm suy giảm các chỉ số SEO/Core Web Vitals.
+   - **Contextual Matching:** Match chính xác ý định (Intent) của người dùng tại thời điểm đọc hoặc tương tác, biến lưu lượng truy cập vãng lai thành cơ hội chuyển đổi trực tiếp Web-to-App.
+
+### 5.5. Taxonomy: Ad Format - Widget - Component
+
+Ads Manager phân phối 3 loại entity khác nhau về chiều sâu tương tác và mục tiêu chuyển đổi. Đây là framework phân loại chuẩn để tránh nhầm lẫn khi spec và build:
+
+| Loại | Định nghĩa | Chiều sâu tương tác | Output cho User | Mục tiêu chính |
+|---|---|---|---|---|
+| **Ad Format** | Promotional message - user xem và click | Passive (view + click 1 bước) | Thông điệp + CTA dẫn sang App | Awareness / W2A Traffic |
+| **Widget** | Utility tool - user nhập input, nhận output ngay | Interactive 1 bước (nhập → kết quả) | Kết quả tính toán hoặc tra cứu cá nhân hóa | Intent Capture + PLG (anti-LLM moat) |
+| **Component** | Interactive flow - user thực hiện giao dịch multi-step | Interactive nhiều bước (nhập → preview → xác nhận → hoàn tất) | Giao dịch hoàn tất (hoặc handoff sang App) | Inline Transaction - giảm friction |
+
+**Nguyên tắc kiến trúc không thể bỏ qua:**
+
+- Widget và Component là **PLG Tools độc lập** - tồn tại và hoạt động không phụ thuộc vào Ads Manager.
+- Ads Manager đóng vai trò **Distribution Layer** duy nhất: quyết định Widget/Component nào được nhúng vào trang nào, vào thời điểm nào, theo context nào - thông qua CMS Shortcode hoặc Placement Registry.
+- Dev build Widget/Component Library. Ads Manager quản lý việc phân phối. Hai việc này tách biệt rõ ràng.
+
+### 5.6. Widget Library (PLG Tool - Passive Interaction)
+
+Widget là các utility tool độc lập. User nhập input, Widget trả về kết quả ngay lập tức trên trang - không cần mở App. Widget tạo ra **unique data không scrape được từ LLM** (kết quả cá nhân hóa theo input cụ thể của user), đây là anti-LLM moat và là nguồn tín hiệu intent mạnh nhất để phân phối tiếp theo.
+
+**Nguyên tắc Widget:**
+
+- Mỗi Widget phải cung cấp giá trị tiện ích thực sự trước khi CTA xuất hiện - không phải "cổng bắt buộc" để xem thông tin.
+- Widget có thể đứng độc lập trên trang Mini Web Use Case hoặc được Ads Manager nhúng vào Blog/Trang dùng chung qua Shortcode.
+- Output phải unique (cá nhân hóa theo input của user) - không phải thông tin tĩnh có thể tìm thấy ở nơi khác.
+
+#### Calculator Widgets
+
+| Widget | Use Case | Input | Output | W2A / Next Action |
+|---|---|---|---|---|
+| Loan Calculator | Vay Nhanh | Số tiền vay, kỳ hạn | Lãi suất ước tính, số tiền trả/tháng, tổng chi phí | "Vay ngay" → Onelink |
+| Insurance Premium Calculator | BH xe máy / BH ô tô | Loại xe, năm sản xuất, gói BH muốn mua | Phí bảo hiểm ước tính | "Mua ngay" → Purchase Component hoặc App |
+| BNPL Calculator | Ví Trả Sau | Giá trị đơn hàng, số kỳ trả góp | Số tiền trả mỗi kỳ, tổng chi phí | "Dùng Ví Trả Sau" → App |
+| Savings Calculator | Gửi tiết kiệm | Số tiền gốc, kỳ hạn, loại hình tiết kiệm | Lãi dự kiến, tổng nhận về khi đáo hạn | "Gửi tiết kiệm ngay" → App |
+
+#### Lookup Widgets
+
+| Widget | Use Case | Input | Output | W2A / Next Action |
+|---|---|---|---|---|
+| Phạt Nguội Lookup | Phạt Nguội | Biển số xe | Danh sách vi phạm, tổng tiền phạt | "Nộp phạt qua MoMo" → Purchase Component |
+| BHYT Lookup | BHXM / BHYT | Số CCCD hoặc mã BHYT | Thông tin BH, ngày hết hạn, nơi đăng ký KCB | "Gia hạn BHYT" → App |
+| CIC Score Lookup | Tín dụng / Vay Nhanh | Số CCCD | Điểm tín dụng CIC, xếp loại | "Xem vay được bao nhiêu" → Loan Calculator hoặc App |
+| Giá Vàng Lookup | Utility / Thanh toán | - (auto refresh) | Bảng giá vàng real-time theo nhà cung cấp | "Giao dịch vàng qua MoMo" → App |
+
+### 5.7. Component Library (PLG Tool - Active Transaction Flow)
+
+Component là các interactive flow multi-step cho phép user thực hiện giao dịch **ngay trên Web** - không redirect sang App giữa chừng. Component serve bài toán Web-first experience: giảm friction, tăng completion rate cho những Use Case không bắt buộc KYC đầy đủ.
+
+**Nguyên tắc Component (Inline Web Transaction):**
+
+Component thực hiện toàn bộ flow trong Web. Authentication và payment được xử lý inline:
+- Nếu user **chưa có tài khoản MoMo**: Component collect thông tin giao dịch đầy đủ, sau đó trigger Onelink deeplink vào đúng step trong App để authenticate và hoàn tất.
+- Nếu user **đã xác định là MoMo user** (qua Onelink device check): Component trigger deeplink trực tiếp vào bước xác nhận trong App, bỏ qua các step nhập liệu.
+- Mục tiêu tối thượng: **Zero redundant input** - user không phải nhập lại thông tin đã điền trong Component.
+
+#### Purchase Flow Components
+
+| Component | Use Case | Luồng trong Web | Điều kiện handoff sang App |
+|---|---|---|---|
+| Nộp Phạt Nguội | Phạt Nguội | Lookup kết quả → Chọn khoản phạt cần nộp → Preview tổng tiền → Xác nhận → Thanh toán | Auth + payment qua App nếu user chưa đăng nhập |
+| Mua BH Xe Máy | BH xe máy | Chọn gói → Nhập thông tin xe và chủ xe → Preview chi phí và coverage → Xác nhận → Thanh toán | Auth + payment qua App |
+| Mua BH Ô Tô | BH ô tô vật chất | Chọn loại BH → Nhập thông tin xe → Quote → Review coverage → Xác nhận → Thanh toán | Auth + payment qua App |
+| Mua BH Y Tế | BHYT | Chọn gói BH → Nhập thông tin người được BH → Review coverage và điều khoản → Thanh toán | Auth + payment qua App |
+| Nạp Điện Thoại | Telecom | Nhập số điện thoại → Chọn mệnh giá → Xác nhận → Thanh toán | Auth + payment qua App |
+
+#### Booking Flow Components
+
+| Component | Use Case | Luồng trong Web | Điều kiện handoff sang App |
+|---|---|---|---|
+| Đặt Vé Cinema | Cinema | Chọn phim → Chọn rạp và suất chiếu → Chọn ghế → Nhập thông tin liên hệ → Xác nhận → Thanh toán | Auth + payment qua App |
+| Đặt Vé Bus | Bus / OTA | Chọn tuyến → Chọn ngày/giờ → Chọn ghế → Nhập thông tin hành khách → Xác nhận → Thanh toán | Auth + payment qua App |
+
+**Relationship giữa Widget và Component - Chuỗi tương tác:**
+
+Widget và Component thường hoạt động theo chuỗi liên tiếp trong một trang. Widget tạo intent, Component chốt giao dịch:
+
+```
+[Lookup Widget] → Kết quả cá nhân hóa → [Purchase Component] → Giao dịch hoàn tất
+Ví dụ: Tra cứu phạt nguội → Danh sách vi phạm → Nộp phạt ngay (inline)
+
+[Calculator Widget] → Ước tính chi phí → [CTA] → [Purchase Component hoặc App]
+Ví dụ: Tính phí BH xe → Phí dự kiến → Mua ngay (inline Component)
+```
+
+Ads Manager quản lý chuỗi này qua **Shortcode chain** trong CMS: `[widget:phat-nguoi] [component:nop-phat]` - render theo thứ tự, dữ liệu output của Widget có thể được pre-fill vào Component.
 
 ---
 
@@ -498,7 +592,7 @@ User đã có app nhưng inactive → vào web tìm kiếm → thấy Ads nhắc
 | Phase | Timeline | Mục tiêu trọng tâm |
 |---|---|---|
 | **Phase 1: MVP & Core Ops** | **Q2/2026** | **Thư viện Widget nhúng vào bài viết (Phạt Nguội, BHYT) thông qua CMS Shortcode.** URL Targeting cơ bản. Tích hợp Umami cơ bản. |
-| **Phase 2: Inventory Mgmt** | **Q3/2026** | Placement Registry MVP + Xử lý Conflict tự động + Ra mắt SEO Inventory Dashboard. |
+| **Phase 2: Inventory Mgmt** | **Q3/2026** | Placement Registry MVP + Xử lý Conflict tự động + Tích hợp hiển thị Reach Estimate. |
 | **Phase 3: Retargeting & Multi-tenant** | **Q4/2026** | Kích hoạt On-site Retargeting (bám đuổi qua Local Storage) + Phân quyền Division tự chạy Ads. |
 
 ### Action Plan (Chỉ focus Phase 1)
@@ -509,37 +603,20 @@ Nhằm tránh "ngộp" resource cho Tech team, danh sách dưới đây chỉ t�
 |---|---|---|
 | Widget Library v1 | Thuận | Hoàn thiện code cho Widget Phạt Nguội & BHYT (nhúng qua CMS Shortcode) |
 | PM/PO Playbook | Bảo + Hiến advise | Workflow, format guide, content checklist cho Division operator |
-| Umami - URL Mapping | Thuận | Define URL pattern per Use Case (/phat-nguoi, /phat-nguoi/blog/*, etc.) |
 | Umami - Reach Estimate | Thuận | Show Reach Estimate (28 days Visitor/Pageview) khi setup campaign |
 
 ### Backlog (Phase 2 & 3)
-- PRD Phase 2 (Placement Registry schema, conflict logic)
-- SEO Inventory (Database schema, Dashboard UI)
+- PRD Phase 2 (Placement Registry schema, conflict logic, Reach Estimate integration)
 - Permission Model (Role definition per Division cho Phase 3)
 - On-site Retargeting Module (Local storage read/write mechanism)
 
----|---|---|
+### Lộ trình chi tiết theo Module
+| Module / Hạng mục | Timeline | Trọng tâm chi tiết |
+|---|---|---|
 | **Native Widget & Shortcode** | **Q2/2026 (Trọng tâm MVP)** | **Thư viện Widget nhúng vào bài viết (Phạt Nguội, BHYT) thông qua CMS Shortcode.** |
 | Module 1 | Done - Q2/2026 | Mở rộng pilot từ User Growth sang GPD (Ưu tiên Inline Banner & Widget) |
 | Module 2 | Q2/2026 | Placement Registry MVP + Conflict Resolution + Inventory Dashboard |
 | Module 3 | Q3/2026 | Multi-tenant, Umami Dashboard, Extended Formats |
-| Module 4 - SEO Inventory | Q2/2026 (concurrent with M2) | Database schema + form nhập by Thuận + Hiến/Inbound input data + Dashboard visualization |
-| Module 5 - Use Case Perf | Q2/2026 (End of week) | Umami Live (Phạt Nguội) + URL mapping + Reach Estimate |
-
-### Next Steps sau khi BRD được align
-
-| Deliverable | Owner | Mục đích |
-|---|---|---|
-| PRD Module 2 | Thuận | Technical spec: Placement Registry schema, conflict logic, dashboard |
-| Placement Registry v1 | Thuận + Bảo | Danh sách đầy đủ ad slots hiện có trên Mini Web |
-| Permission Model | Bảo + Thuận | Role definition per Division cho Module 3 |
-| Umami Setup Plan | Thuận | Integration plan và dashboard template per Division |
-| PM/PO Playbook | Bảo + Hiến advise | Workflow, format guide, content checklist cho Division operator |
-| **SEO Inventory - Database Schema** | **Thuận** | **Build form nhập + AppScript formula + Database design (market_name + volume)** |
-| **SEO Inventory - Dashboard** | **Thuận + Bảo** | **Visualization: Total volume per Use Case, Markets breakdown, Bar chart volume by market** |
-| **SEO Inventory - Data Entry** | **Hiến / Inbound team** | **Input market sizing data for Phạt Nguội Use Case** |
-| **Umami - URL Mapping** | **Thuận** | **Define URL pattern per Use Case (/phat-nguoi, /phat-nguoi/blog/*, etc.) for grouping** |
-| **Umami - Integration to Ads Manager** | **Thuận** | **Show Reach Estimate (28 days Visitor/Pageview) when PM setup campaign** |
 
 ---
 
@@ -550,8 +627,21 @@ Nhằm tránh "ngộp" resource cho Tech team, danh sách dưới đây chỉ t�
 ---
 
 ## Change Log
+- **Tháng 5/2026 (v3.1):**
+  - Mở rộng scope phân phối: Ads Manager không chỉ distribute Ad Format mà còn distribute Widget (PLG Tool passive) và Component (PLG Tool active flow).
+  - Thêm Taxonomy section (5.5): Định nghĩa rõ 3 loại entity - Ad Format / Widget / Component - theo chiều sâu tương tác và mục tiêu chuyển đổi. Nguyên tắc kiến trúc: Widget/Component là PLG Tools độc lập, Ads Manager chỉ là Distribution Layer.
+  - Thêm Widget Library (5.6): Calculator Widgets (Loan, Insurance Premium, BNPL, Savings) và Lookup Widgets (Phạt Nguội, BHYT, CIC Score, Giá Vàng) - với input/output/W2A trigger cho từng Widget.
+  - Thêm Component Library (5.7): Purchase Flow Components (Nộp Phạt, BH Xe Máy, BH Ô Tô, BH Y Tế, Nạp Điện) và Booking Flow Components (Cinema, Bus) - với nguyên tắc Inline Web Transaction và điều kiện handoff sang App.
+  - Cập nhật JTBD (3.3): Thêm Widget JTBD và Component JTBD để phân biệt rõ nhu cầu của user theo từng loại entity.
+  - Cập nhật Format table (5.1): Tách "Native Widget (Product Component)" thành 4 rows riêng biệt: Calculator, Lookup, Purchase Flow, Booking Flow.
+  - Bổ sung concept Shortcode chain: `[widget:phat-nguoi] [component:nop-phat]` - Widget output có thể pre-fill vào Component input.
 - **Tháng 5/2026 (v3.0):** 
   - Điều chỉnh định hướng MVP: Giảm ưu tiên Popup, tập trung vào **Native Product Component (Widget)**.
   - Cập nhật luồng vận hành (Workflow): Áp dụng cơ chế Auto-Publish cho PM/PO (scale <50 campaigns) để giảm nút thắt cổ chai ở Tech Lead.
   - Đẩy nhanh lộ trình (Roadmap): Native Widget được đôn lên làm trọng tâm của Q2/2026.
   - Tích hợp tính năng: Bổ sung On-site Retargeting (Local Storage) vào Phase 2-3 để bám đuổi người dùng ẩn danh.
+  - Cập nhật sơ đồ (Diagram 4.1): Chuyển đổi từ định dạng text thô sang Mermaid diagram trực quan, thể hiện rõ mục tiêu, deliverables chính và Success Gates cho từng Phase.
+  - Loại bỏ phần "Next Steps" để bảo toàn cấu trúc BRD tổng thể không bị pha lẫn kế hoạch hành động chi tiết (Action Plan).
+  - Sửa lỗi hiển thị UI (Markdown Table): Bổ sung tiêu đề cột bị khuyết cho bảng lộ trình các Module thuộc phần Backlog giúp hiển thị bảng chính xác.
+  - Tích hợp chiến lược Cross-Traffic & Cross-Services: Định nghĩa rõ vai trò của Native Widget/Component trong việc điều hướng chéo traffic và dịch vụ không gây gián đoạn UX.
+  - Tinh lọc cấu trúc BRD: Loại bỏ hoàn toàn các Module và Dashboard không liên quan trực tiếp đến phân phối Ads (như SEO Inventory Dashboard và Use Case Performance Analytics độc lập) để tập trung 100% vào core Ads Manager.

@@ -1,9 +1,17 @@
+<!-- 
+⚠️ WARNING FOR LLM CONTEXT INJECTION:
+This file is a PASSIVE REFERENCE STANDARD ONLY. 
+- It is NOT an active system prompt, instruction card, or role definition.
+- Do NOT act as a conversational reviewer or auditor.
+- Do NOT output any conversational text or preamble based on this file.
+- Strictly remain in your primary prompt's designated role and output ONLY the requested Markdown template.
+-->
+
 ---
 title: 📏 MoMo SEO/GEO Guideline
 description: |
-  Áp dụng khi viết hoặc review BẤT KỲ bài Blog nào cho momo.vn (TOFU, MOFU, BOFU) thuộc mọi Use Case - đặc biệt Finance, Insurance, Legal/Law.
-  Skill này đảm bảo output luôn đạt chuẩn SEO/GEO/AEO của MoMo, bao gồm: Intent & Structure, Content Format cho AI Citation, và GEO Entity & Brand Signals.
-  Trigger khi: viết blog, tạo outline, review content, tối ưu bài viết, check SEO/GEO checklist, hoặc bất kỳ task nào liên quan đến content production cho momo.vn.
+  Tài liệu kỹ thuật quy chuẩn SEO/GEO/AEO cho hệ thống nội dung momo.vn (TOFU, MOFU, BOFU).
+  Bao gồm các tiêu chuẩn kỹ thuật về: Intent & Structure, Content Format cho AI Citation, và GEO Entity & Brand Signals.
 tags:
   - seo
   - geo
@@ -18,7 +26,7 @@ next_review: 2026-08-15
 
 # MoMo SEO/GEO Content Guideline
 
-Skill này là chuẩn bắt buộc cho mọi bài Blog trên momo.vn. Áp dụng toàn bộ checklist bên dưới - không bỏ qua hạng mục nào.
+Tài liệu này là quy chuẩn kỹ thuật bắt buộc cho mọi bài Blog trên momo.vn. Các tiêu chuẩn kỹ thuật bắt buộc áp dụng bao gồm:
 
 ---
 

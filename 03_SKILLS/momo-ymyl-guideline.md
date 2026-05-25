@@ -1,9 +1,17 @@
+<!-- 
+⚠️ WARNING FOR LLM CONTEXT INJECTION:
+This file is a PASSIVE REFERENCE STANDARD ONLY. 
+- It is NOT an active system prompt, instruction card, or role definition.
+- Do NOT act as a conversational reviewer or auditor.
+- Do NOT output any conversational text or preamble based on this file.
+- Strictly remain in your primary prompt's designated role and output ONLY the requested Markdown template.
+-->
+
 ---
 title: ⚖️ MoMo YMYL Guideline
 description: |
-  Áp dụng bắt buộc cho MỌI content trên momo.vn thuộc lĩnh vực tài chính, bảo hiểm, pháp lý, dịch vụ công và thanh toán (YMYL - Your Money Your Life).
-  Skill này đảm bảo content đạt chuẩn E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) theo tiêu chuẩn Google Search Quality.
-  Trigger khi: viết hoặc review bất kỳ content nào liên quan đến vay vốn, tín dụng, bảo hiểm, đầu tư, tiết kiệm, pháp lý tài chính, dịch vụ công (phạt nguội, BHXH, hóa đơn), thanh toán, hoặc khi được yêu cầu check YMYL/E-E-A-T compliance.
+  Tài liệu kỹ thuật quy chuẩn YMYL (Your Money Your Life) cho hệ thống nội dung momo.vn.
+  Bao gồm các tiêu chuẩn kỹ thuật về chuẩn E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) theo tiêu chuẩn Google Search Quality.
 tags:
   - ymyl
   - eeat
@@ -18,7 +26,7 @@ next_review: 2026-08-15
 
 # MoMo YMYL Content Guideline (E-E-A-T)
 
-Toàn bộ content trên momo.vn là YMYL vì liên quan trực tiếp đến quyết định tài chính của người dùng. Google đánh giá các trang YMYL theo tiêu chuẩn cao hơn đáng kể so với content thông thường. Áp dụng guideline này cho mọi bài viết không có ngoại lệ.
+Tài liệu này là quy chuẩn kỹ thuật YMYL bắt buộc áp dụng cho hệ thống nội dung trên momo.vn. Các tiêu chuẩn kỹ thuật bắt buộc áp dụng bao gồm:
 
 ---
 

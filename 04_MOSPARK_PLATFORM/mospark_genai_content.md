@@ -147,18 +147,23 @@ Biến MoSpark thành "Production Lab" duy nhất, nơi nội dung được sả
 
 Dự án vận hành dựa trên 2 luồng cơ bản (Double Entry) để đảm bảo tính linh hoạt giữa việc tạo mới thủ công và tạo bằng AI.
 
-#### A. Luồng Tạo Mới (Create New)
-Có 2 quy trình tách biệt hoàn toàn về cách sản xuất nội dung:
+**Quy tắc tối thượng:** Dù tạo nội dung từ luồng nào, mọi bài viết **bắt buộc** phải xuất phát từ một **SEO/GEO Project** đã được định nghĩa sẵn **Business Context** để đảm bảo tính chuẩn xác và đồng bộ về thông tin.
 
-1.  **Tạo Mặc Định (Default/External Flow):** 
-    - **Vận hành:** PM tự viết, thuê Freelancer, hoặc gửi Content Marketing viết bên ngoài hệ thống MoSpark.
-    - **Quy trình:** Có Blog Detail sẵn -> Sử dụng tính năng "Create Blog" trong MoSpark -> Input nội dung vào Blog Editor -> Publish.
+#### A. Luồng Tạo Mới (Create New)
+Có 2 cách sản xuất nội dung chính:
+
+1.  **Dùng AI Cá nhân (Default/External Flow):** 
+    - **Vận hành:** Người dùng sử dụng AI cá nhân (ChatGPT, Claude tự do), tự viết hoặc thuê ngoài.
+    - **Quy trình:** Dùng AI cá nhân -> Có Blog Detail sẵn -> Blog Editor trong MoSpark -> Publish.
     - **Đặc điểm:** MoSpark đóng vai trò là công cụ Input & CMS.
 
-2.  **Tạo qua GenAI Content (In-System AI Flow):**
-    - **Vận hành:** Mọi bước sản xuất diễn ra 100% trên nền tảng MoSpark.
-    - **Quy trình:** Nhập Từ Khóa -> AI Draft Outline -> Manual Edit Outline -> AI Draft Blog Detail -> Sync qua Blog Editor -> Publish.
+2.  **Dùng GenAI xuyên suốt (In-System AI Flow):**
+    - **Vận hành:** Mọi bước sản xuất diễn ra 100% trên nền tảng MoSpark bằng hệ thống GenAI.
+    - **Quy trình:** Primary Keyword -> AI Draft Outline -> Manual Edit Outline -> AI Blog Detail -> Sync qua Blog Editor -> Publish.
     - **Đặc điểm:** MoSpark đóng vai trò là nền tảng sản xuất nội dung (Production Lab).
+
+> [!WARNING]
+> **Bất cập về Cannibalization:** Việc sử dụng song song cả 2 cách trên trong cùng một SEO/GEO Project gây ra sự bất cập và khó khăn lớn trong việc quản trị **Cannibalize từ khóa chính** (tự ăn thịt/xung đột từ khóa). Việc bài viết không đi qua luồng GenAI trung tâm ngay từ đầu sẽ khiến hệ thống lỏng lẻo trong việc rà soát trùng lặp chủ đề/từ khóa.
 
 > [!IMPORTANT]
 > **Định danh Unique:** Dù tạo bằng cách nào, hệ thống phải check trùng lặp Từ khóa. 1 Primary Keyword = 1 Blog Article.
@@ -175,7 +180,10 @@ Bài viết đã tồn tại (tạo từ bất kỳ nguồn nào) đều có th�
 1.  **Project-First Requirement (Ràng buộc bối cảnh):** Mọi **Primary Keyword** bắt buộc phải thuộc về một **SEO/GEO Project** cụ thể. Keyword không được phép tồn tại "mồ côi" vì Project là nơi cung cấp *Business Context* và định nghĩa cấu trúc URL.
 2.  **Strict 1-1 Mapping (Tính duy nhất):** Quy tắc **1 Bài viết ↔ 1 Primary Keyword**. Một Primary Keyword chỉ được đại diện cho một URL Master và một nội dung duy nhất. Nếu người dùng tạo trùng, hệ thống phải chặn và yêu cầu sử dụng luồng "Update/Enhance".
 3.  **Single Ownership (Phân cấp URL):** Một Primary Keyword chỉ thuộc về **duy nhất 1 SEO/GEO Project**. Điều này đảm bảo sự nhất quán trong URL Hierarchy (ví dụ: `/phat-nguoi/` vs `/doi-tac/`) và tránh tranh chấp Authority giữa các Use Case.
-4.  **Unique ID Check (Kho định danh):** Mọi Keyword khi nhập vào phải được đối soát với *Keyword Master Registry* của toàn hệ thống trước khi cho phép đi vào luồng sản xuất nội dung.
+4.  **Cross-Project Cannibalization Check (Kiểm soát Xung đột chéo):** Phạm vi quét của *Keyword Master Registry* phải mang tính **Global (Toàn cục)** toàn hệ thống MoSpark, không nằm cục bộ trong 1 Project. 
+    - *Ví dụ:* Nếu Project "Phạt Nguội" đã sở hữu keyword `quy định ô tô`, thì Project "Bảo Hiểm" **không được phép** tạo mới URL với keyword này.
+    - *Xử lý:* Thay vì tạo 2 URL triệt tiêu nhau, hệ thống yêu cầu sử dụng chung 1 bài viết Authority và thực hiện **Cross-linking** (Bài viết Phạt Nguội chèn Banner/CTA bán Bảo Hiểm).
+5.  **Unique ID Check (Kho định danh):** Mọi Keyword khi nhập vào phải được đối soát với *Keyword Master Registry* của toàn hệ thống trước khi cho phép đi vào luồng sản xuất nội dung.
 
 ---
 

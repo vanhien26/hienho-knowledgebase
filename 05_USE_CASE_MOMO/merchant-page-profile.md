@@ -1,151 +1,194 @@
 # BRD: Merchant Page Profile - B2B2C & O2O
 
-> - **Project:** Merchant Page 2.0 (O2O Strategy)         
-> - **Vision:** Chuyển dịch từ "Trang thông tin" sang "Trung tâm tương tác O2O & Tăng trưởng SME"         
-> - **Status:** Strategy & Ideation           
-> - **Đơn vị triển khai:** Web Platform (GPD) & SEO/GEO Lead          
-> - **Đồng hành:** Inbound Team (BMC)             
->
-> - **SEO Score:** 58/100 | **Traffic:** 45K sessions/tháng | **W2A:** 3.2% | **Last updated:** 2026-05-15
+> - **Project:** Merchant Mini-site `/merchant` (O2O Strategy)
+> - **Vision:** Chuyển dịch từ "Trang thông tin" sang "Merchant's Home on MoMo - Mini-site O2O & Tăng trưởng SME"
+> - **Status:** Strategy & Ideation
+> - **Đơn vị triển khai:** Web Platform (GPD) & SEO/GEO Lead
+> - **Đồng hành:** Inbound Team (BMC)
+> - **SEO Score:** 58/100 | **Traffic:** 45K sessions/tháng | **W2A:** 3.2% | **Version:** 1.1 · Tháng 5/2026
 
 ---
 
-## 1. Tầm nhìn Chiến lược (The Vision)
-
-Mục tiêu là biến mỗi Merchant Page trên Web thành một **Cửa hàng số (Digital Storefront)** mạnh mẽ như Google Business Profile, nhưng được tích hợp sâu vào hệ sinh thái thanh toán và tài chính của MoMo.
-
-### Mô hình B2B2C & O2O:
-1.  **B2B:** MoMo cung cấp giải pháp Soundbox, Quản lý doanh thu, Thuế và Vay vốn cho Merchant.
-2.  **B2C:** MoMo cung cấp giải pháp thanh toán (Ví MoMo, Ví Trả Sau) và hoàn tiền (Mega2026) cho End-user.
-3.  **O2O (Online-to-Offline):** User tìm kiếm thông tin trên Web (Online) -> Nhận ưu đãi/Thông tin -> Đến cửa hàng vật lý để thanh toán qua Soundbox (Offline).
+> **Problem:** User tìm kiếm "{Merchant} có thanh toán MoMo không" nhưng không có trang MoMo nào trả lời trực tiếp - cơ hội O2O (OOH kích hoạt → web capture → offline convert) đang bị bỏ ngỏ hoàn toàn.
+> **KPI Owned:** W2A (Web-to-App) ≥ 12.5% từ `momo.vn/merchant/{slug}` → attributed via Appsflyer
+> **Conversion Flow:** OOH/Search trigger → `/merchant/{slug}` → Payment info + CTA → App open → Thanh toán MoMo tại cửa hàng → Transaction
 
 ---
 
-## 2. Mô hình "Google Business" cho MoMo Merchant
+## 1. Executive Summary
 
-Xây dựng cơ chế tương tác 2 chiều giữa Merchant và MoMo thay vì nội dung tĩnh một chiều.
+### Situation
 
-- **QR-to-Business Edit:** Merchant không "Claim" trực tiếp trên trang Web do giới hạn đăng nhập. Thay vào đó, trang Web cung cấp QR Code đặc biệt:
-    - Chủ quán quét QR -> Điều hướng đến **business.momo.vn**.
-    - Đăng nhập tài khoản Merchant để xác thực quyền sở hữu (Owner).
-    - Sau khi xác thực, chủ quán có thể edit thông tin (giờ mở cửa, ảnh, menu).
-- **PIC Approval Workflow:** 
-    - Merchant submit thay đổi -> Hệ thống bắn notification đến PIC (Growth/BD).
-    - PIC review và Approve trên MoSpark Dashboard -> Trang Web cập nhật real-time.
-- **Merchant Verification Badge:** Dấu tích xanh cho các cửa hàng đã xác thực và đang sử dụng các giải pháp của MoMo (như Soundbox).
+MoMo đang chạy OOH tại hàng nghìn điểm bán trên toàn quốc - billboard, Soundbox, sticker tại quầy. Những điểm chạm offline này tạo ra awareness nhưng không tạo ra digital anchor: user thấy MoMo tại quán, về nhà search tên quán, không tìm thấy trang MoMo nào xác nhận quán đó có nhận MoMo/VTS không. O2O loop bị đứt gãy ngay tại bước quan trọng nhất.
 
-### 2.2. Social Proof & Interaction
-- **Rating & Reviews:** Tích hợp hệ thống đánh giá thực tế từ Thổ Địa Ăn Uống.
-- **User Engagement:** Nút "Lưu cửa hàng", "Chia sẻ ưu đãi", "Chỉ đường".
+### Complication
+
+User search "{Merchant} có thanh toán Ví Trả Sau không" là nhóm đã có intent mua, đã chọn merchant, chỉ cần xác nhận phương thức thanh toán trước khi đến. Đây là traffic có conversion value cao nhất - nhưng MoMo không có sản phẩm web nào capture được. Traffic rơi vào bên thứ ba hoặc đứt gãy hoàn toàn. Mỗi lượt tìm kiếm bị bỏ lỡ là một giao dịch không xảy ra.
+
+### Resolution
+
+Mỗi `momo.vn/merchant/{slug}` là **digital anchor của O2O loop** - điểm kết nối giữa offline presence (OOH, Soundbox) và app conversion. Product job: user tìm đến, xác nhận trong 3 giây quán đó nhận MoMo/VTS, mở App, đến quán thanh toán. Không cần content dài. Không cần đọc nhiều. Product drives the loop - từ search intent đến offline transaction. MoMo trở thành BNPL-first merchant mini-site đầu tiên tại Việt Nam, đóng kín O2O loop mà không đối thủ nào đang làm.
 
 ---
 
-## 3. Chuyên biệt hóa theo Business Vertical (Verticalization)
+## 2. Bối Cảnh Thị Trường
 
-Mỗi ngành hàng sẽ có các module (Component) đặc thù để tối ưu hóa chuyển đổi:
+### Mô hình B2B2C & O2O
 
-### 🍴 FnB (Nhà hàng, Cafe, Trà sữa)
-- **Digital Menu:** Hiển thị danh mục món ăn, giá cả và món "Best Seller".
-- **GenAI Optimized Menu:** AI tự động tóm tắt các món đặc sắc dựa trên review của người dùng.
-- **Booking/Order CTA:** Nút đặt bàn hoặc đặt giao hàng nhanh qua các đối tác tích hợp.
+1. **B2B:** MoMo cung cấp giải pháp Soundbox, Quản lý doanh thu, Thuế và Vay vốn cho Merchant.
+2. **B2C:** MoMo cung cấp giải pháp thanh toán (Ví MoMo, Ví Trả Sau) và hoàn tiền cho End-user.
+3. **O2O (Online-to-Offline):** User tìm kiếm thông tin trên Web → Nhận ưu đãi/Thông tin → Đến cửa hàng vật lý để thanh toán qua Soundbox.
 
-### 🛍 Retail & E-commerce
-- **Product Catalog:** Hiển thị danh sách sản phẩm nổi bật.
-- **Check Availability:** Kiểm tra xem sản phẩm có đang sẵn hàng tại cửa hàng không (V2).
+### Tình trạng hiện tại
 
-### 🏥 Healthcare & Beauty (Spa, Clinic)
-- **Service Price List:** Bảng giá các gói dịch vụ.
-- **Expert/Staff Profile:** Giới thiệu về bác sĩ hoặc kỹ thuật viên.
+| Hệ thống | Traffic | Vấn đề |
+|---|---|---|
+| Merchant Landing Pages (`/thanh-toan-momo-{merchant}`) | 18K/quý | Content cũ 5-7 năm, ưu đãi hết hạn vẫn hiển thị |
+| Thổ Địa Ăn Uống (`/page/{id}`) | 67K/quý | Thin content quy mô lớn, quán đã đóng vẫn hiển thị |
 
----
+### Đối thủ đã đi trước
 
-## 4. "Hạt nhân" Soundbox & Hệ sinh thái SME
+ZaloPay đã build merchant directory tại `zalopay.vn/doi-tac/{merchant}` cho các chuỗi F&B nhưng chưa khai thác BNPL angle. Các BNPL players quốc tế (Klarna, Afterpay, Affirm) đã có merchant directory tích hợp điều kiện BNPL per merchant.
 
-Soundbox không chỉ là một thiết bị thanh toán, mà là trung tâm của trang Merchant SME.
-
-### 🔊 Soundbox Experience Module
-- **Value Prop cho User:** "Thanh toán qua Loa - Nhận quà Mega". Quảng bá việc nghe thông báo tiếng là xác nhận giao dịch an toàn nhất.
-- **Value Prop cho Merchant:** 
-    - **Revenue Management:** Quản lý dòng tiền thông minh qua App.
-    - **Tax Simplified:** Hỗ trợ khai báo thuế cho hộ kinh doanh.
-    - **Merchant Loan:** Cơ hội tiếp cận các khoản vay dựa trên lịch sử giao dịch qua Soundbox.
-
-### 💰 Chiến dịch Mega2026 & VTS
-- **VTS Cashback Loop:** Quảng bá mạnh mẽ: *"Dùng Ví Trả Sau thanh toán qua Soundbox tại đây để được hoàn tiền X% (Độc quyền Mega2026)"*.
-- **Gamification (SEO Boosting):** 
-    - **Mission Search & Claim:** Thiết kế nhiệm vụ yêu cầu user tìm kiếm từ khóa trên Google (vd: "Ví Trả Sau MoMo [Tên Merchant]") -> Tìm và click vào kết quả từ website momo.vn.
-    - **Reward:** Sau khi truy cập qua search, user sẽ nhận được Code ưu đãi hoặc lượt quay Mega.
-    - **Lợi ích:** Tăng Click-Through Rate (CTR) từ Google, tăng tín hiệu Authority cho Website và mang lại traffic chất lượng cao.
+MoMo có cơ hội là BNPL-first merchant directory đầu tiên tại Việt Nam.
 
 ---
 
-## 5. Chiến lược Win-Win & Xây dựng Thực thể (Entity Building)
+## 3. Định Hướng Dự Án
 
-Để tối ưu hóa SEO và GEO, Merchant Page cần được công nhận là một **"Thực thể (Entity)"** có thật và uy tín thông qua sự xác nhận từ chính đối tác.
+### Dự án này phục vụ điều gì?
 
-### 5.1. Offsite & Link Exchange (Digital Authority)
-- **Partner Backlinks:** Khuyến khích/Yêu cầu đối tác đặt link trỏ về Merchant Page của họ trên MoMo từ website chính thức của đối tác (thường ở phần "Hệ thống cửa hàng" hoặc "Phương thức thanh toán").
-- **Social Cross-post:** Đối tác chia sẻ link Merchant Page lên Fanpage/Zalo OA khi thông báo về các chương trình ưu đãi hoặc thanh toán MoMo.
-- **Lợi ích:** Tạo nguồn backlink chất lượng cao, cực kỳ uy tín (Relevant Backlinks), giúp Merchant Page rank top nhanh chóng.
+**Product job cốt lõi:** Đóng kín O2O loop - từ offline awareness (OOH, Soundbox) đến online confirmation (merchant mini-site) đến offline transaction (thanh toán tại quán). Mỗi bước trong loop phải friction-free: user không cần đọc nhiều, không cần navigate, không cần tìm kiếm thêm.
 
-### 5.2. Offline-to-Web Entity (Physical Trust)
-- **QR Code tại điểm bán (POSM):** Đặt QR Code dẫn về Merchant Page ngay tại quầy thu ngân hoặc trên bàn (kèm theo Soundbox).
-    - Thông điệp: *"Quét để xem Menu & Nhận hoàn tiền Mega"*.
-- **Entity Signals:** Việc user quét QR tại tọa độ GPS của cửa hàng và truy cập vào Merchant Page tạo ra tín hiệu cực mạnh cho Google/AI Search về mối quan hệ giữa địa điểm vật lý và trang Web.
+4 outcome phát sinh từ loop được đóng kín:
 
-### 5.3. Giá trị Win-Win
-- **Đối với Đối tác:** 
-    - Có một trang giới thiệu chuyên nghiệp, chuẩn SEO mà không tốn chi phí xây dựng.
-    - Được hưởng lợi từ lượng traffic khổng lồ của MoMo.
-    - Tăng tỷ lệ chuyển đổi tại quầy nhờ các chương trình hoàn tiền (Mega2026, VTS).
-- **Đối với MoMo:**
-    - Sở hữu hệ thống Entity mạnh mẽ, khó bị sao chép bởi đối thủ.
-    - Tăng Authority cho toàn bộ domain momo.vn.
-    - Khép kín hành trình trải nghiệm từ Online (Web) đến Offline (Store).
+**① Inbound Acquisition:** Product xuất hiện đúng lúc user đang search tên quán sau khi tiếp xúc OOH - capture intent ở điểm nóng nhất.
 
----
+**② VTS Activation:** VTS Module embedded trong product như một tính năng tự nhiên - không phải banner promotion. User biết quán nhận VTS → 1 tap kích hoạt. PLG: product converts, không phải campaign.
 
-## 6. Hành trình trải nghiệm O2O (User Journey)
+**③ GEO/AI Visibility:** FAQ + HowTo Schema cho phép mini-site trả lời trực tiếp trong AI Overview - MoMo là nguồn xác nhận merchant payment method đáng tin cậy nhất.
 
-### Scenario: User tìm kiếm quán ăn cuối tuần
-1.  **Search (Online):** User search "Quán nướng nhận Ví Trả Sau gần đây".
-2.  **Discovery (Web):** Landing vào Merchant Page của quán nướng. Thấy menu ngon, rating 4.5* và đặc biệt là có **Badge Hoàn tiền Mega2026 khi quét Soundbox**.
-3.  **Decision:** User quyết định đến quán.
-4.  **Action (Offline):** Tại quán, user chọn món -> Quét QR MoMo -> Chọn nguồn tiền Ví Trả Sau.
-5.  **Confirmation:** Loa Soundbox thông báo: *"MoMo nhận thành công 500.000 đồng"*.
-6.  **Loyalty:** User nhận thông báo hoàn tiền vào túi thần tài/ví và cộng điểm loyalty.
+**④ Web Hygiene:** Consolidate legacy systems về 1 architecture sạch, giải phóng crawl budget, phục hồi site quality cho toàn domain momo.vn.
+
+### Dự án này KHÔNG phải
+
+- Không xây lại Thổ Địa Ăn Uống - store-level discovery ngoài scope
+- Không là CMS cho merchant tự quản lý content
+- Không phải store locator hay agent directory
+- Không phải trang marketing/campaign
 
 ---
 
-## 7. Lộ trình Phát triển (Roadmap)
+## 4. JTBD Analysis
 
-### Phase 1: Interactive Foundation
-- Triển khai Module Rating & Review từ App Feed.
-- Thêm module Soundbox Value Prop & Mega2026 Promo.
-- Thử nghiệm Digital Menu cho nhóm FnB Pilot.
+### Job #1: Xác nhận merchant có nhận MoMo/VTS không
 
-### Phase 2: Merchant Empowerment
-- Ra mắt tính năng "Suggest Edit" cho chủ quán.
-- Triển khai PIC Approval Dashboard trên MoSpark.
-- Tích hợp Merchant Loan teaser cho các Merchant có Soundbox.
+> "Tôi sắp đến {Merchant} và muốn biết có thanh toán Ví Trả Sau được không trước khi đi."
 
-### Phase 3: B2B2C Ecosystem
-- Programmatic SEO cho 10.000+ SME Merchants.
-- Hệ thống Recommendation Engine: "Merchant tương tự có ưu đãi VTS tốt hơn".
+| Dimension | Nội dung |
+|---|---|
+| Functional | Xác nhận phương thức thanh toán được chấp nhận |
+| Emotional | Tránh bất ngờ, chủ động kế hoạch chi tiêu |
+| Trigger | Sắp đến cửa hàng, đang so sánh nơi mua hàng |
+| Serve bằng | `momo.vn/merchant/{slug}` - Payment Methods + VTS highlight |
+
+### Job #2: Tìm ưu đãi MoMo tại một merchant cụ thể
+
+> "MoMo có ưu đãi gì tại {Merchant} không? Tôi muốn dùng VTS có lợi hơn không?"
+
+| Dimension | Nội dung |
+|---|---|
+| Functional | Tìm ưu đãi cashback, deal, hoàn tiền |
+| Emotional | Tối ưu chi tiêu, cảm giác thông minh tài chính |
+| Trigger | Chuẩn bị mua sắm, thấy thông báo deal từ MoMo |
+| Serve bằng | VTS Promotion module + dynamic deal block per merchant mini-site |
+
+### Job #3: Khám phá merchant chấp nhận BNPL theo danh mục
+
+> "Tôi muốn biết những đâu cho mua trước trả sau bằng Ví Trả Sau MoMo."
+
+| Dimension | Nội dung |
+|---|---|
+| Functional | Duyệt merchant theo category, tìm nơi có VTS |
+| Trigger | Muốn mua hàng nhưng chưa chọn nơi |
+| Serve bằng | `momo.vn/merchant/{category}` - Category listing với VTS filter |
 
 ---
 
-### 🔗 Reference & Alignment
-- **Strategic Vision:** [[01_STRATEGIC_PLAN/web_growth_strategy_brd|Web Growth Strategy BRD]] & [[01_STRATEGIC_PLAN/web-momo-okrs-2026|Web OKRs 2026]]
-- **Operational Direction:** [[01_STRATEGIC_PLAN/seo-geo-direction|SEO & GEO Direction]]
-- **Content Playbook:** [[01_STRATEGIC_PLAN/momo-content-plan-strategy|Content Strategy Plan (Utility Layer)]]
-- **Technical Platform:** [[04_MOSPARK_PLATFORM/mospark_master|MoSpark Master]] & [[04_MOSPARK_PLATFORM/mospark_genai_content|GenAI Content Engine]]
-- **Execution Tracking:** [[04_MOSPARK_PLATFORM/mospark_seo_geo_playbook|SEO/GEO Playbook]] & [[04_MOSPARK_PLATFORM/mospark_seo_inventory|SEO Inventory]]
-- **Related Use Cases:** [[05_USE_CASE_MOMO/soundbox-brd|Soundbox BRD]], [[05_USE_CASE_MOMO/vi-tra-sau-brd|Ví Trả Sau BRD]] & [[05_USE_CASE_MOMO/cinema-brd|Cinema BRD]]
+## 5. Kiến Trúc Web
+
+### URL Architecture
+
+| Cấp | URL Pattern | Vai trò |
+|---|---|---|
+| Hub | `momo.vn/merchant` | Discovery + Navigation |
+| Category | `momo.vn/merchant/{ten-category}` | Consideration + Listing |
+| Merchant Mini-site | `momo.vn/merchant/{ten-merchant}-{dia-diem}-{id}` | Decision + Conversion (VTS) |
+
+**Slug pattern:** `{ten-merchant}-{dia-diem}-{id}` cho phép differentiate merchant cùng tên ở nhiều địa điểm. Ví dụ: `momo.vn/merchant/bo-la-lot-ca-loc-nuong-nga-5-43`.
+
+### Danh mục (15 nhóm)
+
+F&B (Nhà hàng, Quán ăn, Cà phê, Trà sữa) - Bách hóa, Cửa hàng tiện lợi, Siêu thị - Giáo dục, Tài chính & Bảo hiểm, Giải trí, Du lịch & Đi lại - Mua sắm, Làm đẹp & Sức khỏe.
+
+### Cấu trúc Merchant Page
+
+| Thành phần | Loại | Mô tả |
+|---|---|---|
+| NAP (Merchant Data) | Platform Data | Logo, tên, category, địa chỉ |
+| VTS Card | Platform Module - Fixed | Thông tin ưu đãi, lợi ích VTS, CTA kích hoạt |
+| Long Content | GenAI Content | Giới thiệu chuyên sâu về merchant (150-300 từ) |
+| FAQ & Hướng dẫn | Platform Module - Fixed | Câu hỏi thường gặp, hướng dẫn thanh toán |
+| Đối tác liên quan | Platform Module | Danh sách merchant cùng danh mục |
+
+### Schema Requirements
+
+| Cấp trang | Schema bắt buộc |
+|---|---|
+| Hub `/merchant` | ItemList, FAQPage, Organization, BreadcrumbList |
+| Category `/merchant/{cat}` | ItemList, FAQPage, HowTo, BreadcrumbList |
+| Merchant `/merchant/{slug}` | LocalBusiness, FAQPage, HowTo, Offer, BreadcrumbList |
+
+---
+
+## 6. Success Metrics
+
+**North Star Metric:** VTS Activations từ `/doi-tac` (attributed via Appsflyer)
+
+| Metric | Target (90 ngày post-launch) | Source |
+|---|---|---|
+| Organic Traffic | Duy trì ≥ 85K/quý (không giảm net) | GSC |
+| VTS Module CTR | ≥ 3% | Analytics |
+| Merchant Pages rank Top 5 cho P1 queries | ≥ 80% | GSC |
+
+**Conversion Funnel:**
+```
+/merchant/{slug} page view → payment_cta_click → App open → MoMo payment at store → Transaction
+```
+
+---
+
+## 7. Dependencies & Constraints
+
+| Dependency | Mô tả | Blocker? |
+|---|---|---|
+| VTS merchant list (updated) | List merchants chấp nhận VTS chính xác | Có - quyết định VTS badge |
+| VTS Terms Data | Data lãi suất, hạn mức, phí, điều kiện từ VTS PO. YMYL - sai data = legal risk | Có |
+| PAGE_ID → Merchant mapping | Export từ Thổ Địa DB cho audit | Có - cần cho legacy audit |
+| Web Platform readiness | Landing Page Builder sẵn sàng cho /doi-tac | Có |
+| Deep Link specs per merchant | Onelink URLs cho CTA vào đúng merchant flow | Có |
+
+### Constraints
+
+- Content production trên Landing Page Builder - không custom development
+- GenAI Content phải qua review trước publish - không auto-publish
+- VTS badge chỉ được gắn sau khi verify với VTS Product team
+- Schema markup inject qua platform template, không hardcode
 
 ---
 
 ## Change Log
-- **Tháng 5/2026:** Khởi tạo tài liệu và chuẩn hóa cấu trúc thư mục.
-- **Tháng 5/2026 (v1.1):** Đồng bộ toàn bộ liên kết tài liệu quan trọng xuống cuối bài (Reference & Alignment).
-
+- **Tháng 5/2026 (v1.4):** Xóa Tracking Event Schema + AB Test Hypothesis - thuộc PRD/Action Plan, không phải BRD.
+- **Tháng 5/2026 (v1.3):** Xóa Risk Assessment - thuộc PRD/Action Plan, không phải BRD.
+- **Tháng 5/2026 (v1.2):** Reframe Executive Summary theo Problem Framing + PLG mindset. Thêm Tracking Event Schema + AB Test Hypothesis. Cập nhật URL /merchant và mini-site concept.
+- **Tháng 5/2026 (v1.1):** Khởi tạo tài liệu, chuẩn hóa framework.

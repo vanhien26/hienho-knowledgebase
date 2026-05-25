@@ -3,7 +3,7 @@ title: "MoSpark SEO Keyword Inventory: Bản đồ Tài nguyên & Thị phần (
 description: >
   Hệ thống quản lý tài nguyên từ khóa, thị phần (SoV) và tiềm năng tăng trưởng. 
   Điểm bắt đầu và trục định hướng cho mọi dự án Web Growth trên MoSpark.
-version: v4.5
+version: v4.7
 status: Active
 owner: Thuận (Out-App Traffic GPD Lead)
 support: Văn Hiến (SEO & GEO Lead)
@@ -23,7 +23,7 @@ Bản đồ Tài nguyên & Thị phần (SoV)
 > - **SEO/GEO Project ID:** `mospark-seo-inventory`
 > - **Owner:** GPD - Out-App Traffic (Thuận)
 > - **Governance:** Văn Hiến (SEO & GEO Lead)
-> - **Version:** 4.5 · May 2026
+> - **Version:** 4.7 · May 2026
 > - **Status:** Active - Platform Core Metadata
 >
 > - **SEO Score:** N/A | **Traffic:** N/A | **W2A:** N/A | **Last updated:** 2026-05-18
@@ -40,11 +40,49 @@ Chấm dứt việc làm nội dung "mù mờ" – Mọi Mini Web/Blog trên MoM
 
 ---
 
-## 2. Tổng Quan Vận Hành (Overview)
+## 2. Vị trí trong chuỗi MoSpark (Chain Position)
 
-SEO Inventory không chỉ là một bảng tính số liệu từ khóa, nó là **Module cốt lõi đầu não** nằm ngay tầng cao nhất của MoSpark. 
+SEO Inventory là **tầng đầu tiên** trong chuỗi vận hành MoSpark - module Market Intelligence. Không sản xuất content, không chạy quảng cáo. Nhiệm vụ duy nhất: **Cho biết đánh vào thị trường nào, ưu tiên Use Case nào, và MoMo đang chiếm bao nhiêu % thị trường.**
 
-Nó đóng vai trò là cơ sở dữ liệu gốc để thiết lập khung ưu tiên nguồn lực (Prioritization Framework) trước khi đội ngũ kỹ thuật bắt tay phát triển Mini Web hoặc Content Team bắt tay sản xuất Blog chi tiết thông qua công cụ AI.
+### 2.1. Mắc xích trong chuỗi
+
+```
+[Keyword Research] + [GA4 Traffic Data] + [Business Direction]
+                            ↓ INPUT
+            ┌───────────────────────────────┐
+            │   📊 SEO INVENTORY            │
+            │   - Market sizing             │
+            │   - Priority ranking          │
+            │   - Market Share tracking     │
+            │   - Cannibalization gate      │
+            └───────────────────────────────┘
+                            ↓ OUTPUT
+        ┌───────────────────┬───────────────────┐
+        │  ✍️ GenAI Content  │  🛡️ Quality Gate  │
+        │  Engine           │  (Scoring BRD)    │
+        │  Nhận: Priority   │  Nhận: Keyword    │
+        │  + keyword target │  ownership map    │
+        └───────────────────┴───────────────────┘
+                            ↓
+            ┌───────────────────────────────┐
+            │   📈 Performance Loop         │
+            │   Trả về traffic data →       │
+            │   cập nhật Market Share,      │
+            │   kích hoạt re-audit          │
+            └───────────────────────────────┘
+```
+
+### 2.2. Input - Output
+
+| Chiều | Dữ liệu | Nguồn | Chu kỳ |
+|---|---|---|---|
+| **INPUT** | Total search volume theo Use Case | Ahrefs / Google KP | Quarterly |
+| **INPUT** | Traffic thực tế MoMo | GA4 / BigQuery | Monthly |
+| **INPUT** | Business priority từ leadership | OKR / Company Direction | Quarterly |
+| **OUTPUT** | Priority Use Case list + Priority Score | → GenAI Content Engine | Quarterly |
+| **OUTPUT** | Market Share % theo Use Case | → Performance Loop | Monthly |
+| **OUTPUT** | Keyword ownership map | → Quality Gate (Cannibalization block) | Per project |
+| **OUTPUT** | Market sizing data | → BRD mới (North Star, KPI input) | Ad-hoc |
 
 ---
 
@@ -129,57 +167,96 @@ graph TD
 
 ---
 
-## 7. Kỹ thuật & Cấu trúc Dữ liệu (Database Schema)
+## 7. Dữ liệu cần duy trì & Trách nhiệm vận hành
 
-Để Web Platform Team (Tech) có thể lập trình cơ sở dữ liệu gốc cho SEO Inventory, cơ sở dữ liệu sẽ lưu trữ bảng thông tin từ khóa theo Schema chuẩn dưới đây:
+Ba nhóm dữ liệu cốt lõi cần được duy trì để SEO Inventory hoạt động đúng. Không phải DB schema - đây là **"dữ liệu gì cần sống"** và **ai chịu trách nhiệm**.
 
-### Bảng: `mospark_seo_inventory`
+### 7.1. Market Data (Thị trường)
 
-| Field | Type | Constraint | Description |
+Trả lời: *"Thị trường này lớn bao nhiêu? User đang tìm gì?"*
+
+| Dữ liệu | Mô tả | Cập nhật | Owner |
 |---|---|---|---|
-| `id` | INT | PRIMARY KEY, AUTO_INCREMENT | ID tự tăng của bản ghi. |
-| `use_case_id` | VARCHAR(50) | FOREIGN KEY | Liên kết với `use_case_id` của GenAI Content Engine & Ads Manager. |
-| `market_name` | VARCHAR(100) | NOT NULL | Tên thị trường (ví dụ: `FS - InsurTech`, `MDS - Merchant Page`). |
-| `cluster_name` | VARCHAR(100) | NOT NULL | Tên cụm chủ đề con (ví dụ: `Tra cứu Phạt Nguội`, `Giá BHXM`). |
-| `primary_keyword` | VARCHAR(100) | UNIQUE, NOT NULL | Từ khóa chính của cụm. Đóng vai trò gác cổng chống Cannibalization. |
-| `search_volume` | INT | NOT NULL, DEFAULT 0 | Lượng tìm kiếm trung bình hàng tháng (Google Search Volume). |
-| `current_position` | INT | DEFAULT 100 | Thứ hạng hiện tại của trang đích MoMo trên SERPs (Google). |
-| `momo_sov` | DECIMAL(5,2) | DEFAULT 0.00 | Thị phần Share of Voice hiện tại của MoMo (%). |
-| `target_sov` | DECIMAL(5,2) | NOT NULL, DEFAULT 40.00 | Thị phần SoV mục tiêu (%). |
-| `canonical_url` | VARCHAR(255) | UNIQUE, NOT NULL | URL trang đích duy nhất chịu trách nhiệm xếp hạng cho từ khóa này. |
-| `priority_score` | DECIMAL(5,2) | DEFAULT 0.00 | Điểm số ưu tiên do hệ thống tự động tính toán (SEO-ICE). |
-| `status` | ENUM | NOT NULL | Trạng thái: `Unexplored`, `In-Progress`, `Dominated`. |
+| Total Search Volume | Tổng lượng tìm kiếm/tháng của Use Case | Quarterly | Hiến |
+| Keyword Cluster map | Danh sách từ khóa chính + phụ theo Use Case | Per project | Hiến |
+| Search Intent mix | Tỷ lệ Informational / Commercial / Transactional | Quarterly | Hiến |
+
+Nguồn: Ahrefs, Google Keyword Planner, GSC.
+
+### 7.2. MoMo Performance (Hiệu suất thực tế)
+
+Trả lời: *"MoMo đang nắm bao nhiêu % thị trường?"*
+
+| Dữ liệu | Mô tả | Cập nhật | Owner |
+|---|---|---|---|
+| Total Traffic MoMo | Tổng traffic thực tế vào các URL của Use Case (sessions/tháng) | Monthly | Thuận |
+| Market Share % | Traffic MoMo / Total Search Volume × 100 | Monthly (tính tự động) | Thuận |
+| Keyword Ranking | Vị trí trang đích MoMo trên Google (từ khóa chính) | Quarterly | Hiến |
+| W2A CR | Tỷ lệ chuyển đổi Web-to-App của Use Case (%) | Quarterly | Hiến (define) / Thuận (track) |
+
+Nguồn: GA4/BigQuery (traffic), GSC (ranking), Appsflyer (W2A CR).
+
+### 7.3. Priority & Governance
+
+Trả lời: *"Làm cái nào trước? Ai làm? Tránh trùng lặp thế nào?"*
+
+| Dữ liệu | Mô tả | Cập nhật | Owner |
+|---|---|---|---|
+| Priority Score | Điểm ưu tiên Use Case/Cluster - tính tự động theo SEO-ICE (xem Section 8.1) | Quarterly (tính lại sau mỗi audit) | System |
+| Target Market Share | Mục tiêu % thị trường của Use Case (benchmark mặc định: 40%) | Per project | Hiến |
+| Canonical URL | URL chính thức được gán cho từng keyword cluster (dùng để chống Cannibalization) | Per project | Hiến |
+| Status | Unexplored / In-Progress / Dominated | Ongoing | Thuận |
+| Last verified | Ngày cập nhật dữ liệu lần cuối - alert khi quá 90 ngày | Ongoing | Thuận |
 
 ---
 
-## 8. Thuật toán Vận hành & Cơ chế Gatekeeper
+## 8. Cơ chế Tự động hóa
 
-Nhằm loại bỏ hoàn toàn các quyết định cảm tính và rủi ro kỹ thuật khi vận hành trên quy mô lớn, hệ thống áp dụng 3 thuật toán và cơ chế tự động hóa:
+Ba cơ chế giúp SEO Inventory vận hành mà không cần quyết định thủ công mỗi lần.
 
-### 8.1. Thuật toán ưu tiên nguồn lực (SEO-ICE Scoring)
-Hệ thống tự động xếp hạng thứ tự ưu tiên sản xuất (Priority Score) của các Cluster trong Use Case bằng công thức:
+### 8.1. Cơ chế Ưu tiên Nguồn lực (SEO-ICE)
 
-$$\text{Opportunity Score} = \text{Search Volume} \times (\text{Target SoV} - \text{Momo SoV}) \times \text{Expected W2A CR}$$
+**Nguyên lý: Use Case có Market Gap lớn + CR cao + Độ khó thấp = Làm trước.**
 
-$$\text{Priority Score} = \frac{\text{Opportunity Score}}{\text{Complexity (1-5)}}$$
+- **Market Gap:** Khoảng cách giữa Market Share mục tiêu và Market Share hiện tại, nhân với tổng search volume. Use Case càng xa mục tiêu và thị trường càng lớn → càng cần đầu tư ngay.
+- **W2A CR:** Tỷ lệ chuyển đổi Web-to-App thực tế của Use Case. Thị trường có CR cao → mỗi traffic thu về giá trị hơn. Do Hiến define theo baseline thực tế - không dùng số ước chừng.
+- **Độ khó triển khai (1-5):** Chia Priority Score để điều chỉnh theo chi phí thực tế. Dự án dễ → khuếch đại ưu tiên; dự án phức tạp → giảm tương đối.
 
-*   **Expected W2A CR:** Tỷ lệ chuyển đổi Web-to-App dự kiến (ví dụ: 8.5% cho InsurTech, 12% cho BNPL).
-*   **Complexity (1-5):** Độ khó kỹ thuật/độ khó nội dung (Dev/Content Effort).
-*   *Hệ thống tự động quét định kỳ hằng đêm, sắp xếp danh sách từ khóa có Priority Score từ cao xuống thấp để gợi ý thứ tự làm nội dung cho Content Team.*
+Sau mỗi quarterly audit, hệ thống tự tính lại Priority Score và sắp xếp danh sách Use Case từ cao xuống thấp - làm input cho GenAI Content Engine chu kỳ tiếp theo.
 
-### 8.2. Công thức tính Share of Voice (SoV Calculation Model)
-Thị phần Share of Voice (SoV) của MoMo trên từng cụm từ khóa/chủ đề được đo lường tự động qua chỉ số hiển thị thực tế từ Google Search Console (GSC) chia cho tổng nhu cầu tìm kiếm của thị trường:
+**Rubric độ khó (1-5):**
 
-$$\text{SoV MoMo} = \frac{\text{Impression (GSC)}}{\text{Total Volume Search}}$$
+| Điểm | Định nghĩa | Ví dụ |
+|---|---|---|
+| **1** | Chỉ cần viết/edit bài Blog. Không cần Dev. | Blog post đơn thuần, không có tool tương tác. |
+| **2** | Landing Page đơn giản. Dev < 1 sprint. Không tích hợp API ngoài. | Mini Web giới thiệu sản phẩm (BH xe máy). |
+| **3** | Landing Page + 1 tính năng tương tác (Calculator, Checker). Dev 1-2 sprint. | Trang Vay Nhanh có Loan Simulator. |
+| **4** | Mini Web nhiều trang (Hub + Spoke). Cần tích hợp API hoặc dữ liệu động. | Merchant Page (VTS) với dynamic slug. |
+| **5** | Hệ thống phức tạp, nhiều nguồn dữ liệu, cần luồng compliance riêng. Dev > 3 sprint. | Tra cứu CIC Score, Tra cứu Phạt Nguội. |
 
-*   **Impression (GSC):** Số lượt hiển thị thực tế của các URL thuộc Use Case trên kết quả tìm kiếm Google (được lấy qua API kết nối trực tiếp với Google Search Console).
-*   **Total Volume Search:** Tổng lượng tìm kiếm của cụm từ khóa (được lưu trong cơ sở dữ liệu SEO Inventory).
+### 8.2. Cơ chế đo Market Share
 
-### 8.3. Cơ chế gác cổng chống chồng chéo từ khóa (Keyword Cannibalization Guardrail)
-Để bảo vệ sức mạnh SEO của từng URL đích trên hệ thống, MoSpark CMS áp dụng một rào cản cứng (Hard Block):
-*   Khi PM khởi tạo một Use Case hoặc một bài viết mới, hệ thống tự động kiểm tra `primary_keyword` nhập vào với database `mospark_seo_inventory`.
-*   If từ khóa chính này **đã được gán cho một URL khác**, CMS sẽ lập tức **Block không cho lưu bản nháp** và hiển thị cảnh báo: 
-    > ⚠ *Từ khóa chính "{Keyword}" đã được tối ưu cho URL chính thống "{URL}". Để tránh chồng chéo từ khóa (Keyword Cannibalization), vui lòng chọn Primary Keyword khác hoặc tối ưu hóa trực tiếp trên URL cũ.*
+**Market Share % = Traffic MoMo thực tế / Tổng Search Volume × 100**
+
+Dùng traffic thực (GA4/BigQuery), không dùng Impressions (GSC). Impressions đếm mỗi lần URL xuất hiện kể cả vị trí thấp không ai click - không phản ánh user đã vào trang. Traffic = người dùng thực sự tiếp cận, sát hơn với W2A funnel và business outcome.
+
+**Ngưỡng đánh giá:**
+
+| Ngưỡng | Phân loại | Hành động |
+|---|---|---|
+| > 40% | Market Leader | Duy trì, mở rộng ngách. |
+| 20-40% | Cạnh tranh tốt | Scale content, tăng tốc. |
+| < 20% | Gap lớn | Audit lại Mini Web, xây nền tảng. |
+| 0% | Chưa có mặt | Ưu tiên xây mới hoàn toàn. |
+
+### 8.3. Cơ chế Chống Keyword Cannibalization
+
+Mỗi keyword cluster chỉ được gán cho đúng 1 URL trên momo.vn. Khi PM tạo content mới trên MoSpark CMS, hệ thống tự kiểm tra:
+
+- Keyword **chưa được gán** → cho phép tạo mới.
+- Keyword **đã có URL sở hữu** → block, hiển thị cảnh báo và trỏ về URL cũ để tối ưu thay vì tạo trang mới.
+
+Mục đích: Tránh tình huống 2 trang cùng tối ưu cho 1 từ khóa - chúng sẽ tự cạnh tranh nhau và không trang nào rank được.
 
 ---
 
@@ -198,7 +275,9 @@ $$\text{SoV MoMo} = \frac{\text{Impression (GSC)}}{\text{Total Volume Search}}$$
 *   **v4.2 (2026-05-18):** Tái cấu trúc chuẩn hóa: Đưa thông tin Nhân sự và Trạng thái (Status) lên khối Metadata đầu trang; chuyển mục Tầm nhìn (Vision) và North Star thành phần Executive Summary (Hiến).
 *   **v4.3 (2026-05-18):** Tinh chỉnh khối Metadata: Chuyển sang định dạng văn bản thuần không có ký tự blockquote `>` và loại bỏ toàn bộ các liên kết double-bracket trong khối Metadata theo chỉ đạo của anh Hiến.
 *   **v4.4 (2026-05-18):** Nâng cấp tài liệu lên hàng Master BRD: Thiết lập cấu trúc dữ liệu cơ sở dữ liệu gốc (12 trường dữ liệu), tích hợp Thuật toán ưu tiên SEO-ICE, Công thức tính SoV và Cơ chế gác cổng chống chồng chéo từ khóa (Hiến).
-*   **v4.5 (2026-05-18):** Tinh chỉnh mô hình tính toán SoV theo chỉ đạo thực tế của anh Hiến: SoV = Impression (GSC) / Total Volume Search (Hiến).
+*   **v4.5 (2026-05-18):** Tinh chỉnh mô hình tính toán SoV - phiên bản tạm thời dùng Impression/Volume (đã được thay thế ở v4.6).
+*   **v4.6 (2026-05-24):** P1 Fixes - Sửa formula Market Share = Traffic/Volume × 100; Bổ sung Complexity Rubric (1-5); W2A CR governance: do Hiến define theo baseline thực tế (Hiến).
+*   **v4.7 (2026-05-24):** Restructure toàn bộ document từ DB spec sang operational doc - (1) Rewrite Section 2: chain position diagram + Input/Output table; (2) Replace Section 7 DB Schema → "Dữ liệu cần duy trì & Trách nhiệm" với 3 nhóm: Market Data / MoMo Performance / Priority & Governance + RACI rõ ràng; (3) Simplify Section 8: bỏ field references, giữ nguyên lý vận hành (Hiến).
 
 ---
-*Maintained by: Văn Hiến (SEO & GEO Lead) | Last updated: 2026-05-18*
+*Maintained by: Văn Hiến (SEO & GEO Lead) | Last updated: 2026-05-24*

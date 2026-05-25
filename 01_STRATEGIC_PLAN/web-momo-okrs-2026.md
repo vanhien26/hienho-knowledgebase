@@ -1,58 +1,96 @@
-# 🎯 Web Momo Okrs 2026
-- OKRs 2026
+# Web MoMo OKRs 2026
 
-**Vision:** Scale MoMo to Vietnam's #1 financial destination (6M visitors) via an Agentic, SEO/GEO-first platform that turns underserved market needs into high-authority traffic.
+> - **Document:** Web MoMo OKRs 2026
+> - **Division:** Growth Platform Division (GPD)
+> - **Version:** 1.1 · May 2026
+> - **Status:** Active
+> - **Last updated:** 2026-05-23
+
+**Vision:** Scale MoMo to Vietnam's #1 financial destination with 6M monthly visitors via an Agentic, SEO/GEO-first platform that turns underserved market needs into high-authority traffic.
 
 ---
 
-## Objective 1: Accelerate MoMo’s Financial Authority to 6M Monthly Visitors
+## Objective 1: Accelerate MoMo's Financial Authority to 6M Monthly Visitors
+
 - **Focus:** Growth, scale, and market dominance.
 
 ### Key Results (KRs)
 
-| KR | Mô tả | Target | Baseline | Nguồn đo lường (SSOT) |
-|----|-------|--------|----------|-----------------------|
-| **KR 1.1** | Tăng lượng khách truy cập duy nhất hàng tháng (MUA) | **6.0 M** | 3.0 M | GA4 Raw Data (BigQuery) |
-| **KR 1.2** | Đạt thứ hạng cao cho 50+ "Financial Underserved Keywords" | **Top 3-5** | Đang đo | GSC API |
-| **KR 1.3** | Tỷ lệ chuyển đổi Web-to-App (Deep-link/Open App) | **12.5%** | 8.2% (Baseline 15/05/2026) | GA4 + Appsflyer |
-| **KR 1.4** | Lưu lượng truy cập từ AI Referral (ChatGPT, Gemini,...) | **Đo lường được** | 0 | Custom BQ Referrer Filter |
+| KR | Chỉ số cốt lõi | Mục tiêu chiến lược | Baseline |
+|----|----------------|---------------------|----------|
+| **KR 1.1** | Tăng trưởng lượng khách truy cập duy nhất hàng tháng MUA | **6.0 triệu MUA** | 3.0 triệu MUA |
+| **KR 1.2** | Chiếm lĩnh thứ hạng Top các từ khóa tài chính ngách | **Top 3 đến Top 5** | Đang ghi nhận |
+| **KR 1.3** | Tối ưu tỷ lệ chuyển đổi từ Web sang App | **12.5% chuyển đổi** | 8.2% (05/2026) |
+| **KR 1.4** | Xác lập đo lường lưu lượng trích dẫn từ AI Search | **Xác lập thành công** | 0 |
 
 ---
 
-## Chiến lược hành động (Action Plan)
+## Objective 2: Phát triển Nền tảng Web tích hợp Trí tuệ Nhân tạo phục vụ toàn doanh nghiệp
 
-1.  **Cấu trúc Nền tảng (Platform Structure):**
-    *   Xây dựng hệ thống sản xuất nội dung nhanh & chất lượng (SEO/GEO-first) qua MoSpark.
-    *   Tối ưu hóa hạ tầng kỹ thuật để các AI Engine dễ dàng trích dẫn (GEO Optimization).
-2.  **Hợp tác & Kết nối (Enablement):**
-    *   Phối hợp với Growth Team quốc tế để thu hút user mới và tái kích hoạt (reactivation).
-    *   Làm việc với các BUs tài chính để đồng bộ hóa nội dung có thẩm quyền cao (High-authority content).
-3.  **Tự doanh Nội dung (Own Content Team):**
-    *   Thử nghiệm qua các Niche Use Case (ví dụ: Phạt nguội, CIC) để kiểm chứng hiệu quả.
-    *   Tiến hành cải tổ toàn diện (Revamp) website momo.vn để tối ưu trải nghiệm cho người dùng mới.
+- **Focus:** AI-powered scale, capability enablement, and user stitching.
 
----
+### Key Results (KRs)
 
-## Nguyên tắc đo lường & Hypothesis Tăng trưởng MUV
-
-**Nguyên tắc cốt lõi:**
-- **Single Source of Truth:** Mọi số liệu báo cáo lên sếp Công đều phải lấy từ **BigQuery** (tuyệt đối không dùng UI GA4 để tránh sai số sampling và thresholding).
-- **Metric chính:** Monthly Unique Active Users (MUA) đếm dựa trên `user_pseudo_id` (định danh thiết bị/trình duyệt của người dùng ẩn danh).
-
-**Giả thuyết (Hypothesis) về Đo lường & Tăng trưởng:**
-> *"Nếu chúng ta chuẩn hóa bộ đo lường sang BigQuery bằng metric `user_pseudo_id` kết hợp với tín hiệu tương tác thực tế (`session_engaged = 1`), chúng ta sẽ nhìn thấy chính xác 100% tệp người dùng ẩn danh từ kênh Out-App mà không bị nhiễu dữ liệu (bot/bounce). Nền tảng dữ liệu minh bạch này sẽ giúp team tối ưu hóa chính xác hiệu suất của từng cụm nội dung/tiện ích, từ đó tạo ra động lực tăng trưởng thực chất để vươn tới mốc 6 triệu MUA."*
-
-**3 Key Results (KRs) hỗ trợ Hypothesis:**
-- **KR 1 (Data Accuracy):** Hoàn thiện 100% Data Pipeline tự động hóa báo cáo MUA hàng tháng lấy nguồn trực tiếp từ BigQuery bằng truy vấn `COUNT(DISTINCT user_pseudo_id)`.
-- **KR 2 (Traffic Quality):** Đảm bảo chất lượng traffic thu về bằng cách duy trì tỷ lệ [X]% trong tổng số `user_pseudo_id` có phát sinh phiên hoạt động gắn kết (`session_engaged = 1`).
-- **KR 3 (Growth Attribution):** Đo lường và phân bổ chính xác (Attribution) tỷ trọng đóng góp vào 6 triệu MUA từ các nhóm Use Case chiến lược (VD: Phạt Nguội, CIC, Ví Trả Sau) dựa hoàn toàn trên Raw Data.
-- **Baseline Date:** Dữ liệu chuẩn bắt đầu từ **23/04/2026** (Full Funnel Pipeline Go-live).
+| KR | Chỉ số cốt lõi | Tiêu chuẩn hoàn thành |
+|----|----------------|-----------------------|
+| **KR 2.1** | Đồng bộ quy trình xây dựng Mini Web cho toàn bộ Cell Teams | 100% Mini Web mới đạt chuẩn SEO và GEO theo mô hình tự vận hành |
+| **KR 2.2** | Vận hành chuỗi sản xuất nội dung tự động bằng GenAI | Hệ thống chạy ổn định và sản xuất nội dung chất lượng cao ở quy mô lớn |
+| **KR 2.3** | Triển khai chuyên trang Trợ giúp Khách hàng Help Center trên Web | Hoàn tất tối ưu hóa toàn diện theo các tiêu chuẩn SEO và GEO cốt lõi |
+| **KR 2.4** | Hoàn thiện Module định danh người dùng Identity Platform | Vận hành Module hợp nhất hành vi người dùng ẩn danh để cá nhân hóa |
 
 ---
 
-## Liên kết vận hành
-- Điều phối dự án: [[orchestrator_engine]] — Pipeline Board theo dõi tiến độ Use Cases
-- Đo lường Web Layer: [[web-tracking]] — GTM Config, Umami, AI Traffic Mapping
-- Chuyển đổi Web→App: [[Web2App-Pipeline]] — CTA Design, Deeplink, Funnel CR
-- Quy trình hàng ngày: [[operational_routine]] — Daily/Weekly/Monthly cadence
-- Master Context: [[hienho_master_doc]] — Mục 5 (Dự án đang triển kh
+## Objective 3: Xác lập SEO và GEO thành năng lực cạnh tranh cốt lõi trên kênh Web
+
+- **Focus:** Quality governance, methodology validation, and AI search attribution.
+
+### Key Results (KRs)
+
+| KR | Chỉ số cốt lõi | Tiêu chuẩn hoàn thành |
+|----|----------------|-----------------------|
+| **KR 3.1** | Áp dụng chính sách quản trị đường dẫn URL toàn công ty | Đảm bảo sức khỏe kỹ thuật của toàn bộ website được quản lý có hệ thống |
+| **KR 3.2** | Vận hành khung kiểm soát và kiểm định tiêu chuẩn SEO và GEO | 100% các dịch vụ mới trên Web Platform vượt qua bộ lọc kiểm định chất lượng |
+| **KR 3.3** | Đo lường hiệu quả trích dẫn và lưu lượng giới thiệu từ AI Search | Báo cáo tự động chi tiết tỷ lệ trích dẫn cho từng dịch vụ trên nền tảng |
+
+---
+
+## Objective 4: Đảm bảo hạ tầng Web Platform vận hành ổn định, bảo mật và sẵn sàng cao
+
+- **Focus:** DevConv, brand consistency, and security compliance.
+
+### Key Results (KRs)
+
+| KR | Chỉ số cốt lõi | Tiêu chuẩn hoàn thành |
+|----|----------------|-----------------------|
+| **KR 4.1** | Vận hành ổn định công cụ Admin Panel và nền tảng WebApp | Đảm bảo cung cấp dịch vụ liên tục cho toàn bộ các đơn vị trong công ty |
+| **KR 4.2** | Phát triển và nâng cấp nền tảng thiết kế Mobase V2 | Đạt tính nhất quán UI/UX theo Brand Guideline và hỗ trợ phát triển bằng AI |
+| **KR 4.3** | Chuẩn hóa mã nguồn mẫu Boilerplate tích hợp quy chuẩn AI | Các Cell Teams tự xây dựng Mini Web độc lập không cần hỗ trợ kỹ thuật |
+| **KR 4.4** | Quản lý mã nguồn an toàn và tuân thủ bảo mật trên GitLab | Đạt 100% tiêu chuẩn an ninh thông tin và phối hợp kiểm soát chất lượng cùng ITC |
+
+---
+
+## Chiến lược hành động
+
+1. **Cơ sở hạ tầng:** Xây dựng hệ thống sản xuất nội dung quy chuẩn trên MoSpark và tối ưu hạ tầng kỹ thuật phục vụ AI Search.
+2. **Hợp tác & Kết nối:** Phối hợp cùng Growth Team và các BU tài chính để đồng bộ nội dung có thẩm quyền cao.
+3. **Tự doanh Nội dung:** Thử nghiệm qua Phạt nguội hoặc CIC để kiểm chứng hiệu quả thực tế trước khi cải tổ toàn diện website momo.vn.
+
+---
+
+## Nguyên tắc Đo lường
+
+- **Single Source of Truth:** Toàn bộ số liệu MUA lấy từ BigQuery - loại bỏ sai số lấy mẫu của GA4 UI.
+- **Metric chính:** Monthly Unique Audience (MUA) - đo lường người dùng thực tế từ Out-App channel.
+- **Growth Attribution:** Phân bổ đóng góp theo từng Use Case chiến lược (Phạt Nguội, CIC, Ví Trả Sau).
+- **AI Referral Baseline:** Thiết lập pipeline đo lường trích dẫn từ AI Search (Google AI Overviews, ChatGPT, Perplexity) - hiện tại bằng 0.
+
+---
+
+## Change Log
+
+| Phiên bản | Ngày | Nội dung thay đổi |
+|-----------|------|-------------------|
+| **v1.0** | 2026-05-13 | Khởi tạo OKRs 2026. |
+| **v1.1** | 2026-05-23 | Chuẩn hóa format: xóa emoji, xóa Obsidian links, đơn giản hóa phần đo lường để phù hợp C-Level. |
+
+*Maintained by: SEO & GEO Lead, Out-App Traffic, GPD | Last updated: 2026-05-23*

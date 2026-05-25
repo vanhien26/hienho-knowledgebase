@@ -68,6 +68,7 @@ MoSpark không chỉ là một CMS, mà là một **Hệ điều hành Tăng tr�
 ---
 
 ## 4. Tài liệu Liên kết
+*   **Strategic Deck (C-Level / Cell Team):** [[01_STRATEGIC_PLAN/mospark-strategic-deck|MoSpark Strategic Deck]] — kèm [[01_STRATEGIC_PLAN/mospark-strategic-deck#Website Proposal Outline (C-Level)|Website Proposal Outline]]
 *   **Chiến lược Nội dung:** [[01_STRATEGIC_PLAN/momo-content-plan-strategy|MoMo Content Strategy]]
 *   **Kỹ thuật SEO/GEO:** [[04_MOSPARK_PLATFORM/mospark_seo_geo_playbook|SEO/GEO Playbook]]
 *   **Hệ thống Quảng cáo:** [[04_MOSPARK_PLATFORM/mospark_ads_manager|Ads Manager Doc]]
