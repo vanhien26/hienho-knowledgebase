@@ -4,23 +4,24 @@
 > - **Main URL:** momo.vn/phat-nguoi
 > - **Division:** PS (Payment Services)
 > - **Use Case:** Phạt Nguội
-> - **Owner:** GPD - Web Platform
-> - **Governance:** Web Product Lead
-> - **Version:** 3.4 - Tháng 5/2026
+> - **Owner:** GPD - Out-App Traffic
+> - **Governance:** SEO & GEO Lead
+> - **Version:** 3.6 - 2026-05-29
 > - **Status:** Phase 1 LIVE - Pilot & Scale
 
 ---
 
 ## 1. Executive Summary
 
-### 1.1 Elegant Problem Framing
-- **Vấn đề cốt lõi:** Người dân cực kỳ sợ bị phạt nguội nhưng không có một công cụ tra cứu nào đủ uy tín, dễ dùng và trả kết quả chính xác theo thời gian thực (real-time). Các web tư nhân thì quảng cáo rác, web nhà nước thì hay sập.
-- **Giải pháp (The "What"):** Xây dựng một trang tra cứu phạt nguội "1 chạm" trên MoMo, lấy dữ liệu trực tiếp từ TTDK. Nhanh, chuẩn xác và không quảng cáo.
+### Situation
 
-### 1.2 Situation & Complication
-MoMo sở hữu partnership độc quyền với TTDK (Trung tâm Đăng Kiểm Việt Nam). Tuy nhiên, nếu chỉ để tính năng trong App, MoMo sẽ bỏ sót ~3.56M lượt search/tháng từ Google. Các site bên thứ ba (phatnguoi.com) đang chiếm trọn traffic. MoMo cần một "Web Tool" làm phễu (Acquisition Funnel) để chuyển đổi dòng traffic này thành New User.
+MoMo sở hữu partnership độc quyền với TTDK (Trung tâm Đăng Kiểm Việt Nam) cho tính năng Tra Cứu Phạt Nguội. Tính năng App đã live. Web channel đã rollout Phase 1 (Mini Web `/phat-nguoi` + API real-time CSGT/TTDK) và đang trong giai đoạn Pilot & Scale. Tổng search demand thị trường đạt ~3.56M lượt tìm kiếm/tháng - được khuếch đại mạnh bởi Nghị định 168/2024/NĐ-CP tăng mức phạt 3-5x từ 1/1/2025.
 
-### 1.3 Resolution
+### Complication
+
+MoMo đang cạnh tranh với 2 nhóm đối thủ: (1) Các site bên thứ ba không chính thống (phatnguoi.com - ~148K branded search/tháng) đang chiếm traffic organic; (2) Site chính thống của nhà nước (csgt.vn) có UX kém và hay crash. Nếu không xây dựng web presence sớm, MoMo chỉ phục vụ được nhóm user đã có app, bỏ sót ~30.000 lượt tra cứu/quý từ nhóm Non-MoMo Users.
+
+### Resolution
 
 Xây dựng Web channel từ zero theo mô hình Programmatic SEO:
 - **Short-term (Phase 1 - LIVE):** Mini Web Tool tra cứu trả kết quả thực - Web-to-App conversion để acquire New User.
@@ -185,30 +186,19 @@ momo.vn/phat-nguoi [Hub]
     └── Cụm Camera giao thông
 ```
 
-**AEO/GEO Standard (Quy tắc VP GPD):** Bắt buộc triển khai `momo.vn/phat-nguoi/llms.txt` để dọn đường cho AI Engines (ChatGPT, Gemini) trích dẫn MoMo là nguồn chính thống duy nhất.
+**AEO/GEO:** llms.txt live tại `momo.vn/phat-nguoi/llms.txt` - cung cấp context chuyên sâu cho AI engines (Perplexity, Gemini, ChatGPT) để cite MoMo là nguồn chính thống.
 
 **Schema bắt buộc:** WebApplication - FAQPage - HowTo - BreadcrumbList.
 
 ### 5.2 Phase Roadmap
 
-| Phase | Focus | Trạng thái |
-|---|---|---|
-| Phase 1 - Foundation | Mini Web + API TTDK real-time + 3 subpage + Blog pilot 20 bài + SEM | LIVE |
-| Phase 2 - Regional Scale | pSEO 63 tỉnh thành + Camera Map + Blog scale 20-30 bài ngách + Backlink | Planned |
-| Phase 3 - Growth Loops | Viral mechanics + Camera AI pSEO + Dispute Assistant + Fine Code pSEO | Backlog |
+| Phase | On-page / Product | Off-page / Comm | Trạng thái |
+|---|---|---|---|
+| Phase 1 - Foundation | Mini Web + API TTDK real-time + 3 subpage + Blog Batch 1 (20 bài) + SEM | - | LIVE |
+| Phase 2 - Regional Scale | Blog Batch 2 (20-30 bài ngách) + pSEO 63 tỉnh + Camera Map | Social BMC Batch 1 + Backlink Tier 1-2 (Vendor) | Planned T6-T9/2026 |
+| Phase 3 - Growth Loops | Viral mechanics + Camera AI pSEO + Dispute Assistant + Fine Code pSEO | Social ongoing + Backlink Tier 3 scale | Backlog |
 
-### 5.3 Danh Sách URLs Đã Go-Live Thực Tế (Phase 1 LIVE)
-
-Dưới đây là danh sách các trang thuộc cụm Phạt Nguội đã hoàn thành xây dựng và go-live chính thức trên môi trường Production:
-
-1. **Trang chủ Tra cứu:** [https://www.momo.vn/phat-nguoi](https://www.momo.vn/phat-nguoi)
-2. **Trang ngách Ô tô:** [https://www.momo.vn/phat-nguoi/o-to](https://www.momo.vn/phat-nguoi/o-to)
-3. **Trang ngách Xe máy:** [https://www.momo.vn/phat-nguoi/xe-may](https://www.momo.vn/phat-nguoi/xe-may)
-4. **Trang ngách Xe máy điện:** [https://www.momo.vn/phat-nguoi/xe-may-dien](https://www.momo.vn/phat-nguoi/xe-may-dien)
-5. **Trang Hub Blog:** [https://www.momo.vn/phat-nguoi/blog](https://www.momo.vn/phat-nguoi/blog) và các trang bài viết chi tiết (Blog detail).
-
-
-### 5.4 Growth & PLG Tactics (Phase 3)
+### 5.3 Growth & PLG Tactics (Phase 3)
 
 **Viral Mechanics:**
 - Viral Share Loop: Nút "Chia sẻ kết quả xe sạch" kèm link pre-filled biển số - tạo organic traffic từ bạn bè share.
@@ -250,10 +240,6 @@ Search -> /phat-nguoi -> Nhập biển số -> Kết quả tra cứu -> CTA "Nh�
 -> App open (Onelink) -> Đăng ký push notification -> MAU activation
 ```
 
-### 6.3 Mandatory Tracking & AB Test Hypothesis (MoSpark Standard)
-- **Hypothesis (Giả thuyết test):** Nếu CTA chuyển từ "Mở App" sang "Cài đặt Cảnh báo Phạt Nguội Tự Động", tỷ lệ W2A sẽ tăng 40% vì đánh trúng Nỗi sợ (Fear-driven intent) của người dùng.
-- **Tracking Event Schema:** Mọi lượt Tra cứu thành công / Không có lỗi / Bị lỗi hệ thống đều phải bắn event lên Umami & GA4 để đo lường Funnel Drop-off.
-
 ---
 
 ## 7. Dependencies & Constraints
@@ -262,11 +248,6 @@ Search -> /phat-nguoi -> Nhập biển số -> Kết quả tra cứu -> CTA "Nh�
 |---|---|---|
 | API TTDK Real-time | Widget tra cứu hoạt động thực (nhập biển số - trả kết quả vi phạm). SLA uptime > 99% | Có - core product value |
 | Partnership exclusivity TTDK | Điều kiện pháp lý duy trì lợi thế competitive | Có - strategic |
-
-### 7.1 Go-to-Market: SPA Framework (Service Productization)
-- **reSearch / Strategy:** Phân tích nhu cầu 3.56M volume/tháng và các điểm mù của đối thủ (UX kém).
-- **Pilot / Plan (T5/2026):** Triển khai Mini Web `/phat-nguoi` + 20 bài blog + Test API. **(ĐÃ HOÀN THÀNH VÀ CHỨNG MINH ĐƯỢC TRAFFIC MẠNH)**
-- **Action / Amplify (T6/2026):** Scale pSEO 63 tỉnh thành và Camera Map để thống trị toàn bộ ngách (Dominance).
 | GA4 + Appsflyer W2A tracking | Track conversion từ web sang app. Phân tách organic vs SEM traffic | Có - đo KPI |
 | Legal Disclaimer trên Web | Web results là tham khảo (Lite mode). Evidence chính thức chỉ trong app | Có - YMYL |
 | pSEO Infrastructure | Build hàng ngàn trang địa phương + camera cần platform support | Có cho Phase 2 |
@@ -398,6 +379,75 @@ Theo Foundation Checklist chuẩn SEO Inventory. Mọi bài blog Phạt Nguội 
 
 ---
 
+## 10. Comm Activities - Off-Page Growth
+
+3 channel amplification song song - On-page (Section 9) là nền, Off-page (Section này) là nhân số.
+
+### 10.1 Social Outreach - Internal BMC
+
+**Mục tiêu:** Khuếch đại reach của content Phạt Nguội qua MoMo's owned social channels - tạo awareness tool, drive organic traffic, và xây dựng entity signal cho GEO.
+
+**Way of Working:**
+- **Hiến brief - BMC execute.** SEO & GEO Lead cung cấp content brief + keyword angle. BMC team (Brand Marketing Communications) thực thi trên các kênh owned của MoMo.
+- Không BMC tự chọn angle - phải align với keyword cluster và JTBD map của từng batch content.
+
+**Content Types ưu tiên:**
+
+| Format | Angle | Cluster gắn với |
+|---|---|---|
+| Infographic | "Mức phạt mới Nghị định 168 - bảng so sánh trước/sau" | Cluster 3 - Nghị định 168 |
+| Short video/Reel | "3 bước tra cứu phạt nguội nhanh nhất 2025" | Cluster 1 - Hub |
+| Awareness post | "Camera phạt nguội đặt ở đâu tại [tỉnh]?" | Cluster 4 - Camera |
+| Seasonal content | "Xe sắp hết hạn đăng kiểm? Kiểm tra phạt nguội trước khi đến TTDK" | JTBD Stage 3 |
+
+**Trigger cung cấp brief cho BMC:**
+- Mỗi lần publish batch content mới → Hiến brief BMC trong vòng 3 ngày
+- Khi có spike search (ví dụ: mùa đăng kiểm, sự kiện pháp lý mới) → Brief nhanh 24h
+
+**KPI Social Outreach:**
+- Click-through từ social về `/phat-nguoi` cluster (GA4 - source/medium social)
+- Share rate trên các post Phạt Nguội
+- Brand mention tăng liên quan đến "tra cứu phạt nguội MoMo" (entity signal)
+
+---
+
+### 10.2 Backlink & Off-site - Vendor
+
+**Mục tiêu:** Xây dựng backlink profile cho domain momo.vn và cụm trang `/phat-nguoi` từ các nguồn có authority cao trong ngành giao thông, pháp luật, và automotive.
+
+**Chiến lược:** MoMo sở hữu TTDK partnership độc quyền - đây là USP mạnh nhất để pitching editorial backlink từ báo chí. Vendor cần khai thác góc này, không chỉ build link thông thường.
+
+**Target Link Sources (ưu tiên):**
+
+| Tier | Nguồn | Cách tiếp cận | Giá trị |
+|---|---|---|---|
+| Tier 1 | Báo lớn (VnExpress, Tuổi Trẻ, VTV) | Press release về TTDK partnership + tính năng mới | Authority cao nhất, DoFollow value |
+| Tier 1 | Báo chuyên ngành (Giao thông Vận tải, Pháp luật) | Editorial article dẫn nguồn MoMo là kênh chính thống | Topical relevance |
+| Tier 2 | Automotive sites (OtoHui, Bonbanh, XeSang) | Sponsored content + review tính năng | Traffic audience relevant |
+| Tier 2 | Forum & community (Otofun, Xe360) | Editorial mention, không mua link forum spam | Natural signal |
+| Tier 3 | Blog/Affiliate SEO trong ngành giao thông | Guest post + resource link | Volume |
+
+**Vendor Criteria (khi đi deal):**
+
+- Không spam link (không PBN, không farm link). MoMo brand = YMYL - Google penalty risk cao nếu dùng black/grey hat.
+- Vendor phải cung cấp danh sách sites trước khi deal - Hiến approve whitelist.
+- Reporting: Domain Authority, Traffic Estimate, DoFollow/NoFollow ratio per link.
+- Hình thức: Link placement báo chí, guest post editorial, resource page.
+
+**Timeline:**
+- T6/2026: Tìm và evaluate 2-3 vendors. Hiến approve whitelist sites.
+- T7/2026: Kick-off campaign backlink Batch 1 (Tier 1 báo lớn - leverage TTDK announcement).
+- T8-T9/2026: Scale Tier 2-3 theo tốc độ Phase 2 content.
+
+**PIC:** Hiến govern + approve. Inbound (Mai) coordinate với vendor sau khi Hiến set standard.
+
+**Nguyên tắc bất di bất dịch:**
+- Mọi link Tier 1 phải có Hiến approve trước khi publish - không delegate cho vendor tự quyết.
+- Không build link vào trang thin content hoặc trang chưa pass Content Quality Gate.
+- Anchor text diversity: Không dùng exact match keyword quá 20% tổng anchor text. Mix brand + partial match + URL anchor.
+
+---
+
 ## Appendix A: Content Cluster - Priority Reference
 
 | Topic Cluster | Stage | Keywords đại diện | Volume |
@@ -424,6 +474,7 @@ Theo Foundation Checklist chuẩn SEO Inventory. Mọi bài blog Phạt Nguội 
 
 | Ngày | Phiên bản | Thay đổi |
 |---|---|---|
+| 2026-05-29 | v3.6 | Thêm Section 10 - Comm Activities Off-Page: Social Outreach (Internal BMC) + Backlink & Off-site (Vendor). Cập nhật Phase Roadmap bổ sung cột Off-page/Comm per phase. |
 | 2026-05-25 | v3.5 | Thêm Section 9 - SEO/GEO Content Engine GenAI Production Plan. Tích hợp SEO Inventory v4.7 framework: phân loại Mass Traffic/DVC, Keyword Cluster Priority Map (7 clusters/P0-P3), GenAI Production Plan 3 phases (Batch 1 done/Batch 2 T6/Pháp 2 pSEO), Content Quality Gate 6 cổng, SoV Tracking Plan với milestones T6-T12/2026. |
 | 2026-05 (đầu tháng) | v3.0 | Final Master - Ready for Execution |
 | 2026-05 (giữa tháng) | v3.1 | Bổ sung SEM Key Learnings |
