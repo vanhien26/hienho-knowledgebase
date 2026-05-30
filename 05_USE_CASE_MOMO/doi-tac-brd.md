@@ -7,7 +7,7 @@
 > - **Owner:** GPD - Out-App Traffic
 > - **Governance:** SEO & GEO Lead
 > - **PIC Build:** Nhật (Build Lead) - Hoài Anh (MoSpark Architecture)
-> - **Version:** 2.5 - 2026-05-29
+> - **Version:** 2.6 - 2026-05-29
 > - **Status:** Pilot Phase - 38 Merchants Live (Batch 2 + Extended)
 
 ---
@@ -243,17 +243,38 @@ Mỗi `momo.vn/merchant/{slug}` gồm 2 phần tách biệt:
 | # | Thành phần | Loại | Chi tiết |
 |---|---|---|---|
 | 1 | KV (Key Visual) | AI-generated | Ảnh thô merchant → Image-to-Image AI retouch → fill MoSpark template. Mọi merchant đều có. |
-| 2 | NAP (Merchant Data) | Platform Data | Tên Merchant, Category, SĐT, Địa chỉ, Hours |
-| 3 | Payment Methods | Platform Module | MoMo/VTS/QR - fix từ merchant data |
-| 4 | O2O Promotion Stack | Platform Module (Fix cứng) | VTS Card + Hoàn tiền + Soundbox CTA (tùy merchant có sản phẩm tương ứng) |
-| 5 | Review Block | Platform Module (conditional) | Aggregate rating + số review - chỉ hiển thị nếu Template A (có Review sync) |
-| 6 | Long Content | GenAI Content | Bài viết 150-300 từ giới thiệu chuyên sâu về merchant |
-| 7 | FAQ & HowTo | GenAI + editor review | Câu hỏi thường gặp + hướng dẫn thanh toán step-by-step |
+| 2 | NAP (Merchant Data) | Platform Data - Structured | Tên, Category, SĐT, Địa chỉ chính thức, **Chỉ dẫn quen thuộc** (landmark), Hours |
+| 3 | Distance Indicator | Platform Module (conditional) | "Cách bạn XX km" - chỉ hiển thị nếu user đã cấp quyền location. Trigger prompt sau khi user scroll đến phần địa chỉ. |
+| 4 | Payment Methods | Platform Module | MoMo/VTS/QR - fix từ merchant data |
+| 5 | O2O Promotion Stack | Platform Module (Fix cứng) | VTS Card + Hoàn tiền + Soundbox CTA (tùy merchant có sản phẩm tương ứng) |
+| 6 | Review Block | Platform Module (conditional) | Aggregate rating + số review - chỉ hiển thị nếu Template A (có Review sync) |
+| 7 | Long Content | GenAI Content | Bài viết 150-300 từ. Reference {merchant.fields} từ Structured Data - không hard-code thông tin thay đổi được. |
+| 8 | FAQ & HowTo | GenAI + editor review | Câu hỏi thường gặp + hướng dẫn thanh toán step-by-step |
+| 9 | **Sticky CTA Bar** (Mobile) | Platform Module - Fixed | Bottom bar cố định trên mobile: [Chỉ đường] [Gọi điện] [Dùng Ví Trả Sau]. Track riêng từng loại click. |
 
 **Nguyên tắc tách biệt quan trọng:**
 - Long Content phục vụ merchant story - không lồng ghép O2O thái quá
-- O2O chỉ xuất hiện tại 2 nơi: Payment Methods list và O2O Promotion Stack module
+- O2O chỉ xuất hiện tại 2 nơi: Payment Methods list, O2O Promotion Stack module, và Sticky CTA Bar
 - Editor không được chỉnh sửa VTS/Hoàn tiền data - inject từ 1 nguồn duy nhất
+- GenAI Content phải reference Structured Data fields - không tự generate thông tin có thể thay đổi (giờ, địa chỉ, giá)
+
+**Merchant Structured Data Model (Single Source of Truth):**
+
+```
+MerchantData {
+  name: string
+  category: string
+  phone: string
+  address: string              // địa chỉ chính thức
+  landmark_directions: string  // "Đối diện nhà thờ X, cạnh chợ Y"
+  coordinates: {lat, lng}
+  hours: {open, close, days[]}
+  payment_methods: string[]    // ["momo", "vts", "qr"]
+  products: string[]           // optional
+}
+```
+
+Thay đổi bất kỳ field nào → tự động update toàn bộ nơi hiển thị (NAP, chỉ dẫn, Long Content references). Không phải re-generate content.
 
 ### 5.5 O2O Solution Stack
 
@@ -383,10 +404,14 @@ Mỗi `momo.vn/merchant/{slug}` gồm 2 phần tách biệt:
 | Metric | Target (90 ngày post-launch) | Source |
 |---|---|---|
 | Organic Traffic | Duy trì 85K/quý (không giảm net vs 2 legacy systems) | GSC |
-| VTS Module CTR | 3% baseline từ Pilot | Umami |
+| VTS CTA click (Sticky Bar) | Baseline từ Pilot | Umami - event: `cta_vts_click` |
+| Directions CTA click | Baseline từ Pilot | Umami - event: `cta_directions_click` |
+| Call CTA click | Baseline từ Pilot | Umami - event: `cta_call_click` |
+| QR scan → Page view (O2O offline signal) | Baseline từ UTM tracking | Umami |
 | Soundbox inquiry từ /merchant | Baseline TBD | Umami |
 | Top queries "{Merchant} + MoMo" | 80% rank Top 5 | GSC |
-| QR scan → Page view (O2O offline signal) | Baseline từ UTM tracking | Umami |
+
+**Merchant Showroom Data (Phase 2 - Backlog):** Monthly digest gửi merchant qua Zalo OA / Soundbox notification: tổng lượt chỉ đường, gọi điện, VTS click từ trang của họ trong tháng.
 
 **Conversion Funnel:**
 ```
@@ -409,10 +434,13 @@ Mỗi `momo.vn/merchant/{slug}` gồm 2 phần tách biệt:
 | Cashback campaign data | Merchants đang chạy hoàn tiền để inject Promotion Module | Không (có thể launch trước) | Campaign team |
 | Review sync mechanism | Source review data: MoMo internal / Google Places / other. TBD | Có nếu dùng Template A | PO + Hiến confirm |
 | PAGE_ID → Merchant mapping | Export từ Thổ Địa DB cho legacy audit + redirect | Có | Hiến request |
-| MoSpark platform readiness | LP Builder sẵn sàng với 2 template variants + KV slot | Có | Hoài Anh |
+| MoSpark platform readiness | LP Builder sẵn sàng với 2 template variants + KV slot + Sticky CTA Bar | Có | Hoài Anh |
+| Merchant Structured Data Schema | Form nhập liệu có cấu trúc: name, address, landmark_directions, hours, phone, payment_methods, coordinates. Single source of truth cho tất cả display components. | Có - phải có trước build content | Hoài Anh (schema design) + Nhật (form UI) |
+| Landmark Directions collection | BD team điền "chỉ dẫn quen thuộc" khi lắp Soundbox: "Đối diện X, cạnh Y". Trường này trong structured form, không phải free-text trong content. | Có | BD/Soundbox team |
 | AI Image pipeline (Image-to-Image) | Tool/model retouch ảnh thô → KV chuẩn brand. Input: ảnh thô từ BD/SME. Output: fill MoSpark KV slot tự động | Có | Trọng (cùng GenAI pipeline) |
 | Ảnh thô merchant | BD team thu thập khi lắp Soundbox, hoặc SME cung cấp. Không có ảnh thô = không có KV AI | Có | BD/Soundbox team |
-| GenAI Content pipeline | Template + prompts cho merchant content (Long Content + FAQ + HowTo) | Không (đang chạy) | Trọng |
+| GenAI Content pipeline (updated) | Prompt template phải reference {merchant.fields} từ Structured Data - không generate thông tin có thể thay đổi. Trọng cần update trước khi scale production. | Không (update từ pipeline hiện tại) | Trọng |
+| Thổ Địa data migration | Confirm với Hoài Anh về scope migrate data Thổ Địa vào Structured Form. TBD - họp tuần 2 T6. | Needs Research | Hoài Anh |
 | Deep Link specs per merchant | Onelink URLs cho O2O CTAs | Có | DA team |
 | Umami tracking setup | Track page view, O2O CTA click, QR scan, scroll depth. Phải có trước launch | Có | Thuận |
 | Sub-pages data requirements | Xác nhận loại sub-pages và data source | Không - Phase 2 | Nhật + Hiến |
@@ -495,6 +523,123 @@ Mỗi `momo.vn/merchant/{slug}` gồm 2 phần tách biệt:
 
 ---
 
+## 11. Ideation Log
+
+> Ghi nhận các ý tưởng sản phẩm phát sinh từ meeting recap, feedback stakeholder, và observation thực tế. Không phải mọi ý tưởng đều vào spec ngay - section này là bộ nhớ chiến lược để đánh giá và prioritize.
+
+**Status legend:**
+- `Adopted` - Đã đưa vào spec/section chính thức trong BRD
+- `Backlog` - Có giá trị, chờ phase sau hoặc cần resource thêm
+- `Needs Research` - Cần clarify thêm trước khi quyết định
+- `Rejected` - Không phù hợp với scope hiện tại, ghi lý do
+
+---
+
+### Batch 1 - Feedback từ Anh Bảo (2026-05-29)
+
+**Nguồn:** Anh Bảo - PM Web Platform | **Meeting:** Product Review Merchant Detail Page
+
+---
+
+#### ID-01 | Chỉ dẫn quen thuộc + Khoảng cách
+
+**Ý tưởng:**
+- Thêm "chỉ dẫn quen thuộc" vào phần địa chỉ: "Đối diện nhà thờ X", "Cạnh chợ Y, rẽ vào hẻm Z" - phù hợp với SME trong hẻm không có địa chỉ rõ ràng.
+- Hiển thị "Cách bạn XX km" nếu user đã cấp quyền location (web geolocation API hoặc in-app).
+
+**Phân tích:**
+JTBD hiện tại của trang cover "xác nhận thanh toán" nhưng chưa cover "tìm được đến quán" - đây là friction thực tế với F&B SME trong hẻm. Nếu user xác nhận xong nhưng không tìm được quán thì O2O loop vẫn đứt.
+
+Chỉ dẫn quen thuộc: Input free-text, BD team điền khi lắp Soundbox hoặc SME cung cấp. Gắn với Structured Data Form (ID-04).
+
+Distance feature: Cần UX decision về timing prompt - không nên request location ngay khi load trang. Trigger tốt nhất là khi user scroll đến phần địa chỉ hoặc click "Xem bản đồ".
+
+**Status:** `Adopted` → Section 5.4 (NAP cập nhật thêm trường landmark_directions) + Section 4 JTBD bổ sung friction "tìm đường đến quán"
+
+**PIC implement:** Nhật (UX) + Hoài Anh (data field) + BD team (thu thập landmark từ merchant)
+
+---
+
+#### ID-02 | Sticky CTA Bottom Bar + Merchant Showroom Data
+
+**Ý tưởng:**
+- CTA fixed ở chân trang mobile (sticky footer): [Chỉ đường] [Gọi điện] [Dùng Ví Trả Sau].
+- Track riêng từng loại CTA click.
+- Dùng data tracking làm "showroom" cho merchant: "Tháng X trang của bạn có 40 lượt chỉ đường, 30 lượt gọi điện" → chứng minh value → tăng retention + làm sales tool cho BD pitch merchant mới.
+
+**Phân tích:**
+Sticky CTA là UX best practice trên mobile, nên implement ngay. Tracking phân loại CTA type là điều kiện để đo KPI conversion thực tế (không chỉ page view).
+
+Merchant Showroom Data là product feature B2B mới - nâng value prop từ "xuất hiện miễn phí" lên "xuất hiện miễn phí + nhận báo cáo hiệu quả hàng tháng". Tạo retention loop: merchant không muốn mất trang nếu đang có traffic. Cũng là sales tool mạnh cho BD khi pitch merchant mới.
+
+Hai tầng cần tách biệt: Tầng 1 (Sticky CTA + Tracking) → implement ngay cùng launch. Tầng 2 (Merchant Monthly Digest) → Phase 2, cần xác nhận delivery channel (Zalo OA? Soundbox notification?).
+
+**Status (Tầng 1 - Sticky CTA + Tracking):** `Adopted` → Section 5.4 (thêm Sticky CTA Bar vào page structure) + Section 8 Success Metrics (thêm CTA type breakdown)
+
+**Status (Tầng 2 - Merchant Showroom):** `Backlog` → Phase 2. Cần xác nhận delivery channel với Nhật + BD team. Không block launch.
+
+**PIC implement Tầng 1:** Nhật (UX/Dev) + Thuận (Umami tracking events)
+
+---
+
+#### ID-03 | Tái sử dụng Thổ Địa Ăn Uống + Multi-source Data Aggregation
+
+**Ý tưởng:**
+- Thổ Địa Ăn Uống (67K traffic/quý) là "nguồn lực có sẵn" thay vì chỉ là legacy cần dọn. Data trong Thổ Địa (tên quán, địa chỉ, review cũ) có thể migrate vào structured form của merchant thay vì bị bỏ đi.
+- Hoài Anh đang có chiến lược tổng hợp thông tin từ nhiều nguồn ngoài OA (Zalo OA, Google Places, MoMo transaction data...) để enrich merchant data tự động.
+
+**Phân tích:**
+BRD hiện tại treat Thổ Địa là "gánh nặng cần redirect". Góp ý này reframe thành "data asset + traffic asset có thể absorb". Hai góc nhìn không conflict nếu làm đúng:
+
+- Traffic: `/page/{id}` → 308 redirect → `/merchant/{slug}` (không đổi)
+- Data: Thổ Địa content/review → migrate vào Structured Data Form của merchant (bổ sung, không thay thế)
+
+Nếu Hoài Anh build được cơ chế multi-source aggregation thì merchant data sẽ được enrich tự động, giảm phụ thuộc BD team điền tay. Đây là scalability unlock quan trọng.
+
+**Status:** `Needs Research` → Cần Hoài Anh confirm scope cụ thể của multi-source strategy trước khi update dependency. Flag: Họp với Hoài Anh tuần 2 T6.
+
+**PIC research:** Hoài Anh (data aggregation strategy) + Hiến (confirm với BRD scope)
+
+---
+
+#### ID-04 | Structured Data Form - Single Source of Truth
+
+**Ý tưởng:**
+- Merchant data (tên, địa chỉ, giờ mở cửa, sản phẩm...) được lưu dưới dạng structured form thống nhất.
+- Sửa 1 lần → update tự động ở tất cả nơi hiển thị (NAP block, chỉ dẫn, GenAI Long Content, FAQ).
+- Hỗ trợ phân nhóm merchant theo data field sau này.
+
+**Phân tích:**
+Đây là architectural decision quan trọng nhất trong 4 góp ý. Nếu không làm ngay, GenAI Long Content sẽ hard-code thông tin vào bài viết. 6 tháng sau merchant đổi giờ/địa chỉ → phải re-generate toàn bộ content.
+
+Mô hình đúng là tách 2 layer:
+- **Structured Data Layer (single source):** name, category, address, landmark_directions, hours, phone, payment_methods, products[], coordinates
+- **Content Layer (GenAI):** dùng `{merchant.field}` làm placeholder thay vì hard-code
+
+Trọng cần update prompt template theo hướng này trước khi scale production.
+
+**Status:** `Adopted` → Section 5.4 (thêm Merchant Data Model) + Section 9 Dependencies (thêm structured form requirement) + brief Trọng update GenAI prompt template
+
+**PIC implement:** Hoài Anh (data schema/platform) + Trọng (GenAI prompt update) + Nhật (form UI)
+
+---
+
+### Template Entry cho Batch tiếp theo
+
+```
+#### ID-XX | [Tên ý tưởng]
+
+**Ý tưởng:** [Mô tả ý tưởng gốc]
+
+**Phân tích:** [Đánh giá, JTBD mapping, technical implication]
+
+**Status:** [Adopted / Backlog / Needs Research / Rejected] → [nếu Adopted: link section]
+
+**PIC:** [Ai thực thi hoặc research tiếp]
+```
+
+---
+
 ## Appendix A: Template Examples
 
 ### Template D - SME Basic (Quán Cơm Chú Lùn)
@@ -551,6 +696,7 @@ Mỗi `momo.vn/merchant/{slug}` gồm 2 phần tách biệt:
 
 ## Change Log
 
+- **2026-05-29 (v2.6):** Thêm Section 11 - Ideation Log. Batch 1 feedback từ Anh Bảo (4 items: ID-01 chỉ dẫn/distance, ID-02 sticky CTA/showroom, ID-03 Thổ Địa merge, ID-04 structured data form). Cập nhật Section 5.4 page structure (thêm landmark_directions, distance indicator, sticky CTA bar, Merchant Data Model). Cập nhật Section 8 metrics (CTA type tracking). Cập nhật Dependencies (structured data schema, landmark collection, Thổ Địa TBD).
 - **2026-05-29 (v2.5):** Cập nhật Template System - từ 4 variants (KV/Non-KV × Review/Non-review) còn 2 variants (With Review / Without Review). Mọi merchant đều có KV AI-generated (Image-to-Image từ ảnh thô). Thêm AI Image pipeline vào Dependencies. Cập nhật page structure: KV là thành phần bắt buộc slot 1. Thêm constraint: không có ảnh thô = không deploy trang.
 - **2026-05-29 (v2.4):** Cập nhật Section 10 - Launch Matrix với actual live URLs của 38 merchants (từ 24 Batch 2 gốc, mở rộng thêm 14). Chuyển status toàn bộ sang "Live". Flag 3 legacy /page/ URLs chưa được redirect (PENDING). Cập nhật scope Version từ 2.0 sang 2.4.
 - **Tháng 5/2026 (v2.3):** Re-audit SERP toàn bộ 24 SME merchants. Phát hiện thêm 2 merchants có /page/ đang index: Chả rươi Hằng Béo (/page/9843228) và Bò nhúng Mắm ruốc 8 Còn (/page/9949928). Cập nhật Action từ "Clean launch" sang "308 Redirect" cho cả 2. Tổng merchants cần 308 redirect: 3/24.
