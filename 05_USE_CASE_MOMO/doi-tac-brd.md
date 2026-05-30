@@ -7,8 +7,8 @@
 > - **Owner:** GPD - Out-App Traffic
 > - **Governance:** SEO & GEO Lead
 > - **PIC Build:** Nhật (Build Lead) - Hoài Anh (MoSpark Architecture)
-> - **Version:** 2.0 - May 2026
-> - **Status:** Pilot Phase - Foundation Build (100-200 Merchants)
+> - **Version:** 2.5 - 2026-05-29
+> - **Status:** Pilot Phase - 38 Merchants Live (Batch 2 + Extended)
 
 ---
 
@@ -214,20 +214,22 @@ Sub-pages chỉ được tạo khi merchant có đủ data - không tạo sub-pa
 | 12 | Mua sắm | /merchant/mua-sam | Mua trước trả sau |
 | 13 | Làm đẹp - Sức khỏe | /merchant/lam-dep-suc-khoe | Chăm sóc trả sau |
 
-### 5.3 Template System - 4 Variants
+### 5.3 Template System - 2 Variants
 
-2 biến quyết định template: **KV (Key Visual)** và **Review** (sync được hay không).
+**Mọi merchant đều có KV** - không phân biệt brand chain hay SME. Biến quyết định template duy nhất: **Review** (có sync được hay không).
 
-| Template | KV | Review | Target Merchant | Use Case |
-|---|---|---|---|---|
-| A - Premium | Có KV | Có Review (sync) | Brand chain lớn (Highlands, BHX) | Brand nhận diện mạnh + review data phong phú |
-| B - Brand | Có KV | Non-review | Chain merchants chưa có review sync | Visual identity có nhưng chưa có review |
-| C - SME Review | Non-KV | Có Review (sync) | SME trending có review data | SME được biết đến, chưa có brand KV |
-| D - SME Basic | Non-KV | Non-review | SME cơ bản, mới onboard | Entry level - page tạo từ data tối thiểu |
+| Template | KV | Review | Target Merchant |
+|---|---|---|---|
+| A - With Review | AI-generated (mọi merchant) | Có Review (sync) | Merchant có review data (brand chain hoặc SME trending) |
+| B - Without Review | AI-generated (mọi merchant) | Non-review | Merchant chưa có review sync |
 
-**Review Sync:** Data source cần xác nhận trước pilot - MoMo transaction rating / Google Places API / internal review system. **TBD với PO team trước khi apply Template A/C.**
+**AI KV Generation Workflow:**
+1. **Input:** Ảnh thô của merchant (chụp vội từ BD team khi lắp Soundbox, hoặc ảnh SME cung cấp)
+2. **AI Process:** Image-to-Image retouch - chuẩn hóa ánh sáng, composition, nâng chất lượng ảnh
+3. **Output:** KV fill vào MoSpark template - đạt chuẩn brand guideline tự động
+4. **Review gate:** Review trước publish (cùng pipeline với Content review)
 
-**KV Eligibility:** Brand chain có logo/banner chất lượng cao. SME không có KV riêng - dùng category visual mặc định của MoSpark.
+**Review Sync:** Data source cần xác nhận - MoMo transaction rating / Google Places API / internal review system. **TBD với PO team trước khi apply Template A.**
 
 ### 5.4 Merchant Detail Page Structure
 
@@ -240,12 +242,13 @@ Mỗi `momo.vn/merchant/{slug}` gồm 2 phần tách biệt:
 
 | # | Thành phần | Loại | Chi tiết |
 |---|---|---|---|
-| 1 | NAP (Merchant Data) | Platform Data | Logo/KV (nếu có), Tên Merchant, Category, SĐT, Địa chỉ, Hours |
-| 2 | Payment Methods | Platform Module | MoMo/VTS/QR - fix từ merchant data |
-| 3 | O2O Promotion Stack | Platform Module (Fix cứng) | VTS Card + Hoàn tiền + Soundbox CTA (tùy merchant có sản phẩm tương ứng) |
-| 4 | Review Block | Platform Module (conditional) | Aggregate rating + số review - chỉ hiển thị nếu Template A hoặc C |
-| 5 | Long Content | GenAI Content | Bài viết 150-300 từ giới thiệu chuyên sâu về merchant |
-| 6 | FAQ & HowTo | GenAI + editor review | Câu hỏi thường gặp + hướng dẫn thanh toán step-by-step |
+| 1 | KV (Key Visual) | AI-generated | Ảnh thô merchant → Image-to-Image AI retouch → fill MoSpark template. Mọi merchant đều có. |
+| 2 | NAP (Merchant Data) | Platform Data | Tên Merchant, Category, SĐT, Địa chỉ, Hours |
+| 3 | Payment Methods | Platform Module | MoMo/VTS/QR - fix từ merchant data |
+| 4 | O2O Promotion Stack | Platform Module (Fix cứng) | VTS Card + Hoàn tiền + Soundbox CTA (tùy merchant có sản phẩm tương ứng) |
+| 5 | Review Block | Platform Module (conditional) | Aggregate rating + số review - chỉ hiển thị nếu Template A (có Review sync) |
+| 6 | Long Content | GenAI Content | Bài viết 150-300 từ giới thiệu chuyên sâu về merchant |
+| 7 | FAQ & HowTo | GenAI + editor review | Câu hỏi thường gặp + hướng dẫn thanh toán step-by-step |
 
 **Nguyên tắc tách biệt quan trọng:**
 - Long Content phục vụ merchant story - không lồng ghép O2O thái quá
@@ -404,65 +407,90 @@ Mỗi `momo.vn/merchant/{slug}` gồm 2 phần tách biệt:
 | VTS Terms Data | Lãi suất, hạn mức, phí - YMYL, sai data = legal risk | Có | PO VTS team |
 | Soundbox merchant list | Merchants dùng Soundbox để ưu tiên onboard pilot | Có | BD/Soundbox team |
 | Cashback campaign data | Merchants đang chạy hoàn tiền để inject Promotion Module | Không (có thể launch trước) | Campaign team |
-| Review sync mechanism | Source review data: MoMo internal / Google Places / other. TBD | Có nếu dùng Template A/C | PO + Hiến confirm |
-| PAGE_ID → Merchant mapping | Export từ Thổ Địa DB cho legacy audit + 301 redirect | Có | Hiến request |
-| MoSpark platform readiness | LP Builder sẵn sàng với 4 template variants | Có | Hoài Anh |
-| GenAI Content pipeline | Template + prompts cho merchant content | Không | Trọng |
+| Review sync mechanism | Source review data: MoMo internal / Google Places / other. TBD | Có nếu dùng Template A | PO + Hiến confirm |
+| PAGE_ID → Merchant mapping | Export từ Thổ Địa DB cho legacy audit + redirect | Có | Hiến request |
+| MoSpark platform readiness | LP Builder sẵn sàng với 2 template variants + KV slot | Có | Hoài Anh |
+| AI Image pipeline (Image-to-Image) | Tool/model retouch ảnh thô → KV chuẩn brand. Input: ảnh thô từ BD/SME. Output: fill MoSpark KV slot tự động | Có | Trọng (cùng GenAI pipeline) |
+| Ảnh thô merchant | BD team thu thập khi lắp Soundbox, hoặc SME cung cấp. Không có ảnh thô = không có KV AI | Có | BD/Soundbox team |
+| GenAI Content pipeline | Template + prompts cho merchant content (Long Content + FAQ + HowTo) | Không (đang chạy) | Trọng |
 | Deep Link specs per merchant | Onelink URLs cho O2O CTAs | Có | DA team |
 | Umami tracking setup | Track page view, O2O CTA click, QR scan, scroll depth. Phải có trước launch | Có | Thuận |
 | Sub-pages data requirements | Xác nhận loại sub-pages và data source | Không - Phase 2 | Nhật + Hiến |
 
 **Constraints:**
 - Content production trên MoSpark - không custom development
-- GenAI Content phải qua review/edit trước publish - không auto-publish
+- GenAI Content (Long Content + FAQ) phải qua review/edit trước publish - không auto-publish
+- AI-generated KV phải qua review trước publish - không auto-apply
 - VTS badge chỉ gắn sau khi verify với PO team - không dựa trên blog data
 - Soundbox CTA chỉ hiển thị với SME merchants được BD team xác nhận
 - Schema markup inject qua MoSpark template - không hardcode
+- Không có ảnh thô = không có KV AI. Không deploy trang nếu thiếu KV (brand guideline gate)
 - Sub-pages chỉ tạo khi có đủ data - không tạo placeholder rỗng
 - Inbound không làm việc trực tiếp với Web Platform - mọi technical request qua SEO & GEO Lead
 
 ---
 
-## 10. Action Plan - SME Merchant URL Migration (Batch 2)
+## 10. Action Plan - SME Merchant URL Migration (Batch 2 + Extended)
 
-> **Scope:** 24 SME Soundbox merchants thuộc chiến dịch Mega 2026 OOH. Batch 1 (Top Brand Chains) xử lý riêng sau khi pilot SME hoàn tất.
-> **Nguyên tắc slug:** `{ten-merchant}-{id}` - tên merchant kebab-case không dấu, không tỉnh thành, kết thúc bằng ID backend tự assign. Ví dụ thực tế: `/merchant/bun-thit-nuong-chi-tuyen-44` (ID = 44).
-> **Redirect rule:** 308 Permanent (không dùng 301 - giữ method). Áp dụng ngay khi /merchant/{slug} live, không để 2 URL tồn tại song song quá 7 ngày.
+> **Scope:** 38 SME Soundbox merchants - Batch 2 gốc (24) + mở rộng thêm 14 trong chiến dịch Mega 2026. Batch 1 (Top Brand Chains) xử lý riêng sau khi pilot SME hoàn tất.
+> **Nguyên tắc slug:** `{ten-merchant}-{id}` - tên merchant kebab-case không dấu, kết thúc bằng ID backend tự assign.
+> **Redirect rule:** 308 Permanent (không dùng 301 - giữ method). 3 merchants có legacy /page/ URL vẫn cần set redirect dù page mới đã live.
+> **Status cập nhật:** 2026-05-29 - Toàn bộ 38 trang đã live.
 
-### 10.1 Redirect & Launch Matrix - SME Batch 2
+### 10.1 Launch Matrix - Toàn bộ 38 SME Merchants (Live)
 
-| # | Merchant | Tỉnh/TP | URL cũ (momo.vn) | URL mới (thực tế / đề xuất) | Action | Status |
-|---|---|---|---|---|---|---|
-| 1 | Bún thịt nướng Chị Tuyền | HCM | `/page/9819516` | `/merchant/bun-thit-nuong-chi-tuyen-44` | 308 Redirect | **Live** |
-| 2 | Cơm tấm Ống Khói Diệu | An Giang | Không có | `/merchant/com-tam-ong-khoi-dieu-{id}` | Clean launch | Chưa launch |
-| 3 | Hủ tiếu Mỹ Tho Thanh Xuân | HCM | Không có | `/merchant/hu-tieu-my-tho-thanh-xuan-{id}` | Clean launch | Chưa launch |
-| 4 | Bánh ướt Cây Me | Cần Thơ | Không có | `/merchant/banh-uot-cay-me-{id}` | Clean launch | Chưa launch |
-| 5 | Bột chiên A Tỷ | Đồng Nai | Không có | `/merchant/bot-chien-a-ty-{id}` | Clean launch | Chưa launch |
-| 6 | Hủ tiếu Nam Vang Ông Hai Bầu | Đồng Nai | Không có | `/merchant/hu-tieu-nam-vang-ong-hai-bau-{id}` | Clean launch | Chưa launch |
-| 7 | Quán Cơm Chú Lùn | Cần Thơ | Không có | `/merchant/quan-com-chu-lun-{id}` | Clean launch | Chưa launch |
-| 8 | Hương Giang Bakery | Bắc Ninh | Không có | `/merchant/huong-giang-bakery-{id}` | Clean launch | Chưa launch |
-| 9 | Hủ tiếu Nam Vang 69 | HCM | Không có | `/merchant/hu-tieu-nam-vang-69-{id}` | Clean launch | Chưa launch |
-| 10 | Chả giò Phượng | Đồng Nai | Không có | `/merchant/cha-gio-phuong-{id}` | Clean launch | Chưa launch |
-| 11 | Hải sản Ngô Thơ | Hải Phòng | Không có | `/merchant/hai-san-ngo-tho-{id}` | Clean launch | Chưa launch |
-| 12 | Chả rươi Hằng Béo | Hà Nội | `/page/9843228` | `/merchant/cha-ruoi-hang-beo-{id}` | 308 Redirect | Chưa launch |
-| 13 | Bánh mì Hữu Liêm | Cần Thơ | Không có | `/merchant/banh-mi-huu-liem-{id}` | Clean launch | Chưa launch |
-| 14 | Tiệm mì Chú Cao | HCM | Không có | `/merchant/tiem-mi-chu-cao-{id}` | Clean launch | Chưa launch |
-| 15 | Bún cá Tư Lùn | An Giang | Không có | `/merchant/bun-ca-tu-lun-{id}` | Clean launch | Chưa launch |
-| 16 | Trà đá Mạnh Nháy | Bắc Ninh | Không có | `/merchant/tra-da-manh-nhay-{id}` | Clean launch | Chưa launch |
-| 17 | Xôi Trường | Bắc Ninh | Không có | `/merchant/xoi-truong-{id}` | Clean launch | Chưa launch |
-| 18 | Bánh mì Khánh Nạp | Hải Phòng | Không có | `/merchant/banh-mi-khanh-nap-{id}` | Clean launch | Chưa launch |
-| 19 | Cô Hường Bún Chả | Hải Phòng | Không có | `/merchant/co-huong-bun-cha-{id}` | Clean launch | Chưa launch |
-| 20 | Bò nhúng Mắm ruốc 8 Còn | Bình Dương | `/page/9949928` | `/merchant/bo-nhung-mam-ruoc-8-con-{id}` | 308 Redirect | Chưa launch |
-| 21 | Bò lá lốt mỡ chài chị Hằng | Bình Dương | Không có | `/merchant/bo-la-lot-mo-chai-chi-hang-{id}` | Clean launch | Chưa launch |
-| 22 | Bún thịt nướng cô Bế | Bình Dương | Không có | `/merchant/bun-thit-nuong-co-be-{id}` | Clean launch | Chưa launch |
-| 23 | Miến lươn chân cầm | Hà Nội | Không có | `/merchant/mien-luon-chan-cam-{id}` | Clean launch | Chưa launch |
-| 24 | Mỳ Cường Thư | Thanh Hóa | Không có | `/merchant/my-cuong-thu-{id}` | Clean launch | Chưa launch |
+| # | Merchant | Tỉnh/TP | URL cũ | URL thực tế | Redirect Status |
+|---|---|---|---|---|---|
+| 1 | Bún thịt nướng Chị Tuyền | HCM | `/page/9819516` | `/merchant/bun-thit-nuong-chi-tuyen-44` | **308 PENDING** |
+| 2 | Cơm tấm Ống Khói Diệu | An Giang | Không có | `/merchant/com-tam-ong-khoi-dieu-45` | Clean |
+| 3 | Hủ tiếu Mỹ Tho Thanh Xuân | HCM | Không có | `/merchant/hu-tieu-my-tho-thanh-xuan-69` | Clean |
+| 4 | Bánh ướt Cây Me | Cần Thơ | Không có | `/merchant/banh-uot-cay-me-can-tho-48` | Clean |
+| 5 | A Tỷ mì xào giòn - Bột chiên | Đồng Nai | Không có | `/merchant/a-ty-mi-xao-gion-bot-chien-64` | Clean |
+| 6 | Hủ tiếu Nam Vang Ông Hai Bầu | Đồng Nai | Không có | `/merchant/hu-tieu-nam-vang-ong-hai-bau-75` | Clean |
+| 7 | Quán Cơm Chú Lùn | Cần Thơ | Không có | `/merchant/quan-com-chu-lun-47` | Clean |
+| 8 | Hương Giang Bakery | Bắc Ninh | Không có | `/merchant/huong-giang-bakery-bac-ninh-63` | Clean |
+| 9 | Hủ tiếu Nam Vang 69 | HCM | Không có | `/merchant/hu-tieu-nam-vang-69-50` | Clean |
+| 10 | Chả giò Phượng | Đồng Nai | Không có | `/merchant/cha-gio-phuong-dong-nai-56` | Clean |
+| 11 | Hải sản Ngô Thơ | Hải Phòng | Không có | `/merchant/hai-san-ngo-tho-55` | Clean |
+| 12 | Chả rươi Hằng Béo | Hà Nội | `/page/9843228` | `/merchant/cha-ruoi-hang-beo-51` | **308 PENDING** |
+| 13 | Bánh mì Hữu Liêm | Cần Thơ | Không có | `/merchant/banh-mi-huu-liem-can-tho-49` | Clean |
+| 14 | Tiệm mỳ Chú Cao | HCM | Không có | `/merchant/tiem-my-chu-cao-46` | Clean |
+| 15 | Bún cá Tư Lùn | An Giang | Không có | `/merchant/bun-ca-tu-lun-54` | Clean |
+| 16 | Trà đá Mạnh Nháy | Bắc Ninh | Không có | `/merchant/tra-da-manh-nhay-bac-ninh-53` | Clean |
+| 17 | Xôi Trường | Bắc Ninh | Không có | `/merchant/xoi-truong-bac-ninh-52` | Clean |
+| 18 | Bánh mì Cây Khánh Nạp | Hải Phòng | Không có | `/merchant/banh-mi-cay-khanh-nap-70` | Clean |
+| 19 | Bún chả Cô Hường | Hải Phòng | Không có | `/merchant/bun-cha-co-huong-58` | Clean |
+| 20 | Lẩu Mắm ruốc 8 Còn | Bình Dương | `/page/9949928` | `/merchant/lau-mam-ruoc-8-con-80` | **308 PENDING** |
+| 21 | Bò lá lốt Chị Hằng | Bình Dương | Không có | `/merchant/bo-la-lot-chi-hang-68` | Clean |
+| 22 | Bún thịt nướng Cô Bế | Bình Dương | Không có | `/merchant/bun-thit-nuong-co-be-71` | Clean |
+| 23 | Miến lươn chân cầm | Hà Nội | Không có | `/merchant/mien-luon-chan-cam-72` | Clean |
+| 24 | Mỳ Cường Thư | Thanh Hóa | Không có | `/merchant/mi-cuong-thu-thanh-hoa-65` | Clean |
+| 25 | Tiệm chè Hữu Hoa | Cần Thơ | Không có | `/merchant/tiem-che-huu-hoa-can-tho-66` | Clean |
+| 26 | Miến gà Cô Nhân | - | Không có | `/merchant/mien-ga-co-nhan-59` | Clean |
+| 27 | Cơm tấm Đi Đức | - | Không có | `/merchant/com-tam-di-duc-57` | Clean |
+| 28 | Quán Cô Hai Thượng | - | Không có | `/merchant/quan-co-hai-thuong-62` | Clean |
+| 29 | Cháo bò Ô Lien | Đà Nẵng | Không có | `/merchant/chao-bo-o-lien-da-nang-73` | Clean |
+| 30 | Bún chả cá Hòn | - | Không có | `/merchant/bun-cha-ca-hon-74` | Clean |
+| 31 | Bún mắm Đi Liên | Đà Nẵng | Không có | `/merchant/bun-mam-di-lien-da-nang-76` | Clean |
+| 32 | Cháo sườn Cô La | Hà Nội | Không có | `/merchant/chao-suon-co-la-ha-noi-77` | Clean |
+| 33 | Giò chả Bà Bình | - | Không có | `/merchant/gio-cha-ba-binh-78` | Clean |
+| 34 | Nộm bò khô Long Vị Dũng | - | Không có | `/merchant/nom-bo-kho-long-vi-dung-79` | Clean |
+| 35 | Hàng chè Bà Thơm | - | Không có | `/merchant/hang-che-ba-thom-60` | Clean |
+| 36 | Cafe bột lồng ly | - | Không có | `/merchant/cafe-bot-long-ly-81` | Clean |
+| 37 | Quán lươn Xuân Leo | - | Không có | `/merchant/quan-luon-xuan-leo-61` | Clean |
+| 38 | Nem chua Phượng Chi Lê | - | Không có | `/merchant/nem-chua-phuong-chi-le-67` | Clean |
 
-### 10.3 Lưu Ý Kỹ Thuật
+**3 legacy /page/ URLs cần 308 redirect ngay (PENDING - tuần 1 tháng 6):**
+- `/page/9819516` → `/merchant/bun-thit-nuong-chi-tuyen-44`
+- `/page/9843228` → `/merchant/cha-ruoi-hang-beo-51`
+- `/page/9949928` → `/merchant/lau-mam-ruoc-8-con-80`
 
-- **GSC Verify:** SERP re-audit (site:momo.vn) lần 2 đã hoàn tất - phát hiện thêm 2 merchants có /page/. Tuy nhiên SERP chỉ trả về top kết quả, GSC Coverage Report vẫn cần verify để đảm bảo không bỏ sót, đặc biệt các merchants có volume > 0 nhưng không hiện trong SERP.
-- **Redirect timing:** Set 308 TRƯỚC hoặc CÙNG LÚC page mới live. Không để gap giữa page mới live và redirect cũ.
-- **Canonical:** Page mới `/merchant/{slug}` phải có self-referencing canonical. Page cũ sau khi redirect không cần canonical.
+### 10.2 Lưu Ý Kỹ Thuật
+
+- **GSC Coverage:** 38 pages đã live nhưng indexing chưa verify. Check GSC Coverage Report tuần 2 T6.
+- **Redirect timing:** 3 /page/ URLs chưa redirect dù page mới đã live - đây là gap cần close ngay. Không để quá 7 ngày.
+- **Canonical:** Page `/merchant/{slug}` phải có self-referencing canonical. Kiểm tra trước khi đóng ticket.
+- **Sitemap:** Verify 38 URLs mới đã được add vào sitemap. 3 /page/ URLs cần xóa khỏi sitemap cùng lúc set redirect.
 - **Sitemap:** Thêm `/merchant/{slug}` vào sitemap ngay khi live. Xóa URL cũ khỏi sitemap cùng lúc set redirect.
 
 ---
@@ -523,6 +551,8 @@ Mỗi `momo.vn/merchant/{slug}` gồm 2 phần tách biệt:
 
 ## Change Log
 
+- **2026-05-29 (v2.5):** Cập nhật Template System - từ 4 variants (KV/Non-KV × Review/Non-review) còn 2 variants (With Review / Without Review). Mọi merchant đều có KV AI-generated (Image-to-Image từ ảnh thô). Thêm AI Image pipeline vào Dependencies. Cập nhật page structure: KV là thành phần bắt buộc slot 1. Thêm constraint: không có ảnh thô = không deploy trang.
+- **2026-05-29 (v2.4):** Cập nhật Section 10 - Launch Matrix với actual live URLs của 38 merchants (từ 24 Batch 2 gốc, mở rộng thêm 14). Chuyển status toàn bộ sang "Live". Flag 3 legacy /page/ URLs chưa được redirect (PENDING). Cập nhật scope Version từ 2.0 sang 2.4.
 - **Tháng 5/2026 (v2.3):** Re-audit SERP toàn bộ 24 SME merchants. Phát hiện thêm 2 merchants có /page/ đang index: Chả rươi Hằng Béo (/page/9843228) và Bò nhúng Mắm ruốc 8 Còn (/page/9949928). Cập nhật Action từ "Clean launch" sang "308 Redirect" cho cả 2. Tổng merchants cần 308 redirect: 3/24.
 - **Tháng 5/2026 (v2.2):** Thêm Section 10 - Action Plan URL Migration cho 24 SME Batch 2. Redirect matrix đầy đủ: URL cũ, URL mới đề xuất, action type. Nguồn: SERP audit site:momo.vn lần 1 - phát hiện Bún thịt nướng Chị Tuyền (/page/9819516).
 - **Tháng 5/2026 (v2.1):** Confirm Standalone Microsite - gỡ Related Merchants module, bổ sung Standalone principle vào Section 5.4. Thêm Xu (Reward) vào O2O stack (TBD Q3+). Bổ sung Timeline (Q2 Mega / Long Term SME comm), O2O Behavior Shift 2 chiều (Online→Offline / Offline→Online), tam giác End User - MoMo - Merchant. Cập nhật PIC GenAI Content: Trọng.
