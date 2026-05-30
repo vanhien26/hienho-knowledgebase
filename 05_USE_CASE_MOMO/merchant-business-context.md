@@ -12,7 +12,7 @@ next_review: 2026-08-25
 > - **Use Case:** Merchant Pages / Đối tác
 > - **Owner:** GPD - Out-App Traffic (Hiến)
 > - **PIC Build:** Nhật (Build Lead) - Hoài Anh (MoSpark Architecture)
-> - **Governance:** Văn Hiến (SEO & GEO Lead)
+> - **Governance:** Văn Hiến (Web Product Lead)
 > - **Version:** 2.0 - May 2026 (aligned với BRD v2.0)
 > - **Status:** Pilot Phase - Foundation Build (100-200 Merchants)
 >

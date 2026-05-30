@@ -2,7 +2,7 @@
 > - **Main URL:** momo.vn/ve-xe
 > - **Division:** GPD - OTA (Non-Air)
 > - **Owner:** GPD - Out-App Traffic
-> - **Governance:** SEO & GEO Lead
+> - **Governance:** Web Product Lead
 > - **Version:** 2.0 - Tháng 05/2026
 > - **Status:** Draft
 > - **Business Model:** Marketplace - MoMo là nền tảng tra cứu, đặt và thanh toán vé xe khách; thu phí từ nhà xe đối tác

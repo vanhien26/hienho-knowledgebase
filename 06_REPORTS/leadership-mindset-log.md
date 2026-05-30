@@ -1,7 +1,7 @@
 # Leadership Mindset Log - Tư duy & Chỉ đạo Lãnh đạo MoMo
 
 > **Mục đích:** Ghi chép có chọn lọc insights từ các cuộc họp với High-Level. Không ghi lại toàn bộ nội dung họp - chỉ ghi những gì có giá trị học hỏi, áp dụng vào tư duy và hành vi của Hiến.
-> **Owner:** Văn Hiến - SEO & GEO Lead
+> **Owner:** Văn Hiến - Web Product Lead
 > **Direct Manager:** Bảo (Web Platform Manager / Project Lead Out-App Traffic)
 > **Cập nhật:** Sau mỗi cuộc họp High-Level → thêm entry mới. Review + đúc kết cuối mỗi tháng.
 > **Nguồn tham chiếu:** Monthly Report RECAP sections + Relay từ Bảo

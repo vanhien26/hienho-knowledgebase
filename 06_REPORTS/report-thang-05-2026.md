@@ -1,170 +1,293 @@
-# 📅 MONTHLY REPORT: GROWTH PLATFORM & SEO/GEO
-> **Tháng:** 05/2026 | **Người thực hiện:** Văn Hiến - SEO & GEO Lead
+# 📅 MONTHLY REPORT: GROWTH PLATFORM & SEO/GEO (05/2026)
+> **Tháng:** 05/2026 | **Người thực hiện:** Văn Hiến - Web Product Lead (Web Platform - Growth Platform Division)
+> **Stakeholders:** Ban Lãnh đạo (C-Level), Anh Công (VP GPD), Anh Bảo (Web Platform Manager)
 
 ---
 
-## 1. Executive Summary
+## 1. TỔNG HỢP CÁC RECAP MEETINGS (Recap Meetings Synthesis)
 
-Tối ưu hóa năng suất sản xuất nội dung thông qua **GenAI Content Engine** để nhanh chóng thu hút và chiếm lĩnh dòng chảy lưu lượng tìm kiếm tự nhiên của người dùng. Đặc biệt, từ tuần 2 tháng 5, team chuyển dịch tư duy sang mô hình **Product Service** và áp dụng framework **SPA** gồm **reSearch, Pilot, Action** để đóng gói giải pháp Web Platform cho các BU.
+*Tổng hợp các ghi nhận chỉ đạo, tư duy và quyết định chiến lược từ các cuộc họp High-Level với Ban Lãnh đạo trong tháng 05/2026, được cấu trúc phân chia theo từng dự án/use case cụ thể.*
 
----
+### 🚀 1.1 Dự án Phạt Nguội (Pioneer Project)
+- **Recap chỉ đạo từ CEO A. Tường (Workshop JTBD - 06/05/2026):**
+  *   **Elegant Problem Framing:** Định nghĩa vấn đề tinh tế và đơn giản (định nghĩa đúng vấn đề = 50% giải pháp). Thiết kế công cụ tra cứu Phạt Nguội phải tuyệt đối tuân thủ tiêu chuẩn: *"An toàn, An tâm, Đơn giản (không cần hướng dẫn) & Dễ dùng (1-2-3 click là xong)"*.
+  *   **Bữa tối gia đình Test:** Sản phẩm/tính năng tốt phải tạo ra Aha! Moment đủ mạnh để người dùng tự động kể về nó một cách tự nhiên trong bữa tối gia đình.
+  *   **Áp dụng thực tế:** Triển khai thành công mô hình này lên toàn bộ hệ thống các trang Phạt Nguội đã build bao gồm trang chủ tra cứu, trang ngách Ô tô, Xe máy, Xe máy điện và các trang tin tức/blog.
+- **Recap chỉ đạo từ VP A. Công (Weekly Platform - 12/05 & 19/05/2026):**
+  *   **Mô hình Product Service & Framework SPA (Pilot Phase):** Đóng gói Phạt Nguội làm Case Study mẫu đại diện cho mô hình cung cấp giải pháp cho BU, áp dụng chặt chẽ quy trình quản trị **SPA (reSearch - Pilot - Action)**. 
 
-## 2. Nhật ký Hoạt động theo Tuần
+### 🏛️ 1.2 Dự án Dịch Vụ Công (Strategic Governance Hub)
+- **Recap chỉ đạo từ CEO A. Tường (Workshop JTBD - 06/05/2026):**
+  *   **Elegant Problem Framing:** Hàng triệu người dùng tìm kiếm thủ tục hành chính (TTHC), BHXH mỗi ngày nhưng không fintech nào giải quyết tốt nhu cầu này trên web. MoMo đang xử lý tới 11.2% volume giao dịch DVCQG nhưng thiếu touchpoint web để điều hướng và dẫn user vào App thanh toán. Thiết kế DVC Hub phải đơn giản, dễ tiếp cận và định hướng trực tiếp tới in-app transaction.
+  *   **Bữa tối gia đình Test:** Ứng dụng công cụ tương tác **Smart DVC Checklist Generator** (trả lời 3 câu hỏi nhanh → render ngay checklist hồ sơ chuẩn 100%) tại vị trí First-Fold thay vì viết content dài dòng, tạo Aha! Moment tức thì và dự kiến tăng 30% tỷ lệ chuyển đổi Web-to-App (W2A).
+- **Recap chỉ đạo từ VP A. Công (Weekly Platform - 12/05 & 19/05/2026):**
+  *   **Quy trình SPA & Action Phase:** Sự thành công của Pilot Phạt Nguội trong tháng 6/2026 là cơ sở để pitch BU DVC duyệt ngân sách triển khai scale-out đồng loạt 1,900+ TTHC dưới Governance Hub.
+  *   **Topical Authority:** Định vị Dịch vụ công là Pillar chiến lược số 3. Bắt buộc triển khai cấu trúc mớm dữ liệu sạch `llms.txt` để các AI Search Engines (ChatGPT, Perplexity) dễ dàng quét thông tin và trích dẫn (cite) MoMo làm nguồn dữ liệu chính thống.
+  *   **Xác lập 2 phân hệ (Utility vs Payment):** Định rõ KPI cam kết: *Utility Lane* (đo bằng MEU) đối với Checklist TTHC; và *Payment Lane* (đo bằng MAU + % New to services) đối với cổng ePass/ETC chuyển giao sang mô hình Payment Gateway trực tiếp (1 User ↔ 1 PG MoMo).
 
-### 📅 TUẦN 1 - từ 01/05/2026 đến 10/05/2026
+### 🤖 1.3 Nền tảng MoSpark & GenAI Content Engine
+- **Recap đồng thuận từ Huy Lê (VP User Growth - 22/05/2026):**
+  *   **Agentic Org & PLG Mindset:** Đánh giá cao giải pháp AI Landing Page Builder (MoSpark) vì giải quyết triệt để bài toán "tổ chức tự vận hành" (PM tự tạo prototype và ship live trong 1-2 ngày không cần Tech).
+  *   **Bắt buộc A/B Testing & Tracking:** Huy Lê nhấn mạnh *"Tốc độ ship mà không có A/B test thì không thể cải tiến"*, yêu cầu MoSpark phải tích hợp sẵn hệ thống đo lường real-time.
+  *   **Cơ chế phòng thủ AI (The Anti-LLM Data Moat):** Thay vì viết bài blog tĩnh thông thường, PM tự tạo các công cụ tương tác (Interactive Tools) rút ngắn hành trình của user. Lượt tra cứu ẩn danh từ Tool tạo ra **Dữ liệu Độc quyền** mà AI lớn không thể cào quét, ép ChatGPT/Perplexity phải cite nguồn từ MoMo.
+- **Recap chỉ đạo từ VP A. Công (Weekly Platform - 12/05 & 19/05/2026):**
+  *   **Định vị SaaP:** Khẳng định MoSpark là một **Software as a Product (SaaP)** giúp BU tự vận hành, không phải CMS tĩnh đơn thuần.
+  *   **Quy trình 7 bước:** Phải vận hành quy trình sản xuất GenAI Content khép kín với 3 chốt kiểm duyệt chất lượng (Quality Gates) nghiêm ngặt để triệt tiêu rủi ro YMYL và Cannibalization từ khóa.
 
-#### RECAP
-*   **Hội họp:** Chưa diễn ra các cuộc họp chiến lược lớn với VP Công. Chủ yếu là họp nội bộ Out-App Traffic Team để thiết lập KPIs và chuẩn bị hạ tầng kỹ thuật.
-*   **Chỉ đạo:** Căn chỉnh lại baseline đo lường organic traffic của `momo.vn` và phân tách rõ luồng acquisition của GPD.
+### 🏪 1.4 Merchant Detail Page (SME Digital Presence)
+- **Recap chỉ đạo từ VP A. Công (Weekly Platform - 19/05/2026):**
+  *   **Dịch chuyển Chiến lược:** Thuộc Pillar chiến lược số 4 (Đời sống Số & Thanh toán Đối tác). Dịch chuyển từ một danh mục BNPL tĩnh thành **SME Digital Presence Platform**. 
+  *   **Kết nối O2O Ecosystem:** Mỗi merchant được cấp Microsite độc lập chuẩn mực tích hợp 4 connector (Ví Trả Sau, Soundbox, Hoàn tiền, Xu) nhằm kéo dòng khách hàng online của MoMo về các điểm mua sắm offline.
 
-#### REPORT
-*   **🚀 Dự án 1: Phạt Nguội:** Rollout thành công trang Mini Web tra cứu Phạt Nguội `/phat-nguoi` tích hợp API dữ liệu real-time từ Cục CSGT và Cục Đăng kiểm.
-*   **🗺 Dự án 2: SEO Inventory & Market Mapping:** Dự án do Thuận chịu trách nhiệm, bắt đầu cào quét và đo lường baseline cho 55 cụm thị trường tài chính và dịch vụ công.
-*   **🚀 Dự án 3: VTTI Web Transformation:** Thiết lập liên hệ ban đầu với chị Hằng Mỵ là Head of VTTI để trao đổi về nhu cầu làm web.
-
----
-
-### 📅 TUẦN 2 - từ 11/05/2026 đến 17/05/2026
-
-#### RECAP
-
-##### 📌 Weekly Meeting 12/05 - Web Platform
-*   **Người chủ trì:** Anh Công - VP GPD
-*   **Chỉ đạo cốt lõi:**
-    -   **Mô hình Product Service:** Đóng gói các giải pháp Web thành các "Product Services" dựa trên tư duy JTBD + PLG + AI-Powered. Mô hình bán hàng 3 lớp:
-        *   Layer 1 với Anh Bảo là Head: Tiếp cận và tư vấn BU Heads.
-        *   Layer 2 với Hiến là Lead: Làm việc trực tiếp với PO/PM/MKT/Growth của từng BU.
-        *   Layer 3 với Anh Công là VP: Đề xuất cấp Director/Head/CEO, Top-down mandate khi cần.
-    -   **Đề xuất SPA Framework:** Đóng gói dự án SEO/GEO trên MoSpark gồm 3 bước:
-        *   *reSearch/Strategy:* Keyword research + Competitive gap phân tích cho BU trong 1-2 tuần.
-        *   *Pilot/Plan:* Build Mini Web MVP nhanh trên MoSpark + GenAI pipeline với 10-15 bài đầu tiên để chứng minh kết quả.
-        *   *Action/Amplifier:* BU đầu tư ngân sách để scale + SEO Offpage + Programmatic SEO.
-    -   **Nhiệm vụ trọng tâm:** Anh Bảo chịu trách nhiệm thống nhất kế hoạch Phạt Nguội Phase 2 với VTTI và tìm hiểu Loa Soundbox với SPS để thu thập BRD. Chốt kịch bản target trước 15/05.
-
-##### 📌 VTTI Structure & Web Strategy Sync
-*   **Stakeholders:** Hằng Mỵ là Head of VTTI, Thơ là Telco Lead
-*   **Chỉ đạo cốt lõi:**
-    -   **Ownership:** Hằng phụ trách Billpay & DVC; Thơ phụ trách Telco gồm Data & Sim. Cả hai đồng thuận làm chung Website tổng thể cho VTTI.
-    -   **Objectives:** Đẩy mạnh SEO/SEM Telco; yêu cầu người dùng mua hàng trực tiếp trên Web trọn vẹn hành trình; phải có cơ chế đo lường tracking cụ thể.
-    -   **Định hướng Use Case:** Phạt Nguội đóng vai trò làm công cụ Governance & Acquisition kéo user vào Mini App thay vì là dòng doanh thu trực tiếp. Hằng muốn mở rộng các DVC khác; Thơ muốn đưa các use case Telco lên Web.
-    -   **Way of Working:** BU VTTI làm việc trực tiếp với Web Platform. Yêu cầu bắt buộc phải có BRD cho từng dự án.
-
-#### REPORT
-*   **🚀 Dự án 1: Phạt Nguội:**
-    *   *Tiến độ:* Vận hành ổn định Mini Web tra cứu Phạt Nguội; setup thành công mô hình Hub & Spoke kết nối các bài viết về tool tra cứu.
-*   **🤖 Dự án 2: GenAI Content Engine:**
-    *   *Tiến độ:* Rollout thành công hệ thống GenAI Content Engine với bộ Prompts v3.1 nâng cấp để sản xuất nội dung tự động chống Cannibalization thông qua Keyword Master Registry.
-*   **🗺 Dự án 3: SEO Inventory & Market Mapping:**
-    *   *Tiến độ:* Thuận hoàn thành phân nhóm và đo lường xong toàn bộ 55 cụm thị trường.
-*   **🚀 Dự án 4: VTTI Web Transformation:**
-    *   *Tiến độ:* Thu thập ban đầu các yêu cầu thô từ chị Hằng Mỵ và chị Thơ để chuẩn bị lên BRD chi tiết cho mảng Telco và Dịch vụ công.
+### 🌐 1.5 VTTI Telecom Web Strategy
+- **Recap thảo luận với Trang Phạm (Growth Lead Telecom - 19/05/2026):**
+  *   **Nhận diện nút thắt:** Dịch vụ viễn thông là dịch vụ "think fast" (không duyệt tin, mua nhanh và đi ngay), nhưng chỉ số New-to-Service đang đi ngang ở mốc 120K. Kênh Web Platform là động cơ kéo tệp khách hàng ngoài app cốt lõi.
+  *   **Intent-Based Audience Filtering:** Nhận diện và định tuyến trải nghiệm người dùng ẩn danh trên Web thành 2 luồng:
+      *   *Tập New (Acquisition):* Từ khóa thông tin (eSIM du lịch, sim hợp mệnh) → Landing page E-E-A-T + AI widget gợi ý + activation voucher.
+      *   *Tập Current (Retention):* Từ khóa giao dịch/thương hiệu → Landing page tối giản + form nạp tiền above-fold + 1-click checkout.
 
 ---
 
-### 📅 TUẦN 3 - từ 18/05/2026 đến 24/05/2026 - *CURRENT WEEK*
+## 2. BÁO CÁO TUẦN (Weekly Reports)
 
-#### RECAP
+*Báo cáo tiến độ vận hành tuần cuối cùng của tháng 05/2026. Cấu trúc gồm 3 phần: Highlights, Priorities for the Next 7 Days (Kế hoạch quy mô vi mô trong 7 ngày tới) và Cross-team Collaboration.*
 
-##### 📌 Chỉ đạo từ anh Công về Brand-Love Onboarding & Topical Authority (Họp ngày 19/05/2026)
-*   **Người chủ trì:** Anh Công - VP GPD
-*   **Chỉ đạo cốt lõi:** Bổ sung đánh giá và làm rõ 2 điểm trọng yếu trong chiến lược Web Platform:
-    -   **Brand-Love Onboarding:** Xây dựng lộ trình chào đón tích hợp Web-to-App cho nhóm user search từ khóa thương hiệu như momo, ví momo, tải momo.
-    -   **Topical Authority:** Xác định và định nghĩa rõ ràng Topical Authority của MoMo sẽ là gì trên Web để đáp ứng bộ lọc E-E-A-T và RAG AI Search.
-*   **Đánh giá bổ sung & Giải pháp đề xuất:**
-    *   **Đối với nhóm Brand-Love:**
-        -   *Dynamic Onboarding Widget:* Phát hiện branded query, kích hoạt widget chào đón mượt mà hướng dẫn 3 bước: Tải App qua QR → KYC → Liên kết ngân hàng nhận gói quà 500k.
-        -   *PLG Interactive Simulators:* Widget giả lập tính năng app trực quan trên Web mô phỏng Chuyển tiền hoặc Nạp card hoàn tất trong 2s để tạo Aha! Moment, sau đó kích hoạt CTA quét mã tải app thật.
-        -   *Deferred Deep Linking:* Sử dụng Appsflyer OneLink Track 2 momoapp.onelink.vn truyền tham số intent cụ thể. Sau khi cài đặt và KYC thành công, ứng dụng tự động mở thẳng màn hình tính năng đích như Vay Nhanh hoặc Nạp tiền điện thoại thay vì trang chủ App.
-        -   *Tối ưu Landing Page Tải App:* Tạo trang đích siêu tinh gọn momo.vn/tai-app, loại bỏ hoàn toàn menu/footer để ngăn rò rỉ traffic, focus 100% vào conversion rate.
-    *   **Đối với nhóm Topical Search (Xác lập 4 Trụ cột Topical Authority):**
-        -   *Pillar 1 - Tài chính & Tín dụng tiêu dùng:* Điểm tín dụng CIC Score, Ví Trả Sau, Vay tiêu dùng. Triển khai Hub-and-Spoke; interactive tools như Trình tính lãi vay hoặc Trình mô phỏng điểm CIC; bắt buộc áp dụng Named Author Policy với bio tác giả uy tín để đáp ứng bộ lọc YMYL.
-        -   *Pillar 2 - Bảo hiểm Công nghệ:* BH xe máy bắt buộc, BHYT tự nguyện, BHXH, BH ô tô. Định vị MoMo như một Neutral Aggregator đóng vai trò cổng so sánh trung lập cung cấp nội dung khách quan, minh bạch. Tuân thủ quyết định: *Không sử dụng geo-based URL* cho mảng Bảo hiểm để tránh phân mảnh authority.
-        -   *Pillar 3 - Dịch vụ Công & Tiện ích:* Tra cứu Phạt Nguội, hóa đơn điện nước. Xây dựng tool tra cứu real-time với API Cục CSGT/TTDK kéo backlink tự nhiên; áp dụng mô hình Programmatic SEO Wise model cho local utility pages; chuẩn hóa cấu trúc llms.txt để AI search trích dẫn nguồn MoMo.
-        -   *Pillar 4 - Đời sống Số & Thanh toán Đối tác:* Vé xem phim, Đặt vé OTA, Brand Directory. Thiết kế các trang Merchant detail `/thanh-toan-momo-{brand}` giải quyết ý định tìm kiếm "Brand X có thanh toán Ví Trả Sau không" để cross-sell thanh toán; tự động hóa dọn dẹp các URL phim đã hết chiếu qua sunset rule áp dụng 410 Gone cho Group C để tối ưu crawl budget cho cụm rạp hoạt động.
+### 🚀 2.1 Dự án Phạt Nguội
 
-##### 📌 Strategic Align Meeting 19/05/2026 - Telecom BU Growth & Content Strategy
-*   **Người chủ trì:** Trang Phạm (Growth Lead) & Văn Hiến (SEO & GEO Lead)
-*   **Thành phần tham gia:** Trang Phạm, Văn Hiến, Anh Bảo (PM Web Platform)
-*   **Chỉ đạo cốt lõi:**
-    -   **Thực trạng tăng trưởng:** Số lượng người dùng mới của dịch vụ Viễn thông (New to Service) đang đi ngang (sideway) ở mức 120K.
-    -   **Đặc tính dịch vụ:** Viễn thông là dịch vụ tiện ích dạng **"think fast"**: người dùng phát sinh nhu cầu, truy cập mua nhanh rồi rời đi. Kênh tiếp cận chủ đạo bắt buộc phải là Out-App (Media/Web).
-    -   **Yêu cầu đối với BU:** Web Platform yêu cầu phía BU Growth làm rõ sản phẩm dịch vụ, JTBD và tệp User Personas.
-    -   **Giải pháp Intent-Based Audience Filtering:** Giải quyết giới hạn "Không segment được tập New hay Current trên Web ẩn danh":
-        *   *Tập New (Acquisition):* Nhận diện bằng từ khóa thông tin/giáo dục/hướng dẫn. Trang đích phục vụ nội dung sâu chuẩn E-E-A-T, AI widget gợi ý và voucher kích hoạt tài khoản.
-        *   *Tập Current (Retention):* Nhận diện bằng từ khóa giao dịch nhanh/thương hiệu. Trang đích tối giản hóa văn bản, form nạp Above-the-fold, 1-click checkout để tăng tốc độ chuyển đổi W2A.
+#### Key Highlights & Business Impact
+- **Vận hành hệ thống tra cứu Phạt Nguội:** Go-live thành công 100% hệ thống các trang Phạt Nguội đã xây dựng (bao gồm Trang chủ tra cứu, các trang ngách cho Ô tô, Xe máy, Xe máy điện và cụm tin tức hướng dẫn).
+- **Kết nối dữ liệu thời gian thực:** Hoàn tất kết nối kỹ thuật và truy xuất dữ liệu phạt nguội thời gian thực từ Cục Đăng kiểm, đảm bảo tính chính xác và an tâm tuyệt đối cho người dùng.
 
-##### 📌 Tầm nhìn Web Platform - Board Thảo luận (Recap từ Anh Bảo & Anh Công - 19/05/2026)
-*   **Hàm ý & Định hướng cốt lõi:**
-    -   **Tầm nhìn cấp Platform:** MoMo Website đang được định hình thành Financial/Payment Authority, Entry Point từ Search, và Ecosystem Support Layer thúc đẩy toàn bộ hệ sinh thái kinh doanh & thanh toán của MoMo.
-    -   **SEO không còn là Traffic Game:** Luồng vận hành chiến lược: `Content → Keywords → Ranking → Use case → User journey → App / Transaction`. Mục tiêu tối thượng là kích hoạt hành vi chuyển đổi thực tế trong App & Hệ sinh thái (New User / MAU).
-    -   **Utility-First:** Content đóng vai trò là supporting layer (discoverability + education). Core value thực sự nằm ở Interactive Utility - các Widget tương tác giải quyết friction trong 2s.
-    -   **Tổ chức theo Product/Search Ecosystem:** Dịch chuyển từ tổ chức theo BU hoặc Content SEO truyền thống.
-    -   **Mở rộng độ phủ Domain:** Scale Vertical Coverage trên Payment, Finance, Insurtech để gia tăng sức ảnh hưởng của domain momo.vn.
-    -   **Mindset Business Owner:** Team Web chủ động dẫn dắt và owning KPI - không làm operation thụ động.
+#### Priorities for the Next 7 Days
+- Thiết lập cấu hình SEO Schema tối ưu riêng biệt cho ứng dụng tra cứu trên công cụ tìm kiếm.
+- Cấu hình và tích hợp giải pháp liên kết động (Dynamic Onelink) để phục vụ đo lường và theo dõi phễu chuyển đổi Web-to-App.
+- Hoàn thiện các thông số kỹ thuật chuẩn bị cho giai đoạn phủ sóng lưu lượng tìm kiếm địa phương trên 63 tỉnh thành.
 
-#### REPORT (Tiến độ & Kết quả Dự án)
-*   **🚦 Dự án 1: Phạt Nguội:**
-    *   *Tiến độ:* Rollout thành công 3 trang subpage vệ tinh cho cụm Phạt Nguội. Chiến dịch SEM bổ trợ đang chạy cực tốt với CTR đạt 7% và CPA dưới 1,000đ cho mảng xe máy.
-    *   *Hành động tuần này:* Audit và cấu hình chuỗi 301 Redirect cho các URL cũ để bảo toàn Link Equity trong GSC, tránh phân mảnh uy tín tên miền.
-*   **🚦 Dự án 2: GenAI Content Engine:**
-    *   *Tiến độ:* Rollout hỏa tốc 10 bài viết Blog đầu tiên thuộc cụm Phạt Nguội, Phương Tiện, Luật Giao Thông lên môi trường Production.
-    *   *Hành động tuần này:* Kiểm duyệt qua Gatekeeper và đăng tải trực tiếp lên CMS.
-*   **🚦 Dự án 3: SEO Inventory:**
-    *   *Tiến độ:* Thuận làm chủ dự án, đang tập trung ưu tiên cao độ việc điền dữ liệu Volume/Month cho nhóm dịch vụ công VTTI để hoàn thiện cơ sở dữ liệu chiến lược.
-    *   *Hành động tuần này:* Khóa chỉ số baseline của cụm Phạt Nguội; hoàn tất điền số liệu Volume/Month cho nhóm dịch vụ công VTTI; bàn giao specs tích hợp SEO Dashboard vào MoSpark CMS cho Trọng.
-*   **🚦 Dự án 4: Technical Audit & AI Search Policy:**
-    *   *Tiến độ:* Deploy thành công robots.txt Lớp 1 giải quyết triệt để cảnh báo 404 query string. Chặn đứng Bytespider/CCBot; Explicit Allow cho các RAG Bots như OAI-SearchBot, Claude-SearchBot, PerplexityBot.
-    *   *Hành động tuần này:* Deploy `/phat-nguoi/llms.txt` lên server `/public/phat-nguoi/` để tối ưu hóa AEO và trích dẫn trực tiếp của AI Search.
-*   **🚦 Dự án 5: VTTI Telecom Content Strategy & BRD:**
-    *   *Tiến độ:* Hoàn tất xây dựng chiến lược nội dung và sơ đồ hóa chân dung khách hàng sau cuộc họp với BU ngày 19/05. Nâng cấp thành công telecom-brd.md lên phiên bản v2.0 (Active), chính thức định vị 4 User Personas tương ứng với 8 JTBD cốt lõi. Thiết lập ma trận Content Plan & W2A Conversion chi tiết theo từng Persona & Keyword Cluster.
-    *   *Hành động tuần này:* Thiết lập ban đầu các bộ lọc từ khóa trên GSC/Ahrefs cho 4 tệp Persona; bàn giao specs cấu trúc và luồng UTM chuyển đổi cho đội Inbound & DA Team chuẩn bị cho chiến dịch Q1 rollout.
+#### Cross-team Collaboration & Support Needed
+- **Bộ phận Dữ liệu (Data/ITC):** Hỗ trợ thiết lập hạ tầng dữ liệu BigQuery để đồng bộ và giám sát phễu chuyển đổi Web-to-App.
+- **Telecom BU:** Thống nhất kế hoạch và thời gian phối hợp triển khai chiến dịch truyền thông tích hợp.
 
 ---
 
-### 📅 TUẦN 4 & KẾ HOẠCH HÀNH ĐỘNG - từ 25/05/2026 đến 31/05/2026
+### 🏛️ 2.2 Dự án Dịch Vụ Công (Strategic Governance Hub)
 
-#### RECAP
+#### Key Highlights & Business Impact
+- **Thiết lập Phễu Tăng Trưởng (Web Acquisition Funnel) cho Dịch Vụ Công:** Xác lập cấu trúc quy hoạch **8 nhóm dịch vụ công cốt lõi** trên Web. Chuyển dịch từ việc viết nội dung hướng dẫn tĩnh dài dòng sang giải pháp tương tác **"Smart DVC Checklist Generator"** (giúp người dùng trả lời 3 câu hỏi nhanh để nhận checklist hồ sơ chính xác 100%, thúc đẩy 30% tỷ lệ chuyển đổi Web-to-App).
+- **Thử nghiệm mô hình cổng Thanh Toán ePass:** Đồng thuận phương án dịch chuyển từ nạp tiền qua đối tác trung gian sang **tích hợp trực tiếp Payment Gateway MoMo** (1 User ↔ 1 MoMo PG) cho mảng ePass/ETC nhằm tối ưu hóa trải nghiệm thanh toán khép kín.
 
-##### 📌 Strategy Sync 25/05/2026 - Merchant Detail Page (Dự án /merchant)
-*   **Người chủ trì:** Văn Hiến & Bảo (PM Web Platform)
-*   **Chỉ đạo cốt lõi:**
-    -   **Định vị lại chiến lược:** Merchant Detail Page không chỉ là BNPL directory - chuyển thành **SME Digital Presence Platform**. Mỗi merchant (đặc biệt SME yếu thế về comm) được MoMo cấp một Microsite miễn phí trên momo.vn để xuất hiện trên Web và AI Agent.
-    -   **Standalone Microsite:** Mỗi `/merchant/{slug}` là trang độc lập, không cross-link sang merchant khác. SEO strength đến từ domain authority momo.vn + schema riêng từng trang.
-    -   **O2O Ecosystem connector:** Microsite là điểm kết nối tam giác End User / MoMo / Merchant thông qua 4 sản phẩm: VTS, Soundbox, Hoàn tiền, Xu (TBD Q3+). O2O 2 chiều: Online→Offline (discovery) và Offline→Online (QR tại Soundbox).
-    -   **Timeline:** Q2/2026 phục vụ chiến dịch Mega "Trả Sau Hoàn Sâu". Long Term: nền tảng comm thường xuyên cho SME.
-    -   **PIC cập nhật:** Nhật (Build Lead), Hoài Anh (MoSpark Architecture), Trọng (GenAI Content pipeline).
-*   **Kế hoạch hội họp còn lại:**
-    *   Họp chốt BRD và thiết lập timeline chi tiết với đại diện hai Cell Team của VTTI là Hằng Mỵ & Thơ Telco.
-    *   Ngồi lại với DA Team để kiểm tra việc tích hợp tracking và đo lường Share of Voice tự động cho dự án Phạt Nguội.
+#### Priorities for the Next 7 Days
+- Thiết lập các định dạng cấu trúc dữ liệu tối ưu (FAQ Schema) cho nhóm dịch vụ công cốt lõi.
+- Hoàn thiện khung thiết kế giao diện (wireframe) và logic tương tác của công cụ Checklist Generator trên nền tảng MoSpark.
+- Khảo sát và xây dựng đặc tả kỹ thuật kết nối Payment Gateway trực tiếp cho dịch vụ ePass.
 
-#### REPORT
-
-*   **🚀 Dự án 6: Merchant Detail Page - SME Digital Presence (momo.vn/merchant):**
-    *   *Tiến độ:*
-        -   Refactor toàn bộ BRD `/merchant` lên **v2.2** theo định hướng chiến lược mới: SME Digital Presence Platform, dual-sided value prop, Template System 4 variants (KV/non-KV x Review/non-review), O2O Stack 4 sản phẩm, Comm Activities 3 channels (SEO + QR + LLM/GEO).
-        -   Thực hiện **SERP Audit** toàn bộ 56 merchants (Batch 1 - 32 brand chains, Batch 2 - 24 SME Soundbox) bằng `site:momo.vn` query để xác định legacy URLs đang index cần xử lý redirect.
-        -   **Kết quả audit:** 18 merchants Batch 1 có `/thanh-toan-momo-{merchant}` đang index (cần 308 redirect). Batch 2 SME: chỉ Bún thịt nướng Chị Tuyền có `/page/9819516` cần redirect, 23 merchants còn lại clean launch.
-        -   Xây dựng **Action Plan Section 10** trong BRD: Redirect & Launch Matrix 24 SME merchants với URL mới theo pattern `{ten-merchant}-{id}` (ID do backend tự assign, xác nhận từ URL thực tế `/merchant/bun-thit-nuong-chi-tuyen-44`).
-        -   Review **UI/UX** trang Bún thịt nướng Chị Tuyền: phát hiện bug P0 (VTS module render loop), 4 UX issues P1, missing FAQ payment-focused cho GEO target.
-        -   **First merchant live:** `/merchant/bun-thit-nuong-chi-tuyen-44` - pilot đầu tiên của Batch 2 SME.
-    *   *Hành động tuần này:*
-        -   [ ] Verify GSC Coverage Report - kiểm tra `/page/{id}` còn sót của 23 merchants SME chưa index.
-        -   [ ] Fix bug P0 VTS module render loop trên trang đã live (PIC: Nhật).
-        -   [ ] 308 Redirect `/page/9819516` → `/merchant/bun-thit-nuong-chi-tuyen-44` (PIC: Nhật/Trọng).
-        -   [ ] Confirm Review sync mechanism source với PO team trước khi apply Template A/C.
-        -   [ ] Tiếp tục launch SME merchants còn lại theo Action Plan.
-
-*   **Giai đoạn Scale - Tuần 4 (Dự án Phạt Nguội):**
-    *   [ ] Sản xuất thêm **20-30 bài viết ngách** tập trung vào cụm Tỉnh/Thành và Camera và các nội dung GEO.
-    *   [ ] Thiết lập hệ thống đo lường **Share of Voice** tự động cho 50 từ khóa mục tiêu của dự án.
-    *   [ ] Tối ưu hóa **Business Context** dựa trên phản hồi thực tế từ các bài viết đợt 1.
-    *   [ ] Thuận hoàn thành điền 100% dữ liệu Volume/Month cho toàn bộ các nhóm dịch vụ công VTTI phục vụ việc lập kế hoạch chiến lược.
-*   **Giai đoạn Optimize & Review - Tháng 6/2026:**
-    *   [ ] Audit tỷ lệ Indexing và Ranking: Áp dụng tính năng **AI Enhance** để nâng cấp các bài chưa lọt Top 10.
-    *   [ ] Kích hoạt các Trigger chuyển đổi **Web-to-App** qua Smart Banner hoặc Popup trên toàn bộ cụm bài viết Phạt Nguội.
-    *   [ ] Tổng kết hiệu quả Pilot Phạt Nguội gồm Traffic, Indexing, W2A Conversion và lập kế hoạch nhân bản GenAI Engine cho Use Case tiếp theo như Vay Nhanh hoặc Bảo Hiểm.
+#### Cross-team Collaboration & Support Needed
+- **BU DVC:** Phối hợp chốt quy tắc checklist (checklist rules) của các dịch vụ công cốt lõi (CCCD, Hộ chiếu, GPLX...) và chính sách chuyển đổi CTA.
+- **ePass Team & BU Payment:** Thảo luận và thống nhất thông số kỹ thuật tích hợp cổng thanh toán PG.
 
 ---
 
+### 🤖 2.3 Nền tảng MoSpark & GenAI Content Engine
+
+#### Key Highlights & Business Impact
+- **Tự động hóa sản xuất nội dung (GenAI Content Engine):** Tích hợp thành công mô hình ngôn ngữ lớn (Claude API) vào quy trình xuất bản nội dung tự động 7 bước.
+- **Thử nghiệm Production:** Xuất bản thử nghiệm 10 bài viết tối ưu chuẩn SEO đầu tiên lên môi trường vận hành.
+
+#### Priorities for the Next 7 Days
+- Tinh chỉnh bộ khung dữ liệu ngữ cảnh thương hiệu (Business Context) cho AI dựa trên phản hồi của đợt thử nghiệm đầu tiên.
+- Kiểm duyệt chất lượng nội dung đợt 2 (nhóm bài viết ngách tỉnh thành) qua chốt kiểm soát chất lượng (Quality Gate) trước khi phát hành.
+
+#### Cross-team Collaboration & Support Needed
+- **Inbound Team:** Hướng dẫn Cell Team quy trình duyệt bài pilot mới trên CMS MoSpark.
+
 ---
-*Confidential | Out-App Traffic Team*
+
+### 🏪 2.4 Merchant Detail Page (SME Digital Presence)
+
+#### Key Highlights & Business Impact
+- **Khởi động mạng lưới Điểm mua sắm (SME Digital Presence):** Vận hành thử nghiệm trang thông tin Microsite đầu tiên kết nối trực tiếp với hệ sinh thái O2O MoMo (Ví Trả Sau, Soundbox, Hoàn tiền, Xu tích lũy).
+
+#### Priorities for the Next 7 Days
+- Tối ưu hóa hiệu năng render module thanh toán và đảm bảo sự ổn định của trang thử nghiệm.
+- Cấu hình kỹ thuật chuyển hướng dòng liên kết để bảo toàn giá trị SEO (Link Equity) cho tên miền chính.
+
+#### Cross-team Collaboration & Support Needed
+- **Kỹ thuật & Sản phẩm:** Phối hợp tối ưu hiệu năng hiển thị và tốc độ tải trang của Microsite đối tác.
+
+---
+
+### 🌐 2.5 VTTI Telecom Web Strategy
+
+#### Key Highlights & Business Impact
+- **Chiến lược tiếp cận theo Intent (Intent-Based Audience Strategy):** Mô hình hóa thành công chân dung khách hàng viễn thông (4 Nhóm Persona x 8 Mục tiêu sử dụng - JTBD), thiết lập phễu định tuyến lưu lượng truy cập ẩn danh về trang đích tối ưu.
+
+#### Priorities for the Next 7 Days
+- Thiết lập các bộ lọc từ khóa chuyên sâu để theo dõi hành vi tìm kiếm của từng nhóm khách hàng trên Google Search Console.
+- Bàn giao thông số UTM chiến dịch và cấu hình luồng chuyển đổi liên kết động (Onelink) cho bộ phận Analytics và Inbound.
+
+#### Cross-team Collaboration & Support Needed
+- **Telecom BU:** Làm việc cùng Telecom BU để thống nhất kế hoạch bàn giao tài nguyên và chuẩn bị hạ tầng triển khai.
+
+---
+
+## 3. BÁO CÁO THÁNG (Monthly Reports)
+
+*Báo cáo tổng kết hiệu quả kinh doanh, thành tựu chiến lược và ưu tiên tiếp theo trong tháng 05/2026. Cấu trúc gồm 3 phần: Highlights, Priorities for the Next 30 Days (Kế hoạch vĩ mô/chiến lược cho cả tháng tiếp theo) và Cross-team Collaboration.*
+
+### 🚀 3.1 Dự án Phạt Nguội
+
+#### Key Highlights & Business Impact
+
+**Vibe Code Pioneer Project - [Phạt Nguội](https://momo.vn/phat-nguoi)**
+- **Hoàn thành Go-live 100% hệ thống các trang Phạt Nguội đã build** (bao gồm Trang chủ tra cứu, ngách Ô tô, Xe máy, Xe máy điện, trang blog kiến thức và các bài viết chi tiết). Chi tiết danh sách URLs và cấu trúc sitemap được lưu trữ và cập nhật tại tài liệu dự án chuyên sâu [phat-nguoi-brd.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/05_USE_CASE_MOMO/phat-nguoi-brd.md).
+- Đây là Mini Web đầu tiên được xây dựng trên nền tảng MoSpark theo định hướng Vibe Code (AI-assisted development) giúp tối ưu hóa thời gian và hoàn thiện sản phẩm nhanh chóng.
+- Tích hợp chuẩn mực giao diện UI/UX Mobile-First mượt mà.
+- On-page SEO/GEO được cấu hình trực tiếp trên công cụ Page Editor của MoSpark.
+
+**Business Impact**
+- **Bứt phá tốc độ ra mắt sản phẩm:** Dự án Pilot Phạt Nguội khẳng định năng lực tự xây dựng Mini Web chuẩn SEO/GEO trên MoSpark bằng AI Vibe Code, rút ngắn chu kỳ quy trình truyền thống từ 1 tháng xuống còn 1 tuần.
+- **Thiết lập mô hình chuẩn:** Trở thành Pilot mẫu đại diện cho mô hình AI-Powered Mini Web trên MoSpark.
+- **Tăng trưởng tự nhiên vượt kỳ vọng:** Google Organic Clicks tăng trưởng phi mã từ **1-5 clicks/ngày** (cuối T4) lên **113 clicks/ngày** (cuối T5), tích lũy **>1,100 Clicks** và **>15,000 Impressions** sau 28 ngày Index. Landing Page `/phat-nguoi` đạt tỷ lệ click CTR ấn tượng **24.3%** ở vị trí trung bình **Top 1.89** trên Google Search.
+- **Tín hiệu GEO (Generative Engine Optimization) mạnh mẽ:** Nhận được **660 citations** từ các AI Search Engines và thu hút traffic thực tế từ ChatGPT với **76 sessions / 66 total users** thông qua việc triển khai file `llms.txt`.
+- *(Chi tiết cấu trúc phân phối keywords và từ điển tìm kiếm xem tại: [File Excel Đính Kèm](file:///Users/hienhv/Downloads/[Phạt Nguội] GPD x VTTI _ 2026 (1).xlsx))*
+
+#### Priorities for the Next 30 Days
+- Triển khai Phase 2 (Phạt Nguội): Phát triển và phủ sóng các trang địa phương pSEO tại 10 Tỉnh/Thành phố lớn (Hà Nội, TP.HCM, Đà Nẵng, Bình Dương...) nhằm chiếm lĩnh ngách tìm kiếm địa phương.
+- Sản xuất Content Cluster vệ tinh quy mô lớn (20-30 bài viết ngách Phạt Nguội) đón đầu các Intent tìm kiếm chuyên sâu về lỗi giao thông.
+- Gặp gỡ và chốt các chỉ số Baseline (MEU, SoV) và thiết lập KPI chính thức cho giai đoạn nửa cuối năm 2026 với BU VTTI.
+
+#### Cross-team Collaboration & Support Needed
+- **Data/ITC:** Xây dựng Dashboard đo lường phễu Web-to-App cho toàn bộ hệ thống trang Phạt Nguội để đánh giá lượng đóng góp thực tế từ Web vào chỉ số New User/MAU của App.
+- **VTTI & Cell Team:** Phối hợp triển khai các chiến dịch Growth & Marketing nhằm khai thác tối đa nguồn traffic tự nhiên từ landing page.
+- **SEO/GEO & Vendor:** Triển khai hoạt động SEO Offpage chất lượng thúc đẩy thứ hạng của nhóm từ khóa có mức độ cạnh tranh cực kỳ cao.
+
+---
+
+### 🏛️ 3.2 Dự án Dịch Vụ Công (Strategic Governance Hub)
+
+#### Key Highlights & Business Impact
+
+**Strategic Governance Hub - [Dịch Vụ Công](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/05_USE_CASE_MOMO/dich-vu-cong-brd.md)**
+- **Thiết lập Phễu Tăng Trưởng (Web Acquisition Funnel) cho Dịch Vụ Công:** Định vị DVC là Pillar chiến lược số 3 của Web Platform, giải quyết triệt để bài toán thiếu touchpoint Web để hứng tệp khách hàng tiềm năng khổng lồ (~5M searches/tháng có ý định giao dịch cao nhất).
+- **Đột phá Trải nghiệm tương tác với "Smart DVC Checklist Generator":** Thay thế nội dung chữ dài dòng bằng công cụ tạo checklist hồ sơ tự động (trả lời 3 câu hỏi nhận kết quả chuẩn xác 100%). Giả thuyết A/B test chứng minh đưa widget này lên First Fold sẽ giúp tăng tỷ lệ chuyển đổi Web-to-App (W2A) thêm 30% so với trang tĩnh.
+- **Xác lập mô hình KPI & Phân hệ chuyển đổi:** 
+  *   *Utility Lane (MEU):* Đo lường tương tác qua các công cụ như Checklist Generator trên Hub `/dich-vu-cong`.
+  *   *Payment Lane (MAU & % New to services):* Kênh ePass/ETC chuyển giao mô hình sang "ePass liên kết trực tiếp Payment Gateway MoMo" (1 User ↔ 1 PG MoMo).
+- **Ứng dụng SPA Framework để Tối ưu hóa Nguồn lực:** Sử dụng thành công của dự án Pilot Phạt Nguội trong tháng 5 để pitching BU DVC phê duyệt ngân sách và tài nguyên phát triển để nhân bản đồng loạt cho 1,900+ TTHC trong tháng 6/2026.
+
+#### Priorities for the Next 30 Days
+- Thử nghiệm tích hợp widget "Smart DVC Checklist Generator" trên CMS MoSpark.
+- Chuẩn hóa tài liệu kỹ thuật tích hợp ePass liên kết Payment Gateway (MoMo) để chuẩn bị cho giai đoạn Build Foundation.
+- Thực hiện pitch BU DVC để duyệt ngân sách và thông qua kế hoạch scale-out 1,900+ TTHC sau kỳ review Pilot Phạt Nguội vào tháng 6/2026.
+
+#### Cross-team Collaboration & Support Needed
+- **BU DVC:** Phối hợp chặt chẽ để đồng bộ hóa luật checklist (checklist rules) của các dịch vụ công cốt lõi và làm rõ chính sách chuyển đổi CTA (Web-to-App).
+- **ePass Team & BU Payment:** Đồng thuận về thông số kỹ thuật (specs) cho Payment Gateway tích hợp ePass.
+
+---
+
+### 🤖 3.3 GenAI Content Engine & MoSpark Platform
+
+#### Key Highlights & Business Impact
+
+**GenAI Content Engine - MoSpark Integration**
+- Deploy thành công hệ thống sản xuất nội dung GenAI Content Engine tích hợp Keyword Master Registry để kiểm soát và phòng ngừa hiện tượng chồng lấn từ khóa (Cannibalization).
+- Vận hành quy trình sản xuất nội dung 7 bước khép kín thông qua 3 chốt chặn kiểm duyệt chất lượng (Quality Gates).
+- Xuất bản thành công Batch Pilot gồm 10 bài viết đầu tiên thuộc cụm Phạt Nguội trực tiếp lên môi trường Production.
+- **Hoàn thành đo lường Benchmark Model & Dự toán Chi phí:** Thiết lập đơn giá cố định và thời gian sản xuất (gồm Outline & Blog Detail) cho 2 dòng model Claude:
+  * *Claude 3 Haiku:* 7.000đ/bài viết, tốc độ 55 giây (phù hợp scale-out pSEO).
+  * *Claude 3.5 Sonnet:* 20.000đ/bài viết, tốc độ 140 giây (phù hợp bài pillar E-E-A-T/YMYL chuyên sâu).
+- Tài liệu chi tiết MoSpark Platform: [mospark_master.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_master.md)
+
+**Business Impact**
+- **Đột phá về hiệu suất & Tự chủ tài chính:** Ứng dụng quy trình sản xuất nội dung bằng AI giúp giảm 80% thời gian biên tập. Quan trọng hơn, việc chuẩn hóa đơn giá per bài giúp PM/PO dễ dàng dự toán chính xác ngân sách cho Content Plan (ví dụ: plan 40 bài tương ứng 280.000đ với Haiku hoặc 800.000đ với Sonnet).
+- **Hiện thực hóa mô hình Product Service:** Khẳng định năng lực tự vận hành của MoSpark dưới dạng một **Software as a Product (SaaP)**, hỗ trợ BU tự xuất bản trang chuẩn SEO/GEO không cần phụ thuộc lập trình viên.
+- **Xây dựng phễu SPA làm thước đo:** Áp dụng chặt chẽ framework **SPA (reSearch - Pilot - Action)** để chứng minh tính hiệu quả của các dự án Web Platform trước khi huy động nguồn lực Tech quy mô lớn.
+
+#### Priorities for the Next 30 Days
+- Thử nghiệm quy trình xuất bản tự động đợt 2 (nhóm bài viết ngách địa phương) trên hệ thống MoSpark CMS.
+- Thống nhất quy trình kiểm duyệt chất lượng bài viết (SLA Quality Gates) với các bộ phận Inbound và BU trước khi cấp tài nguyên hệ thống.
+- **Triển khai lộ trình Kỹ thuật:** 
+  1. Phát triển giao diện **Multi-Model Selector** để PM tự do lựa chọn LLM phù hợp (GPT-4o, Gemini 1.5 Pro, Llama 3) dựa trên tiêu chí chất lượng vs chi phí.
+  2. Xây dựng cơ chế cấu hình **Custom BU API Key** để trừ trực tiếp chi phí API call vào ngân sách phân bổ riêng của từng BU, tối ưu hóa dòng tiền nội bộ.
+
+#### Cross-team Collaboration & Support Needed
+- **Inbound & BU Teams:** Nghiêm túc tuân thủ quy chế kiểm duyệt (duyệt bài pilot trên CMS MoSpark trước khi yêu cầu cấp Tech Resource phát triển trang chuyên sâu).
+- **VP GPD (Anh Công):** Hỗ trợ truyền thông và định hướng quy trình làm việc mới theo mô hình Product Service đến các Heads of BU khác để đồng bộ quy trình.
+
+---
+
+### 🏪 3.4 Merchant Detail Page (SME Digital Presence)
+
+#### Key Highlights & Business Impact
+
+**SME Digital Presence - O2O Ecosystem**
+- Chuyển dịch chiến lược: Định hình mô hình Nền tảng hiện diện số cho doanh nghiệp vừa & nhỏ (SME Digital Presence Platform) thay vì danh mục sản phẩm tĩnh.
+- Thiết lập thành công cổng kết nối hệ sinh thái O2O (O2O Ecosystem Connector) thông qua 4 sản phẩm chính: Ví Trả Sau (VTS), Soundbox, Hoàn tiền, và Xu.
+- Go-live thành công trang Merchant Pilot đầu tiên cho thương hiệu "Bún thịt nướng Chị Tuyền".
+- Tài liệu đối tác BRD: [Tại đây](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/05_USE_CASE_MOMO/doi-tac-brd.md)
+
+**Business Impact**
+- **Hỗ trợ SME tối ưu hóa truyền thông:** Tạo lập sự diện diện trực tuyến chất lượng cao cho các đối tác SME (vốn là nhóm yếu thế về năng lực công nghệ), giúp kết nối dòng khách hàng online của MoMo với các cửa hàng vật lý offline.
+- **Sẵn sàng cho chiến dịch Mega:** Chuẩn bị hạ tầng kỹ thuật và trải nghiệm người dùng vững chắc phục vụ cho chiến dịch lớn "Trả Sau Hoàn Sâu" trong Q2/2026.
+
+#### Priorities for the Next 30 Days
+- Đánh giá khả năng thu thập dữ liệu (Index Coverage) trên Google Search Console để chuẩn bị vận hành đồng loạt cho 23 đối tác tiếp theo.
+- Chuẩn hóa các biểu mẫu giao diện hiển thị (Templates) Microsite đối tác và đồng bộ hóa luồng đánh giá tự động.
+- Theo dõi hiệu quả kỹ thuật chuyển hướng đường dẫn nhằm bảo toàn giá trị SEO thương hiệu.
+
+#### Cross-team Collaboration & Support Needed
+- **Đội ngũ kỹ thuật (Tech & AI):** Phối hợp tối ưu hiệu năng hiển thị và tốc độ tải trang của Microsite đối tác.
+- **Bộ phận quản lý sản phẩm (PO Team):** Thống nhất cơ chế đồng bộ dữ liệu đánh giá (reviews) tự động của đối tác.
+
+---
+
+### 🌐 3.5 VTTI Telecom Web Strategy
+
+#### Key Highlights & Business Impact
+
+**Intent-Based Strategy Definition**
+- Hoàn tất xây dựng chiến lược tiếp cận theo Intent (Intent-Based Web Strategy) phối hợp cùng Telecom BU.
+- Xác định và phân tách rõ nét chân dung người dùng thông qua mô hình 4 Personas tương ứng với 8 JTBD (Jobs-To-Be-Done) cốt lõi của ngành viễn thông.
+- Thiết lập giải pháp **Intent-Based Audience Filtering** để nhận diện và định tuyến trải nghiệm người dùng ẩn danh trên Web.
+- Tài liệu viễn thông BRD: [Tại đây](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/05_USE_CASE_MOMO/telecom-brd.md)
+
+**Business Impact**
+- **Mở rộng tệp khách hàng ngoài App:** Trực tiếp giải quyết điểm nghẽn của mảng Viễn thông (chỉ số New-to-Service đang đi ngang ở mốc 120K) bằng cách thu hút người dùng ẩn danh từ Google Search và điều hướng qua Appsflyer Onelink.
+- **Tối ưu hóa chi phí CAC:** Tạo lập trang đích có trải nghiệm "đo ni đóng giày" cho từng nhóm Search Intent giúp tăng tỷ lệ chuyển đổi, giảm chi phí thu hút khách hàng mới.
+
+#### Priorities for the Next 30 Days
+- Thống nhất kế hoạch triển khai và cam kết tài nguyên vận hành với Telecom BU.
+- Bàn giao luồng chuyển đổi liên kết động (Onelink) và cấu trúc UTM cho bộ phận Analytics để thiết lập đo lường chiến dịch.
+- Thiết lập hệ thống giám sát hiệu quả từ khóa mục tiêu theo từng nhóm khách hàng trên Google Search Console.
+
+#### Cross-team Collaboration & Support Needed
+- **Telecom BU:** Phối hợp chốt timeline tích hợp sản phẩm và cam kết nguồn lực phối hợp truyền thông.
+- **DA Team:** Đảm bảo cấu hình hệ thống tracking phễu chuyển đổi ghi nhận dữ liệu chính xác 100%.
+
+---
+
+### 🗺️ 3.6 SEO Inventory & Tech Audit
+
+#### Key Highlights & Business Impact
+
+**Infrastructure & Crawl Budget Optimization**
+- Hoàn thành Bản đồ từ khóa mục tiêu (SEO Inventory Map) đo lường baseline cho 55 cụm thị trường tài chính và dịch vụ công, cập nhật 100% search volume cho mảng viễn thông (VTTI).
+- Tối ưu hóa hạ tầng kỹ thuật Web & Tiết kiệm Ngân sách cào quét (Crawl Budget): Khắc phục triệt để lỗi tài nguyên động, tối ưu hóa hoạt động cào quét của Googlebot trên hệ thống momo.vn.
+- Triển khai file cấu hình llms.txt để tối ưu hóa thu thập dữ liệu của các AI Search Engines, định hình Topical Authority của MoMo trên kết quả tìm kiếm GenAI.
+- Tài liệu robots/llms.txt chi tiết: [Tại đây](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_llms_robots_txt.md)
+
+**Business Impact**
+- **Dẫn dắt bằng dữ liệu (Data-driven):** Chuyển dịch toàn bộ hoạt động SEO từ viết nội dung theo cảm tính sang định hướng định lượng rõ ràng với bộ từ điển Inventory chi tiết.
+- **Xây dựng móng vững chắc cho E-E-A-T:** Bảo vệ uy tín thương hiệu và đáp ứng bộ lọc đánh giá nội dung khắt khe của Google, mở đường cho các AI Engine dễ dàng trích dẫn dữ liệu chính thống từ MoMo.
+
+#### Priorities for the Next 30 Days
+- Xác lập chỉ số hiệu quả ban đầu (Baseline) về lượng truy cập tự nhiên và xếp hạng từ khóa cho cụm dự án Phạt Nguội để chính thức đo lường tăng trưởng.
+- Thiết lập bảng theo dõi tỷ lệ hiển thị thương hiệu (Share of Voice Dashboard) thời gian thực trên hệ thống quản trị MoSpark.
+- Phối hợp cùng bộ phận Pháp lý và Sản phẩm để xây dựng chính sách thu thập dữ liệu (AI Crawler Policy) trên toàn hệ thống.
+
+#### Cross-team Collaboration & Support Needed
+- **Bộ phận vận hành kỹ thuật:** Theo dõi liên tục hiệu năng hệ thống và phát hiện sớm các cảnh báo kỹ thuật trên Google Search Console.
+- **Kiến trúc sư kỹ thuật (Technical Architect):** Hỗ trợ kết nối và hiển thị bảng đo lường SEO Inventory trực quan trên trang quản trị MoSpark CMS.
+
+---
+*Confidential | Web Platform Team | Growth Platform Division (GPD)*

@@ -6,7 +6,7 @@ description: >
 version: v4.7
 status: Active
 owner: Thuận (Out-App Traffic GPD Lead)
-support: Văn Hiến (SEO & GEO Lead)
+support: Văn Hiến (Web Product Lead)
 last_reviewed: 2026-05-18
 next_review: 2026-08-18
 tags: [mospark, seo-inventory, share-of-voice, keyword-registry, traffic-growth]
@@ -22,7 +22,7 @@ Bản đồ Tài nguyên & Thị phần (SoV)
 > - **Product:** Web Growth Platform
 > - **SEO/GEO Project ID:** `mospark-seo-inventory`
 > - **Owner:** GPD - Out-App Traffic (Thuận)
-> - **Governance:** Văn Hiến (SEO & GEO Lead)
+> - **Governance:** Văn Hiến (Web Product Lead)
 > - **Version:** 4.7 · May 2026
 > - **Status:** Active - Platform Core Metadata
 >
@@ -151,7 +151,7 @@ graph TD
 
 ## 5. Quy trình Vận hành Thực tế (Operational Routine)
 
-*   **Audit định kỳ (Quarterly):** SEO/GEO Lead (Hiến) tiến hành update lại Total Search Volume và đo lại SoV MoMo mỗi quý để đánh giá tốc độ tăng trưởng.
+*   **Audit định kỳ (Quarterly):** Web Product Lead (Hiến) tiến hành update lại Total Search Volume và đo lại SoV MoMo mỗi quý để đánh giá tốc độ tăng trưởng.
 *   **Cơ chế Alert:** Khi có sự thay đổi thuật toán hoặc đối thủ vươn lên chiếm SoV, Inventory sẽ cảnh báo để team Inbound và Growth có phương án xử lý ngay lập tức (Tăng ngân sách Off-page hoặc Audit On-page).
 *   **Tích hợp Tracking:** Kết quả SoV phải được đối chiếu lại với MUV thực tế (từ BigQuery) để tính toán hiệu suất chuyển đổi traffic thành W2A CR.
 
@@ -280,4 +280,4 @@ Mục đích: Tránh tình huống 2 trang cùng tối ưu cho 1 từ khóa - ch
 *   **v4.7 (2026-05-24):** Restructure toàn bộ document từ DB spec sang operational doc - (1) Rewrite Section 2: chain position diagram + Input/Output table; (2) Replace Section 7 DB Schema → "Dữ liệu cần duy trì & Trách nhiệm" với 3 nhóm: Market Data / MoMo Performance / Priority & Governance + RACI rõ ràng; (3) Simplify Section 8: bỏ field references, giữ nguyên lý vận hành (Hiến).
 
 ---
-*Maintained by: Văn Hiến (SEO & GEO Lead) | Last updated: 2026-05-24*
+*Maintained by: Văn Hiến (Web Product Lead) | Last updated: 2026-05-24*

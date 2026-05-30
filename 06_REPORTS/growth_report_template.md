@@ -1,6 +1,6 @@
 # 📅 MASTER REPORT: GROWTH PLATFORM & SEO/GEO
 > **Report Month:** {{month/year}} | **Date:** {{date}}
-> **Owner:** Văn Hiến (SEO & GEO Lead) | **Stakeholder:** Anh Công (VP)
+> **Owner:** Văn Hiến (Web Product Lead) | **Stakeholder:** Anh Công (VP)
 
 ---
 

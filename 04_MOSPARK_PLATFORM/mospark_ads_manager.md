@@ -8,7 +8,7 @@ MoSpark Ads Manager - Web-to-App Campaign Platform
 > - **Product:** Web Growth Platform
 > - **SEO/GEO Project ID:** `mospark-ads-manager`
 > - **Owner:** GPD - Out-App Traffic (Bảo)
-> - **Governance:** Văn Hiến (SEO & GEO Lead)
+> - **Governance:** Văn Hiến (Web Product Lead)
 > - **Version:** 3.0 · April 2026
 > - **Status:** Active - Division/Product Metadata
 >
@@ -36,7 +36,7 @@ Vấn đề sâu hơn là về mô hình vận hành. Khi Web MoMo scale với n
 
 Ads Manager được phát triển theo ba module kế tiếp nhau, từ công cụ vận hành đơn lẻ tiến đến nền tảng quản lý Traffic Inventory và phân phối Ads cho toàn bộ Web MoMo:
 
-- **Module 1 (Production):** Balloon Ads, Popup, Context-based targeting theo URL, A/B test - đang pilot với User Growth team.
+- **Module 1 (Production):** Balloon Ads, Popup, Context-based targeting theo URL, A/B test (LP variant + Ad creative) - đang pilot với User Growth team.
 - **Module 2:** Traffic Inventory Management - quản lý toàn bộ ad placements trên Mini Web theo URL/segment, cho phép nhiều Division vận hành song song mà không conflict.
 - **Module 3:** Ads Distribution Platform - PM/PO các Division/Center tự cấu hình, phân phối và đo lường Ads trên toàn hệ thống Web MoMo, tích hợp Umami dashboard.
 
@@ -499,6 +499,64 @@ PM/PO tự review trước khi submit để tăng chất lượng và giảm vò
 | Điều kiện tài chính | Nếu có số liệu tài chính, đã verify accuracy chưa? |
 | Image spec | Ảnh đúng kích thước theo format spec chưa? |
 
+### 6.4. A/B Testing trên Landing Page Builder
+
+A/B Testing là feature **owned hoàn toàn bởi Ads Manager**. Landing Page Builder chỉ có trách nhiệm tạo các trang LP - toàn bộ test logic (split, distribute, track, winner) nằm trong Ads Manager.
+
+#### Architecture & Ownership
+
+| Module | Trách nhiệm |
+|---|---|
+| **Landing Page Builder** | Tạo LP variants (A/B) và publish lên URL riêng biệt - không handle test logic |
+| **Ads Manager** | Toàn bộ test logic: nhận variant URLs, cấu hình split ratio, phân phối traffic, quản lý vòng đời test |
+| **Umami** | Đo lường per variant: Pageview, CTR, W2A, Scroll depth, Dismiss rate |
+| **PM/PO** | Review data, declare winner thủ công trong Ads Manager |
+
+#### 3 Loại A/B Test
+
+| Type | Mô tả | Khi nào dùng |
+|---|---|---|
+| **LP Variant** | 2 phiên bản Landing Page khác nhau hoàn toàn - layout, copy, CTA, thứ tự module | Test major structural change - high effort |
+| **Ad Creative** | Cùng 1 LP nhưng Balloon/Popup dẫn vào LP có 2 creative khác nhau (ảnh, headline, CTA text) | Test message/creative trước khi build LP mới - low effort |
+| **CTA/Copy trên LP** | Cùng 1 LP layout, chỉ thay đổi CTA text hoặc hero headline | Test micro copy - low effort |
+
+> **Phân biệt input:** LP Variant và CTA/Copy test cần PM tạo trang trước trong LP Builder, sau đó mang URL vào Ads Manager để setup test. Ad Creative test không cần LP Builder - cấu hình toàn bộ trong Ads Manager.
+
+#### Workflow A/B Test
+
+| Bước | Nơi thực hiện | Hành động |
+|---|---|---|
+| 1 | LP Builder | PM tạo Variant A (LP gốc) và Variant B (LP thay đổi), publish lên 2 URL riêng |
+| 2 | Ads Manager | PM tạo A/B Test mới: nhập URL Variant A + B |
+| 3 | Ads Manager | PM cấu hình split ratio (default 50/50, có thể adjust - ví dụ 80/20 để giảm risk) |
+| 4 | Ads Manager | PM set thời gian chạy test, activate |
+| 5 | Umami | Auto-track per variant: pageview, CTR, W2A, scroll depth |
+| 6 | Ads Manager | PM xem performance dashboard per variant sau tối thiểu 7 ngày |
+| 7 | Ads Manager | PM declare winner - pause Variant thua, promote Variant thắng làm primary |
+| 8 | LP Builder | Archive Variant thua - không delete, giữ để reference |
+
+#### Winner Declaration - Manual (PM)
+
+Không có auto-winner detection. PM tự phán quyết trong Ads Manager dựa trên:
+
+| Metric | Priority | Ghi chú |
+|---|---|---|
+| CTR | Primary | Click vào Onelink / App action |
+| W2A Rate | Secondary | Install → Register attributed từ Landing Page |
+| Dismiss Rate | Tertiary | Nếu test có Balloon/Popup dẫn vào LP |
+
+**Quy tắc vận hành:**
+- Chạy tối thiểu **7 ngày** trước khi review - ít hơn thì data quá ít để conclude
+- Không thay đổi nội dung bất kỳ Variant nào trong khi test đang chạy - nếu muốn change phải stop test trong Ads Manager, tạo test mới
+- Không có minimum sample size bắt buộc - PM judgment call nhưng phải note lý do khi declare trong Ads Manager
+
+#### Scope Giới Hạn (Phase 1)
+
+A/B Testing chỉ áp dụng cho **Landing Page** trong Phase 1:
+- Không A/B test Hub/Spoke page của Mini Web Use Case
+- Không A/B test Blog article
+- Homepage không A/B test - shared asset, thay đổi có impact rộng
+
 ---
 
 ## 7. Phạm Vi & Ưu Tiên
@@ -627,6 +685,7 @@ Nhằm tránh "ngộp" resource cho Tech team, danh sách dưới đây chỉ t�
 ---
 
 ## Change Log
+- **Tháng 5/2026 (v3.2):** Thêm Section 6.4 - A/B Testing trên Landing Page Builder. Ownership: Ads Manager owns toàn bộ test logic (split, distribute, track, winner). LP Builder chỉ tạo trang LP. 3 loại test: LP Variant, Ad Creative, CTA/Copy. Workflow 8 bước. Winner: manual PM declare trong Ads Manager. Scope giới hạn Phase 1: chỉ Landing Page, không test Hub/Spoke/Blog/Homepage.
 - **Tháng 5/2026 (v3.1):**
   - Mở rộng scope phân phối: Ads Manager không chỉ distribute Ad Format mà còn distribute Widget (PLG Tool passive) và Component (PLG Tool active flow).
   - Thêm Taxonomy section (5.5): Định nghĩa rõ 3 loại entity - Ad Format / Widget / Component - theo chiều sâu tương tác và mục tiêu chuyển đổi. Nguyên tắc kiến trúc: Widget/Component là PLG Tools độc lập, Ads Manager chỉ là Distribution Layer.

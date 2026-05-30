@@ -5,7 +5,7 @@
 > - **Division:** PS (Payment Services)
 > - **Use Case:** Telco
 > - **Owner:** GPD - Out-App Traffic
-> - **Governance:** SEO & GEO Lead
+> - **Governance:** Web Product Lead
 > - **Version:** 2.1 - 2026-05-24
 > - **Status:** Active (Approved)
 
@@ -19,17 +19,15 @@
 
 ## 1. Executive Summary
 
-### Situation
+### 1.1 Elegant Problem Framing
+- **Vấn đề cốt lõi:** Người dùng cần mua sim phong thủy, mua data gấp hoặc tìm eSIM đi du lịch, nhưng trải nghiệm mua online từ nhà mạng thì rời rạc, ra đại lý thì mất thời gian.
+- **Giải pháp (The "What"):** Gom toàn bộ nhu cầu viễn thông vào 1 Hub duy nhất trên MoMo Web. Sử dụng AI Giải luận phong thủy để tạo "Aha moment" (Bữa tối gia đình test của CEO) và cho phép thanh toán trọn vẹn hành trình (Full Journey).
 
-Mỗi ngày, hàng triệu người Việt search "sim số đẹp hợp tuổi", "gói data Viettel tháng này", "esim du lịch Nhật" - và tất cả đều có thể hoàn thành giao dịch ngay trên MoMo nếu có trang để đón họ. Thị trường ước tính 500K-800K searches/tháng, intent rõ ràng, CAC = 0. Nhưng momo.vn chưa rank cho phần lớn các từ khóa này - không có landing page, không có conversion.
+### 1.2 Situation & Complication
+Mỗi ngày, hàng triệu người Việt search "sim số đẹp hợp tuổi", "gói data Viettel tháng này", "esim du lịch Nhật". Thị trường ước tính 500K-800K searches/tháng, intent rõ ràng, CAC = 0. Nhưng MoMo rank yếu hoặc không rank cho các nhóm từ khóa volume cao này, nhường sân chơi cho TGDD và các bên bán sim trung gian.
 
-### Complication
-
-Đối thủ như Thế Giới Di Động đã xây dựng hệ thống landing page gói cước và sim phong thủy có độ phủ sóng từ khóa rộng. MoMo hiện rank yếu hoặc không rank cho các nhóm từ khóa có volume cao như "sim số đẹp hợp tuổi [năm sinh]" (~2.000-5.000 searches/tháng per năm), "gói data [nhà mạng]" (~10.000-15.000 searches/tháng per nhà mạng), và "esim du lịch [quốc gia]" (~1.000-5.000 per nước hot). MoMo đang bỏ lỡ một lượng intent cao với CAC = 0 từ organic channel.
-
-### Resolution
-
-Use Case Viễn Thông xây dựng hệ thống web content gồm: (1) Hub `/vien-thong` làm trang trung tâm điều phối 4 sản phẩm; (2) Sitemap 3 tầng cho từng sản phẩm; (3) pSEO engine tạo 10.000+ trang sim phong thủy và 330+ trang gói cước; (4) eSIM landing cho 200+ quốc gia; (5) Blog Embed components để tối ưu conversion từ content. Product drives transaction - từ search intent đến purchase trên web, không cần ra đại lý.
+### 1.3 Resolution
+Use Case Viễn Thông xây dựng hệ thống web content gồm: (1) Hub `/vien-thong` làm trang trung tâm; (2) pSEO engine tạo 10.000+ trang sim phong thủy với AI Widget; (3) eSIM landing cho 200+ quốc gia. Product drives transaction - từ search intent đến purchase trên web, không cần ra đại lý.
 
 ---
 
@@ -90,9 +88,10 @@ Số giao dịch Telco tăng thêm từ kênh organic = zero incremental cost pe
 
 **Định hướng từ BU Telco:** Đẩy mạnh SEO/SEM Telco, yêu cầu người dùng mua hàng trực tiếp trên Web trọn vẹn hành trình (Full Journey). Phải có cơ chế đo lường tracking cụ thể. BU VTTI làm việc trực tiếp với Web Platform dựa trên BRD chi tiết.
 
-### 3.3 Bốn Dòng Sản Phẩm & Phân Khúc Người Dùng
+### 3.3 Intent-based Filtering Framework (Trang Phạm Standard)
+Phân loại rạch ròi luồng traffic dựa trên Search Intent để điều hướng vào đúng Product Lane, tránh dắt user đi lòng vòng:
 
-| Sản phẩm | Phân khúc Target | Đặc tính nhu cầu |
+| Sản phẩm | Phân khúc Target | Đặc tính nhu cầu (Intent Filter) |
 |---|---|---|
 | Sim Số Đẹp / Sim Chính Chủ | Người kinh doanh, người duy tâm, người đổi sim phong thủy | Nghiên cứu kỹ trước mua - intent cao, giá trị giao dịch cao |
 | eSIM Du Lịch | Du khách trẻ, hay di chuyển quốc tế, sử dụng smartphone cận cao cấp | Mua trước chuyến đi, cần cài nhanh, giá trị convenience cao |
@@ -265,7 +264,10 @@ momo.vn/vien-thong [Hub - 4 sản phẩm]
 │   └── /nap-tien-dien-thoai/[nha-mang]           (6 nhà mạng)
 │
 └── BLOG CLUSTER (momo.vn/blog - nhúng Blog Embed Components)
+└── BLOG CLUSTER (momo.vn/blog - nhúng Blog Embed Components)
 ```
+
+**AEO/GEO Standard:** `momo.vn/vien-thong/llms.txt` (Bắt buộc theo quy chuẩn VP GPD để chuẩn hóa AI citation cho các câu hỏi phong thủy/gói data).
 
 **Schema bắt buộc:** FAQPage - HowTo - Product - ItemList - BreadcrumbList - AggregateRating per sản phẩm.
 
@@ -324,6 +326,10 @@ Search → Landing Page Telco → Giao dịch trực tiếp trên Web (Full Jour
 | pSEO pages indexed (gói cước) | 0 | 330+ | GSC |
 | eSIM quốc gia pages | 20 | 200 | Site audit |
 
+### 6.3 Mandatory Tracking & AB Test Hypothesis (MoSpark Standard)
+- **Hypothesis:** Nếu dùng "AI Giải Luận Widget" nhập năm sinh ngay trên màn hình đầu tiên (thay vì bắt user tự cuộn tìm số), Conversion Rate (Web-to-Transaction) sẽ tăng 60% vì giải quyết triệt để nhu cầu cá nhân hóa.
+- **Tracking Event Schema:** Gắn tracking DA & Appsflyer cho các sự kiện: `telco_ai_input` (Nhập năm sinh), `telco_package_select` (Chọn gói data/eSIM), `telco_checkout_success`.
+
 ---
 
 ## 7. Dependencies & Constraints
@@ -342,6 +348,11 @@ Search → Landing Page Telco → Giao dịch trực tiếp trên Web (Full Jour
 - Trang sim phong thủy phải có disclaimer rõ ràng về tính chất tham khảo của phong thủy
 - pSEO content phải unique - không được duplicate content giữa các trang (AI Giải Luận giải quyết điều này)
 - eSIM chỉ áp dụng cho thiết bị hỗ trợ eSIM - cần filter và thông báo rõ trong UX
+
+### 7.1 Go-to-Market: SPA Framework (Service Productization)
+- **reSearch / Strategy:** Phân tích nhu cầu 800K searches/tháng (Sim, eSIM, Data) và các insight phong thủy.
+- **Pilot / Plan (T6/2026):** Rollout Nạp Data & eSIM hub + AI Giải luận phong thủy MVP.
+- **Action / Amplify (Q3/2026):** pSEO 10.000+ trang Sim Phong Thủy (x tên x tuổi) để thống trị organic SOV.
 
 ---
 

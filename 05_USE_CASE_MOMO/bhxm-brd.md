@@ -5,7 +5,7 @@
 > - **Division:** FS (Financial Services)
 > - **Use Case:** InsurTech
 > - **Owner:** GPD - Out-App Traffic
-> - **Governance:** SEO & GEO Lead
+> - **Governance:** Web Product Lead
 > - **Version:** 1.1 - March 2026
 > - **Status:** Draft
 > - **SEO Score:** 65/100 | **Traffic:** 15K sessions/tháng | **W2A:** 8.5%
@@ -14,11 +14,14 @@
 
 ## 1. Executive Summary
 
-### Situation
+### 1.1 Elegant Problem Framing
+- **Vấn đề cốt lõi:** Chủ xe máy thường quên mua hoặc không biết bảo hiểm của mình khi nào hết hạn, đến khi bị vẫy vào chốt CSGT thì bị phạt nặng. Đọc luật thì dài, mua thì sợ mua nhầm thẻ bảo hiểm giả.
+- **Giải pháp (The "What"):** Biến MoMo thành "Cứu tinh 1-chạm". Cung cấp PLG tool nhập biển số xe để tra cứu thời hạn, tính phí và đóng tiền gia hạn ngay lập tức, cấp Giấy chứng nhận điện tử hợp lệ trình CSGT.
 
-MoMo là một trong những kênh phân phối bảo hiểm xe máy trực tuyến lớn tại Việt Nam, đã phân phối hơn 2.3 triệu hợp đồng với đối tác là các nhà bảo hiểm uy tín (Bảo Việt, PVI, PTI, MIC, GIC, Liberty). Thị trường có nền tảng cầu tự nhiên rất cao: 72 triệu xe máy đang lưu hành, bảo hiểm TNDS bắt buộc theo pháp luật, và Nghị định 168/2024/NĐ-CP nâng mức phạt lên 200-300K đồng từ 1/1/2025 tạo spike tìm kiếm định kỳ đầu mỗi năm.
+### 1.2 Situation
+MoMo là một trong những kênh phân phối bảo hiểm xe máy trực tuyến lớn tại Việt Nam, đã phân phối hơn 2.3 triệu hợp đồng với đối tác là các nhà bảo hiểm uy tín (Bảo Việt, PVI, PTI, MIC, GIC, Liberty). Thị trường có nền tảng cầu tự nhiên rất cao: 72 triệu xe máy đang lưu hành, bảo hiểm TNDS bắt buộc theo pháp luật.
 
-Dữ liệu keyword nội bộ ghi nhận 519 từ khoá, tổng volume ~67,540/tháng và đạt đỉnh ~76,460 vào tháng 3/2025. Nhu cầu tìm kiếm trải rộng 7 cluster khác nhau từ transactional (mua/giao dịch), informational (kiến thức/pháp lý), đến utility (tra cứu/giá), cho thấy user đang hiện diện ở tất cả các giai đoạn funnel.
+Dữ liệu keyword nội bộ ghi nhận 519 từ khoá, tổng volume ~67,540/tháng và đạt đỉnh ~76,460 vào tháng 3/2025. Nhu cầu tìm kiếm trải rộng 7 cluster khác nhau từ transactional, informational đến utility.
 
 ### Complication
 
@@ -210,8 +213,8 @@ momo.vn/bao-hiem-xe-may [Hub]
 │   ├── /bao-hiem-xe-may/tu-nguyen          - BH tự nguyện/vật chất
 │   ├── /bao-hiem-xe-may/gia-han            - Gia hạn / Tái tục
 │   ├── /bao-hiem-xe-may/boi-thuong         - Hướng dẫn bồi thường
-│   ├── /bao-hiem-xe-may/tra-cuu            - Widget tra cứu biển số
-│   └── /bao-hiem-xe-may/bang-gia           - Bảng giá + calculator
+│   ├── **PLG Interactive Tool:** /bao-hiem-xe-may/tra-cuu - Widget tra cứu biển số (Bữa tối gia đình test)
+│   └── **PLG Interactive Tool:** /bao-hiem-xe-may/bang-gia - Bảng giá + Calculator tính phí
 │
 ├── LANDING PAGE THEO NHÀ BH
 │   ├── /bao-hiem-xe-may/bao-viet
@@ -274,7 +277,8 @@ Bảo hiểm xe máy là YMYL - Google yêu cầu E-E-A-T cao. Các AI engines (
 | ChatGPT / Copilot | Cite từ training data, volume content indexed nhiều | Blog chất lượng cao, được index và share nhiều |
 | TikTok / YouTube Search | Gen Z tìm qua video | Embed video guide ngắn trong trang hướng dẫn mua |
 
-**E-E-A-T signals cần có:**
+**E-E-A-T & AEO signals cần có:**
+- **AEO/GEO Standard (VP GPD):** `momo.vn/bao-hiem-xe-may/llms.txt` chứa dữ liệu sạch về biểu phí BH bắt buộc 2026. Bắt buộc để được trích dẫn chính xác.
 - Author byline với chức danh chuyên môn
 - Ngày cập nhật visible (dd/mm/yyyy), Last reviewed date
 - Cite đúng số Nghị định (Nghị định 168/2024/NĐ-CP, Nghị định 67/2023)
@@ -308,6 +312,10 @@ Bảo hiểm xe máy là YMYL - Google yêu cầu E-E-A-T cao. Các AI engines (
 Organic session → Mua ngay click → App open → Purchase (via Appsflyer)
 ```
 
+### 6.3 Mandatory Tracking & AB Test Hypothesis (MoSpark Standard)
+- **Hypothesis:** Nếu đưa widget "Nhập biển số tra cứu hạn bảo hiểm" lên đầu trang thay vì các banner quảng cáo dài dòng, W2A Conversion sẽ tăng 45% do đánh trúng FOMO bị phạt.
+- **Tracking Event Schema:** Bắt buộc track `bhxm_plate_input`, `bhxm_result_view`, `bhxm_buy_click` qua GA4 & Appsflyer.
+
 ---
 
 ## 7. Dependencies & Constraints
@@ -322,7 +330,14 @@ Organic session → Mua ngay click → App open → Purchase (via Appsflyer)
 | Số liệu trust bar (số hợp đồng, đối tác BH) | BH Product team | Cần xác nhận số liệu chính xác nhất tính đến ngày publish | Không - có thể update sau |
 | Content production | SEO team | 9 blog posts + 15+ landing pages | Không - team tự build |
 
-**Constraints:**
+### 7.1 Go-to-Market: SPA Framework (Service Productization)
+- **reSearch / Strategy:** Phân tích nhu cầu 67.5K searches/tháng, 7 pillar clusters.
+- **Pilot / Plan (T6/2026):** Launch Hub page + PLG Widget (Tra cứu biển số + Tính phí).
+- **Action / Amplify (Q3/2026):** Scale pSEO cho các dòng xe máy điện và blog FOMO pháp lý để dominate organic SOV.
+
+### 7.2 Operational Constraints
+**Hard Constraints (VP GPD Standard):**
+- **Không dùng Geo-URL:** Tuyệt đối KHÔNG tạo trang kiểu `/bao-hiem-xe-may-hcm` (pSEO rác). Quy định giao thông và giá BHXM áp dụng toàn quốc.
 - Content pháp lý (mức phạt, điều kiện BH, mức bồi thường) PHẢI qua legal review trước khi publish - không auto-publish
 - AggregateRating Schema chỉ được dùng khi có data review thực - không dùng fake rating
 - Số liệu Nghị định phải cite đúng số hiệu và năm ban hành

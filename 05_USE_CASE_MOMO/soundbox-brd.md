@@ -4,7 +4,7 @@
 > - **Division:** PS (Payment Services) | SME Offline
 > - **Main URL:** momo.vn/loa-thong-bao-chuyen-khoan
 > - **Owner:** GPD - Out-App Traffic
-> - **Governance:** SEO & GEO Lead
+> - **Governance:** Web Product Lead
 > - **Version:** 2.0 - Tháng 05/2026
 > - **Status:** Draft - Chờ stakeholder review
 

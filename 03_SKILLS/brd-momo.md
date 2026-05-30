@@ -179,7 +179,7 @@ Nếu có điều kiện PHẢI giải quyết trước khi build → đưa vào
 > - **Main URL:** [URL chính]
 > - **Division:** [GPD / FS / etc.]
 > - **Owner:** GPD - Out-App Traffic
-> - **Governance:** SEO & GEO Lead
+> - **Governance:** Web Product Lead
 > - **Version:** [X.Y · Tháng MM/YYYY]
 > - **Status:** [Draft / Active / On Track / LIVE / Chờ pre-conditions]
 > - **Business Model:** [Chỉ thêm nếu cần làm rõ]

@@ -4,7 +4,7 @@
 > - **Market:** Gold
 > - **Division:** GPD - Out-App Traffic
 > - **Owner:** GPD - Out-App Traffic
-> - **Governance:** SEO & GEO Lead
+> - **Governance:** Web Product Lead
 > - **Version:** v1.2 - 2026-05-23
 > - **Status:** Draft - Chờ 3 pre-conditions (xem Section 3.3)
 > - **Business Model:** Financial Utility + PLG Activation (không có sản phẩm mua/bán vàng)

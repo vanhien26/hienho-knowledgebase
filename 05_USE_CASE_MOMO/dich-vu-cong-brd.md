@@ -227,6 +227,7 @@ User search thủ tục hành chính hoặc phạt nguội - tìm thấy MoMo - 
 | **Đất đai** | `/dich-vu-cong/dat-dai` | Sang tên, chuyển nhượng |
 | **Knowledge Base** | `/dich-vu-cong/faq` | FAQ Schema Hub |
 | | `/dich-vu-cong/vneid-la-gi` | Định danh điện tử / VNeID |
+| **AEO/GEO Standard**| `/dich-vu-cong/llms.txt` | Tệp chuẩn hóa AI Indexing (Bắt buộc theo chuẩn VP GPD) |
 
 ### 6.2. Governance Hub Anatomy (`/dich-vu-cong`)
 
@@ -234,6 +235,7 @@ User search thủ tục hành chính hoặc phạt nguội - tìm thấy MoMo - 
 |---|---|---|
 | Hero | Search bar auto-suggest + "Mọi dịch vụ công trong 1 ứng dụng" + trust counter | LCP < 2.5s |
 | Quick Actions | 6 icon dịch vụ phổ biến nhất (Phạt nguội, Đổi bằng lái, CCCD, Thuế, BHXH, Khai sinh) | Personalize nếu logged in |
+| **PLG Interactive Tool** | **Smart DVC Checklist Generator:** Trả lời 3 câu hỏi nhanh (Loại dịch vụ, Tỉnh thành, Tình trạng) → Render ra ngay Checklist chuẩn bị hồ sơ 100% chính xác. | Tạo "Aha Moment" (Utility-First của A.Công) & Passed "Bữa tối gia đình test" (của A.Tường) |
 | Service Grid | Map 8 dịch vụ BU: 3 kênh chiến lược nổi bật + các mảng cân nhắc | Schema: Service + ItemList |
 | App CTA | Sticky bottom banner + QR + deep link | Firebase Dynamic Links |
 | Blog Preview | 3 bài mới nhất | NewsArticle Schema |
@@ -252,6 +254,11 @@ User search thủ tục hành chính hoặc phạt nguội - tìm thấy MoMo - 
 | Organic sessions EOY | Tier B | 500K/tháng | GSC → GA4 |
 | Top 5 keywords DVC | Tier B | 20 keywords | Ahrefs |
 | W2A end-to-end | Tier B | 15% | GA4 + Appsflyer |
+
+### 7.1. Mandatory Tracking & AB Test Hypothesis (MoSpark Standard)
+*Để đảm bảo quá trình xét duyệt và deploy trên MoSpark diễn ra nhanh chóng (Align với nền tảng User Growth):*
+- **Hypothesis (Giả thuyết test):** Nếu đưa "Smart DVC Checklist Generator" (Interactive Tool) lên vị trí First Fold (thay vì bài viết Text), W2A Conversion Rate sẽ tăng ít nhất 30% so với trang thuần Text.
+- **Tracking Event Schema:** Mọi lượt tương tác với Checklist (Click chọn dịch vụ, View kết quả) đều phải được gán event trên GA4 & Appsflyer để đo lường Funnel Drop-off.
 
 ---
 
@@ -274,6 +281,12 @@ User search thủ tục hành chính hoặc phạt nguội - tìm thấy MoMo - 
 |---|---|---|
 | **Phạt Nguội** | **LIVE** | Triển khai độc lập (BRD riêng) |
 | **Thủ tục Hành chính (TTHC)** | **IN PROGRESS** | Đang scale content |
+
+### 8.2. Go-to-Market: SPA Framework (Service Productization)
+*Theo chỉ đạo "Đóng gói giải pháp Web" của VP GPD:*
+1. **reSearch / Strategy (Hoàn thành):** Đã phân tích Demand (~5M searches) & Market Gap (Chưa có Fintech nào phủ).
+2. **Pilot / Plan (Hiện tại):** Dùng **Phạt Nguội** làm Pilot Case Study. Triển khai Mini Web MVP trên MoSpark + GenAI Pipeline.
+3. **Action / Amplifier (Next step T6/2026):** Sau khi Pilot Phạt Nguội chứng minh MEU/MAU thành công ➔ Pitch BU DVC để xin ngân sách Scale toàn bộ 1900+ TTHC.
 
 ---
 

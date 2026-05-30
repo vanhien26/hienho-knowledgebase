@@ -10,11 +10,15 @@
 
 ## 1. Executive Summary
 
-**Situation:** MoMo phân phối eSIM qua đối tác Gohub (150+ quốc gia), Xplori và Mobi Inbound. Thị trường SIM du lịch Việt Nam ước tính 1K–1.5K tỷ VNĐ/năm, tăng trưởng nhanh theo đà xuất cảnh (9 tháng 2025: 5.44 triệu lượt người Việt xuất cảnh, +33.1% YoY). MoMo có lợi thế distribution rõ ràng: 12.8M user A30, thanh toán seamless, trust cao — nhưng hiện không có touchpoint web để capture search demand. Keyword pool ~38.050 SV/tháng (380 keywords) đang bị bỏ ngỏ.
+### 1.1 Elegant Problem Framing
+- **Vấn đề cốt lõi:** Khi chuẩn bị đi du lịch nước ngoài, người Việt cực kỳ sợ bị "mù internet" khi hạ cánh, hoặc sợ "shock bill" roaming. Mua SIM vật lý thì rườm rà, cài eSIM quốc tế (Airalo) thì rào cản ngôn ngữ và khó thanh toán.
+- **Giải pháp (The "What"):** Biến MoMo thành kênh mua eSIM du lịch "Nhanh - Tiện - An Tâm". Thanh toán 1-chạm bằng ví, nhận mã QR và cài đặt ngay tại nhà, xuống máy bay là có mạng.
 
-**Complication:** MoMo chưa được định vị trong đầu user là kênh mua SIM du lịch — mindshare thuộc Airalo, Klook, Gohub. Organic traffic hiện dao động 25–43K/tháng nhưng không có growth, phụ thuộc paid. Web contribution vào tổng Trans hiện tiệm cận 0%. Không có destination pages, không có blog layer, không có GEO FAQ layer — không intercept được user đang search Google theo quốc gia. GMV 2025: 16 tỷ VNĐ (~11% SAM); Target 2026: 48 tỷ VNĐ (+300%).
+### 1.2 Situation & Complication
+MoMo phân phối eSIM qua đối tác Gohub (150+ quốc gia). Tuy nhiên, MoMo chưa được định vị trong đầu user là kênh mua SIM du lịch — mindshare thuộc về Airalo, Klook, Gohub. Keyword pool ~38.050 SV/tháng đang bị bỏ ngỏ vì không có Web touchpoint. MoMo có lợi thế distribution rõ ràng (12.8M user, thanh toán seamless) nhưng Web contribution vào tổng Trans hiện tiệm cận 0%.
 
-**Resolution:** Dự án xây dựng cluster web eSIM Du Lịch gồm 1 Hub page, 10 Destination pages, và ~10 blog theo keyword-driven architecture. Conversion path: Web → Deep link → App → Mua gói → Thanh toán ví MoMo. Web contribution target: 4% (T7/2026) → 10% (T9/2026) tổng Trans; Web GMV target: ~1.1 tỷ VNĐ (T9/2026). Lợi thế cạnh tranh của MoMo không nằm ở sản phẩm eSIM mà ở **distribution + payment seamless + trust** từ hệ sinh thái ví điện tử.
+### 1.3 Resolution
+Dự án xây dựng cluster web eSIM Du Lịch gồm 1 Hub page, 10 Destination pages, và Blog cluster theo mô hình Intent-based Filtering. Lợi thế cạnh tranh của MoMo không nằm ở bản thân gói eSIM mà ở **distribution + payment seamless + trust** từ hệ sinh thái Fintech lớn nhất VN.
 
 ---
 
@@ -244,13 +248,14 @@ SIM du lịch thuộc nhóm **Habitual** trong FCB Grid:
 
 Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu quả, convert traffic thành lượt mở app và mua hàng, contribute vào target web 4–10% Trans từ T7/2026. Đây là Source of Growth mới dựa trên hành vi tìm kiếm Google của khách du lịch — touchpoint web hiện MoMo chưa có.
 
-### Ai được phục vụ?
+### 6.1 Intent-based Filtering Framework (Trang Phạm Standard)
+Phân loại rạch ròi luồng traffic dựa trên Search Intent để điều hướng vào đúng Product Lane/Content:
 
-| User Segment | Nhu cầu chính | Volume indicator |
+| User Segment | Đặc tính nhu cầu (Intent Filter) | Volume indicator |
 |---|---|---|
-| FIT (tự đi, chuẩn bị trước) | Mua eSIM theo quốc gia trước chuyến đi | Cluster destination pages |
-| Người so sánh giải pháp | eSIM vs roaming vs SIM vật lý | Blog comparison, hub FAQ |
-| Người mua hộ cho nhóm | Mua 2+ SIM, cần hiểu rõ trước khi quyết định | Product table + FAQ |
+| FIT (tự đi, chuẩn bị trước) | Mua eSIM theo quốc gia cụ thể (Transact intent) | Cluster destination pages |
+| Người so sánh giải pháp | eSIM vs roaming vs SIM vật lý (Compare intent) | Blog comparison, hub FAQ |
+| Người mua hộ cho nhóm | Cần minh bạch giá, gói đa dạng (Research intent) | Product table + FAQ |
 
 ### Trong scope
 
@@ -312,6 +317,7 @@ Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu q
 | /blog/esim-chau-au | `esim du lịch châu âu` | ~220 | |
 | /blog/klook-esim-vs-momo-esim | `klook esim` | - | Cần legal approval trước khi viết |
 | /blog/airalo-vs-gohub-vs-momo-esim | `esim airalo` | - | Cần legal approval + verify giá đối thủ |
+| /esim-du-lich/llms.txt | AEO/GEO Standard | - | Chuẩn hóa AI Indexing (Bắt buộc theo VP GPD) |
 
 **URL Rules:**
 - Lowercase, hyphenated, không dấu tiếng Việt
@@ -451,7 +457,11 @@ Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu q
 
 *Baseline measurement: đo toàn bộ metrics ngay sau khi publish Hub + 2 destination pages đầu tiên.*
 
-### GA4 Events
+### 8.1 Mandatory Tracking & AB Test Hypothesis (MoSpark Standard)
+- **Hypothesis (Giả thuyết test):** Nếu đặt "Bảng so sánh chi phí eSIM MoMo vs Roaming" ở First Fold thay vì liệt kê gói data thông thường, W2A Conversion sẽ tăng ít nhất 40% vì đánh trúng tâm lý sợ Shock Bill (Fear-driven intent).
+- **Tracking Event Schema:** Bắt buộc track `esim_compare_view`, `esim_cta_click`, `esim_deeplink_click` đổ về GA4 và Appsflyer để đo Funnel drop-off.
+
+### 8.2 GA4 Events
 
 | Event | Trigger | Key Parameters |
 |---|---|---|
@@ -475,7 +485,12 @@ Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu q
 | SEM URL migration alignment | Cần quyết định URL pattern `/khu-vuc/` vs `/` trước khi build | Yes |
 | DA Team — GA4 events setup | Phải có trước khi publish để có baseline | Yes |
 
-**Constraints:**
+### 9.1 Go-to-Market: SPA Framework (Service Productization)
+- **reSearch / Strategy:** Phân tích nhu cầu 38K SV/tháng và các đối thủ (Airalo, Klook, Gohub).
+- **Pilot / Plan (T6/2026):** Rollout Hub page + 10 Destination pages (Thái, Trung, Nhật...) trên MoSpark.
+- **Action / Amplify (Q3/2026):** Pitch BU Telco đổ budget SEM để scale traffic vào Hub, push W2A.
+
+### 9.2 Operational Constraints
 - Gói eSIM Trung Quốc: không publish trang nếu chưa xác nhận khả năng bypass GFW từ Gohub.
 - Giá không được hardcode bất kỳ đâu — phải fetch từ API.
 - Không tạo subdomain — dùng subdirectory `/esim-du-lich/` để giữ domain authority.

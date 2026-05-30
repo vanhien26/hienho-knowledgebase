@@ -93,4 +93,4 @@
 | **v1.0** | 2026-05-13 | Khởi tạo OKRs 2026. |
 | **v1.1** | 2026-05-23 | Chuẩn hóa format: xóa emoji, xóa Obsidian links, đơn giản hóa phần đo lường để phù hợp C-Level. |
 
-*Maintained by: SEO & GEO Lead, Out-App Traffic, GPD | Last updated: 2026-05-23*
+*Maintained by: Web Product Lead, Out-App Traffic, GPD | Last updated: 2026-05-23*

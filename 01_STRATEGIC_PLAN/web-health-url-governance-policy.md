@@ -2,7 +2,7 @@
 ## momo.vn - Platform Health Management
 
 > **Version:** 2.0 | **Ngày tạo:** 2026-05-22 | **Ngày hiệu lực:** Sau khi VP phê duyệt
-> **Policy Owner:** Văn Hiến - SEO & GEO Lead, Out-App Traffic, GPD
+> **Policy Owner:** Văn Hiến - Web Product Lead, Out-App Traffic, GPD
 > **Approver:** Công - VP, Growth Platform Division
 > **Trạng thái:** Draft - Pending VP Approval
 > **Chu kỳ review:** 6 tháng / khi có thay đổi platform lớn
@@ -433,7 +433,7 @@ Thay đổi nhỏ về threshold và tiêu chí đo lường: SEO Lead có thể
 
 | Vai trò | Họ tên | Chức vụ | Ngày ký | Chữ ký |
 |--------|-------|---------|--------|--------|
-| Policy Owner | Văn Hiến | SEO & GEO Lead, Out-App Traffic, GPD | ____________ | ____________ |
+| Policy Owner | Văn Hiến | Web Product Lead, Out-App Traffic, GPD | ____________ | ____________ |
 | Approver | ____________ | VP, Growth Platform Division | ____________ | ____________ |
 
 *Chính sách có hiệu lực kể từ ngày Approver ký phê duyệt.*

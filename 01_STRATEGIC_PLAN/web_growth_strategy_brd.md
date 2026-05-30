@@ -1,7 +1,7 @@
 # BRD: Chiến lược Tăng trưởng Web Growth
 ## SPA Framework & Mô hình Bán hàng Nội bộ (Internal Sales)
 
-> - **Phụ trách:** Web Platform Manager & SEO/GEO Lead, Growth Platform Division
+> - **Phụ trách:** Web Platform Manager & Web Product Lead, Growth Platform Division
 > - **Phê duyệt:** VP - Growth Platform Division
 > - **Version:** 1.1 · May 2026
 > - **Status:** Active
@@ -97,7 +97,25 @@ Mô hình "No-Risk Entry" giúp BU dễ dàng gật đầu:
 
 ---
 
-## 6. Phụ lục: Công thức tính MAU tiềm năng
+## 6. Cơ chế xử lý & Quản trị nguồn lực (Operational Mechanisms)
+
+Để bảo vệ nguồn lực Tech của Web Platform và duy trì tính tự chủ, các tình huống đặc thù được xử lý thông qua các cơ chế sau (tách biệt khỏi Framework SPA):
+
+### 6.1. Cơ chế kiểm soát nhịp độ (Pacing Control)
+- **Áp dụng cho:** Thị trường có Demand cực lớn (như Tín dụng, Tài chính) nhưng Tech Resource hạn chế.
+- **Cách xử lý:** Web Platform đóng vai trò Gatekeeper. Không vội vàng dồn Dev vào code tính năng theo yêu cầu BU. Bắt buộc BU phải chứng minh được tỷ lệ chuyển đổi (W2A) thông qua các giải pháp có sẵn (Low-code CMS, GenAI Content, Basic Widgets). Chỉ khi Pilot vượt ngưỡng ROI kỳ vọng mới duyệt mở khóa Tech Resource để xây dựng Custom Tools phức tạp. Tránh lãng phí nguồn lực kỹ thuật.
+
+### 6.2. Cơ chế cam kết dịch vụ (SLA với Inbound)
+- **Áp dụng cho:** Các Use Case do Inbound Marketing phụ trách nhưng Inbound lại lean on (phụ thuộc) vào Web Platform do không có Dev.
+- **Cách xử lý:** Thiết lập SLA cứng. Inbound phải tự hoàn thành khâu reSearch và tự vận hành Pilot nội dung trên CMS MoSpark. Web Platform sẽ **từ chối tiếp nhận** các request kỹ thuật nếu Inbound chưa xuất trình được số liệu thực tế (Traffic, CTR, W2A) từ tập dữ liệu test. Tuyệt đối tránh biến Web Platform thành "thợ code dạo" nhận lệnh từ Inbound.
+
+### 6.3. Cơ chế quản trị kỳ vọng (Expectation Management)
+- **Áp dụng cho:** Các Use Case mới tấn công vào thị trường có quy mô siêu lớn.
+- **Cách xử lý:** Rào trước kỳ vọng với Head of BU ngay từ giai đoạn Pitching. Với thị trường khổng lồ, một vài đợt test nhỏ ban đầu sẽ chưa thể tạo ra "Impact" (Tổng số lượng User) đáng kể. Cơ chế ở đây là dịch chuyển góc nhìn của BU: Giai đoạn đầu chỉ đánh giá **Tính hiệu quả (Efficiency - Cost per MAU rẻ hơn Ads)** chứ không đánh giá **Tổng Volume**. Khi mô hình Efficiency được chứng minh thành công, lúc đó mới yêu cầu Head of BU rót ngân sách lớn để đánh chiếm Market Share.
+
+---
+
+## 7. Phụ lục: Công thức tính MAU tiềm năng
 
 **New MAU = TASV x CTR target x W2A Rate x Install-to-MAU Rate**
 
@@ -115,4 +133,4 @@ Mô hình "No-Risk Entry" giúp BU dễ dàng gật đầu:
 | **v1.0** | 2026-05-13 | Khởi tạo BRD. |
 | **v1.1** | 2026-05-23 | Chuẩn hóa format: xóa emoji, xóa tên cụ thể → roles, xóa Section 6-7 (action items operational), chuẩn hóa header. |
 
-*Maintained by: Web Platform Manager & SEO/GEO Lead, Growth Platform Division | Last updated: 2026-05-23*
+*Maintained by: Web Platform Manager & Web Product Lead, Growth Platform Division | Last updated: 2026-05-23*

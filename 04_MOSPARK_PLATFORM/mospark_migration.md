@@ -2,7 +2,7 @@
 ark Migration - System Consolidation
 
 > - **Project Manager:** Anh Bảo (Web Platform Manager)
-> - **Governance & SEO Strategy:** Văn Hiến (SEO & GEO Lead)
+> - **Governance & SEO Strategy:** Văn Hiến (Web Product Lead)
 > - **System Architect / Migration Mapper:**  [Cần xác định] Người chịu trách nhiệm định nghĩa cấu trúc dữ liệu, sơ đồ chuyển dịch và liên kết hệ thống.
 > - **Lead Engineers:** Võ Minh Thuận, Lê Đăng Lộc
 > - **Status:** Active - Structure & Mapping Phase

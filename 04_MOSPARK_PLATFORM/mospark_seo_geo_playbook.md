@@ -5,7 +5,7 @@ description: >
   cho các dự án SEO/GEO trên nền tảng MoSpark.
 version: v2.2
 status: Active
-owner: Văn Hiến (SEO & GEO Lead)
+owner: Văn Hiến (Web Product Lead)
 last_updated: 2026-05-16
 tags: [mospark, seo, geo, playbook, strategy, operations]
 ---
@@ -37,7 +37,9 @@ MoSpark đang hướng tới việc lấp đầy các Gap sau:
 
 ## 2. Quy trình vận hành (Project Workflow)
 
-Mọi dự án tăng trưởng trên MoSpark phải tuân thủ quy trình khép kín dưới đây:
+> **Nguyên tắc cốt lõi (SPA Framework):** Trước khi tiếp nhận bất kỳ dự án nào, đặc biệt là các request từ Head of BU, đội ngũ bắt buộc phải áp dụng **SPA Framework (reSearch - Pilot - Action)**. Không nhảy ngay vào sản xuất nội dung (Action) khi chưa làm rõ Market Cap (reSearch) và chạy thử nghiệm (Pilot). BU phải trải qua "Tier 1: Discovery" trước khi yêu cầu scale.
+
+Mọi dự án tăng trưởng trên MoSpark phải tuân thủ quy trình khép kín dưới đây (ánh xạ trực tiếp từ mô hình SPA):
 
 ```mermaid
 graph TD
@@ -181,7 +183,7 @@ graph LR
 *   **Scoring Gate:** [[04_MOSPARK_PLATFORM/mospark_seo_geo_score|SEO/GEO Scoring System]]
 
 ---
-*Maintained by: Văn Hiến (SEO & GEO Lead) | Last updated: 2026-05-16*
+*Maintained by: Văn Hiến (Web Product Lead) | Last updated: 2026-05-16*
 
 ---
 

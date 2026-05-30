@@ -352,4 +352,4 @@ MoSpark đóng vai trò là **Hệ điều hành tăng trưởng cốt lõi (Cor
 | **v6.0** | 2026-05-20 | Tích hợp nội dung từ cuộc trao đổi lãnh đạo — bổ sung Section 1.5 (Under-served Markets & Vertical Focus Strategy với OKR cụ thể), Section 7.3 (Khung hợp tác Platform-BU linh hoạt & Toolbox), và Section 10 (Organization Transformation & Business Ownership). |
 | **v6.1** | 2026-05-23 | Chuẩn hóa format: xóa Obsidian link trong intro. Bổ sung Section 2 (Global Fintech Benchmarks) và Section 3 (Gap Analysis) merge từ seo-geo-direction.md v5.5. Renumber sections 2-8 thành 4-10. |
 
-*Maintained by: SEO & GEO Lead, Out-App Traffic, GPD | Last updated: 2026-05-23*
+*Maintained by: Web Product Lead, Out-App Traffic, GPD | Last updated: 2026-05-23*

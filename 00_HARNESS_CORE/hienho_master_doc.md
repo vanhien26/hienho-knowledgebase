@@ -1,84 +1,22 @@
 # 🚀 Hienho Master Doc (Step 1)
-> Version: 4.1 | Last updated: 2026-05-16 | Maintained by: Văn Hiến
+> Version: 4.3 | Last updated: 2026-05-28 | Maintained by: Văn Hiến
 
----
-
-## MỤC LỤC
+## 📑 MỤC LỤC
 
 1. [Thông tin cá nhân & Bộ phận](#1-thông-tin-cá-nhân--bộ-phận)
    - 1.1 Profile
    - 1.2 Trách nhiệm lõi
    - 1.3 Collaboration Model: GOVERN - BUILD - EXECUTE
-   - 1.4 Ownership map
+   - 1.4 Ownership Map
    - 1.5 Prioritization Framework
    - 1.6 Stack & Tools
+   - 1.7 Core Values & Working Principles
 2. [Các team làm việc chung](#2-các-team-làm-việc-chung)
-3. [KPIs & Metrics](#3-kpis--metrics)
+3. [Mục tiêu Team & Doanh nghiệp](#3-mục-tiêu-team--doanh-nghiệp)
 4. [Quy trình làm việc](#4-quy-trình-làm-việc)
 5. [Dự án đang triển khai](#5-dự-án-đang-triển-khai)
-   - [5.1 Status Board Q1-Q2/2026](#51-status-board-q1-q22026)
-   - [5.2 GEO/AEO QLCT](#52-dự-án-geoaeo-qlct-quản-lý-chi-tiêu)
-   - [5.3 Full Funnel Tracking Pipeline](#53-dự-án-full-funnel-tracking-pipeline)
-   - [5.4 Zero-Traffic URL Audit](#54-dự-án-zero-traffic-url-audit)
-   - [5.5 Popup Ads - Billpay](#55-dự-án-popup-ads---billpay)
-   - [5.6 MoMo Credit Ecosystem (Vay Nhanh + VTS + CIC)](#56-dự-án-momo-credit-ecosystem-vay-nhanh--ví-trả-sau--cic)
-   - [5.7 Auto Insurance (Bảo Hiểm Ô Tô Vật Chất)](#57-dự-án-auto-insurance-bảo-hiểm-ô-tô-vật-chất)
-   - [5.8 Content Governance (tham chiếu → 5.14)](#58-dự-án-content-governance-framework)
-   - [5.9 SEO Inventory - Financial & Payment](#59-task-seo-inventory---financial--payment-market)
-   - [5.10 SEO/GEO Content AI Platform](#510-dự-án-seogeo-content-ai-platform-project-by-ai)
-   - [5.11 Phạt Nguội (Traffic Fines)](#511-dự-án-phạt-nguội-traffic-fines)
-   - [5.12 MoSpark (MoLanding V2)](#512-dự-án-mospark-molanding-v2)
-   - [5.13 Ví Trả Sau SEO/GEO Growth](#513-dự-án-ví-trả-sau-seogeo-growth)
-   - [5.14 Content Governance Framework](#514-content-governance-framework-cập-nhật)
-   - [5.15 Cinema SEO/GEO Growth](#515-dự-án-cinema-seogeo-growth)
-   - [5.16 Merchant Page / Đối tác (VTS Cross-Sale)](#516-dự-án-merchant-page--đối-tác-vts-cross-sale)
-   - [5.17 Off-Page Strategy & Backlink Governance](#517-task-off-page-strategy--backlink-governance)
-   - [5.18 Tech Foundation Gate & Content Angle Governance SOP](#518-task-tech-foundation-gate--content-angle-governance-sop)
-   - [5.19 MoSpark SEO/GEO Scoring BRD](#519-dự-án-mospark-seogeo-scoring--checklist-brd)
-   - [5.20 Chiến lược & North Star (Strategic Plan)](#520-chiến-lược--north-star-strategic-plan)
 6. [Leadership Intelligence](#6-leadership-intelligence)
 7. [Changelog](#7-changelog)
-
-**Tài liệu liên kết:**
-- [[skill_registry|Danh mục Kỹ năng (Registry)]] & [[orchestrator_engine|Điều phối dự án (Orchestrator)]]
-- [[00_HARNESS_CORE/momo-thinking-protocol|Nghị định thư tư duy (Thinking Protocol)]]
-- [[pyramid-principle|Nguyên tắc Kim tự tháp]] | [[jtbd-analysis|Phân tích JTBD]] | [[brd-momo|Kỹ năng viết BRD]]
-- [[momo-html-formatting-skill|Kỹ năng HTML MoMo]] | [[Seo-Geo-audit|Kỹ năng Audit SEO/GEO]] | [[Web2App-Pipeline|Kỹ năng Web-to-App]]
-
----
-
-## 🗺️ KNOWLEDGE ECOSYSTEM MAP (Hệ Sinh Thái Tài Liệu)
-
-Để đảm bảo tính nhất quán từ tầm nhìn đến thực thi, hệ thống tài liệu được cấu trúc theo các tầng liên kết chặt chẽ:
-
-### 1. Tầng Chiến Lược (Strategic Plan)
-*Nơi định nghĩa "Tại sao làm?" và "Tiêu chuẩn là gì?"*
-- **[[01_STRATEGIC_PLAN/web-momo-okrs-2026|Web MoMo OKRs 2026]]**: Mục tiêu North Star & 6 triệu MUA.
-- **[[01_STRATEGIC_PLAN/seo-geo-direction|SEO & GEO Direction]]**: Chiến lược pSEO & AI Search đối chiếu toàn cầu.
-- **[[01_STRATEGIC_PLAN/momo-content-plan-strategy|Content Strategy Plan]]**: Playbook nội dung (Utility - Editorial - Trust).
-- **[[01_STRATEGIC_PLAN/web_growth_strategy_brd|Web Growth Strategy BRD]]**: Khung vận hành SPA (reSearch - Pilot - Action).
-
-### 2. Tầng Nền Tảng (MoSpark Platform)
-*Nơi định nghĩa "Làm bằng cái gì?" và "Quy trình kỹ thuật?"*
-- **[[04_MOSPARK_PLATFORM/mospark_master|MoSpark Master Doc]]**: Kiến trúc hệ thống & Khả năng của Platform.
-- **[[04_MOSPARK_PLATFORM/mospark_genai_content|GenAI Content Engine]]**: Workflow sản xuất nội dung tự động 7 bước.
-- **[[04_MOSPARK_PLATFORM/mospark_seo_geo_playbook|SEO/GEO Playbook]]**: Hướng dẫn kỹ thuật thực thi trên MoSpark.
-- **[[04_MOSPARK_PLATFORM/mospark_seo_inventory|SEO Inventory]]**: Hệ thống quản lý Market Share & Intent Mapping.
-
-### 3. Tầng Thực Thi (Use Cases MoMo)
-*Nơi định nghĩa "Làm cụ thể dự án nào?"*
-- **[[05_USE_CASE_MOMO/phat-nguoi-brd|Phạt Nguội (P0)]]**: Dự án Pilot trọng điểm áp dụng Wise Model.
-- **[[05_USE_CASE_MOMO/dich-vu-cong-brd|Dịch Vụ Công Hub]]**: Trục quản trị mảng Dịch vụ công.
-- **[[05_USE_CASE_MOMO/telecom-brd|Telecom Hub]]**: Quản trị Sim/Data/eSIM.
-- **[[05_USE_CASE_MOMO/vi-tra-sau-brd|Ví Trả Sau]]** | **[[05_USE_CASE_MOMO/vay-nhanh-brd|Vay Nhanh]]** | **[[05_USE_CASE_MOMO/bhxm-brd|Bảo Hiểm Xe Máy]]** | **[[05_USE_CASE_MOMO/cinema-brd|Cinema]]** | **[[05_USE_CASE_MOMO/merchant-page-profile|Merchant Page Profile]]**
-
-### 4. Tầng Báo Cáo & Nhật Ký (Reports & Logs)
-*Nơi ghi nhận kết quả vận hành định kỳ và nhật ký ra quyết định*
-- **[[06_REPORTS/report-thang-05-2026|Báo Cáo Tăng Trưởng Tháng 05/2026]]**: Tiến độ thực thi GenAI, SEO Inventory, và các chỉ đạo tuần của ban giám đốc.
-- **[[07_DECISION_LOG/decision_log|Strategic Decision Log]]**: Nhật ký lưu trữ các quyết định lớn của dự án.
-
----
-
 
 ---
 
@@ -89,7 +27,7 @@
 | Field | Detail |
 |-------|--------|
 | Tên | Văn Hiến |
-| Vai trò | SEO & GEO Lead |
+| Vai trò | Web Product Lead |
 | Bộ phận | Out-App Traffic Team |
 | Division | Growth Platform Division (GPD) |
 | Domain sở hữu | momo.vn (web channel) |
@@ -187,6 +125,19 @@ Khi có nhiều workstream cạnh tranh bandwidth, Hiến ưu tiên theo 2 tiêu
 | Deployment | [Internal / MoSpark Platform] |
 | Tracking standard | GA4 + GTM (marketing attribution) + Appsflyer (attribution) - synced to BigQuery |
 
+### 1.7 Core Values & Working Principles
+
+Các giá trị cốt lõi định hướng cách vận hành và ra quyết định trong vai trò Web Product Lead:
+
+| Giá trị cốt lõi | Nguyên tắc & Hành động thực tế |
+|-----------------|--------------------------------|
+| **Market-driven** | Luôn bắt đầu từ nhu cầu thị trường. Đánh giá ưu tiên dự án dựa trên **Market Search Potential**. Áp dụng **SEO/GEO Inventory** và **JTBD Analysis** để xác định cơ hội, định hướng Web Products thu hút high-intent traffic. |
+| **Ownership** | Chủ động xác định phạm vi và ưu tiên công việc theo mô hình **Govern**. Nắm giữ và duy trì hệ thống quản trị, đặc biệt là Technical & Content Foundation Gate. |
+| **Builder Mindset** | Không chỉ phân phối sản phẩm mà tập trung xây dựng hệ thống có khả năng scale. Trực tiếp tham gia đồng phát triển (co-build) các công cụ và frameworks trên **MoSpark Platform**. |
+| **Data-first** | Mọi đề xuất chiến lược đều dựa trên dữ liệu. Vận hành chuyên sâu các hệ thống đo lường (GA4, GSC, GTM, BigQuery) và tối ưu hóa phễu chuyển đổi Web-to-App. |
+| **AI-first Mindset** | Tích hợp sâu AI vào quy trình sản xuất (GenAI Content Pipeline) và đi đầu chiến lược GEO/AEO để tối ưu hiển thị trên các nền tảng AI mới. |
+| **Collaborative** | Đóng vai trò Web Product Consultant, kết nối hiệu quả giữa Web Platform, Inbound Team và các BU nội bộ để triển khai sản phẩm đúng chuẩn. |
+
 ---
 
 ## 2. CÁC TEAM LÀM VIỆC CHUNG
@@ -203,8 +154,8 @@ flowchart TD
     
     subgraph GPD ["Growth Platform Division"]
         Cong["Anh Công - VP<br/>(Expect: Framework & Market Scale)"]:::leadership
-        Bao["Anh Bảo - Project Lead<br/>(Web Platform Team)"]:::tech
-        Hien["Văn Hiến - SEO & GEO Lead<br/>(Out-App Traffic Team)"]:::hien
+        Bao["Anh Bảo - Senior Manager<br/>(Web Platform)"]:::tech
+        Hien["Văn Hiến - Web Product Lead<br/>(Out-App Traffic Team)"]:::hien
         
         Cong --> Bao
         Bao --> Hien
@@ -224,11 +175,10 @@ flowchart TD
     Hien --- note1
 ```
 
-**Lưu ý quan hệ (Cập nhật 16/05/2026):**
-- Tuệ nghỉ việc → Hiến làm việc và báo cáo trực tiếp cho Bảo và Công
-- Bảo = Project Lead Out-App Traffic / SEO-GEO, báo cáo trực tiếp Công
-- Hiến và Bảo cùng thực hiện toàn bộ workstream SEO/GEO - Hiến là SEO/GEO specialist, Bảo là Project Lead
-- Cấu trúc team Out-App Traffic (SEO/GEO Lead, Web Product Lead, Growth Lead, DA, Content Strategy) vận hành trực tiếp dưới sự dẫn dắt của Bảo và Công.
+**Lưu ý quan hệ (Cập nhật 26/05/2026):**
+- **Từ 01/06/2026:** Hiến (Web Product Lead) sẽ under và báo cáo trực tiếp cho Bảo (Senior Manager - Web Platform).
+- Bảo = Senior Manager phụ trách Web Platform, báo cáo trực tiếp Công (VP).
+- Cấu trúc team Out-App Traffic vận hành trực tiếp dưới sự dẫn dắt của Bảo.
 
 ### 2.2 Out-App Traffic (Hiến sở hữu)
 
@@ -300,21 +250,29 @@ Mỗi Cell Team tiếp cận Hiến theo framework: **Research → Build Web/Fun
 
 > Dùng làm reference khi consult Cell Team hoặc đánh giá market share.
 
-| Nhóm | Sản phẩm | Loại | SoV MoMo | Market Volume/tháng |
-|------|----------|------|----------|---------------------|
-| Vay & Cho vay | Vay Nhanh | Chủ lực | 6% | 4.375.800 |
-| BNPL | Ví Trả Sau | Chủ lực - Market Leader | 54% | 135.290 |
-| Bảo hiểm | BH xe máy | Chủ lực - Mua trực tiếp | 38% | 58.810 |
-| Bảo hiểm | BH ô tô vật chất | Chủ lực - Mua trực tiếp | 0% | 74.000 |
-| Bảo hiểm | BH y tế (BHYT) | Chủ lực - Mua trực tiếp | 0% | 1.415.740 |
-| Bảo hiểm | BH xã hội (BHXH) | Chủ lực - Sắp ra mắt | - | 938.090 |
-| Bảo hiểm | BH nhân thọ & các loại khác | Cổng thanh toán | - | ~19.780 |
-| Tín dụng | Mở thẻ tín dụng | Sản phẩm phụ | - | 600.900 |
-| CIC | CIC Score / Điểm tín dụng | Đang xây dựng | 0% | 96.790 |
-| Đầu tư | Chứng khoán (hợp tác CVS) | Chủ lực - Mini App + Landing page | 0% | 3.000.000 |
-| Đầu tư | Chứng chỉ quỹ | Chủ lực | - | ~12.000 |
-| Tiết kiệm | Gửi tiết kiệm (Bản Việt) | Chủ lực | 0% | 209.000 |
-| Dịch vụ công | Phạt nguội | Cổng thanh toán - Tiềm năng traffic | - | ~1.500.000 |
+| Nhóm | Sản phẩm / Use Case | Trạng thái (Status) | Loại | SoV MoMo | Market Volume/tháng |
+|------|---------------------|---------------------|------|----------|---------------------|
+| Vay & Cho vay | Vay Nhanh | In Progress - Execution Phase | Chủ lực | 6% | 4.375.800 |
+| BNPL | Ví Trả Sau | Active | Chủ lực - Market Leader | 54% | 135.290 |
+| Tín dụng | Điểm tín dụng (CIC) | Planning | Đang xây dựng | 0% | 96.790 |
+| Tín dụng | Mở thẻ tín dụng | - | Sản phẩm phụ | - | 600.900 |
+| Bảo hiểm | BH xe máy | Draft | Chủ lực - Mua trực tiếp | 38% | 58.810 |
+| Bảo hiểm | BH ô tô vật chất | Active | Chủ lực - Mua trực tiếp | 0% | 74.000 |
+| Bảo hiểm | BH y tế (BHYT) | On Track | Chủ lực - Mua trực tiếp | 0% | 1.415.740 |
+| Bảo hiểm | BH xã hội (BHXH) | Sắp ra mắt | Chủ lực | - | 938.090 |
+| Bảo hiểm | BH nhân thọ & khác | - | Cổng thanh toán | - | ~19.780 |
+| Đầu tư | Chứng khoán (CVS) | - | Chủ lực - Mini App | 0% | 3.000.000 |
+| Đầu tư | Chứng chỉ quỹ | - | Chủ lực | - | ~12.000 |
+| Đầu tư | Giá vàng | Draft - Chờ pre-conditions | Tiện ích tài chính | 0% | 84.000.000 |
+| Tiết kiệm | Gửi tiết kiệm | - | Chủ lực | 0% | 209.000 |
+| Dịch vụ công | Phạt nguội | Phase 1 LIVE - Pilot & Scale | Cổng thanh toán | - | ~1.500.000 |
+| Dịch vụ công | DVC Chung | Info hub - Đề án BCA | Cổng thông tin | - | - |
+| Giải trí | Cinema (Phim) | Draft - Cần align PO Cell | Dịch vụ lõi | - | - |
+| Du lịch | Vé xe khách (Bus) | Draft | Dịch vụ lõi | - | - |
+| Viễn thông | eSIM Du lịch | Draft - chờ review PO | Sản phẩm phụ | - | - |
+| Viễn thông | Telecom / Data | Active (Approved) | Chủ lực | - | - |
+| B2B / SME | Soundbox | Draft - Chờ review | Công cụ thanh toán | - | - |
+| B2B / SME | Quản lý Đối tác | Pilot Phase (100-200 Merchants) | B2B Portal | - | - |
 
 ---
 
@@ -494,7 +452,7 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 | MoMo Credit Ecosystem (Vay Nhanh/Ví Trả Sau/CIC) | Active | Hiến + Inbound (Hạnh) | KPI committed: Top 1 / 10 seed keywords |
 | Auto Insurance (Bảo Hiểm Ô Tô Vật Chất) | Active | Hiến | Target: 200K organic traffic 2026 |
 | SEO Inventory - Financial & Payment | In Progress | Hiến | Module 4 Ads Manager integrated - v4 built |
-| SEO/GEO Content AI Platform | Production | Bảo + Trọng + Hiến | v3.4 - 7-step workflow live, Claude API production |
+| SEO/GEO Content AI Platform | Production | Bảo + Trọng + Hiến | v3.5 - Claude Benchmarks live (Haiku 7k/Sonnet 20k), BU Budgeting & Multi-Model roadmap locked |
 | Phạt Nguội (Traffic fines) | P0 Active - Phase 1 Live | Hiến + Hùng (FE) + Hoài Anh (API) | SEM 200tr (T5). Umami Live. GenAI Content. |
 | MoSpark Migration (MoLanding V2) | Platform Ready | Hiến + Bảo | V2 production, Umami & GenAI integrated |
 | VTS SEO/GEO Growth | Active | Hiến + Inbound (Hạnh) | 3 thị trường, SoV targets đã define |
@@ -726,14 +684,17 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 
 **Vision:** Công cụ ứng dụng AI Foundation (Claude/Gemini) để chuẩn hóa hoạt động Content Production trên Website cho cả Inbound (BMC) và Out-App Traffic (GPD).
 
-**Version:** 3.4 (May 2026)
+**Version:** 3.5 (May 2026)
 
 **Owner:**
 - Project Manager: Anh Bảo (Web Platform Manager)
 - Tech Lead: Trọng (Software Engineer II)
-- Governance & Prompts: Văn Hiến (SEO & GEO Lead)
+- Governance & Prompts: Văn Hiến (Web Product Lead)
 
-**Status:** Claude API on Production - Enhanced Prompts Live - MoSpark Blog Auto-Create Integrated.
+**Status:** Claude API on Production (Claude 3 Haiku & Claude 3.5 Sonnet). Đã đo lường và chuẩn hóa benchmark hiệu năng & chi phí sản xuất 2 giai đoạn (Outline + Blog Detail):
+- **Claude 3 Haiku:** ~55 giây / bài, chi phí ~7.000đ / bài viết hoàn chỉnh (phù hợp scale-out pSEO, ngân sách tối giản).
+- **Claude 3.5 Sonnet:** ~140 giây / bài, chi phí ~20.000đ / bài viết hoàn chỉnh (phù hợp bài viết pillar chuyên sâu, yêu cầu E-E-A-T & YMYL cao).
+- **Budgeting predictability:** Giúp PM dễ dàng hoạch toán ngân sách Content Plan chính xác theo số lượng bài viết (ví dụ: plan 40 bài x 7.000đ = 280.000đ cho Haiku, hoặc x 20.000đ = 800.000đ cho Sonnet).
 
 **Workflow Content - 7 Bước:**
 1. Tạo Project (PM/Growth)
@@ -745,10 +706,11 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 7. Blog Editor/Publish (Hiến verify & sign-off - Gate 3 → Content Team publish)
 
 **Roadmap:**
-- Phase 1 (May 2026): 7-Step Workflow live, Phạt Nguội pilot, Scaling Financial products.
-- Phase 2 (June 2026+): GSC API Integration, Automated Insights, Content Refresh Automation.
+- Phase 1 (May 2026): 7-Step Workflow live, Phạt Nguội pilot, quy hoạch ngân sách theo đơn giá model thực tế.
+- Phase 2 (June 2026+): Tích hợp **Multi-Model Selector** (PM tự chọn model GPT-4o, Gemini 1.5 Pro, Llama 3 theo nhu cầu), phát triển cơ chế **Custom BU API Key Integration** để BU tự chịu chi phí theo ngân sách phân bổ riêng. Tích hợp GSC API & Automated Insights.
 
 **Meeting log:**
+- **[2026-05-27]**: Định hình khung giá và lộ trình phân bổ chi phí BU. Xác định rõ đơn giá & thời gian sản xuất thực tế của Claude 3 Haiku (7.000đ - 55s) và Claude 3.5 Sonnet (20.000đ - 140s). Chốt định hướng phát triển Multi-model Selector và tích hợp Custom API Key theo từng BU để giải quyết bài toán ngân sách phòng ban.
 - **[2026-05-07]**: Cập nhật workflow 7 bước và 3 approval gates. Phân định rõ ownership verify (Hiến) vs publish action (Content Team).
 
 
@@ -1266,7 +1228,7 @@ MoSpark không còn là CMS đơn thuần mà là một sản phẩm phần mề
 
 **Status:** Active - Centralized Strategic Plan deployed.
 
----
+
 
 ## 6. LEADERSHIP INTELLIGENCE
 
@@ -1372,6 +1334,7 @@ MoSpark không còn là CMS đơn thuần mà là một sản phẩm phần mề
 | 2026-05-14 | 4.0 | **Major Strategic Update**: (1) Tái cấu trúc toàn bộ Vault, tập trung chiến lược vào folder **01_STRATEGIC_PLAN**. (2) Cập nhật Phạt Nguội v3.0: SEM 200tr, Umami Tracking, GenAI Content production, 3-Phase roadmap. (3) Định nghĩa MoSpark là Software as a Product platform. (4) Đồng bộ Metadata cho tất cả Use Case BRDs. |
 | 2026-05-16 | 4.1 | **Team Structure Update**: (1) Cập nhật Tuệ nghỉ việc. (2) Hiến làm việc và báo cáo trực tiếp cho Bảo (Project Lead) và Công (VP). (3) Cập nhật Org Chart và Escalation Paths toàn bộ tài liệu. |
 | 2026-05-18 | 4.2 | **Monthly Report Alignment**: Bổ sung Tầng Báo Cáo & Nhật Ký vào Knowledge Map; liên kết sâu sắc Báo Cáo Tháng 05/2026 và Master Doc. |
+| 2026-05-28 | 4.3 | **Consolidate Active Projects**: Hợp nhất tệp tin active_projects_log.md ngược trở lại Mục 5 của Master Doc và loại bỏ phần KNOWLEDGE ECOSYSTEM MAP theo yêu cầu của PO. |
 
 
 ---

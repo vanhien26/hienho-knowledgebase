@@ -8,7 +8,7 @@ GEO Scoring Checklist - MoSpark Admin
 > - **Product:** Web Growth Platform
 > - **SEO/GEO Project ID:** `mospark-seo-geo-score`
 > - **Owner:** GPD - Out-App Traffic & Web Platform (Bảo)
-> - **Governance:** Văn Hiến (SEO & GEO Lead)
+> - **Governance:** Văn Hiến (Web Product Lead)
 > - **Version:** 1.0 · April 2026
 > - **Status:** Active - Governance Gate for all MoSpark Output
 >

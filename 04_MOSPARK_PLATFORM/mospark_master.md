@@ -3,9 +3,9 @@ title: "MoSpark: AI-Powered Growth Platform - Product Vision & PRD"
 description: >
   Master Document cho MoSpark Growth Platform.
   Product Vision, PRD hoàn chỉnh, kiến trúc kỹ thuật và quy trình vận hành.
-version: v3.1
+version: v3.3
 status: Active
-owner: Văn Hiến (SEO & GEO Lead)
+owner: Văn Hiến (Web Product Lead)
 last_updated: 2026-05-25
 tags: [mospark, platform, growth-os, genai, seo, geo, prd, product-vision]
 ---
@@ -13,7 +13,7 @@ tags: [mospark, platform, growth-os, genai, seo, geo, prd, product-vision]
 # MoSpark: AI-Powered Growth Platform
 ## Product Vision & PRD
 
-> **Owner:** Văn Hiến (SEO & GEO Lead) | **Version:** v3.1 | **Updated:** 2026-05-25
+> **Owner:** Văn Hiến (Web Product Lead) | **Version:** v3.3 | **Updated:** 2026-05-25
 
 ---
 
@@ -39,7 +39,9 @@ tags: [mospark, platform, growth-os, genai, seo, geo, prd, product-vision]
 
 ### 1.1. Phát biểu Tầm nhìn
 
-> **"MoSpark là Growth Platform để momo.vn trở thành Financial & Payment Authority - nơi PM/PO tự tạo trang, tự chạy Ads, tự đo lường mà không cần đợi Dev; còn AI lo việc sản xuất và tối ưu nội dung ở quy mô lớn."**
+> **"MoSpark là nền tảng Growth Intelligence của momo.vn: CEO, VP và Head of BU thấy rõ Market Sizing từng Use Case để ra quyết định triển khai đúng - PM/PO tự chủ thực thi từ ý tưởng đến kết quả kinh doanh thực, không phụ thuộc Dev."**
+
+> **Elegant Problem:** momo.vn không thể tăng trưởng organic bền vững khi PM phụ thuộc Dev cho mọi thứ, AI sản xuất content không có guardrail, và không ai biết MoMo đang chiếm bao nhiêu % thị trường tìm kiếm.
 
 MoSpark không phải là một CMS nâng cấp. Đây là nền tảng cho phép Web MoMo chủ động tăng trưởng - từ sản xuất nội dung, phân phối Ads đến chuyển đổi Web-to-App - theo một quy trình có thể lặp lại, đo lường được và ngày càng ít cần can thiệp thủ công.
 
@@ -65,42 +67,37 @@ MoSpark không phải là một CMS nâng cấp. Đây là nền tảng cho phé
 
 ## 2. Bối cảnh Chiến lược
 
-> **Tổng hợp từ các cuộc họp chiến lược với Anh Công (VP GPD), Huy Lê (VP User Growth Platform) và A.Tường (CEO). Đây là nền tảng để hiểu tại sao MoSpark được ưu tiên đầu tư.**
+### 2.1. Mandate Chiến lược
 
-### 2.1. Chỉ đạo từ cấp lãnh đạo
+momo.vn Website không còn là corporate site hay blog SEO đơn thuần. MoSpark được xây để hiện thực hóa 3 vai trò chiến lược:
 
-**Anh Công - VP GPD (19/05):**
+| Vai trò | Định nghĩa | MoSpark đóng góp gì |
+|---|---|---|
+| **Financial & Payment Authority** | Điểm đến uy tín, tiếng nói có thẩm quyền trong ngành tài chính/thanh toán Việt Nam | Quality Gate bắt buộc, Named Author Policy, E-E-A-T content chuẩn YMYL |
+| **Entry Point từ Search** | Điểm chạm đầu tiên đón traffic tìm kiếm tự nhiên - cả Google lẫn AI Search | SEO Inventory, GenAI Content Engine, llms.txt pipeline |
+| **Ecosystem Support Layer** | Nền tảng hỗ trợ toàn bộ hệ sinh thái kinh doanh & thanh toán của MoMo | Use Case ID gắn kết mọi module, Ads Manager, Web-to-App attribution |
 
-MoMo Website cần dịch chuyển sang 3 vai trò mới, không còn là corporate site hay blog SEO đơn thuần:
-- **Financial & Payment Authority:** Điểm đến uy tín, tiếng nói có thẩm quyền trong ngành tài chính/thanh toán Việt Nam.
-- **Entry Point từ Search:** Điểm chạm đầu tiên đón traffic tìm kiếm tự nhiên - cả Google lẫn AI Search.
-- **Ecosystem Support Layer:** Nền tảng hỗ trợ toàn bộ hệ sinh thái kinh doanh & thanh toán của MoMo.
-
-Luồng chiến lược cốt lõi:
+**Flow bất biến - mọi quyết định sản phẩm đều trace về đây:**
 ```
 Content → Keywords → Ranking → Use Case → User Journey → App/Transaction (New User / MAU)
 ```
 
 Mục tiêu không dừng ở pageview. Mục tiêu là kích hoạt hành vi chuyển đổi trong App.
 
-Tư duy Use Case làm lõi: Search Intent → Nhu cầu thực tế → Hành trình người dùng → Giải pháp trong App. Mỗi Use Case là một động cơ tăng trưởng độc lập.
+### 2.2. 4 Growth Pillars - Kiến trúc Thị trường
 
-**Huy Lê - VP User Growth (22/05):**
+momo.vn không tổ chức theo BU - tổ chức theo Product / Search Ecosystem. 4 Pillars là 4 growth engine độc lập, mỗi Pillar sở hữu một vertical thị trường để chiếm thị phần tìm kiếm:
 
-- Quy trình cũ quá dài, thuần túy display, PM không thể prototype. PM viết requirement "bay bổng", thiếu thực tế về layout và interaction.
-- MoSpark giải quyết bài toán này: 1 prompt ra Landing Page có Value Prop, hướng dẫn và CTA - từ 1-2 tuần xuống còn 1-2 ngày.
-- PM "non-tech" cũng tự làm được bản prototype, thậm chí production-ready.
-- Tracking và AB Testing phải tích hợp sẵn - "tốc độ ship mà không có AB test thì không thể cải tiến".
-- Cần cơ chế guardrail để dù PM tự làm vẫn đảm bảo chuẩn Brand và SEO.
+| Pillar | Use Cases | Chiến lược Content | Ràng buộc bắt buộc |
+|---|---|---|---|
+| **P1 - Tài chính & Tín dụng** | CIC Score, Ví Trả Sau, Vay Nhanh | Hub-Spoke + Interactive Tools (tính lãi, mô phỏng CIC) | Named Author Policy - hard gate trước launch |
+| **P2 - Bảo hiểm Công nghệ** | BH xe máy, BHYT, BHXH, BH ô tô | Neutral Aggregator - cổng so sánh trung lập | Không dùng geo-based URL cho bảo hiểm |
+| **P3 - Dịch vụ Công & Tiện ích** | Phạt Nguội, Hóa đơn | API real-time + pSEO (63 tỉnh) | llms.txt mandatory trước rollout |
+| **P4 - Đời sống & Merchant** | Cinema, OTA, eSIM, Merchant | Intent-first, Merchant Detail Page | 410 Gone mandatory cho URL hết hạn |
 
-**A.Tường - CEO (qua Workshop JTBD):**
+**Utility-First** là nguyên tắc vận hành: Interactive tools (calculator, simulator, checker) là core value thực sự - content là supporting layer tạo discoverability và giáo dục. Mỗi Use Case mới phải trả lời: "Utility tool của Use Case này là gì?"
 
-- Tiêu chuẩn sản phẩm: **An toàn - An tâm - Đơn giản - Dễ dùng**. Mọi tính năng phải "1-2-3 click là xong", không cần hướng dẫn thêm.
-- "Elegant Problem": Vấn đề phải được phát biểu đơn giản đến mức ai cũng thấy đúng ngay.
-- PLG: Web Platform là một sản phẩm nội bộ - PM dùng vì nó tốt và giải quyết được việc của họ, không phải vì bắt buộc.
-- Đo lường là ưu tiên. Không có AB test = không thể cải tiến.
-
-### 2.2. Bối cảnh thị trường
+### 2.3. Bối cảnh thị trường
 
 AI Search đang thay đổi cách người dùng tìm kiếm thông tin tài chính:
 - Google searches/user giảm ~20% YoY năm 2025.
@@ -137,6 +134,19 @@ Hậu quả: PM không prototype được, requirement "bay bổng" vì không t
 - Analytics bị phức tạp hóa do URL structure không thống nhất.
 - Ads conflict: nhiều Division muốn chạy Ads đồng thời trên cùng một trang, không có cơ chế quản lý.
 
+### 3.4. MoSpark KHÔNG phải
+
+Scope rõ không kém scope có. Dưới đây là những gì MoSpark không làm - để tránh scope creep và giữ đúng mandate:
+
+| MoSpark KHÔNG phải | Lý do cần nói rõ |
+|---|---|
+| **Một CMS thụ động thay thế Admin Panel** | MoSpark là Growth OS có Quality Gate và AI Production tích hợp - không đơn thuần thay cái cũ bằng cái tương đương |
+| **Công cụ tự publish không kiểm soát** | Mọi trang đều phải qua SEO/GEO Scoring Gate - không có ngoại lệ, không có bypass dù PM/PO tự làm |
+| **Thay thế Dev hoàn toàn** | PM/PO tự làm LP và Ads Manager trong phạm vi đã build - module mới vẫn cần Dev theo spec |
+| **Platform để AI tự publish YMYL content** | AI draft - con người review và sign-off trước publish, bắt buộc với nội dung tài chính |
+| **Giải pháp mở rộng cho tất cả BU cùng lúc** | GTM bắt đầu từ User Growth - chứng minh giá trị trước, scale từng Pillar có dữ liệu sau |
+| **Hệ thống tích hợp Payment trực tiếp** | Excluded scope do rào cản pháp lý và after-sale service - không phải roadmap |
+
 ---
 
 ## 4. Users & JTBD
@@ -147,7 +157,7 @@ Hậu quả: PM không prototype được, requirement "bay bổng" vì không t
 |---|---|---|---|
 | **PM/PO Cell Team** | PO Vay Nhanh, Cinema, Bảo Hiểm, Phạt Nguội... | Phụ thuộc Dev cho LP, Ads, content | Tự tạo LP, chạy Ads, nhập Business Context trong cùng ngày |
 | **Content Writer / Inbound** | Mai, Agency content | Đăng nhập nhiều CMS, prompt AI mỗi người mỗi kiểu | 1 interface duy nhất, AI pipeline chuẩn hóa, không cần học lại |
-| **SEO/GEO Lead** | Văn Hiến | Audit thủ công từng trang, không có SoV visibility | Quality gate tự động, SoV dashboard, data để quyết định đầu tư Use Case nào |
+| **Web Product Lead** | Văn Hiến | Audit thủ công từng trang, không có SoV visibility | Quality gate tự động, SoV dashboard, data để quyết định đầu tư Use Case nào |
 | **Platform Admin** | Bảo (Web Platform Manager) | Ads conflict giữa Division, không có inventory view | Placement Registry, enforce policy, không cần review từng campaign |
 
 ### 4.2. Jobs To Be Done cụ thể
@@ -163,7 +173,7 @@ Hậu quả: PM không prototype được, requirement "bay bổng" vì không t
 2. Biết ngay primary keyword mình chọn đã có người dùng chưa - tránh viết trùng.
 3. Biết bài đang thiếu gì để đạt điểm 80+.
 
-**SEO/GEO Lead cần:**
+**Web Product Lead cần:**
 1. Block được nội dung kém chất lượng trước khi ảnh hưởng domain authority.
 2. Thấy được AI engine đang cite MoMo như thế nào cho từng Use Case.
 3. Ưu tiên Use Case nào đáng đầu tư dựa trên Market Volume và SoV gap thực tế.
@@ -172,28 +182,16 @@ Hậu quả: PM không prototype được, requirement "bay bổng" vì không t
 
 ## 5. Kiến trúc Platform
 
-MoSpark vận hành theo 4 lớp, phủ kín toàn bộ lifecycle từ market research đến conversion:
+MoSpark vận hành theo 5 lớp, phủ kín toàn bộ lifecycle từ market research đến conversion, đo lường và tối ưu liên tục:
 
-```
-LAYER 4 - Performance Loop (Phase 2 - Q3+)
-  GSC Auto-Refresh | SoV Tracker | Semantic Linking | Health Alert
-  ↑ feed data ngược lại để tối ưu tiếp
-  
-LAYER 3 - Quality Gate (Active)
-  SEO/GEO Scoring 100pt | Hard Block CWV | Legal Review | YMYL Guard
-  ↑ block nội dung xấu trước publish
-  
-LAYER 2 - Distribution & Conversion (Active → Scaling)
-  Ads Manager | Widget Library | Onelink | Umami Attribution
-  ↑ convert traffic thành App user
-  
-LAYER 1 - Content Production (Active - Pilot)
-  SEO Inventory | Business Context | 7-Step AI Workflow | Blog Editor
-  ↑ sản xuất nội dung đạt chuẩn
-  
-FOUNDATION - Use Case System
-  Use Case ID | Market Map | Keyword Registry | URL Governance
-```
+| Layer | Tên | Status | Modules | Vai trò |
+|---|---|---|---|---|
+| **L5** | Growth Intelligence | Phase 2-3 | GEO Citation Monitor, Experiment Engine, Revenue Attribution, Content Intelligence | Close feedback loop: đo lường toàn bộ vòng lặp, học hỏi, cải tiến compound |
+| **L4** | Performance Loop | Phase 2 | GSC Auto-Refresh, SoV Tracker, Content Decay Detection, Health Alert, Semantic Linking | Feed data ngược lại để tối ưu tiếp |
+| **L3** | Quality Gate | Active | SEO/GEO Scoring 100pt, Hard Block CWV, Legal Review, YMYL Guard | Block nội dung xấu trước publish |
+| **L2** | Distribution & Conversion + PLG | Active - Scaling | Ads Manager, Widget Library, PLG Tool Builder, Onelink, Umami Attribution | Convert traffic thành App user + PLG Tools tạo data moat chống LLM |
+| **L1** | Content Production | Active - Pilot | SEO Inventory, Business Context, 7-Step AI Workflow, Blog Editor | Sản xuất nội dung đạt chuẩn |
+| **F** | Foundation - Use Case System | Always-on | Use Case ID, Market Map, Keyword Registry, URL Governance, PLG Tool Registry | Đơn vị gốc kết nối tất cả modules |
 
 ### 5.1. Layer 1 - Content Production
 
@@ -249,6 +247,11 @@ FOUNDATION - Use Case System
 | M6 | AI Crawler Policy | llms.txt + robots.txt | robots.txt L1 Deployed | 1 | Hiến (spec), Web Platform |
 | M7 | Help Center Agentic | AI-powered FAQ | Registered - Agentic Org Program | 3 | TBD |
 | M8 | Migration | Admin Panel → MoSpark | Structure & Mapping Phase | 1 | Bảo + Thuận + Lộc |
+| M9 | PLG Tool Builder | Utility Tool Platform | Planning - Spec Phase | 2 | Bảo + Thuận + Hiến |
+| M10 | Experiment Engine | Native AB Testing | Planning | 2 | Thuận + DA |
+| M11 | Revenue Attribution | Web-to-App ROI Pipeline | Planning | 2 | Thuận + DA (Hải/Hoàng) |
+| M12 | Content Intelligence | Decay Detection + Opportunity | Planning | 2→3 | Thuận + Hiến |
+| M13 | GEO Citation Monitor | AI Engine Citation Tracking | Planning | 2 | Hiến (spec) + Thuận |
 
 ---
 
@@ -291,7 +294,7 @@ FOUNDATION - Use Case System
 | 3 | Tạo Primary Keyword + Secondary, check trùng | Keyword Master Registry | Content Team |
 | 4 | AI tạo dàn ý → Content edit → PM approve | Outline Final | Content + PM |
 | 5 | AI viết bài chi tiết theo Outline đã approve | Blog Detail Draft | AI (Claude API) |
-| 6 | Review chất lượng, SEO/GEO Score, sign-off | Verified Content | SEO/GEO Lead |
+| 6 | Review chất lượng, SEO/GEO Score, sign-off | Verified Content | Web Product Lead |
 | 7 | Sync qua Blog Editor → Publish | Live on momo.vn | Content Team |
 
 **3 Rules không được phá vỡ:**
@@ -465,6 +468,215 @@ SoV MoMo = Impression (GSC) / Total Volume Search
 
 ---
 
+### 6.10. M9 - PLG Tool Builder
+
+**Mục đích:** Chuẩn hóa build và deploy Utility Tools trên momo.vn. PM/PO tự tạo Calculator, Checker và Comparison tool mà không cần Dev sprint. Mỗi tool tạo ra interaction data độc quyền - đây là anti-LLM moat thực sự của momo.vn.
+
+**Trạng thái:** Planning - Spec Phase.
+
+**Vì sao PLG Tool là core value, không phải nice-to-have:**
+
+| Kênh | Cơ chế chuyển đổi | Số bước đến intent cao nhất |
+|---|---|---|
+| Content Blog | User đọc → có thể click CTA → có thể download App | 3-4 bước, intent decay theo mỗi bước |
+| PLG Tool | User DÙNG tool để giải quyết việc → nhận kết quả → CTA sau result | 1-2 bước, intent ở đỉnh khi nhận kết quả |
+
+Utility-First không phải slogan - đây là cơ chế chuyển đổi khác nhau về cấu trúc.
+
+**4 Tests phân biệt PLG Tool thực sự với widget thông thường:**
+
+| Test | Câu hỏi kiểm tra | Pass khi |
+|---|---|---|
+| **JTBD Test** | Tool giải quyết JTBD cụ thể mà không cần user download App trước? | User hoàn thành task trong 1 phiên trên web |
+| **Data Test** | Tool tạo interaction data mà LLM không thể có từ nguồn khác? | Data là unique: usage patterns, regional distribution, real-time inputs |
+| **1-2-3 Test** | User nhận kết quả trong 3 bước, không cần hướng dẫn? | No tutorial needed, no drop-off mid-flow |
+| **Funnel Test** | CTA sau kết quả dẫn về App feature tương ứng một cách tự nhiên? | CTA xuất hiện sau result, không interrupt trước |
+
+**3 Loại PLG Tool - Taxonomy:**
+
+| Loại | Cơ chế | Ví dụ trên momo.vn | Pillar |
+|---|---|---|---|
+| **Type A - Calculator** | User nhập thông số → tính theo công thức → kết quả số | Tính lãi vay, Tính phí BH xe máy, Tính lãi tiết kiệm, Tính mức phạt theo lỗi vi phạm | P1, P2, P3 |
+| **Type B - Checker / Lookup** | User nhập ID → query API real-time → kết quả cụ thể | Tra phạt nguội (biển số xe), Tra điểm tín dụng CIC, Tra BHXH eligibility | P1, P3 |
+| **Type C - Comparison / Aggregator** | Platform pull data nhiều nguồn → user filter → bảng so sánh | So sánh gói BH xe máy, So sánh gói cước viễn thông, So sánh lãi suất tiết kiệm | P2, P4 |
+
+**Mapping PLG Tools theo 4 Growth Pillars:**
+
+| Pillar | Tools cần build | Data được tạo ra | Priority |
+|---|---|---|---|
+| **P1 - Tài chính & Tín dụng** | Loan calculator, CIC score simulator, VTS eligibility checker | Nhu cầu vay theo khu vực, phân phối credit score người dùng thực tế | P0 |
+| **P2 - Bảo hiểm Công nghệ** | BH cost calculator (xe máy, ô tô, BHYT), Plan comparison | Phân phối mức phí thị trường, preference theo gói, demographic | P1 |
+| **P3 - Dịch vụ Công & Tiện ích** | Phạt nguội lookup (LIVE - mở rộng), BHXH checker, Hóa đơn lookup | Volume tra cứu theo loại vi phạm, khu vực, thời điểm | LIVE - scale |
+| **P4 - Đời sống & Merchant** | Merchant finder, Cinema showtime lookup | Demand theo khu vực, genre preference, payment pattern | P2 |
+
+**Builder Requirements - PM/PO phải tự làm được không qua Dev:**
+
+1. Chọn Tool Type (Calculator / Checker / Comparison)
+2. Define inputs: tên field, data type, required/optional, validation rule
+3. Configure logic: công thức tính (Type A) | API endpoint + params (Type B) | data source + filter columns (Type C)
+4. Set result format: số đơn | bảng chi tiết | Yes/No + lý do | range
+5. Add CTA sau result: text, Onelink deep link đến App feature cụ thể
+6. Set tracking: submit_tool + view_result + click_cta - tự động, không config thêm
+7. Embed via shortcode: `[tool:loan-calculator]` vào bất kỳ page nào trong MoSpark
+8. Preview mobile/desktop → Publish
+
+**Data Pipeline - Cách PLG Tools tạo anti-LLM Moat:**
+
+```
+User query → Tool interaction → Result served
+                 ↓ (anonymous log, no PII)
+         Aggregate weekly batch
+                 ↓
+    Unique Insights được publish:
+    "Mức phạt vượt đèn đỏ trung bình tại HCM: Xđ (Y tra cứu, tháng Z/2026)"
+    "Người VN vay trung bình Xtr, kỳ hạn Y tháng, lãi suất kỳ vọng Z%/năm"
+                 ↓
+    Data Articles → GEO Citation Signal → LLM-proof unique content
+```
+
+Không có competitor nào có data này. Không LLM nào có thể fabricate data này. Đây là moat duy nhất bền vững trong thời đại AI content.
+
+**Success Metrics:**
+
+| Metric | Định nghĩa | Target |
+|---|---|---|
+| Tool sessions/tháng | Lượt sử dụng per tool | > 100K/tool P0 trong 6 tháng live |
+| Tool → CTA click rate | % user click CTA sau khi nhận result | > 15% |
+| Tool → Onelink (W2A proxy) | Sessions từ tool có click Onelink | Baseline Q3/2026 |
+| Data points collected | Anonymous interaction records | > 1M/tool/năm |
+| AI citation từ tool data | AI engines cite MoMo data insights trong responses | Measure Q4/2026 |
+
+---
+
+### 6.11. M10 - Experiment Engine
+
+**Mục đích:** Infrastructure để PM/PO chạy AB test trên Web mà không cần Dev. Section 7.4 mandates AB Test Hypothesis trong mọi spec - M10 là infrastructure để mandate đó có nghĩa thực tế thay vì chỉ là formality.
+
+**Trạng thái:** Planning. Prerequisite trước khi scale M1 (LP Builder) ra toàn GPD.
+
+**Gap hiện tại:** MoSpark track events nhưng không có infrastructure để *serve variants*. Mọi claim "cải tiến" sau publish là opinion, không phải data.
+
+**Capabilities:**
+
+| Capability | Mô tả |
+|---|---|
+| **Variant assignment** | URL-based (A/B routes riêng) hoặc component-based (in-page swap không reload) |
+| **Traffic split** | PM set % phân chia, system assign ngẫu nhiên + consistent per session |
+| **Statistical engine** | Tự tính significance khi đủ sample size. Alert khi p < 0.05 |
+| **Auto-winner** | Winner xác định → notify PM → 1-click promote variant lên production |
+| **Experiment log** | Full history: experiment ID, variants, duration, sample size, winner, uplift |
+
+**Integration:** Events từ experiment tự động gắn `experiment_id` + `variant` vào Umami. Success metric lấy từ downstream: Install, KYC, Transaction (Appsflyer pipeline).
+
+**Success Metrics:**
+- Experiments launched per quarter: 10+
+- % LP mới có ít nhất 1 completed experiment trước khi scale: 80%+
+- Winner detection time trung bình: < 21 ngày
+
+---
+
+### 6.12. M11 - Revenue Attribution Pipeline
+
+**Mục đích:** Trace đầy đủ từ Web content/tool → Web-to-App → New User / MAU / Transaction. Business Owner mindset yêu cầu PM và Hiến biết ROI của từng Use Case - hiện tại không có cách đo end-to-end.
+
+**Trạng thái:** Planning. Cần Umami + Appsflyer ổn định trước khi build unified layer.
+
+**Pipeline 4 lớp:**
+
+| Layer | Track gì | Tool | Output |
+|---|---|---|---|
+| Web behavior | Session → Page → Content → Tool → CTA click | Umami per URL group | Content attribution |
+| Click | Onelink click → source URL → device | Appsflyer + Umami | Channel attribution |
+| Install funnel | Install → Register → KYC → Cashin | Appsflyer Track 2 | User funnel |
+| Revenue proxy | Transaction type + frequency per cohort | App event → BigQuery | Revenue signal |
+
+**Unified View per Use Case:**
+```
+Use Case: Vay Nhanh [tháng X/2026]
+├── Organic sessions: 120,000
+├── Onelink clicks: 4,200 (3.5% CTR)
+├── Installs: 1,260 (30% click → install)
+├── KYC completed: 630 (50% install → KYC)
+├── First loan: 189 (30% KYC → transaction)
+└── CAC proxy: [total web cost / New User attributed]
+```
+
+**Success Metrics:**
+- Full attribution pipeline live cho top 5 Use Cases: Q3/2026
+- % Use Cases có ROI dashboard đủ để justify continued investment: 100% Q4/2026
+- CAC per Use Case tracked và có trend line improving QoQ
+
+---
+
+### 6.13. M12 - Content Intelligence Loop
+
+**Mục đích:** Phát hiện content decay trước khi thành zero-traffic URL. Surface keyword opportunities chưa được cover. Đóng feedback loop giữa publish và optimize - thứ hiện tại bị đứt hoàn toàn sau bước publish.
+
+**Trạng thái:** Planning. Phase 2. Context: 3,670 zero-traffic URLs hiện tại là hậu quả trực tiếp của việc thiếu module này.
+
+**12a. Content Decay Detection:**
+
+| Signal | Threshold | Action |
+|---|---|---|
+| Traffic giảm > 20% trong 4 tuần liên tiếp | Warning | Alert Hiến + Mai |
+| Traffic giảm > 50% trong 8 tuần | Critical | AI Enhancement queue - draft re-write |
+| Zero traffic > 90 ngày | Zero-traffic | URL audit: 410 Gone / Redirect / Rewrite decision |
+
+GSC integration: weekly pull impression + click per URL. Dashboard severity: Warning / Critical / Zero count by Use Case và Pillar.
+
+**12b. Keyword Opportunity Surfacing:**
+- **Near miss list:** GSC queries MoMo rank position 4-15 × volume > 1K/tháng → sorted by (Volume × Position Gap). Brief content update được auto-generate.
+- **White space:** keyword cluster có volume nhưng 0 URL của MoMo → new content brief tự động đưa vào GenAI queue.
+- **Cluster gap:** so sánh keyword coverage hiện có với SEO Inventory target per Use Case.
+
+**Success Metrics:**
+- Zero-traffic URL mới sau khi M12 live: 0/tháng
+- Near miss keywords promoted lên top 3 per quarter: 20+
+- Decay detection coverage: 100% URLs đang live được monitor weekly
+
+---
+
+### 6.14. M13 - GEO Citation Monitor
+
+**Mục đích:** Đo North Star GEO: MoMo được cite trong top 3 AI engine responses cho 20 target PFM queries. Hiện không có cách đo tự động - đây là blocker để biết GEO strategy có work không và llms.txt có effect gì.
+
+**Trạng thái:** Planning. Build song song với M6 (llms.txt rollout).
+
+**Monitoring Setup:**
+
+| AI Engine | Method | Frequency |
+|---|---|---|
+| ChatGPT (GPT-4o) | OpenAI API query + parse response | Weekly |
+| Perplexity | Perplexity API query + source detection | Weekly |
+| Google AI Overview | GSC AI referral data + manual sampling | Weekly |
+
+**Query Library - 20 Seed Queries × 4 Pillars:**
+
+| Pillar | Ví dụ seed queries |
+|---|---|
+| P1 - Tài chính | "vay tiền online uy tín VN", "check điểm tín dụng miễn phí", "ví điện tử có BNPL VN" |
+| P2 - Bảo hiểm | "bảo hiểm xe máy bắt buộc là gì", "so sánh gói bảo hiểm sức khỏe VN" |
+| P3 - Tiện ích | "tra cứu phạt nguội online", "kiểm tra BHXH còn bao nhiêu tháng" |
+| P4 - Đời sống | "thanh toán vé CGV bằng ví điện tử", "mua esim du lịch Thái Lan giá rẻ" |
+
+**Dashboard Metrics:**
+
+| Metric | Định nghĩa | Hiện tại | Target Year 1 |
+|---|---|---|---|
+| Citation Rate | % queries MoMo xuất hiện trong response | 0% | 30%+ (bắt đầu từ P3) |
+| Citation Position | Thứ tự xuất hiện trong response | N/A | Top 3 |
+| Citation Accuracy | Claim MoMo được cite có đúng không | N/A | 100% accurate |
+| Weekly trend | Change after llms.txt events | - | Positive correlation |
+
+**Trigger:** Citation Rate giảm đột ngột → check llms.txt status + content freshness + competitor action.
+
+**Success Metrics:**
+- 20 target queries tracked weekly: Q3/2026
+- Citation Rate > 30% cho P3 queries (data-rich, easiest entry point): Q4/2026
+- Citation Rate > 20% across all 4 Pillars: End 2027
+
+---
+
 ## 7. North Star & KPIs
 
 ### 7.1. North Star Metrics
@@ -508,6 +720,18 @@ Current: 0% AI Chatbot referral vs Wise.com 40%+.
 | O1: New User Growth via Organic & W2A | M2 (GenAI Content) + M3 (Ads Manager) → tăng organic traffic và W2A CR |
 | O2: Platform Stability & Technical Readiness | M4 (Scoring Gate) + M6 (AI Crawler Policy) → không có bad pages live |
 | O3: PLG/Utilities-Led SEO | M3 (Widget Library) + M2 (Tool content) → CIC checker, Loan calculator, Insurance tool |
+
+### 7.4. Measurement-First - Bắt buộc với mọi Spec
+
+"Tốc độ ship mà không có AB test thì không thể cải tiến." MoSpark không chỉ là nơi tạo trang - là nơi học hỏi và cải tiến liên tục. Mọi spec/BRD gửi cho Web Platform phải có 2 field bắt buộc trước khi bắt đầu build:
+
+| Field | Yêu cầu | PIC |
+|---|---|---|
+| **Tracking Event Schema** | List event cần track: event name, properties, trigger condition. Không skip với lý do "sẽ làm sau" | Hiến define standard, DA execute |
+| **AB Test Hypothesis** | Variant A (baseline) vs Variant B (thay đổi) + success metric cụ thể. Không phải "test xem sao" | PM/PO của Use Case đó |
+| **Success Metric trace về NSM** | Metric chính phải trace về New User / MAU / W2A CR - không chỉ pageview hay session | Hiến sign-off |
+
+Thiếu Tracking Event Schema hoặc AB Test Hypothesis - spec chưa complete, Web Platform không bắt đầu build.
 
 ---
 
@@ -610,7 +834,7 @@ Use Case: Phạt Nguội
 
 | Vai trò | Trách nhiệm | Không làm |
 |---|---|---|
-| **Văn Hiến (SEO & GEO Lead)** | Set SEO/GEO standard, govern Quality Gate, input Market data, sign-off YMYL, audit AI Citation | Không execute tracking, không direct với Dev mà không có spec |
+| **Văn Hiến (Web Product Lead)** | Set SEO/GEO standard, govern Quality Gate, input Market data, sign-off YMYL, audit AI Citation | Không execute tracking, không direct với Dev mà không có spec |
 | **Bảo (Web Platform Manager)** | Product direction MoSpark, Placement Registry, enforce "no hardcode", PO Web Platform sprint | Không làm trực tiếp với Agency hay Inbound |
 | **Thuận + Lộc (Developers)** | Build tất cả modules theo spec, Widget Library, database | Không tham gia campaign creation khi đã có self-service |
 | **Mai (Inbound SEO Lead)** | Content production theo brief Hiến, điền Business Context cùng PM, off-page | Không làm trực tiếp với Web Platform - technical request qua Hiến |
@@ -629,6 +853,7 @@ Resource/Policy → Hiến → Tuệ → Công (VP).
 | Tài liệu | Nội dung | Link |
 |---|---|---|
 | SEO/GEO Playbook | Strategy + Operations workflow | [[04_MOSPARK_PLATFORM/mospark_seo_geo_playbook]] |
+| Microsite Management (Product + Dev Spec) | Quản lý Mini Web - Product Spec + Data model, API, Acceptance Criteria cho Hoài Anh | [[04_MOSPARK_PLATFORM/mospark_microsite_management]] |
 | Ads Manager BRD | Chi tiết 5 modules Ads | [[04_MOSPARK_PLATFORM/mospark_ads_manager]] |
 | GenAI Content BRD | 7-step workflow + Governance | [[04_MOSPARK_PLATFORM/mospark_genai_content]] |
 | SEO/GEO Scoring BRD | 100pt scoring model + Hard Block | [[04_MOSPARK_PLATFORM/mospark_seo_geo_score]] |
@@ -650,7 +875,9 @@ Resource/Policy → Hiến → Tuệ → Công (VP).
 | v2.8 | 2026-05-16 | Tái cấu trúc footer + version log. |
 | v3.0 | 2026-05-25 | Tái viết thành Product Vision + PRD đầy đủ. Tổng hợp 8 module. |
 | v3.1 | 2026-05-25 | Viết lại ngôn ngữ cho rõ hơn, bỏ văn phong hàn lâm. Bổ sung Bối cảnh Chiến lược từ meetings (Anh Công, Huy Lê, A.Tường). |
+| v3.2 | 2026-05-25 | Redesign Section 2: xóa meeting-transcript style, thay bằng Mandate Chiến lược (2.1) + 4 Growth Pillars (2.2) + đổi tên 2.2 cũ thành 2.3. Bổ sung Elegant Problem Statement (Section 1.1), MoSpark KHÔNG phải (Section 3.4), Measurement-First bắt buộc (Section 7.4). |
+| v3.3 | 2026-05-25 | Bổ sung 5 modules mới M9-M13: PLG Tool Builder (full spec với 4-test framework + 3 tool types + data pipeline), Experiment Engine, Revenue Attribution Pipeline, Content Intelligence Loop, GEO Citation Monitor. Update kiến trúc platform lên 5 lớp. Update Module Catalog table. Thêm 3 Mermaid diagrams cho M9: 4-Test Decision Framework, Tool Types + Pillar Mapping, Data Pipeline → GEO Moat. |
 
 ---
 
-*Owner: Văn Hiến (SEO & GEO Lead) | Version: v3.1 | Updated: 2026-05-25*
+*Owner: Văn Hiến (Web Product Lead) | Version: v3.3 | Updated: 2026-05-25*

@@ -4,8 +4,8 @@
 > - **Main URL:** momo.vn/phat-nguoi
 > - **Division:** PS (Payment Services)
 > - **Use Case:** Phạt Nguội
-> - **Owner:** GPD - Out-App Traffic
-> - **Governance:** SEO & GEO Lead
+> - **Owner:** GPD - Web Platform
+> - **Governance:** Web Product Lead
 > - **Version:** 3.4 - Tháng 5/2026
 > - **Status:** Phase 1 LIVE - Pilot & Scale
 
@@ -13,15 +13,14 @@
 
 ## 1. Executive Summary
 
-### Situation
+### 1.1 Elegant Problem Framing
+- **Vấn đề cốt lõi:** Người dân cực kỳ sợ bị phạt nguội nhưng không có một công cụ tra cứu nào đủ uy tín, dễ dùng và trả kết quả chính xác theo thời gian thực (real-time). Các web tư nhân thì quảng cáo rác, web nhà nước thì hay sập.
+- **Giải pháp (The "What"):** Xây dựng một trang tra cứu phạt nguội "1 chạm" trên MoMo, lấy dữ liệu trực tiếp từ TTDK. Nhanh, chuẩn xác và không quảng cáo.
 
-MoMo sở hữu partnership độc quyền với TTDK (Trung tâm Đăng Kiểm Việt Nam) cho tính năng Tra Cứu Phạt Nguội. Tính năng App đã live. Web channel đã rollout Phase 1 (Mini Web `/phat-nguoi` + API real-time CSGT/TTDK) và đang trong giai đoạn Pilot & Scale. Tổng search demand thị trường đạt ~3.56M lượt tìm kiếm/tháng - được khuếch đại mạnh bởi Nghị định 168/2024/NĐ-CP tăng mức phạt 3-5x từ 1/1/2025.
+### 1.2 Situation & Complication
+MoMo sở hữu partnership độc quyền với TTDK (Trung tâm Đăng Kiểm Việt Nam). Tuy nhiên, nếu chỉ để tính năng trong App, MoMo sẽ bỏ sót ~3.56M lượt search/tháng từ Google. Các site bên thứ ba (phatnguoi.com) đang chiếm trọn traffic. MoMo cần một "Web Tool" làm phễu (Acquisition Funnel) để chuyển đổi dòng traffic này thành New User.
 
-### Complication
-
-MoMo đang cạnh tranh với 2 nhóm đối thủ: (1) Các site bên thứ ba không chính thống (phatnguoi.com - ~148K branded search/tháng) đang chiếm traffic organic; (2) Site chính thống của nhà nước (csgt.vn) có UX kém và hay crash. Nếu không xây dựng web presence sớm, MoMo chỉ phục vụ được nhóm user đã có app, bỏ sót ~30.000 lượt tra cứu/quý từ nhóm Non-MoMo Users.
-
-### Resolution
+### 1.3 Resolution
 
 Xây dựng Web channel từ zero theo mô hình Programmatic SEO:
 - **Short-term (Phase 1 - LIVE):** Mini Web Tool tra cứu trả kết quả thực - Web-to-App conversion để acquire New User.
@@ -186,7 +185,7 @@ momo.vn/phat-nguoi [Hub]
     └── Cụm Camera giao thông
 ```
 
-**AEO/GEO:** llms.txt live tại `momo.vn/phat-nguoi/llms.txt` - cung cấp context chuyên sâu cho AI engines (Perplexity, Gemini, ChatGPT) để cite MoMo là nguồn chính thống.
+**AEO/GEO Standard (Quy tắc VP GPD):** Bắt buộc triển khai `momo.vn/phat-nguoi/llms.txt` để dọn đường cho AI Engines (ChatGPT, Gemini) trích dẫn MoMo là nguồn chính thống duy nhất.
 
 **Schema bắt buộc:** WebApplication - FAQPage - HowTo - BreadcrumbList.
 
@@ -198,7 +197,18 @@ momo.vn/phat-nguoi [Hub]
 | Phase 2 - Regional Scale | pSEO 63 tỉnh thành + Camera Map + Blog scale 20-30 bài ngách + Backlink | Planned |
 | Phase 3 - Growth Loops | Viral mechanics + Camera AI pSEO + Dispute Assistant + Fine Code pSEO | Backlog |
 
-### 5.3 Growth & PLG Tactics (Phase 3)
+### 5.3 Danh Sách URLs Đã Go-Live Thực Tế (Phase 1 LIVE)
+
+Dưới đây là danh sách các trang thuộc cụm Phạt Nguội đã hoàn thành xây dựng và go-live chính thức trên môi trường Production:
+
+1. **Trang chủ Tra cứu:** [https://www.momo.vn/phat-nguoi](https://www.momo.vn/phat-nguoi)
+2. **Trang ngách Ô tô:** [https://www.momo.vn/phat-nguoi/o-to](https://www.momo.vn/phat-nguoi/o-to)
+3. **Trang ngách Xe máy:** [https://www.momo.vn/phat-nguoi/xe-may](https://www.momo.vn/phat-nguoi/xe-may)
+4. **Trang ngách Xe máy điện:** [https://www.momo.vn/phat-nguoi/xe-may-dien](https://www.momo.vn/phat-nguoi/xe-may-dien)
+5. **Trang Hub Blog:** [https://www.momo.vn/phat-nguoi/blog](https://www.momo.vn/phat-nguoi/blog) và các trang bài viết chi tiết (Blog detail).
+
+
+### 5.4 Growth & PLG Tactics (Phase 3)
 
 **Viral Mechanics:**
 - Viral Share Loop: Nút "Chia sẻ kết quả xe sạch" kèm link pre-filled biển số - tạo organic traffic từ bạn bè share.
@@ -240,6 +250,10 @@ Search -> /phat-nguoi -> Nhập biển số -> Kết quả tra cứu -> CTA "Nh�
 -> App open (Onelink) -> Đăng ký push notification -> MAU activation
 ```
 
+### 6.3 Mandatory Tracking & AB Test Hypothesis (MoSpark Standard)
+- **Hypothesis (Giả thuyết test):** Nếu CTA chuyển từ "Mở App" sang "Cài đặt Cảnh báo Phạt Nguội Tự Động", tỷ lệ W2A sẽ tăng 40% vì đánh trúng Nỗi sợ (Fear-driven intent) của người dùng.
+- **Tracking Event Schema:** Mọi lượt Tra cứu thành công / Không có lỗi / Bị lỗi hệ thống đều phải bắn event lên Umami & GA4 để đo lường Funnel Drop-off.
+
 ---
 
 ## 7. Dependencies & Constraints
@@ -248,6 +262,11 @@ Search -> /phat-nguoi -> Nhập biển số -> Kết quả tra cứu -> CTA "Nh�
 |---|---|---|
 | API TTDK Real-time | Widget tra cứu hoạt động thực (nhập biển số - trả kết quả vi phạm). SLA uptime > 99% | Có - core product value |
 | Partnership exclusivity TTDK | Điều kiện pháp lý duy trì lợi thế competitive | Có - strategic |
+
+### 7.1 Go-to-Market: SPA Framework (Service Productization)
+- **reSearch / Strategy:** Phân tích nhu cầu 3.56M volume/tháng và các điểm mù của đối thủ (UX kém).
+- **Pilot / Plan (T5/2026):** Triển khai Mini Web `/phat-nguoi` + 20 bài blog + Test API. **(ĐÃ HOÀN THÀNH VÀ CHỨNG MINH ĐƯỢC TRAFFIC MẠNH)**
+- **Action / Amplify (T6/2026):** Scale pSEO 63 tỉnh thành và Camera Map để thống trị toàn bộ ngách (Dominance).
 | GA4 + Appsflyer W2A tracking | Track conversion từ web sang app. Phân tách organic vs SEM traffic | Có - đo KPI |
 | Legal Disclaimer trên Web | Web results là tham khảo (Lite mode). Evidence chính thức chỉ trong app | Có - YMYL |
 | pSEO Infrastructure | Build hàng ngàn trang địa phương + camera cần platform support | Có cho Phase 2 |

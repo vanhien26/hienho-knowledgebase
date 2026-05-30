@@ -1,5 +1,5 @@
 # 📅 Operational Routine
-perational Routine (SEO & GEO Lead)
+perational Routine (Web Product Lead)
 
 > **Vision**: Vận hành MoSpark như một Growth Engine tự động hóa, đảm bảo 100% nội dung đạt chuẩn E-E-A-T và tối ưu tỷ lệ Web-to-App.
 

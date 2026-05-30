@@ -3,7 +3,7 @@
 > - **Project:** Merchant Mini-site `/merchant` (O2O Strategy)
 > - **Vision:** Chuyển dịch từ "Trang thông tin" sang "Merchant's Home on MoMo - Mini-site O2O & Tăng trưởng SME"
 > - **Status:** Strategy & Ideation
-> - **Đơn vị triển khai:** Web Platform (GPD) & SEO/GEO Lead
+> - **Đơn vị triển khai:** Web Platform (GPD) & Web Product Lead
 > - **Đồng hành:** Inbound Team (BMC)
 > - **SEO Score:** 58/100 | **Traffic:** 45K sessions/tháng | **W2A:** 3.2% | **Version:** 1.1 · Tháng 5/2026
 

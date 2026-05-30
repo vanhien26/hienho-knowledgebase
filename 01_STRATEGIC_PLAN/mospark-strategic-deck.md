@@ -6,7 +6,7 @@ description: >
 version: 1.2
 status: Active
 owner: GPD - Out-App Traffic
-governance: SEO & GEO Lead
+governance: Web Product Lead
 last_updated: 2026-05-23
 tags: [mospark, deck, strategy, plg, geo, cell-team]
 main_url: momo.vn/mospark
@@ -32,7 +32,7 @@ division: Growth Platform Division (GPD)
 | **Vision (one-liner)** | Scale Web MoMo thành **Vietnam's #1 Financial & Payment Content Hub** — Product-Led Growth, chuyển search intent → app transactions → New User / MAU |
 | **Platform** | MoSpark — AI-Powered Growth OS |
 | **Division** | GPD (Growth Platform Division) |
-| **Governance SEO/GEO** | SEO & GEO Lead |
+| **Governance SEO/GEO** | Web Product Lead |
 
 **Lộ trình đọc đề xuất:**
 
@@ -294,7 +294,7 @@ flowchart TB
 | 3 | Keyword Creation | Registry entry | Content |
 | 4 | AI Outline | Outline Final | Content |
 | 5 | AI Blog Detail | Draft | Claude API |
-| 6 | Review Quality | SEO/GEO Score pass | SEO/GEO Lead |
+| 6 | Review Quality | SEO/GEO Score pass | Web Product Lead |
 | 7 | Sync MoSpark | Live momo.vn | Content |
 
 **Hai luồng sản xuất:**
@@ -443,4 +443,4 @@ pie title Phat_Nguoi_Theme_Distribution_3_56M
 | **v1.1** | 2026-05-21 | Bổ sung Website Proposal Outline. |
 | **v1.2** | 2026-05-23 | Chuẩn hóa format: xóa 30+ Obsidian links, xóa callout blocks, xóa checkboxes, xóa Website Proposal Outline (quá technical cho C-Level), xóa Appendix Document Map. Giữ nguyên 12 sections chiến lược. |
 
-*Maintained by: GPD — Out-App Traffic · Governance: SEO & GEO Lead · v1.2 — May 2026*
+*Maintained by: GPD — Out-App Traffic · Governance: Web Product Lead · v1.2 — May 2026*

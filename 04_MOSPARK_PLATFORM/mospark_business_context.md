@@ -8,7 +8,7 @@ Mẫu thông số bối cảnh kinh doanh 12 Fields cho các Use Case
 > - **Product:** Web Growth Platform
 > - **SEO/GEO Project ID:** `mospark-business-context-template`
 > - **Owner:** GPD - Out-App Traffic (Hiến)
-> - **Governance:** Văn Hiến (SEO & GEO Lead)
+> - **Governance:** Văn Hiến (Web Product Lead)
 > - **Version:** 1.0 · May 2026
 > - **Status:** Active - Reference Guideline Template
 >

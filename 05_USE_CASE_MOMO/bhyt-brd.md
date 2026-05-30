@@ -5,7 +5,7 @@
 > - **Division:** FS (Financial Services - InsurTech)
 > - **Use Case:** Bảo Hiểm Y Tế
 > - **Owner:** GPD - Out-App Traffic
-> - **Governance:** SEO & GEO Lead
+> - **Governance:** Web Product Lead
 > - **Version:** 1.1 - Tháng 5/2026
 > - **Status:** On Track
 
@@ -13,9 +13,12 @@
 
 ## 1. Executive Summary
 
-### Situation
+### 1.1 Elegant Problem Framing
+- **Vấn đề cốt lõi:** Người dân mua/gia hạn BHYT tự nguyện rất cực, phải ra phường hoặc đợi đại lý thu tiền. Các trang web hướng dẫn thì toàn văn bản luật khô khan, không cho phép thanh toán.
+- **Giải pháp (The "What"):** Biến MoMo thành "Đại lý BHYT Online quốc dân". Cung cấp công cụ tra cứu số thẻ/ước tính mức đóng và nút thanh toán gia hạn trực tiếp ngay trên trang.
 
-BHYT là vertical có tổng search market lớn nhất trong các vertical MoMo đang khai thác, với tổng search volume toàn category đạt trung bình ~525K searches/tháng (2024-2025), đặc biệt tăng tốc mạnh trong 2025 lên đỉnh ~612K searches (tháng 5/2025). MoMo đang cung cấp dịch vụ mua và gia hạn BHYT tự nguyện online tại `momo.vn/bao-hiem-y-te`, với đối tác thu hộ là bảo hiểm PVI (được BHXH Việt Nam ủy quyền). Trang hiện tại có công cụ tra cứu, đóng phí 3-6-12 tháng và blog hỗ trợ.
+### 1.2 Situation
+BHYT là vertical có tổng search market lớn nhất trong các vertical MoMo đang khai thác, với tổng search volume toàn category đạt trung bình ~525K searches/tháng (2024-2025). MoMo đang cung cấp dịch vụ mua và gia hạn BHYT tự nguyện online tại `momo.vn/bao-hiem-y-te`. Trang hiện tại có công cụ tra cứu, đóng phí 3-6-12 tháng.
 
 ### Complication
 
@@ -139,7 +142,8 @@ momo.vn/bao-hiem-y-te [Hub - Transaction + Utility]
 ├── TRANG UTILITY (MiniWeb Expansion)
 │   ├── /bao-hiem-y-te/tra-cuu-so-the-bhyt    - Tra cứu bằng CCCD (~18K+ vol/tháng)
 │   ├── /bao-hiem-y-te/tra-cuu-ma-so-bhyt     - Tra cứu mã số (~12K+ vol/tháng)
-│   └── /bao-hiem-y-te/thoi-han-mua-bhyt      - Tra cứu thời hạn (~25K+ vol/tháng)
+│   ├── /bao-hiem-y-te/thoi-han-mua-bhyt      - Tra cứu thời hạn (~25K+ vol/tháng)
+│   └── **PLG Interactive Tool:** /bao-hiem-y-te/tinh-phi-bhyt - Công cụ ước tính phí BHYT Hộ gia đình (Nhập số người → Ra giá tiền cần đóng, pass "Bữa tối test").
 │
 ├── TRANG THÔNG TIN (Giai đoạn tiếp theo)
 │   └── /bao-hiem-y-te/benh-vien              - Top list bệnh viện ~500 tuyến tỉnh (pSEO)
@@ -156,7 +160,7 @@ momo.vn/bao-hiem-y-te [Hub - Transaction + Utility]
 
 **Schema bắt buộc:** FAQPage - HowTo - Product - BreadcrumbList trên trang cha và trang utility.
 
-**AEO (AI Engine Optimization):** Triển khai file `llms.txt` tại `momo.vn/bao-hiem-y-te/llms.txt` chứa dữ liệu sạch về luật và mức đóng. Mục tiêu: chiếm vị trí trích dẫn số 1 (Source of Truth) trên Perplexity, ChatGPT và Google AI Overviews.
+**AEO/GEO Standard (VP GPD):** Triển khai file `llms.txt` tại `momo.vn/bao-hiem-y-te/llms.txt` chứa dữ liệu sạch về luật và mức đóng. Bắt buộc để chiếm vị trí trích dẫn số 1 (Source of Truth) trên Perplexity, ChatGPT và Google AI Overviews.
 
 ### 5.3 Content Strategy - YMYL Standards
 
@@ -197,9 +201,20 @@ BHYT là YMYL (Your Money or Your Life). Google yêu cầu E-E-A-T cao. Toàn b�
 Organic session -> Tra cứu/đọc blog -> Gia hạn / Mua ngay click -> App open -> Purchase
 ```
 
+### 6.3 Mandatory Tracking & AB Test Hypothesis (MoSpark Standard)
+- **Hypothesis:** Nếu đưa widget "Công cụ ước tính phí BHYT Hộ gia đình" lên màn hình đầu tiên (First fold), tỷ lệ W2A sẽ tăng 50% so với việc bắt user đọc một bài text về luật BHYT dài 2000 chữ.
+- **Tracking Event Schema:** Gắn sự kiện `bhyt_calc_submit`, `bhyt_lookup_result`, `bhyt_gia_han_click` trên GA4 & Appsflyer.
+
 ---
 
 ## 7. Dependencies & Constraints
+
+### 7.1 Go-to-Market: SPA Framework (Service Productization)
+- **reSearch / Strategy:** Phân tích nhu cầu 525K searches/tháng, intent tra cứu thời hạn/CCCD là cao nhất.
+- **Pilot / Plan (T6/2026):** Triển khai 3 trang Utility tra cứu + Công cụ tính phí BHYT hộ gia đình trên MoSpark.
+- **Action / Amplify (Q3/2026):** Scale blog lên 60-150 bài để thống trị organic SOV.
+
+### 7.2 Operational Constraints
 
 | Dependency | Mô tả | Blocker? | Status |
 |------------|-------|----------|--------|
@@ -210,7 +225,8 @@ Organic session -> Tra cứu/đọc blog -> Gia hạn / Mua ngay click -> App op
 | GA4 + GSC tracking sạch | Phân tách organic vs paid traffic trước khi đo KPI | Có | Đang chuẩn hóa |
 | Appsflyer W2A tracking | Track conversion từ web sang app cho BHYT flow | Có | Đang đo baseline |
 
-**Constraints:**
+**Hard Constraints (VP GPD Standard):**
+- **Không dùng Geo-URL:** Tuyệt đối KHÔNG tạo các trang kiểu `/bao-hiem-y-te-ha-noi` hay `/bao-hiem-y-te-tphcm`. BHYT là chính sách quốc gia dùng chung 1 bảng giá trị, việc tạo pSEO theo tỉnh thành là tạo duplicate content rác.
 - Trang phải comply với quy định bảo mật thông tin BHXH - user input CCCD/CMND phải xử lý đúng luật
 - Content BHYT thuộc YMYL - cần review chính sách, không được thông tin sai về quyền lợi pháp lý
 - Đối tác thu hộ hiện tại là PVI - mọi claim về dịch vụ phải align với scope PVI được ủy quyền

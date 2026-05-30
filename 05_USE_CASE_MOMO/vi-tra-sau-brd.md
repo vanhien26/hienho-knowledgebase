@@ -16,17 +16,18 @@
 
 ## 1. Executive Summary
 
-### Situation
+### 1.1 Elegant Problem Framing
+- **Vấn đề cốt lõi:** Người dùng có nhu cầu mua sắm/trả góp khẩn cấp nhưng bị ngân hàng từ chối vì nợ xấu hoặc thủ tục rườm rà. Họ search Google tìm giải pháp nhưng VTS (dù duyệt 3 phút, không check CIC) lại hoàn toàn "vô hình" trên Search.
+- **Giải pháp (The "What"):** Biến Web thành kênh "Cứu cánh tài chính 1 chạm". Cung cấp công cụ giả lập trả góp trực quan và chặn đầu (intercept) mọi từ khóa ngách để dắt user tải App kích hoạt VTS ngay lập tức.
 
-Người search "mua điện thoại trả góp chỉ cần CMND", "nợ xấu có mua được không", "nạp game hết tiền" - đây là nhóm đã có intent mua, cần credit, đang bị loại trừ bởi hệ thống ngân hàng truyền thống. VTS là đúng sản phẩm cho họ: không check CIC, duyệt vài phút, dùng ngay trong app MoMo đang có. Nhưng khi họ search, trang /vi-tra-sau không xuất hiện. Hub page có 1,56M impressions/tháng nhưng CTR CTA chỉ 7,25% - traffic đã có, convert chưa được.
+### 1.2 Situation
+Người search "mua điện thoại trả góp chỉ cần CMND", "nợ xấu có mua được không", "nạp game hết tiền" - đây là nhóm đã có intent mua, cần credit, đang bị loại trừ bởi hệ thống ngân hàng truyền thống. VTS là đúng sản phẩm cho họ. Nhưng khi họ search, trang `/vi-tra-sau` không xuất hiện. Hub page có 1,56M impressions/tháng nhưng CTR CTA chỉ 7,25%.
 
-### Complication
+### 1.3 Complication
+Core market "Trả Sau" chỉ có 135K SV/tháng và VTS đã chiếm 54% SOV - growth room trong core market hạn chế. Adjacent market (Trả Góp: 200K SV; Tín Dụng: 700K SV) tổng ~900K SV/tháng là pool intent lớn nhưng SOV VTS tại đó chỉ 10-40%. 
 
-Core market "Trả Sau" chỉ có 135K SV/tháng và VTS đã chiếm 54% SOV - growth room trong core market hạn chế. Adjacent market (Trả Góp: 200K SV; Tín Dụng: 700K SV) tổng ~900K SV/tháng là pool intent lớn nhưng SOV VTS tại đó chỉ 10-40%. Ngoài ra, AI Overview tăng trưởng mạnh từ Q2/2025 đang compress traditional SERP position - MoMo chưa được cite ổn định trong AIO cho VTS queries.
-
-### Resolution
-
-Build sub-pages use-case (/nap-game, /thanh-toan-dien, /tra-gop, /mua-sam) để intercept adjacent intent; revamp hub /vi-tra-sau để tăng W2A CVR từ 7% lên 20%; scale blog 20-30 bài targeting Trả Góp + Tín Dụng clusters; tối ưu GEO/AEO để maintain TOM trên cả SERP lẫn AI Overview. Product drives activation - user tìm thấy đúng lúc cần, hiểu trong 30 giây, kích hoạt ngay.
+### 1.4 Resolution
+Build sub-pages use-case và **PLG Interactive Tool** để intercept adjacent intent; revamp hub `/vi-tra-sau` để tăng W2A CVR từ 7% lên 20%; scale blog 20-30 bài targeting Trả Góp + Tín Dụng clusters; tối ưu GEO/AEO `llms.txt` để maintain TOM. Product drives activation - user tìm thấy đúng lúc cần, hiểu trong 30 giây, kích hoạt ngay.
 
 ---
 
@@ -260,12 +261,14 @@ Web closes the acquisition loop: từ search intent đến VTS activation mà kh
 | /vi-tra-sau/thanh-toan-hoa-don | Sub-page use-case | Job #1 - Điện, Nước, Internet chưa có lương |
 | /blog/ (cluster VTS) | Blog TOFU/MOFU | Job #2, #3, #4 - Intercept adjacent intent |
 | /hoi-dap/ (VTS) | FAQ schema | AIO citation + rich snippets |
+| /vi-tra-sau/llms.txt | AEO/GEO Standard | Chuẩn hóa AI Indexing (Bắt buộc theo chuẩn VP GPD) |
 
 ### 6.2 Scope Build - Core Deliverables
 
 | Deliverable | Mô tả | Mục tiêu |
 |---|---|---|
 | Revamp /vi-tra-sau hub | UI mới: highlight use-cases rõ (10 categories); Social proof (số user, đối tác brands); Comparison section VTS vs thẻ; Sticky CTA bar trên mobile; FAQPage schema | CTR CTA tăng từ 7% → 20% |
+| **PLG Interactive Tool** | **VTS Installment Simulator (Trình giả lập trả góp):** User nhập số tiền cần vay → Kéo slider chọn kỳ hạn (1-12 tháng) → Tool tự động tính chính xác số tiền trả mỗi tháng (hiển thị phí ẩn nếu có minh bạch 100%). | Tạo "Aha Moment", thuyết phục W2A ngay lập tức (CEO & VP GPD standard) |
 | Sub-pages × 10 | Build 10 use-case pages theo nhóm sản phẩm: **Thẻ & Data** (mua-the-game, mua-the-cao-dien-thoai, nap-data) - **Ẩm thực** (thanh-toan-nha-hang + merchant list, dat-do-an) - **Mua sắm** (mua-dien-thoai, thanh-toan-sieu-thi + merchant list) - **Di chuyển** (mua-ve-may-bay, thanh-toan-xang-dau) - **Hóa đơn** (thanh-toan-hoa-don). Mỗi trang có deeplink VTS activation | Intercept adjacent intent theo use-case cụ thể |
 | OneLink deeplink per use-case | Deep link từ mỗi sub-page → app → đúng merchant/service flow | Track W2A attribution per use-case |
 | FAQPage schema | Toàn bộ trang /hoi-dap/ VTS + hub page | Rich snippets + AIO citation |
@@ -316,6 +319,10 @@ Baseline: TBD | Target: 500 activated users/tháng vào tháng 6/2026
 | W2A end-to-end CVR | **Chưa có baseline** - establish Q2/2026 | Set target sau khi có baseline (Q3 review) | Dec 2026 | GA4 + Appsflyer |
 | Scroll depth mobile (hub) | ~75-80% reach block, không click | ≥ 85% reach + click | Oct 2026 (post-revamp) | Heatmap tool |
 
+### 7.4 Mandatory Tracking & AB Test Hypothesis (MoSpark Standard)
+- **Hypothesis (Giả thuyết test):** Nếu đặt "VTS Installment Simulator" (Máy tính trả góp) ở màn hình đầu tiên (First Fold) thay cho banner quảng cáo tĩnh, tỷ lệ CTR tới CTA W2A sẽ tăng ít nhất 50% vì user trực tiếp thấy được quyền lợi tài chính của mình (Utility-first).
+- **Tracking Event Schema:** Gắn sự kiện trên GA4 & Appsflyer cho mọi tương tác: `vts_slider_drag` (Kéo slider chọn tiền), `vts_term_select` (Chọn kỳ hạn), `vts_cta_click` (Click nút Trả góp ngay).
+
 ### 7.4 Ranking & GEO
 
 | Metric | Baseline | Target | Timeframe | Tracking |
@@ -327,6 +334,13 @@ Baseline: TBD | Target: 500 activated users/tháng vào tháng 6/2026
 ---
 
 ## 8. Dependencies & Constraints
+
+### 8.1 Go-to-Market: SPA Framework (Service Productization)
+- **reSearch / Strategy:** Đã hoàn tất phân tích Keyword cluster (Trả sau, Trả góp, Tín dụng) với tổng volume ~900K SV/tháng.
+- **Pilot / Plan (T6/2026):** Revamp Hub `/vi-tra-sau` + Build VTS Installment Simulator + 10 Sub-pages.
+- **Action / Amplify (Q3/2026):** SEO Lead cùng VP GPD pitch BU VTS để commit ngân sách scale 20-30 bài blog đánh chiếm SOV Tín Dụng & Trả Góp.
+
+### 8.2 Operational Constraints
 
 | Dependency | Mô tả | Blocker? | Status |
 |---|---|---|---|
