@@ -1,15 +1,3 @@
----
-title: 🧪 Momo Html Formatting Skill
-Document Format Skill
-
-**Team:** Out-App Traffic · GPD  
-**Status:** Design System Standard  
-**Last Updated:** April 2026
-last_reviewed: 2026-05-15
-next_review: 2026-08-15
----
-
-
 ## Tổng Quan
 
 Skill này định nghĩa toàn bộ design system, brand guideline, và convention cố định khi tạo HTML document nội bộ cho team **Out-App Traffic · GPD** tại MoMo.

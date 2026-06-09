@@ -1,21 +1,3 @@
----
-title: 🛠 Web Tracking
-_web-tracking
-description: "Hướng dẫn setup và audit tracking (GA4, GTM, Appsflyer) cho mọi Use Case trên momo.vn. Đảm bảo dữ liệu Web-to-App được đo lường chính xác."
-category: technical
-tags:
-  - tracking
-  - ga4
-  - gtm
-  - appsflyer
-  - web-to-app
-author: hienho-momo
-version: 1.0.0
-last_reviewed: 2026-05-15
-next_review: 2026-08-15
----
-
-
 # Web-to-App Tracking Standard
 
 ## 1. Tracking Philosophy
@@ -169,6 +151,16 @@ Logic nhận diện AI Referral Traffic:
 Để đảm bảo dữ liệu "Web-attributed" chính xác, các truy vấn trên BQ cần áp dụng filter:
 - **Condition:** `ref = 'website'`
 - **Applied Tables:** `ONELINK_LOGGER_APP_GET_METADATA_V2` và `APP_EVENT.EVENTS`.
+
+### 8.4 Website User ID (WUI) Tracking Integration (PIC: Hiếu)
+Đây là dự án định danh người dùng xuyên suốt Web-to-App của MoSpark. Để xem sơ đồ kiến trúc và đặc tả chi tiết 5 Tầng xử lý, vui lòng tham chiếu tài liệu dự án: [mospark_user_identity_tracking.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_user_identity_tracking.md).
+
+**Tóm tắt Luồng Xử Lý (5 Tầng):**
+1.  **Tầng 1 (Identification):** Edge Middleware đọc HttpOnly Cookie khi user truy cập.
+2.  **Tầng 2 (Identity Generation):** Khởi tạo Identity Object (Anonymous ID qua `generateAnonId()` hoặc Logged-in ID qua `hashed_uid`).
+3.  **Tầng 3 (Analytics Tracking):** Đẩy Identity ID sang GA4 (`dataLayer.push`) và Umami (`umami.identify`) để stitch session.
+4.  **Tầng 4 (CTA Distribution):** CTA Builder tự động gắn tham số `wui=<identityId>` vào toàn bộ link Appsflyer Onelink.
+5.  **Tầng 5 (App Attribution):** App MoMo nhận diện `wui` từ Onelink để liên kết chéo với User ID trong App và đối chiếu dữ liệu MAU/MEU trên BigQuery.
 
 ---
 

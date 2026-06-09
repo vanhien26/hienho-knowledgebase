@@ -4,8 +4,8 @@
 > - **Main URL:** momo.vn/bao-hiem-xe-may
 > - **Division:** FS (Financial Services)
 > - **Use Case:** InsurTech
-> - **Owner:** GPD - Out-App Traffic
-> - **Governance:** Web Product Lead
+> - **Owner:** Web Platform
+> - **Governance:** Web Product Lead (Hiến)
 > - **Version:** 1.1 - March 2026
 > - **Status:** Draft
 > - **SEO Score:** 65/100 | **Traffic:** 15K sessions/tháng | **W2A:** 8.5%

@@ -1,10 +1,3 @@
----
-name: decision-framework
-description: >
-  Khung ra quyết định dựa trên tính khả hồi (reversibility) và tác động (impact). 
-  Giúp tăng tốc độ thực thi và giảm thiểu rủi ro cho các quyết định quan trọng.
----
-
 # ⚖️ Decision Framework - Speed vs Quality
 
 ## 🎯 Mục tiêu

@@ -1,19 +1,7 @@
----
-title: "MoSpark: AI-Powered Growth Platform - Product Vision & PRD"
-description: >
-  Master Document cho MoSpark Growth Platform.
-  Product Vision, PRD hoàn chỉnh, kiến trúc kỹ thuật và quy trình vận hành.
-version: v3.3
-status: Active
-owner: Văn Hiến (Web Product Lead)
-last_updated: 2026-05-25
-tags: [mospark, platform, growth-os, genai, seo, geo, prd, product-vision]
----
-
-# MoSpark: AI-Powered Growth Platform
+# MoSpark - AI-Powered Growth Platform
 ## Product Vision & PRD
 
-> **Owner:** Văn Hiến (Web Product Lead) | **Version:** v3.3 | **Updated:** 2026-05-25
+> **Owner:** Văn Hiến (Web Product Lead) | **Version:** v3.4 | **Updated:** 2026-05-31
 
 ---
 
@@ -93,7 +81,7 @@ momo.vn không tổ chức theo BU - tổ chức theo Product / Search Ecosystem
 | **P1 - Tài chính & Tín dụng** | CIC Score, Ví Trả Sau, Vay Nhanh | Hub-Spoke + Interactive Tools (tính lãi, mô phỏng CIC) | Named Author Policy - hard gate trước launch |
 | **P2 - Bảo hiểm Công nghệ** | BH xe máy, BHYT, BHXH, BH ô tô | Neutral Aggregator - cổng so sánh trung lập | Không dùng geo-based URL cho bảo hiểm |
 | **P3 - Dịch vụ Công & Tiện ích** | Phạt Nguội, Hóa đơn | API real-time + pSEO (63 tỉnh) | llms.txt mandatory trước rollout |
-| **P4 - Đời sống & Merchant** | Cinema, OTA, eSIM, Merchant | Intent-first, Merchant Detail Page | 410 Gone mandatory cho URL hết hạn |
+| **P4 - Đời sống & Merchant** | Cinema, OTA, eSIM, Merchant | Intent-first, Merchant Detail Page | Noindex mandatory cho URL hết hạn (410 Gone đã bỏ - hạ tầng không hỗ trợ) |
 
 **Utility-First** là nguyên tắc vận hành: Interactive tools (calculator, simulator, checker) là core value thực sự - content là supporting layer tạo discoverability và giáo dục. Mỗi Use Case mới phải trả lời: "Utility tool của Use Case này là gì?"
 
@@ -226,7 +214,7 @@ MoSpark vận hành theo 5 lớp, phủ kín toàn bộ lifecycle từ market re
 | `/{mini-web}` | Mini Web Use Case | Rank transactional keywords, capture intent mua hàng | Landing Page Builder |
 | `/{mini-web}/blog/*` | Growth Blog (Use Case) | Satellite content, dồn Link Equity về Mini Web | GenAI Content |
 | `/blog/*` | Growth Blog (General) | Informational keywords, Topical Authority | GenAI Content |
-| `/doi-tac*` | Merchant Page | Cross-sell, Local SEO | LP Builder + Merchant Module |
+| `/merchant*` | Merchant Page | Cross-sell, Local SEO | LP Builder + Merchant Module |
 | `/tin-tuc*` | News/Communications | Brand presence, PR | CMS |
 | `/hoi-dap*` | Help Center | User support, Featured Snippets | Help Center Module |
 | Landing Page | Campaign / Promotion | Conversion-focused, không cần rank dài hạn | LP Builder |
@@ -240,7 +228,7 @@ MoSpark vận hành theo 5 lớp, phủ kín toàn bộ lifecycle từ market re
 | # | Module | Tên | Status | Phase | Owner |
 |---|---|---|---|---|---|
 | M1 | Landing Page Builder | Tự tạo Landing Page | Production - Q2 Onboarding GPD | 1 | Bảo + Thuận |
-| M2 | GenAI Content Engine | AI Content Production | Active - Pilot Phạt Nguội | 1 | Thuận (build), Hiến (govern) |
+| M2 | GenAI Content Engine | AI Content Production | Active - Pilot Phạt Nguội | 1 | Trọng (AI Tool/Model/Workflow), Thuận (GenAI Hình), Lộc (phân quyền User), Hiến (govern) |
 | M3 | Ads Manager | Web-to-App Conversion | V1.2 Production - Pilot User Growth | 1→2 | Thuận, Bảo |
 | M4 | SEO/GEO Scoring Gate | Quality Control | Active - All Page Types | 1 | Thuận (build), Hiến (govern) |
 | M5 | SEO Inventory | Market Map & SoV | Active (Manual) → Dashboard Integration | 1→2 | Thuận, Hiến |
@@ -779,7 +767,7 @@ Use Case: Phạt Nguội
 | Deliverable | Owner | Status |
 |---|---|---|
 | LP Builder - GPD Onboarding | Bảo | In Progress |
-| GenAI Content: Scale Financial (Vay, VTS, CIC) | Thuận + Hiến | In Progress |
+| GenAI Content: Scale Financial (Vay, VTS, CIC) | Trọng + Hiến | In Progress |
 | Ads Manager Widget: Phạt Nguội + BHYT Shortcode | Thuận | In Progress |
 | Umami Live - Phạt Nguội | Thuận | This week |
 | SEO Inventory Dashboard v1 | Thuận (schema) + Hiến (data) | Planning |
@@ -837,6 +825,7 @@ Use Case: Phạt Nguội
 | **Văn Hiến (Web Product Lead)** | Set SEO/GEO standard, govern Quality Gate, input Market data, sign-off YMYL, audit AI Citation | Không execute tracking, không direct với Dev mà không có spec |
 | **Bảo (Web Platform Manager)** | Product direction MoSpark, Placement Registry, enforce "no hardcode", PO Web Platform sprint | Không làm trực tiếp với Agency hay Inbound |
 | **Thuận + Lộc (Developers)** | Build tất cả modules theo spec, Widget Library, database | Không tham gia campaign creation khi đã có self-service |
+| **Trọng (Developer)** | GenAI Content Engine - AI Tool, Model, Workflow (lõi engine). Thuận lo GenAI Hình (Gallery), Lộc lo phân quyền User | Không build các module khác của MoSpark |
 | **Mai (Inbound SEO Lead)** | Content production theo brief Hiến, điền Business Context cùng PM, off-page | Không làm trực tiếp với Web Platform - technical request qua Hiến |
 | **PM/PO Cell Team** | Khởi tạo Use Case, xác nhận Business Context (chịu trách nhiệm pháp lý), approve Outline, tự tạo LP + Ads | Không chỉnh code hoặc nhờ Dev bypass MoSpark |
 
@@ -844,27 +833,11 @@ Use Case: Phạt Nguội
 
 Platform issues → Bảo → Hiến review (nếu SEO impact).
 Content quality → Hiến → Mai (nếu Inbound cần training).
-Resource/Policy → Hiến → Tuệ → Công (VP).
+Resource/Policy → Hiến → Bảo → Công (VP).
 
 ---
 
-## 12. Tài liệu Liên kết
 
-| Tài liệu | Nội dung | Link |
-|---|---|---|
-| SEO/GEO Playbook | Strategy + Operations workflow | [[04_MOSPARK_PLATFORM/mospark_seo_geo_playbook]] |
-| Microsite Management (Product + Dev Spec) | Quản lý Mini Web - Product Spec + Data model, API, Acceptance Criteria cho Hoài Anh | [[04_MOSPARK_PLATFORM/mospark_microsite_management]] |
-| Ads Manager BRD | Chi tiết 5 modules Ads | [[04_MOSPARK_PLATFORM/mospark_ads_manager]] |
-| GenAI Content BRD | 7-step workflow + Governance | [[04_MOSPARK_PLATFORM/mospark_genai_content]] |
-| SEO/GEO Scoring BRD | 100pt scoring model + Hard Block | [[04_MOSPARK_PLATFORM/mospark_seo_geo_score]] |
-| SEO Inventory BRD | Market map + SoV + SEO-ICE | [[04_MOSPARK_PLATFORM/mospark_seo_inventory]] |
-| Business Context Template | 12-field template | [[04_MOSPARK_PLATFORM/mospark_business_context]] |
-| Migration BRD | Admin Panel → MoSpark | [[04_MOSPARK_PLATFORM/mospark_migration]] |
-| AI Crawler Policy | llms.txt + robots.txt | [[04_MOSPARK_PLATFORM/mospark_llms_robots_txt]] |
-| Chiến lược Nội dung | MoMo Content Strategy 2026 | [[01_STRATEGIC_PLAN/momo-content-plan-strategy]] |
-| Master Context | Hienho Master Doc | [[00_HARNESS_CORE/hienho_master_doc]] |
-
----
 
 ## 13. Version Log
 
@@ -877,7 +850,8 @@ Resource/Policy → Hiến → Tuệ → Công (VP).
 | v3.1 | 2026-05-25 | Viết lại ngôn ngữ cho rõ hơn, bỏ văn phong hàn lâm. Bổ sung Bối cảnh Chiến lược từ meetings (Anh Công, Huy Lê, A.Tường). |
 | v3.2 | 2026-05-25 | Redesign Section 2: xóa meeting-transcript style, thay bằng Mandate Chiến lược (2.1) + 4 Growth Pillars (2.2) + đổi tên 2.2 cũ thành 2.3. Bổ sung Elegant Problem Statement (Section 1.1), MoSpark KHÔNG phải (Section 3.4), Measurement-First bắt buộc (Section 7.4). |
 | v3.3 | 2026-05-25 | Bổ sung 5 modules mới M9-M13: PLG Tool Builder (full spec với 4-test framework + 3 tool types + data pipeline), Experiment Engine, Revenue Attribution Pipeline, Content Intelligence Loop, GEO Citation Monitor. Update kiến trúc platform lên 5 lớp. Update Module Catalog table. Thêm 3 Mermaid diagrams cho M9: 4-Test Decision Framework, Tool Types + Pillar Mapping, Data Pipeline → GEO Moat. |
+| v3.4 | 2026-05-31 | **Consistency fix**: (1) M2 GenAI ownership sửa thành Trọng (AI Tool/Model/Workflow) + Thuận (GenAI Hình) + Lộc (phân quyền User) + Hiến (govern), bổ sung Trọng vào RACI 11.1; (2) Pillar P4 (2.2) bỏ 410 Gone thay Noindex (hạ tầng không hỗ trợ); (3) Escalation path 11.2 sửa Tuệ → Bảo (Tuệ nghỉ cuối T5/2026). |
 
 ---
 
-*Owner: Văn Hiến (Web Product Lead) | Version: v3.3 | Updated: 2026-05-25*
+*Owner: Văn Hiến (Web Product Lead) | Version: v3.4 | Updated: 2026-05-31*

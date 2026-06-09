@@ -4,8 +4,8 @@
 > - **Main URL:** momo.vn/bao-hiem-y-te
 > - **Division:** FS (Financial Services - InsurTech)
 > - **Use Case:** Bảo Hiểm Y Tế
-> - **Owner:** GPD - Out-App Traffic
-> - **Governance:** Web Product Lead
+> - **Owner:** Web Platform
+> - **Governance:** Web Product Lead (Hiến)
 > - **Version:** 1.1 - Tháng 5/2026
 > - **Status:** On Track
 

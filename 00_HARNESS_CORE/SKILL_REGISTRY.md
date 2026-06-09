@@ -1,10 +1,3 @@
----
-name: skill-registry
-description: >
-  Mục lục trung tâm điều hướng toàn bộ kỹ năng (Skills) và nguyên tắc (Principles) 
-  của hệ thống Agent Harness. SOT cho Agent khi bắt đầu tác vụ.
----
-
 # 🧪 Skill Registry & Framework Hub
 
 Chào mừng bạn đến với hệ thống **Agent Harness** của Văn Hiến @ MoMo. Đây là file điều hướng trung tâm để AI hiểu và thực thi các nhiệm vụ.
@@ -14,7 +7,7 @@ Chào mừng bạn đến với hệ thống **Agent Harness** của Văn Hiến
 ## 🧭 Điều Phối & Bối Cảnh (Orchestration)
 Dùng các file này để điều phối dự án và nắm vững bối cảnh:
 *   👉 **[[orchestrator_engine]]**: Master Controller / Lifecycle Engine.
-*   👉 **[[mospark_business_context]]**: Single Source of Truth cho Business Context.
+*   👉 **[[mospark_genai_content#7. Business Context - Các trường bắt buộc|mospark_business_context]]**: Single Source of Truth cho Business Context (nằm trong mospark_genai_content).
 
 ---
 
@@ -26,6 +19,7 @@ Dùng để Reasoning và Thinking trước khi Action (Luôn load các file nà
 *   **[[80-20-growth]]**: Tập trung vào 20% nỗ lực tạo ra 80% Impact.
 *   **[[decision-framework]]**: Phân loại quyết định để hành động nhanh hoặc chậm.
 *   **[[brainstorming]]**: Tìm kiếm giải pháp và đánh giá Trade-offs.
+*   **[[mospark_seo_geo_playbook]]**: Khung chiến lược & vận hành SEO/GEO (HubSpot Parity).
 
 ---
 

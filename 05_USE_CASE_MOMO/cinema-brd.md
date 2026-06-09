@@ -4,8 +4,8 @@
 > - **Main URL:** momo.vn/cinema
 > - **Division:** MDS (Merchant & Digital Services)
 > - **Use Case:** Cinema
-> - **Owner:** GPD - Out-App Traffic
-> - **Governance:** Web Product Lead
+> - **Owner:** Web Platform
+> - **Governance:** Web Product Lead (Hiến)
 > - **Version:** 2.1 - Tháng 5/2026
 > - **Status:** Draft - Cần align PO Cell + Dev Lead
 

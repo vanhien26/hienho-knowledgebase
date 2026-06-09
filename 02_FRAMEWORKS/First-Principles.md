@@ -1,10 +1,3 @@
----
-name: first-principles
-description: >
-  Bóc tách vấn đề về những sự thật nguyên bản nhất để xây dựng giải pháp mới, 
-  thay vì copy-cat hoặc làm theo "best practice" một cách mù quáng.
----
-
 # 🧠 First Principles - Deconstruction Skill
 
 ## 🎯 Mục tiêu

@@ -203,6 +203,22 @@ flowchart TD
 | Tools | Xây dựng công cụ cho Out-App Traffic / Cell Team / Inbound vận hành nội dung |
 | KPI chính | Web-to-App conversion, New User, MAU, MEU (chung với GPD) |
 
+### 2.3b Phân Công Dự Án Trọng Điểm & PIC (Web Platform)
+
+| Thành viên | Vai trò chuyên môn | Dự án phụ trách chính (Primary Project) | Hạng mục chi tiết in-charge | Tài liệu / Quy chuẩn liên quan |
+| :--- | :--- | :--- | :--- | :--- |
+| **Bảo** | Senior Manager \| MoSpark Platform Owner | MoSpark Platform (All Projects) | Quản lý và sở hữu toàn bộ các dự án thuộc MoSpark (CMS V2, Ads Manager, LDP Builder, Widget Store). | [mospark_master.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_master.md) |
+| **Hiến** | Web Product Lead \| Foundation & Platform | Web Platform & Foundations | Tham gia chi tiết thiết lập Foundation & Platform bao gồm: GenAI, Microsite/Merchant Page (phục vụ SEO/GEO), Phân quyền, Utility (Widget Store) nhằm tăng MEU/MAU. | [hienho_master_doc.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/00_HARNESS_CORE/hienho_master_doc.md) |
+| **Tuấn** | Product Designer | MoSpark Blog UI/UX Redesign | Thiết kế giao diện Blog Home & Detail, Ads Placements và AI Summarize block. | [mospark_blog_redesign.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_blog_redesign.md) |
+| **Hùng** | Front-End Team Leader \| MoBase Owner | MoBase (Design System) | Chịu trách nhiệm phát triển và quản trị MoBase (Design System của MoMo Web). | [web-momo-okrs-2026.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/01_STRATEGIC_PLAN/web-momo-okrs-2026.md#L66) |
+| **Nhật** | Senior FE Developer | Merchant Page (O2O & VTS Hub) | Triển khai template danh mục, Share button, và tính năng CRUD trạng thái trang đối tác. | [doi-tac-brd.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/05_USE_CASE_MOMO/merchant-project/doi-tac-brd.md) |
+| **Thuận** | Senior FE Developer | MoSpark Distribution & Tracking | Build nền tảng quản lý/phân phối trên MoSpark (Ads & Widget). Follow dự án Umami Tracking (build/kéo dash, define events). Làm Widget tìm điểm VTS cho Merchant Page. Owner phần MoMo Gallery (tích hợp GenAI). Kéo API GA4/GSC từ BigQuery để phục vụ tracking. | [mospark_ads_manager.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_ads_manager.md), [mospark_genai_content.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_genai_content.md), [widget-store-prd.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/08_PRD/widget-store-prd.md) |
+| **Trọng** | Senior FE Developer | GenAI Content Platform | Tích hợp Claude API (Haiku/Sonnet), GenAI pipeline workflow và luồng tự động phân phối nội dung. | [mospark_genai_content.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_genai_content.md) |
+| **Lộc** | Senior FE Developer | CMS Access Control & Permissions | Phân quyền user access trong CMS MoSpark và bảo mật giao diện Admin Panel. | [mospark_permission.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_permission.md) |
+| **Hiếu** | Back-End Team Leader \| Widget Lead | Widget Management & Tracking | Làm chính về UI/UX/Dev cho Widget Management. Đồng bộ Onelink, tracking parameters (`wui`), cấu hình GA4/GTM/Umami và đối soát BigQuery. | [mospark_widget_store.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_widget_store.md), [mospark_user_identity_tracking.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_user_identity_tracking.md) |
+| **Hoài Anh** | Tech Solution Lead | MoSpark Core Backend & API | Thiết kế database Supabase, cổng YARP API Gateway, API đồng bộ M4B và backend Widget Store. | [mospark_master.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_master.md) |
+| **Duy** | Senior BE Developer | BE Development Support | Hỗ trợ phát triển Backend API và hạ tầng database cho các microsites. | [mospark_master.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_master.md) |
+
 ### 2.4 Inbound Marketing (Mai - thuộc BMC)
 
 | Field | Detail |
@@ -1335,7 +1351,10 @@ MoSpark không còn là CMS đơn thuần mà là một sản phẩm phần mề
 | 2026-05-16 | 4.1 | **Team Structure Update**: (1) Cập nhật Tuệ nghỉ việc. (2) Hiến làm việc và báo cáo trực tiếp cho Bảo (Project Lead) và Công (VP). (3) Cập nhật Org Chart và Escalation Paths toàn bộ tài liệu. |
 | 2026-05-18 | 4.2 | **Monthly Report Alignment**: Bổ sung Tầng Báo Cáo & Nhật Ký vào Knowledge Map; liên kết sâu sắc Báo Cáo Tháng 05/2026 và Master Doc. |
 | 2026-05-28 | 4.3 | **Consolidate Active Projects**: Hợp nhất tệp tin active_projects_log.md ngược trở lại Mục 5 của Master Doc và loại bỏ phần KNOWLEDGE ECOSYSTEM MAP theo yêu cầu của PO. |
-
+| 2026-06-09 | 4.4 | **Web Platform PIC Assignment**: Tổng hợp và cập nhật bảng phân công dự án trọng điểm cùng vai trò chi tiết của từng PIC thuộc Web Platform vào Mục 2.3b (Hiến). |
+| 2026-06-09 | 4.5 | **Web Platform Roles Realignment**: Tái định vị vai trò Bảo (sở hữu toàn bộ MoSpark), Hiến (tham gia chi tiết Foundation & Platform), Hùng (chịu trách nhiệm MoBase Design System). |
+| 2026-06-09 | 4.6 | **Thuận & Hiếu Scope Refinement**: Cập nhật phạm vi công việc của Thuận (Phân phối MoSpark, Umami, Galleries GenAI, BigQuery API, Merchant VTS Widget) và Hiếu (làm chính UI/UX/Dev dự án Widget Management). |
+| 2026-06-09 | 4.7 | **Merchant & Widget Specifications Refinement**: (1) Tích hợp Google Map Search Crawler & Dynamic Schema/Amenities theo 7 ngành hàng vào Merchant BRD & PRD. (2) Tái định nghĩa chi tiết JTBD cho 10 core Utilities và loại bỏ static shortcode specifications khỏi Widget Store BRD. |
 
 ---
 
@@ -1356,4 +1375,9 @@ MoSpark không còn là CMS đơn thuần mà là một sản phẩm phần mề
 
 ## Change Log
 - **Tháng 5/2026:** Khởi tạo tài liệu và chuẩn hóa cấu trúc thư mục.
+- **2026-06-09:** Cập nhật bảng phân công chi tiết nhân sự (PIC) cho các dự án trọng điểm của Web Platform (Mục 2.3b).
+- **2026-06-09 (v4.5):** Tái phân công vai trò Bảo (MoSpark Platform Owner), Hiến (Foundation & Platform Detail Design) và Hùng (MoBase Design System Owner).
+- **2026-06-09 (v4.6):** Chi tiết hóa scope của Thuận (phân phối MoSpark, Umami dashboard, GenAI Galleries, BigQuery/GSC/GA4 tracking API) và Hiếu (chủ trì UI/UX/Dev Widget Management).
+- **2026-06-09 (v4.7):** Tích hợp Google Map Search Crawler & Dynamic Schema theo ngành hàng vào Merchant BRD/PRD, tái định nghĩa cụ thể JTBD cho 10 core Utilities và loại bỏ static shortcode specifications khỏi Widget Store BRD.
+
 

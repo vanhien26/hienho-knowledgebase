@@ -138,7 +138,7 @@
 #### Key Highlights & Business Impact
 
 **Vibe Code Pioneer Project - [Phạt Nguội](https://momo.vn/phat-nguoi)**
-- **Hoàn thành Go-live 100% hệ thống các trang Phạt Nguội đã build** (bao gồm Trang chủ tra cứu, ngách Ô tô, Xe máy, Xe máy điện, trang blog kiến thức và các bài viết chi tiết). Chi tiết danh sách URLs và cấu trúc sitemap được lưu trữ và cập nhật tại tài liệu dự án chuyên sâu [phat-nguoi-brd.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/05_USE_CASE_MOMO/phat-nguoi-brd.md).
+- **Hoàn thành Go-live 100% hệ thống các trang Phạt Nguội đã build** (bao gồm Trang chủ tra cứu, ngách Ô tô, Xe máy, Xe máy điện, trang blog kiến thức và các bài viết chi tiết).
 - Đây là Mini Web đầu tiên được xây dựng trên nền tảng MoSpark theo định hướng Vibe Code (AI-assisted development) giúp tối ưu hóa thời gian và hoàn thiện sản phẩm nhanh chóng.
 - Tích hợp chuẩn mực giao diện UI/UX Mobile-First mượt mà.
 - On-page SEO/GEO được cấu hình trực tiếp trên công cụ Page Editor của MoSpark.
@@ -148,7 +148,6 @@
 - **Thiết lập mô hình chuẩn:** Trở thành Pilot mẫu đại diện cho mô hình AI-Powered Mini Web trên MoSpark.
 - **Tăng trưởng tự nhiên vượt kỳ vọng:** Google Organic Clicks tăng trưởng phi mã từ **1-5 clicks/ngày** (cuối T4) lên **113 clicks/ngày** (cuối T5), tích lũy **>1,100 Clicks** và **>15,000 Impressions** sau 28 ngày Index. Landing Page `/phat-nguoi` đạt tỷ lệ click CTR ấn tượng **24.3%** ở vị trí trung bình **Top 1.89** trên Google Search.
 - **Tín hiệu GEO (Generative Engine Optimization) mạnh mẽ:** Nhận được **660 citations** từ các AI Search Engines và thu hút traffic thực tế từ ChatGPT với **76 sessions / 66 total users** thông qua việc triển khai file `llms.txt`.
-- *(Chi tiết cấu trúc phân phối keywords và từ điển tìm kiếm xem tại: [File Excel Đính Kèm](file:///Users/hienhv/Downloads/[Phạt Nguội] GPD x VTTI _ 2026 (1).xlsx))*
 
 #### Priorities for the Next 30 Days
 - Triển khai Phase 2 (Phạt Nguội): Phát triển và phủ sóng các trang địa phương pSEO tại 10 Tỉnh/Thành phố lớn (Hà Nội, TP.HCM, Đà Nẵng, Bình Dương...) nhằm chiếm lĩnh ngách tìm kiếm địa phương.
@@ -166,7 +165,7 @@
 
 #### Key Highlights & Business Impact
 
-**Strategic Governance Hub - [Dịch Vụ Công](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/05_USE_CASE_MOMO/dich-vu-cong-brd.md)**
+**Strategic Governance Hub - Dịch Vụ Công**
 - **Thiết lập Phễu Tăng Trưởng (Web Acquisition Funnel) cho Dịch Vụ Công:** Định vị DVC là Pillar chiến lược số 3 của Web Platform, giải quyết triệt để bài toán thiếu touchpoint Web để hứng tệp khách hàng tiềm năng khổng lồ (~5M searches/tháng có ý định giao dịch cao nhất).
 - **Đột phá Trải nghiệm tương tác với "Smart DVC Checklist Generator":** Thay thế nội dung chữ dài dòng bằng công cụ tạo checklist hồ sơ tự động (trả lời 3 câu hỏi nhận kết quả chuẩn xác 100%). Giả thuyết A/B test chứng minh đưa widget này lên First Fold sẽ giúp tăng tỷ lệ chuyển đổi Web-to-App (W2A) thêm 30% so với trang tĩnh.
 - **Xác lập mô hình KPI & Phân hệ chuyển đổi:** 
@@ -196,7 +195,6 @@
 - **Hoàn thành đo lường Benchmark Model & Dự toán Chi phí:** Thiết lập đơn giá cố định và thời gian sản xuất (gồm Outline & Blog Detail) cho 2 dòng model Claude:
   * *Claude 3 Haiku:* 7.000đ/bài viết, tốc độ 55 giây (phù hợp scale-out pSEO).
   * *Claude 3.5 Sonnet:* 20.000đ/bài viết, tốc độ 140 giây (phù hợp bài pillar E-E-A-T/YMYL chuyên sâu).
-- Tài liệu chi tiết MoSpark Platform: [mospark_master.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_master.md)
 
 **Business Impact**
 - **Đột phá về hiệu suất & Tự chủ tài chính:** Ứng dụng quy trình sản xuất nội dung bằng AI giúp giảm 80% thời gian biên tập. Quan trọng hơn, việc chuẩn hóa đơn giá per bài giúp PM/PO dễ dàng dự toán chính xác ngân sách cho Content Plan (ví dụ: plan 40 bài tương ứng 280.000đ với Haiku hoặc 800.000đ với Sonnet).
@@ -224,7 +222,6 @@
 - Chuyển dịch chiến lược: Định hình mô hình Nền tảng hiện diện số cho doanh nghiệp vừa & nhỏ (SME Digital Presence Platform) thay vì danh mục sản phẩm tĩnh.
 - Thiết lập thành công cổng kết nối hệ sinh thái O2O (O2O Ecosystem Connector) thông qua 4 sản phẩm chính: Ví Trả Sau (VTS), Soundbox, Hoàn tiền, và Xu.
 - Go-live thành công trang Merchant Pilot đầu tiên cho thương hiệu "Bún thịt nướng Chị Tuyền".
-- Tài liệu đối tác BRD: [Tại đây](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/05_USE_CASE_MOMO/doi-tac-brd.md)
 
 **Business Impact**
 - **Hỗ trợ SME tối ưu hóa truyền thông:** Tạo lập sự diện diện trực tuyến chất lượng cao cho các đối tác SME (vốn là nhóm yếu thế về năng lực công nghệ), giúp kết nối dòng khách hàng online của MoMo với các cửa hàng vật lý offline.
@@ -249,7 +246,6 @@
 - Hoàn tất xây dựng chiến lược tiếp cận theo Intent (Intent-Based Web Strategy) phối hợp cùng Telecom BU.
 - Xác định và phân tách rõ nét chân dung người dùng thông qua mô hình 4 Personas tương ứng với 8 JTBD (Jobs-To-Be-Done) cốt lõi của ngành viễn thông.
 - Thiết lập giải pháp **Intent-Based Audience Filtering** để nhận diện và định tuyến trải nghiệm người dùng ẩn danh trên Web.
-- Tài liệu viễn thông BRD: [Tại đây](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/05_USE_CASE_MOMO/telecom-brd.md)
 
 **Business Impact**
 - **Mở rộng tệp khách hàng ngoài App:** Trực tiếp giải quyết điểm nghẽn của mảng Viễn thông (chỉ số New-to-Service đang đi ngang ở mốc 120K) bằng cách thu hút người dùng ẩn danh từ Google Search và điều hướng qua Appsflyer Onelink.
@@ -274,7 +270,6 @@
 - Hoàn thành Bản đồ từ khóa mục tiêu (SEO Inventory Map) đo lường baseline cho 55 cụm thị trường tài chính và dịch vụ công, cập nhật 100% search volume cho mảng viễn thông (VTTI).
 - Tối ưu hóa hạ tầng kỹ thuật Web & Tiết kiệm Ngân sách cào quét (Crawl Budget): Khắc phục triệt để lỗi tài nguyên động, tối ưu hóa hoạt động cào quét của Googlebot trên hệ thống momo.vn.
 - Triển khai file cấu hình llms.txt để tối ưu hóa thu thập dữ liệu của các AI Search Engines, định hình Topical Authority của MoMo trên kết quả tìm kiếm GenAI.
-- Tài liệu robots/llms.txt chi tiết: [Tại đây](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_llms_robots_txt.md)
 
 **Business Impact**
 - **Dẫn dắt bằng dữ liệu (Data-driven):** Chuyển dịch toàn bộ hoạt động SEO từ viết nội dung theo cảm tính sang định hướng định lượng rõ ràng với bộ từ điển Inventory chi tiết.

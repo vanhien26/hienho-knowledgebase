@@ -1,10 +1,3 @@
----
-title: 📄 Brd Momo
-description: "Viết Business Requirements Document (BRD) chuẩn cho Use Case / Project của MoMo Out-App Traffic / GPD theo CEO Standard: Elegant Problem Framing, PLG, User-Centric Safety. BRD define Why (bối cảnh, vấn đề, cơ hội) và What (scope, JTBD, success metrics) để align stakeholder. Trigger: 'viết BRD', 'BRD cho dự án', 'kick-off use case', 'align stakeholder'. Input: Business Context + Keyword CSV + Direction brief. Output: .md file."
-last_reviewed: 2026-05-23
-next_review: 2026-08-23
----
-
 # MoMo BRD Skill - CEO Standard
 
 ## Mục Tiêu

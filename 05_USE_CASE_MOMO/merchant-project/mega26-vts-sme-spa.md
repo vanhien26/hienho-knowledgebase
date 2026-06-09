@@ -1,6 +1,6 @@
 # SPA: Mega 2026 - "Trả Sau Hoàn Sâu" (VTS x SME)
 
-> - **Project:** Use Case Ví Trả Sau x SME — Trả Sau Hoàn Sâu
+> - **Project:** Use Case Ví Trả Sau x SME - Trả Sau Hoàn Sâu
 > - **Channel:** Điểm chạm số (Web/SEO)
 > - **Division:** FS (Financial Services) & SME
 > - **Version:** 2.3 · C-Level Pitch

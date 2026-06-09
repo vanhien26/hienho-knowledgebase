@@ -3,8 +3,8 @@
 > - **Project:** Soundbox Web D2C - Website Order Loa Báo Chuyển Khoản MoMo
 > - **Division:** PS (Payment Services) | SME Offline
 > - **Main URL:** momo.vn/loa-thong-bao-chuyen-khoan
-> - **Owner:** GPD - Out-App Traffic
-> - **Governance:** Web Product Lead
+> - **Owner:** Web Platform
+> - **Governance:** Web Product Lead (Hiến)
 > - **Version:** 2.0 - Tháng 05/2026
 > - **Status:** Draft - Chờ stakeholder review
 

@@ -1,15 +1,11 @@
-# MoSpark Microsite Management
-Quản lý Mini Web theo Use Case + Developer Brief
+# MoSpark - Microsite Management
+Hệ thống quản trị Mini Web và cấu trúc sitemap tự động
 
-> - **Project:** MoSpark Web Platform
-> - **Module:** Microsite Management
-> - **Division:** GPD (Growth Product Division)
-> - **Owner:** GPD - Out-App Traffic (Bảo)
-> - **Governance:** Văn Hiến (Web Product Lead)
-> - **Developer Brief:** Hoài Anh (MoSpark Architecture Owner)
-> - **Tài liệu tham chiếu:** [[04_MOSPARK_PLATFORM/mospark_master]]
+> - **Project Name:** MoSpark Web Platform
+> - **Division:** GPD (Growth Platform Division)
+> - **Owner:** Bảo
+> - **PIC:** Hoài Anh (Architect)
 > - **Version:** 1.2 · May 2026
-> - **Status:** Active - Spec Phase
 
 ---
 
@@ -587,7 +583,7 @@ momo.vn/sitemap.xml                            [Sitemap Index - auto-generate]
 > **Từ:** Văn Hiến (Web Product Lead)
 > **Đến:** Hoài Anh (MoSpark Architecture Owner)
 > **Scope:** 5 modules - Microsite CRUD, llms.txt, Sitemap, Blog Management, Blog Widget Integration
-> **Status:** Spec Phase - chờ Hoài Anh confirm feasibility
+> **Status:** Reviewing - chờ Hoài Anh confirm feasibility
 
 ### Nguyên tắc chung
 

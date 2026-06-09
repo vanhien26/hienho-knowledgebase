@@ -261,7 +261,7 @@ Khách scan QR tại quầy / Soundbox
 **User Story:**
 > As a PM, I want an automated workflow to onboard merchants on MoSpark CMS without engineering support, so that I can quickly verify SEO/GEO data and publish pages at scale.
 
-**Creation Workflows Flowchart:**
+**Creation Workflows Flowchart (Tích hợp Google Map Search Crawler & Data Enrichment):**
 
 ```mermaid
 graph TD
@@ -272,22 +272,25 @@ graph TD
     
     B -->|Bottom-up: PM Field Driven| F[PM đi khảo sát điểm bán offline]
     F --> G{Chọn phương thức nhập liệu}
-    G -->|Manual| H[PM nhập tay NAP & Category]
-    G -->|Auto-sync| I[PM nhập Merchant ID từ M4B]
-    I --> J[Hệ thống gọi API Auto-fill dữ liệu gốc]
+    G -->|Manual| H[PM nhập Tên Merchant]
+    G -->|Auto-sync M4B| I[PM nhập Merchant ID từ M4B]
+    I --> J[CMS gọi API M4B: Auto-fill Tên & Địa chỉ]
     
-    E --> K[Upload dữ liệu thô & Map SEO Cluster]
-    H --> K
-    J --> K
+    H --> CRAWL_MANUAL[Google Map Search Crawler: Tìm kiếm & Trả về thông tin]
+    J --> CRAWL_SYNC[Google Map Search Crawler: Tìm kiếm & Làm giàu dữ liệu]
+    
+    CRAWL_MANUAL -->|Auto-fill NAP + Giờ + Tiện ích| K[PM xác nhận dữ liệu thô & Map SEO Cluster]
+    CRAWL_SYNC -->|Enrich Giờ + Tiện ích vào NAP gốc| K
+    E --> K
     
     K --> PREVIEW[PM xem SEO Inventory & Market Research của Merchant Name]
     PREVIEW --> DECIDE{PM đánh giá dữ liệu?}
     DECIDE -->|Cần điều chỉnh tên/dữ liệu thô| G
-    DECIDE -->|Đồng ý & Tiếp tục| L[GenAI tự động sinh Intro & FAQ]
+    DECIDE -->|Đồng ý & Tiếp tục| L[GenAI sinh Intro & FAQ dựa trên category & tiện ích]
     L --> M[CMS Page Editor: PM kiểm duyệt & Bổ sung]
     M --> N{QC Gate: Đạt chuẩn NAP & Payment?}
     N -->|Không đạt| O[Khóa nút Publish / Báo lỗi]
-    N -->|Đạt chuẩn| P[Publish & Tự động cập nhật Sitemap]
+    N -->|Đạt chuẩn| P[Publish: Sitemap XML & Indexing API]
 ```
 
 **Acceptance Criteria:**
@@ -297,7 +300,19 @@ graph TD
   - Hiển thị màn hình xem trước SEO Inventory (Market Research) của Merchant Name đó để PM xác nhận trước khi kích hoạt GenAI sinh bài.
 - [ ] **Luồng 2 (Bottom-up - PM Field Driven):**
   - Hỗ trợ nhập liệu thủ công (Manual NAP & Category) hoặc nhập Merchant ID từ M4B để tự động gọi API đồng bộ thông tin hành chính.
+  - Tích hợp **Google Map Search Crawler (Gemini-powered)** để tìm kiếm điểm bán tương ứng trên Google Maps và tự động điền (Manual) hoặc làm giàu dữ liệu (M4B Sync) cho các trường: Tên đối tác chuẩn hóa, Địa chỉ chính xác, Giờ mở/đóng cửa, Tiện ích/Dịch vụ.
   - Hiển thị bảng Market Research (Search Volume, KD, Search Intent, Competitors) từ SEO Inventory Database để PM duyệt/tối ưu trước khi tạo bài.
+- [ ] **Technical Specification cho Google Map Search Crawler:**
+  - **Cơ chế Trigger:** Giao diện CMS Layer 2 phát ra sự kiện trigger API khi:
+    - PM nhập xong trường `Merchant Name` ở luồng Manual (delay debounce 500ms).
+    - Sau khi API M4B trả về `Name` và `Address` ở luồng Sync.
+  - **Mapping Dữ liệu Scraped:**
+    - `formatted_address` -> `Địa chỉ` (được chuẩn hóa lại theo định dạng Google Maps)
+    - `opening_hours` -> `Giờ hoạt động` (mảng lưu giờ mở/đóng cửa từng ngày trong tuần).
+    - `types` và `amenities` (wifi, máy lạnh, bãi đỗ xe...) -> Chuyển đổi thành các thẻ checkbox/badge tiện ích tương ứng trong CMS.
+  - **Quy tắc Merging & Ghi Đè (Enrichment Logic):**
+    - Tránh ghi đè dữ liệu tài chính/pháp lý chính chủ từ M4B. Dữ liệu từ M4B có độ ưu tiên cao nhất cho trường *Tên* và *Địa chỉ*.
+    - Dữ liệu Google Maps chỉ dùng để **làm giàu (enrich)** các trường M4B không có: *Giờ hoạt động* và *Tiện ích*.
 - [ ] **Cơ chế kiểm duyệt (Workflow Spec):**
   - **Slug conflict check:** Tự động kiểm tra tính duy nhất của slug URL. Nếu trùng, tự động thêm ID backend làm hậu tố.
   - **QC Gate Validation:** Tự động khóa nút Publish và hiển thị cảnh báo lỗi chi tiết nếu thiếu thông tin NAP bắt buộc hoặc phương thức thanh toán.
@@ -477,19 +492,30 @@ graph TD
 - [ ] Canonical: self-referencing `https://momo.vn/merchant/{slug}`.
 - [ ] Tạm hoãn tạo sub-pages cho toàn bộ đối tác. Bắt buộc hiển thị tất cả dữ liệu (Menu, Chi nhánh, Ưu đãi) inline trên trang chính `/merchant/{slug}` và redirect 301 toàn bộ các request sub-pages về trang cha (xem chi tiết tại Section 3.14).
 
-### 5.2 Structured Data (bắt buộc per page)
+### 5.2 Structured Data (Dynamic Json-LD Schema per Category)
 
-| Schema Type | Bắt buộc | Ghi chú |
-|---|---|---|
-| LocalBusiness | Có | name, address, telephone, openingHours, geo, image, paymentAccepted |
-| FAQPage | Có | tối thiểu 3 Q&A liên quan merchant cụ thể |
-| HowTo | Có | 3-4 steps "Cách thanh toán MoMo tại {Merchant}" |
-| BreadcrumbList | Có | Trang chủ > Đối tác MoMo > {Tên Merchant} |
-| Offer | Nếu có cashback | availabilityEnds, price, priceCurrency |
+Để tối ưu hóa hiển thị trên Google Search, AI Search (Gemini) và giải quyết chính xác bài toán đa dạng danh mục của đối tác MoMo (Siêu thị, Mua sắm, Du lịch, Giáo dục, Làm đẹp, Sức khỏe, F&B), hệ thống MoSpark CMS sẽ tự động cấu hình dynamic Schema.org Type và các thuộc tính tương ứng:
 
-- [ ] Schema inject qua MoSpark template - không hardcode trong content
-- [ ] Validate bằng Google Rich Results Test trước publish
-- [ ] FAQPage + HowTo là điều kiện để xuất hiện trong Google AI Overview và LLM responses
+| Nhóm Danh Mục | Schema.org Type | Thuộc tính bắt buộc (JSON-LD) | Ghi chú kỹ thuật |
+| :--- | :--- | :--- | :--- |
+| **Siêu Thị / Tiện Lợi** | `Supermarket` hoặc `ConvenienceStore` | name, address, openingHours, geo, telephone, image, paymentAccepted | Ánh xạ trực tiếp từ M4B NAP và giờ hoạt động. |
+| **Mua Sắm / Bán Lẻ** | `Store` hoặc chuyên biệt (e.g. `ClothingStore`) | name, address, openingHours, geo, telephone, image, paymentAccepted | Thêm schema `Offer` nếu đang chạy chương trình khuyến mãi. |
+| **Du Lịch / Khách Sạn** | `LodgingBusiness` hoặc `Hotel` | name, address, checkinTime, checkoutTime, amenities (wifi, pool...), geo | Cần bổ sung các tiện ích nghỉ dưỡng vào schema. |
+| **Giáo Dục / Trường Học** | `EducationalOrganization` hoặc `School` | name, address, telephone, logo, courses (nếu có) | Phục vụ intent tìm kiếm trường học/trung tâm chấp nhận MoMo. |
+| **Làm Đẹp / Spa** | `BeautySalon` hoặc `DaySpa` | name, address, openingHours, priceRange, menu (bảng giá dịch vụ) | Bắt buộc phải có `priceRange` và `menu`. |
+| **Y Tế / Sức Sức Khỏe** | `Pharmacy` hoặc `MedicalClinic` | name, address, openingHours, telephone, medicalSpecialty (nếu là phòng khám) | Đáp ứng nghiêm ngặt tiêu chuẩn E-E-A-T cho YMYL. |
+| **Ẩm Thực / F&B** | `Restaurant` hoặc `Cafe` | name, address, openingHours, menu (link thực đơn), servesCuisine, priceRange | Lồng ghép schema `MenuItem` cho các món ăn signature. |
+| **General SME / Khác** | `LocalBusiness` | name, address, telephone, openingHours, geo | Fallback schema mặc định khi không phân loại được ngành. |
+
+- [ ] **Lồng ghép Schema bổ trợ cố định:**
+  - `FAQPage`: Tự động sinh ra mảng `mainEntity` chứa tối thiểu 3 câu hỏi thường gặp của quán.
+  - `HowTo`: Mảng `step` hướng dẫn các bước thanh toán MoMo tại quầy.
+  - `BreadcrumbList`: Định vị vị trí trang: *Trang chủ > Đối tác MoMo > {Tên Merchant}*.
+- [ ] **Technical Verification:**
+  - Schema bắt buộc phải được xuất bản dưới định dạng **JSON-LD** và đặt ở thẻ `<head>` của trang HTML.
+  - Phải vượt qua Google Rich Results Test (0 lỗi, 0 cảnh báo nghiêm trọng) trước khi trang chuyển sang trạng thái `Live`.
+  - Content của `FAQPage` và `HowTo` là điều kiện bắt buộc để trang có cơ hội được hiển thị trên Google AI Overview và các LLM search responses.
+
 
 ### 5.3 Core Web Vitals Targets
 
@@ -511,17 +537,19 @@ graph TD
 | M4B Merchant API | MoMo Internal | Auto-fill NAP data (name, address, phone, hours, logo) | Internal token | [CẦN VERIFY - Hoài Anh] |
 | VTS Merchant List API | MoMo Internal (PO VTS) | Verify merchant có trong VTS network | Internal token | [CẦN VERIFY] |
 | Campaign / Cashback API | MoMo Internal | Inject active cashback offers per merchant | Internal token | [CẦN VERIFY] |
-| Google Places API | Google | Review score + count (Phase II) | API Key | 1000 req/day (free tier) |
+| Google Places / Maps API | Google | Google Map Search Crawler (Tên, địa chỉ, giờ hoạt động, tiện ích) & Review (Phase II) | API Key | 1000 req/day (free tier) |
 | Onelink / Appsflyer | Appsflyer | W2A deep link generation + attribution | [CẦN VERIFY - DA team] | - |
 
 **Data freshness:**
 - NAP data: sync khi PM trigger (không real-time - merchant data ít thay đổi)
+- Google Maps Search data: crawl tại thời điểm PM tạo trang (Layer 2). Không tự động đồng bộ sau khi publish trừ khi PM nhấn nút "Refresh Google Map Data" thủ công trong CMS.
 - VTS merchant list: daily sync hoặc push khi PO VTS update
 - Cashback campaign: real-time inject từ Campaign Management (campaign có start/end date)
 - Review score (Phase II): daily refresh từ Google Places API
 
 **Fallback khi API down:**
-- M4B API: hiển thị data cached, không block page render
+- M4B API: hiển thị data cached, không block page render.
+- Google Map Search API (Crawler): fallback về nhập liệu thủ công (Manual entry). Hiện toast cảnh báo: *"Kết nối Google Maps thất bại, vui lòng kiểm tra và nhập tay thông tin."*
 - VTS API: ẩn VTS badge hoàn toàn (không hiển thị fallback text)
 - Campaign API: ẩn Cashback module (không hiển thị "đang tải...")
 - Google Places (Phase II): ẩn review block, không hiển thị error
@@ -594,3 +622,5 @@ graph TD
 | Version | Date | Author | Note |
 |---|---|---|---|
 | 0.1 | 2026-06-06 | Hiến | Initial draft từ BRD v2.6 |
+| 0.2 | 2026-06-09 | Hiến | Tích hợp Google Map Search Crawler (Mục 3.9 & 6) và Dynamic Json-LD Schema theo ngành hàng (Mục 5.2). |
+

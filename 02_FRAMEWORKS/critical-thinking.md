@@ -1,11 +1,3 @@
----
-name: critical-thinking
-description: >
-  Dùng để challenge assumptions, phát hiện lỗ hổng logic và đặt câu hỏi "tại sao" cho mọi
-  quyết định strategy/product. Đây là "vũ khí" của vai trò GOVERN tại MoMo. 
-  Trigger khi: nhận brief mơ hồ từ BU, content từ Agency, yêu cầu feature từ Dev, hoặc trước khi viết BRD.
----
-
 # 🧠 Critical Thinking - The MoMo Gatekeeper
 
 ## 🎯 Mục tiêu
@@ -46,7 +38,7 @@ description: >
 
 ## 🕵️ Chế độ "Hallucination Hunting" (Dành cho AI Content)
 Khi review nội dung do AI tạo ra (Claude/Gemini), luôn kiểm tra:
-- **Dữ liệu tài chính:** Lãi suất, hạn mức, quy định pháp lý có đúng với [[mospark_business_context]] không?
+- **Dữ liệu tài chính:** Lãi suất, hạn mức, quy định pháp lý có đúng với [[mospark_genai_content#7. Business Context - Các trường bắt buộc|mospark_business_context]] không?
 - **Logic vòng vo:** AI có đang viết filler (văn mẫu) thay vì đi thẳng vào câu trả lời cho User không?
 - **Brand Voice:** Giọng văn có bị quá "robot" hay sai lệch với Core Mantra của MoMo không?
 

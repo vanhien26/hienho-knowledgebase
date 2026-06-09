@@ -1,219 +1,201 @@
-# MONTHLY PLAN: THÁNG 6/2026 - GROWTH PLATFORM & SEO/GEO
-> **Tháng:** 06/2026 | **Người thực hiện:** Văn Hiến - SEO & GEO Lead
-> **Cập nhật lần cuối:** 2026-05-29
+# BÁO CÁO THÁNG 6/2026 - GROWTH PLATFORM & SEO/GEO
+> **Người thực hiện:** Văn Hiến - SEO & GEO Lead
+> **Cập nhật lần cuối:** 2026-05-31
+> **Mục đích:** Lưu trữ Meeting Minutes, Weekly Report và Monthly Report.
 
 ---
 
-## 1. Bối Cảnh Đầu Tháng
+## I. MONTHLY REPORT (Kế hoạch & Tổng kết Tháng 6)
 
-### 1.1 Carry-forward từ tháng 5
+*Báo cáo tổng kết hiệu quả và kế hoạch vĩ mô cho tháng 06/2026, kế thừa 6 dự án trụ cột từ Tháng 5.*
 
-**Thành tựu lớn cần ghi nhận:**
+### 🚀 1. Dự án Phạt Nguội (Pioneer Project)
+**1. Key Highlight & Business Impact:**
+*   **Hiệu suất GSC (Tuần 4 T5/2026):** Ghi nhận tăng trưởng bùng nổ WoW, **Clicks tăng 135%** (793 clicks) và **Impressions tăng 74%** (2.603 lượt). Tỷ lệ CTR trang chủ đạt mức cực cao **30.46%**.
+*   **Ranking:** Hàng loạt từ khóa mục tiêu như *"tra cứu phạt nguội momo"*, *"check phạt nguội momo"* đã leo lên vị trí **Top 1 Google**.
+*   (Dự kiến) Hoàn thành phủ sóng Phạt Nguội trên 10 Tỉnh/Thành phố lớn (Local Intent) và đạt Top 10 cho 60% từ khóa mục tiêu.
+*   Thiết lập thành công Baseline W2A Conversion (Tỷ lệ chuyển đổi Web-to-App) từ Widget Inline tích hợp hệ thống tracking Umami.
+*   **6-Stage GenAI Content Pipeline (Phạt Nguội):** Chuẩn hóa quy trình vận hành tự động hóa content ngách nhằm giải quyết các bài toán vận hành thực tế:
+    *   *Stage 1: Business Context* | **Problem:** Quy định pháp lý về phạt nguội rất nhạy cảm và dễ sai lệch. | **Solution:** Thiết lập "12-Field Business Context Template" trên MoSpark làm Source of Truth chặn đứng lỗi hallucinate của AI.
+    *   *Stage 2: Keyword Research* | **Problem:** Search intent phạt nguội phân mảnh theo địa phương (local search), dễ gây cannibalization. | **Solution:** Automation Keyword Clustering, bóc tách chính xác từ khóa theo địa bàn để tối ưu hóa local SEO.
+    *   *Stage 3: Content Plan* | **Problem:** Lên kế hoạch phủ content vệ tinh tốn nhiều tuần của nhân sự SEO. | **Solution:** Dùng "Broadcast Planning Agent" tự động gom nhóm từ khóa thành các cụm bài viết logic và lên lịch xuất bản tự động.
+    *   *Stage 4: GenAI Content* | **Problem:** Viết bài hàng loạt thiếu chiều sâu, không khớp định dạng và cấu trúc schema. | **Solution:** Cấu hình Prompt-Engine chuẩn hóa (ngăn AI tự ý bịa số liệu, tự động nhúng schema địa bàn và NAP).
+    *   *Stage 5: QC Content* | **Problem:** Kiểm duyệt thủ công mất 1 ngày/bài, làm chậm tiến độ go-live. | **Solution:** AI-REVIEW v1.2 tự động kiểm định compliance, chỉ đẩy bài đạt 100/100 score sang CMS, giảm E2E review xuống còn 10 phút.
+    *   *Stage 6: Publish* | **Problem:** Đăng tải thủ công tốn tài nguyên và thiếu dữ liệu đo lường hiệu quả chuyển đổi thực tế. | **Solution:** Publish trực tiếp qua MoMo MCP, tự động mapping bài viết với Widget Inline tích hợp tracking Umami để đo lường realtime phễu W2A.
 
-- Phạt Nguội rollout thành công, SEM CTR 7%, CPA < 1.000đ (xe máy).
-- GenAI Content Engine v3.1 sản xuất 10 bài đầu tiên lên Production.
-- Merchant Pages: **38 trang SME live** (vượt scope Batch 2 ban đầu là 24, mở rộng thêm 14 merchants). OOH đang chạy đã có digital anchor hứng search demand.
-- robots.txt Lớp 1 deployed, explicit allow RAG bots.
-- SEO Inventory 55 cụm thị trường hoàn thành mapping.
-- Telecom BRD v2.1 done, strategy defined.
+**2. Priorities for 30 days:**
+*   Sản xuất và deploy Content Cluster vệ tinh (20-30 bài viết ngách).
+*   Gắn Inline Widget Phạt Nguội vào các bài blog thay vì dùng banner popup.
+*   Chốt KPI chính thức nửa cuối năm 2026 với BU VTTI.
 
-**Open items chưa close:**
-
-| Item | PIC | Deadline đề xuất |
-|------|-----|------------------|
-| Bug P0: VTS module render loop trên merchant pages | Nhật | 06/06 |
-| 308 Redirect 3 legacy /page/ URLs (Chị Tuyền, Hằng Béo, Bò nhúng 8 Còn) | Nhật/Trọng | 06/06 |
-| Deploy `/phat-nguoi/llms.txt` lên `/public/` | Trọng | 10/06 |
-| Verify GSC Coverage Report - 38 merchant pages indexing status | Hiến | 13/06 |
-| Họp chốt BRD VTTI với Hằng Mỵ & Thơ Telco | Hiến + Bảo | 13/06 |
-| Bàn giao UTM specs Telecom cho DA Team | Hiến | 13/06 |
-| Confirm Review sync mechanism (Template A/C) với PO team | Hiến | 20/06 |
-| GSC + Appsflyer integration close | DA Team | 20/06 |
-
-### 1.2 Gap vs OKR 2026 (snapshot cuối T5)
-
-| KR | Target | Hiện tại | Mức độ | Hành động ưu tiên |
-|----|--------|----------|--------|-------------------|
-| KR 1.1 - MUA | 6M | 3M (baseline) | Mid-year review | Evaluate after T6 |
-| KR 1.3 - W2A Conversion | 12.5% | 8.2% | Miss -4.3pp | Activate triggers |
-| KR 1.4 - AI Citation tracking | Established | 0 - chưa đo | Chưa bắt đầu | llms.txt + baseline |
-| KR 3.3 - AI Citation report | Auto report | 0 | Chưa bắt đầu | Thiết lập pipeline |
-
-**Observation:** KR 1.3 là gap lớn nhất và có thể tác động ngay trong T6 thông qua Merchant Pages (38 trang live + VTS CTA) và Phạt Nguội Inline Widget. Không cần resource mới - chỉ cần kích hoạt đúng chỗ.
+**3. Collab Team (Need):**
+*   **DA Team:** Đo lường phễu Web-to-App qua Appsflyer/Umami.
+*   **VTTI & Cell Team:** Phối hợp chiến dịch Marketing kéo traffic.
 
 ---
 
-## 2. Trọng Tâm Tháng 6
+### 🏛️ 2. Dự án Dịch Vụ Công (Strategic Governance Hub)
+**1. Key Highlight & Business Impact:**
+*   (Dự kiến) Hoàn thiện MVP cho "Smart DVC Checklist Generator" trên MoSpark để tăng W2A CR thêm 30%.
+*   Đạt thỏa thuận ngân sách triển khai scale-out 1.900+ TTHC.
 
-Tháng 6 là tháng **Measure - Optimize - Scale**. Không launch dự án mới lớn. Đóng nốt các open items tháng 5, thiết lập đo lường baseline, và đưa 2 dự án từ "Strategy" sang "Execution" (Telecom + Use Case tiếp theo cho GenAI Engine).
+**2. Priorities for 30 days:**
+*   Thử nghiệm tích hợp widget Checklist Generator trên CMS MoSpark.
+*   Pitch BU DVC phê duyệt ngân sách scale-out sau khi Pilot Phạt Nguội nghiệm thu.
+*   Chuẩn hóa specs tích hợp ePass liên kết Payment Gateway MoMo.
 
-**4 trụ cột tháng 6:**
-
-| # | Trụ cột | Mục tiêu T6 | KR liên quan |
-|---|---------|-------------|--------------|
-| 1 | Merchant Pages - Post-launch Optimize | Baseline W2A, fix bugs, indexing 100% | KR 1.3 |
-| 2 | Phạt Nguội - Scale & Measure | 30 bài ngách, SoV tracking, AEO | KR 1.4 |
-| 3 | W2A Conversion Activation | Inline widgets, tracking closure | KR 1.3 |
-| 4 | Telecom to Execution + Next Use Case Decision | Sprint planning, GenAI Engine next target | KR 2.2 |
-
----
-
-## 3. Kế Hoạch Chi Tiết Theo Tuần
+**3. Collab Team (Need):**
+*   **BU DVC:** Chốt luật checklist (Checklist rules) cho các dịch vụ cốt lõi.
+*   **ePass & BU Payment:** Đồng thuận thông số API cổng thanh toán.
 
 ---
 
-### TUẦN 1 - từ 02/06 đến 08/06
+### 🤖 3. GenAI Content Engine & MoSpark Platform
+**1. Key Highlight & Business Impact:**
+*   (Dự kiến) Tự động hóa sản xuất nội dung quy mô lớn (Scale-up) với đơn giá dự toán chuẩn xác (7k/bài Haiku, 20k/bài Sonnet).
+*   MoSpark chính thức vận hành như một Software as a Product (SaaP) cho các BU.
 
-**Priority: Close critical bugs + Kick off measurement**
+**2. Priorities for 30 days:**
+*   Đưa 8.442 OAs Merchant (Tier 1) vào GenAI Content Pipeline để tự động sản xuất hàng loạt.
+*   Phát triển giao diện Multi-Model Selector (chọn model LLM) và cơ chế Custom BU API Key (trừ phí nội bộ) trên CMS.
+*   Thống nhất quy trình kiểm duyệt nội dung (SLA Quality Gates) đợt 2.
 
-#### ACTIONS
-
-**Merchant Pages:**
-- [ ] Fix P0: VTS module render loop trên toàn bộ 38 trang (PIC: Nhật). Verify trên ít nhất 5 merchants đại diện trước khi close.
-- [ ] 308 Redirect 3 legacy /page/ URLs:
-  - `/page/9819516` → `/merchant/bun-thit-nuong-chi-tuyen-44`
-  - `/page/9843228` → `/merchant/cha-ruoi-hang-beo-51`
-  - `/page/9949928` → `/merchant/lau-mam-ruoc-8-con-80`
-  - PIC: Nhật/Trọng. Rule: Set redirect TRƯỚC hoặc CÙNG LÚC verify - không để gap.
-- [ ] Submit 38 merchant URLs vào Sitemap (nếu chưa). Xóa 3 /page/ URLs khỏi sitemap cùng lúc set redirect.
-- [ ] Setup Umami tracking cho 38 trang: page_view, O2O_cta_click, qr_scan. PIC: Thuận.
-
-**Phạt Nguội:**
-- [ ] Deploy `/phat-nguoi/llms.txt` lên `/public/phat-nguoi/`. Nội dung: structured summary tool tra cứu + entity data cho AI search.
-- [ ] Bắt đầu production 20 bài ngách cụm Tỉnh/Thành: ưu tiên top 10 tỉnh có volume cao nhất.
-
-**Tracking:**
-- [ ] Sync với DA Team (Hải/Hoàng): set deadline hard cho GSC + Appsflyer integration. Target: done trước 20/06.
+**3. Collab Team (Need):**
+*   **Web Platform (Anh Bảo):** Tri triển khai giao diện Multi-Model và Billing trên CMS.
+*   **Inbound & BU:** Tuân thủ quy chế kiểm duyệt Quality Gates.
 
 ---
 
-### TUẦN 2 - từ 09/06 đến 15/06
+### 🏪 4. Merchant Detail Page (O2O Digital Presence & Ví Trả Sau Hub)
+**1. Key Highlight & Business Impact:**
+*   **Evergreen VTS Hub:** Pivot chiến lược định vị Merchant Hub (`momo.vn/merchant`) từ "Tìm Điểm Hoàn Tiền" (mang tính thời vụ) sang Nền tảng "Tìm Điểm Thanh Toán Ví Trả Sau" bền vững với cấu trúc UI/UX 7 Slots tối ưu.
+*   **B2B FOMO Map:** Tái cấu trúc Interactive Map (Slot 2) ưu tiên hiển thị các quán có trang Detail để tạo hiệu ứng FOMO, kích thích các BU tự giác build Merchant Page trên CMS.
+*   **Research-Driven pSEO:** Khai tử hệ thống `/page/` cũ sinh rác hàng loạt. Thay thế bằng cơ chế sinh trang pSEO 3 Lớp lọc (Demand Volume, Data Quality, Intent Mapping) để bảo vệ Crawl Budget và né án phạt Thin Content.
+*   **SEO Pilot Ranking:** Ghi nhận thành công rực rỡ đợt rà soát SERP cho 39 Pilot Merchants. Các trang đã index lọt thẳng vào Top 1 - Top 3 Google (VD: Quán Cơm Chú Lùn, Hải sản Ngô Thơ đạt Top 1).
+*   **6-Stage GenAI Content Pipeline (Merchant Page):** Chuẩn hóa quy trình số hóa đối tác quy mô lớn:
+    *   *Stage 1: Business Context* | **Problem:** BUs thiếu kinh nghiệm F&B, viết mô tả quán sơ sài, không có USP thanh toán. | **Solution:** Chuẩn hóa profile đối tác tích hợp NAP, badge Michelin và chính sách VTS 2in1 làm đầu vào cho LLM.
+    *   *Stage 5: QC Content* | **Problem:** Rủi ro hiển thị sai thông tin địa chỉ hoặc chương trình ưu đãi, gây khiếu nại (bad CSAT). | **Solution:** AI-REVIEW đối chiếu realtime địa chỉ trên Google Maps và trạng thái active của ví thanh toán.
+    *   *Stage 6: Publish* | **Problem:** MC mất thời gian đồng bộ nội dung từ trang Facebook của quán sang MoMo. | **Solution:** Crawl Post Agent tự động quét bài đăng Facebook và đồng bộ sang Merchant Page trên MoMo.
 
-**Priority: Indexing verification + VTTI BRD lock**
+**2. Priorities for 30 days:**
+*   Bàn giao PRD `widget-store-prd.md` cho team Tech và UI/UX để lên Wireframe cấu trúc 7 Slots.
+*   Phối hợp với Sales B2B mang dữ liệu SEO Pilot (Top 1) đi pitching thuyết phục các Chuỗi F&B lớn (Top Brands) tham gia phủ sóng trên Web.
+*   Hoàn tất Submit Sitemap để Index nốt 30% Pilot Merchants còn lại.
+*   Áp dụng quy chuẩn trạng thái xuất bản rút gọn (Draft -> Review -> Live -> Deleted) để kiểm duyệt chất lượng nội dung trước khi xuất bản.
 
-#### ACTIONS
-
-**Merchant Pages:**
-- [ ] Verify GSC Coverage Report: 38 merchants đã được index chưa? Flag bất kỳ trang nào "Discovered - currently not indexed" hoặc "Crawled - currently not indexed".
-- [ ] Check Search Performance trên GSC cho branded queries: "[tên merchant] momo", "[tên merchant] ví trả sau". Ghi nhận baseline rank.
-- [ ] Confirm Review sync mechanism với PO team - chọn source (MoMo internal / Google Places). Quyết định này unlock Template A/C cho Batch 1.
-
-**Telecom:**
-- [ ] Họp chốt BRD Telecom với Hằng Mỵ (VTTI Head) & Thơ (Telco Lead) + Bảo. Output bắt buộc: BRD sign-off, timeline sprint Q3/2026 confirmed.
-- [ ] Bàn giao UTM specs cho DA Team: UTM structure cho 4 Persona × 4 product (Sim Số Đẹp, Nạp Data, eSIM, Nạp Tiền ĐT).
-- [ ] Setup keyword filter trên GSC cho 4 tệp Persona Telecom - baseline capture bắt đầu từ T6.
-
-**Phạt Nguội:**
-- [ ] Hoàn thành 20 bài ngách cụm Tỉnh/Thành, submit cho Gatekeeper review.
-- [ ] Bắt đầu production 10 bài cụm Camera (speed camera, camera phạt nguội theo tỉnh).
-
----
-
-### TUẦN 3 - từ 16/06 đến 22/06
-
-**Priority: Activate W2A triggers + Measure baseline**
-
-#### ACTIONS
-
-**W2A Conversion Activation (KR 1.3):**
-- [ ] Phạt Nguội - Inline Lookup Widget: Nhúng widget tra cứu phạt nguội trực tiếp trong body bài blog (không dùng Smart Banner/Popup - đã quyết định 21/05). Test trên 3 bài cao nhất trước.
-- [ ] Merchant Pages - VTS CTA Audit: Verify CTA "Kích hoạt Ví Trả Sau" đang hoạt động đúng Onelink attribution trên 38 trang. Check Appsflyer attribution đang ghi nhận đúng source `merchant_page`.
-- [ ] Measure W2A rate tuần đầu từ merchant pages: số click CTA / page views. Ghi nhận làm baseline T6.
-
-**SoV Tracking - Phạt Nguội:**
-- [ ] Thiết lập tracking tự động cho 50 từ khóa mục tiêu cụm Phạt Nguội. Tool: có thể dùng GSC + sheet tự động hoặc Ahrefs rank tracker.
-- [ ] Ghi nhận baseline rank cho 50 keywords. Target end-of-T6: Top 10 cho ≥ 60% từ khóa đã deploy content.
-
-**GEO/AEO Foundation:**
-- [ ] Manual check AI responses: Query 10 target queries trong ChatGPT, Perplexity, Google AI Overview. Check MoMo có được cite không. Ghi nhận làm AI Citation Baseline.
-- [ ] Thiết lập tracking quy trình: checklist manual hàng tháng cho AI citation audit (đến khi có automated pipeline).
-
-**Merchant - Batch 1 Planning:**
-- [ ] Audit legacy URLs Batch 1 (32 brand chains): chạy `site:momo.vn` cho từng brand, list `/thanh-toan-momo-{merchant}` đang index. Ước tính: ~18 URLs cần 308 redirect.
-- [ ] Confirm template eligibility: brands nào đủ KV (có logo/banner chất lượng) → Template A/B. Brands nào chưa → Template D.
+**3. Collab Team (Need):**
+*   **Tech/Dev & UI/UX:** Phân tích PRD và thi công UI 7-Slots cho Hub.
+*   **SME / B2B Sales:** Nhận dữ liệu Case Study (Top 1 SEO) để đi chào bán giải pháp O2O.
+*   **O2O / VTS PO:** Phối hợp xây dựng Mini Web "Ví Trả Sau Gần Bạn" - tối ưu SEO/GEO theo Location Page.
 
 ---
 
-### TUẦN 4 - từ 23/06 đến 30/06
+### 🌐 5. VTTI Telecom Web Strategy
+**1. Key Highlight & Business Impact:**
+*   (Dự kiến) Xác lập chính thức phễu định tuyến (Intent-Based Audience Filtering) cho 4 Nhóm Persona Viễn thông.
 
-**Priority: T6 Tổng kết + T7 Direction set**
+**2. Priorities for 30 days:**
+*   Họp chốt BRD Telecom với Hằng Mỵ & Thơ (VTTI).
+*   Bàn giao cấu trúc UTM và luồng Onelink cho DA Team.
+*   Setup keyword filter trên GSC theo Persona để đo lường.
 
-#### ACTIONS
-
-**Tổng kết Pilot Phạt Nguội (Decision Gate):**
-- [ ] Tổng hợp số liệu 30 ngày post-launch: Traffic, Indexing rate, CTR, W2A Conversion, SoV top 10 keywords.
-- [ ] Quyết định Use Case tiếp theo cho GenAI Engine: **Vay Nhanh** hay **BH ô tô**?
-  - Criteria: Search volume, Competitive gap, Internal readiness (BRD status, PO alignment).
-  - Vay Nhanh: BRD v1.1 done, traffic đang giảm cần recover. SoV thấp (2.2% của 3.22M addressable).
-  - BH ô tô: BRD pending, SoV = 0%, 74.000 vol/tháng. Thị trường xanh hơn.
-- [ ] Brief kế hoạch GenAI Engine cho Use Case tiếp theo: keyword map, content structure, production timeline.
-
-**Merchant - Batch 1 Kick-off:**
-- [ ] Finalize redirect matrix Batch 1 (32 brands). Assign PIC và timeline.
-- [ ] Content production plan: 32 brand chain pages cần Template A/B. GenAI content framework đã có từ Batch 2 - adapt.
-
-**Tracking Closure:**
-- [ ] GSC + Appsflyer integration: verify live trước 30/06. Nếu chưa done → escalate.
-- [ ] Appsflyer W2A attribution: confirm merchant_page source đang ghi nhận đúng trong dashboard.
-
-**Monthly Report Prep:**
-- [ ] Tổng hợp số liệu T6: Merchant Pages indexing %, W2A baseline, Phạt Nguội SoV %, AI Citation baseline.
-- [ ] Chuẩn bị slide/doc update cho anh Công/Tuệ về tiến độ Q2 2026.
+**3. Collab Team (Need):**
+*   **Telecom BU (Hằng Mỵ/Thơ):** Ký duyệt BRD và chốt timeline tích hợp.
 
 ---
 
-## 4. KPI Theo Dõi Tháng 6
+### 🗺️ 6. SEO Inventory & Tech Audit
+**1. Key Highlight & Business Impact:**
+*   **Tạm hoàn thành Tech Audit & SEO Inventory**: Đã rà soát kỹ thuật (Tech Audit) và hoàn thiện SEO Inventory baseline cho các dự án trọng điểm.
+*   **Topical Authority & GEO Moat**: Định hình cấu trúc tối ưu cho `robots.txt` (đã deploy Layer 1) và `llms.txt` (đã hoàn thành bản chi tiết cho 39 SME Merchants) để kiểm soát cách AI search agents lập chỉ mục và phản hồi thông tin về MoMo.
+*   Thiết lập bảng theo dõi Share of Voice (SoV) tự động.
 
-| Metric | Baseline (cuối T5) | Target T6 | Source |
-|--------|-------------------|-----------|--------|
-| Merchant Pages Indexed | 1/38 (ước tính) | 38/38 (100%) | GSC Coverage |
-| Merchant Pages - Brand Rank | Chưa đo | Top 5 cho 80% branded queries | GSC |
-| Merchant VTS CTA Click rate | Chưa đo (baseline T6) | Ghi nhận baseline | Umami |
-| W2A từ Merchant | Chưa đo | Ghi nhận baseline (KR 1.3 material) | Appsflyer |
-| Phạt Nguội - Content live | 10 bài | 40 bài (+ 30 bài ngách) | CMS |
-| Phạt Nguội - SoV Top 10 | Chưa đo | ≥ 60% trong 50 keywords | Ahrefs/GSC |
-| AI Citation count | 0 | Baseline documented | Manual audit |
-| Telecom BRD Status | Active (v2.1) | Sprint Planning locked | Internal |
+**2. Priorities for 30 days:**
+*   Đo lường AI Citation Baseline thực tế thông qua các truy vấn trực tiếp trên ChatGPT/Perplexity để đánh giá độ phủ của `llms.txt`.
+*   Thiết lập Dashboard theo dõi SoV thời gian thực.
+*   Deploy `/phat-nguoi/llms.txt`.
 
----
-
-## 5. RACI Tháng 6
-
-| Việc | Hiến | Bảo | Nhật | Trọng | Hoài Anh | Thuận | DA Team |
-|------|------|-----|------|-------|----------|-------|---------|
-| Fix P0 VTS bug | C | A | R | - | - | - | - |
-| 308 Redirects | A | - | R | R | - | - | - |
-| llms.txt deploy | A | - | - | R | - | - | - |
-| Umami tracking setup | A | - | - | - | - | R | - |
-| Telecom BRD meeting | R/A | R | - | - | - | - | - |
-| Content production T6 | A | - | - | R | - | - | - |
-| Keyword tracking setup | R/A | - | - | - | - | R | - |
-| GSC+Appsflyer close | C | A | - | - | - | - | R |
-| Merchant Batch 1 plan | A | C | R | - | R | - | - |
+**3. Collab Team (Need):**
+*   **Web Platform/Tech:** Kết nối API hiển thị Data Dashboard lên CMS.
 
 ---
 
-## 6. Rủi Ro Cần Theo Dõi
+### ✈️ 7. Dự án eSIM Du Lịch (Microsite Migration & Keyword Research)
+**1. Key Highlight & Business Impact:**
+*   **Keyword Research Integration**: Hoàn thành phân tích và tích hợp bộ từ khóa tự động (11.620 SV, 69 clusters, 98.4% BOFU intent) vào tài liệu BRD v2.1 để nhắm chính xác ý định tìm kiếm eSIM du lịch của người dùng.
+*   **Chuẩn hóa sitemap & URL**: Hoàn thành phân tích sitemap `sitemap-0.xml` hiện tại, thống nhất định dạng URL cấu trúc `/esim-du-lich/khu-vuc/{country}` trên toàn bộ tài liệu.
+*   (Dự kiến) Triển khai di chuyển (Migration) microsite cũ sang kiến trúc mới và chạy SEO/GEO tối ưu hóa trong tháng 6.
 
-| Rủi ro | Mức độ | Dấu hiệu cảnh báo | Biện pháp |
-|--------|--------|-------------------|-----------|
-| 38 merchant pages index chậm | CAO | Sau 2 tuần < 50% indexed | Force crawl qua GSC, check Internal Linking từ hub |
-| VTS bug P0 kéo dài > 1 tuần | CAO | Nhật báo cáo blockers kỹ thuật | Escalate lên Bảo, xem xét hotfix |
-| Telecom BRD meeting không chốt được | TRUNG BINH | Hằng Mỵ/Thơ delay | Push sang cuối T6, không để sang T7 |
-| W2A Merchant = 0 sau 2 tuần | TRUNG BINH | Umami không ghi nhận click CTA | Debug Onelink attribution, check CTA placement |
-| GSC+Appsflyer chưa done cuối T6 | TRUNG BINH | DA Team báo cáo blockers | Escalate, set hard deadline với Bảo |
+**2. Priorities for 30 days:**
+*   Thực hiện Microsite Migration sang cấu trúc mới, tối ưu hóa các trang Category và Destination.
+*   Sản xuất nội dung và deploy 10 Destination Pages mục tiêu (Thái Lan, Nhật Bản, Hàn Quốc, Singapore, v.v.).
+*   Verify thiết lập schema LocalBusiness/Product và liên kết nguồn tiền Ví Trả Sau cho eSIM Gohub.
 
----
-
-## 7. Không Làm Trong Tháng 6
-
-- Không launch thêm Use Case mới (trừ khi Decision Gate Phạt Nguội xác nhận ready).
-- Không bắt đầu build BH ô tô hay Vay Nhanh nếu chưa có keyword map xong.
-- Không scale Telecom content trước khi BRD sign-off.
-- Không auto-publish merchant content - mọi GenAI content phải qua review.
-- Không start Merchant Sub-pages (Phase 2) - chưa trong scope T6.
-- Không tạo thêm merchant pages cho Batch 1 trước khi audit legacy URLs hoàn tất.
+**3. Collab Team (Need):**
+*   **Tech/Dev (Nhật):** Triển khai routing, cấu hình redirect 308 trang cũ và audit PageSpeed (LCP, INP).
+*   **PS Division / Telco BU (Hằng Mỵ/Thơ):** Đồng thuận về bảng giá gói cước và luồng thanh toán tích hợp.
 
 ---
 
-*Confidential | Out-App Traffic Team | Cập nhật: 2026-05-29*
+## II. WEEKLY REPORTS (Báo cáo Hàng Tuần)
+
+### Tuần 1 (01/06 - 07/06)
+**1. Key Highlight & Business Impact:**
+*   **Hoàn thành Redirect 301/308 các trang `/page` legacy**: Đã hoàn tất thiết lập cấu hình chuyển hướng redirect 301/308 toàn bộ các trang `/page/{id}` cũ (gồm Bún thịt nướng Chị Tuyền, Chả rươi Hằng Béo, Bò nhúng mắm ruốc 8 Còn) sang URL `/merchant/{slug}` mới nhằm bảo toàn dòng traffic SEO và tránh trùng lặp nội dung.
+*   **Hoàn thành & Tối ưu GEO cho `llms.txt` Đối Tác SME**: Tái cấu trúc toàn diện và cập nhật chi tiết file `llms.txt` cho 39 đối tác SME F&B đang go-live. Bổ sung thông tin NAP (địa chỉ chính thức), thâm niên kinh nghiệm, giải thưởng (Michelin Selected, Bib Gourmand), chỉ số mạng xã hội (CNN, TikTok) và **ràng buộc rõ điều kiện hoàn tiền 50% chỉ áp dụng khi thanh toán bằng nguồn tiền Ví Trả Sau MoMo** nhằm tối ưu hóa thông tin hiển thị trên AI Search Engines (ChatGPT, Perplexity, Google AI Overview).
+*   **Tích hợp Keyword Research & Sitemap cho eSIM Du Lịch**: Cập nhật tài liệu BRD eSIM Du Lịch lên phiên bản v2.1, đưa lượng Search Volume thực tế (11.620 SV trên 69 clusters, 98.4% BOFU intent) từ kết quả automation Excel vào báo cáo. Đồng bộ hóa cấu trúc URL theo sitemap thực tế `/esim-du-lich/khu-vuc/{country}`.
+*   **Đồng bộ Governance Web Platform**: Thực hiện cập nhật vai trò sở hữu (`Owner: Web Platform`) và điều hành (`Governance: Web Product Lead (Hiến)`) trên toàn bộ 11 file BRD thuộc phạm vi quản lý của Web Platform.
+
+**2. Priorities for 7 days:**
+*   **Indexing GSC**: Theo dõi GSC Coverage và Coverage Report để kiểm thử trạng thái indexing của 39 trang đối tác SME mới.
+*   **Đo lường & Tracking**: Phối hợp cùng DA Team kiểm chứng và setup các sự kiện tracking (Umami, Appsflyer) để bắt đầu thu thập số liệu chuyển đổi (Baseline W2A CR).
+*   **Phạt Nguội & Dịch Vụ Công**: Triển khai thiết lập `/phat-nguoi/llms.txt` và xây dựng cấu trúc blog tích hợp Widget Inline.
+
+**3. Collab Team (Need):**
+*   Nhật/Trọng: Cấu hình redirect và verify code hiển thị badge VTS. Thuận (DA): Setup sự kiện tracking Umami/Appsflyer.
+
+---
+
+### Tuần 2 (08/06 - 14/06)
+**1. Key Highlight & Business Impact:**
+*   **Chiến lược Merchant Hub & pSEO:** Hoàn thiện nâng cấp BRD `doi-tac-brd.md` với 3 mũi nhọn: Chuyển đổi thành VTS Hub, Cấu trúc 7-Slots (chia Phasing), và cơ chế Research-Driven pSEO 3 Lớp lọc. Cấy chiến lược "B2B FOMO" vào Bản đồ GPS để kích thích các BU.
+*   **Chuẩn hóa Trạng thái Vòng đời MoSpark:** Hoàn thành đồng bộ quy chuẩn kỹ thuật trạng thái vòng đời trang (Page Lifecycle Status Model) định nghĩa nhất quán 4 trạng thái rút gọn (Draft, Review, Live, Deleted) cùng cấu hình SEO/Server Response tương ứng trực tiếp vào [doi-tac-brd.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/05_USE_CASE_MOMO/merchant-project/doi-tac-brd.md#104-quy-chuẩn-quản-trị-trạng-thái--crud-merchant-seo--crawling) (đối với Merchant) và [mospark_blog_redesign.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_blog_redesign.md#25-quy-chuẩn-quản-trị-trạng-thái--crud-bài-viết-seo--content) (đối với Blog) để quản lý CRUD đơn giản, ngăn chặn lỗi 404 và bảo toàn thứ hạng (link juice).
+*   **Nghiệm thu SEO Pilot Merchant:** Chạy background task quét Google Search Ranking cho các Pilot Merchant. Ghi nhận hàng loạt trang như Quán Cơm Chú Lùn, Hải sản Ngô Thơ chiếm vị trí Top 1 SERP, chứng minh sức mạnh cực lớn của Domain Authority MoMo.
+*   **Chuẩn hóa PRD Widget Store:** Tách bạch hệ thống tài liệu, viết mới `widget-store-prd.md` định nghĩa chuẩn mực kỹ thuật (Smart CTA, Zero-Party Data, NFRs) sẵn sàng bàn giao cho Tech.
+
+**2. Priorities for 7 days:**
+*   **Nhật:** Bổ sung thêm UI template phục vụ các danh mục (Categories), làm lại nút Share và hoàn thiện phần CRUD/Status của các merchant bám sát quy chuẩn trạng thái định nghĩa tại [Mục 10.4 của BRD Đối Tác](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/05_USE_CASE_MOMO/merchant-project/doi-tac-brd.md#104-quy-chuẩn-quản-trị-trạng-thái--crud-merchant-seo--crawling).
+*   **Thuận:** Review lại Widget "Tìm điểm VTS", kiểm tra và hiệu chuẩn thuật toán tính khoảng cách (distance).
+*   **Trọng:** Thiết lập luồng phân phối nội dung tự động từ Research Keyword (Content Plan) sang các kênh Blog, Landing Page, và Merchant.
+*   **Hiến:** Rà soát và đánh giá các bản vẽ thiết kế Figma giao diện UI Blog mới trên MoSpark do Tuấn phụ trách để đảm bảo các tiêu chuẩn SEO (E-E-A-T, CWV, Ads Placements) và tích hợp quy tắc duyệt xuất bản bài viết.
+*   **Hiếu:** Triển khai giải pháp Tracking User ID: truyền tham số WUI (Website User ID) qua Appsflyer Onelink vào App để App lưu trữ và đối chiếu dữ liệu MAU/MEU.
+*   Wireframe Kick-off với team UI/UX dựa trên bản PRD 7-Slots mới nhất.
+*   Check GSC Coverage để fix lỗi Not Indexed cho các quán Pilot còn lại.
+*   Họp chốt BRD Telecom.
+
+**3. Collab Team (Need):**
+*   **UI/UX Team & Devs (Nhật, Trọng, Thuận):** Phối hợp triển khai giao diện, API và tracking theo sơ đồ phân công chi tiết của dự án.
+*   **Tuấn (Design):** Bàn giao thiết kế Figma UI Blog để Hiến rà soát chất lượng.
+*   **Hiếu (Tracking Lead) & Data Team:** Phối hợp cấu hình, truyền nhận WUI và đối chiếu phễu đo lường trên BigQuery.
+*   **VTTI (Hằng Mỵ/Thơ):** Tham gia meeting Telecom.
+
+---
+*(Tuần 3 & 4 cấu trúc tương tự - Cập nhật sau khi hết Tuần 2)*
+
+---
+
+## III. MEETING MINUTES / RECAPS
+
+### 1. Recap: Giải quyết Rác Data Merchant & Chiến lược Thổ Địa V2 (31/05/2026)
+**1. Key Highlight & Business Impact:**
+*   **Xử lý Cannibalization:** Đã viết thuật toán Python làm sạch 54.000 OAs, bóc tách chính xác Tên Đường từ chuỗi Địa Chỉ để nối vào tên Thương hiệu, đảm bảo Keyword SEO chính xác 100%.
+*   **Thổ Địa Ăn Uống V2:** Tách riêng nhóm "Food Generic" (Cơm tấm, Phở) để không dồn vào trang Detail. Thay vào đó, thiết kế hệ thống pSEO Category Hub (Ví dụ: `momo.vn/merchant/com-tam-nguyen-trai`) hứng trọn Local Search Intent dạng Aggregator.
+
+**2. Priorities for 7/30 days:**
+*   Upload 19 file Keyword Batch lên Keyword Planner check Volume.
+*   Mapping kết quả vào file V4 Final.
+*   Update BRD bổ sung tính năng Listing Category Hub.
+
+**3. Collab Team (Need):**
+*   SEO Team tự động hóa khâu xử lý Data.
+*   Product Team (Web Platform) sẽ estimate effort làm Hub Listing trong giai đoạn tới.

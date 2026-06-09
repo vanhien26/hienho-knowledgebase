@@ -132,35 +132,126 @@ MoMo có đủ điều kiện giải quyết gap này: domain authority momo.vn,
 
 ---
 
-## 4. JTBD Analysis (Phân tích Nhu cầu Multi-sided & Niche)
+## 4. JTBD Analysis & Hành Trình Trải Nghiệm (Deep-Dive & Multi-sided)
 
-Hệ thống Merchant Page không đơn thuần là một trang thông tin địa chỉ mà được thiết kế để phục vụ nhu cầu của nhiều nhóm đối tượng (Multi-sided Platform) trong hệ sinh thái O2O của MoMo, tuân thủ cấu trúc tiêu chuẩn **Khi [tình huống] ➔ Tôi muốn [hành động] ➔ Để [giá trị nhận về]**:
-
-### 4.1 Cho Chủ quán (SME): Sở hữu "Điểm chạm Số" chính chủ - Giải tỏa lo âu Marketing & Tăng trưởng doanh thu
-*   **Khi:** Quán ăn của tôi (SME yếu thế) hoàn toàn không có sự diện diện trực tuyến, không có ngân sách hoặc nhân lực làm digital marketing, đồng thời lo sợ bị lãng quên trước đối thủ cạnh tranh có công nghệ tốt hơn,
-*   **Tôi muốn:** Sở hữu một trang thông tin đối tác chuẩn hóa thương hiệu trên domain uy tín `momo.vn` hiển thị NAP xác thực, menu thực tế, và xác minh các phương thức thanh toán (MoMo, Ví Trả Sau, Soundbox) mà không tốn chi phí lập trình hay vận hành,
-*   **Để tôi có thể:** Giải tỏa hoàn toàn nỗi lo âu về marketing kỹ thuật số, tự hào giới thiệu quán ăn của mình đến cộng đồng, tạo niềm tin cho khách hàng và tiếp cận tệp người dùng khổng lồ để trực tiếp tăng trưởng doanh thu.
+Hệ thống Merchant Page không đơn thuần là một trang thông tin địa chỉ tĩnh, mà là **điểm chạm số (Digital Touchpoint)** chiến lược kết nối nhu cầu tìm kiếm tự nhiên ngoài App (Out-App Discovery) với các hành động chuyển đổi O2O trong App (In-App Conversion) phục vụ nhu cầu của nhiều nhóm đối tượng (Multi-sided Platform) trong hệ sinh thái O2O của MoMo.
 
 ---
 
-### 4.2 Cho Người dùng (Consumer): Ra quyết định lựa chọn Quán & Cách thức chi trả
-*   **Khi:** Tôi và nhóm bạn đang chuẩn bị tụ họp đi ăn uống hoặc giải trí và muốn tối ưu hóa chi phí cũng như phương thức thanh toán thuận tiện nhất,
-*   **Tôi muốn:** Tra cứu nhanh thực đơn (Menu) cập nhật, khoảng giá cả, các ưu đãi/hoàn tiền đang hoạt động, các tiện ích thực tế tại quán (máy lạnh, wifi, chỗ đỗ xe hơi/xe máy), cũng như xác thực quán có hỗ trợ quét mã Soundbox/Ví Trả Sau (BNPL) trước khi đến,
-*   **Để tôi có thể:** Ra quyết định lựa chọn địa điểm phù hợp nhất với khẩu vị và ngân sách, tránh các tình huống bất tiện khi đến nơi (không có máy lạnh, không đỗ được xe, giá quá đắt) và loại bỏ hoàn toàn sự cố bối rối/ngại ngùng vì bị từ chối thanh toán BNPL tại quầy.
+### 4.1 Hành Trình Tìm Kiếm Merchant của Người Dùng (Consumer Search Journey)
+
+Hành trình tìm kiếm và khám phá của người dùng từ lúc phát sinh nhu cầu đến khi hoàn tất thanh toán O2O tại điểm bán trải qua 4 giai đoạn chính, được mô tả chi tiết như sau:
+
+```mermaid
+graph TD
+    %% Giai đoạn 1: Phát sinh nhu cầu
+    G1["Giai đoạn 1: Phát Sinh Nhu Cầu & Bối Cảnh"]
+    G1 -->|Trigger| T1("Thèm ăn món cụ thể / Hết tiền mặt cuối tháng (Cần xài Ví Trả Sau) / Tìm chỗ họp nhóm")
+
+    %% Giai đoạn 2: Tìm kiếm & Khám phá
+    T1 --> G2["Giai đoạn 2: Tìm Kiếm & Khám Phá"]
+    G2 -->|Google Search| S1("SEO: '{Tên Quán} địa chỉ' / '{Tên Quán} thực đơn'")
+    G2 -->|GEO / Local Search| S2("GEO: 'Quán ăn quận 1 nhận ví trả sau' / 'Spa gần đây nhận MoMo'")
+    G2 -->|AI Chatbot / Search| S3("AI Search: 'Quán bún thịt nướng nào ngon có thanh toán MoMo?'")
+
+    %% Giai đoạn 3: Xác thực & Đánh giá trên Web
+    S1 & S2 & S3 --> G3["Giai đoạn 3: Xác Thực & Đánh Giá trên Web"]
+    G3 --> V1("Xác thực NAP (Name - Address - Phone) & Giờ mở cửa")
+    G3 --> V2("Xác thực Thanh Toán: Quán có thực sự nhận Ví Trả Sau / Soundbox không?")
+    G3 --> V3("Xác thực Tiện ích: Thực đơn (Menu), giá cả, wifi, máy lạnh, chỗ đỗ xe")
+
+    %% Giai đoạn 4: Quyết định & Chuyển đổi O2O
+    V1 & V2 & V3 --> G4["Giai đoạn 4: Quyết Định & Chuyển Đổi O2O"]
+    G4 --> C1("Online to Offline: Đến quán thực tế qua VTS Map / Hướng dẫn chỉ đường")
+    G4 --> C2("Web to App: Quét QR / Click Onelink để mở Ví Trả Sau hoặc nhận Voucher")
+    G4 --> C3("Thanh toán thành công: Quét mã tại quầy nghe Soundbox báo nhận tiền")
+
+    %% CSS Styling
+    style G1 fill:#ffebee,stroke:#ffcdd2,stroke-width:2px,color:#880e4f
+    style G2 fill:#e8f5e9,stroke:#c8e6c9,stroke-width:2px,color:#1b5e20
+    style G3 fill:#e3f2fd,stroke:#bbdefb,stroke-width:2px,color:#0d47a1
+    style G4 fill:#fff3e0,stroke:#ffe0b2,stroke-width:2px,color:#e65100
+```
+
+1. **Giai đoạn 1: Phát sinh nhu cầu (Trigger):**
+   * **Bối cảnh:** Người dùng nảy sinh nhu cầu ăn uống, làm đẹp, giải trí hoặc mua sắm đột xuất, hoặc chuẩn bị lên kế hoạch tụ họp nhóm bạn.
+   * **Động lực đặc biệt:** Cuối tháng cạn tiền mặt/hết số dư tài khoản nhưng vẫn có nhu cầu chi tiêu thiết yếu hoặc giao lưu xã hội. Nhu cầu cốt lõi lúc này là tìm những quán ăn/dịch vụ chấp nhận thanh toán **Ví Trả Sau MoMo (VTS/BNPL)** để "tiêu trước trả sau", hoặc tìm các quán có hoàn tiền/tích điểm MoMo để tối ưu hóa ngân sách.
+2. **Giai đoạn 2: Tìm kiếm & Khám phá (Search & Discovery):**
+   * **Hành vi:** Thay vì mở MoMo App (vốn được tối ưu hóa cho giao dịch và tiện ích, không phải cho việc tìm kiếm, so sánh và duyệt thông tin địa điểm tự nhiên), người dùng mở trình duyệt web trên di động (Safari, Chrome) hoặc các ứng dụng tìm kiếm ngoài app.
+   * **Kênh tìm kiếm:** Google Search (nhập từ khóa như `[Tên Merchant] thực đơn`, `[Tên Merchant] địa chỉ`), Google Maps (tìm địa điểm gần đây), hoặc thông qua các công cụ AI Search thịnh hành (Gemini, ChatGPT, Perplexity) để đặt các câu hỏi tự nhiên như: *"Quán cafe nào yên tĩnh ở Quận 1 chấp nhận thanh toán Ví Trả Sau MoMo?"*.
+3. **Giai đoạn 3: Xác thực & Đánh giá (Verification & Evaluation):**
+   * Người dùng truy cập vào trang **Merchant Web Page (`momo.vn/merchant/{slug}`)** để xác thực các thông tin quan trọng trước khi đến quán:
+     * **Xác thực NAP & Vị trí:** Kiểm tra địa chỉ chính xác, giờ mở/đóng cửa và số điện thoại liên hệ để tránh việc đến nơi nhưng quán đóng cửa hoặc thông tin bị sai lệch.
+     * **Xác thực Thanh Toán (MoMo/VTS/Soundbox):** Trực tiếp kiểm tra huy hiệu xác thực phương thức thanh toán của MoMo trên trang. Điều này giúp loại bỏ hoàn toàn rủi ro bối rối, ngại ngùng khi thanh toán tại quầy bị từ chối hoặc quán không chấp nhận Ví Trả Sau.
+     * **Xác thực Tiện ích & Thực đơn:** Xem Menu/Bảng giá chính thức của quán để ước tính chi phí, xem các tiện ích kèm theo (wifi, máy lạnh, chỗ đỗ xe hơi/xe máy, không gian).
+4. **Giai đoạn 4: Quyết định & Chuyển đổi O2O (Decision & Action):**
+   * Người dùng quyết định di chuyển đến địa điểm thực tế (Online-to-Offline).
+   * Trên trang web Merchant, người dùng thực hiện các hành động chuyển đổi nhanh (Web-to-App): quét QR hoặc nhấp vào Onelink/Deeplink để kích hoạt nhanh Ví Trả Sau, thu thập voucher ưu đãi độc quyền của quán vào ví MoMo.
+   * Hoàn tất mua sắm/ăn uống và thực hiện quét mã QR tại quầy thanh toán (ví dụ: quét Soundbox nhận phản hồi âm thanh trong 3 giây), khép kín hành trình O2O mượt mà.
 
 ---
 
-### 4.3 Cho Đội ngũ Phát triển Đối tác (MoMo Sales / BD): Công cụ chốt deal (Sales Kit) tại thực địa
+### 4.2 Vai Trò Điểm Chạm của Web trong Hành Trình (Web's Strategic Touchpoint Role)
+
+Trang web Merchant đóng vai trò then chốt giải quyết các khoảng trống và điểm nghẽn lớn của ứng dụng di động đóng (App-only ecosystem):
+
+1. **Phễu Đón Traffic Tự Nhiên Ngoài App (Out-App Discovery Funnel):**
+   * **Bối cảnh:** MoMo App là một "Vườn kín" (Walled Garden) — dữ liệu bên trong app không thể được crawl và index bởi các công cụ tìm kiếm bên ngoài (Google Search, AI Overview, Perplexity). Khi người dùng tìm kiếm tự nhiên trên trình duyệt, các tính năng in-app hoàn toàn vô hình.
+   * **Vai trò Web:** Web đóng vai trò là "cửa ngõ" phễu đầu vào, index hàng chục nghìn trang Merchant chi tiết lên Google Search và các AI Crawler. Web giúp thu hút lượng người dùng khổng lồ đang có "Search Intent" cực kỳ cao ở ngoài app, chuyển hướng họ thành khách hàng giao dịch của MoMo.
+2. **Điểm Xác Thực Niềm Tin Nhờ Authority của MoMo:**
+   * Tên miền `momo.vn` sở hữu Authority (DR/DA) rất lớn. Khi một Merchant có trang con trên `momo.vn`, họ được thừa hưởng uy tín thương hiệu của MoMo.
+   * Đây là trang "Single Source of Truth" xác nhận thông tin thanh toán chính thức (quán có thực sự nhận Ví Trả Sau, MoMo hay Soundbox không), giúp người dùng tin tưởng 100% so với các thông tin tự đăng tải trên mạng xã hội của quán.
+3. **Cầu Nối Kéo Người Dùng Về App (Web-to-App Bridge):**
+   * Web không hướng tới việc xử lý giao dịch thanh toán trực tiếp do các hạn chế về bảo mật và phần cứng trên trình duyệt.
+   * Thay vào đó, Web đóng vai trò **kích thích intent** và **điều hướng mượt mà (Seamless Routing)**: Cung cấp đầy đủ thông tin để thuyết phục người dùng, sau đó cung cấp các CTA rõ ràng (Onelink, dynamic QR code) đưa người dùng vào đúng luồng thanh toán hoặc kích hoạt Ví Trả Sau trong MoMo App.
+4. **Hỗ trợ O2O khép kín (Soundbox & QR Loop):**
+   * QR Code dán tại quầy hoặc trên Soundbox có thể dẫn liên kết ngược lại trang Web Merchant để người dùng xem menu, đánh giá hoặc săn deal tại chỗ mà không yêu cầu họ phải cài đặt/mở app trước, tạo ra trải nghiệm chạm nhẹ nhàng (zero-friction).
+
+---
+
+### 4.3 Deep-Dive JTBD: Nhóm Chủ Quán (Shop Owner / SME)
+
+Chủ quán nhỏ là nhóm đối tượng có nguồn lực digital marketing hạn chế, dễ tổn thương trước làn sóng cạnh tranh số hóa.
+
+| Tiêu chí | Chi tiết phân tích JTBD |
+|---|---|
+| **Bối cảnh & Tình huống (Situation)** | - Sở hữu quán ăn/cửa hàng dịch vụ vừa và nhỏ (SME), kinh doanh phụ thuộc vào khách vãng lai offline.<br>- Không có website riêng, không có ngân sách và chuyên môn làm SEO/Ads.<br>- Cảm thấy bị lãng quên hoặc lép vế trước các chuỗi lớn có hệ thống marketing bài bản.<br>- Đã lắp đặt MoMo/Soundbox/Ví Trả Sau nhưng khách hàng xung quanh không biết để đến chi tiêu. |
+| **Functional Job (Công việc chức năng)** | - Thiết lập sự diện diện trực tuyến chuẩn SEO (NAP, Menu, Hình ảnh) hoàn toàn miễn phí mà không cần biết lập trình.<br>- Đánh dấu rõ ràng quán mình là đối tác chính thức của MoMo, chấp nhận Ví Trả Sau (VTS) để thu hút tệp người dùng trẻ tuổi thích chi tiêu trước.<br>- Hiển thị menu và không gian quán lên Google Search/AI Search để tiếp cận khách hàng đang tìm kiếm món ăn tại khu vực lân cận. |
+| **Emotional Job (Personal - Cảm xúc cá nhân)** | - Cảm thấy tự tin, tự hào vì quán của mình có một trang giới thiệu chuyên nghiệp trên trang web lớn của MoMo.<br>- Loại bỏ cảm giác lo âu, bế tắc khi thấy đối thủ cạnh tranh chạy quảng cáo rầm rộ.<br>- Yên tâm rằng thông tin liên hệ và hình ảnh của quán được hiển thị chính xác, sạch sẽ trên môi trường internet. |
+| **Social Job (Mối quan hệ xã hội)** | - Khẳng định uy tín thương hiệu đối với khách hàng, đối tác và nhà cung cấp.<br>- Được cộng đồng địa phương công nhận là quán ăn hiện đại, bắt nhịp công nghệ thanh toán mới (quét QR Soundbox, trả sau).<br>- Tăng sức cạnh tranh và vị thế thương hiệu trong khu vực kinh doanh địa lý. |
+| **Pain Points (Nỗi đau hiện tại)** | - Tự làm website thì quá đắt đỏ và không có người vận hành, bỏ hoang phế.<br>- Đăng ký trên các nền tảng giao đồ ăn bị chiết khấu quá cao (20-25%).<br>- Khách vào quán hỏi thanh toán Ví Trả Sau nhưng nhân viên lúng túng không biết, dẫn đến mất khách và trải nghiệm xấu.<br>- Khách hàng không tìm thấy quán khi search Google do thiếu tối ưu local SEO. |
+| **Gains (Lợi ích mong muốn)** | - Tăng lượng khách hàng mới đến quán nhờ Google Search tự nhiên (Organic Traffic).<br>- Tăng doanh thu trung bình trên mỗi hóa đơn (AOV) nhờ tệp khách hàng xài Ví Trả Sau thường chi tiêu phóng khoáng hơn.<br>- Tiết kiệm 100% chi phí xây dựng và duy trì hạ tầng web marketing.<br>- Sở hữu trang giới thiệu số chuẩn hóa làm "Sales Kit" để gửi cho khách đặt bàn/đặt tiệc. |
+
+---
+
+### 4.4 Deep-Dive JTBD: Nhóm Người Dùng Cuối (Consumer / End User)
+
+Người dùng cuối mong muốn một hành trình mượt mà, thông tin trung thực và tối ưu hóa tối đa lợi ích tài chính.
+
+| Tiêu chí | Chi tiết phân tích JTBD |
+|---|---|
+| **Bối cảnh & Tình huống (Situation)** | - Đang lên kế hoạch tụ họp bạn bè, gia đình đi ăn uống/làm đẹp nhưng chưa biết chọn quán nào phù hợp.<br>- Gần cuối tháng, lương chưa về, tài khoản ngân hàng cạn kiệt nhưng vẫn phải đi gặp đối tác/bạn bè.<br>- Đang tìm kiếm các quán ăn có ưu đãi hoàn tiền hoặc tích điểm để tiết kiệm chi phí.<br>- Đang đứng ngoài đường hoặc ngồi cafe tìm kiếm nhanh thông tin địa điểm tiếp theo trên điện thoại. |
+| **Functional Job (Công việc chức năng)** | - Tìm kiếm địa điểm ăn uống/dịch vụ gần đây đáp ứng các tiêu chuẩn thực tế (không gian máy lạnh, chỗ đỗ xe hơi, thực đơn và bảng giá rõ ràng).<br>- Xác thực chắc chắn quán có nhận thanh toán bằng MoMo/Ví Trả Sau (BNPL) để chuẩn bị phương án thanh toán trước khi đến.<br>- So sánh ưu đãi/hoàn tiền giữa các quán cùng phân khúc để đưa ra lựa chọn tối ưu chi phí nhất. |
+| **Emotional Job (Personal - Cảm xúc cá nhân)** | - Cảm thấy an tâm và chủ động về mặt tài chính (biết rõ mình có thể dùng Ví Trả Sau để thanh toán).<br>- Tránh cảm giác hoang mang, bối rối hoặc ngượng ngùng tại quầy thanh toán khi bị báo "quán em không nhận ví trả sau" hay "MoMo ở đây đang lỗi".<br>- Thoải mái tận hưởng bữa ăn mà không bị ám ảnh bởi áp lực tài chính ngắn hạn. |
+| **Social Job (Mối quan hệ xã hội)** | - Thể hiện là người chi tiêu thông minh, sành điệu, biết cách săn deal và tận dụng các công nghệ tài chính hiện đại (quét Soundbox, thanh toán trả sau).<br>- Tự tin dẫn dắt nhóm bạn đến quán ăn chất lượng mà không sợ bị "quê" vì quán lụp xụp hay dịch vụ thanh toán kém.<br>- Chia sẻ địa điểm ăn uống uy tín, có xác thực rõ ràng cho bạn bè, người thân. |
+| **Pain Points (Nỗi đau hiện tại)** | - Thông tin về quán trên mạng (địa chỉ, menu, giá cả) bị cũ, sai lệch, dẫn đến việc đến nơi quán đã đóng cửa hoặc giá tăng gấp đôi.<br>- Quảng cáo ghi có nhận MoMo nhưng đến nơi nhân viên bảo chỉ nhận tiền mặt hoặc chuyển khoản ngân hàng cá nhân.<br>- Tìm kiếm thông tin quán trên các app đóng kín rất chậm, tốn pin, khó chia sẻ link ra ngoài trình duyệt hoặc chat group (Zalo/Messenger). |
+| **Gains (Lợi ích mong muốn)** | - Có một trang thông tin xác thực "Single Source of Truth" trực tiếp từ MoMo về tình trạng thanh toán của quán.<br>- Mở và kích hoạt Ví Trả Sau MoMo mượt mà trong 1 phút ngay trên trang web để có tiền thanh toán.<br>- Ăn uống tiết kiệm hơn nhờ tích lũy xu và nhận hoàn tiền trực tiếp.<br>- Trải nghiệm tìm kiếm nhanh chóng, giao diện Web mobile mượt mà, dễ dàng chia sẻ địa điểm cho bạn bè qua 1 click. |
+
+---
+
+### 4.5 Cho Đội ngũ Phát triển Đối tác (MoMo Sales / BD): Công cụ chốt deal (Sales Kit) tại thực địa
 *   **Khi:** Tôi (BD/Sales) đi thị trường tiếp cận các chủ quán truyền thống để thuyết phục họ lắp đặt Soundbox hoặc chấp nhận thanh toán MoMo,
 *   **Tôi muốn:** Trình chiếu trực tiếp trên điện thoại một trang đối tác mẫu chuyên nghiệp, trực quan hiển thị đầy đủ các tiện ích truyền thông số hóa miễn phí mà quán ăn của họ sẽ nhận được khi tham gia mạng lưới,
 *   **Để tôi có thể:** Tăng tỷ lệ chốt hợp đồng (conversion rate), giải thích rõ ràng và thuyết phục giá trị gia tăng của việc lắp đặt Soundbox, và rút ngắn tối đa thời gian đàm phán thương lượng với đối tác.
 
 ---
 
-### 4.4 Cho Đội ngũ Tăng trưởng (MoMo BU Growth & Campaign): Landing Page chiến dịch liên kết thương hiệu lớn (Key Accounts)
+### 4.6 Cho Đội ngũ Tăng trưởng (MoMo BU Growth & Campaign): Landing Page chiến dịch liên kết thương hiệu lớn (Key Accounts)
 *   **Khi:** Tôi (PM Growth) cần triển khai chiến dịch co-branded liên kết với thương hiệu lớn (e.g. Giảm 10% tại Phê La) và cần hướng dòng traffic từ các kênh nội bộ (In-App notification/banner) hoặc bên ngoài (Ads/SEO),
 *   **Tôi muốn:** Có một trang đối tác chuẩn hóa (Phê La Merchant Page) làm Landing Page chiến dịch chứa thông tin thể lệ ưu đãi, các chi nhánh áp dụng và CTA Onelink/Deeplink mượt mà,
 *   **Để tôi có thể:** Tối ưu hóa tỷ lệ chuyển đổi của chiến dịch marketing, đảm bảo trải nghiệm khách hàng không bị đứt gãy, và hứng toàn bộ lượng organic search traffic tìm kiếm ưu đãi liên quan đến thương hiệu đối tác trên Google.
+
+---
 
 ---
 
@@ -205,6 +296,21 @@ Mỗi trang `momo.vn/merchant/{slug}` là một trang đối tác độc lập, 
 - Mọi thông tin chương trình ưu đãi được quản lý và inject tự động từ một nguồn duy nhất đã qua phê duyệt pháp lý.
 - **Function VTS Module (Fixed - YMYL):** Là một chức năng hiển thị tĩnh nằm trong O2O Promotion Stack (Thành phần #4), tự động hiển thị thông tin đặc tả pháp lý của Ví Trả Sau (Lãi suất 0% trong hạn, Hạn mức 1-20 triệu, Phí duy trì 30k-33k/tháng chỉ thu khi có giao dịch, Đối tác TPBank/Shinhan). Nội dung này được inject tự động từ template hệ thống, biên tập viên không chỉnh sửa thủ công để đảm bảo tuân thủ pháp lý tài chính.
 
+### 5.3b Bảng Áp Xạ JTBD ➔ Thành Phần Giao Diện & Dữ Liệu (JTBD to UI/UX Mapping)
+
+Để giải quyết triệt để từng "Job" và xoa dịu các "Nỗi đau" (Pain Points) đã định nghĩa ở Mục 4, cấu trúc Merchant Detail Page được thiết kế tương thích với các thành phần dữ liệu và tính năng cụ thể dưới đây:
+
+| Nhóm Đối Tượng | Động Lực / Nỗi Đau (JTBD) | Thành Phần Dữ Liệu / Tính Năng Trên Web | Cơ Chế Giải Quyết Job |
+| :--- | :--- | :--- | :--- |
+| **Consumer (Người dùng)** | **Xác thực thanh toán:** Lo ngại quán không nhận MoMo hoặc Ví Trả Sau (VTS), sợ bối rối khi bị từ chối tại quầy. | **Payment Methods Badge (#3):** Huy hiệu "Đã Xác Thực bởi MoMo" + Danh sách phương thức: `Ví MoMo`, `Ví Trả Sau (BNPL)`, `Soundbox QR`. | Cung cấp nguồn kiểm chứng chính thống duy nhất (Single Source of Truth), tạo tâm lý an tâm tuyệt đối trước khi đi. |
+| **Consumer (Người dùng)** | **Tối ưu chi tiêu:** Muốn săn deal, tích điểm, tìm kiếm các ưu đãi hoàn tiền để tiết kiệm chi phí. | **O2O Promotion Stack (#4):** Banner ưu đãi tự động inject (e.g. *"Hoàn tiền 10% qua Ví Trả Sau"*), kèm nút CTA Onelink dẫn thẳng vào ví. | Giúp người dùng nhìn thấy và lưu coupon/ưu đãi vào ví ngay lập tức, tiết kiệm công sức tìm kiếm. |
+| **Consumer (Người dùng)** | **Đưa ra quyết định ăn uống:** Tìm kiếm thông tin thực tế (thực đơn, giá cả, wifi, phòng lạnh, chỗ đỗ xe). | **Inline Menu & Dynamic Amenities Block:**<br>- Menu số cập nhật kèm giá tối thiểu-tối đa.<br>- Bộ Amenities badge: `Phòng lạnh`, `Chỗ đỗ xe hơi`, `Wifi miễn phí`. | Hỗ trợ so sánh nhanh và quyết định chọn quán dựa trên thông tin thực tế, tránh các bất tiện sau khi đến nơi. |
+| **Consumer (Người dùng)** | **Tìm đường & Di chuyển:** Muốn đến quán một cách nhanh và chính xác nhất. | **Structured NAP & Map Widget (#2):** Địa chỉ dạng text chuẩn SEO, nút `Chỉ Đường` tích hợp Google Maps, bản đồ mini. | Người dùng mở bản đồ chỉ đường trong 1 click mà không cần gõ lại địa chỉ, tối ưu hóa hành trình O2O. |
+| **Consumer (Người dùng)** | **Thiếu nguồn tài chính tức thời:** Cuối tháng cạn tiền nhưng bắt buộc phải chi tiêu/tụ họp. | **VTS Product Spec Module (#4 - Fixed):** Bảng đặc tả Ví Trả Sau hiển thị tĩnh (Lãi suất 0%, hạn mức 1-20 triệu) + Nút CTA `Kích Hoạt Ví Trả Sau trong 1 phút`. | Cung cấp giải pháp tài chính BNPL ngay lập tức tại điểm chạm, hướng dẫn chi tiết cách mở và sử dụng ví. |
+| **Chủ Quán (SME)** | **Thiếu hiện diện số / SEO yếu:** Không có website riêng, không xuất hiện khi khách search trên Google Search/Maps. | **Search-Optimized Brand Detail Template:** Layout chuẩn SEO (tên miền `momo.vn` authority cao) + LocalBusiness Schema tự động. | Giúp quán xuất hiện ở vị trí cao trên Google Search và AI Overview hoàn toàn miễn phí, tiếp cận tệp khách hàng tự nhiên. |
+| **Chủ Quán (SME)** | **Quảng bá thanh toán MoMo:** Đã lắp MoMo/Soundbox nhưng khách hàng xung quanh không biết để ghé quán. | **Official Co-branded Badging:** Huy hiệu "Đối tác chính thức của MoMo" hiển thị nổi bật trên đầu trang. | Tăng uy tín thương hiệu cho quán nhỏ nhờ sự bảo chứng của MoMo, kích thích khách hàng quét mã. |
+| **Chủ Quán (SME)** | **Chia sẻ thông tin marketing:** Cần gửi thông tin quán/thực đơn cho khách hàng qua mạng xã hội. | **Quick Share Utility:** Nút chia sẻ nhanh lên Zalo/Facebook + QR Code dẫn đến trang web đối tác. | Cung cấp công cụ truyền thông miễn phí cho chủ quán làm "Sales Kit" số hóa để chăm sóc khách hàng. |
+
 
 
 ### 5.4 O2O Solution Stack
@@ -216,13 +322,26 @@ Mỗi trang `momo.vn/merchant/{slug}` là một trang đối tác độc lập, 
 | Soundbox | Giải pháp thu tiền QR cho SME | **[TẠM HOÃN / SHELVED]** | Hiện tại chưa triển khai gì về Soundbox trên Web. |
 | Xu (Reward) | Tích điểm thưởng khi thanh toán tại merchant | TBD - Product vision Q3+ | TBD |
 
-### 5.5 Schema & GEO Requirements
+### 5.5 Schema & GEO Requirements (Dynamic per Industry Category)
 
-| Cấp trang | Schema bắt buộc | GEO Target |
-|---|---|---|
-| Hub `/merchant` | ItemList - FAQPage - Organization - BreadcrumbList | "MoMo có những đối tác nào" |
-| Merchant `/merchant/{slug}` | LocalBusiness - FAQPage - HowTo - Offer - BreadcrumbList | "{Merchant} có nhận VTS không" |
-| Sub-pages (Phase II) | **[TẠM GÁC LẠI / SHELVED]** | - |
+Để tối ưu hóa hiển thị trên Google Search, AI Search (Gemini) và giải quyết chính xác bài toán đa dạng danh mục của đối tác MoMo (Siêu thị, Mua sắm, Du lịch, Giáo dục, Làm đẹp, Y tế/Sức khỏe, F&B), hệ thống MoSpark CMS sẽ tự động cấu hình **Schema.org Type**, **trường dữ liệu crawl/hiển thị**, và **định hướng hành văn GenAI** theo nhóm ngành tương ứng:
+
+| Nhóm Danh Mục | Schema.org Type Bắt Buộc | Trường Dữ Liệu & Tiện Ích Dynamic | Chỉ Thị Hành Văn GenAI Content (Gemini) |
+| :--- | :--- | :--- | :--- |
+| **Siêu Thị / Tiện Lợi** (Supermarket, Coopmart, Winmart...) | `Supermarket` hoặc `ConvenienceStore` | Giờ mở/đóng cửa, Chỗ đỗ xe máy/ô tô, Dịch vụ giao hàng, Xe đẩy mua sắm, Lối đi xe lăn. | **Tone:** Tiện lợi, đầy đủ, giá tốt.<br>**Focus:** Cung cấp thông tin mua sắm nhanh, danh mục hàng hóa thiết yếu và các ưu đãi thanh toán. |
+| **Mua Sắm / Bán Lẻ** (Shopping, Fashion, Electronics...) | `Store` hoặc chuyên biệt (e.g., `ClothingStore`) | Giờ hoạt động, Hotline CSKH, Hỗ trợ đổi trả, Có phòng thử đồ, Bãi đỗ xe. | **Tone:** Trẻ trung, hiện đại, hợp thời.<br>**Focus:** Giới thiệu bộ sưu tập, thương hiệu và các chương trình khuyến mãi/Ví Trả Sau áp dụng tại quầy. |
+| **Du Lịch / Khách Sạn** (Hotel, Homestay, Resort...) | `LodgingBusiness` hoặc `Hotel` | Wifi miễn phí, Có hồ bơi, Giờ Check-in/Check-out, Dịch vụ phòng, Bãi xe ô tô. | **Tone:** Trải nghiệm, thư giãn, sang trọng.<br>**Focus:** Mô tả tiện nghi phòng ốc, vị trí địa lý, không gian nghỉ dưỡng và cách đặt dịch vụ bằng Ví Trả Sau. |
+| **Giáo Dục / Khóa Học** (School, English Center...) | `EducationalOrganization` hoặc `School` | Khóa học nổi bật, Chứng chỉ đào tạo, Cơ sở vật chất (phòng lab, thư viện), Hotline tư vấn. | **Tone:** Chuyên nghiệp, uy tín, đáng tin cậy.<br>**Focus:** Đội ngũ giáo viên, chất lượng đào tạo, lộ trình học tập và chính sách đóng học phí qua Ví Trả Sau. |
+| **Làm Đẹp / Spa** (Beauty Salon, Spa, Hair...) | `BeautySalon` hoặc `DaySpa` | Bảng giá dịch vụ (Menu), Đặt lịch trước (Appointment), Phòng riêng tư, Chỗ đậu xe hơi. | **Tone:** Thư thái, chăm sóc sức khỏe, thanh lịch.<br>**Focus:** Cảm nhận không gian thư giãn, công nghệ làm đẹp áp dụng, tay nghề kỹ thuật viên và khuyến khích đặt lịch. |
+| **Y Tế / Sức Khỏe** (Pharmacy, Clinic, Hospital...) | `Pharmacy` hoặc `MedicalClinic` (YMYL) | Giấy chứng nhận (GPP/Giấy phép), Hotline khẩn cấp, Đội ngũ chuyên môn, Giờ làm việc. | **Tone:** Nghiêm túc, chuẩn y khoa, an toàn tuyệt đối.<br>**Focus:** Đảm bảo tính chính xác thông tin (E-E-A-T), nguồn gốc thuốc/dịch vụ khám chữa bệnh, bảo mật thông tin. |
+| **Ẩm Thực / F&B** (Restaurant, Cafe, Bakery...) | `Restaurant` hoặc `Cafe` | Thực đơn (Digital Menu), Món ký danh (Signature), Phòng lạnh, Chỗ đỗ xe máy. | **Tone:** Hấp dẫn, khơi gợi vị giác, ấm cúng.<br>**Focus:** Mô tả hương vị món ăn nổi bật, phong cách thiết kế quán và bối cảnh phù hợp (hẹn hò, nhóm bạn). |
+| **Các SME Khác** | `LocalBusiness` | NAP, Giờ mở cửa, Số điện thoại. | **Tone:** Thân thiện, gần gũi.<br>**Focus:** Giới thiệu ngắn gọn cửa hàng. |
+
+*Lưu ý cấu trúc Json-LD Schema:*
+- Tất cả các trang chi tiết Merchant bắt buộc phải tự động sinh ra block mã JSON-LD Schema tương ứng ở header trang dựa trên bảng ánh xạ trên.
+- Hub `/merchant` sử dụng: `ItemList - FAQPage - Organization - BreadcrumbList` cho trang điều hướng chung.
+- Đồng thời lồng ghép thêm các schema bổ trợ cố định tại trang chi tiết bao gồm: `FAQPage` (bộ FAQs tự sinh), `HowTo` (hướng dẫn quét mã MoMo), `Offer` (khuyến mãi đang chạy), và `BreadcrumbList`.
+
 
 ### 5.6 Search Intent Mapping
 
@@ -373,11 +492,57 @@ Dự án đo lường sự thành công dựa trên 3 chỉ số cốt lõi sau:
 
 ### 10.2 Lưu Ý Kỹ Thuật
 
+- **Page Status Lifecycle:** Án dụng mô hình trạng thái vòng đời trang MoSpark để quản lý CRUD cho các merchant (Draft, Review, Live, Deleted). Xem chi tiết quy định kỹ thuật phía máy chủ và SEO tại [Mục 10.4 Quy Chuẩn Quản Trị Trạng Thái & CRUD Merchant](#104-quy-chuẩn-quản-trị-trạng-thái--crud-merchant-seo--crawling). Các trang tạm ẩn (Inactive) phải giữ Live kèm banner thông báo đóng cửa tạm thời (200 OK) để bảo toàn rankings thay vì trả về 404.
 - **GSC Coverage:** 39 pages đã live nhưng indexing chưa verify. Check GSC Coverage Report tuần 2 T6.
 - **Redirect timing:** Đã hoàn tất cấu hình và kích hoạt thành công redirect 308 cho 3 URLs legacy về trang mới.
 - **Canonical:** Page `/merchant/{slug}` phải có self-referencing canonical. Kiểm tra trước khi đóng ticket.
 - **Sitemap:** Verify 39 URLs mới đã được add vào sitemap. 3 /page/ URLs cần xóa khỏi sitemap cùng lúc set redirect.
 - **Sitemap:** Thêm `/merchant/{slug}` vào sitemap ngay khi live. Xóa URL cũ khỏi sitemap cùng lúc set redirect.
+
+### 10.3 Kế Hoạch Tuần & Phân Công Nhiệm Vụ (Weekly Action Plan)
+
+Cập nhật phân công chi tiết cho các thành viên dự án (Tuần 2 tháng 6 - từ 08/06 đến 14/06) để đẩy nhanh tiến độ tối ưu và chuẩn bị scale-up:
+
+| PIC | Nhiệm vụ chính (Action Items) | Trạng thái | Ghi chú |
+|---|---|---|---|
+| **Nhật** | - Bổ sung thêm UI template phục vụ các danh mục (Categories template).<br>- Làm lại tính năng/nút chia sẻ (Share button).<br>- Thiết lập phần quản lý trạng thái và CRUD (Create-Read-Update-Delete) của các merchant bám sát các tiêu chuẩn SEO kỹ thuật và HTTP response codes định nghĩa tại [Mục 10.4 Quy Chuẩn Quản Trị Trạng Thái & CRUD Merchant](#104-quy-chuẩn-quản-trị-trạng-thái--crud-merchant-seo--crawling). | `[/] In Progress` | Nhật phụ trách chính phần Front-end & CMS UI. |
+| **Thuận** | - Review lại toàn bộ Widget "Tìm điểm VTS" (Ví Trả Sau).<br>- Kiểm tra lại thuật toán tính toán khoảng cách (distance calculation) giữa user và điểm bán trên bản đồ. | `[/] In Progress` | Thuận phụ trách phần Geo-location & Tracking. |
+| **Trọng** | - Nghiên cứu giải pháp phân phối nội dung (Content Distribution Flow) từ kết quả Research Keyword (Content Plan) của team SEO.<br>- Thiết lập cơ chế đẩy bài tự động đến các kênh phân phối: Blog, Landing Page, và trang đối tác (Merchant Pages). | `[/] In Progress` | Trọng phụ trách phần Data Distribution & CMS backend integrations. |
+
+### 10.4 Quy Chuẩn Quản Trị Trạng Thái & CRUD Merchant (SEO & Crawling)
+
+Để tối ưu hóa trải nghiệm quản trị (CMS UI) và phân quyền triển khai, vòng đời trạng thái của trang đối tác (Merchant Detail Page) được rút gọn về **đúng 4 trạng thái chính**: **Draft** -> **Review** -> **Live** -> **Deleted**.
+
+#### A. Ma Trận Cấu Hình SEO & Server Response
+
+| Trạng thái (CMS Status) | HTTP Code | Robots Meta Directive | Sitemap XML | Canonical URL | Indexing API Ping | Mô tả trải nghiệm người dùng & SEO |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **1. Draft** (Bản nháp) | `404 Not Found` hoặc `403 Forbidden` | `noindex, nofollow` | Loại bỏ (Exclude) | Không có | Không gửi | **Creator:** Chỉnh sửa nội dung thô.<br>**Public user:** Hiển thị lỗi 404. |
+| **2. Review** (UAT / Demo) | `404 Not Found` hoặc `403 Forbidden` | `noindex, nofollow` | Loại bỏ (Exclude) | Không có | Không gửi | **Internal:** Xem trước giao diện qua link UAT/Demo bảo mật.<br>**Public user:** Lỗi 404. |
+| **3. Live** (Hoạt động) | `200 OK` | `index, follow` | Khai báo (Include) | Self-referencing (Trỏ về chính nó) | Gửi Indexing API (Google & IndexNow) | **Public user:** Trang hoạt động đầy đủ.<br>*Có tùy chọn "Tạm ngưng hoạt động" (200 OK + Banner).* |
+| **4. Deleted** (Xóa/Gỡ bỏ) | `404 Not Found` hoặc `410 Gone` | `noindex, nofollow` | Loại bỏ (Exclude) | Không có | Gửi API yêu cầu xóa index (Remove URL) | **Public user:** Lỗi 404/410.<br>*Nếu có cấu hình Redirect, trả về 301/308 sang URL mới.* |
+
+#### B. Cơ Chế Xử Lý SEO & Nghiệp Vụ Tối Giản
+
+1. **Xử lý Tạm ngưng hoạt động (Inactive) trong trạng thái Live:**
+   * **Cách thực hiện:** Không đổi status của trang về nháp hay xóa để tránh bẫy rác 404 (mất index Google). Merchant vẫn giữ nguyên trạng thái **Live** (để giữ `200 OK` và Sitemap XML), nhưng Editor bật toggle **`[x] Tạm ngưng hoạt động (Pause Campaign)`** trên CMS.
+   * **Hiển thị UX:** Trang hiển thị banner cảnh báo: *"Cửa hàng này hiện đang tạm ngưng hoạt động hoặc dừng liên kết thanh toán. Khám phá các cửa hàng tương tự bên dưới!"*, khóa toàn bộ nút CTA Ví Trả Sau, và kích hoạt widget gợi ý 3-5 quán lân cận.
+2. **Xử lý Gộp trang (Archived/Merged) và Xóa (Deleted):**
+   * **Cách thực hiện:** Khi chuyển trang sang trạng thái **Deleted**, CMS cung cấp thêm trường tùy chọn: **`Redirect URL (301/308)`**.
+   * **Nếu có điền Redirect URL:** Máy chủ tự động cấu hình **HTTP 301/308 Redirect** trỏ về URL mới để bảo toàn Link Juice.
+   * **Nếu không có Redirect URL:** Máy chủ trả về **HTTP 410 Gone** (hoặc 404) và hệ thống tự động loại bỏ URL khỏi sitemap XML, đồng thời trigger Indexing API để Google nhanh chóng gỡ index.
+3. **API Auto-sync (M4B):**
+   * Khi tài khoản đối tác trên M4B bị tạm khóa, hệ thống tự động kích hoạt toggle `Tạm ngưng hoạt động` của trang đang **Live**. Chỉ khi đối tác đóng cửa vĩnh viễn mới chuyển status sang **Deleted**.
+
+#### C. Phân Quyền Vai Trò Chuyển Đổi Trạng Thái (Transition RBAC Gates)
+
+| Từ Trạng thái | Sang Trạng thái | Editor / PM (Field PM) | QC Lead / Admin | Tech Lead |
+| :--- | :--- | :---: | :---: | :---: |
+| **Draft** | **Review** | ✔ (Cho phép) | ✔ (Cho phép) | ✔ (Cho phép) |
+| **Review** | **Live** | ❌ (Bị khóa) | ✔ (Cho phép) | ✔ (Cho phép) |
+| **Review** | **Draft** (Reject) | ✔ (Cho phép) | ✔ (Cho phép) | ✔ (Cho phép) |
+| **Live** | **Deleted** | ❌ (Bị khóa) | ✔ (Cho phép) | ✔ (Cho phép) |
+| **Live** | **Review** (Sửa lớn) | ✔ (Cho phép) | ✔ (Cho phép) | ✔ (Cho phép) |
 
 ---
 
@@ -385,73 +550,89 @@ Dự án đo lường sự thành công dựa trên 3 chỉ số cốt lõi sau:
 
 ## 🌌 PHASE II: SCALE, AUTOMATION & LISTING PLATFORM
 
-### 11. Luồng Tạo Merchant Tự Động Cho PM
+### 11. Luồng Tạo Merchant Tự Động Cho PM (3-Layer Workflow)
 
-Nhằm giảm thiểu tác vụ kỹ thuật thủ công và tối ưu hóa vận hành, MoSpark CMS sẽ thiết lập quy trình khởi tạo trang đối tác (Creation Workflows) theo hai hướng tiếp cận chính:
+Nhằm tối giản hóa thao tác, tăng tính tự động và đảm bảo kiểm soát chất lượng chặt chẽ, MoSpark CMS áp dụng quy trình khởi tạo trang đối tác (Creation Workflows) tinh gọn được chia làm đúng **3 Layer** chính:
+
+#### 11.1 Layer 1: Chọn Phương Thức Khởi Tạo (Select Method)
+Khi PM nhấn nút khởi tạo Merchant từ bên trong một **SEO/GEO Project** cụ thể, giao diện hiển thị 2 phương thức lựa chọn:
+1. **Phương thức 1 - Nhập tay (Manual):** Dành cho trường hợp onboard merchant mới chưa có trên hệ thống hoặc PM muốn tự kiểm soát dữ liệu thô.
+2. **Phương thức 2 - Đồng bộ từ M4B (Sync M4B):** Dành cho đối tác đã có tài khoản trên hệ thống MoMo App.
+
+#### 11.2 Layer 2: Nhập thông tin khởi tạo & Sync (Form Input & Sync)
+Tại bước này, hệ thống yêu cầu thu thập đủ **3 thông tin cốt lõi** (Tên, Địa chỉ, Ảnh) để làm nguyên liệu cho GenAI. Để tối ưu hóa tự động hóa và tránh sai lệch dữ liệu, hệ thống tích hợp công cụ **Google Map Search (Gemini-powered với Search Grounding)** để tự động crawl dữ liệu thực địa của quán. Quy trình thu thập cụ thể theo phương thức đã chọn ở Layer 1:
+
+* **Nếu PM chọn phương thức Manual (Nhập tay):**
+  * PM nhập **Tên Merchant**. Hệ thống lập tức kích hoạt **Google Map Search** để tìm kiếm trên Google Maps/Google Business Profile.
+  * Nếu tìm thấy địa điểm trùng khớp: Hệ thống tự động crawl và **auto-fill** các trường thông tin: *Tên đối tác chuẩn hóa, Địa chỉ chính xác, Giờ mở/đóng cửa*, và danh sách *Tiện ích* (Amenities - e.g. wifi, máy lạnh, bãi xe). PM chỉ cần xác nhận và chỉnh sửa nếu cần.
+  * Nếu không tìm thấy: PM tự nhập tay Tên, Địa chỉ, Giờ mở/đóng cửa và tích chọn các Tiện ích tương ứng.
+  * PM tải lên **1 Ảnh** thực tế của quán.
+
+* **Nếu PM chọn phương thức Sync M4B (Đồng bộ M4B):**
+  * PM nhập **Merchant ID** của đối tác. CMS gọi API M4B để tự động điền **Tên Merchant** và **Địa chỉ**.
+  * Đồng thời, hệ thống tự động kích hoạt **Google Map Search (Gemini-powered)** dựa trên Tên & Địa chỉ từ M4B để tìm kiếm listing tương ứng trên Google Maps, thực hiện crawl và tự động **làm giàu dữ liệu (Data Enrichment)** cho các trường thông tin còn thiếu trên M4B bao gồm: *Giờ mở/đóng cửa* và *Tiện ích*.
+  * PM tải lên **1 Ảnh** thực tế của quán.
+
+* *Lưu ý: Nút Tiếp Tục (Kích hoạt GenAI) sẽ bị khóa cho đến khi thu thập đủ cả 3 thông tin bắt buộc (Tên + Địa chỉ + Ảnh).*
+
+**Quy trình Kích hoạt GenAI đồng thời (Single-Pass Execution):**
+Khi PM nhấn xác nhận tiếp tục tại Layer 2, hệ thống tự động chạy **đồng thời trong 1 lượt duy nhất (Single-Pass)**:
+- **GenAI Content (Trọng phụ trách):** Sử dụng model Gemini dựa trên thông tin thô thu được (Tên, Địa chỉ, Giờ hoạt động, Tiện ích) để viết bài mô tả giới thiệu chi tiết chuẩn SEO (Unique content) & tự động sinh bộ câu hỏi thường gặp (FAQs).
+- **GenAI Image (Gemini Banana):** Xử lý hình ảnh vừa tải lên (làm nét, retouch và resize về chuẩn Banner 1050x450 px & Social Share 1200x630 px).
+
+#### 11.3 Layer 3: Kiểm duyệt và Xác nhận thông tin (Verify)
+Giao diện CMS Page Editor hiển thị kết quả sau khi chạy xong Single-Pass Pipeline:
+* PM xem trước, chỉnh sửa trực tiếp nội dung văn bản (Intro, FAQ) và ảnh đã được tối ưu trong thư viện (MoMo Gallery).
+* CMS tự động kiểm duyệt kiểm tra kỹ thuật (QC Gate: NAP, Payment Methods).
+* PM xác nhận thông tin OK và nhấn Publish để xuất bản trang, hệ thống tự động cập nhật Sitemap XML và ping chỉ mục (Indexing API).
+
+---
 
 ```mermaid
 graph TD
-    A[Bắt đầu khởi tạo Merchant] --> B{Chọn luồng khởi tạo}
-    B -->|Top-down: SEO/GEO Driven| C[SEO Team phân tích Intent & lập Inventory]
-    C --> D[Tạo các Cluster & Topic Slot trên CMS]
-    D --> E[PM đi thực tế thu thập data khớp Cluster]
+    Start([PM khởi tạo Merchant trong SEO/GEO Project]) --> Method{Layer 1: Chọn phương thức}
     
-    B -->|Bottom-up: PM Field Driven| F[PM đi khảo sát điểm bán offline]
-    F --> G{Chọn phương thức nhập liệu}
-    G -->|Manual| H[PM nhập tay NAP & Category]
-    G -->|Auto-sync| I[PM nhập Merchant ID từ M4B]
-    I --> J[Hệ thống gọi API Auto-fill dữ liệu gốc]
+    Method -->|Manual| Input_Manual[Layer 2: Nhập Tên Merchant]
+    Method -->|Sync M4B| Input_M4B[Layer 2: Nhập Merchant ID]
     
-    E --> K[Upload dữ liệu thô & Map SEO Cluster]
-    H --> K
-    J --> K
+    Input_Manual --> Gemini_Map_Manual[Google Map Search: Auto-fill Tên + Địa chỉ + Giờ mở cửa + Tiện ích]
+    Input_M4B --> API[CMS gọi API M4B: Tự điền Tên & Địa chỉ]
     
-    K --> PREVIEW[PM xem SEO Inventory & Market Research của Merchant Name]
-    PREVIEW --> DECIDE{PM đánh giá dữ liệu?}
-    DECIDE -->|Cần điều chỉnh tên/dữ liệu thô| G
-    DECIDE -->|Đồng ý & Tiếp tục| L[GenAI tự động sinh Intro & FAQ]
-    L --> M[CMS Page Editor: PM kiểm duyệt & Bổ sung]
-    M --> N{QC Gate: Đạt chuẩn NAP & Payment?}
-    N -->|Không đạt| O[Khóa nút Publish / Báo lỗi]
-    N -->|Đạt chuẩn| P[Publish & Tự động cập nhật Sitemap]
+    API --> Gemini_Map_Sync[Google Map Search: Làm giàu dữ liệu Giờ mở cửa + Tiện ích]
+    
+    Gemini_Map_Manual --> Upload[Tải lên 1 Ảnh thực tế của quán]
+    Gemini_Map_Sync --> Upload
+    
+    Upload --> Submit{PM bấm Tiếp tục}
+    
+    Submit --> GenAI[Chạy Single-Pass GenAI Pipeline: Trọng viết bài & Banana tối ưu ảnh]
+    
+    GenAI --> Verify[Layer 3: CMS Page Editor hiển thị bản thảo]
+    
+    Verify --> QC{QC Gate: Đạt chuẩn NAP & Payment?}
+    QC -->|Không đạt| Edit[PM chỉnh sửa lại]
+    Edit --> Method
+    QC -->|Đạt chuẩn| Live[Publish: Tự động cập nhật Sitemap XML & Indexing API]
 ```
 
-#### 11.1 Chi tiết hai luồng khởi tạo
-
-**Luồng 1: Khởi tạo định hướng SEO/GEO (Top-down)**
-Luồng này do đội ngũ SEO/Data định hướng dựa trên nhu cầu tìm kiếm thực tế của thị trường:
-1. **Phân tích Intent:** Team SEO phân tích Customer Journey và Search Intent để xác định các cơ hội traffic.
-2. **Tạo Topic Slot:** Tạo sẵn các cụm từ khóa (Topic Cluster) trên CMS (Ví dụ: "Top quán Bún chả ngon Hà Nội").
-3. **Thu thập dữ liệu:** PM/Sales đi thị trường dựa trên danh sách slot này để thu thập thông tin và ảnh thực tế khớp với cụm chủ đề đã lên kế hoạch.
-4. **Xem SEO Inventory (Market Research) & Xác nhận:** Trước khi kích hoạt quá trình tạo trang, PM xem trước thông tin SEO Inventory (Market Research) liên quan đến Merchant Name đó được hệ thống kết xuất để xác thực định hướng từ khóa và đối thủ cạnh tranh.
-
-**Luồng 2: Khởi tạo định hướng điểm bán (Bottom-up)**
-Luồng do PM và Sales đi thực tế tại các điểm bán (offline) chủ động onboard đối tác:
-1. PM khảo sát trực tiếp điểm bán, chụp hình menu, không gian quán và ghi nhận tọa độ GPS.
-2. PM truy cập MoSpark CMS và chọn phương thức nhập liệu:
-   - **Nhập liệu thủ công (Manual):** PM tự điền các thông tin NAP (Name, Address, Phone) và chọn danh mục.
-   - **Đồng bộ tự động (Auto-sync M4B):** PM chỉ cần nhập `Merchant ID`. Hệ thống tự động gọi API đồng bộ để điền đầy đủ các trường thông tin hành chính đã có trên hệ thống MoMo App.
-3. **Xem SEO Inventory (Market Research):** Trước khi tạo trang, hệ thống hiển thị dữ liệu Market Research của Merchant Name đó (Search Volume, KD, Search Intent, Competitors) từ SEO Inventory Database để PM phê duyệt và căn chỉnh định hướng từ khóa trước khi sinh bài.
-4. **Tạo nội dung tự động:** Sau khi xác nhận dữ liệu baseline và SEO Inventory, hệ thống kích hoạt GenAI để tạo bài giới thiệu và FAQ. PM thực hiện review lần cuối trước khi bấm Publish.
-
-#### 11.2 Cơ chế kiểm duyệt và Onboard tự động (Workflow Spec)
+#### 11.4 Cơ chế kiểm duyệt và Onboard tự động (Workflow Spec)
 1. **Slug conflict check:** Hệ thống tự động kiểm tra tính duy nhất của slug URL. Nếu bị trùng, hệ thống tự động thêm ID backend làm hậu tố (Ví dụ: `bun-thit-nuong-chi-tuyen-44`) để tránh lỗi trùng lặp URL.
 2. **QC Gate Validation:** CMS tự động rà soát các trường NAP và Payment Methods. Nếu thiếu thông tin bắt buộc, nút Publish sẽ bị khóa và hiển thị cảnh báo lỗi chi tiết.
 3. **Publish & Indexing:** Khi PM xác nhận Publish thành công, hệ thống MoSpark sẽ tự động cập nhật URL mới vào file XML sitemap và gửi ping index lên Google.
-4. **SEO Inventory & Market Research Preview (Trước khi tạo):** Nhằm hỗ trợ PM đưa ra quyết định tối ưu hóa cấu trúc nội dung và định hướng từ khóa trước khi kích hoạt tạo trang và sinh nội dung GenAI, CMS sẽ tự động truy vấn và hiển thị báo cáo nghiên cứu thị trường (Market Research) của Merchant Name đó:
+4. **SEO Inventory & Market Research Preview (Trước khi tạo):** Nhằm hỗ trợ PM đưa ra quyết định tối ưu hóa cấu trúc nội dung và định hướng từ khóa trước khi kích hoạt tạo trang và sinh nội dung GenAI, CMS sẽ tự động hiển thị báo cáo:
    - **Search Volume (Lượng tìm kiếm):** Hiển thị lượt tìm kiếm trung bình tháng của tên merchant hoặc các từ khóa thương hiệu + địa điểm liên quan.
    - **Keyword Difficulty (KD):** Chỉ số độ khó từ khóa (0-100) để đánh giá mức độ cạnh tranh trên công cụ tìm kiếm.
    - **Search Intent (Ý định tìm kiếm):** Xác định loại Intent chính (Local Search, Transactional, Informational).
    - **Top Ranking Competitors:** Danh sách top 5 đối thủ cạnh tranh đang xếp hạng cao nhất cho cụm từ khóa liên quan trên Google SERP.
    - **Keyword Cannibalization Alert:** Cảnh báo nếu từ khóa/tên merchant bị trùng lặp mục tiêu (cannibalization) với các trang merchant hoặc listing page đã xuất bản trước đó trên domain momo.vn.
 
-#### 11.3 Chi tiết Màn hình Preview SEO Inventory & Market Research (Sub-workflow)
+#### 11.5 Chi tiết Màn hình Preview SEO Inventory & Market Research (Sub-workflow)
 
 Để Nhật và đội ngũ kỹ thuật dễ dàng hình dung giao diện và các điều kiện logic tại màn hình Preview trước khi tạo trang, dưới đây là sơ đồ luồng xử lý chi tiết:
 
 ```mermaid
 graph TD
-    SubA[Nhập Merchant Name hoặc Merchant ID] --> SubB[CMS gọi API truy vấn SEO Inventory DB]
+    SubA[Nhập Tên + Địa chỉ hoặc Sync M4B] --> SubB[CMS gọi API truy vấn SEO Inventory DB]
     SubB --> SubC[Hiển thị Dashboard Market Research]
     
     SubC --> SubD1[Search Volume]
@@ -476,8 +657,8 @@ graph TD
 ### 12. Nâng Cấp Deep Data Cho Merchant Detail
 Nâng cao giá trị thông tin và độ uy tín (E-E-A-T) của trang chi tiết bằng cách làm giàu nguồn dữ liệu:
 - **Tích hợp Media & Cơ chế GenAI Design (Gemini Banana):**
-  * **Đồng bộ & Tải lên:** Đồng bộ hoặc cho phép PM tải lên tối thiểu 3 ảnh chất lượng thực tế về không gian quán, menu thực đơn và món ăn tiêu biểu.
-  * **GenAI Design Pipeline (Gemini Banana):** Khi PM tải lên một ảnh bất kỳ của quán với kích thước bất kỳ, hệ thống gọi pipeline GenAI Design (sử dụng Gemini Banana) để tự động áp dụng prompt làm nét, chỉnh sáng và retouch ảnh. Hệ thống tự động tối ưu hóa và xuất ra các kích thước chuẩn để đẩy vào Gallery bao gồm: ảnh **Banner** (1050x450 px) và hình **Social Share** (1200x630 px).
+  * **Đồng bộ & Tải lên tại Form Input:** Tải lên chỉ cần 1 ảnh thực tế tại Form khởi tạo ban đầu (Manual hoặc Sync M4B).
+  * **GenAI Design Pipeline (Gemini Banana) & Content Single-Pass:** Khi PM hoàn tất tải ảnh và bấm xác nhận, hệ thống gọi pipeline GenAI Design (sử dụng Gemini Banana) để tự động làm nét, chỉnh sáng và retouch ảnh cùng lúc với luồng sinh văn bản GenAI Content (chạy trong 1 lượt duy nhất). Hệ thống tự động tối ưu hóa và xuất ra các kích thước chuẩn để đẩy vào Gallery bao gồm: ảnh **Banner** (1050x450 px) và hình **Social Share** (1200x630 px).
   * **Định hướng tương lai:** Mở rộng khả năng tự động xử lý và retouch cho bất kỳ hình ảnh nào được tải lên trực tiếp thông qua trình soạn thảo CMS Page Editor.
 - **Tích hợp đánh giá (Review Integration):** Hiển thị điểm rating trung bình (1-5 sao) và số lượng đánh giá tổng hợp từ các nguồn:
   * Giao dịch thực tế trên MoMo (phản hồi sau khi user thực hiện thanh toán thành công).

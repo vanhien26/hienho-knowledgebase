@@ -1,18 +1,12 @@
-# 📄 Ads Manager Brd
-MoSpark Ads Manager - Web-to-App Campaign Platform
+# MoSpark - Ads Manager
+Nền tảng quản lý và phân phối quảng cáo tự động trên Web
 
-> - **Project:** MoSpark Web Platform
-> - **Main URL:** momo.vn/mospark
-> - **Division:** GPD (Growth Product Division)
-> - **Use Case:** Out-App Traffic
-> - **Product:** Web Growth Platform
-> - **SEO/GEO Project ID:** `mospark-ads-manager`
-> - **Owner:** GPD - Out-App Traffic (Bảo)
-> - **Governance:** Văn Hiến (Web Product Lead)
+> - **Project Name:** MoSpark Web Platform
+> - **Division:** GPD (Growth Platform Division)
+> - **Owner:** Bảo
+> - **PIC:** Thuận (Tech)
 > - **Version:** 3.0 · April 2026
-> - **Status:** Active - Division/Product Metadata
->
-> - **SEO Score:** N/A | **Traffic:** N/A | **W2A:** N/A | **Last updated:** 2026-05-18
+
 
 ---
 
@@ -59,7 +53,7 @@ MoSpark quản lý 7 loại trang chiến lược trên momo.vn. Ads Manager có
 | `/{mini-web}` | Mini Web Use Case | Intent transactional cao | Use Case-specific |
 | `/{mini-web}*` | Advanced Mini Web | Traffic lớn, multi sub-page | Use Case-specific |
 | `/` | Trang chủ | High traffic, awareness | **Shared-source (GPD)** |
-| `/doi-tac*` | Merchant Page | Cross-sell opportunity | **Shared-source (GPD)** |
+| `/merchant*` | Merchant Page | Cross-sell opportunity | **Shared-source (GPD)** |
 | `/blog*` | Growth Articles | Awareness và soft nudge | Mixed (Global/UC) |
 | `/tin-tuc*` | Communications | Awareness | Shared-source (GPD) |
 | `/hoi-dap*` | Help Center | Low interrupt | Shared-source (GPD) |
@@ -243,16 +237,19 @@ Toàn bộ ad slots trên Web MoMo được đăng ký vào registry tập trung
 
 Mỗi placement xác định: URL pattern áp dụng, format được phép, Division/Team có quyền ưu tiên, số lượng Ad active tối đa cùng lúc.
 
-**URL/Segment/Use Case Mapping:**
+**Smart Context & Tag Auto-Targeting (Thay thế Project Mapping):**
 
-PM/PO có thể nhìn thấy bản đồ tổng thể - trang nào thuộc Use Case nào, placement nào đang được sử dụng, slot nào còn trống trong "kho" Shared-source của GPD.
+Loại bỏ cơ chế đăng ký Project và map URL thủ công. Hệ thống tự động xác định nơi phân phối dựa trên:
+- **CMS Tags & Categories:** Liên kết trực tiếp với nhãn phân loại từ CMS (ví dụ: tag `bao-hiem-xe-may`, `vay-tieu-dung`). PM chỉ cần chọn target tag tương ứng khi tạo campaign.
+- **Dynamic Rules:** Cấu hình luật khớp URL/Title tự động (ví dụ: `URL chứa "/bao-hiem-"` hoặc `Title chứa "lãi suất vay"`). Hệ thống tự map trang theo thời gian thực mà không cần khai báo tĩnh.
 
-**Conflict Resolution:**
+**Conflict Resolution (Dynamic Priority Engine):**
 
-Khi nhiều campaign match cùng một placement, hệ thống resolve theo thứ tự: 
-- Đối với Shared-source: GPD Priority Level → Campaign start_at.
-- Đối với Use Case-specific: Division ownership → Priority Level.
-Global guardrail cứng: tối đa 1 Popup active per session, tối đa 2 Balloon cùng lúc.
+Khi nhiều campaign cùng khớp một placement, hệ thống tính Điểm Ưu tiên (Priority Score) để quyết định hiển thị:
+`Score = Campaign Weight + Matching Weight + A/B Test Factor`
+- **Campaign Weight:** Phân cấp độ ưu tiên (GPD Global Priority > Division Priority).
+- **Matching Weight:** Ưu tiên cao nhất cho **User Intent (Retargeting)** (+50 điểm), sau đó đến **CMS Tag** (+30 điểm) và **URL/Title Rule** (+10 điểm).
+- Global guardrail cứng: tối đa 1 Popup active per session, tối đa 2 Balloon cùng lúc.
 
 **Inventory Dashboard:**
 
@@ -305,12 +302,14 @@ Thay vì targeting theo Screen (như Athena), Ads Manager targeting theo loại 
 ### 5.3. Targeting (Context & On-site Retargeting)
 
 **Phase hiện tại (Module 1):**
-- **URL Context:** Ad chỉ hiện/ẩn dựa trên URL pattern của trang hiện hành.
+- **URL Context:** Ad chỉ hiện/ẩn dựa trên URL pattern của trang hiện hành hoặc chèn mã Shortcode trực tiếp trong CMS.
 - **Device type:** Phân biệt Mobile/Desktop (để định tuyến UI/UX phù hợp).
 
-**Phase tiếp theo (Module 2-3):**
-- **Placement-based targeting:** Chọn slot từ Registry thay vì tự nhập URL pattern.
+**Phase tiếp theo (Module 2-3) - Smart Targeting Engine:**
+- **Context-Based Targeting (CMS Tags & Dynamic Rules):** Thay thế cơ chế mapping Project thủ công. Tận dụng tag từ CMS (e.g., `bao-hiem-xe-may`, `vay-tieu-dung`) và các Rule khớp chuỗi URL/Title tự động để phân phối Ads thông minh đến đúng trang đích.
+- **Placement-based targeting:** Chọn slot từ Registry tập trung thay vì tự nhập URL pattern tĩnh.
 - **On-site Retargeting (Behavior-based):** Sử dụng Local Storage / 1st Party Cookie để lưu vết Intent (Ví dụ: User từng vào `/vay-nhanh` nhưng chưa tải app). Khi user truy cập các trang dùng chung (Homepage, Blog), hệ thống tái kích hoạt Widget Vay Nhanh hoặc Sticky Bar nhắc nhở. Tính năng này giúp bám đuổi hiệu quả mà **không cần User phải Log In**, đảm bảo 100% ẩn danh và tuân thủ Data Privacy.
+- **Gamified Behavioral Signal Integration:** Các tương tác vuốt (swipe right/left) trên thẻ Swipe to Match và hành vi cuộn/lưu (double tap to like) trên Doom Scroll Feed sẽ được ghi nhận vào hồ sơ sở thích ẩn danh ở Local Storage (`momo_user_interests`). Động cơ phân phối của Ads Manager sẽ đọc các nhãn sở thích này để tự động cá nhân hóa và hiển thị các chiến dịch quảng cáo liên quan (như phiếu mua hàng F&B hoặc coupon hoàn tiền) trên các trang dùng chung khác của momo.vn.
 
 ### 5.4. Chiến lược Cross-Services & Cross-Traffic bằng Native Widget / Component
 
@@ -330,17 +329,18 @@ Bên cạnh các định dạng hiển thị quảng cáo truyền thống (Ball
 
 ### 5.5. Taxonomy: Ad Format - Widget - Component
 
-Ads Manager phân phối 3 loại entity khác nhau về chiều sâu tương tác và mục tiêu chuyển đổi. Đây là framework phân loại chuẩn để tránh nhầm lẫn khi spec và build:
+Ads Manager phân phối 4 loại entity khác nhau về chiều sâu tương tác và mục tiêu chuyển đổi. Đây là framework phân loại chuẩn để tránh nhầm lẫn khi spec và build:
 
 | Loại | Định nghĩa | Chiều sâu tương tác | Output cho User | Mục tiêu chính |
 |---|---|---|---|---|
 | **Ad Format** | Promotional message - user xem và click | Passive (view + click 1 bước) | Thông điệp + CTA dẫn sang App | Awareness / W2A Traffic |
 | **Widget** | Utility tool - user nhập input, nhận output ngay | Interactive 1 bước (nhập → kết quả) | Kết quả tính toán hoặc tra cứu cá nhân hóa | Intent Capture + PLG (anti-LLM moat) |
 | **Component** | Interactive flow - user thực hiện giao dịch multi-step | Interactive nhiều bước (nhập → preview → xác nhận → hoàn tất) | Giao dịch hoàn tất (hoặc handoff sang App) | Inline Transaction - giảm friction |
+| **Gamified Widget** | Công cụ khám phá giải trí - user vuốt, cuộn hoặc chạm để tìm ưu đãi | High Engagement (cử chỉ vuốt/cuộn dọc liên tục) | Danh sách ưu đãi đã lưu ("Túi Quà" - Local Storage) | Giữ chân người dùng + Capture intent ẩn danh + Dopamine hook |
 
 **Nguyên tắc kiến trúc không thể bỏ qua:**
 
-- Widget và Component là **PLG Tools độc lập** - tồn tại và hoạt động không phụ thuộc vào Ads Manager.
+- Widget, Component và Gamified Widget là **PLG Tools độc lập** - tồn tại và hoạt động không phụ thuộc vào Ads Manager.
 - Ads Manager đóng vai trò **Distribution Layer** duy nhất: quyết định Widget/Component nào được nhúng vào trang nào, vào thời điểm nào, theo context nào - thông qua CMS Shortcode hoặc Placement Registry.
 - Dev build Widget/Component Library. Ads Manager quản lý việc phân phối. Hai việc này tách biệt rõ ràng.
 
@@ -413,6 +413,33 @@ Ví dụ: Tính phí BH xe → Phí dự kiến → Mua ngay (inline Component)
 ```
 
 Ads Manager quản lý chuỗi này qua **Shortcode chain** trong CMS: `[widget:phat-nguoi] [component:nop-phat]` - render theo thứ tự, dữ liệu output của Widget có thể được pre-fill vào Component.
+
+### 5.8. Gamified Discovery Widgets (Phase III)
+
+Gamified Widgets là các thành phần tương tác cao để giữ chân người dùng. Ads Manager chịu trách nhiệm phân phối nội dung quảng cáo (Sponsored Cards) vào các widget này và theo dõi hành vi tương tác để retargeting:
+
+#### 1. Swipe to Match (Tinder-style)
+*   **Cơ chế Phân phối:** Ads Manager phân phối các thẻ ưu đãi (deal cards) của merchant dựa trên khoảng cách GPS và mức độ ưu tiên của chiến dịch. Có hỗ trợ thẻ tài trợ (Sponsored Card) từ các đối tác thương hiệu lớn.
+*   **Tracking & Intent Capture:**
+    *   **Swipe Right event:** Ghi nhận sự quan tâm (`action:like`), lưu ID vào `momo_saved_deals`, tăng điểm sở thích ngành hàng tương ứng trong Local Storage (`momo_user_interests`).
+    *   **Swipe Left event:** Ghi nhận sự bỏ qua (`action:skip`), dùng làm tín hiệu để giảm phân phối ngành hàng đó cho user trong session.
+    *   **Swipe Up / Info click:** Ghi nhận ý định tìm hiểu chi tiết, điều hướng đến Merchant Page.
+
+#### 2. Doom Scroll Feed (TikTok-style)
+*   **Cơ chế Phân phối:** Một luồng danh sách cuộn dọc vô tận gồm các thẻ hình ảnh/video ngắn. Ads Manager đóng vai trò kiểm soát tần suất chèn quảng cáo (Ad Pacing Engine).
+*   **Cơ chế Chèn Quảng Cáo (Sponsored Card Injection):**
+    *   **Quy tắc:** Cứ mỗi 5 thẻ nội dung đối tác thông thường (organic merchant cards), hệ thống sẽ chèn 1 thẻ tài trợ/quảng cáo (sponsored card) do Ads Manager phân phối.
+    *   **Định dạng thẻ tài trợ:** Nhãn hiển thị bắt buộc là "Tài trợ" (Sponsored), tích hợp nút bấm mở ứng dụng trực tiếp bằng Onelink.
+*   **Tracking & Analytics:**
+    *   **Double-tap to like event:** Lưu vết tương thích cao, tự động kích hoạt lưu deal vào ví Local Storage.
+    *   **Scroll Depth / Time spent:** Đo lường thời gian xem của từng thẻ để chấm điểm mức độ thu hút nội dung.
+
+#### 3. Social Activity Feed (Facebook-style)
+*   **Cơ chế Phân phối:** Ads Manager phân phối các bài viết và gợi ý đối tác đang thịnh hành (Trending merchants) vào feed tin hoạt động.
+*   **Tracking & Social Proof Loops:**
+    *   **Activity card click event:** Đo lường hiệu quả thu hút của luồng hoạt động thực tế.
+    *   **Trending click event:** Theo dõi chuyển đổi chéo khi người dùng bấm vào các đối tác hot.
+    *   **Q&A/Recommendation trigger:** Thu thập ý định tìm kiếm cụ thể qua chatbot hỏi đáp để trả về 3 link đối tác được tài trợ phù hợp nhất.
 
 ---
 
@@ -568,7 +595,7 @@ A/B Testing chỉ áp dụng cho **Landing Page** trong Phase 1:
 | P0 | Mini Web Use Case (bảo hiểm, BNPL, vay, phạt nguội) | Intent transactional cao nhất, gần điểm convert |
 | P0 | Landing Page khuyến mãi | User đang tìm ưu đãi - highly receptive |
 | P1 | Blog/News tài chính | Traffic lớn, cơ hội Awareness |
-| P1 | Partner Page (/doi-tac) | Cross-sell opportunity |
+| P1 | Partner Page (/merchant) | Cross-sell opportunity |
 | P2 | Help Center, Guide | Chỉ Awareness nhẹ - không interrupt flow |
 
 ### 7.2. Out of Scope
@@ -651,7 +678,7 @@ User đã có app nhưng inactive → vào web tìm kiếm → thấy Ads nhắc
 |---|---|---|
 | **Phase 1: MVP & Core Ops** | **Q2/2026** | **Thư viện Widget nhúng vào bài viết (Phạt Nguội, BHYT) thông qua CMS Shortcode.** URL Targeting cơ bản. Tích hợp Umami cơ bản. |
 | **Phase 2: Inventory Mgmt** | **Q3/2026** | Placement Registry MVP + Xử lý Conflict tự động + Tích hợp hiển thị Reach Estimate. |
-| **Phase 3: Retargeting & Multi-tenant** | **Q4/2026** | Kích hoạt On-site Retargeting (bám đuổi qua Local Storage) + Phân quyền Division tự chạy Ads. |
+| **Phase 3: Retargeting & Gamification** | **Q4/2026** | Kích hoạt On-site Retargeting (bám đuổi qua Local Storage) + Gamified Discovery Widgets (Swipe to Match, Doom Scroll, Social Feed) + Phân quyền Division tự chạy Ads. |
 
 ### Action Plan (Chỉ focus Phase 1)
 
@@ -674,7 +701,7 @@ Nhằm tránh "ngộp" resource cho Tech team, danh sách dưới đây chỉ t�
 | **Native Widget & Shortcode** | **Q2/2026 (Trọng tâm MVP)** | **Thư viện Widget nhúng vào bài viết (Phạt Nguội, BHYT) thông qua CMS Shortcode.** |
 | Module 1 | Done - Q2/2026 | Mở rộng pilot từ User Growth sang GPD (Ưu tiên Inline Banner & Widget) |
 | Module 2 | Q2/2026 | Placement Registry MVP + Conflict Resolution + Inventory Dashboard |
-| Module 3 | Q3/2026 | Multi-tenant, Umami Dashboard, Extended Formats |
+| Module 3 | Q3/2026 | Multi-tenant, Umami Dashboard, Extended Formats, Gamified Widgets Integration |
 
 ---
 
@@ -685,6 +712,7 @@ Nhằm tránh "ngộp" resource cho Tech team, danh sách dưới đây chỉ t�
 ---
 
 ## Change Log
+- **Tháng 6/2026 (v3.3):** Thay thế cơ chế registry Project và mapping URL thủ công bằng cơ chế Smart Targeting Engine (CMS Tags & Categories + Dynamic Matching Rules), tích hợp thuật toán tính điểm ưu tiên (Priority Score Engine) cho phần giải quyết xung đột (Conflict Resolution).
 - **Tháng 5/2026 (v3.2):** Thêm Section 6.4 - A/B Testing trên Landing Page Builder. Ownership: Ads Manager owns toàn bộ test logic (split, distribute, track, winner). LP Builder chỉ tạo trang LP. 3 loại test: LP Variant, Ad Creative, CTA/Copy. Workflow 8 bước. Winner: manual PM declare trong Ads Manager. Scope giới hạn Phase 1: chỉ Landing Page, không test Hub/Spoke/Blog/Homepage.
 - **Tháng 5/2026 (v3.1):**
   - Mở rộng scope phân phối: Ads Manager không chỉ distribute Ad Format mà còn distribute Widget (PLG Tool passive) và Component (PLG Tool active flow).

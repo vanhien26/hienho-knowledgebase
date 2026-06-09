@@ -1,10 +1,3 @@
----
-title: 🏪 Momo Merchant Page Prompt - F&B Content Writer v1.0
-last_reviewed: 2026-05-25
-next_review: 2026-08-25
----
-
-
 ## SYSTEM PROMPT
 
 ⚠️ **QUY TẮC TỐI THƯỢNG:** ĐÂY KHÔNG PHẢI LÀ MỘT CUỘC HỘI THOẠI!

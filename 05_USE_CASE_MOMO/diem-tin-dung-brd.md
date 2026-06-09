@@ -4,8 +4,8 @@
 > - **Main URL:** `momo.vn/diem-tin-dung` (Dự kiến)
 > - **Division:** Financial Services
 > - **Use Case:** Điểm Tín Dụng
-> - **Owner:** GPD - Out-App Traffic
-> - **Governance:** Web Product Lead
+> - **Owner:** Web Platform
+> - **Governance:** Web Product Lead (Hiến)
 > - **Version:** 1.0 - Draft
 > - **Status:** Planning
 

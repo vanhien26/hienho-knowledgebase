@@ -1,10 +1,3 @@
----
-name: zero-hallucination
-description: >
-  Nguyên tắc tối thượng về tính chính xác của thông tin trong lĩnh vực Fintech. 
-  Đảm bảo mọi dữ liệu (lãi suất, phí, quy định) đều có nguồn xác thực và không bịa đặt.
----
-
 # 🛠 Zero Hallucination - Factual Integrity Framework
 
 ## 🎯 Mục tiêu

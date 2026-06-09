@@ -56,7 +56,7 @@ Trước khi xử lý bất kỳ câu hỏi hoặc yêu cầu nào, AI phải tu
 
 ## 4. Workflow theo Dự án (Project-based Variable Logic)
 
-Mỗi khi có một Use Case mới (Ví dụ: `Dịch vụ công`), Routine thực thi sẽ là:
+Mỗi khi có một Use Case mới (Ví dụ: `Dịch vụ công`), Routine thực thi tuân thủ chặt chẽ theo Framework **[[seo-execution-sop]]** (Quy trình 8 bước triển khai). Dưới đây là tóm tắt các điểm chốt chặn (Gate Checks) quan trọng:
 
 1.  **Define Project**: Khởi tạo biến `Project: Dịch vụ công` trên MoSpark.
 2.  **Mapping Hierarchy**: Phân bổ URL cho các cụm trang (Blog, News, Help, Guides...).

@@ -1,10 +1,3 @@
----
-name: brainstorming
-description: >
-  Quy trình tìm giải pháp sáng tạo và thực thi cho các vấn đề phức tạp. 
-  Dùng sau khi đã bóc tách vấn đề bằng First Principles và hiểu User Job bằng JTBD.
----
-
 # 🧠 Brainstorming - Problem Solving Protocol
 
 ## 🎯 Mục tiêu

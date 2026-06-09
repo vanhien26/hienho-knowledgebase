@@ -1,18 +1,4 @@
----
-title: "MoSpark SEO Keyword Inventory: Bản đồ Tài nguyên & Thị phần (SoV)"
-description: >
-  Hệ thống quản lý tài nguyên từ khóa, thị phần (SoV) và tiềm năng tăng trưởng. 
-  Điểm bắt đầu và trục định hướng cho mọi dự án Web Growth trên MoSpark.
-version: v4.7
-status: Active
-owner: Thuận (Out-App Traffic GPD Lead)
-support: Văn Hiến (Web Product Lead)
-last_reviewed: 2026-05-18
-next_review: 2026-08-18
-tags: [mospark, seo-inventory, share-of-voice, keyword-registry, traffic-growth]
----
-
-# 📊 MoSpark SEO Keyword Inventory
+# MoSpark - SEO Keyword Inventory
 Bản đồ Tài nguyên & Thị phần (SoV)
 
 > - **Project:** MoSpark Web Platform
@@ -79,10 +65,71 @@ SEO Inventory là **tầng đầu tiên** trong chuỗi vận hành MoSpark - mo
 | **INPUT** | Total search volume theo Use Case | Ahrefs / Google KP | Quarterly |
 | **INPUT** | Traffic thực tế MoMo | GA4 / BigQuery | Monthly |
 | **INPUT** | Business priority từ leadership | OKR / Company Direction | Quarterly |
-| **OUTPUT** | Priority Use Case list + Priority Score | → GenAI Content Engine | Quarterly |
+| **OUTPUT** | Priority Use Case list + Priority Score | → SEO/GEO Project Management Hub | Quarterly |
 | **OUTPUT** | Market Share % theo Use Case | → Performance Loop | Monthly |
 | **OUTPUT** | Keyword ownership map | → Quality Gate (Cannibalization block) | Per project |
 | **OUTPUT** | Market sizing data | → BRD mới (North Star, KPI input) | Ad-hoc |
+
+### 2.3. Bảng Dữ liệu Thị trường (Master Market Sizing)
+
+Dưới đây là cơ sở dữ liệu gốc phân bổ Search Volume hàng tháng theo từng Use Case thị trường, được sắp xếp từ cao xuống thấp. Dữ liệu này là tham số cốt lõi để tính toán Điểm Ưu tiên (SEO-ICE) và phân bổ nguồn lực:
+
+| Thị trường (Market) | Volume/tháng |
+|---|---|
+| Gold | 85,758,870 |
+| Merchant Page | 37,600,000 |
+| Exchange Rate | 18,128,060 |
+| Cinema | 11,346,380 |
+| Game Card | 7,466,200 |
+| Public Servies | 5,858,590 |
+| Traffic Fine | 3,599,070 |
+| Stock | 3,000,000 |
+| Loan | 2,958,140 |
+| Flight | 1,820,000 |
+| Travel | 1,170,000 |
+| Foreign Currency | 1,079,000 |
+| Interest rate | 1,050,000 |
+| Bus | 966,000 |
+| Social Insurance | 938,090 |
+| Transfer Money | 870,000 |
+| Sim | 850,000 |
+| Credit | 681,760 |
+| Credit Card | 600,900 |
+| Heath Insurance | 396,910 |
+| Bad Debt | 307,200 |
+| Tiktok Coin | 267,200 |
+| Installment | 230,000 |
+| Ability Assessment | 220,000 |
+| Saving | 209,000 |
+| Mobile Top-up | 190,000 |
+| Electricity | 188,000 |
+| Pay Later | 135,290 |
+| Mở tài khoản ngân hàng | 96,800 |
+| Credit Score | 96,790 |
+| Thuê xe tự lái | 91,900 |
+| Train | 76,000 |
+| Bike Insurance | 58,810 |
+| Bond | 55,560 |
+| ETC | 50,420 |
+| Auto Insurance | 49,580 |
+| Hotel Booking | 42,000 |
+| TV Broadcast | 41,500 |
+| eSim du lịch | 38,000 |
+| Critical illness | 37,930 |
+| Mutual Fund | 36,000 |
+| Nạp Data | 32,000 |
+| Thanh toán thẻ tín dụng | 31,100 |
+| Sàn đầu tư | 17,430 |
+| Nước | 16,800 |
+| Đặt lịch khám bệnh | 16,000 |
+| Cross Border | 14,500 |
+| Internet | 13,800 |
+| Chuyển tiền quốc tế | 13,650 |
+| Thanh toán khoản vay | 11,320 |
+| Travel Insurance | 10,000 |
+| Thanh toán phí bảo hiểm | 6,600 |
+| Soundbox | 6,540 |
+| Túi Thần Tài | 6,300 |
 
 ---
 
@@ -162,7 +209,7 @@ graph TD
 | Phase | Milestone | Tình trạng | Mục tiêu thực thi |
 |---|---|---|---|
 | **Phase 1** | SEO Inventory v4 (Manual) | 🟢 Live / Active | Hoàn tất bảng số liệu trên Docx/Excel cho mảng Financial & Payment. |
-| **Phase 2** | MoSpark Dashboard Integration | 🟡 Planning | Tích hợp thẳng số liệu Inventory vào lúc tạo Project trên hệ thống MoSpark CMS. |
+| **Phase 2** | MoSpark Dashboard Integration | 🟡 Planning | Tích hợp thẳng số liệu Inventory vào lúc tạo Project trên hệ thống MoSpark. |
 | **Phase 3** | Automated Alert System | 🔴 Future | Hệ thống kết nối API với công cụ bên thứ 3 (như GSC) để tự động hóa Tracking thị phần. |
 
 ---
@@ -251,7 +298,7 @@ Dùng traffic thực (GA4/BigQuery), không dùng Impressions (GSC). Impressions
 
 ### 8.3. Cơ chế Chống Keyword Cannibalization
 
-Mỗi keyword cluster chỉ được gán cho đúng 1 URL trên momo.vn. Khi PM tạo content mới trên MoSpark CMS, hệ thống tự kiểm tra:
+Mỗi keyword cluster chỉ được gán cho đúng 1 URL trên momo.vn. Khi PM tạo content mới trên MoSpark, hệ thống tự kiểm tra:
 
 - Keyword **chưa được gán** → cho phép tạo mới.
 - Keyword **đã có URL sở hữu** → block, hiển thị cảnh báo và trỏ về URL cũ để tối ưu thay vì tạo trang mới.
@@ -262,6 +309,7 @@ Mục đích: Tránh tình huống 2 trang cùng tối ưu cho 1 từ khóa - ch
 
 ## 9. Tài liệu Liên kết
 *   **Master Strategy:** [[04_MOSPARK_PLATFORM/mospark_master|MoSpark Master Doc]]
+*   **SEO/GEO Project Hub:** [[04_MOSPARK_PLATFORM/mospark_seo_geo_project|MoSpark SEO/GEO Project Management]]
 *   **Quy trình GenAI Content:** [[04_MOSPARK_PLATFORM/mospark_genai_content|MoSpark GenAI Content Engine]]
 *   **Quản trị Bối cảnh:** [[04_MOSPARK_PLATFORM/mospark_business_context|Business Context Management]]
 *   **Chỉ đạo tối cao:** [[00_HARNESS_CORE/hienho_master_doc|Hienho Master Doc]]

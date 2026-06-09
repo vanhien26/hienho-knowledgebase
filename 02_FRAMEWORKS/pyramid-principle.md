@@ -1,10 +1,3 @@
----
-name: pyramid-principle
-description: >
-  Nguyên tắc cấu trúc thông tin theo hình kim tự tháp: Kết luận trước, diễn giải sau. 
-  Giúp truyền đạt thông tin logic, súc tích và thuyết phục.
----
-
 # 🧠 Pyramid Principle - Logic in Communication
 
 ## 🎯 Mục tiêu

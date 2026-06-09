@@ -1,10 +1,3 @@
----
-title: "MoMo Thinking Protocol (Read-Use-Answer)"
-description: "Quy trình tư duy hệ thống áp dụng cho AI và con người khi xử lý tác vụ trong MoMo Knowledge Base."
-last_reviewed: 2026-05-18
-next_review: 2026-08-18
----
-
 # 🧠 MoMo Thinking Protocol: ĐỌC - DÙNG - TRẢ
 
 Mục tiêu của Protocol này là biến mọi câu trả lời từ một ý kiến cá nhân thành một giải pháp có hệ thống, dựa trên dữ liệu và bám sát chiến lược.
@@ -15,7 +8,7 @@ Mục tiêu của Protocol này là biến mọi câu trả lời từ một ý 
 Trước khi đưa ra bất kỳ nhận định nào, phải xác định được các nguồn tin cậy nhất (Single Source of Truth):
 
 1.  **Chiến lược (Strategic Plan):** Đọc [[01_STRATEGIC_PLAN/web-momo-okrs-2026|Web MoMo OKRs 2026]] để hiểu mục tiêu North Star.
-2.  **Bối cảnh dự án (Business Context):** Đọc các file `business_context_*.md` hoặc [[04_MOSPARK_PLATFORM/mospark_business_context|MoSpark Business Context Template]] để hiểu mô hình kinh doanh.
+2.  **Bối cảnh dự án (Business Context):** Đọc các file `business_context_*.md` hoặc [[04_MOSPARK_PLATFORM/mospark_genai_content#7. Business Context - Các trường bắt buộc|MoSpark Business Context Template]] để hiểu mô hình kinh doanh.
 3.  **Thực thi (Implementation):** Đọc bản BRD mới nhất của Use Case đó trong folder [[05_USE_CASE_MOMO/dich-vu-cong-brd|05_USE_CASE_MOMO]].
 4.  **Dữ liệu thực (Data):** Đọc các file báo cáo trong [[06_REPORTS/report-thang-05-2026|06_REPORTS]] để lấy baseline thực tế.
 

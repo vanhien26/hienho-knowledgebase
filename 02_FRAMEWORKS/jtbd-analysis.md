@@ -1,11 +1,3 @@
----
-name: jtbd-analysis
-description: >
-  Biến "Keyword Research" thành "User Motivations". Dùng để định hình chiến lược sản phẩm (Product) 
-  và nội dung (Content) dựa trên lý do thực sự khiến người dùng tìm kiếm. 
-  Output: JTBD Map trỏ thẳng vào Architecture & Content Matrix.
----
-
 # 🧠 JTBD Analysis - Keyword-Driven Edition
 
 ## 🎯 Mục tiêu

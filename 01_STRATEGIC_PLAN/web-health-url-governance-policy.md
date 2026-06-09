@@ -2,7 +2,7 @@
 ## momo.vn - Platform Health Management
 
 > **Version:** 2.0 | **Ngày tạo:** 2026-05-22 | **Ngày hiệu lực:** Sau khi VP phê duyệt
-> **Policy Owner:** Văn Hiến - Web Product Lead, Out-App Traffic, GPD
+> **Policy Owner:** Văn Hiến - Web Product Lead, Web Platform, GPD
 > **Approver:** Công - VP, Growth Platform Division
 > **Trạng thái:** Draft - Pending VP Approval
 > **Chu kỳ review:** 6 tháng / khi có thay đổi platform lớn
@@ -89,7 +89,7 @@ Chính sách này nhằm:
 | **Crawl Budget** | Giới hạn số trang Googlebot crawl trên momo.vn trong một khoảng thời gian. Trang kém chất lượng tiêu tốn crawl budget không hiệu quả, kéo hiệu suất toàn domain xuống |
 | **W2A (Web-to-App)** | Tỷ lệ chuyển đổi từ người dùng web sang người dùng App (Install hoặc Register), đo bởi Appsflyer/Onelink |
 | **Noindex** | Chỉ thị kỹ thuật bằng meta tag hoặc HTTP header yêu cầu Google không đưa trang vào kết quả tìm kiếm |
-| **Growth Platform** | Team Out-App Traffic - cụ thể là SEO Lead (Hiến) và Web Platform Manager (Bảo) |
+| **Growth Platform** | Team Web Platform - cụ thể là SEO Lead (Hiến) và Web Platform Manager (Bảo) |
 | **Growth Plan** | Kế hoạch tăng trưởng tối thiểu 6 tháng bao gồm: target keyword cluster, traffic milestone, resource commit |
 
 ---
@@ -433,7 +433,7 @@ Thay đổi nhỏ về threshold và tiêu chí đo lường: SEO Lead có thể
 
 | Vai trò | Họ tên | Chức vụ | Ngày ký | Chữ ký |
 |--------|-------|---------|--------|--------|
-| Policy Owner | Văn Hiến | Web Product Lead, Out-App Traffic, GPD | ____________ | ____________ |
+| Policy Owner | Văn Hiến | Web Product Lead, Web Platform, GPD | ____________ | ____________ |
 | Approver | ____________ | VP, Growth Platform Division | ____________ | ____________ |
 
 *Chính sách có hiệu lực kể từ ngày Approver ký phê duyệt.*

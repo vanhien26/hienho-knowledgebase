@@ -1,12 +1,3 @@
----
-title: 📄 Use Case Document
-_use-case-document  
-description: Tạo Web Growth Strategy Document cho bất kỳ Use Case nào của MoMo.vn.
-last_reviewed: 2026-05-15
-next_review: 2026-08-15
----
-
-
 - Trigger khi user nhắc: web growth strategy, use case document, strategy doc,  
 growth plan, zero to one, kick-off Use Case mới, master doc, tài liệu chiến lược. 
 - category: strategy-document  

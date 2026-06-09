@@ -4,8 +4,8 @@
 > - **Main URL:** momo.vn/vien-thong (hub) - /sim-so-dep - /nap-data - /esim-du-lich - /nap-tien-dien-thoai
 > - **Division:** PS (Payment Services)
 > - **Use Case:** Telco
-> - **Owner:** GPD - Out-App Traffic
-> - **Governance:** Web Product Lead
+> - **Owner:** Web Platform
+> - **Governance:** Web Product Lead (Hiến)
 > - **Version:** 2.1 - 2026-05-24
 > - **Status:** Active (Approved)
 

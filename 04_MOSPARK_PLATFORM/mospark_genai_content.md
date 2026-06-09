@@ -1,4 +1,4 @@
-# MoSpark GenAI Content Engine
+# MoSpark - GenAI Content Engine
 Nền tảng sản xuất nội dung bằng AI
 
 > - **Project Name:** MoSpark Web Platform
@@ -113,7 +113,7 @@ Biến MoSpark thành "Production Lab" duy nhất, nơi nội dung được sả
 
 ### 6.1. SEO/GEO Project làm Trung tâm Quản trị & Mapping Microsite
 
-Mỗi dự án SEO/GEO (SEO/GEO Project) trên MoSpark không chỉ đơn thuần là công cụ tạo nội dung mà hoạt động như **Trung tâm Quản trị Dự án (Project Management Hub)**.
+Mỗi dự án SEO/GEO (SEO/GEO Project) trên MoSpark không chỉ đơn thuần là công cụ tạo nội dung mà hoạt động như **Trung tâm Quản trị Dự án (Project Management Hub)** (Chi tiết xem tại: [[04_MOSPARK_PLATFORM/mospark_seo_geo_project|SEO/GEO Project Management]]).
 - **Ràng buộc Mapping 1-1 cứng:** Mỗi SEO/GEO Project phải được thiết lập liên kết (mapping) bắt buộc với **chính xác 1 Microsite** (Use Case) tương ứng. Dự án không được phép hoạt động mồ côi (orphaned).
 - **Cơ chế Định tuyến đường dẫn:** Việc mapping 1-1 này nhằm tuân thủ tuyệt đối cơ chế định tuyến SEO/GEO của MoSpark: mọi bài viết Blog, tài liệu thuộc dự án bắt buộc phải nằm dưới URL của Microsite đó theo cấu trúc: `/{use-case}/blog*` (Ví dụ: `/phat-nguoi/blog/quy-dinh-phat-nguoi-o-to`).
 - **Phân tách thực thể:** Bản thân Microsite quản lý toàn bộ tài sản nội dung của Use Case đó. Blog, Landing Page, FAQ, Merchant Page... đều là các module phân phối thuộc Microsite - không phải các entity hoạt động độc lập:
@@ -502,6 +502,11 @@ Hệ thống GenAI Content sẽ phục vụ sản xuất nội dung cho các d�
 ---
 
 
+
+## 11. Tài liệu Liên kết
+*   **Master Strategy:** [[04_MOSPARK_PLATFORM/mospark_master|MoSpark Master Doc]]
+*   **SEO/GEO Project Hub:** [[04_MOSPARK_PLATFORM/mospark_seo_geo_project|MoSpark SEO/GEO Project Management]]
+*   **Dữ liệu Thị trường:** [[04_MOSPARK_PLATFORM/mospark_seo_inventory|MoSpark SEO Keyword Inventory]]
 
 ## 12. Change Log
 - **v4.5 (2026-06-07):** Nâng cấp tài liệu định nghĩa GenAI Content Engine thành Trung tâm Quản trị Dự án SEO/GEO (SEO/GEO Project Management Hub). Quy định ràng buộc mapping 1-1 bắt buộc với Microsite và cơ chế định tuyến tự động `/{use-case}/blog*` ở mức Database và Router (Hiến).

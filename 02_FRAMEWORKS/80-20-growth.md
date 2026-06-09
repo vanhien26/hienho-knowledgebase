@@ -1,10 +1,3 @@
----
-name: 80-20-growth
-description: >
-  Áp dụng nguyên lý Pareto để tập trung vào 20% nỗ lực tạo ra 80% kết quả tăng trưởng. 
-  Giúp tối ưu hóa nguồn lực và ưu tiên các dự án "High Impact - Low Effort".
----
-
 # 🎯 80/20 Growth Framework (Pareto Principle)
 
 ## 🎯 Mục tiêu
