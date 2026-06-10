@@ -15,7 +15,7 @@
 Các Business Unit (BU) cần các công cụ tương tác động (máy tính lãi suất, giả lập đầu tư, form khảo sát) trên Web để giữ chân khách hàng và tạo chuyển đổi Web-to-App (W2A). Hiện tại, mỗi công cụ phải được lập trình (hardcode) riêng lẻ, tốn nhiều tuần phát triển, không thể tái sử dụng, và rời rạc về mặt kiến trúc dữ liệu.
 
 ### 1.2 Giải pháp (Product Vision)
-Xây dựng **Widget Store Platform** — một hệ sinh thái tiện ích tương tác tập trung được tích hợp thẳng vào MoSpark CMS. Sản phẩm cung cấp một "Widget Engine" dùng chung, cho phép phân phối (embed) các công cụ tài chính/đời sống động vào bất kỳ trang Web nào thông qua mã Shortcode, tự động hóa quy trình chuyển đổi người dùng từ Web sang App MoMo thông qua cơ chế Context-Passing và Smart CTA.
+Xây dựng **Widget Store Platform** — một hệ sinh thái tiện ích tương tác tập trung được tích hợp thẳng vào MoSpark CMS. Sản phẩm cung cấp một "Widget Engine" dùng chung, cho phép nhúng (embed) các cấu phần tiện ích động vào trang Web (theo cơ chế nhúng của hệ thống), tự động hóa quy trình chuyển đổi người dùng từ Web sang App MoMo thông qua cơ chế Context-Passing và Smart CTA.
 
 ### 1.3 Success Metrics (KPIs)
 *Dự án hiện chưa chốt con số KPI cụ thể cho các vi chỉ số tương tác. Web Platform thống nhất hướng đến các chỉ số tăng trưởng (Growth) lõi của MoMo:*
@@ -34,7 +34,7 @@ Xây dựng **Widget Store Platform** — một hệ sinh thái tiện ích tư�
 
 ### 2.2 System Admin / PM (Người vận hành MoSpark)
 *   **Persona:** Product Manager, Marketing Team của các BUs.
-*   **US3 (Self-serve Creation):** Là PM, tôi muốn sử dụng MoSpark Editor để chọn một Widget có sẵn, tùy chỉnh tiêu đề/màu sắc và lấy mã Shortcode nhúng vào bài Blog chỉ trong 5 phút mà không cần nhờ Dev.
+*   **US3 (Self-serve Creation):** Là PM, tôi muốn sử dụng MoSpark Editor để chọn một Widget có sẵn, tùy chỉnh tiêu đề/màu sắc và nhúng vào bài Blog chỉ trong 5 phút thông qua CMS mà không cần nhờ Dev.
 *   **US4 (A/B Testing):** Là PM, tôi muốn cấu hình thay đổi nút CTA (Call-to-Action) của Widget theo từng chiến dịch để test tỷ lệ chuyển đổi.
 
 ---
@@ -57,13 +57,8 @@ Mỗi trang Landing Page chứa Widget phải tuân thủ layout 6 phần:
 *   **FR2 - Zero-Party Data Passing:**
     *   *Logic:* Dữ liệu người dùng nhập (Lương, số tiền muốn vay) sẽ được parse thành chuỗi Base64 hoặc JSON.
     *   *Hành động:* Nối chuỗi này vào URL Parameters của Onelink. Khi App mở, đọc params và fill tự động vào màn hình in-app.
-*   **FR3 - B2B Widget Syndication (Mã nhúng):**
-    *   *Logic:* Đóng gói Widget thành dạng `<script>` embed code hoặc `<iframe>`.
-    *   *Rule:* Cho phép nhúng vào domain của bên thứ 3 (Báo chí, Affiliate) nhưng vẫn track được UTM source về MoMo.
+### 3.3 Đặc tả Tính năng 10 Widgets (Finhub Simulators MVP)
 
-### 3.3 Đặc tả Tính năng 14 Widgets (Phasing Pipeline)
-
-#### Phase 1: Finhub Simulators (10 Widgets MVP)
 1.  **Master Widget (Phân bổ lương):** Hub chính. Nhập tổng thu nhập ➔ Chia ra rổ chi tiêu, tiết kiệm. Tự động pass số dư sang các Widget con.
 2.  **Gold Tracker:** Tích hợp API giá vàng Real-time, biểu đồ lịch sử ➔ CTA: Mua vàng.
 3.  **Exchange Rate:** Quy đổi ngoại tệ ➔ CTA: Chuyển tiền quốc tế.
@@ -75,22 +70,16 @@ Mỗi trang Landing Page chứa Widget phải tuân thủ layout 6 phần:
 9.  **Tính phí BHSK+:** Thanh kéo mức độ nghiêm trọng rủi ro, đối chiếu chi phí phải trả tự túc vs có BHSK ➔ CTA: Mua MoMo Sức Khỏe+.
 10. **Financial Quiz:** Trắc nghiệm vuốt (Tinder-style), trả kết quả "Chức danh" (Persona) ➔ CTA: Nhận Voucher (Instant Reward).
 
-#### Phase 2: Lifestyle & Travel Widgets (4 Widgets Tăng trưởng)
-11. **The Latte Factor (Trà sữa):** Tính chi phí uống trà sữa 1 năm vs Đầu tư sinh lời ➔ CTA: Túi Thần Tài.
-12. **Trip Budget Planner:** Tính chi phí du lịch dựa trên API MoMo Travel, chia tiền nhóm ➔ CTA: Đặt vé / Tạo Quỹ nhóm.
-13. **Traffic Fine Simulator:** Tính mức phạt vi phạm giao thông theo Nghị định 100 ➔ CTA: Tra cứu & Đóng phạt nguội.
-14. **Rent vs Buy (Thuê hay Mua nhà):** So sánh dòng tiền 20 năm ➔ CTA: Vay mua nhà / Đầu tư.
-
 ---
 
 ## 4. Functional Requirements (Yêu cầu chức năng - Backend CMS)
 
-### 4.1 Shortcode Engine
-*   **FR4 - Render Widget:** MoSpark Engine phải nhận diện chuỗi `[widget:{id} parameter="value"]` trong nội dung Rich Text và render thành component React tương ứng.
+### 4.1 Widget Embedding Engine
+*   **FR4 - Render Widget:** MoSpark Engine phải nhận diện cấu phần Widget động được chèn hoặc kéo thả trong nội dung Rich Text/CMS Editor (theo cơ chế nhúng do phía Dev thiết kế) và render thành component React tương ứng.
 
 ### 4.2 API Integration Gateway
-*   **FR5 - Online Fetching:** Các Widget (Vàng, Tỷ giá, Lãi tiết kiệm, Đầu tư, Du lịch) yêu cầu Backend thiết lập Gateway kết nối với API nội bộ của App MoMo để lấy dữ liệu realtime. Có cơ chế Cache (Redis) 15-30 phút để giảm tải.
-*   **FR6 - Offline Calculation:** Các Widget (Thuế, BHXH, Phạt giao thông) hoạt động bằng công thức toán học nội bộ (Offline). Cho phép Admin cập nhật file cấu hình JSON (chứa tỷ lệ thuế, mức phạt) thông qua CMS mà không cần deploy lại code.
+*   **FR5 - Online Fetching:** Các Widget (Vàng, Tỷ giá, Lãi tiết kiệm, Đầu tư) yêu cầu Backend thiết lập Gateway kết nối với API nội bộ của App MoMo để lấy dữ liệu realtime. Có cơ chế Cache (Redis) 15-30 phút để giảm tải.
+*   **FR6 - Offline Calculation:** Các Widget (Thuế, BHXH, Lương hưu, BHSK+) hoạt động bằng công thức toán học nội bộ (Offline). Cho phép Admin cập nhật file cấu hình JSON (chứa tỷ lệ thuế, công thức tính) thông qua CMS mà không cần deploy lại code.
 
 ---
 
@@ -113,7 +102,7 @@ Mỗi trang Landing Page chứa Widget phải tuân thủ layout 6 phần:
 ## 6. Phasing & Release Plan (Lộ trình phát hành)
 
 *   **Phase 1 (MVP - Q3/2026):** Hoàn thiện Widget Engine, Master Widget, và 10 Tiện ích Finhub. Tích hợp Onelink cơ bản.
-*   **Phase 2 (Scale - Q4/2026):** Ra mắt 4 Tiện ích Lifestyle. Triển khai tính năng Smart CTA và B2B Widget Syndication (<iframe>).
+*   **Phase 2 (Scale - Q4/2026):** Mở rộng tích hợp các Widget mới từ Bảo hiểm, Du lịch & Đi lại (tính giá vé, gợi ý tour) hoặc tiện ích đời sống. Triển khai tính năng Smart CTA.
 *   **Phase 3 (Platformization - 2027):** Mở khóa **KOL/KOC Marketplace** (Công cụ Low-code cho phép các chuyên gia tài chính tự build Widget mang thương hiệu của họ).
 
 ---
