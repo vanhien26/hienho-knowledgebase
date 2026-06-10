@@ -317,7 +317,7 @@ Mỗi trang `momo.vn/merchant/{slug}` là một trang đối tác độc lập, 
 
 | Sản phẩm | Vai trò trên Merchant Page | Điều kiện hiển thị | CTA |
 |---|---|---|---|
-| VTS (Ví Trả Sau) | Mua trước trả sau tại merchant | Merchant có trong VTS merchant list (Đã verify từ M4B & PO) | "Kích hoạt Ví Trả Sau" → Onelink |
+| VTS (Ví Trả Sau) | Mua trước trả sau tại merchant + **Tìm điểm thanh toán VTS** (Geo-location widget) | Merchant có trong VTS merchant list (Đã verify từ M4B & PO). Widget "Tìm điểm thanh toán VTS" **LIVE** tại `momo.vn/merchant` từ 10/6/2026. | "Kích hoạt Ví Trả Sau" → Onelink; "Tìm điểm VTS gần bạn" → Geo filter |
 | Hoàn tiền (Cashback) | Ưu đãi cashback khi thanh toán MoMo | Merchant đang chạy cashback campaign (Release theo Mega) | "Xem ưu đãi hoàn tiền" → App |
 | Soundbox | Giải pháp thu tiền QR cho SME | **[TẠM HOÃN / SHELVED]** | Hiện tại chưa triển khai gì về Soundbox trên Web. |
 | Xu (Reward) | Tích điểm thưởng khi thanh toán tại merchant | TBD - Product vision Q3+ | TBD |
@@ -506,7 +506,7 @@ Cập nhật phân công chi tiết cho các thành viên dự án (Tuần 2 th�
 | PIC | Nhiệm vụ chính (Action Items) | Trạng thái | Ghi chú |
 |---|---|---|---|
 | **Nhật** | - Bổ sung thêm UI template phục vụ các danh mục (Categories template).<br>- Làm lại tính năng/nút chia sẻ (Share button).<br>- Thiết lập phần quản lý trạng thái và CRUD (Create-Read-Update-Delete) của các merchant bám sát các tiêu chuẩn SEO kỹ thuật và HTTP response codes định nghĩa tại [Mục 10.4 Quy Chuẩn Quản Trị Trạng Thái & CRUD Merchant](#104-quy-chuẩn-quản-trị-trạng-thái--crud-merchant-seo--crawling). | `[/] In Progress` | Nhật phụ trách chính phần Front-end & CMS UI. |
-| **Thuận** | - Review lại toàn bộ Widget "Tìm điểm VTS" (Ví Trả Sau).<br>- Kiểm tra lại thuật toán tính toán khoảng cách (distance calculation) giữa user và điểm bán trên bản đồ. | `[/] In Progress` | Thuận phụ trách phần Geo-location & Tracking. |
+| **Thuận** | - Widget "Tìm điểm thanh toán VTS" đã go live tại `momo.vn/merchant`.<br>- Distance calculation hoàn thành. | `[x] Done - 10/6` | Tính năng live, Thuận tiếp tục monitoring Geo-location & Tracking. |
 | **Trọng** | - Nghiên cứu giải pháp phân phối nội dung (Content Distribution Flow) từ kết quả Research Keyword (Content Plan) của team SEO.<br>- Thiết lập cơ chế đẩy bài tự động đến các kênh phân phối: Blog, Landing Page, và trang đối tác (Merchant Pages). | `[/] In Progress` | Trọng phụ trách phần Data Distribution & CMS backend integrations. |
 
 ### 10.4 Quy Chuẩn Quản Trị Trạng Thái & CRUD Merchant (SEO & Crawling)
@@ -543,6 +543,39 @@ Cập nhật phân công chi tiết cho các thành viên dự án (Tuần 2 th�
 | **Review** | **Draft** (Reject) | ✔ (Cho phép) | ✔ (Cho phép) | ✔ (Cho phép) |
 | **Live** | **Deleted** | ❌ (Bị khóa) | ✔ (Cho phép) | ✔ (Cho phép) |
 | **Live** | **Review** (Sửa lớn) | ✔ (Cho phép) | ✔ (Cho phép) | ✔ (Cho phép) |
+
+---
+
+## 10.5 Checklist Đóng Phase I & Kickoff Phase II - T6/2026
+
+> Cập nhật: 2026-06-10 | Owner: Hiến | Sprint: Tuần 2-3 T6
+
+### A. Dev In-Progress (Deadline: 14/6)
+
+- [ ] **Nhật** - Bổ sung UI template theo danh mục (Categories template)
+- [ ] **Nhật** - Làm lại Share button
+- [ ] **Nhật** - Thiết lập CRUD/Page Status Lifecycle 4 trạng thái theo spec mục 10.4 (Draft / Review / Live / Deleted)
+- [x] **Thuận** - Widget "Tìm điểm thanh toán VTS" đã go live tại `momo.vn/merchant` *(10/6)*
+- [x] **Thuận** - Distance calculation đã hoàn thành (tính năng live) *(10/6)*
+- [ ] **Trọng** - Thiết lập Content Distribution Flow từ keyword research ra Blog / LP / Merchant Pages
+
+### B. SEO/Technical Gate - Hiến sign-off (Deadline: 14/6)
+
+- [x] **GSC Coverage Report** - 39 trang OOH đã index và có top ranking *(10/6)*
+- [x] **Canonical** - Self-referencing canonical đúng trên tất cả `/merchant/{slug}` *(10/6)*
+- [x] **Sitemap** - Auto-generated, 39 URL mới đã có *(10/6)*
+- [x] **Sitemap** - 3 URL `/page/` (9819516, 9843228, 9949928) đã xóa khỏi sitemap *(10/6)*
+
+### C. Data Integrity
+
+- [ ] **Launch Matrix** - Xác nhận merchant thứ 39 (bảng mục 10.1 hiện chỉ có 38 dòng): đã live hay chưa? Điền vào bảng hoặc ghi chú lý do
+- [ ] **Doc cleanup** - Xóa dòng sitemap bị duplicate trong mục 10.2
+
+### D. Phase II Kickoff (Bắt đầu sau 20/6 nếu Phase I đóng đúng hạn)
+
+- [ ] **Spec review** - Confirm scope Phase II với Nhật + Hoài Anh: luồng tạo merchant tự động 3-Layer (mục 11-11.5)
+- [ ] **Dependency check** - Google Places API: xác nhận license và quota cho Review Integration
+- [ ] **Merchant Hub** - Thuận kickoff Geo-location widget cho `/merchant` (map + filter VTS/Cashback)
 
 ---
 
@@ -688,10 +721,51 @@ Mở rộng quy mô hiển thị tự động (Programmatic SEO) với hàng ch�
     2. **Dynamic Top List:** Top 5 merchant được yêu thích nhất trong quận dựa trên điểm rating thực tế.
   * Nếu một quận/huyện có dưới 5 merchant hoạt động, hệ thống sẽ tự động set thẻ meta `noindex, nofollow` và ẩn khỏi sitemap để bảo vệ website crawl budget.
 
-### 15. Gamification & Dopamine Discovery Loops (Phase III)
+### 15. Engagement Signals & Social Proof (Phase II)
+
+Tăng engagement và time-on-site thông qua các tín hiệu xã hội gắn trực tiếp lên merchant card (Listing) và Merchant Detail Page. Các tính năng này không yêu cầu login, hoạt động client-side, phù hợp để ship trong Phase II - trước khi triển khai gamification nặng hơn ở Phase III.
+
+**JTBD Mapping:**
+
+| Function | User JTBD | Platform JTBD | Mismatch? | Verdict |
+|---|---|---|---|---|
+| Badge "Lọt Top Merchant" | Cần heuristic nhanh để phân biệt quán đáng ghé trong danh sách dài | Tăng CTR listing, phân biệt merchant tốt với merchant mờ nhạt | "Top giao dịch" khác "phù hợp với tôi" - badge tiêu chí hiện tại phục vụ merchant và platform nhiều hơn user | Giữ nhưng redesign tiêu chí - nên map sang rating/review thay vì transaction volume |
+| Counter "XX khách tin dùng" | Cần social proof để giảm rủi ro quyết định khi chưa biết merchant | Tăng trust signal trên listing, giảm bounce | Không - user đang trong evaluate mode, counter đúng job | Giữ - JTBD rõ nhất trong 4, tương tự review count trên Google Maps |
+| "Quán đang hot" Pulse | Không rõ - user có thể đang lên kế hoạch, có dietary constraint, hoặc không ở gần đó | Inject urgency vào session, kích hành động ngay | Lớn - "hot lúc này" không map vào job cụ thể nào của user | Drop hoặc redesign - hiện phục vụ platform, không phải user |
+| Recommendation Rail | Cần tiếp tục khám phá khi merchant vừa xem không phù hợp, không muốn back và search lại | Giảm bounce, tăng pages-per-session | Không - user trong navigate mode, rail đúng job | Giữ - phụ thuộc chất lượng recommendation |
+
+- **15.1 Huy hiệu "Lọt Top Merchant":**
+  * **Cơ chế:** Hệ thống tự động gắn dynamic badge dựa trên khối lượng giao dịch MoMo thực tế (internal data). Badge hiển thị trên Merchant Card ở Listing và đầu Merchant Detail Page.
+  * **Tier badge gợi ý:**
+    * "Top 10 Quận [X] tháng này" - top lượt thanh toán trong quận
+    * "Merchant nổi bật MoMo" - curator pick
+    * "Mới & Đang Hot" - merchant mới, lượt giao dịch tăng đột biến trong 30 ngày
+  * **SEO value:** Badge inject dynamic text snippet vào từng trang listing, giúp tránh thin content kể cả khi merchant data ít.
+  * **Implementation note:** Data source từ transaction log nội bộ, refresh mỗi 24h. Không expose số liệu raw.
+
+- **15.2 Social Proof Counter "Được XX khách MoMo tin dùng":**
+  * **Cơ chế:** Hiển thị tổng lượt giao dịch MoMo (anonymized, làm tròn hàng trăm) ngay dưới tên merchant. Tương tự trust signal "XX đánh giá" trên Google Maps nhưng dùng dữ liệu thanh toán độc quyền của MoMo.
+  * **Format gợi ý:** `"1.200+ lượt thanh toán MoMo"` hoặc `"Được 2.500 khách MoMo tin dùng"`
+  * **FOMO trigger:** Merchant có counter cao tạo social validation tự nhiên - user có xu hướng tin tưởng và click nhiều hơn. Đặc biệt hiệu quả trên mobile (70%+ traffic từ mobile search local intent).
+  * **Variant realtime (nếu data cho phép):** `"Đang có 12 khách thanh toán tại đây"` - urgency theo thời gian thực.
+  * **Privacy note:** Chỉ hiển thị số aggregate - không expose thông tin cá nhân. Cần legal review trước launch.
+
+- **15.3 "Quán đang hot" Activity Pulse:**
+  * **Cơ chế:** Tag tự động gắn khi merchant có lượt giao dịch tăng >50% trong 24h so với baseline 7 ngày trước.
+  * **Mục đích:** Tạo urgency và FOMO ngắn hạn, đặc biệt hữu ích trong khung giờ cao điểm (trưa 11h-13h, tối 17h-20h).
+  * **Implementation note:** Logic tính phía backend, frontend chỉ render text tag - không cần animation nặng, không ảnh hưởng LCP.
+
+- **15.4 "Người dùng cũng ghé thăm" Recommendation Rail:**
+  * **Cơ chế:** Cuối mỗi Merchant Detail Page, hiển thị horizontal scroll rail "Quán gần đây bạn có thể thích" - 4-6 merchant card gợi ý theo: (1) cùng danh mục, (2) cùng quận, (3) collaborative filtering từ MoMo behavior data.
+  * **SEO/Engagement value:** Tăng internal linking giữa các merchant page, giảm bounce rate, tăng pages-per-session. Tương tự "Related products" trên e-commerce.
+  * **Fallback:** Nếu không đủ data CF, mặc định gợi ý theo cùng danh mục + cùng quận.
+
+---
+
+### 16. Gamification & Dopamine Discovery Loops (Phase III)
 Nhằm kéo dài thời gian lưu trữ trên trang (Session Duration), giảm tỷ lệ thoát (Bounce Rate) và tối ưu hóa việc chuyển đổi người dùng ẩn danh trên Web, MoSpark sẽ tích hợp các cơ chế giữ chân bằng dopamine (Gamification & Interactive Discovery Loops) vào trang **Merchant Hub** (`momo.vn/merchant`) và các Landing Page chiến lược:
 
-- **15.1 Tiện ích "Swipe to Match" (Vuốt tìm ưu đãi - Tinder-style):**
+- **16.1 Tiện ích "Swipe to Match" (Vuốt tìm ưu đãi - Tinder-style):**
   * **Cơ chế hoạt động:** Trải nghiệm vuốt (swipe) thẻ tương tự Tinder. Người dùng được xem một tập hợp các thẻ (merchant card) chứa hình ảnh bắt mắt của quán, món ăn signature kèm theo ưu đãi độc quyền (Cashback, mã giảm giá, trả sau 0%).
   * **Hành vi tương tác:**
     * **Vuốt Phải (hoặc click Tim/Lưu):** Lưu ưu đãi vào "Túi quà của tôi" (My Bag) lưu ở Local Storage của trình duyệt. Hệ thống tự động kích hoạt Onelink/Appsflyer để đồng bộ ưu đãi này vào App MoMo khi người dùng mở App.
@@ -699,7 +773,7 @@ Nhằm kéo dài thời gian lưu trữ trên trang (Session Duration), giảm t
     * **Vuốt Lên (hoặc click Xem chi tiết):** Điều hướng người dùng trực tiếp vào trang Merchant Detail Page `/merchant/{slug}`.
   * **Dopamine Hook:** Cảm giác ngẫu nhiên (variable rewards) khi mỗi lần vuốt xuất hiện một quán mới cùng ưu đãi bất ngờ, kết hợp cử chỉ vuốt mượt mà tạo sự thích thú.
 
-- **15.2 Tiện ích "Doom Scroll Feed" (Bản tin cuộn vô tận - TikTok-style):**
+- **16.2 Tiện ích "Doom Scroll Feed" (Bản tin cuộn vô tận - TikTok-style):**
   * **Cơ chế hoạt động:** Một bản tin video ngắn hoặc thẻ hình ảnh cuộn dọc vô hạn (Tiktok-style infinite feed) chứa nội dung đánh giá nhanh (micro-reviews), hình ảnh món ăn thực tế và khuyến mãi tương ứng của các merchant lân cận (dựa trên GPS).
   * **Hành vi tương tác:**
     * Người dùng chỉ cần cuộn dọc (scroll) để xem các quán tiếp theo mà không cần click mở trang mới.
@@ -707,7 +781,7 @@ Nhằm kéo dài thời gian lưu trữ trên trang (Session Duration), giảm t
     * Nút CTA nổi (Sticky CTA button) luôn hiển thị ở góc màn hình: "Lấy ưu đãi ngay" hoặc "Dùng Ví Trả Sau tại quán này" để dẫn trực tiếp vào App.
   * **Dopamine Hook:** Cuộn vô hạn tạo ra vòng lặp dopamine lôi kéo sự tò mò của người dùng, mang lại trải nghiệm khám phá ẩm thực/dịch vụ giải trí trực quan, sinh động.
 
-- **15.3 Tiện ích "Social Activity Feed" (Bảng tin hoạt động xã hội - Facebook-style):**
+- **16.3 Tiện ích "Social Activity Feed" (Bảng tin hoạt động xã hội - Facebook-style):**
   * **Cơ chế hoạt động:** Một bảng tin trực quan hiển thị hoạt động giao dịch thực tế (hoàn toàn ẩn danh) đang diễn ra tại 500k điểm bán đối tác MoMo để tạo hiệu ứng đám đông (Social Proof).
   * **Hành vi tương tác:**
     * Hiển thị dòng trạng thái cập nhật thời gian thực (VD: *"Anh T. vừa quét mã Soundbox hoàn tiền 20k tại Bún thịt nướng Chị Tuyền"*, *"Highlands Coffee Quận 1 đang có 142 khách hàng thanh toán qua MoMo"*).

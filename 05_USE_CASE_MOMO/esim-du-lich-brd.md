@@ -27,7 +27,7 @@ Dự án xây dựng cluster web eSIM Du Lịch gồm 1 Hub page, 10 Destination
 ### 2.1 Thị trường
 
 - eSIM global: $2.45B (2024), CAGR 14% đến 2032
-- Thị trường SIM du lịch Việt Nam: 1K–1.5K tỷ VNĐ/năm, tăng trưởng nhanh
+- Thị trường SIM du lịch Việt Nam: 1K-1.5K tỷ VNĐ/năm, tăng trưởng nhanh
 - 9 tháng đầu 2025: 5.44 triệu lượt người Việt xuất cảnh (+33.1% YoY)
 - 22M+ thiết bị hỗ trợ eSIM tại Việt Nam
 - Xu hướng người Việt mua eSIM trước chuyến đi phù hợp funnel digital của MoMo
@@ -149,7 +149,7 @@ Dự án xây dựng cluster web eSIM Du Lịch gồm 1 Hub page, 10 Destination
 > "MoMo là kênh mua SIM du lịch **nhanh - giá hợp lý - an tâm sử dụng**"
 
 - **Mua nhanh - ít bước:** flow mua SIM đơn giản, chỉ 2 bước
-- **Giá hợp lý:** đảm bảo không cao hơn thị trường quá 10–20K
+- **Giá hợp lý:** đảm bảo không cao hơn thị trường quá 10-20K
 - **An tâm sử dụng:** HDSD rõ ràng, hỗ trợ 24/7, đồng hành suốt chuyến đi
 
 ### 3.7 Định hướng tăng trưởng 2026
@@ -246,7 +246,7 @@ SIM du lịch thuộc nhóm **Habitual** trong FCB Grid:
 
 ### Dự án phục vụ điều gì?
 
-Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu quả, convert traffic thành lượt mở app và mua hàng, contribute vào target web 4–10% Trans từ T7/2026. Đây là Source of Growth mới dựa trên hành vi tìm kiếm Google của khách du lịch — touchpoint web hiện MoMo chưa có.
+Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu quả, convert traffic thành lượt mở app và mua hàng, contribute vào target web 4-10% Trans từ T7/2026. Đây là Source of Growth mới dựa trên hành vi tìm kiếm Google của khách du lịch — touchpoint web hiện MoMo chưa có.
 
 ### 6.1 Intent-based Filtering Framework (Trang Phạm Standard)
 Phân loại rạch ròi luồng traffic dựa trên Search Intent để điều hướng vào đúng Product Lane/Content:
@@ -440,7 +440,7 @@ Web cluster là một phần trong chiến lược tăng trưởng tổng thể.
 ## 8. Success Metrics
 
 ### Objective
-Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu quả, contribute 4–10% Trans từ T7/2026.
+Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu quả, contribute 4-10% Trans từ T7/2026.
 
 ### Key Results
 

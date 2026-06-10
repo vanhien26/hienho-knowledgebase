@@ -2,11 +2,11 @@
 
 > - **Use Case:** Merchant Pages
 > - **Main URL:** momo.vn/merchant / momo.vn/merchant/{slug}
-> - **BRD Ref:** 05_USE_CASE_MOMO/merchant-project/doi-tac-brd.md
+> - **BRD Ref:** 05_USE_CASE_MOMO/doi-tac-brd.md
 > - **Owner:** Web Product Lead (Hiến)
 > - **Engineering Lead:** Nhật
 > - **Architecture:** Hoài Anh (MoSpark integration)
-> - **Version:** 0.1 - 2026-06-06
+> - **Version:** 0.3 - 2026-06-10
 > - **Status:** [IN BUILD] - Phase I Pilot 39 merchants LIVE
 
 ---
@@ -54,6 +54,7 @@ Biến `momo.vn/merchant/{slug}` thành **SME Digital Presence product** - khôn
 - Deep data: Gallery, Review integration, Amenities
 - Merchant Hub với Interactive Map + Smart Search + Dynamic Filters
 - Listing Page pSEO: `momo.vn/merchant/danh-sach/{tinh-thanh}/{quan-huyen}`
+- Engagement Signals & Social Proof: Badge "Top Merchant", Social Proof Counter, Activity Pulse, Recommendation Rail (Section 3.15)
 
 **In scope - Phase III:**
 - Gamification & Dopamine widgets: Swipe to Match, Doom Scroll Feed, Social Activity Feed
@@ -265,32 +266,32 @@ Khách scan QR tại quầy / Soundbox
 
 ```mermaid
 graph TD
-    A[Bắt đầu khởi tạo Merchant] --> B{Chọn luồng khởi tạo}
-    B -->|Top-down: SEO/GEO Driven| C[SEO Team phân tích Intent & lập Inventory]
-    C --> D[Tạo các Cluster & Topic Slot trên CMS]
-    D --> E[PM đi thực tế thu thập data khớp Cluster]
-    
-    B -->|Bottom-up: PM Field Driven| F[PM đi khảo sát điểm bán offline]
-    F --> G{Chọn phương thức nhập liệu}
-    G -->|Manual| H[PM nhập Tên Merchant]
-    G -->|Auto-sync M4B| I[PM nhập Merchant ID từ M4B]
-    I --> J[CMS gọi API M4B: Auto-fill Tên & Địa chỉ]
-    
-    H --> CRAWL_MANUAL[Google Map Search Crawler: Tìm kiếm & Trả về thông tin]
-    J --> CRAWL_SYNC[Google Map Search Crawler: Tìm kiếm & Làm giàu dữ liệu]
-    
-    CRAWL_MANUAL -->|Auto-fill NAP + Giờ + Tiện ích| K[PM xác nhận dữ liệu thô & Map SEO Cluster]
-    CRAWL_SYNC -->|Enrich Giờ + Tiện ích vào NAP gốc| K
+    A["Bắt đầu khởi tạo Merchant"] --> B{"Chọn luồng khởi tạo"}
+    B -->|"Top-down: SEO/GEO Driven"| C["SEO Team phân tích Intent và lập Inventory"]
+    C --> D["Tạo các Cluster và Topic Slot trên CMS"]
+    D --> E["PM đi thực tế thu thập data khớp Cluster"]
+
+    B -->|"Bottom-up: PM Field Driven"| F["PM đi khảo sát điểm bán offline"]
+    F --> G{"Chọn phương thức nhập liệu"}
+    G -->|"Manual"| H["PM nhập Tên Merchant"]
+    G -->|"Auto-sync M4B"| I["PM nhập Merchant ID từ M4B"]
+    I --> J["CMS gọi API M4B: Auto-fill Tên và Địa chỉ"]
+
+    H --> CRAWL_MANUAL["Google Map Search Crawler: Tìm kiếm và Trả về thông tin"]
+    J --> CRAWL_SYNC["Google Map Search Crawler: Tìm kiếm và Làm giàu dữ liệu"]
+
+    CRAWL_MANUAL -->|"Auto-fill NAP + Giờ + Tiện ích"| K["PM xác nhận dữ liệu thô và Map SEO Cluster"]
+    CRAWL_SYNC -->|"Enrich Giờ + Tiện ích vào NAP gốc"| K
     E --> K
-    
-    K --> PREVIEW[PM xem SEO Inventory & Market Research của Merchant Name]
-    PREVIEW --> DECIDE{PM đánh giá dữ liệu?}
-    DECIDE -->|Cần điều chỉnh tên/dữ liệu thô| G
-    DECIDE -->|Đồng ý & Tiếp tục| L[GenAI sinh Intro & FAQ dựa trên category & tiện ích]
-    L --> M[CMS Page Editor: PM kiểm duyệt & Bổ sung]
-    M --> N{QC Gate: Đạt chuẩn NAP & Payment?}
-    N -->|Không đạt| O[Khóa nút Publish / Báo lỗi]
-    N -->|Đạt chuẩn| P[Publish: Sitemap XML & Indexing API]
+
+    K --> PREVIEW["PM xem SEO Inventory và Market Research của Merchant Name"]
+    PREVIEW --> DECIDE{"PM đánh giá dữ liệu?"}
+    DECIDE -->|"Cần điều chỉnh tên hoặc dữ liệu thô"| G
+    DECIDE -->|"Đồng ý và Tiếp tục"| L["GenAI sinh Intro và FAQ dựa trên category và tiện ích"]
+    L --> M["CMS Page Editor: PM kiểm duyệt và Bổ sung"]
+    M --> N{"QC Gate: Đạt chuẩn NAP và Payment?"}
+    N -->|"Không đạt"| O["Khóa nút Publish - Báo lỗi"]
+    N -->|"Đạt chuẩn"| P["Publish: Sitemap XML và Indexing API"]
 ```
 
 **Acceptance Criteria:**
@@ -322,21 +323,21 @@ graph TD
 
 ```mermaid
 graph TD
-    SubA[Nhập Merchant Name hoặc Merchant ID] --> SubB[CMS gọi API truy vấn SEO Inventory DB]
-    SubB --> SubC[Hiển thị Dashboard Market Research]
-    
-    SubC --> SubD1[Search Volume]
-    SubC --> SubD2[Keyword Difficulty]
-    SubC --> SubD3[Search Intent]
-    SubC --> SubD4[Top Competitors]
-    SubC --> SubD5[Cannibalization Check]
-    
-    SubD5 -->|Bị trùng lặp slug/keyword| Warn1[Cảnh báo ĐỎ: Cannibalization Alert]
-    SubD1 -->|Volume = 0 hoặc quá thấp| Warn2[Cảnh báo VÀNG: Low Traffic Potential]
-    
-    SubC --> SubE{PM quyết định}
-    SubE -->|Cần chỉnh sửa / Tối ưu lại tên| SubF[Quay lại bước nhập liệu baseline]
-    SubE -->|Xác nhận thông tin OK| SubG[Hệ thống ghi nhận và chuyển tiếp sang GenAI]
+    SubA["Nhập Merchant Name hoặc Merchant ID"] --> SubB["CMS gọi API truy vấn SEO Inventory DB"]
+    SubB --> SubC["Hiển thị Dashboard Market Research"]
+
+    SubC --> SubD1["Search Volume"]
+    SubC --> SubD2["Keyword Difficulty"]
+    SubC --> SubD3["Search Intent"]
+    SubC --> SubD4["Top Competitors"]
+    SubC --> SubD5["Cannibalization Check"]
+
+    SubD5 -->|"Trùng lặp slug hoặc keyword"| Warn1["Cảnh báo ĐỎ: Cannibalization Alert"]
+    SubD1 -->|"Volume thấp hoặc bằng 0"| Warn2["Cảnh báo VÀNG: Low Traffic Potential"]
+
+    SubC --> SubE{"PM quyết định"}
+    SubE -->|"Cần chỉnh sửa hoặc tối ưu lại tên"| SubF["Quay lại bước nhập liệu baseline"]
+    SubE -->|"Xác nhận thông tin OK"| SubG["Hệ thống ghi nhận và chuyển tiếp sang GenAI"]
 ```
 
 - [ ] **Các quy tắc hiển thị giao diện Preview (UI Logic):**
@@ -455,6 +456,50 @@ graph TD
   - The canonical link tag on `/merchant/{slug}` must be self-referencing. No canonical tags are generated for sub-pages since they redirect.
 
 **Priority:** P1 (Deferred / Shelved)
+
+---
+
+### 3.15 Engagement Signals & Social Proof (Phase II)
+
+**User Story:**
+> As a consumer browsing the merchant listing, I want to see social proof signals (transaction counts, popularity badges, activity indicators) so that I can quickly identify trustworthy and popular merchants without reading long descriptions.
+
+**JTBD Mapping:**
+
+| Feature | User JTBD | Platform JTBD | Mismatch? | Verdict |
+|---|---|---|---|---|
+| Badge "Top Merchant" | Cần heuristic nhanh để phân biệt quán đáng ghé trong danh sách dài | Tăng CTR listing, phân biệt merchant tốt với merchant mờ nhạt | "Top giao dịch" khác "phù hợp với tôi" - tiêu chí hiện tại phục vụ platform nhiều hơn user | Giữ nhưng redesign tiêu chí - nên map sang rating/review thay vì transaction volume thuần |
+| Counter "XX khách tin dùng" | Cần social proof để giảm rủi ro quyết định khi chưa biết merchant | Tăng trust signal trên listing, giảm bounce | Không - user trong evaluate mode, counter đúng job | Giữ - JTBD rõ nhất trong 4, tương tự review count trên Google Maps |
+| "Quán đang hot" Pulse | Không rõ - user có thể đang lên kế hoạch, có dietary constraint, hoặc không ở gần đó | Inject urgency vào session, kích hành động ngay | Lớn - "hot lúc này" không map vào job cụ thể nào của user | Drop hoặc redesign trước sprint |
+| Recommendation Rail | Cần tiếp tục khám phá khi merchant vừa xem không phù hợp, không muốn back và search lại | Giảm bounce, tăng pages-per-session | Không - user trong navigate mode, rail đúng job | Giữ - phụ thuộc chất lượng recommendation |
+
+**Acceptance Criteria - Badge "Lọt Top Merchant" (3.15.1):**
+- [ ] Dynamic badge tự động gắn lên Merchant Card (Listing) và đầu Merchant Detail Page dựa trên transaction data nội bộ (MoMo internal, không expose raw number)
+- [ ] Tier badge: "Top 10 Quận [X] tháng này" / "Merchant nổi bật MoMo" / "Mới & Đang Hot" (tăng đột biến trong 30 ngày)
+- [ ] Data source: transaction log nội bộ, refresh mỗi 24h qua scheduled job
+- [ ] Badge inject dynamic text snippet vào page - phòng thin content trên listing ít data
+- [ ] Không hardcode - badge tự remove khi merchant không còn đủ điều kiện
+
+**Acceptance Criteria - Social Proof Counter (3.15.2):**
+- [ ] Hiển thị tổng lượt giao dịch MoMo (aggregate, làm tròn hàng trăm) ngay dưới tên merchant trên cả Listing Card và Detail Page
+- [ ] Format: `"1.200+ lượt thanh toán MoMo"` hoặc `"Được 2.500 khách MoMo tin dùng"`
+- [ ] Chỉ hiển thị nếu merchant có >= 100 giao dịch; dưới ngưỡng này ẩn counter hoàn toàn (không hiển thị số nhỏ gây phản tác dụng)
+- [ ] Không expose segment data (không ghi "VTS", không breakdown theo sản phẩm)
+- [ ] **Legal gate:** Cần legal sign-off trước launch - counter chứa transaction data dù aggregate vẫn thuộc phạm vi data governance
+- [ ] Variant realtime (gating riêng): `"Đang có 12 khách thanh toán"` - chỉ triển khai nếu Hoài Anh confirm data pipeline realtime available
+
+**Acceptance Criteria - Activity Pulse (3.15.3):**
+- [ ] **[HOLD - cần redesign JTBD trước sprint]** Tag "Quán đang hot" hiện tại không map rõ vào user job. Trước khi build: Hiến cần define lại trigger criteria và user scenario cụ thể
+- [ ] Nếu triển khai: logic tính phía backend (tăng >50% trong 24h vs baseline 7 ngày), frontend chỉ render text tag - không animation, không ảnh hưởng LCP
+
+**Acceptance Criteria - Recommendation Rail (3.15.4):**
+- [ ] Horizontal scroll rail "Quán gần đây bạn có thể thích" cuối mỗi Merchant Detail Page - 4-6 merchant card
+- [ ] Gợi ý theo thứ tự ưu tiên: (1) cùng danh mục + cùng quận, (2) collaborative filtering từ MoMo behavior data nếu available
+- [ ] Fallback khi không đủ data: gợi ý theo cùng danh mục + cùng quận, tối thiểu 3 cards
+- [ ] Mỗi card trong rail phải có internal link đúng về `/merchant/{slug}` tương ứng - đóng góp internal linking mesh
+- [ ] Không hiển thị merchant đang xem trong rail (tự recommend chính mình)
+
+**Priority:** P2 (Phase II - Sprint 4)
 
 ---
 
@@ -606,14 +651,42 @@ graph TD
 
 ## 10. Release Plan
 
+### 10.1 Phase Overview
+
 | Phase | Scope | Target | Exit Criteria |
 |---|---|---|---|
 | Phase I - Foundation | 39 SME pilot merchants live. 3 legacy `/page/` redirects done. Basic Hub page. Schema + tracking. | LIVE (2026-05-29) | 39/39 pages published. 308 redirects verified. GSC coverage report clean. Umami tracking firing. |
 | Phase I - Verify | GSC indexing check. CWV audit. Legacy redirect chain clean. VTS data verify. | Tuần 2 T6/2026 | 39 URLs indexed (GSC). 0 CWV regressions. Attribution flowing Appsflyer. |
 | Phase II - Auto-creation | MoSpark CMS workflow 2 luồng. SEO Inventory preview. QC Gate. Auto-sitemap. | Q3/2026 | PM có thể publish merchant page mà không cần kỹ thuật support. QC gate blocking thin content. |
-| Phase II - Deep data & Hub | Gallery, Review integration, Amenities. Hub (map + filters). Listing pSEO. | Q4/2026 | 80% pilot merchants có >= 3 ảnh. Hub map and listing pages active. |
+| Phase II - Deep data & Hub | Gallery, Review integration, Amenities. Hub (map + filters). Listing pSEO. Engagement Signals. | Q4/2026 | 80% pilot merchants có >= 3 ảnh. Hub map và listing pages active. Engagement signals live. |
 | Phase III - Gamification | Tinder Swipe, TikTok Doom Scroll, Facebook Social Feed widgets. Ads Manager integration. | Q4/2026+ | Gamified widgets active on Hub page. Impression and swipe/click tracking live. |
 | Long term | `/thanh-toan-momo-{merchant}` full audit + redirect. Top brand chains. | 2027 | Legacy cleanup complete. Top 20 brand chains có merchant page. |
+
+---
+
+### 10.2 Sprint Breakdown
+
+> Sprint length: 2 tuần. Owner = Lead dev/PIC chính của sprint, không phải exclusive.
+
+| Sprint | Thời gian | Focus | Key Deliverables | PRD Ref | Owner |
+|---|---|---|---|---|---|
+| **Sprint 0** | 10-20 Jun 2026 | Phase I Close & Verify | GSC index 39 URLs confirmed. CWV audit pass. UI template categories (Nhật). Share button (Nhật). CRUD lifecycle (Nhật). Content Distribution Flow (Trọng). Umami tracking setup (Thuận). | 3.1-3.5, 3.8 | Nhật + Trọng + Thuận |
+| **Sprint 1** | 23 Jun - 4 Jul | CMS Foundation | M4B API integration. Google Maps Crawler MVP. Bottom-up Manual path hoàn chỉnh. | 3.9 (Luồng 2 Manual) | Hoài Anh + Nhật |
+| **Sprint 2** | 7-18 Jul | CMS Auto-creation Full | M4B Sync path. SEO Inventory Preview UI. QC Gate (block publish nếu thiếu NAP). Auto-sitemap + Indexing API ping. | 3.9 (full) | Hoài Anh + Nhật |
+| **Sprint 3** | 21 Jul - 1 Aug | GenAI Image Pipeline | Gemini Banana - auto banner resize (1050x450) + og:image (1200x630). Gallery upload UI trong CMS. | 3.10 | Nhật + Hoài Anh |
+| **Sprint 4** | 4-15 Aug | Engagement Signals | Badge "Top Merchant" (3.15.1). Social Proof Counter (3.15.2). Recommendation Rail (3.15.4). [Hold: Activity Pulse - chờ redesign JTBD] | 3.15 | Nhật |
+| **Sprint 5** | 18-29 Aug | Hub Phase II | Interactive Map widget (lazy load, Google Maps). Smart Search autocomplete. Dynamic Filters (Quận, danh mục, "Có VTS"). | 3.6 Phase II | Nhật + Hoài Anh |
+| **Sprint 6** | 1-12 Sep | Listing Page pSEO | URL pattern `/merchant/danh-sach/{tinh}/{quan}`. Anti-thin gate (noindex < 5 merchants). FAQ Block auto-gen theo khu vực. BreadcrumbList schema. Internal linking mesh. | 3.7 | Nhật + Trọng |
+| **Sprint 7** | 15-26 Sep | Deep Data & Review | Google Places API integration. Review score display. Amenities block. Branch data inline. | 3.6 Phase II deep data | Hoài Anh + Nhật |
+| **Phase III** | Q4 2026 | Gamification | Swipe to Match (3.11). Doom Scroll Feed (3.12). Social Activity Feed (3.13). Ads Manager injection. | 3.11-3.13 | TBD |
+
+**Sprint 0 gate (20 Jun 2026):** Tất cả checklist Phase I trong BRD section 10.5 phải closed trước khi bắt đầu Sprint 1.
+
+**Dependency critical path:**
+- Sprint 1 blocked by: M4B API contract từ Hoài Anh
+- Sprint 4 blocked by: Legal sign-off cho Social Proof Counter (transaction data governance)
+- Sprint 5 blocked by: Google Places API key provisioning (Open Question #7)
+- Phase III blocked by: Ads Manager (M3) roadmap confirmation
 
 ---
 
@@ -623,4 +696,5 @@ graph TD
 |---|---|---|---|
 | 0.1 | 2026-06-06 | Hiến | Initial draft từ BRD v2.6 |
 | 0.2 | 2026-06-09 | Hiến | Tích hợp Google Map Search Crawler (Mục 3.9 & 6) và Dynamic Json-LD Schema theo ngành hàng (Mục 5.2). |
+| 0.3 | 2026-06-10 | Hiến | Sync BRD v2.6: Thêm Section 3.15 Engagement Signals & Social Proof (Badge, Counter, Activity Pulse, Recommendation Rail) kèm JTBD mapping. Thêm Sprint Breakdown (Section 10.2). Fix BRD Ref path. |
 

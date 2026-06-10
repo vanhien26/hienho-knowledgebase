@@ -58,7 +58,7 @@
 
 **Volume distribution → sub-page strategy:**
 - 46 head keywords = 1.548.700 vol (48%) — priority số 1
-- 496 mid-tail (1K–10K) = 1.296.200 vol — 12 sub-pages + blog
+- 496 mid-tail (1K-10K) = 1.296.200 vol — 12 sub-pages + blog
 - 8.305 long tail (<100 vol) — programmatic SEO, chưa ưu tiên
 
 ### 1.3 Competitive Landscape
@@ -112,10 +112,10 @@ Hai mục tiêu song song, không tách rời:
 ### Ai được phục vụ?
 
 **Segment 1 — Emergency Borrower (BOFU · High urgency):**
-Freelancer / công nhân / hộ kinh doanh nhỏ 25–40 tuổi, cần tiền trong ngày. Bị push bởi: ngân hàng hẹn 3-5 ngày, vay người thân ngại, app khác không tin tưởng. Pull bởi: duyệt 5 phút, chỉ cần CCCD, giải ngân vào ví ngay. Anxiety chính: lãi suất thực sự bao nhiêu, có bị lộ data không.
+Freelancer / công nhân / hộ kinh doanh nhỏ 25-40 tuổi, cần tiền trong ngày. Bị push bởi: ngân hàng hẹn 3-5 ngày, vay người thân ngại, app khác không tin tưởng. Pull bởi: duyệt 5 phút, chỉ cần CCCD, giải ngân vào ví ngay. Anxiety chính: lãi suất thực sự bao nhiêu, có bị lộ data không.
 
 **Segment 2 — Comparison Researcher (MOFU):**
-28–45 tuổi, thu nhập ổn định, đang cân nhắc vay tiêu dùng, search Google để research. Anxiety cao nhất: "2.72%/tháng flat rate nghĩa là gì? Tổng tôi trả bao nhiêu?"
+28-45 tuổi, thu nhập ổn định, đang cân nhắc vay tiêu dùng, search Google để research. Anxiety cao nhất: "2.72%/tháng flat rate nghĩa là gì? Tổng tôi trả bao nhiêu?"
 
 **Segment 3 — Rejected Borrower / CIC Concerned (MOFU · Sensitive):**
 Đã bị ngân hàng từ chối hoặc lo ngại về CIC score. Cần lựa chọn uy tín khi không đủ điều kiện ngân hàng. **YMYL red line:** Không claim "bỏ qua CIC" hay "hỗ trợ nợ xấu" nếu MoMo vẫn check CIC.
@@ -237,7 +237,7 @@ Simulator là conversion engine cốt lõi — cần revamp từ công cụ tín
 **Vấn đề hiện tại:** Tính toán cơ bản, không có amortization, không truyền context qua Onelink, không visible ở fold 1 trên mobile.
 
 **Yêu cầu Simulator v2:**
-- Input: Slider số tiền vay (6M–100M VNĐ) + quick-select chips; Lựa chọn kỳ hạn (6/9/12/15/18/24 tháng)
+- Input: Slider số tiền vay (6M-100M VNĐ) + quick-select chips; Lựa chọn kỳ hạn (6/9/12/15/18/24 tháng)
 - Logic: Flat rate 2.72%/tháng (hiển thị disclaimer); Amortization schedule (reducing balance method)
 - Output - Result Card: Tiền trả mỗi tháng (dominant); Tương đương X.XXXđ/ngày; Tổng tiền trả / Tổng tiền lãi; CTA → Onelink với full context (số tiền + kỳ hạn + UTM)
 - Output - Amortization Table: Collapsible toggle; Từng tháng: Trả gốc / Tiền lãi / Tổng trả / Dư nợ
@@ -266,7 +266,7 @@ Simulator là conversion engine cốt lõi — cần revamp từ công cụ tín
 | Quy trình | 3 bước: Chụp CCCD → Kết quả 5' → Nhận tiền ví | |
 | Điều kiện vay | Transparent checklist | YMYL bắt buộc |
 | Service grid | Card links đến từng sub-page segment | |
-| FAQ | 10–15 câu standalone, FAQPage schema, PAA-matched | |
+| FAQ | 10-15 câu standalone, FAQPage schema, PAA-matched | |
 | Disclaimer | Lãi suất tham khảo + NHNN license reference | |
 
 **Schema required:** LoanProduct (name, loanType, amount range, termDuration, annualPercentageRate) · FAQPage · BreadcrumbList
@@ -369,7 +369,7 @@ Bắt buộc với mọi page Vay Nhanh trước publish:
 | Web Platform — Simulator v2 build | Revamp Simulator: amortization + Onelink deep link + mobile fold 1 | Yes | Pending sprint |
 | BU Credit — Onelink template & loan rate config | Confirm Onelink template ID, rate config dynamic vs static | Yes | Cần confirm |
 | DA Team — GA4 events + Appsflyer setup | Events: simulator_interaction, onelink_click; Appsflyer VN activation mapping | Yes | Cần setup trước launch |
-| BU/Legal — Content YMYL approval | Duyệt sub-pages và blog YMYL trước publish. Cần SLA rõ (5–7 ngày/bài) | Yes | Chưa có SLA |
+| BU/Legal — Content YMYL approval | Duyệt sub-pages và blog YMYL trước publish. Cần SLA rõ (5-7 ngày/bài) | Yes | Chưa có SLA |
 | Web Platform — Blog CMS platform | Confirm CMS platform cho blog layer (current vs Next.js standalone) | Yes | Pending |
 | Inbound team — Blog 15+ bài | Viết theo keyword brief, qua BU/Legal duyệt | No | Phụ thuộc capacity + Legal SLA |
 | Off-page campaign | Backlink deployment coordinate với sub-page launch | No | Planning |

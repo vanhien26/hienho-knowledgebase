@@ -1,6 +1,6 @@
 # PRD: MoSpark Widget Store Platform
 
-> - **Document Version:** 1.0 (Refactored from BRD v3.3)
+> - **Document Version:** 1.1 (Synced with BRD v3.4 - removed hardcoded shortcode spec)
 > - **Product Manager:** Hiến (Project Manager)
 > - **Build Lead:** Hiếu
 > - **Backend/API Lead:** Hoài Anh
@@ -15,7 +15,7 @@
 Các Business Unit (BU) cần các công cụ tương tác động (máy tính lãi suất, giả lập đầu tư, form khảo sát) trên Web để giữ chân khách hàng và tạo chuyển đổi Web-to-App (W2A). Hiện tại, mỗi công cụ phải được lập trình (hardcode) riêng lẻ, tốn nhiều tuần phát triển, không thể tái sử dụng, và rời rạc về mặt kiến trúc dữ liệu.
 
 ### 1.2 Giải pháp (Product Vision)
-Xây dựng **Widget Store Platform** — một hệ sinh thái tiện ích tương tác tập trung được tích hợp thẳng vào MoSpark CMS. Sản phẩm cung cấp một "Widget Engine" dùng chung, cho phép phân phối (embed) các công cụ tài chính/đời sống động vào bất kỳ trang Web nào thông qua mã Shortcode, tự động hóa quy trình chuyển đổi người dùng từ Web sang App MoMo thông qua cơ chế Context-Passing và Smart CTA.
+Xây dựng **Widget Store Platform** — một hệ sinh thái tiện ích tương tác tập trung được tích hợp thẳng vào MoSpark CMS. Sản phẩm cung cấp một "Widget Engine" dùng chung, cho phép phân phối (embed) các công cụ tài chính/đời sống động vào bất kỳ trang Web nào thông qua cơ chế nhúng do đội kỹ thuật thiết kế (block component, registry, hoặc iframe - cú pháp cụ thể do Dev quyết định), tự động hóa quy trình chuyển đổi người dùng từ Web sang App MoMo thông qua cơ chế Context-Passing và Smart CTA.
 
 ### 1.3 Success Metrics (KPIs)
 *Dự án hiện chưa chốt con số KPI cụ thể cho các vi chỉ số tương tác. Web Platform thống nhất hướng đến các chỉ số tăng trưởng (Growth) lõi của MoMo:*
@@ -34,7 +34,7 @@ Xây dựng **Widget Store Platform** — một hệ sinh thái tiện ích tư�
 
 ### 2.2 System Admin / PM (Người vận hành MoSpark)
 *   **Persona:** Product Manager, Marketing Team của các BUs.
-*   **US3 (Self-serve Creation):** Là PM, tôi muốn sử dụng MoSpark Editor để chọn một Widget có sẵn, tùy chỉnh tiêu đề/màu sắc và lấy mã Shortcode nhúng vào bài Blog chỉ trong 5 phút mà không cần nhờ Dev.
+*   **US3 (Self-serve Creation):** Là PM, tôi muốn sử dụng MoSpark Editor để chọn một Widget có sẵn, tùy chỉnh tiêu đề/màu sắc và nhúng Widget vào bài Blog chỉ trong 5 phút mà không cần nhờ Dev.
 *   **US4 (A/B Testing):** Là PM, tôi muốn cấu hình thay đổi nút CTA (Call-to-Action) của Widget theo từng chiến dịch để test tỷ lệ chuyển đổi.
 
 ---
@@ -85,8 +85,8 @@ Mỗi trang Landing Page chứa Widget phải tuân thủ layout 6 phần:
 
 ## 4. Functional Requirements (Yêu cầu chức năng - Backend CMS)
 
-### 4.1 Shortcode Engine
-*   **FR4 - Render Widget:** MoSpark Engine phải nhận diện chuỗi `[widget:{id} parameter="value"]` trong nội dung Rich Text và render thành component React tương ứng.
+### 4.1 Widget Embedding Engine
+*   **FR4 - Render Widget:** MoSpark Engine phải hỗ trợ cơ chế nhúng Widget vào nội dung trang (Landing Page, Blog) và render thành component tương tác tương ứng. Cú pháp nhúng cụ thể (block component, dynamic registry, iframe hoặc hình thức khác) do đội kỹ thuật (Hiếu + Hoài Anh) thiết kế và quyết định để đảm bảo tính tối ưu và an toàn hệ thống - không quy định cứng trong spec này.
 
 ### 4.2 API Integration Gateway
 *   **FR5 - Online Fetching:** Các Widget (Vàng, Tỷ giá, Lãi tiết kiệm, Đầu tư, Du lịch) yêu cầu Backend thiết lập Gateway kết nối với API nội bộ của App MoMo để lấy dữ liệu realtime. Có cơ chế Cache (Redis) 15-30 phút để giảm tải.
