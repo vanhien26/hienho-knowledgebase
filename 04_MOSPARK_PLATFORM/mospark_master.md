@@ -240,6 +240,8 @@ MoSpark vận hành theo 5 lớp, phủ kín toàn bộ lifecycle từ market re
 | M11 | Revenue Attribution | Web-to-App ROI Pipeline | Planning | 2 | Thuận + DA (Hải/Hoàng) |
 | M12 | Content Intelligence | Decay Detection + Opportunity | Planning | 2→3 | Thuận + Hiến |
 | M13 | GEO Citation Monitor | AI Engine Citation Tracking | Planning | 2 | Hiến (spec) + Thuận |
+| M14 | HRM API Sync (LnD) | Đồng bộ Data Nhân sự / Phân quyền | Ý tưởng | 3 | Bảo |
+| M15 | 2H Customer KB | Tích hợp Meeting Notes / JTBD | Ý tưởng | 3 | Bảo |
 
 ---
 
@@ -662,6 +664,39 @@ GSC integration: weekly pull impression + click per URL. Dashboard severity: War
 - 20 target queries tracked weekly: Q3/2026
 - Citation Rate > 30% cho P3 queries (data-rich, easiest entry point): Q4/2026
 - Citation Rate > 20% across all 4 Pillars: End 2027
+
+---
+
+### 6.15. M14 - HRM API Sync (LnD Integration)
+
+**Mục đích:** Xây dựng nền tảng định danh và phân quyền tự động cho MoSpark thông qua việc đồng bộ với hệ thống quản trị nhân sự (HRM). Mở rộng quản lý User khi hệ thống scale-up.
+
+**Bối cảnh:** MoMo đang triển khai dự án LnD (Product Led Growth) do các Head of BU/VP chia sẻ khóa học (Text/Doc) trên `product.momo.vn`. Dự án này làm việc mật thiết với HR. Ý tưởng của anh Bảo là tận dụng việc này để MoSpark đồng bộ API trực tiếp với HRM.
+
+**Dữ liệu đồng bộ (từ HRM về MoSpark):**
+- Email
+- Tên nhân viên
+- Phòng ban (Department / Division)
+- Cấp bậc (Level)
+- Thời gian gia nhập (Onboarding Time)
+
+**Giá trị mang lại:**
+- **Automated RBAC:** Tự động map user vào đúng phân quyền Role và Use Case (Cell Team) trên MoSpark dựa vào phòng ban và level, không cần tạo tài khoản thủ công.
+- **Scale-up Ready:** Sẵn sàng cho việc mở rộng số lượng User quản trị trên MoSpark khi GTM toàn bộ các Division.
+
+---
+
+### 6.16. M15 - 2H Customer Knowledge Base
+
+**Mục đích:** Làm dồi dào Knowledge Base của MoMo trên MoSpark bằng nguồn dữ liệu định tính cực kỳ quý giá từ người dùng thực tế (Customer Insight).
+
+**Bối cảnh:** Dự án "2H Customer" - MoMo thuê công ty Research tìm kiếm người dùng. Các cấp Manager+ đi survey khách hàng, lắng nghe, ghi âm, take note, và viết Meeting Minutes Note trên web 2H Customer. Anh Bảo có định hướng muốn thu thập toàn bộ Meeting Notes này.
+
+**Giải pháp:**
+- Thu thập và lưu trữ Meeting Notes dưới định dạng **Markdown**.
+- Markdown là format tối ưu để LLMs (AI) có thể đọc hiểu và vector hóa.
+- Biến các notes này thành toàn bộ Context / JTBD (Jobs To Be Done) của người dùng thực/tiềm năng (tại sao họ dùng hoặc không dùng MoMo).
+- **Ứng dụng:** Trở thành nền tảng cơ sở (Foundational Base) cực kỳ vững chắc cho RAG/GenAI Workflow (M2) của MoSpark, giúp AI viết nội dung sát với insight người dùng thực tế hơn.
 
 ---
 

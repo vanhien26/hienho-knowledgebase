@@ -1,4 +1,4 @@
-# BRD: Soundbox - Web D2C (SEO/GEO Project)
+# BRD: Soundbox
 
 > - **Project:** Soundbox Web D2C - Website Order Loa Báo Chuyển Khoản MoMo
 > - **Division:** PS (Payment Services) | SME Offline

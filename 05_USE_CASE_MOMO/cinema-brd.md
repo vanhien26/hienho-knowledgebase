@@ -1,4 +1,4 @@
-# BRD: Cinema - Web Growth (SEO/GEO Project)
+# BRD: Cinema
 
 > - **Project:** Use Case Cinema - Web Growth Strategy Q2-Q4/2026
 > - **Main URL:** momo.vn/cinema
@@ -264,6 +264,27 @@ Search → /cinema/* → Booking click → App open (deeplink) → Transaction c
 - Outbound links (streaming platforms) phải review với Legal trước khi deploy Phase 4
 - Giá vé realtime phải đến từ partner API - không hardcode (ToS risk)
 - Slug migration bắt buộc có 301 redirect - không được bỏ qua dù với lý do nào
+
+---
+
+## 8. Chiến dịch: Summer Camp 2026 (20/06 - 05/09/2026)
+
+**Mục tiêu (Objective):** Tích hợp trực tiếp cơ chế Gamification vào 4 trang chi tiết phim trọng điểm Hè (Minions, Conan, Spider-Man, Nghỉ Hè Sợ Nghỉ Hưu) trên nền tảng MoSpark, thúc đẩy người dùng hoàn thành nhiệm vụ (mua vé, review) để nhận thưởng, đồng thời đẩy mạnh SEO và W2A conversion trực tiếp tại trang giao dịch.
+
+**Scope & Giải pháp kỹ thuật:**
+- **Không dùng Hub chung, Dùng 4 Film Detail làm Trang Đích:** Chiến dịch sẽ dồn toàn bộ traffic truyền thông về 4 trang đích tương ứng với 4 bộ phim (Ví dụ: `momo.vn/cinema/nghi-he-so-nghi-huu-24855`). 
+- **Migration & Cấu trúc Trang (MoSpark):** Thực hiện migrate 4 trang phim này sang hệ thống MoSpark với cấu trúc mới:
+  - *Top Section (Campaign & Missions):* Hiển thị thông tin chiến dịch Summer Camp và cụm nhiệm vụ riêng biệt của phim đó (VD: Đặt vé sớm Minions, Viết review Minions). Các khối nhiệm vụ có tính năng Scheduler mở khóa theo thời gian thực.
+  - *Bottom Section (Core Booking Flow):* Giữ nguyên cấu trúc thông tin phim và lịch chiếu hiện tại (Synopsis, Trailer, Chọn suất chiếu, Rạp) để đảm bảo không gãy luồng Transaction gốc.
+- **Verify Review Gate (Xác thực mua vé):** User nhập SĐT / Order ID khi submit form review ngay trên trang phim. Hệ thống gọi API check với backend MoMo Movies để đảm bảo user đã mua vé và xem phim thực sự -> Tránh spam, fake review.
+- **W2A Trigger:** Tối ưu hóa phễu, user đang ở trang phim có thể vừa làm nhiệm vụ vừa bấm CTA "Đặt vé ngay" deeplink thẳng vào màn hình thanh toán trong App.
+- **GenAI Content & SEO:** Dồn toàn bộ link equity và truyền thông vào đúng URL của phim. Sản xuất thêm các bài review vệ tinh trỏ link về 4 trang đích này.
+
+**Success Metrics:**
+- Traffic vào 4 trang đích (Film Details): 500,000+
+- Users hoàn thành missions: 50,000+
+- Verified Rating review: 20,000+
+- W2A GMV: Tăng 15% so với cùng kỳ.
 
 ---
 

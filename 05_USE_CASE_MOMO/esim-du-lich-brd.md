@@ -1,4 +1,4 @@
-# BRD: eSIM Du Lịch - Web Growth & Content Architecture
+# BRD: eSIM Du Lịch
 
 > - **Project:** eSIM Du Lịch — Web Growth & SEO/GEO
 > - **Main URL:** momo.vn/esim-du-lich

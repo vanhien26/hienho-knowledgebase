@@ -449,15 +449,17 @@ Dự án GenAI Content được chia làm 2 giai đoạn chính để đảm b�
 *   **Structure-First**: Luôn yêu cầu AI tạo Outline trước khi viết nội dung chi tiết.
 
 ### 9.2. Framework Prompt cho Blog Content
-Quy trình này khớp với **Bước 5 (AI Outline) và Bước 8B (GenAI Detail)** trong Workflow 10 bước:
+Quy trình này khớp với **Bước 5 (AI Outline) và Bước 8B (GenAI Detail)** trong Workflow 10 bước, sử dụng cơ chế nhân bản (Cloning) để cô lập prompt theo từng dự án:
 
+*   **Cơ chế liên kết:** Các Prompt Master trong thư viện đóng vai trò là **Master Prompt Templates**. Khi tạo Project mới, hệ thống tự động clone các template này về Project làm **Project-Specific Localized Prompts**. PM/Content Lead có thể chỉnh sửa bản clone này tại cấp độ Project.
 *   **Phase A: Outline Generator (Bước 5)**
     *   **Input**: Primary Keyword + Business Context (từ Bước 2) + Target Audience + Key Message.
-    *   **Prompt Master:** [[03_SKILLS/momo-blog-prompt-1-outline|GenAI Blog Prompt 1 (Outline)]]
+    *   **Prompt Template nguồn:** [[03_SKILLS/momo-blog-prompt-1-outline|GenAI Blog Prompt 1 (Outline)]] (Được clone về làm `project_outline_prompt` của Project).
 *   **Phase B: Content Writer (Bước 8B - GenAI Detail)**
     *   **Trigger**: PM/Content click "GenAI Detail" trong Blog Editor sau khi Outline đã Selected (Bước 6).
     *   **Input**: Outline từ Phase A + [[03_SKILLS/momo-seo-geo-guideline|MoMo SEO & GEO Prompt Guidelines]] + [[03_SKILLS/momo-ymyl-guideline|MoMo YMYL Guidelines]].
-    *   **Prompt Master:** [[03_SKILLS/momo-blog-prompt-2-writer|GenAI Blog Prompt 2 (Writer)]]
+    *   **Prompt Template nguồn:** [[03_SKILLS/momo-blog-prompt-2-writer|GenAI Blog Prompt 2 (Writer)]] (Được clone về làm `project_writer_prompt` của Project).
+*   **Chi tiết quản trị & vận hành:** Xem thêm tại [MoSpark SEO/GEO Project Hub - Phần 3. Kiến trúc Quản trị Prompt & Guideline](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_seo_geo_project.md#3-kien-truc-quan-tri-prompt--guideline-dinh-huong-theo-du-an-project-specific-localized-prompt-management).
 
 ### 9.3. Quality Gate Standards (SEO/GEO Score)
 Nội dung sau khi GenAI tạo ra phải được tự động chấm điểm qua [[04_MOSPARK_PLATFORM/mospark_seo_geo_score|SEO/GEO Scoring System]]. Các tiêu chí bắt buộc:

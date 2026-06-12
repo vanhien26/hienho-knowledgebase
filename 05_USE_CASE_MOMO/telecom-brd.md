@@ -1,4 +1,4 @@
-# BRD: Viễn Thông - Web Growth (SEO/GEO Project)
+# BRD: Viễn Thông
 
 > - **Project:** MoMo Telecom Growth - Sim Số Đẹp - Nạp Data - eSIM Du Lịch - Nạp Tiền ĐT
 > - **Main URL:** momo.vn/vien-thong (hub) - /sim-so-dep - /nap-data - /esim-du-lich - /nap-tien-dien-thoai

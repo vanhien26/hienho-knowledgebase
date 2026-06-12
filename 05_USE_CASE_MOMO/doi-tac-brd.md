@@ -1,4 +1,4 @@
-# BRD: Merchant Detail Page - SME Digital Presence Platform
+# BRD: Merchant Detail Page
 
 > - **Project:** Merchant Detail Page (SME Digital Presence + O2O Ecosystem)
 > - **Main URL:** momo.vn/merchant
@@ -593,24 +593,26 @@ Khi PM nhấn nút khởi tạo Merchant từ bên trong một **SEO/GEO Project
 2. **Phương thức 2 - Đồng bộ từ M4B (Sync M4B):** Dành cho đối tác đã có tài khoản trên hệ thống MoMo App.
 
 #### 11.2 Layer 2: Nhập thông tin khởi tạo & Sync (Form Input & Sync)
-Tại bước này, hệ thống yêu cầu thu thập đủ **3 thông tin cốt lõi** (Tên, Địa chỉ, Ảnh) để làm nguyên liệu cho GenAI. Để tối ưu hóa tự động hóa và tránh sai lệch dữ liệu, hệ thống tích hợp công cụ **Google Map Search (Gemini-powered với Search Grounding)** để tự động crawl dữ liệu thực địa của quán. Quy trình thu thập cụ thể theo phương thức đã chọn ở Layer 1:
+Tại bước này, hệ thống yêu cầu thu thập đủ **4 thông tin cốt lõi** (Tên, Danh mục, Địa chỉ, Ảnh) để làm nguyên liệu cho GenAI kích hoạt đúng Prompt tương ứng với ngành hàng. Để tối ưu hóa tự động hóa và tránh sai lệch dữ liệu, hệ thống tích hợp công cụ **Google Map Search (Gemini-powered với Search Grounding)** để tự động crawl dữ liệu thực địa của quán. Quy trình thu thập cụ thể theo phương thức đã chọn ở Layer 1:
 
 * **Nếu PM chọn phương thức Manual (Nhập tay):**
   * PM nhập **Tên Merchant**. Hệ thống lập tức kích hoạt **Google Map Search** để tìm kiếm trên Google Maps/Google Business Profile.
   * Nếu tìm thấy địa điểm trùng khớp: Hệ thống tự động crawl và **auto-fill** các trường thông tin: *Tên đối tác chuẩn hóa, Địa chỉ chính xác, Giờ mở/đóng cửa*, và danh sách *Tiện ích* (Amenities - e.g. wifi, máy lạnh, bãi xe). PM chỉ cần xác nhận và chỉnh sửa nếu cần.
-  * Nếu không tìm thấy: PM tự nhập tay Tên, Địa chỉ, Giờ mở/đóng cửa và tích chọn các Tiện ích tương ứng.
+  * Nếu không tìm thấy: PM tự nhập tay Tên, Danh mục (Category), Địa chỉ, Giờ mở/đóng cửa và tích chọn các Tiện ích tương ứng.
   * PM tải lên **1 Ảnh** thực tế của quán.
 
 * **Nếu PM chọn phương thức Sync M4B (Đồng bộ M4B):**
-  * PM nhập **Merchant ID** của đối tác. CMS gọi API M4B để tự động điền **Tên Merchant** và **Địa chỉ**.
+  * PM nhập **Merchant ID** của đối tác. CMS gọi API M4B để tự động điền **Tên Merchant**, **Danh mục (Category)** và **Địa chỉ**.
   * Đồng thời, hệ thống tự động kích hoạt **Google Map Search (Gemini-powered)** dựa trên Tên & Địa chỉ từ M4B để tìm kiếm listing tương ứng trên Google Maps, thực hiện crawl và tự động **làm giàu dữ liệu (Data Enrichment)** cho các trường thông tin còn thiếu trên M4B bao gồm: *Giờ mở/đóng cửa* và *Tiện ích*.
   * PM tải lên **1 Ảnh** thực tế của quán.
 
-* *Lưu ý: Nút Tiếp Tục (Kích hoạt GenAI) sẽ bị khóa cho đến khi thu thập đủ cả 3 thông tin bắt buộc (Tên + Địa chỉ + Ảnh).*
+* *Lưu ý: Nút Tiếp Tục (Kích hoạt GenAI) sẽ bị khóa cho đến khi thu thập đủ cả 4 thông tin bắt buộc (Tên + Danh mục + Địa chỉ + Ảnh).*
 
-**Quy trình Kích hoạt GenAI đồng thời (Single-Pass Execution):**
+**Quy trình Kích hoạt GenAI đồng thời (Single-Pass Execution & Chatbot KB Extraction):**
 Khi PM nhấn xác nhận tiếp tục tại Layer 2, hệ thống tự động chạy **đồng thời trong 1 lượt duy nhất (Single-Pass)**:
-- **GenAI Content (Trọng phụ trách):** Sử dụng model Gemini dựa trên thông tin thô thu được (Tên, Địa chỉ, Giờ hoạt động, Tiện ích) để viết bài mô tả giới thiệu chi tiết chuẩn SEO (Unique content) & tự động sinh bộ câu hỏi thường gặp (FAQs).
+- **GenAI Content (Trọng phụ trách):** Sử dụng model Gemini dựa trên thông tin thô thu được để thực hiện 2 tác vụ:
+  1. Viết bài mô tả giới thiệu chi tiết chuẩn SEO (Unique content) & tự động sinh bộ câu hỏi thường gặp (FAQs).
+  2. Bóc tách và map thông tin vào các trường tĩnh (Structured Custom Fields) trong CMS Editor như: *Địa chỉ, Mức giá, Khung giờ mở cửa, Tiện ích, Chính sách thanh toán*. Các trường này đóng vai trò là **Knowledge Base (KB)** cấu trúc hóa để Chatbot của Duy có thể đọc và truy vấn trực tiếp nhằm trả lời người dùng chính xác, tiết kiệm token LLM và tránh hallucination.
 - **GenAI Image (Gemini Banana):** Xử lý hình ảnh vừa tải lên (làm nét, retouch và resize về chuẩn Banner 1050x450 px & Social Share 1200x630 px).
 
 #### 11.3 Layer 3: Kiểm duyệt và Xác nhận thông tin (Verify)
@@ -638,7 +640,7 @@ graph TD
     
     Upload --> Submit{PM bấm Tiếp tục}
     
-    Submit --> GenAI[Chạy Single-Pass GenAI Pipeline: Trọng viết bài & Banana tối ưu ảnh]
+    Submit --> GenAI[Chạy Single-Pass GenAI Pipeline: Trọng viết bài, bóc tách Chatbot KB & Banana tối ưu ảnh]
     
     GenAI --> Verify[Layer 3: CMS Page Editor hiển thị bản thảo]
     

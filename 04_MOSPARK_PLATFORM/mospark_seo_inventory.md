@@ -6,7 +6,6 @@ Bản đồ Tài nguyên & Thị phần (SoV)
 > - **Division:** GPD (Growth Product Division)
 > - **Use Case:** Out-App Traffic
 > - **Product:** Web Growth Platform
-> - **SEO/GEO Project ID:** `mospark-seo-inventory`
 > - **Owner:** GPD - Out-App Traffic (Thuận)
 > - **Governance:** Văn Hiến (Web Product Lead)
 > - **Version:** 4.7 · May 2026

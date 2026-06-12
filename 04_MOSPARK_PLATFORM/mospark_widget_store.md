@@ -6,9 +6,9 @@ Nền tảng kho tiện ích tương tác (Widget Store) trên MoSpark, hỗ tr�
 > - **Division:** GPD (Growth Platform Division)
 > - **Owner:** Web Platform
 > - **PIC:** Hiếu (Build Lead), Thuận (Widget & Utility Manager), Hiến (Project Manager), Hoài Anh (Backend/API & Widget Engine)
-> - **Sponsors:** GPD & Business Units (Finhub làm đối tác thí điểm Phase 1)
+> - **Sponsors:** GPD & Business Units (Finhub BU - internal - làm đơn vị thí điểm Phase 1)
 > - **Status:** In Progress - MVP Phase
-> - **Version:** 3.4 — 2026-06-09
+> - **Version:** 3.5 — 2026-06-10
 
 ---
 
@@ -101,7 +101,12 @@ Widget Store đóng vai trò là "Vũ khí lõi" của **Luồng 1 (LDP Builder 
 
 Hạ tầng Widget Store Platform được trang bị 2 năng lực chiến lược cực mạnh (Strategic Capabilities):
 1. **Smart CTA (Điều hướng theo Intent):** Hệ thống không fix cứng CTA. Logic Engine sẽ phân tích Input của người dùng để trả về CTA chốt sale phù hợp nhất (Ví dụ: Nhập lương thấp -> Rủ mở Ví Trả Sau; Nhập lương cao -> Rủ mở thẻ Tín dụng hạn mức cao).
+
+> **Smart CTA Rule Engine - PIC & Governance:** Rule Engine do **Hiến (PM)** define và approve; **Hiếu (Build Lead)** implement. Rules được lưu dưới dạng config (không hardcode) để PM/PO có thể update qua CMS mà không cần Sprint mới. Mọi thay đổi rule phải qua approval của Hiến trước khi deploy.
+
 2. **Trải nghiệm Onboarding Cá nhân hóa (Zero-Party Data Engine):** Dữ liệu người dùng khai báo trên Web (Số tuổi, Lương, Mức kỳ vọng) sẽ được mã hóa vào Token của Onelink. Khi mở App MoMo, người dùng sẽ nhận được ngay gói dịch vụ thiết kế cá nhân hóa 1-1, tối đa hóa chuyển đổi.
+
+> **Legal Flag - Zero-Party Data Flow:** Đây là personal data flow từ web (anonymous) vào app (authenticated). Yêu cầu: (1) Consent mechanism rõ ràng trên Web trước khi encode vào Onelink token - user phải biết dữ liệu được truyền sang App; (2) Legal sign-off riêng biệt cho flow này - không gộp vào YMYL Content Gate. **PIC xác nhận Legal clearance trước khi build.**
 
 Hạ tầng này được phát triển dựa trên **Widget Engine** tích hợp sẵn vào MoSpark để phục vụ tất cả các BU:
 
@@ -140,6 +145,8 @@ Bộ công cụ giả lập tài chính Finhub Simulation là nhóm tiện ích 
 *   **Master Widget (Hub):** Trang `/trung-tam-tai-chinh` không chỉ là Category Index tĩnh, mà được nâng cấp thành **Widget Phân Bổ Lương**. Người dùng nhập thu nhập 1 lần, hệ thống tự động tính toán các rổ tài chính (Tiết kiệm, Đầu tư, Bảo hiểm, Dự phòng).
 *   **Landing Page Độc Lập (Spokes):** Mỗi tiện ích con (Tính thuế, Lãi tiết kiệm, Đầu tư) nằm trên một Landing Page riêng biệt (`momo.vn/tinh-lai-tiet-kiem`). Điều này tối ưu tuyệt đối cho SEO.
 *   **Context Passing (Truyền tham số tự động):** Khi click từ rổ của Master Widget sang trang Spoke tương ứng, số tiền được tự động truyền qua URL Parameters (Ví dụ: `?prefill=4000000`) để tự động điền (pre-fill) vào thanh công cụ của Spoke, tạo trải nghiệm Cross-selling mượt mà, không đứt gãy.
+
+> **SEO Note - robots.txt Compatibility:** `Disallow: /*?` đã được deploy trên MoSpark. Các URL Spoke khi có parameter `?prefill=` sẽ bị crawler disallow - đây là behavior đúng vì các URL có parameter không phải canonical page. Dev cần đảm bảo: (1) Canonical URL của Spoke luôn là phiên bản không có parameter; (2) Không tạo indexable variant nào từ `?prefill=`. Confirm với Hoài Anh trước khi build.
 *   **Khả năng phân phối chéo:** Các Widget con có thể được nhúng (embed) vào các bài viết Blog vệ tinh thông qua cơ chế nhúng của hệ thống.
 
 ### 6.2 Chi tiết 10 Tiện ích Phase 1 Pilot (Phân Tích JTBD & Product Value)
@@ -152,7 +159,7 @@ Thay vì đi sâu vào đặc tả kỹ thuật lập trình (Tech Spec), mỗi 
     *   *Functional:* Cập nhật giá vàng SJC/vàng nhẫn thời gian thực và quy đổi nhanh số lượng vàng mong muốn sang tiền mặt.
     *   *Emotional:* An tâm tích lũy tài sản dài hạn; cảm thấy chủ động kiểm soát giá trị tài sản tích trữ.
 *   **Giải pháp của Widget:** Hiển thị biểu đồ xu hướng giá vàng trực quan, bảng giá cập nhật hôm nay và công cụ nhập số chỉ/lượng để tính toán số tiền tương ứng ngay lập tức.
-*   **Cầu nối chuyển đổi (W2A):** CTA ngữ cảnh *"Mua vàng miếng/vàng nhẫn bảo chứng an toàn trực tiếp trên MoMo"*.
+*   **Cầu nối chuyển đổi (W2A):** CTA *"Mua vàng miếng/vàng nhẫn bảo chứng an toàn trực tiếp trên MoMo"*.
 
 #### 2. Exchange Rate Calculator (Tỷ giá Ngoại tệ)
 *   **Bối cảnh & Nỗi đau:** Người chuẩn bị du lịch nước ngoài hoặc mua sắm trên các trang thương mại điện tử quốc tế gặp khó khăn trong việc nhẩm tính giá trị món đồ sang tiền Việt.
@@ -229,61 +236,13 @@ Thay vì đi sâu vào đặc tả kỹ thuật lập trình (Tech Spec), mỗi 
 *   **Giải pháp của Widget:** Giao diện Tinder-swipe (vuốt chọn Đúng/Sai) hoặc chọn câu trả lời nhanh -> Trả về xếp hạng Persona (Ví dụ: *"Sói già tài chính"*, *"Mầm non tích lũy"*) kèm thẻ kết quả chia sẻ mạng xã hội.
 *   **Cầu nối chuyển đổi (W2A):** Tặng ngay voucher mua bảo hiểm/sổ tiết kiệm khi hoàn thành quiz ➔ CTA *"Mở App dùng ngay quà tặng"*.
 
-### 6.3 Phase 2 Pipeline (Lifestyle & Travel Widgets)
-Bộ công cụ hướng tới GenZ và dân văn phòng, tập trung vào yếu tố giải trí (Entertainment), xu hướng (Trending) và vi chuyển đổi (Micro-conversion):
-
-#### 11. Tiện ích "Cai nghiện" Trà sữa / Cà phê (The Latte Factor)
-*   **Input:** Số ly trà sữa/cà phê mỗi tuần, giá tiền trung bình.
-*   **Logic:** Tính tổng chi phí "đốt" vào trà sữa trong 1 năm, 5 năm. Tính toán chi phí cơ hội nếu đem số tiền đó đi đầu tư (lãi kép).
-*   **Output:** Biểu đồ so sánh "Tiền tiêu sản" vs "Tiền tài sản". Ví dụ: "Thay vì uống trà sữa, bạn đã có thể mua iPhone 15 Pro Max hoặc có X trăm triệu".
-*   **PLG Redirection:** CTA "Bắt đầu đầu tư Túi Thần Tài / CCQ chỉ từ 10.000đ".
-
-#### 12. Dự toán Ngân sách Du lịch & Chia tiền (Trip Budget Planner)
-*   **Input:** Điểm đến, số ngày, số lượng người.
-*   **Logic:** Truy xuất dữ liệu giá vé máy bay/khách sạn trung bình từ MoMo Travel.
-*   **Output:** Dự toán chi tiết cho chuyến đi và số tiền mỗi thành viên cần đóng.
-*   **PLG Redirection:** Nút tạo "Quỹ Nhóm MoMo" để gom tiền, hoặc CTA "Đặt vé máy bay / khách sạn trên MoMo".
-
-#### 13. Giả lập Phạt Vi phạm Giao thông (Traffic Fine Simulator)
-*   **Input:** Loại phương tiện, hành vi vi phạm (Quá tốc độ, nồng độ cồn, vượt đèn đỏ).
-*   **Logic:** Tra cứu mức phạt chuẩn xác theo Nghị định 100/123.
-*   **Output:** Hiển thị mức phạt tiền (Từ X đến Y triệu) và hình thức phạt bổ sung (Tước bằng Z tháng).
-*   **PLG Redirection:** Tận dụng search volume 3.5 triệu/tháng để chốt CTA "Tra cứu Phạt nguội biển số xe" và "Thanh toán Phạt nguội trực tuyến".
-
-#### 14. Công cụ Cân não: Thuê nhà hay Mua nhà? (Rent vs Buy Calculator)
-*   **Input:** Vốn tự có, giá trị căn nhà mơ ước, chi phí thuê nhà hiện tại.
-*   **Logic:** So sánh biểu đồ dòng tiền (Cashflow) trong 10-20 năm giữa việc vay tiền mua nhà và việc lấy vốn đi đầu tư + đi thuê nhà.
-*   **Output:** Kết luận phương án nào có lợi hơn về mặt tài chính trong dài hạn.
-*   **PLG Redirection:** Nếu Thuê nhà có lợi ➔ Chốt sale "Đầu tư". Nếu Mua nhà có lợi ➔ Chốt sale "Vay mua nhà / Vay tiêu dùng MoMo".
-
----
-
-## 7. Communication & Distribution Strategy
-
-### 7.1 Mạng lưới Phân phối B2B (Widget Syndication)
-Biến Widget Store thành một mạng lưới Affiliate/Lead Generation khổng lồ:
-*   Đóng gói Widget thành mã nhúng `<iframe>` hoặc `JS Embed`.
-*   Cung cấp **Miễn phí** cho các trang báo lớn (CafeF, VNExpress) và các Affiliate Marketers.
-*   **Lợi ích kép:** Các trang báo có công cụ giữ chân độc giả mà không tốn công code. MoMo thu được lượng **Backlinks** (cực tốt cho SEO) và chốt chuyển đổi trực tiếp từ nguồn Traffic khổng lồ bên ngoài.
-
-### 7.2 Chiến lược GEO/AEO (AI Citation)
-Để đón đầu xu hướng tìm kiếm Generative Search (AI Overview, Perplexity, ChatGPT):
-*   **Structured Data (Schema):** Bắt buộc tự động render cấu trúc JSON-LD `SoftwareApplication` và `FinancialProduct` cho từng trang tiện ích.
-*   **AI Bots Accessibility:** Cho phép các crawler bot của OpenAI, Google-Extended, Anthropic thu thập dữ liệu công cụ.
-*   **Topical Authority:** Xây dựng blog cluster xoay quanh công cụ để tạo liên kết nội bộ (Internal Link Hub) củng cố điểm Authority.
-
-### 7.2 A/B Testing & Personalization
-Sử dụng Ads Manager để phân phối và tối ưu hóa:
-*   Thử nghiệm 2 phiên bản CTA khác nhau trên Results Dashboard (Ví dụ: CTA "Gửi tiết kiệm ngay" vs "Nhận lãi suất 6.5%").
-*   Cá nhân hóa CTA dựa trên lịch sử truy cập ẩn danh lưu ở Local Storage (User từng vào trang vay sẽ thấy CTA hướng về Ví Trả Sau/Vay Nhanh).
-
 ---
 
 # PHẦN III: PROJECT MANAGEMENT
 
 ## 8. Success Metrics
 
-*(Lưu ý: Các vi chỉ số tương tác chi tiết chưa được thiết lập KPI cứng. Dự án thống nhất bám sát các chỉ số tăng trưởng - Growth Metrics lõi của Web Platform).*
+*(Lưu ý: Target chưa được set do chưa có baseline. KPI sẽ được lock sau 2 tuần đầu measure từ ngày launch Phase 1. Dự án thống nhất bám sát các chỉ số tăng trưởng - Growth Metrics lõi của Web Platform. PIC lock target: Hiến + Hải/Hoàng (DA Team).)*
 
 | Nhóm Metric | Chỉ số đo lường (KPI) | Mục tiêu (Target) | Nguồn đo lường |
 |---|---|---|---|
@@ -311,6 +270,12 @@ Sử dụng Ads Manager để phân phối và tối ưu hóa:
 *   **Done:** Định vị chiến lược (Refactor v3.0); URL Architecture and sitemap pattern.
 
 ### Change Log
+*   **Tháng 6/2026 (v3.5):**
+    *   Loại bỏ hoàn toàn các tiện ích Phase 2 phi logic (The Latte Factor, Traffic Fine, Trip Budget, Rent vs Buy) và danh mục chiến lược truyền thông & phân phối (Comm & Distribution Strategy) theo phản hồi của PO vì chưa có kế hoạch triển khai.
+*   **Tháng 6/2026 (v3.5):**
+    *   Fix 6 issues từ PM review: (1) Clarify Smart CTA Rule Engine ownership - Hiến define, Hiếu implement, config-based không hardcode; (2) Thêm Legal Flag cho Zero-Party Data flow (consent + separate Legal sign-off); (3) Thêm SEO note về robots.txt compatibility với Context Passing `?prefill=`; (4) Move B2B Syndication vào Phase 2 scope và flag cần BD; (5) Fix duplicate Section 7.2 -> 7.3; (6) Replace hardcoded Phạt Nguội volume bằng [CẦN VERIFY] reference; (7) Clarify Finhub là internal BU; (8) Clarify KPI chưa có baseline và cơ chế lock sau launch.
+*   **Tháng 6/2026 (v3.4):**
+    *   Xóa Section 7.1 B2B Syndication (iframe/JS embed cho báo đài) - out-of-scope. Widget Store chỉ vận hành trên domain momo.vn, không có kế hoạch distribute ra ngoài. Renumber 7.2/7.3 lại.
 *   **Tháng 6/2026 (v3.4):**
     *   Loại bỏ chi tiết về cú pháp shortcode tĩnh (`[widget:type-id]`) trong đặc tả sản phẩm theo phản hồi của PO. Cơ chế nhúng động/nhúng nội bộ sẽ hoàn toàn do phía Dev chủ động thiết kế (như block component/iframe) để đảm bảo linh hoạt.
 *   **Tháng 6/2026 (v3.3):**

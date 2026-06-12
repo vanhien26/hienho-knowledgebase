@@ -3,7 +3,6 @@
 > - **Document:** MoMo.vn Web Strategic Thesis & Governance Framework (Thesis & BRD)
 > - **Main Domain:** momo.vn
 > - **Division:** Growth Platform Division (GPD)
-> - **Project ID:** `web-momo-strategy-2026`
 > - **Version:** 6.1 · May 2026
 > - **Status:** Active - Master Strategy & Quality Gate for momo.vn
 > - **Last updated:** 2026-05-23

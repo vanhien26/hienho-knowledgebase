@@ -1,4 +1,4 @@
-# BRD: Bảo Hiểm Y Tế - Web Growth (SEO/GEO Project)
+# BRD: Bảo Hiểm Y Tế
 
 > - **Project:** BHYT Web Growth - MiniWeb Expansion + Blog Production
 > - **Main URL:** momo.vn/bao-hiem-y-te

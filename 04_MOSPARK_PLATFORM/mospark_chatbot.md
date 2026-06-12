@@ -5,7 +5,7 @@ Trợ lý AI tư vấn và hỗ trợ người dùng toàn trang Web
 > - **Division:** GPD (Growth Platform Division)
 > - **Owner:** Bảo
 > - **PIC:** Duy (Tech)
-> - **Version:** 1.0 · June 2026
+> - **Version:** 1.1 · June 2026
 
 
 ---
@@ -36,6 +36,7 @@ Chatbot được thiết kế để giải quyết các nhu cầu (JTBD) phổ b
 | **Tìm hiểu USP/Tính năng nổi bật** | *Sản phẩm này có gì đặc biệt?* | Trích xuất USPs từ Business Context. | Xem chi tiết trên App |
 | **Kiểm tra điều kiện tham gia** | *Tôi có đủ điều kiện không?* | Đối chiếu điều kiện từ nội dung YMYL/Disclaimer. | Mở App / Xác thực |
 | **Hỗ trợ thực hiện tác vụ/JTBD** | *Hướng dẫn cách làm* | Hướng dẫn từng bước dựa trên bài Blog/How-to. | Thực hiện ngay trên App |
+| **Tra cứu thông tin Merchant (O2O)** | *Quán này có nhận Ví Trả Sau không? Giờ mở cửa?* | Truy xuất từ Structured Custom Fields (Địa chỉ, Giờ, Payment) của trang Đối tác. | Thanh toán / Kích hoạt Ví Trả Sau |
 | **Hỏi đáp thông tin cụ thể** | *[Câu hỏi cụ thể]* | LLM truy vấn Knowledge Base để trả lời chính xác. | Mở dịch vụ tương ứng |
 | **Tóm tắt nhanh toàn bộ** | *Tóm tắt thông tin* | Gom ý chính thành 3-4 bullet points. | Chuyển đổi / Mở App |
 
@@ -77,7 +78,9 @@ Chatbot được thiết kế để giải quyết các nhu cầu (JTBD) phổ b
 
 Đảm bảo tuân thủ chuẩn MoSpark (Layer 3 - Quality Gate):
 
-1. **Nguồn dữ liệu (Dynamic Knowledge Base):** Chatbot tự động nội suy câu trả lời từ kho dữ liệu tương ứng với trang web hiện tại (bao gồm: trường thông tin `Business Context` (12 fields) và nội dung Content đang thuộc về Use Case đó).
+1. **Nguồn dữ liệu (Dynamic Knowledge Base):** Chatbot tự động nội suy câu trả lời từ kho dữ liệu tương ứng với trang web hiện tại:
+   - **Đối với bài viết/Blog/Use Case chung:** Lấy từ trường thông tin `Business Context` (12 fields) và nội dung Content dài đang thuộc về Use Case đó.
+   - **Đối với trang Merchant (Đối tác):** Chatbot ưu tiên đọc dữ liệu tĩnh được bóc tách tự động từ luồng GenAI Single-Pass của MoSpark (Structured Custom Fields bao gồm `merchant_address`, `price_range`, `operating_hours`, `amenities_services`, `payment_policy`) thông qua Webhook API. Cơ chế cấu trúc hóa này giúp tối ưu token (RAG) và chống hallucination (bịa thông tin).
 2. **Anti-Hallucination:** System Prompt của LLM bắt buộc chứa rule: *"Chỉ trả lời dựa trên Knowledge Base được cung cấp của trang hiện hành. Nếu thông tin không có, trả lời 'Hiện tại chưa có thông tin này' thay vì bịa ra."*
 3. **Quality Gate:** Trang web hiện tại phải đạt điểm SEO/GEO Scoring >= 60 mới được kích hoạt tính năng trả lời tự động bằng AI (vì nội dung gốc rác thì AI trả lời cũng rác).
 

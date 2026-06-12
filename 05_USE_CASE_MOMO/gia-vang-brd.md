@@ -1,6 +1,5 @@
-# BRD: Giá Vàng - SEO Inventory Assessment & Web Product Direction
+# BRD: Giá Vàng
 
-> - **Use Case ID:** gia-vang
 > - **Market:** Gold
 > - **Division:** Web Platform
 > - **Owner:** Web Platform

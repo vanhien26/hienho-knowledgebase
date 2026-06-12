@@ -1,4 +1,4 @@
-# BRD: Ví Trả Sau (BNPL) - Web Growth & SEO/GEO Project
+# BRD: Ví Trả Sau (BNPL)
 
 > - **Project:** Use Case Ví Trả Sau - Web Growth & Inbound SEO/GEO
 > - **Main URL:** momo.vn/vi-tra-sau

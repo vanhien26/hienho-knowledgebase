@@ -1,4 +1,4 @@
-# BRD: Bảo Hiểm Xe Máy - Web Growth (SEO/GEO Project)
+# BRD: Bảo Hiểm Xe Máy
 
 > - **Project:** Bảo Hiểm Xe Máy Web Growth
 > - **Main URL:** momo.vn/bao-hiem-xe-may

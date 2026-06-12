@@ -1,4 +1,4 @@
-# BRD: Tra Cứu Điểm Tín Dụng (CIC) - Web Growth & Monetization
+# BRD: Tra Cứu Điểm Tín Dụng (CIC)
 
 > - **Project:** Điểm Tín Dụng (CIC) Web Growth
 > - **Main URL:** `momo.vn/diem-tin-dung` (Dự kiến)

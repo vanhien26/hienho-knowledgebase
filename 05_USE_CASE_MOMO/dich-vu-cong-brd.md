@@ -1,4 +1,4 @@
-# BRD: Dịch Vụ Công MoMo - Web Growth & Content Architecture
+# BRD: Dịch Vụ Công MoMo
 
 > - **Project:** Dịch Vụ Công MoMo (DVC) - Governance Hub
 > - **Main URL:** `momo.vn/dich-vu-cong` (Governance Hub) + kênh Web chiến lược (Phạt Nguội, ePass)

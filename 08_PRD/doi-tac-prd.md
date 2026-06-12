@@ -561,8 +561,17 @@ graph TD
   - Phải vượt qua Google Rich Results Test (0 lỗi, 0 cảnh báo nghiêm trọng) trước khi trang chuyển sang trạng thái `Live`.
   - Content của `FAQPage` và `HowTo` là điều kiện bắt buộc để trang có cơ hội được hiển thị trên Google AI Overview và các LLM search responses.
 
+### 5.3 Chatbot Knowledge Base Schema (MoSpark to Chatbot Sync)
 
-### 5.3 Core Web Vitals Targets
+Nhằm tối ưu chi phí (RAG tokens) và đảm bảo độ chính xác khi Chatbot nội bộ truy vấn dữ liệu từ trang Merchant, MoSpark CMS yêu cầu GenAI (trong Single-Pass Pipeline) bóc tách dữ liệu vào các trường JSON có cấu trúc tĩnh (Custom Fields) sau thay vì chỉ đổ vào bài viết dài:
+- [ ] `merchant_address`: Chuỗi địa chỉ hoàn chỉnh, bao gồm hướng dẫn đường đi đặc thù (nếu có).
+- [ ] `price_range`: Mức giá trung bình, phân khúc giá hoặc danh mục menu đại diện.
+- [ ] `operating_hours`: Khung giờ mở cửa, đóng cửa, ngày nghỉ tuần/lễ.
+- [ ] `amenities_services`: Mảng các tiện ích (e.g. `["Wifi", "Đỗ xe ô tô", "Phòng lạnh"]`).
+- [ ] `payment_policy`: Chính sách thanh toán (MoMo, Ví Trả Sau, Thẻ tín dụng, Hoàn tiền hiện có).
+*Ghi chú:* Các trường này được lưu dưới dạng metadata của trang và được đồng bộ qua API cho Backend Chatbot của Duy.
+
+### 5.4 Core Web Vitals Targets
 
 | Metric | Target |
 |---|---|
@@ -584,10 +593,12 @@ graph TD
 | Campaign / Cashback API | MoMo Internal | Inject active cashback offers per merchant | Internal token | [CẦN VERIFY] |
 | Google Places / Maps API | Google | Google Map Search Crawler (Tên, địa chỉ, giờ hoạt động, tiện ích) & Review (Phase II) | API Key | 1000 req/day (free tier) |
 | Onelink / Appsflyer | Appsflyer | W2A deep link generation + attribution | [CẦN VERIFY - DA team] | - |
+| Chatbot KB Sync API | MoMo Internal (Duy) | Đồng bộ dữ liệu Structured KB (địa chỉ, giá, giờ mở cửa) từ CMS qua Chatbot DB | Internal token | Webhook On-Publish |
 
 **Data freshness:**
 - NAP data: sync khi PM trigger (không real-time - merchant data ít thay đổi)
 - Google Maps Search data: crawl tại thời điểm PM tạo trang (Layer 2). Không tự động đồng bộ sau khi publish trừ khi PM nhấn nút "Refresh Google Map Data" thủ công trong CMS.
+- Chatbot KB Sync: Gửi Webhook trigger real-time sang Chatbot Database mỗi khi trang Merchant được Publish hoặc Cập nhật thành công từ CMS.
 - VTS merchant list: daily sync hoặc push khi PO VTS update
 - Cashback campaign: real-time inject từ Campaign Management (campaign có start/end date)
 - Review score (Phase II): daily refresh từ Google Places API

@@ -1,4 +1,4 @@
-# BRD: Tra Cứu Phạt Nguội - Web Growth (SEO/GEO Project)
+# BRD: Tra Cứu Phạt Nguội
 
 > - **Project:** Tra Cứu Phạt Nguội Web Growth
 > - **Main URL:** momo.vn/phat-nguoi
@@ -214,6 +214,8 @@ momo.vn/phat-nguoi [Hub]
 - Route-based pSEO: `/phat-nguoi/quoc-lo-1a`, `/phat-nguoi/cao-toc-long-thanh`...
 - Fine Code pSEO: `/loi-vi-pham/vuot-den-do` per mã lỗi vi phạm.
 ### 5.4 Luồng Mua Hàng & Thanh Toán trên Web (Web Subscription & MoMo Payment Checkout Flow)
+
+> **Cập nhật:** Sẽ mang tính năng mua Subscription lên trực tiếp trên Web. Tuần sau PO sẽ gửi BA Doc và User Flow (UX/UI).
 
 Nhằm tối ưu hóa doanh thu trực tiếp từ Web channel (Revenue Stream) và nâng cao trải nghiệm tự động hóa cho người dùng, MoSpark xây dựng luồng mua gói dịch vụ Giám sát Phạt nguội tự động (TTDK Subscription) và thanh toán trực tiếp bằng cổng MoMo Payment Gateway trên Web.
 
@@ -563,7 +565,10 @@ Theo Foundation Checklist chuẩn SEO Inventory. Mọi bài blog Phạt Nguội 
 - Reporting: Domain Authority, Traffic Estimate, DoFollow/NoFollow ratio per link.
 - Hình thức: Link placement báo chí, guest post editorial, resource page.
 
-**Timeline:**
+**Budget & Timeline:**
+- **Ngân sách dự kiến:** ~75 triệu / 2 tháng. (Tuy nhiên đang cần review lại vì thời gian 2 tháng là quá ít cho việc chạy Offpage backlink, cần dãn ra để thấy hiệu quả).
+- **SEM:** Tiếp tục duy trì chạy SEM để cover luồng high-intent demand ngắn hạn.
+- **Social Outreach:** Đẩy mạnh thực thi vào **Q3/2026**.
 - T6/2026: Tìm và evaluate 2-3 vendors. Hiến approve whitelist sites.
 - T7/2026: Kick-off campaign backlink Batch 1 (Tier 1 báo lớn - leverage TTDK announcement).
 - T8-T9/2026: Scale Tier 2-3 theo tốc độ Phase 2 content.
@@ -603,6 +608,7 @@ Theo Foundation Checklist chuẩn SEO Inventory. Mọi bài blog Phạt Nguội 
 
 | Ngày | Phiên bản | Thay đổi |
 |---|---|---|
+| 2026-06-11 | v3.7 | Cập nhật thông tin budget Offpage (~75tr/2tháng - chờ review) và timeline Social Outreach (Q3), duy trì SEM. Bổ sung note PO chuẩn bị cung cấp BA Doc/Flow cho luồng Subscription Web (Sec 5.4). |
 | 2026-05-29 | v3.6 | Thêm Section 10 - Comm Activities Off-Page: Social Outreach (Internal BMC) + Backlink & Off-site (Vendor). Cập nhật Phase Roadmap bổ sung cột Off-page/Comm per phase. |
 | 2026-05-25 | v3.5 | Thêm Section 9 - SEO/GEO Content Engine GenAI Production Plan. Tích hợp SEO Inventory v4.7 framework: phân loại Mass Traffic/DVC, Keyword Cluster Priority Map (7 clusters/P0-P3), GenAI Production Plan 3 phases (Batch 1 done/Batch 2 T6/Pháp 2 pSEO), Content Quality Gate 6 cổng, SoV Tracking Plan với milestones T6-T12/2026. |
 | 2026-05 (đầu tháng) | v3.0 | Final Master - Ready for Execution |

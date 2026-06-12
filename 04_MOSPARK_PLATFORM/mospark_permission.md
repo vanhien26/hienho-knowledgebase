@@ -68,3 +68,18 @@ Sự phân quyền này tạo ra một vòng lặp phối hợp nhịp nhàng, v
 6. **Analytics:** PM (Cell Team) quay lại hệ thống để xem dữ liệu Traffic và Web-to-App Conversion từ bài viết đó (Chỉ xem được số của BU mình).
 
 Với mô hình này, MoSpark vừa giữ được tính tự chủ (Cell Team không phải chờ Dev, Inbound không phải mượn tài khoản) vừa đảm bảo sự kiểm soát chặt chẽ từ trung ương (Web Platform).
+
+---
+
+## 5. Roadmap: Tích hợp HRM & LnD (Automated RBAC)
+
+**Bối cảnh:** Dựa trên định hướng của nền tảng LnD (Product Led Growth) chia sẻ khóa học từ Head of BU/VP, MoSpark đang lên kế hoạch đồng bộ API với hệ thống quản trị nhân sự (HRM).
+
+**Cơ chế Phân quyền Tương lai:**
+Khi mở rộng quy mô GTM cho tất cả Division, việc phân quyền thủ công sẽ tạo ra nút thắt. Việc đồng bộ API HRM sẽ giúp tự động hóa RBAC dựa vào:
+- `Email` & `Tên nhân viên`
+- `Phòng ban` (Department/Division) → Tự động map vào đúng Project / Use Case.
+- `Cấp bậc` (Level) → Tự động phân quyền (Reviewer, Editor, Viewer).
+- `Onboarding Time` → Nắm bắt và cấp quyền kịp thời cho nhân sự mới.
+
+Điều này giúp MoSpark dễ dàng scale-up và quản lý user tập trung trong một nền tảng Growth OS.

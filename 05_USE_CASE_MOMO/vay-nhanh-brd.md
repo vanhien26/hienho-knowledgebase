@@ -1,4 +1,4 @@
-# BRD: Vay Nhanh - Web Growth & Conversion Platform 2026
+# BRD: Vay Nhanh
 
 > - **Project:** Vay Nhanh Web Growth & Conversion Platform
 > - **Main URL:** momo.vn/vay-nhanh
