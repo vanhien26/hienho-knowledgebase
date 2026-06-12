@@ -162,6 +162,20 @@ Nằm trong phân hệ cấu hình nâng cao của Admin Panel MoSpark:
 *   **Nguyên tắc Zero PII (Personally Identifiable Information):** RAG Knowledge Base chỉ được lưu trữ thông tin sản phẩm, chính sách và cẩm nang thương hiệu. Tuyệt đối không lưu trữ thông tin khách hàng, số điện thoại, số tài khoản hoặc lịch sử giao dịch cá nhân.
 *   **Hậu kiểm tự động:** Hệ thống chạy bộ lọc regex và các model NER (Named Entity Recognition) để tự động bóc tách/mã hóa các chuỗi ký tự nghi ngờ là thông tin cá nhân trước khi thực hiện vector hóa.
 
+### 6.3. Cơ chế Quản lý Vòng đời & Tự động Dọn dẹp Dữ liệu Hết hạn (Data Lifecycle & Decay Management)
+Để tránh hiện tượng phình dữ liệu (Data Bloat), tiết kiệm dung lượng Vector DB và tối ưu hóa context window (tránh tốn tokens khi truy xuất), RAG Engine áp dụng các quy chuẩn quản lý vòng đời tri thức chặt chẽ:
+
+1.  **Thiết lập Expiration Tag (TTL - Time To Live):**
+    *   Mỗi tài liệu hoặc bài viết lịch sử GenAI khi nạp vào hệ thống bắt buộc phải được gắn kèm thẻ thời gian hết hạn (`expire_at`).
+    *   *Quy tắc mặc định:* Các tài liệu tĩnh (Brand Guideline, Design System) có TTL vô hạn; thông tin khuyến mãi/mã ưu đãi ngắn hạn có TTL mặc định 30 ngày; các phiên bản nháp GenAI nháp có TTL mặc định 15 ngày.
+2.  **Cơ chế Tự động Dọn dẹp (Auto-purge Cron Job):**
+    *   Hệ thống Vector DB (do Duy thiết lập backend) chạy một cron job định kỳ quét hàng tuần để tự động xóa các vector và chunks đã quá thời hạn `expire_at`.
+3.  **Lớp Lưu trữ Đệm & Xử lý Dữ liệu Hết hạn (Archive & Fallback Gate):**
+    *   Đối với các tài liệu về sản phẩm/dịch vụ quan trọng sắp hết hạn, hệ thống sẽ gửi thông báo cảnh báo đến màn hình Admin. PM có quyền chọn `Gia hạn` (Extend TTL) hoặc `Xác nhận xóa` (Approve Purge).
+    *   Nếu PM không phản hồi sau 7 ngày, các chunks của tài liệu này sẽ tự động được chuyển sang đĩa lạnh (Cold Storage - lưu trữ dạng nén không index vector) và loại bỏ khỏi Vector DB hoạt động để giải phóng bộ nhớ RAM cho hệ thống index.
+4.  **Tối ưu hóa Token khi Inference:**
+    *   Khi RAG Engine thực hiện truy xuất thông tin, các chunks cũ có điểm tương đồng (Similarity score) thấp hoặc có nhãn thời gian cũ hơn sẽ bị hạ mức ưu tiên hoặc lọc bỏ hoàn toàn, tránh việc nhúng thông tin thừa thãi làm phình to payload gửi tới LLM.
+
 ---
 
 ## 7. Tài liệu Liên kết (Related Documents)
