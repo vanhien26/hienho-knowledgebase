@@ -271,16 +271,23 @@ Search → /cinema/* → Booking click → App open (deeplink) → Transaction c
 
 **Mục tiêu (Objective):** Tích hợp trực tiếp cơ chế Gamification vào 4 trang chi tiết phim trọng điểm Hè (Minions, Conan, Spider-Man, Nghỉ Hè Sợ Nghỉ Hưu) trên nền tảng MoSpark, thúc đẩy người dùng hoàn thành nhiệm vụ (mua vé, review) để nhận thưởng, đồng thời đẩy mạnh SEO và W2A conversion trực tiếp tại trang giao dịch.
 
-**Scope & Giải pháp kỹ thuật:**
-- **Không dùng Hub chung, Dùng 4 Film Detail làm Trang Đích:** Chiến dịch sẽ dồn toàn bộ traffic truyền thông về 4 trang đích tương ứng với 4 bộ phim (Ví dụ: `momo.vn/cinema/nghi-he-so-nghi-huu-24855`). 
-- **Migration & Cấu trúc Trang (MoSpark):** Thực hiện migrate 4 trang phim này sang hệ thống MoSpark với cấu trúc mới:
-  - *Top Section (Campaign & Missions):* Hiển thị thông tin chiến dịch Summer Camp và cụm nhiệm vụ riêng biệt của phim đó (VD: Đặt vé sớm Minions, Viết review Minions). Các khối nhiệm vụ có tính năng Scheduler mở khóa theo thời gian thực.
+### 8.1. Visual Assets (Key Visual & Artwork)
+Hệ thống MoSpark quản lý trực quan và lưu trữ các thiết kế phục vụ chiến dịch:
+*   **Key Visual chính của Chiến dịch (Campaign Key Visual - KV):** Được hiển thị tại Header Widget của trang /cinema và banner truyền thông trên tất cả các trang vệ tinh của MoSpark.
+    ![Summer Campaign Key Visual (KV)](file:///Users/hienhv/.gemini/antigravity/brain/14408e0a-cb20-42a7-8acb-7584b1d1124b/summer_campaign_kv_1781341893117.png)
+*   **Artwork của Phim Đầu tiên (Phim Minions):** Được tích hợp thẳng vào vị trí Top Banner (Header Area) của trang phim chi tiết Minions để tạo bầu không khí sinh động và thu hút lượt làm nhiệm vụ từ user.
+    ![Minions Movie Summer Artwork](file:///Users/hienhv/.gemini/antigravity/brain/14408e0a-cb20-42a7-8acb-7584b1d1124b/yellow_characters_summer_artwork_1781342027547.png)
+
+### 8.2. Scope & Giải pháp kỹ thuật (Technical Scope)
+- **Không dùng Hub chung, Dùng 4 Film Detail làm Trang Đích:** Chiến dịch sẽ dồn toàn bộ traffic truyền thông về 4 trang đích tương ứng với 4 bộ phim (Ví dụ: `momo.vn/cinema/minions-24855` hoặc `nghi-he-so-nghi-huu-24855`).
+- **Migration & Cấu trúc Trang (MoSpark Template Mapping):** Thực hiện migrate 4 trang phim này sang hệ thống MoSpark với cấu trúc mới:
+  - *Top Section (Campaign & Missions):* Hiển thị **Artwork của phim** làm hình nền (background), thông tin chiến dịch Summer Camp và cụm nhiệm vụ riêng biệt của phim đó (VD: Đặt vé sớm Minions, Viết review Minions). Các khối nhiệm vụ có tính năng Scheduler mở khóa theo thời gian thực.
   - *Bottom Section (Core Booking Flow):* Giữ nguyên cấu trúc thông tin phim và lịch chiếu hiện tại (Synopsis, Trailer, Chọn suất chiếu, Rạp) để đảm bảo không gãy luồng Transaction gốc.
 - **Verify Review Gate (Xác thực mua vé):** User nhập SĐT / Order ID khi submit form review ngay trên trang phim. Hệ thống gọi API check với backend MoMo Movies để đảm bảo user đã mua vé và xem phim thực sự -> Tránh spam, fake review.
 - **W2A Trigger:** Tối ưu hóa phễu, user đang ở trang phim có thể vừa làm nhiệm vụ vừa bấm CTA "Đặt vé ngay" deeplink thẳng vào màn hình thanh toán trong App.
 - **GenAI Content & SEO:** Dồn toàn bộ link equity và truyền thông vào đúng URL của phim. Sản xuất thêm các bài review vệ tinh trỏ link về 4 trang đích này.
 
-**Success Metrics:**
+### 8.3. Success Metrics
 - Traffic vào 4 trang đích (Film Details): 500,000+
 - Users hoàn thành missions: 50,000+
 - Verified Rating review: 20,000+
