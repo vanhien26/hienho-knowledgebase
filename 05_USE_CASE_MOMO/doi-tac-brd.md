@@ -396,6 +396,30 @@ Lộ trình phát triển nội dung và mở rộng quy mô trang đối tác �
 - **Nhóm SME:** PM và Cell Team chủ động onboard diện rộng các đối tác SME hoạt động trên hệ thống (đặc biệt là các merchant sử dụng Soundbox và chấp nhận Ví Trả Sau) thông qua công cụ CMS tự động hóa.
 - **Quy mô pSEO:** Tự động sinh hàng chục nghìn trang Listing Page khu vực theo địa bàn hành chính (Tỉnh/Thành phố, Quận/Huyện) để tối ưu hóa SEO địa phương (Local Search Intent).
 
+### 7.3 Kiến trúc Làm giàu dữ liệu (Data Enrichment Pipeline) cho Phase II
+Để tự động hóa việc thu thập "Deep Data" trên quy mô lớn mà không lệ thuộc vào nhập liệu thủ công, hệ thống sử dụng kiến trúc Hybrid phân vai rõ ràng giữa AI Grounding và Data Scraping:
+
+1. **Gemini API (Tầng Cơ Bản - Base Data):** Sử dụng tính năng Grounding with Google Search để truy xuất nhanh dữ liệu nền tảng với chi phí API cực rẻ. Đảm nhận việc cào: Tên địa điểm, Địa chỉ, Giờ hoạt động, Tiện ích cơ bản, và Điểm đánh giá trung bình.
+2. **Apify / Ampily (Tầng Dữ Liệu Sâu - Deep Data):** Sử dụng Crawler chuyên dụng (Apify Google Maps Scraper) để cào các dữ liệu cấu trúc mà AI khó tổng hợp chính xác. Đảm nhận việc cào: **Review Post** (nguyên bản text đánh giá của khách hàng) và **Popular Times** (bóc tách dữ liệu biểu đồ giờ đông khách).
+
+Sự phân vai này giúp MoSpark vừa đạt được khối lượng dữ liệu khổng lồ cho pSEO (nhờ Gemini), vừa sở hữu dữ liệu chuyên sâu (nhờ Apify) để phục vụ cho các Key Accounts hoặc Merchant chiến lược mà vẫn tối ưu hóa bài toán chi phí (Cost-Optimization).
+
+### 7.4 Kiến trúc Xử lý Dữ liệu An toàn (Legal & SEO Compliance)
+Tuyệt đối không hiển thị trực tiếp dữ liệu thô (Raw Data) cào từ Google Maps lên giao diện web để tránh rủi ro bản quyền và thuật toán Helpful Content. Thay vào đó, áp dụng cơ chế "Rửa dữ liệu" (Data Sanitization) như sau:
+
+#### 1. Chiến lược xử lý Review (Chống Duplicate Content)
+Thay vì bê nguyên xi các bài review từ Google (dễ bị dính án phạt Duplicate Content), hệ thống sẽ biến dữ liệu cào thành "Nguyên liệu học" cho AI:
+- **Bước 1 (Backend):** Apify cào các bài review thô từ Google Maps. Dữ liệu này chỉ lưu tạm trong Database, KHÔNG render ra Frontend.
+- **Bước 2 (AI Synthesis):** Đẩy bài review qua Gemini API với Prompt: *"Phân tích sentiment, trích xuất điểm mạnh, điểm yếu và viết 1 đoạn tóm tắt mang tính tư vấn cho khách hàng."*
+- **Bước 3 (Hiển thị):** Frontend chỉ hiển thị đoạn văn bản tóm tắt do Gemini sinh ra thông qua module **"AI Summary / Tóm tắt từ Cộng đồng"**.
+👉 **Kết quả:** Vừa cung cấp insight sâu sắc, vừa tạo ra nội dung Unique 100%, giúp SEO tăng trưởng mạnh mẽ và miễn nhiễm với án phạt của Google. *(Lưu ý: Loại bỏ hoàn toàn module "Đọc chi tiết Review" trên giao diện cũ nếu có).*
+
+#### 2. Chiến lược xử lý Hình ảnh (Chống Vi phạm Bản quyền)
+Google quét bản quyền hình ảnh rất gắt gao. Phân tầng nguồn cấp hình ảnh theo mức độ ưu tiên:
+- **Ưu tiên 1 (Nguồn Chính chủ - M4B):** Bắt buộc sử dụng Logo và Banner chính thức do Merchant tự upload qua cổng MoMo For Business (M4B). Dữ liệu này MoMo hoàn toàn sở hữu bản quyền sử dụng.
+- **Ưu tiên 2 (Nguồn Khai thác Hợp lệ - Places API):** Đối với các Merchant lớn thiếu hình, sử dụng API chính thức của Google (Places Photo API) để nhúng ảnh thay vì cào lậu bằng Tool. (Chấp nhận tốn chi phí API nhưng an toàn pháp lý tuyệt đối).
+- **Ưu tiên 3 (AI Generated Placeholders):** Với các quán SME quá nhỏ, không có ảnh M4B cũng không có ảnh Google, sử dụng GenAI (hoặc kho thư viện ảnh nội bộ MoBase) để chèn ảnh Vector nghệ thuật mô phỏng ngành hàng (VD: Quán Cafe sẽ có ảnh vector ly cafe phong cách hiện đại). Cách này giúp giao diện Web luôn đồng bộ và không bao giờ lo bản quyền.
+
 ---
 
 ## 8. Success Metrics
@@ -695,9 +719,9 @@ Nâng cao giá trị thông tin và độ uy tín (E-E-A-T) của trang chi ti�
   * **Đồng bộ & Tải lên tại Form Input:** Tải lên chỉ cần 1 ảnh thực tế tại Form khởi tạo ban đầu (Manual hoặc Sync M4B).
   * **GenAI Design Pipeline (Gemini Banana) & Content Single-Pass:** Khi PM hoàn tất tải ảnh và bấm xác nhận, hệ thống gọi pipeline GenAI Design (sử dụng Gemini Banana) để tự động làm nét, chỉnh sáng và retouch ảnh cùng lúc với luồng sinh văn bản GenAI Content (chạy trong 1 lượt duy nhất). Hệ thống tự động tối ưu hóa và xuất ra các kích thước chuẩn để đẩy vào Gallery bao gồm: ảnh **Banner** (1050x450 px) và hình **Social Share** (1200x630 px).
   * **Định hướng tương lai:** Mở rộng khả năng tự động xử lý và retouch cho bất kỳ hình ảnh nào được tải lên trực tiếp thông qua trình soạn thảo CMS Page Editor.
-- **Tích hợp đánh giá (Review Integration):** Hiển thị điểm rating trung bình (1-5 sao) và số lượng đánh giá tổng hợp từ các nguồn:
-  * Giao dịch thực tế trên MoMo (phản hồi sau khi user thực hiện thanh toán thành công).
-  * Google Places API (kéo điểm đánh giá trung bình từ Google Maps qua cơ chế matching địa chỉ & GPS).
+- **Tích hợp đánh giá & AI Summary (Review Integration):** Hiển thị điểm rating trung bình (1-5 sao) và số lượng đánh giá tổng hợp. Tuyệt đối KHÔNG hiển thị chi tiết nguyên văn bài đánh giá thô cào từ Google Maps. Thay vào đó, áp dụng cơ chế:
+  * Hiển thị điểm số gốc từ giao dịch thực tế trên MoMo và Google Places API.
+  * Hiển thị block **"Tóm tắt từ Cộng đồng (AI Summary)"**: Sử dụng Gemini để phân tích hàng trăm bài review thô và sinh ra 1 đoạn tóm tắt duy nhất về điểm mạnh/yếu của quán (Unique Content 100%).
 - **Trường thông tin tiện ích (Merchant Amenities):** Thêm bộ thuộc tính tiện ích điểm bán dưới dạng check-box hiển thị trực quan: Có chỗ đậu xe hơi, Có máy lạnh, Có Wi-Fi miễn phí, Có khu vực hút thuốc riêng, Có khu vui chơi trẻ em.
 
 ### 13. Merchant Hub - "Tìm Điểm Hoàn Tiền"

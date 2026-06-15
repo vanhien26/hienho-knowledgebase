@@ -460,7 +460,7 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 | Balloon Ads | Done | Hiến | - |
 | Popup Ads - Billpay | Closed | Hiến | - |
 | Ads Manager | Active | Bảo (Lead) + Thuận + Hiến (Advisor) | v3.0 - Đang triển khai Module 2-5 |
-| Zero-Traffic URL Audit | On Track | Hiến | 3,670 URLs / 16 Use Cases |
+| Zero-Traffic URL Audit | Done | Hiến | Hoàn thành xử lý 3,670 URLs / 16 Use Cases (gồm OA, Bus, Cinema và News) |
 | Full Funnel Tracking Pipeline | In Progress | DA (Hải/Hoàng) + Hiến observe | GA4 done, GSC+Appsflyer đang triển khai |
 | Onelink Standardization | Discuss | Hiến | Legacy link audit needed |
 | PLG High-CTR Products | Pending | Hiến | CIC checker, Loan calc, Insurance comparison |
@@ -472,7 +472,7 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 | Phạt Nguội (Traffic fines) | P0 Active - Phase 1 Live | Hiến + Hùng (FE) + Hoài Anh (API) | SEM 200tr (T5). Umami Live. GenAI Content. |
 | MoSpark Migration (MoLanding V2) | Platform Ready | Hiến + Bảo | V2 production, Umami & GenAI integrated |
 | VTS SEO/GEO Growth | Active | Hiến + Inbound (Hạnh) | 3 thị trường, SoV targets đã define |
-| Cinema SEO/GEO | Passive | Hiến | 1M traffic/quý, 959 zero-traffic URLs cần xử lý |
+| Cinema SEO/GEO | Passive | Hiến | 1M traffic/quý, đã xử lý xong 959 zero-traffic URLs |
 | Merchant Page / Đối tác (VTS Cross-Sale) | Active | Hiến + Nhật | BRD v4 done, chờ Legacy Audit + VTS PO align |
 | Off-Page Strategy & Backlink Governance | Active | Hiến (standard) | BRD v2 done, Inbound (Hạnh) execute |
 | Tech Foundation Gate + Angle Governance SOP | Planning | Hiến | Framework defined, cần formalize |
@@ -551,15 +551,19 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 
 ### 5.4 Dự án: Zero-Traffic URL Audit
 
+**Status:** Closed
+
 **Vision:** Loại bỏ crawl waste, tăng crawl budget efficiency, nâng topical authority cho financial domain
 
-**North Star Metric:** Xử lý zero-traffic URLs (Đang triển khai, đã xử lý được OA, Bus, Hourly Hours hơn 70%)
+**North Star Metric:** Xử lý zero-traffic URLs (Hoàn thành 100% - Đã xử lý xong 3.670 URLs trên 16 Use Cases bao gồm OA, Bus, Cinema và News)
 
 **Scope:** 3,670 URLs / 16 Use Cases
 
 **Framework:** Xem mục 4.3 (4 levels)
 
 **Meeting log:**
+**[2026-06-13] - Hoàn thành & Đóng dự án**
+- Hoàn tất xử lý toàn bộ 100% URLs rác của các Use Cases còn lại (Cinema, News). Chiến dịch chính thức đóng lại.
 **[2026-05-01] - Cập nhật tiến độ**
 - Đã xử lý xong Bus, OA (hơn 70% zero-traffic URLs).
 - Đang triển khai xử lý Cinema và News (959 zero-traffic URLs từ Cinema review pages).
@@ -1020,13 +1024,13 @@ flowchart TD
 - Group A (traffic > 20 sessions/tháng): Preserve + optimize content
 - Group B (traffic 5-20 sessions): Evaluate - giữ hoặc merge
 - Group C (traffic = 0, phim đã hết chiếu): 410 Gone hoặc 301 về phim detail
-- Quyết định: phụ thuộc vào chất lượng auto-generated review content (cần audit)
+- Quyết định: Đã hoàn tất xử lý 100% theo các quy chuẩn 410 Gone / 301.
 
 **Sunset rule cho pSEO Cinema:**
 - Suất chiếu hết + không có suất chiếu mới trong 30 ngày → trigger 410
 - Review page thin content (<200 từ) → noindex trước, quyết định sau
 
-**Status:** Passive (đang thả nổi) - cần kickoff plan xử lý zero-traffic URLs
+**Status:** Passive - Đã hoàn thành xử lý 959 zero-traffic URLs
 
 **SEO Score:** 82/100 | **Traffic:** 350K sessions/tháng | **W2A:** 12.1% | **Last updated:** 2026-05-15
 

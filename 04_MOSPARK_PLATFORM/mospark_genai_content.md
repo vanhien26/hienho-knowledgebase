@@ -5,7 +5,7 @@ Nền tảng sản xuất nội dung bằng AI
 > - **Division:** GPD (Growth Platform Division)
 > - **Owner:** Hiến
 > - **PIC:** Trọng (Tech), Lộc (User Role)
-> - **Version:** 4.5 · June 2026
+> - **Version:** 4.13 · June 2026
 
 
 ---
@@ -21,11 +21,12 @@ MoSpark cần một "cỗ máy" sản xuất nội dung không chỉ nhanh mà p
 - **Thiếu Source of Truth:** AI dễ bị ảo giác (hallucination) nếu không được bám sát vào mô tả sản phẩm và các URL tham chiếu cụ thể của dự án.
 
 ### 1.3. Giải pháp (Resolution)
-Tạo ra **SEO/GEO Project Management Hub & AI Content Engine** - một không gian quản lý tập trung:
-- **SEO/GEO Project Management:** Hoạt động như trung tâm quản trị dự án SEO/GEO, trong đó mỗi dự án bắt buộc phải ánh xạ 1-1 với một Microsite tương ứng nhằm kiểm soát đường dẫn URL.
-- **Business Context:** Sử dụng mô tả Use Case và URL làm ngữ cảnh toàn cục để định hướng AI.
-- **Prompt Standardization:** Hệ thống quản trị Guideline (SEO/AEO/GEO) tự động áp dụng vào mọi bài viết.
-- **Performance Intelligence:** Tích hợp tính năng đo lường **Share Of Voice (SOV)** để đánh giá mức độ xuất hiện của MoMo trong câu trả lời của AI.
+Tạo ra **SEO/GEO Project Management Hub & AI Content Engine** - một không gian quản lý tập trung dựa trên 5 trụ cột chiến lược v5.0:
+- **SEO/GEO Project Management & Mapping:** Hoạt động như trung tâm quản trị dự án, bắt buộc ánh xạ 1-1 với Microsite đích để tự động kiểm soát URL và phân cấp.
+- **GEO Moat & AI Citation Tracking:** Tự động hóa sinh 20 query prompts mô phỏng search intent trên AI Search (ChatGPT, Perplexity) để lưu trữ phục vụ đo lường Citation Rate, kết hợp nén nội dung bài viết thành llms.txt cho AI Crawlers.
+- **Multi-Agent Quality Guardrails:** 3 Sub-agents tự động hóa khâu rà soát: YMYL & Legal Compliance Agent (kiểm tra từ khóa cấm, quy định NHNN), Information Gain Scraper (cào quét đối thủ real-time để tìm Content Gap), và Internal Linker (chống cannibalization).
+- **Programmatic pSEO Factory:** Tự động hóa sản xuất nội dung quy mô lớn qua CSV (dành cho use case phân mảnh địa phương như Phạt Nguội, eSIM).
+- **Closed-Loop Auto-Refresh:** Đồng bộ dữ liệu GSC/GA4 qua BigQuery để tự động cảnh báo Content Decay và đề xuất cập nhật bài viết.
 
 ### 1.4. Tam giác Dữ liệu (The Data Triangle)
 Kiến trúc của GenAI Content được thiết kế dựa trên sự phân tách và kết hợp rõ ràng của 3 nguồn lực:
@@ -69,6 +70,11 @@ Biến MoSpark thành "Production Lab" duy nhất, nơi nội dung được sả
 - **URL Routing Auto-governance:** Tự động cấu trúc đường dẫn bài viết Blog theo quy tắc: `/{use-case}/blog*` (ví dụ: `/vay-nhanh/blog/*`), kế thừa trực tiếp từ Microsite base path để đồng bộ hóa phân cấp URL.
 - **Keyword Master Registry:** Quản lý tập trung Primary Keywords, đảm bảo tính duy nhất (Unique ID Check) trên toàn bộ hệ thống để ngăn chặn Keyword Cannibalization.
 - **Double Entry Sync:** Cơ chế đồng bộ bài viết từ module Sản xuất sang module Quản trị (Editor).
+- **AI Query Generator & Citation Tracker (GEO Moat):** Tự động sinh và lưu trữ bộ 20 query prompts cho mỗi Primary Keyword để đo lường định kỳ Citation Rate trên ChatGPT/Gemini/Perplexity.
+- **Auto-compressed llms.txt Generator:** Tự động nén và đồng bộ dữ liệu bài viết vào file llms.txt của Microsite để làm sạch nguồn dữ liệu cho AI crawlers.
+- **Multi-Agent Reviewers (YMYL Compliance, Information Gain, Internal Linker):** Hệ thống chốt chặn tự động chất lượng, pháp lý và cấu trúc liên kết chéo.
+- **CSV Bulk Generator (pSEO Factory):** Tạo lập hàng loạt hàng trăm trang địa phương/ngách qua file CSV/API.
+- **Decay Auto-Alert & Refresh Loop:** Đồng bộ Google Search Console & GA4 tự động phát hiện sụt giảm hiệu suất để kích hoạt luồng đề xuất tối ưu nội dung.
 
 ---
 
@@ -81,39 +87,31 @@ Biến MoSpark thành "Production Lab" duy nhất, nơi nội dung được sả
 
 ---
 
-## 5. Giải pháp đo lường Share Of Voice (SOV)
+## 5. Giải pháp đo lường Share Of Voice (SOV) & AI Citation Tracking
 
-Đây là tính năng quan trọng để đánh giá hiệu quả của dự án SEO/GEO:
+Đây là tính năng quan trọng để đánh giá mức độ xuất hiện và độ phủ thương hiệu của MoMo trong câu trả lời của AI:
 
-### 5.1. Cơ chế thu thập dữ liệu
-- Hệ thống sử dụng Primary Keyword để hỏi AI (kèm Grounding Search).
+### 5.1. Cơ chế thu thập dữ liệu (AI Query Generator)
+- Từ một **Primary Keyword** chính của bài viết, MoSpark sử dụng GenAI tự động giả lập **20 câu truy vấn (query prompts)** bám sát nhất theo Search Intent của người dùng (tập trung vào các truy vấn dạng tìm kiếm, so sánh và giao dịch).
+- Hệ thống lưu trữ bộ câu hỏi này vào cơ sở dữ liệu và tự động chạy lịch trình truy vấn định kỳ (cron job) lên các công cụ AI Search (ChatGPT, Gemini, Perplexity).
 - AI trả về câu trả lời kèm danh sách các nguồn tham khảo (References).
 
 ### 5.2. Logic tính toán
-- **Trích xuất Domain:** Hệ thống tự động tách domain từ các URL tham khảo.
-- **Thống kê:** Đếm số lần mỗi domain được trích dẫn và tính tỷ lệ phần trăm (%) dựa trên thị trường.
-- **Công thức:** `SOV % = (Số lần domain MoMo xuất hiện / Total Volume Search) * 100`.
+- **Trích xuất Domain:** Hệ thống tự động tách domain từ các URL tham khảo được AI phản hồi.
+- **Thống kê:** Đếm số lần domain MoMo được trích dẫn trên tổng số 20 câu hỏi thử nghiệm và tính tỷ lệ phần trăm (%) dựa trên thị trường.
+- **Công thức tính Citation Rate:** `Citation Rate % = (Số câu hỏi MoMo được trích dẫn / 20 câu hỏi giả lập) * 100`.
+- **Công thức tính SOV:** `SOV % = (Số lần domain MoMo xuất hiện / Tổng số lần tất cả domain xuất hiện trong reference) * 100`.
 
 ### 5.3. Tối ưu hóa vận hành
-- Để tiết kiệm chi phí, hệ thống gom nhóm các Secondary Keywords khi thực hiện đo lường SOV (tối đa 6 API call cho mỗi cụm từ khóa chính).
+- Để tiết kiệm chi phí API, hệ thống gom nhóm các Secondary Keywords của cùng một Topic Cluster để đo lường chung (tối đa 6 API call cho mỗi cụm từ khóa chính khi quét diện rộng).
 
 ---
 
 ## 6. Workflow Content
 
-### 6.0. Giải thích Thuật ngữ (Glossary)
-
-Để đảm bảo sự thống nhất trong vận hành, các thuật ngữ dưới đây được định nghĩa như sau:
-
-*   **Keyword Master Registry (Kho Định Danh Gốc):** Là "Sổ cái" trung tâm lưu trữ toàn bộ Primary Keywords của một Use Case. Mọi trang nội dung (dù tạo từ luồng nào) đều phải được đăng ký tại đây.
-*   **Unique ID Check (Kiểm tra Định danh Duy nhất):** Quy trình hậu kiểm tự động. Hệ thống đối soát từ khóa mới với *Keyword Master Registry* để đảm bảo không có 2 trang trùng lặp nội dung/từ khóa trong cùng một Use Case.
-*   **AI Enhance (Nâng cấp AI):** Tính năng cho phép "tái cấu trúc" một trang nội dung hiện có bằng sức mạnh của GenAI thông qua việc chuyển hướng về quy trình Draft Outline/Detail.
-*   **Bottom-Up Sync (Đồng bộ ngược):** Cơ chế tự động tạo bản ghi tại *Keyword Master Registry* khi người dùng nhập Primary Keyword trong CMS Page Editor.
-*   **Top-Down Sync (Đồng bộ xuôi):** Cơ chế tự động khởi tạo trang nội dung trong CMS Page Editor khi người dùng tạo Primary Keyword và Content trong module GenAI.
-
 ### 6.1. SEO/GEO Project làm Trung tâm Quản trị & Mapping Microsite
 
-Mỗi dự án SEO/GEO (SEO/GEO Project) trên MoSpark không chỉ đơn thuần là công cụ tạo nội dung mà hoạt động như **Trung tâm Quản trị Dự án (Project Management Hub)** (Chi tiết xem tại: [[04_MOSPARK_PLATFORM/mospark_seo_geo_project|SEO/GEO Project Management]]).
+Mỗi dự án SEO/GEO (SEO/GEO Project) trên MoSpark không chỉ đơn thuần là công cụ tạo nội dung mà hoạt động như **Trung tâm Quản trị Dự án (Project Management Hub)** (Chi tiết xem tại: SEO/GEO Project Management).
 - **Ràng buộc Mapping 1-1 cứng:** Mỗi SEO/GEO Project phải được thiết lập liên kết (mapping) bắt buộc với **chính xác 1 Microsite** (Use Case) tương ứng. Dự án không được phép hoạt động mồ côi (orphaned).
 - **Cơ chế Định tuyến đường dẫn:** Việc mapping 1-1 này nhằm tuân thủ tuyệt đối cơ chế định tuyến SEO/GEO của MoSpark: mọi bài viết Blog, tài liệu thuộc dự án bắt buộc phải nằm dưới URL của Microsite đó theo cấu trúc: `/{use-case}/blog*` (Ví dụ: `/phat-nguoi/blog/quy-dinh-phat-nguoi-o-to`).
 - **Phân tách thực thể:** Bản thân Microsite quản lý toàn bộ tài sản nội dung của Use Case đó. Blog, Landing Page, FAQ, Merchant Page... đều là các module phân phối thuộc Microsite - không phải các entity hoạt động độc lập:
@@ -210,7 +208,7 @@ Trang đã tồn tại có thể cập nhật theo 2 cách:
 1. **Thủ công:** Sửa trực tiếp trong CMS Page Editor
 2. **Enhance by GenAI:** Click nút trong CMS Page Editor - redirect về GenAI Content module của keyword đó để tối ưu lại bằng AI, sau đó sync ngược về Editor
 
-### 6.3. Core Data Governance Rules (Xác nhận với Dev - Trọng)
+### 6.3. Core Data Governance Rules (Đã xác nhận & Triển khai)
 
 Để đảm bảo tính toàn vẹn dữ liệu và tránh xung đột SEO (Cannibalization), hệ thống áp dụng các quy tắc cứng sau:
 
@@ -352,6 +350,27 @@ sequenceDiagram
     - **Logic:** Dù nội dung đến từ luồng nào, Primary Keyword (từ CMS Editor hoặc từ GenAI) đều phải "check-in" tại Keyword Master Registry. 
     - Nếu Keyword đã tồn tại, hệ thống sẽ ngăn chặn việc tạo mới và yêu cầu user sử dụng trang hiện có để tránh "Content Cannibalization".
 
+### 6.8. Luồng sản xuất Long Content Section cho Microsite & Merchant Page
+
+Khác với luồng viết bài Blog độc lập (Standalone Blog), luồng sản xuất **Long Content Section** được thiết kế để điền nội dung chuyên sâu (SEO text) vào một phần giao diện (Block/Section) của trang Microsite hoặc Merchant Page:
+
+```mermaid
+graph TD
+    A[SEO Inventory: Chọn Location/Merchant Keyword] --> B[AI sinh Outline Dàn ý]
+    B --> C{Chọn Page Type: Microsite Page / Merchant Page}
+    C --> D[Push Outline vào CMS Editor của Microsite/Merchant]
+    D --> E[PM review brief tại ô Long Content Section]
+    E --> F[Click GenAI Detail]
+    F --> G[AI tự động điền bài viết 300-500 từ + tự sinh FAQ Schema]
+    G --> H[QC & SEO/GEO Scoring Gate]
+    H --> I[Publish: Nội dung hiển thị tại phần Long Content SEO]
+```
+
+#### Các điểm đặc thù của luồng Long Content:
+1.  **Context grounding theo địa bàn (Local Intent):** AI được truyền dữ liệu thực tế về địa phương (Ví dụ: Địa chỉ cơ quan CSGT tiếp nhận phạt nguội, kho bạc, lỗi phổ biến) từ trường *Business Context* của dự án để viết, loại bỏ 100% ảo giác.
+2.  **Định dạng đầu ra (Output Format):** GenAI không sinh toàn bộ trang mà sinh ra 1 khối nội dung HTML/Rich Text (300 - 500 từ) có cấu trúc Heading chặt chẽ (để map vào `llms-full.txt` phục vụ AI search crawlers) kết hợp tự động cấu trúc block FAQ (chuyển đổi thành `FAQPage` JSON-LD Schema).
+3.  **Vị trí hiển thị:** Nội dung sau khi Publish sẽ xuất hiện tại phần **Long Content SEO (thường là phần dưới cùng hoặc Slot 3/Slot 4 trên layout trang)**, đóng vai trò tạo Topical Authority và cung cấp thông tin hữu ích cho người dùng mà không cản trở hành vi tương tác tại Widget Tra cứu chính.
+
 ---
 
 ## 7. Business Context - Các trường bắt buộc
@@ -411,29 +430,34 @@ Dưới đây là mẫu chuẩn để mô tả trọn vẹn một Business Model
 
 ## 8. Lộ trình Triển khai (Implementation Roadmap)
 
-Dự án GenAI Content được chia làm 2 giai đoạn chính để đảm bảo tính ổn định của hệ thống trước khi mở rộng tính năng đo lường:
+Dự án GenAI Content được chia làm 3 giai đoạn chính để đảm bảo tính ổn định và mở rộng hệ thống.
 
 ### Giai đoạn 1: Technical Flow & Workflow Standardization (May 2026)
 **Trọng tâm:** Hoàn thiện hạ tầng kỹ thuật và quy trình sản xuất nội dung.
 - Triển khai toàn bộ **Technical Flow** (Project Mapping, Business Context, Keyword Registry).
 - Hoàn thiện 3 luồng vận hành (**Flow 1, 2, 3**) tích hợp với MoSpark Blog Editor.
 - Tích hợp Claude API và hệ thống Prompt Master.
-- Pilot thành công cho dự án **Phạt Nguội** và **Merchant Directory**.
-- ✅ **7-Step Workflow live:** Blog Detail AI + Blog Editor Publish separation
-- ✅ **Phạt Nguội pilot:** Foundation complete - **Target T5/2026: 10 bài/tuần, PM execute theo GenAI Flow**
-- ✅ **Scale Financial products:** Vay Nhanh, Ví Trả Sau, CIC
+- Pilot thành công cho dự án **Phạt Nguội** (đã triển khai thực tế và thực hiện tốt vai trò trong bước đầu) và **Merchant Directory**.
 
 ### Giai đoạn 2: Share of Voice (SoV) & Visibility Tracking (June 2026+)
-**Trọng tâm:** Đo lường hiệu quả và tối ưu hóa tăng trưởng.
+**Trọng tâm:** Đo lường hiệu quả, tự động hóa chất lượng & tracking.
+- **P0:** Nâng cấp hệ thống trong tháng 6/2026 để hỗ trợ sản xuất Content bên trong một Microsite có Long Content Section (Phạt Nguội) và Merchant.
+- **P0:** Triển khai **AI Query Generator & Citation Tracking** (sinh và lưu trữ 20 query prompts, truy vấn tự động đo lường định kỳ).
+- **P0:** Tích hợp quy chuẩn tự động sinh và nén dữ liệu `llms.txt` từ nội dung thực tế của bài viết.
+- **P0:** Phát triển **YMYL & Legal Compliance Agent** để chốt chặn tự động an toàn pháp lý cho sản phẩm tài chính.
+- **P0 (Đề xuất HubSpot):** Tích hợp **MoMom Brand Voice Presets** (Tone Expert, Friendly, Informative) vào Lớp Business Context.
+- **P0 (Đề xuất HubSpot):** Nâng cấp **Smart Internal Linker Agent** để tự động chèn liên kết ngữ cảnh khi viết bài.
 - Tích hợp Dashboard đo lường **SoV (Share of Voice)** theo từng Use Case.
 - Theo dõi **Visibility Index** của các bài viết GenAI trên Google Search & AI Search.
-- Hệ thống cảnh báo **Content Decay** (Nội dung giảm sút hiệu quả).
-- Tự động gợi ý từ khóa mới dựa trên Gap Analysis (SEO Inventory).
+- **GSC + BigQuery Feedback Loop & Content Decay Auto-Refresh:** Hệ thống cảnh báo nội dung giảm hiệu suất và gợi ý bản nháp tối ưu bài viết.
 - **Market Inventory UI (by Trọng):** Hiển thị danh sách Cluster & Volume của Market tương ứng ngay trong giao diện SEO/GEO Project để PM chọn Primary Keyword.
-- **Google Search Console API Integration:** Theo dõi hiệu suất per Use Case
-- **Metrics per Use Case:** Organic traffic, impressions, CTR, avg position
-- **Automated Insights:** Gợi ý tối ưu nội dung dựa trên data
-- **Content Refresh Automation:** Identify underperforming articles - suggest updates
+
+### Giai đoạn 3: Multi-format Scale & Engagement Optimization (Q4/2026)
+**Trọng tâm:** Tối ưu hóa chuyển đổi Web-to-App & mở rộng đa định dạng.
+- **P0:** Mở rộng năng lực GenAI để sản xuất content trên Web với **đa dạng page type và đa dạng format** (không chỉ giới hạn ở Blog Articles mà bao gồm cả Landing Page, FAQ, Merchant Page, v.v.).
+- **P1:** Triển khai **Programmatic Bulk Generator** (pSEO) để hỗ trợ scale hàng loạt trang vệ tinh qua CSV.
+- **P1 (Đề xuất HubSpot):** Tích hợp **Content Remix Engine** để tự động chuyển đổi bài viết chất lượng cao sang các định dạng Ads, Push App, và FAQ.
+- **P1 (Đề xuất HubSpot):** Phát triển giao diện **Visual Topic Cluster Map** để hiển thị trực quan các mối quan hệ liên kết và tình trạng sức khỏe liên kết.
 
 ---
 
@@ -454,15 +478,14 @@ Quy trình này khớp với **Bước 5 (AI Outline) và Bước 8B (GenAI Deta
 *   **Cơ chế liên kết:** Các Prompt Master trong thư viện đóng vai trò là **Master Prompt Templates**. Khi tạo Project mới, hệ thống tự động clone các template này về Project làm **Project-Specific Localized Prompts**. PM/Content Lead có thể chỉnh sửa bản clone này tại cấp độ Project.
 *   **Phase A: Outline Generator (Bước 5)**
     *   **Input**: Primary Keyword + Business Context (từ Bước 2) + Target Audience + Key Message.
-    *   **Prompt Template nguồn:** [[03_SKILLS/momo-blog-prompt-1-outline|GenAI Blog Prompt 1 (Outline)]] (Được clone về làm `project_outline_prompt` của Project).
+    *   **Prompt Template nguồn:** GenAI Blog Prompt 1 (Outline) (Được clone về làm `project_outline_prompt` của Project).
 *   **Phase B: Content Writer (Bước 8B - GenAI Detail)**
     *   **Trigger**: PM/Content click "GenAI Detail" trong Blog Editor sau khi Outline đã Selected (Bước 6).
-    *   **Input**: Outline từ Phase A + [[03_SKILLS/momo-seo-geo-guideline|MoMo SEO & GEO Prompt Guidelines]] + [[03_SKILLS/momo-ymyl-guideline|MoMo YMYL Guidelines]].
-    *   **Prompt Template nguồn:** [[03_SKILLS/momo-blog-prompt-2-writer|GenAI Blog Prompt 2 (Writer)]] (Được clone về làm `project_writer_prompt` của Project).
-*   **Chi tiết quản trị & vận hành:** Xem thêm tại [MoSpark SEO/GEO Project Hub - Phần 3. Kiến trúc Quản trị Prompt & Guideline](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_seo_geo_project.md#3-kien-truc-quan-tri-prompt--guideline-dinh-huong-theo-du-an-project-specific-localized-prompt-management).
+    *   **Input**: Outline từ Phase A + MoMo SEO & GEO Prompt Guidelines + MoMo YMYL Guidelines.
+    *   **Prompt Template nguồn:** GenAI Blog Prompt 2 (Writer) (Được clone về làm `project_writer_prompt` của Project).
 
 ### 9.3. Quality Gate Standards (SEO/GEO Score)
-Nội dung sau khi GenAI tạo ra phải được tự động chấm điểm qua [[04_MOSPARK_PLATFORM/mospark_seo_geo_score|SEO/GEO Scoring System]]. Các tiêu chí bắt buộc:
+Nội dung sau khi GenAI tạo ra phải được tự động chấm điểm qua SEO/GEO Scoring System. Các tiêu chí bắt buộc:
 *   Mật độ từ khóa chính.
 *   Sự hiện diện của FAQ Schema.
 *   Độ dài và cấu trúc Heading.
@@ -503,14 +526,54 @@ Hệ thống GenAI Content sẽ phục vụ sản xuất nội dung cho các d�
 
 ---
 
+## 11. Định hướng Nâng cấp HubSpot Content Hub (Chiến lược v5.0+)
 
+Hệ thống được thiết kế mở rộng dựa trên việc học hỏi các giải pháp tối ưu từ HubSpot Content Hub nhằm giải quyết bài toán đồng nhất thương hiệu và tự động hóa phân phối nội dung chéo:
 
-## 11. Tài liệu Liên kết
-*   **Master Strategy:** [[04_MOSPARK_PLATFORM/mospark_master|MoSpark Master Doc]]
-*   **SEO/GEO Project Hub:** [[04_MOSPARK_PLATFORM/mospark_seo_geo_project|MoSpark SEO/GEO Project Management]]
-*   **Dữ liệu Thị trường:** [[04_MOSPARK_PLATFORM/mospark_seo_inventory|MoSpark SEO Keyword Inventory]]
+### 11.1. MoMom Brand Voice Presets (CMS Level)
+*   **Mô tả:** Tích hợp bộ tùy chọn tone giọng (Tone Presets) tại CMS song hành cùng Business Context.
+*   **Các Tone giọng chính:**
+    *   `Expert (Chuyên gia):` Hành văn đáng tin cậy, khách quan cho các Use Case tài chính (CIC, Vay Nhanh).
+    *   `Playful (Trẻ trung):` Hành văn vui tươi, sinh động cho Merchant, Cinema.
+    *   `Informative (Hướng dẫn):` Rõ ràng, dễ hiểu cho DVC, Phạt Nguội.
+*   **Ứng dụng:** PM chọn preset khi thiết lập dự án; GenAI Detail Engine tự động áp dụng để sinh bài viết đồng nhất.
 
-## 12. Change Log
+### 11.2. Content Remix Engine (Tái chế Nội dung)
+*   **Mô tả:** Cơ chế tự động bóc tách bài viết Hero Content để nhân bản sang nhiều định dạng phân phối phụ.
+*   **Đầu ra:** Bản nháp Email, mẫu Push Notification, tiêu đề/mô tả quảng cáo cho Ads Manager, và FAQ snippets.
+
+### 11.3. Bản đồ Topic Cluster & Smart Internal Linker
+*   **Mô tả:** Trực quan hóa cấu trúc liên kết giữa Pillar Page và các trang vệ tinh (Cluster Pages) cùng hệ thống tự động kiểm soát sức mạnh liên kết (Link Health Check).
+*   **Quy tắc:** Hệ thống tự chèn liên kết ngữ cảnh kèm Anchor Text chuẩn SEO giữa các bài viết mới và trang Pillar đích ngay trong quá trình sinh nội dung.
+
+---
+
+## 12. Giải thích Thuật ngữ (Glossary)
+
+Để đảm bảo sự thống nhất trong vận hành, các thuật ngữ dưới đây được định nghĩa như sau:
+
+*   **Keyword Master Registry (Kho Định Danh Gốc):** Là "Sổ cái" trung tâm lưu trữ toàn bộ Primary Keywords của một Use Case. Mọi trang nội dung (dù tạo từ luồng nào) đều phải được đăng ký tại đây.
+*   **Unique ID Check (Kiểm tra Định danh Duy nhất):** Quy trình hậu kiểm tự động. Hệ thống đối soát từ khóa mới với *Keyword Master Registry* để đảm bảo không có 2 trang trùng lặp nội dung/từ khóa trong cùng một Use Case.
+*   **AI Enhance (Nâng cấp AI):** Tính năng cho phép "tái cấu trúc" một trang nội dung hiện có bằng sức mạnh của GenAI thông qua việc chuyển hướng về quy trình Draft Outline/Detail.
+*   **Bottom-Up Sync (Đồng bộ ngược):** Cơ chế tự động tạo bản ghi tại *Keyword Master Registry* khi người dùng nhập Primary Keyword trong CMS Page Editor.
+*   **Top-Down Sync (Đồng bộ xuôi):** Cơ chế tự động khởi tạo trang nội dung trong CMS Page Editor khi người dùng tạo Primary Keyword và Content trong module GenAI.
+
+---
+
+## 13. Tài liệu Liên kết
+*   **Master Strategy:** MoSpark Master Doc
+*   **SEO/GEO Project Hub:** MoSpark SEO/GEO Project Management
+*   **Dữ liệu Thị trường:** MoSpark SEO Keyword Inventory
+
+## 14. Change Log
+- **v4.13 (2026-06-14):** Bổ dung mục 6.8 đặc tả riêng quy trình sản xuất Long Content Section (SEO Text) cho trang Microsite địa phương và Merchant Page, đồng bộ hóa vị trí hiển thị và cơ chế grounding. (Hiến).
+- **v4.12 (2026-06-14):** Tích hợp định hướng chiến lược học hỏi từ HubSpot Content Hub: Thêm mục 11 về Brand Voice Presets, Content Remix Engine và Visual Cluster Map. Cập nhật lộ trình triển khai Giai đoạn 2 & 3. (Hiến).
+- **v4.11 (2026-06-14):** Loại bỏ hoàn toàn các đề cập và lộ trình liên quan đến Widget ra khỏi tài liệu thiết kế của GenAI Content Engine, vì tính năng này thuộc phạm vi quản lý của Ads Manager (phân phối Widget) và Thư viện Widget độc lập. (Hiến).
+- **v4.10 (2026-06-14):** Chuẩn hóa định hướng tính năng Widget: Thay thế "Widget Generator" (tự sinh mã React/HTML bằng AI) thành "Widget Shortcode Integration" (nhúng các Widget tương tác có sẵn từ Thư viện qua CMS Shortcode). (Hiến).
+- **v4.9 (2026-06-14):** Di chuyển phần Giải thích Thuật ngữ (Glossary) từ phần Workflow xuống cuối tài liệu (mục 11) trước phần Tài liệu Liên kết theo quy chuẩn chung. (Hiến).
+- **v4.8 (2026-06-14):** Cập nhật lộ trình triển khai: đưa sản xuất nội dung đa dạng page type/format (Blog, LP, FAQ, Merchant...) về Phase III; pilot Phạt Nguội chạy tốt; bổ sung kế hoạch nâng cấp tháng 6 để sản xuất Content cho Microsite có Long Content Section (Phạt Nguội) và Merchant ở Phase II. (Hiến).
+- **v4.7 (2026-06-14):** Xác nhận hoàn thành và triển khai thực tế bộ quy tắc Core Data Governance Rules bởi Dev (Trọng). (Hiến).
+- **v4.6 (2026-06-13):** Tích hợp 5 Trụ cột nâng cấp v5.0 được phê duyệt: Thiết lập GEO Moat (AI Query Generator & 20 simulated prompts tracking, auto-compressed llms.txt), Multi-Agent Quality Guardrails (Compliance, Info Gain, Internal Linker), Programmatic pSEO Bulk Generator, và Closed-loop Decay Refresh. Cập nhật Lộ trình triển khai Phase 2 & 3. (Hiến).
 - **v4.5 (2026-06-07):** Nâng cấp tài liệu định nghĩa GenAI Content Engine thành Trung tâm Quản trị Dự án SEO/GEO (SEO/GEO Project Management Hub). Quy định ràng buộc mapping 1-1 bắt buộc với Microsite và cơ chế định tuyến tự động `/{use-case}/blog*` ở mức Database và Router (Hiến).
 - **v4.4 (2026-06-05):** Chuyển đổi mô hình từ sản xuất Blog đơn thuần sang chiến lược đa dạng hóa trang phân phối (Content Strategy với Page Type: Blog, LP, FAQ, Merchant Page). Tích hợp giao diện SEO Inventory có Topic Cluster (Expand/Collapse) để PM chọn trực tiếp Primary Keyword và click tạo Outline/Detail. (Hiến).
 - **v4.3 (2026-05-31):** Bổ sung Tech Ownership rõ ràng cho 3 Dev: Trọng (AI Tool/Model/Workflow - lõi engine sinh content), Thuận (GenAI Hình - đang quản lý MoMo Gallery), Lộc (phân quyền User access GenAI trong MoSpark). Governance: Hiến (Skill Hub).
@@ -523,4 +586,4 @@ Hệ thống GenAI Content sẽ phục vụ sản xuất nội dung cho các d�
 - **v3.6 (2026-05-07):** Cập nhật luồng Double Entry Flow & 7-step workflow (Hiến).
 
 ---
-*Maintained by: Văn Hiến (Web Product Lead) | Last updated: 2026-06-07*
+*Maintained by: Văn Hiến (Web Product Lead) | Last updated: 2026-06-14*

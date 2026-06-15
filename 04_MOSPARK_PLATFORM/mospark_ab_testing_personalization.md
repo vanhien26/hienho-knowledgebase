@@ -67,3 +67,24 @@ Hệ thống sử dụng các Rule Engine dựa trên các biến (Variables) th
 - **Win Rate:** Tỷ lệ số lần thử nghiệm thành công (Tạo ra CR cao hơn bản gốc).
 - **Lift in CR:** Phần trăm tăng trưởng Click-to-App trung bình từ các Winning Variants.
 - **Personalization Engagement:** Tỷ lệ tương tác (Click-through) trên các Block nội dung cá nhân hóa so với nội dung tĩnh.
+
+---
+
+## 6. Phạm vi Tích hợp (Module Applicability Matrix)
+
+Dự án A/B Testing & Personalization (M10) đóng vai trò là một "Core Engine". Tuy nhiên, cơ chế nội dung động này không được áp dụng tùy tiện trên toàn hệ thống mà bị giới hạn chặt chẽ để bảo vệ nền tảng SEO. Dưới đây là ma trận phân bổ:
+
+### 6.1. Chi tiết Ma trận Tích hợp
+
+| Module được Tích hợp | Khả năng A/B Testing | Khả năng Personalization (Cá nhân hóa) | Ghi chú & Rào cản (Guardrails) |
+|---|---|---|---|
+| **M1 - Landing Page Builder** | **Toàn diện:** Cho phép Duplicate variant, test CTA, Hero Banner, Layout. | **Cao:** Hỗ trợ thay đổi nội dung trang dựa theo Geo-Location và Login State. | Phải tuân thủ Compliance Matrix (Khóa Scheme/TnC). Traffic Split tại Edge Router. |
+| **M3 - Ads Manager** (Widget/Banner) | **Cao:** Test các thông điệp Banner, màu sắc Widget. | **Tối đa:** Target hiển thị Banner/Widget riêng biệt theo UTM Context hoặc User Cohort. | Trải nghiệm Ads phải mượt, không làm rớt LCP. |
+| **M9 - PLG Tool Builder** | **Trung bình:** Chỉ test UI nhập liệu hoặc vị trí đặt Tool trên trang. | **Trung bình:** Tự động điền tham số mặc định (VD: Tự động chọn "TP.HCM" dựa vào Geo-Location). | Không test công thức tính toán/API của Tool để đảm bảo tính chính xác của Data. |
+| **M2 - GenAI Content** (Blog SEO) | **Rất hạn chế:** Tuyệt đối không test nội dung bài viết. Chốt phương án không test Title/H1 để bảo vệ thứ hạng. | **Không áp dụng cho Nội dung:** Bài SEO bắt buộc là trang tĩnh (Static) 100% để Googlebot index chính xác. | *Ngoại lệ:* Có thể áp dụng Personalization cho **các Ad slot nằm bên trong bài viết**, không phải bản thân bài viết. |
+
+### 6.2. Lộ trình triển khai (Phase Rollout)
+Vì việc áp dụng Personalization cho toàn hệ thống đòi hỏi khối lượng xử lý lớn tại Edge Router, hệ thống sẽ được mở khóa theo lộ trình:
+- **Phase 1 (MVP):** Áp dụng độc quyền cho **M1 (Landing Page Builder)** để tối ưu tỷ lệ chuyển đổi các chiến dịch ngắn hạn.
+- **Phase 2:** Mở rộng cho **M3 (Ads Manager)** để cá nhân hóa phân phối quảng cáo Widget/Banner trên toàn site.
+- **Phase 3:** Áp dụng cho **M9 (PLG Tools)**.

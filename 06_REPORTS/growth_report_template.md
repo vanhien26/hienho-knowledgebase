@@ -47,7 +47,7 @@
 pie title Market Volume Distribution (MUV)
     "FS (Financial Services)" : 108.0
     "PS (Payment Services)" : 18.0
-    "MDS (Movie/Entertainment)" : 9.8
+    "MDS (Marketing Distribution Services)" : 9.8
     "Others" : 5.0
 ```
 

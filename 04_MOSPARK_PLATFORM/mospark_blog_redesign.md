@@ -105,10 +105,42 @@ Cải tổ toàn diện giao diện hiển thị của MoSpark Blog (Home & Deta
 
 ---
 
-## 4. Change Log
+## 4. Acceptance Criteria & JTBD Scorecard (Prototype)
+
+**Prototype Link:** `08_PRD/blog-redesign/prototype-detail-page.html`
+
+### 4.1. User Jobs & Features Mapping
+
+| # | User Job (JTBD) | Nhu cầu người dùng | UI/Feature giải quyết | Vị trí trên trang |
+|---|---|---|---|---|
+| **J1** | **Chia sẻ bài viết** | Lan truyền nội dung hữu ích đến mạng lưới cá nhân nhanh chóng. | **Share Bar** | Sticky hoặc cạnh tiêu đề |
+| **J2** | **Xác minh độ tin cậy** | Xác thực chuyên môn và danh tính tác giả đối với các nội dung YMYL. | **Author Box** | Đầu bài (mini) + Cuối bài (full) |
+| **J3** | **Đọc nhanh trước khi đọc sâu** | Nắm bắt nhanh các ý chính của bài viết dài trong thời gian ngắn (Skimming). | **AI Summarize** | Ngay dưới H1 + Author mini |
+| **J4** | **Điều hướng nội dung dài** | Định vị nhanh và chuyển hướng ngay đến các tiểu mục chứa thông tin quan tâm. | **TOC (Mục lục)** | Dưới AI Summary, sticky sidebar (desktop) |
+| **J5** | **Khám phá sản phẩm MoMo** | Tiếp cận các sản phẩm, dịch vụ phù hợp được hệ thống gợi ý theo ngữ cảnh. | **Ads Placements** | In-feed, In-content, Sticky bottom, Floating sidebar |
+
+### 4.2. Acceptance Criteria (Must-have) & Scorecard
+
+**Mục tiêu bàn giao:** Prototype phải đạt tối thiểu 24/27 tiêu chí (≥ 89%) trước khi chuyển cho team Engineering.
+
+| Job | Tiêu chí (Acceptance Criteria) | Trạng thái Prototype |
+|---|---|---|
+| **J1 - Share Bar** | 1. Có bộ nút Share (Copy Link, Facebook, Zalo, X)<br>2. Mobile: Icon share trên Header bar<br>3. Desktop: Icon share cạnh tiêu đề<br>4. Click Copy Link → hiện toast "Đã sao chép" | ✅ Đạt (4/4) |
+| **J2 - Author Box** | 1. Mini (Đầu bài): Avatar 32px + Tên + Chức danh<br>2. Full (Cuối bài): Avatar 64px + Tên + Chức danh + Bio + Social icons<br>3. Tên tác giả có thể click (link/anchor)<br>4. Responsive: Không bị vỡ trên mobile 320px | ✅ Đạt (4/4) |
+| **J3 - AI Summarize**| 1. Vị trí: Dưới Author Mini, trước TOC<br>2. Icon ✦ (Sparkles) + badge "AI Tóm tắt"<br>3. Background gradient nhạt hoặc nổi bật<br>4. Nội dung: 3-4 bullet points<br>5. Mobile: Có thể collapsible | ✅ Đạt (5/5) |
+| **J4 - TOC** | 1. Tự động render từ các thẻ H2<br>2. Mobile: Collapsible box (mặc định đóng)<br>3. Desktop: Sticky sidebar, highlight mục đang đọc<br>4. Click → smooth scroll đến heading | ✅ Đạt (4/4) |
+| **J5 - Ads Placements** | 1. In-content: 1 slot sau H2 đầu tiên (có skeleton)<br>2. Sticky Bottom (Mobile): Banner 60px có nút X đóng<br>3. Floating Sidebar (Desktop): Cột phải, cuộn theo nội dung<br>4. Tất cả ads slot phải có skeleton loading (tránh CLS)<br>5. Ads slot phải có kích thước cố định | ✅ Đạt (5/5) |
+| **General** | 1. Hero Image: Edge-to-edge mobile, 16:9 ratio<br>2. In-post Image: Caption + Nguồn + Bo góc 8px<br>3. Font: Inter hoặc Roboto<br>4. Brand color: #A5006D (Primary)<br>5. Hiệu năng: Hero image tĩnh, không animation nặng | ✅ Đạt (5/5) |
+
+**Kết quả đánh giá Prototype:** 27/27 (100%) - Đủ điều kiện bàn giao cho Dev.
+
+---
+
+## 5. Change Log
 - **v1.0 (2026-06-01):** Khởi tạo tài liệu. Định nghĩa 4 tính năng cốt lõi cho đợt Re-Design: Ads Placements, AI Summarize, Author Box, và Image Display Optimization (Văn Hiến).
 - **v1.1 (2026-06-09):** Tuấn hoàn thành bản vẽ thiết kế Figma đầu tiên; Văn Hiến thực hiện rà soát, đánh giá cấu trúc UX & SEO tiêu chuẩn (Văn Hiến).
 - **v1.2 (2026-06-09):** Tích hợp quy chuẩn quản lý trạng thái xuất bản bài viết (Page Lifecycle Status Model) nhằm tối ưu kiểm duyệt và ngăn chặn lỗi SEO 404 trực tiếp tại Mục 2.5 của tài liệu này (Văn Hiến).
+- **v1.3 (2026-06-14):** Bổ sung mục 4. Acceptance Criteria & JTBD Scorecard để làm tiêu chuẩn đánh giá Prototype trước khi bàn giao Dev (Văn Hiến).
 
 ---
-*Maintained by: Văn Hiến (Web Product Lead) | Last updated: 2026-06-09*
+*Maintained by: Văn Hiến (Web Product Lead) | Last updated: 2026-06-14*
