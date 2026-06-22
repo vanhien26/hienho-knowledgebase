@@ -162,18 +162,18 @@
 ### 🛡️ 9. Dự án Báo Cáo Lừa Đảo (Trust - Report Scam)
 **1. Key Highlight & Business Impact:**
 *   **Thiết lập dự án Use Case Trust:** Tạo mới thành công tài liệu BRD [trust-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_USE_CASE_MOMO/trust-brd.md) cho dự án Báo Cáo Lừa Đảo trên Web, định hình luồng tiếp nhận báo cáo ẩn danh không cần đăng nhập nhằm tối ưu hóa trải nghiệm cho nhóm đối tượng ngoài hệ sinh thái MoMo (**Non-MoMo Users**).
-*   **Ứng dụng GenAI Autofill:** Tích hợp mô hình Gemini 1.5 Flash tự động bóc tách các thực thể (SĐT, STK, Ngân hàng, Số tiền) từ kịch bản lừa đảo dạng văn bản tự do của người dùng để tự động điền form (Autofill) ở màn hình xác nhận, rút ngắn quy trình gửi báo cáo xuống dưới 2 phút.
-*   **Áp dụng S-P-A Framework:** Cấu trúc lộ trình triển khai rõ ràng qua 3 giai đoạn: reSearch (nghiên cứu kịch bản, prompt compliance) ➔ Pilot (phát triển Landing Page MVP và thử nghiệm AI Autofill trên nhóm nhỏ) ➔ Action (vận hành Landing Page chính thức, đẩy dữ liệu về DB Risk và CS).
+*   **Xây dựng Landing Page giới thiệu:** Thiết kế giao diện giới thiệu tính năng "An Toàn Cùng MoMo" theo file mẫu, kêu gọi người dùng đóng góp thông tin tố cáo kẻ lừa đảo qua Form nhập tay (Manual Input) đơn giản (chưa tích hợp GenAI hay các tính năng nâng cao khác ở phase này).
+*   **Áp dụng S-P-A Framework:** Cấu trúc lộ trình triển khai rõ ràng qua 3 giai đoạn: reSearch (phân tích giao diện mẫu, chuẩn hóa các trường thông tin Form tối giản, và compliance Nghị định 13) ➔ Pilot (phát triển Landing Page MVP và Form nhập tay tĩnh, thử nghiệm luồng submit quy mô nhỏ) ➔ Action (vận hành Landing Page chính thức, đẩy dữ liệu về DB Risk và tạo ticket tự động cho CS).
 
 **2. Priorities for 30 days:**
-*   Bàn giao tài liệu BRD v1.1 (đã thu hẹp scope tập trung vào Landing Page) cho team Risk & CS để thống nhất cơ chế xác minh thông tin báo cáo ẩn danh.
-*   Thiết kế Wireframe giao diện Landing Page tối giản `/report-scam` trên Mobile & Web.
-*   Hoàn thiện Master Prompt bóc tách thông tin cho Gemini 1.5 Flash và chốt compliance pháp lý về thu thập dữ liệu tự nguyện (Nghị định 13).
+*   Bàn giao tài liệu BRD v1.2 (scope Landing Page giới thiệu + form nhập tay tĩnh) cho team Risk & CS để chốt các trường dữ liệu tối thiểu cần thu thập.
+*   Triển khai giao diện Landing Page tĩnh `/report-scam` và Form báo cáo theo file thiết kế mẫu.
+*   Hoàn thiện compliance pháp lý về thu thập dữ liệu cá nhân tự nguyện (Nghị định 13) cho người dùng gửi ẩn danh.
 
 **3. Collab Team (Need):**
-*   **Risk & Security Team:** Hướng dẫn nghiệp vụ phân loại và duyệt dữ liệu báo cáo lừa đảo tự động.
-*   **Legal & Compliance:** Duyệt tính pháp lý của quy trình gửi báo cáo ẩn danh không đăng nhập.
-*   **CS Operations:** Đồng thuận quy trình phân loại ticket tự động để giảm tải vận hành.
+*   **Risk & Security Team:** Thống nhất các trường thông tin tối thiểu của Form phục vụ hậu kiểm.
+*   **Legal & Compliance:** Duyệt tính pháp lý của quy trình gửi báo cáo ẩn danh không đăng nhập và form thu thập tự nguyện.
+*   **CS Operations:** Hỗ trợ quy trình tiếp nhận và phân loại ticket tự động được tạo từ form web.
 
 ---
 
@@ -233,11 +233,11 @@
 *   **Đóng gói Bối cảnh Nghiệp vụ Merchant**: Hoàn thành xây dựng tài liệu bối cảnh nghiệp vụ rút gọn [merchant-business-context.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/merchant-business-context.md) tích hợp đầy đủ 5 giải pháp tài chính và công cụ tiếp thị bổ trợ dành cho SME (QR Đa năng, Soundbox, M4B app, Vay Nhanh, Marketing tools) để làm dữ liệu nền tảng (Grounding Context) cho AI sinh nội dung.
 *   **Thống nhất Phân quyền mặc định (Editor/Admin)**: Đơn giản hóa cơ chế bảo mật quyền truy cập cho dự án, xác định cứng 2 vai trò cơ bản: **Editor** (chỉ có quyền xem dự án, Topic Clusters/Merchant và tiến hành tạo bài/duyệt outline) và **Admin** (toàn quyền quản trị, chỉnh sửa bối cảnh, prompt cục bộ và upload CSV từ khóa).
 *   **Định hình Cơ chế Đồng bộ Volume Search Hàng Tháng**: Thống nhất kiến trúc đồng bộ tự động hàng tháng (Monthly Cron Job) chỉ số lượng tìm kiếm thị trường thông qua Google Ads API (Keyword Planner) đối soát với Google Search Console API để lấy số lượt hiển thị, clicks và thứ hạng trung bình thực tế của MoMo (phục vụ tính toán SoV).
-*   **Khởi tạo Use Case Trust (Report Scam)**: Ban hành tài liệu đặc tả nghiệp vụ [trust-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_USE_CASE_MOMO/trust-brd.md) (v1.1) cho dự án Landing Page Báo Cáo Lừa Đảo ẩn danh trên Web, áp dụng S-P-A Framework (reSearch - Pilot - Action) và tích hợp GenAI Autofill bóc tách văn bản mô tả tự nhiên của nạn nhân.
+*   **Khởi tạo Use Case Trust (Report Scam)**: Ban hành tài liệu đặc tả nghiệp vụ [trust-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_USE_CASE_MOMO/trust-brd.md) (v1.2) cho dự án Landing Page Báo Cáo Lừa Đảo ẩn danh trên Web, áp dụng S-P-A Framework (reSearch - Pilot - Action) với scope chỉ gồm Landing Page giới thiệu và Form thu thập báo cáo nhập tay tĩnh.
 
 **2. Priorities for 7 days (Tuần 4: 22/06 - 28/06):**
 *   **Phạt Nguội (Xuất bản Toàn diện theo yêu cầu anh Bảo):** Đẩy nhanh tiến độ go-live và xuất bản toàn bộ 100% bài viết Blog vệ tinh (Cluster) kết hợp phủ sóng 63 tỉnh/thành (pSEO Location) ngay trong tháng 6/2026. Hoài Anh và Tech team hoàn tất tích hợp cổng thanh toán MoMo Payment Gateway cho luồng checkout Subscription trên Web.
-*   **Kick-off Dự án Trust**: Tổ chức cuộc họp khởi động (Kick-off) dự án Báo Cáo Lừa Đảo trên Web với các bên liên quan (Risk, CS, Legal) để lấy ý kiến phản hồi về BRD v1.1 và thống nhất scope Landing Page.
+*   **Kick-off Dự án Trust**: Tổ chức cuộc họp khởi động (Kick-off) dự án Báo Cáo Lừa Đảo trên Web với các bên liên quan (Risk, CS, Legal) để lấy ý kiến phản hồi về BRD v1.2 và thống nhất scope Landing Page.
 *   **UI/UX 7-Slots cho Merchant Hub**: Team UI/UX bàn giao thiết kế chi tiết cấu trúc 7-Slots cho Merchant Hub bám sát tài liệu PRD `widget-store-prd.md`.
 *   **Kiểm thử Module CSV & Automatic Clustering**: Trọng (Dev) hoàn tất kiểm thử chức năng upload CSV và tự động phân bổ từ khóa theo nhóm phễu (TOFU/MOFU/BOFU) trên giao diện CMS MoSpark.
 *   **Kết nối API Google Ads & Google Search Console**: Devs bắt đầu code API kết nối Google Ads (Keyword Planner) để đồng bộ Volume Search hàng tháng và API GSC để hiển thị dashboard SoV realtime.
