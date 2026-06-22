@@ -1,16 +1,16 @@
 # BRD: Báo Cáo Lừa Đảo (Trust - Report Scam)
 
-> - **Project:** Use Case Báo Cáo Lừa Đảo (Trust) - Web Growth & Inbound SEO/GEO
+> - **Project:** Use Case Báo Cáo Lừa Đảo (Trust) - Web Growth & Inbound Web Platform
 > - **Main URL:** momo.vn/report-scam
 > - **Division:** Risk & Security (GPD Web Platform)
-> - **Version:** 1.0 · Tháng 6/2026
-> - **Status:** Active
+> - **Version:** 1.1 · Tháng 6/2026
+> - **Status:** Active (Scope: Landing Page & GenAI Autofill - S-P-A Framework)
 
 ---
 
-> **Problem:** Mỗi tháng có hàng ngàn người dùng ngoài hệ sinh thái MoMo (Non-MoMo Users) bị lừa đảo trực tuyến tìm kiếm trên Google cách kiểm tra uy tín số tài khoản/số điện thoại hoặc tố giác kẻ lừa đảo. Tuy nhiên, họ gặp rào cản lớn khi phải tải app, đăng ký, đăng nhập tài khoản MoMo mới có thể gửi báo cáo trên Miniapp. Điều này làm lãng phí nguồn dữ liệu cảnh báo khổng lồ từ cộng đồng và làm tăng chi phí xử lý thủ công của CS (2.000–3.000 tickets/tháng).
+> **Problem:** Mỗi tháng có hàng ngàn người dùng ngoài hệ sinh thái MoMo (Non-MoMo Users) bị lừa đảo trực tuyến tìm kiếm nơi tố giác kẻ lừa đảo hoặc cảnh báo cộng đồng. Tuy nhiên, họ gặp rào cản lớn khi phải tải app, đăng ký, đăng nhập tài khoản MoMo mới có thể gửi báo cáo trên Miniapp. Điều này làm lãng phí nguồn dữ liệu cảnh báo khổng lồ từ cộng đồng và làm tăng chi phí xử lý thủ công của CS (2.000–3.000 tickets/tháng).
 > **KPI Owned:** Số lượng báo cáo lừa đảo ẩn danh được tiếp nhận và xác minh thành công trên Web (làm phong phú cơ sở dữ liệu cảnh báo cộng đồng và AI Scoring).
-> **Conversion Flow:** Search "số điện thoại [SĐT] lừa đảo" / "số tài khoản [STK] lừa đảo" / "cách tố cáo lừa đảo qua mạng" → `/report-scam` hoặc `/report-scam/tra-cuu/{slug}` → Xem chỉ số tín nhiệm / Nhập mô tả kịch bản lừa đảo → AI tự động bóc tách thực thể và điền form (Autofill) → Submit thành công (Không yêu cầu đăng nhập/OTP).
+> **Conversion Flow:** Người dùng truy cập Landing Page `/report-scam` → Nhập mô tả kịch bản lừa đảo bằng ngôn ngữ tự nhiên → AI (Gemini) tự động bóc tách thực thể và điền form (Autofill) → Người dùng xác nhận và gửi báo cáo → Submit thành công (Không yêu cầu đăng nhập/OTP, bảo đảm ẩn danh).
 
 ---
 
@@ -22,17 +22,16 @@
 
 ### 1.2 Situation
 *   Mỗi tháng, hệ thống CS của MoMo tiếp nhận thủ công khoảng 2.000–3.000 ticket liên quan đến phản ánh lừa đảo.
-*   Người dùng khi nghi ngờ một số điện thoại hoặc số tài khoản ngân hàng lạ thường tìm kiếm trên Google trước khi giao dịch, nhưng MoMo chưa có trang Web nào xuất hiện để cảnh báo và tiếp nhận thông tin từ nhóm đối tượng có ý định giao dịch này.
+*   Người dùng khi bị lừa đảo (hoặc suýt bị lừa đảo) cần một công cụ Web phản hồi nhanh chóng, ẩn danh và dễ dàng tiếp cận mà không có rào cản đăng nhập.
 
 ### 1.3 Complication
-*   Hành vi lừa đảo tài chính qua mạng ngày càng tinh vi và thay đổi kịch bản liên tục (giả danh cơ quan công quyền, việc nhẹ lương cao, giả mạo biên lai chuyển tiền).
-*   Việc thu thập dữ liệu thủ công qua form điền truyền thống có tỷ lệ bỏ dở (drop rate) rất cao do người dùng phải nhớ và tự tay nhập quá nhiều thông tin chi tiết.
+*   Hành vi lừa đảo tài chính qua mạng ngày càng tinh vi và thay đổi kịch bản liên tục.
+*   Việc thu thập dữ liệu thủ công qua form điền truyền thống có tỷ lệ bỏ dở (drop rate) rất cao do người dùng phải nhớ và tự tay nhập quá nhiều thông tin chi tiết (SĐT lừa đảo, STK, Tên ngân hàng, Số tiền, Phương thức).
 
-### 1.4 Resolution
-*   Build Landing Page `/report-scam` cho phép báo cáo ẩn danh 1 chạm.
-*   Tích hợp AI Engine bóc tách thông tin tự động từ kịch bản văn bản tự do của người dùng để tự động điền form (Autofill).
-*   Hợp tác với Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao (A05 - Bộ Công an) để xây dựng Central Hub chia sẻ dữ liệu lừa đảo quốc gia.
-*   Tự động sinh các trang tra cứu lừa đảo động (pSEO) theo số điện thoại/số tài khoản đã bị cảnh báo để đón đầu traffic tìm kiếm từ Google.
+### 1.4 Resolution (S-P-A Framework Implementation)
+*   **reSearch (Giai đoạn 1):** Nghiên cứu hành vi người dùng, các kịch bản lừa đảo phổ biến và thiết lập bộ quy chuẩn bóc tách thông tin. Nghiên cứu giải pháp tuân thủ pháp lý (Nghị định 13/2023/NĐ-CP) và thiết kế hệ thống prompt cho Gemini 1.5 Flash.
+*   **Pilot (Giai đoạn 2):** Xây dựng Landing Page MVP `/report-scam` không yêu cầu đăng nhập/OTP. Tích hợp module GenAI Autofill bóc tách text tự do sang biểu mẫu xác nhận. Chạy thử nghiệm trên nhóm nhỏ người dùng để đánh giá tính chính xác của AI và tỷ lệ hoàn thành (Completion Rate).
+*   **Action (Giai đoạn 3):** Triển khai rộng rãi Landing Page, tự động hóa luồng đẩy dữ liệu báo cáo sang hệ thống AI Scoring của Risk Team để phân tích hành vi và đồng bộ dữ liệu xử lý vé của CS.
 
 ---
 
@@ -43,111 +42,106 @@
 | Asset | URL | Trạng thái | Ghi chú |
 |---|---|---|---|
 | Hub page | /report-scam | Chưa build | Landing page tiếp nhận báo cáo lừa đảo không cần đăng nhập |
-| pSEO Search page | /report-scam/tra-cuu/* | Chưa build | Trang tra cứu độ uy tín của số điện thoại/số tài khoản |
 | AEO/GEO Document | /report-scam/llms.txt | Chưa build | Chuẩn hóa thông tin cảnh báo an toàn cho AI Search Engines |
 
-### 2.2 Market Size & SOV Baseline
-
-| Thị trường | TAM (SV/tháng) | SOV Hiện tại | SOV Mục tiêu | Ghi chú |
-|---|---|---|---|---|
-| Tra cứu số điện thoại lừa đảo | ~12.000 | 0% | 50% | Target chính của pSEO |
-| Tra cứu số tài khoản lừa đảo | ~5.000 | 0% | 40% | Kết nối dữ liệu ngân hàng đối tác |
-| Tố cáo lừa đảo trực tuyến | ~3.000 | 0% | 60% | Hướng về trang tiếp nhận ẩn danh |
-
----
-
-## 3. Định Hướng Dự Án
-
-### 3.1 Product Job Cốt Lõi
-*   **User nghi ngờ giao dịch lừa đảo hoặc đã là nạn nhân -> Truy cập Web MoMo không cần đăng nhập -> Gõ kịch bản lừa đảo bằng ngôn ngữ tự nhiên -> AI tự động bóc tách và điền form thông tin -> Gửi báo cáo ẩn danh hoàn tất trong 2 phút để bảo vệ bản thân và cảnh báo cộng đồng.**
-
-### 3.2 Đối Tượng Phục Vụ
-*   **Segment 1 - Nạn nhân lừa đảo (Scam Victim):** Đã bị mất tiền hoặc suýt mất tiền, muốn cảnh báo cộng đồng nhanh chóng mà không cần phơi bày danh tính hoặc thực hiện các bước KYC phức tạp.
-*   **Segment 2 - Người cảnh giác (Vigilant Spender):** Nghi ngờ một số điện thoại hoặc số tài khoản lạ trước khi thực hiện giao dịch, cần tra cứu nhanh độ uy tín của thông tin đó.
-*   **Segment 3 - Non-MoMo Users:** Những người dùng ngân hàng truyền thống hoặc ví điện tử khác bị lừa đảo tài chính qua tài khoản MoMo giả mạo, cần một kênh trình báo trung lập.
-
-### 3.3 Dự Án Này KHÔNG Phải
-*   KHÔNG build tính năng bên trong App MoMo (đã có Miniapp phụ trách).
-*   KHÔNG cam kết bồi hoàn tài chính tự động (phải đi theo luồng CS khiếu nại riêng).
-*   KHÔNG cam kết phong tỏa tài khoản ngân hàng/ví ngay lập tức khi vừa nhận báo cáo (cần qua quy trình đối soát và xác minh rủi ro).
+### 2.2 Phạm vi dự án (Scope & Out-of-Scope)
+*   **In-Scope:**
+    *   Xây dựng Landing Page Web tĩnh `/report-scam` phản hồi nhanh, tối ưu hóa giao diện di động.
+    *   Tích hợp ô nhập kịch bản tự do (ngôn ngữ tự nhiên) tại màn hình đầu tiên.
+    *   Tích hợp GenAI (Gemini 1.5 Flash API) bóc tách các trường: Số điện thoại kẻ lừa đảo, Số tài khoản ngân hàng kẻ lừa đảo, Tên ngân hàng thụ hưởng, Số tiền bị lừa, và Phương thức lừa đảo (Kịch bản).
+    *   Tự động điền (Autofill) kết quả bóc tách vào form bước tiếp theo để người dùng kiểm tra và xác nhận.
+    *   Cho phép gửi thông tin ẩn danh hoàn toàn (các trường liên hệ cá nhân như Email/SĐT người báo cáo là tùy chọn và đi kèm checkbox đồng thuận tuân thủ Nghị định 13).
+*   **Out-of-Scope (Future Phases / Kế hoạch mở rộng dài hạn):**
+    *   SEO Planning diện rộng và hệ thống trang tra cứu động pSEO (`/report-scam/tra-cuu/*`).
+    *   Kết nối API đồng bộ dữ liệu thời gian thực với các cơ quan chức năng hoặc bên thứ ba (như A05).
+    *   Các tính năng tương tác cộng đồng, bình luận hoặc đánh giá độ uy tín tài khoản trên Web.
 
 ---
 
-## 4. Phân Tích Thị Trường & Keyword Research
+## 3. Quy Trình S-P-A (reSearch ➔ Pilot ➔ Action)
 
-### 4.1 Opportunity Map - Keyword Cluster → URL
+```mermaid
+graph TD
+    subgraph Stage 1: reSearch
+        A[Nghiên cứu Kịch bản Lừa đảo] --> B[Thiết lập Business Context cho AI]
+        B --> C[Thiết kế Prompt & Compliance Legal]
+    end
+    subgraph Stage 2: Pilot
+        C --> D[Build Landing Page MVP]
+        D --> E[Tích hợp Gemini 1.5 Flash Autofill]
+        E --> F[Chạy thử nghiệm trên nhóm nhỏ & đo lường]
+    end
+    subgraph Stage 3: Action
+        F --> G[Go-Live Rộng rãi Landing Page]
+        G --> H[Đồng bộ dữ liệu sang DB Risk & CS ticketing]
+    end
+```
 
-| Cluster | SV/tháng | Intent | Target URL | Content angle |
-|---|---|---|---|---|
-| kiểm tra số điện thoại lừa đảo | 3.600 | Commercial | /report-scam/tra-cuu | Công cụ check độ uy tín SĐT trực tuyến |
-| số tài khoản [STK] lừa đảo | 2.200 | Trans/BOFU | /report-scam/tra-cuu/[stk] | Lịch sử cảnh báo báo cáo lừa đảo của tài khoản |
-| tố cáo lừa đảo qua mạng ở đâu | 1.800 | Info/MOFU | /report-scam | Hướng dẫn báo cáo ẩn danh nhanh trong 2 phút |
-| báo cáo tài khoản MoMo lừa đảo | 900 | Nav/BOFU | /report-scam | Tiếp nhận báo cáo lừa đảo ẩn danh không cần đăng nhập |
+### 3.1 Giai đoạn 1: reSearch (Khảo sát & Thiết kế)
+*   **Mục tiêu:** Thu thập dữ liệu các kịch bản lừa đảo thực tế để cấu hình AI và thiết kế giao diện tối giản nhất.
+*   **Nhiệm vụ chi tiết:**
+    1.  **Phân tích kịch bản:** Thu thập 100 kịch bản lừa đảo mẫu từ dữ liệu CS (như giả mạo biên lai chuyển khoản, giả danh shipper, tuyển cộng tác viên, v.v.) để làm tập dữ liệu grounding cho AI.
+    2.  **Thiết lập Prompt bóc tách:** Thiết lập Master Prompt hướng dẫn Gemini 1.5 Flash bóc tách thông tin một cách chuẩn xác, xử lý các trường hợp văn bản nhập không đầy đủ hoặc dùng từ lóng.
+    3.  **Đánh giá pháp lý (Compliance):** Làm việc với Legal để phê duyệt điều khoản bảo mật dữ liệu. Landing page không yêu cầu đăng nhập nhưng cần có checkbox tuyên bố miễn trừ trách nhiệm và đồng thuận thu thập thông tin tự nguyện (nếu người dùng nhập SĐT/Email liên hệ).
+
+### 3.2 Giai đoạn 2: Pilot (Thử nghiệm MVP)
+*   **Mục tiêu:** Kiểm thử thực tế trải nghiệm không đăng nhập và tính ổn định của tính năng AI Autofill trên Landing Page.
+*   **Nhiệm vụ chi tiết:**
+    1.  **Phát triển Landing Page MVP:** Giao diện tối giản với 2 bước:
+        *   *Bước 1:* Nhập nội dung mô tả kịch bản (Textarea tự do).
+        *   *Bước 2:* Xác nhận thông tin đã bóc tách (Form điền sẵn thông tin SĐT, STK, Số tiền, Ngân hàng). Tất cả các trường này đều có thể sửa đổi và không bắt buộc nhập để tránh lỗi nhận diện sai của AI gây đứt gãy trải nghiệm.
+    2.  **Tích hợp GenAI:** Kết nối frontend với API Gemini 1.5 Flash qua backend API Gateway của Web Platform.
+    3.  **Chạy thử nghiệm (Internal & Friends-Family):** Cho chạy thử nghiệm với nhóm 100 người dùng mẫu, yêu cầu họ nhập kịch bản lừa đảo thực tế để đo lường độ chính xác của AI. Mục tiêu đạt tỷ lệ bóc tách đúng >= 85%.
+
+### 3.3 Giai đoạn 3: Action (Vận hành Rộng rãi)
+*   **Mục tiêu:** Triển khai chính thức Landing Page `/report-scam` rộng rãi, bắt đầu thu thập dữ liệu báo cáo ẩn danh từ cộng đồng.
+*   **Nhiệm vụ chi tiết:**
+    1.  **Go-live Landing Page:** Cấu hình CDN và tối ưu hóa hiệu năng Landing Page đảm bảo thời gian tải trang dưới 1.5 giây.
+    2.  **Tích hợp phễu dữ liệu:** Tự động đẩy thông tin báo cáo đã qua xác nhận của người dùng về cơ sở dữ liệu cảnh báo của Risk Team để làm giàu dữ liệu cho AI Scoring (chặn giao dịch đáng ngờ trên App MoMo).
+    3.  **Giảm tải CS:** Tự động phân loại nội dung báo cáo và tạo ticket tự động trên hệ thống CS, giúp CS Agent không phải nhập thủ công dữ liệu từ người dùng.
 
 ---
 
-## 5. JTBD (Jobs-to-be-Done) Analysis
+## 4. JTBD (Jobs-to-be-Done) Analysis
 
-### Job #SCAM-01 - Ẩn danh Tố cáo (Scam Victim)
-*   *Search cluster:* "tố cáo lừa đảo ẩn danh", "báo cáo tài khoản lừa đảo qua mạng"
-*   > "Tôi muốn gửi báo cáo lừa đảo để ngăn chặn kẻ xấu tiếp tục lừa người khác, nhưng tôi không muốn phải để lộ thông tin cá nhân hay trải qua các bước KYC rườm rà."
+### Job #TRUST-01 - Tố cáo Nhanh chóng & Ẩn danh (Scam Victim)
+*   > "Tôi muốn gửi báo cáo tố cáo kẻ lừa đảo một cách nhanh chóng ngay trên trình duyệt mà không cần phải thực hiện các bước tải app hay đăng nhập rườm rà, để tôi có thể cảnh báo cộng đồng và giúp ngăn chặn hành vi lừa đảo mà vẫn bảo vệ được danh tính của mình."
 
 | Dimension | Nội dung |
 |---|---|
-| Functional | Gửi báo cáo thành công kèm bằng chứng (ảnh chụp, SĐT, STK) trong vòng 2 phút, ẩn danh hoàn toàn |
-| Emotional | Cảm thấy bớt bất lực, đóng góp giá trị cho cộng đồng, không sợ bị trả thù hoặc làm lộ thông tin cá nhân |
-| Social | Trở thành người có trách nhiệm bảo vệ an toàn thông tin cộng đồng |
-| Trigger | Vừa bị lừa đảo chuyển khoản qua mạng |
-
-**Giải pháp:** Landing Page `/report-scam` tích hợp AI Autofill từ văn bản mô tả tự do, lược bỏ bước OTP/đăng nhập.
+| **Functional** | - Nhập kịch bản tự do bằng ngôn ngữ tự nhiên.<br>- AI tự động điền form, kiểm tra lại thông tin và bấm gửi trong vòng dưới 2 phút.<br>- Không cần OTP/đăng nhập/KYC. |
+| **Emotional** | - Cảm thấy an tâm vì thông tin cá nhân được bảo vệ ẩn danh.<br>- Giảm bớt sự thất vọng và bất lực sau khi bị lừa đảo nhờ có kênh tố cáo chính thống. |
+| **Social** | - Đóng góp dữ liệu để bảo vệ cộng đồng tránh khỏi các nạn nhân tiếp theo. |
+| **Trigger** | - Người dùng vừa trải qua hoặc phát hiện một vụ lừa đảo tài chính liên quan đến tài khoản MoMo hoặc các ngân hàng đối tác. |
 
 ---
 
-## 6. Kiến Trúc & Scope Build
+## 5. Success Metrics
 
-### 6.1 URL Architecture
+Do dự án tập trung vào Landing Page báo cáo không đăng nhập áp dụng S-P-A Framework và chưa triển khai SEO planning hay pSEO mở rộng, các chỉ số thành công sẽ tập trung vào hiệu năng vận hành và chất lượng trải nghiệm:
 
-| URL | Content Type | Mục tiêu |
-|---|---|---|
-| /report-scam | Hub - Pillar page | Landing page tiếp nhận báo cáo lừa đảo ẩn danh, hướng dẫn quy trình |
-| /report-scam/tra-cuu | Search page | Công cụ tìm kiếm nhanh độ uy tín của SĐT/STK |
-| /report-scam/tra-cuu/[sdt-stk] | pSEO Location | Trang chi tiết cảnh báo cho từng số điện thoại/số tài khoản cụ thể |
-| /report-scam/llms.txt | AEO/GEO Standard | Chuẩn hóa thông tin an toàn bảo mật phục vụ các mô hình AI Search |
+### 5.1 Product & Experience Metrics
+*   **Landing Page Completion Rate:** Đạt >= 65% (Tỷ lệ người dùng bắt đầu nhập kịch bản lừa đảo hoàn thành toàn bộ quy trình gửi báo cáo).
+*   **AI Autofill Accuracy Rate:** Đạt >= 85% (Tỷ lệ thông tin bóc tách tự động bởi Gemini 1.5 Flash khớp đúng với nội dung kịch bản thực tế).
+*   **Average Submission Time:** Dưới 90 giây (Thời gian trung bình từ lúc truy cập trang đến khi gửi báo cáo thành công).
+*   **Error Rate (API/Frontend):** Dưới 1% (Tỷ lệ lỗi khi gửi thông tin hoặc gọi API bóc tách dữ liệu).
 
-### 6.2 Scope Build - Core Deliverables
-
-| Deliverable | Mô tả | Mục tiêu |
-|---|---|---|
-| Landing Page `/report-scam` | Giao diện thu gọn, ô nhập kịch bản tự do ở màn hình đầu tiên, không bắt buộc đăng nhập | Tăng tỷ lệ gửi báo cáo lừa đảo thành công từ web |
-| **GenAI Autofill Pipeline** | AI tự động bóc tách các trường thông tin (SĐT, STK, Ngân hàng, Số tiền, Kịch bản) từ văn bản tự do của người dùng và điền sẵn vào màn hình xác nhận thông tin | Giảm ma sát điền form, hoàn thành báo cáo dưới 2 phút |
-| pSEO Search Engine | Tự động sinh trang chi tiết cảnh báo cho các số điện thoại/số tài khoản đã có lịch sử bị báo cáo lừa đảo và được xác thực | Đón đầu lượng traffic tìm kiếm nghi vấn từ Google |
-| A05 Central Hub Sync | API kết nối đồng bộ dữ liệu cảnh báo thời gian thực với Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao | Tăng tính xác thực dữ liệu và độ uy tín (E-E-A-T) của trang |
+### 5.2 Business & Operational Metrics
+*   **CS Ticket Deflection Rate:** Giảm 15% lượng ticket báo cáo lừa đảo gửi thủ công qua tổng đài CS nhờ luồng tự phục vụ (Self-service) trên Web.
+*   **Risk Database Ingestion:** Tăng trưởng số lượng số điện thoại/số tài khoản lừa đảo mới được cập nhật vào AI Scoring DB hàng tháng.
 
 ---
 
-## 7. Success Metrics
+## 6. Dependencies & Constraints
 
-### 7.1 North Star Metric
-*   **Số lượng báo cáo lừa đảo ẩn danh được xác minh thành công từ Web:** Lượng báo cáo lừa đảo hợp lệ được gửi từ Website `/report-scam` mà không qua đăng nhập, được hệ thống Risk kiểm soát và ghi nhận thành công vào DB cảnh báo.
-
-### 7.2 Organic Traffic Targets
-*   **Organic Sessions:** Đạt 50K sessions/tháng sau 90 ngày launch nhờ hệ thống pSEO tra cứu số điện thoại/số tài khoản lừa đảo.
-*   **CTR tới CTA báo cáo:** Đạt >= 25% người dùng truy cập trang `/report-scam` hoàn thành bước gửi báo cáo.
-
----
-
-## 8. Dependencies & Constraints
-
-### 8.1 Operational Constraints
-
-| Dependency | Mô tả | Blocker? | Status |
+| Dependency | Bộ phận | Vai trò | Trạng thái |
 |---|---|---|---|
-| Risk & Security Team | Phê duyệt và cung cấp bộ quy tắc xác minh thông tin báo cáo tự động | Yes | Pending |
-| A05 Connection | Đồng thuận kết nối API và chia sẻ dữ liệu Central Hub với Cục An ninh mạng | Yes | Pending |
-| Legal / Compliance | Duyệt cơ chế bảo vệ dữ liệu cá nhân (Nghị định 13) cho người dùng ẩn danh | Yes | Pending |
-| GenAI API Gateway | Đảm bảo hạn mức (Rate Limit) và chi phí API Gemini 1.5 Flash cho tác vụ bóc tách | No | Active |
+| **Risk & Security Team** | Risk | Phê duyệt logic xử lý dữ liệu báo cáo ẩn danh và tích hợp vào hệ thống AI Scoring. | Pending |
+| **Legal & Compliance** | Legal | Đảm bảo quy trình báo cáo ẩn danh tuân thủ Nghị định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân. | Pending |
+| **GenAI Infrastructure** | Tech/Platform | Hỗ trợ API Gateway và hạn mức gọi API Gemini 1.5 Flash cho Landing Page. | Active |
 
 ---
 
 ## Change Log
-- **Tháng 6/2026 (v1.0):** Khởi tạo tài liệu BRD Use Case Báo Cáo Lừa Đảo (Trust - Report Scam) theo quy chuẩn Web Platform.
+- **Tháng 6/2026 (v1.0):** Khởi tạo dự thảo tài liệu BRD.
+- **22/06/2026 (v1.1):** Điều chỉnh thu hẹp scope dự án (Chỉ tập trung xây dựng Landing Page gửi báo cáo ẩn danh, chưa triển khai SEO planning/tra cứu pSEO) và cấu trúc lại toàn bộ tài liệu theo quy trình **S-P-A Framework (reSearch - Pilot - Action)**.
