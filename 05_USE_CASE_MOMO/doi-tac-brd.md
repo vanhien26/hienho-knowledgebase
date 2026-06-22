@@ -617,68 +617,52 @@ Cập nhật phân công chi tiết cho các thành viên dự án (Tuần 2 th�
 
 ### 11. Luồng Tạo Merchant Tự Động Cho PM (3-Layer Workflow)
 
-Nhằm tối giản hóa thao tác, tăng tính tự động và đảm bảo kiểm soát chất lượng chặt chẽ, MoSpark CMS áp dụng quy trình khởi tạo trang đối tác (Creation Workflows) tinh gọn được chia làm đúng **3 Layer** chính:
+Nhằm tối giản hóa thao tác, đảm bảo tính chiến lược và kiểm soát chất lượng chặt chẽ, MoSpark CMS áp dụng quy trình khởi tạo trang đối tác (Merchant Creation Flow) định hướng bởi SEO thông qua **3 Layer** chính:
 
-#### 11.1 Layer 1: Chọn Phương Thức Khởi Tạo (Select Method)
-Khi PM nhấn nút khởi tạo Merchant từ bên trong một **SEO/GEO Project** cụ thể, giao diện hiển thị 2 phương thức lựa chọn:
-1. **Phương thức 1 - Nhập tay (Manual):** Dành cho trường hợp onboard merchant mới chưa có trên hệ thống hoặc PM muốn tự kiểm soát dữ liệu thô.
-2. **Phương thức 2 - Đồng bộ từ M4B (Sync M4B):** Dành cho đối tác đã có tài khoản trên hệ thống MoMo App.
+#### 11.1 Layer 1: Định hình Chiến Lược SEO (SEO-driven Strategy Setup)
+Mọi Merchant được khởi tạo trên hệ thống bắt buộc phải được gắn kết với **Theme/Cluster** và có dữ liệu **Volume Search** rõ ràng kế thừa từ dự án **SEO/GEO Project**. Điều này đảm bảo trang Merchant Page Detail được sinh ra để hứng đúng intent tìm kiếm thực tế của người dùng thị trường, thay vì tạo trang tràn lan thiếu chiến lược.
+* PM/Editor rà soát bảng từ khóa trong SEO/GEO Project -> Xác định đối tác cần onboard tương thích với cụm từ khóa mục tiêu -> Bấm nút kích hoạt dựng để hệ thống đẩy đối tác đó qua **Luồng tạo Merchant (Merchant Creation Flow)**.
 
-#### 11.2 Layer 2: Nhập thông tin khởi tạo & Sync (Form Input & Sync)
-Tại bước này, hệ thống yêu cầu thu thập đủ **4 thông tin cốt lõi** (Tên, Danh mục, Địa chỉ, Ảnh) để làm nguyên liệu cho GenAI kích hoạt đúng Prompt tương ứng với ngành hàng. Để tối ưu hóa tự động hóa và tránh sai lệch dữ liệu, hệ thống tích hợp công cụ **Google Map Search (Gemini-powered với Search Grounding)** để tự động crawl dữ liệu thực địa của quán. Quy trình thu thập cụ thể theo phương thức đã chọn ở Layer 1:
+#### 11.2 Layer 2: Luồng Tạo Merchant & User Input (Merchant Creation Flow)
+Tại giao diện Form khởi tạo, hệ thống yêu cầu User (Editor/Admin) nhập trực tiếp (User input) **4 thông tin quan trọng** của Merchant để thiết lập Base Data và bối cảnh cho trang đích:
+1. **Địa chỉ (Address):** Địa chỉ vật lý chính xác của quán phục vụ tính năng Map/Location.
+2. **MerchantID (M4B ID):** ID định danh đối tác trên hệ thống MoMo, phục vụ liên kết dữ liệu Ví Trả Sau/Soundbox và sinh Deep Link Web-to-App (`momo://app/merchant?id={merchant_id}`).
+3. **GenAI content:** Nội dung mô tả giới thiệu chi tiết (Intro, FAQ) được GenAI sinh ra dựa trên bối cảnh nghiệp vụ chung trộn với thông tin đối tác cụ thể và được người dùng duyệt/chỉnh sửa trực tiếp.
+4. **Image (Hình ảnh):** Tải lên hình ảnh logo hoặc banner thực tế chính thức của quán.
 
-* **Nếu PM chọn phương thức Manual (Nhập tay):**
-  * PM nhập **Tên Merchant**. Hệ thống lập tức kích hoạt **Google Map Search** để tìm kiếm trên Google Maps/Google Business Profile.
-  * Nếu tìm thấy địa điểm trùng khớp: Hệ thống tự động crawl và **auto-fill** các trường thông tin: *Tên đối tác chuẩn hóa, Địa chỉ chính xác, Giờ mở/đóng cửa*, và danh sách *Tiện ích* (Amenities - e.g. wifi, máy lạnh, bãi xe). PM chỉ cần xác nhận và chỉnh sửa nếu cần.
-  * Nếu không tìm thấy: PM tự nhập tay Tên, Danh mục (Category), Địa chỉ, Giờ mở/đóng cửa và tích chọn các Tiện ích tương ứng.
-  * PM tải lên **1 Ảnh** thực tế của quán.
+*Lưu ý: Nút Tiếp Tục (Kích hoạt QC Gate) sẽ bị khóa cho đến khi User nhập đầy đủ và hợp lệ cả 4 trường thông tin bắt buộc nêu trên để tránh tạo ra các trang "thin content" thiếu dữ liệu.*
 
-* **Nếu PM chọn phương thức Sync M4B (Đồng bộ M4B):**
-  * PM nhập **Merchant ID** của đối tác. CMS gọi API M4B để tự động điền **Tên Merchant**, **Danh mục (Category)** và **Địa chỉ**.
-  * Đồng thời, hệ thống tự động kích hoạt **Google Map Search (Gemini-powered)** dựa trên Tên & Địa chỉ từ M4B để tìm kiếm listing tương ứng trên Google Maps, thực hiện crawl và tự động **làm giàu dữ liệu (Data Enrichment)** cho các trường thông tin còn thiếu trên M4B bao gồm: *Giờ mở/đóng cửa* và *Tiện ích*.
-  * PM tải lên **1 Ảnh** thực tế của quán.
-
-* *Lưu ý: Nút Tiếp Tục (Kích hoạt GenAI) sẽ bị khóa cho đến khi thu thập đủ cả 4 thông tin bắt buộc (Tên + Danh mục + Địa chỉ + Ảnh).*
-
-**Quy trình Kích hoạt GenAI đồng thời (Single-Pass Execution & Chatbot KB Extraction):**
-Khi PM nhấn xác nhận tiếp tục tại Layer 2, hệ thống tự động chạy **đồng thời trong 1 lượt duy nhất (Single-Pass)**:
-- **GenAI Content (Trọng phụ trách):** Sử dụng model Gemini dựa trên thông tin thô thu được để thực hiện 2 tác vụ:
-  1. Viết bài mô tả giới thiệu chi tiết chuẩn SEO (Unique content) & tự động sinh bộ câu hỏi thường gặp (FAQs).
-  2. Bóc tách và map thông tin vào các trường tĩnh (Structured Custom Fields) trong CMS Editor như: *Địa chỉ, Mức giá, Khung giờ mở cửa, Tiện ích, Chính sách thanh toán*. Các trường này đóng vai trò là **Knowledge Base (KB)** cấu trúc hóa để Chatbot của Duy có thể đọc và truy vấn trực tiếp nhằm trả lời người dùng chính xác, tiết kiệm token LLM và tránh hallucination.
-- **GenAI Image (Gemini Banana):** Xử lý hình ảnh vừa tải lên (làm nét, retouch và resize về chuẩn Banner 1050x450 px & Social Share 1200x630 px).
-
-#### 11.3 Layer 3: Kiểm duyệt và Xác nhận thông tin (Verify)
-Giao diện CMS Page Editor hiển thị kết quả sau khi chạy xong Single-Pass Pipeline:
-* PM xem trước, chỉnh sửa trực tiếp nội dung văn bản (Intro, FAQ) và ảnh đã được tối ưu trong thư viện (MoMo Gallery).
-* CMS tự động kiểm duyệt kiểm tra kỹ thuật (QC Gate: NAP, Payment Methods).
-* PM xác nhận thông tin OK và nhấn Publish để xuất bản trang, hệ thống tự động cập nhật Sitemap XML và ping chỉ mục (Indexing API).
+#### 11.3 Layer 3: Kiểm duyệt và Xác nhận thông tin (Verify & Publish)
+Giao diện CMS hiển thị bản thảo hoàn thiện của trang đối tác:
+* PM xem trước toàn bộ giao diện hiển thị, chỉnh sửa trực tiếp nội dung văn bản (GenAI content) và kiểm tra hình ảnh.
+* Hệ thống tự động rà soát qua cổng kiểm soát chất lượng **QC Gate** (kiểm tra tính hợp lệ của địa chỉ, định dạng MerchantID, sự hiện diện của badge thanh toán và hình ảnh).
+* PM xác nhận thông tin OK và nhấn **Publish** để chính thức xuất bản trang. Hệ thống tự động cập nhật URL vào Sitemap XML và ping chỉ mục (Indexing API).
 
 ---
 
 ```mermaid
 graph TD
-    Start([PM khởi tạo Merchant trong SEO/GEO Project]) --> Method{Layer 1: Chọn phương thức}
+    Start([PM rà soát Theme/Cluster & Volume trong SEO/GEO Project]) --> Identify[Xác định Merchant mục tiêu phù hợp từ khóa]
+    Identify --> Build[Bấm xây dựng: Đẩy qua luồng tạo Merchant]
     
-    Method -->|Manual| Input_Manual[Layer 2: Nhập Tên Merchant]
-    Method -->|Sync M4B| Input_M4B[Layer 2: Nhập Merchant ID]
+    subgraph Merchant Creation Flow (User Input)
+        Build --> InputAddress[Nhập Địa chỉ Merchant]
+        Build --> InputID[Nhập MerchantID]
+        Build --> InputContent[Nhập/Duyệt GenAI Content]
+        Build --> InputImage[Tải lên Image của quán]
+    end
     
-    Input_Manual --> Gemini_Map_Manual[Google Map Search: Auto-fill Tên + Địa chỉ + Giờ mở cửa + Tiện ích]
-    Input_M4B --> API[CMS gọi API M4B: Tự điền Tên & Địa chỉ]
+    InputAddress --> Validate{User nhập đủ 4 thông tin cốt lõi?}
+    InputID --> Validate
+    InputContent --> Validate
+    InputImage --> Validate
     
-    API --> Gemini_Map_Sync[Google Map Search: Làm giàu dữ liệu Giờ mở cửa + Tiện ích]
+    Validate -->|Chưa đủ| Lock[Khóa nút Tiếp tục]
+    Validate -->|Đầy đủ| Layer3[Layer 3: CMS Page Editor hiển thị bản thảo]
     
-    Gemini_Map_Manual --> Upload[Tải lên 1 Ảnh thực tế của quán]
-    Gemini_Map_Sync --> Upload
-    
-    Upload --> Submit{PM bấm Tiếp tục}
-    
-    Submit --> GenAI[Chạy Single-Pass GenAI Pipeline: Trọng viết bài, bóc tách Chatbot KB & Banana tối ưu ảnh]
-    
-    GenAI --> Verify[Layer 3: CMS Page Editor hiển thị bản thảo]
-    
-    Verify --> QC{QC Gate: Đạt chuẩn NAP & Payment?}
-    QC -->|Không đạt| Edit[PM chỉnh sửa lại]
-    Edit --> Method
+    Layer3 --> QC{QC Gate: Đạt chuẩn NAP & Payment?}
+    QC -->|Không đạt| Edit[PM chỉnh sửa thủ công]
+    Edit --> Layer3
     QC -->|Đạt chuẩn| Live[Publish: Tự động cập nhật Sitemap XML & Indexing API]
 ```
 

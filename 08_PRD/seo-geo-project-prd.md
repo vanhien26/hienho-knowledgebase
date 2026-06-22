@@ -224,6 +224,18 @@ flowchart TD
 *   **Công thức trộn:**
     `Final Prompt = Localized Writer Prompt + Platform Context (Ví Trả Sau/Soundbox) + Merchant Context (Menu/Address) + Target Keyword + Approved Outline`
 
+##### 4. Luồng Khởi Tạo Merchant Từ SEO/GEO Project (Merchant Creation Flow)
+*   **Mô tả:** Cơ chế khởi tạo trang đối tác dựa trên định hướng chiến lược từ khóa và cụm chủ đề của dự án SEO/GEO.
+*   **Yêu cầu chi tiết:**
+    *   **Liên kết Chiến lược:** Mọi Merchant được khởi tạo bắt buộc phải có chiến lược liên kết với Theme/Cluster và kế thừa chỉ số Volume Search từ dự án SEO/GEO Project để đảm bảo hiệu quả SEO.
+    *   **Quá trình Kích hoạt:** Khi PM/Editor xác định Merchant mục tiêu từ danh sách từ khóa chiến lược, hệ thống sẽ kích hoạt nút xây dựng và đẩy đối tác đó qua Luồng tạo Merchant (Merchant Creation Flow) trên giao diện CMS MoSpark.
+    *   **User Input (Nhập tay thông tin cốt lõi):** Tại giao diện Form này, người dùng (User) nhập tay trực tiếp các thông tin quan trọng của Merchant để khởi tạo bao gồm:
+        1. **Địa chỉ (Address):** Địa chỉ vật lý chính xác của quán phục vụ tính năng Map/Location.
+        2. **MerchantID (M4B ID):** ID đối tác trên MoMo, phục vụ sinh Deep Link Web-to-App (`momo://app/merchant?id={merchant_id}`).
+        3. **GenAI content:** Nội dung mô tả (Intro, FAQ) được GenAI sinh tự động dựa trên bối cảnh chung phối hợp với context cục bộ của Merchant và được người dùng phê duyệt/chỉnh sửa.
+        4. **Hình ảnh (Image):** Ảnh chụp banner hoặc logo thực tế của quán.
+    *   **QC Gate Validation:** Hệ thống khóa tính năng Publish cho đến khi nhập đầy đủ cả 4 thông tin bắt buộc trên và vượt qua kiểm duyệt QC Gate tự động.
+
 ---
 
 ## VII. W2A CONVERSION & DATA REQUIREMENTS

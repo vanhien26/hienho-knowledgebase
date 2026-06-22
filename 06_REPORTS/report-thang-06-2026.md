@@ -76,18 +76,19 @@
 *   **B2B FOMO Map:** Tái cấu trúc Interactive Map (Slot 2) ưu tiên hiển thị các quán có trang Detail để tạo hiệu ứng FOMO, kích thích các BU tự giác build Merchant Page trên CMS.
 *   **Research-Driven pSEO:** Khai tử hệ thống `/page/` cũ sinh rác hàng loạt. Thay thế bằng cơ chế sinh trang pSEO 3 Lớp lọc (Demand Volume, Data Quality, Intent Mapping) để bảo vệ Crawl Budget và né án phạt Thin Content.
 *   **SEO Pilot Ranking:** Ghi nhận thành công rực rỡ đợt rà soát SERP cho 39 Pilot Merchants. Các trang đã index lọt thẳng vào Top 1 - Top 3 Google (VD: Quán Cơm Chú Lùn, Hải sản Ngô Thơ đạt Top 1).
-*   **6-Stage GenAI Content Pipeline & Hybrid Data Architecture:** Chuẩn hóa quy trình số hóa đối tác quy mô lớn và giải quyết bài toán cào dữ liệu (Data Ingestion):
-    *   *Data Ingestion (Gemini x Apify):* Áp dụng "Hybrid Architecture" kết hợp Gemini API (Grounding) lấy Base Data (NAP, Tiện ích) với chi phí cực rẻ và Apify cào Deep Data (Raw Reviews, Popular times) để có dữ liệu chuyên sâu.
+*   **6-Stage GenAI Content Pipeline & SEO-Driven Merchant Creation:** Chuẩn hóa quy trình số hóa đối tác quy mô lớn và đồng nhất kiến trúc khởi tạo:
+    *   *Liên kết Chiến lược:* Khai tử cơ chế tạo trang đối tác ngẫu nhiên. Các Merchant được tạo ra bắt buộc phải có chiến lược rõ ràng từ Theme/Cluster và Volume Search thừa hưởng từ SEO/GEO Project.
+    *   *Merchant Creation Flow:* Khi PM/Editor xác định Merchant mục tiêu từ danh sách chiến lược của dự án SEO/GEO, hệ thống sẽ đẩy đối tác đó sang Luồng tạo Merchant trên giao diện CMS MoSpark, yêu cầu User nhập tay (User input) 4 thông tin quan trọng: **Địa chỉ**, **MerchantID** (định danh M4B), **GenAI content** (nội dung Intro/FAQ được duyệt) và **Image** để chính thức khởi tạo trang.
     *   *Safe Data Architecture:* Chuyển đổi Raw Reviews thành "AI Summary", tạo ra Unique Content giải quyết triệt để rủi ro bản quyền và Duplicate Content, giúp boot mạnh điểm E-E-A-T.
-    *   *Stage 1: Business Context* | **Problem:** BUs thiếu kinh nghiệm F&B, viết mô tả sơ sài. | **Solution:** Chuẩn hóa profile đối tác tích hợp NAP, badge Michelin làm đầu vào cho LLM.
     *   *Stage 5: QC Content* | **Problem:** Rủi ro sai địa chỉ, ưu đãi (bad CSAT). | **Solution:** AI-REVIEW đối chiếu realtime địa chỉ trên Google Maps và trạng thái ví thanh toán.
     *   *Stage 6: Publish* | **Problem:** Đồng bộ FB tốn thời gian. | **Solution:** Crawl Post Agent tự động quét bài đăng Facebook và đồng bộ sang Merchant Page.
 
 **2. Priorities for 30 days:**
-*   Bàn giao PRD `widget-store-prd.md` cho team Tech và UI/UX để lên Wireframe cấu trúc 7 Slots.
+*   Nghiệm thu tài liệu PRD `doi-tac-prd.md` và `seo-geo-project-prd.md` phần luồng tạo Merchant định hướng bởi SEO từ SEO/GEO Project.
+*   Bàn giao PRD `widget-store-prd.md` cho team Tech và UI/UX để lên Wireframe cấu trúc 7 Slots cho Merchant Hub.
 *   Phối hợp với Sales B2B mang dữ liệu SEO Pilot (Top 1) đi pitching thuyết phục các Chuỗi F&B lớn (Top Brands) tham gia phủ sóng trên Web.
 *   Hoàn tất Submit Sitemap để Index nốt 30% Pilot Merchants còn lại.
-*   Áp dụng quy chuẩn trạng thái xuất bản rút gọn (Draft -> Review -> Live -> Deleted) để kiểm duyệt chất lượng nội dung trước khi xuất bản.
+*   Áp dụng quy chuẩn trạng thái xuất bản rút gọn (Draft -> Review -> Live -> Deleted) trên CMS Page Editor.
 
 **3. Collab Team (Need):**
 *   **Tech/Dev & UI/UX:** Phân tích PRD và thi công UI 7-Slots cho Hub.
@@ -238,6 +239,7 @@
 **2. Priorities for 7 days (Tuần 4: 22/06 - 28/06):**
 *   **Phạt Nguội (Xuất bản Toàn diện theo yêu cầu anh Bảo):** Đẩy nhanh tiến độ go-live và xuất bản toàn bộ 100% bài viết Blog vệ tinh (Cluster) kết hợp phủ sóng 63 tỉnh/thành (pSEO Location) ngay trong tháng 6/2026. Hoài Anh và Tech team hoàn tất tích hợp cổng thanh toán MoMo Payment Gateway cho luồng checkout Subscription trên Web.
 *   **Kick-off Dự án Trust**: Tổ chức cuộc họp khởi động (Kick-off) dự án Báo Cáo Lừa Đảo trên Web với các bên liên quan (Risk, CS, Legal) để lấy ý kiến phản hồi về BRD v1.2 và thống nhất scope Landing Page.
+*   **Luồng Tạo Merchant liên kết SEO**: Team UI/UX phối hợp cùng Devs phác thảo giao diện luồng tạo Merchant (Merchant Creation Flow) trên MoSpark CMS bám sát PRD v1.0, hỗ trợ input thủ công Địa chỉ/MerchantID/GenAI content/Image và liên kết trực tiếp với cụm từ khóa/volume của SEO/GEO Project.
 *   **UI/UX 7-Slots cho Merchant Hub**: Team UI/UX bàn giao thiết kế chi tiết cấu trúc 7-Slots cho Merchant Hub bám sát tài liệu PRD `widget-store-prd.md`.
 *   **Kiểm thử Module CSV & Automatic Clustering**: Trọng (Dev) hoàn tất kiểm thử chức năng upload CSV và tự động phân bổ từ khóa theo nhóm phễu (TOFU/MOFU/BOFU) trên giao diện CMS MoSpark.
 *   **Kết nối API Google Ads & Google Search Console**: Devs bắt đầu code API kết nối Google Ads (Keyword Planner) để đồng bộ Volume Search hàng tháng và API GSC để hiển thị dashboard SoV realtime.
