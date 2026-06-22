@@ -5,6 +5,7 @@
 > - **Division:** Risk & Security (GPD Web Platform)
 > - **Version:** 1.2 · Tháng 6/2026
 > - **Status:** Active (Scope: Landing Page giới thiệu & Thu thập Báo cáo thủ công - S-P-A Framework)
+> - **PRD Specs:** [08_PRD/trust-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/trust-prd.md)
 
 ---
 
