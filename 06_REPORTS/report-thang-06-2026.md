@@ -159,6 +159,24 @@
 
 ---
 
+### 🛡️ 9. Dự án Báo Cáo Lừa Đảo (Trust - Report Scam)
+**1. Key Highlight & Business Impact:**
+*   **Thiết lập dự án Use Case Trust:** Tạo mới thành công tài liệu BRD cho dự án Báo Cáo Lừa Đảo [trust-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_USE_CASE_MOMO/trust-brd.md), định hình luồng tiếp nhận báo cáo lừa đảo không cần đăng nhập trực tiếp trên Web nhằm mở rộng tệp đối tượng tiếp cận đến nhóm **Non-MoMo Users**.
+*   **Ứng dụng GenAI Autofill:** Thiết lập giải pháp bóc tách thực thể tự động từ kịch bản lừa đảo dạng text tự do của nạn nhân bằng Gemini 1.5 Flash để tự động điền (autofill) các trường dữ liệu ở màn hình thông tin, tối ưu thời gian hoàn thành báo cáo dưới 2 phút.
+*   **Tiềm năng tăng trưởng pSEO:** Thiết kế cấu trúc các trang tra cứu số điện thoại/số tài khoản lừa đảo động `/report-scam/tra-cuu/[sdt-stk]` để thu hút phễu traffic tìm kiếm khổng lồ từ Google Search, tạo vòng lặp Web-to-App điều hướng người dùng kích hoạt Khiên Bảo Vệ ví MoMo.
+
+**2. Priorities for 30 days:**
+*   Bàn giao tài liệu BRD v1.0 cho team Risk & CS để chốt bộ quy tắc xác minh thông tin lừa đảo.
+*   Phối hợp xây dựng Wireframe giao diện Landing Page báo cáo không đăng nhập.
+*   Làm việc với A05 (Cục An ninh mạng - Bộ Công an) để kết nối API đồng bộ cơ sở dữ liệu cảnh báo Central Hub.
+
+**3. Collab Team (Need):**
+*   **Risk & Security Team:** Cung cấp logic xác minh tài khoản lừa đảo và tích hợp AI Scoring.
+*   **A05 Tech Team:** Thiết lập tài liệu kỹ thuật kết nối API Central Hub chia sẻ dữ liệu lừa đảo quốc gia.
+*   **CS Operations:** Hỗ trợ chuẩn hóa quy trình phân loại ticket lừa đảo tự động để giảm tải vận hành.
+
+---
+
 ## II. WEEKLY REPORTS (Báo cáo Hàng Tuần)
 
 ### Tuần 1 (01/06 - 07/06)
@@ -215,9 +233,11 @@
 *   **Đóng gói Bối cảnh Nghiệp vụ Merchant**: Hoàn thành xây dựng tài liệu bối cảnh nghiệp vụ rút gọn [merchant-business-context.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/merchant-business-context.md) tích hợp đầy đủ 5 giải pháp tài chính và công cụ tiếp thị bổ trợ dành cho SME (QR Đa năng, Soundbox, M4B app, Vay Nhanh, Marketing tools) để làm dữ liệu nền tảng (Grounding Context) cho AI sinh nội dung.
 *   **Thống nhất Phân quyền mặc định (Editor/Admin)**: Đơn giản hóa cơ chế bảo mật quyền truy cập cho dự án, xác định cứng 2 vai trò cơ bản: **Editor** (chỉ có quyền xem dự án, Topic Clusters/Merchant và tiến hành tạo bài/duyệt outline) và **Admin** (toàn quyền quản trị, chỉnh sửa bối cảnh, prompt cục bộ và upload CSV từ khóa).
 *   **Định hình Cơ chế Đồng bộ Volume Search Hàng Tháng**: Thống nhất kiến trúc đồng bộ tự động hàng tháng (Monthly Cron Job) chỉ số lượng tìm kiếm thị trường thông qua Google Ads API (Keyword Planner) đối soát với Google Search Console API để lấy số lượt hiển thị, clicks và thứ hạng trung bình thực tế của MoMo (phục vụ tính toán SoV).
+*   **Khởi tạo Use Case Trust (Report Scam)**: Xây dựng và ban hành tài liệu đặc tả nghiệp vụ [trust-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_USE_CASE_MOMO/trust-brd.md) cho dự án Báo Cáo Lừa Đảo ẩn danh không đăng nhập, tích hợp ứng dụng AI bóc tách thực thể kịch bản và cơ chế pSEO tra cứu để đón đầu lượng traffic tìm kiếm trên Google.
 
 **2. Priorities for 7 days (Tuần 4: 22/06 - 28/06):**
 *   **Phạt Nguội (Xuất bản Toàn diện theo yêu cầu anh Bảo):** Đẩy nhanh tiến độ go-live và xuất bản toàn bộ 100% bài viết Blog vệ tinh (Cluster) kết hợp phủ sóng 63 tỉnh/thành (pSEO Location) ngay trong tháng 6/2026. Hoài Anh và Tech team hoàn tất tích hợp cổng thanh toán MoMo Payment Gateway cho luồng checkout Subscription trên Web.
+*   **Kick-off Dự án Trust**: Tổ chức cuộc họp khởi động (Kick-off) dự án Báo Cáo Lừa Đảo với các bên liên quan (Risk, CS, Legal) để lấy ý kiến phản hồi về BRD v1.0.
 *   **UI/UX 7-Slots cho Merchant Hub**: Team UI/UX bàn giao thiết kế chi tiết cấu trúc 7-Slots cho Merchant Hub bám sát tài liệu PRD `widget-store-prd.md`.
 *   **Kiểm thử Module CSV & Automatic Clustering**: Trọng (Dev) hoàn tất kiểm thử chức năng upload CSV và tự động phân bổ từ khóa theo nhóm phễu (TOFU/MOFU/BOFU) trên giao diện CMS MoSpark.
 *   **Kết nối API Google Ads & Google Search Console**: Devs bắt đầu code API kết nối Google Ads (Keyword Planner) để đồng bộ Volume Search hàng tháng và API GSC để hiển thị dashboard SoV realtime.
