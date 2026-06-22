@@ -5,6 +5,7 @@
 > *   **Tên dự án / Sản phẩm (PRODUCT NAME):** [Ví dụ: Tra cứu Phạt nguội, Đăng ký Ví Trả Sau...]
 > *   **Phiên bản & Ngày (Version & Date):** Version 1.0 - [dd/mm/yyyy]
 > *   **Đơn vị đề xuất (Business Owner / Cell Team):** [Tên Cell Team / Division]
+> *   **Web Product Lead (Đầu mối tiếp nhận & phê duyệt):** Hien.ho
 > *   **Product Owner (PO) phụ trách:** [Họ và tên - Email]
 > *   **Product Manager (Người phê duyệt sản phẩm):** [Họ và tên - Email]
 > *   **Engineer Lead (Người phụ trách kỹ thuật):** [Họ và tên - Email]
@@ -15,9 +16,6 @@
 >     *   [ ] **1. Tính năng mới (New Feature):** Tạo mới Microsite, xây dựng Widget tra cứu/tính toán mới. *(Bắt buộc áp dụng PRD)*
 >     *   [ ] **2. Cải tiến lớn (Major Improvement):** Thay đổi luồng trải nghiệm, thay đổi logic nghiệp vụ, tích hợp thêm API mới hoặc đổi cơ chế xác thực. *(Bắt buộc áp dụng PRD)*
 >     *   [ ] **3. Thay đổi cấu trúc (Structural Change):** Thay đổi phân cấp đường dẫn (URL Structure), bố cục layout hoặc site structure. *(Bắt buộc áp dụng PRD)*
->     *   [ ] **4. Bổ sung thông tin (Content Update):** Cập nhật bài viết Blog, thông tin tĩnh, FAQs hoặc SEO/GEO content. *(Không bắt buộc PRD, cập nhật trực tiếp qua CMS/GenAI Engine)*
-
----
 
 ## I. RELATED DOCUMENTS
 *Các liên kết tài liệu nghiệp vụ, thiết kế hiện có từ phía Cell Team (Vui lòng đính kèm link trước khi đi vào chi tiết).*
@@ -26,8 +24,6 @@
 *   [ ] **Tài liệu nghiệp vụ (BRD / PRD in-app gốc):** [Chèn link slide giới thiệu hoặc file BRD chi tiết của sản phẩm]
 *   [ ] **Tài sản thương hiệu (Brand Assets / Guideline riêng):** [Chèn link logo, key visuals, palette màu sắc nếu có]
 *   [ ] **Tài liệu đặc tả API (Swagger / Postman):** [Chèn link tài liệu kỹ thuật tích hợp]
-
----
 
 ## II. BACKGROUND & PROBLEM STATEMENT
 
@@ -42,8 +38,6 @@
 > **Ví dụ mẫu (Dự án Phạt Nguội):** Giao diện tra cứu phạt nguội hiện tại của Cục CSGT khó dùng trên mobile và bắt nhập mã CAPTCHA dễ sai. Trên Web momo.vn chưa có công cụ này khiến người dùng thoát trang và tìm đến đối thủ. Về mặt vận hành, việc chưa tự động hóa nạp dữ liệu phạt nguội khiến đội ngũ content phải tạo bài thủ công, tốn nhiều chi phí nhân sự.
 
 - [Điền nội dung của bạn vào đây]
-
----
 
 ## III. OBJECTIVES & VALUE PROPOSITION
 
@@ -66,8 +60,6 @@
 > **Ví dụ mẫu:** Chúng tôi giúp *các tài xế lái xe tại Việt Nam* *tra cứu và nộp phạt nguội nhanh chóng dưới 1 phút* bằng cách *cung cấp widget tra cứu phạt nguội 1-click không cần CAPTCHA trên Web MoMo*.
 
 - [Điền nội dung của bạn vào đây]
-
----
 
 ## IV. TARGET PERSONAS & HIGH-LEVEL USER EXPERIENCE (JTBD)
 
@@ -103,8 +95,6 @@
 
 - [Điền nội dung của bạn vào đây]
 
----
-
 ## V. BUSINESS CONTEXT
 *Cung cấp thông tin nghiệp vụ cốt lõi để đội ngũ phát triển hiểu rõ về sản phẩm/dịch vụ.*
 
@@ -123,8 +113,6 @@
 > **Ví dụ mẫu:** Không dùng các từ "Cho vay tiền", "Giải ngân nhanh" (tránh hiểu lầm là tín dụng đen), không so sánh trực tiếp với thẻ tín dụng của ngân hàng X.
 
 - [Điền nội dung của bạn vào đây]
-
----
 
 ## VI. FEATURE REQUIREMENTS & RELEASE PHASES
 *(Mô tả chi tiết các tính năng cần làm theo từng Giai đoạn phát hành)*
@@ -161,15 +149,9 @@
     *   *URL hiện tại:* momo.vn/...
     *   *URL mới mong muốn:* momo.vn/...
 
-#### LOẠI 4: BỔ SUNG THÔNG TIN (CONTENT UPDATE)
-*   **Nội dung bổ sung:** [Nội dung bài viết mới, danh sách FAQs bổ sung hoặc thông tin nghiệp vụ cần cập nhật].
-*   **Từ khóa cần bổ sung (Keywords):** [Cung cấp từ khóa chính / phụ nếu có].
-
 ### 3. Ngoài phạm vi triển khai (Out of scope)
 *Xác định rõ ranh giới của dự án, những gì không được thực hiện trong dự án này.*
 - [Điền nội dung của bạn vào đây]
-
----
 
 ## VII. W2A CONVERSION & DATA REQUIREMENTS
 
@@ -184,9 +166,7 @@
 *Nếu tính năng cần dữ liệu thời gian thực từ Cell Team (Ví dụ: Tra cứu điểm tín dụng, Số tiền vay tối đa...).*
 *   **Kịch bản khi lỗi (Fallback):** [Khi API của Cell Team lỗi hoặc timeout > 3s, giao diện Web sẽ hiển thị thế nào?]
 
----
-
-## VIII. GOVERNANCE, RISKS & DECISION TRACKER
+## VIII. GOVERNANCE & RISKS
 
 ### 1. Kênh phân phối thông tin bổ sung (Distribution Channels)
 *Nội dung/tri thức này ngoài hiển thị trên Web trang đích, Cell Team có muốn đồng bộ lên các kênh phân phối tự động khác thuộc PLG Infrastructure không?*
@@ -203,7 +183,8 @@
 
 ### 3. Cam kết nguồn lực & Đầu mối phê duyệt (Stakeholders & Commitments)
 *Vui lòng chỉ định rõ người chịu trách nhiệm nghiệm thu sản phẩm và ký cam kết:*
-*   **Đầu mối phê duyệt nội dung/nghiệp vụ:** [Họ tên - Email]
+*   **Đầu mối phê duyệt phía Web Platform (Web Product Lead):** Hien.ho
+*   **Đầu mối phê duyệt nội dung/nghiệp vụ phía Cell Team:** [Họ tên - Email]
 *   **Đầu mối phê duyệt Pháp lý (Legal Approval) (nếu có):** [Họ tên - Email]
 *   **Đầu mối vận hành kỹ thuật (Tech Lead Cell Team):** [Họ tên - Email]
 *   **Cam kết đồng hành (Bắt buộc tích chọn để duyệt khởi chạy):**
@@ -218,17 +199,8 @@
 | [Ví dụ: API đối tác bị nghẽn] | Cao | Fallback về luồng hướng dẫn mở App tra cứu thủ công | Dev Cell Team |
 | | | | |
 
-### 5. Nhật ký câu hỏi & Quyết định thống nhất (Questions and decision tracker)
-*Theo dõi các câu hỏi mở và các quyết định có sự đánh đổi (tradeoffs) đã được thống nhất giữa hai bên.*
-
-| Ngày (Date) | Câu hỏi / Quyết định (Question/Decision) | Nội dung thống nhất / Trả lời (Answer) |
-|---|---|---|
-| [dd/mm/yyyy] | [Ví dụ: Có bắt buộc đăng nhập OTP để tra cứu phạt nguội không?] | [Không bắt buộc để tăng tối đa Traffic và giảm Drop-off rate ở Stage P] |
-
----
-
 ## LỊCH SỬ THAY ĐỔI (Changelog)
 
 | Phiên bản | Ngày cập nhật | Người thực hiện | Nội dung thay đổi |
 |---|---|---|---|
-| 3.2 | 2026-06-18 | Web Product Lead | Gộp trực tiếp quy tắc áp dụng tài liệu PRD vào ô tích chọn Loại yêu cầu tại phần Metadata |
+| 3.4 | 2026-06-18 | Web Product Lead | Bỏ loại yêu cầu Content Update; đưa Hien.ho làm Web Product Lead phê duyệt chính |

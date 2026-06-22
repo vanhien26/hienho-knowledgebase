@@ -269,22 +269,29 @@ Search → /cinema/* → Booking click → App open (deeplink) → Transaction c
 
 ## 8. Chiến dịch: Summer Camp 2026 (20/06 - 05/09/2026)
 
-**Mục tiêu (Objective):** Tích hợp trực tiếp cơ chế Gamification vào 4 trang chi tiết phim trọng điểm Hè (Minions, Conan, Spider-Man, Nghỉ Hè Sợ Nghỉ Hưu) trên nền tảng MoSpark, thúc đẩy người dùng hoàn thành nhiệm vụ (mua vé, review) để nhận thưởng, đồng thời đẩy mạnh SEO và W2A conversion trực tiếp tại trang giao dịch.
+Chiến dịch tương tác quy mô lớn dành cho 4 bộ phim trọng điểm: Minions, Conan, Spider Man, Nghỉ Hè Sợ Nghỉ Hưu.
 
-### 8.1. Scope & Giải pháp kỹ thuật (Technical Scope)
-- **Không dùng Hub chung, Dùng 4 Film Detail làm Trang Đích:** Chiến dịch sẽ dồn toàn bộ traffic truyền thông về 4 trang đích tương ứng với 4 bộ phim (Ví dụ: `momo.vn/cinema/minions-24855` hoặc `nghi-he-so-nghi-huu-24855`).
-- **Migration & Cấu trúc Trang (MoSpark Template Mapping):** Thực hiện migrate 4 trang phim này sang hệ thống MoSpark với cấu trúc mới:
-  - *Top Section (Campaign & Missions):* Hiển thị **Artwork của phim** làm hình nền (background), thông tin chiến dịch Summer Camp và cụm nhiệm vụ riêng biệt của phim đó (VD: Đặt vé sớm Minions, Viết review Minions). Các khối nhiệm vụ có tính năng Scheduler mở khóa theo thời gian thực.
-  - *Bottom Section (Core Booking Flow):* Giữ nguyên cấu trúc thông tin phim và lịch chiếu hiện tại (Synopsis, Trailer, Chọn suất chiếu, Rạp) để đảm bảo không gãy luồng Transaction gốc.
-- **Verify Review Gate (Xác thực mua vé):** User nhập SĐT / Order ID khi submit form review ngay trên trang phim. Hệ thống gọi API check với backend MoMo Movies để đảm bảo user đã mua vé và xem phim thực sự -> Tránh spam, fake review.
-- **W2A Trigger:** Tối ưu hóa phễu, user đang ở trang phim có thể vừa làm nhiệm vụ vừa bấm CTA "Đặt vé ngay" deeplink thẳng vào màn hình thanh toán trong App.
-- **GenAI Content & SEO:** Dồn toàn bộ link equity và truyền thông vào đúng URL của phim. Sản xuất thêm các bài review vệ tinh trỏ link về 4 trang đích này.
+### 8.1. Mục tiêu Chiến dịch (Priorities)
+1. **GMV / Market Share (Ưu tiên 1):** Push user mua vé trực tiếp trên MoMo.
+2. **Rating / Review (Ưu tiên 2):** Tăng tỷ lệ user "đã mua vé" để lại review phim trên hệ thống MoMo.
+3. **Community (Ưu tiên 3):** Tăng lượng user tham gia cộng đồng In-app và khởi tạo (launch) new community Out-app.
 
-### 8.2. Success Metrics
-- Traffic vào 4 trang đích (Film Details): 500,000+
-- Users hoàn thành missions: 50,000+
-- Verified Rating review: 20,000+
-- W2A GMV: Tăng 15% so với cùng kỳ.
+### 8.2. Landing Page Gamification (Vai trò của Web Platform)
+- **Hub Chính:** Landing Page đóng vai trò là Hub chính của chiến dịch.
+- **Nhiệm vụ "Show" không "Thực thi":** Landing page chỉ có vai trò **hiển thị nhiệm vụ (Show Mission)**. Người dùng sẽ click từ Web để dẫn (Deeplink) vào thực hiện nhiệm vụ thông qua các bài post minigame In-app.
+- **Tracking độc lập:** Luồng thực thi và tracking tiến độ user làm nhiệm vụ do hệ thống Minigame in-app (BU Movies) đảm nhận. Web Platform KHÔNG cần xử lý luồng API CheckTicket hay Verify Review Gate.
+
+### 8.3. Cơ chế Nhiệm vụ (Missions Logic)
+- **Mở theo chu kỳ phim:** Mỗi bộ phim có 3-5 nhiệm vụ, chia theo cycle: Trước khi chiếu -> Tuần khởi chiếu -> Hậu khởi chiếu.
+- **Mở theo ngày:** Nhiệm vụ được mở theo mốc thời gian bộ phim khởi chiếu.
+- **Không ràng buộc Level:** User có thể làm nhiệm vụ bất kỳ, không yêu cầu vượt qua Level trước đó -> Giải quyết triệt để tình trạng user drop journey.
+
+### 8.4. Next Steps & Handoff
+- **On-air Target:** 25/06/2026.
+- **BU Movies cần bàn giao cho Web Team:**
+  - Bản thiết kế Master KV.
+  - Danh sách Mission Game.
+  - Yêu cầu cụ thể về cấu trúc Landing Page (nội dung text, size block...).
 
 ---
 

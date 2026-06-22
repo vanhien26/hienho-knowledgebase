@@ -13,8 +13,8 @@
 **1. Key Highlight & Business Impact:**
 *   **Hiệu suất GSC (Tuần 4 T5/2026):** Ghi nhận tăng trưởng bùng nổ WoW, **Clicks tăng 135%** (793 clicks) và **Impressions tăng 74%** (2.603 lượt). Tỷ lệ CTR trang chủ đạt mức cực cao **30.46%**.
 *   **Ranking:** Hàng loạt từ khóa mục tiêu như *"tra cứu phạt nguội momo"*, *"check phạt nguội momo"* đã leo lên vị trí **Top 1 Google**.
-*   (Dự kiến) Hoàn thành phủ sóng Phạt Nguội trên 10 Tỉnh/Thành phố lớn (Local Intent) và đạt Top 10 cho 60% từ khóa mục tiêu.
-*   Thiết lập thành công Baseline W2A Conversion (Tỷ lệ chuyển đổi Web-to-App) từ Widget Inline tích hợp hệ thống tracking Umami.
+*   **Tiến độ pSEO Địa phương (Phase 2):** Hoàn thành thiết lập Data Baseline cho 63 tỉnh/thành và cấu hình Master Prompt trong module MoSpark GenAI. Chạy thử nghiệm thành công sinh nội dung tự động unique cho 5 tỉnh thành mẫu (Hà Nội, TP.HCM, Đà Nẵng, Bình Dương, Đồng Nai) bằng model Claude 3.Haiku/3.5 Sonnet, chuẩn bị cho việc launch Pilot 10 tỉnh thành trọng điểm có volume lớn nhất trong Tuần 3.
+*   **Thiết lập W2A Conversion Tracking:** Hoàn thành chuyển đổi và tích hợp thành công Inline Widget Phạt Nguội kết hợp tracking Umami để đo lường realtime phễu Web-to-App.
 *   **6-Stage GenAI Content Pipeline (Phạt Nguội):** Chuẩn hóa quy trình vận hành tự động hóa content ngách nhằm giải quyết các bài toán vận hành thực tế:
     *   *Stage 1: Business Context* | **Problem:** Quy định pháp lý về phạt nguội rất nhạy cảm và dễ sai lệch. | **Solution:** Thiết lập "12-Field Business Context Template" trên MoSpark làm Source of Truth chặn đứng lỗi hallucinate của AI.
     *   *Stage 2: Keyword Research* | **Problem:** Search intent phạt nguội phân mảnh theo địa phương (local search), dễ gây cannibalization. | **Solution:** Automation Keyword Clustering, bóc tách chính xác từ khóa theo địa bàn để tối ưu hóa local SEO.
@@ -24,13 +24,15 @@
     *   *Stage 6: Publish* | **Problem:** Đăng tải thủ công tốn tài nguyên và thiếu dữ liệu đo lường hiệu quả chuyển đổi thực tế. | **Solution:** Publish trực tiếp qua MoMo MCP, tự động mapping bài viết với Widget Inline tích hợp tracking Umami để đo lường realtime phễu W2A.
 
 **2. Priorities for 30 days:**
-*   Sản xuất và deploy Content Cluster vệ tinh (20-30 bài viết ngách).
-*   Gắn Inline Widget Phạt Nguội vào các bài blog thay vì dùng banner popup.
-*   Chốt KPI chính thức nửa cuối năm 2026 với BU VTTI.
+*   **Xuất bản Toàn diện (100% Go-Live):** Đẩy nhanh tiến độ theo chỉ đạo của anh Bảo - hoàn tất xuất bản toàn bộ 100% bài viết Blog vệ tinh (Cluster) và phủ sóng đầy đủ trang pSEO của 63 tỉnh/thành trên cả nước ngay trong tháng 6/2026.
+*   Triển khai thành công Pilot 10 tỉnh/thành trọng điểm trong Tuần 3, sau đó chạy Bulk Generation để tự động publish thông qua MoSpark CMS cho 53 tỉnh thành còn lại trong Tuần 4.
+*   Gắn Inline Widget Phạt Nguội vào 100% bài viết blog vệ tinh thuộc Cluster.
+*   Chốt KPI chính thức nửa cuối năm 2026 và ngân sách Off-page (~75tr/2tháng) với BU VTTI.
 
 **3. Collab Team (Need):**
+*   **Cell Team & Hoài Anh:** Phối hợp triển khai kỹ thuật (Frontend/Backend) và luồng API/Payment Gateway cho dự án Phạt Nguội.
 *   **DA Team:** Đo lường phễu Web-to-App qua Appsflyer/Umami.
-*   **VTTI & Cell Team:** Phối hợp chiến dịch Marketing kéo traffic.
+*   **VTTI Team:** Phối hợp chiến dịch Marketing kéo traffic và duyệt ngân sách Off-page.
 
 ---
 
@@ -50,32 +52,36 @@
 
 ---
 
-### 🤖 3. GenAI Content Engine & MoSpark Platform
+### 🤖 3. GenAI Content Engine & MoSpark Platform (SEO/GEO Project Integration)
 **1. Key Highlight & Business Impact:**
-*   (Dự kiến) Tự động hóa sản xuất nội dung quy mô lớn (Scale-up) với đơn giá dự toán chuẩn xác (7k/bài Haiku, 20k/bài Sonnet).
-*   MoSpark chính thức vận hành như một Software as a Product (SaaP) cho các BU.
+*   **Hoàn thiện Module SEO/GEO Project:** Đang trong quá trình hoàn thiện các cấu phần cốt lõi của SEO/GEO Project bao gồm quản trị Inventory và Content Plan. Hệ thống hỗ trợ tính năng tải lên (upload) CSV trực tiếp, tự động phân bổ từ khóa theo mô hình phân cấp **Theme -> Cluster -> Keyword Group** một cách khoa học và tự động, giúp tối ưu hóa cấu trúc liên kết và dòng chảy traffic.
+*   **Theo dõi Trạng thái Xuất bản Keyword (Status Tracking):** Tích hợp tính năng quản lý tiến trình bài viết cho từng keyword với các trạng thái rõ ràng (**Đã viết / Chưa viết**) và đính kèm đường link dẫn trực tiếp đến bài viết chi tiết sau khi xuất bản, giúp quản trị viên dễ dàng theo dõi hiệu suất nội dung realtime.
+*   **Mở rộng sinh content cho Merchant Page Detail (Kế hoạch tiếp nối):** Chuyển dịch từ giai đoạn R&D thử nghiệm (tuần trước chỉ mới dừng lại ở việc Crawl dữ liệu từ Google Map đối với 1 merchant thí điểm) sang giai đoạn triển khai GenAI để **tự động sinh nội dung chi tiết cho Merchant Page Detail** dựa trên nguồn dữ liệu cào được.
 
 **2. Priorities for 30 days:**
-*   Đưa 8.442 OAs Merchant (Tier 1) vào GenAI Content Pipeline để tự động sản xuất hàng loạt.
-*   Phát triển giao diện Multi-Model Selector (chọn model LLM) và cơ chế Custom BU API Key (trừ phí nội bộ) trên CMS.
-*   Thống nhất quy trình kiểm duyệt nội dung (SLA Quality Gates) đợt 2.
+*   Nghiệm thu hoàn tất tính năng upload CSV và tự động phân bổ từ khóa (Theme/Cluster/Keyword Group) trên CMS MoSpark.
+*   Triển khai thực tế luồng GenAI tự động sinh nội dung chi tiết cho hàng loạt Merchant Page Detail từ dữ liệu cào Google Maps.
+*   Đồng bộ hóa dashboard hiển thị trạng thái Keyword (Đã viết/Chưa viết) kèm URL bài viết chi tiết.
 
 **3. Collab Team (Need):**
-*   **Web Platform (Anh Bảo):** Tri triển khai giao diện Multi-Model và Billing trên CMS.
-*   **Inbound & BU:** Tuân thủ quy chế kiểm duyệt Quality Gates.
+*   **Tech/Dev (Trọng):** Phối hợp tối ưu hóa thuật toán phân loại Cluster tự động từ CSV và tích hợp API sinh nội dung Merchant Page.
+*   **SEO Team:** Chuẩn bị file CSV mẫu chứa bộ Keyword và phân loại Theme/Cluster tương ứng phục vụ kiểm thử tính năng upload.
 
 ---
 
 ### 🏪 4. Merchant Detail Page (O2O Digital Presence & Ví Trả Sau Hub)
 **1. Key Highlight & Business Impact:**
 *   **Evergreen VTS Hub:** Pivot chiến lược định vị Merchant Hub (`momo.vn/merchant`) từ "Tìm Điểm Hoàn Tiền" (mang tính thời vụ) sang Nền tảng "Tìm Điểm Thanh Toán Ví Trả Sau" bền vững với cấu trúc UI/UX 7 Slots tối ưu.
+*   **SME Value Prop (Mục 3.1):** Định hình vai trò của các giải pháp tài chính (VTS kích cầu & tăng AOV, Vay Nhanh hỗ trợ vốn lưu động, Bảo Hiểm phòng ngừa rủi ro vận hành) và thiết bị Soundbox (phát âm thanh xác nhận giao dịch rảnh tay, ngăn chặn gian lận tại quầy) trong việc tối ưu hóa hiện diện số miễn phí của SME.
 *   **B2B FOMO Map:** Tái cấu trúc Interactive Map (Slot 2) ưu tiên hiển thị các quán có trang Detail để tạo hiệu ứng FOMO, kích thích các BU tự giác build Merchant Page trên CMS.
 *   **Research-Driven pSEO:** Khai tử hệ thống `/page/` cũ sinh rác hàng loạt. Thay thế bằng cơ chế sinh trang pSEO 3 Lớp lọc (Demand Volume, Data Quality, Intent Mapping) để bảo vệ Crawl Budget và né án phạt Thin Content.
 *   **SEO Pilot Ranking:** Ghi nhận thành công rực rỡ đợt rà soát SERP cho 39 Pilot Merchants. Các trang đã index lọt thẳng vào Top 1 - Top 3 Google (VD: Quán Cơm Chú Lùn, Hải sản Ngô Thơ đạt Top 1).
-*   **6-Stage GenAI Content Pipeline (Merchant Page):** Chuẩn hóa quy trình số hóa đối tác quy mô lớn:
-    *   *Stage 1: Business Context* | **Problem:** BUs thiếu kinh nghiệm F&B, viết mô tả quán sơ sài, không có USP thanh toán. | **Solution:** Chuẩn hóa profile đối tác tích hợp NAP, badge Michelin và chính sách VTS 2in1 làm đầu vào cho LLM.
-    *   *Stage 5: QC Content* | **Problem:** Rủi ro hiển thị sai thông tin địa chỉ hoặc chương trình ưu đãi, gây khiếu nại (bad CSAT). | **Solution:** AI-REVIEW đối chiếu realtime địa chỉ trên Google Maps và trạng thái active của ví thanh toán.
-    *   *Stage 6: Publish* | **Problem:** MC mất thời gian đồng bộ nội dung từ trang Facebook của quán sang MoMo. | **Solution:** Crawl Post Agent tự động quét bài đăng Facebook và đồng bộ sang Merchant Page trên MoMo.
+*   **6-Stage GenAI Content Pipeline & Hybrid Data Architecture:** Chuẩn hóa quy trình số hóa đối tác quy mô lớn và giải quyết bài toán cào dữ liệu (Data Ingestion):
+    *   *Data Ingestion (Gemini x Apify):* Áp dụng "Hybrid Architecture" kết hợp Gemini API (Grounding) lấy Base Data (NAP, Tiện ích) với chi phí cực rẻ và Apify cào Deep Data (Raw Reviews, Popular times) để có dữ liệu chuyên sâu.
+    *   *Safe Data Architecture:* Chuyển đổi Raw Reviews thành "AI Summary", tạo ra Unique Content giải quyết triệt để rủi ro bản quyền và Duplicate Content, giúp boot mạnh điểm E-E-A-T.
+    *   *Stage 1: Business Context* | **Problem:** BUs thiếu kinh nghiệm F&B, viết mô tả sơ sài. | **Solution:** Chuẩn hóa profile đối tác tích hợp NAP, badge Michelin làm đầu vào cho LLM.
+    *   *Stage 5: QC Content* | **Problem:** Rủi ro sai địa chỉ, ưu đãi (bad CSAT). | **Solution:** AI-REVIEW đối chiếu realtime địa chỉ trên Google Maps và trạng thái ví thanh toán.
+    *   *Stage 6: Publish* | **Problem:** Đồng bộ FB tốn thời gian. | **Solution:** Crawl Post Agent tự động quét bài đăng Facebook và đồng bộ sang Merchant Page.
 
 **2. Priorities for 30 days:**
 *   Bàn giao PRD `widget-store-prd.md` cho team Tech và UI/UX để lên Wireframe cấu trúc 7 Slots.
@@ -137,6 +143,22 @@
 
 ---
 
+### 🍿 8. Chiến dịch Cinema Summer Camp 2026 (Strategic Partnership)
+**1. Key Highlight & Business Impact:**
+*   **Tối ưu Nguồn lực & Nhanh chóng Go-to-Market:** Đạt thỏa thuận chiến lược với BU Movies để tái định vị vai trò của Web Platform trong chiến dịch Summer Camp. Thay vì xây dựng hệ thống tracking phức tạp trên Web, Web Platform sẽ vận hành mô hình "Gamification Hub" tập trung (Show Mission) và điều hướng luồng thực thi trực tiếp vào hệ thống Minigame In-app hiện hữu. Quyết định này giúp tiết kiệm 80% chi phí phát triển (R&D Cost) và đảm bảo thời gian On-air siêu tốc đúng mốc 25/06.
+*   **Đồng bộ Mục tiêu Kinh doanh (Business Alignment):** Cấu trúc Hub được thiết kế để phục vụ trực tiếp cho 3 mục tiêu cốt lõi của BU: (1) Thúc đẩy tăng trưởng GMV bán vé trực tiếp; (2) Tăng tỷ lệ Verified Rating/Review từ người dùng mua vé thật; (3) Mở rộng quy mô cộng đồng Out-app và In-app.
+*   **Chiến lược Chống rớt phễu (Retention Optimization):** Áp dụng kịch bản mở khóa nhiệm vụ linh hoạt bám sát Vòng đời phim (Pre-release, Premiere, Post-release) thay vì mô hình cày cấp (Leveling) tuyến tính, qua đó gia tăng trải nghiệm người dùng và tỷ lệ giữ chân khách hàng (Retention Rate) xuyên suốt chiến dịch Hè.
+
+**2. Priorities for 30 days:**
+*   Phối hợp chặt chẽ với BU Movies tiếp nhận tài nguyên (Master KV, Mission Mechanics) để hoàn thiện UI/UX Hub Gamification.
+*   Rà soát luồng điều hướng liền mạch (Seamless Journey) từ Web sang In-app nhằm tối đa hóa tỷ lệ chuyển đổi (W2A Conversion Rate).
+*   Cam kết Launching đúng tiến độ dự án vào ngày 25/06/2026.
+
+**3. Collab Team (Need):**
+*   **BU Movies:** Cần đẩy nhanh quá trình cung cấp nguyên liệu đồ họa (Master KV) và logic Mission để Web Team kịp tiến độ Go-live.
+
+---
+
 ## II. WEEKLY REPORTS (Báo cáo Hàng Tuần)
 
 ### Tuần 1 (01/06 - 07/06)
@@ -158,29 +180,59 @@
 
 ### Tuần 2 (08/06 - 14/06)
 **1. Key Highlight & Business Impact:**
-*   **Chiến lược Merchant Hub & pSEO:** Hoàn thiện nâng cấp BRD `doi-tac-brd.md` với 3 mũi nhọn: Chuyển đổi thành VTS Hub, Cấu trúc 7-Slots (chia Phasing), và cơ chế Research-Driven pSEO 3 Lớp lọc. Cấy chiến lược "B2B FOMO" vào Bản đồ GPS để kích thích các BU.
+*   **Chiến lược Merchant Hub & pSEO:** Hoàn thiện nâng cấp BRD `doi-tac-brd.md` với 3 mũi nhọn: Chuyển đổi thành VTS Hub, Cấu trúc 7-Slots (chia Phasing), và cơ chế Research-Driven pSEO 3 Lớp lọc. Cấy chiến lược "B2B FOMO" vào Bản đồ GPS để kích thích các BU. Đồng thời bổ sung chi tiết tại mục 3.1 làm rõ vai trò của các giải pháp tài chính (VTS, Vay Nhanh, Bảo Hiểm) và Soundbox đối với hoạt động của SME.
 *   **Chuẩn hóa Trạng thái Vòng đời MoSpark:** Hoàn thành đồng bộ quy chuẩn kỹ thuật trạng thái vòng đời trang (Page Lifecycle Status Model) định nghĩa nhất quán 4 trạng thái rút gọn (Draft, Review, Live, Deleted) cùng cấu hình SEO/Server Response tương ứng trực tiếp vào [doi-tac-brd.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/05_USE_CASE_MOMO/merchant-project/doi-tac-brd.md#104-quy-chuẩn-quản-trị-trạng-thái--crud-merchant-seo--crawling) (đối với Merchant) và [mospark_blog_redesign.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_blog_redesign.md#25-quy-chuẩn-quản-trị-trạng-thái--crud-bài-viết-seo--content) (đối với Blog) để quản lý CRUD đơn giản, ngăn chặn lỗi 404 và bảo toàn thứ hạng (link juice).
 *   **Nghiệm thu SEO Pilot Merchant:** Chạy background task quét Google Search Ranking cho các Pilot Merchant. Ghi nhận hàng loạt trang như Quán Cơm Chú Lùn, Hải sản Ngô Thơ chiếm vị trí Top 1 SERP, chứng minh sức mạnh cực lớn của Domain Authority MoMo.
 *   **Chuẩn hóa PRD Widget Store:** Tách bạch hệ thống tài liệu, viết mới `widget-store-prd.md` định nghĩa chuẩn mực kỹ thuật (Smart CTA, Zero-Party Data, NFRs) sẵn sàng bàn giao cho Tech.
+*   **Tiến độ GenAI Content Engine (SEO/GEO Project):** Hoàn thiện giai đoạn 1 của module SEO/GEO Project hỗ trợ upload CSV và tự động phân bổ Theme/Cluster/Keyword Group, đồng thời khởi động luồng GenAI sinh content cho Merchant Page Detail (kế thừa từ kết quả crawl Google Map cho 1 merchant ở tuần 1).
+*   **Thử nghiệm pSEO Địa phương (Phạt Nguội):** Hoàn thành thiết lập Data Baseline và Master Prompt cho 63 tỉnh/thành. Chạy thử nghiệm thành công sinh nội dung tự động unique cho 5 tỉnh thành mẫu (Hà Nội, TP.HCM, Đà Nẵng, Bình Dương, Đồng Nai) qua Claude 3.Haiku/3.5 Sonnet, xác nhận dữ liệu chính xác và đạt tiêu chuẩn chất lượng.
 
 **2. Priorities for 7 days:**
-*   **Nhật:** Bổ sung thêm UI template phục vụ các danh mục (Categories), làm lại nút Share và hoàn thiện phần CRUD/Status của các merchant bám sát quy chuẩn trạng thái định nghĩa tại [Mục 10.4 của BRD Đối Tác](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/05_USE_CASE_MOMO/merchant-project/doi-tac-brd.md#104-quy-chuẩn-quản-trị-trạng-thái--crud-merchant-seo--crawling).
-*   **Thuận:** Review lại Widget "Tìm điểm VTS", kiểm tra và hiệu chuẩn thuật toán tính khoảng cách (distance).
-*   **Trọng:** Thiết lập luồng phân phối nội dung tự động từ Research Keyword (Content Plan) sang các kênh Blog, Landing Page, và Merchant.
-*   **Hiến:** Rà soát và đánh giá các bản vẽ thiết kế Figma giao diện UI Blog mới trên MoSpark do Tuấn phụ trách để đảm bảo các tiêu chuẩn SEO (E-E-A-T, CWV, Ads Placements) và tích hợp quy tắc duyệt xuất bản bài viết.
-*   **Hiếu:** Triển khai giải pháp Tracking User ID: truyền tham số WUI (Website User ID) qua Appsflyer Onelink vào App để App lưu trữ và đối chiếu dữ liệu MAU/MEU.
-*   Wireframe Kick-off với team UI/UX dựa trên bản PRD 7-Slots mới nhất.
-*   Check GSC Coverage để fix lỗi Not Indexed cho các quán Pilot còn lại.
-*   Họp chốt BRD Telecom.
+*   **Phạt Nguội (Tuần 3 - Phối hợp với Cell Team):**
+    *   **Hoài Anh (Technical):** Đảm nhận toàn bộ phần kỹ thuật (Frontend/Backend) bao gồm xây dựng các trang địa phương pSEO Location, triển khai luồng mua gói Subscription trên Web và tích hợp cổng thanh toán MoMo Payment Gateway.
+    *   **Hiến:** Theo dõi sát luồng sản phẩm (Product Flow), thực hiện Review UX/UI và cấu hình GenAI Content để tạo phần Long Content (SEO text, FAQ schema) trên các trang pSEO địa phương.
+*   **CMS & Merchant Project:**
+    *   **Tuấn (Design):** Bàn giao thiết kế Figma giao diện UI Blog mới để Hiến rà soát chất lượng.
+    *   **Nhật:** Thực hiện hoàn thiện phần CRUD/Status của các merchant bám sát BRD Đối Tác.
+    *   **Trọng:** Hoàn thiện module upload CSV & phân bổ tự động cho SEO/GEO Project.
+*   **Các nhiệm vụ khác:**
+    *   **Thuận:** Review lại Widget "Tìm điểm VTS", kiểm tra và hiệu chuẩn thuật toán tính khoảng cách (distance).
+    *   **Hiếu:** Triển khai giải pháp Tracking User ID: truyền tham số WUI (Website User ID) qua Appsflyer Onelink vào App để App lưu trữ và đối chiếu dữ liệu MAU/MEU.
+    *   Wireframe Kick-off với team UI/UX dựa trên bản PRD 7-Slots mới nhất.
+    *   Check GSC Coverage để fix lỗi Not Indexed cho các quán Pilot còn lại.
+    *   Họp chốt BRD Telecom.
 
 **3. Collab Team (Need):**
-*   **UI/UX Team & Devs (Nhật, Trọng, Thuận):** Phối hợp triển khai giao diện, API và tracking theo sơ đồ phân công chi tiết của dự án.
-*   **Tuấn (Design):** Bàn giao thiết kế Figma UI Blog để Hiến rà soát chất lượng.
+*   **Phạt Nguội:** Phối hợp cùng **Cell Team** và **Hoài Anh** triển khai kỹ thuật và luồng API/Payment Gateway.
+*   **UI/UX Team & Devs (Tuấn, Nhật, Trọng, Thuận):** Phối hợp triển khai giao diện, API và tracking đối với dự án Merchant và CMS Blog.
 *   **Hiếu (Tracking Lead) & Data Team:** Phối hợp cấu hình, truyền nhận WUI và đối chiếu phễu đo lường trên BigQuery.
 *   **VTTI (Hằng Mỵ/Thơ):** Tham gia meeting Telecom.
 
 ---
-*(Tuần 3 & 4 cấu trúc tương tự - Cập nhật sau khi hết Tuần 2)*
+### Tuần 3 (15/06 - 21/06)
+**1. Key Highlight & Business Impact:**
+*   **Chuẩn hóa 5 Bước Thiết lập Dự án**: Đồng bộ quy trình cài đặt SEO/GEO Project Platform thành 5 bước chuẩn của PM trên giao diện MoSpark, tài liệu chiến lược và PRD ([seo-geo-project-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/seo-geo-project-prd.md)) kèm sơ đồ Mermaid hướng dẫn chi tiết luồng tích hợp cho Devs.
+*   **Đóng gói Bối cảnh Nghiệp vụ Merchant**: Hoàn thành xây dựng tài liệu bối cảnh nghiệp vụ rút gọn [merchant-business-context.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/merchant-business-context.md) tích hợp đầy đủ 5 giải pháp tài chính và công cụ tiếp thị bổ trợ dành cho SME (QR Đa năng, Soundbox, M4B app, Vay Nhanh, Marketing tools) để làm dữ liệu nền tảng (Grounding Context) cho AI sinh nội dung.
+*   **Thống nhất Phân quyền mặc định (Editor/Admin)**: Đơn giản hóa cơ chế bảo mật quyền truy cập cho dự án, xác định cứng 2 vai trò cơ bản: **Editor** (chỉ có quyền xem dự án, Topic Clusters/Merchant và tiến hành tạo bài/duyệt outline) và **Admin** (toàn quyền quản trị, chỉnh sửa bối cảnh, prompt cục bộ và upload CSV từ khóa).
+*   **Định hình Cơ chế Đồng bộ Volume Search Hàng Tháng**: Thống nhất kiến trúc đồng bộ tự động hàng tháng (Monthly Cron Job) chỉ số lượng tìm kiếm thị trường thông qua Google Ads API (Keyword Planner) đối soát với Google Search Console API để lấy số lượt hiển thị, clicks và thứ hạng trung bình thực tế của MoMo (phục vụ tính toán SoV).
+
+**2. Priorities for 7 days (Tuần 4: 22/06 - 28/06):**
+*   **Phạt Nguội (Xuất bản Toàn diện theo yêu cầu anh Bảo):** Đẩy nhanh tiến độ go-live và xuất bản toàn bộ 100% bài viết Blog vệ tinh (Cluster) kết hợp phủ sóng 63 tỉnh/thành (pSEO Location) ngay trong tháng 6/2026. Hoài Anh và Tech team hoàn tất tích hợp cổng thanh toán MoMo Payment Gateway cho luồng checkout Subscription trên Web.
+*   **UI/UX 7-Slots cho Merchant Hub**: Team UI/UX bàn giao thiết kế chi tiết cấu trúc 7-Slots cho Merchant Hub bám sát tài liệu PRD `widget-store-prd.md`.
+*   **Kiểm thử Module CSV & Automatic Clustering**: Trọng (Dev) hoàn tất kiểm thử chức năng upload CSV và tự động phân bổ từ khóa theo nhóm phễu (TOFU/MOFU/BOFU) trên giao diện CMS MoSpark.
+*   **Kết nối API Google Ads & Google Search Console**: Devs bắt đầu code API kết nối Google Ads (Keyword Planner) để đồng bộ Volume Search hàng tháng và API GSC để hiển thị dashboard SoV realtime.
+*   **Microsite eSIM Du Lịch**: Bắt đầu triển khai di chuyển (migration) microsite eSIM Gohub cũ sang cấu trúc URL mới `/esim-du-lich/khu-vuc/{country}`.
+
+**3. Collab Team (Need):**
+*   **Hoài Anh & Cell Team:** Launching Pilot Phạt Nguội và hoàn thiện luồng thanh toán gói cước.
+*   **Trọng & Dev team:** Hoàn thiện module upload CSV, phân cụm từ khóa và kết nối API Google Ads/GSC.
+*   **UI/UX Team:** Bàn giao giao diện 7-Slots Merchant Hub và UI Blog mới.
+*   **VTTI Team:** Phối hợp kiểm duyệt gói eSIM Gohub và đối soát luồng thanh toán tích hợp.
+
+---
+
+### Tuần 4 (22/06 - 28/06)
+*(Cấu trúc tương tự - Sẽ cập nhật chi tiết kết quả thực tế vào cuối Tuần 4)*
 
 ---
 

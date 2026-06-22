@@ -130,30 +130,51 @@ Dưới đây là cơ sở dữ liệu gốc phân bổ Search Volume hàng thá
 | Soundbox | 6,540 |
 | Túi Thần Tài | 6,300 |
 
+### 2.4. Phân loại cấu trúc Inventory: Tập trung (Single Use Case) vs. Phân tán (Distributed Merchant)
+
+Để đáp ứng đặc thù kinh doanh O2O của MoMo, hệ thống phân tách cấu trúc SEO Keyword Inventory thành hai mô hình quản lý:
+
+#### A. Mô hình Tập trung (Single Use Case Inventory)
+*   **Áp dụng:** Phạt Nguội, Cinema, Bảo hiểm xe máy, Vay Nhanh...
+*   **Đặc điểm:** Toàn bộ từ khóa thuộc dự án đều tập trung vào giải quyết một chủ đề duy nhất.
+*   **Công thức:** `Total Inventory = Volume(Keyword_1) + Volume(Keyword_2) + ...`
+
+#### B. Mô hình Phân tán (Distributed Multi-Merchant Inventory)
+*   **Áp dụng:** Dự án **Merchant Page** (Trang đối tác).
+*   **Đặc điểm:** Dự án không có một danh sách từ khóa cố định chung. Thay vào đó, mỗi Cửa hàng đối tác (Merchant Entity) là một đơn vị nội dung độc lập sở hữu một tập từ khóa (Inventory) riêng:
+    *   *Primary Keyword (Từ khóa chính):* Tên thương hiệu/cửa hàng (ví dụ: `Tiệm mì chú cao`).
+    *   *Secondary Keywords (Từ khóa phụ):* Các ý định tìm kiếm xung quanh cửa hàng đó (ví dụ: `menu mì chú cao`, `thực đơn tiệm mì chú cao`, `tiệm mì chú cao có thanh toán momo không`, `tiệm mì chú cao ví trả sau`...).
+*   **Cơ chế Tính toán Tổng (Total Inventory):**
+    *   **Merchant-Level Inventory ($I_m$):** Tổng lượng tìm kiếm của thương hiệu đó và các từ khóa liên quan:
+        $$I_m = \text{Volume}(\text{Primary Keyword}) + \sum \text{Volume}(\text{Secondary Keywords})$$
+    *   **Total Project Inventory ($I_{total}$):** Tổng dung lượng thị trường của toàn bộ dự án Merchant được tích lũy từ tổng của tất cả Merchant-Level Inventories thành viên:
+        $$I_{total} = \sum_{m=1}^{N} I_m$$
+
 ---
 
 ## 3. Entry Point: Quy trình Khởi tạo Dự án SEO/GEO trên MoSpark
 
-SEO Inventory chính là điểm bắt đầu (Entry Point) của mọi dự án trên MoSpark. Dưới đây là luồng chuẩn khi Product Manager (PM) hoặc Growth Team muốn tạo mới một Use Case:
+Quy trình thiết lập dự án của PM trên MoSpark tuân thủ nghiêm ngặt 5 bước, trong đó dữ liệu của SEO Inventory đóng vai trò là cơ sở đầu vào cốt lõi:
 
-### Bước 1: Define Market (Lựa chọn chiến trường)
-*   **Hành động:** Xác định Use Case (Ví dụ: Tra cứu Phạt Nguội).
-*   **Hệ thống xử lý:** Tham chiếu với cơ sở dữ liệu SEO Inventory v4.
-*   **Đầu ra:** Biết rõ thị trường này có bao nhiêu lượng search mỗi tháng (VD: 1.5M searches) và MoMo đang chiếm bao nhiêu % (SoV).
+### Bước 1: Tạo tên dự án
+*   **Hành động:** PM khởi tạo dự án SEO/GEO mới bằng cách điền thông tin định danh (Tên dự án, Division phụ trách).
 
-### Bước 2: Phân loại Priority (Mức độ ưu tiên)
-Dựa trên SEO Inventory, hệ thống tự động phân Use Case thành 4 nhóm chiến lược:
-1.  **Market Leader (SoV > 40%):** Ví Trả Sau. *Mục tiêu:* Duy trì, Scale thêm ngách.
-2.  **High Potential (SoV 20-40%):** Bảo Hiểm Xe Máy. *Mục tiêu:* Scale mạnh nội dung để đẩy lên 40%.
-3.  **Low SoV/Gap Lớn (SoV < 20%):** Vay Nhanh, Bảo Hiểm Ô Tô. *Mục tiêu:* Xây mới nền tảng, tái cấu trúc Mini Web.
-4.  **Mass Traffic/Dịch vụ công:** Phạt nguội, BHXH. *Mục tiêu:* Kéo lượng User khổng lồ về hệ sinh thái.
+### Bước 2: Nhập Business Context - Inventory - URL (Vai trò của SEO Inventory)
+*   **Hành động:** PM nhập Business Context (Markdown) và khai báo các thông số của dự án từ SEO Inventory (Target URL, Search Volume ban đầu).
+*   **Hệ thống xử lý:** Tham chiếu thông số URL và lượng tìm kiếm với cơ sở dữ liệu SEO Inventory để tự động phân nhóm mức độ ưu tiên (SEO-ICE) theo 4 nhóm chiến lược:
+    1.  **Market Leader (SoV > 40%):** Ví Trả Sau. *Mục tiêu:* Duy trì, Scale thêm ngách.
+    2.  **High Potential (SoV 20-40%):** Bảo Hiểm Xe Máy. *Mục tiêu:* Scale mạnh nội dung để đẩy lên 40%.
+    3.  **Low SoV/Gap Lớn (SoV < 20%):** Vay Nhanh, Bảo Hiểm Ô Tô. *Mục tiêu:* Xây mới nền tảng, tái cấu trúc Mini Web.
+    4.  **Mass Traffic/Dịch vụ công:** Phạt nguội, BHXH. *Mục tiêu:* Kéo lượng User khổng lồ về hệ sinh thái.
 
-### Bước 3: Business Context Sync (Cung cấp bối cảnh)
-*   Sau khi chốt được Use Case và mục tiêu, PM sẽ phải điền **Business Context** theo mẫu chuẩn.
-*   Đây là bộ thông số "linh hồn" giúp định hướng cho AI (Claude) viết content đúng chuẩn thương hiệu và đúng Intent thị trường.
+### Bước 3: Upload Keyword Research
+*   **Hành động:** PM tải lên tệp CSV chứa danh sách từ khóa đầy đủ (gồm Keyword, Role, Search Volume, Content Mapping) được trích xuất từ kế hoạch nghiên cứu từ khóa của SEO Inventory.
 
-### Bước 4: Kick-off (Bắt đầu sản xuất)
-*   Kích hoạt quy trình 7 bước GenAI Content: Tạo Primary Keyword -> Draft Outline -> Manual Edit -> Blog Detail AI -> Publish.
+### Bước 4: Thiết lập prompt (Hoặc chọn Prompt)
+*   **Hành động:** PM thiết lập prompt bằng cách chọn Prompt Template mẫu hệ thống hoặc tùy chỉnh prompt cục bộ cho dự án. Hệ thống tự động ghép hợp (matching) prompt với các bộ Content Skills và SEO/GEO Skills tương ứng trong cơ sở dữ liệu.
+
+### Bước 5: Tiến hành viết bài (Vận hành sản xuất)
+*   **Hành động:** Kích hoạt GenAI sản xuất nội dung qua 2 Layer: AI tự động tạo dàn ý (Outline) -> PM chỉnh sửa/duyệt dàn ý -> AI tự động viết bài viết chi tiết dựa trên dàn ý đã duyệt và xuất bản lên Web.
 
 ---
 
@@ -223,11 +244,13 @@ Trả lời: *"Thị trường này lớn bao nhiêu? User đang tìm gì?"*
 
 | Dữ liệu | Mô tả | Cập nhật | Owner |
 |---|---|---|---|
-| Total Search Volume | Tổng lượng tìm kiếm/tháng của Use Case | Quarterly | Hiến |
+| Total Search Volume | Tổng lượng tìm kiếm/tháng của Use Case | Monthly (Auto-Sync) | Hiến |
 | Keyword Cluster map | Danh sách từ khóa chính + phụ theo Use Case | Per project | Hiến |
 | Search Intent mix | Tỷ lệ Informational / Commercial / Transactional | Quarterly | Hiến |
 
-Nguồn: Ahrefs, Google Keyword Planner, GSC.
+Nguồn dữ liệu & Cơ chế Sync:
+*   **Google Ads API (Keyword Planner):** Nguồn chính xác nhất để lấy dung lượng tìm kiếm thực tế của thị trường (Market Search Volume) thông qua `KeywordPlanService`. Hệ thống chạy cron job tự động đồng bộ hàng tháng để bắt kịp xu hướng tìm kiếm và tính mùa vụ.
+*   **Ahrefs / Semrush API:** Kênh dự phòng (Fallback) để lấy Volume và độ khó từ khóa (Keyword Difficulty) khi API Google Ads bị quá tải hoặc giới hạn hạn mức.
 
 ### 7.2. MoMo Performance (Hiệu suất thực tế)
 

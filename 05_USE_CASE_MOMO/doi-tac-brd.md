@@ -97,15 +97,23 @@ MoMo có đủ điều kiện giải quyết gap này: domain authority momo.vn,
 
 **Dual-sided product - 3 điểm kết nối:**
 
-**Cho SME:** Mỗi `momo.vn/merchant/{slug}` là Digital Presence page hoàn toàn miễn phí. SME không cần tự build, không cần bảo trì. Được xuất hiện trên Google Search và AI Agent responses khi user tìm kiếm tên merchant hoặc danh mục.
+**Cho SME:** Mỗi `momo.vn/merchant/{slug}` là Digital Presence page hoàn toàn miễn phí, không cần tự build hay bảo trì. Tại đây, MoMo đóng vai trò là hệ sinh thái toàn diện cung cấp các giải pháp thiết thực cho SME bao gồm:
+- **Giải pháp thanh toán số & Soundbox:** Tối ưu hóa việc nhận tiền qua mã QR và thanh toán Ví Trả Sau (VTS) an toàn. Đặc biệt, thiết bị **Soundbox** phát âm thanh xác nhận giao dịch thành công tại quầy ngay lập tức, giúp chủ quán/thu ngân kiểm tra tiền về rảnh tay, chống gian lận và nâng cao tốc độ phục vụ.
+- **Kê khai thuế:** Cung cấp công cụ hỗ trợ đơn giản hóa việc kê khai thuế đối với hộ kinh doanh và doanh nghiệp nhỏ.
+- **Hỗ trợ vay vốn & Giải pháp Tài chính:**
+  - **Ví Trả Sau (VTS):** Kích cầu tiêu dùng thông qua mô hình mua trước trả sau (BNPL), giúp SME gia tăng giá trị đơn hàng trung bình (AOV) và tiếp cận tệp khách hàng trẻ.
+  - **Vay Nhanh (Fast Loan):** Giúp SME tiếp cận các nguồn vốn kinh doanh tín chấp ưu đãi linh hoạt trực tiếp từ đối tác tài chính liên kết trên MoMo để kịp thời bổ sung vốn lưu động dựa trên lịch sử giao dịch.
+  - **Bảo Hiểm (Insurance):** Giảm thiểu rủi ro vận hành (bảo hiểm tài sản, cháy nổ cửa hàng, hoặc bảo hiểm sức khỏe cho chủ quán/nhân viên).
+- **Tiếp cận đa kênh:** Giúp SME tăng độ phủ thương hiệu và xuất hiện nổi bật trên Google Search, AI Agent responses (ChatGPT, Perplexity...) cũng như tiếp cận trực tiếp tệp khách hàng in-app khổng lồ của MoMo.
 
 **Cho Consumer:** Xác nhận merchant nhận MoMo/VTS và kích hoạt O2O ngay từ trang. Product job: xác nhận + activate trong 3 bước.
 
-**Cho MoMo - O2O Ecosystem Connector:** Merchant Microsite là điểm kết nối tam giác End User / MoMo / Merchant thông qua 4 sản phẩm O2O:
-- **VTS (Ví Trả Sau):** Consumer kích hoạt BNPL ngay khi biết merchant hỗ trợ
-- **Soundbox:** SME thu tiền QR → QR link về Microsite → đóng vòng lặp Offline → Online
-- **Hoàn tiền (Cashback):** Consumer thấy cashback offer → incentive thanh toán MoMo tại merchant
-- **Xu (Reward):** Tích điểm khi thanh toán - long term loyalty loop. Chi tiết TBD Q3+.
+**Cho MoMo - O2O Ecosystem Connector:** Merchant Microsite là điểm kết nối tam giác End User / MoMo / Merchant thông qua các giải pháp tài chính và O2O:
+- **VTS (Ví Trả Sau):** Kích hoạt dòng tiền BNPL của người dùng chi trả cho Merchant.
+- **Soundbox:** Đóng vòng lặp thanh toán ngoại tuyến (Offline-to-Online) và tăng tính gắn kết của đối tác.
+- **Vay Nhanh & Bảo Hiểm:** Mở rộng danh mục sản phẩm tài chính và hỗ trợ an toàn vận hành cho mạng lưới SME.
+- **Hoàn tiền (Cashback):** Kích thích chi tiêu thông qua các chiến dịch hoàn tiền liên kết.
+- **Xu (Reward):** Tích lũy điểm thưởng khi thanh toán - thiết lập vòng lặp khách hàng trung thành dài hạn. Chi tiết TBD Q3+.
 
 **Phased Rollout Strategy:**
 - **Phase I (Foundation & Mega Campaign Pilot):**

@@ -1,13 +1,13 @@
 # BRD: Tra Cứu Phạt Nguội
-
+ 
 > - **Project:** Tra Cứu Phạt Nguội Web Growth
 > - **Main URL:** momo.vn/phat-nguoi
 > - **Division:** PS (Payment Services)
 > - **Use Case:** Phạt Nguội
 > - **Owner:** Web Platform
 > - **Governance:** Web Product Lead (Hiến)
-> - **Version:** 3.6 - 2026-05-29
-> - **Status:** Phase 1 LIVE - Pilot & Scale
+> - **Version:** 3.7 - 2026-06-11
+> - **Status:** Phase 1 LIVE - Pilot & Scale (Phase 2 Local pSEO Pilot in progress)
 
 ---
 
@@ -318,16 +318,17 @@ Mỗi trang địa phương `/phat-nguoi/{tinh-thanh}` được thiết kế tin
 
 
 #### 4. Kế hoạch triển khai & Lộ trình Rollout (Tháng 6/2026)
-- **Tuần 1 (01/06 - 07/06): Thiết lập Data Baseline & Layout Design**
+- **Tuần 1 (01/06 - 07/06): Thiết lập Data Baseline & Layout Design [HOÀN THÀNH]**
   * Hoàn tất thu thập dữ liệu hành chính các phòng CSGT, địa chỉ xử phạt và kho bạc của 63 tỉnh/thành (tạm thời chưa tích hợp dữ liệu camera giao thông).
   * Thống nhất Layout UI/UX cho trang Tỉnh thành (PM duyệt mẫu thiết kế theo cấu trúc 3 phần chính trước khi scale).
-- **Tuần 2 (08/06 - 14/06): Cấu hình GenAI Content Engine & Prompt Integration**
+- **Tuần 2 (08/06 - 14/06): Cấu hình GenAI Content Engine & Prompt Integration [HOÀN THÀNH]**
   * Cấu hình prompt master cho 63 trang location trong module MoSpark GenAI.
-  * Sử dụng Claude 3.Haiku/3.5 Sonnet để chạy thử nghiệm sinh nội dung unique cho 5 tỉnh thành mẫu, đối soát chất lượng thông tin.
-- **Tuần 3 (15/06 - 21/06): Pilot Giai đoạn 1 (Top 10 Tỉnh thành có Volume lớn nhất)**
+  * Sử dụng Claude 3.Haiku/3.5 Sonnet để chạy thử nghiệm sinh nội dung unique cho 5 tỉnh thành mẫu (Hà Nội, TP.HCM, Đà Nẵng, Bình Dương, Đồng Nai), đối soát chất lượng thông tin.
+- **Tuần 3 (15/06 - 21/06): Pilot Giai đoạn 1 (Top 10 Tỉnh thành có Volume lớn nhất) [ĐẠT YÊU CẦU]**
   * Launch pilot 10 địa phương trọng điểm: Hà Nội, TP.HCM, Đà Nẵng, Bình Dương, Đồng Nai, Cần Thơ, Hải Phòng, Long An, Bắc Ninh, Nghệ An.
   * Theo dõi chỉ số index trên Google Search Console (GSC) và tốc độ tải trang (Core Web Vitals).
-- **Tuần 4 (22/06 - 30/06): Scale & Launch toàn bộ 63 Tỉnh thành**
+- **Tuần 4 (22/06 - 30/06): Xuất bản Toàn diện theo yêu cầu anh Bảo [TRIỂN KHAI GẤP]**
+  * Đẩy nhanh tiến độ hoàn tất xuất bản toàn bộ 100% bài viết Blog vệ tinh (Cluster) và phủ sóng 63 tỉnh/thành (pSEO Location) trên cả nước ngay trong tháng 6/2026.
   * Chạy tự động sản xuất hàng loạt (Bulk Generation) và tự động publish thông qua MoSpark CMS cho 53 tỉnh thành còn lại.
   * Kích hoạt Dashboard đo lường SoV (Share of Voice) trên AI search cho các keyword địa phương này.
 
@@ -463,7 +464,7 @@ Mỗi cluster chỉ được gán một Canonical URL - áp dụng Cannibalizati
   - Cluster 4: Lỗi vi phạm cụ thể (vượt đèn đỏ, không mũ bảo hiểm, đi ngược chiều...)
   - Cluster 5: Tỉnh thành - ưu tiên 10 tỉnh volume cao nhất: HCM, HN, Đà Nẵng, Bình Dương, Đồng Nai, Cần Thơ, Hải Phòng, Long An, Bắc Ninh, Nghệ An
 - **Format bắt buộc:** Blog + Internal Link về /phat-nguoi (Hub) + Schema FAQPage + HowTo
-- **PIC Content:** Trọng (GenAI pipeline) - Hiến (editorial sign-off)
+- **PIC:** Hoài Anh (Technical/Cell Team) - Hiến (Product Flow & GenAI Content for pSEO Long Content)
 - **Timeline:** T6/2026 sau Pilot review
 
 #### Long-term Scale (Phase 2-3 - pSEO)
@@ -481,11 +482,11 @@ Theo Foundation Checklist chuẩn SEO Inventory. Mọi bài blog Phạt Nguội 
 | Gate | Yêu cầu | PIC |
 |---|---|---|
 | Information Gain | Có data/góc nhìn không scrape được từ LLM (TTDK data, mức phạt theo Nghị định 168 thực tế, stats camera tỉnh) | Hiến review |
-| Keyword Ownership | Keyword cluster không trùng với URL đã index (Cannibalization check trên MoSpark CMS) | Trọng check CMS |
-| Schema Markup | FAQPage + HowTo required. BreadcrumbList. WebApplication (Hub). | Trọng build |
+| Keyword Ownership | Keyword cluster không trùng với URL đã index (Cannibalization check trên MoSpark CMS) | Hoài Anh check CMS |
+| Schema Markup | FAQPage + HowTo required. BreadcrumbList. WebApplication (Hub). | Hoài Anh build |
 | Legal Compliance | Không dùng "xóa vi phạm", "bỏ phạt", "bypass pháp lý". Có Legal Disclaimer tham chiếu Lite mode. | Hiến review |
-| Internal Link | Mọi bài Blog cắm link về /phat-nguoi (Hub) và subpage phù hợp (/o-to hoặc /xe-may) | Trọng/Mai |
-| CWV Gate | LCP < 2.5s, INP < 200ms, CLS < 0.1 - Pass trước publish | Dev QA |
+| Internal Link | Mọi bài Blog cắm link về /phat-nguoi (Hub) và subpage phù hợp (/o-to hoặc /xe-may) | Hoài Anh/Mai |
+| CWV Gate | LCP < 2.5s, INP < 200ms, CLS < 0.1 - Pass trước publish | Hoài Anh QA |
 
 **Quy tắc cứng:** GenAI Content không được auto-publish. Bắt buộc qua editorial review và Hiến sign-off trước khi live. AI draft là input cho editor - không phải output cuối.
 

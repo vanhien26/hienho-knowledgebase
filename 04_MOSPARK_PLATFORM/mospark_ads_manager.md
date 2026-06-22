@@ -5,7 +5,7 @@ Nền tảng quản lý và phân phối quảng cáo tự động trên Web
 > - **Division:** GPD (Growth Platform Division)
 > - **Owner:** Bảo
 > - **PIC:** Thuận (Tech)
-> - **Version:** 3.0 · April 2026
+> - **Version:** 3.4 · June 2026
 
 
 ---
@@ -27,10 +27,11 @@ Thực tế đã chứng minh nhu cầu: trước khi có Ads Manager, MoMo đã
 Vấn đề sâu hơn là về mô hình vận hành. Khi Web MoMo scale với nhiều trang và nhiều Division muốn chạy Ads đồng thời, cơ chế hardcode thủ công sẽ tạo ra conflict placement, thiếu visibility tổng thể, không có measurement chuẩn, và Dev phải tham gia vào mỗi campaign - trái với triết lý của MoSpark.
 
 ### Resolution
+ 
+Ads Manager tập trung vào nhiệm vụ tích hợp các định dạng quảng cáo hiện có từ Admin Tool như **Float**, **Balloon**, và cơ chế **A/B Testing** về nền tảng MoSpark, đồng thời cải thiện và chuẩn hóa các định dạng quảng cáo (Format Ads) cốt lõi gồm **Widget** và **Popup** để tối ưu hóa tỷ lệ chuyển đổi.
 
-Ads Manager được phát triển theo ba module kế tiếp nhau, từ công cụ vận hành đơn lẻ tiến đến nền tảng quản lý Traffic Inventory và phân phối Ads cho toàn bộ Web MoMo:
-
-- **Module 1 (Production):** Balloon Ads, Popup, Context-based targeting theo URL, A/B test (LP variant + Ad creative) - đang pilot với User Growth team.
+Hệ thống được phát triển theo lộ trình 3 module kế tiếp nhau:
+- **Module 1 (Production - Trọng tâm hiện tại):** Tích hợp và chuyển dịch các định dạng Float, Balloon, Popup, và cơ chế A/B Testing (Landing Page variant + Ad creative) từ Admin Tool về MoSpark. Cải thiện, nâng cấp chất lượng hiển thị của Widget và Popup.
 - **Module 2:** Traffic Inventory Management - quản lý toàn bộ ad placements trên Mini Web theo URL/segment, cho phép nhiều Division vận hành song song mà không conflict.
 - **Module 3:** Ads Distribution Platform - PM/PO các Division/Center tự cấu hình, phân phối và đo lường Ads trên toàn hệ thống Web MoMo, tích hợp Umami dashboard.
 
@@ -676,19 +677,20 @@ User đã có app nhưng inactive → vào web tìm kiếm → thấy Ads nhắc
 
 | Phase | Timeline | Mục tiêu trọng tâm |
 |---|---|---|
-| **Phase 1: MVP & Core Ops** | **Q2/2026** | **Thư viện Widget nhúng vào bài viết (Phạt Nguội, BHYT) thông qua CMS Shortcode.** URL Targeting cơ bản. Tích hợp Umami cơ bản. |
+| **Phase 1: MVP & Core Ops** | **Q2/2026** | **Tích hợp các định dạng Ads từ Admin Tool (Float, Balloon, A/B Testing) về MoSpark.** Đồng thời cải thiện và chuẩn hóa các Format hiển thị (Widget, Popup) để tối ưu hóa phễu chuyển đổi Web-to-App. |
 | **Phase 2: Inventory Mgmt** | **Q3/2026** | Placement Registry MVP + Xử lý Conflict tự động + Tích hợp hiển thị Reach Estimate. |
 | **Phase 3: Retargeting & Gamification** | **Q4/2026** | Kích hoạt On-site Retargeting (bám đuổi qua Local Storage) + Gamified Discovery Widgets (Swipe to Match, Doom Scroll, Social Feed) + Phân quyền Division tự chạy Ads. |
 
 ### Action Plan (Chỉ focus Phase 1)
 
-Nhằm tránh "ngộp" resource cho Tech team, danh sách dưới đây chỉ tập trung vào các công việc cần giải quyết dứt điểm trong Phase 1 (Q2/2026). Các task của Phase 2 và 3 đã được đẩy vào Backlog.
+Nhằm giải quyết dứt điểm các mục tiêu tích hợp và nâng cấp định dạng trong Phase 1 (Q2/2026), danh sách hành động của đội ngũ được quy hoạch cụ thể:
 
 | Deliverable | Owner | Mục đích |
 |---|---|---|
-| Widget Library v1 | Thuận | Hoàn thiện code cho Widget Phạt Nguội & BHYT (nhúng qua CMS Shortcode) |
-| PM/PO Playbook | Bảo + Hiến advise | Workflow, format guide, content checklist cho Division operator |
-| Umami - Reach Estimate | Thuận | Show Reach Estimate (28 days Visitor/Pageview) khi setup campaign |
+| Admin Tool Ads Integration | Thuận | Code tích hợp, chuyển dịch các định dạng quảng cáo Float và Balloon từ Admin Tool cũ về chạy trực tiếp trên MoSpark. |
+| A/B Testing Engine v1 | Thuận | Phát triển động cơ A/B Testing trên MoSpark (split traffic, đo lường metrics của LP variant và Ad creative). |
+| Ads Format Improvement | Thuận | Cải thiện UX/UI và tối ưu hiệu suất hiển thị của Widget (nhúng CMS Shortcode) và Popup để giảm dismiss rate. |
+| PM/PO Playbook | Bảo + Hiến advise | Tài liệu hướng dẫn PM/PO cấu hình ads, widget và các tiêu chuẩn kiểm duyệt nội dung (Content Standards). |
 
 ### Backlog (Phase 2 & 3)
 - PRD Phase 2 (Placement Registry schema, conflict logic, Reach Estimate integration)
@@ -698,8 +700,8 @@ Nhằm tránh "ngộp" resource cho Tech team, danh sách dưới đây chỉ t�
 ### Lộ trình chi tiết theo Module
 | Module / Hạng mục | Timeline | Trọng tâm chi tiết |
 |---|---|---|
-| **Native Widget & Shortcode** | **Q2/2026 (Trọng tâm MVP)** | **Thư viện Widget nhúng vào bài viết (Phạt Nguội, BHYT) thông qua CMS Shortcode.** |
-| Module 1 | Done - Q2/2026 | Mở rộng pilot từ User Growth sang GPD (Ưu tiên Inline Banner & Widget) |
+| **Admin Tool & Format Integration** | **Q2/2026 (Trọng tâm MVP)** | **Tích hợp Float, Balloon, A/B Testing từ Admin Tool về MoSpark; Nâng cấp định dạng Widget & Popup.** |
+| Module 1 | Done - Q2/2026 | Mở rộng pilot từ User Growth sang GPD (Tập trung Float, Balloon và A/B Testing) |
 | Module 2 | Q2/2026 | Placement Registry MVP + Conflict Resolution + Inventory Dashboard |
 | Module 3 | Q3/2026 | Multi-tenant, Umami Dashboard, Extended Formats, Gamified Widgets Integration |
 
@@ -712,6 +714,7 @@ Nhằm tránh "ngộp" resource cho Tech team, danh sách dưới đây chỉ t�
 ---
 
 ## Change Log
+- **Tháng 6/2026 (v3.4):** Định hướng lại trọng tâm dự án Ads tập trung vào việc tích hợp các định dạng quảng cáo từ Admin Tool (Float, Balloon, A/B Testing) về MoSpark và cải thiện các Format hiển thị (Widget, Popup).
 - **Tháng 6/2026 (v3.3):** Thay thế cơ chế registry Project và mapping URL thủ công bằng cơ chế Smart Targeting Engine (CMS Tags & Categories + Dynamic Matching Rules), tích hợp thuật toán tính điểm ưu tiên (Priority Score Engine) cho phần giải quyết xung đột (Conflict Resolution).
 - **Tháng 5/2026 (v3.2):** Thêm Section 6.4 - A/B Testing trên Landing Page Builder. Ownership: Ads Manager owns toàn bộ test logic (split, distribute, track, winner). LP Builder chỉ tạo trang LP. 3 loại test: LP Variant, Ad Creative, CTA/Copy. Workflow 8 bước. Winner: manual PM declare trong Ads Manager. Scope giới hạn Phase 1: chỉ Landing Page, không test Hub/Spoke/Blog/Homepage.
 - **Tháng 5/2026 (v3.1):**

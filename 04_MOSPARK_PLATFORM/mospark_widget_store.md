@@ -72,10 +72,13 @@ Thay vì lập trình riêng lẻ từng công cụ (tốn 2-3 tuần phát tri�
 
 ## 4. Product Vision & Scope Limits
 
-### 4.1 S-P-A Framework (Situation - Problem - Action)
-*   **Situation:** Web momo.vn sở hữu lượng traffic tự nhiên lớn nhưng tỷ lệ chuyển đổi trực tiếp thấp do thiếu điểm chạm tương tác.
-*   **Problem:** Người dùng có nhu cầu tính toán cụ thể nhưng landing page hiện tại quá tĩnh, chỉ cung cấp thông tin đọc thuần túy.
-*   **Action:** Biến các trang thông tin tĩnh thành các **Interactive Utility Hubs** thông qua Widget Store.
+### 4.1 Định hướng theo [Khung Tăng trưởng S-P-A](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/02_FRAMEWORKS/spa-framework.md) (reSearch - Pilot - Action)
+*(Xem chi tiết quy trình tăng trưởng và biểu mẫu yêu cầu tính năng tại [S-P-A Playbook & Template](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/02_FRAMEWORKS/spa-framework.md))*
+
+Dự án Widget Store đóng vai trò then chốt trong việc thực thi giai đoạn **Pilot** (thử nghiệm tính năng qua MVP) và **Action** (sản xuất hàng loạt, tối ưu Smart CTA để thúc đẩy tăng trưởng) cho các Use Case:
+*   **reSearch & Strategy (Stage S):** Xác định nhu cầu tính toán/giả lập của người dùng từ lượng traffic tự nhiên lớn (SEO/GEO).
+*   **Pilot & Plan (Stage P):** Build nhanh các Widget MVP (tiện ích tương tác) nhúng vào các trang Pilot để đo lường phễu Web-to-App.
+*   **Action & Amplifier (Stage A):** Scale rộng rãi các Widget trên hệ thống, kích hoạt luồng Smart CTA và Zero-Party Data Passing để tối đa hóa chuyển đổi MAU/MEU cho các BU.
 
 ### 4.2 Dự án này KHÔNG phải là:
 *   Nơi thực hiện các giao dịch thanh toán trực tiếp (Mọi giao dịch thanh toán, KYC sâu đều được điều hướng về App MoMo thông qua Onelink).
