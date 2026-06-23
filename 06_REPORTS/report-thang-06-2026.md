@@ -232,8 +232,9 @@
 ---
 ### Tuần 3 (15/06 - 21/06)
 **1. Key Highlight & Business Impact:**
+*   **Quy trình Tạo Merchant Định Hướng SEO (Đối tác):** Ban hành tài liệu PRD [doi-tac-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/doi-tac-prd.md) và tài liệu chiến lược [doi-tac-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_USE_CASE_MOMO/doi-tac-brd.md) (v1.1), chốt luồng tạo đối tác bắt buộc gắn kết với chiến lược Theme/Cluster và Volume Search từ SEO/GEO Project. Định hình Luồng tạo Merchant (Merchant Creation Flow) trên CMS MoSpark yêu cầu User nhập tay (User input) 4 trường thông tin cốt lõi bắt buộc: Địa chỉ, MerchantID (Sync M4B), GenAI content (Intro/FAQ) và Image.
+*   **Đóng gói Bối cảnh Nghiệp vụ Merchant**: Hoàn thành xây dựng tài liệu bối cảnh nghiệp vụ rút gọn [merchant-business-context.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/merchant-business-context.md) tích hợp đầy đủ 5 giải pháp tài chính và công cụ tiếp thị bổ trợ dành cho SME (Ví Trả Sau, Soundbox, QR Đa Năng, Vay Nhanh, Bảo Hiểm) làm dữ liệu Grounding Context cho AI viết bài.
 *   **Chuẩn hóa 5 Bước Thiết lập Dự án**: Đồng bộ quy trình cài đặt SEO/GEO Project Platform thành 5 bước chuẩn của PM trên giao diện MoSpark, tài liệu chiến lược và PRD ([seo-geo-project-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/seo-geo-project-prd.md)) kèm sơ đồ Mermaid hướng dẫn chi tiết luồng tích hợp cho Devs.
-*   **Đóng gói Bối cảnh Nghiệp vụ Merchant**: Hoàn thành xây dựng tài liệu bối cảnh nghiệp vụ rút gọn [merchant-business-context.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/merchant-business-context.md) tích hợp đầy đủ 5 giải pháp tài chính và công cụ tiếp thị bổ trợ dành cho SME (QR Đa năng, Soundbox, M4B app, Vay Nhanh, Marketing tools) để làm dữ liệu nền tảng (Grounding Context) cho AI sinh nội dung.
 *   **Thống nhất Phân quyền mặc định (Editor/Admin)**: Đơn giản hóa cơ chế bảo mật quyền truy cập cho dự án, xác định cứng 2 vai trò cơ bản: **Editor** (chỉ có quyền xem dự án, Topic Clusters/Merchant và tiến hành tạo bài/duyệt outline) và **Admin** (toàn quyền quản trị, chỉnh sửa bối cảnh, prompt cục bộ và upload CSV từ khóa).
 *   **Định hình Cơ chế Đồng bộ Volume Search Hàng Tháng**: Thống nhất kiến trúc đồng bộ tự động hàng tháng (Monthly Cron Job) chỉ số lượng tìm kiếm thị trường thông qua Google Ads API (Keyword Planner) đối soát với Google Search Console API để lấy số lượt hiển thị, clicks và thứ hạng trung bình thực tế của MoMo (phục vụ tính toán SoV).
 *   **Khởi tạo Use Case Trust (Report Scam)**: Ban hành tài liệu đặc tả nghiệp vụ BRD [trust-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_USE_CASE_MOMO/trust-brd.md) (v1.2) và tài liệu PRD chi tiết [trust-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/trust-prd.md) (v1.0) cho dự án Landing Page Báo Cáo Lừa Đảo ẩn danh trên Web, áp dụng S-P-A Framework (reSearch - Pilot - Action) và đồng bộ Specs thiết kế từ Cell Team.
@@ -241,8 +242,7 @@
 **2. Priorities for 7 days (Tuần 4: 22/06 - 28/06):**
 *   **Phạt Nguội (Xuất bản Toàn diện theo yêu cầu anh Bảo):** Đẩy nhanh tiến độ go-live và xuất bản toàn bộ 100% bài viết Blog vệ tinh (Cluster) kết hợp phủ sóng 63 tỉnh/thành (pSEO Location) ngay trong tháng 6/2026. Hoài Anh và Tech team hoàn tất tích hợp cổng thanh toán MoMo Payment Gateway cho luồng checkout Subscription trên Web.
 *   **Kick-off Dự án Trust**: Tổ chức cuộc họp khởi động (Kick-off) dự án Báo Cáo Lừa Đảo trên Web với các bên liên quan (Risk, CS, Legal, Devs, QC) để lấy ý kiến phản hồi về BRD v1.2 & PRD v1.0 và thống nhất kế hoạch phát triển.
-*   **Luồng Tạo Merchant liên kết SEO**: Team UI/UX phối hợp cùng Devs phác thảo giao diện luồng tạo Merchant (Merchant Creation Flow) trên MoSpark CMS bám sát PRD v1.0, hỗ trợ input thủ công Địa chỉ/MerchantID/GenAI content/Image và liên kết trực tiếp với cụm từ khóa/volume của SEO/GEO Project.
-*   **UI/UX 7-Slots cho Merchant Hub**: Team UI/UX bàn giao thiết kế chi tiết cấu trúc 7-Slots cho Merchant Hub bám sát tài liệu PRD `widget-store-prd.md`.
+*   **Luồng Tạo Merchant liên kết SEO (Đối tác):** Team UI/UX phối hợp cùng Devs phác thảo giao diện luồng tạo Merchant (Merchant Creation Flow) trên MoSpark CMS bám sát PRD v1.0, hỗ trợ input thủ công Địa chỉ/MerchantID/GenAI content/Image và liên kết trực tiếp với cụm từ khóa/volume của SEO/GEO Project. Bàn giao thiết kế chi tiết cấu trúc 7-Slots cho Merchant Hub bám sát tài liệu PRD `widget-store-prd.md` và submit sitemap để index nốt 30% Pilot Merchants còn lại.
 *   **Kiểm thử Module CSV & Automatic Clustering**: Trọng (Dev) hoàn tất kiểm thử chức năng upload CSV và tự động phân bổ từ khóa theo nhóm phễu (TOFU/MOFU/BOFU) trên giao diện CMS MoSpark.
 *   **Kết nối API Google Ads & Google Search Console**: Devs bắt đầu code API kết nối Google Ads (Keyword Planner) để đồng bộ Volume Search hàng tháng và API GSC để hiển thị dashboard SoV realtime.
 *   **Microsite eSIM Du Lịch**: Bắt đầu triển khai di chuyển (migration) microsite eSIM Gohub cũ sang cấu trúc URL mới `/esim-du-lich/khu-vuc/{country}`.
@@ -250,7 +250,7 @@
 **3. Collab Team (Need):**
 *   **Hoài Anh & Cell Team:** Launching Pilot Phạt Nguội và hoàn thiện luồng thanh toán gói cước.
 *   **Trọng & Dev team:** Hoàn thiện module upload CSV, phân cụm từ khóa và kết nối API Google Ads/GSC.
-*   **UI/UX Team:** Bàn giao giao diện 7-Slots Merchant Hub và UI Blog mới.
+*   **UI/UX Team:** Bàn giao giao diện 7-Slots Merchant Hub, phác thảo Wireframe luồng tạo Merchant mới và UI Blog mới.
 *   **VTTI Team:** Phối hợp kiểm duyệt gói eSIM Gohub và đối soát luồng thanh toán tích hợp.
 
 ---
