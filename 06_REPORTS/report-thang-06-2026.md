@@ -231,48 +231,67 @@
 
 ---
 ### Tuần 3 (15/06 - 21/06)
-**1. Key Highlight & Business Impact:**
-*   **Quy trình Tạo Merchant Định Hướng SEO (Đối tác):** Thống nhất và chốt luồng tạo đối tác dựa trên định hướng từ chiến lược từ khóa và dung lượng tìm kiếm của dự án SEO/GEO. Thiết lập giao diện tạo mới trên trang quản trị, yêu cầu nhập thủ công các trường thông tin cốt lõi (Địa chỉ, mã đối tác, nội dung mô tả tự động sinh bởi AI và hình ảnh đại diện).
-*   **Đóng gói Bối cảnh Nghiệp vụ Merchant:** Hoàn tất xây dựng bối cảnh nghiệp vụ tích hợp các giải pháp tài chính và công cụ bán hàng (Ví Trả Sau, thiết bị loa thông báo Soundbox, QR Đa Năng, Vay Nhanh, Bảo Hiểm) làm dữ liệu nền tảng cho AI viết bài giới thiệu đối tác.
-*   **Chuẩn hóa Quy trình Thiết lập Dự án:** Đồng bộ quy trình cài đặt nền tảng SEO/GEO thành 5 bước chuẩn của PM trên giao diện quản trị CMS kèm sơ đồ hướng dẫn luồng tích hợp chi tiết cho đội ngũ phát triển.
-*   **Thống nhất Phân quyền mặc định:** Đơn giản hóa cơ chế bảo mật quyền truy cập cho dự án CMS với 2 vai trò cơ bản: Editor (chỉ xem thông tin dự án, cấu trúc và viết bài) và Admin (toàn quyền hệ thống).
-*   **Định hình Cơ chế Đồng bộ Volume Search Hàng Tháng:** Thống nhất kiến trúc đồng bộ tự động hàng tháng chỉ số lượng tìm kiếm thị trường thông qua Google Ads API đối soát với Google Search Console API để lấy số lượt hiển thị, click và thứ hạng trung bình thực tế phục vụ tính toán thị phần tìm kiếm (Share of Voice).
-*   **Khởi tạo dự án Báo Cáo Lừa Đảo (Trust):** Ban hành tài liệu đặc tả nghiệp vụ và tài liệu thiết kế chi tiết cho Landing Page Báo Cáo Lừa Đảo ẩn danh trên Web, áp dụng mô hình ba giai đoạn (Nghiên cứu -> Thử nghiệm -> Vận hành) và đồng bộ hóa các yêu cầu kỹ thuật từ Cell Team.
 
-**2. Priorities for 7 days (Tuần 4: 22/06 - 28/06):**
-*   **Dịch vụ Phạt Nguội:** Đẩy nhanh tiến độ go-live và xuất bản toàn bộ bài viết Blog vệ tinh kết hợp phủ sóng 63 tỉnh/thành (trang địa phương) ngay trong tháng 6/2026. Phối hợp với Cell Team hoàn tất tích hợp cổng thanh toán MoMo cho luồng đăng ký gói cước trên Web.
-*   **Khởi động Dự án Trust:** Tổ chức họp kick-off dự án Báo Cáo Lừa Đảo trên Web với các bên liên quan để lấy ý kiến phản hồi về tài liệu đặc tả và thống nhất kế hoạch phát triển.
-*   **Luồng Tạo Merchant liên kết SEO (Đối tác):** Phác thảo giao diện luồng tạo Merchant mới trên trang quản trị, hỗ trợ nhập thủ công thông tin địa chỉ/mã đối tác/nội dung AI/hình ảnh và liên kết trực tiếp với cụm từ khóa của dự án SEO/GEO. Bàn giao thiết kế chi tiết cấu trúc Hub đối tác 7 slots và theo dõi việc lập chỉ mục cho các đối tác thử nghiệm.
-*   **Kiểm thử Module Tải CSV & Phân cụm Từ khóa:** Hoàn tất kiểm thử chức năng tải lên file CSV và tự động phân bổ từ khóa theo nhóm phễu trên giao diện quản trị CMS.
-*   **Kết nối API đo lường hiệu quả SEO:** Bắt đầu triển khai kết nối Google Ads API để đồng bộ dung lượng tìm kiếm hàng tháng và Google Search Console API để hiển thị dashboard đo lường thị phần realtime.
-*   **Microsite eSIM Du Lịch:** Triển khai di chuyển microsite cũ sang cấu trúc URL mới tối ưu.
+#### 🏪 Dự án Đối tác (Merchant Page) & Nền tảng SEO/GEO
+*   **Key Highlights & Business Impact:**
+    *   **Quy trình Tạo Merchant Định Hướng SEO:** Thống nhất và chốt luồng tạo đối tác dựa trên định hướng từ chiến lược từ khóa và dung lượng tìm kiếm của dự án SEO/GEO. Thiết lập giao diện tạo mới trên trang quản trị, yêu cầu nhập thủ công các trường thông tin cốt lõi (Địa chỉ, mã đối tác, nội dung mô tả tự động sinh bởi AI và hình ảnh đại diện).
+    *   **Đóng gói Bối cảnh Nghiệp vụ Merchant:** Hoàn tất xây dựng bối cảnh nghiệp vụ tích hợp các giải pháp tài chính và công cụ bán hàng (Ví Trả Sau, thiết bị loa thông báo Soundbox, QR Đa Năng, Vay Nhanh, Bảo Hiểm) làm dữ liệu nền tảng cho AI viết bài giới thiệu đối tác.
+    *   **Chuẩn hóa Quy trình Thiết lập Dự án:** Đồng bộ quy trình cài đặt nền tảng SEO/GEO thành 5 bước chuẩn của PM trên giao diện quản trị CMS kèm sơ đồ hướng dẫn luồng tích hợp chi tiết cho đội ngũ phát triển.
+    *   **Thống nhất Phân quyền mặc định:** Đơn giản hóa cơ chế bảo mật quyền truy cập cho dự án CMS với 2 vai trò cơ bản: Editor (chỉ xem thông tin dự án, cấu trúc và viết bài) và Admin (toàn quyền hệ thống).
+    *   **Định hình Cơ chế Đồng bộ Volume Search Hàng Tháng:** Thống nhất kiến trúc đồng bộ tự động hàng tháng chỉ số lượng tìm kiếm thị trường thông qua Google Ads API đối soát với Google Search Console API để lấy số lượt hiển thị, click và thứ hạng trung bình thực tế phục vụ tính toán thị phần tìm kiếm (Share of Voice).
+*   **Priorities for 7 days (Tuần 4: 22/06 - 28/06):**
+    *   **Luồng Tạo Merchant liên kết SEO:** Phác thảo giao diện luồng tạo Merchant mới trên trang quản trị, hỗ trợ nhập thủ công thông tin địa chỉ/mã đối tác/nội dung AI/hình ảnh và liên kết trực tiếp với cụm từ khóa của dự án SEO/GEO. Bàn giao thiết kế chi tiết cấu trúc Hub đối tác 7 slots và theo dõi việc lập chỉ mục cho các đối tác thử nghiệm.
+    *   **Kiểm thử Module Tải CSV & Phân cụm Từ khóa:** Hoàn tất kiểm thử chức năng tải lên file CSV và tự động phân bổ từ khóa theo nhóm phễu trên giao diện quản trị CMS.
+    *   **Kết nối API đo lường hiệu quả SEO:** Bắt đầu triển khai kết nối Google Ads API để đồng bộ dung lượng tìm kiếm hàng tháng và Google Search Console API để hiển thị dashboard đo lường thị phần realtime.
+*   **Collab Team (Need):**
+    *   **Đội ngũ phát triển (Dev team):** Hoàn thiện các module tải lên CSV, phân cụm từ khóa và kết nối các API đo lường.
+    *   **UI/UX Team:** Bàn giao giao diện Hub đối tác, phác thảo luồng tạo đối tác mới và giao diện Blog mới.
 
-**3. Collab Team (Need):**
-*   **Cell Team & Đối tác kỹ thuật:** Khởi chạy thử nghiệm Phạt Nguội và hoàn thiện luồng thanh toán.
-*   **Đội ngũ phát triển (Dev team):** Hoàn thiện các module tải lên CSV, phân cụm từ khóa và kết nối các API đo lường.
-*   **UI/UX Team:** Bàn giao giao diện Hub đối tác, phác thảo luồng tạo đối tác mới và giao diện Blog mới.
-*   **VTTI Team:** Phối hợp kiểm duyệt gói eSIM và đối soát luồng thanh toán tích hợp.
+#### 🛡️ Dự án Trust (Báo Cáo Lừa Đảo)
+*   **Key Highlights & Business Impact:**
+    *   **Khởi tạo dự án Báo Cáo Lừa Đảo:** Ban hành tài liệu đặc tả nghiệp vụ và tài liệu thiết kế chi tiết cho Landing Page Báo Cáo Lừa Đảo ẩn danh trên Web, áp dụng mô hình ba giai đoạn (Nghiên cứu -> Thử nghiệm -> Vận hành) và đồng bộ hóa các yêu cầu kỹ thuật từ Cell Team.
+*   **Priorities for 7 days (Tuần 4: 22/06 - 28/06):**
+    *   **Khởi động Dự án Trust:** Tổ chức họp kick-off dự án Báo Cáo Lừa Đảo trên Web với các bên liên quan để lấy ý kiến phản hồi về tài liệu đặc tả và thống nhất kế hoạch phát triển.
+
+#### 🚀 Dự án Phạt Nguội
+*   **Priorities for 7 days (Tuần 4: 22/06 - 28/06):**
+    *   **Dịch vụ Phạt Nguội:** Đẩy nhanh tiến độ go-live và xuất bản toàn bộ bài viết Blog vệ tinh kết hợp phủ sóng 63 tỉnh/thành (trang địa phương) ngay trong tháng 6/2026. Phối hợp với Cell Team hoàn tất tích hợp cổng thanh toán MoMo cho luồng đăng ký gói cước trên Web.
+*   **Collab Team (Need):**
+    *   **Cell Team & Đối tác kỹ thuật:** Khởi chạy thử nghiệm Phạt Nguội và hoàn thiện luồng thanh toán.
+
+#### ✈️ Dự án eSIM Du Lịch
+*   **Priorities for 7 days (Tuần 4: 22/06 - 28/06):**
+    *   **Microsite eSIM Du Lịch:** Triển khai di chuyển microsite cũ sang cấu trúc URL mới tối ưu.
+*   **Collab Team (Need):**
+    *   **VTTI Team:** Phối hợp kiểm duyệt gói eSIM và đối soát luồng thanh toán tích hợp.
 
 ---
 
 ### Tuần 4 (22/06 - 28/06)
-**1. Key Highlight & Business Impact:**
-*   **Triển khai Bản tin An Toàn Bảo Mật (ATBM) Quý:** Ban hành đặc tả chi tiết Bản tin ATBM định kỳ dưới dạng Long Form Content có tính năng tương tác phục vụ chiến dịch khảo sát an toàn bảo mật (mục tiêu tăng 30% cho 2 câu hỏi cốt lõi). Triển khai 3 thẻ lật (Flip Cards) cho phép tải ảnh CDN trực tiếp, các khối tính năng mở rộng tích hợp phễu Web-to-App, và khối số liệu động CountUp.
-*   **Quy hoạch Vị trí Nhúng Bản tin ATBM:** Xác định vị trí nhúng widget giới thiệu Bản tin trên trang chủ ATBM nằm ở khu vực cố định (dưới Chứng chỉ bảo mật quốc tế, trên mục FAQ Giải đáp).
-*   **Đặc tả chi tiết Landing Page & Form Báo Cáo Lừa Đảo:** Thống nhất thiết kế giao diện Landing Page 5 Zone và Form báo cáo 3 bước ẩn danh (không bắt buộc đăng nhập, tuân thủ quy định pháp lý Nghị định 13/2023/NĐ-CP về xử lý dữ liệu cá nhân tự nguyện).
-*   **Thiết kế Hub Đối tác & Luồng Tạo Merchant:** Hoàn thiện phác thảo giao diện luồng tạo Merchant mới liên kết chiến lược từ khóa trên CMS và bàn giao thiết kế chi tiết Hub đối tác 7 slots định vị làm điểm thanh toán Ví Trả Sau.
 
-**2. Priorities for 7 days (Tuần 5: 29/06 - 05/07):**
-*   **Đánh giá & Phản hồi (Kick-off):** Tổ chức họp kick-off dự án Báo Cáo Lừa Đảo và Bản tin ATBM với các bên liên quan (Risk, CS, Legal, Devs, QC) để chốt thiết kế và kế hoạch phát triển.
-*   **Phát triển Landing Page & Form Báo Cáo:** Triển khai xây dựng giao diện Landing Page và Form báo cáo 3 bước bám sát thiết kế đã thống nhất.
-*   **Đồng bộ dữ liệu & Đo lường:** Thiết lập dashboard cập nhật số liệu báo cáo cộng đồng trực tiếp và tích hợp tracking các sự kiện tương tác trên bản tin (lượt tải thẻ, click mở app).
-*   **Hoàn thiện luồng tạo Merchant và thiết kế Hub:** Devs thi công giao diện tạo đối tác mới trên CMS và cấu trúc 7-Slots cho Hub đối tác.
+#### 🛡️ Dự án Trust (Báo Cáo Lừa Đảo & Bản Tin ATBM)
+*   **Key Highlights & Business Impact:**
+    *   **Triển khai Bản tin An Toàn Bảo Mật (ATBM) Quý:** Ban hành đặc tả chi tiết Bản tin ATBM định kỳ dưới dạng Long Form Content có tính năng tương tác phục vụ chiến dịch khảo sát an toàn bảo mật (mục tiêu tăng 30% cho 2 câu hỏi cốt lõi). Triển khai 3 thẻ lật (Flip Cards) cho phép tải ảnh CDN trực tiếp, các khối tính năng mở rộng tích hợp phễu Web-to-App, và khối số liệu động CountUp.
+    *   **Quy hoạch Vị trí Nhúng Bản tin ATBM:** Xác định vị trí nhúng widget giới thiệu Bản tin trên trang chủ ATBM nằm ở khu vực cố định (dưới Chứng chỉ bảo mật quốc tế, trên mục FAQ Giải đáp).
+    *   **Đặc tả chi tiết Landing Page & Form Báo Cáo Lừa Đảo:** Thống nhất thiết kế giao diện Landing Page 5 Zone và Form báo cáo 3 bước ẩn danh (không bắt buộc đăng nhập, tuân thủ quy định pháp lý Nghị định 13/2023/NĐ-CP về xử lý dữ liệu cá nhân tự nguyện).
+*   **Priorities for 7 days (Tuần 5: 29/06 - 05/07):**
+    *   **Đánh giá & Phản hồi (Kick-off):** Tổ chức họp kick-off dự án Báo Cáo Lừa Đảo và Bản tin ATBM với các bên liên quan để chốt thiết kế và kế hoạch phát triển.
+    *   **Phát triển Landing Page & Form Báo Cáo:** Triển khai xây dựng giao diện Landing Page và Form báo cáo 3 bước bám sát thiết kế đã thống nhất.
+    *   **Đồng bộ dữ liệu & Đo lường:** Thiết lập dashboard cập nhật số liệu báo cáo cộng đồng trực tiếp và tích hợp tracking các sự kiện tương tác trên bản tin (lượt tải thẻ, click mở app).
+*   **Collab Team (Need):**
+    *   **Đội ngũ phát triển (Dev team) & QC:** Bắt đầu triển khai Frontend/Backend cho Landing Page báo cáo lừa đảo, Form 3 bước và Bản tin ATBM.
+    *   **Risk & Security Team:** Thống nhất các trường thông tin tối giản phục vụ nghiệp vụ hậu kiểm.
+    *   **Legal & Compliance:** Duyệt tính pháp lý của quy trình gửi báo cáo ẩn danh không đăng nhập và form thu thập tự nguyện.
+    *   **UI/UX Team:** Hoàn tất thiết kế chi tiết giao diện Bản tin ATBM và các card hình ảnh.
 
-**3. Collab Team (Need):**
-*   **Đội ngũ phát triển (Dev team) & QC:** Bắt đầu triển khai Frontend/Backend cho Landing Page báo cáo lừa đảo, Form 3 bước và Bản tin ATBM.
-*   **Risk & Security Team:** Thống nhất các trường thông tin tối giản phục vụ nghiệp vụ hậu kiểm.
-*   **Legal & Compliance:** Duyệt tính pháp lý của quy trình gửi báo cáo ẩn danh không đăng nhập và form thu thập tự nguyện.
-*   **UI/UX Team:** Hoàn tất thiết kế chi tiết giao diện Bản tin ATBM và các card hình ảnh.
+#### 🏪 Dự án Đối tác (Merchant Page)
+*   **Key Highlights & Business Impact:**
+    *   **Thiết kế Hub Đối tác & Luồng Tạo Merchant:** Hoàn thiện phác thảo giao diện luồng tạo Merchant mới liên kết chiến lược từ khóa trên CMS và bàn giao thiết kế chi tiết Hub đối tác 7 slots định vị làm điểm thanh toán Ví Trả Sau.
+*   **Priorities for 7 days (Tuần 5: 29/06 - 05/07):**
+    *   **Hoàn thiện luồng tạo Merchant và thiết kế Hub:** Devs thi công giao diện tạo đối tác mới trên CMS và cấu trúc 7-Slots cho Hub đối tác.
+*   **Collab Team (Need):**
+    *   **Đội ngũ phát triển (Dev team):** Thi công giao diện tạo đối tác mới và cấu hình liên kết dự án SEO/GEO.
+    *   **UI/UX Team:** Bàn giao giao diện chi tiết Hub đối tác 7 slots.
 
 ---
 
