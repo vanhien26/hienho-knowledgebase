@@ -1,11 +1,12 @@
-# BRD: Báo Cáo Lừa Đảo (Trust - Report Scam)
+# BRD: Báo Cáo Lừa Đảo & Bản Tin An Toàn Bảo Mật (Trust - Report Scam & Security Newsletter)
 
 > - **Project:** Use Case Báo Cáo Lừa Đảo (Trust) - Web Growth & Inbound Web Platform
-> - **Main URL:** momo.vn/report-scam
+> - **Main URL:** momo.vn/report-scam & momo.vn/atbm/ban-tin/{quy-nam}
 > - **Division:** Risk & Security (GPD Web Platform)
-> - **Version:** 1.2 · Tháng 6/2026
-> - **Status:** Active (Scope: Landing Page giới thiệu & Thu thập Báo cáo thủ công - S-P-A Framework)
-> - **PRD Specs:** [08_PRD/trust-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/trust-prd.md)
+> - **Version:** 1.3 · Tháng 6/2026
+> - **Status:** Active (Scope: Landing Page báo cáo, Form nhập tay tĩnh & Bản tin ATBM Quý - S-P-A Framework)
+> - **PRD Specs (Report Scam):** [08_PRD/trust-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/trust-prd.md)
+> - **PRD Specs (Bản tin ATBM):** [08_PRD/ban-tin-atbm-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/ban-tin-atbm-prd.md)
 
 ---
 
@@ -43,6 +44,7 @@
 | Asset | URL | Trạng thái | Ghi chú |
 |---|---|---|---|
 | Hub page | /report-scam | Chưa build | Landing page giới thiệu và thu thập báo cáo lừa đảo ẩn danh (Form nhập tay) |
+| Bản tin ATBM Quý | /atbm/ban-tin/{quy-nam} | Chưa build | Landing page long-form content tương tác giới thiệu hoạt động & số liệu ATBM từng Quý |
 | AEO/GEO Document | /report-scam/llms.txt | Chưa build | Chuẩn hóa thông tin cảnh báo an toàn cho AI Search Engines |
 
 ### 2.2 Phạm vi dự án (Scope & Out-of-Scope)
@@ -54,6 +56,12 @@
         *   Hình ảnh/Tệp đính kèm bằng chứng (chụp màn hình chat, hóa đơn chuyển tiền).
         *   Nội dung mô tả ngắn kịch bản lừa đảo.
     *   Cơ chế gửi ẩn danh hoàn toàn (các trường SĐT/Email của người gửi là tùy chọn và đi kèm checkbox đồng thuận tuân thủ Nghị định 13).
+    *   **Phát triển Bản tin ATBM định kỳ Quý (momo.vn/atbm/ban-tin/{quy-nam}):**
+        *   Landing page dạng Long Form Content có tính năng tương tác phục vụ chiến dịch Survey (tăng 30% cho 2 câu hỏi khảo sát cốt lõi).
+        *   Khối 3 Flip Cards tương tác, cho phép người dùng tải trực tiếp tệp ảnh thẻ từ CDN về máy.
+        *   Khối Tính Năng (Feature Highlights) với các nút bấm/hyperlinks mở app MoMo (Web-to-App) để kích hoạt/cài đặt tính năng in-app.
+        *   Khối Highlight Con Số động (CountUp) thể hiện trực quan các con số tác động an toàn bảo mật.
+        *   Liên kết điều hướng chéo giữa trang chủ ATBM, bản tin các quý và nhúng widget bản tin ở vị trí cố định trên trang chủ ATBM (dưới Certification, trên FAQ).
 *   **Out-of-Scope (Các phase tiếp theo):**
     *   Tích hợp GenAI bóc tách thực thể (Autofill) từ văn bản tự do.
     *   SEO Planning diện rộng, các trang tra cứu lừa đảo động (pSEO) `/report-scam/tra-cuu/*`.
