@@ -247,11 +247,13 @@
     *   **Đội ngũ phát triển (Dev team):** Hoàn thiện các module tải lên CSV, phân cụm từ khóa và kết nối các API đo lường.
     *   **UI/UX Team:** Bàn giao giao diện Hub đối tác, phác thảo luồng tạo đối tác mới và giao diện Blog mới.
 
-#### 🛡️ Dự án Trust (Báo Cáo Lừa Đảo)
+#### 🛡️ Dự án Trust (Báo Cáo Lừa Đảo & Bản Tin ATBM)
 *   **Key Highlights & Business Impact:**
-    *   **Khởi tạo dự án Báo Cáo Lừa Đảo:** Ban hành tài liệu đặc tả nghiệp vụ và tài liệu thiết kế chi tiết cho Landing Page Báo Cáo Lừa Đảo ẩn danh trên Web, áp dụng mô hình ba giai đoạn (Nghiên cứu -> Thử nghiệm -> Vận hành) và đồng bộ hóa các yêu cầu kỹ thuật từ Cell Team.
+    *   **Hoàn tất thiết kế Bản tin Quý 2:** Bộ phận Marketing đã hoàn thành toàn bộ nội dung và thiết kế giao diện cho Bản tin Quý 2.
+    *   **Tiếp nhận tài liệu nghiệp vụ Báo cáo lừa đảo:** Nhận bàn giao tài liệu nghiệp vụ và đặc tả sản phẩm mô tả chi tiết luồng tiếp nhận thông tin lừa đảo từ Cell Team.
 *   **Priorities for 7 days (Tuần 4: 22/06 - 28/06):**
-    *   **Khởi động Dự án Trust:** Tổ chức họp kick-off dự án Báo Cáo Lừa Đảo trên Web với các bên liên quan để lấy ý kiến phản hồi về tài liệu đặc tả và thống nhất kế hoạch phát triển.
+    *   **Xây dựng bản Demo trên Mospark:** Triển khai dựng bản Demo chạy thử nghiệm của Bản tin Quý 2 trên nền tảng Mospark.
+    *   **Áp dụng Quy trình SPA cho Báo cáo lừa đảo:** Bắt đầu triển khai dự án Báo cáo lừa đảo đi qua các giai đoạn của quy trình SPA (bắt đầu từ khâu Nghiên cứu và Thiết kế cấu trúc ban đầu).
 
 #### 🚀 Dự án Phạt Nguội
 *   **Priorities for 7 days (Tuần 4: 22/06 - 28/06):**
@@ -271,13 +273,11 @@
 
 #### 🛡️ Dự án Trust (Báo Cáo Lừa Đảo & Bản Tin ATBM)
 *   **Key Highlights & Business Impact:**
-    *   **Triển khai Bản tin An Toàn Bảo Mật (ATBM) Quý:** Ban hành đặc tả chi tiết Bản tin ATBM định kỳ dưới dạng Long Form Content có tính năng tương tác phục vụ chiến dịch khảo sát an toàn bảo mật (mục tiêu tăng 30% cho 2 câu hỏi cốt lõi). Triển khai 3 thẻ lật (Flip Cards) cho phép tải ảnh CDN trực tiếp, các khối tính năng mở rộng tích hợp phễu Web-to-App, và khối số liệu động CountUp.
-    *   **Quy hoạch Vị trí Nhúng Bản tin ATBM:** Xác định vị trí nhúng widget giới thiệu Bản tin trên trang chủ ATBM nằm ở khu vực cố định (dưới Chứng chỉ bảo mật quốc tế, trên mục FAQ Giải đáp).
-    *   **Đặc tả chi tiết Landing Page & Form Báo Cáo Lừa Đảo:** Thống nhất thiết kế giao diện Landing Page 5 Zone và Form báo cáo 3 bước ẩn danh (không bắt buộc đăng nhập, tuân thủ quy định pháp lý Nghị định 13/2023/NĐ-CP về xử lý dữ liệu cá nhân tự nguyện).
+    *   **Xây dựng Demo Bản tin Quý 2 trên Mospark:** Hoàn thành dựng bản Demo cho Bản tin Quý 2 trên nền tảng Mospark để trình duyệt giao diện và tương tác (các thẻ lật, tải ảnh CDN trực tiếp).
+    *   **Triển khai SPA cho Báo cáo lừa đảo:** Triển khai giai đoạn Nghiên cứu trong quy trình SPA, hoàn thành rà soát các trường thông tin tối giản và thiết lập các điều khoản tuân thủ quy định pháp lý.
 *   **Priorities for 7 days (Tuần 5: 29/06 - 05/07):**
-    *   **Đánh giá & Phản hồi (Kick-off):** Tổ chức họp kick-off dự án Báo Cáo Lừa Đảo và Bản tin ATBM với các bên liên quan để chốt thiết kế và kế hoạch phát triển.
-    *   **Phát triển Landing Page & Form Báo Cáo:** Triển khai xây dựng giao diện Landing Page và Form báo cáo 3 bước bám sát thiết kế đã thống nhất.
-    *   **Đồng bộ dữ liệu & Đo lường:** Thiết lập dashboard cập nhật số liệu báo cáo cộng đồng trực tiếp và tích hợp tracking các sự kiện tương tác trên bản tin (lượt tải thẻ, click mở app).
+    *   **Nghiệm thu bản Demo và Chuẩn bị Triển khai:** Họp duyệt bản Demo Bản tin Quý 2 và bàn giao cho đội ngũ phát triển để hoàn thiện.
+    *   **Triển khai Giai đoạn Thử nghiệm (Pilot) Báo cáo lừa đảo:** Chuyển dự án Báo cáo lừa đảo sang giai đoạn Pilot theo quy trình SPA, phối hợp cùng các bên liên quan để lấy phản hồi về luồng nghiệp vụ tiếp nhận thông tin.
 *   **Collab Team (Need):**
     *   **Đội ngũ phát triển (Dev team) & QC:** Bắt đầu triển khai Frontend/Backend cho Landing Page báo cáo lừa đảo, Form 3 bước và Bản tin ATBM.
     *   **Risk & Security Team:** Thống nhất các trường thông tin tối giản phục vụ nghiệp vụ hậu kiểm.
