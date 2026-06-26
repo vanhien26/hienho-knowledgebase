@@ -6,8 +6,8 @@
 > - **Use Case:** Phạt Nguội
 > - **Owner:** Web Platform
 > - **Governance:** Web Product Lead (Hiến)
-> - **Version:** 3.7 - 2026-06-11
-> - **Status:** Phase 1 LIVE - Pilot & Scale (Phase 2 Local pSEO Pilot in progress)
+> - **Version:** 3.8 - 2026-06-26
+> - **Status:** Phase 1 LIVE - Pilot & Scale (Phase 2 Subscription & pSEO Route scales in progress)
 
 ---
 
@@ -92,6 +92,20 @@ Nghị định 168/2024/NĐ-CP tăng mức phạt 3-5x từ 1/1/2025 tạo nhu c
 - Không đề cập các site không chính thống (phatnguoi.com) ngoại trừ so sánh về bảo mật
 - Không dùng ngôn ngữ "xóa vi phạm" hoặc "bỏ phạt" (vi phạm pháp luật)
 - Không cạnh tranh trực tiếp csgt.vn về tính năng - cạnh tranh về UX và ecosystem
+
+### 3.4 Khung Hợp Tác Đầu Tư & Chia Sẻ Doanh Thu Liên BU (Cross-BU Co-investment & Attribution Framework)
+
+Nhằm giải quyết bài toán ROI thấp của dự án Phạt Nguội khi đứng độc lập (do chi phí chạy SEM lớn và tỷ lệ nộp phạt thu phí hoa hồng trực tiếp thấp), MoMo áp dụng mô hình **Co-investment (Đồng đầu tư)**. Dự án Phạt Nguội đóng vai trò là **Phễu Hút Traffic Đại Chúng (Mass Traffic Acquisition Funnel)**, sau đó phân phối lưu lượng người dùng sở hữu phương tiện giao thông (tệp khách hàng có giá trị cao) cho các BUs khác để tối ưu hóa doanh thu chéo:
+
+1.  **BU Bảo Hiểm (Insurance - Ô tô & Xe máy):**
+    *   *Hình thức hợp tác:* Tích hợp widget kiểm tra thời hạn và mua nhanh Bảo hiểm trách nhiệm dân sự (TNDS) bắt buộc hoặc Bảo hiểm thân vỏ tự nguyện trực tiếp tại trang kết quả tra cứu (Slot 4 / Slot 5).
+    *   *Cơ chế phân bổ ngân sách:* BU Bảo Hiểm tài trợ **35% - 40% chi phí SEM và vận hành** của Phạt Nguội dựa trên tỷ lệ lead chuyển đổi thành công mua bảo hiểm qua web/app.
+2.  **BU Tài Chính (Ví Trả Sau & Vay Nhanh):**
+    *   *Hình thức hợp tác:* Khi phát hiện lỗi phạt nguội có số tiền lớn (từ 1.000.000đ trở lên) hoặc người dùng có lịch sử điểm tín dụng tốt, hệ thống tự động hiển thị gợi ý mở **Ví Trả Sau (VTS)** hoặc đăng ký **Vay Nhanh** giải ngân trong 5 phút để thanh toán nộp phạt ngay lập tức.
+    *   *Cơ chế phân bổ ngân sách:* BU Tài Chính đồng tài trợ **30% chi phí chạy Ads** dựa trên số lượng tài khoản ví/khoản vay mới được kích hoạt từ trang Phạt Nguội.
+3.  **Mô hình Phân bổ Doanh thu & ROI (Attribution Model):**
+    *   Doanh thu từ các gói Subscription cảnh báo (Silver/Gold) phát sinh trên Web sẽ được ưu tiên hoàn bù chi phí marketing (SEM) của dự án trước khi phân bổ lợi nhuận cho BU PS.
+    *   Mọi lead chuyển đổi chéo thành công sang mua bảo hiểm/vay tiêu dùng sẽ được ghi nhận attribution 100% về cho phễu Phạt Nguội trên Web để tính toán ROI thực tế toàn diện (Total Portfolio ROI) thay vì chỉ đo lường ROI đơn lẻ của BU Phạt Nguội.
 
 ---
 
@@ -215,7 +229,7 @@ momo.vn/phat-nguoi [Hub]
 - Fine Code pSEO: `/loi-vi-pham/vuot-den-do` per mã lỗi vi phạm.
 ### 5.4 Luồng Mua Hàng & Thanh Toán trên Web (Web Subscription & MoMo Payment Checkout Flow)
 
-> **Cập nhật:** Sẽ mang tính năng mua Subscription lên trực tiếp trên Web. Tuần sau PO sẽ gửi BA Doc và User Flow (UX/UI).
+> **Cập nhật:** Tính năng mua gói Subscription giám sát phạt nguội tự động sẽ được ưu tiên phát triển và launch trực tiếp trên Web vào **Tháng 7/2026** (thuộc Phase 2) để giải quyết bài toán tạo doanh thu trực tiếp và cải thiện ROI dự án. PO đã bàn giao BA Doc và User Flow hoàn chỉnh.
 
 Nhằm tối ưu hóa doanh thu trực tiếp từ Web channel (Revenue Stream) và nâng cao trải nghiệm tự động hóa cho người dùng, MoSpark xây dựng luồng mua gói dịch vụ Giám sát Phạt nguội tự động (TTDK Subscription) và thanh toán trực tiếp bằng cổng MoMo Payment Gateway trên Web.
 
@@ -471,7 +485,14 @@ Mỗi cluster chỉ được gán một Canonical URL - áp dụng Cannibalizati
 
 - **63 tỉnh thành** `/phat-nguoi/[tinh-thanh]`: Mỗi trang cần unique data (camera nhiều nhất tỉnh, lỗi phổ biến, mức phạt cụ thể) - không thin content. Không deploy placeholder rỗng.
 - **Fine Code pSEO** `/phat-nguoi/blog/loi-[ma-loi]`: Per mã lỗi vi phạm cụ thể - target long-tail từ Cluster 4.
-- **Route pSEO** (Phase 3): `/phat-nguoi/quoc-lo-1a`, `/phat-nguoi/cao-toc-long-thanh`...
+- **Route pSEO** (Phase 2 - Triển khai T7/2026): `/phat-nguoi/tuyen-duong/quoc-lo-1a`, `/phat-nguoi/tuyen-duong/cao-toc-long-thanh`...
+  * **Tích hợp Dữ liệu Crawled Camera & Tuyến đường:** Hệ thống tự động tích hợp dữ liệu cào (crawl data) từ các nguồn chính thống và dữ liệu đóng góp cộng đồng về các tuyến đường có lắp camera phạt nguội.
+  * **Trường dữ liệu bắt buộc trên mỗi trang Route:**
+    1. Vị trí chính xác các camera phạt nguội (tọa độ, lý trình km).
+    2. Các lỗi phạt nguội phổ biến nhất trên tuyến (Ví dụ: chạy quá tốc độ, đi sai làn đường).
+    3. Tốc độ giới hạn cho phép của từng đoạn đường trên tuyến.
+    4. Biểu đồ thống kê số ca vi phạm trong 30 ngày gần nhất (anonymized stats).
+  * **Mục tiêu pSEO:** Đón đầu lượng search cực lớn về các từ khóa `"phạt nguội quốc lộ 1a"`, `"camera phạt nguội cao tốc Long Thành"`, giúp trang có nội dung dồi dào, unique 100%, vượt qua bộ lọc chống thin content của Google.
 
 ---
 
@@ -609,6 +630,7 @@ Theo Foundation Checklist chuẩn SEO Inventory. Mọi bài blog Phạt Nguội 
 
 | Ngày | Phiên bản | Thay đổi |
 |---|---|---|
+| 2026-06-26 | v3.8 | Tích hợp điều chỉnh họp BU Phạt Nguội: (1) Khóa lịch launch Subscription Web trong tháng 7/2026; (2) Thiết lập Khung đồng đầu tư Cross-BU Co-investment (Sec 3.4) để giải quyết bài toán ROI; (3) Nâng cấp đặc tả Route pSEO tích hợp dữ liệu cào camera/tuyến đường để đón đầu traffic. |
 | 2026-06-11 | v3.7 | Cập nhật thông tin budget Offpage (~75tr/2tháng - chờ review) và timeline Social Outreach (Q3), duy trì SEM. Bổ sung note PO chuẩn bị cung cấp BA Doc/Flow cho luồng Subscription Web (Sec 5.4). |
 | 2026-05-29 | v3.6 | Thêm Section 10 - Comm Activities Off-Page: Social Outreach (Internal BMC) + Backlink & Off-site (Vendor). Cập nhật Phase Roadmap bổ sung cột Off-page/Comm per phase. |
 | 2026-05-25 | v3.5 | Thêm Section 9 - SEO/GEO Content Engine GenAI Production Plan. Tích hợp SEO Inventory v4.7 framework: phân loại Mass Traffic/DVC, Keyword Cluster Priority Map (7 clusters/P0-P3), GenAI Production Plan 3 phases (Batch 1 done/Batch 2 T6/Pháp 2 pSEO), Content Quality Gate 6 cổng, SoV Tracking Plan với milestones T6-T12/2026. |
