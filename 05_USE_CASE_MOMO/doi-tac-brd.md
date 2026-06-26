@@ -93,7 +93,7 @@ MoMo có đủ điều kiện giải quyết gap này: domain authority momo.vn,
 
 ## 3. Định Hướng Dự Án
 
-### 3.1 Dự Án Này Phục Vụ Điều Gì?
+### 3.1 Dự Án Này Phục vụ Điều Gì?
 
 **Dual-sided product - 3 điểm kết nối:**
 
@@ -104,9 +104,15 @@ MoMo có đủ điều kiện giải quyết gap này: domain authority momo.vn,
   - **Ví Trả Sau (VTS):** Kích cầu tiêu dùng thông qua mô hình mua trước trả sau (BNPL), giúp SME gia tăng giá trị đơn hàng trung bình (AOV) và tiếp cận tệp khách hàng trẻ.
   - **Vay Nhanh (Fast Loan):** Giúp SME tiếp cận các nguồn vốn kinh doanh tín chấp ưu đãi linh hoạt trực tiếp từ đối tác tài chính liên kết trên MoMo để kịp thời bổ sung vốn lưu động dựa trên lịch sử giao dịch.
   - **Bảo Hiểm (Insurance):** Giảm thiểu rủi ro vận hành (bảo hiểm tài sản, cháy nổ cửa hàng, hoặc bảo hiểm sức khỏe cho chủ quán/nhân viên).
+- **QR Code Merchant URL:** Tự động tạo và cung cấp QR Code động trỏ trực tiếp về trang chi tiết Merchant, hỗ trợ in ấn tại quầy nhằm thu hút khách hàng offline quét mã truy cập xem thông tin, thực đơn, ưu đãi số.
 - **Tiếp cận đa kênh:** Giúp SME tăng độ phủ thương hiệu và xuất hiện nổi bật trên Google Search, AI Agent responses (ChatGPT, Perplexity...) cũng như tiếp cận trực tiếp tệp khách hàng in-app khổng lồ của MoMo.
 
-**Cho Consumer:** Xác nhận merchant nhận MoMo/VTS và kích hoạt O2O ngay từ trang. Product job: xác nhận + activate trong 3 bước.
+**Cho Consumer:** Xác nhận merchant nhận MoMo/VTS và kích hoạt O2O ngay từ trang. Product job: xác nhận + activate trong 3 bước:
+- **Thực đơn (Menu) cào tự động:** Xem menu món ăn và giá bán F&B được cào tự động và đồng bộ trực tiếp từ Grabfood/Shopeefood thay vì menu tĩnh hay dữ liệu Google Maps lỗi thời.
+- **Bảo mật số điện thoại (NĐ 13):** Ẩn 4 chữ số cuối của SĐT liên hệ, hiển thị nút "Xem" để bảo mật thông tin cá nhân. Tracking custom event `view_phone` khi user click xem số đầy đủ.
+- **Social Profile:** Truy cập nhanh các liên kết mạng xã hội của quán (Facebook, Instagram, TikTok, Website) qua các icon được tích hợp.
+- **Nhãn "Đối tác MoMo":** Yên tâm giao dịch khi thấy nhãn xác thực "Đối tác MoMo" nổi bật bên cạnh tên merchant (chỉ hiển thị khi mapping thành công M4B ID).
+- **Header và Navigate Menu cải tiến:** Giao diện Header đồng thương hiệu hiển thị Logo Merchant đặt cạnh logo MoMo, kết hợp Navigate Menu dạng anchor links điều hướng scroll mượt đến các vùng thông tin trên trang.
 
 **Cho MoMo - O2O Ecosystem Connector:** Merchant Microsite là điểm kết nối tam giác End User / MoMo / Merchant thông qua các giải pháp tài chính và O2O:
 - **VTS (Ví Trả Sau):** Kích hoạt dòng tiền BNPL của người dùng chi trả cho Merchant.
@@ -137,6 +143,29 @@ MoMo có đủ điều kiện giải quyết gap này: domain authority momo.vn,
 - Không phải store locator (merchant-level, không phải branch-level)
 - Không phải trang marketing/campaign - đây là evergreen content + platform
 - Không phải Google Business Profile replica - MoMo value-add là O2O stack, không phải local listing đơn thuần
+
+### 3.3 Phân Tách Gói Giải Pháp Merchant Page (Basic vs Premium)
+
+Để tối ưu hóa tài nguyên vận hành, phân loại tệp đối tác chiến lược và tạo ra lợi thế cạnh tranh số (Moat) vượt trội, trang Merchant Page được phân thành hai nhóm giải pháp: **Basic (Cơ Bản)** và **Premium (Cao Cấp)**.
+
+| Tiêu chí | Gói Basic (Cơ Bản) | Gói Premium (Cao Cấp) |
+| :--- | :--- | :--- |
+| **Đối tượng mục tiêu** | SME offline cực nhỏ (quán vỉa hè, hộ kinh doanh nhỏ lẻ). | Key Accounts (KA), chuỗi thương hiệu lớn (Highlands, Phê La, Circle K...) hoặc đối tác tích cực. |
+| **Mục tiêu chiến lược** | Phủ sóng nhanh diện diện số (Digital Presence), tối ưu hóa SEO/GEO Search quy mô lớn. | Tương tác O2O chuyên sâu, gia tăng giá trị đơn hàng (AOV), giữ chân khách hàng thông qua hệ sinh thái số. |
+| **Dữ liệu NAP & Bản đồ** | Địa chỉ, vị trí Map, số điện thoại ẩn 4 số cuối (NĐ 13) + nút "Xem". | NAP cơ bản + **Tích hợp đồng bộ nâng cao với Google Maps** (Đẩy dữ liệu xác thực của MoMo lên Google Maps để tạo Official Profiles). |
+| **Huy hiệu & Thanh toán** | badge Ví MoMo, Ví Trả Sau. | badge MoMo, Ví Trả Sau + **Nhãn xác thực "Đối tác MoMo" nổi bật** (khi mapping thành công M4B ID nâng cao). |
+| **Thực đơn & Giá cả** | Không hiển thị hoặc nhập tay tối giản. | **Thực đơn (Menu) cào tự động từ Shopeefood/Grabfood** (đồng bộ giá/món ăn tự động mỗi 7 ngày hoặc refresh qua CMS). |
+| **Đánh giá & Review** | Chỉ hiển thị điểm rating trung bình. | **Review Integration & AI Summary** (Tích hợp rating MoMo/Google Places + Gemini tóm tắt review thành Unique Content 100% tránh phạt duplicate content). |
+| **Giao diện Header** | Header MoMo mặc định. | **Co-branded Header & Navigate Menu** (Logo đối tác kế logo MoMo, menu anchor links cuộn mượt + Scroll-Spy tự động highlight). |
+| **Social & Kết nối** | Không hỗ trợ. | **Social Profiles** (Icon Facebook, Instagram, TikTok, Website) + **Tích hợp Official Account (OA ID)** để quan tâm OA trực tiếp từ Web. |
+| **QR Code điểm bán** | QR Code tĩnh dẫn về URL Merchant. | QR Code động tích hợp sẵn UTM tracking nâng cao + nút tải ảnh chất lượng cao trên CMS. |
+| **CMS Workflow** | Tạo tự động hàng loạt từ dữ liệu thô (Bottom-up PM Field Driven). | Luồng kiểm duyệt nâng cao, enrich dữ liệu Places API và đồng bộ M4B nâng cao. |
+
+> [!NOTE]
+> **Điểm đặc sắc của gói Premium (The Premium Moat):**
+> * **Giải phóng 95% lực lượng vận hành:** Nhờ tích hợp API tự động cào menu từ Shopeefood/Grabfood, dữ liệu thực đơn luôn được cập nhật theo thời gian thực mà không cần PM nhập tay.
+> * **Độc bản nội dung với AI Summary:** Việc chuyển đổi các bài đánh giá thô thành đoạn tóm tắt thông minh của Gemini giúp MoMo sở hữu nội dung độc nhất (Unique Content 100%), tối ưu SEO vượt trội mà không vi phạm bản quyền hay bị Google phạt trùng lặp nội dung.
+> * **Trải nghiệm mượt mà không tải lại trang:** Navigate Menu dạng anchor links kết hợp hiệu ứng cuộn mượt và Scroll-Spy giúp trang Premium mang lại trải nghiệm như một ứng dụng đơn trang (Single Page App) cao cấp.
 
 ---
 
@@ -270,6 +299,8 @@ Người dùng cuối mong muốn một hành trình mượt mà, thông tin tru
 | Cấp | URL Pattern | Số lượng | Vai trò |
 |---|---|---|---|
 | Hub | `momo.vn/merchant` | 1 | Discovery + Navigation |
+| Listing (Hành chính) | `momo.vn/merchant/danh-sach/{tinh-thanh}` hoặc `momo.vn/merchant/danh-sach/{tinh-thanh}/{quan-huyen}` | Hàng trăm (tỉnh) -> Hàng ngàn (quận) | Định hướng tìm kiếm địa bàn hành chính |
+| Listing (POI/Địa điểm) | `momo.vn/merchant/danh-sach/{tinh-thanh}/diem-den/{poi-slug}` | Hàng ngàn (malls, chợ, phố,...) | Định hướng tìm kiếm cửa hàng (như Ví Trả Sau) tại POI cụ thể |
 | Merchant Detail | `momo.vn/merchant/{ten-merchant}-{id}` | 39 (pilot) → Hàng nghìn đối tác (scale) | Decision + O2O Conversion (cho cả SME và Chain) |
 | Sub-pages (Phase II) | `momo.vn/merchant/{slug}/{sub-page}` | **[TẠM GÁC LẠI / SHELVED]** | Tạm hoãn; tất cả các thông tin Menu/Chi nhánh/Ưu đãi gom về trang chính. |
 
@@ -576,6 +607,10 @@ Cập nhật phân công chi tiết cho các thành viên dự án (Tuần 2 th�
 | **Live** | **Deleted** | ❌ (Bị khóa) | ✔ (Cho phép) | ✔ (Cho phép) |
 | **Live** | **Review** (Sửa lớn) | ✔ (Cho phép) | ✔ (Cho phép) | ✔ (Cho phép) |
 
+#### D. Quy chuẩn Bảo mật Số điện thoại (Nghị định 13) & QR Code Điểm bán
+1. **Ẩn SĐT một phần:** Trên Frontend của trang Live, số điện thoại NAP bắt buộc phải ẩn đi 4 chữ số cuối (dạng `090xxxx123` hoặc `0901 234 ***`) và hiển thị nút **"Xem"** kế bên để đảm bảo tuân thủ quy định bảo vệ dữ liệu cá nhân của Nghị định 13/2023/NĐ-CP. Gửi tracking event `view_phone` khi người dùng nhấp chọn xem SĐT đầy đủ.
+2. **Quy chuẩn QR Code:** Khi trang chuyển sang trạng thái **Live**, hệ thống CMS tự động tạo QR Code dẫn về URL merchant (`momo.vn/merchant/{slug}`). Mã QR này được nhúng UTM mặc định để đo lường nguồn truy cập từ offline quét mã tại quầy đối tác.
+
 ---
 
 ## 10.5 Checklist Đóng Phase I & Kickoff Phase II - T6/2026
@@ -624,18 +659,24 @@ Mọi Merchant được khởi tạo trên hệ thống bắt buộc phải đư
 * PM/Editor rà soát bảng từ khóa trong SEO/GEO Project -> Xác định đối tác cần onboard tương thích với cụm từ khóa mục tiêu -> Bấm nút kích hoạt dựng để hệ thống đẩy đối tác đó qua **Luồng tạo Merchant (Merchant Creation Flow)**.
 
 #### 11.2 Layer 2: Luồng Tạo Merchant & User Input (Merchant Creation Flow)
-Tại giao diện Form khởi tạo, hệ thống yêu cầu User (Editor/Admin) nhập trực tiếp (User input) **4 thông tin quan trọng** của Merchant để thiết lập Base Data và bối cảnh cho trang đích:
+Tại giao diện Form khởi tạo, hệ thống yêu cầu User (Editor/Admin) nhập trực tiếp (User input) các thông tin quan trọng của Merchant để thiết lập Base Data, cào dữ liệu và bối cảnh cho trang đích:
 1. **Địa chỉ (Address):** Địa chỉ vật lý chính xác của quán phục vụ tính năng Map/Location.
-2. **MerchantID (M4B ID):** ID định danh đối tác trên hệ thống MoMo, phục vụ liên kết dữ liệu Ví Trả Sau/Soundbox và sinh Deep Link Web-to-App (`momo://app/merchant?id={merchant_id}`).
-3. **GenAI content:** Nội dung mô tả giới thiệu chi tiết (Intro, FAQ) được GenAI sinh ra dựa trên bối cảnh nghiệp vụ chung trộn với thông tin đối tác cụ thể và được người dùng duyệt/chỉnh sửa trực tiếp.
-4. **Image (Hình ảnh):** Tải lên hình ảnh logo hoặc banner thực tế chính thức của quán.
+2. **MerchantID (M4B ID) & Search đối tác:** Hỗ trợ nhập trực tiếp MerchantID hoặc cung cấp thanh tìm kiếm thông minh trên giao diện CMS để tìm kiếm đối tác theo **Tên quán, Store ID hoặc OA ID**, hệ thống tự động trả về và mapping MerchantID (M4B ID). Khi PM mapping thành công ID này, hệ thống sẽ tự động gán nhãn **"Đối tác MoMo"** hiển thị trên Frontend.
+3. **Grabfood/Shopeefood URL:** PM/Editor khai báo link gian hàng Grabfood hoặc Shopeefood để hệ thống cào dữ liệu thực đơn (Menu cào tự động) và cập nhật giá món ăn.
+4. **GenAI content:** Nội dung mô tả giới thiệu chi tiết (Intro, FAQ) được GenAI sinh ra dựa trên bối cảnh nghiệp vụ chung trộn với thông tin đối tác cụ thể và được người dùng duyệt/chỉnh sửa trực tiếp.
+5. **Image (Hình ảnh) & Social Links:** Tải lên hình ảnh logo/banner chính thức của quán và khai báo các link Social Profiles (Facebook, Instagram, TikTok, Website nếu có).
 
-*Lưu ý: Nút Tiếp Tục (Kích hoạt QC Gate) sẽ bị khóa cho đến khi User nhập đầy đủ và hợp lệ cả 4 trường thông tin bắt buộc nêu trên để tránh tạo ra các trang "thin content" thiếu dữ liệu.*
+*Lưu ý: Nút Tiếp Tục (Kích hoạt QC Gate) sẽ bị khóa cho đến khi User nhập đầy đủ và hợp lệ các trường thông tin bắt buộc nêu trên (Địa chỉ, MerchantID, Menu Source, Image) để tránh tạo ra các trang "thin content" thiếu dữ liệu.*
 
 #### 11.3 Layer 3: Kiểm duyệt và Xác nhận thông tin (Verify & Publish)
 Giao diện CMS hiển thị bản thảo hoàn thiện của trang đối tác:
-* PM xem trước toàn bộ giao diện hiển thị, chỉnh sửa trực tiếp nội dung văn bản (GenAI content) và kiểm tra hình ảnh.
-* Hệ thống tự động rà soát qua cổng kiểm soát chất lượng **QC Gate** (kiểm tra tính hợp lệ của địa chỉ, định dạng MerchantID, sự hiện diện của badge thanh toán và hình ảnh).
+* PM xem trước toàn bộ giao diện hiển thị bao gồm:
+  - Header cải tiến: Logo Merchant đặt cạnh Logo MoMo, Navigate Menu chứa anchor links `#tong-quan`, `#thuc-don`, `#chi-nhanh`, `#uu-dai`.
+  - NAP block: SĐT được ẩn 4 số cuối (kèm nút Xem), các icon Social Profiles được tích hợp.
+  - Nhãn "Đối tác MoMo" hiển thị nổi bật bên cạnh tên merchant.
+  - Menu F&B cào tự động từ Shopeefood/Grabfood.
+* PM chỉnh sửa trực tiếp nội dung văn bản (GenAI content) và kiểm tra hình ảnh.
+* Hệ thống tự động rà soát qua cổng kiểm soát chất lượng **QC Gate** (kiểm tra tính hợp lệ của địa chỉ, định dạng MerchantID, sự hiện diện của badge thanh toán, dữ liệu menu cào và hình ảnh).
 * PM xác nhận thông tin OK và nhấn **Publish** để chính thức xuất bản trang. Hệ thống tự động cập nhật URL vào Sitemap XML và ping chỉ mục (Indexing API).
 
 ---
@@ -668,8 +709,9 @@ graph TD
 
 #### 11.4 Cơ chế kiểm duyệt và Onboard tự động (Workflow Spec)
 1. **Slug conflict check:** Hệ thống tự động kiểm tra tính duy nhất của slug URL. Nếu bị trùng, hệ thống tự động thêm ID backend làm hậu tố (Ví dụ: `bun-thit-nuong-chi-tuyen-44`) để tránh lỗi trùng lặp URL.
-2. **QC Gate Validation:** CMS tự động rà soát các trường NAP và Payment Methods. Nếu thiếu thông tin bắt buộc, nút Publish sẽ bị khóa và hiển thị cảnh báo lỗi chi tiết.
-3. **Publish & Indexing:** Khi PM xác nhận Publish thành công, hệ thống MoSpark sẽ tự động cập nhật URL mới vào file XML sitemap và gửi ping index lên Google.
+2. **QC Gate Validation:** CMS tự động rà soát các trường NAP, Payment Methods và Menu. Nếu thiếu thông tin bắt buộc, nút Publish sẽ bị khóa và hiển thị cảnh báo lỗi chi tiết.
+3. **Tự động tạo QR Code:** CMS tự động tạo mã QR Code động trỏ trực tiếp về URL merchant và cung cấp nút **"Tải QR Code"** kèm UTM tracking mặc định ở trang quản trị để PM tải xuống in ấn.
+4. **Publish & Indexing:** Khi PM xác nhận Publish thành công, hệ thống MoSpark sẽ tự động cập nhật URL mới vào file XML sitemap và gửi ping index lên Google.
 4. **SEO Inventory & Market Research Preview (Trước khi tạo):** Nhằm hỗ trợ PM đưa ra quyết định tối ưu hóa cấu trúc nội dung và định hướng từ khóa trước khi kích hoạt tạo trang và sinh nội dung GenAI, CMS sẽ tự động hiển thị báo cáo:
    - **Search Volume (Lượng tìm kiếm):** Hiển thị lượt tìm kiếm trung bình tháng của tên merchant hoặc các từ khóa thương hiệu + địa điểm liên quan.
    - **Keyword Difficulty (KD):** Chỉ số độ khó từ khóa (0-100) để đánh giá mức độ cạnh tranh trên công cụ tìm kiếm.
@@ -728,16 +770,41 @@ Xây dựng trang chủ `momo.vn/merchant` đóng vai trò là danh bạ đối 
   * Lọc nhanh theo loại ưu đãi: "Có nhận Ví Trả Sau", "Đang có Hoàn tiền/Cashback".
 
 ### 14. Listing Page (pSEO) & Anti-Thin Content Rules
-Mở rộng quy mô hiển thị tự động (Programmatic SEO) với hàng chục nghìn trang danh mục khu vực để đón đầu từ khóa tìm kiếm địa phương (local intent):
-- **Cấu trúc URL & internal linking:**
-  * Sinh tự động các trang listing theo cấu trúc hành chính: `momo.vn/merchant/danh-sach/{tinh-thanh}` và `momo.vn/merchant/danh-sach/{tinh-thanh}/{quan-huyen}` (Ví dụ: `momo.vn/merchant/danh-sach/hcm/quan-1`).
-  * Tự động xây dựng liên kết nội bộ chéo (Internal Linking Mesh) thông qua cấu trúc breadcrumbs tiêu chuẩn: `Trang chủ -> Tìm đối tác -> TP.HCM -> Quận 1`.
-- **Quy tắc chống nội dung rác (Anti-Thin Content Rules):**
-  * Để ngăn ngừa Google phạt thuật toán do trang danh mục rác/ít nội dung, mỗi trang Listing Page phải có ít nhất 5 merchant đang hoạt động.
-  * Mỗi trang listing tự động inject thêm 2 thành phần dynamic content:
-    1. **FAQ Block:** Hỏi đáp tự động (Ví dụ: "Quận 1 có bao nhiêu quán nhận Ví Trả Sau?", "Cách thanh toán MoMo tại Quận 1").
-    2. **Dynamic Top List:** Top 5 merchant được yêu thích nhất trong quận dựa trên điểm rating thực tế.
-  * Nếu một quận/huyện có dưới 5 merchant hoạt động, hệ thống sẽ tự động set thẻ meta `noindex, nofollow` và ẩn khỏi sitemap để bảo vệ website crawl budget.
+Mở rộng quy mô hiển thị tự động (Programmatic SEO) với hàng chục nghìn trang danh mục khu vực để đón đầu từ khóa tìm kiếm địa phương (local intent), đặc biệt tập trung vào địa bàn hành chính và các địa điểm/POI (Chợ, Mall, Trường học, Tuyến phố,...) có nhu cầu thanh toán Ví Trả Sau (VTS) cao:
+
+- **14.1 Phân loại trang Listing pSEO (URL & Linking Structure):**
+  * **Trang Listing Hành chính:** Sinh tự động theo cấu trúc hành chính: `momo.vn/merchant/danh-sach/{tinh-thanh}` và `momo.vn/merchant/danh-sach/{tinh-thanh}/{quan-huyen}` (Ví dụ: `momo.vn/merchant/danh-sach/hcm/quan-1`).
+  * **Trang Listing POI / Địa điểm:** Sinh tự động theo cấu trúc địa điểm đặc trưng: `momo.vn/merchant/danh-sach/{tinh-thanh}/diem-den/{poi-slug}` (Ví dụ: `momo.vn/merchant/danh-sach/hcm/diem-den/cho-ben-thanh`, `momo.vn/merchant/danh-sach/hn/diem-den/aeon-mall-long-bien`).
+  * **Hệ thống phân loại POI (Taxonomy):**
+    1. *Mall / TTTM:* Aeon Mall, Vincom Mega Mall, Lotte Mall, Crescent Mall...
+    2. *Chợ truyền thống:* Chợ Bến Thành, Chợ Đồng Xuân, Chợ An Đông, Chợ Lớn...
+    3. *Trường đại học:* Đại học Bách Khoa, Đại học Quốc Gia, RMIT...
+    4. *Tuyến phố mua sắm/ẩm thực:* Nguyễn Huệ, Phố Huế, Phan Xích Long...
+    5. *Tòa nhà / Landmark:* Landmark 81, Bitexco, Keangnam...
+    6. *Sân bay / Nhà ga:* Sân bay Tân Sơn Nhất, Sân bay Nội Bài, Ga Sài Gòn...
+  * **Cơ chế liên kết nội bộ chéo (Internal Linking Mesh):**
+    * Đối với trang Listing Hành chính: `Trang chủ -> Tìm đối tác -> {Tỉnh/Thành} -> {Quận/Huyện}`.
+    * Đối với trang Listing POI: `Trang chủ -> Tìm đối tác -> {Tỉnh/Thành} -> {Quận/Huyện} -> {Tên Địa Điểm}`.
+
+- **14.2 Cơ chế Ánh xạ đối tác vào POI (POI Merchant Mapping Logic):**
+  * **Trùng khớp Tên/Địa chỉ (Text-matching & M4B metadata):** Lọc theo trường dữ liệu địa chỉ hoặc tên merchant có chứa tên POI (ví dụ: "Highlands Coffee Aeon Mall Tân Phú", "Kiot 24 Chợ Bến Thành").
+  * **Bán kính Tọa độ Địa lý (Geo-coordinates Radius):** Lọc tự động các đối tác SME/Offline nằm trong bán kính tọa độ xác định của POI:
+    * Đối với Mall/Building/Market khép kín: Bán kính $r \le 100m - 150m$ để đảm bảo merchant nằm trong/sát POI.
+    * Đối với Tuyến phố/Đại học/Khu vực mở rộng: Bán kính $r \le 300m - 500m$ dọc theo tuyến đường hoặc trong khuôn viên.
+
+- **14.3 Quy tắc chống nội dung rác (Anti-Thin Content Rules):**
+  * **Đối với trang Listing Hành chính:** Bắt buộc có tối thiểu **5 merchant hoạt động**. Nếu dưới 5, tự động set thẻ meta `noindex, nofollow` và ẩn khỏi sitemap để bảo vệ website crawl budget.
+  * **Đối với trang Listing POI / Địa điểm:**
+    * Yêu cầu tối thiểu **3 merchant hoạt động** (do POI có phạm vi nhỏ hơn quận/huyện).
+    * **Cơ chế Fallback bán kính (Radius Fallback):** Nếu POI có dưới 3 merchant bên trong, hệ thống tự động quét mở rộng bán kính lên 500m - 1km xung quanh tọa độ POI để gom thêm đối tác lân cận và hiển thị dưới nhãn: *"Cửa hàng chấp nhận Ví Trả Sau gần {Tên POI}"*.
+    * Nếu tổng số đối tác (ở trong POI + lân cận bán kính fallback) vẫn dưới 3 merchant, trang đó sẽ tự động bị set thẻ meta `noindex, nofollow` để tránh Google phạt thin content.
+
+- **14.4 Nội dung Động (Dynamic Content Injection per Listing):**
+  * **FAQ Block (Hỏi đáp tự động):**
+    * *Ví dụ cho Listing Hành chính:* "Quận 1 có bao nhiêu quán nhận Ví Trả Sau?", "Cách thanh toán MoMo tại Quận 1".
+    * *Ví dụ cho Listing POI:* "Aeon Mall Tân Phú có những shop nào thanh toán bằng Ví Trả Sau MoMo?", "Tôi có thể dùng Ví Trả Sau mua sắm tại Chợ Bến Thành không?".
+  * **Dynamic Top List:** Top 5 merchant được yêu thích nhất (dựa trên rating thực tế từ Umami/momo.vn reviews).
+  * **Trust Signal Badges:** Các merchant card hiển thị trên listing phải tự động hiển thị counter `"Được XX khách MoMo tin dùng"` (giao dịch thực tế anonymized) và badge `"Hỗ trợ Ví Trả Sau"` nổi bật để tăng CTR.
 
 ### 15. Engagement Signals & Social Proof (Phase II)
 

@@ -118,14 +118,20 @@ Khách scan QR tại quầy / Soundbox
 ### 3.1 NAP Block (Name, Address, Phone)
 
 **User Story:**
-> As a consumer, I want to see accurate merchant info (name, address, hours, phone) at a glance so that I can confirm I'm on the right page before taking action.
+> As a consumer, I want to see accurate merchant info (name, address, hours, phone, social networks) and verify their partner status at a glance so that I can confirm I'm on the right page and feel secure.
 
 **Acceptance Criteria:**
-- [ ] Hiển thị: Tên merchant, địa chỉ, số điện thoại, giờ hoạt động
-- [ ] Data source: Single source of truth từ M4B API - không nhập thủ công trong bài viết
-- [ ] Logo / Banner: Ảnh thương hiệu chính thức từ merchant data
-- [ ] Hiển thị đúng trên mobile (primary breakpoint 375px)
-- [ ] Schema LocalBusiness inject đầy đủ: name, address, telephone, openingHours, geo coordinates
+- [ ] **Hiển thị thông tin NAP:** Tên merchant, địa chỉ, số điện thoại, giờ hoạt động.
+- [ ] **Bảo mật & Ẩn số điện thoại một phần (Compliance NĐ 13):**
+  - Số điện thoại hiển thị trên giao diện phải được ẩn 4 chữ số cuối (ví dụ: `0901 234 ***`).
+  - Hiển thị nút **"Xem"** bên cạnh.
+  - Khi người dùng click nút "Xem", số điện thoại đầy đủ sẽ hiển thị, đồng thời hệ thống trigger custom event `view_phone` gửi về Umami/GA4 phục vụ đo lường tương tác thực tế.
+- [ ] **Social Profile:** Hiển thị các icon liên kết mạng xã hội (Facebook, Instagram, TikTok, Website chính thức) của brand đó bên cạnh thông tin liên hệ (nếu trong database của brand có khai báo).
+- [ ] **Nhãn "Đối tác MoMo" (Trust Signal):** Hiển thị Label "Đối tác MoMo" nổi bật bên cạnh tên merchant nếu merchant được mapping thành công `merchantID` (M4B ID).
+- [ ] **Data source:** Single source of truth từ M4B API - không nhập thủ công trong bài viết.
+- [ ] **Logo / Banner:** Ảnh thương hiệu chính thức từ merchant data.
+- [ ] **Hiển thị đúng trên mobile:** responsive, primary breakpoint 375px.
+- [ ] **Schema LocalBusiness inject đầy đủ:** name, address, telephone (lưu ý schema khai báo số điện thoại đầy đủ để bot cào, nhưng frontend render ẩn), openingHours, geo coordinates.
 
 **Priority:** P0
 
@@ -224,18 +230,25 @@ Khách scan QR tại quầy / Soundbox
 
 ---
 
-### 3.7 Listing Page pSEO (`momo.vn/merchant/danh-sach/{slug}`)
+### 3.7 Listing Page pSEO (Hành chính & POI/Địa điểm)
 
 **User Story:**
-> As a consumer searching "quán ăn nhận MoMo quận 1", I want a curated list page for my area so that I can browse options without landing on a generic page.
+> As a consumer searching "cửa hàng nhận Ví Trả Sau tại Aeon Mall" or "quán ăn nhận MoMo quận 1", I want a curated list page for my area or destination so that I can browse options and locate VTS merchants without landing on a generic page.
 
 **Acceptance Criteria:**
-- [ ] URL pattern: `/merchant/danh-sach/{tinh-thanh}` và `/merchant/danh-sach/{tinh-thanh}/{quan-huyen}`
-- [ ] Anti-thin content gate: chỉ publish nếu >= 5 merchant active trong khu vực
-- [ ] < 5 merchants: auto set `noindex, nofollow` + remove khỏi sitemap
-- [ ] Dynamic content bắt buộc: FAQ Block (tự sinh theo khu vực) + Top 5 merchants (by rating)
-- [ ] BreadcrumbList Schema: Trang chủ > Tìm đối tác > {Tỉnh} > {Quận}
-- [ ] Internal linking mesh: cross-link giữa Hub, Listing pages, và Merchant Detail pages
+- [ ] **URL patterns:**
+  * Listing Hành chính: `/merchant/danh-sach/{tinh-thanh}` và `/merchant/danh-sach/{tinh-thanh}/{quan-huyen}`
+  * Listing POI / Địa điểm: `/merchant/danh-sach/{tinh-thanh}/diem-den/{poi-slug}` (Ví dụ: `momo.vn/merchant/danh-sach/hcm/diem-den/cho-ben-thanh`, `momo.vn/merchant/danh-sach/hn/diem-den/vincom-ba-trieu`)
+- [ ] **POI Taxonomy support:** Mall/TTTM, Chợ truyền thống, Tuyến phố mua sắm, Trường Đại học, Tòa nhà/Landmark, Sân bay/Nhà ga.
+- [ ] **Anti-thin content gate:**
+  * Listing Hành chính: Publish nếu $\ge 5$ merchant active trong khu vực. Nếu $< 5$, auto set `noindex, nofollow` + remove khỏi sitemap.
+  * Listing POI / Địa điểm: Publish nếu $\ge 3$ merchant active.
+  * **Radius Fallback logic:** Nếu POI có $< 3$ merchants, tự động quy quét bán kính 500m - 1km xung quanh tọa độ POI để hiển thị thêm đối tác lân cận dưới nhãn *"Cửa hàng chấp nhận Ví Trả Sau gần {POI}"*. Nếu tổng cộng (POI + lân cận) vẫn $< 3$, set `noindex, nofollow` + remove khỏi sitemap.
+- [ ] **Dynamic content bắt buộc:** FAQ Block (tự sinh theo khu vực/địa điểm, ví dụ: *"Cách dùng Ví Trả Sau tại Chợ Bến Thành"*) + Top 5 merchants (by rating) + Trust Badges (`Hỗ trợ Ví Trả Sau`, `Được XX khách MoMo tin dùng`).
+- [ ] **BreadcrumbList Schema:**
+  * Listing Hành chính: `Trang chủ > Tìm đối tác > {Tỉnh} > {Quận}`
+  * Listing POI / Địa điểm: `Trang chủ > Tìm đối tác > {Tỉnh} > {Quận} > {Tên Địa Điểm}`
+- [ ] **Internal linking mesh:** cross-link giữa Hub, Listing pages (admin & POIs), và Merchant Detail pages.
 
 **Priority:** P2 (Phase II)
 
@@ -300,9 +313,13 @@ graph TD
   - Hỗ trợ PM tải lên dữ liệu thô và map vào SEO Cluster đã lên kế hoạch.
   - Hiển thị màn hình xem trước SEO Inventory (Market Research) của Merchant Name đó để PM xác nhận trước khi kích hoạt GenAI sinh bài.
 - [ ] **Luồng 2 (Bottom-up - PM Field Driven):**
-  - Hỗ trợ nhập liệu thủ công (Manual NAP & Category) hoặc nhập Merchant ID từ M4B để tự động gọi API đồng bộ thông tin hành chính.
+  - Hỗ trợ nhập liệu thủ công (Manual NAP & Category) hoặc mapping đối tác. Hệ thống cung cấp thanh tìm kiếm thông minh trên CMS cho phép tìm kiếm đối tác theo **Tên quán, Store ID hoặc OA ID** để tự động lấy và mapping `MerchantID` (M4B ID), hoặc nhập trực tiếp `MerchantID` nếu có sẵn. Khi mapping thành công, hệ thống tự động gọi API đồng bộ thông tin hành chính từ M4B và tự động gán nhãn "Đối tác MoMo" hiển thị trên giao diện Frontend của trang chi tiết.
   - Tích hợp **Google Map Search Crawler (Gemini-powered)** để tìm kiếm điểm bán tương ứng trên Google Maps và tự động điền (Manual) hoặc làm giàu dữ liệu (M4B Sync) cho các trường: Tên đối tác chuẩn hóa, Địa chỉ chính xác, Giờ mở/đóng cửa, Tiện ích/Dịch vụ.
   - Hiển thị bảng Market Research (Search Volume, KD, Search Intent, Competitors) từ SEO Inventory Database để PM duyệt/tối ưu trước khi tạo bài.
+- [ ] **Tạo & Tải QR Code dẫn về URL Merchant:**
+  - Trên trang quản trị CMS, sau khi merchant page được tạo và lưu thành công, hệ thống tự động tạo mã QR Code động trỏ trực tiếp về URL merchant (`momo.vn/merchant/{slug}`).
+  - Mã QR Code được tích hợp sẵn cấu hình UTM mặc định: `utm_source=qr&utm_medium=offline&utm_campaign=merchant-qr&utm_content={merchant_id}`.
+  - Giao diện CMS cung cấp nút **"Tải QR Code"** (Download QR Code) cho phép PM/Editor tải xuống dưới định dạng ảnh chất lượng cao (.png hoặc .svg) để in ấn dán tại điểm bán offline.
 - [ ] **Technical Specification cho Google Map Search Crawler:**
   - **Cơ chế Trigger:** Giao diện CMS Layer 2 phát ra sự kiện trigger API khi:
     - PM nhập xong trường `Merchant Name` ở luồng Manual (delay debounce 500ms).
@@ -436,10 +453,10 @@ graph TD
 
 ---
 
-### 3.14 Merchant Detail Page Routing & Single-page Layout [SHELVED - TEMPORARILY DEFERRED]
+### 3.14 Merchant Detail Page Routing, Header & Single-page Layout [SHELVED - TEMPORARILY DEFERRED]
 
 **User Story:**
-> As a PM and SEO Manager, I want to temporarily suspend the generation of sub-page URLs and enforce a single-page inline layout for all merchants, so that development complexity is reduced, operational resources are focused, and crawl budget is protected across all 500k OAs.
+> As a PM and SEO Manager, I want to temporarily suspend the generation of sub-page URLs, enforce a single-page inline layout, show co-branded header with anchor navigation, and scrape menu data from Grabfood/Shopeefood to reduce development complexity and protect crawl budget.
 
 **Acceptance Criteria & Shelving Rules:**
 - [ ] **Enforced Single-page Architecture:**
@@ -448,9 +465,15 @@ graph TD
 - [ ] **Router & 301 Redirect Rules (Edge/Middleware level):**
   - If a user or bot requests any sub-page path under a merchant (e.g. `/merchant/{slug}/menu`, `/merchant/{slug}/chi-nhanh`, `/merchant/{slug}/uu-dai`), the router must immediately trigger a server-side **301 Permanent Redirect** back to the parent URL `/merchant/{slug}`.
   - All UTM query parameters MUST be preserved and forwarded during redirection.
-- [ ] **UI Inline Layout & Tabs:**
-  - All content sections (Name/Address/Phone, Map widget, VTS module, Cashback campaigns, Menu list, Branch lists, FAQ, and HowTo) must be rendered **inline** on the single parent page `/merchant/{slug}`.
-  - Use Client-side Tabs (e.g. "Tổng quan", "Thực đơn", "Chi nhánh", "Ưu đãi") or scroll scroll-spy elements to toggle or jump between sections. Clicking these tabs must not reload the page or alter the URL path.
+- [ ] **Cải tiến Header & Navigate Menu:**
+  - **Co-branded Logo:** Logo của Merchant phải được đặt ở Header, đặt cạnh logo MoMo (dạng `[MoMo Logo] | [Merchant Logo]`).
+  - **Navigate Menu:** Mang các section thông tin chính lên thanh Navigate Menu đầu trang dưới dạng anchor links nhảy nhanh đến các vùng tương ứng (ví dụ: `#tong-quan`, `#thuc-don`, `#chi-nhanh`, `#uu-dai`).
+  - **Scroll-Spy & Smooth Scroll:** Hỗ trợ scroll mượt mà khi click. Tự động highlight mục menu tương ứng khi user scroll qua vùng section tương ứng trên trang.
+- [ ] **Thực đơn (Menu) cào tự động từ Shopeefood/Grabfood:**
+  - Dữ liệu thực đơn F&B sẽ được cào tự động từ Shopeefood và Grabfood dựa trên link đối tác được mapping hoặc khai báo. Không cho phép cào menu từ Google Maps hoặc nhập tay để đảm bảo dữ liệu món ăn và giá bán luôn cập nhật và chính xác nhất.
+- [ ] **UI Inline Layout & Sections:**
+  - Tất cả các phần nội dung (NAP Block, Bản đồ, VTS module, Cashback campaigns, Menu list, Branch lists, FAQ, và HowTo) phải được hiển thị **inline** trên trang duy nhất `/merchant/{slug}`.
+  - Sử dụng các tab chuyển đổi phía Client-side hoặc anchor links để cuộn trang nhanh giữa các phần. Clicking các tab/menu điều hướng này không làm tải lại trang hoặc thay đổi URL path.
 - [ ] **Sitemap and Canonical Rules:**
   - Only the primary `/merchant/{slug}` URL is added to the sitemap XML.
   - The canonical link tag on `/merchant/{slug}` must be self-referencing. No canonical tags are generated for sub-pages since they redirect.
@@ -592,12 +615,15 @@ Nhằm tối ưu chi phí (RAG tokens) và đảm bảo độ chính xác khi Ch
 | VTS Merchant List API | MoMo Internal (PO VTS) | Verify merchant có trong VTS network | Internal token | [CẦN VERIFY] |
 | Campaign / Cashback API | MoMo Internal | Inject active cashback offers per merchant | Internal token | [CẦN VERIFY] |
 | Google Places / Maps API | Google | Google Map Search Crawler (Tên, địa chỉ, giờ hoạt động, tiện ích) & Review (Phase II) | API Key | 1000 req/day (free tier) |
+| Grabfood Menu API / Scraper | Grabfood | Cào tự động thực đơn & giá món ăn F&B | Scraper Token | [CẦN VERIFY] |
+| Shopeefood Menu API / Scraper | Shopeefood | Cào tự động thực đơn & giá món ăn F&B | Scraper Token | [CẦN VERIFY] |
 | Onelink / Appsflyer | Appsflyer | W2A deep link generation + attribution | [CẦN VERIFY - DA team] | - |
 | Chatbot KB Sync API | MoMo Internal (Duy) | Đồng bộ dữ liệu Structured KB (địa chỉ, giá, giờ mở cửa) từ CMS qua Chatbot DB | Internal token | Webhook On-Publish |
 
 **Data freshness:**
 - NAP data: sync khi PM trigger (không real-time - merchant data ít thay đổi)
 - Google Maps Search data: crawl tại thời điểm PM tạo trang (Layer 2). Không tự động đồng bộ sau khi publish trừ khi PM nhấn nút "Refresh Google Map Data" thủ công trong CMS.
+- Menu F&B (Grabfood/Shopeefood): cào tự động khi tạo/mapping merchant, tự động đồng bộ (sync) định kỳ mỗi 7 ngày. PM có thể bấm "Refresh Menu" thủ công trong CMS.
 - Chatbot KB Sync: Gửi Webhook trigger real-time sang Chatbot Database mỗi khi trang Merchant được Publish hoặc Cập nhật thành công từ CMS.
 - VTS merchant list: daily sync hoặc push khi PO VTS update
 - Cashback campaign: real-time inject từ Campaign Management (campaign có start/end date)
@@ -606,6 +632,7 @@ Nhằm tối ưu chi phí (RAG tokens) và đảm bảo độ chính xác khi Ch
 **Fallback khi API down:**
 - M4B API: hiển thị data cached, không block page render.
 - Google Map Search API (Crawler): fallback về nhập liệu thủ công (Manual entry). Hiện toast cảnh báo: *"Kết nối Google Maps thất bại, vui lòng kiểm tra và nhập tay thông tin."*
+- Grabfood / Shopeefood Crawler: Fallback về hiển thị dữ liệu Menu đã cache trong Database. Nếu không có cache, hiển thị form cho phép PM/Editor nhập tay/sửa đổi menu thủ công trên giao diện CMS để tránh mất hiển thị menu trên Frontend.
 - VTS API: ẩn VTS badge hoàn toàn (không hiển thị fallback text)
 - Campaign API: ẩn Cashback module (không hiển thị "đang tải...")
 - Google Places (Phase II): ẩn review block, không hiển thị error
@@ -687,7 +714,7 @@ Nhằm tối ưu chi phí (RAG tokens) và đảm bảo độ chính xác khi Ch
 | **Sprint 3** | 21 Jul - 1 Aug | GenAI Image Pipeline | Gemini Banana - auto banner resize (1050x450) + og:image (1200x630). Gallery upload UI trong CMS. | 3.10 | Nhật + Hoài Anh |
 | **Sprint 4** | 4-15 Aug | Engagement Signals | Badge "Top Merchant" (3.15.1). Social Proof Counter (3.15.2). Recommendation Rail (3.15.4). [Hold: Activity Pulse - chờ redesign JTBD] | 3.15 | Nhật |
 | **Sprint 5** | 18-29 Aug | Hub Phase II | Interactive Map widget (lazy load, Google Maps). Smart Search autocomplete. Dynamic Filters (Quận, danh mục, "Có VTS"). | 3.6 Phase II | Nhật + Hoài Anh |
-| **Sprint 6** | 1-12 Sep | Listing Page pSEO | URL pattern `/merchant/danh-sach/{tinh}/{quan}`. Anti-thin gate (noindex < 5 merchants). FAQ Block auto-gen theo khu vực. BreadcrumbList schema. Internal linking mesh. | 3.7 | Nhật + Trọng |
+| **Sprint 6** | 1-12 Sep | Listing Page pSEO | URL patterns for Admin (`/merchant/danh-sach/{tinh}/{quan}`) & POI (`/merchant/danh-sach/{tinh}/diem-den/{poi}`). Anti-thin gate (admin >= 5, POI >= 3 with radius fallback). FAQ Block auto-gen. BreadcrumbList schema. Internal linking mesh. | 3.7 | Nhật + Trọng |
 | **Sprint 7** | 15-26 Sep | Deep Data & Review | Google Places API integration. Review score display. Amenities block. Branch data inline. | 3.6 Phase II deep data | Hoài Anh + Nhật |
 | **Phase III** | Q4 2026 | Gamification | Swipe to Match (3.11). Doom Scroll Feed (3.12). Social Activity Feed (3.13). Ads Manager injection. | 3.11-3.13 | TBD |
 
