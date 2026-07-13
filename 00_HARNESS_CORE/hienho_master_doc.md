@@ -140,9 +140,115 @@ Các giá trị cốt lõi định hướng cách vận hành và ra quyết đ�
 
 ---
 
-## 2. CÁC TEAM LÀM VIỆC CHUNG
+## 2. OKRS 2026 - WEB PRODUCT LEAD
 
-### 2.1 Org Chart - GPD
+> 📑 **Tài liệu chi tiết:** [Web Product Lead - Strategic & OKRs H2 2026](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/01_STRATEGIC_PLAN/web-product-lead-strategic-okrs-h2-2026.md)
+
+### 2.1 Đề xuất OKR H2/2026
+
+#### **OKR 1**
+**Mục tiêu (Objective): Xây dựng và phát triển MoSpark trở thành nền tảng AI-Powered trong hoạt động GenAI Content**
+*Định hình MoSpark làm hạ tầng lõi tự động hóa năng lực phát triển Web và sản xuất nội dung cho toàn nền tảng thông qua các sản phẩm:*
+
+**Mô tả các kết quả cần có để đạt được mục tiêu:**
+- **PLG Project:** Đạt mức tăng trưởng >30% thị phần (Share of Voice) cho các dự án tiềm năng hoặc dự án được chỉ đạo, bằng cách xây dựng và vận hành hệ thống quản lý Content Plan theo Topic Cluster và hành vi JTBD User.
+- **GenAI Content:** Cắt giảm 80-90% thời gian sản xuất các định dạng nội dung đa dạng (bao gồm Blog, Mini Web, Video ngắn, và Text-to-Speech) và tối ưu chi phí token, bằng cách tự động hóa quy trình sinh nội dung end-to-end.
+- **Merchant Page Builder (với GenAI Content):** Tự động hóa sản xuất nội dung giới thiệu và làm giàu dữ liệu đối tác bằng AI (Google Maps API Context) cho các trang Merchant (Ví Trả Sau).
+- **SEO/GEO Score:** Đảm bảo nội dung AI sinh ra đạt điểm số chất lượng ≥ 80 điểm và không dính lỗi kỹ thuật về CWV và những lỗi nghiêm trọng trước khi xuất bản.
+
+#### **OKR 2**
+**Mục tiêu (Objective): Tư vấn giải pháp tăng trưởng và đảm bảo các tiêu chuẩn Technical & Content Foundation cho các chiến dịch**
+*Tư vấn giải pháp và đảm bảo tiêu chuẩn kỹ thuật vận hành Website thông qua các sản phẩm:*
+
+**Mô tả các kết quả cần có để đạt được mục tiêu:**
+- **Web Performance:** Đảm bảo kỹ thuật web luôn ở mức tối ưu, không phát sinh lỗi kỹ thuật nghiêm trọng ảnh hưởng đến trải nghiệm người dùng.
+- **Mini Web (CreditTech):** Tư vấn và phối hợp chặt chẽ cùng Inbound triển khai các giải pháp Web-to-App cho các sản phẩm Ví Trả Sau, Vay Nhanh.
+- **Campaigns (BMC):** Đồng hành và hỗ trợ kỹ thuật cho các chiến dịch Inbound đóng vai trò chủ trì (PM) để tối ưu phễu chuyển đổi.
+- **SPA Framework:** Áp dụng quy trình SPA (reSearch - Pilot - Action) để tư vấn giải pháp tăng trưởng cho các Cell Teams.
+
+#### **OKR 3**
+**Mục tiêu (Objective): Xây dựng giải pháp tăng trưởng và thúc đẩy mục tiêu tăng trưởng Web Traffic và MAU**
+*Tập trung thúc đẩy lưu lượng truy cập tự nhiên (Web Traffic) và tối ưu hóa tỷ lệ chuyển đổi Web-to-App để gia tăng lượng người dùng mới (New User/MAU) một cách minh bạch thông qua các nhóm dự án:*
+
+**Mô tả các kết quả cần có để đạt được mục tiêu:**
+- **Web Platform Project:** Triển khai các dự án do Web Platform chủ trì (bao gồm Merchant Page góp phần thúc đẩy tăng trưởng và Phạt Nguội làm phễu thu hút) nhằm tối ưu hóa Local SEO và hiển thị thương hiệu ngoài App.
+- **Các dự án của Cell Team:** Phối hợp và hỗ trợ kỹ thuật cùng các Cell Teams triển khai các dự án (như Vehicle Hub, Cinema, eSIM, Bảo hiểm Ô tô) nhằm đáp ứng các cam kết về chỉ số giao dịch và tăng trưởng doanh thu trực tiếp.
+- **User Growth:** Phối hợp cùng User Growth thiết lập hệ thống đo lường và tối ưu hóa phễu chuyển đổi Web-to-App (W2A) nhằm thúc đẩy tăng trưởng New User trên Website.
+- **Financial Authority:** Thúc đẩy vị thế có thẩm quyền trong ngành tài chính thông qua việc xây dựng và phát hành bộ 10 công cụ giả lập tài chính Finhub Simulation Tools (tính lãi tiết kiệm, lương hưu, vàng, ngoại tệ...) làm phễu tương tác thu hút lưu lượng ngoài App.
+
+#### **OKR 4**
+**Mục tiêu (Objective): Đảm bảo các hoạt động trên Website đáp ứng các tiêu chuẩn Technical & Content Foundation**
+*Thiết lập quy chuẩn kỹ thuật, ban hành tài liệu hướng dẫn và thực hiện kiểm duyệt nghiêm ngặt nhằm duy trì sức khỏe tối ưu cho Website thông qua các hoạt động:*
+
+**Mô tả các kết quả cần có để đạt được mục tiêu:**
+- **Platform Guideline:** Ban hành đầy đủ các tài liệu hướng dẫn và quy chuẩn kỹ thuật (SEO/GEO, tracking) giúp các Cell Teams triển khai dự án độc lập đúng tiêu chuẩn của Web Platform.
+- **Quality Gate:** Đảm bảo và thực hiện kiểm duyệt kỹ thuật nghiêm ngặt cho mọi dự án Web mới trước khi Go-live theo đúng tiêu chuẩn vận hành của Platform.
+- **Backlink Security:** Kiểm soát, rà quét và ngăn chặn triệt để các nguồn backlink xấu (spam links) để bảo vệ thẩm quyền tên miền (Domain Authority).
+- **URL & Content Governance:** Rà soát định kỳ nhằm loại bỏ các nội dung lỗi thời (out-of-date) và các URL không có giá trị (zero-traffic/thin content) giúp tối ưu hóa ngân sách thu thập dữ liệu (Crawl Budget) của các công cụ tìm kiếm.
+
+---
+
+### 2.2 Đề xuất OKR & Kết quả Đạt được Thực tế H1/2026
+
+#### **Mục tiêu 1: Tăng trưởng New User từ web organic thông qua tối ưu traffic và Web-to-App conversion**
+*   **Kết quả cần có đề xuất (Proposed KRs):**
+    *   **KR 1.1:** Tư vấn giải pháp SEO & Inbound cho các Use Case chiến lược ưu tiên nhóm Financial Services (Credit, Insurance, BNPL) và các Use Case có tính chiến lược của BU (như Telco, Cinema, OTA, eSIM).
+    *   **KR 1.2:** Triển khai Web-to-App (Web Ads) theo campaign calendar hoặc Quick-Win Case phối hợp Cell Team khai thác các sản phẩm có CTR web-to-app cao để thiết kế luồng chuyển đổi tối ưu.
+    *   **KR 1.3:** Rà soát và kiểm soát chất lượng nội dung xuất bản từ PO/Biz đảm bảo chuẩn SEO/GEO, đúng thông điệp, đúng quy trình trước khi lên production.
+*   **Kết quả đạt được thực tế H1/2026 (Actual Achievements):**
+    *   **Đối với KR 1.1 (Tư vấn SEO & Inbound):**
+        *   *Tư vấn giải pháp tăng trưởng Web:* Triển khai giải pháp cho các Use Case quan trọng của MoMo như Ví Trả Sau, Vay Nhanh, Điểm Tín Dụng, các sản phẩm Bảo Hiểm và dịch vụ thanh toán số (Sim, eSIM, Cinema).
+        *   *Thị phần tìm kiếm (Share of Voice - SoV):* Đạt mục tiêu SoV của Ví Trả Sau (54%) và Vay Nhanh (7%).
+        *   *Hiệu suất Google Search Console H1/2026 (Dữ liệu thực tế từ Search Performance Report):* Tổng lưu lượng tìm kiếm tự nhiên mang lại **5.934.051 Clicks** và **206.288.717 Impressions** (CTR trung bình đạt 2.88%). Trong đó, các dự án đóng góp chính: Cinema (2.010.041 clicks), Ví Trả Sau (213.379 clicks), Vay Nhanh (182.057 clicks), Bảo hiểm (91.699 clicks), Phạt Nguội (19.335 clicks).
+        *   *Bảo hiểm & Khác:* Đóng gói cấu trúc Auto Insurance (MasterDoc v2, PRD docx) bảo toàn Topical Authority; hoàn tất BRD Draft cho eSIM và Bảo hiểm xe máy.
+    *   **Đối với KR 1.2 (Triển khai Web-to-App & Quick-Wins):**
+        *   *Dự án Ads Website (New to MoMo):* Phối hợp cùng User Growth triển khai dự án Ads Website thúc đẩy New User trên Website thông qua các schema "New To MoMo" mang lại kết quả phễu chuyển đổi thực tế trong H1/2026: **36.867 Installs** -> **16.690 Registrations** (REG) -> **9.800+ Bank Mappings** (Map Bank) -> **7.000+ MAU**.
+        *   *Popup Ads - Billpay:* Triển khai thành công trên 22 pages chiến lược với cơ chế phân phối bậc (tiered placement), đã đo lường và hoàn thành đóng dự án.
+        *   *Chuẩn hóa Onelink:* Tham gia chuẩn hóa hệ thống Onelink trên Website nhằm mục tiêu đo lường end-to-end từ Out-App -> Website -> App và nonApp. Giải quyết dứt điểm các Looker SQL bugs đo lường sai lệch.
+    *   **Đối với KR 1.3 (Rà soát & kiểm soát chất lượng):**
+
+#### **Mục tiêu 2: Xây dựng nền tảng MoMo.vn ổn định và định hướng GEO/AEO-First**
+*   **Kết quả cần có đề xuất (Proposed KRs):**
+    *   **KR 2.1:** Đảm bảo hệ thống website vận hành ổn định và có nền tảng kỹ thuật chuẩn bao gồm chuẩn hóa quy trình xuất bản nội dung qua Admin Panel, hoàn thiện luồng làm việc giữa Inbound/WebPlatform và Cell Team, xây dựng tài liệu SOP kiểm duyệt nội dung.
+    *   **KR 2.2:** Xây dựng hệ thống tracking full-funnel Web-to-App (New/Current User), chuẩn hóa toàn bộ Onelink/Universal Link + UTM trên mọi CTA, triển khai A/B Testing.
+    *   **KR 2.3:** Rà soát và Audit Website đảm bảo hiệu suất, các cập nhật thuật toán từ google, AI trending, budget crawl.
+    *   **KR 2.4:** Xây dựng GEO Checklist Framework (citability scoring, answer-first format, AI crawler policy) và áp dụng vào quy trình sản xuất nội dung đảm bảo momo.vn sẵn sàng cho AI Search.
+*   **Kết quả đạt được thực tế H1/2026 (Actual Achievements):**
+    *   **Đối với KR 2.1 (Vận hành ổn định & SOP):**
+        *   *Cố vấn và Vận hành Chiến dịch (Campaigns):* Tham gia tư vấn, triển khai, vận hành và tối ưu hóa SEO/GEO cho các chiến dịch Mega lớn của công ty là **Lắc Xì H1/2026** và **Mega Summer 2026**.
+        *   *MoSpark CMS Migration:* Đưa hệ thống MoSpark CMS vào hoạt động (Platform Ready), tích hợp sẵn Umami và GenAI content pipeline. Đang onboard LP Builder cho GPD.
+        *   *Quy trình biên tập:* Xác lập Workflow content 7 bước và 3 approval gates để phân định rõ vai trò verify (Hiến) vs publish (Content Team).
+    *   **Đối với KR 2.2 (Tracking & UTM):**
+        *   *Identity Platform:* Triển khai thành công hạ tầng định danh người dùng qua Edge Cookie & Edge Middleware, hỗ trợ stitch chính xác hành vi người dùng ẩn danh từ Web tới giao dịch trên App.
+    *   **Đối với KR 2.3 (Audit Website & Crawl Budget):**
+        *   *Zero-Traffic URL Clean-up:* Rà soát và xử lý loại bỏ **hơn 3.000 URL không có giá trị** (chính xác là 3.670 URLs rác trên 16 Use Cases gồm OA, Bus, Cinema và News) nằm rải rác ở từng Cell Team để dọn dẹp crawl waste, tối ưu hóa Crawl Budget của Googlebot.
+        *   *Quy tắc quản trị:* Đưa ra bộ quy tắc xử lý ngắn hạn và dài hạn cho URL Governance (Sunset rule cho pSEO, chính sách 410 Gone / 301 Redirect).
+        *   *Robots.txt:* Deploy thành công nâng cấp Lớp 1 (`Disallow: /*?`), chặn query string spam, bảo vệ crawl budget cho Googlebot.
+    *   **Đối với KR 2.4 (GEO Checklist & AI Overviews):**
+        *   *SEO/GEO Scoring Gate:* Hoàn tất BRD v1.1 tích hợp công thức chấm điểm 5 block (100 điểm) trực tiếp vào CMS MoSpark để kiểm soát chất lượng.
+        *   *AI Crawler Policy:* Xây dựng cấu trúc file `llms.txt` và bắt đầu chạy thử nghiệm (pilot) trên dự án Phạt Nguội.
+
+#### **Mục tiêu 3: Xây dựng các sản phẩm web PLG/Utilities-led SEO để tăng trưởng DLU/MAU bền vững**
+*   **Kết quả cần có đề xuất (Proposed KRs):**
+    *   **KR 3.1:** Phối hợp Web Platform/PO/Biz xây dựng các MiniWeb và Utility Tools trên momo.vn theo mô hình Product-led Growth, tập trung vào nhóm Financial Services để tạo quick win. Ví dụ: công cụ kiểm tra điểm CIC, tính lãi suất vay, so sánh gói bảo hiểm ô tô/xe máy, tra cứu hạn mức Ví Trả Sau, tính phí trả góp.
+    *   **KR 3.2:** Mỗi Utility Tool tự thân tạo giá trị sử dụng, thu hút organic traffic từ search intent cao, sau đó chuyển đổi thành DLU/MAU qua deeplink.
+    *   **KR 3.3:** Xây dựng Pillar/Cluster Content Strategy cho nhóm Use Case Credit & Insurance, kết hợp programmatic SEO để scale. Đảm bảo mỗi sản phẩm web đều có đóng góp DLU/MAU.
+*   **Kết quả đạt được thực tế H1/2026 (Actual Achievements):**
+    *   **Đối với KR 3.1 (MiniWeb & Utility Tools):**
+        *   *Phạt Nguội (Traffic Fines):* Triển khai thành công dự án P0 Phạt Nguội Phase 1 (Live) tích hợp API real-time từ TTDK & CSGT, bản đồ camera, tính năng đăng ký nhận cảnh báo vi phạm (Subscription).
+        *   *CIC Simulator:* Xây dựng và hoàn thiện HTML Widget giả lập điểm tín dụng CIC (band 300-850) làm PLG hook.
+        *   *Finhub Simulation Tools:* Thiết lập logic tính toán và thiết kế wireframe prototype cho bộ 10 công cụ tài chính cốt lõi (Gross-Net, lãi tiết kiệm, lương hưu...).
+    *   **Đối với KR 3.2 (Thu hút organic traffic & Chuyển đổi DLU/MAU):**
+        *   *Smart CTA & Zero-Party Data Passing:* Vận hành cơ chế nút CTA động cá nhân hóa và đóng gói truyền dữ liệu ngữ cảnh (URL parameter mã hóa) từ Web sang App để tự động điền (pre-fill) thông tin người dùng trên App MoMo.
+        *   *Merchant Page Builder (O2O local SEO):* Hoàn thành chạy thử nghiệm (Pilot) 39 merchant; hoàn thiện luồng tự động tạo trang địa điểm chuẩn Local SEO từ cơ sở dữ liệu đối tác (200k+ merchant Ví Trả Sau) giúp thu hút traffic ngoài App.
+    *   **Đối với KR 3.3 (Pillar Content & Programmatic SEO):**
+        *   *GenAI Content Engine:* Tích hợp Claude API (Claude 3 Haiku & Claude 3.5 Sonnet) trên MoSpark Production; chạy benchmark hiệu năng và chi phí chi tiết (Haiku ~7k/bài/55s; Sonnet ~20k/bài/140s) giúp hoạch định chính xác ngân sách cho Content Plan.
+
+---
+
+## 3. CÁC TEAM LÀM VIỆC CHUNG
+
+### 3.1 Org Chart - GPD
 
 ```mermaid
 flowchart TD
@@ -180,7 +286,7 @@ flowchart TD
 - Bảo = Senior Manager phụ trách Web Platform, báo cáo trực tiếp Công (VP).
 - Cấu trúc team Out-App Traffic vận hành trực tiếp dưới sự dẫn dắt của Bảo.
 
-### 2.2 Out-App Traffic (Hiến sở hữu)
+### 3.2 Out-App Traffic (Hiến sở hữu)
 
 | Field | Detail |
 |-------|--------|
@@ -191,7 +297,7 @@ flowchart TD
 | Quan hệ với Web Platform | Hiến gửi technical request / SEO potential project → Bảo implement |
 | Quan hệ với Inbound | Hiến là đầu mối - Inbound không làm việc trực tiếp với Web Platform |
 
-### 2.3 Web Platform (Bảo)
+### 3.3 Web Platform (Bảo)
 
 | Field | Detail |
 |-------|--------|
@@ -203,7 +309,7 @@ flowchart TD
 | Tools | Xây dựng công cụ cho Out-App Traffic / Cell Team / Inbound vận hành nội dung |
 | KPI chính | Web-to-App conversion, New User, MAU, MEU (chung với GPD) |
 
-### 2.3b Phân Công Dự Án Trọng Điểm & PIC (Web Platform)
+### 3.3b Phân Công Dự Án Trọng Điểm & PIC (Web Platform)
 
 | Thành viên | Vai trò chuyên môn | Dự án phụ trách chính (Primary Project) | Hạng mục chi tiết in-charge | Tài liệu / Quy chuẩn liên quan |
 | :--- | :--- | :--- | :--- | :--- |
@@ -219,7 +325,7 @@ flowchart TD
 | **Hoài Anh** | Tech Solution Lead | MoSpark Core Backend & API | Thiết kế database Supabase, cổng YARP API Gateway, API đồng bộ M4B và backend Widget Store. | [mospark_master.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_master.md) |
 | **Duy** | Senior BE Developer | Chatbot & Backend API | Chịu trách nhiệm hệ thống Chatbot, RAG Knowledge Base Sync từ MoSpark và backend API cho các microsites. | [mospark_master.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_master.md) |
 
-### 2.4 Inbound Marketing (Mai - thuộc BMC)
+### 3.4 Inbound Marketing (Mai - thuộc BMC)
 
 | Field | Detail |
 |-------|--------|
@@ -233,7 +339,7 @@ flowchart TD
 | Foundation Checklist | Inbound phải tuân thủ - đây cũng là checklist Inbound input và cung cấp. Sign-off: Hiến |
 | FS commitment | Vay Nhanh / Ví Trả Sau / CIC: Inbound cam kết Traffic/Ranking |
 
-### 2.5 Cell Team Matrix (theo Business Unit)
+### 3.5 Cell Team Matrix (theo Business Unit)
 
 Mỗi Cell Team tiếp cận Hiến theo framework: **Research → Build Web/Function → Content Production → Tracking → Evaluation**
 
@@ -262,7 +368,7 @@ Mỗi Cell Team tiếp cận Hiến theo framework: **Research → Build Web/Fun
 | DA (Data Analyst) | Data pipeline, reporting, SQL/BigQuery |
 | Legal | Review nội dung tài chính, compliance YMYL |
 
-### 2.6 Danh mục sản phẩm MoMo trên Web (theo SEO Inventory)
+### 3.6 Danh mục sản phẩm MoMo trên Web (theo SEO Inventory)
 
 > Dùng làm reference khi consult Cell Team hoặc đánh giá market share.
 
@@ -292,9 +398,9 @@ Mỗi Cell Team tiếp cận Hiến theo framework: **Research → Build Web/Fun
 
 ---
 
-## 3. MỤC TIÊU TEAM & DOANH NGHIỆP
+## 4. MỤC TIÊU TEAM & DOANH NGHIỆP
 
-### 3.1 OKR 2026 - Out-App Traffic Team
+### 4.1 OKR 2026 - Out-App Traffic Team
 
 **Vision:** Scale MoMo to Vietnam's #1 financial destination (6M visitors) via an Agentic, SEO/GEO-first platform that turns underserved market needs into high-authority traffic.
 
@@ -325,7 +431,7 @@ Mỗi Cell Team tiếp cận Hiến theo framework: **Research → Build Web/Fun
   - Insurance comparison tool live
 - **North Star:** Users giải quyết được nhu cầu tài chính trên web trước khi cần vào App
 
-### 3.2 GEO North Star
+### 4.2 GEO North Star
 
 > MoMo được cite trong top 3 AI engine responses cho 20 target PFM queries trong vòng 12 tháng
 
@@ -333,7 +439,7 @@ Mỗi Cell Team tiếp cận Hiến theo framework: **Research → Build Web/Fun
 - **Current gap:** 0% AI Chatbot referral traffic vs Wise.com: 40%+
 - **Decision blockers:** Named author approval, Legal review cadence, Dev resource cho tool portfolio
 
-### 3.3 MoMo Business KPIs liên quan đến Web
+### 4.3 MoMo Business KPIs liên quan đến Web
 
 | KPI | Định nghĩa | Nguồn tracking |
 |-----|-----------|----------------|
