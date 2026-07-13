@@ -15,29 +15,29 @@
 
 ### 1.1. Bối cảnh Thị trường & Thách thức GEO (AI Search)
 *   **Sự dịch chuyển của Search:** Hành vi tìm kiếm đang thay đổi nhanh chóng khi lượng tìm kiếm trên Google giảm ~20% YoY (2025), trong khi ChatGPT đạt 700M người dùng hàng tuần và Perplexity đạt 780M truy vấn/tháng. AI Overviews (SGE) hiện xuất hiện trên 13-30% truy vấn, đặc biệt là nhóm tài chính/fintech.
-*   **Thực trạng của MoMo:** MoMo đang tụt hậu trong GEO (Generative Engine Optimization) với tỉ lệ AI Chatbot referral còn rất hạn chế (~0%). Tuy nhiên, các đối thủ trong nước (ZaloPay, VPBank, Cake) chưa triển khai `llms.txt` hay AI-native content pipeline. Đây là thời cơ chiến lược để MoMo chiếm lĩnh thị trường tìm kiếm AI.
-*   **Elegant Problem:** momo.vn không thể tăng trưởng organic bền vững khi PM phụ thuộc Dev cho mọi thứ, AI sản xuất content không có guardrail, và không ai biết MoMo đang chiếm bao nhiêu % thị trường tìm kiếm.
+*   **Thực trạng của MoMo:** Tỉ lệ trích dẫn thương hiệu MoMo trên các AI Chatbot (AI Chatbot referral) còn rất thấp (~0%). Tuy nhiên, các đối thủ cạnh tranh trực tiếp (ZaloPay, VPBank, Cake) chưa áp dụng `llms.txt` hay quy trình AI-native content. Đây là cơ hội để MoMo đi đầu chiếm lĩnh thị phần tìm kiếm AI.
+*   **Vấn đề cốt lõi:** Kênh Web momo.vn chưa thể tự chủ tăng trưởng khi PM/PO phụ thuộc hoàn toàn vào Dev để phát triển trang mới, nội dung do AI sinh ra chưa có bộ lọc kiểm soát tự động, và chưa có hệ thống đo lường thị phần tìm kiếm (Share of Voice).
 
 ### 1.2. Thực trạng H1/2026 & Định hướng Hành động H2/2026
-*   **Thực trạng H1/2026 (Kết quả & Nền tảng đã đạt được):**
-    *   *Traffic & Conversion:* Đạt 5.9M clicks từ organic search. Dự án Ads Website (New to MoMo) mang lại hiệu quả phễu thực tế vượt kỳ vọng (36.8K Installs -> 7K MAU).
-    *   *Sản phẩm PLG:* Rollout Phạt Nguội Phase 1 (Live), CIC Simulator widget và thiết lập wireframe cho các công cụ giả lập tài chính Finhub. Chạy thử nghiệm Local SEO cho 39 Merchant.
-    *   *Platform Health:* Đưa hệ thống MoSpark CMS vào hoạt động; dọn dẹp crawl waste bằng cách xóa bỏ hơn 3.670 URL rác; tích hợp thành công Identity Platform (Edge Cookie) stitch hành vi người dùng.
-*   **Khoảng cách & Định hướng Hành động H2/2026 (Những việc cần giải quyết):**
-    *   *Quy mô GenAI & Chất lượng:* Tự động hóa hoàn toàn quy trình sinh nội dung end-to-end trên MoSpark, siết chặt chất lượng nội dung bằng bộ lọc SEO/GEO Scoring Gate (≥ 80 điểm) trước khi publish để tránh lỗi YMYL tài chính.
-    *   *PLG & Thẩm quyền Tài chính:* Đóng gói và phát hành chính thức các công cụ giả lập tài chính Finhub; scale-up tự động tạo trang Local SEO cho toàn bộ đối tác Merchant (Ví Trả Sau); tối ưu hóa sâu phễu chuyển đổi Web-to-App.
-    *   *Vận hành tự trị của Cell Teams:* Ban hành Platform Guidelines hướng dẫn Cell Teams tự triển khai Mini Web; vận hành Publish Gate để kiểm duyệt và phê duyệt độc lập chất lượng đầu ra trước khi Go-Live mà không phụ thuộc vào nguồn lực lập trình.
-    *   *Quản trị domain:* Rà soát crawl budget, quản lý file `robots.txt`/`llms.txt` và rà quét chặn link spam để bảo vệ thẩm quyền tên miền (Domain Authority).
+*   **Thực trạng H1/2026 (Nền tảng đã hoàn thành):**
+    *   *Traffic & Conversion:* Mang lại 5.9M click tự nhiên. Phễu chuyển đổi Ads Website (New to MoMo) đạt kết quả thực tế 36.8K Installs -> 7K MAU.
+    *   *Công cụ PLG:* Rollout giai đoạn 1 Use Case Phạt Nguội (tích hợp API kiểm tra vi phạm), CIC Simulator widget và hoàn tất thiết kế wireframe các công cụ giả lập tài chính Finhub. Hoàn thành thử nghiệm Local SEO cho 39 đối tác (Merchant).
+    *   *Hạ tầng & Chất lượng:* Vận hành hệ thống MoSpark CMS; loại bỏ hơn 3.670 URL rác để tối ưu Crawl Budget; hoàn thành tích hợp Identity Platform (Edge Cookie) để định danh và đo lường hành vi người dùng ẩn danh từ Web vào App.
+*   **Định hướng Hành động H2/2026 (Mục tiêu thực thi):**
+    *   *Tự động hóa & Kiểm soát nội dung:* Vận hành quy trình sinh nội dung tự động end-to-end trên MoSpark, áp dụng bộ lọc SEO/GEO Scoring Gate (yêu cầu đạt ≥ 80 điểm) trước khi xuất bản nhằm kiểm soát rủi ro thông tin YMYL tài chính.
+    *   *Triển khai công cụ PLG:* Phát hành chính thức các công cụ giả lập tài chính Finhub; tự động hóa tạo trang Local SEO quy mô lớn cho các Merchant (Ví Trả Sau); tối ưu hóa tỉ lệ chuyển đổi Web-to-App.
+    *   *Hỗ trợ Cell Teams tự vận hành:* Ban hành tài liệu hướng dẫn (Platform Guidelines) và thực thi kiểm duyệt qua cổng Publish Gate để Cell Teams tự triển khai Mini Web đúng quy chuẩn kỹ thuật mà không cần Dev Web Platform hỗ trợ trực tiếp.
+    *   *Bảo mật & Quản trị domain:* Rà soát hiệu quả cào dữ liệu của Googlebot, kiểm soát cấu trúc `robots.txt`/`llms.txt` và rà quét disavow các backlink spam để duy trì độ tin cậy tên miền (Domain Authority).
 
 ### 1.3. 3 Vai trò Chiến lược (Mandate Chiến lược) của Website momo.vn
 Website momo.vn không còn là corporate site hay blog SEO đơn thuần. MoSpark được xây dựng để hiện thực hóa 3 vai trò chiến lược dưới sự quản trị của Web Product Lead:
-1.  **Financial & Payment Authority:** Xây dựng momo.vn thành điểm đến uy tín và có thẩm quyền hàng đầu trong ngành tài chính/thanh toán tại Việt Nam thông qua chính sách quản trị chất lượng nghiêm ngặt (Quality Gate, Named Author Policy và nội dung chuẩn YMYL).
-2.  **Website Growth Traffic & MAU:** Thúc đẩy lưu lượng truy cập tự nhiên (Organic Traffic) ngoài App và tối ưu hóa tỷ lệ chuyển đổi phễu Web-to-App (W2A) nhằm gia tăng lượng người dùng mới (New User/MAU) hoạt động tích cực.
-3.  **Product-Led Growth theo JTBD:** Phát triển các công cụ tiện ích tương tác (Calculators/Simulators) để giải quyết trực tiếp nhu cầu thực tế (Jobs-to-be-Done) của người dùng trên Web, làm đòn bẩy thúc đẩy tăng trưởng tự nhiên dựa trên giá trị sản phẩm.
+1.  **Financial & Payment Authority:** Xây dựng momo.vn thành website tin cậy và có độ phủ thông tin hàng đầu trong ngành tài chính và thanh toán tại Việt Nam thông qua kiểm duyệt chất lượng nghiêm ngặt (Quality Gate, Named Author Policy và tiêu chuẩn YMYL).
+2.  **Website Growth Traffic & MAU:** Thúc đẩy lưu lượng truy cập tự nhiên (Organic Traffic) ngoài App và tối ưu hóa phễu chuyển đổi Web-to-App nhằm gia tăng người dùng mới (New User/MAU) cho MoMo.
+3.  **Product-Led Growth theo JTBD:** Phát triển các công cụ tiện ích tương tác (Calculators/Simulators) giải quyết trực tiếp nhu cầu tìm kiếm thực tế (Jobs-to-be-Done) của người dùng trên Web, làm động lực tăng trưởng tự nhiên dựa trên giá trị sử dụng của sản phẩm Web.
 
 ### 1.4. Nguyên tắc cốt lõi: Product-Led Growth (PLG)
-*   **Product-Led Growth (PLG):** Sự tăng trưởng của kênh Web MoMo (momo.vn) được dẫn dắt hoàn toàn bởi chính giá trị của bản thân sản phẩm Web. Các công cụ tương tác, tiện ích (Calculator, Simulator, Checker) đóng vai trò là lõi sản phẩm giúp giải quyết trực tiếp Jobs-to-be-Done (JTBD) của người dùng ngay trên Web. Nội dung (content) chỉ đóng vai trò là lớp hỗ trợ tạo khả năng khám phá (discoverability) và giáo dục. Trải nghiệm sản phẩm tốt sẽ tự nhiên chuyển đổi người dùng sang App (New User/MAU) qua các luồng tối ưu (Smart CTA, pre-filled data) mà không cần quảng cáo gây phiền hay spam nội dung thông tin thuần túy.
-*   **Quy tắc bất biến:** Mỗi Use Case mới trên Web phải trả lời được câu hỏi: *"Utility tool của Use Case này là gì?"* và tuân thủ flow chuyển đổi PLG:
+*   **Product-Led Growth (PLG):** Tăng trưởng kênh Web dựa trên giá trị sử dụng thực tế của sản phẩm Web. Các công cụ tương tác và tiện ích (Calculator, Simulator, Checker) giải quyết trực tiếp nhu cầu (JTBD) của người dùng ngay trên Web. Nội dung bài viết đóng vai trò hỗ trợ khả năng hiển thị (discoverability) và cung cấp thông tin. Trải nghiệm sản phẩm hữu ích sẽ chuyển đổi người dùng sang App (New User/MAU) qua các luồng liên kết tối ưu (Smart CTA, truyền dữ liệu pre-fill), thay vì sử dụng các phương thức quảng cáo đại trà hoặc xuất bản nội dung không có giá trị (thin content).
+*   **Quy tắc bất biến:** Mỗi Use Case mới trên Web phải phát triển tối thiểu một công cụ tiện ích (Utility tool) tương ứng và tuân thủ phễu chuyển đổi PLG:
     ```
     Content → Keywords → Ranking → Use Case → User Journey → App/Transaction (New User / MAU)
     ```
@@ -50,17 +50,17 @@ Website momo.vn không còn là corporate site hay blog SEO đơn thuần. MoSpa
 > **Scale MoMo to Vietnam's #1 financial destination with 6M monthly visitors via an Agentic, SEO/GEO-first platform that turns underserved market needs into high-authority traffic.**
 
 ### 2.2. Strategic Framework - 3 Value Layers (Khung Chiến lược - 3 Lớp Giá trị)
-Chiến lược phát triển Web MoMo được xây dựng trên 3 lớp giá trị cốt lõi nhằm tối ưu hóa sự tăng trưởng từ ngoài App vào trong App:
-*   **Layer 1 - MoMo (Brand & Authority Governance):** Xây dựng thương hiệu và thẩm quyền tên miền (Domain Authority) của momo.vn thông qua:
-    *   *Content Authority:* Sở hữu các Use Cases chiến lược thuộc thị trường underserved (đặc biệt là các dự án cốt lõi như Phạt Nguội, Bảo hiểm ô tô, eSIM du lịch, Cinema) để MoMo thiết lập thẩm quyền nội dung và chiếm vị trí số 1 thị trường.
-    *   *AI-powered (GEO):* Cấu trúc nội dung chuẩn semantic để các công cụ tìm kiếm AI (ChatGPT, Gemini, Perplexity) trích dẫn MoMo làm nguồn uy tín.
-    *   *Kết quả:* Chuyển hóa thị trường underserved ngoài App (Phạt Nguội, Bảo hiểm ô tô, eSIM du lịch, Cinema...) thành traffic uy tín có tỷ lệ chuyển đổi cao.
-*   **Layer 2 - User (Product-Led Growth - PLG):** Phục vụ hành trình tìm kiếm và giải quyết Jobs-to-be-Done (JTBD) của người dùng thông qua:
-    *   *Mọi sản phẩm Web đi theo tinh thần PLG:* Định hướng tất cả các sản phẩm xây dựng trên Website momo.vn đều bám sát triết lý tăng trưởng dẫn dắt bởi sản phẩm (Product-Led Growth), tập trung phát triển các tiện ích tương tác giải quyết JTBD với trọng tâm là các công cụ tiện ích tài chính (Financial Utilities) nói riêng và các giải pháp PLG nói chung (như các công cụ tài chính Finhub, CIC Simulator, Phạt Nguội real-time Checker).
-    *   *Kết quả:* Giải quyết trực tiếp nhu cầu người dùng ngay trên Web, kích hoạt trải nghiệm "Aha moment" và thúc đẩy hành vi chuyển đổi tự nhiên vào App (New User/MAU) qua các luồng tối ưu (Smart CTA, pre-filled data).
-*   **Layer 3 - Cell Team (Platform-as-a-Service - PaaS):** Hỗ trợ các Cell Teams tiếp cận thị trường ngoài App thông qua:
-    *   *Mô hình PaaS:* Cung cấp giải pháp, quy trình, nền tảng (MoSpark, boilerplate mẫu, hướng dẫn kỹ thuật SEO/GEO) và kiểm soát chất lượng qua Quality Gate.
-    *   *Kết quả:* Các Cell Teams tự chủ xây dựng và vận hành sản phẩm Web nhanh chóng, đúng tiêu chuẩn kỹ thuật và đo lường được ROI.
+Chiến lược Web được tổ chức theo 3 lớp mục tiêu nhằm chuyển đổi lưu lượng truy cập từ ngoài App vào App:
+*   **Layer 1 - MoMo (Brand & Authority Governance):** Bảo vệ và gia tăng độ tin cậy tên miền (Domain Authority) của momo.vn:
+    *   *Content Authority:* Sở hữu các Use Cases chiến lược thuộc thị trường chưa được khai thác tốt ngoài App (Phạt Nguội, Bảo hiểm ô tô, eSIM du lịch, Cinema) để MoMo chiếm thứ hạng cao trên các công cụ tìm kiếm.
+    *   *AI-powered (GEO):* Định dạng cấu trúc dữ liệu chuẩn semantic để các công cụ tìm kiếm AI trích dẫn nội dung MoMo làm nguồn tham chiếu.
+    *   *Kết quả:* Chuyển hóa thị trường tiềm năng ngoài App (Phạt Nguội, Bảo hiểm ô tô, eSIM du lịch, Cinema...) thành traffic chất lượng có tỷ lệ chuyển đổi cao.
+*   **Layer 2 - User (Product-Led Growth - PLG):** Giải quyết nhu cầu tìm kiếm thông tin và công cụ của người dùng:
+    *   *Mọi sản phẩm Web đi theo tinh thần PLG:* Định hướng tất cả các sản phẩm xây dựng trên Website momo.vn đều bám sát triết lý tăng trưởng dẫn dắt bởi sản phẩm, tập trung phát triển các tiện ích tương tác với trọng tâm là các công cụ tiện ích tài chính (Financial Utilities) nói riêng và các giải pháp PLG nói chung (như các công cụ tài chính Finhub, CIC Simulator, Phạt Nguội Checker).
+    *   *Kết quả:* Người dùng giải quyết được nhu cầu ngay trên Web, tạo trải nghiệm tích cực và thúc đẩy chuyển đổi tự nhiên vào App (New User/MAU) qua Smart CTA và truyền dữ liệu pre-fill.
+*   **Layer 3 - Cell Team (Platform-as-a-Service - PaaS):** Hỗ trợ các Cell Teams tiếp cận thị trường ngoài App:
+    *   *Mô hình PaaS:* Cung cấp giải pháp kỹ thuật, quy trình xuất bản, nền tảng (MoSpark, boilerplate mẫu, hướng dẫn kỹ thuật SEO/GEO) và kiểm soát chất lượng qua Quality Gate.
+    *   *Kết quả:* Các Cell Teams tự xây dựng và vận hành sản phẩm Web đúng chuẩn kỹ thuật, đo lường được ROI.
 
 ### 2.3. 4 Growth Pillars (Kiến trúc Thị trường)
 momo.vn không tổ chức theo BU mà theo Product/Search Ecosystem. 4 Pillars đại diện cho 4 growth engine độc lập sở hữu các vertical thị trường dưới sự kiểm duyệt kỹ thuật của Web Product Lead:
