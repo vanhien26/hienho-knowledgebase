@@ -585,6 +585,22 @@ A/B Testing chỉ áp dụng cho **Landing Page** trong Phase 1:
 - Không A/B test Blog article
 - Homepage không A/B test - shared asset, thay đổi có impact rộng
 
+### Kế hoạch Nâng cấp Tính năng trong H2/2026 (Phase 2 & 3 Implementation)
+
+1. **Ads Placement Registry & Conflict Resolution (Bộ điều phối vị trí & Giải quyết xung đột):**
+   *   Xây dựng registry quản lý tập trung các vị trí hiển thị quảng cáo theo URL/Category.
+   *   Áp dụng thuật toán tự động giải quyết tranh chấp (Conflict Resolution) dựa trên điểm ưu tiên chiến dịch và thực thi nghiêm ngặt các rào cản UX Guardrails (Ví dụ: Max 1 Popup, Max 2 Balloon hiển thị đồng thời trên một trang).
+2. **On-site Anonymous Retargeting Engine (Bám đuổi ẩn danh tại trang):**
+   *   Cài đặt cơ chế ghi vết hành vi tương tác và drop-off của người dùng ẩn danh xuống Local Storage.
+   *   Tự động phân phối Banner/Widget cá nhân hóa phù hợp với intent sử dụng khi người dùng quay lại các trang dùng chung.
+
+### Lộ trình chi tiết theo Module
+| Module / Hạng mục | Timeline | Trọng tâm chi tiết |
+|---|---|---|
+| **Admin Tool & Format Integration** | Done - H1/2026 | Tích hợp Float, Balloon, A/B Testing từ Admin Tool về MoSpark; Nâng cấp định dạng Widget & Popup. |
+| **Ads Placement & Conflict Resolution** | Active - H2/2026 | Placement Registry MVP + Conflict Resolution + Inventory Dashboard + UX Guardrails Enforcement. |
+| **On-site Retargeting & Multi-tenant** | Active - H2/2026 | Ghi vết Local Storage + Cá nhân hóa Ads cho user ẩn danh + Phân quyền đa BU (RBAC). |
+
 ---
 
 ## 7. Phạm Vi & Ưu Tiên
@@ -692,18 +708,21 @@ Nhằm giải quyết dứt điểm các mục tiêu tích hợp và nâng cấp
 | Ads Format Improvement | Thuận | Cải thiện UX/UI và tối ưu hiệu suất hiển thị của Widget (nhúng CMS Shortcode) và Popup để giảm dismiss rate. |
 | PM/PO Playbook | Bảo + Hiến advise | Tài liệu hướng dẫn PM/PO cấu hình ads, widget và các tiêu chuẩn kiểm duyệt nội dung (Content Standards). |
 
-### Backlog (Phase 2 & 3)
-- PRD Phase 2 (Placement Registry schema, conflict logic, Reach Estimate integration)
-- Permission Model (Role definition per Division cho Phase 3)
-- On-site Retargeting Module (Local storage read/write mechanism)
+### Kế hoạch Nâng cấp Tính năng trong H2/2026 (Phase 2 & 3 Implementation)
+
+1. **Ads Placement Registry & Conflict Resolution (Bộ điều phối vị trí & Giải quyết xung đột):**
+   *   Xây dựng registry quản lý tập trung các vị trí hiển thị quảng cáo theo URL/Category.
+   *   Áp dụng thuật toán tự động giải quyết tranh chấp (Conflict Resolution) dựa trên điểm ưu tiên chiến dịch và thực thi nghiêm ngặt các rào cản UX Guardrails (Ví dụ: Max 1 Popup, Max 2 Balloon hiển thị đồng thời trên một trang).
+2. **On-site Anonymous Retargeting Engine (Bám đuổi ẩn danh tại trang):**
+   *   Cài đặt cơ chế ghi vết hành vi tương tác và drop-off của người dùng ẩn danh xuống Local Storage.
+   *   Tự động phân phối Banner/Widget cá nhân hóa phù hợp với intent sử dụng khi người dùng quay lại các trang dùng chung.
 
 ### Lộ trình chi tiết theo Module
 | Module / Hạng mục | Timeline | Trọng tâm chi tiết |
 |---|---|---|
-| **Admin Tool & Format Integration** | **Q2/2026 (Trọng tâm MVP)** | **Tích hợp Float, Balloon, A/B Testing từ Admin Tool về MoSpark; Nâng cấp định dạng Widget & Popup.** |
-| Module 1 | Done - Q2/2026 | Mở rộng pilot từ User Growth sang GPD (Tập trung Float, Balloon và A/B Testing) |
-| Module 2 | Q2/2026 | Placement Registry MVP + Conflict Resolution + Inventory Dashboard |
-| Module 3 | Q3/2026 | Multi-tenant, Umami Dashboard, Extended Formats, Gamified Widgets Integration |
+| **Admin Tool & Format Integration** | Done - H1/2026 | Tích hợp Float, Balloon, A/B Testing từ Admin Tool về MoSpark; Nâng cấp định dạng Widget & Popup. |
+| **Ads Placement & Conflict Resolution** | Active - H2/2026 | Placement Registry MVP + Conflict Resolution + Inventory Dashboard + UX Guardrails Enforcement. |
+| **On-site Retargeting & Multi-tenant** | Active - H2/2026 | Ghi vết Local Storage + Cá nhân hóa Ads cho user ẩn danh + Phân quyền đa BU (RBAC). |
 
 ---
 

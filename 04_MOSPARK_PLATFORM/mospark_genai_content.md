@@ -21,8 +21,8 @@ MoSpark cần một "cỗ máy" sản xuất nội dung không chỉ nhanh mà p
 - **Thiếu Source of Truth:** AI dễ bị ảo giác (hallucination) nếu không được bám sát vào mô tả sản phẩm và các URL tham chiếu cụ thể của dự án.
 
 ### 1.3. Giải pháp (Resolution)
-Tạo ra **SEO/GEO Project Management Hub & AI Content Engine** - một không gian quản lý tập trung dựa trên 5 trụ cột chiến lược v5.0:
-- **SEO/GEO Project Management & Mapping:** Hoạt động như trung tâm quản trị dự án, bắt buộc ánh xạ 1-1 với Microsite đích để tự động kiểm soát URL và phân cấp.
+Tạo ra **PLG Project Management Hub & AI Content Engine** - một không gian quản lý tập trung dựa trên 5 trụ cột chiến lược v5.0:
+- **PLG Project Management & Mapping:** Hoạt động như trung tâm quản trị dự án, bắt buộc ánh xạ 1-1 với Microsite đích để tự động kiểm soát URL và phân cấp.
 - **GEO Moat & AI Citation Tracking:** Tự động hóa sinh 20 query prompts mô phỏng search intent trên AI Search (ChatGPT, Perplexity) để lưu trữ phục vụ đo lường Citation Rate, kết hợp nén nội dung bài viết thành llms.txt cho AI Crawlers.
 - **Multi-Agent Quality Guardrails:** 3 Sub-agents tự động hóa khâu rà soát: YMYL & Legal Compliance Agent (kiểm tra từ khóa cấm, quy định NHNN), Information Gain Scraper (cào quét đối thủ real-time để tìm Content Gap), và Internal Linker (chống cannibalization).
 - **Programmatic pSEO Factory:** Tự động hóa sản xuất nội dung quy mô lớn qua CSV (dành cho use case phân mảnh địa phương như Phạt Nguội, eSIM).
@@ -109,10 +109,10 @@ Biến MoSpark thành "Production Lab" duy nhất, nơi nội dung được sả
 
 ## 6. Workflow Content
 
-### 6.1. SEO/GEO Project làm Trung tâm Quản trị & Mapping Microsite
+### 6.1. PLG Project làm Trung tâm Quản trị & Mapping Microsite
 
-Mỗi dự án SEO/GEO (SEO/GEO Project) trên MoSpark không chỉ đơn thuần là công cụ tạo nội dung mà hoạt động như **Trung tâm Quản trị Dự án (Project Management Hub)** (Chi tiết xem tại: SEO/GEO Project Management).
-- **Ràng buộc Mapping 1-1 cứng:** Mỗi SEO/GEO Project phải được thiết lập liên kết (mapping) bắt buộc với **chính xác 1 Microsite** (Use Case) tương ứng. Dự án không được phép hoạt động mồ côi (orphaned).
+Mỗi dự án SEO/GEO (PLG Project) trên MoSpark không chỉ đơn thuần là công cụ tạo nội dung mà hoạt động như **Trung tâm Quản trị Dự án (Project Management Hub)** (Chi tiết xem tại: PLG Project Management).
+- **Ràng buộc Mapping 1-1 cứng:** Mỗi PLG Project phải được thiết lập liên kết (mapping) bắt buộc với **chính xác 1 Microsite** (Use Case) tương ứng. Dự án không được phép hoạt động mồ côi (orphaned).
 - **Cơ chế Định tuyến đường dẫn:** Việc mapping 1-1 này nhằm tuân thủ tuyệt đối cơ chế định tuyến SEO/GEO của MoSpark: mọi bài viết Blog, tài liệu thuộc dự án bắt buộc phải nằm dưới URL của Microsite đó theo cấu trúc: `/{use-case}/blog*` (Ví dụ: `/phat-nguoi/blog/quy-dinh-phat-nguoi-o-to`).
 - **Phân tách thực thể:** Bản thân Microsite quản lý toàn bộ tài sản nội dung của Use Case đó. Blog, Landing Page, FAQ, Merchant Page... đều là các module phân phối thuộc Microsite - không phải các entity hoạt động độc lập:
 
@@ -127,7 +127,7 @@ Mỗi dự án SEO/GEO (SEO/GEO Project) trên MoSpark không chỉ đơn thuầ
 
 Content được tạo theo 2 con đường - cả 2 đều yêu cầu Primary Keyword phải đăng ký trong Keyword Master Registry trước khi publish:
 - **Manual (CMS Page Editor trực tiếp):** Content paste bài viết vào CMS Page Editor, nhập Primary Keyword để trigger Unique ID Check.
-- **GenAI Flow (luồng bắt buộc):** SEO/GEO Project (SEO Inventory Cluster) → Business Context → Outline (Selected) → Chọn định dạng phân phối (Page Type: Blog/LP/Merchant...) → CMS Page Editor.
+- **GenAI Flow (luồng bắt buộc):** PLG Project (SEO Inventory Cluster) → Business Context → Outline (Selected) → Chọn định dạng phân phối (Page Type: Blog/LP/Merchant...) → CMS Page Editor.
 
 **Content Management - List View:**
 
@@ -155,11 +155,11 @@ Chỉ hiển thị Editor - không có AI Usage panel vì không có API call.
 
 ### 6.2. Luồng GenAI → Content (Mandatory Flow)
 
-**Điều kiện tiên quyết:** SEO/GEO Project đã tạo và mapped với Microsite trước khi bắt đầu.
+**Điều kiện tiên quyết:** PLG Project đã tạo và mapped với Microsite trước khi bắt đầu.
 
 | Bước | Hành động | Owner | Gate |
 |---|---|---|---|
-| **1** | SEO/GEO Project mapped vào Microsite | PM/PO | Prerequisite cứng - không bỏ qua |
+| **1** | PLG Project mapped vào Microsite | PM/PO | Prerequisite cứng - không bỏ qua |
 | **2** | Nhập Business Context đầy đủ theo template | PM + SEO Lead validate | Bắt buộc hoàn thành trước khi tạo keyword |
 | **3** | Xem SEO Inventory + Topic Cluster (Expand/Collapse UI) | PM chọn stage/cluster cần tấn công | TOFU/MOFU/BOFU hiển thị, PM mở rộng cluster để xem danh sách Primary Keywords |
 | **4** | Chọn / Áp dụng Primary Keyword từ Cluster | PM / Content Team | Trực tiếp trigger tạo content cho keyword, chạy Unique ID Check tự động toàn hệ thống |
@@ -212,14 +212,14 @@ Trang đã tồn tại có thể cập nhật theo 2 cách:
 
 Để đảm bảo tính toàn vẹn dữ liệu và tránh xung đột SEO (Cannibalization), hệ thống áp dụng các quy tắc cứng sau:
 
-1.  **Project-First Requirement (Ràng buộc bối cảnh):** Mọi **Primary Keyword** bắt buộc phải thuộc về một **SEO/GEO Project** cụ thể. Keyword không được phép tồn tại "mồ côi" vì Project là nơi cung cấp *Business Context* và định nghĩa cấu trúc URL.
+1.  **Project-First Requirement (Ràng buộc bối cảnh):** Mọi **Primary Keyword** bắt buộc phải thuộc về một **PLG Project** cụ thể. Keyword không được phép tồn tại "mồ côi" vì Project là nơi cung cấp *Business Context* và định nghĩa cấu trúc URL.
 2.  **Strict 1-1 Mapping (Tính duy nhất):** Quy tắc **1 Bài viết ↔ 1 Primary Keyword**. Một Primary Keyword chỉ được đại diện cho một URL Master và một nội dung duy nhất. Nếu người dùng tạo trùng, hệ thống phải chặn và yêu cầu sử dụng luồng "Update/Enhance".
-3.  **Single Ownership (Phân cấp URL):** Một Primary Keyword chỉ thuộc về **duy nhất 1 SEO/GEO Project**. Điều này đảm bảo sự nhất quán trong URL Hierarchy (ví dụ: `/phat-nguoi/` vs `/merchant/`) và tránh tranh chấp Authority giữa các Use Case.
+3.  **Single Ownership (Phân cấp URL):** Một Primary Keyword chỉ thuộc về **duy nhất 1 PLG Project**. Điều này đảm bảo sự nhất quán trong URL Hierarchy (ví dụ: `/phat-nguoi/` vs `/merchant/`) và tránh tranh chấp Authority giữa các Use Case.
 4.  **Cross-Project Cannibalization Check (Kiểm soát Xung đột chéo):** Phạm vi quét của *Keyword Master Registry* phải mang tính **Global (Toàn cục)** toàn hệ thống MoSpark, không nằm cục bộ trong 1 Project. 
     - *Ví dụ:* Nếu Project "Phạt Nguội" đã sở hữu keyword `quy định ô tô`, thì Project "Bảo Hiểm" **không được phép** tạo mới URL với keyword này.
     - *Xử lý:* Thay vì tạo 2 URL triệt tiêu nhau, hệ thống yêu cầu sử dụng chung 1 bài viết Authority và thực hiện **Cross-linking** (Bài viết Phạt Nguội chèn Banner/CTA bán Bảo Hiểm).
 5.  **Unique ID Check (Kho định danh):** Mọi Keyword khi nhập vào phải được đối soát với *Keyword Master Registry* của toàn hệ thống trước khi cho phép đi vào luồng sản xuất nội dung.
-6.  **Strict 1-to-1 Project-to-Microsite Mapping (Đồng bộ cấu trúc định tuyến):** Mỗi SEO/GEO Project chỉ được phép liên kết với duy nhất 1 Microsite. Hệ thống Router và CMS Page Editor sẽ thực thi kiểm soát ở mức cơ sở dữ liệu: mọi URL con sinh ra từ Project (e.g. blog post, FAQs) sẽ tự động kế thừa tiền tố slug của Microsite được map (ví dụ: `/{use-case}/blog/{slug}`) để đảm bảo cấu trúc thư mục URL luôn chuẩn chỉnh.
+6.  **Strict 1-to-1 Project-to-Microsite Mapping (Đồng bộ cấu trúc định tuyến):** Mỗi PLG Project chỉ được phép liên kết với duy nhất 1 Microsite. Hệ thống Router và CMS Page Editor sẽ thực thi kiểm soát ở mức cơ sở dữ liệu: mọi URL con sinh ra từ Project (e.g. blog post, FAQs) sẽ tự động kế thừa tiền tố slug của Microsite được map (ví dụ: `/{use-case}/blog/{slug}`) để đảm bảo cấu trúc thư mục URL luôn chuẩn chỉnh.
 
 ---
 
@@ -227,7 +227,7 @@ Trang đã tồn tại có thể cập nhật theo 2 cách:
 
 | Bước | Tên Bước | Hành động | Input/Output | Owner |
 |---|---|---|---|---|
-| **1** | **Map Microsite** | SEO/GEO Project mapping vào Microsite tương ứng | Project linked to Microsite | PM/PO |
+| **1** | **Map Microsite** | PLG Project mapping vào Microsite tương ứng | Project linked to Microsite | PM/PO |
 | **2** | **Business Context** | Nhập đầy đủ 12 trường theo template (xem Section 7) | Context Layer - Source of Truth cho AI | PM/Growth + SEO Lead validate |
 | **3** | **SEO Inventory** | Xem Market Sizing, mở rộng TOFU/MOFU/BOFU cluster (Expand/Collapse UI) | Bảng Keyword Strategy tích hợp Business Context | PM/Growth |
 | **4** | **Keyword Apply** | Bấm nút **"Apply / Write Outline"** trực tiếp cạnh Keyword đã phân cụm | Keyword vào Master Registry, Unique ID Check tự động | PM / Content Team |
@@ -267,7 +267,7 @@ graph TD
 #### PM/Growth (Cell Team)
 **Trách nhiệm chính:** Map Microsite, nhập Business Context, chọn keyword từ Inventory, duyệt Outline & quyết định loại hình phân phối (Page Type)
 
-- **Bước 1:** Map SEO/GEO Project vào đúng Microsite
+- **Bước 1:** Map PLG Project vào đúng Microsite
 - **Bước 2:** **Nhập Business Context đầy đủ - chịu trách nhiệm pháp lý về nội dung nhập vào**
   - Confirm tất cả 12 trường theo template: Value Prop, Trust Signals, Disclaimer, Blacklist terms
   - Verify không có thông tin sai, không recommend competitor, không overpromise tính năng
@@ -450,7 +450,7 @@ Dự án GenAI Content được chia làm 3 giai đoạn chính để đảm b�
 - Tích hợp Dashboard đo lường **SoV (Share of Voice)** theo từng Use Case.
 - Theo dõi **Visibility Index** của các bài viết GenAI trên Google Search & AI Search.
 - **GSC + BigQuery Feedback Loop & Content Decay Auto-Refresh:** Hệ thống cảnh báo nội dung giảm hiệu suất và gợi ý bản nháp tối ưu bài viết.
-- **Market Inventory UI (by Trọng):** Hiển thị danh sách Cluster & Volume của Market tương ứng ngay trong giao diện SEO/GEO Project để PM chọn Primary Keyword.
+- **Market Inventory UI (by Trọng):** Hiển thị danh sách Cluster & Volume của Market tương ứng ngay trong giao diện PLG Project để PM chọn Primary Keyword.
 
 ### Giai đoạn 3: Multi-format Scale & Engagement Optimization (Q4/2026)
 **Trọng tâm:** Tối ưu hóa chuyển đổi Web-to-App & mở rộng đa định dạng.
@@ -508,9 +508,13 @@ Việc xác định rõ đơn giá cố định trên từng bài viết giúp P
     *   Nếu chọn chạy 100% bằng **Haiku**: 40 bài x 7.000đ = 280.000 VNĐ.
     *   Nếu chọn chạy 100% bằng **Sonnet**: 40 bài x 20.000đ = 800.000 VNĐ.
 
-**Định hướng & Lộ trình sắp tới:**
-1.  **Đa dạng hóa Model (Multi-Model Selector):** Tích hợp thêm các mô hình ngôn ngữ hàng đầu khác (GPT-4o, Gemini 1.5 Pro, Llama 3, v.v.) trực tiếp trên giao diện CMS MoSpark để PM chủ động lựa chọn tùy theo tính chất nội dung và ngân sách.
-2.  **Cơ chế tích hợp API Key theo BU (Custom BU API Key Integration):** Cho phép các đơn vị kinh doanh (BUs) chủ động cấu hình API Key riêng của BU mình vào hệ thống. Chi phí API call phát sinh sẽ được tự động trừ trực tiếp vào ngân sách phân bổ riêng của BU đó, giải quyết triệt để bài toán phân bổ chi phí giữa các phòng ban.
+**Kế hoạch Nâng cấp Tính năng trong H2/2026:**
+
+1. **Enterprise Multi-Model Hub:** Tích hợp cổng API gateway tập trung của công ty hỗ trợ đa dạng model (Gemini, Claude, GPT) tùy theo nhu cầu và tính chất của từng dự án Cell Team.
+2. **GenAI Billing & Chargeback System:** Tự động tổng hợp chi phí tạo bài viết từ GenAI (dựa trên token tiêu thụ thực tế) để xuất "hóa đơn ảo" khấu trừ trực tiếp vào ngân sách (Budgets) của từng Cell Team.
+3. **Custom Use-Case Prompts (Content Writer Agent):** Cho phép cấu hình các Prompts chuyên biệt viết Outline/Detail cho từng Use Case cụ thể. Mỗi dự án được gán một "Content Writer" riêng biệt được tối ưu hóa để đảm bảo chất lượng văn phong, kiểm soát chi phí, và định hướng chính xác theo Business Context.
+4. **Creative GenAI Suite (Image & Video):** Tích hợp tính năng tự động tạo hình ảnh minh họa (theo template chuẩn Mobase) và video ngắn từ prompt trực tiếp trong luồng sản xuất content.
+5. **Auto-Rewrite Loop (Vòng lặp tự động viết lại):** Tự động nhận tín hiệu cảnh báo từ Content Decay (sụt giảm traffic click trên Google Search Console) để tự tạo draft nâng cấp bài viết.
 
 ---
 
@@ -552,6 +556,7 @@ Hệ thống được thiết kế mở rộng dựa trên việc học hỏi c�
 
 Để đảm bảo sự thống nhất trong vận hành, các thuật ngữ dưới đây được định nghĩa như sau:
 
+*   **GenAI (Generative AI - Trí tuệ Nhân tạo Tạo sinh):** Trong hệ sinh thái MoSpark, GenAI là công nghệ sử dụng các Mô hình Ngôn ngữ Lớn (LLMs như Claude, Gemini, GPT) để tự động hóa việc sinh dàn bài (Outline) và viết nội dung chi tiết (Detail Content) cho các định dạng trang web (Blog, Landing Page, Merchant Page, FAQ) dựa trên dữ liệu đầu vào là bộ khung ngữ cảnh sản phẩm (Business Context) và từ khóa mục tiêu (Primary/Secondary Keywords).
 *   **Keyword Master Registry (Kho Định Danh Gốc):** Là "Sổ cái" trung tâm lưu trữ toàn bộ Primary Keywords của một Use Case. Mọi trang nội dung (dù tạo từ luồng nào) đều phải được đăng ký tại đây.
 *   **Unique ID Check (Kiểm tra Định danh Duy nhất):** Quy trình hậu kiểm tự động. Hệ thống đối soát từ khóa mới với *Keyword Master Registry* để đảm bảo không có 2 trang trùng lặp nội dung/từ khóa trong cùng một Use Case.
 *   **AI Enhance (Nâng cấp AI):** Tính năng cho phép "tái cấu trúc" một trang nội dung hiện có bằng sức mạnh của GenAI thông qua việc chuyển hướng về quy trình Draft Outline/Detail.
@@ -562,7 +567,7 @@ Hệ thống được thiết kế mở rộng dựa trên việc học hỏi c�
 
 ## 13. Tài liệu Liên kết
 *   **Master Strategy:** MoSpark Master Doc
-*   **SEO/GEO Project Hub:** MoSpark SEO/GEO Project Management
+*   **PLG Project Hub:** MoSpark PLG Project Management
 *   **Dữ liệu Thị trường:** MoSpark SEO Keyword Inventory
 
 ## 14. Change Log
@@ -574,7 +579,7 @@ Hệ thống được thiết kế mở rộng dựa trên việc học hỏi c�
 - **v4.8 (2026-06-14):** Cập nhật lộ trình triển khai: đưa sản xuất nội dung đa dạng page type/format (Blog, LP, FAQ, Merchant...) về Phase III; pilot Phạt Nguội chạy tốt; bổ sung kế hoạch nâng cấp tháng 6 để sản xuất Content cho Microsite có Long Content Section (Phạt Nguội) và Merchant ở Phase II. (Hiến).
 - **v4.7 (2026-06-14):** Xác nhận hoàn thành và triển khai thực tế bộ quy tắc Core Data Governance Rules bởi Dev (Trọng). (Hiến).
 - **v4.6 (2026-06-13):** Tích hợp 5 Trụ cột nâng cấp v5.0 được phê duyệt: Thiết lập GEO Moat (AI Query Generator & 20 simulated prompts tracking, auto-compressed llms.txt), Multi-Agent Quality Guardrails (Compliance, Info Gain, Internal Linker), Programmatic pSEO Bulk Generator, và Closed-loop Decay Refresh. Cập nhật Lộ trình triển khai Phase 2 & 3. (Hiến).
-- **v4.5 (2026-06-07):** Nâng cấp tài liệu định nghĩa GenAI Content Engine thành Trung tâm Quản trị Dự án SEO/GEO (SEO/GEO Project Management Hub). Quy định ràng buộc mapping 1-1 bắt buộc với Microsite và cơ chế định tuyến tự động `/{use-case}/blog*` ở mức Database và Router (Hiến).
+- **v4.5 (2026-06-07):** Nâng cấp tài liệu định nghĩa GenAI Content Engine thành Trung tâm Quản trị Dự án SEO/GEO (PLG Project Management Hub). Quy định ràng buộc mapping 1-1 bắt buộc với Microsite và cơ chế định tuyến tự động `/{use-case}/blog*` ở mức Database và Router (Hiến).
 - **v4.4 (2026-06-05):** Chuyển đổi mô hình từ sản xuất Blog đơn thuần sang chiến lược đa dạng hóa trang phân phối (Content Strategy với Page Type: Blog, LP, FAQ, Merchant Page). Tích hợp giao diện SEO Inventory có Topic Cluster (Expand/Collapse) để PM chọn trực tiếp Primary Keyword và click tạo Outline/Detail. (Hiến).
 - **v4.3 (2026-05-31):** Bổ sung Tech Ownership rõ ràng cho 3 Dev: Trọng (AI Tool/Model/Workflow - lõi engine sinh content), Thuận (GenAI Hình - đang quản lý MoMo Gallery), Lộc (phân quyền User access GenAI trong MoSpark). Governance: Hiến (Skill Hub).
 - **v4.2 (2026-05-27):** Cập nhật Section 9.4: Bổ sung đơn giá và thời gian benchmark chi tiết cho Claude 3 Haiku (7.000đ - 55s) & Claude 3.5 Sonnet (20.000đ - 140s). Quy hoạch cơ chế dự toán chi phí theo Content Plan và định hướng lộ trình Multi-model Selector + tích hợp API Key theo BU (Văn Hiến).

@@ -3,7 +3,7 @@
 
 > - **Document type:** Operational Skill
 > - **Audience:** Web Platform Team (Bảo + members)
-> - **Owner:** Out-App Traffic · GPD · Văn Hiến
+> - **Owner:** Web Platform · GPD · Văn Hiến
 > - **Last updated:** Tháng 5/2026
 > - **Status:** In Progress - robots.txt Lớp 1 DEPLOYED
 
@@ -118,7 +118,7 @@ Sitemap: https://www.momo.vn/sitemap-1.1.xml
 | `/view-app/` | Đúng | App deep link view |
 
 **Vấn đề 1 - `/help` đang bị block:**
-Nếu đây là trang hướng dẫn sử dụng sản phẩm, đây là content có giá trị cho cả SEO index lẫn AI understanding. Cần Web Platform + Out-App Traffic confirm mục đích thực sự trước khi quyết định giữ hay bỏ directive này.
+Nếu đây là trang hướng dẫn sử dụng sản phẩm, đây là content có giá trị cho cả SEO index lẫn AI understanding. Cần Web Platform + Web Platform confirm mục đích thực sự trước khi quyết định giữ hay bỏ directive này.
 
 **Vấn đề 2 - Không có AI crawler policy:**
 `User-agent: * Allow: /` có nghĩa tất cả crawlers được phép crawl toàn bộ site - bao gồm Bytespider (ByteDance), CCBot (Common Crawl), và tất cả training crawlers. Đây không phải lỗi, nhưng là **policy mặc định không có chủ ý**. MoMo chưa bao giờ thực sự quyết định có muốn content của mình vào training data AI hay không.
@@ -342,7 +342,7 @@ Disallow: /*?*fbclid=
 Sitemap: https://www.momo.vn/sitemap-1.1.xml
 ```
 
-**Lưu ý về `/help`:** Giữ nguyên trong template trên - cần Out-App Traffic + Web Platform confirm mục đích trước khi quyết định.
+**Lưu ý về `/help`:** Giữ nguyên trong template trên - cần Web Platform + Web Platform confirm mục đích trước khi quyết định.
 
 ### 3.5 Giới hạn của robots.txt cần biết
 
@@ -526,11 +526,11 @@ momo.vn/quan-ly-chi-tieu/llms-full.txt
 
 | Deliverable | Content owner | Technical owner |
 |-------------|--------------|-----------------|
-| `robots.txt` nâng cấp | Out-App Traffic (spec) | Web Platform (implement) |
-| `llms_summary` per product | Out-App Traffic + BU | Web Platform (add field vào CMS) |
+| `robots.txt` nâng cấp | Web Platform (spec) | Web Platform (implement) |
+| `llms_summary` per product | Web Platform + BU | Web Platform (add field vào CMS) |
 | Long Content quality | Inbound + BU | - |
 | Auto-generate pipeline | - | Web Platform |
-| Quarterly review | Out-App Traffic | Web Platform (URL check) |
+| Quarterly review | Web Platform | Web Platform (URL check) |
 
 ---
 
@@ -550,7 +550,7 @@ Bước 2: Baseline metrics
   → Ghi lại làm baseline
         ↓
 Bước 3: Confirm canonical URLs
-  → Out-App Traffic cung cấp danh sách
+  → Web Platform cung cấp danh sách
   → Web Platform verify 200 OK, không có redirect chain
         ↓
 Bước 4: Add llms_summary field vào Supabase CMS
@@ -635,7 +635,7 @@ MoMo được vận hành bởi Service (Công ty Cổ phần Dịch vụ Di Đ�
 
 ### 9.2 Option A - Thêm `llms_summary` field vào CMS
 
-**Mô tả:** Web Platform thêm field mới vào Supabase schema. Field này chứa 2-3 câu mô tả factual về sản phẩm - viết đúng cho AI đọc. Inbound/BU + Out-App Traffic điền một lần, pipeline tự pull vào `llms.txt` master.
+**Mô tả:** Web Platform thêm field mới vào Supabase schema. Field này chứa 2-3 câu mô tả factual về sản phẩm - viết đúng cho AI đọc. Inbound/BU + Web Platform điền một lần, pipeline tự pull vào `llms.txt` master.
 
 **Gợi ý field spec:**
 - Field name: `llms_summary`
@@ -698,7 +698,7 @@ Với setup hiện tại (CI/CD có, cron không có): **Manual trigger** là kh
 
 ### 9.7 Content rules cho Inbound/BU
 
-Out-App Traffic chịu trách nhiệm communicate rules sau đến Inbound/BU:
+Web Platform chịu trách nhiệm communicate rules sau đến Inbound/BU:
 
 **Nên làm:**
 - Dùng H2 cho section chính, H3 cho subsection - không skip heading level
@@ -893,7 +893,7 @@ Nếu sau 6 tháng cả 3 signals đều flat → giữ maintenance tối thiể
 
 *Living document - update khi có thay đổi về standard, product, hoặc learnings từ monitoring.*
 
-*Out-App Traffic · GPD | momo.vn | Văn Hi- **Master Strategy:** [[mospark_master]]
+*Web Platform · GPD | momo.vn | Văn Hi- **Master Strategy:** [[mospark_master]]
 
 ---
 

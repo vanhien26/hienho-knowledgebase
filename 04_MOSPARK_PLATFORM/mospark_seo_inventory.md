@@ -4,9 +4,9 @@ Bản đồ Tài nguyên & Thị phần (SoV)
 > - **Project:** MoSpark Web Platform
 > - **Main URL:** momo.vn/mospark
 > - **Division:** GPD (Growth Product Division)
-> - **Use Case:** Out-App Traffic
+> - **Use Case:** Web Platform
 > - **Product:** Web Growth Platform
-> - **Owner:** GPD - Out-App Traffic (Thuận)
+> - **Owner:** GPD - Web Platform (Thuận)
 > - **Governance:** Văn Hiến (Web Product Lead)
 > - **Version:** 4.7 · May 2026
 > - **Status:** Active - Platform Core Metadata
@@ -64,7 +64,7 @@ SEO Inventory là **tầng đầu tiên** trong chuỗi vận hành MoSpark - mo
 | **INPUT** | Total search volume theo Use Case | Ahrefs / Google KP | Quarterly |
 | **INPUT** | Traffic thực tế MoMo | GA4 / BigQuery | Monthly |
 | **INPUT** | Business priority từ leadership | OKR / Company Direction | Quarterly |
-| **OUTPUT** | Priority Use Case list + Priority Score | → SEO/GEO Project Management Hub | Quarterly |
+| **OUTPUT** | Priority Use Case list + Priority Score | → PLG Project Management Hub | Quarterly |
 | **OUTPUT** | Market Share % theo Use Case | → Performance Loop | Monthly |
 | **OUTPUT** | Keyword ownership map | → Quality Gate (Cannibalization block) | Per project |
 | **OUTPUT** | Market sizing data | → BRD mới (North Star, KPI input) | Ad-hoc |
@@ -331,7 +331,7 @@ Mục đích: Tránh tình huống 2 trang cùng tối ưu cho 1 từ khóa - ch
 
 ## 9. Tài liệu Liên kết
 *   **Master Strategy:** [[04_MOSPARK_PLATFORM/mospark_master|MoSpark Master Doc]]
-*   **SEO/GEO Project Hub:** [[04_MOSPARK_PLATFORM/mospark_seo_geo_project|MoSpark SEO/GEO Project Management]]
+*   **PLG Project Hub:** [[04_MOSPARK_PLATFORM/mospark_plg_project|MoSpark PLG Project Management]]
 *   **Quy trình GenAI Content:** [[04_MOSPARK_PLATFORM/mospark_genai_content|MoSpark GenAI Content Engine]]
 *   **Quản trị Bối cảnh:** [[04_MOSPARK_PLATFORM/mospark_business_context|Business Context Management]]
 *   **Chỉ đạo tối cao:** [[00_HARNESS_CORE/hienho_master_doc|Hienho Master Doc]]

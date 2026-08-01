@@ -171,7 +171,7 @@ MoSpark sử dụng **Use Case** như một cơ chế phân loại và phân ph�
 |------|-------|--------|
 | Cross-blog internal linking | Bảo/Web Platform | Auto-suggest links |
 | Unified search across all blog paths | Bảo/Web Platform | Global search |
-| Analytics consolidation | DA (Hải/Hoàng) | Unified dashboard |
+| Analytics consolidation | DA (Hải) | Unified dashboard |
 | Deprecate Admin Tool V1 | Bảo | Shutdown old system |
 
 **Success Criteria:**

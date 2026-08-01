@@ -3,11 +3,11 @@ title: "MoSpark Strategic Deck"
 description: >
   Deck/Proposal nội bộ giúp C-Level và Cell Team nắm chiến lược Web MoMo,
   vai trò MoSpark Growth OS, và cách onboard Use Case. Đọc như slide — 15–25 phút.
-version: 1.2
+version: 1.3
 status: Active
-owner: GPD - Out-App Traffic
+owner: GPD - Web Platform
 governance: Web Product Lead
-last_updated: 2026-05-23
+last_updated: 2026-07-10
 tags: [mospark, deck, strategy, plg, geo, cell-team]
 main_url: momo.vn/mospark
 division: Growth Platform Division (GPD)
@@ -170,11 +170,15 @@ flowchart LR
 
 **Audience:** Both
 
-**Takeaway:** MoSpark không phải CMS — là hệ điều hành tăng trưởng 4 lớp: sản xuất → monetize/contextual ads → quality gate → performance loop.
+**Takeaway:** MoSpark không phải CMS thông thường — là hệ điều hành tăng trưởng 4 lớp (sản xuất → monetize/contextual ads → quality gate → performance loop), phục vụ song hành cả dự án PLG tăng số và Mini Web truyền thông.
 
 **Định nghĩa:**
 
 > **MoSpark** = **Growth OS** cho momo.vn — "Cỗ máy tăng trưởng tự trị" sản xuất, tối ưu và chuyển đổi dựa trên Search Intent và AI.
+
+**Phân loại Trụ cột Sản phẩm trên Nền tảng:**
+1. **Trụ cột PLG (Product-Led Growth Projects):** Các sản phẩm giải quyết JTBD bằng tiện ích (Calculator, Simulator, Maps) có cam kết chỉ số tăng trưởng số lượng (W2A rate, Activation, Transactions).
+2. **Trụ cột Truyền thông (Communication Mini Webs & LPs):** Các trang nội dung chuyên đề, chiến dịch PR thương hiệu (như báo cáo lừa đảo dự án Trust, bản tin an toàn bảo mật) sử dụng hạ tầng CMS/Editor để tối ưu vận hành nhưng **không gán cam kết tăng trưởng số cứng**, hướng tới truyền tải thông tin và xây dựng niềm tin số.
 
 ```mermaid
 flowchart TB
@@ -322,16 +326,16 @@ flowchart TB
 |:---|:---|
 | **Market volume** | ~3.56M searches/tháng |
 | **MoMo edge** | Partnership TTDK; Official data; Trust Moat vs phatnguoi.com |
-| **Model** | Wise-style pSEO + Web Tool (lookup không login) |
+| **Model** | Intentional Location Hub + Web Tool (lookup không login) |
 | **Status (05/2026)** | SEM LIVE · Umami tracking · GenAI Ready content |
 
 **Growth framework 3 giai đoạn:**
 
 | Giai đoạn | Hành động | Kết quả |
 |:---|:---|:---|
-| **Short-term** | Web Tool tra cứu real-time | W2A → New User |
-| **Mid-term** | Interactive Camera Map | Chiếm cluster "camera phạt nguội" |
-| **Long-term** | pSEO 63 tỉnh/thành | Topical Authority + GEO citation |
+| **Short-term** | Web Tool tra cứu + Subscription + Interactive Camera Map + Tuyến đường (Route) | W2A -> New User & direct checkout revenue |
+| **Mid-term** | Khởi tạo trang Khu vực có chủ đích + Blog Batch 2 | Topical Authority + GEO citation |
+| **Long-term** | Growth Loops + Bản đồ Camera AI + Dispute Assistant | Viral loops & advanced PLG tactics |
 
 ```mermaid
 pie title Phat_Nguoi_Theme_Distribution_3_56M
@@ -407,7 +411,7 @@ pie title Phat_Nguoi_Theme_Distribution_3_56M
 
 **Lời mời hành động:**
 
-1. Chọn Use Case → book **Feasibility Sync** với GPD (Out-App Traffic)
+1. Chọn Use Case → book **Feasibility Sync** với GPD (Web Platform)
 2. Hoàn thành **Business Context 12 fields** trước khi tạo keyword
 3. Không bypass **Publish Gate** — mọi URL momo.vn đều audit
 
@@ -442,5 +446,6 @@ pie title Phat_Nguoi_Theme_Distribution_3_56M
 | **v1.0** | 2026-05-21 | Khởi tạo Strategic Deck. |
 | **v1.1** | 2026-05-21 | Bổ sung Website Proposal Outline. |
 | **v1.2** | 2026-05-23 | Chuẩn hóa format: xóa 30+ Obsidian links, xóa callout blocks, xóa checkboxes, xóa Website Proposal Outline (quá technical cho C-Level), xóa Appendix Document Map. Giữ nguyên 12 sections chiến lược. |
+| **v1.3** | 2026-07-10 | Bổ sung định hướng phân loại trụ cột sản phẩm trên MoSpark (phân biệt PLG vs PR/Truyền thông). |
 
-*Maintained by: GPD — Out-App Traffic · Governance: Web Product Lead · v1.2 — May 2026*
+*Maintained by: GPD — Web Platform · Governance: Web Product Lead · v1.3 — July 2026*

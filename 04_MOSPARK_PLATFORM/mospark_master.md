@@ -94,7 +94,7 @@ AI Search đang thay đổi cách người dùng tìm kiếm thông tin tài ch�
 - AI Overviews xuất hiện trên 13-30% queries - fintech là category trigger cao.
 - Người dùng VN đang hỏi AI: *"ví điện tử nào tốt nhất"*, *"vay tiền online uy tín"*. Nếu MoMo không có structured context, AI trả lời theo nội dung của competitor.
 
-MoMo đang tụt hậu trong GEO: 0% AI Chatbot referral so với Wise.com 40%+. Tính đến tháng 5/2026, chưa có major Vietnamese fintech nào (ZaloPay, VPBank, Cake) deploy llms.txt hay AI-native content pipeline - đây là window đang mở.
+MoMo từng ghi nhận 0% AI Chatbot referral so với Wise.com 40%+. Sau khi pilot `llms.txt` trên Phạt Nguội (May 2026), chúng ta bước đầu nhận được hơn 660 citations và lượng traffic thực tế từ ChatGPT. Trước xu thế dịch chuyển mạnh mẽ của người dùng sang các công cụ AI Search và Chatbot thế hệ mới, đây là cơ hội vàng để MoMo nhanh chóng hoàn thiện và scale up hạ tầng GEO, củng cố vị thế dẫn đầu thị phần hiển thị trên các công cụ tìm kiếm thế hệ mới.
 
 ---
 
@@ -144,7 +144,7 @@ Scope rõ không kém scope có. Dưới đây là những gì MoSpark không l�
 | Persona | Ai | Pain point | Cần gì từ MoSpark |
 |---|---|---|---|
 | **PM/PO Cell Team** | PO Vay Nhanh, Cinema, Bảo Hiểm, Phạt Nguội... | Phụ thuộc Dev cho LP, Ads, content | Tự tạo LP, chạy Ads, nhập Business Context trong cùng ngày |
-| **Content Writer / Inbound** | Mai, Agency content | Đăng nhập nhiều CMS, prompt AI mỗi người mỗi kiểu | 1 interface duy nhất, AI pipeline chuẩn hóa, không cần học lại |
+| **Content Writer / Inbound** | Content Writers, Agency content | Đăng nhập nhiều CMS, prompt AI mỗi người mỗi kiểu | 1 interface duy nhất, AI pipeline chuẩn hóa, không cần học lại |
 | **Web Product Lead** | Văn Hiến | Audit thủ công từng trang, không có SoV visibility | Quality gate tự động, SoV dashboard, data để quyết định đầu tư Use Case nào |
 | **Platform Admin** | Bảo (Web Platform Manager) | Ads conflict giữa Division, không có inventory view | Placement Registry, enforce policy, không cần review từng campaign |
 
@@ -237,7 +237,7 @@ MoSpark vận hành theo 5 lớp, phủ kín toàn bộ lifecycle từ market re
 | M8 | Migration | Admin Panel → MoSpark | Structure & Mapping Phase | 1 | Bảo + Thuận + Lộc |
 | M9 | PLG Tool Builder | Utility Tool Platform | Planning - Spec Phase | 2 | Bảo + Thuận + Hiến |
 | M10 | Experiment Engine | Native AB Testing | Planning | 2 | Thuận + DA |
-| M11 | Revenue Attribution | Web-to-App ROI Pipeline | Planning | 2 | Thuận + DA (Hải/Hoàng) |
+| M11 | Revenue Attribution | Web-to-App ROI Pipeline | Planning | 2 | Thuận + DA (Hải) |
 | M12 | Content Intelligence | Decay Detection + Opportunity | Planning | 2→3 | Thuận + Hiến |
 | M13 | GEO Citation Monitor | AI Engine Citation Tracking | Planning | 2 | Hiến (spec) + Thuận |
 | M14 | HRM API Sync (LnD) | Đồng bộ Data Nhân sự / Phân quyền | Ý tưởng | 3 | Bảo |
@@ -608,7 +608,7 @@ Use Case: Vay Nhanh [tháng X/2026]
 
 | Signal | Threshold | Action |
 |---|---|---|
-| Traffic giảm > 20% trong 4 tuần liên tiếp | Warning | Alert Hiến + Mai |
+| Traffic giảm > 20% trong 4 tuần liên tiếp | Warning | Alert Hiến + Inbound Team |
 | Traffic giảm > 50% trong 8 tuần | Critical | AI Enhancement queue - draft re-write |
 | Zero traffic > 90 ngày | Zero-traffic | URL audit: 410 Gone / Redirect / Rewrite decision |
 
@@ -720,7 +720,7 @@ User trên Web → Ads (reactivation) → App Open → MAU
 ```
 MoMo được cite trong top 3 AI engine responses cho 20 target PFM queries.
 Engines: Google AI Overview, ChatGPT, Perplexity.
-Current: 0% AI Chatbot referral vs Wise.com 40%+.
+Current: Tỉ lệ trích dẫn tổng thể còn thấp (từng ghi nhận 0% AI Chatbot referral vs Wise.com 40%+; hiện bắt đầu có tín hiệu từ pilot Phạt Nguội).
 ```
 
 ### 7.2. Platform KPIs
@@ -861,13 +861,13 @@ Use Case: Phạt Nguội
 | **Bảo (Web Platform Manager)** | Product direction MoSpark, Placement Registry, enforce "no hardcode", PO Web Platform sprint | Không làm trực tiếp với Agency hay Inbound |
 | **Thuận + Lộc (Developers)** | Build tất cả modules theo spec, Widget Library, database | Không tham gia campaign creation khi đã có self-service |
 | **Trọng (Developer)** | GenAI Content Engine - AI Tool, Model, Workflow (lõi engine). Thuận lo GenAI Hình (Gallery), Lộc lo phân quyền User | Không build các module khác của MoSpark |
-| **Mai (Inbound SEO Lead)** | Content production theo brief Hiến, điền Business Context cùng PM, off-page | Không làm trực tiếp với Web Platform - technical request qua Hiến |
+| **Inbound Team (BMC)** | Content production theo brief Hiến, điền Business Context cùng PM, off-page | Không làm trực tiếp với Web Platform - technical request qua Hiến |
 | **PM/PO Cell Team** | Khởi tạo Use Case, xác nhận Business Context (chịu trách nhiệm pháp lý), approve Outline, tự tạo LP + Ads | Không chỉnh code hoặc nhờ Dev bypass MoSpark |
 
 ### 11.2. Escalation Path
 
 Platform issues → Bảo → Hiến review (nếu SEO impact).
-Content quality → Hiến → Mai (nếu Inbound cần training).
+Content quality → Hiến → Inbound Team (nếu Inbound cần training).
 Resource/Policy → Hiến → Bảo → Công (VP).
 
 ---

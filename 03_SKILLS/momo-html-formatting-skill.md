@@ -1,8 +1,8 @@
 ## Tổng Quan
 
-Skill này định nghĩa toàn bộ design system, brand guideline, và convention cố định khi tạo HTML document nội bộ cho team **Out-App Traffic · GPD** tại MoMo.
+Skill này định nghĩa toàn bộ design system, brand guideline, và convention cố định khi tạo HTML document nội bộ cho team **Web Platform · GPD** tại MoMo.
 
-**Quy tắc bắt buộc:** Áp dụng skill này bất cứ khi nào output là một file HTML nội bộ cho MoMo GPD/Out-App Traffic, đặc biệt khi tạo mới hoặc cập nhật HTML doc, strategy doc, project doc, use case document dạng HTML.
+**Quy tắc bắt buộc:** Áp dụng skill này bất cứ khi nào output là một file HTML nội bộ cho MoMo GPD/Web Platform, đặc biệt khi tạo mới hoặc cập nhật HTML doc, strategy doc, project doc, use case document dạng HTML.
 
 ---
 
@@ -11,7 +11,7 @@ Skill này định nghĩa toàn bộ design system, brand guideline, và convent
 ### Metadata cố định
 
 ```
-Team:    Out-App Traffic · GPD
+Team:    Web Platform · GPD
 <title>: [Tên Use Case] - [Loại Document] | MoMo
 ```
 
@@ -407,7 +407,7 @@ font-weight: 600;
 
 ```html
 <div class="sidebar-footer">
-  Out-App Traffic · GPD<br>
+  Web Platform · GPD<br>
   Last updated: [Tháng/Năm]<br>
   MoMo - momo.vn
 </div>
@@ -465,4 +465,4 @@ font-weight: 600;
 
 ---
 
-**Skill này là "source of truth" cho toàn bộ HTML documentation MoMo Out-App Traffic. Bất kỳ câu hỏi về design/layout/color, đều được giải quyết qua tài liệu này
+**Skill này là "source of truth" cho toàn bộ HTML documentation MoMo Web Platform. Bất kỳ câu hỏi về design/layout/color, đều được giải quyết qua tài liệu này

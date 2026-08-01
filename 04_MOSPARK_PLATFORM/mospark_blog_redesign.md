@@ -4,7 +4,7 @@ Tiêu chuẩn và tối ưu hóa giao diện hiển thị hệ thống Blog
 > - **Project Name:** MoSpark Web Platform
 > - **Division:** GPD (Growth Platform Division)
 > - **Owner:** Bảo
-> - **PIC:** Tuấn (Design)
+> - **PIC:** Hùng (FE/Design - Tiếp nhận sau khi Tuấn nghỉ)
 > - **Version:** 1.0 · June 2026
 
 ---
@@ -12,7 +12,7 @@ Tiêu chuẩn và tối ưu hóa giao diện hiển thị hệ thống Blog
 ## 1. Executive Summary
 
 ### 1.1. Bối cảnh (Situation)
-Blog của MoMo hiện đang phục vụ lượng lớn Out-App Traffic thông qua SEO và Social. Tuy nhiên, UI/UX hiện tại chưa được tối ưu triệt để để giữ chân người dùng (Retention), tạo dựng độ tin cậy chuyên gia (E-E-A-T), và tận dụng lượng traffic khổng lồ này để chuyển đổi về App (Web-to-App).
+Blog của MoMo hiện đang phục vụ lượng lớn Web Platform thông qua SEO và Social. Tuy nhiên, UI/UX hiện tại chưa được tối ưu triệt để để giữ chân người dùng (Retention), tạo dựng độ tin cậy chuyên gia (E-E-A-T), và tận dụng lượng traffic khổng lồ này để chuyển đổi về App (Web-to-App).
 
 ### 1.2. Mục tiêu (Objective)
 Cải tổ toàn diện giao diện hiển thị của MoSpark Blog (Home & Detail) với 4 trọng tâm chính:
@@ -99,7 +99,7 @@ Cải tổ toàn diện giao diện hiển thị của MoSpark Blog (Home & Deta
 
 ## 3. Workflow Phối hợp
 
-1. **Product Design (Tuấn):** Chịu trách nhiệm thiết kế layout, UI components, responsive behavior (Desktop/Mobile) dựa trên brief này. Bàn giao thiết kế trên Figma.
+1. **Product Design (Hùng):** Chịu trách nhiệm thiết kế layout, UI components, responsive behavior (Desktop/Mobile) dựa trên brief này (Tiếp nhận và phụ trách sau khi Tuấn nghỉ).
 2. **Web Product Lead (Văn Hiến):** Rà soát bản thiết kế để đảm bảo không vi phạm các rào cản về SEO (CWV, E-E-A-T) trước khi đưa sang đội Engineering.
 3. **Engineering Team:** Dựng component và cấu hình liên kết (Schema mapping, Ads logic) trong MoSpark Editor. Tích hợp quản trị vòng đời trạng thái của bài viết (Draft -> Review -> Live -> Deleted) bám sát các tiêu chuẩn kỹ thuật (HTTP codes, Sitemap, Robots, Canonical) được định nghĩa tại [Mục 2.5 Quy Chuẩn Quản Trị Trạng Thái & CRUD Bài Viết](#2.5.-quy-chuẩn-quản-trị-trạng-thái--crud-bài-viết-seo--content).
 

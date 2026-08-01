@@ -3,10 +3,10 @@
 > - **Project Name:** MoSpark Widget Store Platform
 > - **Division:** GPD (Growth Platform Division)
 > - **Owner:** Web Platform
-> - **PIC:** Hiếu (Backend, API Config & Logic Builder), Thuận (Widget & Utility Manager - Đóng gói & quản trị Widget để phân phối qua Ads Manager), Hiến (Project Manager)
+> - **PIC:** Hiếu (Prototype & Logic Builder), Thuận (Widget Standards & Packaging), Hiến (Project Manager)
 > - **Sponsors:** GPD & Business Units (Finhub BU - internal - làm đơn vị thí điểm Phase 1)
 > - **Status:** Active - Restructured & PLG Reoriented
-> - **Version:** 3.6 — 2026-06-25
+> - **Version:** 4.4 — 2026-07-02
 
 ---
 
@@ -14,8 +14,30 @@
 
 ## 1. Executive Summary & Core Widget Definition
 
-### 1.1 Executive Summary
-Dự án **Widget Store** trên MoSpark cung cấp một thư viện các tiện ích tương tác chuẩn hóa nhằm mục tiêu tăng trưởng lưu lượng truy cập tự nhiên (SEO/GEO) và tối ưu tỷ lệ chuyển đổi Web-to-App (W2A) trên toàn hệ thống MoMo Web Channel.
+### 1.1 Executive Summary & Platform Product Vision
+Dự án **Widget Store Platform** được phát triển theo định hướng là **Một Nền tảng Tương tác Tăng trưởng hợp nhất (Unified PLG Growth Platform)** trên toàn hệ thống MoMo Web Channel, nhằm mục tiêu thúc đẩy các chỉ số **MEU (Monthly Earning Users)**, **MAU (Monthly Active Users)** và **Login App (DLU/MLU)** theo định hướng **Product-Led Growth (PLG)**.
+
+Để giúp các Stakeholders hiểu rõ định hướng, Product Vision của Nền tảng được chia nhỏ (break down) cụ thể như sau:
+
+#### 👥 Giá trị đạt được theo Stakeholders (Value Proposition & Outcomes)
+*   **Với Business Units & Cell Teams (BUs):**
+    *   **Tự chủ & Tốc độ (Go-to-market in 5 mins):** Chọn, cấu hình tham số JSON Schema và deploy Widget lên Landing Page/Blog trong 5 phút qua CMS, hoàn toàn không phụ thuộc lực lượng FE Developer của từng team hay chu kỳ Sprint phát triển UI.
+    *   **Đo lường & Tối ưu dễ dàng:** Tự do cấu hình kịch bản **Smart CTA Rules** và thực hiện **A/B Testing** thông điệp CTA để tối ưu tỷ lệ chuyển đổi.
+*   **Với End-Users (Người dùng cuối):**
+    *   **Giải quyết JTBD tức thời:** Tra cứu thuế, tính lãi tiết kiệm, xem giá vàng... trực tiếp trên Web trong 2 giây mà không cần login hay tải app, nhận giá trị tức thì (*Aha! Moment*).
+    *   **Trải nghiệm chuyển đổi mượt mà (W2A Contextual Onboarding):** Khi bấm CTA vào App MoMo, toàn bộ dữ liệu đã nhập trên Web sẽ tự động điền sẵn (prefill), loại bỏ rào cản nhập liệu lặp lại.
+*   **Với MoSpark (Sở hữu nền tảng):**
+    *   **Tăng trưởng Organic Traffic (SEO/GEO):** Các widget hữu ích là thỏi nam châm thu hút lưu lượng truy cập chất lượng cao từ Google SERP / AI Search, xây dựng hào bảo vệ nội dung (Anti-LLM Moat).
+    *   **Tối ưu W2A & Thúc đẩy Login:** Chuyển đổi traffic ẩn danh trên Web thành người dùng đăng nhập app có phát sinh giao dịch tài chính (MEU) thông qua cơ chế tracking parameter và Smart CTA cá nhân hóa theo hành vi nhập liệu.
+
+#### 🛠️ Việc cần làm / Các trụ cột thực thi của Platform (Key Platform Pillars - What to do)
+1.  **Utilities Ingestion & Refactoring Pipeline (Quy trình Tiếp nhận & Xây dựng):** Quản lý tập trung toàn bộ các Utilities (tiện ích tương tác) của MoMo do Cell Team yêu cầu (request) hoặc do Platform chủ động tự xây dựng nhằm gia tăng chỉ số Product-Led Growth (PLG) trên Web. Hỗ trợ song song 2 quy trình linh hoạt:
+    *   *Workflow A (Brief to Prototype - Hiếu phụ trách):* Tiếp nhận brief nghiệp vụ (Logic/Công thức) từ Cell Team/Platform $\rightarrow$ Hiếu dựng bản prototype nhanh để verify.
+    *   *Workflow B (HTML Ingestion - Thuận phụ trách):* Tiếp nhận bản HTML Prototype thô từ Cell Teams tự viết $\rightarrow$ Thuận refactor chuẩn Mobase và UI/UX để đóng gói.
+2.  **Widget Registry & Dynamic Rendering Engine:** Xây dựng danh mục quản lý và hiển thị động các cấu phần tương tác dựa trên cấu hình từ CMS Editor.
+3.  **Smart CTA & Zero-Party Data Engine:** Thiết kế cơ chế điều hướng nút hành động thông minh theo hành vi người dùng và đồng bộ dữ liệu ngữ cảnh an toàn qua URL parameter của Onelink.
+4.  **API Governance Gateway:** Tích hợp dữ liệu realtime in-app của MoMo (giá vàng, tỷ giá) với cơ chế cache tự động và cơ chế khóa cứng công thức (Formula Lock) kiểm duyệt pháp lý/tài chính YMYL tập trung.
+5.  **Microsite-to-Widget Auto-Mapping & Ads Manager Cross-sell:** Thiết lập cơ chế tự động gán Widget 1-1 với Microsite tương ứng (ví dụ: CIC Simulator gán với `/diem-tin-dung`). Bất kỳ trang con nào thuộc Microsite đó sẽ tự động thừa kế và hiển thị Widget tại đúng vị trí quy chuẩn mà không cần Cell Team phải nhúng mã Shortcode hay sử dụng editor kéo thả các block code tự build (chưa hỗ trợ kéo thả tiện ích tự build). Đồng thời, khóa hiển thị trực tiếp ở ngoài Microsite và chỉ cho phép phân phối ra các trang/dự án khác có liên quan thông qua **Ads Manager** bằng cách "khoét slot" quảng cáo tương thích để thực hiện kịch bản bán chéo (cross-sell).
 
 Thay vì lập trình riêng lẻ từng công cụ hoặc cho phép các BU tự xây dựng tự do (dễ gây lỗi giao diện và tính toán), hệ thống cung cấp một hạ tầng Registry dùng chung để render các Component được phát triển tập trung. Phase 1 sẽ triển khai thí điểm bộ công cụ giả lập tài chính **Finhub Simulation Tools** (10 công cụ tương tác cốt lõi).
 
@@ -66,13 +88,13 @@ Dựa trên nhu cầu tìm kiếm khổng lồ (Search Intent) của người d�
 
 ---
 
-## 4. Product Vision & Scope Limits
+## 4. Operational Framework & Scope Limits
 
-### 4.1 Định hướng tăng trưởng (S-P-A Framework)
-Dự án Widget Store đóng vai trò then chốt trong việc thực thi giai đoạn **Pilot** (thử nghiệm tính năng qua MVP) và **Action** (sản xuất hàng loạt, tối ưu Smart CTA để thúc đẩy tăng trưởng) cho các Use Case:
-*   **reSearch & Strategy (Stage S):** Xác định nhu cầu tính toán/giả lập của người dùng từ lượng traffic tự nhiên lớn (SEO/GEO).
-*   **Pilot & Plan (Stage P):** Build nhanh các Widget MVP (tiện ích tương tác) nhúng vào các trang Pilot để đo lường phễu Web-to-App.
-*   **Action & Amplifier (Stage A):** Scale rộng rãi các Widget trên hệ thống, kích hoạt luồng Smart CTA và Zero-Party Data Passing để tối đa hóa chuyển đổi MAU/MEU cho các BU.
+### 4.1 Quy trình thực thi S-P-A cho các Cell Teams (Operational Workflow)
+Khung làm việc **S-P-A (Strategy - Pilot - Action) Framework** được định nghĩa là **quy trình thực thi thực tế** mà các Cell Teams/BUs sẽ áp dụng để triển khai các Utilities/Widgets của họ trên nền tảng:
+*   **reSearch & Strategy (Stage S):** Xác định nhu cầu tính toán/giả lập của người dùng dựa trên nghiên cứu và phân tích lượng traffic tự nhiên tiềm năng (SEO/GEO/Search Intent).
+*   **Pilot & Plan (Stage P):** Đưa bản HTML Prototype thô vào platform để refactor và đóng gói, triển khai các Widget MVP trên các trang Landing Page thử nghiệm nhằm đo lường mức độ tương tác và phễu W2A ban đầu.
+*   **Action & Amplifier (Stage A):** Phát hành rộng rãi Widget trên hệ thống, tối ưu hóa Smart CTA và Zero-Party Data Passing để tối đa hóa chuyển đổi MAU/MEU cho BU.
 
 ### 4.2 Lộ trình phát hành (Roadmap)
 
@@ -84,83 +106,47 @@ Dự án Widget Store đóng vai trò then chốt trong việc thực thi giai �
 
 ---
 
-# PHẦN II: TECHNICAL ARCHITECTURE & SPECS
+# PHẦN II: PRODUCT CAPABILITIES & STANDARDS
 
-## 5. Widget Registry & Rendering Engine (Next.js)
+## 5. Widget Registry & Distribution Capabilities (Hạ tầng quản trị và phân phối)
 
-Hệ thống Next.js Engine của MoSpark đóng vai trò là một Registry quản lý các Component React tĩnh. CMS Editor sẽ không cho phép tự thiết kế HTML/CSS của Widget, mà chỉ nhúng Widget theo định danh và truyền tham số cấu hình:
+Hệ thống quản lý tiện ích của MoSpark hoạt động như một danh mục quản lý tập trung (Registry) các cấu phần tương tác. CMS Editor chỉ cho phép người quản trị BU lựa chọn Widget từ thư viện có sẵn và cấu hình tham số đầu vào, đảm bảo tính nhất quán về UI/UX và tính chính xác về mặt logic.
 
 ```mermaid
 flowchart TD
-    CMS[MoSpark Editor] -->|Cấu hình Tham số & Chọn Widget| Registry[Widget Registry]
-    Registry -->|Render Component React| Engine[Next.js Rendering Engine]
-    Engine -->|Prefill Parameter & UI Config| UserBrowser[User Trình Duyệt]
-    UserBrowser -->|Nhập dữ liệu| WidgetLogic[Logic Component - Dev Built]
-    WidgetLogic -->|Kết quả & Định tuyến Smart CTA| UserBrowser
-    UserBrowser -->|Click Onelink| MoMoApp[MoMo App Transaction]
+    CMS[MoSpark Editor - BU Config] -->|Chọn Widget & Cấu hình Tham số| Registry[Widget Registry]
+    Registry -->|Hiển thị Widget| UserBrowser[Trình Duyệt Người Dùng]
+    UserBrowser -->|Nhập dữ liệu & Tương tác| WidgetLogic[Xử lý Logic & Tính toán]
+    WidgetLogic -->|Trả kết quả & Gợi ý Smart CTA| UserBrowser
+    UserBrowser -->|Click Smart CTA| MoMoApp[Mở App & Tự động điền dữ liệu]
 ```
 
-## 6. CMS Parameter JSON Schemas (Cấu hình tham số CMS)
+### 5.1. Microsite-to-Widget Mapping (Cơ chế gán tự động và thừa kế)
 
-Để ngăn BU làm hỏng thiết kế hoặc công thức tính toán, CMS chỉ cung cấp giao diện điền tham số (Parameters) được định nghĩa qua JSON Schema chuẩn cho mỗi Widget.
+Để tối ưu hóa vận hành và kiểm soát chặt chẽ sự xuất hiện của các công cụ trên hệ thống ở quy mô lớn, Nền tảng áp dụng cơ chế mapping tự động thay vì cấu hình thủ công cho từng trang con trong Puck Editor:
+*   **Nguyên tắc Mapping 1-1:** Mỗi Widget khi được xây dựng (ví dụ: CIC Simulator) sẽ được map trực tiếp với một Microsite / Mini Web gốc tương ứng (ví dụ: `/diem-tin-dung`).
+*   **Cơ chế Thừa kế Tự động (Auto-Inheritance):** Sau khi được map, bất kỳ trang con, trang đích chi tiết hay bài viết Blog nào thuộc Microsite đó đều sẽ tự động kế thừa và hiển thị Widget tương ứng tại đúng vị trí quy chuẩn (ví dụ: Slot 2) mà không cần người quản trị phải vào từng trang để kéo thả thủ công bằng Puck Editor.
+*   **Kiểm soát hiển thị (Governance Gate):** 
+    *   *Trong Microsite gốc:* Hiển thị tự động theo thừa kế cấu hình của Microsite.
+    *   *Ngoài Microsite:* Khối kéo thả trực tiếp của Widget đó bị khóa hoàn toàn trong Puck Editor đối với các trang khác để tránh việc BU tự ý nhúng bừa bãi. Việc phân phối ra ngoài Microsite gốc bắt buộc phải thông qua **Ads Manager** định tuyến động để phục vụ chiến dịch phân phối chéo (Cross-sell).
 
-Ví dụ JSON Schema cấu hình cho **Savings Yield Calculator (Widget Lãi Tiết kiệm)**:
-```json
-{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "SavingsWidgetConfig",
-  "type": "object",
-  "properties": {
-    "widgetId": { "type": "string", "const": "savings_calculator" },
-    "defaultAmount": { "type": "number", "default": 50000000 },
-    "minAmount": { "type": "number", "default": 1000000 },
-    "maxAmount": { "type": "number", "default": 1000000000 },
-    "stepAmount": { "type": "number", "default": 5000000 },
-    "defaultTermMonths": { "type": "integer", "default": 6 },
-    "ctaDestination": { "type": "string", "format": "uri" },
-    "utmCampaign": { "type": "string", "default": "saving_widget_mospark" }
-  },
-  "required": ["widgetId", "ctaDestination"]
-}
-```
+## 6. CMS Configuration Standards (Cơ chế cấu hình tham số trên CMS)
 
-## 7. Smart CTA Rule Engine
+Để bảo vệ tính nhất quán của thiết kế và ngăn chặn việc can thiệp làm sai lệch logic tính toán, BUs sẽ không được chỉnh sửa HTML/CSS hay viết mã code. Thay vào đó, CMS cung cấp một bộ trường cấu hình (Configuration Form) được định nghĩa sẵn cho mỗi Widget bao gồm các giá trị mặc định, giới hạn thanh kéo (giá trị tối thiểu, tối đa, bước nhảy), đường dẫn đích (CTA Link) và các tham số chiến dịch (UTM parameters).
 
-Hệ thống không fix cứng CTA. Nút kêu gọi hành động sẽ tự động thay đổi dựa trên Intent được phân tích từ Input dữ liệu của người dùng.
+## 7. Smart CTA Capability (Định tuyến nút hành động thông minh)
 
-*   **Quy trình quản lý:**
-    *   **Hiến (PM)** định nghĩa và duyệt (Approve) các Rule dưới dạng file JSON cấu hình. Mọi thay đổi rule phải qua phê duyệt của Hiến trước khi chạy.
-    *   **Hiếu (Backend & Logic)** triển khai kịch bản Rule Engine trong code logic của Component.
-*   **Ví dụ Rule cấu hình:**
-    ```json
-    {
-      "widgetId": "gross_net_calculator",
-      "rules": [
-        {
-          "condition": "salaryNet < 15000000",
-          "ctaText": "Nhận ngay hạn mức Ví Trả Sau chi tiêu trước",
-          "deepLink": "momo://app/vitrasau"
-        },
-        {
-          "condition": "salaryNet >= 40000000",
-          "ctaText": "Mở thẻ tín dụng hạn mức cao miễn phí",
-          "deepLink": "momo://app/creditcard"
-        }
-      ],
-      "defaultCta": {
-        "ctaText": "Gửi tiết kiệm tích lũy online nhận lãi suất cao",
-        "deepLink": "momo://app/saving"
-      }
-    }
-    ```
+Nút hành động (CTA) trên Widget không cố định mà tự động thay đổi thông điệp và đường dẫn sâu (Deep Link) dựa trên kết quả tương tác hoặc dữ liệu nhập vào của người dùng để tối đa hóa tỷ lệ chuyển đổi:
+*   **Ví dụ ứng dụng:** Đối với công cụ tính lương thực nhận, nếu lương tính ra thấp (dưới 15 triệu đồng), Widget tự động hiển thị CTA đề xuất ví trả sau. Nếu lương cao (từ 40 triệu đồng trở lên), Widget tự động chuyển thành đề xuất mở thẻ tín dụng hạn mức cao.
+*   **Quản trị kịch bản:** Các kịch bản định tuyến thông minh này sẽ được cấu hình tập trung và phê duyệt trước bởi Product Manager để đảm bảo tính phù hợp của đề xuất tài chính.
 
-## 8. Zero-Party Data Engine
+## 8. Zero-Party Data Passing (Cơ chế đồng bộ dữ liệu ngữ cảnh)
 
-Dữ liệu người dùng khai báo trên Web (số tiền muốn gửi, mức lương, số năm đóng bảo hiểm) sẽ được mã hóa an toàn nhằm cá nhân hóa luồng Onboarding trên App:
-1.  **Mã hóa:** Logic Component (Next.js) nén dữ liệu nhập vào thành chuỗi Base64 bảo mật (đã được loại bỏ các thông tin định danh cá nhân PII dạng plain text).
-2.  **Đính kèm:** Chuỗi dữ liệu được gắn vào token tham số của Onelink.
-3.  **Onboarding 1-1 trên App:** Khi người dùng mở App, App đọc token này và tự động điền sẵn (pre-fill) các trường dữ liệu tương ứng trên màn hình in-app.
-4.  **Legal Gate:** Luồng dữ liệu yêu cầu cơ chế đồng ý (Consent mechanism) rõ ràng từ người dùng trên Web trước khi chuyển đổi dữ liệu và phải được pháp lý phê duyệt riêng biệt.
+Dữ liệu do người dùng chủ động khai báo khi tương tác với Widget trên Web sẽ được đồng bộ trực tiếp vào màn hình in-app tương ứng nhằm tối ưu hóa trải nghiệm chuyển đổi (W2A):
+1.  **Thu nhận & Mã hóa:** Widget tự động đóng gói các tham số người dùng nhập (như số tiền muốn gửi, kỳ hạn) thành một mã bảo mật (đã loại bỏ mọi thông tin định danh cá nhân).
+2.  **Đính kèm:** Mã dữ liệu này được gắn trực tiếp vào đường dẫn sâu của nút CTA.
+3.  **Tự động điền (Pre-fill):** Khi người dùng chuyển tiếp sang App MoMo, ứng dụng sẽ đọc mã này và điền sẵn dữ liệu vào các trường tương ứng trên màn hình dịch vụ.
+4.  **Tuân thủ pháp lý:** Luồng đồng bộ dữ liệu này yêu cầu hiển thị thông báo và nhận được sự đồng ý rõ ràng (Consent) của người dùng trên Web trước khi thực hiện chuyển tiếp.
 
 ## 9. Page Template Standard (Bố cục 6 Slots)
 
@@ -222,28 +208,52 @@ Mỗi tiện ích trong Phase 1 Pilot được thiết kế xoay quanh giải qu
 
 # PHẦN IV: PROJECT GOVERNANCE & PICS
 
-## 10. Technical Dependencies & API Availability
+## 10. Core Service Integrations & Operations (Tích hợp dịch vụ & Vận hành)
 
-Hệ thống Next.js Engine phân tách rõ 2 nhóm tiện ích để duy trì tính sẵn sàng và hiệu năng:
+Để duy trì tính sẵn sàng và hiệu năng cao nhất, các tiện ích trên Platform được chia làm 2 nhóm vận hành chính:
+1.  **Nhóm Tích hợp Dữ liệu Thời gian thực (Real-time Utilities):** Bao gồm theo dõi giá vàng, tỷ giá ngoại tệ, tính lãi tiết kiệm, giả lập đầu tư. Nhóm này tự động cập nhật dữ liệu mới nhất từ nguồn dữ liệu thực tế in-app của MoMo với cơ chế lưu bộ đệm (cache) tự động để tránh nghẽn luồng truy cập.
+2.  **Nhóm Tính toán Nội bộ (Offline Calculation Utilities):** Bao gồm máy tính thuế Gross-Net, BHXH, lương hưu, tính phí bảo hiểm sức khỏe, tính lãi vay, và trắc nghiệm. Nhóm này hoạt động hoàn toàn bằng thuật toán nội bộ ngay trên trình duyệt mà không cần kết nối dữ liệu in-app.
 
-1.  **Nhóm Tích hợp API Real-time (Gold Tracker, Exchange Rate, Savings, Investment):**
-    *   Yêu cầu kết nối API Gateway của MoSpark để đồng bộ dữ liệu thời gian thực từ API nội bộ App MoMo.
-    *   **Hiếu (Backend & Logic)** phụ trách cấu hình Gateway, quản lý cơ chế Cache (Redis 15-30 phút) để tránh quá tải API.
-2.  **Nhóm Offline Calculation (Tax, BHXH, Pension, Health Cost, Loan Calculator, Quiz):**
-    *   Hoạt động độc lập không phụ thuộc API in-app, tính toán trực tiếp bằng code logic của Component trên trình duyệt dựa trên file cấu hình tĩnh.
+## 11. Compliance & Security Governance (Quản trị tuân thủ & An toàn)
 
-## 11. Compliance, robots.txt SEO limits, and Formula Lock
+*   **Formula Lock (Khóa công thức nghiệp vụ):** BUs tuyệt đối không được tự ý sửa đổi công thức tính toán trên CMS. Mọi thay đổi liên quan đến thuật toán (đặc biệt là biểu thuế, lãi suất) phải được rà soát bởi Compliance/Pháp lý và do đội kỹ thuật thực thi cập nhật qua hệ thống cấu hình tĩnh.
+*   **SEO Compliance:** Nền tảng tự động xử lý các cấu hình kỹ thuật để hỗ trợ việc truyền tham số mà không tạo ra lỗi trùng lặp nội dung (Duplicate Content) làm ảnh hưởng đến thứ hạng tìm kiếm tự nhiên của trang.
+*   **Data Privacy:** Cam kết bảo mật thông tin người dùng. Mọi tham số truyền dữ liệu ngữ cảnh qua URL tuyệt đối không chứa thông tin định danh cá nhân (PII) dưới dạng văn bản thô.
 
-*   **Formula Lock (Khóa công thức nghiệp vụ):** BUs tuyệt đối không được cấu hình hay thay đổi công thức toán học trên giao diện CMS. Mọi thay đổi công thức (đặc biệt là biểu thuế, cách tính lãi) phải được chỉnh sửa trong file JSON cấu hình và deploy tập trung bởi đội Dev (Hiếu phụ trách kỹ thuật) sau khi có sự đồng ý của Hiến và đội ngũ Pháp lý (Legal Sign-off).
-*   **SEO robots.txt Compatibility:** Để hỗ trợ truyền tham số pre-fill qua URL (Context-Passing) mà không gây ảnh hưởng đến thứ hạng SEO do trùng lặp nội dung:
-    *   Tất cả các URL đích (Spoke pages) chứa tham số `?prefill=` bắt buộc phải có thẻ `<link rel="canonical" href="...">` trỏ về phiên bản URL sạch không chứa parameter.
-    *   File `robots.txt` đã cấu hình `Disallow: /*?` để chặn các bot tìm kiếm cào dữ liệu các URL biến thể có tham số.
-    *   **Hiếu** kiểm thử kỹ hành vi này trên môi trường staging trước khi deploy.
+## 12. Widget Development Workflow (Quy trình phát triển)
 
-## 12. Success Metrics & Change Log
+Quy trình phát triển Widget từ yêu cầu của BU được quy định rõ ràng nhằm tối ưu hóa tiến độ và chất lượng:
+*   **Bước 1: Tiếp nhận Brief & Build Prototype (Hiếu):** Hiếu trực tiếp tiếp nhận thông tin Brief của BU về các yêu cầu Logic/Formula, các thông tin cần hiển thị cho người dùng về các Utilities/Component/Widget/... Sau đó, Hiếu tiến hành build bản Prototype nhanh (chưa cần tuân thủ chuẩn MoBase Design System) để xác thực (verify) lại trực tiếp với BU.
+*   **Bước 2: Refactor & Đóng gói (Thuận):** Sau khi bản Prototype được BU xác nhận, Thuận chịu trách nhiệm refactor lại prototype theo chuẩn Design System (MoBase), đưa vào quản lý và thực hiện đóng gói (packaging) để sẵn sàng phân phối qua Ads Manager.
+
+---
+
+## 12.5. Kế hoạch Nâng cấp Tính năng trong H2/2026 (Utilities & Merchant Page Upgrades)
+
+Trong H2/2026, nền tảng Widget Store và Merchant Page sẽ được nâng cấp các tính năng tự động hóa và tối ưu trải nghiệm sau:
+
+1. **Low-code Drag-and-drop Tool Configurator:** Nâng cấp từ cấu hình bằng code tay sang trình cấu hình kéo thả trực quan. Cho phép PM tự xây dựng các trường nhập liệu (input fields), định nghĩa logic tính toán (Calculator) hoặc cấu hình API tra cứu (Checker) nhanh chóng.
+2. **Tool Data Pipeline (GEO Moat Generator):** Hệ thống tự động thu thập và tổng hợp dữ liệu tương tác ẩn danh của người dùng trên các tiện ích tính toán/tra cứu để sinh tự động các bài báo cáo insight tiêu dùng, tạo hàng rào GEO Moat độc quyền cho momo.vn.
+3. **Merchant Listing & Category Hub Pages (Merchant):** Phát triển các trang danh sách (Listing Pages) và trang Hub cho phép tìm kiếm, lọc các địa điểm chấp nhận thanh toán Ví Trả Sau theo Khu vực địa lý (Tỉnh/Thành, Quận/Huyện), Category ngành hàng (F&B, Mua sắm, Làm đẹp...) và các Điều kiện ngữ cảnh đặc biệt (gần trường học, gần trung tâm thương mại/mall, mở cửa 24/7...).
+4. **Automated Sitemap Splitting Engine (Merchant):** Tự động phân tách và quản lý sitemap động cho hơn 200K+ trang merchant giúp tối ưu hóa crawl budget của các công cụ tìm kiếm.
+5. **Local SEO Schema Auto-Generator (Merchant):** Tự động sinh cấu trúc schema LocalBusiness (NAP data - Name, Address, Phone) chuẩn xác cho từng cửa hàng để gia tăng tốc độ index và hiển thị trên Google Map.
+6. **Dynamic O2O Deep-linking Generator (Merchant):** Tự động sinh Onelink deep-link gắn mã cửa hàng động phục vụ cho kịch bản quét QR Code/Soundbox thanh toán nhanh tại quầy của merchant.
+7. **Grabfood/Shopeefood Menu Crawling Engine (Merchant):** Tích hợp tính năng cào dữ liệu (crawl) thực đơn (Menu) và hình ảnh món ăn từ Grabfood/Shopeefood để hiển thị trực tiếp danh mục món ăn (Dishes/Items) của cửa hàng trên trang Merchant Page.
+
+---
+
+## 13. Success Metrics & Change Log
 
 *   **Success Metrics (Growth Metrics):** Đo lường và tối ưu dựa trên 3 chỉ số chính: MEU (Monthly Earning Users), MAU (Monthly Active Users), và Lượt cài đặt App mới (New Install) thông qua Appsflyer. Target cụ thể sẽ được lock 2 tuần sau khi có baseline của Phase 1.
 *   **Change Log:**
+    *   **v4.4 (2026-07-02):** Bổ sung đặc tả 2 quy trình tiếp nhận (Workflow A & B) của Ingestion & Refactoring Pipeline trong Key Platform Pillars và đồng bộ hóa loại bỏ các thuật ngữ kỹ thuật.
+    *   **v4.3 (2026-07-02):** Thêm quy hoạch Microsite-to-Widget Mapping tự động kế thừa (Auto-Inheritance) để tối ưu vận hành và kiểm soát chặt chẽ sự xuất hiện của các công cụ trên hệ thống.
+    *   **v4.2 (2026-07-02):** Loại bỏ các đặc tả kỹ thuật chi tiết của Dev (Next.js, JSON Schema, Base64, Redis, robots.txt) để tập trung tài liệu hoàn toàn vào định hướng sản phẩm và nghiệp vụ của PM.
+    *   **v4.1 (2026-07-02):** Chuẩn hóa lại tên Stakeholder sở hữu nền tảng là MoSpark (thay vì MoMo Growth & Platform).
+    *   **v4.0 (2026-07-02):** Tái định nghĩa Product Vision của cả nền tảng theo định hướng Platform (phân rã chi tiết Giá trị cần đạt & Việc cần làm cho stakeholders), phân định rõ S-P-A Framework là quy trình thực thi cho Cell Teams.
+    *   **v3.9 (2026-07-02):** Điều chỉnh Product Vision & Scope định vị Widget Store thành Một Nền tảng Tương tác Tăng trưởng hợp nhất (Unified PLG Growth Platform).
+    *   **v3.8 (2026-07-02):** Cập nhật định hướng Product Vision & Scope của Widget Store theo định hướng PLG, tăng trưởng MEU/DLU/MLU và vai trò platform tiếp nhận Prototype HTML từ các Cell Teams.
+    *   **v3.7 (2026-06-26):** Cập nhật quy trình phối hợp làm việc mới: Hiếu tiếp nhận brief BU về Logic/Formula & hiển thị để build Prototype nhanh và verify với BU; Thuận chịu trách nhiệm refactor prototype chuẩn Design System (MoBase), quản lý và đóng gói.
     *   **v3.6 (2026-06-25):** Tái cấu trúc tài liệu theo mô hình 4 phần chuẩn hóa; định nghĩa lại khái niệm Widget theo nguyên lý "3 Có & 3 Không"; phân bổ lại vai trò PIC chi tiết (Hiếu phụ trách Backend/Logic/APIs, Thuận phụ trách Đóng gói/Quản trị Widget cho Ads Manager, Hiến quản lý chung & duyệt Smart CTA).
 
 ---

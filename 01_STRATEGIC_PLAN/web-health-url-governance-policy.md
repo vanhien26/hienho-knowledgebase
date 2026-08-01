@@ -89,7 +89,7 @@ Chính sách này nhằm:
 | **Crawl Budget** | Giới hạn số trang Googlebot crawl trên momo.vn trong một khoảng thời gian. Trang kém chất lượng tiêu tốn crawl budget không hiệu quả, kéo hiệu suất toàn domain xuống |
 | **W2A (Web-to-App)** | Tỷ lệ chuyển đổi từ người dùng web sang người dùng App (Install hoặc Register), đo bởi Appsflyer/Onelink |
 | **Noindex** | Chỉ thị kỹ thuật bằng meta tag hoặc HTTP header yêu cầu Google không đưa trang vào kết quả tìm kiếm |
-| **Growth Platform** | Team Web Platform - cụ thể là SEO Lead (Hiến) và Web Platform Manager (Bảo) |
+| **Growth Platform** | Team Web Platform - cụ thể là SEO Lead (Hiến) và Head of Web Platform (Bảo) |
 | **Growth Plan** | Kế hoạch tăng trưởng tối thiểu 6 tháng bao gồm: target keyword cluster, traffic milestone, resource commit |
 
 ---
@@ -417,7 +417,7 @@ Thay đổi nhỏ về threshold và tiêu chí đo lường: SEO Lead có thể
 
 | Rủi ro | Mức độ | Khuyến nghị |
 |--------|--------|------------|
-| Thiếu automation cho monthly monitoring - SEO Lead dễ overload bandwidth khi carry nhiều workstream song song | Cao | Prioritize automation dashboard (Umami Module 5). Xem xét giao execution monitoring cho DA Team (Hải/Hoàng) |
+| Thiếu automation cho monthly monitoring - SEO Lead dễ overload bandwidth khi carry nhiều workstream song song | Cao | Prioritize automation dashboard (Umami Module 5). Xem xét giao execution monitoring cho DA Team (Hải) |
 | Cell PO từ chối phối hợp kéo dài - Growth Platform không có quyền force Cell Team không qua VP | Trung bình - Cao | Policy chỉ có răng khi VP mandate được giao rõ ràng và HoD các Cell Team được thông báo trước |
 | Growth Plan template chưa formalize trong MoSpark flow - Cell PO có thể nộp kế hoạch chung chung | Trung bình | Tích hợp Growth Plan template vào MoSpark onboarding Q3/2026 |
 
@@ -450,5 +450,5 @@ Thay đổi nhỏ về threshold và tiêu chí đo lường: SEO Lead có thể
 
 ---
 
-*Policy Owner: Out-App Traffic Team, Growth Platform Division*
+*Policy Owner: Web Platform Team, Growth Platform Division*
 *Phê duyệt cần thiết: VP Công (GPD) trước khi distribute cho Cell Teams*

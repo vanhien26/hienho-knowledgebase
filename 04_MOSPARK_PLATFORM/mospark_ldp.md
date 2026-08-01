@@ -91,6 +91,18 @@ Chiến lược tiếp cận "Beachhead": Bắt đầu từ nhóm 15% PM "Seriou
 - **P2 - Assisted Rollout:** Đưa bộ Starter Template và quy trình Onboarding để phá vỡ rào cản 66.7% PM "ngại cái mới".
 - **P3 - Scale & Integrate:** Scale lên workflow tự động hóa hàng loạt (Variant fan-out, A/B Testing, Multi-tenant) và tích hợp sâu PFM data.
 
+## 9.5. Kế hoạch Nâng cấp Tính năng trong H2/2026
+
+Trong H2/2026, nền tảng Landing Page Builder sẽ tập trung nâng cấp các tính năng hỗ trợ tự chủ vận hành cho Cell Teams và chuẩn hóa chất lượng trang:
+
+1. **Mở rộng Kho Templates:** Phát triển và bổ sung nhiều mẫu thiết kế Landing Page (Templates) chuẩn hóa theo nhận diện thương hiệu MoMo, tối ưu riêng cho từng mục tiêu chiến dịch (khuyến mãi, giới thiệu dịch vụ, đăng ký thông tin).
+2. **Tiêu chuẩn Giao diện & Tự động hóa Nội dung:**
+   *   *Mặc định Header/Footer:* Mọi trang Landing Page khởi tạo mới sẽ được nhúng sẵn khối Header/Footer chuẩn của msite (vẫn cho phép Editor chỉnh sửa nội dung hoặc ẩn đi nếu cần thiết).
+   *   *Auto-mapping Blog/News:* Hỗ trợ tính năng kéo và hiển thị tự động danh sách các bài viết Blog/Tin tức liên quan trực tiếp từ các dự án Microsite tương ứng mà không cần PM cấu hình liên kết thủ công.
+3. **Instant Live Preview (Xem Demo nhanh):** Cung cấp trình live preview trực tiếp trên Admin Dashboard để PM kiểm tra hiển thị trên Mobile/Desktop tức thì mà không cần xuất source code (tách source) hay chạy thử ở môi trường local.
+
+---
+
 ## 10. Open Considerations (Các vấn đề cần chốt)
 - **Build-vs-buy economics:** Cần số liệu chi phí TCO thực tế để xin Funding (Đang chờ xác minh).
 - **Tính pháp lý của Data-capture:** Tính năng thu thập SĐT cần qua bài test về Privacy/Consent (PII) trước khi live.

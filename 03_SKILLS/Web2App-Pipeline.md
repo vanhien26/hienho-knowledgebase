@@ -214,13 +214,13 @@ Tracking từ Appsflyer sau khi user rời web:
 
 | Event | Định nghĩa | Owner |
 |-------|-----------|-------|
-| `af_install` | App install hoàn tất | DA (Hải/Hoàng) |
+| `af_install` | App install hoàn tất | DA (Hải) |
 | `af_complete_registration` | Register thành công | DA |
 | `kyc_completed` | Xác thực danh tính xong | DA |
 | `cashin_success` | Nạp tiền lần đầu | DA |
 | `mau_event` | Active trong tháng | DA |
 
-**Ownership:** DA Cell Team (Hải/Hoàng) execute setup. Hiến define standard và verify xem events có fire đúng sau launch không.
+**Ownership:** DA Cell Team (Hải) execute setup. Hiến define standard và verify xem events có fire đúng sau launch không.
 
 ### 3.3 Looker Studio Dashboard - W2A View
 
@@ -311,7 +311,7 @@ trên /vay-nhanh thì CTA Click Rate tăng 20% vì CTA mới reflect đúng Job
 
 ## Phần 6: RACI
 
-| Hoạt động | Hiến (Out-App Traffic) | PO Cell | DA (Hải/Hoàng) | Dev |
+| Hoạt động | Hiến (Web Platform) | PO Cell | DA (Hải) | Dev |
 |-----------|----------------------|---------|----------------|-----|
 | Define CTA touchpoints & text | R/A | C | I | I |
 | Define deeplink + UTM structure | R/A | C | C | I |

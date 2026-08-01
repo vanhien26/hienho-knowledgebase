@@ -16,7 +16,7 @@ Hệ thống được chia thành 3 nhóm người dùng chính:
 - **Trách nhiệm chính:** Đảm bảo hệ thống chạy đúng policy, giải quyết các xung đột tài nguyên (VD: 2 Division cùng tranh một vị trí Ads), và định hướng chuẩn SEO/GEO chung.
 
 ### 1.2. Inbound - Content Creator
-- **Đại diện:** Đội ngũ Content, SEO, Agency (Mai và team).
+- **Đại diện:** Đội ngũ Content, SEO, Agency (Inbound Team).
 - **Quyền hạn:** Có quyền truy cập ngang (Cross-project access) vào **tất cả các nội dung** thuộc Blog / News / GenAI Content / Copywriting của Mini Web. Tuy nhiên, họ bị giới hạn các quyền liên quan đến cấu hình hệ thống hoặc chi tiêu (Ads).
 - **Trách nhiệm chính:** Sản xuất nội dung chuẩn SEO/E-E-A-T, quản lý Master Keyword Registry, tối ưu điểm SEO/GEO Score.
 
@@ -71,15 +71,15 @@ Với mô hình này, MoSpark vừa giữ được tính tự chủ (Cell Team k
 
 ---
 
-## 5. Roadmap: Tích hợp HRM & LnD (Automated RBAC)
+## 5. Hiện trạng H1/2026: Tích hợp HRM & ldp.mservice.io (Automated RBAC)
 
-**Bối cảnh:** Dựa trên định hướng của nền tảng LnD (Product Led Growth) chia sẻ khóa học từ Head of BU/VP, MoSpark đang lên kế hoạch đồng bộ API với hệ thống quản trị nhân sự (HRM).
+**Bối cảnh:** Để mở rộng quy mô GTM cho tất cả Division mà không gây nút thắt quản trị, MoSpark đã hoàn thành việc đồng bộ API với hệ thống quản trị nhân sự (HRM) của công ty và triển khai cổng đăng nhập.
 
-**Cơ chế Phân quyền Tương lai:**
-Khi mở rộng quy mô GTM cho tất cả Division, việc phân quyền thủ công sẽ tạo ra nút thắt. Việc đồng bộ API HRM sẽ giúp tự động hóa RBAC dựa vào:
-- `Email` & `Tên nhân viên`
-- `Phòng ban` (Department/Division) → Tự động map vào đúng Project / Use Case.
-- `Cấp bậc` (Level) → Tự động phân quyền (Reviewer, Editor, Viewer).
-- `Onboarding Time` → Nắm bắt và cấp quyền kịp thời cho nhân sự mới.
+**Cơ chế Đăng nhập & Phân quyền Tự động (Completed H1):**
+Trước khi sử dụng các module trên MoSpark, User truy cập vào cổng `ldp.mservice.io` để tạo tài khoản và đăng nhập bằng Gmail doanh nghiệp. Hệ thống tự động đồng bộ API HRM để đối soát dữ liệu và phân quyền tức thì cho User dựa trên các trường thông tin:
+- `Email` & `Tên nhân viên` dùng để xác thực định danh gốc.
+- `Phòng ban (Department/Division)` → Tự động ánh xạ và phân lập dự án (Tenant/Use Case) tương ứng, đảm bảo cách ly dữ liệu.
+- `Cấp bậc (Level/Role)` → Tự động ánh xạ và phân cấp quyền hạn (Super Admin, Content Editor, Cell Team Owner).
+- `Onboarding Time` → Tự động cấp quyền kịp thời cho nhân sự mới khi gia nhập dự án.
 
 Điều này giúp MoSpark dễ dàng scale-up và quản lý user tập trung trong một nền tảng Growth OS.

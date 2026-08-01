@@ -1,0 +1,657 @@
+# BRD: Tra Cứu Phạt Nguội
+ 
+> - **Project:** Tra Cứu Phạt Nguội Web Growth
+> - **Main URL:** momo.vn/phat-nguoi
+> - **Division:** PS (Payment Services)
+> - **Use Case:** Phạt Nguội
+> - **Owner:** Web Platform
+> - **Governance:** Web Product Lead (Hiến)
+> - **Version:** 4.0 - 2026-07-07
+> - **Status:** Phase 1 LIVE - Pilot & Scale (Location Scale Up & Blog Production in Phase 2; Subscription & other features packaged in Phase 1)
+
+---
+
+## 1. Executive Summary
+
+### Situation
+
+MoMo sở hữu partnership độc quyền với TTDK (Trung tâm Đăng Kiểm Việt Nam) cho tính năng Tra Cứu Phạt Nguội. Tính năng App đã live. Web channel đã rollout Phase 1 (Mini Web `/phat-nguoi` + API real-time CSGT/TTDK) và đang trong giai đoạn Pilot & Scale. Tổng search demand thị trường đạt ~3.56M lượt tìm kiếm/tháng - được khuếch đại mạnh bởi Nghị định 168/2024/NĐ-CP tăng mức phạt 3-5x từ 1/1/2025.
+
+### Complication
+
+MoMo đang cạnh tranh với 2 nhóm đối thủ: (1) Các site bên thứ ba không chính thống (phatnguoi.com - ~148K branded search/tháng) đang chiếm traffic organic; (2) Site chính thống của nhà nước (csgt.vn) có UX kém và hay crash. Nếu không xây dựng web presence sớm, MoMo chỉ phục vụ được nhóm user đã có app, bỏ sót ~30.000 lượt tra cứu/quý từ nhóm Non-MoMo Users.
+
+### Resolution
+
+Xây dựng Web channel từ zero theo mô hình Programmatic SEO:
+- **Phase 1 (Foundation & Core Utilities - LIVE/Pilot):** Mini Web Tool tra cứu thực (ô-tô/xe-máy/xe-điện) + Bản đồ Camera giao thông (Interactive Camera Map) + Gói Subscription & Thanh toán Web PG + Route-based pSEO + Chiến dịch Off-page.
+- **Phase 2 (Regional Scale):** Scale Up trang Location (pSEO 63 tỉnh thành) và tiếp tục sản xuất Blog (Batch 2).
+- **Phase 3 (Growth Loops):** Growth Loops + Camera AI pSEO + Dispute Assistant + Fine Code pSEO.
+
+**Định vị chiến lược:** Phạt Nguội = Governance & Acquisition (kéo user vào hệ sinh thái MoMo), không phải dòng doanh thu Web trực tiếp. Case study mẫu cho Product-Led Growth trên Web Platform.
+
+---
+
+## 2. Bối Cảnh Thị Trường
+
+### 2.1 Market Demand
+
+| Metric | Giá trị |
+|---|---|
+| Total monthly search volume | ~3.56M lượt/tháng |
+| Total vehicles (Ô tô + Xe máy) | 84M+ phương tiện |
+| MoMo users with verified cars | 700K+ |
+
+Nghị định 168/2024/NĐ-CP tăng mức phạt 3-5x từ 1/1/2025 tạo nhu cầu tìm kiếm "evergreen" mạnh - spike đầu năm và duy trì cao quanh năm.
+
+### 2.2 Competitive Gap - Chiến Lược Displacement
+
+| Competitor | Brand Search | Điểm yếu | MoMo Solution |
+|---|---|---|---|
+| phatnguoi.com | ~148K/tháng | Site bên thứ 3, rủi ro data privacy, không official | Official TTDK integration + MoMo brand trust |
+| csgt.vn (Official) | ~13K/tháng | UX kém, hay crash, khó dùng | MoSpark optimized UX |
+| VNeTraffic | ~14K/tháng | Khó sử dụng, không có ecosystem | Seamless Web-to-App flow |
+
+### 2.3 Strategic Advantages
+
+- **Trust Moat:** Super App brand loại bỏ lo ngại rò rỉ data thường gặp ở các site gray market.
+- **Ecosystem Advantage:** Search - Notify - Pay - Insure toàn bộ trong 1 app.
+- **Official Data:** Logo TTDK/CSGT chính thống - trust signal mạnh nhất trong category này.
+
+### 2.4 Phân Tích SEM - Validation Market Demand
+
+| Metric | Kết quả | Hàm ý chiến lược |
+|---|---|---|
+| CTR trung bình SEM | ~7% | High-intent market được xác nhận |
+| CVR utility (multi-search) | 155-178% | User tra nhiều lần/visit - cần tính năng "Lưu danh sách xe" |
+| Cluster xe máy CTR | Đến 18%, CPA thấp nhất | Phân khúc đối thủ đang bỏ ngỏ - ưu tiên pSEO |
+| Exact Match vs Phrase | Exact hiệu quả hơn ~50% CPA | Long-tail intent rõ ràng |
+
+### 2.5 Empirical Dataset Analysis (431,506 Vehicles)
+
+Dữ liệu phân tích thực tế từ mẫu **455.462 lượt tra cứu phạt nguội** (**431.506 xe duy nhất**) khẳng định các cơ hội chiến lược sau:
+1. **Ô tô chiếm 68.55% lượt tra cứu (312.233 xe ô tô):** Phạt Nguội chính là "Cửa ngõ vàng" hứng tệp chủ xe ô tô có thu nhập cao và ARPU lớn trên Open Web.
+2. **72.40% Lỗi phạt nguội đang TỒN ĐỌNG CHƯA NỘP (52.999 lỗi chưa nộp / 73.207 lỗi):** Tiềm năng doanh thu trực tiếp lớn cho tính năng **Nộp phạt Dịch vụ công** và **Trả góp tiền phạt 0% qua Ví Trả Sau MoMo**.
+3. **90.39% Xe SẠCH không vi phạm (387.836 xe):** Điểm chạm tâm lý hoàn hảo để tặng Voucher Bảo hiểm TNDS/Thân vỏ & Bật tính năng Auto-scan quét phạt nguội tự động định kỳ để lưu Vehicle Profile.
+4. **67.04% Lỗi vi phạm thuộc nhóm CHẠY QUÁ TỐC ĐỘ (49.080 lỗi):** Cơ sở để bán kèm gói **Vietmap Live 30k/tháng** (cảnh báo tốc độ realtime) và **Gói Cứu hộ đường bộ 24/7**.
+
+---
+
+## 3. Định Hướng Dự Án
+
+
+### 3.1 Product Identity & KPI Model
+
+- **Primary success metric (Web):** Đạt **Top 3 thứ hạng tìm kiếm (Google Ranking)** cho các từ khóa chính (ví dụ: *"tra cứu phạt nguội"*, *"phạt nguội"*...).
+- **Secondary metrics:** MEU (Monthly Engagement Users - user có tương tác Utility như tra cứu biển số, multi-search loop), MAU (in-app), % New to Services, W2A Conversion Rate.
+- **Acquisition Funnel:** Web Utility (MEU) - W2A - In-App activation (MAU, ecosystem cross-sell).
+- **Revenue Stream:** Commission từ nộp phạt qua Cổng Dịch Vụ Công Quốc Gia. Cross-sell bảo hiểm xe máy/ô tô. Subscription TTDK (Silver/Gold).
+
+### 3.2 Web-to-App Flow & Luồng Tiện ích Hướng dẫn Lỗi (Web-to-App & Contextual Violation Guide Flow)
+
+**Triết lý:** Web deliver đủ value (kết quả tra cứu + giải pháp xử lý) để build Trust, sau đó dùng "Thông báo tự động real-time" làm mồi câu dẫn user sang App.
+
+**Quy trình Vận hành Trải nghiệm người dùng (UX) và Dữ liệu:**
+1.  **Thu thập dữ liệu lỗi vi phạm:** Hệ thống tự động thu thập thông tin về lỗi vi phạm thực tế từ cơ sở dữ liệu tra cứu của người dùng.
+2.  **Sản xuất nội dung Blog hỗ trợ:** Lấy danh sách mã lỗi vi phạm làm cơ sở để GenAI tự động sản xuất bài viết Blog tương ứng, cung cấp thông tin hữu ích về mức phạt tiền chính xác (Nghị định 168) và hướng dẫn chi tiết cách nộp phạt.
+3.  **Cá nhân hóa kết quả tra cứu (Contextual Integration):** Khi người dùng tra cứu biển số xe bằng Widget trên Web và nhận kết quả **CÓ vi phạm**, hệ thống tự động nhận diện mã lỗi và đính kèm (attach link) bài viết Blog hướng dẫn của đúng mã lỗi đó ngay trên màn hình kết quả để người dùng tự xem hướng dẫn xử lý.
+
+```mermaid
+flowchart TD
+    Start[User nhập biển số xe trên Web] --> Query[Hệ thống gọi API TTDK/CSGT]
+    Query --> Result{Kết quả tra cứu?}
+    
+    Result -- Không vi phạm (Xe sạch) --> CleanScreen[Hiển thị kết quả 'Không vi phạm']
+    CleanScreen --> CleanWidget[Hiển thị Subscription Widget: Cảnh báo tự động nếu phát sinh lỗi mới]
+    CleanWidget --> SubscribeClean[User đăng ký gói Năm 29k/năm / Dùng thử 7 ngày]
+    
+    Result -- Có vi phạm --> ViolateScreen[Liệt kê danh sách các lỗi vi phạm]
+    ViolateScreen --> MapBlog[Hệ thống nhận diện mã lỗi & đính kèm link Blog Hướng dẫn xử lý]
+    ViolateScreen --> CheckFinance{Kiểm tra điều kiện tài chính?}
+    
+    CheckFinance -- Phạt >= 1.000.000đ HOẶC Điểm tín dụng tốt --> SuggestFinance[Hiển thị gợi ý mở Ví Trả Sau / Vay Nhanh thanh toán ngay]
+    CheckFinance -- Phạt < 1.000.000đ & Không có điểm tốt --> SuggestNormal[Hiển thị Subscription Widget: Nhắc nhở nộp phạt tránh quá hạn]
+    
+    SuggestFinance --> CTA[User click CTA nhận thông báo / Mở liên kết]
+    SuggestNormal --> CTA
+    CTA --> W2A[Chuyển đổi sang App MoMo qua Onelink để hoàn tất]
+```
+
+**Web (Lite):** Nhập biển số -> Xem kết quả (Có/Không vi phạm + Đính kèm link Blog hướng dẫn xử lý lỗi tương ứng) -> CTA "Đăng ký nhận thông báo real-time qua MoMo"
+
+**App (Full):** Xem ảnh chụp vi phạm - nộp phạt online - nhận push notify - quản lý subscription Silver/Gold.
+
+
+### 3.3 Dự Án Này KHÔNG Phải
+
+- Không phải trang thay thế cho app feature
+- Không đề cập các site không chính thống (phatnguoi.com) ngoại trừ so sánh về bảo mật
+- Không dùng ngôn ngữ "xóa vi phạm" hoặc "bỏ phạt" (vi phạm pháp luật)
+- Không cạnh tranh trực tiếp csgt.vn về tính năng - cạnh tranh về UX và ecosystem
+
+### 3.4 Khung Hợp Tác Đầu Tư & Chia Sẻ Doanh Thu Liên BU (Cross-BU Co-investment & Attribution Framework)
+
+Nhằm giải quyết bài toán ROI thấp của dự án Phạt Nguội khi đứng độc lập (do chi phí chạy SEM lớn và tỷ lệ nộp phạt thu phí hoa hồng trực tiếp thấp), MoMo áp dụng mô hình **Co-investment (Đồng đầu tư)**. Dự án Phạt Nguội đóng vai trò là **Phễu Hút Traffic Đại Chúng (Mass Traffic Acquisition Funnel)**, sau đó phân phối lưu lượng người dùng sở hữu phương tiện giao thông (tệp khách hàng có giá trị cao) cho các BUs khác để tối ưu hóa doanh thu chéo:
+
+1.  **BU Bảo Hiểm (Insurance - Ô tô & Xe máy):**
+    *   *Hình thức hợp tác:* Tích hợp widget kiểm tra thời hạn và mua nhanh Bảo hiểm trách nhiệm dân sự (TNDS) bắt buộc hoặc Bảo hiểm thân vỏ tự nguyện trực tiếp tại trang kết quả tra cứu (Slot 4 / Slot 5).
+    *   *Campaign Bundle:* Triển khai chương trình Cross-Sell ưu đãi đóng gói (Bundle) - "Mua bảo hiểm ô tô tặng 1 năm dịch vụ tra cứu phạt nguội tự động" để kích cầu doanh thu chéo giữa 2 BU.
+    *   *Cơ chế phân bổ ngân sách:* BU Bảo Hiểm tài trợ **35% - 40% chi phí SEM và vận hành** của Phạt Nguội dựa trên tỷ lệ lead chuyển đổi thành công mua bảo hiểm qua web/app.
+2.  **BU Tài Chính (Ví Trả Sau & Vay Nhanh):**
+    *   *Hình thức hợp tác:* Khi phát hiện lỗi phạt nguội có số tiền lớn (từ 1.000.000đ trở lên) hoặc người dùng có lịch sử điểm tín dụng tốt, hệ thống tự động hiển thị gợi ý mở **Ví Trả Sau (VTS)** hoặc đăng ký **Vay Nhanh** giải ngân trong 5 phút để thanh toán nộp phạt ngay lập tức.
+    *   *Cơ chế phân bổ ngân sách:* BU Tài Chính đồng tài trợ **30% chi phí chạy Ads** dựa trên số lượng tài khoản ví/khoản vay mới được kích hoạt từ trang Phạt Nguội.
+3.  **Mô hình Phân bổ Doanh thu & ROI (Attribution Model):**
+    *   Doanh thu từ các gói Subscription cảnh báo (Silver/Gold) phát sinh trên Web sẽ được ưu tiên hoàn bù chi phí marketing (SEM) của dự án trước khi phân bổ lợi nhuận cho BU PS.
+    *   Mọi lead chuyển đổi chéo thành công sang mua bảo hiểm/vay tiêu dùng sẽ được ghi nhận attribution 100% về cho phễu Phạt Nguội trên Web để tính toán ROI thực tế toàn diện (Total Portfolio ROI) thay vì chỉ đo lường ROI đơn lẻ của BU Phạt Nguội.
+
+---
+
+## 4. JTBD Analysis
+
+### Stage 1 - Nhận Biết Vi Phạm: "Tìm kênh tra cứu uy tín"
+
+**Keywords:** tra cứu phạt nguội (673K), phạt nguội (301K), kiểm tra phạt nguội (165K), check phạt nguội (110K)
+
+| Dimension | Nội dung |
+|---|---|
+| Functional | Tìm được kênh tra cứu chính xác, không sợ lừa đảo hay lộ thông tin |
+| Emotional | Lo lắng về việc xe có bị phạt không, muốn biết ngay |
+| Social | Không muốn bị CSGT "chặn" vì không biết xe đang bị phạt |
+| Trigger | Chuẩn bị đăng kiểm - Thấy người khác bị phạt - Không nhớ xe đã qua camera hay chưa |
+
+**Giải pháp:** Landing Page `/phat-nguoi` - Blog "Tra cứu phạt nguội ở đâu nhanh nhất 2025".
+
+---
+
+### Stage 2 - Tra Cứu & Xác Nhận: "Tra theo loại xe và địa phương"
+
+**Keywords:** tra cứu phạt nguội ô tô (49.5K), kiểm tra phạt nguội xe máy (22.2K), camera phạt nguội (8.1K), tra cứu theo tỉnh thành
+
+| Dimension | Nội dung |
+|---|---|
+| Functional | Tra đúng theo loại xe (ô tô/xe máy), theo tỉnh đang ở, xem chi tiết lỗi, thời gian, địa điểm |
+| Emotional | Muốn biết chính xác - không muốn tra sai xe hoặc sai tỉnh |
+| Trigger | Chuẩn bị chuyến đi xa - Đang ở tỉnh khác - Có nhiều xe cần quản lý |
+
+**Giải pháp:** `/phat-nguoi/o-to` - `/phat-nguoi/xe-may` - `/phat-nguoi/[tinh-thanh]` (pSEO 63 tỉnh) - `/phat-nguoi/camera-giao-thong`.
+
+---
+
+### Stage 3 - Nộp Phạt & Đăng Kiểm: "Nộp phạt online nhanh gọn"
+
+**Keywords:** nộp phạt giao thông online (2.9K), nộp phạt nguội online (1.9K), cách nộp phạt nguội
+
+| Dimension | Nội dung |
+|---|---|
+| Functional | Nộp phạt không cần đến tận nơi, online 24/7 |
+| Emotional | Tiết kiệm thời gian, tránh phải xếp hàng ở Kho Bạc hoặc CSGT |
+| Trigger | Cần đăng kiểm nhưng đang có vi phạm chưa nộp |
+
+**Giải pháp:** `/phat-nguoi/blog/nop-phat-nguoi` (CTA nộp phạt trực tiếp) - Blog "Cách nộp phạt nguội online 2025".
+
+---
+
+### Stage 4 - Kiến Thức & Phòng Tránh: "Hiểu luật để không tái phạm"
+
+**Keywords:** nghị định 168 (33.1K), lỗi vượt đèn đỏ (8.1K), camera giao thông (12.1K)
+
+| Dimension | Nội dung |
+|---|---|
+| Functional | Hiểu mức phạt theo từng lỗi, biết camera đặt ở đâu để tránh |
+| Emotional | Không muốn bị phạt bất ngờ - chủ động tuân thủ luật |
+| Trigger | Đã từng bị phạt - Vừa xem tin về Nghị định 168 - Chuẩn bị thi bằng lái |
+
+**Giải pháp:** Blog hub `/phat-nguoi/blog` - Bài "Nghị định 168: Bảng mức phạt mới nhất".
+
+---
+
+## 5. Kiến Trúc Web
+
+### 5.1 Sitemap Hub & Spoke
+
+```
+momo.vn/phat-nguoi [Hub]
+│
+├── TRANG PHƯƠNG TIỆN
+│   ├── /phat-nguoi/o-to              (LIVE)
+│   ├── /phat-nguoi/xe-may            (LIVE)
+│   └── /phat-nguoi/xe-may-dien       (LIVE)
+│
+├── TRANG ĐỊA PHƯƠNG (Phase 2 - Scale Up Location pSEO)
+│   ├── /phat-nguoi/ha-noi
+│   ├── /phat-nguoi/tp-hcm
+│   └── /phat-nguoi/[tinh-thanh]...
+│
+├── TRANG CAMERA (Phase 1 - Interactive Camera Map)
+│   ├── /phat-nguoi/camera-giao-thong
+│   └── /phat-nguoi/camera-[khu-vuc] (pSEO)
+│
+├── TRANG DỊCH VỤ
+│   └── /phat-nguoi/blog/nop-phat-nguoi
+│
+└── BLOG CLUSTER
+    ├── /phat-nguoi/blog              (Hub kiến thức)
+    ├── Cụm Nghị định 168
+    ├── Cụm Hướng dẫn tra cứu
+    ├── Cụm Nộp phạt online
+    └── Cụm Camera giao thông
+```
+
+**AEO/GEO:** llms.txt live tại `momo.vn/phat-nguoi/llms.txt` - cung cấp context chuyên sâu cho AI engines (Perplexity, Gemini, ChatGPT) để cite MoMo là nguồn chính thống.
+
+**Schema bắt buộc:** WebApplication - FAQPage - HowTo - BreadcrumbList.
+
+### 5.2 Phase Roadmap
+
+| Phase | On-page / Product | Off-page / Comm | Trạng thái |
+|---|---|---|---|
+| Phase 1 - Foundation & Core | Mini Web Tool + API TTDK real-time + 3 subpage + Blog Batch 1 (20 bài) + SEM + Gói Subscription & Web PG Checkout + Interactive Camera Map + Route-based pSEO | Social BMC Batch 1 + Backlink Tier 1-2 (Vendor) + Chiến dịch Off-page | LIVE / Pilot |
+| Phase 2 - Regional Scale | Scale Up trang Location (pSEO 63 tỉnh thành) + Tiếp tục sản xuất Blog (Batch 2: 20-30 bài ngách) | - | Planned T6/2026 |
+| Phase 3 - Growth Loops | Viral mechanics + Camera AI pSEO + Dispute Assistant + Fine Code pSEO | Social ongoing + Backlink Tier 3 scale | Backlog |
+
+### 5.3 Growth & PLG Tactics (Phase 3)
+
+**Viral Mechanics:**
+- Viral Share Loop: Nút "Chia sẻ kết quả xe sạch" kèm link pre-filled biển số - tạo organic traffic từ bạn bè share.
+- UGC Warning: User thấy bị phạt tại camera A - nút "Cảnh báo bạn bè lái xe qua khu vực này".
+- Seasonal Spike Trigger: Banner "Xe sắp đến hạn đăng kiểm? Kiểm tra phạt nguội trước".
+
+**Product-Led Growth:**
+- Safe Driver Reward: Kết quả "Không vi phạm" - Hiển thị voucher giảm 20% Bảo hiểm xe máy/ô tô (cross-sell).
+- Dispute Assistant Lite: Decision tree giúp user biết có nên khiếu nại lỗi không - dẫn vào App.
+- Data Moat Report: Xuất bản "Top 10 tuyến đường nhiều vi phạm nhất" hàng tháng (MoMo là bên duy nhất có TTDK data cho báo cáo này - earned media + backlink tự nhiên).
+
+**Advanced pSEO:**
+- Route-based pSEO: `/phat-nguoi/quoc-lo-1a`, `/phat-nguoi/cao-toc-long-thanh`...
+- Fine Code pSEO: `/loi-vi-pham/vuot-den-do` per mã lỗi vi phạm.
+### 5.4 Luồng Mua Hàng & Thanh Toán trên Web (Web Subscription & MoMo Payment Checkout Flow)
+
+> **Cập nhật:** Tính năng mua gói Subscription giám sát phạt nguội tự động sẽ được ưu tiên phát triển và launch trực tiếp trên Web trong **Phase 1** để giải quyết bài toán tạo doanh thu trực tiếp và cải thiện ROI dự án. Tuy nhiên, tính năng này hiện tại đang tạm thời điều chỉnh mục tiêu (aim lại) để chốt thêm yêu cầu do phía PO Cell Team chưa gửi đầy đủ thông tin chi tiết và đặc tả kỹ thuật.
+
+Nhằm tối ưu hóa doanh thu trực tiếp từ Web channel (Revenue Stream) và nâng cao trải nghiệm tự động hóa cho người dùng, MoSpark xây dựng luồng mua gói dịch vụ Giám sát Phạt nguội tự động (TTDK Subscription) và thanh toán trực tiếp bằng cổng MoMo Payment Gateway trên Web.
+
+#### 1. Cơ cấu Gói dịch vụ (Subscription Packages)
+
+Người dùng có thể lựa chọn đăng ký theo chu kỳ **Tháng** hoặc **Năm** (giao diện mặc định khuyên dùng gói Năm với ưu đãi sâu). Chi tiết tính năng và giá của các gói:
+
+- **Gói Bạc (Silver):**
+  * Giá gói Tháng: **10.000đ/tháng** (Giá gốc 20.000đ/tháng - Giảm 50%).
+  * Giá gói Năm: **29.000đ/năm** (Giá gốc 199.000đ/năm - Giảm 85%).
+  * Quyền lợi đi kèm:
+    - Nhận thông báo tự động ngay khi phát sinh lỗi phạt nguội mới.
+    - Tự động nhắc nhở nộp phạt nguội trước thời hạn.
+    - Tra cứu lịch sử vi phạm và cập nhật trạng thái xử lý.
+    - Tự động nhắc nhở khi đến hạn đăng kiểm xe.
+- **Gói Vàng (Gold):**
+  * Giá gói Tháng: **19.000đ/tháng** (Giá gốc 29.000đ/tháng - Giảm 34%).
+  * Giá gói Năm: **39.000đ/năm** (Giá gốc 299.000đ/năm - Giảm 87%).
+  * Quyền lợi đi kèm:
+    - Đầy đủ tất cả các tính năng của gói Bạc.
+    - Nhận thêm ưu đãi đặc quyền giảm giá đến **40% các loại bảo hiểm ô tô** (Lưu ý: Không áp dụng quyền lợi bảo hiểm này trong thời gian dùng thử 7 ngày).
+
+*Chính sách dùng thử & mua ngay:* Hỗ trợ nút **[Dùng thử miễn phí 7 ngày]** hoặc **[Bỏ qua gói dùng thử và mua ngay]** để thúc đẩy tỷ lệ chuyển đổi trực tiếp trên Web.
+
+#### 2. Trải nghiệm Luồng Mua Hàng (User Journey)
+
+```mermaid
+flowchart TD
+    A[User chọn gói Bạc/Vàng & Nhập SĐT trên Web] --> B[Hệ thống hiển thị mã QR thanh toán MoMo]
+    B --> C[User dùng ứng dụng MoMo quét mã QR trên màn hình]
+    C --> D[Mở thẳng màn hình Thanh Toán An Toàn trong App MoMo]
+    D --> E[User xác nhận thanh toán thành công trên App]
+    E --> F[MoMo PG gửi IPN Webhook báo kết quả về Web Server]
+    F --> G[Website nhận fallback đồng bộ realtime & hiển thị Giao dịch thành công]
+```
+
+#### 3. Đặc tả chi tiết các bước trong Checkout Flow
+- **Bước 1: Chọn gói & Điền thông tin (Checkout Form):**
+  * Người dùng chọn gói dịch vụ (Bạc/Vàng), chu kỳ (Tháng/Năm) và điền số điện thoại liên kết nhận thông báo.
+- **Bước 2: Hiển thị mã QR thanh toán:**
+  * Hệ thống Web gọi API của MoMo PG để tạo mã giao dịch và hiển thị mã QR thanh toán an toàn trực tiếp trên giao diện Web.
+- **Bước 3: Quét mã QR trên App MoMo:**
+  * Người dùng mở ứng dụng MoMo trên điện thoại di động và thực hiện quét mã QR hiển thị trên Web.
+- **Bước 4: Hoàn tất thanh toán an toàn & Phản hồi Website (Done):**
+  * Sau khi quét mã, ứng dụng MoMo sẽ tự động nhận diện và đưa người dùng trực tiếp tới màn hình Thanh Toán An Toàn (Secure Payment Screen) bên trong App.
+  * Người dùng thực hiện xác thực bảo mật (FaceID/PIN) và bấm xác nhận để hoàn tất giao dịch.
+  * **Đồng bộ trạng thái trên Website (Real-time Fallback):** Hệ thống Web Backend nhận tín hiệu từ MoMo PG qua Webhook (IPN), đồng thời giao diện Website tự động nhận được fallback cập nhật trạng thái (thông qua cơ chế Websocket hoặc Polling) để trả ra kết quả giao dịch thành công ngay lập tức trên màn hình của người dùng.
+
+
+#### 5. Vị trí hiển thị Component Mua Hàng (Placement Strategy)
+
+Để tối ưu hóa tỷ lệ chuyển đổi (CVR), cấu phần mua gói đăng ký (Subscription Widget) sẽ được hiển thị linh hoạt tại các vị trí chiến lược sau trên Website:
+
+1. **Trực tiếp dưới kết quả tra cứu (Primary Location - Contextual Trigger):** Đây là điểm chạm có chuyển đổi cao nhất vì người dùng đang ở đỉnh điểm của sự quan tâm (high-intent).
+   - **Trường hợp xe KHÔNG vi phạm (Xe sạch):** Hiển thị ngay dưới banner thông báo *"Chúc mừng, phương tiện của bạn không có lỗi vi phạm"*.
+     * *Thông điệp (Message):* "Chủ động bảo vệ phương tiện - Đăng ký gói giám sát tự động để nhận cảnh báo ngay lập tức nếu phát sinh phạt nguội mới."
+     * *CTA:* [Đăng ký gói Năm - Chỉ 29k] hoặc [Dùng thử miễn phí 7 ngày].
+   - **Trường hợp xe CÓ vi phạm:** Hiển thị bên dưới danh sách các lỗi vi phạm hiện tại.
+     * *Thông điệp (Message):* "Nhận thông báo nhắc nhở nộp phạt trước hạn để tránh bị từ chối đăng kiểm và tự động theo dõi các lỗi phát sinh mới."
+     * *CTA:* [Đăng ký nhận cảnh báo - Chỉ 29k/năm].
+
+2. **Section Bảng giá (Pricing Section) tại Trang chủ `/phat-nguoi`:**
+   - Đặt ở phần giữa hoặc cuối trang chủ (dưới widget tra cứu và phần hướng dẫn sử dụng, trên phần FAQ).
+   - Thiết kế dưới dạng một bảng so sánh tính năng (Bạc vs Vàng) và chu kỳ (Tháng/Năm) để phục vụ nhóm người dùng vãng lai hoặc quay lại mua sau khi cân nhắc.
+
+3. **Nút CTA nổi bật trên Header / Navigation Bar:**
+   - Thiết kế nút CTA nhỏ màu hồng MoMo nổi bật: `[Đăng ký nhận cảnh báo]` hoặc `[Gói dịch vụ]` trên thanh menu đầu trang.
+   - Khi click sẽ tự động scroll-down hoặc dẫn về Section Bảng giá ở Trang chủ.
+
+4. **Kích hoạt qua Banner trong các bài viết thuộc Blog Cluster:**
+   - Chèn các banner/widget mua gói dịch vụ ở giữa hoặc cuối các bài viết hướng dẫn đăng kiểm, nghị định mức phạt mới, danh sách các camera phạt nguội để hứng lượng traffic tự nhiên từ SEO/GEO.
+
+### 5.5 Định Hướng & Cấu Trúc Trang Khu Vực Có Chủ Đích (Intentional Location Strategy)
+
+Để đảm bảo tính chính xác 100% của dữ liệu và kiểm soát chất lượng hiển thị, dự án chuyển dịch từ mô hình pSEO hàng loạt sang **Khởi tạo trang khu vực có chủ đích**. Chỉ xuất bản các trang thuộc danh sách whitelist được duyệt và đã qua khâu xác thực dữ liệu thủ công.
+
+#### 1. Cấu Trúc URL & Phân Loại Thực Thể Địa Lý
+Hệ thống MoSpark định nghĩa 3 nhóm trang khu vực có chủ đích chính:
+*   **Vùng địa lý lớn (Region):** `/phat-nguoi/khu-vuc/{ten-vung}`
+    *   *Ví dụ:* `/phat-nguoi/khu-vuc/mien-tay`, `/phat-nguoi/khu-vuc/tay-nguyen`
+*   **Tuyến đường huyết mạch (Route):** `/phat-nguoi/tuyen-duong/{ten-tuyen-duong}`
+    *   *Ví dụ:* `/phat-nguoi/tuyen-duong/quoc-lo-1a`, `/phat-nguoi/tuyen-duong/cao-toc-long-thanh`
+*   **Điểm nóng / Giao lộ / Địa danh (Hotspot & Landmark):** `/phat-nguoi/dia-diem/{ten-dia-diem}`
+    *   *Ví dụ:* `/phat-nguoi/dia-diem/nga-tu-hang-xanh`, `/phat-nguoi/dia-diem/ham-thu-thiem`
+
+#### 2. Quy Trình 5 Bước Vận Hành & Kiểm Soát Dữ Liệu (Curated Pipeline)
+Mỗi trang khu vực mới được khởi tạo và publish thông qua quy trình kiểm soát nghiêm ngặt sau:
+1.  **Lọc & Lập Whitelist (SEO Lead):** Lựa chọn địa danh dựa trên số lượng tìm kiếm lớn (volume > 1,000/tháng) và mức độ thiết thực với tài xế.
+2.  **Xác Thực Dữ Liệu Thực Tế (Cell Team):** Xác minh thủ công danh sách camera phạt nguội (tọa độ GPS), địa chỉ kho bạc nhà nước tiếp nhận nộp phạt, và cơ quan CSGT địa phương chịu trách nhiệm xử lý.
+3.  **GenAI Draft Content (MoSpark CMS):** Sử dụng các mô hình Claude 3.5 Sonnet trong module GenAI để sinh bài viết chi tiết dựa trên dữ liệu đã xác thực, cung cấp thông tin hữu ích về luật và quy định xử phạt (Nghị định 168).
+4.  **Tích hợp Widget & Bản đồ (Product/Tech Cell):** Nhúng bản đồ tọa độ camera phạt nguội thực tế và bảng đối chiếu mức tiền phạt nhanh cho các lỗi vi phạm phổ biến tại khu vực đó.
+5.  **Editorial Gate (Văn Hiến sign-off):** PM kiểm tra và phê duyệt chất lượng nội dung cùng độ chính xác của dữ liệu trước khi bấm nút Publish trực tuyến.
+
+#### 3. Quản Trị Link Equity & Tránh Chồng Chéo Từ Khóa (Silo Control)
+*   **Breadcrumb Phân Cấp:** Thiết lập breadcrumb có logic cha-con rõ ràng để Googlebot/AI hiểu sơ đồ tri thức (Ví dụ: `Trang chủ ➔ TP.HCM ➔ Quận Bình Thạnh ➔ Ngã tư Hàng Xanh`).
+*   **Schema `containedInPlace`:** Nhúng Schema JSON-LD mô tả thực thể địa lý con nằm trong thực thể địa lý mẹ để phục vụ tối ưu hóa AI Search (AEO).
+*   **Thẻ Canonical tự tham chiếu:** Giữ thẻ canonical tự trỏ về chính nó cho các trang địa danh cụ thể để duy trì chỉ mục độc lập trên các công cụ tìm kiếm, tránh bị gộp chỉ mục về trang tỉnh/thành mẹ.
+
+#### 4. Kế Hoạch Triển Khai & Danh Sách Ưu Tiên (Phase 1)
+Thay vì tạo hàng loạt 63 tỉnh thành ngay lập tức, dự án sẽ cuốn chiếu theo đợt chất lượng:
+*   **Đợt 1 (Tháng 7/2026):** Tập trung vào 10 địa điểm/tuyến đường có lượng tìm kiếm cao nhất và dữ liệu đã sẵn sàng:
+    *   *Region:* Miền Tây, Tây Nguyên
+    *   *Route:* Cao tốc TP.HCM - Long Thành - Dầu Giây, Cao tốc Pháp Vân - Cầu Giẽ, Quốc lộ 1A
+    *   *Hotspot:* Ngã tư Hàng Xanh, Hầm Thủ Thiêm, Ngã tư Sở, Cầu Rồng, Ngã sáu Cộng Hòa.
+*   **Đợt 2 (Tháng 8/2026):** Mở rộng sang 15 điểm nóng tiếp theo thuộc Hà Nội, TP.HCM và Đà Nẵng sau khi hoàn tất đối soát dữ liệu.
+
+#### 5. Nguyên Tắc Sáp Nhập & Điều Chỉnh Địa Giới Hành Chính
+*   **Nguyên tắc "Intent-First" (Ưu tiên theo Intent):** Giữ nguyên hoạt động của trang địa danh cũ nếu người dùng vẫn duy trì thói quen tìm kiếm địa danh đó (Ví dụ: "Hà Tây"), không thực hiện xóa trang hay redirect vội vã.
+*   **Tối ưu hóa Alias Page:** Gộp dữ liệu backend của tỉnh cũ vào đơn vị quản lý mới, hiển thị ghi chú nhỏ trên giao diện: *"Dữ liệu phạt nguội khu vực [Tỉnh A] được tự động cập nhật theo đơn vị hành chính mới [Tỉnh B]"*.
+
+
+---
+
+## 6. Success Metrics
+
+### 6.1 KPI Framework
+
+| Metric | Target | Source |
+|---|---|---|
+| **Top 3 Google Ranking** (Primary KPI) | Đạt Top 3 thứ hạng tìm kiếm cho các từ khóa chính (*"tra cứu phạt nguội"*, *"phạt nguội"*...) | Google Search Console / Ahrefs |
+| **MEU Utility** (Secondary) | Đo lường người dùng tương tác công cụ tra cứu thực tế trên Web | Umami + GA4 |
+| **W2A Conversion Rate** (Secondary) | Đạt 15% (Tỷ lệ chuyển đổi Web-to-App) | GA4 + Appsflyer |
+
+### 6.2 Conversion Funnel
+
+```
+Search -> Landing page /phat-nguoi -> Nhập biển số -> Trả kết quả + Contextual Blog -> CTA -> Tải/Mở App (W2A)
+```
+
+
+---
+
+## 7. Dependencies & Constraints
+
+| Dependency | Mô tả | Blocker? |
+|---|---|---|
+| API TTDK Real-time | Widget tra cứu hoạt động thực (nhập biển số - trả kết quả vi phạm). SLA uptime > 99% | Có - core product value |
+| Partnership exclusivity TTDK | Điều kiện pháp lý duy trì lợi thế competitive | Có - strategic |
+| GA4 + Appsflyer W2A tracking | Track conversion từ web sang app. Phân tách organic vs SEM traffic | Có - đo KPI |
+| Legal Disclaimer trên Web | Web results là tham khảo (Lite mode). Evidence chính thức chỉ trong app | Có - YMYL |
+| pSEO Infrastructure | Build hàng ngàn trang địa phương + camera cần platform support | Có cho Phase 2 |
+
+**Constraints:**
+- Web Lite Mode: Không hiển thị ảnh chụp vi phạm, không cho phép nộp phạt trực tiếp - phải dẫn vào app. Đây là constraint pháp lý, không phải kỹ thuật.
+- Content compliance: Không dùng ngôn ngữ "xóa vi phạm", "bỏ phạt", không refer site không chính thống.
+- Privacy: Không lưu trữ biển số sau query - phải tuân thủ quy định bảo mật TTDK.
+- Subscription Web: Nếu triển khai checkout Subscription trên Web cần xác nhận scope rõ ràng với BU - KPI có thể conflict với positioning acquisition.
+- **Yêu cầu bắt buộc sở hữu App MoMo:** Khách hàng mua gói Subscription trên Web bắt buộc phải sở hữu/tải ứng dụng MoMo và liên kết đúng Số điện thoại đăng ký thì mới nhận được thông báo biến động lỗi phạt nguội qua App Push. Đây là điều kiện vận hành kỹ thuật bắt buộc để kích hoạt tính năng gửi Alert tự động.
+
+---
+
+## 8. Risk Assessment
+
+| # | Rủi ro | Khả năng | Impact | Mitigation |
+|---|---|---|---|---|
+| R1 | API TTDK latency cao hoặc downtime - widget không trả kết quả - user không tin | Trung bình | Rất cao | SLA cứng với TTDK. Fallback message rõ ràng thay vì trang trắng |
+| R2 | phatnguoi.com cải thiện UX hoặc claim official status - mất competitive edge | Trung bình | Cao | Liên tục nhấn mạnh Official TTDK logo và trust signals. Speed-to-market Phase 2 |
+| R3 | AI Overview erode organic traffic trước khi MoMo được cite | Cao | Cao | AEO priority: llms.txt + FAQPage Schema + structured data ngay Phase 1 |
+| R4 | Subscription Web conflict với positioning acquisition - user bị friction | Trung bình | Trung bình | Validate tại Pilot review T6/2026. Set success criteria rõ ràng trước launch Subs Web |
+| R5 | pSEO 63 tỉnh bị Google nhận diện là thin content | Trung bình | Cao | Mỗi trang tỉnh cần unique content: stats vi phạm, camera nhiều nhất, mức phạt phổ biến tại tỉnh đó |
+| R6 | SEM budget không đủ ROI để justify tiếp tục | Thấp (CTR 7% đã tốt) | Trung bình | Review CPA weekly. Shift budget sang Exact Match cho cluster hiệu quả nhất (xe máy) |
+
+---
+
+## 9. SEO/GEO Content Engine - GenAI Production Plan
+
+> **Nguồn:** Tích hợp từ SEO Inventory v4.7 (`mospark_seo_inventory.md`) - Entry Point system cho dự án Phạt Nguội trên MoSpark. Mọi quyết định content phải gắn với Market Volume thực và SoV mục tiêu, không sản xuất "mù mờ".
+
+### 9.1 Phân Loại Trong SEO Inventory
+
+**Nhóm:** Mass Traffic / Dịch vụ công (Inventory Priority Group 4)
+
+**Chiến lược nhóm:** Kéo lượng User khổng lồ về hệ sinh thái MoMo - KPI là MEU và W2A acquisition, không phải revenue trực tiếp.
+
+**Độ khó triển khai (ICE Rubric):** 5/5 - hệ thống phức tạp, tích hợp API TTDK, compliance pháp lý nghiêm ngặt, Dev > 3 sprint.
+
+| Metric | Giá trị | Source | Chu kỳ cập nhật |
+|---|---|---|---|
+| Total Search Volume | ~3.56M lượt/tháng | Ahrefs/KP | Quarterly |
+| SoV MoMo hiện tại | TBD - đo baseline T6/2026 | GA4/BigQuery | Monthly |
+| SoV target Year 1 | 10%+ (~356K sessions/tháng) | Hiến (định nghĩa sau Pilot) | |
+| SoV target Long-term | 15%+ (~534K sessions/tháng) | Hiến | |
+| Priority Score (SEO-ICE) | Cao - Mass Traffic Category | Inventory v4.7 | Quarterly |
+
+---
+
+### 9.2 Keyword Cluster Priority Map
+
+Mỗi cluster chỉ được gán một Canonical URL - áp dụng Cannibalization Gate của SEO Inventory. Không tạo content trùng cluster đã có URL sở hữu.
+
+| # | Cluster | Volume/tháng | Intent Stage | Loại Content | Priority | Canonical URL |
+|---|---|---|---|---|---|---|
+| 1 | Công cụ tra cứu (Hub) | ~1.05M+ | Stage 1 | Landing page (pSEO/Mini Web) | P0 | /phat-nguoi |
+| 2 | Tra cứu theo xe | ~70K+ | Stage 2 | Landing page (pSEO/Mini Web) | P1 | /phat-nguoi/o-to, /phat-nguoi/xe-may, /phat-nguoi/xe-may-dien |
+| 3 | Nghị định 168 & mức phạt | ~40K+ | Stage 4 | Blog | P1 | /phat-nguoi/blog/nghi-dinh-168-* |
+| 4 | Camera giao thông | ~20K+ | Stage 2 | Landing page (pSEO/Mini Web) | P1 | /phat-nguoi/camera-giao-thong |
+| 5 | Lỗi vi phạm cụ thể | ~20K+ | Stage 4 | Blog | P2 | /phat-nguoi/blog/loi-* |
+| 6 | Tra cứu theo tỉnh thành | ~15K+ aggregate | Stage 2 | Landing page (pSEO/Mini Web) | P2 | /phat-nguoi/[tinh-thanh] |
+| 7 | Nộp phạt online | ~10K+ | Stage 3 | Blog | P3 | /phat-nguoi/blog/nop-phat-nguoi |
+
+**Nguyên tắc phân bổ:** P0 = Production ngay. P1 = Batch 1-2 (Phase 1-2). P2 = Scale Phase 2. P3 = Phase 3 trở đi.
+
+---
+
+### 9.3 GenAI Content Production Plan
+
+**Luồng chuẩn:** Keyword Cluster Map ➔ Business Context Sync ➔ Outline AI (Claude) ➔ Cell Team review/edit ➔ Blog Detail AI ➔ Editorial Review (Hiến) ➔ Publish.
+
+#### Batch 1 - Pilot (Phase 1 - Đã hoàn thành)
+
+- **Số lượng:** 20 bài blog
+- **Cluster focus:** Cluster 1-2 (Hub + Xe) + Cluster 3 (Nghị định 168 anchor)
+- **Keywords tiêu biểu:** "Tra cứu phạt nguội", "Kiểm tra phạt nguội xe máy", "Mức phạt theo Nghị định 168"
+- **Status:** Published
+
+#### Batch 2 - Scale (Phase 2 - Kế hoạch T6/2026)
+
+- **Số lượng mục tiêu:** 20-30 bài ngách
+- **Cluster focus:**
+  - Cluster 3: Camera giao thông (camera đặt ở đâu, cách hoạt động, vùng phủ)
+  - Cluster 4: Lỗi vi phạm cụ thể (vượt đèn đỏ, không mũ bảo hiểm, đi ngược chiều...)
+  - Cluster 5: Tỉnh thành - ưu tiên 10 tỉnh volume cao nhất: HCM, HN, Đà Nẵng, Bình Dương, Đồng Nai, Cần Thơ, Hải Phòng, Long An, Bắc Ninh, Nghệ An
+- **Format bắt buộc:** Blog + Internal Link về /phat-nguoi (Hub) + Schema FAQPage + HowTo
+- **PIC:** Hoài Anh (Technical/Cell Team) - Hiến (Product Flow & GenAI Content for pSEO Long Content)
+- **Timeline:** T6/2026 sau Pilot review
+
+#### Long-term Scale (pSEO)
+
+- **63 tỉnh thành (Phase 2)** `/phat-nguoi/[tinh-thanh]`: Mỗi trang cần unique data (camera nhiều nhất tỉnh, lỗi phổ biến, mức phạt cụ thể) - không thin content. Không deploy placeholder rỗng.
+- **Fine Code pSEO (Phase 3)** `/phat-nguoi/blog/loi-[ma-loi]`: Per mã lỗi vi phạm cụ thể - target long-tail từ Cluster 4.
+- **Route pSEO (Phase 1)**: `/phat-nguoi/tuyen-duong/quoc-lo-1a`, `/phat-nguoi/tuyen-duong/cao-toc-long-thanh`...
+  * **Tích hợp Dữ liệu Crawled Camera & Tuyến đường:** Hệ thống tự động tích hợp dữ liệu cào (crawl data) từ các nguồn chính thống và dữ liệu đóng góp cộng đồng về các tuyến đường có lắp camera phạt nguội.
+  * **Trường dữ liệu bắt buộc trên mỗi trang Route:**
+    1. Vị trí chính xác các camera phạt nguội (tọa độ, lý trình km).
+    2. Các lỗi phạt nguội phổ biến nhất trên tuyến (Ví dụ: chạy quá tốc độ, đi sai làn đường).
+    3. Tốc độ giới hạn cho phép của từng đoạn đường trên tuyến.
+    4. Biểu đồ thống kê số ca vi phạm trong 30 ngày gần nhất (anonymized stats).
+  * **Mục tiêu pSEO:** Đón đầu lượng search cực lớn về các từ khóa `"phạt nguội quốc lộ 1a"`, `"camera phạt nguội cao tốc Long Thành"`, giúp trang có nội dung dồi dào, unique 100%, vượt qua bộ lọc chống thin content của Google.
+  * **Cải tiến luồng CMS thuộc PLG Project (Tháng 7/2026):** Để tối ưu hóa trải nghiệm hiển thị chuyên sâu (Long Content) của Location Page vốn khác biệt với Blog thông thường, hệ thống CMS được nâng cấp tính năng cho phép người dùng lựa chọn định dạng trang (Choose Page Type: Blog Type vs Location/Landing Page Type) ngay sau khi GenAI tạo xong nội dung.
+
+---
+
+### 9.4 Content Quality Gate (Bắt buộc trước publish)
+
+Theo Foundation Checklist chuẩn SEO Inventory. Mọi bài blog Phạt Nguội phải pass đủ 6 cổng - không publish nếu thiếu.
+
+| Gate | Yêu cầu | PIC |
+|---|---|---|
+| Information Gain | Có data/góc nhìn không scrape được từ LLM (TTDK data, mức phạt theo Nghị định 168 thực tế, stats camera tỉnh) | Hiến review |
+| Keyword Ownership | Keyword cluster không trùng với URL đã index (Cannibalization check trên MoSpark CMS) | Hoài Anh check CMS |
+| Schema Markup | FAQPage + HowTo required. BreadcrumbList. WebApplication (Hub). | Hoài Anh build |
+| Legal Compliance | Không dùng "xóa vi phạm", "bỏ phạt", "bypass pháp lý". Có Legal Disclaimer tham chiếu Lite mode. | Hiến review |
+| Internal Link | Mọi bài Blog cắm link về /phat-nguoi (Hub) và subpage phù hợp (/o-to hoặc /xe-may) | Hoài Anh/Mai |
+| CWV Gate | LCP < 2.5s, INP < 200ms, CLS < 0.1 - Pass trước publish | Hoài Anh QA |
+
+**Quy tắc cứng:** GenAI Content không được auto-publish. Bắt buộc qua editorial review và Hiến sign-off trước khi live. AI draft là input cho editor - không phải output cuối.
+
+---
+
+### 9.5 SoV Tracking Plan
+
+**Công thức:** SoV % = GA4 Organic Sessions /phat-nguoi cluster (tháng) / Total Search Volume 3.56M × 100
+
+**Chu kỳ:** Monthly tracking (traffic GA4) + Quarterly SoV audit đầy đủ.
+
+| Milestone | Target SoV | Target Sessions/tháng | Timeline |
+|---|---|---|---|
+| Baseline lần đầu | TBD | TBD | T6/2026 - sau Pilot review |
+| Phase 2 launch | 5%+ | ~178K | T9/2026 |
+| Year-end target | 10%+ | ~356K | T12/2026 |
+| Long-term aspirational | 15%+ | ~534K | 2027 |
+
+**Alert trigger:** SoV không tăng sau 2 tháng liên tiếp post-publish batch → kích hoạt On-page audit (AI Enhance) + tăng Offpage effort.
+
+**Owner:** Thuận (Monthly tracking) - Hiến (Quarterly audit + định nghĩa target revision).
+
+---
+
+## 10. Comm Activities - Off-Page Growth
+
+3 channel amplification song song - On-page (Section 9) là nền, Off-page (Section này) là nhân số.
+
+### 10.1 Social Outreach - Internal BMC
+
+**Mục tiêu:** Khuếch đại reach của content Phạt Nguội qua MoMo's owned social channels - tạo awareness tool, drive organic traffic, và xây dựng entity signal cho GEO.
+
+**Way of Working:**
+- **Hiến brief - BMC execute.** SEO & GEO Lead cung cấp content brief + keyword angle. BMC team (Brand Marketing Communications) thực thi trên các kênh owned của MoMo.
+- Không BMC tự chọn angle - phải align với keyword cluster và JTBD map của từng batch content.
+
+**Content Types ưu tiên:**
+
+| Format | Angle | Cluster gắn với |
+|---|---|---|
+| Infographic | "Mức phạt mới Nghị định 168 - bảng so sánh trước/sau" | Cluster 3 - Nghị định 168 |
+| Short video/Reel | "3 bước tra cứu phạt nguội nhanh nhất 2025" | Cluster 1 - Hub |
+| Awareness post | "Camera phạt nguội đặt ở đâu tại [tỉnh]?" | Cluster 4 - Camera |
+| Seasonal content | "Xe sắp hết hạn đăng kiểm? Kiểm tra phạt nguội trước khi đến TTDK" | JTBD Stage 3 |
+
+**Trigger cung cấp brief cho BMC:**
+- Mỗi lần publish batch content mới → Hiến brief BMC trong vòng 3 ngày
+- Khi có spike search (ví dụ: mùa đăng kiểm, sự kiện pháp lý mới) → Brief nhanh 24h
+
+**KPI Social Outreach:**
+- Click-through từ social về `/phat-nguoi` cluster (GA4 - source/medium social)
+- Share rate trên các post Phạt Nguội
+- Brand mention tăng liên quan đến "tra cứu phạt nguội MoMo" (entity signal)
+
+---
+
+### 10.2 Backlink & Off-site - Vendor
+
+**Mục tiêu:** Xây dựng backlink profile cho domain momo.vn và cụm trang `/phat-nguoi` từ các nguồn có authority cao trong ngành giao thông, pháp luật, và automotive.
+
+**Chiến lược:** MoMo sở hữu TTDK partnership độc quyền - đây là USP mạnh nhất để pitching editorial backlink từ báo chí. Vendor cần khai thác góc này, không chỉ build link thông thường.
+
+**Target Link Sources (ưu tiên):**
+
+| Tier | Nguồn | Cách tiếp cận | Giá trị |
+|---|---|---|---|
+| Tier 1 | Báo lớn (VnExpress, Tuổi Trẻ, VTV) | Press release về TTDK partnership + tính năng mới | Authority cao nhất, DoFollow value |
+| Tier 1 | Báo chuyên ngành (Giao thông Vận tải, Pháp luật) | Editorial article dẫn nguồn MoMo là kênh chính thống | Topical relevance |
+| Tier 2 | Automotive sites (OtoHui, Bonbanh, XeSang) | Sponsored content + review tính năng | Traffic audience relevant |
+| Tier 2 | Forum & community (Otofun, Xe360) | Editorial mention, không mua link forum spam | Natural signal |
+| Tier 3 | Blog/Affiliate SEO trong ngành giao thông | Guest post + resource link | Volume |
+
+**Vendor Criteria (khi đi deal):**
+
+- Không spam link (không PBN, không farm link). MoMo brand = YMYL - Google penalty risk cao nếu dùng black/grey hat.
+- Vendor phải cung cấp danh sách sites trước khi deal - Hiến approve whitelist.
+- Reporting: Domain Authority, Traffic Estimate, DoFollow/NoFollow ratio per link.
+- Hình thức: Link placement báo chí, guest post editorial, resource page.
+
+**Budget & Timeline:**
+- **Ngân sách chiến dịch Off-page:** Triển khai cùng SEO Mentor ngân sách **75 triệu đồng** nhằm tối ưu hóa liên kết (Backlink Plan) và xây dựng Domain Authority vững chắc. Thời gian chạy sẽ được kéo dãn ra để thấy rõ hiệu quả thay vì chỉ tập trung trong 2 tháng như dự kiến cũ.
+- **Trao đổi liên kết (Exchange Link):** Thiết lập quan hệ đối tác trao đổi backlink chính thống với các cổng thông tin của Trung tâm đăng kiểm (TTDK) để tăng độ uy tín (Authoritativeness) cho cụm `/phat-nguoi`.
+- **SEM:** Tiếp tục duy trì chạy SEM để cover luồng high-intent demand ngắn hạn.
+- **Social Outreach:** Đẩy mạnh thực thi vào **Q3/2026**.
+- T6/2026: Tìm và evaluate 2-3 vendors. Hiến approve whitelist sites.
+- T7/2026: Kick-off campaign backlink Batch 1 (Tier 1 báo lớn - leverage TTDK announcement & exchange link).
+- T8-T9/2026: Scale Tier 2-3 theo tốc độ Phase 2 content.
+
+**PIC:** Hiến govern + approve. Inbound (Mai) coordinate với vendor sau khi Hiến set standard.
+
+**Nguyên tắc bất di bất dịch:**
+- Mọi link Tier 1 phải có Hiến approve trước khi publish - không delegate cho vendor tự quyết.
+- Không build link vào trang thin content hoặc trang chưa pass Content Quality Gate.
+- Anchor text diversity: Không dùng exact match keyword quá 20% tổng anchor text. Mix brand + partial match + URL anchor.
+
+---
+
+## Appendix A: Content Cluster - Priority Reference
+
+| Topic Cluster | Stage | Keywords đại diện | Volume |
+|---|---|---|---|
+| Công cụ tra cứu | Stage 1 | tra cứu phạt nguội, kiểm tra phạt nguội | ~1M+/tháng |
+| Tra cứu theo xe | Stage 2 | phạt nguội ô tô, kiểm tra phạt nguội xe máy | ~70K+/tháng |
+| Camera giao thông | Stage 2 | camera phạt nguội, camera giao thông | ~20K+/tháng |
+| Tra cứu theo tỉnh | Stage 2 | phạt nguội HN/HCM/Đà Nẵng... | ~15K+/tháng aggregate |
+| Nộp phạt online | Stage 3 | nộp phạt giao thông online | ~10K+/tháng |
+| Nghị định 168 | Stage 4 | nghị định 168, mức phạt mới | ~40K+/tháng |
+| Lỗi vi phạm cụ thể | Stage 4 | vượt đèn đỏ, không có bằng lái | ~20K+/tháng |
+
+---
+
+## Appendix B: Compliance & Legal Framework
+
+- **Legal Basis:** Nghị định 168/2024/NĐ-CP & Thông tư 73/2024/TT-BCA.
+- **Disclaimer bắt buộc:** Kết quả Web là tham khảo (Lite mode). Hồ sơ chính thức và ảnh vi phạm chỉ có trong App.
+- **Prohibited content:** Không đề cập site không chính thống ngoại trừ so sánh bảo mật. Tuyệt đối tránh các cụm từ "xóa vi phạm", "bỏ phạt", "bypass pháp lý".
+
+---
+
+## Change Log
+
+| Ngày | Phiên bản | Thay đổi |
+|---|---|---|
+| 2026-07-07 | v4.0 | Tái cấu trúc lộ trình và KPI theo yêu cầu của Hiến: (1) Đóng gói các tính năng Subscription Web, Camera Map, Route pSEO, và hoạt động Off-page về Phase 1; (2) Phase 2 chỉ tập trung vào Scale Up trang Location và sản xuất Blog ngách; (3) Thiết lập KPI chính là Top 3 thứ hạng tìm kiếm từ khóa chính; (4) Tối giản bảng Success Metrics; (5) Bổ sung sơ đồ Mermaid mô tả luồng xử lý vi phạm. |
+| 2026-07-07 | v3.9 | Cập nhật định hướng dự án Phạt Nguội: (1) Triển khai gói bundle Cross-Sell mua bảo hiểm ô tô tặng 1 năm phạt nguội; (2) Triển khai Off-page 75 triệu cùng SEO Mentor và trao đổi backlink TTDK; (3) Tích hợp luồng outline review và cải tiến Page Type CMS; (4) Tạm aim lại luồng Subscription do thiếu thông tin từ Cell Team; (5) Cập nhật cấu trúc trang địa phương (Location Page Layout Spec) tích hợp tự động tuyến đường vi phạm; (6) Đặc tả luồng liên kết chéo động (Contextual Guide Flow) từ Widget kết quả sang Blog lỗi tương ứng. |
+| 2026-06-26 | v3.8 | Tích hợp điều chỉnh họp BU Phạt Nguội: (1) Khóa lịch launch Subscription Web trong tháng 7/2026; (2) Thiết lập Khung đồng đầu tư Cross-BU Co-investment (Sec 3.4) để giải quyết bài toán ROI; (3) Nâng cấp đặc tả Route pSEO tích hợp dữ liệu cào camera/tuyến đường để đón đầu traffic. |
+| 2026-06-11 | v3.7 | Cập nhật thông tin budget Offpage (~75tr/2tháng - chờ review) và timeline Social Outreach (Q3), duy trì SEM. Bổ sung note PO chuẩn bị cung cấp BA Doc/Flow cho luồng Subscription Web (Sec 5.4). |
+| 2026-05-29 | v3.6 | Thêm Section 10 - Comm Activities Off-Page: Social Outreach (Internal BMC) + Backlink & Off-site (Vendor). Cập nhật Phase Roadmap bổ sung cột Off-page/Comm per phase. |
+| 2026-05-25 | v3.5 | Thêm Section 9 - SEO/GEO Content Engine GenAI Production Plan. Tích hợp SEO Inventory v4.7 framework: phân loại Mass Traffic/DVC, Keyword Cluster Priority Map (7 clusters/P0-P3), GenAI Production Plan 3 phases (Batch 1 done/Batch 2 T6/Pháp 2 pSEO), Content Quality Gate 6 cổng, SoV Tracking Plan với milestones T6-T12/2026. |
+| 2026-05 (đầu tháng) | v3.0 | Final Master - Ready for Execution |
+| 2026-05 (giữa tháng) | v3.1 | Bổ sung SEM Key Learnings |
+| 2026-05-21 | v3.2 | Cập nhật trạng thái Phase 1 LIVE |
+| 2026-05-21 | v3.3 | llms.txt LIVE; chuyển sang Inline Lookup Widget |
+| 2026-05-22 | v3.4 | MEU Tier A commit; Subscription Web short-term |

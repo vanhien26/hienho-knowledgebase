@@ -180,7 +180,7 @@ Nằm trong phân hệ cấu hình nâng cao của Admin Panel MoSpark:
 
 ## 7. Tài liệu Liên kết (Related Documents)
 *   **Platform Master:** [MoSpark Master Doc](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_master.md)
-*   **SEO/GEO Project Hub:** [MoSpark SEO/GEO Project Hub](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_seo_geo_project.md)
+*   **PLG Project Hub:** [MoSpark PLG Project Hub](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_plg_project.md)
 *   **GenAI Production Lab:** [MoSpark GenAI Content Engine](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_genai_content.md)
 
 ---

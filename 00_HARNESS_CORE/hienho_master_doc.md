@@ -81,7 +81,7 @@ Hệ thống vận hành dựa trên tam giác phối hợp chặt chẽ:
     *   Nhận spec trực tiếp từ Hiến và thực thi (Sprint → Build → Deploy).
     *   Không làm việc trực tiếp với Inbound/Agency.
 
-3.  **Inbound Team - Mai & team (EXECUTE Content):**
+3.  **Inbound Team (EXECUTE Content):**
     *   Sản xuất nội dung (Blog, Off-page) theo Brief của Hiến.
     *   Thực hiện submit content lên hệ thống.
     *   Agency (nếu có) phải qua Inbound review trước khi Hiến audit cuối cùng.
@@ -137,54 +137,74 @@ Các giá trị cốt lõi định hướng cách vận hành và ra quyết đ�
 | **Data-first** | Mọi đề xuất chiến lược đều dựa trên dữ liệu. Vận hành chuyên sâu các hệ thống đo lường (GA4, GSC, GTM, BigQuery) và tối ưu hóa phễu chuyển đổi Web-to-App. |
 | **AI-first Mindset** | Tích hợp sâu AI vào quy trình sản xuất (GenAI Content Pipeline) và đi đầu chiến lược GEO/AEO để tối ưu hiển thị trên các nền tảng AI mới. |
 | **Collaborative** | Đóng vai trò Web Product Consultant, kết nối hiệu quả giữa Web Platform, Inbound Team và các BU nội bộ để triển khai sản phẩm đúng chuẩn. |
+### 1.8 Mục tiêu Phát triển Bản thân (Individual Development Plan - IDP)
+
+**Tên tổng thể: Định hướng trở thành Chuyên gia Sản phẩm AI (AI Product Manager/Lead) cho Nền tảng Web**
+
+Nhằm đáp ứng sự bùng nổ của trí tuệ nhân tạo và chiến lược mới của GPD, mục tiêu phát triển cá nhân của Văn Hiến tập trung vào việc ứng dụng AI để làm mấu chốt tăng trưởng, thông qua 3 trục cốt lõi:
+
+*   **1. Quản trị Sản phẩm bằng Trí tuệ nhân tạo (AI-Driven Product Management):**
+    *   *Mục tiêu:* Nâng cấp từ làm Sản phẩm Web (Web Product) truyền thống sang làm Sản phẩm AI (AI Product).
+    *   *Hành động:* Trực tiếp xây dựng và tối ưu các lõi công nghệ AI trên nền tảng MoSpark (như GenAI Content Engine, RAG Knowledge Base, công cụ Automation). Dùng sức mạnh của AI để rút ngắn thời gian ra mắt chiến dịch và tự động hóa phễu chuyển đổi Web-to-App.
+
+*   **2. Làm chủ Kỷ nguyên Tìm kiếm AI (GEO/AEO Leadership):**
+    *   *Mục tiêu:* Tiên phong dẫn dắt mảng Tối ưu hóa Công cụ Tìm kiếm AI (GEO/AEO) tại MoMo.
+    *   *Hành động:* Xây dựng bộ tiêu chuẩn (AI Crawler Policy, định dạng Answer-first). Triển khai hệ thống file `llms.txt` và các cấu trúc dữ liệu đặc thù để đảm bảo sản phẩm của MoMo luôn được các AI Engines (ChatGPT, Perplexity, Gemini) đọc hiểu và ưu tiên trích dẫn (citation).
+
+*   **3. Tư vấn Tăng trưởng bằng AI (AI-Led Growth & Consulting):**
+    *   *Mục tiêu:* Trở thành đối tác tư vấn chiến lược AI-First cho các Khối Kinh Doanh (Cell Teams/BU).
+    *   *Hành động:* Gói gọn các giải pháp AI và Product-Led Growth (PLG) thành cẩm nang dễ hiểu. Trực tiếp tư vấn cho các BU cách ứng dụng công nghệ AI vào sản phẩm Web để bứt phá lưu lượng truy cập (Traffic) và người dùng mới (DLU) với chi phí rẻ nhất.
 
 ---
 
 ## 2. OKRS 2026 - WEB PRODUCT LEAD
 
-> 📑 **Tài liệu chi tiết:** [Web Product Lead - Strategic & OKRs H2 2026](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/01_STRATEGIC_PLAN/web-product-lead-strategic-okrs-h2-2026.md)
+> 📑 **Tài liệu chi tiết:** [Web Product Lead - Strategic & OKRs H2 2026](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/01_STRATEGIC_PLAN/product-lead.md)
 
 ### 2.1 Đề xuất OKR H2/2026
 
 #### **OKR 1**
-**Mục tiêu (Objective): Xây dựng và phát triển MoSpark trở thành nền tảng AI-Powered trong hoạt động GenAI Content**
-*Định hình MoSpark làm hạ tầng lõi tự động hóa năng lực phát triển Web và sản xuất nội dung cho toàn nền tảng thông qua các sản phẩm:*
-
-**Mô tả các kết quả cần có để đạt được mục tiêu:**
-- **PLG Project:** Đạt mức tăng trưởng >30% thị phần (Share of Voice) cho các dự án tiềm năng hoặc dự án được chỉ đạo, bằng cách xây dựng và vận hành hệ thống quản lý Content Plan theo Topic Cluster và hành vi JTBD User.
-- **GenAI Content:** Cắt giảm 80-90% thời gian sản xuất các định dạng nội dung đa dạng (bao gồm Blog, Mini Web, Video ngắn, và Text-to-Speech) và tối ưu chi phí token, bằng cách tự động hóa quy trình sinh nội dung end-to-end.
-- **Merchant Page Builder (với GenAI Content):** Tự động hóa sản xuất nội dung giới thiệu và làm giàu dữ liệu đối tác bằng AI (Google Maps API Context) cho các trang Merchant (Ví Trả Sau).
-- **SEO/GEO Score:** Đảm bảo nội dung AI sinh ra đạt điểm số chất lượng ≥ 80 điểm và không dính lỗi kỹ thuật về CWV và những lỗi nghiêm trọng trước khi xuất bản.
-
-#### **OKR 2**
-**Mục tiêu (Objective): Tư vấn giải pháp tăng trưởng và đảm bảo các tiêu chuẩn Technical & Content Foundation cho các chiến dịch**
-*Tư vấn giải pháp và đảm bảo tiêu chuẩn kỹ thuật vận hành Website thông qua các sản phẩm:*
-
-**Mô tả các kết quả cần có để đạt được mục tiêu:**
-- **Web Performance:** Đảm bảo kỹ thuật web luôn ở mức tối ưu, không phát sinh lỗi kỹ thuật nghiêm trọng ảnh hưởng đến trải nghiệm người dùng.
-- **Mini Web (CreditTech):** Tư vấn và phối hợp chặt chẽ cùng Inbound triển khai các giải pháp Web-to-App cho các sản phẩm Ví Trả Sau, Vay Nhanh.
-- **Campaigns (BMC):** Đồng hành và hỗ trợ kỹ thuật cho các chiến dịch Inbound đóng vai trò chủ trì (PM) để tối ưu phễu chuyển đổi.
-- **SPA Framework:** Áp dụng quy trình SPA (reSearch - Pilot - Action) để tư vấn giải pháp tăng trưởng cho các Cell Teams.
-
-#### **OKR 3**
 **Mục tiêu (Objective): Xây dựng giải pháp tăng trưởng và thúc đẩy mục tiêu tăng trưởng Web Traffic và MAU**
 *Tập trung thúc đẩy lưu lượng truy cập tự nhiên (Web Traffic) và tối ưu hóa tỷ lệ chuyển đổi Web-to-App để gia tăng lượng người dùng mới (New User/MAU) một cách minh bạch thông qua các nhóm dự án:*
 
 **Mô tả các kết quả cần có để đạt được mục tiêu:**
-- **Web Platform Project:** Triển khai các dự án do Web Platform chủ trì (bao gồm Merchant Page góp phần thúc đẩy tăng trưởng và Phạt Nguội làm phễu thu hút) nhằm tối ưu hóa Local SEO và hiển thị thương hiệu ngoài App.
-- **Các dự án của Cell Team:** Phối hợp và hỗ trợ kỹ thuật cùng các Cell Teams triển khai các dự án (như Vehicle Hub, Cinema, eSIM, Bảo hiểm Ô tô) nhằm đáp ứng các cam kết về chỉ số giao dịch và tăng trưởng doanh thu trực tiếp.
-- **User Growth:** Phối hợp cùng User Growth thiết lập hệ thống đo lường và tối ưu hóa phễu chuyển đổi Web-to-App (W2A) nhằm thúc đẩy tăng trưởng New User trên Website.
-- **Financial Authority:** Thúc đẩy vị thế có thẩm quyền trong ngành tài chính thông qua việc xây dựng và phát hành bộ 10 công cụ giả lập tài chính Finhub Simulation Tools (tính lãi tiết kiệm, lương hưu, vàng, ngoại tệ...) làm phễu tương tác thu hút lưu lượng ngoài App.
+- **Web Platform Project:** Triển khai các dự án do Web Platform trực tiếp làm Owner: Đạt **Top 3 Ranking** cho nhóm từ khóa Phạt Nguội; scale-up Local SEO cho **500 Merchant Pages** (phát triển các trang Merchant Detail và Merchant Listing định hướng Location Page giải quyết JTBD từ PLG Project).
+- **5 Web Hubs Architecture:** Tập trung xây dựng 5 Web Hubs cốt lõi làm nền tảng phục vụ theo nhóm đối tượng (Merchant Hub, Cinema Hub, Vehicle Hub, Financial Hub/Finhub, Student Hub). Mỗi Hub phục vụ một đối tượng chuyên biệt (Trang cửa hàng đối tác, Nhu cầu xem phim, Biển số xe, Nhu cầu tài chính, MSSV/Email sinh viên), cho phép mở rộng hàng loạt sản phẩm & use cases được hỗ trợ trực tiếp từ Hub.
+- **Các dự án của Cell Team:** Các dự án Cell Team (Vehicle Hub, Cinema, eSIM, Bảo hiểm Ô tô) - ngoại trừ các dự án Inbound tham gia - đóng góp **3.0M PageViews/tháng**.
+- **Overall Web-to-App Funnel:** Tối ưu phễu Web-to-App tổng thể và scale-up traffic hướng tới mục tiêu đột phá đạt **1.0M MAU/tháng** vào cuối H2/2026 (lũy kế H2 đạt **>4.0M MAU**), đạt tỷ lệ chuyển đổi trung bình **>10%** (hướng tới target **12.5%**).
+- **User Growth:** Phối hợp cùng User Growth triển khai dự án Ads Website đóng góp **>20K New Users** (REG) và **>14K New User MAU** thực tế.
+- **Financial Authority:** Hướng tới mục tiêu xây dựng toàn bộ hệ thống Utilities Tools về Finance tại MoMo thông qua việc phát hành thành công bộ **10 công cụ giả lập tài chính Finhub**.
 
-#### **OKR 4**
-**Mục tiêu (Objective): Đảm bảo các hoạt động trên Website đáp ứng các tiêu chuẩn Technical & Content Foundation**
+#### **OKR 2**
+**Mục tiêu (Objective): Xây dựng và phát triển MoSpark trở thành nền tảng AI-Powered trong hoạt động GenAI Content**
+*Định hình MoSpark làm hạ tầng lõi tự động hóa năng lực phát triển Web và sản xuất nội dung cho toàn nền tảng thông qua các sản phẩm:*
+
+**Mô tả các kết quả cần có để đạt được mục tiêu:**
+- **PLG Project:** Vận hành nền tảng quản trị **Topic Cluster**; ứng dụng GenAI để sản xuất nội dung theo **Content Plan** nhằm phục vụ mục tiêu tăng trưởng **Ranking & Traffic (PageViews)**.
+- **GenAI Content:** Áp dụng các Model AI để sản xuất đa dạng định dạng nội dung, cắt giảm tối đa thời gian sản xuất, đảm bảo chuẩn business context và luôn tối ưu chi phí token.
+- **Merchant-Led Growth:** Xây dựng chiến lược tăng trưởng thông qua các trang **Location Listing (Merchant Listing)** giải quyết JTBD từ **PLG Project** cho **500 Merchant Pages**.
+- **Ads Manager & Utilities Tool:** Khai thác quảng cáo và điều phối hiển thị Dynamic placement banner tự động theo ngữ cảnh; phát triển các công cụ tiện ích/widget tra cứu (Calculator, Simulator tính lãi suất/trả góp, và tiện ích theo dõi Giá Vàng) làm phễu gián tiếp dẫn lưu lượng về các dịch vụ tài chính (Tiết kiệm, Đầu tư).
+- **SEO/GEO Score & Quality Gate:** Đảm bảo 100% nội dung AI sinh ra đạt điểm số chất lượng ≥ 80 điểm (không lỗi Core Web Vitals, không trùng lặp/lỗi SEO) trước khi xuất bản.
+
+#### **OKR 3**
+**Mục tiêu (Objective): Thiết lập quy chuẩn vận hành, quản trị an toàn thông tin & sức khỏe tên miền (Technical & Content Governance)**
 *Thiết lập quy chuẩn kỹ thuật, ban hành tài liệu hướng dẫn và thực hiện kiểm duyệt nghiêm ngặt nhằm duy trì sức khỏe tối ưu cho Website thông qua các hoạt động:*
 
 **Mô tả các kết quả cần có để đạt được mục tiêu:**
 - **Platform Guideline:** Ban hành đầy đủ các tài liệu hướng dẫn và quy chuẩn kỹ thuật (SEO/GEO, tracking) giúp các Cell Teams triển khai dự án độc lập đúng tiêu chuẩn của Web Platform.
-- **Quality Gate:** Đảm bảo và thực hiện kiểm duyệt kỹ thuật nghiêm ngặt cho mọi dự án Web mới trước khi Go-live theo đúng tiêu chuẩn vận hành của Platform.
+- **Quality Gate:** Thực hiện kiểm duyệt kỹ thuật & nội dung nghiêm ngặt 100% dự án Web mới trước khi Go-live, đảm bảo tiêu chuẩn Agent-Led Search Readiness (Schema markup, E-E-A-T, entity, author).
 - **Backlink Security:** Kiểm soát, rà quét và ngăn chặn triệt để các nguồn backlink xấu (spam links) để bảo vệ thẩm quyền tên miền (Domain Authority).
-- **URL & Content Governance:** Rà soát định kỳ nhằm loại bỏ các nội dung lỗi thời (out-of-date) và các URL không có giá trị (zero-traffic/thin content) giúp tối ưu hóa ngân sách thu thập dữ liệu (Crawl Budget) của các công cụ tìm kiếm.
+- **URL & Content Governance:** Rà soát định kỳ loại bỏ nội dung lỗi thời, duy trì độ tươi mới (**Data Freshness**) và dọn dẹp các URL không có giá trị (zero-traffic/thin content), đảm bảo tính chính xác cao để AI Agents dễ cào và trích dẫn, tối ưu ngân sách cào dữ liệu (Crawl Budget).
+
+#### **OKR 4**
+**Mục tiêu (Objective): Tư vấn giải pháp tăng trưởng và thúc đẩy năng lực triển khai cho các chiến dịch & Cell Teams (Growth Advisory & Enablement)**
+*Tử vấn thiết kế luồng chuyển đổi, sitemap, hiệu suất và áp dụng các framework tăng trưởng (SPA) để hỗ trợ đối tác nội bộ vận hành độc lập:*
+
+**Mô tả các kết quả cần có để đạt được mục tiêu:**
+- **Conversion Performance Support:** Hỗ trợ Cell Teams giám sát chỉ số Web Performance (Core Web Vitals), ngăn chặn các lỗi nghiêm trọng làm suy giảm CTR/CR.
+- **Web-to-App Flow (CreditTech):** Tư vấn thiết kế sitemap, cấu trúc cluster và luồng chuyển đổi W2A cho các dự án Inbound phụ trách chính: **Ví Trả Sau, Vay Nhanh, Destination Promotion Hub (MoMo Travel)**.
+- **Campaign & Insurance Support:** Đồng hành cố vấn giải pháp kỹ thuật, cấu trúc SEO/GEO và tối ưu chuyển đổi cho các chiến dịch/dự án do Inbound làm Owner: **Bảo hiểm Y tế (BHYT), Bảo hiểm xe máy (BHXM)**.
+- **Growth Framework (SPA):** Thẩm định tính khả thi (Feasibility) và tư vấn hướng tiếp cận pSEO, cấu trúc SEO Inventory, kịch bản JTBD cho các Cell Teams theo quy trình SPA.
 
 ---
 
@@ -199,12 +219,22 @@ Các giá trị cốt lõi định hướng cách vận hành và ra quyết đ�
     *   **Đối với KR 1.1 (Tư vấn SEO & Inbound):**
         *   *Tư vấn giải pháp tăng trưởng Web:* Triển khai giải pháp cho các Use Case quan trọng của MoMo như Ví Trả Sau, Vay Nhanh, Điểm Tín Dụng, các sản phẩm Bảo Hiểm và dịch vụ thanh toán số (Sim, eSIM, Cinema).
         *   *Thị phần tìm kiếm (Share of Voice - SoV):* Đạt mục tiêu SoV của Ví Trả Sau (54%) và Vay Nhanh (7%).
-        *   *Hiệu suất Google Search Console H1/2026 (Dữ liệu thực tế từ Search Performance Report):* Tổng lưu lượng tìm kiếm tự nhiên mang lại **5.934.051 Clicks** và **206.288.717 Impressions** (CTR trung bình đạt 2.88%). Trong đó, các dự án đóng góp chính: Cinema (2.010.041 clicks), Ví Trả Sau (213.379 clicks), Vay Nhanh (182.057 clicks), Bảo hiểm (91.699 clicks), Phạt Nguội (19.335 clicks).
+        *   *Hiệu suất truy cập Web (Web Traffic & Pageviews) trong H1/2026:* Đạt **9.3M Active Users**, **9M New Users**, **9.4M Total Users** và **19M Views**.
+        *   *Hiệu suất Tiếp cận và Tìm kiếm Tự nhiên (Search Reach & Organic Traffic) trong H1/2026:* Tổng lưu lượng tìm kiếm tự nhiên mang lại **5.934.051 Clicks** và **206.288.717 Impressions** (CTR trung bình đạt 2.88%). Trong đó, các dự án đóng góp chính: Cinema (2.010.041 clicks), Ví Trả Sau (213.379 clicks), Vay Nhanh (182.057 clicks), Bảo hiểm (91.699 clicks), Phạt Nguội (19.335 clicks).
         *   *Bảo hiểm & Khác:* Đóng gói cấu trúc Auto Insurance (MasterDoc v2, PRD docx) bảo toàn Topical Authority; hoàn tất BRD Draft cho eSIM và Bảo hiểm xe máy.
     *   **Đối với KR 1.2 (Triển khai Web-to-App & Quick-Wins):**
-        *   *Dự án Ads Website (New to MoMo):* Phối hợp cùng User Growth triển khai dự án Ads Website thúc đẩy New User trên Website thông qua các schema "New To MoMo" mang lại kết quả phễu chuyển đổi thực tế trong H1/2026: **36.867 Installs** -> **16.690 Registrations** (REG) -> **9.800+ Bank Mappings** (Map Bank) -> **7.000+ MAU**.
+        *   *Hiệu suất phễu Web-to-App tổng thể (Số liệu lũy kế từ 23/04/2026 đến nay):*
+            *   *Chỉ số tương tác (Engagement Metrics):* Đạt **7,56M View page** (+350,9%), **2,035M Click CTA** (+555,2% với CTR đạt 54,3%), **415,91K Login app** (+80,1%) và **246,52K MAU** (+602,8% với tỷ lệ chuyển đổi CR MAU/Login đạt 59,3%).
+            *   *Phễu người dùng (Unique User Funnel):* Đạt **2.896.658 người dùng truy cập** (100% Views) -> **1.635.020 người dùng nhấn dẫn sang app** (56% Click to app) -> **415.914 người dùng đăng nhập app thành công** (14% Login app) -> **246.517 người dùng phát sinh giao dịch** (9% MAU).
+            *   *Chi tiết hiệu suất theo tháng (H1/2026):*
+                *   *Page views (Attention):* 2.601.280 (Jan) | 3.470.470 (Feb) | 3.221.705 (Mar) | 2.699.883 (Apr) | 3.273.707 (May) | 3.311.429 (Jun, MoM +1.2%).
+                *   *Sessions (Attention):* 1.930.821 (Jan) | 2.373.734 (Feb) | 2.347.190 (Mar) | 1.859.048 (Apr) | 2.330.499 (May) | 2.451.799 (Jun, MoM +5.2%).
+                *   *MEU (Interest - Monthly Engagement Users):* 1.397.453 (Jan) | 1.755.757 (Feb) | 1.686.392 (Mar) | 1.427.165 (Apr) | 1.706.739 (May) | 1.675.301 (Jun, MoM -1.8%).
+                *   *Click-to-App (Desire):* 964.893 (May) | 824.309 (Jun, MoM -14.5%).
+                *   *Login App (Action):* 180.148 (May) | 248.468 (Jun, MoM +37.9%) [Trong đó, Existing users: 178.152 (May) -> 242.409 (Jun, MoM +36.1%); Install App: 1.996 (May) -> 6.059 (Jun, MoM +203.5%)].
+        *   *Dự án Ads Website (New to MoMo - Nhiều Scheme trên Web qua Ads Manager):* Phối hợp cùng User Growth triển khai dự án Ads Website thúc đẩy New User trên Website thông qua các schema "New To MoMo" mang lại kết quả phễu chuyển đổi thực tế trong H1/2026: **36.867 Installs** -> **16.690 Registrations** (REG) -> **9.800+ Bank Mappings** (Map Bank) -> **7.000+ MAU**.
         *   *Popup Ads - Billpay:* Triển khai thành công trên 22 pages chiến lược với cơ chế phân phối bậc (tiered placement), đã đo lường và hoàn thành đóng dự án.
-        *   *Chuẩn hóa Onelink:* Tham gia chuẩn hóa hệ thống Onelink trên Website nhằm mục tiêu đo lường end-to-end từ Out-App -> Website -> App và nonApp. Giải quyết dứt điểm các Looker SQL bugs đo lường sai lệch.
+        *   *Chuẩn hóa Onelink:* Tham gia chuẩn hóa hệ thống Onelink trên Website nhằm mục tiêu đo lường end-to-end từ Out-App -> Website -> App và nonApp. Giải quyết dứt điểm các lỗi đo lường sai lệch trong hệ thống báo cáo.
     *   **Đối với KR 1.3 (Rà soát & kiểm soát chất lượng):**
 
 #### **Mục tiêu 2: Xây dựng nền tảng MoMo.vn ổn định và định hướng GEO/AEO-First**
@@ -269,7 +299,7 @@ flowchart TD
     end
 
     subgraph BMC ["Brand & Marketing Center"]
-        Inbound["Inbound Marketing Team - Mai<br/>(Execute Content & Off-page)"]:::inbound
+        Inbound["Inbound Marketing Team<br/>(Execute Content & Off-page)"]:::inbound
     end
 
     %% Interactions
@@ -318,18 +348,18 @@ flowchart TD
 | **Tuấn** | Product Designer | MoSpark Blog UI/UX Redesign | Thiết kế giao diện Blog Home & Detail, Ads Placements và AI Summarize block. | [mospark_blog_redesign.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_blog_redesign.md) |
 | **Hùng** | Front-End Team Leader \| MoBase Owner | MoBase (Design System) | Chịu trách nhiệm phát triển và quản trị MoBase (Design System của MoMo Web). | [web-momo-okrs-2026.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/01_STRATEGIC_PLAN/web-momo-okrs-2026.md#L66) |
 | **Nhật** | Senior FE Developer | Merchant Page (O2O & VTS Hub) | Triển khai template danh mục, Editor cho Merchant, tích hợp custom fields (Chatbot KB) và tính năng CRUD. | [doi-tac-brd.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/05_USE_CASE_MOMO/doi-tac-brd.md) |
-| **Thuận** | Senior FE Developer | MoSpark Distribution, Tracking & MoSpark Studio | Build nền tảng quản lý/phân phối trên MoSpark (Ads & Widget). Làm Widget tìm điểm VTS cho Merchant Page. Owner phần MoMo Gallery và MoSpark Multimodal Studio (phát triển các Node xử lý Image/Video GenAI thông qua ComfyUI backend). Kéo API GA4/GSC từ BigQuery. | [mospark_ads_manager.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_ads_manager.md), [mospark_genai_content.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_genai_content.md), [widget-store-prd.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/08_PRD/widget-store-prd.md) |
+| **Thuận** | Senior FE Developer | MoSpark Distribution, Tracking & MoSpark Studio | Build nền tảng quản lý/phân phối trên MoSpark (Ads & Widget). Đối với Merchant Page, Thuận chịu trách nhiệm triển khai đo lường Umami và tích hợp các Widget tương tác (như Map Widget, Widget tìm điểm VTS). Owner phần MoMo Gallery và MoSpark Multimodal Studio (phát triển các Node xử lý Image/Video GenAI thông qua ComfyUI backend). Kéo API GA4/GSC từ BigQuery. | [mospark_ads_manager.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_ads_manager.md), [mospark_genai_content.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_genai_content.md), [widget-store-prd.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/08_PRD/widget-store-prd.md) |
 | **Trọng** | Senior FE Developer | GenAI Content Platform (Text/Logic) | Quản lý GenAI pipeline workflow, sinh bài mô tả chuẩn SEO, Text/Logic Node Backend và bóc tách dữ liệu có cấu trúc (Chatbot KB) cho Merchant Editor. | [mospark_genai_content.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_genai_content.md) |
 | **Lộc** | Senior FE Developer | CMS Access Control & Permissions | Phân quyền user access trong CMS MoSpark và bảo mật giao diện Admin Panel. | [mospark_permission.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_permission.md) |
 | **Hiếu** | Back-End Team Leader \| Widget Lead | Widget Management & Tracking | Làm chính về UI/UX/Dev cho Widget Management. Đồng bộ Onelink, tracking parameters (`wui`), cấu hình GA4/GTM/Umami và đối soát BigQuery. | [mospark_widget_store.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_widget_store.md), [mospark_user_identity_tracking.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_user_identity_tracking.md) |
 | **Hoài Anh** | Tech Solution Lead | MoSpark Core Backend & API | Thiết kế database Supabase, cổng YARP API Gateway, API đồng bộ M4B và backend Widget Store. | [mospark_master.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_master.md) |
 | **Duy** | Senior BE Developer | Chatbot & Backend API | Chịu trách nhiệm hệ thống Chatbot, RAG Knowledge Base Sync từ MoSpark và backend API cho các microsites. | [mospark_master.md](file:///Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_master.md) |
 
-### 3.4 Inbound Marketing (Mai - thuộc BMC)
+### 3.4 Inbound Marketing (thuộc BMC)
 
 | Field | Detail |
 |-------|--------|
-| Lead | Mai (SEO & Inbound Team Leader) |
+| Lead | Inbound Team Lead (Vacant) |
 | Team Structure | **Ngọc Hạnh (Senior SEO):** Phụ trách SEO cho Ví Trả Sau, Vay Nhanh; Technical Audit; Off-Page |
 | Division | BMC (Brand & Marketing Center) - không thuộc GPD |
 | Scope | SEO tư vấn (Plan / Blog / Off-page) - tiền thân của Out-App Traffic |
@@ -376,7 +406,7 @@ Mỗi Cell Team tiếp cận Hiến theo framework: **Research → Build Web/Fun
 |------|---------------------|---------------------|------|----------|---------------------|
 | Vay & Cho vay | Vay Nhanh | In Progress - Execution Phase | Chủ lực | 6% | 4.375.800 |
 | BNPL | Ví Trả Sau | Active | Chủ lực - Market Leader | 54% | 135.290 |
-| Tín dụng | Điểm tín dụng (CIC) | Planning | Đang xây dựng | 0% | 96.790 |
+| Tín dụng | Điểm tín dụng (CIC) | Active | Đã hoàn thành 2 công cụ (Tra cứu & Nâng điểm) | 0% | 96.790 |
 | Tín dụng | Mở thẻ tín dụng | - | Sản phẩm phụ | - | 600.900 |
 | Bảo hiểm | BH xe máy | Draft | Chủ lực - Mua trực tiếp | 38% | 58.810 |
 | Bảo hiểm | BH ô tô vật chất | Active | Chủ lực - Mua trực tiếp | 0% | 74.000 |
@@ -394,7 +424,7 @@ Mỗi Cell Team tiếp cận Hiến theo framework: **Research → Build Web/Fun
 | Viễn thông | eSIM Du lịch | Draft - chờ review PO | Sản phẩm phụ | - | - |
 | Viễn thông | Telecom / Data | Active (Approved) | Chủ lực | - | - |
 | B2B / SME | Soundbox | Draft - Chờ review | Công cụ thanh toán | - | - |
-| B2B / SME | Quản lý Đối tác | Pilot Phase (100-200 Merchants) | B2B Portal | - | - |
+| B2B / SME | Quản lý Đối tác | Pilot Phase (100-500 Merchants) | B2B Portal | - | - |
 
 ---
 
@@ -436,7 +466,7 @@ Mỗi Cell Team tiếp cận Hiến theo framework: **Research → Build Web/Fun
 > MoMo được cite trong top 3 AI engine responses cho 20 target PFM queries trong vòng 12 tháng
 
 - **Engines target:** Google AI Overview, ChatGPT, Perplexity
-- **Current gap:** 0% AI Chatbot referral traffic vs Wise.com: 40%+
+- **Current gap:** Tỉ lệ trích dẫn tổng thể còn thấp (từng ghi nhận 0% AI Chatbot referral vs Wise.com: 40%+; hiện bắt đầu có tín hiệu từ pilot Phạt Nguội).
 - **Decision blockers:** Named author approval, Legal review cadence, Dev resource cho tool portfolio
 
 ### 4.3 MoMo Business KPIs liên quan đến Web
@@ -587,6 +617,7 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 | LLMs.txt & Robots.txt | In Progress | Hiến + Bảo | robots.txt Lớp 1 DEPLOYED. Next: llms.txt pilot Phạt Nguội |
 | BHXM | Draft | Hiến | BRD Draft - cần growth plan post-spike |
 | eSIM Du Lịch | Draft | Hiến | BRD Draft - chờ PO + Dev review |
+| U18 User Growth (Phí Xét Tuyển 2026) | Active - Campaign Launching | Hiến + GPD Team | BRD done. Landing page /phi-xet-tuyen completed |
 | **SEO/GEO Packages (BU Education)** | **Planning** | **Hiến** | **Giới thiệu vai trò Web + SEO Inventory cho Head of BU** |
 
 ---
@@ -651,7 +682,7 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
   - Ghi nhận đã track được Full Flow cho người dùng đã có App (Existing Users) qua Onelink.
   - Vấn đề: Phần Install (New User) chưa track được chính xác. Phía DA (Data Analyst) đang bị challenge về tính xác thực/logic của data này.
 - Action items:
-  - Hiến + DA: Review lại attribution logic của Appsflyer/Onelink cho flow Install [Cần xử lý]
+  - Hiến + DA: Review lại attribution logic of Appsflyer/Onelink cho flow Install [Cần xử lý]
 
 ---
 
@@ -708,25 +739,25 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 **Meeting log:**
 
 **[2026-04-13] - Sync BU FS - Vay Nhanh**
-- Participants: Hiến, Mai (Inbound/BMC), BU FS team
+- Participants: Hiến, Hạnh (Inbound/BMC), BU FS team
 - Key decisions:
   - KPI commit: Top 1 cho 10 seed keywords. Milestone: ít nhất Top 3 vào tháng 9, Top 1 vào tháng 12
   - BU cần đẩy nhanh tiến độ - cần Inbound (BMC) phối hợp cùng BU thực hiện các action cần thiết
   - Đánh giá lại nhu cầu nguồn lực và resource → back lại cho BU
 - Action items:
   - Agency: Back báo cáo ranking report tuần này → họp đề xuất solution nếu ranking chưa khôi phục [Agency]
-  - Mai: Audit competitor, review plan điều chỉnh theo thuật toán mới [Mai]
+  - Hạnh: Audit competitor, review plan điều chỉnh theo thuật toán mới [Hạnh]
   - BU FS: Audit page /vay-nhanh → xác định nội dung cần bổ sung để tăng unique content [BU FS]
   - BU FS: Review + bổ sung GEO prompts cho Vay Nhanh [BU FS]
-  - BMC: Triển khai monthly report và project tracker để team theo dõi định kỳ [Mai]
+  - Inbound Team: Triển khai monthly report và project tracker để team theo dõi định kỳ [Inbound Team]
   - BU FS: Chuẩn bị content golive new pages (Vay theo đối tượng, vay theo mục đích, blogs) [BU FS]
-  - Hiến + Mai: Phản hồi content directions và template UI cho new pages [Hiến + Mai - tuần này]
+  - Hiến + Inbound Team: Phản hồi content directions và template UI cho new pages [Hiến + Inbound Team - tuần này]
   - Hiến: Back lại phần revamp mới của website [Hiến - tuần này]
 - Blockers surfaced:
   - Ranking chưa khôi phục - đang chờ agency report
   - New pages cần content direction trước khi BU bắt đầu làm
 - Hoạt động đang chạy:
-  - Off-page: Backlink với agency
+  - Off-page: Backlink with agency
   - On-page: Technical + Content production + Revamp website (tăng Time on Site + CR vào app)
 
 ---
@@ -813,7 +844,7 @@ Dùng để đánh giá định kỳ (quarterly) mức độ tham chiến của 
 **Version:** 3.5 (May 2026)
 
 **Owner:**
-- Project Manager: Anh Bảo (Web Platform Manager)
+- Project Manager: Anh Bảo (Head of Web Platform)
 - Tech Lead: Trọng (Software Engineer II)
 - Governance & Prompts: Văn Hiến (Web Product Lead)
 
@@ -965,6 +996,7 @@ Xây dựng nền tảng quản lý nội dung Web thế hệ mới thay thế A
 | 2 | **SEO/GEO Scoring Gate** | BRD done - chờ implement | Hiến (spec) + Nhật (build) | 5 blocks, 100 điểm. Hard block disable nút Publish. Xem [[mospark_seo_geo_score]] |
 | 3 | **GenAI Content Pipeline** | Integrating | Trọng (build) + Hiến (Skill Hub) | Claude API đang tích hợp. Pilot: Phạt Nguội content. Workflow: Keyword → Outline AI → Edit → Content AI → Publish |
 | 4 | **Umami Tracking** | - | Web Platform | [Cần bổ sung thông tin] |
+| 5 | **Ads Manager & Utilities Tool** | Planning | Thuận (build) + Hiếu (Widget Lead) | Vận hành Dynamic placement banner tự động hiển thị popup theo ngữ cảnh; xây dựng SDK cho các widget tra cứu (Calculator, Simulator lãi suất, Giá Vàng) làm phễu gián tiếp dẫn traffic về các dịch vụ tài chính (Tiết kiệm, Đầu tư) và tăng New User. |
 
 ---
 
@@ -978,22 +1010,29 @@ Xây dựng nền tảng quản lý nội dung Web thế hệ mới thay thế A
 
 ---
 
-#### Ads Manager Module (v3.0)
+#### Ads Manager & Utilities Tool (v3.0)
 
-**Mục tiêu:** Nền tảng phân phối promotional content đúng context trên Web MoMo (Web-to-App pipeline).
+**Mục tiêu:** Xây dựng hệ thống quản lý khai thác quảng cáo theo ngữ cảnh hành vi, điều phối ad placements và phát triển các công cụ tiện ích (Utilities Tools) nhằm gián tiếp thu hút New Users và chuyển đổi traffic Web-to-App sang các dịch vụ Tài chính (Tiết kiệm, Đầu tư).
 
-**Status:** On Progress (May 2026).
+**Định hướng Chiến lược:**
+1. **Phễu gián tiếp dẫn dòng về Financial Services (Tiết kiệm, Đầu tư):**
+   - Xây dựng và tích hợp các công cụ tiện ích tra cứu trực quan (Interactive Utilities Widgets) như **Calculator (tính lãi suất/lợi nhuận tích lũy), Simulator (giả lập trả góp/lãi suất vay), và Gold Price Tracker (theo dõi giá vàng)**.
+   - Khi người dùng sử dụng tiện ích trên Web -> Ghi nhận intent -> Dynamic placement banner tự động hiển thị popup kích hoạt banner theo ngữ cảnh -> Gợi ý các sản phẩm Tài chính tương ứng trên App (ví dụ: mở tài khoản Tiết kiệm Online, Đầu tư chứng chỉ quỹ) -> Điều hướng người dùng qua link Onelink/Deeplink.
+2. **Tăng trưởng người dùng mới (New User Acquisition):**
+   - Tận dụng traffic tìm kiếm tự nhiên của các trang tiện ích (giá vàng, tra cứu phạt nguội, tỷ giá) làm phễu gom người dùng ngoài app (out-app users).
+   - Tự động kích hoạt Popup Banner chào mừng với quà tặng cài đặt app (schema "New To MoMo") khi phát hiện hành vi truy cập từ người dùng mới, dẫn dắt họ điền thông tin đăng ký (REG) và liên kết ngân hàng để nhận quà.
 
-**Lộ trình 5 Module:**
-- **Module 1:** Campaign Operations (Production) - Balloon, Popup, URL targeting.
-- **Module 2:** Traffic Inventory Management (Q2/2026) - Placement Registry, Conflict Resolution.
-- **Module 3:** Ads Distribution Platform (Q3/2026) - Multi-tenant, Umami Dashboard.
-- **Module 4:** **SEO Inventory Dashboard (Q2/2026)** - Market Sizing (Search Volume) per Use Case. Thuận build, Hiến input data.
-- **Module 5:** **Use Case Performance by Umami (Q2/2026)** - Tracking Visitor/Pageview, Reach Estimate integration.
+**Lộ trình Phát triển:**
+- **Module 1: Campaign Operations (Production)** - Tích hợp Balloon, Float, Popup và cơ chế nhắm mục tiêu (Targeting) theo URL context.
+- **Module 2: Traffic Inventory Management (Q2/2026)** - Quản lý placements trên toàn trang, tự động điều phối để tránh conflict quảng cáo.
+- **Module 3: Utilities Platform (Q2/2026)** - Phát triển bộ công cụ Calculator, Simulator lãi suất/vay và tích hợp tracking dữ liệu.
+- **Module 4: Ads Distribution Platform (Q3/2026)** - PM/PO tự cấu hình chiến dịch, tích hợp báo cáo hiệu quả qua Umami Dashboard.
+- **Module 5: BigQuery/GSC/GA4 tracking API (Q2/2026)** - Tracking sâu hành trình người dùng từ Click Banner -> App Open -> Active MAU.
 
 **Team:**
 - **Bảo:** Project Lead
 - **Thuận:** Technical Owner + Umami Tracking (Management & Deployment)
+- **Hiến:** Product Advisor · Tham gia tư vấn và phối hợp phát triển các Utilities, điều phối inventory quảng cáo.
 
 ---
 
@@ -1047,7 +1086,7 @@ Xây dựng nền tảng quản lý nội dung Web thế hệ mới thay thế A
 | Nhóm | Phụ trách | Phạm vi |
 |---|---|---|
 | **Out-App Traffic (Hiến)** | **Phạt Nguội (Chủ lực)** | CEO Mandate: Tra cứu + Blog Giao thông |
-| **Inbound Team (Mai/Hạnh)** | **Tất cả Use Case khác** | Vay Nhanh, Ví Trả Sau, Bảo hiểm, Billpay, Cinema... |
+| **Inbound Team (Hạnh)** | **Tất cả Use Case khác** | Vay Nhanh, Ví Trả Sau, Bảo hiểm, Billpay, Cinema... |
 | **Gatekeeper (Hiến)** | **Toàn bộ momo.vn** | Chuẩn hóa Technical & SEO/GEO Scoring trước khi Live |
 
 **Decision Tree - Ownership:**
@@ -1065,7 +1104,7 @@ flowchart TD
     %% Phân luồng
     IntentCheck -- "Informational\n(How-to, Tips, News)" --> InboundOwn[INBOUND Sở hữu & Thực thi]:::inbound
     IntentCheck -- "Transactional\n(Mua, Tra cứu, Đăng ký)" --> GPD[OUT-APP TRAFFIC Sở hữu]:::hien
-    IntentCheck -- "Mixed / Khó xác định" --> Sync["Sync Meeting:\nHiến + Mai quyết định"]:::process
+    IntentCheck -- "Mixed / Khó xác định" --> Sync["Sync Meeting:\nHiến + Inbound Team quyết định"]:::process
     IntentCheck -- "Navigational\n(Brand Search)" --> GPD
     
     %% Thực thi
@@ -1328,7 +1367,25 @@ Spoke: /thanh-toan-momo-{brand} → Breadcrumb về VTS Hub → Related merchant
 
 ---
 
-### 5.21 Chiến lược & North Star (Strategic Plan)
+### 5.21 Dự án: U18 User Growth (Phí Xét Tuyển 2026)
+
+**Vision:** Thu hút người dùng đăng ký mới (U18) thông qua moment nộp lệ phí xét tuyển đại học trực tuyến và Back to School, biến MoMo thành cổng thanh toán và quản lý chi tiêu học tập quen thuộc.
+
+**North Star Metrics:** New User Acquisition (Web-to-App) + Tỷ lệ thanh toán thành công.
+
+**URL chính thức:** `/phi-xet-tuyen`
+
+**Kế hoạch phân bổ ngân sách Performance (300 triệu VND):**
+- TikTok Ads (60%): Tối ưu hóa cài đặt & đăng ký tài khoản.
+- Google Ads UAC (40%): Banner & Video hướng dẫn.
+
+**BRD Status:** Hoàn thành tại [user-growth-u18-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_USE_CASE_MOMO/user-growth-u18-brd.md)
+
+**Status:** Active - Campaign Launching
+
+---
+
+### 5.22 Chiến lược & North Star (Strategic Plan)
 
 **Loại:** Trục chiến lược cao nhất (Command Center)
 
@@ -1399,12 +1456,12 @@ MoSpark không còn là CMS đơn thuần mà là một sản phẩm phần mề
 | OKR 2026 liên quan | KR3.1 URL Governance, KR3.2 SEO/GEO Framework, KR3.3 AI Referral Traffic measurement |
 | Alignment với Hiến | Cùng thực hiện toàn bộ workstream SEO/GEO - Hiến là SEO/GEO specialist, Bảo là Project Lead |
 
-### 6.4 Mai - Inbound SEO Lead (BMC)
+### 6.4 Inbound SEO Team (BMC)
 
 | Field | Detail |
 |-------|--------|
-| Tên | Mai |
-| Vai trò | Inbound SEO Lead |
+| Tên | Inbound SEO Team |
+| Vai trò | Inbound SEO Execution |
 | Bộ phận | BMC (Brand & Marketing Communications) / Inbound Team |
 | Reporting line | Trong Inbound, không trực thuộc GPD |
 | Quan hệ với Hiến | Execution partner - nhận brief từ Hiến, execute content production và off-page |
@@ -1412,7 +1469,7 @@ MoSpark không còn là CMS đơn thuần mà là một sản phẩm phần mề
 | Working style | Cần direction rõ ràng trước khi triển khai. Responsive với data-backed brief |
 | Trigger tích cực | Được cung cấp content direction + template UI rõ ràng |
 | Scope phụ trách | Blog content production, competitor audit, off-page execution (agency coordination), content calendar |
-| Ghi chú | **Ngọc Hạnh (Senior SEO)** mới tuyển dụng, phụ trách trực tiếp SEO cho VTS/Vay Nhanh, Technical Audit và Off-Page. Agency (nếu có) chạy qua Mai review trước khi Hiến audit cuối cùng. Rule: Inbound không làm việc trực tiếp với Web Platform |
+| Ghi chú | **Ngọc Hạnh (Senior SEO)** phụ trách trực tiếp SEO cho VTS/Vay Nhanh, Technical Audit và Off-Page. Agency (nếu có) chạy qua Inbound Team review trước khi Hiến audit cuối cùng. Rule: Inbound không làm việc trực tiếp với Web Platform |
 
 ### 6.5 Trọng - Web Platform Developer
 
@@ -1425,7 +1482,7 @@ MoSpark không còn là CMS đơn thuần mà là một sản phẩm phần mề
 | Touchpoint | GenAI Content Pipeline (Claude API integration) |
 | Working style | Developer - cần spec rõ ràng, input/output defined trước khi build |
 | Scope phụ trách | SEO/GEO Content AI Platform (PIC build công cụ), GenAI pipeline integration |
-| Ghi chú | Hiến own Skill Hub (prompts, checklist) - Trọng implement vào platform. Align qua Bảo hoặc trực tiếp khi có spec từ Hiến |
+| Ghi chú | Hiến own Skill Hub (prompts, checklist) - Trọng implement vào platform. Align qua Bảo hoặc trực tiếp khi có spec từ Hiến. Xem OKRs & Kế hoạch chi tiết tại [trong.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/Member/trong.md) |
 
 ---
 

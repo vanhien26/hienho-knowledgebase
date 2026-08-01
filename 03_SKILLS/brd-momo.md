@@ -171,7 +171,7 @@ Nếu có điều kiện PHẢI giải quyết trước khi build → đưa vào
 > - **Project:** [Tên dự án]
 > - **Main URL:** [URL chính]
 > - **Division:** [GPD / FS / etc.]
-> - **Owner:** GPD - Out-App Traffic
+> - **Owner:** GPD - Web Platform
 > - **Governance:** Web Product Lead
 > - **Version:** [X.Y · Tháng MM/YYYY]
 > - **Status:** [Draft / Active / On Track / LIVE / Chờ pre-conditions]

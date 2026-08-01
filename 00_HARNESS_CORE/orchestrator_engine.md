@@ -20,7 +20,7 @@ Dưới đây là bản đồ điều hướng dự án. Agent phải xác đị
 | **06** | **SEO Review + QA Testing (Gate 1)** | Hiến + Dev | [[Seo-Geo-audit]] | [ ] **Gate 1: SEO/GEO Score** |
 | **07** | **Staging & Sign-off (Gate 2)** | Hiến + PO Cell + Dev | [[Web2App-Pipeline]] | [ ] **Gate 2: Foundation Checklist** |
 | **08** | **Roll Out (Production)** | Hiến + Dev | [[use-case-document]] | [ ] [[mospark-seo-geo-score-brd|Publish Gate]] |
-| **09** | **Post-Launch Monitoring** | Hải/Hoàng (DA) + Hiến | [[web-tracking]] | [ ] Organic Traffic Growth |
+| **09** | **Post-Launch Monitoring** | Hải (DA) + Hiến | [[web-tracking]] | [ ] Organic Traffic Growth |
 
 ---
 

@@ -1,8 +1,8 @@
 # Giới thiệu GPD Web Platform: Nền tảng Tăng trưởng Ngoài Ứng dụng (Out-App Growth)
 
-> - **Bộ phận:** Web Platform Team & Out-App Traffic Team
+> - **Bộ phận:** Web Platform Team & Web Platform Team
 > - **Division:** Growth Platform Division (GPD)
-> - **Chịu trách nhiệm chính:** Bảo (Senior Manager - Web Platform) & Văn Hiến (Web Product Lead - Out-App Traffic)
+> - **Chịu trách nhiệm chính:** Bảo (Senior Manager - Web Platform) & Văn Hiến (Web Product Lead - Web Platform)
 > - **Tài liệu tham chiếu:** [hienho_master_doc.md](file:///c:/Klaus/hienho-knowledgebase/00_HARNESS_CORE/hienho_master_doc.md) | [web_growth_strategy_brd.md](file:///c:/Klaus/hienho-knowledgebase/01_STRATEGIC_PLAN/web_growth_strategy_brd.md)
 
 ---
@@ -50,12 +50,12 @@ Quy trình vận hành và kiểm soát chất lượng trên domain `momo.vn` �
 
 ```mermaid
 flowchart TD
-    Hiến["Văn Hiến (GOVERN Standard)\nOut-App Traffic Lead"] -- Gửi Technical Request --> Bảo["Web Platform (BUILD Product)\nTech Lead: Thuận/Hiếu"]
-    Inbound["Inbound Team (EXECUTE Content)\nBMC - Lead: Mai"] -- Đăng ký / Submit Content --> Hiến
+    Hiến["Văn Hiến (GOVERN Standard)\nWeb Platform Lead"] -- Gửi Technical Request --> Bảo["Web Platform (BUILD Product)\nTech Lead: Thuận/Hiếu"]
+    Inbound["Inbound Team (EXECUTE Content)\nBMC"] -- Đăng ký / Submit Content --> Hiến
     Hiến -- Phê duyệt / Sign-off Gate --> Inbound
 ```
 
-- **Govern (Giám sát & Quy chuẩn):** Do **Văn Hiến (Out-App Traffic)** chịu trách nhiệm. Định nghĩa các tiêu chuẩn SEO/GEO, nghiên cứu thị trường, kiểm tra kỹ thuật (Sitemap, Schema, URL Governance) và là người phê duyệt cuối cùng (Publish Gate Sign-off) trước khi bất kỳ trang nào được đưa lên production.
+- **Govern (Giám sát & Quy chuẩn):** Do **Văn Hiến (Web Platform)** chịu trách nhiệm. Định nghĩa các tiêu chuẩn SEO/GEO, nghiên cứu thị trường, kiểm tra kỹ thuật (Sitemap, Schema, URL Governance) và là người phê duyệt cuối cùng (Publish Gate Sign-off) trước khi bất kỳ trang nào được đưa lên production.
 - **Build (Xây dựng Nền tảng):** Do **Bảo (Web Platform)** và đội ngũ kỹ sư (FE: Hùng, Thuận, Nhật; BE: Hiếu, Hoài Anh, Duy) phụ trách. Nhận yêu cầu kỹ thuật trực tiếp từ Hiến để phát triển các tính năng lõi trên MoSpark.
 - **Execute (Thực thi Nội dung):** Do **Inbound Marketing Team (BMC)** hoặc các **Cell Teams (BUs)** thực hiện sản xuất nội dung, bài blog, và chạy chiến dịch theo bộ khung chuẩn (Foundation Checklist) do Hiến ban hành.
 
@@ -78,7 +78,7 @@ Hoạt động của GPD Web Platform hướng trực tiếp tới các chỉ s�
 
 Mọi dự án hoặc Use Case của các BU khi đưa lên Web MoMo đều phải đi qua quy trình chuẩn hóa nhằm bảo toàn sức khỏe của Website (`momo.vn`):
 
-1. **Research & Discovery:** Nghiên cứu dung lượng thị trường và đối thủ (Out-App Traffic).
+1. **Research & Discovery:** Nghiên cứu dung lượng thị trường và đối thủ (Web Platform).
 2. **Thiết lập Mục tiêu:** Xác định KPI và Benchmark chuyển đổi.
 3. **Product Brief & Tracking Plan:** Viết brief sản phẩm và lên tài liệu tracking chi tiết.
 4. **Feasibility Sync:** Đồng bộ với Cell Team về nguồn lực và lộ trình phát triển.

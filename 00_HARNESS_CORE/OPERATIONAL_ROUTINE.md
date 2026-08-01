@@ -38,7 +38,7 @@ Trước khi xử lý bất kỳ câu hỏi hoặc yêu cầu nào, AI phải tu
 
 ### Thứ 6: Governance & Support
 *   Review bộ **GenAI Prompts**: Hiệu chỉnh Outline/Writer prompts dựa trên kết quả Ranking thực tế.
-*   Support team **DA (Hải/Hoàng)**: Kiểm tra tính đúng đắn của Tracking Plan cho các Landing Page mới.
+*   Support team **DA (Hải)**: Kiểm tra tính đúng đắn của Tracking Plan cho các Landing Page mới.
 *   Check **llms.txt** các use case đang live: URLs có còn 200 OK không, có product mới cần add không.
 
 ---

@@ -44,7 +44,7 @@ Mục tiêu: Đảm bảo 100% nội dung xuất bản đạt chuẩn **E-E-A-T*
 
 ### 6. Production, Tracking & Handoff
 *   **Action:** Bơm nội dung lên hệ thống.
-*   **Event Spec:** Chốt với Hải/Hoàng (Team DA) các cờ tracking (`momo-deep-link-click`, `cta_install`). Đảm bảo `web-tracking.md` được tuân thủ.
+*   **Event Spec:** Chốt với Hải (Team DA) các cờ tracking (`momo-deep-link-click`, `cta_install`). Đảm bảo `web-tracking.md` được tuân thủ.
 *   **Publish:** Đóng băng URL và release bản Live.
 
 ### 7. Đo lường Web-to-App (Post-launch)

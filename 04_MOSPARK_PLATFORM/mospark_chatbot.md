@@ -86,6 +86,15 @@ Chatbot được thiết kế để giải quyết các nhu cầu (JTBD) phổ b
 
 ---
 
+## 5.5. Kế hoạch Nâng cấp Tính năng H2/2026
+
+Trong H2/2026, hệ thống Chatbot sẽ được nâng cấp các năng lực thông minh và kịch bản tương tác chuyên sâu sau:
+
+1. **Qualitative Data Ingestion Pipeline (Meeting Notes RAG):** Thiết lập pipeline tự động thu thập, phân tích ngữ nghĩa và vector hóa dữ liệu định tính (Qualitative Data) từ các tài liệu ghi chú khảo sát khách hàng (2H Customer Meeting Notes dưới dạng Markdown) để nạp vào cơ sở dữ liệu tri thức của RAG, giúp Chatbot tư vấn sâu sát và thực tế hơn.
+2. **Scenario Mapping Engine (Typebot v2):** Phát triển engine kéo thả kịch bản hội thoại thông minh tự động, hỗ trợ phân nhánh sâu và cá nhân hóa câu trả lời theo hành vi nhập liệu của user đối với các Use Case tài chính/bảo hiểm phức tạp.
+
+---
+
 ## 6. Measurement-First: Hypothesis & KPIs
 
 ### 6.1. AB Test Hypothesis

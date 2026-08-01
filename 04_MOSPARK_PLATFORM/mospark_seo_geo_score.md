@@ -255,6 +255,17 @@ Score Panel tích hợp trực tiếp bên dưới các trường nhập liệu 
 
 ---
 
+## 10.5. Kế hoạch Nâng cấp & Tích hợp H2/2026 (Blog Editor Integration)
+
+Trong H2/2026, hệ thống SEO/GEO Scoring System sẽ được tích hợp sâu vào Blog Editor nhằm siết chặt quy trình kiểm duyệt chất lượng đầu ra:
+
+1. **Real-time Editor Score Panel:** Tích hợp bộ chấm điểm thời gian thực trực tiếp trên giao diện của Blog Editor (Tiptap). Điểm số và các cảnh báo sẽ thay đổi tự động dựa trên hành vi gõ văn bản của Editor (Debounce 2s).
+2. **Automated Hard Block Gate:** Vô hiệu hóa nút Publish và chặn cứng API Endpoint `/api/v1/publish` nếu bài viết dính 1 trong 9 lỗi chặn cứng hoặc tổng điểm SEO/GEO < 60/100.
+3. **YMYL & E-E-A-T Compliance Audit:** Tự động đối chiếu thông tin tác giả (Author Box, Social Links) và sự hiện diện của tuyên bố miễn trừ trách nhiệm (Disclaimer) đối với các bài viết tài chính nhạy cảm.
+4. **CTA Limit Verification:** Tự động quét và cảnh báo lỗi nếu bài viết vượt quá số lượng tối đa cho phép là 2 CTAs.
+
+---
+
 ## 11. Giải thích Thuật ngữ (Glossary)
 
 | Thuật ngữ | Giải thích |
