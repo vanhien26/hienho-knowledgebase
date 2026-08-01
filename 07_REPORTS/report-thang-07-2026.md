@@ -26,13 +26,18 @@
 #### 2. Cinema Hub (Cổng Giải Trí & Điện Ảnh) - [Dự án Tái đầu tư & Tái kích hoạt]
 * **Strategic Positioning:** Xây dựng Cinema Authority (Vị thế Uy tín & Chuyên gia Điện ảnh) trên Open Web, mở rộng tối đa độ phủ thông tin điện ảnh và thiết lập trọn vẹn luồng mua vé liền mạch (End-to-End) từ Web đến App.
 * **Challenge:** Khắc phục tình trạng sụt giảm tỷ lệ chuyển đổi Web-to-App do rào cản bắt buộc tải App mới mua được vé, đồng thời khai thác tệp 280K lượt tìm kiếm/tháng từ các từ khóa top ngành điện ảnh.
+* **Hiệu suất H1/2026 (Actual Baseline):**
+    * Organic Traffic H1: 2.010.041 visits
+    * Total Traffic H1: 4.035.028 visits
+    * Booking Clicks H1: 870.467 clicks
+    * Tickets Sold H1 (Số vé bán): 107.146 vé
 * **Solution & Scope (Giải quyết JTBD của tệp người dùng đam mê phim):**
     * Tra cứu 0-click & Giữ chỗ realtime: Hợp nhất suất chiếu thời gian thực của 8 chuỗi rạp (CGV, Lotte, Galaxy, BHD, Cinestar, Beta, Mega GS, Touch Cinema) theo vị trí địa lý của người dùng.
     * Luồng Mua vé End-to-End trực tiếp: Tích hợp thanh toán Native Web Payment cho người dùng mới/Non-App hoàn tất đặt ghế 1-click ngay trên Web không cần tải App.
     * Bách khoa toàn thư & Review điện ảnh: Cung cấp danh mục phim đang/sắp chiếu, trailer, thông tin đạo diễn/diễn viên và tổng hợp điểm đánh giá review từ cộng đồng.
     * Báo giá rạp & Combo ưu đãi: Tra cứu bảng giá vé theo cụm rạp, gợi ý combo bỏng nước và thẻ quà tặng ưu đãi độc quyền.
     * Chuyển đổi vòng đời phim sang OTT: Tự động nhận diện phim hết suất chiếu tại rạp để gợi ý link xem trực tuyến trên các nền tảng OTT đối tác (VieON, Netflix, Galaxy Play, FPT Play).
-* **Mục tiêu Tái đầu tư (Target Uplift 100%):** Tái kích hoạt dự án trên nền tảng sẵn có với mục tiêu tăng trưởng gấp đôi (Uplift 100%) toàn bộ chỉ số hiệu suất trong H2: Organic Traffic đạt >4.02M visits (Total Traffic >8.07M visits), Booking Clicks đạt >1.74M clicks, số vé bán đạt >214.292 vé và nâng tỷ lệ chuyển đổi Web-to-App đạt ≥ 4.50%.
+* **Mục tiêu Tái đầu tư H2/2026 (Target Uplift 100%):** Tái kích hoạt dự án trên nền tảng sẵn có với mục tiêu tăng trưởng gấp đôi (Uplift 100%) toàn bộ chỉ số hiệu suất trong H2 so với H1 baseline: Organic Traffic đạt >4.02M visits (Total Traffic >8.07M visits), Booking Clicks đạt >1.74M clicks, số vé bán đạt >214.292 vé và nâng tỷ lệ chuyển đổi Web-to-App đạt ≥ 4.50%.
 
 #### 3. Financial Hub (Finhub - Trung Tâm Công Cụ Tài Chính)
 * **Strategic Positioning:** Xây dựng Financial Authority (Vị thế Uy tín & Chuyên gia Tài chính) trên Open Web, cung cấp bộ công cụ giả lập và tính toán cá nhân minh bạch để tạo dựng niềm tin số (Trust-led Growth) và dẫn dắt phễu chuyển đổi sang các sản phẩm tài chính MoMo (Ví Trả Sau, Vay Nhanh).
