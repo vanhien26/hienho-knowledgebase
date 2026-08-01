@@ -26,12 +26,12 @@
 #### 2. Cinema Hub (Cổng Giải Trí & Điện Ảnh) - [Dự án Tái đầu tư & Tái kích hoạt]
 * **Strategic Positioning:** Xây dựng Cinema Authority trên Open Web, mở rộng độ phủ lĩnh vực điện ảnh và thiết lập luồng mua vé End-to-End. Tái đầu tư trên nền tảng sẵn có từ H1 (Organic Traffic 2.01M, Total Traffic 4.03M, 870.4K Booking Clicks, 107.1K vé bán) với mục tiêu Uplift 100% trong H2 (Organic Traffic >4.02M, Total >8.07M, Booking Clicks >1.74M, >214.2K vé bán).
 * **Challenge:** Khắc phục tình trạng sụt giảm tỷ lệ chuyển đổi Web-to-App do rào cản bắt buộc tải App mới mua được vé, đồng thời khai thác tệp 280K lượt tìm kiếm/tháng từ các từ khóa top ngành điện ảnh.
-* **Solution & Scope (Giải quyết JTBD của tệp người dùng đam mê phim):**
-    * Tra cứu suất chiếu rạp: Hợp nhất lịch chiếu 8 chuỗi rạp (CGV, Lotte, Galaxy, BHD, Cinestar, Beta, Mega GS, Touch Cinema) theo vị trí người dùng.
-    * Luồng thanh toán trên Web: Đặt ghế và thanh toán vé xem phim trực tiếp trên Web không bắt buộc tải App.
-    * Thông tin & Đánh giá phim: Cung cấp danh mục phim đang/sắp chiếu, trailer, thông tin ekip và điểm đánh giá review.
-    * Bảng giá & Ưu đãi: Hiển thị bảng giá vé rạp và combo bỏng nước.
-    * Đề xuất phim OTT: Chuyển hướng gợi ý link xem phim trên các nền tảng OTT (VieON, Netflix, Galaxy Play, FPT Play) khi phim hết suất chiếu tại rạp.
+* **Trạng thái hiện tại:** Đã hợp tác và tích hợp thành công 11 cụm rạp chiếu phim; đã có sẵn thông tin phim, bài viết review và bảng giá vé.
+* **Mục tiêu & Solution H2 (Giải quyết JTBD tệp người dùng đam mê phim):**
+    * Thiết lập luồng mua vé End-to-End: Tích hợp thanh toán trực tiếp trên Web không bắt buộc tải App.
+    * Mở rộng TV Series & OTT: Xây dựng chuyên mục TV Series phục vụ tệp xem phim trực tuyến OTT.
+    * Xây dựng trang Đạo diễn & Diễn viên: Bổ sung dữ liệu chuyên sâu về ekip, đạo diễn và diễn viên điện ảnh.
+    * Tích hợp Use Cases mở rộng: Bổ sung các tiện ích tương hỗ phục vụ toàn diện hệ sinh thái Cinema Hub.
 
 #### 3. Financial Hub (Finhub - Trung Tâm Công Cụ Tài Chính)
 * **Strategic Positioning:** Xây dựng Financial Authority (Vị thế Uy tín & Chuyên gia Tài chính) trên Open Web, cung cấp bộ công cụ giả lập và tính toán cá nhân minh bạch để tạo dựng niềm tin số (Trust-led Growth) và dẫn dắt phễu chuyển đổi sang các sản phẩm tài chính MoMo (Ví Trả Sau, Vay Nhanh).
