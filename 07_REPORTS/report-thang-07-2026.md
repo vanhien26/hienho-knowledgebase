@@ -31,7 +31,7 @@
     * Thiết lập luồng mua vé End-to-End: Tích hợp thanh toán trực tiếp trên Web không bắt buộc tải App.
     * Mở rộng TV Series & OTT: Xây dựng chuyên mục TV Series phục vụ tệp xem phim trực tuyến OTT.
     * Xây dựng trang Đạo diễn & Diễn viên: Bổ sung dữ liệu chuyên sâu về ekip, đạo diễn và diễn viên điện ảnh.
-    * Tích hợp Use Cases mở rộng: Bổ sung các tiện ích tương hỗ phục vụ toàn diện hệ sinh thái Cinema Hub.
+    * Tích hợp dịch vụ tài chính: Bổ sung các tiện ích tài chính tương hỗ (Ví Trả Sau 0% lãi suất, E-Voucher quà tặng điện ảnh).
 
 #### 3. Financial Hub (Finhub - Trung Tâm Công Cụ Tài Chính)
 * **Strategic Positioning:** Xây dựng Financial Authority (Vị thế Uy tín & Chuyên gia Tài chính) trên Open Web, cung cấp bộ công cụ giả lập và tính toán cá nhân minh bạch để tạo dựng niềm tin số (Trust-led Growth) và dẫn dắt phễu chuyển đổi sang các sản phẩm tài chính MoMo (Ví Trả Sau, Vay Nhanh).
