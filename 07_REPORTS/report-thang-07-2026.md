@@ -15,22 +15,33 @@
 
 ---
 
-### 🚀 CÁC DỰ ÁN TRỌNG ĐIỂM (KEY PROJECTS)
+### CÁC DỰ ÁN TRỌNG ĐIỂM (KEY HUBS)
 
-#### 1. Phạt Nguội (Pioneer Project)
-Sản phẩm pilot của AI vibe code kết hợp cùng VTTIs nhằm thu hút người dùng qua Web.
-*   **Trọng tâm tháng 7/2026:** Triển khai pSEO địa phương phủ khắp 63 tỉnh/thành. Hoàn tất tích hợp cổng thanh toán MoMo cho luồng checkout Subscription (mua gói cước nhận tin phạt nguội) trực tiếp trên Web.
+#### 1. Vehicle Hub (Tiện ích Giao thông & Hồ sơ Phương tiện) - [Dự án mới triển khai]
+* **Định hướng chiến lược:** Nối tiếp, mở rộng và tận dụng tối đa nền tảng cùng hiệu suất bứt phá từ dự án Phạt Nguội (Total Traffic 267.3K Views, Tỷ lệ tra cứu 78.16%, 14.886 lượt Login App và 9.825 người dùng giao dịch chéo) để phát triển thành Vehicle Hub với định hướng "Một chiếc xe - Một tài khoản dịch vụ".
+* **Challenge:** Giải quyết rào cản phân mảnh thông tin của chủ phương tiện khi phải sử dụng 5-7 ứng dụng/website độc lập (phạt nguội, nạp ETC, bảo hiểm, đăng kiểm, giá xăng), đồng thời chuyển đổi tệp tìm kiếm ngoài Open Web thành tài khoản định danh xe (Vehicle Profile) trên MoMo.
+* **Solution & Scope:** Tận dụng phễu mồi câu Phạt Nguội làm điểm chạm đầu tiên để khởi tạo Hồ sơ xe, mở rộng hệ sinh thái tiện ích giao thông (bảng giá xăng, trạm sạc EV, nạp tiền ETC, nhắc lịch đăng kiểm) và tích hợp các gói dịch vụ gia tăng (Subscription cảnh báo tự động 9k/năm, Bảo hiểm Ô tô).
+* **Trạng thái hiện tại:** Dự án mới khởi tạo trong tháng, đang tập trung xây dựng hạ tầng Hồ sơ xe (Vehicle Profile) từ nền tảng Phạt Nguội và kết nối API tích hợp dữ liệu với các đối tác (ePass, TTDK, Bảo hiểm). Các chỉ số hiệu suất kinh doanh tổng thể sẽ được ghi nhận khi đi vào vận hành chính thức.
 
-#### 2. Dự án Merchant Page (Mega) + Merchant Page Builder
-Merchant Page là Hub thông tin O2O tích hợp điểm thanh toán Ví Trả Sau phục vụ Mega Campaign 2026.
-*   **Trọng tâm tháng 7/2026:** Thực hiện kế hoạch pSEO phủ sóng thêm **50 đối tác SME** mới phục vụ chiến dịch "Ví Trả Sau Gần Bạn". Chiến dịch tập trung phát triển danh sách merchant quanh các trường đại học lớn để phục vụ nhóm đối tượng U18 sắp nhập học tìm kiếm điểm chấp nhận thanh toán Ví Trả Sau gần trường.
-*   **Nâng cấp H2/2026:** Nghiên cứu phát triển Merchant Listing & Category Hub (tìm kiếm local, ngành hàng, ngữ cảnh acceptance), Automated Sitemap Splitting và Local SEO Schema Auto-Generator nhằm tối ưu hóa Crawl Budget.
+#### 2. Cinema Hub (Cổng Giải Trí & Điện Ảnh) - [Dự án Tái đầu tư & Tái kích hoạt]
+* **Strategic Positioning:** Xây dựng Cinema Authority (Vị thế Uy tín & Chuyên gia Điện ảnh) trên Open Web, mở rộng tối đa độ phủ thông tin điện ảnh và thiết lập trọn vẹn luồng mua vé liền mạch (End-to-End) từ Web đến App.
+* **Challenge:** Khắc phục tình trạng sụt giảm tỷ lệ chuyển đổi Web-to-App do rào cản bắt buộc tải App mới mua được vé, đồng thời khai thác tệp 280K lượt tìm kiếm/tháng từ các từ khóa top ngành điện ảnh.
+* **Solution & Scope (Giải quyết JTBD của tệp người dùng đam mê phim):**
+    * Tra cứu 0-click & Giữ chỗ realtime: Hợp nhất suất chiếu thời gian thực của 8 chuỗi rạp (CGV, Lotte, Galaxy, BHD, Cinestar, Beta, Mega GS, Touch Cinema) theo vị trí địa lý của người dùng.
+    * Luồng Mua vé End-to-End trực tiếp: Tích hợp thanh toán Native Web Payment cho người dùng mới/Non-App hoàn tất đặt ghế 1-click ngay trên Web không cần tải App.
+    * Bách khoa toàn thư & Review điện ảnh: Cung cấp danh mục phim đang/sắp chiếu, trailer, thông tin đạo diễn/diễn viên và tổng hợp điểm đánh giá review từ cộng đồng.
+    * Báo giá rạp & Combo ưu đãi: Tra cứu bảng giá vé theo cụm rạp, gợi ý combo bỏng nước và thẻ quà tặng ưu đãi độc quyền.
+    * Chuyển đổi vòng đời phim sang OTT: Tự động nhận diện phim hết suất chiếu tại rạp để gợi ý link xem trực tuyến trên các nền tảng OTT đối tác (VieON, Netflix, Galaxy Play, FPT Play).
+* **Mục tiêu Tái đầu tư (Target Uplift 100%):** Tái kích hoạt dự án trên nền tảng sẵn có với mục tiêu tăng trưởng gấp đôi (Uplift 100%) toàn bộ chỉ số hiệu suất trong H2: Organic Traffic đạt >4.02M visits (Total Traffic >8.07M visits), Booking Clicks đạt >1.74M clicks, số vé bán đạt >214.292 vé và nâng tỷ lệ chuyển đổi Web-to-App đạt ≥ 4.50%.
 
-#### 3. Utilities & Widget (MoSpark & Web Integration)
-Thư viện tiện ích tương tác tài chính/tra cứu (Utilities) trên Web MoMo nhằm thúc đẩy phễu Web-to-App.
-*   **Trọng tâm tháng 7/2026 (Widget Platform):** Triển khai Registry & Rendering Engine nhúng Widget tự động kế thừa (Auto-Inheritance) trên các trang thuộc Microsite. Áp dụng quy trình phối hợp mới giữa Hiếu (Prototype/Verify) và Thuận (Refactor MoBase/Package).
-*   **Trọng tâm tháng 7/2026 (eSIM & Trust Utilities):** Hoàn tất di chuyển microsite eSIM Du Lịch sang MoSpark và giữ nguyên cấu trúc URL để bảo toàn SEO. Release Landing Page 5 Zone và Form báo cáo lừa đảo 3 bước ẩn danh của dự án Trust.
-*   **GenAI Content Engine (SEO/GEO Project):** Hoàn tất Bulk Generation nội dung pSEO local cho các dự án trọng điểm, đồng bộ search volume qua Google Ads & Search Console API lên dashboard quản trị realtime.
+#### 3. Financial Hub (Finhub - Trung Tâm Công Cụ Tài Chính)
+* **Strategic Positioning:** Xây dựng Financial Authority (Vị thế Uy tín & Chuyên gia Tài chính) trên Open Web, cung cấp bộ công cụ giả lập và tính toán cá nhân minh bạch để tạo dựng niềm tin số (Trust-led Growth) và dẫn dắt phễu chuyển đổi sang các sản phẩm tài chính MoMo (Ví Trả Sau, Vay Nhanh).
+* **Key Highlights:** Đã hoàn thành đóng gói bộ công cụ giả lập và tính toán tài chính đa dạng trên nền tảng MoSpark (Bộ 2 công cụ CIC, Vay Nhanh, Ví Trả Sau, BHYT và Lương hưu); linh hoạt thiết lập các công cụ tiện ích tại các điểm chạm (Touch Points) tương ứng để hỗ trợ bài toán nhu cầu (JTBD) và đo lường (tracking) hiệu quả; tự động điều hướng bằng CTA động.
+* **Business Impact:** Khẳng định uy tín tài chính (Financial Authority), thiết lập phễu thu hút thành công >100.000 Financial Leads đăng ký Ví Trả Sau & Vay Nhanh trên App, chiếm lĩnh Top 3 Organic Search cho các từ khóa cốt lõi.
+
+#### 4. SMEs Hub (MoMo Merchant Page Hub)
+* **Key Highlights:** Hoàn thành bộ mẫu giao diện (UI Templates) chuẩn MoBase làm tài liệu trực quan cho đội ngũ Sales chào hàng; tham gia hỗ trợ khởi tạo trang MoMo Merchant Page từ các Form Request do lực lượng Salesman gửi về khi đi thực địa; cải tiến toàn diện sản phẩm MoMo Merchant Page về mặt UI/UX.
+* **Business Impact:** Đồng hành cùng lực lượng SalesForce tối ưu quy trình tạo trang đối tác thực địa, đồng thời giao diện UI/UX cải tiến giúp tăng tỷ lệ tương tác và chuyển đổi từ người dùng xem trang thông tin cửa hàng trên Web sang giao dịch O2O.
 
 ---
 
