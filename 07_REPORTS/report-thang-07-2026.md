@@ -51,20 +51,30 @@ Thư viện tiện ích tương tác tài chính/tra cứu (Utilities) trên Web
 
 ## II. SỐ LIỆU HIỆU SUẤT TOÀN WEB (WEB OVERALL PERFORMANCE)
 
-Bảng tổng hợp số liệu hiệu suất phễu chuyển đổi toàn Web MoMo năm 2026 (July 2026 cập nhật khi có Looker report):
+### 1. Phễu Chuyển Đổi Toàn Web (Web Overall Funnel)
 
 | Metrics | Jan 2026 | Feb 2026 | Mar 2026 | Apr 2026 | May 2026 | Jun 2026 | Jul 2026 | MoM (%) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Page views (Attention)** | 2,601,280 | 3,470,470 | 3,221,705 | 2,699,883 | 3,273,707 | **3,310,000** | - | - |
-| **Sessions (Attention)** | 1,930,821 | 2,373,734 | 2,347,190 | 1,859,048 | 2,330,499 | **N/A** *(*) | - | - |
-| **MEU (Interest)** | 1,397,453 | 1,755,757 | 1,686,392 | 1,427,165 | 1,706,739 | **N/A** *(*) | - | - |
-| **Click-to-App (Desire)** | - | - | - | 609,140 | 964,893 | **824,309** | - | - |
-| **Login App (Action)** | - | - | - | - | 180,148 | **248,468** | - | - |
-| *   *Existing users* | - | - | - | - | 178,152 | **234,377** | - | - |
-| *   *Install App (New to MoMo)* | - | - | - | - | 1,996 | **14,091** | - | - |
+| **Page views (Attention)** | 2,601,280 | 3,470,470 | 3,221,705 | 2,699,883 | 3,273,707 | 3,311,429 | **3,167,821** | -4.3% |
+| **Sessions (Attention)** | 1,930,821 | 2,373,734 | 2,347,190 | 1,859,048 | 2,330,499 | 2,451,799 | **2,617,774** | **+6.7%** |
+| **MEU (Interest)** | 1,397,453 | 1,755,757 | 1,686,392 | 1,427,165 | 1,706,739 | 1,675,301 | **1,728,912** | **+3.2%** |
+| **Click-to-App (Desire)** | - | - | - | - | 964,893 | 824,309 | **713,318** | -13.4% |
+| **Login App (Action)** | - | - | - | - | 180,148 | 248,468 | **224,162** | -9.8% |
+| *   *Existing users* | - | - | - | - | 178,152 | 242,409 | **217,500** | -10.3% |
+| *   *Install App (New User)* | - | - | - | - | 1,996 | 6,059 | **6,662** | **+10.0%** |
 
-> [!NOTE]
-> (*) Chỉ số **Sessions** and **MEU** trong tháng 6 không được hiển thị trên Looker Studio, các chỉ số khác trích xuất chính xác theo hệ thống.
+### 2. Phân Tích Traffic Theo Nguồn (Traffic Channels Breakdown)
+
+| Channel | Apr 2026 | May 2026 | Jun 2026 | Jul 2026 | Điểm Nổi Bật T7/2026 |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **Organic Search** | 794,003 | 847,733 | 763,584 | **758,905** | Duy trì ổn định, là kênh đóng góp traffic chính |
+| **Direct** | 400,878 | 440,270 | 237,110 | **229,992** | Traffic tự nhiên trực tiếp vào hệ thống |
+| **Paid Search** | 87,855 | 383,407 | 480,574 | **122,482** | Giảm do điều chỉnh ngân sách chiến dịch paid |
+| **Paid Social** | 35,014 | 27,491 | 51,235 | **156,542** | **Bứt phá mạnh (+205.5% MoM)** đẩy mạnh tương tác |
+| **App Referral** | 36,546 | 16,984 | 38,169 | **53,367** | **Tăng trưởng ấn tượng (+39.8% MoM)** từ luồng W2A |
+| **Organic Social** | 96,548 | 44,321 | 23,057 | **17,514** | Tương tác tự nhiên từ mạng xã hội |
+| **AI Referrals** | 2,284 | 7,920 | 5,999 | **6,481** | **Tăng trưởng (+8.0% MoM)** từ các công cụ AI Search |
+| **Cross-network** | 1,295 | 8,189 | 6,947 | **2,997** | Traffic chuyển tiếp liên mạng |
 
 ## III. WEEKLY REPORTS (Báo cáo Hàng Tuần)
 
