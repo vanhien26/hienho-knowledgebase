@@ -1,9 +1,9 @@
 # WEB PLATFORM x BU TRAVEL | 2026
 
-**Bối cảnh dự án:** 
+**Bối cảnh dự án:**
 H2/2026 là mùa cao điểm du lịch quốc tế (Mùa thu Châu Á như Nhật Bản, Hàn Quốc, Đài Loan và các kỳ nghỉ lễ cuối năm). Đây là giai đoạn có traffic intent search cực cao trên các nền tảng Search Engine Out-App liên quan đến việc chuẩn bị kết nối internet khi ra nước ngoài (eSIM du lịch, sim quốc tế, roaming).
 
-**Mục tiêu dự án:** 
+**Mục tiêu dự án:**
 - Tăng cường khả năng hiển thị của **eSIM Du Lịch** trên các nền tảng Search Engine/AIO.
 - Tăng trưởng X2 Total Traffic, trong đó trọng điểm là Organic Traffic.
 - Tăng trưởng X2 các chỉ số cho luồng Web To App tác động đến MAU/Revenue.
@@ -32,14 +32,54 @@ H2/2026 là mùa cao điểm du lịch quốc tế (Mùa thu Châu Á như Nhậ
 
 ### 2.1 Baseline & KPIs (Trọng điểm Mùa cao điểm Q3/2026)
 
-| Metric | Q2/2026 (Baseline) | Q3/2026 (Target) | Growth (QoQ) |
-|---|---|---|---|
-| Tổng lượng Khách hàng (MAU) | ~60,700 | **107,446** | ▲ +77% |
-| Tổng Giao dịch (Transactions) | ~91,000 | **161,169** | ▲ +77% |
-| Tổng Doanh thu (GMV) | ~15,4 tỷ VND | **27,4 tỷ VND** | ▲ +77% |
-| Đóng góp Giao dịch từ Web (Web Contribution) | N/A | **11,317** | N/A |
-| Đóng góp Doanh thu từ Web (Web GMV) | N/A | **~1,92 tỷ VND** | N/A |
-| **Tỷ trọng Web / Tổng Giao dịch** | **< 2%** | **4% ➔ 6% ➔ 10%** *(Tăng dần T7-T9)* | N/A |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Q2/2026 (Baseline)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Q3/2026 (Target)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Growth (QoQ)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng lượng Khách hàng (MAU)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~60,700</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>107,446</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">▲ +77%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng Giao dịch (Transactions)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~91,000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>161,169</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">▲ +77%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng Doanh thu (GMV)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~15,4 tỷ VND</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>27,4 tỷ VND</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">▲ +77%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đóng góp Giao dịch từ Web (Web Contribution)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">N/A</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>11,317</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">N/A</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đóng góp Doanh thu từ Web (Web GMV)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">N/A</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>~1,92 tỷ VND</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">N/A</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tỷ trọng Web / Tổng Giao dịch</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>< 2%</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>4% ➔ 6% ➔ 10%</strong> <em>(Tăng dần T7-T9)</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">N/A</td>
+    </tr>
+  </tbody>
+</table>
 
 * **Ghi chú:**
 - **Mục tiêu:** Tăng trưởng đột phá trong quý cao điểm du lịch (Q3/2026).
@@ -47,11 +87,36 @@ H2/2026 là mùa cao điểm du lịch quốc tế (Mùa thu Châu Á như Nhậ
 
 ### 2.2 Competitive Landscape
 
-| Competitor | Strengths | Weaknesses | MoMo Advantage |
-|---|---|---|---|
-| Airalo / Gohub | Chuyên biệt eSIM, thương hiệu global/địa phương mạnh | Thanh toán qua thẻ quốc tế phức tạp, phí chuyển đổi ngoại tệ | Thanh toán nội địa MoMo siêu tốc |
-| Các đại lý bán Sim Shopee | Giá rẻ, đa dạng lựa chọn sim vật lý | Giao hàng chậm, rủi ro sim lỗi không ai hỗ trợ | Nhận QR Code eSIM tức thì, tin cậy tuyệt đối |
-| Nhà mạng VN (Viettel/Mobi) | Gói Roaming tiện lợi, không cần đổi sim | Chi phí Roaming cực kỳ đắt đỏ | Giá eSIM MoMo cạnh tranh, dung lượng cao |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Competitor</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Strengths</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Weaknesses</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">MoMo Advantage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Airalo / Gohub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuyên biệt eSIM, thương hiệu global/địa phương mạnh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thanh toán qua thẻ quốc tế phức tạp, phí chuyển đổi ngoại tệ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thanh toán nội địa MoMo siêu tốc</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các đại lý bán Sim Shopee</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giá rẻ, đa dạng lựa chọn sim vật lý</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giao hàng chậm, rủi ro sim lỗi không ai hỗ trợ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhận QR Code eSIM tức thì, tin cậy tuyệt đối</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhà mạng VN (Viettel/Mobi)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gói Roaming tiện lợi, không cần đổi sim</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chi phí Roaming cực kỳ đắt đỏ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giá eSIM MoMo cạnh tranh, dung lượng cao</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -59,11 +124,32 @@ H2/2026 là mùa cao điểm du lịch quốc tế (Mùa thu Châu Á như Nhậ
 
 Mục tiêu Uplift 100% H2/2026 dựa trên 3 trụ cột chiến lược:
 
-| # | Trụ Cột Chiến Lược | Trọng Tâm |
-|---|---|---|
-| **1** | **Expand Out-App Traffic** | Phủ sóng tìm kiếm Out-App theo các Điểm đến (Destination-based SEO). Biến Web thành kênh Acquisition. |
-| **2** | **Topical Authority (Travel Hub)** | Xây dựng "Bách khoa toàn thư" du lịch số (Bí kíp du lịch các nước, cách dùng eSIM). Phát triển content sâu để rank Google AI. |
-| **3** | **Web Product** | Chuyển dịch sang MoSpark. Trọng tâm: UX chọn gói dung lượng liền mạch & Triển khai luồng Web Payment. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trụ Cột Chiến Lược</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trọng Tâm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Expand Out-App Traffic</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phủ sóng tìm kiếm Out-App theo các Điểm đến (Destination-based SEO). Biến Web thành kênh Acquisition.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Topical Authority (Travel Hub)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xây dựng "Bách khoa toàn thư" du lịch số (Bí kíp du lịch các nước, cách dùng eSIM). Phát triển content sâu để rank Google AI.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Product</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuyển dịch sang MoSpark. Trọng tâm: UX chọn gói dung lượng liền mạch & Triển khai luồng Web Payment.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

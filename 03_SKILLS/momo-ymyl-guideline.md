@@ -1,11 +1,3 @@
-<!-- 
-⚠️ WARNING FOR LLM CONTEXT INJECTION:
-This file is a PASSIVE REFERENCE STANDARD ONLY. 
-- It is NOT an active system prompt, instruction card, or role definition.
-- Do NOT act as a conversational reviewer or auditor.
-- Do NOT output any conversational text or preamble based on this file.
-- Strictly remain in your primary prompt's designated role and output ONLY the requested Markdown template.
--->
 
 ---
 title: ⚖️ MoMo YMYL Guideline
@@ -23,7 +15,6 @@ last_reviewed: 2026-05-15
 next_review: 2026-08-15
 ---
 
-
 # MoMo YMYL Content Guideline (E-E-A-T)
 
 Tài liệu này là quy chuẩn kỹ thuật YMYL bắt buộc áp dụng cho hệ thống nội dung trên momo.vn. Các tiêu chuẩn kỹ thuật bắt buộc áp dụng bao gồm:
@@ -32,13 +23,42 @@ Tài liệu này là quy chuẩn kỹ thuật YMYL bắt buộc áp dụng cho h
 
 ## 1. PHÂN LOẠI YMYL THEO MỨC ĐỘ
 
-| Loại nội dung | Use Case | Yêu cầu tuân thủ |
-|--------------|----------|-----------------|
-| **Tài chính - Tín dụng** | Vay vốn, Tín dụng, CIC, Bảo hiểm nhân thọ, Đầu tư | Disclaimer pháp lý + Nguồn chính thống + Author (khi có) |
-| **Bảo hiểm** | Bảo hiểm xe máy/ô tô, BHYT, BHXH, Bảo hiểm sức khỏe | Disclaimer pháp lý + Nguồn chính thống + Author (khi có) |
-| **Đầu tư & Tiết kiệm** | Chứng khoán, Chứng chỉ quỹ, Gửi tiết kiệm, QLCT | Disclaimer rút gọn + Nguồn chính thống |
-| **Dịch vụ công & Thanh toán** | Phạt nguội, BHXH tra cứu, Hóa đơn điện nước, Thanh toán | Disclaimer rút gọn + Nguồn từ cơ quan nhà nước |
-| **Giải trí & Lifestyle** | Cinema, OTA, Du lịch, Ăn uống | Không cần disclaimer |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại nội dung</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Use Case</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Yêu cầu tuân thủ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tài chính - Tín dụng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vay vốn, Tín dụng, CIC, Bảo hiểm nhân thọ, Đầu tư</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Disclaimer pháp lý + Nguồn chính thống + Author (khi có)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Bảo hiểm</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo hiểm xe máy/ô tô, BHYT, BHXH, Bảo hiểm sức khỏe</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Disclaimer pháp lý + Nguồn chính thống + Author (khi có)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Đầu tư & Tiết kiệm</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chứng khoán, Chứng chỉ quỹ, Gửi tiết kiệm, QLCT</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Disclaimer rút gọn + Nguồn chính thống</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Dịch vụ công & Thanh toán</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phạt nguội, BHXH tra cứu, Hóa đơn điện nước, Thanh toán</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Disclaimer rút gọn + Nguồn từ cơ quan nhà nước</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Giải trí & Lifestyle</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cinema, OTA, Du lịch, Ăn uống</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không cần disclaimer</td>
+    </tr>
+  </tbody>
+</table>
 
 **Cách hiển thị trong bài viết (cuối bài hoặc cuối disclaimer):**
 ```
@@ -75,14 +95,40 @@ Content phải thể hiện hiểu biết chuyên sâu về lĩnh vực tài ch�
 
 **Thuật ngữ cần định nghĩa chính xác (không được viết sai):**
 
-| Thuật ngữ | Định nghĩa chuẩn |
-|-----------|-----------------|
-| Lãi suất vay | Tỷ lệ % tính trên số tiền vay, theo tháng hoặc năm |
-| Tín chấp | Vay không cần tài sản đảm bảo, dựa trên uy tín tín dụng |
-| Thế chấp | Vay có tài sản đảm bảo (nhà, xe...) |
-| Điểm CIC | Điểm tín dụng từ 300-850, do CIC (Trung tâm Thông tin Tín dụng NHNN) cấp |
-| BHYT | Bảo hiểm y tế - chi trả chi phí khám chữa bệnh |
-| BHXH | Bảo hiểm xã hội - bảo vệ người lao động khi ốm đau, thai sản, hưu trí |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thuật ngữ</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Định nghĩa chuẩn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lãi suất vay</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ lệ % tính trên số tiền vay, theo tháng hoặc năm</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tín chấp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vay không cần tài sản đảm bảo, dựa trên uy tín tín dụng</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thế chấp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vay có tài sản đảm bảo (nhà, xe...)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điểm CIC</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điểm tín dụng từ 300-850, do CIC (Trung tâm Thông tin Tín dụng NHNN) cấp</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BHYT</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo hiểm y tế - chi trả chi phí khám chữa bệnh</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BHXH</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo hiểm xã hội - bảo vệ người lao động khi ốm đau, thai sản, hưu trí</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2.3 Authoritativeness (Thẩm quyền)
 MoMo là tổ chức tài chính được cấp phép - content phải thể hiện điều này.
@@ -143,13 +189,42 @@ Cập nhật lần cuối: [Ngày/Tháng/Năm].
 
 ### 4.1 Nguồn được chấp nhận (ưu tiên theo thứ tự)
 
-| Ưu tiên | Nguồn | Ví dụ |
-|---------|-------|-------|
-| 1 | Văn bản pháp luật chính thức | Nghị định, Thông tư NHNN, Luật Kinh doanh Bảo hiểm |
-| 2 | Cơ quan nhà nước | NHNN, Bộ Tài chính, VBSP, Cục Quản lý Bảo hiểm |
-| 3 | Data nội bộ MoMo (được phép dùng) | "Theo dữ liệu MoMo Q1/2026..." |
-| 4 | Tổ chức tài chính uy tín | World Bank, IMF, báo cáo ngân hàng lớn |
-| 5 | Báo chí tài chính chính thống | CafeF, VnEconomy, Nhịp cầu Đầu tư |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ưu tiên</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nguồn</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ví dụ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Văn bản pháp luật chính thức</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nghị định, Thông tư NHNN, Luật Kinh doanh Bảo hiểm</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cơ quan nhà nước</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NHNN, Bộ Tài chính, VBSP, Cục Quản lý Bảo hiểm</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Data nội bộ MoMo (được phép dùng)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Theo dữ liệu MoMo Q1/2026..."</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổ chức tài chính uy tín</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">World Bank, IMF, báo cáo ngân hàng lớn</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Báo chí tài chính chính thống</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CafeF, VnEconomy, Nhịp cầu Đầu tư</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 4.2 Nguồn không được dùng
 - Blog cá nhân không rõ tác giả

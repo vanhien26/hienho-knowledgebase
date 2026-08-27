@@ -1,43 +1,82 @@
-# 🗺️ Knowledge Routing & Context Pipeline (Bản Đồ Định Tuyến Dữ Liệu SSOT)
+# TẦNG KNOWLEDGE ROUTING & PIPELINE CÂU TRẢ LỜI TỐI ƯU (KNOWLEDGE LAYER ARCHITECTURE)
 
-> **Mục đích:** Quy định nguyên tắc phân loại khái niệm, định tuyến từ khóa và chỉ định nguồn dữ liệu chuẩn mực (Single Source of Truth - SSOT) cho hệ thống và AI khi làm việc trong Knowledge Base MoMo.
-> **Owner:** Văn Hiến - Web Product Lead
-> **Cập nhật gần nhất:** 31/07/2026
+Tài liệu định nghĩa kiến trúc **Tầng Knowledge (Knowledge Layer)** của hệ thống codebase. Thay vì chỉ phân loại câu hỏi (Prompt classification) bề nổi, Tầng Knowledge vận hành như một bộ máy định tuyến tri thức đa lớp (Multi-layer Knowledge Routing Pipeline) để đảm bảo mọi vấn đề người đặt ra đều nhận được **Câu trả lời Tối ưu (Optimal Answer)** chuẩn xác, trung thực và sát bối cảnh kinh doanh.
 
 ---
 
-## 📌 1. BẢNG ĐỊNH TUYẾN DỮ LIỆU & PHÂN BIỆT KHÁI NIỆM (SSOT ROUTING MATRIX)
-
-| Khái niệm / Từ khóa | Phân loại & Bản chất khái niệm | Thư mục & File SSOT | Quy tắc Truy xuất & Tránh nhầm lẫn |
-| :--- | :--- | :--- | :--- |
-| **Townhall** | Buổi sinh hoạt toàn công ty định kỳ do **Ban Lãnh Đạo (BOM / C-Level)** chủ trì. Tập trung vào kết quả kinh doanh vĩ mô, chỉ số User Trust Index, định hướng chiến lược (Trust-led Growth), tư duy vận hành (Thuật toán 5 bước) và bài toán/điểm nghẽn toàn công ty. | 📂 `07_REPORTS/`<br>📄 `townhall-*.md`<br>📄 `leadership-mindset-log.md` | ❌ **KHÔNG** nhầm với báo cáo tháng của team (`report-thang-*.md`).<br>✅ **CHỈ** lấy chỉ đạo vĩ mô từ BOM và định hướng C-Level. |
-| **Monthly Report** | Báo cáo hiệu suất kinh doanh, traffic, W2A, điểm nhấn dự án và tiến độ sprint hàng tháng của **Web Platform Team**. | 📂 `07_REPORTS/`<br>📄 `report-thang-MM-YYYY.md` | 🔍 Tìm đúng file theo tháng yêu cầu (Ví dụ: `report-thang-07-2026.md`). |
-| **Strategic Plan & OKRs** | Định hướng chiến lược dài hạn H1/H2, mục tiêu North Star, cam kết chỉ số vĩ mô cho C-Level (6.0M MUA, W2A > 10%). | 📂 `01_STRATEGIC_PLAN/`<br>📄 `h2-2026-report.md` | Đọc để lấy khung chiến lược và cam kết KPI tổng thể. |
-| **BRD (Business Requirements)** | Tài liệu đặc tả yêu cầu kinh doanh, bài toán Use Case và luồng trải nghiệm cho các dịch vụ MoMo (Phạt Nguội, Cinema, eSIM, Ví Trả Sau, Vay Nhanh...). | 📂 `05_HUBS/`<br>📂 `06_USE_CASE_MOMO/` | Đọc file BRD mới nhất của Use Case tương ứng. |
-| **PRD (Product Requirements)** | Tài liệu đặc tả tính năng sản phẩm kỹ thuật chi tiết dành cho Đội ngũ Phát triển (Dev/Product). | 📂 `09_PRD/` | Tham chiếu khi cần chi tiết về tính năng/release. |
-| **MoSpark Platform & Tech** | Kiến trúc hạ tầng MoSpark, GenAI Content Engine, Widget Store Registry, CMS Editor, FPT Cloud integration. | 📂 `04_MOSPARK_PLATFORM/` | Tham chiếu khi liên quan đến khả năng hệ thống Web Platform. |
-| **Frameworks & Skills** | Hệ thống tư duy (80/20 Growth, JTBD, Pyramid Principle) và tiêu chuẩn SEO/GEO/AEO, YMYL Guidelines. | 📂 `02_FRAMEWORKS/`<br>📂 `03_SKILLS/` | Đọc để áp dụng đúng phương pháp luận khi phân tích & viết bài. |
-| **Decision Log** | Nhật ký ghi nhận các quyết định kiến trúc, sản phẩm và chiến lược quan trọng đã được chốt. | 📂 `08_DECISION_LOG/` | Đọc để hiểu lý do lịch sử đằng sau các quyết định. |
-
----
-
-## 🔍 2. PIPELINE XỬ LÝ KHI AI TIẾP NHẬN YÊU CẦU (AI RETRIEVAL PIPELINE)
-
-Khi nhận một truy vấn từ người dùng, AI phải thực hiện định tuyến theo 3 bước:
+## 1. KHUNG KIẾN TRÚC 5 TẦNG KNOWLEDGE (5-LAYER KNOWLEDGE PIPELINE)
 
 ```
-[User Request] 
-       ↓ 
-1. Phân loại Ý định (Intent Classification): Tìm từ khóa thuộc nhóm nào trong Bảng Định Tuyến.
-       ↓ 
-2. Trỏ tới File SSOT: Chỉ mở và đọc file đúng thư mục chỉ định (Tránh đọc nhầm loại tài liệu).
-       ↓ 
-3. Kiểm tra ranh giới khái niệm (Boundary Check): Đối soát để chắc chắn thông tin trả ra đúng ngữ cảnh (E.g., Townhall ≠ Report).
+┌────────────────────────────────────────────────────────────────────────┐
+│                   TẦNG KNOWLEDGE ROUTING TRUNG TÂM                     │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │
+    ┌───────────────────────────────┼───────────────────────────────┐
+    ▼                               ▼                               ▼
+[TẦNG 1: MEMORY CONTEXT]    [TẦNG 2: PROBLEM FRAMING]   [TẦNG 3: SSOT KNOWLEDGE DOMAIN]
+- MEETING_RECAPS.md          - Nhìn vào trong (Assumptions) - Strategic Plan (01)
+- decision_log.md            - Nhìn ra ngoài (Biz/User)    - MoSpark Platform (04)
+- hienho_master_doc.md       - Định khung lại (Reframe)     - Strategic Hubs (05)
+                                                            - Use Cases BRD (06)
+                                                            - Reports & Data (07)
+    └───────────────────────────────┬───────────────────────────────┘
+                                    │
+                                    ▼
+                    [TẦNG 4: FRAMEWORK & SKILL EXECUTION]
+                    - Product Frameworks Master (03)
+                    - UIC / RICE Prioritization (03)
+                    - CEO Standard BRD (03)
+                                    │
+                                    ▼
+                    [TẦNG 5: OPTIMAL OUTPUT PACKAGING]
+                    - Cấu trúc: Context -> Action -> Data
+                    - Sơ đồ Mermaid Flow + Step Table
+                    - Quy chuẩn: No Emoji, No PIC names
 ```
 
 ---
 
-## ⚠️ 3. CÁC NGUYÊN TẮC CỐT LÕI KHÁC (CORE CONSTRAINTS)
+## 2. QUY TRÌNH VẬN HÀNH CHI TIẾT TỪNG TẦNG KNOWLEDGE
 
-1. **Khái niệm Townhall:** Mọi truy vấn liên quan đến "Townhall", "Town Hall", "Chỉ đạo BOM", "BOM Mindset" bắt buộc chỉ trỏ về `07_REPORTS/townhall-*.md` và `leadership-mindset-log.md`.
-2. **Single Source of Truth:** Không tự tạo giả định nếu thông tin chưa có trong Vault; nếu có thông tin mâu thuẫn giữa file cá nhân và file Master, ưu tiên file Master mới nhất tại thư mục quy định.
+### Tầng 1: Context Memory Layer (Tầng Bối Cảnh Lịch Sử & Chỉ Đạo)
+Mọi câu hỏi/vấn đề khi tiếp nhận bắt buộc phải đi qua Tầng 1 để nạp bối cảnh:
+- [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md): Chỉ đạo chiến lược của Ban Giám đốc (anh Công, anh Tường), định hướng Foundation vs Transformation vs Incubator.
+- [`08_DECISION_LOG/decision_log.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_DECISION_LOG/decision_log.md): Nhật ký các quyết định kiến trúc và nghiệp vụ đã chốt.
+- [`00_HARNESS_CORE/hienho_master_doc.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/hienho_master_doc.md): Tổng quan toàn bộ hệ thống Web Platform & MoSpark.
+
+### Tầng 2: Executive Problem Framing Layer (Tầng Định Khung Bài Toán)
+Phân tích vấn đề người dùng đặt ra theo 3 góc nhìn quản trị:
+- **Tác động Kinh doanh (Business Metrics):** Tác động như thế nào tới MAU, New Users, W2A Conversion Rate, Doanh thu?
+- **Rào cản Trải nghiệm & Niềm tin (Trust & UX Friction):** Bài toán có đụng đến điểm đau (Pain points) hay rào cản an toàn tài chính của người dùng không?
+- **Năng lực Nền tảng (MoSpark Platform Capability):** Nền tảng hiện có đáp ứng được chưa hay cần nâng cấp?
+
+### Tầng 3: SSOT Knowledge Domain Layer (Tầng Tri Thức Chuẩn Thuần)
+Định tuyến trực tiếp đến đúng nguồn dữ liệu gốc (Single Source of Truth) trong repo:
+- **Tăng trưởng & OKRs:** Thư mục [`01_STRATEGIC_PLAN/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/01_STRATEGIC_PLAN).
+- **Hạ tầng MoSpark:** Thư mục [`04_MOSPARK_PLATFORM/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM).
+- **Các cụm Hubs:** Thư mục [`05_HUBS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS).
+- **Các Use Case BRD:** Thư mục [`06_USE_CASE_MOMO/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO).
+- **Báo cáo & Số liệu thực tế:** Thư mục [`07_REPORTS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS).
+- **Đặc tả PRD:** Thư mục [`09_PRD/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD).
+- **Tư duy & Triết lý Lãnh đạo:** File [`10_LEADERSHIP_MINDSET/leadership-mindset.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/10_LEADERSHIP_MINDSET/leadership-mindset.md).
+
+### Tầng 4: Master Skill & Framework Execution Layer (Tầng Thực Thi Master Skills)
+Kích hoạt 3 Master Skills trong thư mục [`.agents/skills/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/.agents/skills) kết hợp cùng kho tham chiếu [`03_SKILLS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS):
+- **Product Master (`product-master`):** Kích hoạt cho các bài toán định khung vấn đề, định vị sản phẩm, hoạch định chiến lược 4 Zone, đánh giá ưu tiên RICE/UIC, lập lộ trình và thiết kế luồng AI.
+- **Web Platform Reporting (`web-platform-reporting`):** Kích hoạt cho đóng gói báo cáo định kỳ Weekly gửi Executive Leadership và Monthly gửi Ban Giám Đốc.
+- **Frontend Slides (`frontend-slides`):** Kích hoạt khi cần khởi tạo slide thuyết trình Web hiện đại bằng HTML/CSS hoạt họa chuẩn Stage 16:9 (1920×1080) zero dependencies, phục vụ thuyết trình trực tiếp, pitch deck, reporting và export.
+
+### Tầng 5: Optimal Output Packaging Layer (Tầng Đóng Gói Câu Trả Lời Tối Ưu)
+Kiểm soát chuẩn định dạng đầu ra theo đúng chỉ dẫn [`AGENTS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/AGENTS.md):
+- **Cấu trúc câu trả lời:** Đi thẳng vào bản chất ➔ Nêu rõ Context ➔ Action Items cụ thể ➔ Chỉ số KPIs / Số liệu thực tế.
+- **Biểu diễn luồng người dùng:** Sơ đồ Mermaid (`graph TD` hoặc `graph LR`) + Bảng phân tích chi tiết các bước.
+- **Biểu diễn lộ trình:** Bảng Markdown (`Table`).
+- **Quy chuẩn văn phong:** Không Emoji/Icon trong tiêu đề/bảng/danh sách, không tên riêng cá nhân PIC (thay bằng tên team chuyên môn), không từ ngữ hoa mỹ kiểu AI.
+
+---
+
+## 3. NGUYÊN TẮC BẢO ĐẢM CÂU TRẢ LỜI HOÀN HẢO (OPTIMAL ANSWER GUARANTEE)
+
+1. **Không hoang đường dữ liệu (Zero Hallucination):** 100% số liệu và bối cảnh trình bày phải xuất phát từ Tầng 3 (SSOT Knowledge Domain) và Tầng 1 (Memory Context).
+2. **Không trả lời bề nổi:** Khi tiếp nhận câu hỏi, Agent phải đi xuyên suốt từ Tầng 1 đến Tầng 5 để tạo ra câu trả lời có chiều sâu quản trị thay vì chỉ giải nghĩa từ ngữ.
+3. **Luôn đo lường bằng chỉ số kinh doanh:** Mọi đề xuất sản phẩm đều phải gắn liền với tác động tới MAU, New Users, Web-to-App CR hoặc Doanh thu.

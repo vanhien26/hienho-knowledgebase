@@ -42,40 +42,143 @@ Xây dựng kênh D2C qua website với hai luồng song song: (1) Tối ưu và
 
 ### 2.1 Hiện Trạng Web & Traffic
 
-| Kênh | URL | Trạng thái | Vấn đề |
-|---|---|---|---|
-| MiniWeb MoMo | momo.vn/loa-thong-bao-chuyen-khoan | Đang hoạt động, đang phục hồi | URL đổi 11/5/2025 phá ranking; chưa có checkout |
-| IPOS Web | loathongbao.ipos.vn | Đang hoạt động | Do Cell Team tự build, dùng làm trang hứng traffic test đơn từ momo.vn |
-| In-App MoMo | Luồng đặt hàng nội bộ app | Đang hoạt động | Chỉ reach MoMo users; tracking bị gián đoạn |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Kênh</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trạng thái</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vấn đề</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MiniWeb MoMo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">momo.vn/loa-thong-bao-chuyen-khoan</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang hoạt động, đang phục hồi</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL đổi 11/5/2025 phá ranking; chưa có checkout</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">IPOS Web</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">loathongbao.ipos.vn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang hoạt động</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Do Cell Team tự build, dùng làm trang hứng traffic test đơn từ momo.vn</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">In-App MoMo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Luồng đặt hàng nội bộ app</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang hoạt động</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chỉ reach MoMo users; tracking bị gián đoạn</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2.2 Traffic Historical Data
 
-| Giai đoạn | Organic Sessions | Click to App | CR% | Ghi chú |
-|---|---|---|---|---|
-| T08/2024 | 184 | 77 | 41.8% | MiniWeb launch |
-| T10/2024 | 4.800 | 2.414 | 50.3% | Tăng tốt |
-| T12/2024 | 6.900 | 1.666 | 24.1% | Peak |
-| T01/2025 | 5.700 | 930 | 16.3% | Sau Tết drop |
-| T06/2025 | 2.500 | 362 | 14.5% | Điểm đáy sau URL change |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giai đoạn</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Organic Sessions</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Click to App</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">CR%</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T08/2024</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">184</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">77</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">41.8%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MiniWeb launch</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T10/2024</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4.800</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.414</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">50.3%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng tốt</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T12/2024</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6.900</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.666</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">24.1%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Peak</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T01/2025</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5.700</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">930</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">16.3%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sau Tết drop</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T06/2025</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.500</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">362</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">14.5%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điểm đáy sau URL change</td>
+    </tr>
+  </tbody>
+</table>
 
 **Nhận xét:** CR% sụt mạnh từ 41-50% (T8-T10/2024) xuống còn 14-16% (H1/2025). Vấn đề không chỉ là traffic mà là chất lượng landing và intent matching.
 
 ### 2.3 Market Landscape
 
-| Metric | Giá trị |
-|---|---|
-| Total search volume thị trường | ~46.000 lượt/tháng |
-| Tăng trưởng thị trường (12 tháng) | x10 lần so với 06/2024 |
-| Số lượng từ khoá tracked | 627 từ khoá |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giá trị</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Total search volume thị trường</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~46.000 lượt/tháng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng trưởng thị trường (12 tháng)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">x10 lần so với 06/2024</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số lượng từ khoá tracked</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">627 từ khoá</td>
+    </tr>
+  </tbody>
+</table>
 
 **Top competitor clusters:**
 
-| Cluster | Volume ước tính |
-|---|---|
-| Loa Thông Báo Chuyển Khoản (generic) | ~8.000+/tháng |
-| Loa MoMo (branded) | ~2.500+/tháng |
-| Loa Ngân Hàng (Vietcombank, MB, Techcombank, BIDV, Vietinbank) | ~8.000+/tháng |
-| Loa Ting Ting / Thần Tài Mobifone / Tingee | ~2.500+/tháng |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cluster</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Volume ước tính</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loa Thông Báo Chuyển Khoản (generic)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~8.000+/tháng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loa MoMo (branded)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~2.500+/tháng</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loa Ngân Hàng (Vietcombank, MB, Techcombank, BIDV, Vietinbank)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~8.000+/tháng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loa Ting Ting / Thần Tài Mobifone / Tingee</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~2.500+/tháng</td>
+    </tr>
+  </tbody>
+</table>
 
 **Nhận định:** Nhóm loa ngân hàng là threat lớn nhất - các ngân hàng có authority domain cực cao và tặng loa miễn phí khi mở tài khoản. MoMo không thể thắng ở nhóm brand intent ngân hàng, nhưng có thể dominate nhóm generic intent và how-to intent.
 
@@ -114,13 +217,36 @@ Web closes the D2C loop: từ search intent đến confirmed purchase mà không
 
 > "Tôi đang bán hàng, khách chuyển khoản xong tôi không nghe được có tiền vào không. Cần thiết bị đọc to để tôi biết ngay."
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Xác nhận giao dịch nhận tiền tức thì, hands-free, không phụ thuộc điện thoại |
-| Emotional | Tự tin khi bán hàng; tránh bị khách "giả chuyển khoản" lừa |
-| Social | Chuyên nghiệp hơn trong mắt khách hàng - quầy có thiết bị bài bản, không cầm điện thoại suốt |
-| Trigger | Mất tiền vì không nghe thông báo; hoặc thấy shop khác dùng |
-| Search → App | "loa thông báo chuyển khoản", "loa momo" → momo.vn/loa-thong-bao-chuyen-khoan → "Đặt hàng ngay" → ipos.vn checkout (Non-MoMo) hoặc App MoMo (MoMo user) → Purchase confirmed |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xác nhận giao dịch nhận tiền tức thì, hands-free, không phụ thuộc điện thoại</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự tin khi bán hàng; tránh bị khách "giả chuyển khoản" lừa</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuyên nghiệp hơn trong mắt khách hàng - quầy có thiết bị bài bản, không cầm điện thoại suốt</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mất tiền vì không nghe thông báo; hoặc thấy shop khác dùng</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"loa thông báo chuyển khoản", "loa momo" → momo.vn/loa-thong-bao-chuyen-khoan → "Đặt hàng ngay" → ipos.vn checkout (Non-MoMo) hoặc App MoMo (MoMo user) → Purchase confirmed</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** Landing Page chính + Product Page D2C với đầy đủ specs, giá, CTA đặt hàng.
 
@@ -130,13 +256,36 @@ Web closes the D2C loop: từ search intent đến confirmed purchase mà không
 
 > "Tôi thấy có nhiều loại loa, không biết loa nào tốt hơn - nhất là loa ngân hàng tặng miễn phí vs loa MoMo phải mua."
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Hiểu sự khác biệt; đưa ra quyết định mua đúng |
-| Emotional | Không muốn chọn sai - mất tiền hoặc trải nghiệm kém |
-| Social | Bạn bè hay đồng nghiệp cùng ngành hỏi "loa nào ngon hơn" - cần câu trả lời tự tin từ so sánh thực tế, không phải phỏng đoán |
-| Trigger | Bị overwhelmed bởi quá nhiều lựa chọn; thấy quảng cáo từ nhiều nguồn |
-| Search → App | "loa momo vs ting ting", "so sánh loa báo chuyển khoản", "loa ngân hàng nào tốt" → /blog/so-sanh-loa-momo-vs-ting-ting → CTA "Đặt loa MoMo" → ipos.vn checkout |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiểu sự khác biệt; đưa ra quyết định mua đúng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không muốn chọn sai - mất tiền hoặc trải nghiệm kém</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bạn bè hay đồng nghiệp cùng ngành hỏi "loa nào ngon hơn" - cần câu trả lời tự tin từ so sánh thực tế, không phải phỏng đoán</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bị overwhelmed bởi quá nhiều lựa chọn; thấy quảng cáo từ nhiều nguồn</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"loa momo vs ting ting", "so sánh loa báo chuyển khoản", "loa ngân hàng nào tốt" → /blog/so-sanh-loa-momo-vs-ting-ting → CTA "Đặt loa MoMo" → ipos.vn checkout</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** Blog so sánh trung lập (MoMo vs Ting Ting, MoMo vs Loa Thần Tài Mobifone); landing page theo competitor intent.
 
@@ -146,13 +295,36 @@ Web closes the D2C loop: từ search intent đến confirmed purchase mà không
 
 > "Tôi đã mua rồi nhưng setup không được - không biết connect wifi thế nào, loa không đọc."
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Sản phẩm hoạt động đúng như mong đợi |
-| Emotional | Không muốn cảm thấy "mua nhầm"; muốn tự xử lý được |
-| Social | Không muốn gọi hotline rồi bị thấy là "không biết dùng đồ công nghệ" trước mặt nhân viên hay hàng xóm |
-| Trigger | Sản phẩm không work sau khi mua; hoặc đổi điện thoại/số tài khoản |
-| Search → App | "cách cài đặt loa momo", "kết nối wifi loa momo không được", "reset loa momo" → /blog/cai-dat-loa-momo → Hướng dẫn từng bước + CTA upsell cho user chưa có loa |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sản phẩm hoạt động đúng như mong đợi</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không muốn cảm thấy "mua nhầm"; muốn tự xử lý được</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không muốn gọi hotline rồi bị thấy là "không biết dùng đồ công nghệ" trước mặt nhân viên hay hàng xóm</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sản phẩm không work sau khi mua; hoặc đổi điện thoại/số tài khoản</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"cách cài đặt loa momo", "kết nối wifi loa momo không được", "reset loa momo" → /blog/cai-dat-loa-momo → Hướng dẫn từng bước + CTA upsell cho user chưa có loa</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** Blog how-to + FAQ page trên miniWeb; hỗ trợ retention user đang dùng.
 
@@ -162,13 +334,36 @@ Web closes the D2C loop: từ search intent đến confirmed purchase mà không
 
 > "Loa MoMo có miễn phí không? Hay phải mua? Mua ở đâu? Điều kiện là gì?"
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Biết chính xác chi phí sở hữu trước khi ra quyết định |
-| Emotional | Lo ngại chi phí ẩn; muốn minh bạch |
-| Social | Thấy shop cạnh bên có loa mà mình chưa có - không muốn thua kém về sự chuyên nghiệp trong mắt khách |
-| Trigger | Thấy giá quảng cáo khác nhau ở nhiều nơi; chưa rõ điều kiện đăng ký |
-| Search → App | "loa momo giá bao nhiêu", "mua loa momo ở đâu", "điều kiện đăng ký loa momo" → momo.vn/loa-thong-bao-chuyen-khoan#pricing → Pricing section rõ ràng → "Đặt hàng ngay" → ipos.vn |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Biết chính xác chi phí sở hữu trước khi ra quyết định</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lo ngại chi phí ẩn; muốn minh bạch</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thấy shop cạnh bên có loa mà mình chưa có - không muốn thua kém về sự chuyên nghiệp trong mắt khách</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thấy giá quảng cáo khác nhau ở nhiều nơi; chưa rõ điều kiện đăng ký</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"loa momo giá bao nhiêu", "mua loa momo ở đâu", "điều kiện đăng ký loa momo" → momo.vn/loa-thong-bao-chuyen-khoan#pricing → Pricing section rõ ràng → "Đặt hàng ngay" → ipos.vn</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** Pricing section rõ ràng trên LP; FAQ về phí, điều kiện đăng ký; CTA "Đặt hàng ngay" với price visible.
 
@@ -178,13 +373,36 @@ Web closes the D2C loop: từ search intent đến confirmed purchase mà không
 
 > "Tôi mới nghe đến soundbox - không rõ nó là cái gì, dùng cho trường hợp nào."
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Hiểu product fit trước khi consider mua |
-| Emotional | Không muốn mua thứ "không cần thiết"; cần thấy use case cụ thể giống mình |
-| Social | Thấy hàng xóm hay người bán cùng chợ dùng - muốn hiểu xem mình có cần không trước khi hỏi họ |
-| Trigger | Thấy quảng cáo hoặc nghe người khác nhắc đến |
-| Search → App | "soundbox là gì", "loa thông báo chuyển khoản là gì", "cách dùng loa báo tiền" → Educational blog/FAQ → CTA xem sản phẩm → momo.vn LP → ipos.vn đặt hàng |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiểu product fit trước khi consider mua</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không muốn mua thứ "không cần thiết"; cần thấy use case cụ thể giống mình</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thấy hàng xóm hay người bán cùng chợ dùng - muốn hiểu xem mình có cần không trước khi hỏi họ</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thấy quảng cáo hoặc nghe người khác nhắc đến</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"soundbox là gì", "loa thông báo chuyển khoản là gì", "cách dùng loa báo tiền" → Educational blog/FAQ → CTA xem sản phẩm → momo.vn LP → ipos.vn đặt hàng</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** Educational blog + FAQ section trên LP + video/visual minh họa use case thực tế.
 
@@ -198,7 +416,7 @@ Web closes the D2C loop: từ search intent đến confirmed purchase mà không
 momo.vn/loa-thong-bao-chuyen-khoan  [SEO & Traffic Hub]
 ├── Main Landing Page (revamp - optimize conversion)
 ├── Nút "Mua Ngay" (CTA)
-└── Redirect -> Trang nhập thông tin mua hàng trên loathongbao.ipos.vn
+└── Redirect ➔ Trang nhập thông tin mua hàng trên loathongbao.ipos.vn
 
 loathongbao.ipos.vn                  [D2C Checkout Pilot]
 ├── Form nhập thông tin mua hàng (Cell Team build)
@@ -209,22 +427,82 @@ loathongbao.ipos.vn                  [D2C Checkout Pilot]
 
 ### 5.2 Workstreams
 
-| WST | Hạng mục | Mô tả |
-|---|---|---|
-| WST1 | MiniWeb MoMo - Tối ưu & Khôi phục | Revamp LP hiện tại; bổ sung long content; optimize onpage; cải thiện CR từ organic traffic |
-| WST2 | IPOS Web - D2C Channel cho Non-MoMo | Build/optimize web bán hàng trên domain có phép TMĐT, tích hợp checkout đầy đủ |
-| WST3 | Tracking Integration | Khép kín tracking toàn bộ phễu: Click → LP → Checkout → Purchase. Phục vụ SEO analytics và Ads optimization |
-| WST4 | SEO/Content Scale | Phục hồi ranking + mở rộng content cluster (blog, comparison, how-to) để capture mid-funnel và top-funnel |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">WST</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hạng mục</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">WST1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MiniWeb MoMo - Tối ưu & Khôi phục</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Revamp LP hiện tại; bổ sung long content; optimize onpage; cải thiện CR từ organic traffic</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">WST2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">IPOS Web - D2C Channel cho Non-MoMo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Build/optimize web bán hàng trên domain có phép TMĐT, tích hợp checkout đầy đủ</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">WST3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tracking Integration</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khép kín tracking toàn bộ phễu: Click → LP → Checkout → Purchase. Phục vụ SEO analytics và Ads optimization</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">WST4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO/Content Scale</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phục hồi ranking + mở rộng content cluster (blog, comparison, how-to) để capture mid-funnel và top-funnel</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 5.3 Content Structure
 
-| Content Type | Intent | Volume | Channel |
-|---|---|---|---|
-| Main LP Revamp | Transaction | ~8.000/tháng | momo.vn |
-| Comparison Pages (8 URLs) | Comparison/Buy | ~15.000/tháng aggregate | momo.vn |
-| How-to / Setup Guides (5 URLs) | Do/Technical | ~2.500/tháng | momo.vn/blog |
-| Pricing & FAQ | Know/Buy | ~2.000/tháng | momo.vn + ipos |
-| Educational Blog | Know | ~1.500/tháng | momo.vn/blog |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Content Type</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Intent</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Volume</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Channel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Main LP Revamp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transaction</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~8.000/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">momo.vn</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Comparison Pages (8 URLs)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Comparison/Buy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~15.000/tháng aggregate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">momo.vn</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">How-to / Setup Guides (5 URLs)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Do/Technical</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~2.500/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">momo.vn/blog</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Pricing & FAQ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Know/Buy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~2.000/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">momo.vn + ipos</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Educational Blog</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Know</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~1.500/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">momo.vn/blog</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -241,27 +519,100 @@ Search → momo.vn LP → CTA click → ipos.vn checkout → Purchase confirmed
 
 ### 6.2 KPI Framework
 
-| Metric | Baseline | Target (EOY 2026) | Source |
-|---|---|---|---|
-| Monthly organic sessions | ~2.500/tháng (T06/2025) | 40.000/tháng | GSC + GA4 |
-| Market share (traffic/total volume) | Dưới 10% ước tính | 20% market share | GSC vs Keyword tool |
-| CR (sessions → đặt hàng thành công) | 0% (chưa có D2C checkout) | 3% | GA4 + IPOS analytics |
-| Số đơn hàng/tháng qua web | 0 | ~1.200 đơn/tháng | IPOS order system |
-| Keywords ranking Top 5 (volume 500+/tháng) | Đang đo baseline | 10 keywords | GSC + SEO tool |
-| Keywords ranking Top 10 (volume 200+/tháng) | Đang đo baseline | 25 keywords | GSC + SEO tool |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Baseline</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target (EOY 2026)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Monthly organic sessions</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~2.500/tháng (T06/2025)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">40.000/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC + GA4</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Market share (traffic/total volume)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dưới 10% ước tính</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">20% market share</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC vs Keyword tool</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CR (sessions → đặt hàng thành công)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0% (chưa có D2C checkout)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GA4 + IPOS analytics</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số đơn hàng/tháng qua web</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~1.200 đơn/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">IPOS order system</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Keywords ranking Top 5 (volume 500+/tháng)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang đo baseline</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">10 keywords</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC + SEO tool</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Keywords ranking Top 10 (volume 200+/tháng)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang đo baseline</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">25 keywords</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC + SEO tool</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ## 7. Dependencies & Constraints
 
-| Dependency | Mô tả | Blocker? |
-|---|---|---|
-| Quyết định Build E-commerce | Mặc dù momo.vn đã có License TMĐT, việc build Native E-commerce cần nhiều thời gian. Solution: Dùng loathongbao.ipos.vn làm trang test luồng (MVP) | Workaround |
-| Cell Team (IPOS) | Vận hành và tối ưu form nhập thông tin mua hàng trên loathongbao.ipos.vn để hứng traffic từ momo.vn | Có |
-| URL Canonicalization sau sự kiện 11/5/2025 | Cần confirm 301 redirect từ URL cũ về URL mới đã được setup đúng chưa. Nếu sai → link equity bị mất | Hard |
-| Onelink / Appsflyer tracking setup | Setup tracking parameter đầy đủ cho toàn bộ phễu từ web → app (MoMo users) và web → checkout (Non-MoMo users) | Hard |
-| BU Soundbox - Content Brief | Cần BU cung cấp: danh sách tính năng sản phẩm, lỗi thường gặp + cách xử lý, pricing chính thức, điều kiện đặt hàng | Có |
-| Legal review comparison pages | 8 comparison pages mention competitor brands cần Legal approve trước khi publish | Có |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dependency</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Blocker?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quyết định Build E-commerce</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mặc dù momo.vn đã có License TMĐT, việc build Native E-commerce cần nhiều thời gian. Solution: Dùng loathongbao.ipos.vn làm trang test luồng (MVP)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Workaround</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cell Team (IPOS)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vận hành và tối ưu form nhập thông tin mua hàng trên loathongbao.ipos.vn để hứng traffic từ momo.vn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL Canonicalization sau sự kiện 11/5/2025</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần confirm 301 redirect từ URL cũ về URL mới đã được setup đúng chưa. Nếu sai → link equity bị mất</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hard</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Onelink / Appsflyer tracking setup</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Setup tracking parameter đầy đủ cho toàn bộ phễu từ web → app (MoMo users) và web → checkout (Non-MoMo users)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hard</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BU Soundbox - Content Brief</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần BU cung cấp: danh sách tính năng sản phẩm, lỗi thường gặp + cách xử lý, pricing chính thức, điều kiện đặt hàng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Legal review comparison pages</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">8 comparison pages mention competitor brands cần Legal approve trước khi publish</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+  </tbody>
+</table>
 
 **Constraints:**
 - Checkout tạm thời đi qua `loathongbao.ipos.vn` để test tỷ lệ chuyển đổi, trước khi đưa ra quyết định đầu tư nguồn lực build luồng E-commerce Native trên momo.vn.

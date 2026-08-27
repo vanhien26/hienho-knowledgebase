@@ -13,7 +13,7 @@ Hệ thống Quản trị Tri thức Tập trung & Truy xuất Cơ sở Dữ li�
 ## 1. Executive Summary
 
 ### 1.1. Tầm nhìn & Mục tiêu (Vision & Objectives)
-Để các bài viết và trang nội dung do GenAI hoặc biên tập viên tạo ra trên MoSpark luôn đạt độ chính xác tối đa, không bị ảo giác thông tin (Hallucination), và đồng nhất với các chính sách của MoMo, hệ thống cần một **Cơ sở Tri thức Tập trung (RAG Knowledge Base)**. 
+Để các bài viết và trang nội dung do GenAI hoặc biên tập viên tạo ra trên MoSpark luôn đạt độ chính xác tối đa, không bị ảo giác thông tin (Hallucination), và đồng nhất với các chính sách của MoMo, hệ thống cần một **Cơ sở Tri thức Tập trung (RAG Knowledge Base)**.
 
 Thay vì quản lý ngữ cảnh phân mảnh ở từng dự án, RAG Knowledge Base hoạt động như một lớp hạ tầng độc lập. Nó lưu trữ toàn bộ dữ liệu sản phẩm, dịch vụ của MoMo, các quy chuẩn thương hiệu, và cả những nội dung lịch sử do GenAI tạo ra. Khi cần thiết, hệ thống sẽ sử dụng cơ chế **Truy xuất Thông tin tăng cường (Retrieval-Augmented Generation)** để cung cấp ngữ cảnh chuẩn xác nhất cho các tác vụ sinh nội dung hoặc giải đáp người dùng.
 
@@ -31,25 +31,73 @@ Hệ thống RAG được thiết kế để bao phủ toàn bộ tài sản d�
 
 ```
 +-------------------------------------------------------------------------+
-|                        RAG KNOWLEDGE SOURCES                            |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">RAG KNOWLEDGE SOURCES</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
 +-------------------------------------------------------------------------+
-|                                                                         |
-| 1. Quy chuẩn toàn cục (Global Standards):                                |
-|    - Brand Guideline (Tone of Voice, Xưng hô)                           |
-|    - Design System (MoBase UI/UX Rules, Headings)                       |
-|    - SEO & Content Principles (E-E-A-T, YMYL)                           |
-|                                                                         |
-| 2. Dữ liệu sản phẩm & dịch vụ (MoMo Product Catalogue):                 |
-|    - Tài chính (Vay Nhanh, Ví Trả Sau, CIC, Tiết Kiệm)                  |
-|    - Tiện ích (Thanh toán hóa đơn, Vé xem phim, Mua sắm)                |
-|    - API Docs & Vận hành từ các Cell Teams                              |
-|                                                                         |
-| 3. Dữ liệu đối tác (Merchant Project):                                  |
-|    - Địa chỉ, Giờ mở cửa, Tiện ích, Quy định thanh toán                 |
-|                                                                         |
-| 4. Dữ liệu sinh ra bởi GenAI (Historical Outputs):                      |
-|    - Bài viết Blog, Landing Pages, FAQs đã được xuất bản                |
-|                                                                         |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1. Quy chuẩn toàn cục (Global Standards):</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Brand Guideline (Tone of Voice, Xưng hô)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Design System (MoBase UI/UX Rules, Headings)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- SEO & Content Principles (E-E-A-T, YMYL)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2. Dữ liệu sản phẩm & dịch vụ (MoMo Product Catalogue):</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Tài chính (Vay Nhanh, Ví Trả Sau, CIC, Tiết Kiệm)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Tiện ích (Thanh toán hóa đơn, Vé xem phim, Mua sắm)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- API Docs & Vận hành từ các Cell Teams</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3. Dữ liệu đối tác (Merchant Project):</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Địa chỉ, Giờ mở cửa, Tiện ích, Quy định thanh toán</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4. Dữ liệu sinh ra bởi GenAI (Historical Outputs):</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Bài viết Blog, Landing Pages, FAQs đã được xuất bản</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+  </tbody>
+</table>
 +-------------------------------------------------------------------------+
 ```
 
@@ -60,14 +108,38 @@ Hệ thống RAG được thiết kế để bao phủ toàn bộ tài sản d�
 Hệ thống RAG được triển khai dưới sự phụ trách của **Duy (Senior BE Developer)** với kiến trúc 4 bước tiêu chuẩn:
 
 ```
-[Ingestion] (Markdown/PDF/APIs) 
-     |
+[Ingestion] (Markdown/PDF/APIs)
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
      v
 [Chunking] (Semantic/Recursive, size: 512 tokens)
-     |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
      v
 [Embedding] (text-embedding-3-small)
-     |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
      v
 [Vector Database] (Supabase pgvector)
 ```
@@ -89,39 +161,95 @@ Khi một tác vụ sinh nội dung (Outline/Detail Generator) hoặc một câu
 
 ```
                   +-----------------------------------------+
-                  |  Tác vụ sinh bài viết / Câu hỏi User    |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tác vụ sinh bài viết / Câu hỏi User</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
                   +-----------------------------------------+
                                        | (Trích xuất Keyword & Embedding)
                                        v
                   +-----------------------------------------+
-                  |       Tìm kiếm độ tương đồng (RAG)      |
-                  |          (Supabase pgvector)            |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tìm kiếm độ tương đồng (RAG)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">(Supabase pgvector)</td>
+    </tr>
+  </tbody>
+</table>
                   +-----------------------------------------+
-                                       |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
                    +-------------------+-------------------+
                    | (Độ khớp > 0.75)                      | (Độ khớp < 0.75)
                    v                                       v
 +-------------------------------------+  +-------------------------------------+
-|    Lọc theo Metadata của Project    |  |       Fallback về Google Search     |
-|   (Lấy Brand + Product Chunks)      |  |          (Grounding Search)         |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Lọc theo Metadata của Project</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Fallback về Google Search</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">(Lấy Brand + Product Chunks)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">(Grounding Search)</td>
+    </tr>
+  </tbody>
+</table>
 +-------------------------------------+  +-------------------------------------+
-                   |                                       |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
                    +-------------------+-------------------+
                                        v
                   +-----------------------------------------+
-                  |   Bơm vào Context Layer gửi đến LLM    |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Bơm vào Context Layer gửi đến LLM</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
                   +-----------------------------------------+
 ```
 
 ### 4.1. Thuật toán tìm kiếm tương đồng (Similarity Search)
 Hệ thống tính toán khoảng cách Cosine Similarity giữa Vector câu truy vấn và cơ sở dữ liệu Vector DB.
-*   **Ngưỡng lọc (Threshold):** Đặt ở mức $0.75$. Các đoạn có điểm tương đồng dưới $0.75$ sẽ bị loại bỏ để tránh nạp dữ liệu rác.
-*   **Giới hạn truy xuất (Top-K):** Lấy tối đa $Top-5$ chunks liên quan nhất cho mỗi lượt sinh nội dung.
+*   **Ngưỡng lọc (Threshold):** Đặt ở mức $0.75$. Các đoạn có điểm tương đồng dưới $0.75 sẽ bị loại bỏ để tránh nạp dữ liệu rác.
+*   **Giới hạn truy xuất (Top-K):** Lấy tối đa $Top-5 chunks liên quan nhất cho mỗi lượt sinh nội dung.
 
 ### 4.2. Bơm Ngữ Cảnh Tự Động (Inference Context Injection)
 Hệ thống biên dịch prompt động bằng cách gộp các chunks tìm được vào Prompt gửi sang LLM:
-$$\text{Final System Prompt} = \text{Project-Specific System Prompt} + \text{RAG Brand Guideline Chunks}$$
-$$\text{Final User Prompt} = \text{Business Context} + \text{RAG Product Specs Chunks} + \text{Primary Keyword}$$
+$$Final System Prompt= Project-Specific System Prompt+ RAG Brand Guideline Chunks$
+$$Final User Prompt= Business Context+ RAG Product Specs Chunks+ Primary Keyword$
 
 ### 4.3. Gợi ý Chèn Liên Kết Chéo (RAG Cross-linking Recommendation)
 Khi viết một bài mới (ví dụ: *Cách đăng ký phạt nguội qua momo*), RAG Engine sẽ quét cơ sở dữ liệu các bài viết hiện hữu:
@@ -135,7 +263,7 @@ Khi viết một bài mới (ví dụ: *Cách đăng ký phạt nguội qua momo
 Nằm trong phân hệ cấu hình nâng cao của Admin Panel MoSpark:
 
 ### 5.1. Màn hình Quản lý Nguồn Tri thức (Knowledge Center Dashboard)
-*   **Trình tải lên tài liệu (Ingestion Panel):** 
+*   **Trình tải lên tài liệu (Ingestion Panel):**
     *   Hỗ trợ kéo thả các file định dạng `.md`, `.pdf`, `.docx`.
     *   Ô nhập URL để crawl dữ liệu tự động từ các trang hướng dẫn của MoMo (ví dụ: `momo.vn/huong-dan-thanh-toan`).
 *   **Trình kết nối API (API Connectors):** Nơi cấu hình để đồng bộ dữ liệu thời gian thực từ các Cell Teams.

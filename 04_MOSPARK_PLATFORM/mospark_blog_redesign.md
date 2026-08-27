@@ -54,7 +54,7 @@ Cải tổ toàn diện giao diện hiển thị của MoSpark Blog (Home & Deta
 ### 2.4. Hiển thị Hình ảnh (Hero Image & In-post)
 - **Mục tiêu:** Nâng cấp cảm quan (Look & Feel) theo chuẩn báo chí/tạp chí tài chính cao cấp và bảo vệ điểm hiệu năng (LCP).
 - **Chi tiết UI/UX:**
-  - **Hero Image (Ảnh bìa):** 
+  - **Hero Image (Ảnh bìa):**
     - Hiển thị tràn viền (Edge-to-edge) trên Mobile.
     - Cố định tỷ lệ khung hình (Aspect Ratio), ví dụ 16:9 hoặc 2:1, để tránh việc ảnh bị cắt lệch trọng tâm khi Editor upload kích thước tùy ý.
   - **In-post Image (Ảnh trong bài):**
@@ -64,16 +64,61 @@ Cải tổ toàn diện giao diện hiển thị của MoSpark Blog (Home & Deta
 
 ## 2.5. Quy Chuẩn Quản Trị Trạng Thái & CRUD Bài Viết (SEO & Content)
 
-Để tối ưu hóa trải nghiệm quản trị (CMS UI) và phân quyền triển khai, vòng đời trạng thái của bài viết Blog (Blog Article Page) được rút gọn về **đúng 4 trạng thái chính**: **Draft** -> **Review** -> **Live** -> **Deleted**.
+Để tối ưu hóa trải nghiệm quản trị (CMS UI) và phân quyền triển khai, vòng đời trạng thái của bài viết Blog (Blog Article Page) được rút gọn về **đúng 4 trạng thái chính**: **Draft** ➔ **Review** ➔ **Live** ➔ **Deleted**.
 
 #### A. Ma Trận Cấu Hình SEO & Server Response
 
-| Trạng thái (CMS Status) | HTTP Code | Robots Meta Directive | Sitemap XML | Canonical URL | Indexing API Ping | Mô tả trải nghiệm người dùng & SEO |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **1. Draft** (Bản nháp) | `404 Not Found` hoặc `403 Forbidden` | `noindex, nofollow` | Loại bỏ (Exclude) | Không có | Không gửi | **Creator:** Viết nội dung thô (GenAI Outline/Detail).<br>**Public user:** Lỗi 404. |
-| **2. Review** (UAT / Demo) | `404 Not Found` hoặc `403 Forbidden` | `noindex, nofollow` | Loại bỏ (Exclude) | Không có | Không gửi | **Creator/QC:** Xem trước giao diện bài viết, duyệt E-E-A-T.<br>**Public user:** Lỗi 404. |
-| **3. Live** (Hoạt động) | `200 OK` | `index, follow` | Khai báo (Include) | Self-referencing (Trỏ về chính nó) | Gửi Indexing API (Google & IndexNow) | **Public user:** Xem và đọc bài viết đầy đủ. |
-| **4. Deleted** (Xóa/Gỡ bỏ) | `404 Not Found` hoặc `410 Gone` | `noindex, nofollow` | Loại bỏ (Exclude) | Không có | Gửi API yêu cầu xóa index (Remove URL) | **Public user:** Lỗi 404/410.<br>*Hỗ trợ cấu hình Redirect 301/308 (gộp) hoặc 302/307 (tạm ẩn).* |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trạng thái (CMS Status)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">HTTP Code</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Robots Meta Directive</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Sitemap XML</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Canonical URL</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Indexing API Ping</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả trải nghiệm người dùng & SEO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1. Draft</strong> (Bản nháp)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">404 Not Found</code> hoặc <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">403 Forbidden</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">noindex, nofollow</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loại bỏ (Exclude)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không gửi</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Creator:</strong> Viết nội dung thô (GenAI Outline/Detail).<br><strong>Public user:</strong> Lỗi 404.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>2. Review</strong> (UAT / Demo)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">404 Not Found</code> hoặc <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">403 Forbidden</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">noindex, nofollow</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loại bỏ (Exclude)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không gửi</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Creator/QC:</strong> Xem trước giao diện bài viết, duyệt E-E-A-T.<br><strong>Public user:</strong> Lỗi 404.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>3. Live</strong> (Hoạt động)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">200 OK</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">index, follow</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khai báo (Include)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Self-referencing (Trỏ về chính nó)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gửi Indexing API (Google & IndexNow)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Public user:</strong> Xem và đọc bài viết đầy đủ.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>4. Deleted</strong> (Xóa/Gỡ bỏ)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">404 Not Found</code> hoặc <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">410 Gone</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">noindex, nofollow</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loại bỏ (Exclude)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gửi API yêu cầu xóa index (Remove URL)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Public user:</strong> Lỗi 404/410.<br><em>Hỗ trợ cấu hình Redirect 301/308 (gộp) hoặc 302/307 (tạm ẩn).</em></td>
+    </tr>
+  </tbody>
+</table>
 
 #### B. Cơ Chế Xử Lý SEO & Nghiệp Vụ Tối Giản
 
@@ -87,13 +132,54 @@ Cải tổ toàn diện giao diện hiển thị của MoSpark Blog (Home & Deta
 
 #### C. Phân Quyền Vai Trò Chuyển Đổi Trạng Thái (Transition RBAC Gates)
 
-| Từ Trạng thái | Sang Trạng thái | Editor (Creator) | QC Lead / Admin | Tech Lead |
-| :--- | :--- | :---: | :---: | :---: |
-| **Draft** | **Review** | ✔ (Cho phép) | ✔ (Cho phép) | ✔ (Cho phép) |
-| **Review** | **Live** | ❌ (Bị khóa) | ✔ (Cho phép) | ✔ (Cho phép) |
-| **Review** | **Draft** (Reject) | ✔ (Cho phép) | ✔ (Cho phép) | ✔ (Cho phép) |
-| **Live** | **Deleted** | ❌ (Bị khóa) | ✔ (Cho phép) | ✔ (Cho phép) |
-| **Live** | **Review** (Sửa lớn) | ✔ (Cho phép) | ✔ (Cho phép) | ✔ (Cho phép) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Từ Trạng thái</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Sang Trạng thái</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Editor (Creator)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">QC Lead / Admin</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Tech Lead</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Draft</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Review</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">✔ (Cho phép)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">✔ (Cho phép)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">✔ (Cho phép)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Review</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Live</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">❌ (Bị khóa)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">✔ (Cho phép)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">✔ (Cho phép)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Review</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Draft</strong> (Reject)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">✔ (Cho phép)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">✔ (Cho phép)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">✔ (Cho phép)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Live</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Deleted</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">❌ (Bị khóa)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">✔ (Cho phép)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">✔ (Cho phép)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Live</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Review</strong> (Sửa lớn)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">✔ (Cho phép)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">✔ (Cho phép)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">✔ (Cho phép)</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -101,7 +187,7 @@ Cải tổ toàn diện giao diện hiển thị của MoSpark Blog (Home & Deta
 
 1. **Product Design (Hùng):** Chịu trách nhiệm thiết kế layout, UI components, responsive behavior (Desktop/Mobile) dựa trên brief này (Tiếp nhận và phụ trách sau khi Tuấn nghỉ).
 2. **Web Product Lead (Văn Hiến):** Rà soát bản thiết kế để đảm bảo không vi phạm các rào cản về SEO (CWV, E-E-A-T) trước khi đưa sang đội Engineering.
-3. **Engineering Team:** Dựng component và cấu hình liên kết (Schema mapping, Ads logic) trong MoSpark Editor. Tích hợp quản trị vòng đời trạng thái của bài viết (Draft -> Review -> Live -> Deleted) bám sát các tiêu chuẩn kỹ thuật (HTTP codes, Sitemap, Robots, Canonical) được định nghĩa tại [Mục 2.5 Quy Chuẩn Quản Trị Trạng Thái & CRUD Bài Viết](#2.5.-quy-chuẩn-quản-trị-trạng-thái--crud-bài-viết-seo--content).
+3. **Engineering Team:** Dựng component và cấu hình liên kết (Schema mapping, Ads logic) trong MoSpark Editor. Tích hợp quản trị vòng đời trạng thái của bài viết (Draft ➔ Review ➔ Live ➔ Deleted) bám sát các tiêu chuẩn kỹ thuật (HTTP codes, Sitemap, Robots, Canonical) được định nghĩa tại [Mục 2.5 Quy Chuẩn Quản Trị Trạng Thái & CRUD Bài Viết](#2.5.-quy-chuẩn-quản-trị-trạng-thái--crud-bài-viết-seo--content).
 
 ---
 
@@ -111,26 +197,100 @@ Cải tổ toàn diện giao diện hiển thị của MoSpark Blog (Home & Deta
 
 ### 4.1. User Jobs & Features Mapping
 
-| # | User Job (JTBD) | Nhu cầu người dùng | UI/Feature giải quyết | Vị trí trên trang |
-|---|---|---|---|---|
-| **J1** | **Chia sẻ bài viết** | Lan truyền nội dung hữu ích đến mạng lưới cá nhân nhanh chóng. | **Share Bar** | Sticky hoặc cạnh tiêu đề |
-| **J2** | **Xác minh độ tin cậy** | Xác thực chuyên môn và danh tính tác giả đối với các nội dung YMYL. | **Author Box** | Đầu bài (mini) + Cuối bài (full) |
-| **J3** | **Đọc nhanh trước khi đọc sâu** | Nắm bắt nhanh các ý chính của bài viết dài trong thời gian ngắn (Skimming). | **AI Summarize** | Ngay dưới H1 + Author mini |
-| **J4** | **Điều hướng nội dung dài** | Định vị nhanh và chuyển hướng ngay đến các tiểu mục chứa thông tin quan tâm. | **TOC (Mục lục)** | Dưới AI Summary, sticky sidebar (desktop) |
-| **J5** | **Khám phá sản phẩm MoMo** | Tiếp cận các sản phẩm, dịch vụ phù hợp được hệ thống gợi ý theo ngữ cảnh. | **Ads Placements** | In-feed, In-content, Sticky bottom, Floating sidebar |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">User Job (JTBD)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhu cầu người dùng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">UI/Feature giải quyết</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vị trí trên trang</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>J1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Chia sẻ bài viết</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lan truyền nội dung hữu ích đến mạng lưới cá nhân nhanh chóng.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Share Bar</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sticky hoặc cạnh tiêu đề</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>J2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Xác minh độ tin cậy</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xác thực chuyên môn và danh tính tác giả đối với các nội dung YMYL.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Author Box</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đầu bài (mini) + Cuối bài (full)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>J3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Đọc nhanh trước khi đọc sâu</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nắm bắt nhanh các ý chính của bài viết dài trong thời gian ngắn (Skimming).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>AI Summarize</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ngay dưới H1 + Author mini</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>J4</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Điều hướng nội dung dài</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Định vị nhanh và chuyển hướng ngay đến các tiểu mục chứa thông tin quan tâm.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>TOC (Mục lục)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dưới AI Summary, sticky sidebar (desktop)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>J5</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Khám phá sản phẩm MoMo</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tiếp cận các sản phẩm, dịch vụ phù hợp được hệ thống gợi ý theo ngữ cảnh.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Ads Placements</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">In-feed, In-content, Sticky bottom, Floating sidebar</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 4.2. Acceptance Criteria (Must-have) & Scorecard
 
 **Mục tiêu bàn giao:** Prototype phải đạt tối thiểu 24/27 tiêu chí (≥ 89%) trước khi chuyển cho team Engineering.
 
-| Job | Tiêu chí (Acceptance Criteria) | Trạng thái Prototype |
-|---|---|---|
-| **J1 - Share Bar** | 1. Có bộ nút Share (Copy Link, Facebook, Zalo, X)<br>2. Mobile: Icon share trên Header bar<br>3. Desktop: Icon share cạnh tiêu đề<br>4. Click Copy Link → hiện toast "Đã sao chép" | ✅ Đạt (4/4) |
-| **J2 - Author Box** | 1. Mini (Đầu bài): Avatar 32px + Tên + Chức danh<br>2. Full (Cuối bài): Avatar 64px + Tên + Chức danh + Bio + Social icons<br>3. Tên tác giả có thể click (link/anchor)<br>4. Responsive: Không bị vỡ trên mobile 320px | ✅ Đạt (4/4) |
-| **J3 - AI Summarize**| 1. Vị trí: Dưới Author Mini, trước TOC<br>2. Icon ✦ (Sparkles) + badge "AI Tóm tắt"<br>3. Background gradient nhạt hoặc nổi bật<br>4. Nội dung: 3-4 bullet points<br>5. Mobile: Có thể collapsible | ✅ Đạt (5/5) |
-| **J4 - TOC** | 1. Tự động render từ các thẻ H2<br>2. Mobile: Collapsible box (mặc định đóng)<br>3. Desktop: Sticky sidebar, highlight mục đang đọc<br>4. Click → smooth scroll đến heading | ✅ Đạt (4/4) |
-| **J5 - Ads Placements** | 1. In-content: 1 slot sau H2 đầu tiên (có skeleton)<br>2. Sticky Bottom (Mobile): Banner 60px có nút X đóng<br>3. Floating Sidebar (Desktop): Cột phải, cuộn theo nội dung<br>4. Tất cả ads slot phải có skeleton loading (tránh CLS)<br>5. Ads slot phải có kích thước cố định | ✅ Đạt (5/5) |
-| **General** | 1. Hero Image: Edge-to-edge mobile, 16:9 ratio<br>2. In-post Image: Caption + Nguồn + Bo góc 8px<br>3. Font: Inter hoặc Roboto<br>4. Brand color: #A5006D (Primary)<br>5. Hiệu năng: Hero image tĩnh, không animation nặng | ✅ Đạt (5/5) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Job</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tiêu chí (Acceptance Criteria)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trạng thái Prototype</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>J1 - Share Bar</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1. Có bộ nút Share (Copy Link, Facebook, Zalo, X)<br>2. Mobile: Icon share trên Header bar<br>3. Desktop: Icon share cạnh tiêu đề<br>4. Click Copy Link → hiện toast "Đã sao chép"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">✅ Đạt (4/4)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>J2 - Author Box</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1. Mini (Đầu bài): Avatar 32px + Tên + Chức danh<br>2. Full (Cuối bài): Avatar 64px + Tên + Chức danh + Bio + Social icons<br>3. Tên tác giả có thể click (link/anchor)<br>4. Responsive: Không bị vỡ trên mobile 320px</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">✅ Đạt (4/4)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>J3 - AI Summarize</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1. Vị trí: Dưới Author Mini, trước TOC<br>2. Icon ✦ (Sparkles) + badge "AI Tóm tắt"<br>3. Background gradient nhạt hoặc nổi bật<br>4. Nội dung: 3-4 bullet points<br>5. Mobile: Có thể collapsible</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">✅ Đạt (5/5)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>J4 - TOC</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1. Tự động render từ các thẻ H2<br>2. Mobile: Collapsible box (mặc định đóng)<br>3. Desktop: Sticky sidebar, highlight mục đang đọc<br>4. Click → smooth scroll đến heading</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">✅ Đạt (4/4)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>J5 - Ads Placements</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1. In-content: 1 slot sau H2 đầu tiên (có skeleton)<br>2. Sticky Bottom (Mobile): Banner 60px có nút X đóng<br>3. Floating Sidebar (Desktop): Cột phải, cuộn theo nội dung<br>4. Tất cả ads slot phải có skeleton loading (tránh CLS)<br>5. Ads slot phải có kích thước cố định</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">✅ Đạt (5/5)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>General</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1. Hero Image: Edge-to-edge mobile, 16:9 ratio<br>2. In-post Image: Caption + Nguồn + Bo góc 8px<br>3. Font: Inter hoặc Roboto<br>4. Brand color: #A5006D (Primary)<br>5. Hiệu năng: Hero image tĩnh, không animation nặng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">✅ Đạt (5/5)</td>
+    </tr>
+  </tbody>
+</table>
 
 **Kết quả đánh giá Prototype:** 27/27 (100%) - Đủ điều kiện bàn giao cho Dev.
 

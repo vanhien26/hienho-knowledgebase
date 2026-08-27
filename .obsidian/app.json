@@ -1,3 +1,6 @@
 {
-  "promptDelete": false
+  "promptDelete": false,
+  "defaultViewMode": "preview",
+  "strictLineBreaks": false,
+  "tabSize": 4
 }

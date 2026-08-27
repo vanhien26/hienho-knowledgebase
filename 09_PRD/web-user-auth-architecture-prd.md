@@ -15,7 +15,7 @@
 ## I. TÀI LIỆU LIÊN QUAN (References)
 *   **Đặc tả định danh Web-to-App:** [mospark_user_identity_tracking.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM/mospark_user_identity_tracking.md)
 *   **PRD Trang Đối Tác (SME detail page):** [doi-tac-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/doi-tac-prd.md)
-*   **BRD Merchant Page (MMP):** [doi-tac-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_USE_CASE_MOMO/doi-tac-brd.md)
+*   **BRD Merchant Page (MMP):** [doi-tac-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO/doi-tac-brd.md)
 *   **PRD Web Identity Mapping (Use Cases):** [web-identity-mapping-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_PRD/web-identity-mapping-prd.md)
 
 ---
@@ -24,7 +24,7 @@
 
 ### 1. Nguyên tắc cốt lõi (Core Principles)
 *   **Định danh thực thể vật lý thật:** Hệ thống hướng tới xác thực các thực thể vật lý có thật ngoài đời (người dùng thật, nhu cầu thật), tuyệt đối không chạy theo số lượng tài khoản ảo hoặc ảo hóa dữ liệu.
-*   **Kiểm soát rủi ro H2 2026 (H2 Risk Control):** 
+*   **Kiểm soát rủi ro H2 2026 (H2 Risk Control):**
     *   MoMo **chưa áp dụng các chương trình tặng thưởng/khuyến mại lớn** trên kênh Web nhằm triệt tiêu động cơ của các đối tượng gian lận (fraud/cheat) tấn công hệ thống.
     *   Phạm vi định danh trên Web trong giai đoạn H2 chỉ dừng lại ở mức độ: **Thu thập thông tin hành vi** và cho phép **tương tác đóng góp nội dung** (User Generated Content - UGC) của người dùng đã xác thực.
     *   Mọi hoạt động thanh toán (payment), đối soát tài chính hoặc áp dụng khuyến mãi nhạy cảm **bắt buộc phải thực hiện bên trong App MoMo** để đảm bảo an toàn tuyệt đối.
@@ -33,15 +33,39 @@
 
 ```
 +----------------------------------------------------------------------------+
-| Cấp độ 3: MoMo App Auth (Xác thực tài khoản MoMo in-app qua QR/OTP/wui)      |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cấp độ 3: MoMo App Auth (Xác thực tài khoản MoMo in-app qua QR/OTP/wui)</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
 +----------------------------------------------------------------------------+
                                       ▲
 +----------------------------------------------------------------------------+
-| Cấp độ 2: Online Verification (Xác thực Số điện thoại/Zalo hoặc Social)      |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cấp độ 2: Online Verification (Xác thực Số điện thoại/Zalo hoặc Social)</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
 +----------------------------------------------------------------------------+
                                       ▲
 +----------------------------------------------------------------------------+
-| Cấp độ 1: Basic Info (Thu thập Name, YOB, Address theo nhu cầu dự án)       |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cấp độ 1: Basic Info (Thu thập Name, YOB, Address theo nhu cầu dự án)</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
 +----------------------------------------------------------------------------+
 ```
 
@@ -79,7 +103,15 @@
 
 ```
                   +-------------------------------------------------+
-                  |                 [ INTERNET ]                    |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">[ INTERNET ]</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
                   +-------------------------------------------------+
                            │                               │
             (VPN & Smart Gate Auth)                 (Public Access)
@@ -187,7 +219,7 @@ CREATE POLICY staff_all_merchants ON merchants
 CREATE POLICY merchant_view_own ON merchants
     FOR SELECT
     TO merchant_user
-    USING (owner_phone = auth.jwt() ->> 'phone_number');
+    USING (owner_phone = auth.jwt()  ➔ > 'phone_number');
 
 -- CHÍNH SÁCH CHO BẢNG MERCHANT_PROPOSALS (LUỒNG ĐỀ XUẤT):
 -- 1. Staff có quyền xem và cập nhật trạng thái duyệt đề xuất
@@ -203,9 +235,9 @@ CREATE POLICY merchant_create_own_proposal ON merchant_proposals
     TO merchant_user
     WITH CHECK (
         EXISTS (
-            SELECT 1 FROM merchants 
-            WHERE merchants.id = merchant_id 
-            AND merchants.owner_phone = auth.jwt() ->> 'phone_number'
+            SELECT 1 FROM merchants
+            WHERE merchants.id = merchant_id
+            AND merchants.owner_phone = auth.jwt()  ➔ > 'phone_number'
         )
     );
 
@@ -214,9 +246,9 @@ CREATE POLICY merchant_view_own_proposal ON merchant_proposals
     TO merchant_user
     USING (
         EXISTS (
-            SELECT 1 FROM merchants 
-            WHERE merchants.id = merchant_id 
-            AND merchants.owner_phone = auth.jwt() ->> 'phone_number'
+            SELECT 1 FROM merchants
+            WHERE merchants.id = merchant_id
+            AND merchants.owner_phone = auth.jwt()  ➔ > 'phone_number'
         )
     );
 ```
@@ -226,7 +258,7 @@ CREATE POLICY merchant_view_own_proposal ON merchant_proposals
 ## VI. BẢO MẬT & VẬN HÀNH (Security & Operations)
 
 ### 1. Kiểm soát Truy cập VPN & Smart Gate
-*   **MAM (`m.momo.vn`):** DNS của tên miền `m.momo.vn` cấu hình riêng ở mức DNS nội bộ hoặc phân giải IP chỉ chấp nhận dải IP của VPN công ty. 
+*   **MAM (`m.momo.vn`):** DNS của tên miền `m.momo.vn` cấu hình riêng ở mức DNS nội bộ hoặc phân giải IP chỉ chấp nhận dải IP của VPN công ty.
 *   **Smart Gate Authentication:** Tầng API Gateway Netcore chặn toàn bộ request vào `m.momo.vn` nếu không có JWT Token hợp lệ sinh ra từ cổng Smart Gate xác thực email `@mservice.com.vn`.
 
 ### 2. Ngăn ngừa Lọt dữ liệu và Chống Spam
@@ -237,6 +269,21 @@ CREATE POLICY merchant_view_own_proposal ON merchant_proposals
 
 ## LỊCH SỬ THAY ĐỔI (Changelog)
 
-| Phiên bản | Ngày cập nhật | Người thực hiện | Nội dung thay đổi |
-| :--- | :--- | :--- | :--- |
-| 1.0 | 2026-07-20 | Web Product Agent | Khởi tạo tài liệu đặc tả chiến lược định danh và kiến trúc hệ thống quản trị cửa hàng (MAM vs MB). |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phiên bản</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ngày cập nhật</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Người thực hiện</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung thay đổi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-07-20</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Agent</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khởi tạo tài liệu đặc tả chiến lược định danh và kiến trúc hệ thống quản trị cửa hàng (MAM vs MB).</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,28 +1,49 @@
-# 🏛️ Decision Log - MoMo Web Growth
+# DECISION LOG - MOMO WEB GROWTH
 
-Tài liệu này ghi lại các quyết định chiến lược (Fork Points) quan trọng trong quá trình phát triển dự án. Giúp đội ngũ hiểu được bối cảnh (Context) và lý do (Rationale) đằng sau mỗi quyết định.
-
----
-
-## 📅 Log Quyết định
-
-| Ngày | Dự án | Quyết định | Lý do (Rationale) | Người quyết định |
-| 2026-07-28 | **Security / Admin** | Bắt buộc thuộc tính `sandbox` cho Iframe upload HTML tùy ý và lên kế hoạch cô lập Domain | Đã phát hiện rủi ro XSS & GTM đánh cắp Token/Local Storage từ mã script lạ chạy cùng domain Admin | Văn Hiến |
-| 2026-07-28 | **Chatbot Phạt Nguội** | Chuyển dịch sang Knowledge Space (Intent-Based & Topic Cluster) dựa trên dữ liệu keyword từ tool "Row" | Khắc phục hạn chế của phương pháp cũ "đi từ ngọn" (chỉ vector hóa raw content), tăng tính chính xác của câu trả lời | Văn Hiến + Duy + Hiến + Trọng |
-| 2026-07-28 | **Student Hub / Mapbox** | Áp dụng cơ chế Login-only access để hiển thị bản đồ Mapbox | Ngăn chặn truy cập ảo gây rủi ro leakage chi phí ngoài kiểm soát | Văn Hiến |
-| 2026-07-28 | **Merchant / AI Menu** | Chuyển model AI trích xuất dữ liệu menu sang Gemini Flash/Mini | Giảm 95% chi phí Token xử lý (từ 2.000 VNĐ down còn ~100 VNĐ/lượt), tối ưu quy mô chi phí | Văn Hiến |
-| 2026-06-26 | **Widget Store** | Phân tách quy trình phát triển Widget: Hiếu build Prototype nhanh (chưa cần chuẩn MoBase) để verify logic với BU; Thuận refactor chuẩn Design System (MoBase) và đóng gói | Tăng tốc độ xác thực logic tính toán và hiển thị với BU, đảm bảo chất lượng đóng gói và tính nhất quán với Design System khi release | Văn Hiến |
-| 2026-05-21 | **Phạt Nguội** | Bỏ Smart Banner/Popup; thay bằng **Inline Lookup Widget** nhúng trong nội dung bài blog | Không phù hợp với trải nghiệm đọc blog và ngữ cảnh người dùng | Văn Hiến |
-| 2026-05-19 | **Telecom** | Sử dụng **Intent-Based Audience Filtering** (Phân loại bằng Search Intent) | Bỏ qua giới hạn kỹ thuật không thể segment New/Current trên Web ẩn danh; gom nhóm keyword để gián tiếp xác định tệp khách hàng và phân phối trải nghiệm content/CTA tương thích. | Văn Hiến + Trang Phạm + Anh Bảo |
-| 2026-05-14 | **Auto Insurance** | Không dùng geo-based URL clusters | Tránh pha loãng Topical Authority; tập trung vào JTBD cross-reference hiệu quả hơn cho mảng Bảo hiểm. | Văn Hiến |
-| 2026-05-10 | **Technical SEO** | Sử dụng `Disallow: /*?` | Chặn crawl các URL tham số gây trùng lặp nội dung và lãng phí Crawl Budget. | Văn Hiến |
-| 2026-04-20 | **MoSpark Platform** | Chuyển sang Claude API cho GenAI | Khả năng viết tiếng Việt tự nhiên hơn và tuân thủ tốt hơn các prompt phức tạp về YMYL. | Văn Hiến + Anh Bảo |
-| 2026-04-15 | **Phạt Nguội** | Chọn mô hình Wise (pSEO) làm pilot | Phạt nguội có search volume cực lớn và tính chất dữ liệu phù hợp để tự động hóa hàng ngàn trang landing page. | Văn Hiến + Anh Công |
-| 2026-04-10 | **Org Structure** | Anh Bảo làm Project Lead Out-App | Tăng cường sự kết nối giữa định hướng SEO/GEO và khả năng thực thi kỹ thuật của Web Platform. | Anh Công |
+Tài liệu này ghi lại các quyết định chiến lược (Fork Points) và kiến trúc hệ thống quan trọng trong quá trình phát triển dự án. Giúp đội ngũ hiểu rõ bối cảnh (Context) và lý do (Rationale) đằng sau mỗi quyết định.
 
 ---
 
-## 💡 Hướng dẫn sử dụng
-1. Ghi lại mọi quyết định có ảnh hưởng đến cấu trúc hệ thống, ngân sách hoặc định hướng chiến lược.
-2. Format: [Ngày] | [Dự án] | [Quyết định] | [Lý do] | [Owner].
-3. Link đến các file BRD hoặc Meeting Log liên quan nếu cần.
+## BẢNG LOG QUYẾT ĐỊNH HỆ THỐNG & CHIẾN LƯỢC
+
+| Ngày | Dự án / Phân Hệ | Quyết định | Lý do (Rationale) | Người quyết định |
+|---|---|---|---|---|
+| **2026-08-20** | **Vehicle Hub / Scope** | Chốt danh mục 5 Subpages Go-live Tháng 8/2026 cho Vehicle Hub (`/tien-ich-giao-thong`): Giá xăng (`/gia-xang`), Cây xăng (`/cay-xang`), Trạm sạc EV (`/tram-sac`), Garage (`/tim-garage`), và ePass (`/epass`) | Hợp nhất các tiện ích giao thông thiết yếu thành bộ Spoke Hub hoàn chỉnh; bổ sung ePass mở rộng phễu chuyển đổi dịch vụ BOT. | Web Product Lead x Cell Teams |
+| **2026-08-20** | **Vehicle Hub / Data** | Đóng gói dữ liệu Garage, Cây xăng, Trạm sạc thành 3 Google Sheets dùng chung đồng bộ Web & App; tích hợp qua hạ tầng Algify | Chuẩn hóa cơ sở dữ liệu phương tiện dùng chung, loại bỏ phân mảnh dữ liệu giữa hai kênh Web và App. | Web Product Lead x Web Dev |
+| **2026-08-19** | **Phạt Nguội / UI-UX** | Tái cấu trúc giao diện tra cứu Phạt Nguội (`momo.vn/phat-nguoi`): bỏ popup, chuyển sang Single Page Inline Block; chia 2 luồng kết quả (Có vi phạm: Nộp phạt In-App + Content Block Cẩm nang; Không vi phạm: Cross-sell Bảo hiểm & Gói thông báo) | Tối ưu hiển thị Mobile Responsive, nâng cao tỷ lệ W2A Login CTR và tạo dòng doanh thu Subscription/Giao dịch trực tuyến trên App. | Web Product Lead x BU Phạt Nguội x Web Dev |
+| **2026-08-19** | **Phạt Nguội / Content** | Chuẩn hóa GenAI Content Pipeline cho Phạt nguội: Content Team sử dụng GenAI soạn thảo cẩm nang luật giao thông, QC 100% tính pháp lý, và áp bảng mã map lỗi vi phạm để nhúng tự động dưới kết quả tra cứu | Đảm bảo tính chính xác pháp lý của mức phạt theo các Nghị định, loại bỏ rủi ro truyền thông và tự động hóa cá nhân hóa bài viết theo kết quả tra cứu. | Web Product Lead x Content Team |
+| **2026-08-12** | **Strategy / Traffic** | Chuẩn hóa Khung 3 Kịch bản Traffic Target MUV (H2/2026): **Best Case (6M)**, **Base Case (5M)**, **Worst Case (4M)** | Thiết lập khung 3 kịch bản tăng trưởng linh hoạt phù hợp biến động AI Search và nguồn lực media/off-page từ các BUs. | VP (Anh Công) x Bảo x Văn Hiến |
+| **2026-08-09** | **Knowledge Layer** | Thiết lập Mô hình 5-Layer Knowledge Pipeline trong `KNOWLEDGE_ROUTING.md` | Tự động hóa định tuyến câu trả lời tối ưu từ dữ liệu SSOT, loại bỏ sự phụ thuộc vào việc phân loại câu hỏi bề nổi. | Văn Hiến |
+| **2026-08-08** | **Strategy / Traffic** | Điều chỉnh mục tiêu Traffic H2/2026 từ 6M xuống **4.0M - 4.5M MUV/tháng** | Tác động của công nghệ AI Search / AI Overview làm giảm CTR kết quả tìm kiếm tự nhiên; quy hoạch tập trung vào chất lượng phễu W2A. | VP (Anh Công) x Bảo x Văn Hiến |
+| **2026-08-08** | **Governance / Metrics** | Thống nhất bộ 2 nhóm chỉ số chuẩn hóa với BUs: **Web Metrics** (MPV, CTR) & **Business Metrics** (MEU, MAU, Trans, Revenue) | Chuẩn hóa ngôn ngữ đo lường chung giữa Web Platform và tất cả 20+ Cell Teams/BUs. | Executive Leadership x BUs |
+| **2026-08-08** | **Reporting Format** | Tái cấu trúc Slide báo cáo BGĐ: Biểu đồ 3 chỉ số cốt lõi bên trái; Tác động thực thi Performance & Productivity bên phải | Tránh việc slide cũ chứa quá nhiều số liệu chi tiết rời rạc gây tranh cãi khi giải trình với Ban Giám đốc. | Executive Leadership x Bảo x Văn Hiến |
+| **2026-08-08** | **Governance / Org** | Đồng bộ 100% vai trò chức danh thành **Web Product Lead** trên toàn bộ 67+ file tài liệu codebase | Chuẩn hóa vai trò quản trị sản phẩm Web Platform; SEO/GEO và URL Governance được xác định là tiêu chuẩn kỹ thuật (Quality Gates) do Web Product Lead giám sát. | Văn Hiến |
+| **2026-08-07** | **Hubs Portfolio** | **Chính thức loại bỏ SME Merchant Hub khỏi danh sách Strategic Web Hubs**, chỉ duy trì module Tooling trên MoSpark cho Salesman | Merchant Page bản chất là Sales Kit chào hàng loa Soundbox cho tiểu thương offline, không có target organic traffic out-app hay New User trực tiếp trên Web. | VP (Anh Công) x Bảo x Văn Hiến |
+| **2026-08-07** | **W2A Boundaries** | Web Platform **không nhận chỉ số New User (New to MoMo) hoàn toàn cho App**, tập trung 100% vào phễu chuyển đổi Web-to-App (W2A Login / Installs) | Ngân sách quà tặng/khuyến mãi (CC budget) thuộc đội ngũ khác; việc cố nhận New User gây dẫm chân công việc và tạo áp lực quá tải không phù hợp. | Senior Management x Văn Hiến |
+| **2026-08-07** | **User Identity** | Áp dụng luồng định danh người dùng 3 bước mềm dẻo: Soft Interaction (Trải nghiệm Utility) ➔ Contact Collection (Email Auth) ➔ App Authentication (Sync Agent ID) | Không tạo rào cản kỹ thuật/Phone fit quá cứng nhắc làm đứt gãy luồng truy cập out-app của người dùng. | Senior Management x Văn Hiến |
+| **2026-08-07** | **Skills & Frameworks** | Tái cấu trúc thư mục `03_SKILLS/` thành bộ 12 Master Skill Files Việt hóa (`product-frameworks-master`, `awesome-product-management`, `awesome-fintech`...) | Cung cấp tri thức chuẩn quốc tế (17.6k+ Stars GitHub) về tư duy sản phẩm, mô hình kinh doanh Fintech, 4 Zone Performance và các khung ưu tiên RICE/UIC. | Văn Hiến |
+| **2026-08-07** | **Documentation Standard** | Loại bỏ hoàn toàn các file Prompt thô, guideline HTML cũ; ép 100% chuẩn Markdown không Emoji, không tên cá nhân PIC | Đồng bộ định dạng tài liệu trong repo theo nguyên tắc Product Lead/Tech Lead cô đọng, thực tế và trực quan (Mermaid Flow + Roadmap Table). | Văn Hiến |
+| **2026-08-05** | **Cinema Hub** | Tích hợp luồng thanh toán Native Web QR Payment 1-on-1 và cấp Deep Link riêng cho từng suất chiếu (ví dụ: 14:00) | Loại bỏ đứt gãy do rào cản bắt buộc mở App để mua vé, cho phép Google Crawlers/AI Search hiển thị suất chiếu trực tiếp trên SERP. | Web Product Lead x Software Team |
+| **2026-08-05** | **Vehicle Hub** | Chuyển dịch Vehicle Hub từ dự án thử nghiệm thành Trụ cột tăng trưởng chiến lược số 1 out-app; đặt mục tiêu 260K Thẻ Xe Số (Vehicle Profile) | Tận dụng quy mô tìm kiếm giao thông khổng lồ (>16.2M searches/tháng) và thành công của Phạt nguội để mở rộng phễu bán chéo Bảo hiểm & ePass. | Executive Leadership x Văn Hiến |
+| **2026-08-04** | **Financial Hub** | Xây dựng Master Hub `/trung-tam-tai-chinh` và Chuyên trang CIC `/diem-tin-dung`; chuẩn bị chiến dịch bùng nổ đón mốc **8 triệu lượt check CIC toàn dân (01/01/2027)** | Tận dụng chính sách mở kiểm tra tín dụng miễn phí của NHNN, biến CIC thành đòn bẩy uy tín số 1 (Financial Authority) cho MoMo. | Sang (Head of Wealth) x Bảo x Văn Hiến |
+| **2026-08-03** | **Org / SEO Scope** | Chuyển giao phần việc vận hành SEO thuần túy (SEO operation) cho Media Team; Web Platform chỉ giữ vai trò tư vấn, xây dựng hạ tầng MoSpark và "Limited SEO" | Giải phóng băng thông cho Web Platform tập trung làm sản phẩm, công cụ và quy trình tự động hóa thay vì sa đà vào vận hành SEO bài viết thủ công. | VP (Anh Công) x Bảo x Văn Hiến |
+| **2026-07-28** | **Security / Admin** | Bắt buộc thuộc tính `sandbox` cho Iframe upload HTML tùy ý và lên kế hoạch cô lập Domain | Đã phát hiện rủi ro XSS & GTM đánh cắp Token/Local Storage từ mã script lạ chạy cùng domain Admin. | Văn Hiến |
+| **2026-07-28** | **Chatbot Phạt Nguội** | Chuyển dịch sang Knowledge Space (Intent-Based & Topic Cluster) dựa trên dữ liệu keyword từ tool "Row" | Khắc phục hạn chế của phương pháp cũ "đi từ ngọn" (chỉ vector hóa raw content), tăng tính chính xác của câu trả lời. | Văn Hiến + Duy + Hiến + Trọng |
+| **2026-07-28** | **Student Hub / Mapbox** | Áp dụng cơ chế Login-only access để hiển thị bản đồ Mapbox | Ngăn chặn truy cập ảo gây rủi ro lãng phí chi phí API ngoài kiểm soát. | Văn Hiến |
+| **2026-07-28** | **Merchant / AI Menu** | Chuyển model AI trích xuất dữ liệu menu sang Gemini Flash/Mini | Giảm 95% chi phí Token xử lý (từ 2.000 VNĐ down còn ~100 VNĐ/lượt), tối ưu quy mô chi phí. | Văn Hiến |
+| **2026-06-26** | **Widget Store** | Phân tách quy trình phát triển Widget: Build Prototype nhanh để verify logic với BU, sau đó refactor chuẩn Design System (MoBase) | Tăng tốc độ xác thực logic tính toán và hiển thị với BU, đảm bảo chất lượng đóng gói khi release. | Văn Hiến |
+| **2026-05-21** | **Phạt Nguội** | Bỏ Smart Banner/Popup; thay bằng **Inline Lookup Widget** nhúng trong nội dung bài blog | Không phù hợp với trải nghiệm đọc blog và ngữ cảnh người dùng. | Văn Hiến |
+| **2026-05-19** | **Telecom** | Sử dụng **Intent-Based Audience Filtering** (Phân loại bằng Search Intent) | Bỏ qua giới hạn kỹ thuật không thể segment New/Current trên Web ẩn danh; gom nhóm keyword để phân phối trải nghiệm CTA tương thích. | Văn Hiến + Trang Phạm + Anh Bảo |
+| **2026-05-14** | **Auto Insurance** | Không dùng geo-based URL clusters | Tránh pha loãng Topical Authority; tập trung vào JTBD cross-reference hiệu quả hơn cho mảng Bảo hiểm. | Văn Hiến |
+| **2026-05-10** | **Technical SEO** | Sử dụng `Disallow: /*?` | Chặn crawl các URL tham số gây trùng lặp nội dung và lãng phí Crawl Budget. | Văn Hiến |
+| **2026-04-20** | **MoSpark Platform** | Chuyển sang Claude API cho GenAI Content Pipeline | Khả năng viết tiếng Việt tự nhiên hơn và tuân thủ tốt hơn các prompt phức tạp về YMYL. | Văn Hiến + Anh Bảo |
+| **2026-04-15** | **Phạt Nguội** | Chọn mô hình Wise (pSEO) làm dự án pilot | Phạt nguội có search volume cực lớn và tính chất dữ liệu phù hợp để tự động hóa hàng ngàn trang landing page. | Văn Hiến + Anh Công |
+| **2026-04-10** | **Org Structure** | Anh Bảo làm Project Lead Out-App | Tăng cường sự kết nối giữa định hướng sản phẩm và khả năng thực thi kỹ thuật của Web Platform. | Anh Công |
+
+---
+
+## NGUYÊN TẮC QUẢN LÝ DECISION LOG
+
+1. Ghi lại mọi quyết định có ảnh hưởng đến kiến trúc hệ thống, phân bổ nguồn lực hoặc định hướng chiến lược.
+2. Cấu trúc mỗi log: `[Ngày] | [Dự án/Phân hệ] | [Quyết định] | [Lý do (Rationale)] | [Người quyết định]`.
+3. Định kỳ cập nhật log mỗi khi chốt một điểm rẽ nhánh (Fork Point) mới trong các cuộc họp chiến lược.

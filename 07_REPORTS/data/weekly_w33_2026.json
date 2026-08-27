@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "type": "weekly",
+    "title": "BÁO CÁO HÀNG TUẦN 5 WEB HUBS",
+    "period": "TUẦN 33/2026 (10-16/08)",
+    "subtitle": "Web Platform Team (GPD) · Weekly Performance & Next Actions",
+    "team": "Web Platform Team (GPD)",
+    "author": "Văn Hiến",
+    "date": "2026-08-17",
+    "unit": "Web Platform Team (GPD)"
+  },
+
+  "kpis": [
+    { "label": "Page Views", "value": "812.400", "delta": "+7,0%", "target": "6.000.000", "color": "magenta" },
+    { "label": "Sessions", "value": "684.520", "delta": "+5,2%", "target": "4.500.000", "color": "teal" },
+    { "label": "Click-to-App (CTA)", "value": "201.300", "delta": "+9,8%", "target": "1.200.000", "color": "blue" },
+    { "label": "Login App (Agent ID)", "value": "62.950", "delta": "+11,0%", "target": "400.000", "color": "green" }
+  ],
+
+  "highlights": [
+    {
+      "title": "Organic Search Hồi Phục",
+      "body": "Organic đạt 812.400 (+7,0% WoW), dẫn dắt bởi Phạt Nguội và cụm từ khóa Cinema cuối tuần."
+    },
+    {
+      "title": "GEO/AI Referrals Bứt Phá",
+      "body": "AI Referrals +41,2% WoW nhờ tối ưu llms.txt trên Phạt Nguội - tín hiệu citation tăng trên ChatGPT/Perplexity."
+    },
+    {
+      "title": "Install App Tăng Trưởng 3 Tuần Liên Tiếp",
+      "body": "New User Install +29,1% WoW đạt 2.150 lượt, mở rộng luồng mẹo chuyển đổi từ Welcomescreen."
+    }
+  ],
+
+  "weeklyProgress": {
+    "title": "Tiến Độ Công Việc Tuần",
+    "columns": [
+      { "key": "project", "label": "Dự Án" },
+      { "key": "status", "label": "Trạng Thái" },
+      { "key": "progress", "label": "Tiến Độ Tuần" },
+      { "key": "next", "label": "Hành Động Tuần Sau" }
+    ],
+    "rows": [
+      { "project": "Cinema Hub", "status": "On Track", "progress": "Auto-redirect URL phim hết suất hoàn tất 3/11 cụm rạp; kết nối TMDB API đang pilot", "next": "Hoàn tất auto-redirect toàn bộ cụm rạp; chốt spec QR Payment" },
+      { "project": "Vehicle Hub", "status": "On Track", "progress": "QC Gate GenAI đang dev; API phạt nguội ổn định 0-CAPTCHA", "next": "UAT QC Gate trên 10 bài test; hoàn thiện pre-fill Hồ sơ xe" },
+      { "project": "Financial Hub", "status": "At Risk", "progress": "Simulator chứng khoán wireframe xong, chờ dev cache realtime", "next": "Nhúng Widget BHXH & Lương hưu vào Master Hub" },
+      { "project": "SMEs Merchant", "status": "On Track", "progress": "50 merchant pages pilot go-live; CSV import + Tags hoạt động", "next": "Mở rộng 50 trang tiếp theo; chờ API M4B" },
+      { "project": "Student/New User", "status": "At Risk", "progress": "Personalization Page đang thiết kế; Welcome CVR chưa đạt target", "next": "Go-live Personalization cho segment Sinh viên" }
+    ]
+  },
+
+  "hubBlocks": [
+    {
+      "name": "Cinema Hub",
+      "zone": "Performance Zone",
+      "results": [
+        "Tuần đạt 1.95M PageViews, Booking Clicks 420K (CVR 4,6%).",
+        "3/11 cụm rạp hoàn tất auto-redirect vòng đời phim, giảm dead link."
+      ],
+      "actions": [
+        "Hoàn tất auto-redirect toàn bộ cụm rạp.",
+        "Chốt spec Native Web QR Payment."
+      ]
+    },
+    {
+      "name": "Vehicle Hub",
+      "zone": "Transformation Zone",
+      "results": [
+        "Phạt nguội 0-CAPTCHA đạt 121K traffic tuần, W2A CR 50%.",
+        "QC Gate GenAI hoàn tất 70% scope."
+      ],
+      "actions": [
+        "UAT QC Gate trên 10 bài test GenAI.",
+        "Hoàn thiện pre-fill Hồ sơ xe khi mua BH."
+      ]
+    }
+  ],
+
+  "next30days": [
+    "Go-live Master Pages /tien-ich-giao-thong, /trung-tam-tai-chinh.",
+    "Mở rộng 50-100 SME Merchant Pages.",
+    "Tối ưu luồng QR Payment Cinema & Phạt nguội.",
+    "Personalization Page segment Sinh viên."
+  ]
+}

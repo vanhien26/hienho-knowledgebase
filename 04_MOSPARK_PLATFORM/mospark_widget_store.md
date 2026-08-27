@@ -32,8 +32,8 @@ Dự án **Widget Store Platform** được phát triển theo định hướng 
 
 #### 🛠️ Việc cần làm / Các trụ cột thực thi của Platform (Key Platform Pillars - What to do)
 1.  **Utilities Ingestion & Refactoring Pipeline (Quy trình Tiếp nhận & Xây dựng):** Quản lý tập trung toàn bộ các Utilities (tiện ích tương tác) của MoMo do Cell Team yêu cầu (request) hoặc do Platform chủ động tự xây dựng nhằm gia tăng chỉ số Product-Led Growth (PLG) trên Web. Hỗ trợ song song 2 quy trình linh hoạt:
-    *   *Workflow A (Brief to Prototype - Hiếu phụ trách):* Tiếp nhận brief nghiệp vụ (Logic/Công thức) từ Cell Team/Platform $\rightarrow$ Hiếu dựng bản prototype nhanh để verify.
-    *   *Workflow B (HTML Ingestion - Thuận phụ trách):* Tiếp nhận bản HTML Prototype thô từ Cell Teams tự viết $\rightarrow$ Thuận refactor chuẩn Mobase và UI/UX để đóng gói.
+    *   *Workflow A (Brief to Prototype - Hiếu phụ trách):* Tiếp nhận brief nghiệp vụ (Logic/Công thức) từ Cell Team/Platform $->$ Hiếu dựng bản prototype nhanh để verify.
+    *   *Workflow B (HTML Ingestion - Thuận phụ trách):* Tiếp nhận bản HTML Prototype thô từ Cell Teams tự viết $->$ Thuận refactor chuẩn Mobase và UI/UX để đóng gói.
 2.  **Widget Registry & Dynamic Rendering Engine:** Xây dựng danh mục quản lý và hiển thị động các cấu phần tương tác dựa trên cấu hình từ CMS Editor.
 3.  **Smart CTA & Zero-Party Data Engine:** Thiết kế cơ chế điều hướng nút hành động thông minh theo hành vi người dùng và đồng bộ dữ liệu ngữ cảnh an toàn qua URL parameter của Onelink.
 4.  **API Governance Gateway:** Tích hợp dữ liệu realtime in-app của MoMo (giá vàng, tỷ giá) với cơ chế cache tự động và cơ chế khóa cứng công thức (Formula Lock) kiểm duyệt pháp lý/tài chính YMYL tập trung.
@@ -60,17 +60,72 @@ Thay vì lập trình riêng lẻ từng công cụ hoặc cho phép các BU t�
 ### 2.1 Bảng Đồng bộ Dữ liệu Thị trường (Master Market Sizing)
 Dựa trên nhu cầu tìm kiếm khổng lồ (Search Intent) của người dùng liên quan đến YMYL, MoMo tập trung phủ các mỏ vàng traffic sau:
 
-| Thị trường (Market) | Volume/tháng | Trạng thái SERP hiện tại | Cơ hội của MoMo (Widget) |
-|---|---|---|---|
-| **Gold (Giá Vàng)** | **85.758.870** | Các trang báo đài, công cụ sơ sài, nhiều quảng cáo | Widget theo dõi/quy đổi giá vàng SJC/Nhẫn trực quan, CTA Mua Vàng. |
-| **Exchange Rate (Tỷ giá)** | **18.128.060** | Công cụ của ngân hàng rời rạc, ít ngoại tệ | Máy tính tỷ giá ngoại tệ real-time, so sánh tỷ giá. |
-| Loan (Vay) | 2.958.140 | Các bảng tính lãi vay ngân hàng tĩnh, khó hiểu | Công cụ tính dư nợ giảm dần trực quan, CTA Vay Nhanh |
-| Stock (Chứng khoán) | 3.000.000 | App chuyên biệt phức tạp | Công cụ giả lập đầu tư CCQ/Cổ phiếu đơn giản trên Web |
-| Social Insurance (BHXH) | 938.090 | Các trang BHXH nhà nước khó sử dụng | Trực quan hóa mức đóng, tra cứu nhanh, CTA tiết kiệm |
-| Heath Insurance (BHSK) | 396.910 | Các bảng tính phí phức tạp, nặng thuật ngữ | Công cụ tính phí BHSK nhanh gọn, trực quan |
-| Saving (Lãi tiết kiệm) | 209.000 | Các trang ngân hàng rời rạc | Nhập số ➔ Xem lãi ➔ Gửi trực tiếp qua MoMo |
-| Personal Income Tax (Thuế TNCN) | *Chưa có dữ liệu* | Các trang báo, trang luật, giao diện cũ | Widget sạch, tính chính xác cao, CTA gửi tiết kiệm |
-| Pension (Lương hưu) | *Chưa có dữ liệu* | Các bảng tính phức tạp, thủ công | Ước tính lương hưu tự động, CTA quỹ hưu trí/tiết kiệm |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thị trường (Market)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Volume/tháng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trạng thái SERP hiện tại</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cơ hội của MoMo (Widget)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Gold (Giá Vàng)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>85.758.870</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các trang báo đài, công cụ sơ sài, nhiều quảng cáo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget theo dõi/quy đổi giá vàng SJC/Nhẫn trực quan, CTA Mua Vàng.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Exchange Rate (Tỷ giá)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>18.128.060</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Công cụ của ngân hàng rời rạc, ít ngoại tệ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Máy tính tỷ giá ngoại tệ real-time, so sánh tỷ giá.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loan (Vay)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.958.140</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các bảng tính lãi vay ngân hàng tĩnh, khó hiểu</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Công cụ tính dư nợ giảm dần trực quan, CTA Vay Nhanh</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stock (Chứng khoán)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.000.000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">App chuyên biệt phức tạp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Công cụ giả lập đầu tư CCQ/Cổ phiếu đơn giản trên Web</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social Insurance (BHXH)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">938.090</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các trang BHXH nhà nước khó sử dụng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trực quan hóa mức đóng, tra cứu nhanh, CTA tiết kiệm</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Heath Insurance (BHSK)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">396.910</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các bảng tính phí phức tạp, nặng thuật ngữ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Công cụ tính phí BHSK nhanh gọn, trực quan</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Saving (Lãi tiết kiệm)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">209.000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các trang ngân hàng rời rạc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhập số -> Xem lãi -> Gửi trực tiếp qua MoMo</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Personal Income Tax (Thuế TNCN)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Chưa có dữ liệu</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các trang báo, trang luật, giao diện cũ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget sạch, tính chính xác cao, CTA gửi tiết kiệm</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Pension (Lương hưu)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Chưa có dữ liệu</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các bảng tính phức tạp, thủ công</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ước tính lương hưu tự động, CTA quỹ hưu trí/tiết kiệm</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -98,11 +153,36 @@ Khung làm việc **S-P-A (Strategy - Pilot - Action) Framework** được đị
 
 ### 4.2 Lộ trình phát hành (Roadmap)
 
-| Phase | Phạm vi & Tiện ích triển khai | Mục tiêu | Trạng thái |
-|---|---|---|---|
-| **Phase 1** | **Pilot Siêu Tiện ích & Finhub Simulators**:<br>- Bộ 10 tiện ích: Giá Vàng (Gold), Tỷ giá (Exchange Rate), Lãi Vay (Loan), Trắc nghiệm (Quiz), Thuế TNCN, Lãi Tiết kiệm, BHXH, Lương hưu, Đầu tư CCQ, Phí BHSK+.<br>- Kiến trúc: Hub & Spoke | - Khởi dựng **Widget Engine** và tích hợp CMS.<br>- Thử nghiệm quy trình render Widget trên trang landing page.<br>- Kiểm chứng luồng chuyển đổi Web-to-App và SEO/GEO. | **Discovery & MVP** (Tháng 6-7/2026) |
-| **Phase 2** | **Mở rộng các BU thuộc khối Dịch vụ & Tiêu dùng**:<br>- Tích hợp các Widget mới từ Bảo hiểm (như Phí BHXM, BHYT), Du lịch & Đi lại (tính giá vé, gợi ý tour), hoặc Tiện ích đời sống. | - Tối ưu hóa hiệu năng Widget Engine.<br>- Chuẩn hóa hệ thống thiết kế (Design System) của Widget Store trên CMS. | *Lên kế hoạch* (Dự kiến Q3/2026) |
-| **Phase 3** | **Advanced PLG Scaling & Distribution**:<br>- Mở rộng quy mô công cụ tra cứu địa phương hóa (Programmatic lookups).<br>- Tích hợp AI Intent-based routing cho Smart CTA.<br>- Phát triển giải pháp **B2B Syndication** (nhúng các widget chuẩn của MoMo sang các báo điện tử, trang tin tức tài chính của đối tác). | - Tối đa hóa traffic thông qua Programmatic pSEO.<br>- Cá nhân hóa phễu W2A bằng AI.<br>- Phân phối widget để thu hút traffic ngoài hệ sinh thái MoMo. | *Lên kế hoạch* (Dự kiến Q4/2026) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phase</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phạm vi & Tiện ích triển khai</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục tiêu</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trạng thái</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phase 1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Pilot Siêu Tiện ích & Finhub Simulators</strong>:<br>- Bộ 10 tiện ích: Giá Vàng (Gold), Tỷ giá (Exchange Rate), Lãi Vay (Loan), Trắc nghiệm (Quiz), Thuế TNCN, Lãi Tiết kiệm, BHXH, Lương hưu, Đầu tư CCQ, Phí BHSK+.<br>- Kiến trúc: Hub & Spoke</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Khởi dựng <strong>Widget Engine</strong> và tích hợp CMS.<br>- Thử nghiệm quy trình render Widget trên trang landing page.<br>- Kiểm chứng luồng chuyển đổi Web-to-App và SEO/GEO.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Discovery & MVP</strong> (Tháng 6-7/2026)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phase 2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Mở rộng các BU thuộc khối Dịch vụ & Tiêu dùng</strong>:<br>- Tích hợp các Widget mới từ Bảo hiểm (như Phí BHXM, BHYT), Du lịch & Đi lại (tính giá vé, gợi ý tour), hoặc Tiện ích đời sống.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Tối ưu hóa hiệu năng Widget Engine.<br>- Chuẩn hóa hệ thống thiết kế (Design System) của Widget Store trên CMS.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Lên kế hoạch</em> (Dự kiến Q3/2026)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phase 3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Advanced PLG Scaling & Distribution</strong>:<br>- Mở rộng quy mô công cụ tra cứu địa phương hóa (Programmatic lookups).<br>- Tích hợp AI Intent-based routing cho Smart CTA.<br>- Phát triển giải pháp <strong>B2B Syndication</strong> (nhúng các widget chuẩn của MoMo sang các báo điện tử, trang tin tức tài chính của đối tác).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Tối đa hóa traffic thông qua Programmatic pSEO.<br>- Cá nhân hóa phễu W2A bằng AI.<br>- Phân phối widget để thu hút traffic ngoài hệ sinh thái MoMo.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Lên kế hoạch</em> (Dự kiến Q4/2026)</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -126,7 +206,7 @@ flowchart TD
 Để tối ưu hóa vận hành và kiểm soát chặt chẽ sự xuất hiện của các công cụ trên hệ thống ở quy mô lớn, Nền tảng áp dụng cơ chế mapping tự động thay vì cấu hình thủ công cho từng trang con trong Puck Editor:
 *   **Nguyên tắc Mapping 1-1:** Mỗi Widget khi được xây dựng (ví dụ: CIC Simulator) sẽ được map trực tiếp với một Microsite / Mini Web gốc tương ứng (ví dụ: `/diem-tin-dung`).
 *   **Cơ chế Thừa kế Tự động (Auto-Inheritance):** Sau khi được map, bất kỳ trang con, trang đích chi tiết hay bài viết Blog nào thuộc Microsite đó đều sẽ tự động kế thừa và hiển thị Widget tương ứng tại đúng vị trí quy chuẩn (ví dụ: Slot 2) mà không cần người quản trị phải vào từng trang để kéo thả thủ công bằng Puck Editor.
-*   **Kiểm soát hiển thị (Governance Gate):** 
+*   **Kiểm soát hiển thị (Governance Gate):**
     *   *Trong Microsite gốc:* Hiển thị tự động theo thừa kế cấu hình của Microsite.
     *   *Ngoài Microsite:* Khối kéo thả trực tiếp của Widget đó bị khóa hoàn toàn trong Puck Editor đối với các trang khác để tránh việc BU tự ý nhúng bừa bãi. Việc phân phối ra ngoài Microsite gốc bắt buộc phải thông qua **Ads Manager** định tuyến động để phục vụ chiến dịch phân phối chéo (Cross-sell).
 
@@ -202,7 +282,7 @@ Mỗi tiện ích trong Phase 1 Pilot được thiết kế xoay quanh giải qu
 
 ### 10. Financial Quiz & Gamified Assessment (Trắc nghiệm tài chính)
 *   **JTBD giải quyết:** Kiểm tra nhanh mức độ hiểu biết tài chính hoặc khẩu vị rủi ro cá nhân qua hình thức trắc nghiệm vuốt (Tinder-style) để giải trí và nhận quà tặng.
-*   **Cầu nối W2A:** Tặng ngay voucher mua bảo hiểm/sổ tiết kiệm khi hoàn thành quiz ➔ CTA *"Mở App dùng ngay quà tặng"*.
+*   **Cầu nối W2A:** Tặng ngay voucher mua bảo hiểm/sổ tiết kiệm khi hoàn thành quiz -> CTA *"Mở App dùng ngay quà tặng"*.
 
 ---
 

@@ -1,13 +1,13 @@
 # BRD: Tra Cứu Phạt Nguội
- 
+
 > - **Project:** Tra Cứu Phạt Nguội Web Growth
 > - **Main URL:** momo.vn/phat-nguoi
 > - **Division:** PS (Payment Services)
 > - **Use Case:** Phạt Nguội
 > - **Owner:** Web Platform
-> - **Governance:** Web Product Lead (Hiến)
-> - **Version:** 4.0 - 2026-07-07
-> - **Status:** Phase 1 LIVE - Pilot & Scale (Location Scale Up & Blog Production in Phase 2; Subscription & other features packaged in Phase 1)
+> - **Governance:** Web Product Lead
+> - **Version:** 5.0 - 2026-08-19
+> - **Status:** Aligned 19/08/2026 - Tái cấu trúc luồng kết quả tra cứu (Single Page Inline Section), phân 2 nhánh trả kết quả (Có vi phạm: Nộp phạt In-App + Content Block cẩm nang; Không vi phạm: Cross-sell Bảo hiểm & Gói đăng ký thông báo Phạt nguội tự động), áp dụng GenAI Content QC & mapping tự động.
 
 ---
 
@@ -36,21 +36,63 @@ Xây dựng Web channel từ zero theo mô hình Programmatic SEO:
 
 ### 2.1 Market Demand
 
-| Metric | Giá trị |
-|---|---|
-| Total monthly search volume | ~3.56M lượt/tháng |
-| Total vehicles (Ô tô + Xe máy) | 84M+ phương tiện |
-| MoMo users with verified cars | 700K+ |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giá trị</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Total monthly search volume</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~3.56M lượt/tháng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Total vehicles (Ô tô + Xe máy)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">84M+ phương tiện</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo users with verified cars</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">700K+</td>
+    </tr>
+  </tbody>
+</table>
 
 Nghị định 168/2024/NĐ-CP tăng mức phạt 3-5x từ 1/1/2025 tạo nhu cầu tìm kiếm "evergreen" mạnh - spike đầu năm và duy trì cao quanh năm.
 
 ### 2.2 Competitive Gap - Chiến Lược Displacement
 
-| Competitor | Brand Search | Điểm yếu | MoMo Solution |
-|---|---|---|---|
-| phatnguoi.com | ~148K/tháng | Site bên thứ 3, rủi ro data privacy, không official | Official TTDK integration + MoMo brand trust |
-| csgt.vn (Official) | ~13K/tháng | UX kém, hay crash, khó dùng | MoSpark optimized UX |
-| VNeTraffic | ~14K/tháng | Khó sử dụng, không có ecosystem | Seamless Web-to-App flow |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Competitor</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Brand Search</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điểm yếu</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">MoMo Solution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">phatnguoi.com</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~148K/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Site bên thứ 3, rủi ro data privacy, không official</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Official TTDK integration + MoMo brand trust</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">csgt.vn (Official)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~13K/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UX kém, hay crash, khó dùng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark optimized UX</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">VNeTraffic</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~14K/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khó sử dụng, không có ecosystem</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Seamless Web-to-App flow</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2.3 Strategic Advantages
 
@@ -60,12 +102,37 @@ Nghị định 168/2024/NĐ-CP tăng mức phạt 3-5x từ 1/1/2025 tạo nhu c
 
 ### 2.4 Phân Tích SEM - Validation Market Demand
 
-| Metric | Kết quả | Hàm ý chiến lược |
-|---|---|---|
-| CTR trung bình SEM | ~7% | High-intent market được xác nhận |
-| CVR utility (multi-search) | 155-178% | User tra nhiều lần/visit - cần tính năng "Lưu danh sách xe" |
-| Cluster xe máy CTR | Đến 18%, CPA thấp nhất | Phân khúc đối thủ đang bỏ ngỏ - ưu tiên pSEO |
-| Exact Match vs Phrase | Exact hiệu quả hơn ~50% CPA | Long-tail intent rõ ràng |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Kết quả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hàm ý chiến lược</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CTR trung bình SEM</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~7%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">High-intent market được xác nhận</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CVR utility (multi-search)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">155-178%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User tra nhiều lần/visit - cần tính năng "Lưu danh sách xe"</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cluster xe máy CTR</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đến 18%, CPA thấp nhất</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phân khúc đối thủ đang bỏ ngỏ - ưu tiên pSEO</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Exact Match vs Phrase</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Exact hiệu quả hơn ~50% CPA</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Long-tail intent rõ ràng</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2.5 Empirical Dataset Analysis (431,506 Vehicles)
 
@@ -79,7 +146,6 @@ Dữ liệu phân tích thực tế từ mẫu **455.462 lượt tra cứu phạ
 
 ## 3. Định Hướng Dự Án
 
-
 ### 3.1 Product Identity & KPI Model
 
 - **Primary success metric (Web):** Đạt **Top 3 thứ hạng tìm kiếm (Google Ranking)** cho các từ khóa chính (ví dụ: *"tra cứu phạt nguội"*, *"phạt nguội"*...).
@@ -89,38 +155,35 @@ Dữ liệu phân tích thực tế từ mẫu **455.462 lượt tra cứu phạ
 
 ### 3.2 Web-to-App Flow & Luồng Tiện ích Hướng dẫn Lỗi (Web-to-App & Contextual Violation Guide Flow)
 
-**Triết lý:** Web deliver đủ value (kết quả tra cứu + giải pháp xử lý) để build Trust, sau đó dùng "Thông báo tự động real-time" làm mồi câu dẫn user sang App.
+**Triết lý:** Web deliver đủ value (kết quả tra cứu + cẩm nang xử lý lỗi) để build Trust, sau đó điều hướng người dùng sang App bằng các nút CTA hành động rõ ràng (Nộp phạt trực tuyến, Đăng ký thông báo tự động, Mua bảo hiểm xe).
 
-**Quy trình Vận hành Trải nghiệm người dùng (UX) và Dữ liệu:**
-1.  **Thu thập dữ liệu lỗi vi phạm:** Hệ thống tự động thu thập thông tin về lỗi vi phạm thực tế từ cơ sở dữ liệu tra cứu của người dùng.
-2.  **Sản xuất nội dung Blog hỗ trợ:** Lấy danh sách mã lỗi vi phạm làm cơ sở để GenAI tự động sản xuất bài viết Blog tương ứng, cung cấp thông tin hữu ích về mức phạt tiền chính xác (Nghị định 168) và hướng dẫn chi tiết cách nộp phạt.
-3.  **Cá nhân hóa kết quả tra cứu (Contextual Integration):** Khi người dùng tra cứu biển số xe bằng Widget trên Web và nhận kết quả **CÓ vi phạm**, hệ thống tự động nhận diện mã lỗi và đính kèm (attach link) bài viết Blog hướng dẫn của đúng mã lỗi đó ngay trên màn hình kết quả để người dùng tự xem hướng dẫn xử lý.
+**Quy trình Vận hành Trải nghiệm người dùng (UX) và Dữ liệu (Cập nhật 19/08/2026):**
+1. **Thu thập dữ liệu tra cứu:** Người dùng nhập biển số xe trên Widget tra cứu Single Page của Web `momo.vn/phat-nguoi`.
+2. **Trả kết quả 2 nhánh (Single Page Inline Section - Không dùng Popup):**
+   - **Nhánh KHÔNG VI PHẠM (Xe sạch):** Trả màn hình chúc mừng ➔ Hiển thị 2 khối CTA Cross-sell: (1) Mua bảo hiểm Ô tô / Xe máy; (2) Đăng ký gói nhận thông báo Phạt nguội tự động (gói Tháng / gói Năm).
+   - **Nhánh CÓ VI PHẠM (Có lỗi):** Trả chi tiết lỗi vi phạm, địa điểm, mã quyết định và tiền phạt ước tính ➔ Hiển thị nút **CTA 1 (Nộp phạt trực tuyến)** dẫn mở Mini App Nộp phạt trên App MoMo và **CTA 2 (Inline Content Block)** đính kèm bài viết cẩm nang hướng dẫn thủ tục đóng phạt, Nghị định pháp luật và sử dụng VNeID/GPLX điện tử.
+3. **Cơ chế GenAI Content QC & Auto-mapping:** Content Team kiểm duyệt (Fact-check) 100% tính chính xác pháp lý các bài viết GenAI và gắn mã map lỗi vi phạm để Web Dev lập trình tự động nhúng bài cẩm nang tương ứng dưới màn hình kết quả tra cứu.
 
 ```mermaid
 flowchart TD
-    Start[User nhập biển số xe trên Web] --> Query[Hệ thống gọi API TTDK/CSGT]
-    Query --> Result{Kết quả tra cứu?}
-    
-    Result -- Không vi phạm (Xe sạch) --> CleanScreen[Hiển thị kết quả 'Không vi phạm']
-    CleanScreen --> CleanWidget[Hiển thị Subscription Widget: Cảnh báo tự động nếu phát sinh lỗi mới]
-    CleanWidget --> SubscribeClean[User đăng ký gói Năm 29k/năm / Dùng thử 7 ngày]
-    
-    Result -- Có vi phạm --> ViolateScreen[Liệt kê danh sách các lỗi vi phạm]
-    ViolateScreen --> MapBlog[Hệ thống nhận diện mã lỗi & đính kèm link Blog Hướng dẫn xử lý]
-    ViolateScreen --> CheckFinance{Kiểm tra điều kiện tài chính?}
-    
-    CheckFinance -- Phạt >= 1.000.000đ HOẶC Điểm tín dụng tốt --> SuggestFinance[Hiển thị gợi ý mở Ví Trả Sau / Vay Nhanh thanh toán ngay]
-    CheckFinance -- Phạt < 1.000.000đ & Không có điểm tốt --> SuggestNormal[Hiển thị Subscription Widget: Nhắc nhở nộp phạt tránh quá hạn]
-    
-    SuggestFinance --> CTA[User click CTA nhận thông báo / Mở liên kết]
-    SuggestNormal --> CTA
-    CTA --> W2A[Chuyển đổi sang App MoMo qua Onelink để hoàn tất]
+    Start["User nhập biển số xe trên Web momo.vn/phat-nguoi"] --> Query["Hệ thống gọi API TTDK/CSGT"]
+    Query --> Result{"Kết quả tra cứu"}
+
+    Result -- "Không vi phạm (Xe sạch)" --> CleanScreen["Hiển thị Màn hình Chúc mừng"]
+    CleanScreen --> CrossSell1["CTA Cross-sell 1: Bảo hiểm Ô tô / Xe máy"]
+    CleanScreen --> CrossSell2["CTA Cross-sell 2: Gói Đăng ký Thông báo Phạt nguội (Tháng/Năm)"]
+    CrossSell1 --> QR1["Dynamic QR / Onelink ➔ Mở Webview / Mini App"]
+    CrossSell2 --> QR2["Dynamic QR / Onelink ➔ Mở Mini App MoMo"]
+
+    Result -- "Có vi phạm" --> ViolateScreen["Hiển thị Chi tiết Lỗi vi phạm & Mức phạt"]
+    ViolateScreen --> CTA1["CTA 1: Nộp phạt trực tuyến ➔ Mini App Nộp phạt trên App MoMo"]
+    ViolateScreen --> CTA2["CTA 2: Inline Content Block (Cẩm nang & Hướng dẫn xử lý vi phạm)"]
+    CTA2 --> QC["Nội dung GenAI đã QC 100% tính pháp lý & Map tự động theo mã lỗi"]
 ```
 
-**Web (Lite):** Nhập biển số -> Xem kết quả (Có/Không vi phạm + Đính kèm link Blog hướng dẫn xử lý lỗi tương ứng) -> CTA "Đăng ký nhận thông báo real-time qua MoMo"
+**Web (Lite):** Nhập biển số ➔ Trả kết quả Single Page Inline Block ➔ CTA Nộp phạt / Mua gói thông báo / Đọc cẩm nang QC.
 
-**App (Full):** Xem ảnh chụp vi phạm - nộp phạt online - nhận push notify - quản lý subscription Silver/Gold.
-
+**App (Full):** Xem ảnh chụp vi phạm ➔ Nộp phạt online ➔ Nhận push notification ➔ Quản lý Thẻ Xe Số & Subscription.
 
 ### 3.3 Dự Án Này KHÔNG Phải
 
@@ -152,12 +215,32 @@ Nhằm giải quyết bài toán ROI thấp của dự án Phạt Nguội khi đ
 
 **Keywords:** tra cứu phạt nguội (673K), phạt nguội (301K), kiểm tra phạt nguội (165K), check phạt nguội (110K)
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Tìm được kênh tra cứu chính xác, không sợ lừa đảo hay lộ thông tin |
-| Emotional | Lo lắng về việc xe có bị phạt không, muốn biết ngay |
-| Social | Không muốn bị CSGT "chặn" vì không biết xe đang bị phạt |
-| Trigger | Chuẩn bị đăng kiểm - Thấy người khác bị phạt - Không nhớ xe đã qua camera hay chưa |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tìm được kênh tra cứu chính xác, không sợ lừa đảo hay lộ thông tin</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lo lắng về việc xe có bị phạt không, muốn biết ngay</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không muốn bị CSGT "chặn" vì không biết xe đang bị phạt</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuẩn bị đăng kiểm - Thấy người khác bị phạt - Không nhớ xe đã qua camera hay chưa</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** Landing Page `/phat-nguoi` - Blog "Tra cứu phạt nguội ở đâu nhanh nhất 2025".
 
@@ -167,11 +250,28 @@ Nhằm giải quyết bài toán ROI thấp của dự án Phạt Nguội khi đ
 
 **Keywords:** tra cứu phạt nguội ô tô (49.5K), kiểm tra phạt nguội xe máy (22.2K), camera phạt nguội (8.1K), tra cứu theo tỉnh thành
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Tra đúng theo loại xe (ô tô/xe máy), theo tỉnh đang ở, xem chi tiết lỗi, thời gian, địa điểm |
-| Emotional | Muốn biết chính xác - không muốn tra sai xe hoặc sai tỉnh |
-| Trigger | Chuẩn bị chuyến đi xa - Đang ở tỉnh khác - Có nhiều xe cần quản lý |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra đúng theo loại xe (ô tô/xe máy), theo tỉnh đang ở, xem chi tiết lỗi, thời gian, địa điểm</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Muốn biết chính xác - không muốn tra sai xe hoặc sai tỉnh</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuẩn bị chuyến đi xa - Đang ở tỉnh khác - Có nhiều xe cần quản lý</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** `/phat-nguoi/o-to` - `/phat-nguoi/xe-may` - `/phat-nguoi/[tinh-thanh]` (pSEO 63 tỉnh) - `/phat-nguoi/camera-giao-thong`.
 
@@ -181,11 +281,28 @@ Nhằm giải quyết bài toán ROI thấp của dự án Phạt Nguội khi đ
 
 **Keywords:** nộp phạt giao thông online (2.9K), nộp phạt nguội online (1.9K), cách nộp phạt nguội
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Nộp phạt không cần đến tận nơi, online 24/7 |
-| Emotional | Tiết kiệm thời gian, tránh phải xếp hàng ở Kho Bạc hoặc CSGT |
-| Trigger | Cần đăng kiểm nhưng đang có vi phạm chưa nộp |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nộp phạt không cần đến tận nơi, online 24/7</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tiết kiệm thời gian, tránh phải xếp hàng ở Kho Bạc hoặc CSGT</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần đăng kiểm nhưng đang có vi phạm chưa nộp</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** `/phat-nguoi/blog/nop-phat-nguoi` (CTA nộp phạt trực tiếp) - Blog "Cách nộp phạt nguội online 2025".
 
@@ -195,11 +312,28 @@ Nhằm giải quyết bài toán ROI thấp của dự án Phạt Nguội khi đ
 
 **Keywords:** nghị định 168 (33.1K), lỗi vượt đèn đỏ (8.1K), camera giao thông (12.1K)
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Hiểu mức phạt theo từng lỗi, biết camera đặt ở đâu để tránh |
-| Emotional | Không muốn bị phạt bất ngờ - chủ động tuân thủ luật |
-| Trigger | Đã từng bị phạt - Vừa xem tin về Nghị định 168 - Chuẩn bị thi bằng lái |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiểu mức phạt theo từng lỗi, biết camera đặt ở đâu để tránh</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không muốn bị phạt bất ngờ - chủ động tuân thủ luật</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đã từng bị phạt - Vừa xem tin về Nghị định 168 - Chuẩn bị thi bằng lái</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** Blog hub `/phat-nguoi/blog` - Bài "Nghị định 168: Bảng mức phạt mới nhất".
 
@@ -243,11 +377,36 @@ momo.vn/phat-nguoi [Hub]
 
 ### 5.2 Phase Roadmap
 
-| Phase | On-page / Product | Off-page / Comm | Trạng thái |
-|---|---|---|---|
-| Phase 1 - Foundation & Core | Mini Web Tool + API TTDK real-time + 3 subpage + Blog Batch 1 (20 bài) + SEM + Gói Subscription & Web PG Checkout + Interactive Camera Map + Route-based pSEO | Social BMC Batch 1 + Backlink Tier 1-2 (Vendor) + Chiến dịch Off-page | LIVE / Pilot |
-| Phase 2 - Regional Scale | Scale Up trang Location (pSEO 63 tỉnh thành) + Tiếp tục sản xuất Blog (Batch 2: 20-30 bài ngách) | - | Planned T6/2026 |
-| Phase 3 - Growth Loops | Viral mechanics + Camera AI pSEO + Dispute Assistant + Fine Code pSEO | Social ongoing + Backlink Tier 3 scale | Backlog |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phase</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">On-page / Product</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Off-page / Comm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trạng thái</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 1 - Foundation & Core</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mini Web Tool + API TTDK real-time + 3 subpage + Blog Batch 1 (20 bài) + SEM + Gói Subscription & Web PG Checkout + Interactive Camera Map + Route-based pSEO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social BMC Batch 1 + Backlink Tier 1-2 (Vendor) + Chiến dịch Off-page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LIVE / Pilot</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 2 - Regional Scale</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Scale Up trang Location (pSEO 63 tỉnh thành) + Tiếp tục sản xuất Blog (Batch 2: 20-30 bài ngách)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Planned T6/2026</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 3 - Growth Loops</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Viral mechanics + Camera AI pSEO + Dispute Assistant + Fine Code pSEO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social ongoing + Backlink Tier 3 scale</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Backlog</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 5.3 Growth & PLG Tactics (Phase 3)
 
@@ -315,7 +474,6 @@ flowchart TD
   * Người dùng thực hiện xác thực bảo mật (FaceID/PIN) và bấm xác nhận để hoàn tất giao dịch.
   * **Đồng bộ trạng thái trên Website (Real-time Fallback):** Hệ thống Web Backend nhận tín hiệu từ MoMo PG qua Webhook (IPN), đồng thời giao diện Website tự động nhận được fallback cập nhật trạng thái (thông qua cơ chế Websocket hoặc Polling) để trả ra kết quả giao dịch thành công ngay lập tức trên màn hình của người dùng.
 
-
 #### 5. Vị trí hiển thị Component Mua Hàng (Placement Strategy)
 
 Để tối ưu hóa tỷ lệ chuyển đổi (CVR), cấu phần mua gói đăng ký (Subscription Widget) sẽ được hiển thị linh hoạt tại các vị trí chiến lược sau trên Website:
@@ -354,14 +512,14 @@ Hệ thống MoSpark định nghĩa 3 nhóm trang khu vực có chủ đích ch�
 
 #### 2. Quy Trình 5 Bước Vận Hành & Kiểm Soát Dữ Liệu (Curated Pipeline)
 Mỗi trang khu vực mới được khởi tạo và publish thông qua quy trình kiểm soát nghiêm ngặt sau:
-1.  **Lọc & Lập Whitelist (SEO Lead):** Lựa chọn địa danh dựa trên số lượng tìm kiếm lớn (volume > 1,000/tháng) và mức độ thiết thực với tài xế.
+1.  **Lọc & Lập Whitelist (Web Product Lead):** Lựa chọn địa danh dựa trên số lượng tìm kiếm lớn (volume > 1,000/tháng) và mức độ thiết thực với tài xế.
 2.  **Xác Thực Dữ Liệu Thực Tế (Cell Team):** Xác minh thủ công danh sách camera phạt nguội (tọa độ GPS), địa chỉ kho bạc nhà nước tiếp nhận nộp phạt, và cơ quan CSGT địa phương chịu trách nhiệm xử lý.
 3.  **GenAI Draft Content (MoSpark CMS):** Sử dụng các mô hình Claude 3.5 Sonnet trong module GenAI để sinh bài viết chi tiết dựa trên dữ liệu đã xác thực, cung cấp thông tin hữu ích về luật và quy định xử phạt (Nghị định 168).
 4.  **Tích hợp Widget & Bản đồ (Product/Tech Cell):** Nhúng bản đồ tọa độ camera phạt nguội thực tế và bảng đối chiếu mức tiền phạt nhanh cho các lỗi vi phạm phổ biến tại khu vực đó.
 5.  **Editorial Gate (Văn Hiến sign-off):** PM kiểm tra và phê duyệt chất lượng nội dung cùng độ chính xác của dữ liệu trước khi bấm nút Publish trực tuyến.
 
 #### 3. Quản Trị Link Equity & Tránh Chồng Chéo Từ Khóa (Silo Control)
-*   **Breadcrumb Phân Cấp:** Thiết lập breadcrumb có logic cha-con rõ ràng để Googlebot/AI hiểu sơ đồ tri thức (Ví dụ: `Trang chủ ➔ TP.HCM ➔ Quận Bình Thạnh ➔ Ngã tư Hàng Xanh`).
+*   **Breadcrumb Phân Cấp:** Thiết lập breadcrumb có logic cha-con rõ ràng để Googlebot/AI hiểu sơ đồ tri thức (Ví dụ: `Trang chủ -> TP.HCM -> Quận Bình Thạnh -> Ngã tư Hàng Xanh`).
 *   **Schema `containedInPlace`:** Nhúng Schema JSON-LD mô tả thực thể địa lý con nằm trong thực thể địa lý mẹ để phục vụ tối ưu hóa AI Search (AEO).
 *   **Thẻ Canonical tự tham chiếu:** Giữ thẻ canonical tự trỏ về chính nó cho các trang địa danh cụ thể để duy trì chỉ mục độc lập trên các công cụ tìm kiếm, tránh bị gộp chỉ mục về trang tỉnh/thành mẹ.
 
@@ -377,18 +535,38 @@ Thay vì tạo hàng loạt 63 tỉnh thành ngay lập tức, dự án sẽ cu�
 *   **Nguyên tắc "Intent-First" (Ưu tiên theo Intent):** Giữ nguyên hoạt động của trang địa danh cũ nếu người dùng vẫn duy trì thói quen tìm kiếm địa danh đó (Ví dụ: "Hà Tây"), không thực hiện xóa trang hay redirect vội vã.
 *   **Tối ưu hóa Alias Page:** Gộp dữ liệu backend của tỉnh cũ vào đơn vị quản lý mới, hiển thị ghi chú nhỏ trên giao diện: *"Dữ liệu phạt nguội khu vực [Tỉnh A] được tự động cập nhật theo đơn vị hành chính mới [Tỉnh B]"*.
 
-
 ---
 
 ## 6. Success Metrics
 
 ### 6.1 KPI Framework
 
-| Metric | Target | Source |
-|---|---|---|
-| **Top 3 Google Ranking** (Primary KPI) | Đạt Top 3 thứ hạng tìm kiếm cho các từ khóa chính (*"tra cứu phạt nguội"*, *"phạt nguội"*...) | Google Search Console / Ahrefs |
-| **MEU Utility** (Secondary) | Đo lường người dùng tương tác công cụ tra cứu thực tế trên Web | Umami + GA4 |
-| **W2A Conversion Rate** (Secondary) | Đạt 15% (Tỷ lệ chuyển đổi Web-to-App) | GA4 + Appsflyer |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Top 3 Google Ranking</strong> (Primary KPI)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đạt Top 3 thứ hạng tìm kiếm cho các từ khóa chính (<em>"tra cứu phạt nguội"</em>, <em>"phạt nguội"</em>...)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Google Search Console / Ahrefs</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MEU Utility</strong> (Secondary)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đo lường người dùng tương tác công cụ tra cứu thực tế trên Web</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Umami + GA4</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>W2A Conversion Rate</strong> (Secondary)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đạt 15% (Tỷ lệ chuyển đổi Web-to-App)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GA4 + Appsflyer</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 6.2 Conversion Funnel
 
@@ -396,18 +574,46 @@ Thay vì tạo hàng loạt 63 tỉnh thành ngay lập tức, dự án sẽ cu�
 Search -> Landing page /phat-nguoi -> Nhập biển số -> Trả kết quả + Contextual Blog -> CTA -> Tải/Mở App (W2A)
 ```
 
-
 ---
 
 ## 7. Dependencies & Constraints
 
-| Dependency | Mô tả | Blocker? |
-|---|---|---|
-| API TTDK Real-time | Widget tra cứu hoạt động thực (nhập biển số - trả kết quả vi phạm). SLA uptime > 99% | Có - core product value |
-| Partnership exclusivity TTDK | Điều kiện pháp lý duy trì lợi thế competitive | Có - strategic |
-| GA4 + Appsflyer W2A tracking | Track conversion từ web sang app. Phân tách organic vs SEM traffic | Có - đo KPI |
-| Legal Disclaimer trên Web | Web results là tham khảo (Lite mode). Evidence chính thức chỉ trong app | Có - YMYL |
-| pSEO Infrastructure | Build hàng ngàn trang địa phương + camera cần platform support | Có cho Phase 2 |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dependency</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Blocker?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">API TTDK Real-time</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget tra cứu hoạt động thực (nhập biển số - trả kết quả vi phạm). SLA uptime > 99%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - core product value</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Partnership exclusivity TTDK</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điều kiện pháp lý duy trì lợi thế competitive</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - strategic</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GA4 + Appsflyer W2A tracking</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Track conversion từ web sang app. Phân tách organic vs SEM traffic</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - đo KPI</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Legal Disclaimer trên Web</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web results là tham khảo (Lite mode). Evidence chính thức chỉ trong app</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - YMYL</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">pSEO Infrastructure</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Build hàng ngàn trang địa phương + camera cần platform support</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có cho Phase 2</td>
+    </tr>
+  </tbody>
+</table>
 
 **Constraints:**
 - Web Lite Mode: Không hiển thị ảnh chụp vi phạm, không cho phép nộp phạt trực tiếp - phải dẫn vào app. Đây là constraint pháp lý, không phải kỹ thuật.
@@ -420,14 +626,61 @@ Search -> Landing page /phat-nguoi -> Nhập biển số -> Trả kết quả + 
 
 ## 8. Risk Assessment
 
-| # | Rủi ro | Khả năng | Impact | Mitigation |
-|---|---|---|---|---|
-| R1 | API TTDK latency cao hoặc downtime - widget không trả kết quả - user không tin | Trung bình | Rất cao | SLA cứng với TTDK. Fallback message rõ ràng thay vì trang trắng |
-| R2 | phatnguoi.com cải thiện UX hoặc claim official status - mất competitive edge | Trung bình | Cao | Liên tục nhấn mạnh Official TTDK logo và trust signals. Speed-to-market Phase 2 |
-| R3 | AI Overview erode organic traffic trước khi MoMo được cite | Cao | Cao | AEO priority: llms.txt + FAQPage Schema + structured data ngay Phase 1 |
-| R4 | Subscription Web conflict với positioning acquisition - user bị friction | Trung bình | Trung bình | Validate tại Pilot review T6/2026. Set success criteria rõ ràng trước launch Subs Web |
-| R5 | pSEO 63 tỉnh bị Google nhận diện là thin content | Trung bình | Cao | Mỗi trang tỉnh cần unique content: stats vi phạm, camera nhiều nhất, mức phạt phổ biến tại tỉnh đó |
-| R6 | SEM budget không đủ ROI để justify tiếp tục | Thấp (CTR 7% đã tốt) | Trung bình | Review CPA weekly. Shift budget sang Exact Match cho cluster hiệu quả nhất (xe máy) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Rủi ro</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Khả năng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Impact</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mitigation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">API TTDK latency cao hoặc downtime - widget không trả kết quả - user không tin</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Rất cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SLA cứng với TTDK. Fallback message rõ ràng thay vì trang trắng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">phatnguoi.com cải thiện UX hoặc claim official status - mất competitive edge</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Liên tục nhấn mạnh Official TTDK logo và trust signals. Speed-to-market Phase 2</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI Overview erode organic traffic trước khi MoMo được cite</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AEO priority: llms.txt + FAQPage Schema + structured data ngay Phase 1</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Subscription Web conflict với positioning acquisition - user bị friction</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Validate tại Pilot review T6/2026. Set success criteria rõ ràng trước launch Subs Web</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">pSEO 63 tỉnh bị Google nhận diện là thin content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mỗi trang tỉnh cần unique content: stats vi phạm, camera nhiều nhất, mức phạt phổ biến tại tỉnh đó</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEM budget không đủ ROI để justify tiếp tục</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thấp (CTR 7% đã tốt)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Review CPA weekly. Shift budget sang Exact Match cho cluster hiệu quả nhất (xe máy)</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -443,13 +696,48 @@ Search -> Landing page /phat-nguoi -> Nhập biển số -> Trả kết quả + 
 
 **Độ khó triển khai (ICE Rubric):** 5/5 - hệ thống phức tạp, tích hợp API TTDK, compliance pháp lý nghiêm ngặt, Dev > 3 sprint.
 
-| Metric | Giá trị | Source | Chu kỳ cập nhật |
-|---|---|---|---|
-| Total Search Volume | ~3.56M lượt/tháng | Ahrefs/KP | Quarterly |
-| SoV MoMo hiện tại | TBD - đo baseline T6/2026 | GA4/BigQuery | Monthly |
-| SoV target Year 1 | 10%+ (~356K sessions/tháng) | Hiến (định nghĩa sau Pilot) | |
-| SoV target Long-term | 15%+ (~534K sessions/tháng) | Hiến | |
-| Priority Score (SEO-ICE) | Cao - Mass Traffic Category | Inventory v4.7 | Quarterly |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giá trị</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Source</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chu kỳ cập nhật</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Total Search Volume</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~3.56M lượt/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ahrefs/KP</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quarterly</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SoV MoMo hiện tại</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TBD - đo baseline T6/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GA4/BigQuery</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Monthly</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SoV target Year 1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">10%+ (~356K sessions/tháng)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến (định nghĩa sau Pilot)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SoV target Long-term</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">15%+ (~534K sessions/tháng)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Priority Score (SEO-ICE)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao - Mass Traffic Category</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Inventory v4.7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quarterly</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -457,15 +745,84 @@ Search -> Landing page /phat-nguoi -> Nhập biển số -> Trả kết quả + 
 
 Mỗi cluster chỉ được gán một Canonical URL - áp dụng Cannibalization Gate của SEO Inventory. Không tạo content trùng cluster đã có URL sở hữu.
 
-| # | Cluster | Volume/tháng | Intent Stage | Loại Content | Priority | Canonical URL |
-|---|---|---|---|---|---|---|
-| 1 | Công cụ tra cứu (Hub) | ~1.05M+ | Stage 1 | Landing page (pSEO/Mini Web) | P0 | /phat-nguoi |
-| 2 | Tra cứu theo xe | ~70K+ | Stage 2 | Landing page (pSEO/Mini Web) | P1 | /phat-nguoi/o-to, /phat-nguoi/xe-may, /phat-nguoi/xe-may-dien |
-| 3 | Nghị định 168 & mức phạt | ~40K+ | Stage 4 | Blog | P1 | /phat-nguoi/blog/nghi-dinh-168-* |
-| 4 | Camera giao thông | ~20K+ | Stage 2 | Landing page (pSEO/Mini Web) | P1 | /phat-nguoi/camera-giao-thong |
-| 5 | Lỗi vi phạm cụ thể | ~20K+ | Stage 4 | Blog | P2 | /phat-nguoi/blog/loi-* |
-| 6 | Tra cứu theo tỉnh thành | ~15K+ aggregate | Stage 2 | Landing page (pSEO/Mini Web) | P2 | /phat-nguoi/[tinh-thanh] |
-| 7 | Nộp phạt online | ~10K+ | Stage 3 | Blog | P3 | /phat-nguoi/blog/nop-phat-nguoi |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cluster</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Volume/tháng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Intent Stage</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại Content</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Priority</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Canonical URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Công cụ tra cứu (Hub)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~1.05M+</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing page (pSEO/Mini Web)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/phat-nguoi</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra cứu theo xe</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~70K+</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing page (pSEO/Mini Web)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/phat-nguoi/o-to, /phat-nguoi/xe-may, /phat-nguoi/xe-may-dien</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nghị định 168 & mức phạt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~40K+</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/phat-nguoi/blog/nghi-dinh-168-*</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Camera giao thông</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~20K+</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing page (pSEO/Mini Web)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/phat-nguoi/camera-giao-thong</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi vi phạm cụ thể</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~20K+</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/phat-nguoi/blog/loi-*</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra cứu theo tỉnh thành</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~15K+ aggregate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing page (pSEO/Mini Web)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/phat-nguoi/[tinh-thanh]</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nộp phạt online</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~10K+</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/phat-nguoi/blog/nop-phat-nguoi</td>
+    </tr>
+  </tbody>
+</table>
 
 **Nguyên tắc phân bổ:** P0 = Production ngay. P1 = Batch 1-2 (Phase 1-2). P2 = Scale Phase 2. P3 = Phase 3 trở đi.
 
@@ -473,7 +830,7 @@ Mỗi cluster chỉ được gán một Canonical URL - áp dụng Cannibalizati
 
 ### 9.3 GenAI Content Production Plan
 
-**Luồng chuẩn:** Keyword Cluster Map ➔ Business Context Sync ➔ Outline AI (Claude) ➔ Cell Team review/edit ➔ Blog Detail AI ➔ Editorial Review (Hiến) ➔ Publish.
+**Luồng chuẩn:** Keyword Cluster Map -> Business Context Sync -> Outline AI (Claude) -> Cell Team review/edit -> Blog Detail AI -> Editorial Review (Hiến) -> Publish.
 
 #### Batch 1 - Pilot (Phase 1 - Đã hoàn thành)
 
@@ -513,14 +870,47 @@ Mỗi cluster chỉ được gán một Canonical URL - áp dụng Cannibalizati
 
 Theo Foundation Checklist chuẩn SEO Inventory. Mọi bài blog Phạt Nguội phải pass đủ 6 cổng - không publish nếu thiếu.
 
-| Gate | Yêu cầu | PIC |
-|---|---|---|
-| Information Gain | Có data/góc nhìn không scrape được từ LLM (TTDK data, mức phạt theo Nghị định 168 thực tế, stats camera tỉnh) | Hiến review |
-| Keyword Ownership | Keyword cluster không trùng với URL đã index (Cannibalization check trên MoSpark CMS) | Hoài Anh check CMS |
-| Schema Markup | FAQPage + HowTo required. BreadcrumbList. WebApplication (Hub). | Hoài Anh build |
-| Legal Compliance | Không dùng "xóa vi phạm", "bỏ phạt", "bypass pháp lý". Có Legal Disclaimer tham chiếu Lite mode. | Hiến review |
-| Internal Link | Mọi bài Blog cắm link về /phat-nguoi (Hub) và subpage phù hợp (/o-to hoặc /xe-may) | Hoài Anh/Mai |
-| CWV Gate | LCP < 2.5s, INP < 200ms, CLS < 0.1 - Pass trước publish | Hoài Anh QA |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Gate</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Yêu cầu</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">PIC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Information Gain</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có data/góc nhìn không scrape được từ LLM (TTDK data, mức phạt theo Nghị định 168 thực tế, stats camera tỉnh)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến review</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Keyword Ownership</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Keyword cluster không trùng với URL đã index (Cannibalization check trên MoSpark CMS)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoài Anh check CMS</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Schema Markup</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FAQPage + HowTo required. BreadcrumbList. WebApplication (Hub).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoài Anh build</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Legal Compliance</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không dùng "xóa vi phạm", "bỏ phạt", "bypass pháp lý". Có Legal Disclaimer tham chiếu Lite mode.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến review</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Internal Link</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mọi bài Blog cắm link về /phat-nguoi (Hub) và subpage phù hợp (/o-to hoặc /xe-may)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoài Anh/Mai</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CWV Gate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LCP < 2.5s, INP < 200ms, CLS < 0.1 - Pass trước publish</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoài Anh QA</td>
+    </tr>
+  </tbody>
+</table>
 
 **Quy tắc cứng:** GenAI Content không được auto-publish. Bắt buộc qua editorial review và Hiến sign-off trước khi live. AI draft là input cho editor - không phải output cuối.
 
@@ -532,12 +922,42 @@ Theo Foundation Checklist chuẩn SEO Inventory. Mọi bài blog Phạt Nguội 
 
 **Chu kỳ:** Monthly tracking (traffic GA4) + Quarterly SoV audit đầy đủ.
 
-| Milestone | Target SoV | Target Sessions/tháng | Timeline |
-|---|---|---|---|
-| Baseline lần đầu | TBD | TBD | T6/2026 - sau Pilot review |
-| Phase 2 launch | 5%+ | ~178K | T9/2026 |
-| Year-end target | 10%+ | ~356K | T12/2026 |
-| Long-term aspirational | 15%+ | ~534K | 2027 |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Milestone</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target SoV</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target Sessions/tháng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Timeline</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Baseline lần đầu</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TBD</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TBD</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T6/2026 - sau Pilot review</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 2 launch</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5%+</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~178K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T9/2026</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Year-end target</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">10%+</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~356K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T12/2026</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Long-term aspirational</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">15%+</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~534K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2027</td>
+    </tr>
+  </tbody>
+</table>
 
 **Alert trigger:** SoV không tăng sau 2 tháng liên tiếp post-publish batch → kích hoạt On-page audit (AI Enhance) + tăng Offpage effort.
 
@@ -554,17 +974,42 @@ Theo Foundation Checklist chuẩn SEO Inventory. Mọi bài blog Phạt Nguội 
 **Mục tiêu:** Khuếch đại reach của content Phạt Nguội qua MoMo's owned social channels - tạo awareness tool, drive organic traffic, và xây dựng entity signal cho GEO.
 
 **Way of Working:**
-- **Hiến brief - BMC execute.** SEO & GEO Lead cung cấp content brief + keyword angle. BMC team (Brand Marketing Communications) thực thi trên các kênh owned của MoMo.
+- **Hiến brief - BMC execute.** Web Product Lead cung cấp content brief + keyword angle. BMC team (Brand Marketing Communications) thực thi trên các kênh owned của MoMo.
 - Không BMC tự chọn angle - phải align với keyword cluster và JTBD map của từng batch content.
 
 **Content Types ưu tiên:**
 
-| Format | Angle | Cluster gắn với |
-|---|---|---|
-| Infographic | "Mức phạt mới Nghị định 168 - bảng so sánh trước/sau" | Cluster 3 - Nghị định 168 |
-| Short video/Reel | "3 bước tra cứu phạt nguội nhanh nhất 2025" | Cluster 1 - Hub |
-| Awareness post | "Camera phạt nguội đặt ở đâu tại [tỉnh]?" | Cluster 4 - Camera |
-| Seasonal content | "Xe sắp hết hạn đăng kiểm? Kiểm tra phạt nguội trước khi đến TTDK" | JTBD Stage 3 |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Format</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Angle</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cluster gắn với</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Infographic</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Mức phạt mới Nghị định 168 - bảng so sánh trước/sau"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cluster 3 - Nghị định 168</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Short video/Reel</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"3 bước tra cứu phạt nguội nhanh nhất 2025"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cluster 1 - Hub</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Awareness post</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Camera phạt nguội đặt ở đâu tại [tỉnh]?"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cluster 4 - Camera</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Seasonal content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Xe sắp hết hạn đăng kiểm? Kiểm tra phạt nguội trước khi đến TTDK"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">JTBD Stage 3</td>
+    </tr>
+  </tbody>
+</table>
 
 **Trigger cung cấp brief cho BMC:**
 - Mỗi lần publish batch content mới → Hiến brief BMC trong vòng 3 ngày
@@ -585,13 +1030,48 @@ Theo Foundation Checklist chuẩn SEO Inventory. Mọi bài blog Phạt Nguội 
 
 **Target Link Sources (ưu tiên):**
 
-| Tier | Nguồn | Cách tiếp cận | Giá trị |
-|---|---|---|---|
-| Tier 1 | Báo lớn (VnExpress, Tuổi Trẻ, VTV) | Press release về TTDK partnership + tính năng mới | Authority cao nhất, DoFollow value |
-| Tier 1 | Báo chuyên ngành (Giao thông Vận tải, Pháp luật) | Editorial article dẫn nguồn MoMo là kênh chính thống | Topical relevance |
-| Tier 2 | Automotive sites (OtoHui, Bonbanh, XeSang) | Sponsored content + review tính năng | Traffic audience relevant |
-| Tier 2 | Forum & community (Otofun, Xe360) | Editorial mention, không mua link forum spam | Natural signal |
-| Tier 3 | Blog/Affiliate SEO trong ngành giao thông | Guest post + resource link | Volume |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tier</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nguồn</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cách tiếp cận</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giá trị</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier 1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Báo lớn (VnExpress, Tuổi Trẻ, VTV)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Press release về TTDK partnership + tính năng mới</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Authority cao nhất, DoFollow value</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier 1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Báo chuyên ngành (Giao thông Vận tải, Pháp luật)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Editorial article dẫn nguồn MoMo là kênh chính thống</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Topical relevance</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier 2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Automotive sites (OtoHui, Bonbanh, XeSang)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sponsored content + review tính năng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic audience relevant</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier 2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Forum & community (Otofun, Xe360)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Editorial mention, không mua link forum spam</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Natural signal</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier 3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog/Affiliate SEO trong ngành giao thông</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Guest post + resource link</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Volume</td>
+    </tr>
+  </tbody>
+</table>
 
 **Vendor Criteria (khi đi deal):**
 
@@ -609,7 +1089,7 @@ Theo Foundation Checklist chuẩn SEO Inventory. Mọi bài blog Phạt Nguội 
 - T7/2026: Kick-off campaign backlink Batch 1 (Tier 1 báo lớn - leverage TTDK announcement & exchange link).
 - T8-T9/2026: Scale Tier 2-3 theo tốc độ Phase 2 content.
 
-**PIC:** Hiến govern + approve. Inbound (Mai) coordinate với vendor sau khi Hiến set standard.
+**PIC:** Hiến govern + approve. Media Team (Mai) coordinate với vendor sau khi Hiến set standard.
 
 **Nguyên tắc bất di bất dịch:**
 - Mọi link Tier 1 phải có Hiến approve trước khi publish - không delegate cho vendor tự quyết.
@@ -620,15 +1100,60 @@ Theo Foundation Checklist chuẩn SEO Inventory. Mọi bài blog Phạt Nguội 
 
 ## Appendix A: Content Cluster - Priority Reference
 
-| Topic Cluster | Stage | Keywords đại diện | Volume |
-|---|---|---|---|
-| Công cụ tra cứu | Stage 1 | tra cứu phạt nguội, kiểm tra phạt nguội | ~1M+/tháng |
-| Tra cứu theo xe | Stage 2 | phạt nguội ô tô, kiểm tra phạt nguội xe máy | ~70K+/tháng |
-| Camera giao thông | Stage 2 | camera phạt nguội, camera giao thông | ~20K+/tháng |
-| Tra cứu theo tỉnh | Stage 2 | phạt nguội HN/HCM/Đà Nẵng... | ~15K+/tháng aggregate |
-| Nộp phạt online | Stage 3 | nộp phạt giao thông online | ~10K+/tháng |
-| Nghị định 168 | Stage 4 | nghị định 168, mức phạt mới | ~40K+/tháng |
-| Lỗi vi phạm cụ thể | Stage 4 | vượt đèn đỏ, không có bằng lái | ~20K+/tháng |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Topic Cluster</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Stage</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Keywords đại diện</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Volume</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Công cụ tra cứu</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">tra cứu phạt nguội, kiểm tra phạt nguội</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~1M+/tháng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra cứu theo xe</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">phạt nguội ô tô, kiểm tra phạt nguội xe máy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~70K+/tháng</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Camera giao thông</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">camera phạt nguội, camera giao thông</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~20K+/tháng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra cứu theo tỉnh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">phạt nguội HN/HCM/Đà Nẵng...</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~15K+/tháng aggregate</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nộp phạt online</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">nộp phạt giao thông online</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~10K+/tháng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nghị định 168</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">nghị định 168, mức phạt mới</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~40K+/tháng</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi vi phạm cụ thể</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Stage 4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">vượt đèn đỏ, không có bằng lái</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~20K+/tháng</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -642,16 +1167,74 @@ Theo Foundation Checklist chuẩn SEO Inventory. Mọi bài blog Phạt Nguội 
 
 ## Change Log
 
-| Ngày | Phiên bản | Thay đổi |
-|---|---|---|
-| 2026-07-07 | v4.0 | Tái cấu trúc lộ trình và KPI theo yêu cầu của Hiến: (1) Đóng gói các tính năng Subscription Web, Camera Map, Route pSEO, và hoạt động Off-page về Phase 1; (2) Phase 2 chỉ tập trung vào Scale Up trang Location và sản xuất Blog ngách; (3) Thiết lập KPI chính là Top 3 thứ hạng tìm kiếm từ khóa chính; (4) Tối giản bảng Success Metrics; (5) Bổ sung sơ đồ Mermaid mô tả luồng xử lý vi phạm. |
-| 2026-07-07 | v3.9 | Cập nhật định hướng dự án Phạt Nguội: (1) Triển khai gói bundle Cross-Sell mua bảo hiểm ô tô tặng 1 năm phạt nguội; (2) Triển khai Off-page 75 triệu cùng SEO Mentor và trao đổi backlink TTDK; (3) Tích hợp luồng outline review và cải tiến Page Type CMS; (4) Tạm aim lại luồng Subscription do thiếu thông tin từ Cell Team; (5) Cập nhật cấu trúc trang địa phương (Location Page Layout Spec) tích hợp tự động tuyến đường vi phạm; (6) Đặc tả luồng liên kết chéo động (Contextual Guide Flow) từ Widget kết quả sang Blog lỗi tương ứng. |
-| 2026-06-26 | v3.8 | Tích hợp điều chỉnh họp BU Phạt Nguội: (1) Khóa lịch launch Subscription Web trong tháng 7/2026; (2) Thiết lập Khung đồng đầu tư Cross-BU Co-investment (Sec 3.4) để giải quyết bài toán ROI; (3) Nâng cấp đặc tả Route pSEO tích hợp dữ liệu cào camera/tuyến đường để đón đầu traffic. |
-| 2026-06-11 | v3.7 | Cập nhật thông tin budget Offpage (~75tr/2tháng - chờ review) và timeline Social Outreach (Q3), duy trì SEM. Bổ sung note PO chuẩn bị cung cấp BA Doc/Flow cho luồng Subscription Web (Sec 5.4). |
-| 2026-05-29 | v3.6 | Thêm Section 10 - Comm Activities Off-Page: Social Outreach (Internal BMC) + Backlink & Off-site (Vendor). Cập nhật Phase Roadmap bổ sung cột Off-page/Comm per phase. |
-| 2026-05-25 | v3.5 | Thêm Section 9 - SEO/GEO Content Engine GenAI Production Plan. Tích hợp SEO Inventory v4.7 framework: phân loại Mass Traffic/DVC, Keyword Cluster Priority Map (7 clusters/P0-P3), GenAI Production Plan 3 phases (Batch 1 done/Batch 2 T6/Pháp 2 pSEO), Content Quality Gate 6 cổng, SoV Tracking Plan với milestones T6-T12/2026. |
-| 2026-05 (đầu tháng) | v3.0 | Final Master - Ready for Execution |
-| 2026-05 (giữa tháng) | v3.1 | Bổ sung SEM Key Learnings |
-| 2026-05-21 | v3.2 | Cập nhật trạng thái Phase 1 LIVE |
-| 2026-05-21 | v3.3 | llms.txt LIVE; chuyển sang Inline Lookup Widget |
-| 2026-05-22 | v3.4 | MEU Tier A commit; Subscription Web short-term |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ngày</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phiên bản</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thay đổi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-08-19</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v5.0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cập nhật chiến lược & luồng trải nghiệm theo biên bản họp 19/08/2026: (1) Tái cấu trúc màn hình kết quả tra cứu Phạt Nguội từ popup sang Single Page Inline Section; (2) Phân rã 2 nhánh kết quả: Có vi phạm (CTA Nộp phạt In-App + Inline Content Block giải thích lỗi theo Nghị định), Không vi phạm (Cross-sell Bảo hiểm Ô tô/Xe máy & Gói đăng ký thông báo Phạt nguội tự động Tháng/Năm); (3) Cập nhật ngân sách SEM Q3/2026 ở mức 70 triệu VNĐ, dồn lực tối ưu W2A Login CTR & Transactions trên organic/paid traffic hiện có; (4) Chuẩn hóa quy trình sản xuất cẩm nang GenAI, bắt buộc QC 100% tính pháp lý và gắn bảng mã map lỗi vi phạm để nhúng bài viết tự động.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-07-07</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v4.0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tái cấu trúc lộ trình và KPI theo yêu cầu của Hiến: (1) Đóng gói các tính năng Subscription Web, Camera Map, Route pSEO, và hoạt động Off-page về Phase 1; (2) Phase 2 chỉ tập trung vào Scale Up trang Location và sản xuất Blog ngách; (3) Thiết lập KPI chính là Top 3 thứ hạng tìm kiếm từ khóa chính; (4) Tối giản bảng Success Metrics; (5) Bổ sung sơ đồ Mermaid mô tả luồng xử lý vi phạm.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-07-07</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v3.9</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cập nhật định hướng dự án Phạt Nguội: (1) Triển khai gói bundle Cross-Sell mua bảo hiểm ô tô tặng 1 năm phạt nguội; (2) Triển khai Off-page 75 triệu cùng SEO Mentor và trao đổi backlink TTDK; (3) Tích hợp luồng outline review và cải tiến Page Type CMS; (4) Tạm aim lại luồng Subscription do thiếu thông tin từ Cell Team; (5) Cập nhật cấu trúc trang địa phương (Location Page Layout Spec) tích hợp tự động tuyến đường vi phạm; (6) Đặc tả luồng liên kết chéo động (Contextual Guide Flow) từ Widget kết quả sang Blog lỗi tương ứng.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-06-26</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v3.8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tích hợp điều chỉnh họp BU Phạt Nguội: (1) Khóa lịch launch Subscription Web trong tháng 7/2026; (2) Thiết lập Khung đồng đầu tư Cross-BU Co-investment (Sec 3.4) để giải quyết bài toán ROI; (3) Nâng cấp đặc tả Route pSEO tích hợp dữ liệu cào camera/tuyến đường để đón đầu traffic.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-06-11</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v3.7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cập nhật thông tin budget Offpage (~75tr/2tháng - chờ review) và timeline Social Outreach (Q3), duy trì SEM. Bổ sung note PO chuẩn bị cung cấp BA Doc/Flow cho luồng Subscription Web (Sec 5.4).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-29</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v3.6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thêm Section 10 - Comm Activities Off-Page: Social Outreach (Internal BMC) + Backlink & Off-site (Vendor). Cập nhật Phase Roadmap bổ sung cột Off-page/Comm per phase.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-25</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v3.5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thêm Section 9 - SEO/GEO Content Engine GenAI Production Plan. Tích hợp SEO Inventory v4.7 framework: phân loại Mass Traffic/DVC, Keyword Cluster Priority Map (7 clusters/P0-P3), GenAI Production Plan 3 phases (Batch 1 done/Batch 2 T6/Pháp 2 pSEO), Content Quality Gate 6 cổng, SoV Tracking Plan với milestones T6-T12/2026.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05 (đầu tháng)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v3.0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Final Master - Ready for Execution</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05 (giữa tháng)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v3.1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bổ sung SEM Key Learnings</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-21</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v3.2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cập nhật trạng thái Phase 1 LIVE</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-21</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v3.3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">llms.txt LIVE; chuyển sang Inline Lookup Widget</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-22</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v3.4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MEU Tier A commit; Subscription Web short-term</td>
+    </tr>
+  </tbody>
+</table>

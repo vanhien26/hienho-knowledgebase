@@ -35,10 +35,33 @@ Với mỗi phương án, phải chỉ rõ:
 ## 🛠 Output Template: The Idea Matrix
 Agent output bảng này cho User review:
 
-| Phương án | Mô tả giải pháp | Ưu điểm | Nhược điểm | Khả năng thực thi (1-5) |
-|:--- |:--- |:--- |:--- |:--- |
-| **MVP** | [Làm gì?] | Nhanh, rẻ | Chưa tối ưu UX | 5/5 |
-| **Scale** | [Làm gì?] | Bền vững, chuẩn | Tốn Dev/Content | 3/5 |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phương án</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả giải pháp</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ưu điểm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhược điểm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Khả năng thực thi (1-5)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MVP</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Làm gì?]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhanh, rẻ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa tối ưu UX</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5/5</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Scale</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Làm gì?]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bền vững, chuẩn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tốn Dev/Content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3/5</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

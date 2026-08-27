@@ -15,10 +15,27 @@ Liệt kê toàn bộ các đầu việc đang có trong pipeline. Với mỗi �
 ### Bước 2: Phân loại vào Ma trận Priority
 Dùng ma trận 2x2 để lọc ra "20% nỗ lực vàng":
 
-| | Low Effort | High Effort |
-|:--- |:--- |:--- |
-| **High Impact** | 🚀 **Quick Wins (Làm ngay)** | 🏗 **Strategic Projects (Lập kế hoạch)** |
-| **Low Impact** | 🧹 **Fill-ins (Làm khi rảnh)** | 🗑 **Time Wasters (Hủy bỏ/Hoãn)** |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Low Effort</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">High Effort</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>High Impact</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">🚀 <strong>Quick Wins (Làm ngay)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">🏗 <strong>Strategic Projects (Lập kế hoạch)</strong></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Low Impact</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">🧹 <strong>Fill-ins (Làm khi rảnh)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">🗑 <strong>Time Wasters (Hủy bỏ/Hoãn)</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Bước 3: Đào sâu vào "The Vital Few"
 Tập trung nguồn lực cao nhất cho nhóm **Quick Wins**. Đặt câu hỏi: "Làm thế nào để scale kết quả của dự án này lên gấp 10 lần?"

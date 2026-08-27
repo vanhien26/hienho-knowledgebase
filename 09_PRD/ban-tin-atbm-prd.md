@@ -34,7 +34,7 @@ Bản tin được thiết kế dưới dạng **Long Form Content** với các 
 
 ### 2.2 Khối 3 Flip Cards (Thẻ lật tương tác)
 *   **Mô tả:** 3 thẻ thông tin tương tác (lật mặt trước/mặt sau) chứa nội dung cảnh báo hoặc tips bảo mật.
-*   **Nút Download Asset:** 
+*   **Nút Download Asset:**
     *   Mỗi thẻ lật đi kèm một nút bấm tải ảnh riêng biệt (Ví dụ: "Tải thẻ này về máy").
     *   *Yêu cầu kỹ thuật:* Khi click, hệ thống tự động tải xuống (download) trực tiếp tệp hình ảnh gốc (Asset file) của thẻ đó về máy (không phải ảnh chụp màn hình screenshot toàn bộ trang Web). Điều này phục vụ nhu cầu lưu trữ và tự chia sẻ (share) thủ công của người dùng.
     *   *Tính năng tương lai (Next Version):* Nghiên cứu tích hợp App Developer APIs để hỗ trợ chia sẻ trực tiếp lên các mạng xã hội.

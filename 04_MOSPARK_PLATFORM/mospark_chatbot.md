@@ -7,18 +7,17 @@ Trợ lý AI tư vấn và hỗ trợ người dùng toàn trang Web
 > - **PIC:** Duy (Tech)
 > - **Version:** 1.1 · June 2026
 
-
 ---
 
 ## 1. Mục Đích & Vai Trò Chiến Lược
 
 ### 1.1. Bối cảnh
-Với định hướng phát triển của MoSpark, website momo.vn ngày càng đa dạng với hàng chục Use Case (Ví Trả Sau, Vay Nhanh, Bảo Hiểm, Phạt Nguội, Đối tác...) và lượng thông tin đồ sộ. Tuy nhiên, người dùng thường có xu hướng "lười đọc" toàn bộ nội dung tĩnh mà chỉ muốn tìm nhanh thông tin để giải quyết một JTBD cụ thể (VD: "Phí bảo hiểm xe máy là bao nhiêu?", "Nợ xấu có mở Ví Trả Sau được không?"). 
+Với định hướng phát triển của MoSpark, website momo.vn ngày càng đa dạng với hàng chục Use Case (Ví Trả Sau, Vay Nhanh, Bảo Hiểm, Phạt Nguội, Đối tác...) và lượng thông tin đồ sộ. Tuy nhiên, người dùng thường có xu hướng "lười đọc" toàn bộ nội dung tĩnh mà chỉ muốn tìm nhanh thông tin để giải quyết một JTBD cụ thể (VD: "Phí bảo hiểm xe máy là bao nhiêu?", "Nợ xấu có mở Ví Trả Sau được không?").
 
 Việc không tìm thấy thông tin nhanh chóng trên một trang web lớn dẫn đến tỷ lệ thoát trang (bounce rate) cao và mất cơ hội chuyển đổi Web-to-App (W2A).
 
 ### 1.2. Giải pháp: mospark_chatbot - Agentic Web Chatbot
-Định vị không phải là một công cụ trò chuyện mở (open-domain chat), mà là một **PLG Tool (Utility)** được nhúng trên **toàn bộ website momo.vn**. 
+Định vị không phải là một công cụ trò chuyện mở (open-domain chat), mà là một **PLG Tool (Utility)** được nhúng trên **toàn bộ website momo.vn**.
 
 **3 Nguyên tắc thiết kế cốt lõi:**
 1. **Zero-Scripting (Contextual Grounding):** Dù người dùng đang ở bất kỳ trang nào, Chatbot tự động nhận diện ngữ cảnh (URL) để load đúng Knowledge Base (Business Context 12 fields + Content + LLM) của dự án/Use Case tương ứng để dẫn dắt và giải quyết JTBD. Không cấu hình kịch bản thủ công.
@@ -31,14 +30,54 @@ Việc không tìm thấy thông tin nhanh chóng trên một trang web lớn d�
 
 Chatbot được thiết kế để giải quyết các nhu cầu (JTBD) phổ biến nhất khi người dùng duyệt website. Dưới đây là ví dụ minh họa cơ chế:
 
-| Nhu cầu (Intent) | Lựa chọn (Quick Reply) | Hành động của Chatbot (Từ Knowledge Base) | Call-to-Action (CTA) kỳ vọng |
-|---|---|---|---|
-| **Tìm hiểu USP/Tính năng nổi bật** | *Sản phẩm này có gì đặc biệt?* | Trích xuất USPs từ Business Context. | Xem chi tiết trên App |
-| **Kiểm tra điều kiện tham gia** | *Tôi có đủ điều kiện không?* | Đối chiếu điều kiện từ nội dung YMYL/Disclaimer. | Mở App / Xác thực |
-| **Hỗ trợ thực hiện tác vụ/JTBD** | *Hướng dẫn cách làm* | Hướng dẫn từng bước dựa trên bài Blog/How-to. | Thực hiện ngay trên App |
-| **Tra cứu thông tin Merchant (O2O)** | *Quán này có nhận Ví Trả Sau không? Giờ mở cửa?* | Truy xuất từ Structured Custom Fields (Địa chỉ, Giờ, Payment) của trang Đối tác. | Thanh toán / Kích hoạt Ví Trả Sau |
-| **Hỏi đáp thông tin cụ thể** | *[Câu hỏi cụ thể]* | LLM truy vấn Knowledge Base để trả lời chính xác. | Mở dịch vụ tương ứng |
-| **Tóm tắt nhanh toàn bộ** | *Tóm tắt thông tin* | Gom ý chính thành 3-4 bullet points. | Chuyển đổi / Mở App |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhu cầu (Intent)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Lựa chọn (Quick Reply)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hành động của Chatbot (Từ Knowledge Base)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Call-to-Action (CTA) kỳ vọng</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tìm hiểu USP/Tính năng nổi bật</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Sản phẩm này có gì đặc biệt?</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trích xuất USPs từ Business Context.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xem chi tiết trên App</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Kiểm tra điều kiện tham gia</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Tôi có đủ điều kiện không?</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đối chiếu điều kiện từ nội dung YMYL/Disclaimer.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mở App / Xác thực</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hỗ trợ thực hiện tác vụ/JTBD</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Hướng dẫn cách làm</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hướng dẫn từng bước dựa trên bài Blog/How-to.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thực hiện ngay trên App</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tra cứu thông tin Merchant (O2O)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Quán này có nhận Ví Trả Sau không? Giờ mở cửa?</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Truy xuất từ Structured Custom Fields (Địa chỉ, Giờ, Payment) của trang Đối tác.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thanh toán / Kích hoạt Ví Trả Sau</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hỏi đáp thông tin cụ thể</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>[Câu hỏi cụ thể]</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LLM truy vấn Knowledge Base để trả lời chính xác.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mở dịch vụ tương ứng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tóm tắt nhanh toàn bộ</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Tóm tắt thông tin</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gom ý chính thành 3-4 bullet points.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuyển đổi / Mở App</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -55,14 +94,14 @@ Chatbot được thiết kế để giải quyết các nhu cầu (JTBD) phổ b
    - Chưa login (Anonymous): Gọi hàm `generateAnonId()`.
    - Kết xuất ra một `Identity Object { identityId, userType }` chuẩn hóa.
 3. **Tầng 3 - Analytics Tracking:**
-   - Init Chatbot Session: Push `identity_init` lên DataLayer (GTM -> GA4) và gọi `umami.identify(identityId)`.
+   - Init Chatbot Session: Push `identity_init` lên DataLayer (GTM ➔ GA4) và gọi `umami.identify(identityId)`.
    - Track các event: `chatbot_opened`, `quick_reply_clicked`, `question_asked`.
 4. **Tầng 4 - CTA Distribution (Crucial Step):**
    - Mọi Onelink được Chatbot sinh ra hoặc hiển thị trên khung chat **phải được tự động gắn tham số `wui`**.
    - Định dạng: `https://onelink.momo.vn/.../?wui=<identityId>&ref=web_chatbot`
 5. **Tầng 5 - App Attribution:**
    - Khi mở App qua OneLink, App MoMo tiếp nhận `wui` và map với `IdentityId`.
-   - Data pipeline (Appsflyer + BigQuery) sẽ khâu nối: Hành vi hỏi Chatbot trên Web -> Giao dịch/thanh toán trên App.
+   - Data pipeline (Appsflyer + BigQuery) sẽ khâu nối: Hành vi hỏi Chatbot trên Web ➔ Giao dịch/thanh toán trên App.
 
 ---
 
@@ -103,12 +142,37 @@ Trong H2/2026, hệ thống Chatbot sẽ được nâng cấp các năng lực t
 - **Variant B:** Website + Floating Chatbot Widget (mospark_chatbot).
 
 ### 6.2. Metrics Tracked (Umami & Appsflyer)
-| Metric | Định nghĩa | Target |
-|---|---|---|
-| **Chatbot Interaction Rate** | % Session có click mở chatbot | > 20% traffic trang |
-| **Quick Reply Usage** | % Session mở chatbot có bấm vào ít nhất 1 Quick Reply | > 60% (chứng minh tính hữu dụng) |
-| **W2A Chatbot CTR** | Lượt click OneLink trong Chatbot / Tổng số session mở Chatbot | > 10% |
-| **End-to-End Conversion** | App Install / App Open thành công mang theo `wui` từ Chatbot | Đo lường baseline sau 1 tháng |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Định nghĩa</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Chatbot Interaction Rate</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">% Session có click mở chatbot</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">> 20% traffic trang</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Quick Reply Usage</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">% Session mở chatbot có bấm vào ít nhất 1 Quick Reply</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">> 60% (chứng minh tính hữu dụng)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>W2A Chatbot CTR</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lượt click OneLink trong Chatbot / Tổng số session mở Chatbot</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">> 10%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>End-to-End Conversion</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">App Install / App Open thành công mang theo <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">wui</code> từ Chatbot</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đo lường baseline sau 1 tháng</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 *Tài liệu này được lập theo chuẩn quy trình Spec của MoSpark Platform. Web Platform team sẽ dựa vào mục 3 và 6 để tiến hành setup schema trước khi build UI.*

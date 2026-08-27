@@ -15,17 +15,13 @@
 > *   **Loại yêu cầu:**
 >     *   [x] **1. Tính năng mới (New Feature):** Xây dựng Cổng thông tin Destination Hub (Web Landing Pages) kết hợp Widget tính toán tỷ giá ngoại tệ và luồng in-app mua sắm combo dịch vụ Outbound (eSIM + Vé bay + Khách sạn + QR Thanh toán quốc tế).
 
----
-
 ## I. RELATED DOCUMENTS
 *Các liên kết tài liệu nghiệp vụ, thiết kế và thông tin nền tảng.*
 
 *   [x] **Figma Design Link:** `https://www.figma.com/file/momo-destination-hub-prototype`
-*   [x] **Tài liệu tham chiếu eSIM Du Lịch:** [esim-du-lich-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_USE_CASE_MOMO/esim-du-lich-brd.md)
-*   [x] **Tài liệu tham chiếu MoMo Travel (OTA):** [ota-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_USE_CASE_MOMO/ota-brd.md)
+*   [x] **Tài liệu tham chiếu eSIM Du Lịch:** [esim-du-lich-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO/esim-du-lich-brd.md)
+*   [x] **Tài liệu tham chiếu MoMo Travel (OTA):** [ota-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO/ota-brd.md)
 *   [x] **Tài liệu đặc tả API đối tác (Gohub eSIM / Agoda Hotel):** `https://api-docs.momo.vn/travel/v1/integrations`
-
----
 
 ## II. BACKGROUND & PROBLEM STATEMENT
 
@@ -41,25 +37,56 @@ Người Việt đi du lịch tự túc ngày càng trẻ hóa và có xu hướ
     *   Tỷ giá quy đổi mập mờ, không minh bạch.
     *   Rủi ro mất thẻ vật lý hoặc thiếu thẻ tín dụng khi thanh toán đặt phòng khách sạn.
 
----
-
 ## III. OBJECTIVES & VALUE PROPOSITION
 
 ### 1. Mục tiêu & Chỉ số đo lường (Objectives, Goals & Success criteria)
 Dự án hướng tới việc tối ưu hóa tỷ lệ bán chéo dịch vụ và khẳng định vị thế "All-in-one Travel Hub" của MoMo cho thị trường du lịch nước ngoài.
 
-| Chỉ số (KPI) | Trước thay đổi (Baseline) | Mục tiêu sau thay đổi (Target) | Thời gian đo lường (Timeframe) |
-|---|---|---|---|
-| Traffic truy cập Hub Web | 0 | > 250,000 Pageviews/tháng | 3 tháng sau ra mắt |
-| Tỷ lệ chuyển đổi Web-to-App (W2A CR) | 0% | > 12% | 3 tháng sau ra mắt |
-| Tỷ lệ bán chéo sản phẩm (Cross-sell Rate) | < 2% (Mua vé bay có kèm eSIM) | > 15% khách mua vé máy bay quốc tế sẽ mua kèm eSIM hoặc Khách sạn | 6 tháng sau ra mắt |
-| Doanh thu từ thanh toán QR Quốc tế | N/A | Tăng trưởng giao dịch QR quốc tế (outbound) đạt +35% MoM | 6 tháng sau ra mắt |
-| Tốc độ tăng trưởng doanh số eSIM du lịch | N/A | Tăng trưởng +45% YoY | Q4/2026 |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chỉ số (KPI)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trước thay đổi (Baseline)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục tiêu sau thay đổi (Target)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thời gian đo lường (Timeframe)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic truy cập Hub Web</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">> 250,000 Pageviews/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3 tháng sau ra mắt</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ lệ chuyển đổi Web-to-App (W2A CR)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">> 12%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3 tháng sau ra mắt</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ lệ bán chéo sản phẩm (Cross-sell Rate)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 2% (Mua vé bay có kèm eSIM)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">> 15% khách mua vé máy bay quốc tế sẽ mua kèm eSIM hoặc Khách sạn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6 tháng sau ra mắt</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Doanh thu từ thanh toán QR Quốc tế</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">N/A</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng trưởng giao dịch QR quốc tế (outbound) đạt +35% MoM</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6 tháng sau ra mắt</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tốc độ tăng trưởng doanh số eSIM du lịch</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">N/A</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng trưởng +45% YoY</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q4/2026</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2. Tuyên ngôn giá trị (Value Proposition)
 > Chúng tôi giúp **người Việt đi du lịch tự túc nước ngoài** **lên kế hoạch, chuẩn bị kết nối internet, đặt vé máy bay, khách sạn và quản trị chi phí thanh toán quốc tế chỉ trong 3 phút** bằng cách **cung cấp cổng Destination Hub - nền tảng trọn gói giúp tự động đồng bộ hành trình, tích hợp eSIM kích hoạt ngay và tối ưu hóa tỷ giá quy đổi ngoại tệ khi quét QR quốc tế.**
-
----
 
 ## IV. TARGET PERSONAS & HIGH-LEVEL USER EXPERIENCE (JTBD)
 
@@ -88,8 +115,6 @@ Dự án hướng tới việc tối ưu hóa tỷ lệ bán chéo dịch vụ v
 *   **Nội dung họ cần đọc (I want to...):** Tìm thấy Landing Page của MoMo chuyên về điểm đến đó (ví dụ: `momo.vn/esim-du-lich/thai-lan`), cung cấp công cụ widget so sánh chi phí thanh toán (MoMo QR vs. Thẻ tín dụng truyền thống) và bảng chọn gói dịch vụ đi kèm.
 *   **Hành vi chuyển đổi kỳ vọng (So I can...):** Nhấp chọn gói combo ưu đãi và chuyển đổi liền mạch sang App MoMo để thanh toán hoàn tất.
 
----
-
 ## V. BUSINESS CONTEXT & PRODUCT SPECS
 
 ### 1. Cấu trúc cổng dịch vụ (Destination Hub Structure)
@@ -115,8 +140,6 @@ Hệ thống Destination Hub sẽ được tổ chức theo cấu trúc hình c�
 *   **Giới hạn:** Mua eSIM yêu cầu thiết bị của người dùng phải hỗ trợ công nghệ eSIM (từ iPhone XS trở lên, Samsung S20 trở lên...). Hệ thống Web/App phải có widget kiểm tra tính tương thích thiết bị trước khi cho phép thanh toán.
 *   **Blacklist:** Không sử dụng các từ *"chuyển vùng quốc tế giá rẻ nhất"* (tránh tranh chấp với các nhà mạng viễn thông Viettel, Mobifone, Vinaphone). Không so sánh tỷ giá trực tiếp bằng cách ghi tên cụ thể của một ngân hàng đối thủ (dùng cụm từ *"Thẻ tín dụng ngân hàng thông thường"*).
 
----
-
 ## VI. FEATURE REQUIREMENTS & RELEASE PHASES
 
 ### 1. Lộ trình phát hành (Release Phases)
@@ -137,36 +160,97 @@ Hệ thống Destination Hub sẽ được tổ chức theo cấu trúc hình c�
 #### A. Trải nghiệm Kênh Web (Landing Page & Widget)
 *   **Xác thực:** Công khai (Public). Không bắt buộc đăng nhập để xem thông tin và dùng thử máy tính tỷ giá.
 
-| ID | Tính năng (Feature) | User Story | Yêu cầu kỹ thuật Phase 1 |
-|---|---|---|---|
-| DH-W01 | Destination Filter & Content Hub | As a Web Visitor, I want to filter destinations and view combined options for Flight, Hotel, and eSIM, so that I can prepare my trip easily. | - Thiết kế giao diện thẻ (Tabs) chuyển đổi mượt mà giữa các dịch vụ cho mỗi nước.<br>- Dữ liệu giá vé và khách sạn được cache mỗi 15 phút từ API để đảm bảo tốc độ tải trang tối ưu.<br>- Thiết kế responsive chuẩn mobile-first. |
-| DH-W02 | Exchange Rate & Cost Calculator | As a traveler, I want to input foreign currency (e.g., SGD, THB) and compare the cost of MoMo QR vs Traditional Credit Card, so that I can see the savings. | - Tự động tải tỷ giá ngoại tệ hiện tại.<br>- Tính toán: `Số tiền VND = Ngoại tệ * Tỷ giá MoMo` (không phí ẩn).<br>- So sánh với thẻ tín dụng: `Số tiền VND = Ngoại tệ * Tỷ giá ngân hàng + 3% phí chuyển đổi ngoại tệ`. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">ID</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tính năng (Feature)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">User Story</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Yêu cầu kỹ thuật Phase 1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">DH-W01</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Destination Filter & Content Hub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">As a Web Visitor, I want to filter destinations and view combined options for Flight, Hotel, and eSIM, so that I can prepare my trip easily.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Thiết kế giao diện thẻ (Tabs) chuyển đổi mượt mà giữa các dịch vụ cho mỗi nước.<br>- Dữ liệu giá vé và khách sạn được cache mỗi 15 phút từ API để đảm bảo tốc độ tải trang tối ưu.<br>- Thiết kế responsive chuẩn mobile-first.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">DH-W02</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Exchange Rate & Cost Calculator</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">As a traveler, I want to input foreign currency (e.g., SGD, THB) and compare the cost of MoMo QR vs Traditional Credit Card, so that I can see the savings.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Tự động tải tỷ giá ngoại tệ hiện tại.<br>- Tính toán: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Số tiền VND = Ngoại tệ <em> Tỷ giá MoMo</code> (không phí ẩn).<br>- So sánh với thẻ tín dụng: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Số tiền VND = Ngoại tệ </em> Tỷ giá ngân hàng + 3% phí chuyển đổi ngoại tệ</code>.</td>
+    </tr>
+  </tbody>
+</table>
 
 #### B. Trải nghiệm in-app MoMo (Mobile App)
 *   **Xác thực:** Đăng nhập tài khoản ví MoMo.
 
-| ID | Tính năng (Feature) | User Story | Yêu cầu kỹ thuật Phase 1 |
-|---|---|---|---|
-| DH-A01 | In-app Cross-sell Checkout | As a MoMo traveler, I want to purchase an eSIM directly at the flight checkout step, so that I don't have to buy it separately later. | - Khi người dùng ở bước thanh toán vé máy bay đi Thái Lan, hiển thị popup đề xuất: *"Thêm eSIM du lịch Thái Lan chỉ với 99,000đ (Đã giảm 15%)"*.<br>- Nếu đồng ý, cộng gộp giá trị đơn hàng và xử lý thanh toán 1-chạm. |
-| DH-A02 | eSIM Auto-Delivery & Guide | As an eSIM buyer, I want to receive my QR code and configuration guide inside the app, so that I don't lose it. | - Hiển thị tab "Ví Voucher / Lịch sử dịch vụ" lưu trữ mã QR eSIM dạng SVG.<br>- Hiển thị hướng dẫn từng bước kích hoạt cho 2 hệ điều hành chính (iOS/Android). |
-
----
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">ID</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tính năng (Feature)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">User Story</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Yêu cầu kỹ thuật Phase 1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">DH-A01</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">In-app Cross-sell Checkout</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">As a MoMo traveler, I want to purchase an eSIM directly at the flight checkout step, so that I don't have to buy it separately later.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Khi người dùng ở bước thanh toán vé máy bay đi Thái Lan, hiển thị popup đề xuất: <em>"Thêm eSIM du lịch Thái Lan chỉ với 99,000đ (Đã giảm 15%)"</em>.<br>- Nếu đồng ý, cộng gộp giá trị đơn hàng và xử lý thanh toán 1-chạm.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">DH-A02</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">eSIM Auto-Delivery & Guide</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">As an eSIM buyer, I want to receive my QR code and configuration guide inside the app, so that I don't lose it.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Hiển thị tab "Ví Voucher / Lịch sử dịch vụ" lưu trữ mã QR eSIM dạng SVG.<br>- Hiển thị hướng dẫn từng bước kích hoạt cho 2 hệ điều hành chính (iOS/Android).</td>
+    </tr>
+  </tbody>
+</table>
 
 ## VII. W2A CONVERSION & DATA REQUIREMENTS
 
 ### 1. Luồng chuyển đổi Web-to-App (W2A Trigger Points)
 
-| Vị trí CTA trên Web | Câu chữ hiển thị (CTA Text) | Deep Link mở App | Hành động in-app |
-|---|---|---|---|
-| Widget Vé Máy Bay trên Web | "Đặt vé rẻ trên App MoMo" | `momo://app/travel/flight?destination={country_code}&promo=true` | Mở trực tiếp màn hình tìm kiếm vé máy bay đi quốc gia đó với bộ lọc giá rẻ. |
-| Widget Mua eSIM trên Web | "Mua eSIM & Nhận mã ngay" | `momo://app/telecom/esim?country={country_code}&partner=gohub` | Mở màn hình thanh toán gói cước eSIM của nước tương ứng. |
-| Tab Cẩm nang thanh toán | "Bật tính năng quét QR Quốc tế" | `momo://app/payment/qr_roaming` | Chuyển hướng người dùng đến trang xác thực và kích hoạt quét QR quốc tế. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vị trí CTA trên Web</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Câu chữ hiển thị (CTA Text)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Deep Link mở App</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hành động in-app</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget Vé Máy Bay trên Web</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Đặt vé rẻ trên App MoMo"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo://app/travel/flight?destination={country_code}&promo=true</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mở trực tiếp màn hình tìm kiếm vé máy bay đi quốc gia đó với bộ lọc giá rẻ.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget Mua eSIM trên Web</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Mua eSIM & Nhận mã ngay"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo://app/telecom/esim?country={country_code}&partner=gohub</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mở màn hình thanh toán gói cước eSIM của nước tương ứng.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tab Cẩm nang thanh toán</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Bật tính năng quét QR Quốc tế"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo://app/payment/qr_roaming</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuyển hướng người dùng đến trang xác thực và kích hoạt quét QR quốc tế.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2. API Nghiệp Vụ & Fallback Logic
 *   **Fallback khi lỗi API giá vé:** Nếu API giá vé thời gian thực bị lỗi hoặc phản hồi lâu hơn 3 giây, giao diện Web sẽ hiển thị mức giá sàn tĩnh trung bình (Ví dụ: *"Vé đi Thái Lan chỉ từ 1,800,000đ"* kèm lưu ý: *"Giá vé thay đổi theo thời gian thực"* và chuyển hướng người dùng vào App tìm kiếm thủ công).
 *   **Fallback khi lỗi gửi eSIM:** Nếu hệ thống API Gohub gặp sự cố không sinh được mã QR eSIM sau khi thanh toán, hệ thống MoMo sẽ tự động chuyển trạng thái đơn hàng sang "Đang xử lý", gửi thông báo xin lỗi người dùng và cam kết xử lý hoàn thành thủ công bởi bộ phận CSKH trong vòng 15 phút.
-
----
 
 ## VIII. GOVERNANCE & RISKS
 
@@ -187,15 +271,48 @@ Hệ thống Destination Hub sẽ được tổ chức theo cấu trúc hình c�
 
 ### 4. Quản trị rủi ro tiềm tàng (Potential Risk)
 
-| Rủi ro (Risk) | Mức độ ảnh hưởng (Impact) | Phương án giảm thiểu (Risk management plan) | Người chịu trách nhiệm (PIC) |
-|---|---|---|---|
-| Người dùng mua eSIM nhưng thiết bị không hỗ trợ (không đọc kỹ lưu ý). | Trung bình | - Bổ sung bước kiểm tra/chọn dòng máy (Dropdown select) bắt buộc trên Web/App trước khi nhấn nút "Thanh toán".<br>- Có chính sách hoàn tiền tự động nhanh nếu phát hiện thiết bị chưa từng kích hoạt profile eSIM nào. | PO OTA & Tech Lead |
-| Tỷ giá ngoại tệ biến động mạnh gây chênh lệch lỗ cho MoMo khi thanh toán quốc tế. | Cao | - Thiết lập biên độ an toàn tỷ giá (+0.5% so với tỷ giá liên ngân hàng thực tế).<br>- Tự động tạm dừng tính năng QR Roaming nếu API tỷ giá bị mất kết nối quá 10 phút. | Tech Lead Fintech |
-
----
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Rủi ro (Risk)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mức độ ảnh hưởng (Impact)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phương án giảm thiểu (Risk management plan)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Người chịu trách nhiệm (PIC)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người dùng mua eSIM nhưng thiết bị không hỗ trợ (không đọc kỹ lưu ý).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Bổ sung bước kiểm tra/chọn dòng máy (Dropdown select) bắt buộc trên Web/App trước khi nhấn nút "Thanh toán".<br>- Có chính sách hoàn tiền tự động nhanh nếu phát hiện thiết bị chưa từng kích hoạt profile eSIM nào.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PO OTA & Tech Lead</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ giá ngoại tệ biến động mạnh gây chênh lệch lỗ cho MoMo khi thanh toán quốc tế.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Thiết lập biên độ an toàn tỷ giá (+0.5% so với tỷ giá liên ngân hàng thực tế).<br>- Tự động tạm dừng tính năng QR Roaming nếu API tỷ giá bị mất kết nối quá 10 phút.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tech Lead Fintech</td>
+    </tr>
+  </tbody>
+</table>
 
 ## LỊCH SỬ THAY ĐỔI (Changelog)
 
-| Phiên bản | Ngày cập nhật | Người thực hiện | Nội dung thay đổi |
-|---|---|---|---|
-| 1.0 | 2026-06-30 | PO Travel & Telco | Khởi tạo tài liệu PRD đầu tiên cho dự án MoMo Destination Hub |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phiên bản</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ngày cập nhật</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Người thực hiện</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung thay đổi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-06-30</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PO Travel & Telco</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khởi tạo tài liệu PRD đầu tiên cho dự án MoMo Destination Hub</td>
+    </tr>
+  </tbody>
+</table>

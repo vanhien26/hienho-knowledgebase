@@ -30,11 +30,32 @@ Khi gặp quyết định Loại 1, hãy dùng WRAP:
 
 ## 💡 Ứng dụng tại MoMo Web
 
-| Quyết định | Loại | Hành động (Action) |
-|:--- |:--- |:--- |
-| Viết 10 bài blog cho mảng eSIM. | Loại 2 | Thực hiện ngay, monitor traffic sau 2 tuần. |
-| Mua một Domain mới để làm satellite site. | Loại 1 | Cần phân tích ROI, rủi ro SEO và xin ý kiến Lead. |
-| Chỉnh sửa giao diện Tool Phạt Nguội. | Loại 2 | Test trên 10% user, nếu ổn thì roll-out 100%. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Quyết định</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hành động (Action)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Viết 10 bài blog cho mảng eSIM.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loại 2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thực hiện ngay, monitor traffic sau 2 tuần.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mua một Domain mới để làm satellite site.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loại 1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần phân tích ROI, rủi ro SEO và xin ý kiến Lead.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chỉnh sửa giao diện Tool Phạt Nguội.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loại 2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Test trên 10% user, nếu ổn thì roll-out 100%.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

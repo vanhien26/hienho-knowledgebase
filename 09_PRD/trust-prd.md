@@ -20,7 +20,7 @@
 *   **Hành vi người dùng:** Khi phát hiện bị lừa đảo, nạn nhân thường hoảng loạn và lập tức tìm kiếm trên Google với từ khóa: *"bị lừa chuyển khoản MoMo phải làm gì"*, *"tố cáo số tài khoản MoMo lừa đảo"*. Họ cần một kênh tiếp nhận nhanh chóng, tin cậy, không rườm rà.
 
 ### 1.3 Key Constraints & Non-Goals
-*   **Non-Goals:** 
+*   **Non-Goals:**
     *   Không xử lý trực tiếp khiếu nại hoàn tiền hay tranh chấp giao dịch qua kênh này (phải chuyển hướng sang luồng hỗ trợ CS in-app hoặc Hotline).
     *   Không cam kết phản hồi cá nhân chi tiết cho từng báo cáo ở phiên bản V1 (do tính chất báo cáo ẩn danh).
 
@@ -43,15 +43,45 @@ Giao diện trang Landing Page `/report-scam` được thiết kế theo cấu t
 
 ### 2.2 Zone 2: Live Dashboard (Tác động cộng đồng)
 *   **Mục tiêu:** Hiển thị số liệu thực tế để tăng động lực báo cáo của người dùng.
-*   **Logic hiển thị:** 
+*   **Logic hiển thị:**
     *   Lấy dữ liệu thời gian thực từ hệ thống bảo mật MoMo và làm tròn số liệu theo định dạng rút gọn (ví dụ: `4.659` -> `4.7K`, `4.630` -> `4.600` -> `4.6K`).
 
-| Chỉ số hiển thị | Logic dữ liệu | Nhãn Tiếng Việt | Nhãn Tiếng Anh |
-|---|---|---|---|
-| **Thông tin 1** | Tổng số báo cáo lừa đảo ghi nhận từ tất cả các nguồn | Báo cáo từ cộng đồng | Community Reports |
-| **Thông tin 2** | Tổng số giao dịch rủi ro/lừa đảo được hệ thống phát hiện | Cảnh báo giao dịch | Transactions Warned |
-| **Thông tin 3** | Tổng số người dùng được bảo vệ an toàn khỏi giao dịch xấu | Người được bảo vệ | People Protected |
-| **Thông tin 4** | Tổng số tiền lừa đảo đã được ngăn chặn thành công | Số tiền được bảo vệ | Amount Protected |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chỉ số hiển thị</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Logic dữ liệu</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhãn Tiếng Việt</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhãn Tiếng Anh</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Thông tin 1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng số báo cáo lừa đảo ghi nhận từ tất cả các nguồn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Báo cáo từ cộng đồng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Community Reports</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Thông tin 2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng số giao dịch rủi ro/lừa đảo được hệ thống phát hiện</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cảnh báo giao dịch</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transactions Warned</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Thông tin 3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng số người dùng được bảo vệ an toàn khỏi giao dịch xấu</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người được bảo vệ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">People Protected</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Thông tin 4</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng số tiền lừa đảo đã được ngăn chặn thành công</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số tiền được bảo vệ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Amount Protected</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2.3 Zone 3: Cơ chế xử lý (How it works)
 *   **Mục tiêu:** Giải thích luồng xử lý báo cáo sau khi người dùng submit.

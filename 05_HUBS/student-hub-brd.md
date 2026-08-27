@@ -1,18 +1,16 @@
 # BRD: Student Hub - Nền Tảng Dịch Vụ & Cổng Thông Tin Sinh Viên MoMo
 
 > - **Project:** Student Hub (Web Platform & Student Pass Identity)
-> - **Platform:** Web Platform (`momo.vn/sinh-vien`)
 > - **Division:** Growth Platform Division (GPD)
 > - **Owner:** Web Platform Team (GPD)
 
----
-
 ## I. Business Context
 
-### 1.1 Market Sizing & User Base
-* **Quy mô thị trường Gen Z:** Việt Nam có khoảng 9,58 triệu người độ tuổi 16-22. Tổng số Học sinh - Sinh viên (HSSV) đạt ~2,44 triệu người. Mỗi năm hệ thống đại học & cao đẳng đón nhận hơn 580.000 tân sinh viên nhập học.
-* **Tệp người dùng MoMo hiện tại:** Nhóm 16-22 tuổi đóng góp ~30% tổng MAU và ~50% New MAU của MoMo (~1,49 triệu sinh viên đang sử dụng, đạt 61,1% độ phủ tệp HSSV toàn quốc).
+### 1.1 Market Sizing & User Base (Dữ liệu xác thực từ Market Data)
+* **Quy mô thị trường Gen Z (16-22 tuổi):** Việt Nam có khoảng **9,58 triệu người** độ tuổi 16-22. Tổng số Học sinh - Sinh viên (HSSV) đạt **~2,44 triệu người**. Mỗi năm hệ thống đại học & cao đẳng đón nhận hơn **580.000 tân sinh viên** nhập học.
+* **Tệp người dùng MoMo hiện tại:** Nhóm 16-22 tuổi đóng góp **~30% tổng MAU** và **~50% New MAU** của MoMo (**~1,49 triệu sinh viên đang sử dụng**, đạt **61,1% độ phủ tệp HSSV toàn quốc**).
 * **Cột mốc tự lập đầu tiên (1st Financial Entry Window):** Giai đoạn 18-19 tuổi (xa nhà nhập học) là thời điểm phát sinh nhu cầu giao dịch tài chính độc lập đầu đời (nộp lệ phí, đóng học phí, nhận tiền sinh hoạt, thuê trọ, chi tiêu). Bắt trọn tệp khách hàng giai đoạn này giúp định hình thói quen tài chính 5-10 năm tới.
+* **Insight Mới về Hành vi Chọn Trường/Ngành:** Học sinh có xu hướng chọn **Ngành học trước rồi mới chọn Trường** -> Student Hub bổ sung bộ lọc **Tra cứu theo Ngành học (Filter by Major)** và công cụ **So sánh Trường (School Comparison Tool)**.
 
 ### 1.2 Competitive Landscape
 * **Áp lực cạnh tranh từ các ngân hàng:** MB Bank, Vietcombank, TPBank, VPBank liên tục phủ sóng trực tiếp (on-site campus acquisition) tại các trường ĐH/THPT, mở tài khoản eKYC và phát hành thẻ liên kết sinh viên.
@@ -21,17 +19,72 @@
 ### 1.3 Executive Overview & Product Statement
 * **Định vị sản phẩm:** Student Hub (`momo.vn/sinh-vien`) là trang web tập trung toàn bộ cẩm nang, dịch vụ và ưu đãi dành riêng cho sinh viên của MoMo.
 * **Mục tiêu sản phẩm:** Giải quyết triệt để sự đứt gãy giữa các dịch vụ sinh viên đang bị vận hành rời rạc, tạo phễu thu hút người dùng trẻ từ Web không cần đăng nhập, kết nối nội dung cẩm nang & Review Trường học với các dịch vụ tài chính MoMo.
+* **05 Trụ cột Nội dung (5 Content Pillars):**
+  1. *Pillar 1 - Quy định & Thủ tục:* Học vụ, đăng ký tín chỉ, điểm rèn luyện, điều kiện tốt nghiệp.
+  2. *Pillar 2 - Chi tiêu & Tài chính SV:* Thuê trọ, chia tiền trọ, đóng học phí, Ví Trả Sau 0%.
+  3. *Pillar 3 - Cuộc sống & Campus:* Ăn uống, xe buýt, câu lạc bộ, địa điểm quanh trường.
+  4. *Pillar 4 - Kỹ năng sống & AI:* Gemini Student Offer, Canva Pro, kỹ năng mềm, phát triển bản thân.
+  5. *Pillar 5 - Giải trí & Trending:* Vé xem phim sinh viên 50K, sự kiện HOT, ngày hội việc làm.
 * **Mô hình vận hành độc lập (Standing Platform):** Student Hub là **nền tảng vận hành dài hạn (Year-round Standing Platform)** chạy song song với các chiến dịch tiếp thị theo mùa (như Back2School). Hub không đóng góp trực tiếp KPI vào chiến dịch Back2School mà sở hữu bộ chỉ số đo lường hiệu quả nền tảng hoàn toàn độc lập.
 
 ### 1.4 Product Goals & Key Metrics
-| Chỉ số Chiến lược | Định nghĩa & Cách đo lường | Mục tiêu Phase 1 (Nền tảng Dài hạn) | Căn cứ & Nguồn số liệu |
-| :--- | :--- | :--- | :--- |
-| **User Acquisition** | Tổng số HSSV hoàn tất xác thực Thẻ Sinh Viên Số In-App | **~612.000 sinh viên xác thực** | Đạt ~41% trong tổng số 1,49 triệu sinh viên hiện đang dùng MoMo (tập trung 5 trường trọng điểm Phase 1: UEH, FTU, TDTU, HCMUT, VLU + Tân sinh viên mới). |
-| **Web Engagement** | Tỷ lệ người dùng quay lại Web Hub & tương tác với Content / Review | **Tăng trưởng +25%** so với Baseline | Dự báo từ lượng truy cập tự nhiên Organic Search (pSEO/GEO) và traffic truy cập nền tảng chạy song song với chiến dịch mùa vụ. |
-| **Product Cross-sell** | Tỷ lệ sinh viên từ Web Hub chuyển đổi sang kích hoạt Ví Trả Sau, Túi Thần Tài | **Theo phễu điều hướng OneLink** | Đo lường tỷ lệ nhấp CTA OneLink từ Web Hub sang App MoMo mở hạn mức Ví Trả Sau & Túi Thần Tài. |
-| **Web Attribution** | Tỷ lệ lượt xác thực & giao dịch được ghi nhận chính xác theo nguồn UTM | **100% lượt chuyển đổi gắn UTM** | Sử dụng **Umami Analytics** đo lường 100% User Flow & CTA trên Web; Sử dụng **OneLink (AppsFlyer)** ghi nhận Open App / Install App & Attribution. |
 
----
+#### 1. Bộ Mục Tiêu & KPI Đề Xuất Alignment (Student Pass x Web Platform)
+
+* **Mục tiêu Hợp tác Chiến lược:**
+  1. **Thu hút & Kích hoạt:** Thu hút người dùng sinh viên (Gen Z U18-U23) vào hệ sinh thái MoMo; gia tăng traffic và activation cho Student Pass.
+  2. **Top-of-Mind Brand Awareness:** Tăng nhận diện thương hiệu Student Pass, hướng tới trở thành lựa chọn hàng đầu của sinh viên; mở rộng hợp tác với các trường đại học & đối tác giáo dục.
+  3. **Hạng mục Hợp tác Trọng tâm:**
+     - **Student Pass Ambassador:** Xây dựng mạng lưới đại sứ sinh viên tại các trường đại học, đồng hành cùng MoMo trong 12 tháng để lan tỏa Student Pass, thúc đẩy tăng trưởng người dùng và tạo cộng đồng sinh viên trên MoMo.
+     - **Student Pass Webinar:** Xây dựng chuyên mục webinar/workshop trên Web Platform, phân phối nội dung từ các diễn giả và đối tác nhằm thu hút sinh viên và điều hướng traffic về Student Pass.
+
+* **Bảng KPI Cam Kết Alignment (Web & App Objectives):**
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chỉ số Chiến lược</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Định nghĩa & Cách đo lường</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục tiêu Cam kết (KPI Target)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Căn cứ & Nguồn số liệu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Traffic Target</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng lượt xem trang (PageView) truy cập vào Student Hub trên Kênh Web MoMo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>500.000 PageView / Q4</strong> (~167.000 PageView/tháng)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Do Umami Analytics đo lường từ nguồn Organic Search (pSEO/GEO), chuyên mục Webinar và chuỗi Seeding Ambassador.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web-to-App CTR</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ lệ nhấp nút hành động CTA OneLink từ Web Hub điều hướng sang App MoMo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>10.00% - 15.00%</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Baseline CTR tiêu chuẩn toàn nền tảng Web Platform đối với tệp người dùng trẻ.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>New Verified Students</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số lượng sinh viên mới hoàn tất xác thực Thẻ Sinh Viên Số / Email .edu.vn In-App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>70.000 Sinh viên xác thực mới</strong> (Q3 - Q4)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ghi nhận từ hệ thống xác thực Student Pass In-App kết hợp phễu điều hướng từ Web Hub.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Student Pass MEU</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng số người dùng sinh viên định danh hoạt động hàng tháng (Monthly Engaged Users)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1.500.000 Student Pass MEU</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số liệu người dùng active tích lũy từ hệ sinh thái Student Pass trên App MoMo.</td>
+    </tr>
+  </tbody>
+</table>
+
+* **Timeline Triển Khai & Lộ Trình 2 Giai Đoạn:**
+  - **Phase 1: Foundation (Q3 - Q4/2026):**
+    - Build Trang chủ Sinh viên Gateway (`momo.vn/sinh-vien`) đóng vai trò Cổng dẫn đường (Navigation Hub) tìm kiếm và điều hướng người dùng đến các trang trường ĐH.
+    - Build Pilot 05 trường trọng điểm (UEH, FTU, TDTU, HCMUT, VLU) đón trọn nhu cầu tìm kiếm cụm từ khóa "Review + Tên trường".
+    - Tích hợp trọn vẹn 04 nhóm JTBD trong 05 trang trường: (1) Thông tin tổng quan & Học phí tín chỉ, (2) Điểm chuẩn tuyển sinh 3 năm, (3) Tiện ích quanh trường (Bản đồ 5km & Tuyến xe buýt), (4) Student Pass Identity (Thẻ Sinh Viên Số & gói đặc quyền >1.386M/năm).
+  - **Phase 2: Programmatic Scale & Ecosystem (Q4/2026):**
+    - Programmatic pSEO Scale-out tự động mở rộng 100+ trang trường ĐH/CĐ toàn quốc theo các Tier lưu lượng (Tier 1 >100K: ĐH Công Nghiệp HN, ĐH Bách Khoa HN, ĐH Sư Phạm, ĐH Phenikaa, ĐHQG...; Tier 2 50K-100K: ĐH Cần Thơ, PTIT, UTC...).
+    - Mở rộng Kiến trúc Trang con chuyên biệt (Sub-pages): Sub-page Nhà trọ & KTX (`/nha-tro`), Sub-page Review UGC Chi tiết (`/review`), Sub-page Webinar & Event (`/workshop`), Sub-page Đại Sứ Sinh Viên (`/ambassador`).
+    - Phân hệ Cổng Việc Làm Sinh Viên (Part-time & Internship) và Micro-gamification "Thực Tập Sinh Đầu Tư" (100M tiền ảo) điều hướng chuyển đổi sang Ví Trả Sau 0%, Túi Thần Tài, Quản Lý Chi Tiêu.
 
 ## II. Product Vision
 
@@ -50,19 +103,84 @@
 ### 2.3 Comprehensive Service Ecosystem
 Hệ sinh thái tiện ích "Bạn đồng hành MoMo" dành cho sinh viên được phân rã chi tiết thành 11 Use Cases dịch vụ độc lập:
 
-| # | Use Case Dịch Vụ | Mô tả Nhu cầu & Luồng Sử dụng | Chỉ số KPI Cam kết |
-|---|---|---|---|
-| 1 | **Học phí & Lệ phí xét tuyển** | Tra cứu & nộp học phí đại học/cao đẳng; Nộp lệ phí nguyện vọng xét tuyển THPT Quốc gia trực tuyến. | Số lượt nộp lệ phí nguyện vọng; GMV & Số lượt giao dịch đóng học phí sinh viên. |
-| 2 | **Bảo Hiểm Y Tế Sinh Viên (BHYT)** | Tra cứu & nộp tiền gia hạn Bảo hiểm Y tế sinh viên bắt buộc trực tuyến theo trường ĐH/THPT; Nhắc lịch gia hạn thẻ BHYT tự động đầu năm học. | Số lượt thanh toán gia hạn BHYT sinh viên thành công; GMV giao dịch BHYT HSSV. |
-| 3 | **Data 4G/5G & Nạp tiền điện thoại** | Nạp tiền điện thoại trả trước/trả sau; Tra cứu & nạp các gói cước Data 4G/5G sinh viên giá rẻ từ Viettel, Vina, Mobi. | Lượt nạp Data & Nạp tiền ĐT hàng tháng; Tần suất giao dịch viễn thông SV. |
-| 4 | **Vé xem phim (Cinema Booking)** | Tra cứu lịch chiếu rạp (CGV, Lotte, Galaxy, BHS...), chọn rạp/suất chiếu và đặt vé xem phim với ưu đãi sinh viên. | Số lượng vé xem phim sinh viên bán ra (Student Tickets Sold). |
-| 5 | **Global Payment (Ứng dụng AI & Giải trí)** | Đăng ký & gia hạn gói công cụ AI học tập (Google Gemini Student Offer, Canva Pro, ChatGPT Plus) và dịch vụ giải trí OTT. | Lượt đăng ký gói AI (Gemini Student Offer) & các dịch vụ OTT sinh viên. |
-| 6 | **Vay Nhanh** | Tra cứu khoản vay tiêu dùng sinh viên / người trẻ (10M - 100M), máy tính giả lập dư nợ giảm dần & nộp hồ sơ vay trực tuyến. | Số lượt dùng máy tính Vay Nhanh; Tỷ lệ nộp hồ sơ vay qua Web thành công. |
-| 7 | **Ví Trả Sau** | Cấp hạn mức tín dụng sinh viên (miễn phí duy trì) hỗ trợ mua sắm thiết bị học tập, laptop, xe máy 0% lãi suất. | Tỷ lệ mở Ví Trả Sau sinh viên; GMV giao dịch bằng Ví Trả Sau. |
-| 8 | **Quản Lý Chi Tiêu** | Tự động phân loại thu chi hàng tháng, lập ngân sách sinh hoạt xa nhà & chia tiền phòng trọ/tiền ăn với bạn cùng phòng. | Số người dùng active Mini-app QLCT; Lượt tạo Quỹ Nhóm phòng trọ. |
-| 9 | **Tiết kiệm (Túi Thần Tài)** | Gợi ý gửi khoản tiền sinh hoạt / tích lũy nhỏ lẻ sinh lời tự động theo ngày cho sinh viên. | Tỷ lệ sinh viên mở Túi Thần Tài; Tổng dòng tiền tích lũy sinh viên. |
-| 10 | **Mở tài khoản ngân hàng** | Mở tài khoản ngân hàng liên kết trực tuyến, eKYC tài khoản thanh toán nhận gói quà / voucher chào mừng sinh viên. | Số lượng tài khoản ngân hàng mở mới thành công từ Web Hub. |
-| 11 | **Địa điểm quanh trường (Merchant Discovery)** | Tra cứu danh sách quán ăn, cửa hàng tiện lợi chấp nhận thanh toán MoMo quanh khu vực các cơ sở trường học (Multi-Campus) & KTX để nhận voucher O2O. | Lượt tra cứu địa điểm chấp nhận MoMo; Tần suất giao dịch QR thanh toán MoMo tại shop. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Use Case Dịch Vụ</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả Nhu cầu & Luồng Sử dụng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chỉ số KPI Cam kết</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Học phí & Lệ phí xét tuyển</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra cứu & nộp học phí đại học/cao đẳng; Nộp lệ phí nguyện vọng xét tuyển THPT Quốc gia trực tuyến.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số lượt nộp lệ phí nguyện vọng; GMV & Số lượt giao dịch đóng học phí sinh viên.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Bảo Hiểm Y Tế Sinh Viên (BHYT)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra cứu & nộp tiền gia hạn Bảo hiểm Y tế sinh viên bắt buộc trực tuyến theo trường ĐH/THPT; Nhắc lịch gia hạn thẻ BHYT tự động đầu năm học.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số lượt thanh toán gia hạn BHYT sinh viên thành công; GMV giao dịch BHYT HSSV.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Data 4G/5G & Nạp tiền điện thoại</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nạp tiền điện thoại trả trước/trả sau; Tra cứu & nạp các gói cước Data 4G/5G sinh viên giá rẻ từ Viettel, Vina, Mobi.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lượt nạp Data & Nạp tiền ĐT hàng tháng; Tần suất giao dịch viễn thông SV.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Vé xem phim (Cinema Booking)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra cứu lịch chiếu rạp (CGV, Lotte, Galaxy, BHS...), chọn rạp/suất chiếu và đặt vé xem phim với ưu đãi sinh viên.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số lượng vé xem phim sinh viên bán ra (Student Tickets Sold).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Global Payment (Ứng dụng AI & Giải trí)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đăng ký & gia hạn gói công cụ AI học tập (Google Gemini Student Offer, Canva Pro, ChatGPT Plus) và dịch vụ giải trí OTT.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lượt đăng ký gói AI (Gemini Student Offer) & các dịch vụ OTT sinh viên.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Vay Nhanh</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra cứu khoản vay tiêu dùng sinh viên / người trẻ (10M - 100M), máy tính giả lập dư nợ giảm dần & nộp hồ sơ vay trực tuyến.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số lượt dùng máy tính Vay Nhanh; Tỷ lệ nộp hồ sơ vay qua Web thành công.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Ví Trả Sau</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cấp hạn mức tín dụng sinh viên (miễn phí duy trì) hỗ trợ mua sắm thiết bị học tập, laptop, xe máy 0% lãi suất.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ lệ mở Ví Trả Sau sinh viên; GMV giao dịch bằng Ví Trả Sau.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Quản Lý Chi Tiêu</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự động phân loại thu chi hàng tháng, lập ngân sách sinh hoạt xa nhà & chia tiền phòng trọ/tiền ăn với bạn cùng phòng.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số người dùng active Mini-app QLCT; Lượt tạo Quỹ Nhóm phòng trọ.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">9</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tiết kiệm (Túi Thần Tài)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gợi ý gửi khoản tiền sinh hoạt / tích lũy nhỏ lẻ sinh lời tự động theo ngày cho sinh viên.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ lệ sinh viên mở Túi Thần Tài; Tổng dòng tiền tích lũy sinh viên.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">10</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Mở tài khoản ngân hàng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mở tài khoản ngân hàng liên kết trực tuyến, eKYC tài khoản thanh toán nhận gói quà / voucher chào mừng sinh viên.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số lượng tài khoản ngân hàng mở mới thành công từ Web Hub.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">11</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Địa điểm quanh trường (Merchant Discovery)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra cứu danh sách quán ăn, cửa hàng tiện lợi chấp nhận thanh toán MoMo quanh khu vực các cơ sở trường học (Multi-Campus) & KTX để nhận voucher O2O.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lượt tra cứu địa điểm chấp nhận MoMo; Tần suất giao dịch QR thanh toán MoMo tại shop.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2.4 Product Architecture & Multi-Campus Engine
 Mục này mô tả việc xây dựng các trang trường học chi tiết (`momo.vn/sinh-vien/[ten-truong-ma-truong]`) tổng hợp thông tin học phí, môi trường học tập, các cơ sở chi nhánh và đánh giá (Review/Rating) thực tế từ sinh viên nhằm giải quyết trực tiếp nhu cầu tìm hiểu trường học (JTBD) của sinh viên:
@@ -108,8 +226,6 @@ Mục này mô tả việc xây dựng các trang trường học chi tiết (`m
   * *Tagging cơ sở:* Sinh viên chọn đúng cơ sở mình đang học khi viết bài đánh giá.
   * *Đánh giá 5 sao & Nhãn Gen Z:* Thang điểm 5 sao cùng các nhãn nhận xét trẻ trung (*"Peak vi-ci-eo"*, *"Tinh hoa hội tụ"*, *"Dịu keo"*...).
 
----
-
 ## III. Jobs-to-be-Done (JTBD)
 
 ### 3.1 Student User JTBD
@@ -136,13 +252,32 @@ Mục này mô tả việc xây dựng các trang trường học chi tiết (`m
 3. **Core Insights Gen Z:** Ưu tiên hàng đầu về bảo mật thông tin cá nhân (chỉ thực hiện định danh In-App), khao khát đọc bài đánh giá trường học góc nhìn người thật việc thật, đòi hỏi minh bạch về phí duy trì & lãi suất.
 
 ### 3.4 Value Impact Breakdown
-| Bên tham gia | Giá trị nhận được từ Student Hub | Giá trị đóng góp lại cho Hệ sinh thái MoMo |
-| :--- | :--- | :--- |
-| **Sinh viên (HSSV)** | Cẩm nang xa nhà, micro-tool tính tiền trọ, gói đặc quyền >1,386M/năm, review trường thực tế. | Lượt xác thực định danh, tần suất giao dịch hàng ngày, gắn kết LTV dài hạn. |
-| **MoMo Platform** | Tăng nhận diện thương hiệu với Gen Z, làm giàu dữ liệu người dùng trẻ. | Phễu chuyển đổi sang các dịch vụ tài chính có lợi nhuận (Ví Trả Sau, Túi Thần Tài). |
-| **Đối tác (Merchants/Trường)** | Kênh tiếp cận chính thức tới tệp sinh viên có nhu cầu mua sắm/học tập thật. | Voucher tài trợ, tài trợ quỹ CLB, uy tín phân phối tự nhiên. |
-
----
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Bên tham gia</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giá trị nhận được từ Student Hub</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giá trị đóng góp lại cho Hệ sinh thái MoMo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sinh viên (HSSV)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cẩm nang xa nhà, micro-tool tính tiền trọ, gói đặc quyền >1,386M/năm, review trường thực tế.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lượt xác thực định danh, tần suất giao dịch hàng ngày, gắn kết LTV dài hạn.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MoMo Platform</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng nhận diện thương hiệu với Gen Z, làm giàu dữ liệu người dùng trẻ.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phễu chuyển đổi sang các dịch vụ tài chính có lợi nhuận (Ví Trả Sau, Túi Thần Tài).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Đối tác (Merchants/Trường)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kênh tiếp cận chính thức tới tệp sinh viên có nhu cầu mua sắm/học tập thật.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Voucher tài trợ, tài trợ quỹ CLB, uy tín phân phối tự nhiên.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## IV. Product Led Growth (PLG)
 
@@ -163,11 +298,13 @@ Mục này mô tả việc xây dựng các trang trường học chi tiết (`m
 * **Accomplishment (Học Đầu tư):** Game **"Thực tập sinh đầu tư"** cấp 100 triệu tiền ảo cho sinh viên trải nghiệm giao dịch chứng khoán giả lập và đua top Bảng xếp hạng tích Xu MoMo.
 * **Gói Đặc Quyền Sinh Viên (>1,386M/năm):** Cơ chế Săn Xu Cấp Tốc x10 trong Tháng 9, miễn phí duy trì Ví Trả Sau, bảo hiểm xe máy, voucher 500K mua Laptop, hỗ trợ trả góp Apple 0%, free Data TikTok/YouTube, Co-branding PNJ x Back2School.
 
----
-
 ## V. Content Structure & SEO/GEO
 
-### 5.1 Master Site Structure & URL Hierarchy
+### 5.1 Master Site Structure
+* **Lộ Trình Triển Khai Kiến Trúc Trang (2-Phase Architecture Roadmap):**
+  * **Phase 1 (Hiện tại - Single-Page + Modal Popups):** Hiện tại **chưa triển khai các trang con (Sub-pages)** cho Ngành đào tạo, Học bổng, Việc làm, Nhà trọ. Tất cả nội dung chi tiết được hiển thị trực tiếp trên một trang trường học duy nhất (`momo.vn/sinh-vien/[ten-truong-ma-truong]`) thông qua **Modal Popups / Drawers / Anchor Links (`#nganh-dao-tao`, `#hoc-bong`, `#viec-lam`, `#nha-tro`, `#review`)** nhằm tập trung sức mạnh SEO Domain Authority và tối ưu tốc độ tải trang.
+  * **Phase 2 (Mở rộng Programmatic Sub-Pages):** Các đường dẫn trang con chuyên biệt (`/sinh-vien/[ten-truong]/nha-tro`, `/ambassador`, `/workshop`, `/review`) sẽ được mở rộng trong Phase 2 khi quy mô traffic tự nhiên tăng trưởng.
+ & URL Hierarchy
 
 Cấu trúc đường dẫn URL tổng thể (Site Map Architecture) của Student Hub được thiết kế theo chuẩn phân cấp Subdirectory phân rã từ gốc `/sinh-vien`:
 
@@ -182,72 +319,129 @@ momo.vn/sinh-vien (Trang chủ Student Hub / Discovery Hub)
 ```
 
 #### URL Routing Matrix
-| URL Pattern | Tên Loại Trang (Page Type) | Chức năng Chính & Trải nghiệm UX | Primary CTA |
-| :--- | :--- | :--- | :--- |
-| `momo.vn/sinh-vien` | **Hub Homepage** | Tổng quan Thẻ Sinh Viên Số, Banner ưu đãi hot, Widget Bạn đồng hành MoMo, Top Review Trường. | *Xác thực ngay / Nhận đặc quyền* |
-| `momo.vn/sinh-vien/[ten-truong-ma-truong]` | **School Landing Page** | Trang trường chuyên biệt (VD: `/sinh-vien/ton-duc-thang-tdtu`), thông tin học phí, môi trường học, review tổng quan. | *Review ngay (OneLink mở App)* |
-| `momo.vn/sinh-vien/[ten-truong-ma-truong]/nha-tro` | **Sub-page Nhà trọ & KTX** | Danh sách phòng trọ an toàn, giá thuê KTX, bản đồ khoảng cách tới cơ sở trường ĐH. | *Xem nhà trọ / Tính tiền trọ* |
-| `momo.vn/sinh-vien/[ten-truong-ma-truong]/ambassador` | **Sub-page Đại sứ Sinh viên (Ambassador)** | Chương trình tuyển dụng & hoạt động của Campus Ambassadors MoMo tại trường ĐH, cơ hội việc làm & đặc quyền thủ lĩnh. | *Đăng ký làm Ambassador* |
-| `momo.vn/sinh-vien/[ten-truong-ma-truong]/workshop` | **Sub-page Workshop & Event** | Chuỗi bài viết & đăng ký tham gia Webinar "Career & AI Talk", sự kiện CLB trường ĐH. | *Đăng ký tham gia Workshop* |
-| `momo.vn/sinh-vien/[ten-truong-ma-truong]/review` | **Sub-page Review UGC Chi Tiết** | Bài viết đánh giá 5 sao góc nhìn sinh viên thực tế theo từng cơ sở (Campus A, B, N). | *Viết Review (OneLink mở App)* |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL Pattern</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Loại Trang (Page Type)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chức năng Chính & Trải nghiệm UX</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Primary CTA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/sinh-vien</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hub Homepage</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng quan Thẻ Sinh Viên Số, Banner ưu đãi hot, Widget Bạn đồng hành MoMo, Top Review Trường.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Xác thực ngay / Nhận đặc quyền</em></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/sinh-vien/[ten-truong-ma-truong]</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>School Landing Page</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang trường chuyên biệt (VD: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/sinh-vien/ton-duc-thang-tdtu</code>), thông tin học phí, môi trường học, review tổng quan.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Review ngay (OneLink mở App)</em></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/sinh-vien/[ten-truong-ma-truong]/nha-tro</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sub-page Nhà trọ & KTX</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Danh sách phòng trọ an toàn, giá thuê KTX, bản đồ khoảng cách tới cơ sở trường ĐH.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Xem nhà trọ / Tính tiền trọ</em></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/sinh-vien/[ten-truong-ma-truong]/ambassador</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sub-page Đại sứ Sinh viên (Ambassador)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chương trình tuyển dụng & hoạt động của Campus Ambassadors MoMo tại trường ĐH, cơ hội việc làm & đặc quyền thủ lĩnh.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Đăng ký làm Ambassador</em></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/sinh-vien/[ten-truong-ma-truong]/workshop</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sub-page Workshop & Event</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuỗi bài viết & đăng ký tham gia Webinar "Career & AI Talk", sự kiện CLB trường ĐH.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Đăng ký tham gia Workshop</em></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/sinh-vien/[ten-truong-ma-truong]/review</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sub-page Review UGC Chi Tiết</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bài viết đánh giá 5 sao góc nhìn sinh viên thực tế theo từng cơ sở (Campus A, B, N).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Viết Review (OneLink mở App)</em></td>
+    </tr>
+  </tbody>
+</table>
 
-### 5.1.1 School Detail Landing Page Architecture
+### 5.1.1 Content Structure - School Detail
 
-Mô tả chi tiết cấu trúc 07 khối thành phần giao diện (UI Sections) hiển thị trên một trang trường học chi tiết (`momo.vn/sinh-vien/[ten-truong-ma-truong]`):
+Bố cục chi tiết 12 khối thành phần giao diện & nội dung hiển thị trên một trang trường học chi tiết (`momo.vn/sinh-vien/[ten-truong-ma-truong]`):
 
-1. **Hero Section & NAP Information:**
-   * Tên chính thức của trường ĐH kèm **dấu tick xác thực `✓`** đặt ngay bên cạnh tên trường.
-   * Thông tin NAP (Name - Address - Phone), bộ lọc Tab chọn lọc theo chi nhánh/cơ sở (`[Tất Cả Cơ Sở] | [Cơ Sở A] | [Cơ Sở B] | [Cơ Sở N]`), Logo trường, ảnh cover khuôn viên và nút CTA chính: *"Đánh giá trường này"* (Kích hoạt OneLink mở App MoMo).
+1. **Hero Section & Thông tin NAP:**
+   * Tên chính thức của trường ĐH kèm **dấu tick xác thực** đặt ngay bên cạnh tên trường.
+   * Thông tin NAP (Name - Address - Phone), bộ lọc Tab chọn lọc theo chi nhánh/cơ sở (`[Tất Cả Cơ Sở] | [Cơ Sở A] | [Cơ Sở B] | [Cơ Sở N]`), Logo trường, Slide ảnh cover khuôn viên và nút CTA chính: *"Đánh giá trường này"* (Kích hoạt OneLink mở App MoMo).
+   * Điểm đánh giá uy tín (thang 5 sao + số lượt review), Điểm chuẩn đầu vào các năm (thấp nhất - cao nhất), Mức học phí trung bình (VNĐ/năm) và Tóm tắt quy chế xét tuyển hiện hành.
 
-2. **Grid Icon Dịch Vụ:**
-   * Lưới icon điều hướng 1-touch truy cập nhanh các dịch vụ tiện ích sinh viên: Nộp học phí, Gia hạn BHYT, Nạp Data 4G/5G, Đặt vé xem phim, Gói AI Gemini Offer, Mở Ví Trả Sau 0% lãi suất.
+2. **Grid Icon Dịch Vụ MoMo:**
+   * Lưới icon điều hướng 1-touch truy cập nhanh 6 dịch vụ tiện ích sinh viên cố định: Đóng học phí, Cổng đăng ký tín chỉ (deep-link hệ thống trường), Vay nhanh sinh viên, Ví Trả Sau 0% lãi suất, Túi Thần Tài tích lũy sinh lời, Gói Student Pass đặc quyền và Đặt vé xem phim.
 
-3. **Các Môn Học & Khoa:**
-   * Tổng quan các khoa ngành đào tạo, danh sách môn học tiêu biểu, thông tin học phí trung bình theo tín chỉ/năm và tỷ lệ sinh viên có việc làm sau khi tốt nghiệp.
+3. **Utility Tính Học Phí:**
+   * Công cụ giả lập tài chính độc lập: Thanh trượt số lượng tín chỉ linh hoạt (12 - 30 tín chỉ), tự động giả lập tổng tiền học phí theo từng ngành học/kỳ, phân rã chi phí chi tiết kèm nút CTA *"Nộp học phí ngay"* (OneLink mở phễu nộp học phí In-App).
 
-4. **Utilities Tính Học Phí Theo Tín Chỉ:**
-   * Công cụ giả lập tính tổng học phí theo số lượng tín chỉ sinh viên mong muốn học, hiển thị phân rã chi phí dự kiến kèm nút CTA *"Nộp học phí ngay"* dẫn dắt trực tiếp qua OneLink sang phễu Nộp học phí In-App.
+4. **Tuyến Xe Buýt:**
+   * Phân hệ tra cứu phương tiện công cộng chuyên biệt: Hiển thị danh sách các tuyến xe buýt đi qua từng cơ sở trường ĐH (VD: tuyến 139, 34, 38, 56...), thời gian di chuyển ước tính, vị trí trạm đón/trả, giá vé (thẻ UniPass 2.000đ/lượt TDTU, ĐHQG Bus).
 
-5. **Widget Cửa Hàng Gần Đây:**
-   * Widget bản đồ & danh sách cửa hàng chấp nhận thanh toán MoMo quanh khu vực trường ĐH: Phân rã cửa hàng *Bên trong Campus* và *Bên ngoài Campus* với bộ lọc bán kính tùy chọn (500m, 1km, 2km) kèm các voucher ưu đãi O2O.
+5. **Tin Tức & Sự Kiện:**
+   * Khối tin tức nổi bật 30-60 ngày gần nhất thu thập từ website chính thức của trường (Thông báo lịch thi, ngày hội việc làm, lễ tốt nghiệp, thành tích nổi bật) dạng card bài viết (Tiêu đề, ảnh đại diện, ngày đăng, tóm tắt).
 
-6. **Khối Đánh Giá & Review:**
-   * Phân rã điểm số 5 sao theo 5 tiêu chí: *Khuôn viên trường, Thư viện & Thiết bị, Canteen & Giá cả, Nhà xe & An ninh, Khoảng cách trọ/KTX*.
-   * Danh sách bài review chi tiết từ sinh viên đang học (kèm nhãn Gen Z: *"Peak vi-ci-eo"*, *"Tinh hoa hội tụ"*...).
+6. **Thông Tin Tổng Quan:**
+   * Bảng tổng hợp vị trí địa lý các cơ sở chi nhánh, Ngành đào tạo nổi bật, Chương trình học đặc biệt, Tiêu chuẩn đầu ra, Thành tích/chứng nhận, Cơ sở vật chất, Chương trình sau đại học và Cơ hội du học liên kết.
 
-7. **Các Gói Ưu Đãi Sinh Viên & Công Cụ AI:**
-   * Gợi ý gói **Google Gemini Student Offer**, ưu đãi nạp Data 4G/5G, voucher mua Laptop và gói đặc quyền sinh viên MoMo.
+7. **Ngành Đào Tạo:**
+   * Danh sách khối ngành đào tạo kèm Học phí (VNĐ/năm hoặc tín chỉ), Điểm đầu vào, Thời gian học (4 năm).
+   * **Modal Popup / Chi tiết Ngành (Phase 1):** Phân rã Lộ trình học 7-8 học kỳ (~120-142 tín chỉ), Mục tiêu đào tạo, Chuẩn đầu ra ngoại ngữ (TOEIC/IELTS), Cơ hội nghề nghiệp & Bảng mức lương khởi điểm vs 3 năm kinh nghiệm.
 
-### 5.2 4 Core Content Pillars
-1. **Cách chi tiêu cho sinh viên:** Kỹ năng quản lý tài chính cá nhân, "1 ngày sinh viên tiêu bao nhiêu", "Sống ổn với 3 triệu/tháng".
-2. **Những điều cần biết khi xa nhà:** An toàn thuê trọ, cảnh báo lừa đảo phòng trọ/việc làm/đa cấp, thủ tục nhập học.
-3. **Kỹ năng sống & AI:** Phương pháp học tập hiệu quả, ứng dụng AI trong học tập/việc làm, chuỗi **Webinar "Career & AI Talk"** đồng hành cùng diễn giả kinh nghiệm.
-4. **Giải trí & Review Trường học:** Review "bóc trần" trường ĐH theo cơ sở, Video ngắn, Study With Me, giải trí Gen Z.
+8. **Học Bổng:**
+   * Danh sách card học bổng trường & quỹ doanh nghiệp tài trợ (Tên học bổng, Giá trị VNĐ hoặc % học phí, Đối tượng áp dụng).
+   * **Modal Popup / Chi tiết Học Bổng (Phase 1):** Chi tiết điều kiện xét tuyển (GPA, rèn luyện), Thời hạn nộp hồ sơ và Link đăng ký trực tuyến.
 
-### 5.3 pSEO & GEO Optimization
-* **Chuẩn SEO pSEO:** Cấu trúc bài viết chuẩn SEO phủ rộng từ khóa cẩm nang sinh viên, thủ tục nhập học và địa điểm ăn uống quanh trường.
-* **Chuẩn GEO cho AI Search Engine:** Biên soạn các bài hướng dẫn dưới dạng bảng biểu và câu hỏi FAQ sinh động. Khi sinh viên hỏi các công cụ AI Search (*ChatGPT, Gemini, Perplexity*), AI sẽ ưu tiên trích dẫn nguồn từ `momo.vn/sinh-vien`.
+9. **Bản Đồ Tiện Ích 5km:**
+   * Bản đồ GPS tích hợp bộ lọc 7 nhóm tiện ích quanh cơ sở trường ĐH: Nhà trọ & KTX, Quán ăn, Quán cà phê, Mua sắm (Chợ/Siêu thị), Giải trí (Sân bóng/Cầu lông/Phim) và Trung tâm Tiếng Anh.
+   * **Badge Ưu đãi MoMo SME:** Ưu tiên hiển thị cửa hàng chấp nhận MoMo.
+   * **Modal Popup / Chi tiết Địa Điểm (Phase 1):** Hiển thị giờ mở cửa, menu/bảng giá, khoảng cách từ trường, nút *Chỉ đường* (Google Maps) và *Review*.
 
-### 5.4 Technical Constraints & Risk Governance
-* **Tuân thủ quy định NHNN (Thông tư 23 & 40/2024/TT-NHNN):** Mọi giao dịch tài chính, hoàn tiền, giải ngân Ví Trả Sau **100% thực hiện trong App MoMo đã KYC**. Web Platform (`momo.vn/sinh-vien`) đóng vai trò là kênh hiển thị nội dung công khai và điều hướng về App qua OneLink.
-* **Quy chuẩn Đo Lường Tracking & Attribution (Analytics Tech Stack):**
-  * **Umami Analytics:** Đo lường 100% hành vi người dùng trên Web (`momo.vn/sinh-vien`): lượt xem trang (Pageviews), luồng chuyển dịch (User Flow), độ sâu cuộn trang (Scroll Depth), nhấp nút CTA, tương tác micro-tool và bài viết Review Trường học.
-  * **OneLink / AppsFlyer:** Xử lý luồng điều hướng từ Web sang App MoMo, ghi nhận sự kiện Open App, Install App và Attribution lượt xác thực Thẻ Sinh Viên Số & giao dịch tài chính In-App.
-* **Quy Chuẩn Kỹ Thuật & Kiến Trúc API Xe Buýt 0 VNĐ (Public Transit GTFS & PostGIS Spec):**
-  * **Phase 1 (MVP - Chi phí 0 VNĐ & Tốc độ < 50ms):**
-    * Import dữ liệu chuẩn mở GTFS (`routes.txt`, `stops.txt`, `stop_times.txt`) từ Sở GTVT TP.HCM (`ebus.buyttphcm.com.vn`) & Hà Nội (`timbus.vn`) vào Database nội bộ MoMo (`PostgreSQL` + `PostGIS`).
-    * Sử dụng truy vấn không gian PostGIS `ST_DWithin` để quét chính xác các trạm bus và tuyến bus chủ lực trong bán kính 500m - 1km quanh tọa độ GPS của từng cơ sở trường ĐH với **tốc độ phản hồi < 50ms và chi phí API 0 VNĐ**.
-  * **Tích hợp Direct REST API Endpoints Nhà Nước:**
-    * API Danh sách tuyến TP.HCM: `GET http://ebus.buyttphcm.com.vn/api/Route/GetAll`
-    * API Trạm dừng theo tuyến: `GET http://ebus.buyttphcm.com.vn/api/Route/GetRouteDetail?routeId={route_id}`
-    * API Trạm dừng quanh tọa độ: `GET http://ebus.buyttphcm.com.vn/api/Stop/GetStopsByBound`
-    * AJAX Endpoints từ `timbus.vn` (Hà Nội).
-  * **Phase 2 (Real-time Tracking & Dynamic Walking Directions):**
-    * Tích hợp Google Maps Transit Directions API với lớp **Redis Cache 24h** tận dụng $200 credit miễn phí hàng tháng của Google Cloud giúp tiết kiệm 99% chi phí API phát sinh.
-* **Hiệu năng kỹ thuật (Performance):** Thiết kế chuẩn **Mobile-First** (Thumb-friendly, giao diện tối ưu hiển thị trên di động). Tốc độ tải trang Web dưới 1,5 giây.
-* **Bảng Quản Trị Rủi Ro (Risk Mitigation Matrix):**
-  | Rủi ro (Risk) | Tác động | Phương án Xử lý (Mitigation) |
-  | :--- | :--- | :--- |
-  | **Rủi ro Kéo Traffic** | User không biết tới Hub | Seeding bài viết review trên FB/Threads, Referral Program rủ bạn cùng trường, up-sell từ cổng nộp học phí. |
-  | **Rủi ro Retention** | User lấy voucher xong bỏ đi | Gamification x10 Xu, Game Thực tập sinh đầu tư 100M, Review trường học hàng tuần. |
-  | **Rủi ro Tốt nghiệp** | Mất khách khi hết hạn thẻ SV | Chuyển đổi tự động từ Student Pass sang gói "Người đi làm" và nâng hạn mức Ví Trả Sau dựa trên điểm uy tín. |
+10. **Cổng Việc Làm:**
+    * Bảng việc làm phân 2 nhánh riêng biệt: *Việc làm thêm (Part-time)* và *Thực tập sinh (Internship)*. Hiển thị Tên vị trí, Logo công ty, Mức lương (VNĐ/giờ hoặc /tháng), Địa điểm.
+    * **Modal Popup / Chi tiết Việc Làm (Phase 1):** Mô tả công việc chuẩn TopCV (JD, Yêu cầu ứng viên, Quyền lợi, Địa điểm mini-map, Thông tin công ty & CTA Ứng tuyển).
+
+11. **Đánh Giá & Review UGC:**
+    * Bài viết đánh giá ẩn danh từ sinh viên thực tế phân rã 5 tiêu chí (*Khuôn viên, Thư viện, Canteen, Nhà xe/An ninh, Trọ/KTX*).
+    * Bộ 5-8 cụm từ gợi ý chọn nhanh (*"Cơ sở vật chất tốt", "Giảng viên tận tâm", "Học phí hợp lý"*...).
+
+12. **FAQs Sinh Viên:**
+    * Trả lời chính xác 10 câu hỏi thường gặp: Dưới bao nhiêu điểm nợ môn (<5.0/10), Cấm thi rớt môn, Chương trình tích lũy điểm rèn luyện, Hướng dẫn đăng ký tín chỉ, Tuyến xe buýt đến trường, Điều kiện ra trường, Thẻ sinh viên 6-in-1, Danh sách CLB và Phí BHYT bắt buộc (914.520đ/năm).
+
+### 5.4 Compliance & Risk Governance
+* **Tuân thủ quy định Pháp lý & NHNN (Thông tư 23 & 40/2024/TT-NHNN):** Mọi giao dịch tài chính, hoàn tiền, giải ngân Ví Trả Sau **100% thực hiện trong App MoMo đã eKYC**. Web Platform (`momo.vn/sinh-vien`) đóng vai trò là kênh hiển thị thông tin công khai và điều hướng về App qua OneLink.
+* **Bảng Quản Trị Rủi Ro Kinh Doanh & Tăng Trưởng (Risk Mitigation Matrix):**
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Rủi ro Kinh doanh (Risk)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tác động</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phương án Xử lý & Quản trị (Mitigation)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Rủi ro Kéo Traffic (Acquisition)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sinh viên chưa biết tới Web Hub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Seeding bài viết review trên FB/Threads, Referral Program rủ bạn cùng trường, up-sell từ cổng nộp học phí.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Rủi ro Giữ chân (Retention)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User nhận đặc quyền xong bỏ đi</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gamification tích Xu thưởng, Thử thách điểm danh sinh viên hàng ngày, Review trường học hàng tuần.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Rủi ro Tốt nghiệp (Graduation Churn)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mất người dùng khi ra trường đi làm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuyển đổi tự động từ Student Pass sang gói "Người đi làm" và nâng hạn mức Ví Trả Sau dựa trên điểm uy tín.</td>
+    </tr>
+  </tbody>
+</table>

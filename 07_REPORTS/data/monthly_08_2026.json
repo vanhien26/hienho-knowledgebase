@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "type": "monthly",
+    "title": "BÁO CÁO HIỆU SUẤT & TĂNG TRƯỞNG WEB PLATFORM",
+    "period": "THÁNG 08/2026",
+    "subtitle": "Web Platform Team (GPD) · MoSpark Platform & 5 Strategic Web Hubs",
+    "team": "Web Platform Team (GPD)",
+    "author": "Văn Hiến",
+    "date": "2026-08-07",
+    "unit": "Web Platform Team (GPD)"
+  },
+
+  "kpis": [
+    { "label": "Page Views", "value": "3.450.120", "delta": "+8,9%", "target": "6.000.000", "color": "magenta" },
+    { "label": "Sessions", "value": "2.810.450", "delta": "+7,4%", "target": "4.500.000", "color": "teal" },
+    { "label": "MEU (Active Users)", "value": "1.890.300", "delta": "+9,3%", "target": "3.000.000", "color": "blue" },
+    { "label": "Login App (Agent ID)", "value": "251.800", "delta": "+12,3%", "target": "400.000", "color": "green" },
+    { "label": "Install App (New User)", "value": "8.600", "delta": "+29,1%", "target": "30.000", "color": "amber" },
+    { "label": "AI Referrals", "value": "9.150", "delta": "+41,2%", "target": "-", "color": "gold" }
+  ],
+
+  "highlights": [
+    {
+      "title": "Định Vị Web Destination & Mục Tiêu 6M Traffic",
+      "body": "Chuyển dịch từ \"Web Platform\" kỹ thuật sang \"Web Destination / Web Hub\" (Điểm đến trên Web), kết hợp Content uy tín và tiện ích Utility để đạt North Star 6 triệu traffic/tháng."
+    },
+    {
+      "title": "Khung KPI Phễu Web-to-App & User Identity 3 Bước",
+      "body": "Đo lường phễu chuyển đổi (Traffic, CTR 10-15%, Login App/Agent ID, MAU/MEU). Luồng định danh 3 bước: Soft Interaction → Contact Collection (Email) → App Authentication (Agent ID)."
+    },
+    {
+      "title": "Phân Loại Dự Án Theo Khung 4 Zones",
+      "body": "Performance Zone (Cinema) - CVR & Vé bán. Transformation Zone (Vehicle, Financial) - Uplift Traffic. Incubation Zone (Student, New User) - Baseline CVR. Productivity Zone (MoSpark CMS & Core Engine) - Hạ tầng vận hành."
+    },
+    {
+      "title": "Cơ Cấu Bộ Máy Vận Hành Kỹ Thuật",
+      "body": "2 nhánh: Platform (MoSpark CMS, bảo mật, tracking, LP Builder) và Business Projects (nhân sự kỹ thuật chuyên trách theo từng Strategic Hub)."
+    }
+  ],
+
+  "funnel": {
+    "title": "Phễu Chuyển Đổi Toàn Web (Web Overall Funnel)",
+    "periods": ["T6/2026", "T7/2026", "T8/2026"],
+    "columns": [
+      { "key": "metric", "label": "Chỉ Số (Metrics)" },
+      { "key": "t6", "label": "T6/2026" },
+      { "key": "t7", "label": "T7/2026" },
+      { "key": "t8", "label": "T8/2026", "current": true },
+      { "key": "mom", "label": "MoM (%)" },
+      { "key": "target", "label": "Target H2" }
+    ],
+    "rows": [
+      { "metric": "Page views", "t6": "3.311.429", "t7": "3.167.821", "t8": "3.450.120", "mom": "+8,9%", "target": "6.000.000" },
+      { "metric": "Sessions", "t6": "2.451.799", "t7": "2.617.774", "t8": "2.810.450", "mom": "+7,4%", "target": "4.500.000" },
+      { "metric": "MEU (Active Users)", "t6": "1.675.301", "t7": "1.728.912", "t8": "1.890.300", "mom": "+9,3%", "target": "3.000.000" },
+      { "metric": "Click-to-App (CTA)", "t6": "824.309", "t7": "713.318", "t8": "805.200", "mom": "+12,9%", "target": "1.200.000" },
+      { "metric": "Login App (Agent ID)", "t6": "248.468", "t7": "224.162", "t8": "251.800", "mom": "+12,3%", "target": "400.000" },
+      { "metric": "Install App (New User)", "t6": "6.059", "t7": "6.662", "t8": "8.600", "mom": "+29,1%", "target": "30.000" }
+    ]
+  },
+
+  "channels": {
+    "title": "Phân Tích Nguồn Traffic (Traffic Channels Breakdown)",
+    "periods": ["T5/2026", "T6/2026", "T7/2026", "T8/2026"],
+    "columns": [
+      { "key": "channel", "label": "Kênh Truy Cập" },
+      { "key": "t5", "label": "T5/2026" },
+      { "key": "t6", "label": "T6/2026" },
+      { "key": "t7", "label": "T7/2026" },
+      { "key": "t8", "label": "T8/2026", "current": true },
+      { "key": "insight", "label": "Xu Hướng & Điểm Nổi Bật" }
+    ],
+    "rows": [
+      { "channel": "Organic Search", "t5": "847.733", "t6": "763.584", "t7": "758.905", "t8": "812.400", "insight": "Tăng trưởng (+7.0% MoM) từ nhóm từ khóa Phạt Nguội & Cinema" },
+      { "channel": "Direct Traffic", "t5": "440.270", "t6": "237.110", "t7": "229.992", "t8": "245.100", "insight": "Lưu lượng truy cập trực tiếp ổn định" },
+      { "channel": "Paid Search", "t5": "383.407", "t6": "480.574", "t7": "122.482", "t8": "135.000", "insight": "Tối ưu chi phí Ads, tập trung từ khóa ngách" },
+      { "channel": "Paid Social", "t5": "27.491", "t6": "51.235", "t7": "156.542", "t8": "182.300", "insight": "Tăng trưởng (+16.5% MoM) từ chiến dịch Social Content" },
+      { "channel": "App Referral", "t5": "16.984", "t6": "38.169", "t7": "53.367", "t8": "64.200", "insight": "Tăng trưởng (+20.3% MoM) từ luồng Web-to-App" },
+      { "channel": "AI Referrals", "t5": "7.920", "t6": "5.999", "t7": "6.481", "t8": "9.150", "insight": "Bứt phá (+41.2% MoM) từ tối ưu GEO (Generative Engine)" }
+    ]
+  },
+
+  "hubs": [
+    {
+      "name": "Platform Hub",
+      "tagline": "MoSpark CMS & Core Engine",
+      "zone": "Productivity Zone",
+      "kpis": [
+        { "label": "API Response", "value": "<120ms", "note": "Tối ưu hạ tầng MoSpark" },
+        { "label": "GenAI Automation", "value": "80%", "note": "Quy trình sản xuất chuẩn SEO/GEO" }
+      ],
+      "results": [
+        "Tối ưu hóa hạ tầng MoSpark CMS, giảm thời gian phản hồi API Server xuống <120ms.",
+        "Triển khai thành công Module Ads Manager tập trung quản trị vị trí quảng cáo Out-App, tối ưu CTR Banner.",
+        "Tự động hóa 80% quy trình sản xuất bài viết chuẩn SEO/GEO thông qua GenAI Pipeline."
+      ],
+      "issues": [
+        "Nghiệm thu Module Captcha bảo vệ hạ tầng Webform.",
+        "Nâng cấp tính năng phân quyền trên CMS."
+      ],
+      "actions": [
+        "Nghiệm thu Module Captcha bảo vệ hạ tầng Webform.",
+        "Nâng cấp tính năng phân quyền trên CMS."
+      ]
+    },
+    {
+      "name": "Cinema Hub",
+      "tagline": "Cổng Giải Trí & Điện Ảnh",
+      "zone": "Performance Zone",
+      "kpis": [
+        { "label": "PageViews", "value": "8.070.056", "note": "Tổng lưu lượng xem phim" },
+        { "label": "Booking Clicks", "value": "1.740.934", "note": "W2A CR ≥ 4.50%" },
+        { "label": "Vé bán", "value": "214.292", "note": "Out-app / in-app" }
+      ],
+      "results": [
+        "Đạt 1.740.934 lượt Booking Clicks (W2A CR >= 4.50%).",
+        "Chuyển đổi thành công 76.158 Users đăng nhập App, 97.660 giao dịch và 214.292 vé bán out-app/in-app."
+      ],
+      "issues": [
+        "Film Life Cycles: Chưa có cơ chế xử lý tự động vòng đời phim (Sắp chiếu → Đang chiếu → Rút rạp), lãng phí Crawl Budget.",
+        "Payment: Chưa triển khai cổng thanh toán All-in-One QR Code trực tiếp ngoài Web, đứt gãy W2A CVR.",
+        "Nội dung Out-date: Dữ liệu review, lịch chiếu chậm cập nhật so với thực tế cụm rạp.",
+        "Độ phủ: Chưa phủ mảng Đạo diễn/Diễn viên, TV Series, OTT và từ khóa ngách địa phương."
+      ],
+      "actions": [
+        "Thiết lập quy trình tự động hóa vòng đời phim trên MoSpark CMS (Auto-Redirect URL phim hết suất).",
+        "Tích hợp cổng Native Web All-in-One QR Payment thanh toán trực tiếp ngoài Web.",
+        "Kết nối tự động API TMDB & GenAI Pipeline cập nhật realtime dữ liệu phim.",
+        "Phủ sóng TV Series, trang Đạo diễn/Diễn viên, Lịch chiếu theo cụm rạp địa phương."
+      ]
+    },
+    {
+      "name": "Vehicle Hub",
+      "tagline": "Tiện Ích Giao Thông & Hồ Sơ Xe",
+      "zone": "Transformation Zone",
+      "kpis": [
+        { "label": "Traffic", "value": "500.000", "note": "Phạt nguội 0-CAPTCHA/tháng" },
+        { "label": "W2A CR", "value": "50%", "note": "250.000 Login App/tháng" },
+        { "label": "Thẻ Xe Số", "value": "100.000", "note": "Saved Vehicle Profile" }
+      ],
+      "results": [
+        "Tra cứu Phạt nguội 0-CAPTCHA là phễu đầu kéo chính, thu hút 500.000 Traffic/tháng.",
+        "Tỷ lệ chuyển đổi W2A CR 50%, ghi nhận 250.000 Users đăng nhập App/tháng và 100.000 Thẻ Xe Số.",
+        "Phân luồng BH Ô tô đạt 200.061 Organic Views/năm, đóng góp 2,72 Tỷ VNĐ Doanh thu phí bảo hiểm.",
+        "Phân luồng BH Xe máy đạt 350.000 Traffic/tháng, mục tiêu 80.000 đơn BH/năm."
+      ],
+      "issues": [
+        "[Business] Phân mảnh tiện ích chủ xe (phạt nguội, ETC, đăng kiểm, bảo hiểm) chưa tập trung về một điểm chạm.",
+        "[Business] Service Attach Rate thấp, chưa bán chéo BH Ô tô/Xe máy, ETC từ tệp tra cứu Phạt nguội miễn phí.",
+        "[Platform] Chưa QC được Content GenAI tạo ra trước khi xuất bản.",
+        "[Platform] Phụ thuộc API đối tác (ePass, TTDK, Cổng Dịch vụ công).",
+        "[Platform] Hồ sơ phương tiện (Vehicle Profile) chưa đồng bộ pre-fill 100%."
+      ],
+      "actions": [
+        "Tích hợp kiểm duyệt tự động QC Gate trên MoSpark CMS.",
+        "Tối ưu tốc độ phản hồi API tra cứu phạt nguội.",
+        "Hoàn thiện luồng mua BH Ô tô/Xe máy 1-click dựa trên data pre-fill Hồ sơ xe."
+      ]
+    },
+    {
+      "name": "Financial Hub",
+      "tagline": "Finhub - Trung Tâm Tài Chính Cá Nhân",
+      "zone": "Transformation Zone",
+      "kpis": [
+        { "label": "Traffic", "value": "1.000.000", "note": "Master /trung-tam-tai-chinh" },
+        { "label": "MAU", "value": "500.000", "note": "Chuyển đổi về App MoMo" },
+        { "label": "CIC", "value": "Sẵn sàng", "note": "Mốc reset 8 triệu CIC toàn dân" }
+      ],
+      "results": [
+        "Finhub Master (/trung-tam-tai-chinh) đạt 1.000.000 Traffic/tháng, chuyển đổi 500.000 MAU về App MoMo.",
+        "Phân luồng Tra cứu Điểm Tín Dụng (CIC) hoàn thiện hạ tầng cho mốc reset 8 triệu CIC toàn dân.",
+        "Vận hành bộ công cụ giả lập & tính toán tài chính (Tracker giá vàng 24/7, tỷ giá ngoại tệ, tính lãi tiết kiệm, BHXH/Lương hưu)."
+      ],
+      "issues": [
+        "[Business] Tâm lý e ngại khi đánh giá sức khỏe tài chính, cần tự tính toán out-app trước khi giao dịch.",
+        "[Business] Áp lực mốc reset 8 triệu CIC (01/01/2027) - phễu CIC trên Web bị đứt gãy sẽ thất thoát tệp người dùng.",
+        "[Platform] Bộ công cụ Simulator chưa phủ rộng, mới dừng ở bản thử nghiệm.",
+        "[Platform] Tải trọng dữ liệu Realtime (giá vàng, tỷ giá) cần hạ tầng cache để không giảm tốc tải Master Hub."
+      ],
+      "actions": [
+        "Ra mắt công cụ giả lập chứng khoán.",
+        "Nhúng diện rộng bộ Widget BHXH & Lương hưu.",
+        "Tối ưu hóa hạ tầng cache dữ liệu realtime giá vàng/tỷ giá."
+      ]
+    },
+    {
+      "name": "SMEs Merchant Hub",
+      "tagline": "MoMo Merchant Page & Location Hub",
+      "zone": "Transformation Zone",
+      "kpis": [
+        { "label": "UI Templates", "value": "MoBase", "note": "Chuẩn Design System" },
+        { "label": "List Engine", "value": "50 rows", "note": "Bulk Actions + Tags + CSV Import" },
+        { "label": "Lat/Long", "value": "Tự động", "note": "Extraction từ địa chỉ/Google Maps" }
+      ],
+      "results": [
+        "Hoàn thành bộ UI Templates chuẩn MoBase và Sales Kit cho lực lượng bán hàng thực địa.",
+        "SalesForce tạo trang MoMo Merchant Page (momo.vn/merchant/{slug}) từ Form Request/Form Order.",
+        "Nâng cấp MoSpark CMS Merchant List Engine: 50 rows/page, Tags & CSV Import, Bulk Actions, Lat/Long Extraction, GenAI Long Content Prompt."
+      ],
+      "issues": [
+        "[Business] PO Ví Trả Sau chưa chốt KPI chuyển đổi từ Web; phụ thuộc luồng khởi tạo thủ công từ Form Order.",
+        "[Platform] Chưa QC được Content GenAI (QC Gate / Hallucination Control).",
+        "[Platform] API M4B đồng bộ dữ liệu đối tác đang phát triển.",
+        "[Platform] Tạm gác luồng Soundbox (thiếu data đối tác xác thực và spec Onelink deep link)."
+      ],
+      "actions": [
+        "Xây dựng bộ công cụ QC Gate tự động trên MoSpark CMS.",
+        "Tối ưu quy trình duyệt Form Order tự động.",
+        "Hoàn thiện kết nối API M4B."
+      ]
+    },
+    {
+      "name": "Student & New User Hub",
+      "tagline": "Ươm Tạo Mô Hình & Tệp Người Dùng Mới",
+      "zone": "Incubation Zone",
+      "kpis": [
+        { "label": "Student Hub", "value": "Planning", "note": "Incubator / Product-Market Fit" },
+        { "label": "New User Installs", "value": "30.000", "note": "Target/tháng" },
+        { "label": "New-to-MoMo", "value": "5.000", "note": "Users/tháng" }
+      ],
+      "results": [
+        "Student Hub: đang trong giai đoạn lập kế hoạch & thẩm định sản phẩm (Planning / Incubator).",
+        "New User Hub: vận hành mô hình \"Trải Nghiệm Trước, Cài Đặt Sau\" qua momo.vn/welcome, hướng tới 30.000 Installs/tháng và 5.000 New-to-MoMo Users/tháng."
+      ],
+      "issues": [
+        "[Student] Chưa có Cổng Web momo.vn/sinh-vien; Student Pass mới có In-App; sinh viên nhạy cảm về giá.",
+        "[Student] Chưa triển khai trên MoSpark CMS; đang xây tính năng School Review/Rating.",
+        "[New User] Tỷ lệ rơi rớt 62% khi đẩy Ads trực tiếp về App Store (REG CVR chỉ 38.14%).",
+        "[New User] 90% traffic phụ thuộc Paid Ads; chưa có Personalization Page theo Segment."
+      ],
+      "actions": [
+        "Xây dựng trang Hướng dẫn tải App & Personalization Page theo Segment trên MoSpark CMS.",
+        "Đa dạng hóa UI/UX và khai thác triệt để Ads Manager."
+      ]
+    }
+  ],
+
+  "roadmap": {
+    "title": "Lộ Trình & Cột Mốc Triển Khai (Roadmap & Milestones)",
+    "columns": [
+      { "key": "phase", "label": "Giai Đoạn" },
+      { "key": "time", "label": "Thời Gian" },
+      { "key": "name", "label": "Tên Giai Đoạn" },
+      { "key": "detail", "label": "Chi Tiết Triển Khai & Mục Tiêu" }
+    ],
+    "rows": [
+      { "phase": "Phase 1", "time": "Tháng 08/2026", "name": "Khởi Tạo & Chuẩn Hóa Hạ Tầng", "detail": "Hoàn tất cấu trúc 5 Web Hubs, nâng cấp MoSpark CMS, tối ưu 0-CAPTCHA Phạt Nguội và chốt hợp tác 11 cụm rạp Cinema." },
+      { "phase": "Phase 2", "time": "Tháng 09/2026", "name": "Go-Live Master Pages & Pilot O2O", "detail": "Go-live /tien-ich-giao-thong, /trung-tam-tai-chinh, mở rộng 50-100 Merchant Pages O2O và Campus Tour Student Hub." },
+      { "phase": "Phase 3", "time": "Tháng 10-11/2026", "name": "Scale Up & Monetization Engine", "detail": "Scale 500-1.000 Merchant Pages, tối ưu luồng Web QR Payment, bứt phá traffic đạt mốc 4.5M - 6M/tháng." },
+      { "phase": "Phase 4", "time": "Tháng 12/2026", "name": "Tổng Kết & Tối Ưu Hóa H2", "detail": "Đánh giá OKRs H2/2026, hoàn thiện đo lường đứt gãy Web-to-App, đóng gói báo cáo chiến lược năm." }
+    ]
+  },
+
+  "next30days": [
+    "Triển khai Go-live Master Pages /tien-ich-giao-thong, /trung-tam-tai-chinh và New User Hub.",
+    "Mở rộng 50-100 trang SME Merchant Pages thí điểm.",
+    "Tối ưu luồng thanh toán QR Code trực tiếp ngoài Web cho Cinema Hub và Phạt nguội.",
+    "Đồng bộ bài toán nghiệp vụ với Bảo hiểm (InsurTech), Phương tiện (VTTI), Tài chính (FinHub), Điện ảnh (MDS-Movies), Giải pháp Đối tác (M4B)."
+  ]
+}

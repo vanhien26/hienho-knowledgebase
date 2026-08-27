@@ -6,13 +6,43 @@
 
 ## THÔNG TIN TỔNG QUAN (METADATA)
 
-| Hạng Mục | Chi Tiết |
-| :--- | :--- |
-| **Tên Sản Phẩm / Use Case** | **[Tên Sản Phẩm Web - Ví dụ: Vehicle Hub / Tra Cứu Phạt Nguội / Bảo Hiểm]** |
-| **Canonical Root URL** | `momo.vn/[product-slug]/` |
-| **Trạng Thái Tài Liệu** | **[ ] DRAFT | [ ] UNDER REVIEW | [ ] APPROVED | [ ] IN BUILD | [ ] LIVE** |
-| **Governance** | **Web Product Lead:** [Tên] \| **Lead Engineer:** [Tên] \| **Business Owner:** [Tên] \| **PMM:** [Tên] |
-| **Mốc Tiến Độ Dự Kiến** | Kick-off: `[DD/MM/YYYY]` $\rightarrow$ Dev Test: `[DD/MM/YYYY]` $\rightarrow$ Pilot: `[DD/MM/YYYY]` $\rightarrow$ Go-Live: `[DD/MM/YYYY]` |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hạng Mục</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chi Tiết</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tên Sản Phẩm / Use Case</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>[Tên Sản Phẩm Web - Ví dụ: Vehicle Hub / Tra Cứu Phạt Nguội / Bảo Hiểm]</strong></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Canonical Root URL</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/[product-slug]/</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trạng Thái Tài Liệu</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em></em>[ ] DRAFT</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[ ] UNDER REVIEW</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[ ] APPROVED</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[ ] IN BUILD</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[ ] LIVE<em></em></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Governance</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Product Lead:</strong> [Tên] \</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Lead Engineer:</strong> [Tên] \</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Business Owner:</strong> [Tên] \</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>PMM:</strong> [Tên]</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Mốc Tiến Độ Dự Kiến</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kick-off: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[DD/MM/YYYY]</code>  ➔  Dev Test: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[DD/MM/YYYY]</code>  ➔  Pilot: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[DD/MM/YYYY]</code>  ➔  Go-Live: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[DD/MM/YYYY]</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -24,7 +54,7 @@
 ### 1.2 Product Vision & PLG Funnel
 Tầm nhìn dài hạn của sản phẩm và phễu tăng trưởng Product-Led Growth (PLG) 4 bước:
 
-$$\text{Search Demand (Google/AI)} \longrightarrow \text{Web Utility Page} \longrightarrow \text{In-App Product/Hub} \longrightarrow \text{User Acquisition / Transaction}$$
+$$Search Demand (Google/AI)\longrightarrow Web Utility Page\longrightarrow In-App Product/Hub\longrightarrow User Acquisition / Transaction$
 
 * **Kênh Web (Web Platform):** Thu hút Organic Traffic quy mô lớn, tạo điểm chạm đầu tiên giải quyết nhu cầu tìm kiếm tức thời và thu thập dữ liệu định danh đầu vào.
 * **In-App Product (BU Owner):** Điểm đến lưu trữ, quản lý và tự động hóa trải nghiệm sản phẩm sâu (Retention & Engagement).
@@ -46,11 +76,36 @@ $$\text{Search Demand (Google/AI)} \longrightarrow \text{Web Utility Page} \long
 * **User Pain Points:** [Mô tả chi tiết 3-4 nỗi đau lớn nhất của người dùng khi tìm kiếm và sử dụng dịch vụ trên Web...]
 * **Search Demand Inventory:**
 
-| Nhóm Nhu Cầu (Search Cluster) | Mẫu Từ Khóa Tìm Kiếm (Query Examples) | Monthly Search Volume | Loại Intent (Search Intent) |
-| :--- | :--- | :---: | :--- |
-| **Nhóm 1: Core Utility** | `[Từ khóa 1]`, `[Từ khóa 2]` | [Volume] | Transactional / High-Intent |
-| **Nhóm 2: Informational** | `[Từ khóa 3]`, `[Từ khóa 4]` | [Volume] | Informational / Research |
-| **Nhóm 3: Local GEO** | `[Từ khóa 5]`, `[Từ khóa 6]` | [Volume] | Local Intent / O2O |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhóm Nhu Cầu (Search Cluster)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mẫu Từ Khóa Tìm Kiếm (Query Examples)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Monthly Search Volume</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại Intent (Search Intent)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Nhóm 1: Core Utility</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[Từ khóa 1]</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[Từ khóa 2]</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">[Volume]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transactional / High-Intent</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Nhóm 2: Informational</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[Từ khóa 3]</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[Từ khóa 4]</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">[Volume]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Informational / Research</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Nhóm 3: Local GEO</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[Từ khóa 5]</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[Từ khóa 6]</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">[Volume]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Local Intent / O2O</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -61,19 +116,77 @@ Cấu trúc Kênh Web được chia thành **2 Nhóm Cấu Trúc Rõ Ràng**:
 
 #### Nhóm A: Trang Chủ Hub & Các Spoke Pages Trực Thuộc (`/[hub-slug]/*`)
 
-| STT | Tên Trang / Sub-page | URL Canonical | Phân Cấp Routing | Vai Trò Trong Cấu Trúc Sitemap |
-| :---: | :--- | :--- | :---: | :--- |
-| 1 | **Trang Chủ Hub** | `/[hub-slug]/` | Master Hub Root | Cổng tổng điều hướng 360°, tích hợp công cụ tra cứu trung tâm |
-| 2 | **[Spoke Page 1]** | `/[hub-slug]/[spoke-1]/` | Spoke Sub-page | Trang tiện ích / thông tin chuyên sâu 1 |
-| 3 | **[Spoke Page 2]** | `/[hub-slug]/[spoke-2]/` | Spoke Sub-page | Trang bản đồ địa điểm GEO 2 |
-| 4 | **Blog / Cẩm Nang** | `/[hub-slug]/blog/` | Spoke Sub-page | Trang bài viết tư vấn, hướng dẫn và thông tin ngành |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">STT</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Trang / Sub-page</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL Canonical</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Phân Cấp Routing</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai Trò Trong Cấu Trúc Sitemap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trang Chủ Hub</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/[hub-slug]/</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">Master Hub Root</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cổng tổng điều hướng 360°, tích hợp công cụ tra cứu trung tâm</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>[Spoke Page 1]</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/[hub-slug]/[spoke-1]/</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">Spoke Sub-page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang tiện ích / thông tin chuyên sâu 1</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>[Spoke Page 2]</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/[hub-slug]/[spoke-2]/</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">Spoke Sub-page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang bản đồ địa điểm GEO 2</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Blog / Cẩm Nang</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/[hub-slug]/blog/</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">Spoke Sub-page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang bài viết tư vấn, hướng dẫn và thông tin ngành</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Nhóm B: Các Trang Use Case Độc Lập (Top-Level Standalone Canonical URLs)
 
-| STT | Tên Use Case Standalone | URL Canonical | Phân Cấp Routing | Vai Trò & Điểm Khác Biệt Trong Cấu Trúc |
-| :---: | :--- | :--- | :---: | :--- |
-| 1 | **[Use Case Standalone 1]** | `/[usecase-1-slug]/` | Root Standalone | Utility/Landing độc lập Top 1 Google cho use case 1 |
-| 2 | **[Use Case Standalone 2]** | `/[usecase-2-slug]/` | Root Standalone | Trang bán hàng độc lập phục vụ sản phẩm thương mại 2 |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">STT</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Use Case Standalone</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL Canonical</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Phân Cấp Routing</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai Trò & Điểm Khác Biệt Trong Cấu Trúc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>[Use Case Standalone 1]</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/[usecase-1-slug]/</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">Root Standalone</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Utility/Landing độc lập Top 1 Google cho use case 1</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>[Use Case Standalone 2]</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/[usecase-2-slug]/</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">Root Standalone</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang bán hàng độc lập phục vụ sản phẩm thương mại 2</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Quy Chuẩn Routing URL Technical Rules:
 1. **Case Sensitivity:** 100% URL viết chữ thường (lowercase).
@@ -86,29 +199,121 @@ Cấu trúc Kênh Web được chia thành **2 Nhóm Cấu Trúc Rõ Ràng**:
 
 Bảng đặc tả cấu trúc nội dung chi tiết từng khối thành phần cho từng loại trang:
 
-| Trang / Phân Hệ | Tên Component / Section | Nhu Cầu Người Dùng (JTBD) | Giải Pháp Cấu Trúc (Solution) | Thành Phần UI (UI Components) & Functions |
-| :--- | :--- | :--- | :--- | :--- |
-| **Master Hub**<br>`/[hub-slug]/` | **Hero & Master Search** | "Tôi muốn tra cứu/sử dụng tiện ích ngay lập tức." | Ô nhập liệu thông minh 1-click + Button Action. | Headline H1 + Input Field + Nút Action 1-click |
-| | **Quick Utilities Grid** | "Tôi muốn truy cập nhanh các tiện ích phổ biến." | Grid 6 Card phím tắt điều hướng 6 Spoke cốt lõi. | Grid 6 Card phím tắt tiện ích |
-| | **Real-time Data Feed** | "Tôi muốn xem dữ liệu biến động thời gian thực." | Dynamic Feed dữ liệu cập nhật thời gian thực. | Bảng dữ liệu / Map Widget vị trí lân cận |
-| | **Local GEO Selector** | "Tôi muốn lọc địa điểm tại khu vực sắp di chuyển đến." | Dropdown lọc Tỉnh/Thành $\rightarrow$ Quận/Huyện. | Dropdown chọn Tỉnh/Thành $\rightarrow$ Quận/Huyện |
-| | **FAQ Accordion Block** | "Tôi muốn giải đáp thắc mắc thường gặp." | Accordion Q&A gắn Schema `FAQPage`. | Accordion list các câu hỏi & câu trả lời |
-| **[Standalone Page]**<br>`/[usecase-slug]/` | **Hero & Tool Input** | "Tôi muốn sử dụng công cụ tra cứu/báo giá ngay." | Form nhập liệu trực tiếp bypass CAPTCHA. | Form nhập thông tin + Nút Tra cứu / Báo giá |
-| | **Result & Smart CTA** | "Tôi muốn xem kết quả và thực hiện giao dịch." | Output màn hình kết quả + Smart CTA mở App MoMo. | Khối hiển thị kết quả + Banner CTA Web-to-App |
-| | **SEO Explanatory Block**| "Tôi muốn đọc hướng dẫn và bảng tra chi tiết." | Nội dung bài viết tư vấn chuẩn SEO 800-1200 từ. | Bài viết hướng dẫn từng bước & Bảng tra chi tiết |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trang / Phân Hệ</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Component / Section</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhu Cầu Người Dùng (JTBD)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giải Pháp Cấu Trúc (Solution)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thành Phần UI (UI Components) & Functions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Master Hub</strong><br><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/[hub-slug]/</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hero & Master Search</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Tôi muốn tra cứu/sử dụng tiện ích ngay lập tức."</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ô nhập liệu thông minh 1-click + Button Action.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Headline H1 + Input Field + Nút Action 1-click</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Quick Utilities Grid</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Tôi muốn truy cập nhanh các tiện ích phổ biến."</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Grid 6 Card phím tắt điều hướng 6 Spoke cốt lõi.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Grid 6 Card phím tắt tiện ích</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Real-time Data Feed</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Tôi muốn xem dữ liệu biến động thời gian thực."</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dynamic Feed dữ liệu cập nhật thời gian thực.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảng dữ liệu / Map Widget vị trí lân cận</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Local GEO Selector</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Tôi muốn lọc địa điểm tại khu vực sắp di chuyển đến."</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dropdown lọc Tỉnh/Thành  ➔  Quận/Huyện.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dropdown chọn Tỉnh/Thành  ➔  Quận/Huyện</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>FAQ Accordion Block</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Tôi muốn giải đáp thắc mắc thường gặp."</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Accordion Q&A gắn Schema <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">FAQPage</code>.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Accordion list các câu hỏi & câu trả lời</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>[Standalone Page]</strong><br><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/[usecase-slug]/</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hero & Tool Input</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Tôi muốn sử dụng công cụ tra cứu/báo giá ngay."</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Form nhập liệu trực tiếp bypass CAPTCHA.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Form nhập thông tin + Nút Tra cứu / Báo giá</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Result & Smart CTA</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Tôi muốn xem kết quả và thực hiện giao dịch."</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Output màn hình kết quả + Smart CTA mở App MoMo.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khối hiển thị kết quả + Banner CTA Web-to-App</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>SEO Explanatory Block</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Tôi muốn đọc hướng dẫn và bảng tra chi tiết."</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nội dung bài viết tư vấn chuẩn SEO 800-1200 từ.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bài viết hướng dẫn từng bước & Bảng tra chi tiết</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ### 3.3 Umami Event Tracking theo Touchpoint
 
-| Touchpoint / Vị Trí Tương Tác | Hành Động Người Dùng (User Action) | Umami Event Name |
-| :--- | :--- | :--- |
-| **Hero Search Form** | Bấm nút Tra cứu / Tìm kiếm | `search_submit` |
-| **Smart W2A CTA Banner** | Bấm nút điều hướng mở App MoMo | `w2a_click` |
-| **Quick Utilities Grid** | Bấm phím tắt dịch vụ trên Hub | `utility_click` |
-| **GEO Filter Bar** | Chọn bộ lọc Tỉnh/Thành, Quận/Huyện, Loại danh mục | `filter_select` |
-| **Merchant Card Snippet** | Bấm vào thẻ địa điểm chi tiết | `merchant_click` |
-| **Form Báo Giá / Mua Hàng** | Bấm nút xem báo giá / mua sản phẩm | `form_submit` |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Touchpoint / Vị Trí Tương Tác</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hành Động Người Dùng (User Action)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Umami Event Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hero Search Form</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bấm nút Tra cứu / Tìm kiếm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">search_submit</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Smart W2A CTA Banner</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bấm nút điều hướng mở App MoMo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">w2a_click</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Quick Utilities Grid</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bấm phím tắt dịch vụ trên Hub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">utility_click</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GEO Filter Bar</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chọn bộ lọc Tỉnh/Thành, Quận/Huyện, Loại danh mục</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">filter_select</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Merchant Card Snippet</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bấm vào thẻ địa điểm chi tiết</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">merchant_click</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Form Báo Giá / Mua Hàng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bấm nút xem báo giá / mua sản phẩm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">form_submit</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -118,11 +323,34 @@ Bảng đặc tả cấu trúc nội dung chi tiết từng khối thành phần
 
 #### A. Công Thức Meta Tag Standards
 
-| Loại Trang | Công Thức Tag `<title>` (Max 60 chars) | Công Thức `<meta description>` (150-160 chars) |
-| :--- | :--- | :--- |
-| **Master Hub** | `[Tên Hub] MoMo - [Lợi ích cốt lõi] 3 Phút` | `[Mô tả tổng quan hệ sinh thái + danh sách tiện ích chính + Call-to-action trên MoMo.]` |
-| **Standalone Use Case** | `[Tên Use Case] Online (Không CAPTCHA) | MoMo` | `[Mô tả ngắn chứa từ khóa chính + tính năng nổi bật + Lời kêu gọi hành động.]` |
-| **Spoke GEO Page** | `Bản Đồ [Tên Tiện Ích] Gần Đây | MoMo` | `[Mô tả tìm vị trí trạm/garage gần nhất + bộ lọc địa phương + chỉ đường Google Maps.]` |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại Trang</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Công Thức Tag <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><title></code> (Max 60 chars)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Công Thức <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><meta description></code> (150-160 chars)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Master Hub</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[Tên Hub] MoMo - [Lợi ích cốt lõi] 3 Phút</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[Mô tả tổng quan hệ sinh thái + danh sách tiện ích chính + Call-to-action trên MoMo.]</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Standalone Use Case</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">`[Tên Use Case] Online (Không CAPTCHA)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo`</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[Mô tả ngắn chứa từ khóa chính + tính năng nổi bật + Lời kêu gọi hành động.]</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Spoke GEO Page</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">`Bản Đồ [Tên Tiện Ích] Gần Đây</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo`</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[Mô tả tìm vị trí trạm/garage gần nhất + bộ lọc địa phương + chỉ đường Google Maps.]</code></td>
+    </tr>
+  </tbody>
+</table>
 
 #### B. Quy Chuẩn Heading Hierarchy (H1 - H4)
 * **Quy tắc H1:** Mỗi trang có duy nhất **1 thẻ `<h1>`** đặt tại Hero Section chứa từ khóa chính.

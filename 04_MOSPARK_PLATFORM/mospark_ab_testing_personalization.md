@@ -12,7 +12,7 @@ Nền tảng thử nghiệm A/B và cá nhân hóa nội dung động
 ## 1. Executive Summary
 
 ### 1.1 Bối Cảnh
-Hiện tại, MoSpark đã xây dựng thành công lớp **Acquisition** thông qua hệ thống CMS, SEO/GEO Builder và Programmatic SEO. Tuy nhiên, mọi trải nghiệm trên Web (từ Merchant Page đến các Landing Page chiến dịch) đều đang hoạt động theo dạng "One-size-fits-all" (Nội dung tĩnh, giống hệt nhau đối với mọi User). 
+Hiện tại, MoSpark đã xây dựng thành công lớp **Acquisition** thông qua hệ thống CMS, SEO/GEO Builder và Programmatic SEO. Tuy nhiên, mọi trải nghiệm trên Web (từ Merchant Page đến các Landing Page chiến dịch) đều đang hoạt động theo dạng "One-size-fits-all" (Nội dung tĩnh, giống hệt nhau đối với mọi User).
 
 Điều này hạn chế khả năng tối ưu hóa tỷ lệ chuyển đổi (CR) vì hệ thống không thể tự đánh giá xem thiết kế A hay B sẽ mang lại nhiều Click-to-App (CTA) hơn, hoặc không thể hiển thị ưu đãi cá nhân hóa theo từng nhóm người dùng cụ thể.
 
@@ -45,7 +45,7 @@ Bổ sung module **A/B Testing & Personalization Engine** vào lõi của MoSpar
 
 ### 3.2 Personalization Engine (Dynamic Content)
 Hệ thống sử dụng các Rule Engine dựa trên các biến (Variables) thu thập được qua Edge Middleware và Cookies:
-1. **Geo-Location Rule:** Phân phối nội dung dựa trên Tỉnh/Thành phố. 
+1. **Geo-Location Rule:** Phân phối nội dung dựa trên Tỉnh/Thành phố.
    - *Use Case:* Trang "Thổ Địa" tự động hiển thị list nhà hàng gần User nhất.
 2. **Identity/Login Rule:** Phân biệt User Anonymous và User đã Login.
    - *Use Case:* Nếu User đã login Web, Sticky CTA sẽ là "Mở App Thanh Toán Ngay". Nếu chưa Login, Sticky CTA là "Tải MoMo".
@@ -76,12 +76,42 @@ Dự án A/B Testing & Personalization (M10) đóng vai trò là một "Core Eng
 
 ### 6.1. Chi tiết Ma trận Tích hợp
 
-| Module được Tích hợp | Khả năng A/B Testing | Khả năng Personalization (Cá nhân hóa) | Ghi chú & Rào cản (Guardrails) |
-|---|---|---|---|
-| **M1 - Landing Page Builder** | **Toàn diện:** Cho phép Duplicate variant, test CTA, Hero Banner, Layout. | **Cao:** Hỗ trợ thay đổi nội dung trang dựa theo Geo-Location và Login State. | Phải tuân thủ Compliance Matrix (Khóa Scheme/TnC). Traffic Split tại Edge Router. |
-| **M3 - Ads Manager** (Widget/Banner) | **Cao:** Test các thông điệp Banner, màu sắc Widget. | **Tối đa:** Target hiển thị Banner/Widget riêng biệt theo UTM Context hoặc User Cohort. | Trải nghiệm Ads phải mượt, không làm rớt LCP. |
-| **M9 - PLG Tool Builder** | **Trung bình:** Chỉ test UI nhập liệu hoặc vị trí đặt Tool trên trang. | **Trung bình:** Tự động điền tham số mặc định (VD: Tự động chọn "TP.HCM" dựa vào Geo-Location). | Không test công thức tính toán/API của Tool để đảm bảo tính chính xác của Data. |
-| **M2 - GenAI Content** (Blog SEO) | **Rất hạn chế:** Tuyệt đối không test nội dung bài viết. Chốt phương án không test Title/H1 để bảo vệ thứ hạng. | **Không áp dụng cho Nội dung:** Bài SEO bắt buộc là trang tĩnh (Static) 100% để Googlebot index chính xác. | *Ngoại lệ:* Có thể áp dụng Personalization cho **các Ad slot nằm bên trong bài viết**, không phải bản thân bài viết. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Module được Tích hợp</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Khả năng A/B Testing</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Khả năng Personalization (Cá nhân hóa)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú & Rào cản (Guardrails)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M1 - Landing Page Builder</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Toàn diện:</strong> Cho phép Duplicate variant, test CTA, Hero Banner, Layout.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cao:</strong> Hỗ trợ thay đổi nội dung trang dựa theo Geo-Location và Login State.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phải tuân thủ Compliance Matrix (Khóa Scheme/TnC). Traffic Split tại Edge Router.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M3 - Ads Manager</strong> (Widget/Banner)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cao:</strong> Test các thông điệp Banner, màu sắc Widget.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tối đa:</strong> Target hiển thị Banner/Widget riêng biệt theo UTM Context hoặc User Cohort.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trải nghiệm Ads phải mượt, không làm rớt LCP.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M9 - PLG Tool Builder</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trung bình:</strong> Chỉ test UI nhập liệu hoặc vị trí đặt Tool trên trang.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trung bình:</strong> Tự động điền tham số mặc định (VD: Tự động chọn "TP.HCM" dựa vào Geo-Location).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không test công thức tính toán/API của Tool để đảm bảo tính chính xác của Data.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M2 - GenAI Content</strong> (Blog SEO)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Rất hạn chế:</strong> Tuyệt đối không test nội dung bài viết. Chốt phương án không test Title/H1 để bảo vệ thứ hạng.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Không áp dụng cho Nội dung:</strong> Bài SEO bắt buộc là trang tĩnh (Static) 100% để Googlebot index chính xác.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Ngoại lệ:</em> Có thể áp dụng Personalization cho <strong>các Ad slot nằm bên trong bài viết</strong>, không phải bản thân bài viết.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 6.2. Lộ trình triển khai (Phase Rollout)
 Vì việc áp dụng Personalization cho toàn hệ thống đòi hỏi khối lượng xử lý lớn tại Edge Router, hệ thống sẽ được mở khóa theo lộ trình:

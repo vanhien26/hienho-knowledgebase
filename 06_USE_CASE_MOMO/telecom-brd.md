@@ -35,32 +35,139 @@ Use Case Viễn Thông xây dựng hệ thống web content gồm: (1) Hub `/vie
 
 ### 2.1 Hiện Trạng Sản Phẩm
 
-| Sản phẩm | URL | Trạng thái web hiện tại | Organic traffic ước tính |
-|---|---|---|---|
-| Nạp Tiền ĐT | momo.vn/nap-tien-dien-thoai | Trang thông tin đơn thuần | ~30.000 sessions/tháng |
-| Sim Số Đẹp | momo.vn/sim-so-dep | Đã triển khai trang chủ về luồng sản phẩm | ~5.000 sessions/tháng |
-| Nạp Data | momo.vn/nap-data | Có homepage và 4 sub-page nhà mạng, chưa có luồng mua hàng đầy đủ | ~8.000 sessions/tháng |
-| eSIM Du Lịch | momo.vn/esim-du-lich | Đã triển khai đủ luồng từ homepage đến trang khu vực chi tiết | ~2.000 sessions/tháng |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Sản phẩm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trạng thái web hiện tại</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Organic traffic ước tính</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nạp Tiền ĐT</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">momo.vn/nap-tien-dien-thoai</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang thông tin đơn thuần</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~30.000 sessions/tháng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sim Số Đẹp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">momo.vn/sim-so-dep</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đã triển khai trang chủ về luồng sản phẩm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~5.000 sessions/tháng</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nạp Data</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">momo.vn/nap-data</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có homepage và 4 sub-page nhà mạng, chưa có luồng mua hàng đầy đủ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~8.000 sessions/tháng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">eSIM Du Lịch</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">momo.vn/esim-du-lich</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đã triển khai đủ luồng từ homepage đến trang khu vực chi tiết</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~2.000 sessions/tháng</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2.2 Search Demand Landscape
 
-| Nhóm từ khóa | Ví dụ keyword | Volume ước tính | Intent | Competitor ranking |
-|---|---|---|---|---|
-| Sim phong thủy × năm sinh | "sim số đẹp hợp tuổi 1990" | ~150K/tháng tổng (50 năm × 2-5K) | Buy | Các site phong thủy, TGDD |
-| Sim phong thủy × tên | "sim hợp tên Minh", "sim tên Lan" | ~500K/tháng tổng (5.000 tên) | Buy | Yếu - cơ hội lớn cho MoMo |
-| Gói data nhà mạng | "gói data Viettel", "gói D90N" | ~15K/tháng per nhà mạng | Buy | TGDD rank Top 1-3 |
-| eSIM quốc gia | "esim Nhật Bản", "esim Hàn Quốc" | ~3.000-8.000/tháng per nước hot | Buy | eSIM providers quốc tế |
-| Nạp tiền branded | "nạp tiền điện thoại qua MoMo" | ~20.000/tháng | Go | MoMo đang rank tốt |
-| So sánh / hướng dẫn | "cách chọn sim hợp phong thủy" | ~5.000-10.000/tháng | Know | Blog site, TGDD |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhóm từ khóa</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ví dụ keyword</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Volume ước tính</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Intent</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Competitor ranking</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sim phong thủy × năm sinh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"sim số đẹp hợp tuổi 1990"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~150K/tháng tổng (50 năm × 2-5K)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Buy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các site phong thủy, TGDD</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sim phong thủy × tên</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"sim hợp tên Minh", "sim tên Lan"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~500K/tháng tổng (5.000 tên)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Buy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Yếu - cơ hội lớn cho MoMo</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gói data nhà mạng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"gói data Viettel", "gói D90N"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~15K/tháng per nhà mạng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Buy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TGDD rank Top 1-3</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">eSIM quốc gia</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"esim Nhật Bản", "esim Hàn Quốc"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~3.000-8.000/tháng per nước hot</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Buy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">eSIM providers quốc tế</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nạp tiền branded</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"nạp tiền điện thoại qua MoMo"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~20.000/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Go</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo đang rank tốt</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">So sánh / hướng dẫn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"cách chọn sim hợp phong thủy"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~5.000-10.000/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Know</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog site, TGDD</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2.3 Phân Tích Cạnh Tranh
 
-| Đối thủ | Điểm mạnh | Điểm yếu | MoMo Advantage |
-|---|---|---|---|
-| Thế Giới Di Động | Domain authority cao, phủ sóng rộng gói cước + sim | Không có payment app tích hợp, không có phong thủy AI | MoMo Pay ecosystem, AI giải luận personalized |
-| Các site sim phong thủy | Content depth về phong thủy, UX đơn giản | Không bán được sim online | MoMo có thể bán trực tiếp - zero friction |
-| eSIM providers quốc tế | Phủ sóng toàn cầu | Không có tiếng Việt tốt, không có local payment | MoMo Pay + tiếng Việt native |
-| Nhà mạng (Viettel, Mobi, Vina) | Brand awareness | Web UX kém, không aggregate cross-carrier | MoMo là neutral aggregator - so sánh được |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đối thủ</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điểm mạnh</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điểm yếu</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">MoMo Advantage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thế Giới Di Động</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Domain authority cao, phủ sóng rộng gói cước + sim</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có payment app tích hợp, không có phong thủy AI</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo Pay ecosystem, AI giải luận personalized</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các site sim phong thủy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content depth về phong thủy, UX đơn giản</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không bán được sim online</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo có thể bán trực tiếp - zero friction</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">eSIM providers quốc tế</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phủ sóng toàn cầu</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có tiếng Việt tốt, không có local payment</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo Pay + tiếng Việt native</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhà mạng (Viettel, Mobi, Vina)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Brand awareness</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web UX kém, không aggregate cross-carrier</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo là neutral aggregator - so sánh được</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -91,12 +198,37 @@ Số giao dịch Telco tăng thêm từ kênh organic = zero incremental cost pe
 ### 3.3 Intent-based Filtering Framework (Trang Phạm Standard)
 Phân loại rạch ròi luồng traffic dựa trên Search Intent để điều hướng vào đúng Product Lane, tránh dắt user đi lòng vòng:
 
-| Sản phẩm | Phân khúc Target | Đặc tính nhu cầu (Intent Filter) |
-|---|---|---|
-| Sim Số Đẹp / Sim Chính Chủ | Người kinh doanh, người duy tâm, người đổi sim phong thủy | Nghiên cứu kỹ trước mua - intent cao, giá trị giao dịch cao |
-| eSIM Du Lịch | Du khách trẻ, hay di chuyển quốc tế, sử dụng smartphone cận cao cấp | Mua trước chuyến đi, cần cài nhanh, giá trị convenience cao |
-| Nạp Data 4G/5G | Shipper, tài xế, game thủ, Gen Z tiêu thụ nhiều internet | Nhu cầu gấp hoặc so sánh gói, nhạy cảm về giá và dung lượng |
-| Nạp Tiền Điện Thoại | Mọi người dùng di động trả trước, người nạp hộ người thân | Tốc độ tối thượng, 24/7, không muốn rào cản |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Sản phẩm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phân khúc Target</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đặc tính nhu cầu (Intent Filter)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sim Số Đẹp / Sim Chính Chủ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người kinh doanh, người duy tâm, người đổi sim phong thủy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nghiên cứu kỹ trước mua - intent cao, giá trị giao dịch cao</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">eSIM Du Lịch</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Du khách trẻ, hay di chuyển quốc tế, sử dụng smartphone cận cao cấp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mua trước chuyến đi, cần cài nhanh, giá trị convenience cao</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nạp Data 4G/5G</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Shipper, tài xế, game thủ, Gen Z tiêu thụ nhiều internet</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhu cầu gấp hoặc so sánh gói, nhạy cảm về giá và dung lượng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nạp Tiền Điện Thoại</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mọi người dùng di động trả trước, người nạp hộ người thân</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tốc độ tối thượng, 24/7, không muốn rào cản</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 3.4 Dự Án Này KHÔNG Phải
 
@@ -114,13 +246,36 @@ Phân loại rạch ròi luồng traffic dựa trên Search Intent để điều
 
 > "Tôi cần chọn số điện thoại mới hợp với mệnh, tuổi của mình để mang may mắn."
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Tìm được sim có đuôi số hợp mệnh/năm sinh, mua online không cần ra đại lý |
-| Emotional | An tâm đã chọn đúng, không lo dùng số "xấu" ảnh hưởng công việc, sức khỏe |
-| Social | Người thân/đối tác thấy mình chỉn chu, am hiểu phong thủy |
-| Trigger | Mua sim mới - Khai trương kinh doanh - Đầu năm mới - Chuyển mạng |
-| Search → App | "sim số đẹp hợp tuổi 1990", "sim mệnh Mộc Viettel" → /sim-so-dep/phong-thuy/[menh] → AI Giải Luận gợi ý sim → "Mua ngay" → Web checkout / App MoMo |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tìm được sim có đuôi số hợp mệnh/năm sinh, mua online không cần ra đại lý</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">An tâm đã chọn đúng, không lo dùng số "xấu" ảnh hưởng công việc, sức khỏe</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người thân/đối tác thấy mình chỉn chu, am hiểu phong thủy</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mua sim mới - Khai trương kinh doanh - Đầu năm mới - Chuyển mạng</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"sim số đẹp hợp tuổi 1990", "sim mệnh Mộc Viettel" → /sim-so-dep/phong-thuy/[menh] → AI Giải Luận gợi ý sim → "Mua ngay" → Web checkout / App MoMo</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** pSEO trang năm sinh × mệnh × nhà mạng + AI Giải Luận widget.
 
@@ -130,13 +285,36 @@ Phân loại rạch ròi luồng traffic dựa trên Search Intent để điều
 
 > "Tôi muốn tặng sim số đẹp hợp tuổi người được tặng - quà độc đáo và thiết thực."
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Nhập năm sinh người được tặng → AI gợi ý sim phù hợp → mua và giao nhận đúng dịp |
-| Emotional | Cảm thấy đã chuẩn bị chu đáo, quà có ý nghĩa thay vì mua đại |
-| Social | Người nhận cảm nhận được sự quan tâm cá nhân hóa - kể lại "bạn tặng sim hợp mệnh mình" |
-| Trigger | Sinh nhật - Tết - Khai trương - Ra trường - Đám cưới |
-| Search → App | "sim tặng sinh nhật", "sim số đẹp làm quà", "sim hợp tuổi người yêu" → /sim-so-dep/tang-sim-so-dep → Widget nhập năm sinh người được tặng → Chọn sim → Checkout |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhập năm sinh người được tặng → AI gợi ý sim phù hợp → mua và giao nhận đúng dịp</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cảm thấy đã chuẩn bị chu đáo, quà có ý nghĩa thay vì mua đại</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người nhận cảm nhận được sự quan tâm cá nhân hóa - kể lại "bạn tặng sim hợp mệnh mình"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sinh nhật - Tết - Khai trương - Ra trường - Đám cưới</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"sim tặng sinh nhật", "sim số đẹp làm quà", "sim hợp tuổi người yêu" → /sim-so-dep/tang-sim-so-dep → Widget nhập năm sinh người được tặng → Chọn sim → Checkout</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** Landing /sim-so-dep/tang-sim-so-dep + Widget nhập năm sinh người được tặng.
 
@@ -146,13 +324,36 @@ Phân loại rạch ròi luồng traffic dựa trên Search Intent để điều
 
 > "Số điện thoại là bộ mặt của doanh nghiệp - tôi cần số dễ nhớ, in được lên danh thiếp."
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Filter được sim theo pattern (đuôi lặp, số đẹp), chọn nhà mạng, giá range |
-| Emotional | Tự tin khi đưa số cho khách, cảm giác chuyên nghiệp |
-| Social | Khách hàng nhớ ngay số, thấy chủ doanh nghiệp đầu tư nghiêm túc - kể cho nhau nghe về số hotline đẹp |
-| Trigger | Mở cơ sở mới - Rebranding - Đổi số hotline |
-| Search → App | "sim số đẹp kinh doanh", "sim hotline dễ nhớ", "sim 4 số cuối đẹp Viettel" → /sim-so-dep/sim-kinh-doanh → Filter pattern + nhà mạng → "Đặt sim ngay" → Checkout |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Filter được sim theo pattern (đuôi lặp, số đẹp), chọn nhà mạng, giá range</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự tin khi đưa số cho khách, cảm giác chuyên nghiệp</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khách hàng nhớ ngay số, thấy chủ doanh nghiệp đầu tư nghiêm túc - kể cho nhau nghe về số hotline đẹp</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mở cơ sở mới - Rebranding - Đổi số hotline</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"sim số đẹp kinh doanh", "sim hotline dễ nhớ", "sim 4 số cuối đẹp Viettel" → /sim-so-dep/sim-kinh-doanh → Filter pattern + nhà mạng → "Đặt sim ngay" → Checkout</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** Landing /sim-so-dep/sim-kinh-doanh + premium tier sim + Blog sim hotline theo ngành.
 
@@ -162,13 +363,36 @@ Phân loại rạch ròi luồng traffic dựa trên Search Intent để điều
 
 > "Điện thoại vừa thông báo hết data - tôi cần đăng ký gói ngay, nhanh nhất có thể."
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Đăng ký gói trong 3 bước, thanh toán ví MoMo sẵn có, kích hoạt tức thì |
-| Emotional | Không bị "chết internet" giữa chừng, không cần nhờ ai hay tìm wifi |
-| Social | Vẫn available với công việc và mọi người xung quanh - không bị hỏi "sao không reply" |
-| Trigger | Thông báo hết data - Mạng chậm đột ngột - Cuối tháng |
-| Search → App | "gói data Viettel", "đăng ký gói D90N", "nạp data Viettel ngay" → /nap-data/viettel/[ten-goi] → 1-click đăng ký → Web payment / App MoMo → Kích hoạt tức thì |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đăng ký gói trong 3 bước, thanh toán ví MoMo sẵn có, kích hoạt tức thì</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không bị "chết internet" giữa chừng, không cần nhờ ai hay tìm wifi</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vẫn available với công việc và mọi người xung quanh - không bị hỏi "sao không reply"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thông báo hết data - Mạng chậm đột ngột - Cuối tháng</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"gói data Viettel", "đăng ký gói D90N", "nạp data Viettel ngay" → /nap-data/viettel/[ten-goi] → 1-click đăng ký → Web payment / App MoMo → Kích hoạt tức thì</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** pSEO landing /nap-data/[nha-mang]/[ten-goi] rank Top 1 + badge "Kích hoạt tức thì".
 
@@ -178,13 +402,36 @@ Phân loại rạch ròi luồng traffic dựa trên Search Intent để điều
 
 > "Tôi muốn biết gói nào cho nhiều GB nhất với giá tốt nhất trong tháng này."
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | So sánh được tất cả gói của nhà mạng, hiểu rõ data/ngày và tổng data |
-| Emotional | Tự tin đã chọn gói "value nhất", không bị cảm giác bị thiệt |
-| Social | Recommend được gói tốt cho bạn bè/đồng nghiệp - "tao đang dùng gói này, rẻ mà nhiều data lắm" |
-| Trigger | Gói hết hiệu lực - Review chi phí hàng tháng - Thấy quảng cáo gói mới |
-| Search → App | "so sánh gói data 100k các nhà mạng", "gói data nào nhiều GB nhất", "gói data Viettel tốt nhất" → /nap-data/[nha-mang] → Bảng so sánh + filter → Badge "Best Value" → Chọn và mua |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">So sánh được tất cả gói của nhà mạng, hiểu rõ data/ngày và tổng data</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự tin đã chọn gói "value nhất", không bị cảm giác bị thiệt</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Recommend được gói tốt cho bạn bè/đồng nghiệp - "tao đang dùng gói này, rẻ mà nhiều data lắm"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gói hết hiệu lực - Review chi phí hàng tháng - Thấy quảng cáo gói mới</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"so sánh gói data 100k các nhà mạng", "gói data nào nhiều GB nhất", "gói data Viettel tốt nhất" → /nap-data/[nha-mang] → Bảng so sánh + filter → Badge "Best Value" → Chọn và mua</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** Trang nhà mạng: bảng đầy đủ + filter + badge "Best Value".
 
@@ -194,13 +441,36 @@ Phân loại rạch ròi luồng traffic dựa trên Search Intent để điều
 
 > "Tôi muốn có internet ngay khi vừa hạ cánh - không phải xếp hàng ở sân bay."
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Mua và cài eSIM trước khi đi, đến nơi chỉ bật lên là có mạng ngay |
-| Emotional | An tâm hoàn toàn - không "tối tăm" khi vừa đến nơi lạ |
-| Social | Update được ngay cho gia đình biết đã đến an toàn - không bị nhắn "đến chưa mà im vậy" |
-| Trigger | Mua vé máy bay - 1-2 tuần trước chuyến đi - Check-in online |
-| Search → App | "esim Nhật Bản", "esim du lịch Hàn Quốc", "mua esim trước khi đi nước ngoài" → /esim-du-lich/chau-a/nhat-ban → "Mua và cài trước khi đi" + Hướng dẫn → Web checkout / App MoMo |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mua và cài eSIM trước khi đi, đến nơi chỉ bật lên là có mạng ngay</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">An tâm hoàn toàn - không "tối tăm" khi vừa đến nơi lạ</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Update được ngay cho gia đình biết đã đến an toàn - không bị nhắn "đến chưa mà im vậy"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mua vé máy bay - 1-2 tuần trước chuyến đi - Check-in online</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"esim Nhật Bản", "esim du lịch Hàn Quốc", "mua esim trước khi đi nước ngoài" → /esim-du-lich/chau-a/nhat-ban → "Mua và cài trước khi đi" + Hướng dẫn → Web checkout / App MoMo</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** Hero copy "Internet ngay khi hạ cánh" + Hướng dẫn cài trước khi đi + Trust signal.
 
@@ -210,13 +480,36 @@ Phân loại rạch ròi luồng traffic dựa trên Search Intent để điều
 
 > "Lần trước tôi về nước mới biết bill roaming đến vài triệu - lần này tôi muốn biết trước."
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Giá cố định đã biết trước, không có phí ẩn hay cước roaming bất ngờ |
-| Emotional | Dùng internet thoải mái không phải dè xẻn, không lo về con số hóa đơn |
-| Social | Chia sẻ được ảnh/video real-time cho bạn bè không cần đợi về nhà - kể lại "dùng eSIM MoMo tiết kiệm mấy triệu so với roaming" |
-| Trigger | Đã từng bị bill roaming cao - Chuẩn bị cho chuyến đi dài ngày |
-| Search → App | "esim có tốt hơn roaming không", "roaming Viettel Nhật giá bao nhiêu", "so sánh esim vs roaming" → /blog/esim-vs-roaming-tiet-kiem → So sánh + Calculator tiết kiệm → "Tiết kiệm [X]đ với eSIM MoMo" → Checkout |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giá cố định đã biết trước, không có phí ẩn hay cước roaming bất ngờ</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dùng internet thoải mái không phải dè xẻn, không lo về con số hóa đơn</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chia sẻ được ảnh/video real-time cho bạn bè không cần đợi về nhà - kể lại "dùng eSIM MoMo tiết kiệm mấy triệu so với roaming"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đã từng bị bill roaming cao - Chuẩn bị cho chuyến đi dài ngày</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"esim có tốt hơn roaming không", "roaming Viettel Nhật giá bao nhiêu", "so sánh esim vs roaming" → /blog/esim-vs-roaming-tiet-kiem → So sánh + Calculator tiết kiệm → "Tiết kiệm [X]đ với eSIM MoMo" → Checkout</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** So sánh eSIM MoMo vs roaming Viettel/Mobi + Calculator tiết kiệm.
 
@@ -226,13 +519,36 @@ Phân loại rạch ròi luồng traffic dựa trên Search Intent để điều
 
 > "Điện thoại vừa báo sắp hết tiền - tôi cần nạp ngay trước khi bị cắt cuộc gọi."
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Nạp trong 10 giây, nhận xác nhận ngay, 24/7 không cần ra cửa hàng |
-| Emotional | Không lo bị cắt cuộc gọi quan trọng, không cần dè xẻn từng tin nhắn |
-| Social | Luôn available cho gia đình, đồng nghiệp, khách hàng - không bị "gọi không nghe, nhắn không reply" |
-| Trigger | SMS "tài khoản sắp hết" - Cuộc gọi bị ngắt - Cuối tháng |
-| Search → App | "nạp tiền điện thoại Viettel nhanh", "nạp tiền MoMo", "nạp thẻ điện thoại online" → /nap-tien-dien-thoai/viettel → Form nạp above-the-fold → Nhập số + Nạp ngay → Web payment / App confirm |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nạp trong 10 giây, nhận xác nhận ngay, 24/7 không cần ra cửa hàng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không lo bị cắt cuộc gọi quan trọng, không cần dè xẻn từng tin nhắn</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Luôn available cho gia đình, đồng nghiệp, khách hàng - không bị "gọi không nghe, nhắn không reply"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SMS "tài khoản sắp hết" - Cuộc gọi bị ngắt - Cuối tháng</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"nạp tiền điện thoại Viettel nhanh", "nạp tiền MoMo", "nạp thẻ điện thoại online" → /nap-tien-dien-thoai/viettel → Form nạp above-the-fold → Nhập số + Nạp ngay → Web payment / App confirm</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** Form nạp above-the-fold + "Nạp trong 5 giây" badge + Auto-detect nhà mạng từ đầu số.
 
@@ -315,16 +631,66 @@ Search → Landing Page Telco → Giao dịch trực tiếp trên Web (Full Jour
 
 ### 6.2 KPI Framework
 
-| Metric | Baseline (hiện tại) | Target EOY 2026 | Source |
-|---|---|---|---|
-| Organic sessions/tháng (toàn Telco cluster) | ~45K (tổng 4 sản phẩm ước tính) | 270.000+ sessions/tháng | GSC + GA4 |
-| Nạp tiền ĐT organic sessions | ~30.000/tháng | 50.000+/tháng | GSC |
-| Sim Số Đẹp organic sessions | ~5.000/tháng | 80.000+/tháng (pSEO scale) | GSC |
-| Nạp Data organic sessions | ~8.000/tháng | 80.000+/tháng | GSC |
-| eSIM Du Lịch organic sessions | ~2.000/tháng | 60.000+/tháng | GSC |
-| pSEO pages indexed (sim phong thủy) | 0 | 10.000+ | GSC |
-| pSEO pages indexed (gói cước) | 0 | 330+ | GSC |
-| eSIM quốc gia pages | 20 | 200 | Site audit |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Baseline (hiện tại)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target EOY 2026</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Organic sessions/tháng (toàn Telco cluster)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~45K (tổng 4 sản phẩm ước tính)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">270.000+ sessions/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC + GA4</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nạp tiền ĐT organic sessions</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~30.000/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">50.000+/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sim Số Đẹp organic sessions</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~5.000/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">80.000+/tháng (pSEO scale)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nạp Data organic sessions</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~8.000/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">80.000+/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">eSIM Du Lịch organic sessions</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~2.000/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">60.000+/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">pSEO pages indexed (sim phong thủy)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">10.000+</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">pSEO pages indexed (gói cước)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">330+</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">eSIM quốc gia pages</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">20</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">200</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Site audit</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 6.3 Mandatory Tracking & AB Test Hypothesis (MoSpark Standard)
 - **Hypothesis:** Nếu dùng "AI Giải Luận Widget" nhập năm sinh ngay trên màn hình đầu tiên (thay vì bắt user tự cuộn tìm số), Conversion Rate (Web-to-Transaction) sẽ tăng 60% vì giải quyết nhu cầu cá nhân hóa.
@@ -334,14 +700,47 @@ Search → Landing Page Telco → Giao dịch trực tiếp trên Web (Full Jour
 
 ## 7. Dependencies & Constraints
 
-| Dependency | Mô tả | Blocker? |
-|---|---|---|
-| API gói cước real-time từ nhà mạng | Bảng gói data cần cập nhật real-time. Không có API = trang tĩnh lỗi thời, mất tin cậy | Có - cho Nạp Data |
-| API sim inventory từ Cellteam | Trang sim cần hiển thị sim còn hàng, giá real-time | Có - cho Sim Số Đẹp |
-| Deep Link per sản phẩm và per gói | CTA "Mua ngay" cần deep link đúng destination trong App | Có - cho tất cả sản phẩm |
-| Phong Thủy Data validation | Bảng mệnh ngũ hành theo năm sinh cần được consultant phong thủy review trước khi public ở production | Có - trust signal |
-| Blog Embed Component build | 6 loại widget cần Web Platform build trước khi blog có thể sử dụng | Có - cho content strategy |
-| GA4 + Appsflyer W2A tracking | Track conversion từ web sang app per sản phẩm Telco | Có - đo KPI |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dependency</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Blocker?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">API gói cước real-time từ nhà mạng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảng gói data cần cập nhật real-time. Không có API = trang tĩnh lỗi thời, mất tin cậy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - cho Nạp Data</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">API sim inventory từ Cellteam</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang sim cần hiển thị sim còn hàng, giá real-time</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - cho Sim Số Đẹp</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Deep Link per sản phẩm và per gói</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CTA "Mua ngay" cần deep link đúng destination trong App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - cho tất cả sản phẩm</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phong Thủy Data validation</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảng mệnh ngũ hành theo năm sinh cần được consultant phong thủy review trước khi public ở production</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - trust signal</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog Embed Component build</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6 loại widget cần Web Platform build trước khi blog có thể sử dụng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - cho content strategy</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GA4 + Appsflyer W2A tracking</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Track conversion từ web sang app per sản phẩm Telco</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - đo KPI</td>
+    </tr>
+  </tbody>
+</table>
 
 **Constraints:**
 - Full Journey trên Web (End-to-End) là yêu cầu của BU Telco - không chỉ là landing page redirect về App
@@ -360,29 +759,115 @@ Search → Landing Page Telco → Giao dịch trực tiếp trên Web (Full Jour
 
 *Bảng seed cho AI Giải Luận Engine - cần consultant phong thủy validate trước production.*
 
-| Năm sinh | Can Chi | Mệnh | Số cát (đuôi) | Số kỵ | Nhà mạng gợi ý |
-|---|---|---|---|---|---|
-| 1984-1985 | Giáp Tý / Ất Sửu | Kim | 1, 6, 7 | 2, 3, 8 | Viettel 086, 096 |
-| 1986-1987 | Bính Dần / Đinh Mão | Hỏa | 2, 7, 9 | 1, 6, 4 | MobiFone 090, 089 |
-| 1988-1989 | Mậu Thìn / Kỷ Tỵ | Mộc | 3, 4, 8 | 1, 6, 7 | Vinaphone 081, 082 |
-| 1990-1991 | Canh Ngọ / Tân Mùi | Thổ | 2, 5, 8 | 3, 4, 9 | Viettel 086, Vina 094 |
-| 1992-1993 | Nhâm Thân / Quý Dậu | Kim | 1, 6, 7 | 2, 3, 8 | Viettel 096, 097 |
-| 1994-1995 | Giáp Tuất / Ất Hợi | Hỏa | 2, 7, 9 | 1, 6, 4 | MobiFone 079, Viettel 038 |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Năm sinh</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Can Chi</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mệnh</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Số cát (đuôi)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Số kỵ</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhà mạng gợi ý</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1984-1985</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giáp Tý / Ất Sửu</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kim</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1, 6, 7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2, 3, 8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Viettel 086, 096</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1986-1987</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bính Dần / Đinh Mão</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hỏa</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2, 7, 9</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1, 6, 4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MobiFone 090, 089</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1988-1989</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mậu Thìn / Kỷ Tỵ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mộc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3, 4, 8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1, 6, 7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vinaphone 081, 082</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1990-1991</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Canh Ngọ / Tân Mùi</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thổ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2, 5, 8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3, 4, 9</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Viettel 086, Vina 094</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1992-1993</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhâm Thân / Quý Dậu</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kim</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1, 6, 7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2, 3, 8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Viettel 096, 097</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1994-1995</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giáp Tuất / Ất Hợi</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hỏa</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2, 7, 9</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1, 6, 4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MobiFone 079, Viettel 038</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ## Appendix B: Glossary
 
-| Thuật ngữ | Định nghĩa |
-|---|---|
-| W2A | Web-to-App - tỷ lệ user từ web chuyển sang hoàn thành giao dịch trên app MoMo |
-| pSEO | Programmatic SEO - tạo nhiều trang tương tự nhau theo template, mỗi trang unique content |
-| Web Platform | Traffic đến MoMo từ các kênh ngoài app (web, blog, organic search) |
-| Nạp Âm Mệnh | Hệ thống phân loại mệnh ngũ hành theo năm sinh trong phong thủy Việt Nam |
-| AI Giải Luận | Tính năng AI generate giải thích phong thủy unique cho từng tổ hợp tên × năm sinh × mệnh |
-| Blog Embed Component | Widget sản phẩm nhúng vào bài blog để tăng conversion tại điểm intent cao nhất |
-| JTBD | Jobs-to-Be-Done - framework xác định "công việc" user thuê sản phẩm để thực hiện |
-| CAC | Customer Acquisition Cost - chi phí để có được 1 user mới |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thuật ngữ</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Định nghĩa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">W2A</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web-to-App - tỷ lệ user từ web chuyển sang hoàn thành giao dịch trên app MoMo</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">pSEO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Programmatic SEO - tạo nhiều trang tương tự nhau theo template, mỗi trang unique content</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic đến MoMo từ các kênh ngoài app (web, blog, organic search)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nạp Âm Mệnh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hệ thống phân loại mệnh ngũ hành theo năm sinh trong phong thủy Việt Nam</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI Giải Luận</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tính năng AI generate giải thích phong thủy unique cho từng tổ hợp tên × năm sinh × mệnh</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog Embed Component</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget sản phẩm nhúng vào bài blog để tăng conversion tại điểm intent cao nhất</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">JTBD</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Jobs-to-Be-Done - framework xác định "công việc" user thuê sản phẩm để thực hiện</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CAC</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Customer Acquisition Cost - chi phí để có được 1 user mới</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

@@ -23,7 +23,7 @@ Thay đổi vị thế của **Web Platform** từ một đơn vị cung cấp d
 
 Hiệu quả của chiến lược Content Authority được đo lường chặt chẽ bằng dữ liệu kinh doanh, không dựa trên cảm tính:
 - **Primary OKR (Chỉ số chính):** Lọt vào **Top 3 kết quả tìm kiếm của Google** cho các từ khóa chiến lược đã được chọn (Chỉ số đo lường Content Authority).
-- **Secondary Metrics (Chỉ số phụ):** 
+- **Secondary Metrics (Chỉ số phụ):**
   - Lưu lượng truy cập (Organic Traffic) vào website.
   - Tỷ lệ chuyển đổi **Web-to-App (W2A Rate)** từ traffic web sang ứng dụng MoMo.
 
@@ -32,8 +32,8 @@ Hiệu quả của chiến lược Content Authority được đo lường chặ
 ## 3. Chiến lược Nội dung & Tối ưu hóa (SEO/GEO)
 
 ### 3.1. Tiếp cận theo Hành trình Người dùng (User Journey)
-Nội dung không viết lẻ tẻ mà phải bám sát vòng đời người dùng: Nhận thức (Awareness) -> Nghiên cứu (Research) -> Lựa chọn (Choice) -> Thực hiện tác vụ.
-- *Ví dụ Phạt Nguội:* Bắt đầu từ "xe máy có bị phạt không?" -> "cách tra cứu chính xác" -> "nộp phạt thế nào?" -> Q&A khiếu nại.
+Nội dung không viết lẻ tẻ mà phải bám sát vòng đời người dùng: Nhận thức (Awareness) ➔ Nghiên cứu (Research) ➔ Lựa chọn (Choice) ➔ Thực hiện tác vụ.
+- *Ví dụ Phạt Nguội:* Bắt đầu từ "xe máy có bị phạt không?" ➔ "cách tra cứu chính xác" ➔ "nộp phạt thế nào?" ➔ Q&A khiếu nại.
 - Sự kết nối này tạo ra một cụm **15-20 bài viết liên kết chặt chẽ (Cluster)** để "own" (sở hữu) toàn bộ mảng chủ đề, đẩy mạnh sức mạnh SEO tổng thể.
 
 ### 3.2. Dịch chuyển từ SEO sang GEO
@@ -49,7 +49,7 @@ Chiến lược không chỉ tập trung vào Google Search truyền thống mà
 ### 4.1. Công cụ 'Moat' (Full-flow AI Content Engine)
 Để giải quyết bài toán scale, team phát triển công cụ nội bộ **'Moat'** (Nằm trong hệ sinh thái MoSpark GenAI).
 - **Mục tiêu:** Rút ngắn thời gian tạo một cụm nội dung từ **2 tuần xuống còn 1-2 ngày**.
-- **Chức năng:** Hỗ trợ toàn trình từ nhận input (Business Context), dùng LLM gen bài, đến liên kết nội bộ và tối ưu chuẩn SEO/GEO. 
+- **Chức năng:** Hỗ trợ toàn trình từ nhận input (Business Context), dùng LLM gen bài, đến liên kết nội bộ và tối ưu chuẩn SEO/GEO.
 - **Phân bổ:** Công cụ giải quyết 80% lượng nội dung hỗ trợ, để con người (Writer/Analyst) tập trung 20% vào các nội dung chuyên sâu (E-E-A-T).
 
 ### 4.2. Kế hoạch Nguồn lực (Hybrid Model)
@@ -86,17 +86,38 @@ Khi Pitching với BU, sử dụng 4 bước để làm nổi bật "nỗi đau"
 ## 7. Cơ chế Quản trị Nguồn lực & Kỳ vọng
 
 - **Pacing Control:** Với thị trường lớn, bắt buộc BU chứng minh được tỷ lệ W2A qua các công cụ Low-code/GenAI trước khi Web Platform mở khóa Tech Resource làm Custom Tools. Tránh lãng phí.
-- **SLA với Inbound:** Inbound phải tự research và pilot nội dung trên CMS. Web Platform từ chối làm "thợ code dạo" nếu không có số liệu chứng minh (Traffic, W2A).
+- **SLA với Media Team:** Media Team phải tự research và pilot nội dung trên CMS. Web Platform từ chối làm "thợ code dạo" nếu không có số liệu chứng minh (Traffic, W2A).
 - **Expectation Management:** Đánh tiếng trước với BU: Giai đoạn đầu chỉ đánh giá **Tính hiệu quả (Efficiency - Cost per MAU rẻ hơn Ads)**, không đánh giá ngay Tổng Volume (Scale) cho đến khi mô hình chạy trơn tru.
 
 ---
 
 ## Change Log
 
-| Phiên bản | Ngày | Nội dung thay đổi |
-|-----------|------|-------------------|
-| **v2.0** | 2026-06-03 | Tích hợp tinh thần cuộc họp Business_Grow: Chuyển đổi tư duy sang Platform Owner, thiết lập mục tiêu Content Authority (Top 3 OKR, VTTI Pilot), định hướng GEO và đưa công cụ 'Moat' vào chiến lược cốt lõi. |
-| **v1.1** | 2026-05-23 | Chuẩn hóa format: xóa emoji, chuẩn hóa role, header. |
-| **v1.0** | 2026-05-13 | Khởi tạo BRD. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phiên bản</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ngày</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung thay đổi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v2.0</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-06-03</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tích hợp tinh thần cuộc họp Business_Grow: Chuyển đổi tư duy sang Platform Owner, thiết lập mục tiêu Content Authority (Top 3 OKR, VTTI Pilot), định hướng GEO và đưa công cụ 'Moat' vào chiến lược cốt lõi.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v1.1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-23</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuẩn hóa format: xóa emoji, chuẩn hóa role, header.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v1.0</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-13</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khởi tạo BRD.</td>
+    </tr>
+  </tbody>
+</table>
 
 *Maintained by: Web Platform Manager & Web Product Lead, Growth Platform Division | Last updated: 2026-06-03*

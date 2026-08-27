@@ -24,12 +24,37 @@ Không dàn trải mọi lĩnh vực cùng lúc, chiến lược tập trung ngu
 
 ### 1.4. Mục tiêu Then chốt 2026 (Strategic OKRs)
 
-| Chỉ số Cốt lõi | Target 2026 | Ý nghĩa |
-| :--- | :--- | :--- |
-| **Vertical chiến lược** | **3-5 Verticals** | Tập trung làm dứt điểm các ngành hàng trọng điểm (FS, VTTI, Cinema, Merchant) |
-| **Share of Voice (SoV)** | **Top 3-5 Google** | Thước đo Authority thực sự, lọt top hiển thị cho các từ khóa quan trọng |
-| **Traffic (MUA)** | **5-6M MUA** | Tăng trưởng hệ quả từ việc xây dựng Authority thành công (từ 3M lên 5-6M) |
-| **Web-to-App Conversion** | **≥ 12.5%** | Tỷ lệ chuyển đổi người dùng Web sang kích hoạt App MoMo |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chỉ số Cốt lõi</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target 2026</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ý nghĩa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Vertical chiến lược</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>3-5 Verticals</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tập trung làm dứt điểm các ngành hàng trọng điểm (FS, VTTI, Cinema, Merchant)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Share of Voice (SoV)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Top 3-5 Google</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thước đo Authority thực sự, lọt top hiển thị cho các từ khóa quan trọng</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Traffic (MUA)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>5-6M MUA</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng trưởng hệ quả từ việc xây dựng Authority thành công (từ 3M lên 5-6M)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web-to-App Conversion</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>≥ 12.5%</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ lệ chuyển đổi người dùng Web sang kích hoạt App MoMo</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -64,13 +89,48 @@ Không dàn trải mọi lĩnh vực cùng lúc, chiến lược tập trung ngu
 
 ## 3. Gap Analysis: Global Models vs MoMo
 
-| Trụ cột chiến lược | Tiêu chuẩn Global | Trạng thái hiện tại của MoMo | Gap cần khỏa lấp |
-| :--- | :--- | :--- | :--- |
-| **Technical & Speed** | Web Core Vitals "Good"; DOM siêu sạch, không JS thừa | Tốc độ tải trang di động trung bình; DOM còn chứa nhiều thẻ lồng nhau | Tối ưu hóa DOM Cleanliness; Chuẩn hóa Schema JSON-LD cấu trúc |
-| **Programmatic SEO** | Tạo hàng chục nghìn trang tự động; Dữ liệu real-time từ API | Bài viết tạo thủ công chiếm 90%; Chưa tích hợp pSEO | Triển khai template pSEO cho các use-case tiện ích (Vay, Hóa đơn) |
-| **Trust & E-E-A-T** | Byline chuyên gia thực thụ; Editorial Policy minh bạch | Bài viết ký danh chung chung; Thiếu Editorial policy công khai | Triển khai Named Author Policy; Công bố Editorial Policy & Quality Gate |
-| **Web-to-App (W2A)** | Khách hàng tự trải nghiệm trên web; Điều hướng app mượt mà | Form đăng ký trên web nặng nề; W2A CTR thấp | Tích hợp Interactive Web Widgets; Triển khai Smart Banner/QR tối ưu |
-| **AI Citation (GEO)** | Tối ưu hóa AIO click surfaces; Cấu trúc Answer-first | Định dạng bài viết kiểu cũ; Không có FAQ/Definition block | Tối ưu hóa cấu trúc Heading & định dạng Answer-first cho AI Overview |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trụ cột chiến lược</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tiêu chuẩn Global</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trạng thái hiện tại của MoMo</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Gap cần khỏa lấp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Technical & Speed</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Core Vitals "Good"; DOM siêu sạch, không JS thừa</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tốc độ tải trang di động trung bình; DOM còn chứa nhiều thẻ lồng nhau</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tối ưu hóa DOM Cleanliness; Chuẩn hóa Schema JSON-LD cấu trúc</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Programmatic SEO</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tạo hàng chục nghìn trang tự động; Dữ liệu real-time từ API</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bài viết tạo thủ công chiếm 90%; Chưa tích hợp pSEO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Triển khai template pSEO cho các use-case tiện ích (Vay, Hóa đơn)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trust & E-E-A-T</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Byline chuyên gia thực thụ; Editorial Policy minh bạch</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bài viết ký danh chung chung; Thiếu Editorial policy công khai</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Triển khai Named Author Policy; Công bố Editorial Policy & Quality Gate</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web-to-App (W2A)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khách hàng tự trải nghiệm trên web; Điều hướng app mượt mà</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Form đăng ký trên web nặng nề; W2A CTR thấp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tích hợp Interactive Web Widgets; Triển khai Smart Banner/QR tối ưu</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>AI Citation (GEO)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tối ưu hóa AIO click surfaces; Cấu trúc Answer-first</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Định dạng bài viết kiểu cũ; Không có FAQ/Definition block</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tối ưu hóa cấu trúc Heading & định dạng Answer-first cho AI Overview</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -120,28 +180,137 @@ pie title Phạt Nguội Theme Distribution - 3.56M Volume
 
 #### Bảng Dữ liệu Volume Search Chi tiết theo Theme
 
-| Theme (Chủ đề) | Số lượng Keywords | Volume/Tháng | Tỷ lệ % | Loại Intent |
-| :--- | :---: | :---: | :---: | :--- |
-| **Phạt Nguội (Core)** | 330 | 2,513,890 | 70.69% | Transactional (Do) |
-| **Phương Tiện** (xe máy, ô tô...) | 213 | 533,110 | 14.99% | Transactional (Do) |
-| **Tỉnh/Thành** (Hà Nội, TP.HCM...) | 309 | 79,830 | 2.24% | Transactional (Do) |
-| **Luật Giao Thông** | 236 | 78,590 | 2.21% | Informational (Know) |
-| **Đăng Kiểm Xe** | 325 | 76,870 | 2.16% | Transactional (Do) |
-| **Lỗi Vi Phạm** (lỗi đè vạch...) | 164 | 64,500 | 1.81% | Informational (Know) |
-| **Kiến Thức** | 176 | 57,400 | 1.61% | Informational (Know) |
-| **Vi phạm giao thông** | 167 | 54,200 | 1.52% | Informational (Know) |
-| **Camera Giao Thông** | 228 | 51,890 | 1.46% | Transactional / Info |
-| **Nộp Phạt Nguội** | 83 | 24,510 | 0.69% | Transactional / Buy |
-| **Tra cứu biển số xe** | 90 | 20,450 | 0.58% | Transactional (Do) |
-| **VNEID** | 9 | 1,070 | 0.03% | Navigational (Go) |
-| **TỔNG CỘNG** | **2,330** | **3,556,310** | **100%** | |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Theme (Chủ đề)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Số lượng Keywords</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Volume/Tháng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Tỷ lệ %</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại Intent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phạt Nguội (Core)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">330</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2,513,890</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">70.69%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transactional (Do)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phương Tiện</strong> (xe máy, ô tô...)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">213</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">533,110</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">14.99%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transactional (Do)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tỉnh/Thành</strong> (Hà Nội, TP.HCM...)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">309</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">79,830</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.24%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transactional (Do)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Luật Giao Thông</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">236</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">78,590</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.21%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Informational (Know)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Đăng Kiểm Xe</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">325</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">76,870</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.16%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transactional (Do)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Lỗi Vi Phạm</strong> (lỗi đè vạch...)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">164</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">64,500</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1.81%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Informational (Know)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Kiến Thức</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">176</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">57,400</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1.61%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Informational (Know)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Vi phạm giao thông</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">167</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">54,200</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1.52%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Informational (Know)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Camera Giao Thông</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">228</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">51,890</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1.46%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transactional / Info</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Nộp Phạt Nguội</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">83</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">24,510</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">0.69%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transactional / Buy</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tra cứu biển số xe</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">90</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">20,450</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">0.58%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transactional (Do)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>VNEID</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">9</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1,070</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">0.03%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Navigational (Go)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>TỔNG CỘNG</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>2,330</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>3,556,310</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>100%</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+  </tbody>
+</table>
 
 #### Điều phối Traffic dựa trên Search Intent
 
-| Phân nhóm Intent | Tỷ lệ % | Quy mô Volume | Chiến lược Điều phối (Routing) |
-| :--- | :---: | :---: | :--- |
-| **Transactional / Decision (Do/Buy)** | **92.84%** | **~3.30M searches/tháng** | Điều hướng thẳng vào Landing Page / Interactive Tool để giải quyết tức thì. |
-| **Informational / Awareness (Know)** | **7.16%** | **~254.7K searches/tháng** | Dẫn người dùng vào các bài viết Blog E-E-A-T để giáo dục và điều hướng liên kết ngữ cảnh về Tool. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phân nhóm Intent</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Tỷ lệ %</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Quy mô Volume</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chiến lược Điều phối (Routing)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Transactional / Decision (Do/Buy)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>92.84%</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>~3.30M searches/tháng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điều hướng thẳng vào Landing Page / Interactive Tool để giải quyết tức thì.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Informational / Awareness (Know)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>7.16%</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>~254.7K searches/tháng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dẫn người dùng vào các bài viết Blog E-E-A-T để giáo dục và điều hướng liên kết ngữ cảnh về Tool.</td>
+    </tr>
+  </tbody>
+</table>
 
 > **Strategic Insight:** Nhóm Phạt Nguội Core chiếm >70% thị phần (tập trung toàn bộ vào nhu cầu chuyển đổi/giao dịch). Đây là "đại dương đỏ" với mức độ cạnh tranh SEO cực kỳ khốc liệt. Do đó, không thể vội vàng chỉ xây 1 trang đích `/phat-nguoi` đơn lẻ và mong lên Top ngay. MoMo bắt buộc phải có thời gian và một **Content Plan dài hạn** đánh mạnh vào các cụm từ khóa cung cấp thông tin (Evergreen Keywords - Luật, Lỗi vi phạm) nhằm bao phủ phễu tìm kiếm, xây dựng liên kết nội bộ vững chắc để đẩy sức mạnh dần dần lên trang đích chính.
 
@@ -157,11 +326,32 @@ Người dùng tìm kiếm Phạt Nguội được phân làm 3 nhóm "thuê" gi
 
 Hành trình tăng trưởng Web-to-App được vận hành khép kín qua 3 giai đoạn (Build → Distribute → Convert), phản ánh chính xác mô hình đầu tư, phân phối và hiện thực hóa giá trị kinh doanh:
 
-| Giai đoạn (Stage) | Trọng tâm Hành động (Execution) | Kết quả kỳ vọng (Outcomes) |
-| :--- | :--- | :--- |
-| **1. Build** *(Nền tảng & Tài sản)* | Phân tích Intent/Clusters để xây dựng **Hệ thống Landing Page pSEO** (cho truy vấn hành động) và **Blog Clusters E-E-A-T** (cho truy vấn thông tin). Tích hợp các **Interactive Widgets** ngay trên trang. | Hệ sinh thái tài sản số bao phủ mọi điểm chạm. Template sẵn sàng nhân rộng tự động (pSEO). |
-| **2. Distribute** *(Phân phối)* | Tối ưu SEO kỹ thuật & E-E-A-T để lọt Top Google; cấu trúc nội dung Answer-First (GEO) để được AI Agents (Gemini, ChatGPT) trích dẫn. | Đạt **Top 3-5 Google**, thu hút **500K+ organic sessions/tháng** (Free Traffic). Trở thành nguồn trích dẫn AI. |
-| **3. Convert** *(Tăng trưởng W2A)* | Dẫn user vào trang đích phù hợp ngữ cảnh, kích hoạt **Aha! Moment** (ví dụ: trả kết quả CSGT trong 2s). Điều hướng đăng ký giám sát tự động 24/7 trên App MoMo. | Tỷ lệ chuyển đổi **Web-to-App ≥ 12.5%**. Mang lại hàng chục nghìn Activated Users mới mỗi tháng một cách bền vững. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giai đoạn (Stage)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trọng tâm Hành động (Execution)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Kết quả kỳ vọng (Outcomes)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1. Build</strong> <em>(Nền tảng & Tài sản)</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phân tích Intent/Clusters để xây dựng <strong>Hệ thống Landing Page pSEO</strong> (cho truy vấn hành động) và <strong>Blog Clusters E-E-A-T</strong> (cho truy vấn thông tin). Tích hợp các <strong>Interactive Widgets</strong> ngay trên trang.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hệ sinh thái tài sản số bao phủ mọi điểm chạm. Template sẵn sàng nhân rộng tự động (pSEO).</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>2. Distribute</strong> <em>(Phân phối)</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tối ưu SEO kỹ thuật & E-E-A-T để lọt Top Google; cấu trúc nội dung Answer-First (GEO) để được AI Agents (Gemini, ChatGPT) trích dẫn.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đạt <strong>Top 3-5 Google</strong>, thu hút <strong>500K+ organic sessions/tháng</strong> (Free Traffic). Trở thành nguồn trích dẫn AI.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>3. Convert</strong> <em>(Tăng trưởng W2A)</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dẫn user vào trang đích phù hợp ngữ cảnh, kích hoạt <strong>Aha! Moment</strong> (ví dụ: trả kết quả CSGT trong 2s). Điều hướng đăng ký giám sát tự động 24/7 trên App MoMo.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ lệ chuyển đổi <strong>Web-to-App ≥ 12.5%</strong>. Mang lại hàng chục nghìn Activated Users mới mỗi tháng một cách bền vững.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 5.4. Mô hình Phân phối & Chuyển đổi Use-Case (Use-Case Growth Engine)
 
@@ -260,10 +450,30 @@ flowchart TD
 
 #### Mô hình Hợp tác Linh hoạt
 
-| Loại BU | Năng lực hiện tại | Vai trò Platform | Vai trò BU |
-| :--- | :--- | :--- | :--- |
-| **BU mạnh** (ví dụ: Financial Services) | Có đội ngũ content & product riêng | Hỗ trợ **công cụ và quy trình** (SEO Dash, GenAI Pipeline, Technical SEO framework) | Tự chủ sản xuất nội dung & quản lý Vertical |
-| **BU yếu / thiếu người** (ví dụ: Dịch vụ công) | Thiếu nhân sự chuyên trách | **"Thầu" trọn gói** từ keyword research → content production → technical optimization | Cung cấp domain expertise & phê duyệt nội dung |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại BU</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Năng lực hiện tại</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò Platform</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò BU</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>BU mạnh</strong> (ví dụ: Financial Services)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có đội ngũ content & product riêng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hỗ trợ <strong>công cụ và quy trình</strong> (SEO Dash, GenAI Pipeline, Technical SEO framework)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự chủ sản xuất nội dung & quản lý Vertical</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>BU yếu / thiếu người</strong> (ví dụ: Dịch vụ công)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thiếu nhân sự chuyên trách</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>"Thầu" trọn gói</strong> từ keyword research → content production → technical optimization</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cung cấp domain expertise & phê duyệt nội dung</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Toolbox & Năng lực Hỗ trợ từ Platform (MoSpark Growth OS)
 
@@ -299,7 +509,7 @@ Hàng quý, hệ thống tự động quét dữ liệu traffic & ranking và ch
 
 ## 8. MoSpark: The Technical Core Enabler
 
-MoSpark đóng vai trò là **Hệ điều hành tăng trưởng cốt lõi (Core Growth OS)** của momo.vn. Đây không chỉ là một hệ quản trị nội dung (CMS) thuần túy, mà là nền tảng công nghệ tối thượng để hiện thực hóa toàn bộ chiến lược Inbound, SEO/GEO và Product-Led Growth (PLG) trong năm 2026:
+MoSpark đóng vai trò là **Hệ điều hành tăng trưởng cốt lõi (Core Growth OS)** của momo.vn. Đây không chỉ là một hệ quản trị nội dung (CMS) thuần túy, mà là nền tảng công nghệ tối thượng để hiện thực hóa toàn bộ chiến lược Media Team, SEO/GEO và Product-Led Growth (PLG) trong năm 2026:
 
 - **Động cơ Tự động hóa và Nhân rộng Quy mô (Scale & Automation Engine):** Đóng vai trò là trung tâm xử lý dữ liệu và tự động hóa quy trình sản xuất nội dung quy mô lớn qua pSEO (Programmatic SEO), giúp MoMo phủ sóng hàng vạn trang tiện ích ngách một cách nhanh chóng với chi phí tối thiểu.
 - **Trình Bảo vệ Chất lượng và Tuân thủ (Quality & Compliance Guard):** Đóng vai trò là chốt chặn kỹ thuật tự động hóa, kiểm soát chặt chẽ mọi trang nội dung trước khi xuất bản phải tuân thủ tuyệt đối các chuẩn mực E-E-A-T nghiêm ngặt, tối ưu hóa hiển thị AEO/GEO cho các AI Search Engines, và đồng bộ hóa trải nghiệm chuyển đổi Web-to-App.
@@ -315,17 +525,37 @@ MoSpark đóng vai trò là **Hệ điều hành tăng trưởng cốt lõi (Cor
 
 > **Team Web không còn là đơn vị "đợi đặt hàng" (Order-taker) mà phải đóng vai trò Business Owner — chủ động dẫn dắt chiến lược tăng trưởng Web, chịu trách nhiệm trực tiếp về mục tiêu kinh doanh trên momo.vn.**
 
-| Tư duy cũ (Operation Support) | Tư duy mới (Business Owner) |
-| :--- | :--- |
-| Đợi BU đặt hàng, làm theo brief | Chủ động nghiên cứu thị trường, đề xuất Vertical chiến lược |
-| KPI = số bài viết sản xuất | KPI = SoV, Traffic, W2A Conversion |
-| Chỉ chịu trách nhiệm khâu execution | Owning toàn bộ funnel từ Discovery → Conversion |
-| Phản ứng theo yêu cầu từng lần | Xây dựng hệ thống & quy trình tự vận hành |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tư duy cũ (Operation Support)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tư duy mới (Business Owner)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợi BU đặt hàng, làm theo brief</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chủ động nghiên cứu thị trường, đề xuất Vertical chiến lược</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">KPI = số bài viết sản xuất</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">KPI = SoV, Traffic, W2A Conversion</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chỉ chịu trách nhiệm khâu execution</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Owning toàn bộ funnel từ Discovery → Conversion</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phản ứng theo yêu cầu từng lần</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xây dựng hệ thống & quy trình tự vận hành</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 9.2. Mô hình Ownership & Accountability
 
 - **GPD owning chỉ số mục tiêu:** Team Web sở hữu và chịu trách nhiệm trực tiếp về các KPIs: Share of Voice, Organic Traffic (MUA), Web-to-App Conversion Rate cho toàn bộ domain momo.vn.
-- **BU contributing:** Các đơn vị kinh doanh (BUs) và Inbound tham gia thực hiện một phần (sản xuất nội dung chuyên môn, cung cấp domain expertise), nhưng **GPD giám sát và đảm bảo kết quả cuối cùng**.
+- **BU contributing:** Các đơn vị kinh doanh (BUs) và Media Team tham gia thực hiện một phần (sản xuất nội dung chuyên môn, cung cấp domain expertise), nhưng **GPD giám sát và đảm bảo kết quả cuối cùng**.
 - **Escalation path:** Khi một Vertical không đạt target sau 1 quý, GPD có quyền điều chỉnh chiến lược, tái phân bổ nguồn lực, hoặc chuyển sang mô hình "thầu trọn gói".
 
 ### 9.3. Kế hoạch Nhân sự & Năng lực
@@ -340,15 +570,56 @@ MoSpark đóng vai trò là **Hệ điều hành tăng trưởng cốt lõi (Cor
 
 ## 10. Change Log
 
-| Phiên bản | Ngày | Nội dung thay đổi |
-| :--- | :--- | :--- |
-| **v1.0** | 2026-05-12 | Khởi tạo tài liệu định hướng chiến lược. |
-| **v2.0** | 2026-05-15 | Cập nhật Inbound Tactics, Content Mix Matrix, AARC Model & Editorial Workflow. |
-| **v3.0** | 2026-05-18 | Sáp nhập hoàn toàn tài liệu audit skill (Seo-Geo-audit.md v3.0) vào tài liệu chiến lược làm single source of truth cho Strategy & QC Checklist. |
-| **v4.0** | 2026-05-19 | Chuyển tất cả heading sang tiếng Anh ngắn gọn và lược bỏ toàn bộ liên kết nội bộ Obsidian theo yêu cầu người dùng. |
-| **v5.0** | 2026-05-19 | Tích hợp Master Vertical Funnel dựa trên điểm khởi phát thực tế của User và phân tích chia nhánh định tuyến Intent. |
-| **v5.5** | 2026-05-19 | Sáp nhập toàn diện momo-content-plan-strategy.md thành bản Luận đề & BRD Website 2026. Lược bỏ các mục Scorecards, Calendar, Gate Checks. Gom tụ 4 trục chiến lược cũ (Axis 1-4) thành mục 4 trụ cột vĩ mô duy nhất, nâng tầm vai trò chiến lược của MoSpark thành Hệ điều hành tăng trưởng lõi. |
-| **v6.0** | 2026-05-20 | Tích hợp nội dung từ cuộc trao đổi lãnh đạo — bổ sung Section 1.5 (Under-served Markets & Vertical Focus Strategy với OKR cụ thể), Section 7.3 (Khung hợp tác Platform-BU linh hoạt & Toolbox), và Section 10 (Organization Transformation & Business Ownership). |
-| **v6.1** | 2026-05-23 | Chuẩn hóa format: xóa Obsidian link trong intro. Bổ sung Section 2 (Global Fintech Benchmarks) và Section 3 (Gap Analysis) merge từ seo-geo-direction.md v5.5. Renumber sections 2-8 thành 4-10. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phiên bản</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ngày</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung thay đổi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v1.0</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-12</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khởi tạo tài liệu định hướng chiến lược.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v2.0</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-15</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cập nhật Media Team Tactics, Content Mix Matrix, AARC Model & Editorial Workflow.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v3.0</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-18</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sáp nhập hoàn toàn tài liệu audit skill (Seo-Geo-audit.md v3.0) vào tài liệu chiến lược làm single source of truth cho Strategy & QC Checklist.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v4.0</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-19</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuyển tất cả heading sang tiếng Anh ngắn gọn và lược bỏ toàn bộ liên kết nội bộ Obsidian theo yêu cầu người dùng.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v5.0</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-19</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tích hợp Master Vertical Funnel dựa trên điểm khởi phát thực tế của User và phân tích chia nhánh định tuyến Intent.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v5.5</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-19</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sáp nhập toàn diện momo-content-plan-strategy.md thành bản Luận đề & BRD Website 2026. Lược bỏ các mục Scorecards, Calendar, Gate Checks. Gom tụ 4 trục chiến lược cũ (Axis 1-4) thành mục 4 trụ cột vĩ mô duy nhất, nâng tầm vai trò chiến lược của MoSpark thành Hệ điều hành tăng trưởng lõi.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v6.0</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-20</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tích hợp nội dung từ cuộc trao đổi lãnh đạo — bổ sung Section 1.5 (Under-served Markets & Vertical Focus Strategy với OKR cụ thể), Section 7.3 (Khung hợp tác Platform-BU linh hoạt & Toolbox), và Section 10 (Organization Transformation & Business Ownership).</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v6.1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-23</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuẩn hóa format: xóa Obsidian link trong intro. Bổ sung Section 2 (Global Fintech Benchmarks) và Section 3 (Gap Analysis) merge từ seo-geo-direction.md v5.5. Renumber sections 2-8 thành 4-10.</td>
+    </tr>
+  </tbody>
+</table>
 
 *Maintained by: Web Product Lead, Web Platform, GPD | Last updated: 2026-05-23*

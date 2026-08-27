@@ -7,7 +7,7 @@
 > - **Owner:** Web Platform
 > - **Governance:** Web Product Lead (Văn Hiến)
 > - **Version:** 1.0 - Draft (12/07/2026)
-> - **Status:** Draft - cần review với BU, Web Platform, Inbound
+> - **Status:** Draft - cần review với BU, Web Platform, Media Team
 
 ---
 
@@ -41,7 +41,7 @@ Triển khai chiến lược revamp toàn bộ Mini-web để hỗ trợ thanh t
 - **Số lượng:** 72-80 bài viết (cần audit lại số lượng chính xác).
 - **Content Decay (Tình trạng rác nội dung):** Dữ liệu cho thấy 84% traffic chỉ đến từ 30 bài cốt lõi. Khoảng 40-50 bài viết còn lại đang là "dead weight" kéo tụt sức khỏe toàn trang.
 - **Hiệu năng:** Top traffic nằm ở các bài TOFU/SUPPORT (vd: "Mức phạt nồng độ cồn" - 20K traffic) nhưng CTR cực thấp (0.3 - 0.7%).
-- **Trang cha (Main page):** Đang có sự chuyển dịch lớn. Cụm từ khóa "vật chất" (bảo hiểm vật chất xe ô tô) đã mất hút hoàn toàn trên bảng xếp hạng (hạng 27 rớt xuống 0). Ngược lại, cụm từ khóa "thân vỏ" đang có đà tăng trưởng cực mạnh trong T7/2026: "Bảo hiểm thân vỏ ô tô" leo từ hạng 56 lên hạng 17, đặc biệt keyword "mua bảo hiểm thân vỏ ô tô" đã **lọt top #2**. 
+- **Trang cha (Main page):** Đang có sự chuyển dịch lớn. Cụm từ khóa "vật chất" (bảo hiểm vật chất xe ô tô) đã mất hút hoàn toàn trên bảng xếp hạng (hạng 27 rớt xuống 0). Ngược lại, cụm từ khóa "thân vỏ" đang có đà tăng trưởng cực mạnh trong T7/2026: "Bảo hiểm thân vỏ ô tô" leo từ hạng 56 lên hạng 17, đặc biệt keyword "mua bảo hiểm thân vỏ ô tô" đã **lọt top #2**.
 - **AI Overview:** Đã bắt đầu xuất hiện và trigger thành công cho từ khóa intent giá cả là "giá bảo hiểm thân vỏ ô tô".
 - **Điểm sáng:** Bài "Mua Bảo hiểm Ô tô Bắt buộc" có CTR tốt (41.2%), có thể dùng làm template tham chiếu.
 
@@ -74,7 +74,7 @@ Triển khai chiến lược revamp toàn bộ Mini-web để hỗ trợ thanh t
 > "Tôi đi VinFast VF8, nên mua gói nào? Phí bao nhiêu?"
 - **Functional:** Biết chính xác chi phí cho dòng xe của mình.
 - **Emotional:** Cảm giác cá nhân hóa, chắc chắn gói bảo hiểm cover đúng rủi ro của dòng xe đó.
-- **Giải pháp:** (Đã loại bỏ khỏi scope dự án Bảo Hiểm) -> Chuyển giao về luồng quản lý Vehicle Profile của dự án Vehicle Hub mẹ để xử lý.
+- **Giải pháp:** (Đã loại bỏ khỏi scope dự án Bảo Hiểm) ➔ Chuyển giao về luồng quản lý Vehicle Profile của dự án Vehicle Hub mẹ để xử lý.
 
 ### Job #3: Nhanh chóng nhận GCN Điện tử hợp lệ
 > "Tôi cần mua ngay để đi đường không bị phạt."
@@ -133,12 +133,35 @@ Các trang đối tác được cấu trúc chuẩn E-E-A-T với 14 block chín
 ### 6.1 Funnel Targets & North Star Metric
 **North Star Metric:** Số hợp đồng mua qua kênh Web.
 
-| Sản phẩm | Target Traffic | Target Leads | CR (Web-to-Purchase) | Business Target (Best Case) |
-|---|---|---|---|---|
-| **VCX** | 9.800 | 1.400 | 3.4% | 335 đơn (tăng từ 3 đơn năm 2025) |
-| **TNDS** | 6.000 | 459 | 20.0% | 707 đơn |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Sản phẩm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target Traffic</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target Leads</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">CR (Web-to-Purchase)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Business Target (Best Case)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>VCX</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">9.800</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.400</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.4%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">335 đơn (tăng từ 3 đơn năm 2025)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>TNDS</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6.000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">459</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">20.0%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">707 đơn</td>
+    </tr>
+  </tbody>
+</table>
 
-> **[CẦN VERIFY]** Mô hình Funnel (Marketing vs Business objective) đang có sự chênh lệch (1.400 leads x 3.4% = 48 đơn, khác với 335 đơn). Cần BU và Inbound chốt 1 model duy nhất.
+> **[CẦN VERIFY]** Mô hình Funnel (Marketing vs Business objective) đang có sự chênh lệch (1.400 leads x 3.4% = 48 đơn, khác với 335 đơn). Cần BU và Media Team chốt 1 model duy nhất.
 
 ### 6.2 Traffic Targets (Theo quý)
 - **Q1/2026:** ~28.024 views.
@@ -151,19 +174,60 @@ Các trang đối tác được cấu trúc chuẩn E-E-A-T với 14 block chín
 ## 7. Dependencies & Constraints
 
 ### 7.1 Stakeholders & RACI
-| Vai trò | Người/Team | Trách nhiệm |
-|---|---|---|
-| **Web Product Lead** | Văn Hiến | Consult chiến lược SEO/GEO, audit, chuẩn hóa framework |
-| **Inbound SEO Lead** | Inbound Team / Ngọc Hạnh | Content optimization, execution content plan |
-| **SEO Agency** | Midas | Cam kết thứ hạng từ khóa (Ranking KPI) và triển khai Off-page theo ngân sách |
-| **Web Platform** | Anh Thuận, Bảo | Build mini-web, component (discount, payment) |
-| **BU (Insurance)** | INS incharge | Product objective, đối tác, pricing, direct discount |
-| **PR / Backlink** | Anh Đặng.Lê | PR article, đối tác PR & media mention |
-| **Ads / SEM** | Team Ads, chị Tường | Search volume verify, campaign setup, budget |
-| **VP GPD** | Công | Approve scope & budget |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Người/Team</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trách nhiệm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Product Lead</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Văn Hiến</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Consult chiến lược SEO/GEO, audit, chuẩn hóa framework</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Media Team Web Product Lead</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Media Team / Ngọc Hạnh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content optimization, execution content plan</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>SEO Agency</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Midas</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cam kết thứ hạng từ khóa (Ranking KPI) và triển khai Off-page theo ngân sách</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Platform</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Anh Thuận, Bảo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Build mini-web, component (discount, payment)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>BU (Insurance)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">INS incharge</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Product objective, đối tác, pricing, direct discount</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>PR / Backlink</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Anh Đặng.Lê</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PR article, đối tác PR & media mention</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Ads / SEM</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Team Ads, chị Tường</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search volume verify, campaign setup, budget</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>VP GPD</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Công</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Approve scope & budget</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 7.2 Constraints & Operational Blockers
-- **Giải ngân Offpage Budget:** Ngân sách 500 triệu VNĐ phân bổ dồn dập vào Q3 (Tháng 7-9). Cần đảm bảo năng lực sản xuất content (Guest post, PR) của team Inbound theo kịp tiến độ giải ngân để không bị miss plan.
+- **Giải ngân Offpage Budget:** Ngân sách 500 triệu VNĐ phân bổ dồn dập vào Q3 (Tháng 7-9). Cần đảm bảo năng lực sản xuất content (Guest post, PR) của team Media Team theo kịp tiến độ giải ngân để không bị miss plan.
 - **SEM Budget:** Ngân sách test (50 triệu) khá mỏng, rủi ro không đủ data để optimize CPA. Cần check kỹ volume.
 - **Lộ trình (Q3-Q4):** File Action Plan hiện tại chỉ chi tiết Q2, cần break down các task cụ thể cho Q3 và Q4.
 
@@ -171,12 +235,47 @@ Các trang đối tác được cấu trúc chuẩn E-E-A-T với 14 block chín
 
 ## 8. Risk Assessment
 
-| # | Rủi ro | Mức độ | Khả năng | Hướng xử lý (Mitigation) |
-|---|---|---|---|---|
-| R1 | Web đang bị Content Decay nặng (84% traffic chỉ từ 30 bài), làm giảm sức mạnh của toàn cụm chủ đề bảo hiểm. | Cao | Cao | Bắt buộc triển khai chiến dịch Pruning (Xóa) hoặc Consolidate (Gộp) 40-50 bài kém chất lượng trước khi triển khai Off-page. |
-| R2 | Biến động thứ hạng trong quá trình chuyển dịch (Migration) từ keyword "vật chất" sang "thân vỏ" có thể làm hụt traffic ngắn hạn. | Cao | Trung | Tiếp tục dồn lực tối ưu On-page và Off-page cho cụm "thân vỏ" vì tín hiệu T7/2026 đang rất tốt (lên top 2). |
-| R3 | Số liệu Funnel mâu thuẫn (MKT vs Business). | Cao | Cao | Thống nhất 1 model với BU trước khi report KPI lên VP. |
-| R4 | Fake rating/Review trên Insurer sub-page. | Cao | Trung | Chỉ implement AggregateRating Schema nếu có review thực tế. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Rủi ro</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mức độ</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Khả năng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hướng xử lý (Mitigation)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web đang bị Content Decay nặng (84% traffic chỉ từ 30 bài), làm giảm sức mạnh của toàn cụm chủ đề bảo hiểm.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bắt buộc triển khai chiến dịch Pruning (Xóa) hoặc Consolidate (Gộp) 40-50 bài kém chất lượng trước khi triển khai Off-page.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Biến động thứ hạng trong quá trình chuyển dịch (Migration) từ keyword "vật chất" sang "thân vỏ" có thể làm hụt traffic ngắn hạn.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tiếp tục dồn lực tối ưu On-page và Off-page cho cụm "thân vỏ" vì tín hiệu T7/2026 đang rất tốt (lên top 2).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số liệu Funnel mâu thuẫn (MKT vs Business).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thống nhất 1 model với BU trước khi report KPI lên VP.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Fake rating/Review trên Insurer sub-page.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chỉ implement AggregateRating Schema nếu có review thực tế.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

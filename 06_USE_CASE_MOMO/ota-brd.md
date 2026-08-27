@@ -13,7 +13,7 @@
 >
 > **KPI Owned:** Conversion Rate (booking/visit DPH vs trang tìm kiếm thường), Average Order Value (% đơn hàng cross-sell khởi tạo từ DPH), MAU Travel (% user vào Travel xem ít nhất 1 trang DPH/tháng).
 >
-> **Conversion Flow:** Banner/Push/Search results $\rightarrow$ Landing Page DPH (theo điểm đến cụ thể) $\rightarrow$ Chọn chặng bay/Khách sạn/Trải nghiệm giá tốt $\rightarrow$ Prefill thông tin tìm kiếm $\rightarrow$ Thanh toán trọn gói trên MoMo.
+> **Conversion Flow:** Banner/Push/Search results  ➔  Landing Page DPH (theo điểm đến cụ thể)  ➔  Chọn chặng bay/Khách sạn/Trải nghiệm giá tốt  ➔  Prefill thông tin tìm kiếm  ➔  Thanh toán trọn gói trên MoMo.
 
 ---
 
@@ -43,24 +43,83 @@
 
 ### 2.2 Insight từ Trip.com & Traveloka
 
-| Tiêu chí | Trip.com | Traveloka | MoMo Travel DPH (Đề xuất) |
-|---|---|---|---|
-| **Cấu trúc trang** | Landing page theo chủ đề lớn (vd: "Go China") | Landing page theo 1 điểm đến cụ thể (vd: Taiwan) | Landing page theo điểm đến cụ thể kết hợp Hub tổng hợp |
-| **Nội dung chính** | Vé bay + Khách sạn + Trải nghiệm + Nội dung truyền cảm hứng | Mức giảm giá nổi bật, khung thời gian áp dụng, CTA | Vé bay giá tốt + Khách sạn + Trải nghiệm + Ưu đãi đa đối tác |
-| **Cách dùng dữ liệu** | Trộn editorial và dữ liệu giá thực tế | Tập trung hoàn toàn vào ưu đãi/giá rẻ | Giá thực tế real-time kết hợp block coupon động từ CMS |
-| **Điểm mạnh** | Gắn use-case theo hành trình, tăng dwell-time | Thông điệp rõ ràng, dễ tạo cảm giác cấp bách (urgency) | **Lợi thế thanh toán ví điện tử & đối tác tài chính đa dạng** |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tiêu chí</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trip.com</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Traveloka</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">MoMo Travel DPH (Đề xuất)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cấu trúc trang</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing page theo chủ đề lớn (vd: "Go China")</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing page theo 1 điểm đến cụ thể (vd: Taiwan)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing page theo điểm đến cụ thể kết hợp Hub tổng hợp</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Nội dung chính</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vé bay + Khách sạn + Trải nghiệm + Nội dung truyền cảm hứng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mức giảm giá nổi bật, khung thời gian áp dụng, CTA</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vé bay giá tốt + Khách sạn + Trải nghiệm + Ưu đãi đa đối tác</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cách dùng dữ liệu</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trộn editorial và dữ liệu giá thực tế</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tập trung hoàn toàn vào ưu đãi/giá rẻ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giá thực tế real-time kết hợp block coupon động từ CMS</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Điểm mạnh</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gắn use-case theo hành trình, tăng dwell-time</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thông điệp rõ ràng, dễ tạo cảm giác cấp bách (urgency)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Lợi thế thanh toán ví điện tử & đối tác tài chính đa dạng</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ## 3. Mục Tiêu & KPI Đo Lường
 
-| Mục tiêu | Chỉ số đo (KPI) | Phương pháp đo |
-|---|---|---|
-| **Tăng nhận diện (Awareness) vé quốc tế** | % user vào app Travel có xem ít nhất 1 trang DPH/tháng | Tracking pageview DPH / MAU Travel |
-| **Tăng tỷ lệ chuyển đổi chặng quốc tế** | Tỷ lệ chuyển đổi (booking/visit) trên trang DPH so với trang tìm kiếm thường | A/B Testing chênh lệch CVR |
-| **Tăng giá trị đơn hàng trung bình (AOV)** | % đơn hàng có cross-sell (khách sạn/trải nghiệm/bảo hiểm) | Gắn UTM/source_id theo từng entry point trên DPH |
-| **Hiệu quả khai thác đối tác** | Số lượng & doanh thu campaign bank/hãng bay/TCDL gắn trên DPH | Báo cáo theo banner_id / partner_id |
-| **Tối ưu vận hành nội dung** | Thời gian dựng 1 trang điểm đến mới (Target: $\le$ X ngày) | Theo dõi quy trình cấu hình trên CMS nội bộ |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục tiêu</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chỉ số đo (KPI)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phương pháp đo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tăng nhận diện (Awareness) vé quốc tế</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">% user vào app Travel có xem ít nhất 1 trang DPH/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tracking pageview DPH / MAU Travel</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tăng tỷ lệ chuyển đổi chặng quốc tế</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ lệ chuyển đổi (booking/visit) trên trang DPH so với trang tìm kiếm thường</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">A/B Testing chênh lệch CVR</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tăng giá trị đơn hàng trung bình (AOV)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">% đơn hàng có cross-sell (khách sạn/trải nghiệm/bảo hiểm)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gắn UTM/source_id theo từng entry point trên DPH</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hiệu quả khai thác đối tác</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số lượng & doanh thu campaign bank/hãng bay/TCDL gắn trên DPH</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Báo cáo theo banner_id / partner_id</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tối ưu vận hành nội dung</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thời gian dựng 1 trang điểm đến mới (Target: ≤ X ngày)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Theo dõi quy trình cấu hình trên CMS nội bộ</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -155,7 +214,7 @@ Trang DPH sẽ hiển thị các block module hóa theo thứ tự từ trên xu
 
 ## 9. Rủi Ro & Giải Pháp Giảm Thiểu
 
-- **Chậm trễ ưu đãi đối tác:** BD/Partnership đàm phán chậm dẫn đến thiếu coupon. 
+- **Chậm trễ ưu đãi đối tác:** BD/Partnership đàm phán chậm dẫn đến thiếu coupon.
   * *Giải pháp:* Luôn chuẩn bị sẵn các chương trình ưu đãi mặc định từ MoMo Travel (hoặc đối tác bank dài hạn) làm phương án dự phòng.
 - **Sai lệch giá hiển thị:** Lệch giá giữa trang DPH và trang kết quả tìm kiếm chi tiết do cơ chế cache dữ liệu.
   * *Giải pháp:* Thiết lập tần suất dọn dẹp cache (cache invalidation) tối đa 15-30 phút/lần cho các điểm đến trọng điểm.
@@ -166,4 +225,4 @@ Trang DPH sẽ hiển thị các block module hóa theo thứ tự từ trên xu
 
 ## Change Log
 
-- **Tháng 7/2026 (v1.1):** Đồng bộ định hướng từ PRD MoMo Destination Hub: Xác lập vai trò dự án do Inbound Team chủ trì triển khai chính, dưới sự phối hợp, theo dõi và kiểm soát hạ tầng kỹ thuật của Web Platform; định hình bộ chỉ số đo lường chi tiết (Traffic > 250k views, W2A > 12%, Cross-sell > 15% eSIM/Khách sạn) và tích hợp thêm widget tỷ giá ngoại tệ, QR thanh toán quốc tế (PromptPay, NETS).
+- **Tháng 7/2026 (v1.1):** Đồng bộ định hướng từ PRD MoMo Destination Hub: Xác lập vai trò dự án do Media Team chủ trì triển khai chính, dưới sự phối hợp, theo dõi và kiểm soát hạ tầng kỹ thuật của Web Platform; định hình bộ chỉ số đo lường chi tiết (Traffic > 250k views, W2A > 12%, Cross-sell > 15% eSIM/Khách sạn) và tích hợp thêm widget tỷ giá ngoại tệ, QR thanh toán quốc tế (PromptPay, NETS).

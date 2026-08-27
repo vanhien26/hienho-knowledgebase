@@ -9,11 +9,32 @@ Tài liệu này hợp nhất tầm nhìn chiến lược "HubSpot Parity" và q
 Mục tiêu của MoSpark không phải là copy HubSpot, mà là **lấp đầy vùng MoSpark đang trống** (post-publish measurement) trong khi **giữ nguyên lợi thế MoSpark đang có** (pre-publish quality gate, GEO scoring, GenAI production).
 
 ### 1.1. Triết lý vận hành
-| Chiều | HubSpot | MoSpark |
-|---|---|---|
-| **Mạnh nhất** | Đo lường & Giám sát sau xuất bản | Kiểm soát chất lượng & AI Production trước xuất bản |
-| **Yêu nhất** | Content quality gate (không có hard block) | Visibility tracking sau khi nội dung live |
-| **Triết lý** | "Đo xong mới biết cần làm gì" | "Chuẩn hóa trước khi ra ngoài" |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chiều</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">HubSpot</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">MoSpark</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Mạnh nhất</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đo lường & Giám sát sau xuất bản</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kiểm soát chất lượng & AI Production trước xuất bản</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Yêu nhất</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content quality gate (không có hard block)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Visibility tracking sau khi nội dung live</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Triết lý</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Đo xong mới biết cần làm gì"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Chuẩn hóa trước khi ra ngoài"</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 1.2. Bản đồ năng lực & Khoảng trống (Gap Analysis)
 MoSpark đang hướng tới việc lấp đầy các Gap sau:
@@ -79,24 +100,24 @@ graph TD
 
 ### Giai đoạn 0: Phân tích Tiền dự án (Pre-Project Analysis)
 1. **Kiểm tra SEO Inventory (Market Potential):** Tra cứu **Total Market Volume** của Use Case tại tài liệu `[[mospark_seo_inventory]]`.
-2. **Đo lường hiệu suất & Tính SoV (Umami Audit):** 
+2. **Đo lường hiệu suất & Tính SoV (Umami Audit):**
    - Lọc dữ liệu trên Umami theo **URL Path** của Cluster (ví dụ: `/blog/phat-nguoi/*`).
    - Lấy **Total Sessions (30 ngày gần nhất)**.
    - Tính **SoV (%) = (Sessions / Market Volume) * 100**.
 3. **Quyết định thực thi (Decision Matrix):**
-   - **SoV < 1% (Start to Zero):** Dự án mới hoàn toàn ➔ Sản xuất nội dung mới ồ ạt.
-   - **SoV 1% - 20% (High Gap):** Đã có traffic nhưng chưa tương xứng tiềm năng ➔ Tạo satellite content để bao phủ thêm từ khóa phụ. (Nhóm < 40% SoV trong Workflow).
-   - **SoV 20% - 40% (Growth Phase):** Đang tăng trưởng ➔ Ưu tiên dùng tính năng **AI Enhance** để tối ưu hóa nội dung cũ lên Top 3. (Nhóm < 40% SoV trong Workflow).
-   - **SoV > 40% (Dominating):** Vị thế dẫn đầu ➔ Chỉ cần duy trì và theo dõi Content Decay.
+   - **SoV < 1% (Start to Zero):** Dự án mới hoàn toàn -> Sản xuất nội dung mới ồ ạt.
+   - **SoV 1% - 20% (High Gap):** Đã có traffic nhưng chưa tương xứng tiềm năng -> Tạo satellite content để bao phủ thêm từ khóa phụ. (Nhóm < 40% SoV trong Workflow).
+   - **SoV 20% - 40% (Growth Phase):** Đang tăng trưởng -> Ưu tiên dùng tính năng **AI Enhance** để tối ưu hóa nội dung cũ lên Top 3. (Nhóm < 40% SoV trong Workflow).
+   - **SoV > 40% (Dominating):** Vị thế dẫn đầu -> Chỉ cần duy trì và theo dõi Content Decay.
 
 ### Giai đoạn 1: Khởi tạo Project (Initiation)
 1. **Business Context:** Điền đầy đủ bối cảnh tại `[[mospark_genai_content#7. Business Context - Các trường bắt buộc|mospark_business_context]]`. Đây là "linh hồn" để AI viết đúng hướng.
 2. **Cấu hình CMS:** Tạo Use Case, gán bối cảnh và thiết lập Distribution Rules (Auto-embed, Cross-linking).
 
 ### Giai đoạn 2: Sản xuất Nội dung (Production)
-1. **GenAI Pipeline:** 
+1. **GenAI Pipeline:**
    - Lấy Primary Keyword từ Inventory.
-   - Chạy luồng Outline ➔ Writer Prompt.
+   - Chạy luồng Outline -> Writer Prompt.
 2. **Quality Gate:** Kiểm tra tại `[[mospark_seo_geo_score]]`. Đảm bảo đạt **80+ điểm** mới được Publish.
 
 ### Giai đoạn 3: Theo dõi & Tối ưu (Growth Loop)
@@ -119,10 +140,10 @@ graph TD
 
 ### Bước 3: Build Microsite / Blog (Chuẩn bị Hạ tầng & Luồng chuyển đổi)
 * **Mục tiêu:** Tạo ra điểm chạm giữ chân và chuyển đổi user từ Web sang App MoMo.
-* **Hành động (Product & Tech Cell):** 
+* **Hành động (Product & Tech Cell):**
   - **Thiết kế & Code Widget:** Xây dựng các công cụ tương tác nhúng vào bài (VD: Tool tính lãi suất trả góp, tra cứu phạt nguội).
   - **Tích hợp Deep link/Universal Link:** Nút CTA phải dẫn thẳng vào màn hình chức năng tương ứng trên App MoMo.
-  - **Tối ưu UI/UX & Tracking:** Thiết lập luồng GTM, event tracking cho các phễu chuyển đổi (Traffic ➔ Click CTA ➔ Mở App ➔ Giao dịch).
+  - **Tối ưu UI/UX & Tracking:** Thiết lập luồng GTM, event tracking cho các phễu chuyển đổi (Traffic -> Click CTA -> Mở App -> Giao dịch).
 
 ### Bước 4: SEO/GEO On-Page (Sản xuất & Tối ưu nội dung)
 * **Mục tiêu:** Nội dung chất lượng cao nhất, AI và Google dễ đọc nhất, đạt điểm `[[mospark_seo_geo_score]]` > 80.
@@ -171,7 +192,7 @@ graph LR
 
     %% Legend
     P4 -- "1-1 Rule" --> E1
-    
+
     style Planning fill:#e3f2fd,stroke:#1565c0
     style Execution fill:#f1f8e9,stroke:#2e7d32
     style P4 fill:#fce4ec,stroke:#c2185b,stroke-width:2px
@@ -181,11 +202,32 @@ graph LR
 
 ## 6. Lộ trình nâng cấp (Roadmap to HubSpot Parity)
 
-| Giai đoạn | Trọng tâm tính năng | Mục tiêu |
-| :--- | :--- | :--- |
-| **Tier 1 (Quick Win)** | Cluster Map UI, Per-article Analytics Embed | PM nhìn thấy độ phủ thị trường và hiệu suất bài viết ngay trong Editor. |
-| **Tier 2 (Medium)** | Keyword Ranking Tracker, Content Decay Alert | Tự động cảnh báo khi từ khóa rớt hạng để kịp thời refresh. |
-| **Tier 3 (Strategic)** | GEO Monitoring Dashboard, Citation Analysis | Đo lường mức độ AI trích dẫn MoMo so với đối thủ cạnh tranh. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giai đoạn</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trọng tâm tính năng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục tiêu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tier 1 (Quick Win)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cluster Map UI, Per-article Analytics Embed</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM nhìn thấy độ phủ thị trường và hiệu suất bài viết ngay trong Editor.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tier 2 (Medium)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Keyword Ranking Tracker, Content Decay Alert</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự động cảnh báo khi từ khóa rớt hạng để kịp thời refresh.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tier 3 (Strategic)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GEO Monitoring Dashboard, Citation Analysis</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đo lường mức độ AI trích dẫn MoMo so với đối thủ cạnh tranh.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -207,12 +249,42 @@ graph LR
 
 ## 9. Nhật ký Thay đổi (Version Log)
 
-| Phiên bản | Ngày | Nội dung thay đổi | Người thực hiện |
-| :--- | :--- | :--- | :--- |
-| **v2.0** | 2026-05-12 | Khởi tạo Playbook kết hợp HubSpot Parity. | Văn Hiến |
-| **v2.1** | 2026-05-15 | Cập nhật triết lý vận hành MoSpark (Pre-publish gate). | Văn Hiến |
-| **v2.2** | 2026-05-16 | Tái cấu trúc: Tài liệu liên kết xuống cuối & thêm Version Log. | Văn Hiến |
-| **v2.3** | 2026-06-03 | Bổ sung Khung Tăng Trưởng Khép Kín (End-to-End Growth Framework cho MoMo) và vai trò Cell Team; làm gọn Change Log. | Văn Hiến (AI) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phiên bản</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ngày</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung thay đổi</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Người thực hiện</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v2.0</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-12</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khởi tạo Playbook kết hợp HubSpot Parity.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Văn Hiến</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v2.1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-15</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cập nhật triết lý vận hành MoSpark (Pre-publish gate).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Văn Hiến</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v2.2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-16</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tái cấu trúc: Tài liệu liên kết xuống cuối & thêm Version Log.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Văn Hiến</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v2.3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-06-03</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bổ sung Khung Tăng Trưởng Khép Kín (End-to-End Growth Framework cho MoMo) và vai trò Cell Team; làm gọn Change Log.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Văn Hiến (AI)</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

@@ -4,7 +4,7 @@
 > - **Main URL:** momo.vn/esim-du-lich
 > - **Division:** PS (Payment Services) - Telco
 > - **Version:** 1.4 · Tháng 6/2026
-> - **Status:** Active (Scope: Outbound & Inbound eSIM - Migration to MoSpark)
+> - **Status:** Active (Scope: Outbound & Media Team eSIM - Migration to MoSpark)
 
 ---
 
@@ -34,56 +34,204 @@ Dự án xây dựng cluster web eSIM Du Lịch gồm 1 Hub page, 10 Destination
 
 ### 2.2 Competitive Landscape
 
-| Player | Điểm mạnh | Điểm yếu vs MoMo |
-|---|---|---|
-| **Gohub** (đối tác) | Dẫn đầu thị trường, 195+ quốc gia | Brand awareness thấp với user phổ thông |
-| **Gloka** | B2C mạnh, SEO tốt | Không có siêu app distribution |
-| **Airalo** | Global #1, brand quốc tế | Không bản địa hóa cho người Việt |
-| **Klook** | OTA distribution, SV đáng kể | Không phải core product |
-| **Traveloka** | OTA lớn, đông user Việt | SIM du lịch không phải core |
-| **Sàn TMĐT** (Shopee, Lazada) | Đa dạng gói, giá cạnh tranh, review nhiều | CSKH yếu, không chuyên SIM |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Player</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điểm mạnh</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điểm yếu vs MoMo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Gohub</strong> (đối tác)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dẫn đầu thị trường, 195+ quốc gia</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Brand awareness thấp với user phổ thông</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Gloka</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">B2C mạnh, SEO tốt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có siêu app distribution</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Airalo</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Global #1, brand quốc tế</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không bản địa hóa cho người Việt</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Klook</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">OTA distribution, SV đáng kể</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không phải core product</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Traveloka</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">OTA lớn, đông user Việt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SIM du lịch không phải core</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sàn TMĐT</strong> (Shopee, Lazada)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đa dạng gói, giá cạnh tranh, review nhiều</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CSKH yếu, không chuyên SIM</td>
+    </tr>
+  </tbody>
+</table>
 
 **Strategic position:** MoMo không cạnh tranh trên sản phẩm eSIM - cạnh tranh trên **distribution, UX, và trust**. User MoMo sẵn có ví và thẻ liên kết - friction mua thấp hơn bất kỳ competitor nào.
 
 **SWOT:**
 
-| Strengths | Weaknesses |
-|---|---|
-| Tệp 12.8M A30 users, traffic tự nhiên cao | Chưa được định vị "chuyên du lịch" trong đầu user |
-| Lợi thế thanh toán all-in-one | Chưa có USP khác biệt, dễ bị so sánh giá |
-| Brand awareness cao | Chi phí marketing hạn chế |
-| Danh mục rộng (105+ quốc gia), đa dạng khoảng giá | SIM phụ thuộc chính sách viễn thông đối tác |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Strengths</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Weaknesses</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tệp 12.8M A30 users, traffic tự nhiên cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa được định vị "chuyên du lịch" trong đầu user</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lợi thế thanh toán all-in-one</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa có USP khác biệt, dễ bị so sánh giá</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Brand awareness cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chi phí marketing hạn chế</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Danh mục rộng (105+ quốc gia), đa dạng khoảng giá</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SIM phụ thuộc chính sách viễn thông đối tác</td>
+    </tr>
+  </tbody>
+</table>
 
-| Opportunities | Threats |
-|---|---|
-| Người Việt xuất cảnh tăng >33% (2025) | Nhiều player lâu năm (Klook, Traveloka, Trip.com) |
-| Xu hướng mua eSIM trước chuyến đi | Sàn TMĐT dễ cạnh tranh giá |
-| 22M+ thiết bị hỗ trợ eSIM | Nhanh mất thị phần nếu không có chiến lược đặc biệt |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Opportunities</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Threats</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người Việt xuất cảnh tăng >33% (2025)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhiều player lâu năm (Klook, Traveloka, Trip.com)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xu hướng mua eSIM trước chuyến đi</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sàn TMĐT dễ cạnh tranh giá</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">22M+ thiết bị hỗ trợ eSIM</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhanh mất thị phần nếu không có chiến lược đặc biệt</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2.3 Keyword Opportunity (450 từ khóa, 50.850 SV/tháng)
 
-| Cluster | SV/tháng | Ghi chú |
-|---|---|---|
-| eSIM Chung | 8.510 | Hub page |
-| Việt Nam (Inbound) | 12.800 | Destination page cho khách nước ngoài vào VN |
-| eSIM + SIM Trung Quốc | 7.850 | Trang lớn nhất - có GFW caveat |
-| Sim Ngoại Quốc Chung | 4.100 | Hub + blog |
-| Thái Lan | 3.930 | Destination page |
-| Nhật Bản | 1.950 | Destination page |
-| Singapore | 1.530 | Destination page |
-| Cẩm nang / How-to | 1.430 | Blog cluster |
-| Hàn Quốc | 1.160 | Destination page |
-| Châu Âu | 1.090 | Destination page |
-| Mỹ | 900 | Destination page |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cluster</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">SV/tháng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">eSIM Chung</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">8.510</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hub page</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Việt Nam (Media Team)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">12.800</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Destination page cho khách nước ngoài vào VN</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">eSIM + SIM Trung Quốc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">7.850</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang lớn nhất - có GFW caveat</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sim Ngoại Quốc Chung</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4.100</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hub + blog</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thái Lan</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.930</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Destination page</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhật Bản</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.950</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Destination page</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Singapore</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.530</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Destination page</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cẩm nang / How-to</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.430</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog cluster</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hàn Quốc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.160</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Destination page</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Châu Âu</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.090</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Destination page</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mỹ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">900</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Destination page</td>
+    </tr>
+  </tbody>
+</table>
 
 **SEM keyword data (bổ sung):**
 
-| Cluster SEM | Tổng SV | Keywords tiêu biểu |
-|---|---|---|
-| Sim Trung Quốc | 5.510 | `sim trung quốc` (1.600), `mua sim trung quốc` (1.000) |
-| Travel Sim Overall | 4.080 | `esim du lịch` (1.300), `sim du lịch` (880) |
-| Sim Hàn Quốc | 1.450 | `sim hàn quốc` (320), `esim hàn quốc` (320) |
-| Vietnam eSIM (Inbound) | 12.800 | `vietnam esim` (9.900), `best esim for vietnam` (1.900) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cluster SEM</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tổng SV</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Keywords tiêu biểu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sim Trung Quốc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5.510</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">sim trung quốc</code> (1.600), <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">mua sim trung quốc</code> (1.000)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Travel Sim Overall</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4.080</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">esim du lịch</code> (1.300), <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">sim du lịch</code> (880)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sim Hàn Quốc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.450</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">sim hàn quốc</code> (320), <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">esim hàn quốc</code> (320)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vietnam eSIM (Media Team)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">12.800</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">vietnam esim</code> (9.900), <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">best esim for vietnam</code> (1.900)</td>
+    </tr>
+  </tbody>
+</table>
 
 **4 Strategic Observations:**
 
@@ -98,50 +246,205 @@ Dự án xây dựng cluster web eSIM Du Lịch gồm 1 Hub page, 10 Destination
 
 ### 3.1 User Funnel (A30 Base)
 
-| Stage | Số lượng | % Base | CR sang stage tiếp |
-|---|---|---|---|
-| Tổng A30 Users | 12.8M | 100% | - |
-| Du lịch nước ngoài (2025) | 771K | 6.0% | 6% |
-| Dùng SIM kết nối mạng | 331K | 2.6% | 43% |
-| Trực tiếp mua SIM | 159K | 1.2% | 48% |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Stage</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Số lượng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">% Base</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">CR sang stage tiếp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng A30 Users</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">12.8M</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">100%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Du lịch nước ngoài (2025)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">771K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6.0%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dùng SIM kết nối mạng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">331K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.6%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">43%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trực tiếp mua SIM</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">159K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.2%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">48%</td>
+    </tr>
+  </tbody>
+</table>
 
 *Lưu ý: Chỉ 48% người dùng SIM trực tiếp mua - phần còn lại mua hộ người khác hoặc 1 người phát hotspot cho cả nhó.*
 
 ### 3.2 Market Sizing
 
-| Metric | Giá trị |
-|---|---|
-| TAM (tổng chi tiêu SIM du lịch A30) | ~171 tỷ VNĐ/năm |
-| SAM (nhóm mua SIM online) | ~143.5 tỷ VNĐ/năm |
-| MoMo GMV hiện tại (2025) | 16 tỷ VNĐ (~11% SAM) |
-| Target GMV 2026 | 48 tỷ VNĐ (+300%) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giá trị</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TAM (tổng chi tiêu SIM du lịch A30)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~171 tỷ VNĐ/năm</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SAM (nhóm mua SIM online)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~143.5 tỷ VNĐ/năm</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo GMV hiện tại (2025)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">16 tỷ VNĐ (~11% SAM)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Target GMV 2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">48 tỷ VNĐ (+300%)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 3.3 KPI Targets Q3/2026
 
-| KPI | T7/2026 | T8/2026 (PEAK) | T9/2026 (PEAK) | Q3 Total | vs Q2 |
-|---|---|---|---|---|---|
-| MAU | 32.520 | 31.219 | 43.707 | 107.446 | +77% |
-| Trans | 48.780 | 46.829 | 65.560 | 161.169 | +77% |
-| GMV (VNĐ) | 8.29 tỷ | 7.96 tỷ | 11.15 tỷ | 27.4 tỷ | +77% |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">KPI</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">T7/2026</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">T8/2026 (PEAK)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">T9/2026 (PEAK)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Q3 Total</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">vs Q2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MAU</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">32.520</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">31.219</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">43.707</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">107.446</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">+77%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trans</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">48.780</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">46.829</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">65.560</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">161.169</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">+77%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GMV (VNĐ)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">8.29 tỷ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">7.96 tỷ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">11.15 tỷ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">27.4 tỷ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">+77%</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 3.4 Web Contribution Target
 
-| Metric | T7/2026 | T8/2026 | T9/2026 |
-|---|---|---|---|
-| Web % contribution | 4% | 6% | 10% |
-| Web Trans (absolute) | 1.951 | 2.810 | 6.556 |
-| Web GMV | 331.7M VNĐ | 477.6M VNĐ | 1.114.5M VNĐ |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">T7/2026</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">T8/2026</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">T9/2026</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web % contribution</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">10%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Trans (absolute)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.951</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.810</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6.556</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web GMV</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">331.7M VNĐ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">477.6M VNĐ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.114.5M VNĐ</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 3.5 Destination Data - Lượt khách Việt xuất cảnh (2024)
 
-| Quốc gia | Lượt khách VN | FIT ratio | Est. FIT | Audience chính |
-|---|---|---|---|---|
-| Trung Quốc | ~1.400.000 | 62% | 868.000 | FIT + GIT |
-| Thái Lan | ~920.000 | 58% | 533.600 | FIT |
-| Nhật Bản | ~710.000 | 35% | 248.500 | GIT |
-| Hàn Quốc | ~615.000 | 62% | 381.300 | FIT |
-| Singapore | ~480.000 | 75% | 360.000 | FIT |
-| Malaysia | ~420.000 | 65% | 273.000 | FIT |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Quốc gia</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Lượt khách VN</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">FIT ratio</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Est. FIT</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Audience chính</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung Quốc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~1.400.000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">62%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">868.000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FIT + GIT</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thái Lan</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~920.000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">58%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">533.600</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FIT</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhật Bản</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~710.000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">35%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">248.500</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GIT</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hàn Quốc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~615.000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">62%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">381.300</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FIT</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Singapore</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~480.000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">75%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">360.000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FIT</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Malaysia</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~420.000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">65%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">273.000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FIT</td>
+    </tr>
+  </tbody>
+</table>
 
 *FIT = Free Independent Traveler (tự đi, target chính cho eSIM online). GIT = Group Inclusive Tour (đi đoàn, thường guide lo SIM).*
 
@@ -161,7 +464,7 @@ Dự án xây dựng cluster web eSIM Du Lịch gồm 1 Hub page, 10 Destination
 - **Partnership:** Hợp tác chặt chẽ với Gohub
 - **Source of Growth mới:** **Kênh Web** - dựa trên hành vi tìm kiếm Google của khách du lịch (đây là scope BRD này)
 
-### 3.8 Market Research & Content Plan: Inbound eSIM (Khách vào Việt Nam)
+### 3.8 Market Research & Content Plan: Media Team eSIM (Khách vào Việt Nam)
 
 *   **Market Research:**
     *   **Dung lượng thị trường:** Việt Nam đón 12.7 triệu lượt khách quốc tế năm 2024, dự kiến tăng lên 18 triệu lượt vào năm 2026. Tỷ lệ khách du lịch tự túc (FIT) chiếm hơn 70%, đây là đối tượng chính có nhu cầu cao về kết nối internet ngay khi hạ cánh.
@@ -193,24 +496,78 @@ SIM du lịch thuộc nhóm **Habitual** trong FCB Grid:
 - Trong nhóm online: **74% mua eSIM**, 26% SIM vật lý
 - Trong nhóm offline: 38% eSIM, **62% SIM vật lý**
 
-| Metric | Nhóm Online (85%) | Nhóm Offline (15%) |
-|---|---|---|
-| Profile | Nữ, trẻ, độc thân/chưa có con, đi DL thường xuyên | Nam, lớn tuổi, có con, ít đi DL |
-| Số SIM/lần mua | Mean 2.13 SIM/người | Mean 1.78 SIM/người |
-| Dung lượng | Mean 2.66 GB/ngày (1-3GB chủ yếu) | Mean 3.66 GB/ngày (>5GB) |
-| Giá trung bình | 213.586 VNĐ/SIM | 284.381 VNĐ/SIM |
-| Hành vi | Nhạy cảm giá, tối ưu gói phù hợp | Sẵn sàng chi, cần HDSD rõ ràng |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhóm Online (85%)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhóm Offline (15%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Profile</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nữ, trẻ, độc thân/chưa có con, đi DL thường xuyên</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nam, lớn tuổi, có con, ít đi DL</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số SIM/lần mua</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mean 2.13 SIM/người</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mean 1.78 SIM/người</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dung lượng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mean 2.66 GB/ngày (1-3GB chủ yếu)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mean 3.66 GB/ngày (>5GB)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giá trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">213.586 VNĐ/SIM</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">284.381 VNĐ/SIM</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hành vi</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhạy cảm giá, tối ưu gói phù hợp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sẵn sàng chi, cần HDSD rõ ràng</td>
+    </tr>
+  </tbody>
+</table>
 
 *Insight: Nhóm online mua trung bình 2+ SIM/lần (mua hộ). Web nên highlight combo/multi-buy. Dung lượng 1-3GB/ngày là sweet spot cho pricing display.*
 
 ### 4.3 Đánh giá kênh mua (User feedback)
 
-| Kênh | Điểm hài lòng | Điểm không hài lòng |
-|---|---|---|
-| **MoMo** | Giao dịch nhanh & tiện, dễ thao tác, tin tưởng brand | Giá chưa rẻ nhất, ít voucher, thiếu HDSD kích hoạt |
-| **Sàn TMĐT** | Đa dạng gói, giá tốt, nhiều review | CSKH kém, khó liên hệ shop |
-| **App du lịch** | Tiện lợi, nhận eSIM nhanh | Ít khuyến mãi |
-| **Website SIM** | Tư vấn hỗ trợ 24/7, dễ mua/sử dụng | - |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Kênh</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điểm hài lòng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điểm không hài lòng</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MoMo</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giao dịch nhanh & tiện, dễ thao tác, tin tưởng brand</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giá chưa rẻ nhất, ít voucher, thiếu HDSD kích hoạt</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sàn TMĐT</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đa dạng gói, giá tốt, nhiều review</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CSKH kém, khó liên hệ shop</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>App du lịch</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tiện lợi, nhận eSIM nhanh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ít khuyến mãi</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Website SIM</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tư vấn hỗ trợ 24/7, dễ mua/sử dụng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+  </tbody>
+</table>
 
 **Leverage cho web:** MoMo mạnh ở "giao dịch nhanh + trust" nhưng yếu ở "giá & hướng dẫn". Web content phải address cả hai: (1) Hướng dẫn kích hoạt rõ ràng trong How-to section; (2) Nhấn mạnh "giá hợp lý" thay vì "giá rẻ nhất" - tránh cuộc chiến giá.
 
@@ -230,19 +587,19 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
 - **Hành động:** User chuẩn bị chuyến đi quốc tế (vé đã book hoặc đang plan ~7-14 ngày trước bay) bắt đầu nhận thức nhu cầu kết nối khi ra nước ngoài. Đây là moment "trip is now real" - intent cao nhưng đa kênh, MoMo phải cạnh tranh top-of-mind với Klook/Trip/Traveloka/ roaming nhà mạng.
 - **Touchpoint MoMo:**
     App MoMo: Home banner, Mini app, Discovery feed, Push notification, Travel section.
-    
+
     [GAP] Travel cluster (vé MB / khách sạn / bảo hiểm/QR Quốc tế) chưa cross-trigger mạnh sang SIM du lịch.
 - **Customer Jobs-to-be-Done (JTBD):**
   - *Functional:* Hiểu landscape connectivity quốc tế (roaming nhà mạng, eSIM, SIM vật lý sân bay, Pocket Wi-Fi) và quy đổi nhanh về chi phí + tiện lợi cho lifestyle cụ thể.
-    
+
     MoMo serve: △ TB
     Có Mini App nhưng không có education layer; user vẫn phải Google để hiểu eSIM vs SIM vật lý."
   - *Social:* Tự định vị là "người du lịch thông thái" - không bị động trước phí roaming; không "biến mất" với nhóm đi cùng và người thân ở nhà.
-    
+
     MoMo serve: ✗ Yếu
     Brand MoMo = fintech, không phải "travel-savvy badge" so với Airalo/Klook trong mindshare gen Z
   - *Emotional:* Giảm pre-trip anxiety ("nếu không có internet thì sao?"); chuyển từ trạng thái lo lắng sang "có kế hoạch B".
-    
+
     MoMo serve: ✗ Yếu
     Không có pre-trip checklist proactive; user vẫn lo lắng và phải tự research - MoMo không tham gia hành trình giảm anxiety.
 - **MoMo Leverage (Lợi thế sẵn có):**
@@ -250,7 +607,7 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
     Direction: Du lịch quốc tế gom "trip kit"
 - **Điểm đau & Cảm xúc người dùng:**
   - *Pain points:* Awareness gap top-of-mind: MoMo không là "first thought" cho SIM du lịch. Mindshare đang ở Airalo/Klook (gen Z tech-savvy) và roaming nhà mạng (segment trung niên). Không có cross-trigger từ booking cluster.
-    
+
     Mức độ: CAO
   - *Trạng thái cảm xúc:* Băn khoăn (chưa biết phương án nào tối ưu) - Lo lắng nhẹ (sợ phí roaming) - Tò mò (eSIM là gì? an toàn không?).
 - **Cơ hội & Solution Mapping (MoMo-specific):**
@@ -264,19 +621,19 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
 - **Hành động:** User search điểm đến cụ thể (vd "esim Nhật", "sim du lịch Hàn") hoặc browse list quốc gia phổ biến để xác nhận MoMo có giải pháp cho điểm đến của mình.   Mental model: nghĩ theo quốc gia trước, gói SIM sau.
 - **Touchpoint MoMo:**
     TRONG MoMo: Global search home MoMo, Search bar in app, Mini App listing, Travel section.
-    
+
     [GAP] Global search MoMo yếu, không suggest SKU best choice cho quốc gia đang tìm kiếm
 - **Customer Jobs-to-be-Done (JTBD):**
   - *Functional:* Confirm MoMo có phục vụ sim cho điểm đến của tôi, narrow down danh sách option phù hợp mà không cần đoán nhà mạng/độ phủ.
-    
+
     MoMo serve: △ TB
     Search MoMo hoạt động nhưng synonym/intent yếu; chưa có suggest SKU top of mind/peak/best choice nên user vẫn phải scan thủ công."
   - *Social:* Có "câu trả lời sẵn sàng" cho nhóm bạn khi được hỏi "đã lo SIM chưa?", "đi Nhật xài gì?".
-    
+
     MoMo serve: ✗ Yếu
     User mất kiên nhẫn search → không có moment "tự hào đã lo xong/ bà hoàng săn deal" để khoe nhóm.
   - *Emotional:* Cảm giác "MoMo hiểu chuyến đi của mình" - chuyển từ ngờ vực sang tin tưởng. Đây là moment quyết định ở lại hay rời app.
-    
+
     MoMo serve: ✗ Yếu
     Search không khớp intent → user nghi ngờ "MoMo có thực sự phục vụ travel không?"; mất trust ngay từ moment đầu.
 - **MoMo Leverage (Lợi thế sẵn có):**
@@ -284,7 +641,7 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
     Country-first leverage được mental model du lịch của user
 - **Điểm đau & Cảm xúc người dùng:**
   - *Pain points:* Search relevance không suggest SKU ("esim Nhật" chỉ suggest quốc gia, ko suggest SKU peak của quốc gia); thiếu hub quốc gia tổng hợp; user phải scan từng gói để đoán cover quốc gia mình đi.
-    
+
     Mức độ: CAO
   - *Trạng thái cảm xúc:* Bối rối nếu search không trả kết quả -Mất kiên nhẫn ("sao tìm khó vậy?") -Có nguy cơ rời app rất cao.
 - **Cơ hội & Solution Mapping (MoMo-specific):**
@@ -299,19 +656,19 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
 - **Hành động:** User compare các gói trong cùng quốc gia (dung lượng × ngày × giá × nhà mạng cover) trên MoMo và mở thêm tab so sánh với Klook/Trip/Traveloka/ roaming nhà mạng. Đây là khâu evaluation quan trọng nhất pre-purchase.
 - **Touchpoint MoMo:**
     TRONG MoMo: PDP Mini App, Filter, Pricing display.
-    
+
     [GAP] Không có review/rating, không có comparison view, không có brand partner badge.
 - **Customer Jobs-to-be-Done (JTBD):**
   - *Functional:* Chọn được gói "đủ dùng - đáng giá" cho lifestyle: light (3-5GB), heavy (10GB+), work-from-anywhere (unlimited).
-    
+
     MoMo Serve: △ TB
     Đủ thông tin cơ bản (giá, dung lượng, ngày); thiếu recommendation engine và comparison view nên quyết định khó.
   - *Social:* Tránh bị "hớ" khi share kinh nghiệm với bạn ("tao mua cái này, đắt mà ít data"); thể hiện sense về giá trị.
-    
+
     MoMo serve: ✗ Yếu
     Không có review/rating nên user không có evidence để "khoe" lựa chọn của mình với bạn bè.
   - *Emotional:* Tự tin quyết định không bị hớ; loại bỏ cảm giác phải so sánh hàng giờ; giảm regret về sau.
-    
+
     MoMo serve: ✗ Yếu
     Trust gap + decision paralysis → user phân vân, dễ procrastinate ("để mai tính") → silent abandonment.
 - **MoMo Leverage (Lợi thế sẵn có):**
@@ -319,7 +676,7 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
     - Reviews từ user MoMo cùng route (geographic + duration matched) -  social proof độc nhất.
 - **Điểm đau & Cảm xúc người dùng:**
   - *Pain points:* Trust gap nghiêm trọng - Mini App không support review/rating/social proof natively. Decision paralysis bởi quá nhiều SKU giống nhau (5GB-7d vs 5GB-10d vs 7GB-7d). Không có comparison view, user phải screenshot tự note.
-    
+
     Mức độ: RẤT CAO (conversion bottleneck quan trọng nhất pre-purchase)
   - *Trạng thái cảm xúc:* Phân vân - Nghi ngờ - Mệt mỏi (so sánh nhiều) - Có xu hướng "để mai tính" (procrastination = silent abandonment).
 - **Cơ hội & Solution Mapping (MoMo-specific):**
@@ -327,7 +684,7 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
     - Comparison view 2-3 gói side-by-side.
     - Review close-the-loop từ chuyến đã đi.
     - Brand partner page "borrow trust" từ Airalo/Bytesim.
-    - Lưu lại thông tin đã xem -> giúp user quay lại có thể tiếp tục hành trình mua data/sim trên MoMo dưới dạng shortcuts hoặc pop-up notification
+    - Lưu lại thông tin đã xem ➔ giúp user quay lại có thể tiếp tục hành trình mua data/sim trên MoMo dưới dạng shortcuts hoặc pop-up notification
     - Auto detect device suitable for e-sim or not (reference Klook)
 
 ---
@@ -336,19 +693,19 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
 - **Hành động:** User chọn gói cụ thể, click "Mua ngay" - đã commit về quyết định nhưng chưa hoàn tất giao dịch. Trạng thái commit cao nhưng vẫn dễ bị "pre-checkout abandonment" nếu rào cản xuất hiện.
 - **Touchpoint MoMo:**
     TRONG MoMo: PDP "Mua ngay", Cart Mini App.
-    
+
     [GAP] Quá nhiều gói tương tự, Không rõ sự khác biệt giữa các gói, Không có recommendation hoặc “best choice”; không có multi-buy SKU cho group travel.
 - **Customer Jobs-to-be-Done (JTBD):**
   - *Functional:* Lock-in lựa chọn (gói + ngày kích hoạt) chính xác để tránh sai sót dẫn đến refund hoặc đổi gói hoặc sử dụng không đủ dẫn đến hết gói giữa chừng
-    
+
     MoMo Serve: ✓ Tốt
     Buy flow nhanh, one-tap có sẵn; PDP đầy đủ thông tin để commit.
   - *Social:* Khẳng định vai trò "người lo logistics" trong nhóm; tự tin chốt cho cả đoàn nếu mua chung.
-    
+
     MoMo serve: △ TB
     Có thể mua được nhưng không có flow mua cho nhóm (multi-buy SKU); mất cơ hội thể hiện vai trò.
   - *Emotional:* Cảm giác progress - tiến gần đến trạng thái "sẵn sàng đi". Endorphin moment nhỏ.
-    
+
     MoMo serve: ✓ Tốt
     Tap "Mua ngay" tạo cảm giác progress rõ rệt; user thấy mình tiến gần đến "sẵn sàng đi".
 - **MoMo Leverage (Lợi thế sẵn có):**
@@ -357,7 +714,7 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
     - Multi-buy SKU cho group travel.
 - **Điểm đau & Cảm xúc người dùng:**
   - *Pain points:* Date picker không liên kết booking (user phải tự nhớ ngày bay); không có upsell/multi-buy mạch lạc cho group travel.
-    
+
     Mức độ: TRUNG BÌNH (ảnh hưởng AOV không CR chính)
   - *Trạng thái cảm xúc:* Thoả mãn nhẹ - Vẫn còn buyer's hesitation cuối ("liệu mình có chọn đúng?").
 - **Cơ hội & Solution Mapping (MoMo-specific):**
@@ -371,20 +728,20 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
 - **Hành động:** User nhập thông tin nhận hàng: email (cho QR eSIM), SĐT, tên đầy đủ, địa chỉ giao (SIM vật lý). Đây là silent trở ngại killer -user complete mua nhưng có thể nhận sai/không nhận được.
 - **Touchpoint MoMo:**
     TRONG MoMo: Form input Mini App (email, SĐT, tên, địa chỉ), reuse KYC level đã verified.
-    
+
     [GAP NẶNG] Điền lại thông tin sau mỗi lần check out, Không lưu lại thông tin đã input của user và auto fill (ko serve được cho trường hợp mua hộ người khác)
 - **Customer Jobs-to-be-Done (JTBD):**
   - *Functional:* - Cung cấp thông tin chính xác để chắc chắn nhận sản phẩm - đặc biệt email/SĐT phải đúng vì QR thường gửi qua các kênh này.
     - Tự động hóa, điền sẵn thông tin, giảm số bước trong quy trình checkout
-    
+
     MoMo Serve: ✗ Yếu
     Không save và auto suggest từ previous profiles; risk nhập sai email cao = không nhận QR - đây là silent killer
   - *Social:* Không bị bẽ mặt vì sai email/SĐT dẫn đến không nhận được QR ngày bay - đặc biệt khi đi cùng người khác.
-    
+
     MoMo serve: ✗ Yếu
     Form thủ công làm tăng probability sai sót khi đi nhóm → mất face với team đồng hành.
   - *Emotional:* Lo lắng nhẹ về data privacy (phải nhập email); cần feeling "MoMo đã có data này, sao bắt nhập lại".
-    
+
     MoMo serve: ✗ Yếu
     User cảm thấy "không được tôn trọng thời gian" ("sao phải nhập lại?"); gãy positive flow tâm lý.
 - **MoMo Leverage (Lợi thế sẵn có):**
@@ -392,7 +749,7 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
     - KYC reuse: user đã verified trong MoMo → không cần fill-in lại.
 - **Điểm đau & Cảm xúc người dùng:**
   - *Pain points:* Form dài, user phải nhập lại thông tin MoMo đã có; không có realtime validation; risk lớn: nhập sai email = không nhận QR = panic ở sân bay; không có "preview thông tin" pre-confirm.
-    
+
     Mức độ: CAO (silent killer -user complete giao dịch nhưng nhận sai)
   - *Trạng thái cảm xúc:* Hơi bực ("sao phải nhập lại?") - Lo lắng về sai sót - Cảm thấy không được "tôn trọng thời gian".
 - **Cơ hội & Solution Mapping (MoMo-specific):**
@@ -409,15 +766,15 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
     → ĐÂY LÀ TOUCHPOINT MẠNH NHẤT của MoMo, hệ sinh thái thanh toán đầy đủ.
 - **Customer Jobs-to-be-Done (JTBD):**
   - *Functional:* Hoàn tất thanh toán nhanh, an toàn, tận dụng tối đa voucher/cashback.
-    
+
     MoMo Serve: ✓ Tốt
     Thanh toán 1 chạm, voucher, refund nhanh -best-in-class fintech UX, là điểm mạnh gốc của MoMo.
   - *Social:* Cảm thấy mình "đỉnh điên" - dùng ví thông minh, thanh toán không lóng ngóng (mạnh ở segment trẻ/gen Z).
-    
+
     MoMo serve: ✓ Tốt
     Đặc biệt với gen Z, dùng MoMo = "modern payment badge"; thanh toán nhanh trước team = social win.
   - *Emotional:* An tâm về security; voucher = "win" tâm lý; hoàn tất = relief.
-    
+
     MoMo serve: ✓ Tốt
     Security trust + voucher win = positive emotional moment lớn nhất toàn journey hiện tại.
 - **MoMo Leverage (Lợi thế sẵn có):**
@@ -425,7 +782,7 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
     Trust as fintech: user đã tin MoMo về payment - đây là step lowest trở ngại.
 - **Điểm đau & Cảm xúc người dùng:**
   - *Pain points:* Confirmation flow chưa rõ "sản phẩm sẽ về đâu" (email vs in-app); voucher Travel không proactive offered (user phải tự apply code).
-    
+
     Mức độ: THẤP - TRUNG BÌNH (bước tốt nhất hiện nay, chỉ có gap nhỏ về UX confirmation)
   - *Trạng thái cảm xúc:* Smooth - Hài lòng - Phấn khích nếu voucher tốt (đây là khoảnh khắc tích cực nhất hiện tại).
 - **Cơ hội & Solution Mapping (MoMo-specific):**
@@ -439,19 +796,19 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
 - **Hành động:** Nhận QR code qua email + in-app, cài đặt eSIM lên device theo OS (iOS scan / Android có 2-3 luồng) hoặc lắp SIM vật lý. Thường thực hiện trước/khi vừa hạ cánh ở sân bay quốc tế.
 - **Touchpoint MoMo:**
     TRONG MoMo: hiển thị mã QR in app hoặc email.
-    
-    [GAP RẤT NẶNG]:  5+ bước kích hoạt thủ công sau khi mua, Yêu cầu thiết bị thứ hai để quét QR → OS Settings để add eSIM ->  quy trình nhiều bước, dễ mắc lỗi, dẫn đến tỉ lệ bỏ cuộc cao. Không có luồng kích hoạt in-app.
+
+    [GAP RẤT NẶNG]:  5+ bước kích hoạt thủ công sau khi mua, Yêu cầu thiết bị thứ hai để quét QR → OS Settings để add eSIM ➔  quy trình nhiều bước, dễ mắc lỗi, dẫn đến tỉ lệ bỏ cuộc cao. Không có luồng kích hoạt in-app.
 - **Customer Jobs-to-be-Done (JTBD):**
   - *Functional:* Kích hoạt SIM tự động, thành công đúng moment cần dùng - ngay sau hạ cánh hoặc trước đó để test.
-    
+
     MoMo Serve: △ TB
     QR hợp lệ nhưng user phải rời app để cài đặt; hướng dẫn không adaptive theo OS → success rate giảm.
   - *Social:* Có thể giúp bạn đồng hành cùng setup eSIM -thể hiện thành thạo công nghệ; tránh để mọi người chờ ở sân bay.
-    
+
     MoMo serve: ✗ Yếu
     User tự lúng túng setup → không thể đóng vai "tech-savvy" trong nhóm; có khi còn cản trở team.
   - *Emotional:* MOMENT ANXIETY CAO NHẤT trong toàn journey. Nếu lỗi ở sân bay nước ngoài → panic; thành công → relief lớn.
-    
+
     MoMo serve: ✗ Yếu
     ANXIETY PEAK của journey nhưng không có pre-trip reminder, không có offline guide, không có in-app support → MoMo vắng mặt đúng lúc cần nhất.
 - **MoMo Leverage (Lợi thế sẵn có):**
@@ -460,11 +817,11 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
     - In-app chat support call qua Wi-Fi sân bay -tránh tốn phí roaming.
 - **Điểm đau & Cảm xúc người dùng:**
   - *Pain points:* GAP LỚN NHẤT TOÀN JOURNEY: user phải rời MoMo (vào Gmail) để lấy QR hoặc dowload mã QR tại in app MoMo. Sau đó phải dùng thiết bị thứ 2 để scan QR (đôi với iOS); hướng dẫn không adaptive theo OS, dạng text dài; không có offline guide; không có pre-trip reminder; không có test mode.
-    
+
     Mức độ: RẤT CAO (single biggest pain point - kéo NPS xuống đáy)
   - *Trạng thái cảm xúc:* STRESS PEAK, Hồi hộp → Panic (nếu lỗi giữa sân bay) → Relief (nếu thành công). BIÊN ĐỘ CẢM XÚC CAO NHẤT JOURNEY
 - **Cơ hội & Solution Mapping (MoMo-specific):**
-    - "My Travel SIM" in-app: QR + auto cài adaptive iOS/Android 
+    - "My Travel SIM" in-app: QR + auto cài adaptive iOS/Android
     - Pre-trip reminder 1  ngày trước đi
     - Test mode: kích hoạt thử trước khi bay.
     - Live chat in-app khi user đang ở sân bay (qua Wi-Fi).
@@ -475,20 +832,20 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
 - **Hành động:** User dùng internet trong chuyến đi (GG Maps, social, video call về nhà), theo dõi data còn lại; nếu sắp hết phải top-up hoặc mua gói mới. Đây là moment trải nghiệm "sống còn" với satisfaction.
 - **Touchpoint MoMo:**
     TRONG MoMo: (gần như không có touchpoint native).
-    
+
     [GAP NẶNG]: Chưa hỗ trợ xem data usage, Hotline quốc tế (support).
     Không có usage dashboard, không có in-app top-up, không có in-app chat.
 - **Customer Jobs-to-be-Done (JTBD):**
   - *Functional:* Có internet ổn định liên tục; biết chính xác data còn lại; nạp thêm dễ dàng khi sắp hết.
-    
+
     MoMo Serve: ✗ Yếu
     Internet chạy nhưng tracking và top-up đều ngoài MoMo (qua app nhà cung cấp chính),  -MoMo không sở hữu trải nghiệm.
   - *Social:* Chia sẻ vị trí/ảnh/video real-time, gọi video về nhà - làm tròn vai " nhà du lịch sành sỏi".
-    
+
     MoMo serve: △ TB
     Phụ thuộc gói có đủ data không; MoMo không liên quan đến social moment chia sẻ này.
   - *Emotional:* Tự do, kết nối, tận hưởng. Nhưng nếu hết data đột ngột → bực bội + hoảng loạn (offline ở nước ngoài).
-    
+
     MoMo serve: △ TB
     Khi tốt thì tốt; khi hết data MoMo không nhận biết để hỗ trợ → cảm xúc tiêu cực không được chặn.
 - **MoMo Leverage (Lợi thế sẵn có):**
@@ -497,7 +854,7 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
     - In-app chat multi-language cho lỗi sóng.
 - **Điểm đau & Cảm xúc người dùng:**
   - *Pain points:* Không có usage tracking native (user phải dùng app telco riêng); không có top-up flow trong MoMo; không có alert chủ động; không có in-app support khi lỗi giữa chuyến.
-    
+
     Mức độ: CAO (loyalty leak quan trọng -đây là moment xây ấn tượng)
   - *Trạng thái cảm xúc:* Phấn khích/Tự do (khi tốt) → Bực bội/Hoảng loạn (nếu hết data bất ngờ).
 - **Cơ hội & Solution Mapping (MoMo-specific):**
@@ -515,15 +872,15 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
     [GAP]: Trip ended quietly; không có review prompt, không có CRM travel-specific, không có loyalty Travel tier.
 - **Customer Jobs-to-be-Done (JTBD):**
   - *Functional:* Dọn dẹp eSIM cũ; lưu thông tin chuyến cho lần sau; quyết định có quay lại MoMo không.
-    
+
     MoMo Serve: ✗ Yếu
     Không hướng dẫn xoá eSIM cũ; không lưu trip history để pre-fill cho lần sau.
   - *Social:* Recommend cho bạn bè, đăng review trên MXH, xây personal brand "người du lịch thông thái".
-    
+
     MoMo serve: ✗ Yếu
     Không có referral mechanism; user có ý định share nhưng không được trigger và không có incentive.
   - *Emotional:* Hài lòng (hoặc thất vọng) với trải nghiệm tổng thể; xây thói quen quay lại MoMo cho chuyến đi kế tiếp.
-    
+
     MoMo serve: ✗ Yếu
     Không có post-trip touchpoint → không xây dựng được thói quen "next trip = MoMo"; emotional bond không hình thành.
 - **MoMo Leverage (Lợi thế sẵn có):**
@@ -532,7 +889,7 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
     - Referral cho bạn cùng đi: "Mời bạn cùng mua eSIM, cả hai có voucher".
 - **Điểm đau & Cảm xúc người dùng:**
   - *Pain points:* Không có retention loop chuyên biệt cho travel; không leverage data chuyến đi để predict next trip; không có review collection để feed lại trust signals.
-    
+
     Mức độ: CAO (LTV leak -mỗi user phải re-acquire cho từng chuyến đi)
   - *Trạng thái cảm xúc:* Trung tính nếu không trigger - Tích cực + loyalty nếu MoMo nhắc đúng thời điểm.
 - **Cơ hội & Solution Mapping (MoMo-specific):**
@@ -555,10 +912,10 @@ Bản đồ chi tiết hành trình người dùng khi mua và sử dụng eSIM 
 ### 5.4 Các Tính Năng JTBD Mới (Q3/2026)
 
 Nhằm giải quyết các pain points của user khi chuẩn bị và trong lúc đi du lịch, dự án bổ sung các idea JTBD sau:
-- **Smart Package Recommender:** Khách hàng lo ngại không biết chọn gói nào phù hợp trong hành trình. -> User nhập ngày đi/ngày về, hệ thống show gói data phù hợp nhất.
-- **Check Device Compatibility:** Khách hàng muốn biết thiết bị hiện tại có hỗ trợ eSIM hay không trước khi thanh toán. -> Tích hợp tool check nhanh khả năng hỗ trợ eSIM của thiết bị.
-- **In-App Travel Guide (Cẩm nang check-in & Cảnh báo Internet):** Khách hàng mua SIM để lướt mạng và sống ảo. -> Gợi ý các địa điểm check-in/sống ảo nổi tiếng, đồng thời cảnh báo (aware) người dùng về các ứng dụng bị chặn theo từng quốc gia (VD: chặn mạng xã hội).
-- **MoMo Overseas Merchants (Bản đồ thanh toán):** MoMo cho phép thanh toán hơn 60 quốc gia qua Alipay. -> Hiển thị danh sách/bản đồ merchant tại vị trí hiện tại ở nước ngoài để user biết và sử dụng MoMo thanh toán.
+- **Smart Package Recommender:** Khách hàng lo ngại không biết chọn gói nào phù hợp trong hành trình. ➔ User nhập ngày đi/ngày về, hệ thống show gói data phù hợp nhất.
+- **Check Device Compatibility:** Khách hàng muốn biết thiết bị hiện tại có hỗ trợ eSIM hay không trước khi thanh toán. ➔ Tích hợp tool check nhanh khả năng hỗ trợ eSIM của thiết bị.
+- **In-App Travel Guide (Cẩm nang check-in & Cảnh báo Internet):** Khách hàng mua SIM để lướt mạng và sống ảo. ➔ Gợi ý các địa điểm check-in/sống ảo nổi tiếng, đồng thời cảnh báo (aware) người dùng về các ứng dụng bị chặn theo từng quốc gia (VD: chặn mạng xã hội).
+- **MoMo Overseas Merchants (Bản đồ thanh toán):** MoMo cho phép thanh toán hơn 60 quốc gia qua Alipay. ➔ Hiển thị danh sách/bản đồ merchant tại vị trí hiện tại ở nước ngoài để user biết và sử dụng MoMo thanh toán.
 
 ---
 
@@ -571,11 +928,32 @@ Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu q
 ### 6.1 Intent-based Filtering Framework (Trang Phạm Standard)
 Phân loại rạch ròi luồng traffic dựa trên Search Intent để điều hướng vào đúng Product Lane/Content:
 
-| User Segment | Đặc tính nhu cầu (Intent Filter) | Volume indicator |
-|---|---|---|
-| FIT (tự đi, chuẩn bị trước) | Mua eSIM theo quốc gia cụ thể (Transact intent) | Cluster destination pages |
-| Người so sánh giải pháp | eSIM vs roaming vs SIM vật lý (Compare intent) | Blog comparison, hub FAQ |
-| Người mua hộ cho nhóm | Cần minh bạch giá, gói đa dạng (Research intent) | Product table + FAQ |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">User Segment</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đặc tính nhu cầu (Intent Filter)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Volume indicator</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FIT (tự đi, chuẩn bị trước)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mua eSIM theo quốc gia cụ thể (Transact intent)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cluster destination pages</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người so sánh giải pháp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">eSIM vs roaming vs SIM vật lý (Compare intent)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog comparison, hub FAQ</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người mua hộ cho nhóm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần minh bạch giá, gói đa dạng (Research intent)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Product table + FAQ</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Trong scope
 
@@ -590,7 +968,7 @@ Phân loại rạch ròi luồng traffic dựa trên Search Intent để điều
 ### Ngoài scope
 
 - App-side UI/UX cho màn hình eSIM trong MoMo App
-- Hệ thống inventory / fulfillment phía Gohub/Xplori/Mobi Inbound
+- Hệ thống inventory / fulfillment phía Gohub/Xplori/Mobi Media Team
 - Social media / paid campaign cho eSIM cluster
 - Đa ngôn ngữ (chỉ tiếng Việt + bilingual title/H2 khi cần)
 - Trang so sánh competitor trực tiếp (cần approval riêng)
@@ -604,41 +982,172 @@ Phân loại rạch ròi luồng traffic dựa trên Search Intent để điều
 
 **Hub:**
 
-| URL | SV/tháng | Content Type |
-|---|---|---|
-| /esim-du-lich | 8.510+ | Hub Pillar - navigation + education + AEO |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">SV/tháng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Content Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/esim-du-lich</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">8.510+</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hub Pillar - navigation + education + AEO</td>
+    </tr>
+  </tbody>
+</table>
 
 **Destination Pages (11 trang):**
 
-| URL | SV/tháng | Ghi chú |
-|---|---|---|
-| /esim-du-lich/trung-quoc | 7.850 | GFW disclaimer bắt buộc - không publish trước khi confirm với Gohub |
-| /esim-du-lich/viet-nam | 12.800 | Inbound eSIM cho khách du lịch nước ngoài vào Việt Nam |
-| /esim-du-lich/thai-lan | 3.930 | |
-| /esim-du-lich/nhat-ban | 1.950 | |
-| /esim-du-lich/singapore | 1.530 | |
-| /esim-du-lich/han-quoc | 1.160 | |
-| /esim-du-lich/chau-au | 1.090 | 1 gói cover toàn Schengen |
-| /esim-du-lich/my | 900 | |
-| /esim-du-lich/uc | 790 | |
-| /esim-du-lich/dai-loan | 700 | |
-| /esim-du-lich/malaysia | 610 | |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">SV/tháng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/esim-du-lich/trung-quoc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">7.850</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GFW disclaimer bắt buộc - không publish trước khi confirm với Gohub</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/esim-du-lich/viet-nam</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">12.800</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Media Team eSIM cho khách du lịch nước ngoài vào Việt Nam</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/esim-du-lich/thai-lan</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.930</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/esim-du-lich/nhat-ban</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.950</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/esim-du-lich/singapore</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.530</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/esim-du-lich/han-quoc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.160</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/esim-du-lich/chau-au</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.090</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1 gói cover toàn Schengen</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/esim-du-lich/my</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">900</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/esim-du-lich/uc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">790</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/esim-du-lich/dai-loan</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">700</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/esim-du-lich/malaysia</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">610</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+  </tbody>
+</table>
 
 **Blog Cluster:**
 
-| URL | Target keyword | SV | Ghi chú |
-|---|---|---|---|
-| /blog/esim-la-gi | `esim du lịch là gì` | ~200 | AEO priority, HowTo schema |
-| /blog/esim-vs-chuyen-vung | `cách chuyển vùng quốc tế viettel/mobi` | 1.260 | Intercept competitor query |
-| /blog/cach-mua-esim-tren-momo | `mua esim du lịch` | ~200 | How-to focus |
-| /blog/dien-thoai-ho-tro-esim-2026 | `điện thoại hỗ trợ esim` | ~50 | Update 6 tháng/lần |
-| /blog/esim-trung-quoc-co-vao-google-khong | `esim trung quốc` | ~790 | Publish đồng thời với /trung-quoc |
-| /blog/esim-thai-lan | `esim thailand`, `sim dtac thái lan` | ~530 | |
-| /blog/kinh-nghiem-esim-nhat-ban | `esim nhật bản` | ~340 | |
-| /blog/esim-chau-au | `esim du lịch châu âu` | ~220 | |
-| /blog/klook-esim-vs-momo-esim | `klook esim` | - | Cần legal approval trước khi viết |
-| /blog/airalo-vs-gohub-vs-momo-esim | `esim airalo` | - | Cần legal approval + verify giá đối thủ |
-| /esim-du-lich/llms.txt | AEO/GEO Standard | - | Chuẩn hóa AI Indexing (Bắt buộc theo VP GPD) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target keyword</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">SV</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/blog/esim-la-gi</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">esim du lịch là gì</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~200</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AEO priority, HowTo schema</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/blog/esim-vs-chuyen-vung</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">cách chuyển vùng quốc tế viettel/mobi</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.260</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Intercept competitor query</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/blog/cach-mua-esim-tren-momo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">mua esim du lịch</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~200</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">How-to focus</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/blog/dien-thoai-ho-tro-esim-2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">điện thoại hỗ trợ esim</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~50</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Update 6 tháng/lần</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/blog/esim-trung-quoc-co-vao-google-khong</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">esim trung quốc</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~790</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Publish đồng thời với /trung-quoc</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/blog/esim-thai-lan</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">esim thailand</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">sim dtac thái lan</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~530</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/blog/kinh-nghiem-esim-nhat-ban</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">esim nhật bản</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~340</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/blog/esim-chau-au</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">esim du lịch châu âu</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~220</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/blog/klook-esim-vs-momo-esim</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">klook esim</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần legal approval trước khi viết</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/blog/airalo-vs-gohub-vs-momo-esim</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">esim airalo</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần legal approval + verify giá đối thủ</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/esim-du-lich/llms.txt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AEO/GEO Standard</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuẩn hóa AI Indexing (Bắt buộc theo VP GPD)</td>
+    </tr>
+  </tbody>
+</table>
 
 **URL Rules:**
 - Lowercase, hyphenated, không dấu tiếng Việt
@@ -648,36 +1157,135 @@ Phân loại rạch ròi luồng traffic dựa trên Search Intent để điều
 
 ### 7.2 Hub Page Anatomy
 
-| Section | Thành phần | Schema |
-|---|---|---|
-| Hero | H1 + 3 trust signals (QR · 150+ quốc gia · Hoàn tiền) + CTA Primary + CTA Secondary | WebPage, BreadcrumbList |
-| Answer Block | "eSIM Du Lịch Là Gì?" - 60-80 từ + bảng so sánh 3 cột (eSIM/SIM vật lý/Roaming) | FAQPage |
-| Destination Grid | 10 card: Flag + Quốc gia + Giá từ [X]đ + Link đến destination page | - |
-| How-to 4 bước | Mở app → Chọn gói → Thanh toán → Nhận QR/kích hoạt | HowTo |
-| FAQ Block | 8 câu AEO priority (xem Appendix A) | FAQPage |
-| Cross-sell | Link Bảo hiểm du lịch + Blog cards | - |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Section</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thành phần</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hero</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">H1 + 3 trust signals (QR · 150+ quốc gia · Hoàn tiền) + CTA Primary + CTA Secondary</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">WebPage, BreadcrumbList</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Answer Block</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"eSIM Du Lịch Là Gì?" - 60-80 từ + bảng so sánh 3 cột (eSIM/SIM vật lý/Roaming)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FAQPage</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Destination Grid</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">10 card: Flag + Quốc gia + Giá từ [X]đ + Link đến destination page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">How-to 4 bước</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mở app → Chọn gói → Thanh toán → Nhận QR/kích hoạt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">HowTo</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FAQ Block</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">8 câu AEO priority (xem Appendix A)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FAQPage</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cross-sell</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Link Bảo hiểm du lịch + Blog cards</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 7.3 Destination Page Anatomy
 
-| Section | Thành phần | Schema |
-|---|---|---|
-| Hero | H1 pattern: "eSIM [Quốc Gia] ([EN Name]) - [Gói phổ biến] / Từ [Giá]đ" + Breadcrumb | Product, BreadcrumbList |
-| Product Table | Thời hạn · Dung lượng · Tốc độ · Giá (từ API) · CTA "Mua Ngay" - highlight "Bán chạy nhất" | AggregateOffer, PriceSpecification |
-| Country Context | 100-150 từ về đặc thù kết nối tại quốc gia | FAQPage |
-| FAQ | 5-7 câu riêng theo quốc gia | FAQPage |
-| Related Destinations | 3-4 trang liên quan về địa lý/trip pattern | - |
-| Sticky CTA | Floating button visible toàn scroll: "[Flag] Mua eSIM [Quốc Gia]" | - |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Section</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thành phần</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hero</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">H1 pattern: "eSIM [Quốc Gia] ([EN Name]) - [Gói phổ biến] / Từ [Giá]đ" + Breadcrumb</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Product, BreadcrumbList</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Product Table</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thời hạn · Dung lượng · Tốc độ · Giá (từ API) · CTA "Mua Ngay" - highlight "Bán chạy nhất"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AggregateOffer, PriceSpecification</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Country Context</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">100-150 từ về đặc thù kết nối tại quốc gia</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FAQPage</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FAQ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5-7 câu riêng theo quốc gia</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FAQPage</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Related Destinations</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3-4 trang liên quan về địa lý/trip pattern</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sticky CTA</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Floating button visible toàn scroll: "[Flag] Mua eSIM [Quốc Gia]"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+  </tbody>
+</table>
 
 **Bilingual title spec (địa chỉ bilingual queries):**
 
-| Destination | Title tag | H2 bilingual trong body |
-|---|---|---|
-| Việt Nam | "Vietnam eSIM (eSIM Việt Nam) - Best Travel Data Plans for Tourists" | "Best Vietnam eSIM Plans for International Travelers" |
-| Thái Lan | "eSIM Thái Lan (Thailand eSIM) - Gói Cước & Mua Ngay" | "Thailand eSIM Plans for Vietnamese Travelers" |
-| Trung Quốc | "eSIM Trung Quốc (China eSIM) - Kết Nối Không Giới Hạn" | "China eSIM - What You Need to Know" |
-| Hàn Quốc | "eSIM Hàn Quốc (Korea eSIM) - Mua Nhanh Kích Hoạt Ngay" | "Korea eSIM - Compare Plans" |
-| Singapore | "eSIM Singapore - Gói Data & Giá Tốt Nhất 2026" | "Singapore eSIM Options Compared" |
-| Châu Âu | "eSIM Châu Âu (Europe eSIM) - 1 Gói Cho Cả Schengen" | "Europe eSIM - Cover Multiple Countries" |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Destination</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Title tag</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">H2 bilingual trong body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Việt Nam</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Vietnam eSIM (eSIM Việt Nam) - Best Travel Data Plans for Tourists"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Best Vietnam eSIM Plans for International Travelers"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thái Lan</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"eSIM Thái Lan (Thailand eSIM) - Gói Cước & Mua Ngay"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Thailand eSIM Plans for Vietnamese Travelers"</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung Quốc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"eSIM Trung Quốc (China eSIM) - Kết Nối Không Giới Hạn"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"China eSIM - What You Need to Know"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hàn Quốc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"eSIM Hàn Quốc (Korea eSIM) - Mua Nhanh Kích Hoạt Ngay"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Korea eSIM - Compare Plans"</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Singapore</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"eSIM Singapore - Gói Data & Giá Tốt Nhất 2026"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Singapore eSIM Options Compared"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Châu Âu</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"eSIM Châu Âu (Europe eSIM) - 1 Gói Cho Cả Schengen"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Europe eSIM - Cover Multiple Countries"</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 7.4 Content Strategy
 
@@ -692,11 +1300,36 @@ Phân loại rạch ròi luồng traffic dựa trên Search Intent để điều
 
 **Blog Tier:**
 
-| Tier | Mô tả | Word count | Schema |
-|---|---|---|---|
-| Tier 1 | Education - phải có | 1.000-2.000 từ | Article, FAQPage, HowTo |
-| Tier 2 | Destination-specific | 800-1.500 từ | Article, FAQPage |
-| Tier 3 | Competitor comparison | 1.200-2.000 từ + bảng | Article, FAQPage + Legal approval |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tier</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Word count</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier 1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Education - phải có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.000-2.000 từ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Article, FAQPage, HowTo</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier 2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Destination-specific</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">800-1.500 từ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Article, FAQPage</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier 3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Competitor comparison</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.200-2.000 từ + bảng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Article, FAQPage + Legal approval</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 7.4.1 Kế Hoạch Nội Dung Google SEM Ads (Mẫu Quảng Cáo)
 
@@ -762,7 +1395,7 @@ Các tiêu đề (Headlines) và mô tả (Descriptions) được tối ưu hóa
   - Mua SIM Hàn Quốc tốc độ 4G/5G ổn định, mua và kích hoạt online đơn giản qua ứng dụng MoMo
 - **Mẫu Mô Tả (Descriptions):**
 
-#### Chiến dịch SEM: Sim Việt Nam (Inbound)
+#### Chiến dịch SEM: Sim Việt Nam (Media Team)
 - **Final URL:** `eSIM Việt Nam dùng liền`
 - **Mẫu Tiêu Đề (Headlines) tiêu biểu:**
   - Sim du lịch Việt Nam giá tốt
@@ -776,39 +1409,116 @@ Các tiêu đề (Headlines) và mô tả (Descriptions) được tối ưu hóa
   - Mua sim Việt Nam trên MoMo cho khách nước ngoài - nhận mã kích hoạt eSIM ngay
 - **Mẫu Mô Tả (Descriptions):**
 
-
 ### 7.5 SEM-SEO Feedback Loop
 
 SEM đang live cho SIM Du Lịch. Dữ liệu SEM bổ sung liên tục cho SEO:
 
-| Action | Mô tả |
-|---|---|
-| Top performing SEM queries → SEO target | Queries có CTR + conversion cao từ SEM ưu tiên trong SEO content |
-| SEM landing page migration | Khi cluster live, redirect SEM destination URLs sang trang mới trong cluster |
-| SEM negative keywords → SEO exclude | Keywords SEM đã loại vì sai intent → loại khỏi SEO target |
-| SEM ad copy testing → SEO title/meta | Headlines SEM có CTR cao → test làm title tag/meta description |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Action</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Top performing SEM queries → SEO target</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Queries có CTR + conversion cao từ SEM ưu tiên trong SEO content</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEM landing page migration</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khi cluster live, redirect SEM destination URLs sang trang mới trong cluster</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEM negative keywords → SEO exclude</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Keywords SEM đã loại vì sai intent → loại khỏi SEO target</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEM ad copy testing → SEO title/meta</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Headlines SEM có CTR cao → test làm title tag/meta description</td>
+    </tr>
+  </tbody>
+</table>
 
 **Organic traffic baseline (thực tế):**
 
-| Metric | T1/2026 | T3/2026 | T6/2026 | T9/2026 (target) |
-|---|---|---|---|---|
-| Organic traffic | 25.724 | 31.992 | 27.391 | 42.907 |
-| Paid traffic | 41.224 | 14.116 | 51.594 | 55.635 |
-| CR MAU/Traffic | 4.98% | 8.23% | 6.64% | 7.85% |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">T1/2026</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">T3/2026</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">T6/2026</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">T9/2026 (target)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Organic traffic</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">25.724</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">31.992</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">27.391</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">42.907</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Paid traffic</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">41.224</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">14.116</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">51.594</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">55.635</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CR MAU/Traffic</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4.98%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">8.23%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6.64%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">7.85%</td>
+    </tr>
+  </tbody>
+</table>
 
 *Insight: Organic traffic dao động 25-43K/tháng nhưng không growth. Web cluster cần tạo organic growth engine ổn định, giảm phụ thuộc paid.*
 
 ### 7.6 Technical Standards (Gate bắt buộc)
 
-| Standard | Requirement |
-|---|---|
-| LCP | < 2.5s (mobile 4G) |
-| CLS | < 0.1 - lưu ý khi API load async |
-| INP | < 200ms |
-| Schema validation | 0 error trên Google Rich Results Test trước publish |
-| Deep link | Test pass iOS + Android, cả installed và not installed |
-| Giá | Fetch từ Gohub API (không hardcode) - fallback "Xem giá trong app" nếu API timeout |
-| Mobile CTA | Sticky button visible toàn scroll, không bị overlap bởi browser chrome (iOS Safari) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Standard</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Requirement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LCP</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 2.5s (mobile 4G)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CLS</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 0.1 - lưu ý khi API load async</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">INP</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 200ms</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Schema validation</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0 error trên Google Rich Results Test trước publish</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Deep link</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Test pass iOS + Android, cả installed và not installed</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giá</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Fetch từ Gohub API (không hardcode) - fallback "Xem giá trong app" nếu API timeout</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobile CTA</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sticky button visible toàn scroll, không bị overlap bởi browser chrome (iOS Safari)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 7.7 Product Roadmap Alignment
 
@@ -835,56 +1545,330 @@ Web cluster là một phần trong chiến lược tăng trưởng tổng thể.
 
 **Web ↔ Product Dependencies:**
 
-| Web Feature | Phụ thuộc Product Feature | Ghi chú |
-|---|---|---|
-| Highlight "Bán chạy nhất" trong Product Table | Smart Package Comparison | Dùng cùng logic "most popular" |
-| Blog "Cách kích hoạt eSIM" | In-app eSIM Activation | Cập nhật content khi tính năng live |
-| FAQ "Mua eSIM ở đâu uy tín" | Social Proof Layer | Bổ sung data khi feature live |
-| Cross-sell Block trên Hub | Cross-trigger Booking | Align danh sách cross-sell |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Web Feature</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phụ thuộc Product Feature</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Highlight "Bán chạy nhất" trong Product Table</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Smart Package Comparison</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dùng cùng logic "most popular"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog "Cách kích hoạt eSIM"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">In-app eSIM Activation</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cập nhật content khi tính năng live</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FAQ "Mua eSIM ở đâu uy tín"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social Proof Layer</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bổ sung data khi feature live</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cross-sell Block trên Hub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cross-trigger Booking</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Align danh sách cross-sell</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ### 7.8 Bảng Ánh Xạ Mã Lỗi Hệ Thống (Error Codes Mapping)
 
-Bảng đối chiếu mã lỗi của đối tác Gohub, Xplori, Mobi Inbound và cách xử lý hiển thị ở phía Backend/Frontend để đưa ra các thông báo thân thiện với người dùng (localized error messages):
+Bảng đối chiếu mã lỗi của đối tác Gohub, Xplori, Mobi Media Team và cách xử lý hiển thị ở phía Backend/Frontend để đưa ra các thông báo thân thiện với người dùng (localized error messages):
 
-| No. | Nhà Cung Cấp | Lỗi Đối Tác | Thông Điệp Đối Tác | Mã Lỗi BE | BE Msg (User-facing) |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Gohub | 200 or 201 | Create order successfully | 0 | Thành công |
-| 2 | Gohub | 400 | Invalid email Invalid quantity Invalid phone | 1006 | Giao dịch thất bại |
-| 3 | Gohub | 401 | Unauthorized | 1006 | Giao dịch thất bại |
-| 4 | Gohub | 404 | Resource not found | 1006 | Giao dịch thất bại |
-| 5 | Gohub | 405 | Method not allowed | 1006 | Giao dịch thất bại |
-| 6 | Gohub | 409 | Duplicate resource | 1006 | Giao dịch thất bại |
-| 7 | Gohub | 430 | The request has already been handled, sending the same payload again is not allowed. | Chưa map |  |
-| 8 | Gohub | 500 | Server internal error | 1006 | Giao dịch thất bại |
-| 9 | Xplori | 200 |  | 0 | Thành công |
-| 10 | Xplori | <>200 |  | 1006 | Giao dịch thất bại |
-| 11 | Mobi inbound | 0 |  | 0 | Thành công |
-| 12 | Mobi inbound | -1 |  | 1006 | Lỗi hệ thống |
-| 13 | Mobi inbound | -2 |  | 1006 | Lỗi hệ thống |
-| 14 | Mobi inbound | -3 |  | 1006 | Lỗi hệ thống |
-| 15 | Mobi inbound | -4 |  | 1006 | Lỗi hệ thống |
-| 16 | Mobi inbound | -60 |  | 1006 | Lỗi hệ thống |
-| 17 | Mobi inbound | -61 |  | 1006 | Lỗi hệ thống |
-| 18 | Mobi inbound | -62 |  | 1006 | Lỗi hệ thống |
-| 19 | Mobi inbound | -63 |  | 1006 | Lỗi hệ thống |
-| 20 | Mobi inbound | -65 |  | 1006 | Lỗi hệ thống |
-| 21 | Mobi inbound | -69 |  | 1006 | Lỗi hệ thống |
-| 22 | Mobi inbound | -70 |  | 1006 | Lỗi hệ thống |
-| 23 | Mobi inbound | -71 |  | 1006 | Lỗi hệ thống |
-| 24 | Mobi inbound | -72 |  | 1006 | Lỗi hệ thống |
-| 25 | Mobi inbound | -73 |  | 1006 | Lỗi hệ thống |
-| 26 | Mobi inbound | -74 |  | 1006 | Lỗi hệ thống |
-| 27 | Mobi inbound | -75 |  | 1006 | Lỗi hệ thống |
-| 28 | Mobi inbound | -76 |  | 1006 | Lỗi hệ thống |
-| 29 | Mobi inbound | -77 |  | 1006 | Lỗi hệ thống |
-| 30 | Mobi inbound | -78 |  | 1006 | Lỗi hệ thống |
-| 31 | Mobi inbound | -79 |  | 1006 | Lỗi hệ thống |
-| 32 | Mobi inbound | -81 |  | 1006 | Lỗi hệ thống |
-| 33 | Mobi inbound | -82 |  | 1006 | Lỗi hệ thống |
-| 34 | Mobi inbound | -999 |  | 1006 | Lỗi hệ thống |
-
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">No.</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhà Cung Cấp</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Lỗi Đối Tác</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thông Điệp Đối Tác</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mã Lỗi BE</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">BE Msg (User-facing)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gohub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">200 or 201</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Create order successfully</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thành công</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gohub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">400</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Invalid email Invalid quantity Invalid phone</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giao dịch thất bại</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gohub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">401</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Unauthorized</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giao dịch thất bại</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gohub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">404</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Resource not found</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giao dịch thất bại</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gohub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">405</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Method not allowed</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giao dịch thất bại</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gohub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">409</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Duplicate resource</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giao dịch thất bại</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gohub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">430</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">The request has already been handled, sending the same payload again is not allowed.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa map</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gohub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">500</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Server internal error</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giao dịch thất bại</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">9</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xplori</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">200</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thành công</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">10</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xplori</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><>200</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giao dịch thất bại</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">11</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thành công</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">12</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">13</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">14</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">15</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">16</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-60</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">17</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-61</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">18</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-62</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">19</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-63</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">20</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-65</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">21</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-69</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">22</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-70</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">23</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-71</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">24</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-72</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">25</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-73</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">26</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-74</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">27</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-75</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">28</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-76</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">29</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-77</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">30</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-78</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">31</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-79</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">32</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-81</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">33</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-82</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">34</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobi media team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-999</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1006</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi hệ thống</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 8. Success Metrics
 
@@ -893,16 +1877,66 @@ Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu q
 
 ### Key Results
 
-| KR | Metric | Target | Tracking |
-|---|---|---|---|
-| KR1 | Organic Clicks - `/esim-du-lich/*` | +40% vs baseline | GSC |
-| KR2 | Average Position - top 5 keywords | Top 10 | GSC |
-| KR3 | AI Overview Appearances | ≥ 3 FAQ queries cited | GSC / Manual audit |
-| KR4 | Click-to-App Rate (web → app, mobile) | > 3% | GA4 + Appsflyer |
-| KR5 | New Users từ eSIM Funnel | Grow MoM | Appsflyer |
-| KR6 | FAQ Schema Eligibility | 0 error, ≥ 5 FAQ indexed/trang | GSC Enhancements |
-| **KR7** | **Web Trans contribution** | **4% T7 → 10% T9/2026** | **GA4 + Appsflyer** |
-| **KR8** | **Web GMV** | **≥ 1.1 tỷ VNĐ (T9/2026)** | **GA4 + Internal** |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">KR</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tracking</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">KR1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Organic Clicks - <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/esim-du-lich/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">+40% vs baseline</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">KR2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Average Position - top 5 keywords</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Top 10</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">KR3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI Overview Appearances</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">≥ 3 FAQ queries cited</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC / Manual audit</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">KR4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Click-to-App Rate (web → app, mobile)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">> 3%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GA4 + Appsflyer</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">KR5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">New Users từ eSIM Funnel</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Grow MoM</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Appsflyer</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">KR6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FAQ Schema Eligibility</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0 error, ≥ 5 FAQ indexed/trang</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC Enhancements</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR7</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Trans contribution</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>4% T7 → 10% T9/2026</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GA4 + Appsflyer</strong></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR8</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web GMV</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>≥ 1.1 tỷ VNĐ (T9/2026)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GA4 + Internal</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 *Baseline measurement: đo toàn bộ metrics ngay sau khi publish Hub + 2 destination pages đầu tiên.*
 
@@ -912,34 +1946,100 @@ Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu q
 
 ### 8.2 GA4 Events
 
-| Event | Trigger | Key Parameters |
-|---|---|---|
-| `esim_cta_click` | Click bất kỳ CTA trong cluster | page_type, country, cta_position |
-| `esim_deeplink_click` | Click deep link → app | country, source_page |
-| `esim_faq_expand` | Expand FAQ accordion | question_id, page_type |
-| `esim_product_view` | User scroll đến product table | country, packages_loaded |
-| `esim_blog_cta_click` | Click CTA trong blog | blog_slug, cta_position |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Event</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trigger</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Key Parameters</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">esim_cta_click</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Click bất kỳ CTA trong cluster</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">page_type, country, cta_position</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">esim_deeplink_click</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Click deep link → app</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">country, source_page</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">esim_faq_expand</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Expand FAQ accordion</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">question_id, page_type</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">esim_product_view</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User scroll đến product table</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">country, packages_loaded</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">esim_blog_cta_click</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Click CTA trong blog</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">blog_slug, cta_position</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ## 9. Dependencies & Constraints
 
-| Dependency | Mô tả | Blocker? |
-|---|---|---|
-| Gohub API spec (endpoint, auth, response format) | Cần trước khi Dev build product table | Yes |
-| Gohub xác nhận gói VPN cho trang Trung Quốc | Không publish `/esim-du-lich/trung-quoc` trước khi có thông tin này | Yes |
-| Deep link scheme từ App team | CTA trên web không hoạt động nếu thiếu | Yes |
-| CMS support schema injection | Xác nhận trước khi build để plan effort | Yes |
-| Legal approval cho Blog Tier 3 (comparison) | Blog comparison bị delay nếu không có sớm | No |
-| SEM URL migration alignment | Cần quyết định URL pattern `/khu-vuc/` vs `/` trước khi build | Yes |
-| DA Team - GA4 events setup | Phải có trước khi publish để có baseline | Yes |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dependency</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Blocker?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gohub API spec (endpoint, auth, response format)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần trước khi Dev build product table</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Yes</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gohub xác nhận gói VPN cho trang Trung Quốc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không publish <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/esim-du-lich/trung-quoc</code> trước khi có thông tin này</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Yes</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Deep link scheme từ App team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CTA trên web không hoạt động nếu thiếu</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Yes</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CMS support schema injection</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xác nhận trước khi build để plan effort</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Yes</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Legal approval cho Blog Tier 3 (comparison)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog comparison bị delay nếu không có sớm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">No</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEM URL migration alignment</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần quyết định URL pattern <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/khu-vuc/</code> vs <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/</code> trước khi build</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Yes</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">DA Team - GA4 events setup</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phải có trước khi publish để có baseline</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Yes</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 9.1 Go-to-Market: SPA Framework (Service Productization)
-- **reSearch / Strategy:** Phân tích nhu cầu 50K SV/tháng (gồm cả Outbound & Inbound) và các đối thủ (Airalo, Klook, Gohub).
-- **Pilot / Plan (T6/2026):** 
+- **reSearch / Strategy:** Phân tích nhu cầu 50K SV/tháng (gồm cả Outbound & Media Team) và các đối thủ (Airalo, Klook, Gohub).
+- **Pilot / Plan (T6/2026):**
   - Di chuyển toàn bộ Microsite eSIM hiện tại sang nền tảng MoSpark, cam kết **giữ nguyên cấu trúc URL hiện tại** (URL Structure giữ nguyên) để bảo toàn thứ hạng SEO và tránh ảnh hưởng dòng chảy traffic.
   - Rollout Hub page + 11 Destination pages (Thái, Trung, Nhật, Việt Nam...) trên MoSpark.
-- **Action / Amplify (Q3/2026):** 
+- **Action / Amplify (Q3/2026):**
   - Pitch BU Telco đổ budget SEM để scale traffic vào Hub, push W2A.
   - Hoàn tất Migration Admin Tool qua MoSpark. Đảm bảo API ổn định và luồng thanh toán mượt mà trên Mobile/Desktop.
   - Revamp UI/UX tổng thể cho trang eSIM và tung ra các tính năng JTBD bổ sung (Gợi ý gói cước, Check thiết bị, Cẩm nang check-in, Bản đồ thanh toán MoMo).
@@ -957,39 +2057,181 @@ Xây dựng cluster web eSIM Du Lịch thành kênh organic acquisition hiệu q
 Chiến lược tiếp cận thông qua KOLs (TikTok) và seeding cộng đồng (Facebook Groups) để tối ưu hóa truyền miệng (Word-of-Mouth):
 
 #### Danh sách KOLs Hợp Tác (TikTok):
-| KOL | Kênh | Follower | Vai Trò & Content Angle |
-| :--- | :--- | :--- | :--- |
-| Jayni Travel | TikTok | 69.2K | Sản xuất video ngắn trải nghiệm eSIM MoMo khi du lịch Thái Lan/Nhật Bản |
-| Đoá Qua | TikTok | 166K | Sản xuất video review so sánh eSIM MoMo vs SIM vật lý sân bay |
-| Đi cùng Thy | TikTok | 219K | Review sự tiện lợi và tốc độ của eSIM MoMo ở Châu Âu/Đài Loan |
-| Bửu Vi Vu | TikTok | 258K | Video hướng dẫn cài đặt eSIM 1 phút trên app MoMo |
-| Myngccc | TikTok | 20K | Trải nghiệm mua eSIM du lịch siêu rẻ chỉ từ 10K trên MoMo |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">KOL</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Kênh</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Follower</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai Trò & Content Angle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Jayni Travel</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TikTok</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">69.2K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sản xuất video ngắn trải nghiệm eSIM MoMo khi du lịch Thái Lan/Nhật Bản</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đoá Qua</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TikTok</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">166K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sản xuất video review so sánh eSIM MoMo vs SIM vật lý sân bay</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đi cùng Thy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TikTok</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">219K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Review sự tiện lợi và tốc độ của eSIM MoMo ở Châu Âu/Đài Loan</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bửu Vi Vu</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TikTok</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">258K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Video hướng dẫn cài đặt eSIM 1 phút trên app MoMo</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Myngccc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TikTok</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">20K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trải nghiệm mua eSIM du lịch siêu rẻ chỉ từ 10K trên MoMo</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Cộng Đồng Du Lịch Nhắm Mục Tiêu (Facebook Groups Seeding):
-| Group Facebook | Thành viên | Link Nhóm | Target Topic |
-| :--- | :--- | :--- | :--- |
-| Ăn chơi Đài Loan 台灣 - 去哪吃啥? | 229K | [Link](https://www.facebook.com/groups/anchoidailoan/) | Review kết nối và sóng eSIM MoMo tại Đài Loan |
-| Du lịch tự do Đài Loan | 173K | [Link](https://www.facebook.com/groups/867394263291528/) | Chia sẻ kinh nghiệm mua SIM du lịch online giá rẻ |
-| REVIEW DU LỊCH HONG KONG 🇭🇰 | 89K | [Link](https://www.facebook.com/groups/dulichhongkong/) | Hỏi đáp/chia sẻ sóng eSIM khi đi Hong Kong |
-| Review Kinh Nghiệm Du Lịch Hàn Quốc ✅ | 417K | [Link](https://www.facebook.com/groups/reviewkinhnghiemdulichhanquoc/) | Kinh nghiệm kích hoạt eSIM Hàn Quốc trên MoMo |
-| Du lịch Hàn tự túc: 100% Real Review | 51.6K | [Link](https://www.facebook.com/groups/dulichhantutuc/) | Đánh giá chất lượng mạng eSIM Hàn Quốc của đối tác Gohub |
-| Review du lịch có tâm | 306.6K | [Link](https://www.facebook.com/groups/728586307582132/) | Seeding bài viết tổng hợp mua eSIM đi nhiều nước trên MoMo |
-| Du Lịch Thái Lan | 446.3K | [Link](https://www.facebook.com/groups/1439141509745393/) | Voucher giảm giá eSIM Thái Lan chỉ từ 10K trên MoMo |
-| NHÀ TRUNG 🇨🇳 Cộng đồng du lịch Trung Quốc | 130K | [Link](https://www.facebook.com/groups/nhatrung/) | Lưu ý sử dụng eSIM Trung Quốc bypass GFW để vào Google/Facebook |
-| CHÂU ÂU REVIEW TẤT TẦN TẬT | 102.2K | [Link](https://www.facebook.com/groups/633019552066467) | Chia sẻ kinh nghiệm mua eSIM Schengen 1 gói đi nhiều nước |
-
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Group Facebook</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thành viên</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Link Nhóm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target Topic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ăn chơi Đài Loan 台灣 - 去哪吃啥?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">229K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><a href="https://www.facebook.com/groups/anchoidailoan/">Link</a></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Review kết nối và sóng eSIM MoMo tại Đài Loan</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Du lịch tự do Đài Loan</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">173K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><a href="https://www.facebook.com/groups/867394263291528/">Link</a></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chia sẻ kinh nghiệm mua SIM du lịch online giá rẻ</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">REVIEW DU LỊCH HONG KONG 🇭🇰</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">89K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><a href="https://www.facebook.com/groups/dulichhongkong/">Link</a></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hỏi đáp/chia sẻ sóng eSIM khi đi Hong Kong</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Review Kinh Nghiệm Du Lịch Hàn Quốc ✅</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">417K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><a href="https://www.facebook.com/groups/reviewkinhnghiemdulichhanquoc/">Link</a></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kinh nghiệm kích hoạt eSIM Hàn Quốc trên MoMo</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Du lịch Hàn tự túc: 100% Real Review</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">51.6K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><a href="https://www.facebook.com/groups/dulichhantutuc/">Link</a></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đánh giá chất lượng mạng eSIM Hàn Quốc của đối tác Gohub</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Review du lịch có tâm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">306.6K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><a href="https://www.facebook.com/groups/728586307582132/">Link</a></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Seeding bài viết tổng hợp mua eSIM đi nhiều nước trên MoMo</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Du Lịch Thái Lan</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">446.3K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><a href="https://www.facebook.com/groups/1439141509745393/">Link</a></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Voucher giảm giá eSIM Thái Lan chỉ từ 10K trên MoMo</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NHÀ TRUNG 🇨🇳 Cộng đồng du lịch Trung Quốc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">130K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><a href="https://www.facebook.com/groups/nhatrung/">Link</a></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lưu ý sử dụng eSIM Trung Quốc bypass GFW để vào Google/Facebook</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CHÂU ÂU REVIEW TẤT TẦN TẬT</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">102.2K</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><a href="https://www.facebook.com/groups/633019552066467">Link</a></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chia sẻ kinh nghiệm mua eSIM Schengen 1 gói đi nhiều nước</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 10. Risk Assessment
 
-| # | Rủi ro | Khả năng | Impact | Mitigation |
-|---|---|---|---|---|
-| R1 | Gohub API không stable, timeout thường xuyên | Medium | High | Fallback "Xem giá trong app" + cache 15 phút |
-| R2 | Gói eSIM TQ không bypass GFW - user disappointed | High | High | Disclaimer rõ ràng bắt buộc, xác nhận với Gohub trước publish |
-| R3 | CMS không support schema injection | Medium | Medium | Dev inject qua code thay vì CMS plugin |
-| R4 | Deep link fail trên device cụ thể | Low | Medium | Test matrix đủ device, có fallback URL |
-| R5 | Competitor publish trang tốt hơn trong thời gian build | Medium | Medium | Ưu tiên Hub + TQ + Thái Lan live trước |
-| R6 | SEM/SEO URL conflict tạo duplicate content | Medium | Medium | Quyết định URL pattern trước khi build, redirect cái còn lại |
-| R7 | Web cluster launch delay → miss web contribution target T7 | Medium | High | Scope tối thiểu khả thi: Hub + 1 Destination + 1 Blog |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Rủi ro</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Khả năng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Impact</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mitigation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gohub API không stable, timeout thường xuyên</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Medium</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">High</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Fallback "Xem giá trong app" + cache 15 phút</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gói eSIM TQ không bypass GFW - user disappointed</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">High</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">High</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Disclaimer rõ ràng bắt buộc, xác nhận với Gohub trước publish</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CMS không support schema injection</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Medium</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Medium</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dev inject qua code thay vì CMS plugin</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Deep link fail trên device cụ thể</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Low</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Medium</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Test matrix đủ device, có fallback URL</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Competitor publish trang tốt hơn trong thời gian build</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Medium</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Medium</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ưu tiên Hub + TQ + Thái Lan live trước</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEM/SEO URL conflict tạo duplicate content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Medium</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Medium</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quyết định URL pattern trước khi build, redirect cái còn lại</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web cluster launch delay → miss web contribution target T7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Medium</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">High</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Scope tối thiểu khả thi: Hub + 1 Destination + 1 Blog</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

@@ -10,7 +10,7 @@ Tài liệu đặc tả kỹ thuật và kiến trúc hệ thống định danh 
 ---
 
 ## 1. Job To Be Done (JTBD)
-> Khi cần tối ưu tỷ lệ chuyển đổi từ Website sang App, tôi muốn định danh và liên kết người dùng xuyên suốt giữa Web và App, nhằm theo dõi đầy đủ hành trình từ **Anonymous User ➔ Logged-in User ➔ Click-to-App ➔ In-App User**, từ đó đo lường hiệu quả chuyển đổi và tối ưu các chiến dịch tăng trưởng.
+> Khi cần tối ưu tỷ lệ chuyển đổi từ Website sang App, tôi muốn định danh và liên kết người dùng xuyên suốt giữa Web và App, nhằm theo dõi đầy đủ hành trình từ **Anonymous User -> Logged-in User -> Click-to-App -> In-App User**, từ đó đo lường hiệu quả chuyển đổi và tối ưu các chiến dịch tăng trưởng.
 
 ---
 
@@ -26,10 +26,10 @@ graph TD
     %% Tầng 2: Sinh định danh
     subgraph T2["Tầng 2 - Sinh định danh"]
         Middleware --> CheckCookie{Cookie hợp lệ?}
-        
+
         CheckCookie -->|Không| Anon[Anonymous <br> generateAnonId]
         CheckCookie -->|Có - Đã định danh| Logged[Logged in <br> hashed_uid, method]
-        
+
         Anon --> CheckLogin{Login?}
         CheckLogin -->|Có| Logged
         CheckLogin -->|Không| IdentityObj[Identity Object <br> identityId, userType...]
@@ -40,7 +40,7 @@ graph TD
     subgraph T3["Tầng 3 - Analytics tracking"]
         IdentityObj --> GTM[GTM -> GA4 <br> dataLayer.push]
         IdentityObj --> Umami[Umami <br> umami.identify]
-        
+
         GTM --> GTM_Events[Events: login - logout - qr_scanned <br> Reporting Identity]
         Umami --> Umami_Session[Session: anon_id_ref lưu để stitch <br> Reporting Identity]
     end
@@ -79,7 +79,7 @@ Hệ thống tiến hành khởi tạo và chuẩn hóa định danh người d�
 
 ### Tầng 3. Analytics Tracking
 Identity Object được gửi đồng thời đến các nền tảng phân tích dữ liệu ngay sau khi được khởi tạo thành công:
-*   **GTM ➔ GA4:** Gửi dữ liệu qua `dataLayer.push({ user_identity_init: [...] })`. Ghi nhận các sự kiện quan trọng: `login`, `logout`, `qr_scanned` để đồng bộ Reporting Identity.
+*   **GTM -> GA4:** Gửi dữ liệu qua `dataLayer.push({ user_identity_init: [...] })`. Ghi nhận các sự kiện quan trọng: `login`, `logout`, `qr_scanned` để đồng bộ Reporting Identity.
 *   **Umami:** Gọi hàm `umami.identify(identityId, { user_type... })`. Lưu trữ `anon_id_ref` trong session để phục vụ cơ chế stitch dữ liệu hành vi.
 
 ### Tầng 4. CTA Distribution

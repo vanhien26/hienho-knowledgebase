@@ -62,7 +62,7 @@ Khi bắt đầu triển khai và thiết lập (Set-up) một dự án Product 
 2.  **Định hướng Product Growth (Chiến lược Nội dung & AI Engine):**
     *   *Nhân sự:* **Product Marketing** (Vị trí chuyên trách mới).
     *   *Nội dung:*
-        *   Nghiên cứu từ khóa (Keyword Research) $\rightarrow$ Chiến lược nội dung (Content Strategy) $\rightarrow$ Kế hoạch nội dung (Content Plan) để xác định rõ SEO Inventory + Topic Cluster (Phân tách từ khóa chính, từ khóa phụ) + Search Volume của từng từ khóa.
+        *   Nghiên cứu từ khóa (Keyword Research) $->$ Chiến lược nội dung (Content Strategy) $->$ Kế hoạch nội dung (Content Plan) để xác định rõ SEO Inventory + Topic Cluster (Phân tách từ khóa chính, từ khóa phụ) + Search Volume của từng từ khóa.
         *   Nghiên cứu và xây dựng Cơ sở tri thức (Knowledge Base) kết hợp với Prompting đi kèm **Business Context** của Cell Team để huấn luyện AI sinh Content tối ưu (Blog/Long Content/Mini Web).
 
 ---
@@ -95,14 +95,39 @@ Hệ thống PLG Project phân tách rạch ròi thành **2 loại dự án chí
 
 Để đội ngũ Dev chỉ cần phát triển một cơ sở dữ liệu và cấu trúc giao diện dạng cây (Hierarchical Table Grid) duy nhất cho cả 2 loại dự án, cấu trúc của chúng được mapping đồng bộ như sau:
 
-| Tầng Hệ thống (Dev) | Dự án Use Case (Cell Team) | Dự án Merchant Page (Web Platform) | Định nghĩa & Ví dụ |
-| :--- | :--- | :--- | :--- |
-| **Tầng 1: TOPIC** | **Chủ đề sản phẩm lớn** | **Ngành hàng / Danh mục** | Phân nhóm cấp cao nhất. Ví dụ: `Phương Tiện` (Use Case) / `F&B` (Merchant). |
-| **Tầng 2: CLUSTER** | **Cụm chủ đề con (Intent)** | **Thực thể đối tác (Merchant)** | Đại diện cho nhóm thực thể. Ví dụ: `Phạt nguội xe máy` (Use Case) / `Tiệm Mì Chú Cao` (Merchant). |
-| **Tầng 3: KEYWORD** | **Từ khóa mục tiêu** | **Từ khóa của quán** | Hạt nhân cơ sở. Có thuộc tính `Role` và `Mapping Type`. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tầng Hệ thống (Dev)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dự án Use Case (Cell Team)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dự án Merchant Page (Web Platform)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Định nghĩa & Ví dụ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tầng 1: TOPIC</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Chủ đề sản phẩm lớn</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Ngành hàng / Danh mục</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phân nhóm cấp cao nhất. Ví dụ: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Phương Tiện</code> (Use Case) / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">F&B</code> (Merchant).</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tầng 2: CLUSTER</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cụm chủ đề con (Intent)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Thực thể đối tác (Merchant)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đại diện cho nhóm thực thể. Ví dụ: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Phạt nguội xe máy</code> (Use Case) / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Tiệm Mì Chú Cao</code> (Merchant).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tầng 3: KEYWORD</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Từ khóa mục tiêu</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Từ khóa của quán</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hạt nhân cơ sở. Có thuộc tính <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Role</code> và <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Mapping Type</code>.</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Chi tiết thuộc tính mở rộng của Keyword ở tầng DB:
-*   **Role (Vai trò từ khóa):** 
+*   **Role (Vai trò từ khóa):**
     *   *Dự án Use Case:* `TOFU` | `MOFU` | `BOFU` (phân chia theo phễu marketing).
     *   *Dự án Merchant:* `Primary` (Từ khóa thương hiệu chính của quán) | `Secondary` (Từ khóa phụ/Intent mở rộng: menu, địa chỉ...).
 *   **Content Mapping Type (Cơ chế sinh trang):**
@@ -125,14 +150,14 @@ Hệ thống PLG Project phân tách rạch ròi thành **2 loại dự án chí
    * **Cơ chế:** Đồng bộ chuẩn dữ liệu N.A.P (Name - Address - Phone) của cửa hàng từ hệ thống M4B để đảm bảo tính xác thực thông tin.
 
 2. **Quy trình làm giàu dữ liệu tự động (Data Enrichment Pipeline):**
-   * **Cách thức xây dựng:** 
+   * **Cách thức xây dựng:**
      * *Đầu vào:* Dữ liệu hành chính cơ bản (Tên, Mã đối tác) được đồng bộ tự động từ hệ thống M4B (MoMo for Business).
      * *Làm giàu bằng AI:* Hệ thống MoSpark tự động cào thông tin thực tế từ Google Maps API (Thực đơn số, giờ hoạt động, hình ảnh, Amenities như Wifi/Bãi đỗ xe) và các đánh giá (Reviews) của khách hàng.
      * *Đóng gói:* Đưa toàn bộ dữ liệu trên vào Dynamic Merchant Context làm nguyên liệu đầu vào cho GenAI Content Engine.
 
 3. **Vòng lặp Chuyển đổi O2O (Offline-to-Online Loop):**
    * **Nguyên lý:** Trang Web Merchant đóng vai trò là Hub trung chuyển dòng traffic.
-   * **Cách thức xây dựng:** 
+   * **Cách thức xây dựng:**
      * *Offline-to-Online:* Mã QR đặt tại quầy hoặc thiết bị Soundbox của quán dẫn người dùng về trang Web đối tác để xem menu số hoặc nhận voucher.
      * *Online-to-App:* Trên trang Web chèn các nút CTA (W2A Trigger Points) chứa Deep Link đưa người dùng trực tiếp vào luồng thanh toán hoặc kích hoạt Ví Trả Sau cho đúng mã cửa hàng đó trên App MoMo.
 
@@ -154,8 +179,6 @@ Hệ thống PLG Project phân tách rạch ròi thành **2 loại dự án chí
 ---
 
 ## 3. Kiến trúc Quản trị Prompt & Guideline (Project-Specific Localized Prompt Management)
-
-
 
 ### 3.1. Quy trình Cài đặt & Vận hành Dự án (Project Setup & Content Generation Flow)
 Quy trình thiết lập dự án và xuất bản nội dung của PM trên MoSpark tuân thủ nghiêm ngặt 5 bước:
@@ -179,19 +202,19 @@ Dưới đây là sơ đồ mô tả chi tiết 5 bước thiết lập và vậ
 flowchart TD
     Start([Bắt đầu Cài đặt Dự án]) --> Step1[Bước 1: Tạo tên dự án]
     Step1 --> Step1Sub[PM khởi tạo dự án & điền tên định danh]
-    
+
     Step1Sub --> Step2[Bước 2: Nhập Business Context - Inventory - URL - API Keys]
     Step2 --> Step2Sub[PM nhập: Business Context, SEO/GEO Inventory, URL gốc của dự án & API Keys riêng]
-    
+
     Step2Sub --> Step3[Bước 3: Upload Keyword Research]
     Step3 --> Step3Sub[PM tải lên tệp CSV từ khóa chứa:<br>Keyword, Role, Search Volume, Content Mapping]
-    
+
     Step3Sub --> Step4[Bước 4: Thiết lập AI Prompt riêng hoặc chọn Prompt mẫu]
     Step4 --> Step4Sub[PM chọn Prompt mẫu có sẵn hoặc tùy chỉnh AI Prompt riêng cục bộ<br><i>Hệ thống tự động ghép hợp với Content & SEO/GEO Skills</i>]
-    
+
     Step4Sub --> Step5[Bước 5: Tiến hành viết bài]
     Step5 --> Step5Sub[Kích hoạt GenAI sản xuất nội dung qua 2 Layer:<br>Layer 1: Tạo & Duyệt Outline -> Layer 2: Sinh bài viết chi tiết]
-    
+
     style Start fill:#f9f,stroke:#333,stroke-width:2px
     style Step5 fill:#9f9,stroke:#333,stroke-width:2px
 ```
@@ -203,10 +226,10 @@ flowchart TD
 
 ### 3.4. Cấu trúc Phân quyền Đơn giản (Simple Permission Roles)
 Hệ thống không xây dựng bộ phân quyền phức tạp, chỉ mặc định phân chia thành 2 vai trò cơ bản:
-*   **Editor (Biên tập viên):** 
+*   **Editor (Biên tập viên):**
     *   Quyền hạn: Xem thông tin dự án, cấu trúc Topic Clusters/Merchant, và tiến hành tạo bài (kích hoạt luồng sản xuất GenAI qua 2 Layer: sinh Outline, duyệt Outline và tạo bài viết chi tiết).
     *   Giới hạn: Không được quyền chỉnh sửa bối cảnh nghiệp vụ (Business Context), cấu hình dự án, prompt cục bộ hay các thiết lập cốt lõi khác.
-*   **Admin (Quản trị viên):** 
+*   **Admin (Quản trị viên):**
     *   Quyền hạn: Sở hữu toàn quyền kiểm soát hệ thống, bao gồm chỉnh sửa bối cảnh nghiệp vụ (Business Context), tùy chỉnh prompt cục bộ (Project-specific Prompt), thay đổi cấu hình dự án, import tệp CSV từ khóa, và quản lý các template chung của hệ thống.
 
 ### 3.5. Quy tắc Kỹ thuật & Ràng buộc Hệ thống (Technical Specs & Integrity Rules)
@@ -251,10 +274,10 @@ Bảng chính hiển thị danh sách đối tác và có cấu trúc cây mở 
 
 ## 4. Quản trị Định tuyến và Microsite Mapping
 
-PLG Project đóng vai trò gác cổng (Gatekeeper) đối với hệ thống URL của MoSpark. 
+PLG Project đóng vai trò gác cổng (Gatekeeper) đối với hệ thống URL của MoSpark.
 
 ### 4.1. Ràng buộc Mapping 1-1
-Mỗi PLG Project bắt buộc phải được gắn với **chính xác 1 Microsite** (ví dụ: `mospark-vay-nhanh` gắn với Microsite Vay Nhanh). 
+Mỗi PLG Project bắt buộc phải được gắn với **chính xác 1 Microsite** (ví dụ: `mospark-vay-nhanh` gắn với Microsite Vay Nhanh).
 
 ### 4.2. Thực thi URL Routing (`/{use-case}/blog*`)
 *   Toàn bộ Keyword được chọn để sản xuất bài viết từ Project này sẽ tự động được gán tiền tố đường dẫn kế thừa từ Microsite.

@@ -7,7 +7,6 @@ Hệ thống tự động kiểm duyệt & chấm điểm SEO/GEO chất lượn
 > - **PIC:** Trọng (Tech/API), Thuận (UI), Lộc (Access Control)
 > - **Version:** 1.3.1 · June 2026
 
-
 ---
 
 ## 1. Executive Summary
@@ -29,11 +28,32 @@ Tích hợp **SEO/GEO Checklist Scoring** trực tiếp vào **Section SEO** c�
 
 ## 2. Stakeholder (Nhóm người dùng chính)
 
-| Vai trò | Trách nhiệm chính | Mục tiêu |
-| :--- | :--- | :--- |
-| **Content Editor** | Viết nội dung, nhập Metadata. | Nhập Primary Keyword, rà soát cảnh báo từ Score Panel và tối ưu bài viết đạt ngưỡng Pass. |
-| **Web Product Lead** | Thiết kế bộ quy tắc Scoring. | Duy trì và nâng cấp các tiêu chuẩn SEO/GEO/CWV để phù hợp với thuật toán của Google/AI. |
-| **Developer (Tech Team)** | Cài đặt logic parse DOM & check API. | Triển khai các thuật toán auto-check và tích hợp Lighthouse API cho CWV. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trách nhiệm chính</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục tiêu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Content Editor</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Viết nội dung, nhập Metadata.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhập Primary Keyword, rà soát cảnh báo từ Score Panel và tối ưu bài viết đạt ngưỡng Pass.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Product Lead</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thiết kế bộ quy tắc Scoring.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Duy trì và nâng cấp các tiêu chuẩn SEO/GEO/CWV để phù hợp với thuật toán của Google/AI.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Developer (Tech Team)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cài đặt logic parse DOM & check API.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Triển khai các thuật toán auto-check và tích hợp Lighthouse API cho CWV.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -58,17 +78,17 @@ Tích hợp **SEO/GEO Checklist Scoring** trực tiếp vào **Section SEO** c�
 flowchart TD
     A([Bắt đầu: Keywords & Bài viết sync từ\nGenAI Content Engine]) --> B[Đẩy vào Blog/Merchant Editor\n(Trạng thái Draft)]
     B --> C{1. Kiểm tra\nĐiều kiện cứng}
-    
+
     C -- "Thiếu Keyword / CWV / Hard Block" --> C1([CASE 1: CHẶN PUBLISH\n(Buộc Editor Review & Sửa)])
-    
+
     C -- "Pass hết Điều kiện cứng" --> D[2. Tính điểm SEO/GEO]
-    
+
     D --> E{3. Phân loại điểm?}
-    
+
     E -- "Score < 60" --> C1
-    
+
     E -- "Score 60 - 79" --> D1([CASE 2: CHO PHÉP PUBLISH\nTrạng thái: Cần tối ưu])
-    
+
     E -- "Score ≥ 80" --> D2([CASE 3: CHO PHÉP PUBLISH\nTrạng thái: Tốt])
 ```
 
@@ -78,12 +98,37 @@ flowchart TD
 
 Các field editor phải nhập trước khi Scoring chạy. Map với field hiện có trong MoSpark:
 
-| Field | Source | Ghi chú |
-|-------|--------|---------|
-| Meta Title | Sinh từ Editor/GenAI | Dùng để check length, keyword placement |
-| Meta Description | Sinh từ Editor/GenAI | Dùng để check length |
-| **Primary Keyword** | Sync từ GenAI Content Engine | 1 từ khóa duy nhất. Nền tảng chặn Publish nếu trường này rỗng. |
-| **Secondary Keywords** | Sync từ GenAI Content Engine | Danh sách từ khóa phụ. Optional. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Field</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Source</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Meta Title</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sinh từ Editor/GenAI</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dùng để check length, keyword placement</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Meta Description</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sinh từ Editor/GenAI</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dùng để check length</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Primary Keyword</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sync từ GenAI Content Engine</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1 từ khóa duy nhất. Nền tảng chặn Publish nếu trường này rỗng.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Secondary Keywords</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sync từ GenAI Content Engine</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Danh sách từ khóa phụ. Optional.</td>
+    </tr>
+  </tbody>
+</table>
 
 > **Lưu ý Data Flow:** Toàn bộ Keywords (Primary/Secondary) sẽ được hệ thống `GenAI Content Engine` tạo và map tự động dựa trên Keyword Master Registry, sau đó đẩy (push) trực tiếp sang Blog Editor dưới dạng Draft. Editor không cần nhập tay ở bước này. Tuy nhiên, trước khi bấm Publish, **hệ thống Score sẽ làm nhiệm vụ chặn (Hard Block) để Editor phải Review lại chất lượng bài sinh ra từ AI.**
 
@@ -128,20 +173,70 @@ Fallback: Nếu Publish mà Primary trống → nút Publish bị disable hoàn 
 
 ### 6.1 Tổng điểm: 100 điểm (Cố định)
 
-| Block / Nhóm | Điểm tối đa | Ghi chú |
-|---|---|---|
-| **Block 1 - Technical SEO & CWV** | **25** | Nền tảng kỹ thuật và hiệu năng bắt buộc. |
-| **Block 2 - On-Page SEO** | **55** | Tối ưu hóa nội dung hiển thị và từ khóa. |
-| **Block 3 - GEO & Entity Signals** | **20** | Tín hiệu cấu trúc dữ liệu cho AI Search. |
-| **Tổng** | **100** | |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Block / Nhóm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điểm tối đa</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Block 1 - Technical SEO & CWV</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>25</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nền tảng kỹ thuật và hiệu năng bắt buộc.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Block 2 - On-Page SEO</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>55</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tối ưu hóa nội dung hiển thị và từ khóa.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Block 3 - GEO & Entity Signals</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>20</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tín hiệu cấu trúc dữ liệu cho AI Search.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tổng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>100</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 6.2 Ngưỡng Publish (Hard Gate)
 
-| Case | Trạng thái | Điều kiện | Behavior của Nút Publish |
-|--------|-----------|-----------|----------|
-| **CASE 1** | **Blocked** | Vi phạm bất kỳ 1 lỗi `Hard Block` HOẶC Tổng điểm < 60 | `Disabled` hoàn toàn |
-| **CASE 2** | **Warning** | Pass toàn bộ `Hard Block` VÀ Tổng điểm 60-79 | `Enabled` (Hiển thị badge "⚠ Cần tối ưu") |
-| **CASE 3** | **Pass** | Pass toàn bộ `Hard Block` VÀ Tổng điểm ≥ 80 | `Enabled` (Trạng thái "Tốt") |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Case</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trạng thái</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điều kiện</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Behavior của Nút Publish</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>CASE 1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Blocked</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vi phạm bất kỳ 1 lỗi <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Hard Block</code> HOẶC Tổng điểm < 60</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Disabled</code> hoàn toàn</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>CASE 2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Warning</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Pass toàn bộ <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Hard Block</code> VÀ Tổng điểm 60-79</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Enabled</code> (Hiển thị badge "⚠ Cần tối ưu")</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>CASE 3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Pass</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Pass toàn bộ <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Hard Block</code> VÀ Tổng điểm ≥ 80</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Enabled</code> (Trạng thái "Tốt")</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -150,44 +245,210 @@ Fallback: Nếu Publish mà Primary trống → nút Publish bị disable hoàn 
 ### 7.1 Block 1: Technical SEO & Core Web Vitals (25 Điểm)
 *Các yếu tố nền tảng để Googlebot thu thập dữ liệu và trải nghiệm người dùng.*
 
-| # | Hạng mục | Điểm | Hard Block | Giải thích cho Editor | Thuật toán Tính toán (Computation for Dev) |
-|---|----------|------|------------|-----------------------|-----------------------------------------|
-| 1.1 | **Canonical Tag** | 5 | NO | Phải trỏ đúng URL chuẩn. | Parse `<head>` tìm `<link rel="canonical" href="...">`. Khớp giá trị `href` với URL thực tế. |
-| 1.2 | **Robots Meta** | 5 | **YES** | Cho phép Google Bot đọc trang. | Parse `<head>` tìm `<meta name="robots">`. Giá trị bắt buộc chứa `index, follow`. |
-| 1.3 | **CWV: LCP** | 5 | NO | Thời gian tải nội dung chính ≤ 2.5s. | Trigger API gọi Google PSI (thông qua Signed URL). Lấy `largest-contentful-paint`. Trả Fail nếu `> 2.5s`. |
-| 1.4 | **CWV: INP** | 5 | NO | Độ trễ tương tác ≤ 200ms. | Lấy trường `interaction-to-next-paint` từ PSI. Trả Fail nếu `> 200ms`. |
-| 1.5 | **CWV: CLS** | 5 | NO | Điểm giật lag Layout ≤ 0.1. | Lấy trường `cumulative-layout-shift` từ PSI. Trả Fail nếu `> 0.1`. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hạng mục</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điểm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hard Block</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giải thích cho Editor</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thuật toán Tính toán (Computation for Dev)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Canonical Tag</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phải trỏ đúng URL chuẩn.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Parse <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><head></code> tìm <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><link rel="canonical" href="..."></code>. Khớp giá trị <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">href</code> với URL thực tế.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Robots Meta</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>YES</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cho phép Google Bot đọc trang.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Parse <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><head></code> tìm <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><meta name="robots"></code>. Giá trị bắt buộc chứa <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">index, follow</code>.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>CWV: LCP</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thời gian tải nội dung chính ≤ 2.5s.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger API gọi Google PSI (thông qua Signed URL). Lấy <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">largest-contentful-paint</code>. Trả Fail nếu <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">> 2.5s</code>.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>CWV: INP</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Độ trễ tương tác ≤ 200ms.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lấy trường <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">interaction-to-next-paint</code> từ PSI. Trả Fail nếu <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">> 200ms</code>.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>CWV: CLS</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điểm giật lag Layout ≤ 0.1.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lấy trường <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">cumulative-layout-shift</code> từ PSI. Trả Fail nếu <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">> 0.1</code>.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ### 7.2 Block 2: On-Page SEO (55 Điểm)
 *Tối ưu hóa trực tiếp trên nội dung bài viết.*
 
-| # | Hạng mục | Điểm | Hard Block | Giải thích cho Editor | Thuật toán Tính toán (Computation for Dev) |
-|---|----------|------|------------|-----------------------|-----------------------------------------|
-| 2.1 | **Primary Keyword** | 10 | **YES** | Từ khóa chính không được trống. | Lấy array `keywords[0]`. Trả Fail nếu `length == 0` hoặc `< 2 chars`. |
-| 2.2 | **Call-to-Action** | 5 | NO | Phải có ít nhất 1 nút bấm (W2A). | Trong Editor, track button component. Fallback: tìm `data-cta="true"` hoặc `<a class="momo-btn">`. |
-| 2.3 | **H1 Tag** | 8 | NO | 1 thẻ H1 duy nhất, chứa từ khóa. | Đếm `<h1/>` trong body (`count == 1`). Dùng Regex `/keyword/i` check string bên trong thẻ. |
-| 2.4 | **Meta Title** | 5 | NO | Độ dài 40-60 ký tự. | Đếm length của field Meta Title. Phải nằm trong Range `[40, 60]`. |
-| 2.5 | **Meta Description** | 5 | NO | Độ dài 120-160 ký tự. | Đếm length của field Meta Description. Nằm trong Range `[120, 160]`. |
-| 2.6 | **Wordcount** | 6 | NO | Độ dài text đủ chuẩn. | Strip HTML tags, split text bằng khoảng trắng. Trả Pass nếu length ≥ 800 (Mini-web) hoặc ≥ 300 (Landing). |
-| 2.7 | **Keyword Density** | 8 | NO | Mật độ từ khóa chính 1-2%. | Đếm tổng keyword (regex `/\bkeyword\b/gi`) chia cho Wordcount tổng. Nằm trong `[0.01, 0.02]`. |
-| 2.8 | **Image Alt Text** | 4 | NO | Ảnh có text chú thích. | Tìm thẻ `<img>`. Pass nếu 100% các thẻ có `alt` và length > 0. |
-| 2.9 | **Encoding Error** | 4 | NO | Không lỗi font Tiếng Việt. | Regex check ký tự `/?|□/` do unicode lỗi. Trả Pass nếu count == 0. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hạng mục</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điểm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hard Block</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giải thích cho Editor</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thuật toán Tính toán (Computation for Dev)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Primary Keyword</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">10</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>YES</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Từ khóa chính không được trống.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lấy array <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">keywords[0]</code>. Trả Fail nếu <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">length == 0</code> hoặc <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">< 2 chars</code>.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Call-to-Action</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phải có ít nhất 1 nút bấm (W2A).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trong Editor, track button component. Fallback: tìm <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">data-cta="true"</code> hoặc <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><a class="momo-btn"></code>.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>H1 Tag</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1 thẻ H1 duy nhất, chứa từ khóa.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đếm <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><h1/></code> trong body (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">count == 1</code>). Dùng Regex <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/keyword/i</code> check string bên trong thẻ.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Meta Title</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Độ dài 40-60 ký tự.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đếm length của field Meta Title. Phải nằm trong Range <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[40, 60]</code>.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Meta Description</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Độ dài 120-160 ký tự.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đếm length của field Meta Description. Nằm trong Range <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[120, 160]</code>.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Wordcount</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Độ dài text đủ chuẩn.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Strip HTML tags, split text bằng khoảng trắng. Trả Pass nếu length ≥ 800 (Mini-web) hoặc ≥ 300 (Landing).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Keyword Density</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mật độ từ khóa chính 1-2%.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đếm tổng keyword (regex <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/\bkeyword\b/gi</code>) chia cho Wordcount tổng. Nằm trong <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[0.01, 0.02]</code>.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Image Alt Text</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ảnh có text chú thích.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tìm thẻ <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><img></code>. Pass nếu 100% các thẻ có <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">alt</code> và length > 0.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.9</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Encoding Error</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không lỗi font Tiếng Việt.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Regex check ký tự `/?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">□/` do unicode lỗi. Trả Pass nếu count == 0.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ### 7.3 Block 3: GEO & Entity Signals (20 Điểm)
 *Tối ưu hóa dữ liệu cấu trúc cho AI Search.*
 
-| # | Hạng mục | Điểm | Hard Block | Giải thích cho Editor | Thuật toán Tính toán (Computation for Dev) |
-|---|----------|------|------------|-----------------------|-----------------------------------------|
-| 3.1 | **Schema JSON-LD** | 6 | NO | Khai báo chuẩn dữ liệu. | Regex tìm `<script type="application/ld+json">`. `JSON.parse` content, check tồn tại `@type`. |
-| 3.2 | **Internal Links** | 5 | NO | Liên kết chéo về MoMo. | Parse `href` của `<a>`. Pass nếu có URL chứa `momo.vn`. |
-| 3.3 | **Social Meta (OG)** | 4 | NO | Share Facebook/Zalo chuẩn. | Parse `<head>` tìm `meta property="og:..."`. Pass nếu đủ `title`, `description`, `url`, `image`. |
-| 3.4 | **Fact Density** | 5 | NO | Tối thiểu 3 số liệu (%, tỷ, triệu). | Regex `/\b(\d+(?:\.\d+)?)\s*(%|triệu|tỷ|VNĐ)\b/g`. Đẩy mảng ra Modal UI. Editor xác nhận -> Pass. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hạng mục</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điểm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hard Block</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giải thích cho Editor</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thuật toán Tính toán (Computation for Dev)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Schema JSON-LD</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khai báo chuẩn dữ liệu.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Regex tìm <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><script type="application/ld+json"></code>. <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">JSON.parse</code> content, check tồn tại <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">@type</code>.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Internal Links</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Liên kết chéo về MoMo.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Parse <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">href</code> của <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><a></code>. Pass nếu có URL chứa <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn</code>.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Social Meta (OG)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Share Facebook/Zalo chuẩn.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Parse <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><head></code> tìm <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">meta property="og:..."</code>. Pass nếu đủ <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">title</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">description</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">url</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">image</code>.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Fact Density</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tối thiểu 3 số liệu (%, tỷ, triệu).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Regex `/\b(\d+(?:\.\d+)?)\s*(%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">triệu</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">tỷ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">VNĐ)\b/g`. Đẩy mảng ra Modal UI. Editor xác nhận -> Pass.</td>
+    </tr>
+  </tbody>
+</table>
 
-> **Quy tắc Scale điểm Block 3:** 
+> **Quy tắc Scale điểm Block 3:**
 > - **Trang Blog & Mini Web:** Áp dụng toàn bộ (20đ).
 > - **Trang Landing Page & Merchant Page:** Bỏ qua kiểm tra `3.4 Fact Density`. Backend tự Scale điểm: `Block3_Score = (Điểm_Thực_Đạt / 15) * 20` (Làm tròn toán học).
 
@@ -200,7 +461,7 @@ Core Web Vitals (LCP, INP, CLS) là yếu tố xếp hạng quan trọng của G
 
 ### Implementation Method (Draft Signed URL)
 - Vì trang đang ở chế độ Draft (chưa Live), có cơ chế Auth bảo vệ, Google PageSpeed Insights (PSI) API không thể truy cập trực tiếp URL.
-- **Giải pháp (Bypass Auth):** 
+- **Giải pháp (Bypass Auth):**
   1. Khi user click `Run CWV Check`, Backend cấp tốc sinh ra 1 Temporary Signed URL (Ví dụ: `momo.vn/draft/abc?token=xyz...`) cho phép bypass Authentication, TTL (Time-to-live) là 3 phút.
   2. Backend call Google PSI API với URL này.
   3. Nhận kết quả Lab Data và render về Score Panel. Hết 3 phút Token tự hủy.
@@ -268,45 +529,142 @@ Trong H2/2026, hệ thống SEO/GEO Scoring System sẽ được tích hợp sâ
 
 ## 11. Giải thích Thuật ngữ (Glossary)
 
-| Thuật ngữ | Giải thích |
-|-----------|-----------|
-| **Hard Block** | Điều kiện chặn cứng - nếu item này fail, nút Publish bị vô hiệu hóa hoàn toàn, bất kể tổng điểm bao nhiêu. |
-| **Draft** | Bản nháp - trạng thái trang đã được lưu nhưng chưa live, chưa ảnh hưởng trang đang chạy. |
-| **Publish** | Hành động đưa trang mới lên live lần đầu tiên. |
-| **Score Panel** | Bảng chấm điểm SEO/GEO tích hợp trong MoSpark Admin. |
-| **CWV (Core Web Vitals)** | Bộ 3 chỉ số hiệu năng trang web cốt lõi của Google: LCP, INP, CLS - ảnh hưởng trực tiếp đến thứ hạng tìm kiếm. |
-| **LCP** | Largest Contentful Paint - thời gian tải phần nội dung lớn nhất hiển thị lên màn hình. Ngưỡng tốt: ≤ 2.5s. |
-| **INP** | Interaction to Next Paint - thời gian phản hồi khi người dùng tương tác (click, gõ phím). Ngưỡng tốt: ≤ 200ms. |
-| **CLS** | Cumulative Layout Shift - mức độ giật layout bất ngờ khi trang tải. Ngưỡng tốt: ≤ 0.1. |
-| **FCP** | First Contentful Paint - thời gian xuất hiện nội dung đầu tiên. Ngưỡng tốt: ≤ 1.8s. |
-| **TTFB** | Time to First Byte - thời gian server phản hồi byte đầu tiên. Ngưỡng tốt: ≤ 800ms. |
-| **SEO** | Search Engine Optimization - tối ưu hóa để trang được tìm thấy trên Google và các công cụ tìm kiếm. |
-| **GEO** | Generative Engine Optimization - tối ưu hóa để nội dung được trích dẫn bởi AI (ChatGPT, Perplexity, Google AI Overviews). |
-| **E-E-A-T** | Experience, Expertise, Authoritativeness, Trustworthiness - bộ tiêu chí Google dùng để đánh giá chất lượng nội dung. |
-| **YMYL** | Your Money Your Life - nhóm nội dung nhạy cảm (tài chính, sức khỏe, pháp lý) bị Google đánh giá khắt khe hơn. |
-| **Canonical tag** | Thẻ HTML khai báo URL "chính thống" của trang, giúp Google không bị confuse khi có nhiều URL tương tự. |
-| **Robots meta** | Thẻ HTML chỉ định Google có được phép crawl và index trang hay không. Giá trị chuẩn: `index, follow`. |
-| **DOM** | Document Object Model - cấu trúc HTML được dựng lên trong trình duyệt. System "parse DOM" nghĩa là đọc và phân tích cấu trúc HTML đó. |
-| **JSON-LD** | JavaScript Object Notation for Linked Data - định dạng khai báo Schema (dữ liệu có cấu trúc) trong thẻ `<script>` của trang. |
-| **Schema / Structured Data** | Dữ liệu có cấu trúc - thông tin được đánh dấu theo chuẩn Schema.org để AI và Google hiểu rõ nội dung trang hơn. |
-| **SERP** | Search Engine Results Page - trang kết quả tìm kiếm của Google. |
-| **GSC** | Google Search Console - công cụ miễn phí của Google để theo dõi hiệu suất tìm kiếm và phát hiện lỗi kỹ thuật. |
-| **Orphan page** | Trang mồ côi - trang không được link đến từ bất kỳ trang nào khác trên site, Googlebot khó tìm thấy. |
-| **Fact Density** | Mật độ số liệu - mức độ xuất hiện của số liệu, thống kê, dữ kiện cụ thể trong nội dung. AI engine ưu tiên trích dẫn nội dung có fact density cao. |
-| **Topical Authority** | Thẩm quyền chủ đề - mức độ Google/AI đánh giá một site là nguồn đáng tin cậy về một chủ đề cụ thể. |
-| **Disclaimer** | Tuyên bố từ chối trách nhiệm - đoạn văn bắt buộc trên nội dung tài chính, nhắc người đọc rằng nội dung chỉ mang tính thông tin, không phải tư vấn đầu tư. |
-| **Lab data** | Dữ liệu đo lường trong môi trường kiểm soát (Lighthouse headless) - đo trên máy chủ, không phải dữ liệu thực từ người dùng. |
-| **Field data** | Dữ liệu thực tế từ người dùng thật (Chrome UX Report) - chính xác hơn lab data nhưng chỉ có với trang đã có traffic. |
-| **Signed URL** | URL tạm thời có gắn token bảo mật, cho phép truy cập trang Draft không cần đăng nhập trong thời gian giới hạn. |
-| **Headless Chrome** | Trình duyệt Chrome chạy không có giao diện (ẩn), dùng để tự động hóa việc mở trang và đo hiệu năng trên server. |
-| **Internal link** | Liên kết nội bộ - link từ một trang trên momo.vn trỏ đến một trang khác cũng trên momo.vn. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thuật ngữ</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giải thích</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hard Block</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điều kiện chặn cứng - nếu item này fail, nút Publish bị vô hiệu hóa hoàn toàn, bất kể tổng điểm bao nhiêu.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Draft</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bản nháp - trạng thái trang đã được lưu nhưng chưa live, chưa ảnh hưởng trang đang chạy.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Publish</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hành động đưa trang mới lên live lần đầu tiên.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Score Panel</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảng chấm điểm SEO/GEO tích hợp trong MoSpark Admin.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>CWV (Core Web Vitals)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bộ 3 chỉ số hiệu năng trang web cốt lõi của Google: LCP, INP, CLS - ảnh hưởng trực tiếp đến thứ hạng tìm kiếm.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>LCP</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Largest Contentful Paint - thời gian tải phần nội dung lớn nhất hiển thị lên màn hình. Ngưỡng tốt: ≤ 2.5s.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>INP</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Interaction to Next Paint - thời gian phản hồi khi người dùng tương tác (click, gõ phím). Ngưỡng tốt: ≤ 200ms.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>CLS</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cumulative Layout Shift - mức độ giật layout bất ngờ khi trang tải. Ngưỡng tốt: ≤ 0.1.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>FCP</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">First Contentful Paint - thời gian xuất hiện nội dung đầu tiên. Ngưỡng tốt: ≤ 1.8s.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>TTFB</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Time to First Byte - thời gian server phản hồi byte đầu tiên. Ngưỡng tốt: ≤ 800ms.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>SEO</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search Engine Optimization - tối ưu hóa để trang được tìm thấy trên Google và các công cụ tìm kiếm.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GEO</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Generative Engine Optimization - tối ưu hóa để nội dung được trích dẫn bởi AI (ChatGPT, Perplexity, Google AI Overviews).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>E-E-A-T</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Experience, Expertise, Authoritativeness, Trustworthiness - bộ tiêu chí Google dùng để đánh giá chất lượng nội dung.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>YMYL</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Your Money Your Life - nhóm nội dung nhạy cảm (tài chính, sức khỏe, pháp lý) bị Google đánh giá khắt khe hơn.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Canonical tag</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thẻ HTML khai báo URL "chính thống" của trang, giúp Google không bị confuse khi có nhiều URL tương tự.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Robots meta</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thẻ HTML chỉ định Google có được phép crawl và index trang hay không. Giá trị chuẩn: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">index, follow</code>.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>DOM</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Document Object Model - cấu trúc HTML được dựng lên trong trình duyệt. System "parse DOM" nghĩa là đọc và phân tích cấu trúc HTML đó.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>JSON-LD</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">JavaScript Object Notation for Linked Data - định dạng khai báo Schema (dữ liệu có cấu trúc) trong thẻ <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><script></code> của trang.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Schema / Structured Data</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dữ liệu có cấu trúc - thông tin được đánh dấu theo chuẩn Schema.org để AI và Google hiểu rõ nội dung trang hơn.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>SERP</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search Engine Results Page - trang kết quả tìm kiếm của Google.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GSC</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Google Search Console - công cụ miễn phí của Google để theo dõi hiệu suất tìm kiếm và phát hiện lỗi kỹ thuật.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Orphan page</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang mồ côi - trang không được link đến từ bất kỳ trang nào khác trên site, Googlebot khó tìm thấy.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Fact Density</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mật độ số liệu - mức độ xuất hiện của số liệu, thống kê, dữ kiện cụ thể trong nội dung. AI engine ưu tiên trích dẫn nội dung có fact density cao.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Topical Authority</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thẩm quyền chủ đề - mức độ Google/AI đánh giá một site là nguồn đáng tin cậy về một chủ đề cụ thể.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Disclaimer</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tuyên bố từ chối trách nhiệm - đoạn văn bắt buộc trên nội dung tài chính, nhắc người đọc rằng nội dung chỉ mang tính thông tin, không phải tư vấn đầu tư.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Lab data</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dữ liệu đo lường trong môi trường kiểm soát (Lighthouse headless) - đo trên máy chủ, không phải dữ liệu thực từ người dùng.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Field data</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dữ liệu thực tế từ người dùng thật (Chrome UX Report) - chính xác hơn lab data nhưng chỉ có với trang đã có traffic.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Signed URL</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL tạm thời có gắn token bảo mật, cho phép truy cập trang Draft không cần đăng nhập trong thời gian giới hạn.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Headless Chrome</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trình duyệt Chrome chạy không có giao diện (ẩn), dùng để tự động hóa việc mở trang và đo hiệu năng trên server.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Internal link</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Liên kết nội bộ - link từ một trang trên momo.vn trỏ đến một trang khác cũng trên momo.vn.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ## 12. Change Log
 
 - **v2.0 (2026-06-01):** Tái cấu trúc (Re-architect) hoàn toàn mô hình điểm từ dạng Blocks sang dạng Tiers (Mandatory -> Basic -> Advanced). Nhúng thẳng thuật toán Computation Logic vào bảng để Tech Team làm Spec API.
-
 
 - **v1.3.1 (2026-06-01):** Di chuyển Bảng Thuật Ngữ (Glossary) xuống cuối trang, trước Change Log, để ưu tiên luồng đọc Workflow và Input Model lên trên. Re-number các Heading tương ứng.
 - **v1.3 (2026-06-01):** Chuẩn hóa toàn bộ cấu trúc tài liệu theo template của `mospark_genai_content.md`. Phục hồi các phần cốt lõi: Executive Summary, Stakeholders, và Bài toán cần giải. Re-format Headers và Bullet points.

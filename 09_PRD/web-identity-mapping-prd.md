@@ -7,7 +7,7 @@
 > *   **Đầu mối Cell Team (PO & Tech Lead):** Growth Platform Division (GPD)
 > *   **Web Product Lead (Duyệt dự án):** Hien.ho
 > *   **Trạng thái tài liệu (Document status):** DRAFT
-> *   **Tiến độ dự kiến:** Q3/2026 (Kick-off) ➔ Q3/2026 (Pilot) ➔ Q4/2026 (Go-Live)
+> *   **Tiến độ dự kiến:** Q3/2026 (Kick-off) -> Q3/2026 (Pilot) -> Q4/2026 (Go-Live)
 > *   **Loại yêu cầu:** [x] Tính năng mới | [ ] Cải tiến/Thay đổi cấu trúc
 
 ---
@@ -15,8 +15,8 @@
 ## I. TÀI LIỆU LIÊN QUAN (References)
 *   **Kiến trúc định danh cơ sở (MoSpark):** [mospark_user_identity_tracking.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM/mospark_user_identity_tracking.md)
 *   **Tài liệu nghiệp vụ Vehicle Hub:** [vehicle-hub-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/vehicle-hub-brd.md) | [vehicle-hub-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD/vehicle-hub-prd.md)
-*   **Tài liệu nghiệp vụ Soundbox:** [soundbox-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_USE_CASE_MOMO/soundbox-brd.md)
-*   **Tài liệu định hướng U18 & Student Pass:** [user-growth-u18-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_USE_CASE_MOMO/user-growth-u18-brd.md)
+*   **Tài liệu nghiệp vụ Soundbox:** [soundbox-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO/soundbox-brd.md)
+*   **Tài liệu định hướng U18 & Student Pass:** [user-growth-u18-brd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO/user-growth-u18-brd.md)
 
 ---
 
@@ -36,11 +36,36 @@ Xây dựng **Web Identity Hub** nhằm liên kết mã định danh trình duy�
 > **North Star Metric: Identity Binding Rate (IBR)**
 > Tỷ lệ phiên truy cập Web (Sessions) duy nhất thực hiện liên kết thành công ít nhất một Identity (Biển số xe, IMEI Soundbox, hoặc Email sinh viên).
 
-| Chỉ số (KPI) | Hiện tại (Baseline) | Mục tiêu (Target) | Thời gian đo |
-| :--- | :--- | :--- | :--- |
-| **Identity Binding Rate (IBR)** | 0% | >= 15% tổng lượng traffic tiện ích | Q4/2026 |
-| **Web-to-App Conversion Rate (W2A CR)** | ~1.5% | >= 5.5% (đối với nhóm đã map Identity) | Q4/2026 |
-| **Tỷ lệ giữ chân người dùng Web (7-day Retention)** | ~5% | >= 20% (nhờ Personalized Widgets) | Q4/2026 |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chỉ số (KPI)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hiện tại (Baseline)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục tiêu (Target)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thời gian đo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Identity Binding Rate (IBR)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">>= 15% tổng lượng traffic tiện ích</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q4/2026</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web-to-App Conversion Rate (W2A CR)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~1.5%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">>= 5.5% (đối với nhóm đã map Identity)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q4/2026</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tỷ lệ giữ chân người dùng Web (7-day Retention)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~5%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">>= 20% (nhờ Personalized Widgets)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q4/2026</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -72,7 +97,7 @@ sequenceDiagram
     User->>Web: Truy cập Website tiện ích (e.g., /phat-nguoi)
     Web->>Edge: Gửi request kèm Cookie định danh
     Edge-->>Web: Trả về Identity Object (identityId)
-    
+
     rect rgb(240, 248, 255)
         note right of User: Giai đoạn Mapping (Liên kết)
         User->>Web: Nhập thông tin Identity (Biển số xe / IMEI / Email SV)
@@ -100,11 +125,36 @@ sequenceDiagram
 
 ### 3. Chi tiết các Widget tiện ích & Luồng chuyển đổi
 
-| Sản phẩm / Use Case | Phương thức ánh xạ (Mapping Input) | Trải nghiệm Cá nhân hóa trên Web (Returning User) | Luồng chuyển đổi sang App (W2A & Deep Link) |
-| :--- | :--- | :--- | :--- |
-| **Vehicle Hub** | Biển số xe (License Plate)<br>*(Ví dụ: 30F-123.45)* | * **Widget Tra cứu tự động:** Tự động chạy ngầm API tra cứu phạt nguội trên Web load. Hiển thị: *"Xe của bạn (30F-123.45) có 0 lỗi vi phạm mới"*. <br> * **Cảnh báo đăng kiểm:** Hiển thị thời hạn đăng kiểm dự kiến. | Nút **"Nộp phạt ngay"** hoặc **"Đăng ký thông báo tự động"** -> Deeplink chứa thông tin biển số xe được mã hóa: `momo://app/vehicle-hub?plate=30F12345&wui=<identityId>` |
-| **Soundbox** | IMEI của thiết bị (15 chữ số)<br>*(Ví dụ: 868722051234567)* | * **Widget Giám sát Loa:** Hiển thị trạng thái kết nối trực quan (Online/Offline/Mất sóng), dung lượng pin, âm lượng loa hiện tại.<br>* **Nhật ký giao dịch:** Hiển thị 3 giao dịch nhận tiền gần nhất qua loa. | Nút **"Cấu hình Wifi / Âm lượng"** hoặc **"Báo lỗi kỹ thuật"** -> Deeplink mở trang quản lý thiết bị trên MoMo Merchant: `momo://app/merchant/soundbox?imei=<imei>&wui=<identityId>` |
-| **Student Pass** | Email sinh viên đuôi `.edu.vn` hoặc Mã số sinh viên (MSSV) | * **Dashboard Ưu đãi:** Mở khóa toàn bộ kho mã giảm giá (Spotify, CGV, Grab) trực tiếp trên Web.<br>* **Trạng thái:** Hiển thị *"Đặc quyền sinh viên: Đã xác thực (Hiệu lực đến 31/12/2026)"*. | Nút **"Lấy mã giảm giá trên MoMo"** -> Deeplink mở màn hình Student Pass in-app để tự động liên kết học sinh/sinh viên: `momo://app/student-pass?verify_token=<token>&wui=<identityId>` |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Sản phẩm / Use Case</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phương thức ánh xạ (Mapping Input)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trải nghiệm Cá nhân hóa trên Web (Returning User)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Luồng chuyển đổi sang App (W2A & Deep Link)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Vehicle Hub</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Biển số xe (License Plate)<br><em>(Ví dụ: 30F-123.45)</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em> <strong>Widget Tra cứu tự động:</strong> Tự động chạy ngầm API tra cứu phạt nguội trên Web load. Hiển thị: </em>"Xe của bạn (30F-123.45) có 0 lỗi vi phạm mới"<em>. <br> </em> <strong>Cảnh báo đăng kiểm:</strong> Hiển thị thời hạn đăng kiểm dự kiến.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nút <strong>"Nộp phạt ngay"</strong> hoặc <strong>"Đăng ký thông báo tự động"</strong> -> Deeplink chứa thông tin biển số xe được mã hóa: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo://app/vehicle-hub?plate=30F12345&wui=<identityId></code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Soundbox</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">IMEI của thiết bị (15 chữ số)<br><em>(Ví dụ: 868722051234567)</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em> <strong>Widget Giám sát Loa:</strong> Hiển thị trạng thái kết nối trực quan (Online/Offline/Mất sóng), dung lượng pin, âm lượng loa hiện tại.<br></em> <strong>Nhật ký giao dịch:</strong> Hiển thị 3 giao dịch nhận tiền gần nhất qua loa.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nút <strong>"Cấu hình Wifi / Âm lượng"</strong> hoặc <strong>"Báo lỗi kỹ thuật"</strong> -> Deeplink mở trang quản lý thiết bị trên MoMo Merchant: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo://app/merchant/soundbox?imei=<imei>&wui=<identityId></code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Student Pass</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Email sinh viên đuôi <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">.edu.vn</code> hoặc Mã số sinh viên (MSSV)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em> <strong>Dashboard Ưu đãi:</strong> Mở khóa toàn bộ kho mã giảm giá (Spotify, CGV, Grab) trực tiếp trên Web.<br></em> <strong>Trạng thái:</strong> Hiển thị <em>"Đặc quyền sinh viên: Đã xác thực (Hiệu lực đến 31/12/2026)"</em>.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nút <strong>"Lấy mã giảm giá trên MoMo"</strong> -> Deeplink mở màn hình Student Pass in-app để tự động liên kết học sinh/sinh viên: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo://app/student-pass?verify_token=<token>&wui=<identityId></code></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -155,10 +205,25 @@ Thay thế hoàn toàn các banner tĩnh. Khi người dùng có Identity đã m
 
 ```
 +---------------------------------------------------------+
-|  Xin chào! Rất vui được gặp lại bạn.                    |
-|  [🚘 Xe ô tô của bạn]                                   |
-|  Biển số: 30F-123.** | Trạng thái: 0 lỗi phạt nguội mới  |
-|  [Nạp tiền ePass nhanh]    [Kiểm tra chi tiết lỗi]      |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Xin chào! Rất vui được gặp lại bạn.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[🚘 Xe ô tô của bạn]</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Biển số: 30F-123.<em></em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trạng thái: 0 lỗi phạt nguội mới</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Nạp tiền ePass nhanh]    [Kiểm tra chi tiết lỗi]</td>
+    </tr>
+  </tbody>
+</table>
 +---------------------------------------------------------+
 ```
 
@@ -166,8 +231,8 @@ Thay thế hoàn toàn các banner tĩnh. Khi người dùng có Identity đã m
 Khi người dùng thực hiện liên kết định danh thành công, hiển thị prompt gợi ý đăng ký nhận thông báo trình duyệt:
 *   *Tần suất:* Tối đa 1 lần/ngày đối với cập nhật quan trọng.
 *   *Kịch bản gửi:*
-    *   Hệ thống quét phạt nguội định kỳ phát hiện lỗi mới của biển số đã map ➔ Gửi thông báo đẩy Click-to-Web.
-    *   Hệ thống giám sát Soundbox ghi nhận loa mất kết nối > 15 phút ➔ Gửi thông báo đẩy cho Merchant.
+    *   Hệ thống quét phạt nguội định kỳ phát hiện lỗi mới của biển số đã map -> Gửi thông báo đẩy Click-to-Web.
+    *   Hệ thống giám sát Soundbox ghi nhận loa mất kết nối > 15 phút -> Gửi thông báo đẩy cho Merchant.
 
 ### 3. Vòng lặp kích hoạt ưu đãi chéo (Cross-benefit Loop)
 *   *Student Pass:* Sinh viên đã xác thực email trên Web khi mua vé CGV trên Web MoMo sẽ được tự động kích hoạt mã giảm giá sinh viên mà không cần nhập code thủ công.
@@ -179,11 +244,32 @@ Khi người dùng thực hiện liên kết định danh thành công, hiển t
 
 ### 1. Phân quyền và Bảo mật dữ liệu
 
-| Identity Type | Rủi ro Bảo mật | Giải pháp giảm thiểu (Mitigation) |
-|---|---|---|
-| **Vehicle Plate** | Lộ lịch trình di chuyển, thông tin phạt nguội của xe người khác. | * Ẩn thông tin nhạy cảm (Tên chủ xe, địa chỉ lỗi vi phạm cụ thể chỉ hiển thị dạng mask trên Web).<br>* Chỉ cho phép xem đầy đủ biên bản vi phạm hình ảnh khi chuyển sang App MoMo đã xác thực KYC chính chủ. |
-| **Soundbox IMEI** | Lộ doanh thu, số tiền giao dịch của cửa hàng. | * Bắt buộc phải quét QR Code đăng nhập MoMo Merchant để xác thực quyền sở hữu IMEI trước khi hiển thị chi tiết số dư hoặc giao dịch gần nhất trên Web. |
-| **Student Pass** | Giả mạo sinh viên để trục lợi khuyến mãi thương mại. | * Xác thực mã OTP bắt buộc gửi đến email có đuôi định dạng `.edu.vn`. Mỗi email chỉ được liên kết với tối đa 1 tài khoản MoMo. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Identity Type</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Rủi ro Bảo mật</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giải pháp giảm thiểu (Mitigation)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Vehicle Plate</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lộ lịch trình di chuyển, thông tin phạt nguội của xe người khác.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em> Ẩn thông tin nhạy cảm (Tên chủ xe, địa chỉ lỗi vi phạm cụ thể chỉ hiển thị dạng mask trên Web).<br></em> Chỉ cho phép xem đầy đủ biên bản vi phạm hình ảnh khi chuyển sang App MoMo đã xác thực KYC chính chủ.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Soundbox IMEI</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lộ doanh thu, số tiền giao dịch của cửa hàng.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">* Bắt buộc phải quét QR Code đăng nhập MoMo Merchant để xác thực quyền sở hữu IMEI trước khi hiển thị chi tiết số dư hoặc giao dịch gần nhất trên Web.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Student Pass</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giả mạo sinh viên để trục lợi khuyến mãi thương mại.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">* Xác thực mã OTP bắt buộc gửi đến email có đuôi định dạng <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">.edu.vn</code>. Mỗi email chỉ được liên kết với tối đa 1 tài khoản MoMo.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2. Quản lý Tần suất truy vấn (Rate Limiting)
 *   Áp dụng rate-limit nghiêm ngặt tại Edge API:
@@ -195,6 +281,21 @@ Khi người dùng thực hiện liên kết định danh thành công, hiển t
 
 ## LỊCH SỬ THAY ĐỔI (Changelog)
 
-| Phiên bản | Ngày cập nhật | Người thực hiện | Nội dung thay đổi |
-| :--- | :--- | :--- | :--- |
-| 1.0 | 2026-07-20 | Web Product Agent | Khởi tạo tài liệu đặc tả hệ thống Web Identity Hub & Mapping (Giai đoạn Q3/2026). |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phiên bản</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ngày cập nhật</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Người thực hiện</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung thay đổi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-07-20</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Agent</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khởi tạo tài liệu đặc tả hệ thống Web Identity Hub & Mapping (Giai đoạn Q3/2026).</td>
+    </tr>
+  </tbody>
+</table>

@@ -18,7 +18,7 @@ Trước khi xử lý bất kỳ câu hỏi hoặc yêu cầu nào, AI phải tu
 *Mục tiêu: Đảm bảo "mạch máu" dữ liệu và hệ thống luôn thông suốt.*
 
 *   **Audit Real-time**: Kiểm tra nhanh các nội dung mới xuất bản qua biến `Project` trên MoSpark.
-*   **Gatekeeper Alert**: Tiếp nhận các yêu cầu Review từ team Inbound/Agency thông qua SEO/GEO Scoring.
+*   **Gatekeeper Alert**: Tiếp nhận các yêu cầu Review từ team Media Team / Agency thông qua SEO/GEO Scoring.
 *   **Critical Monitoring**: Observe tình trạng Indexing và Search Console của các dự án P0 (Phạt Nguội, Vay Nhanh).
 *   **AI Crawler Check**: Spot-check server logs cho OAI-SearchBot, Claude-SearchBot, PerplexityBot trên các page mới golive.
 
@@ -46,7 +46,7 @@ Trước khi xử lý bất kỳ câu hỏi hoặc yêu cầu nào, AI phải tu
 ## 3. Monthly Strategic Review (Vòng lặp 30 ngày)
 *Mục tiêu: Đánh giá hiệu quả đầu tư và tối ưu hóa hệ thống.*
 
-*   **SEO Inventory Audit**: Cập nhật SoV (Share of Voice) của MoMo so với đối thủ (Ví dụ: Vay Nhanh 6% -> Mục tiêu 10%).
+*   **SEO Inventory Audit**: Cập nhật SoV (Share of Voice) của MoMo so với đối thủ (Ví dụ: Vay Nhanh 6% ➔ Mục tiêu 10%).
 *   **Migration Cleanup**: Rà soát các URLs cũ đã chuyển sang MoSpark, đảm bảo 100% Link Integrity.
 *   **Standard Update**: Cập nhật **momo-seo-geo-guideline** và **YMYL Guideline** dựa trên các thuật toán mới của Google/AI Search.
 *   **AI Citation Audit**: Test monthly - hỏi ChatGPT/Perplexity/Claude về các sản phẩm MoMo, kiểm tra AI đang describe đúng chưa. Nếu sai lệch → review llms.txt + Long Content nguồn.
@@ -68,12 +68,32 @@ Mỗi khi có một Use Case mới (Ví dụ: `Dịch vụ công`), Routine th�
 
 ## 5. Các "Nút bấm" Quyết định (Decision Gates)
 
-| Tình huống | Quyết định của Hiến |
-|------------|---------------------|
-| Content Score < 80 | **Reject**: Yêu cầu Inbound/Agency sửa lại theo Guideline. |
-| Use Case không có Search Demand | **Deprioritize**: Chuyển xuống hàng chờ, không đầu tư Resource. |
-| Lỗi Tech/Platform | **Request**: Gửi yêu cầu cho Anh Bảo xử lý trong Roadmap. |
-| Sai lệch Tracking | **Consult**: Support team DA tìm ra "Truth of Source". |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tình huống</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Quyết định của Hiến</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content Score < 80</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Reject</strong>: Yêu cầu Media Team / Agency sửa lại theo Guideline.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Use Case không có Search Demand</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Deprioritize</strong>: Chuyển xuống hàng chờ, không đầu tư Resource.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lỗi Tech/Platform</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Request</strong>: Gửi yêu cầu cho Anh Bảo xử lý trong Roadmap.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sai lệch Tracking</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Consult</strong>: Support team DA tìm ra "Truth of Source".</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

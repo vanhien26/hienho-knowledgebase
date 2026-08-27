@@ -32,8 +32,8 @@ Tầm nhìn sản phẩm là xây dựng **Widget Store Platform** — một **N
 
 #### 🛠️ Việc cần làm / Các trụ cột thực thi của Platform (Key Platform Pillars - What to do)
 1.  **Ingestion & Refactoring Pipeline (Quy trình Tiếp nhận & Chuẩn hóa):** Hỗ trợ song song 2 quy trình tiếp nhận (workflows) linh hoạt từ các Cell Teams/BUs:
-    *   *Workflow A (Brief to Prototype - Hiếu phụ trách):* Web Platform tiếp nhận Brief nghiệp vụ (Logic/Công thức tính toán & Thông tin hiển thị) $\rightarrow$ Hiếu chịu trách nhiệm triển khai xây dựng bản prototype thô để xác thực (verify) logic với BU.
-    *   *Workflow B (HTML Ingestion to Standard - Thuận phụ trách):* Web Platform tiếp nhận Brief dưới dạng bản HTML Prototype thô do các Cell Teams tự phát triển trước $\rightarrow$ Thuận chịu trách nhiệm refactor theo đúng chuẩn Design System (MoBase) và UI/UX Flow để đóng gói đưa vào Registry.
+    *   *Workflow A (Brief to Prototype - Hiếu phụ trách):* Web Platform tiếp nhận Brief nghiệp vụ (Logic/Công thức tính toán & Thông tin hiển thị) $->$ Hiếu chịu trách nhiệm triển khai xây dựng bản prototype thô để xác thực (verify) logic với BU.
+    *   *Workflow B (HTML Ingestion to Standard - Thuận phụ trách):* Web Platform tiếp nhận Brief dưới dạng bản HTML Prototype thô do các Cell Teams tự phát triển trước $->$ Thuận chịu trách nhiệm refactor theo đúng chuẩn Design System (MoBase) và UI/UX Flow để đóng gói đưa vào Registry.
 2.  **Registry & Rendering Engine (Next.js):** Xây dựng hạ tầng Registry dùng chung để lưu trữ và kết xuất (render) động các Component React tĩnh dựa trên cấu hình JSON Schema từ CMS Editor.
 3.  **Smart CTA & Zero-Party Data Engine:** Thiết kế Rule Engine tự động điều hướng nút CTA theo hành vi nhập liệu của user và cơ chế mã hóa Base64 truyền dữ liệu an toàn qua URL parameter của Onelink.
 4.  **API Governance Gateway:** Thiết kế cổng API Gateway kết nối realtime dữ liệu in-app (vàng, tỷ giá) có tích hợp Redis Cache 15-30 phút và cơ chế khóa cứng công thức (Formula Lock) để kiểm duyệt pháp lý/tài chính YMYL tập trung.
@@ -106,16 +106,16 @@ Mỗi trang Landing Page chứa Widget phải tuân thủ bố cục cấu trúc
 
 ## 5. Phase 1 Pilot Specifications (Đặc tả 10 Tiện ích MVP)
 
-1.  **Master Widget (Phân bổ lương):** Hub chính. Nhập tổng thu nhập ➔ Chia ra rổ chi tiêu, tiết kiệm. Tự động truyền tham số (prefill) sang các Widget con.
-2.  **Gold Tracker:** Tích hợp API giá vàng Real-time, biểu đồ lịch sử ➔ CTA: Mua vàng.
-3.  **Exchange Rate:** Quy đổi ngoại tệ ➔ CTA: Chuyển tiền quốc tế.
-4.  **Gross-Net Tax:** Tính lương thực nhận, BHYT, BHXH ➔ CTA: Gửi tiết kiệm / Ví Trả Sau.
-5.  **Lãi Tiết Kiệm:** Kéo slider chọn kỳ hạn, tính lãi cuối kỳ ➔ CTA: Mở sổ tiết kiệm MoMo.
-6.  **Tính BHXH:** Tính mức đóng và mức hưởng 1 lần ➔ CTA: Tích lũy hưu trí.
-7.  **Tính Lương hưu:** Tính tuổi nghỉ hưu, tỷ lệ hưởng ➔ CTA: Đầu tư dài hạn.
-8.  **Đầu tư Chứng khoán/CCQ:** Kéo API lịch sử mã cổ phiếu (Ví dụ: FPT), giả lập lãi nếu đầu tư từ 1 năm trước ➔ CTA: Mở tài khoản Vietcap.
-9.  **Tính phí BHSK+:** Thanh kéo mức độ nghiêm trọng rủi ro, đối chiếu chi phí phải trả tự túc vs có BHSK ➔ CTA: Mua MoMo Sức Khỏe+.
-10. **Financial Quiz:** Trắc nghiệm vuốt (Tinder-style), trả kết quả "Chức danh" (Persona) ➔ CTA: Nhận Voucher (Instant Reward).
+1.  **Master Widget (Phân bổ lương):** Hub chính. Nhập tổng thu nhập -> Chia ra rổ chi tiêu, tiết kiệm. Tự động truyền tham số (prefill) sang các Widget con.
+2.  **Gold Tracker:** Tích hợp API giá vàng Real-time, biểu đồ lịch sử -> CTA: Mua vàng.
+3.  **Exchange Rate:** Quy đổi ngoại tệ -> CTA: Chuyển tiền quốc tế.
+4.  **Gross-Net Tax:** Tính lương thực nhận, BHYT, BHXH -> CTA: Gửi tiết kiệm / Ví Trả Sau.
+5.  **Lãi Tiết Kiệm:** Kéo slider chọn kỳ hạn, tính lãi cuối kỳ -> CTA: Mở sổ tiết kiệm MoMo.
+6.  **Tính BHXH:** Tính mức đóng và mức hưởng 1 lần -> CTA: Tích lũy hưu trí.
+7.  **Tính Lương hưu:** Tính tuổi nghỉ hưu, tỷ lệ hưởng -> CTA: Đầu tư dài hạn.
+8.  **Đầu tư Chứng khoán/CCQ:** Kéo API lịch sử mã cổ phiếu (Ví dụ: FPT), giả lập lãi nếu đầu tư từ 1 năm trước -> CTA: Mở tài khoản Vietcap.
+9.  **Tính phí BHSK+:** Thanh kéo mức độ nghiêm trọng rủi ro, đối chiếu chi phí phải trả tự túc vs có BHSK -> CTA: Mua MoMo Sức Khỏe+.
+10. **Financial Quiz:** Trắc nghiệm vuốt (Tinder-style), trả kết quả "Chức danh" (Persona) -> CTA: Nhận Voucher (Instant Reward).
 
 ---
 

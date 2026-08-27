@@ -1,64 +1,52 @@
-# 🧪 Skill Registry & Framework Hub
+# SKILL REGISTRY & FRAMEWORK HUB
 
-Chào mừng bạn đến với hệ thống **Agent Harness** của Văn Hiến @ MoMo. Đây là file điều hướng trung tâm để AI hiểu và thực thi các nhiệm vụ.
-
----
-
-## 🧭 Điều Phối & Bối Cảnh (Orchestration)
-Dùng các file này để điều phối dự án và nắm vững bối cảnh:
-*   👉 **[[orchestrator_engine]]**: Master Controller / Lifecycle Engine.
-*   👉 **[[mospark_genai_content#7. Business Context - Các trường bắt buộc|mospark_business_context]]**: Single Source of Truth cho Business Context (nằm trong mospark_genai_content).
+File chỉ mục và sơ đồ đăng ký trung tâm (Registry Index) giúp AI Agent và đội ngũ nắm bắt hệ thống **3 Master Agent Skills** và thư viện tri thức nghiệp vụ trong codebase.
 
 ---
 
-## 🧠 Thư Viện Tư Duy (Frameworks)
-Dùng để Reasoning và Thinking trước khi Action (Luôn load các file này đầu tiên):
-*   **[[critical-thinking]]**: Soi xét giả định, phát hiện lỗ hổng logic.
-*   **[[First-Principles]]**: Bóc tách vấn đề về những sự thật nguyên bản.
-*   **[[jtbd-analysis]]**: Hiểu động lực "thuê" sản phẩm của người dùng.
-*   **[[80-20-growth]]**: Tập trung vào 20% nỗ lực tạo ra 80% Impact.
-*   **[[decision-framework]]**: Phân loại quyết định để hành động nhanh hoặc chậm.
-*   **[[brainstorming]]**: Tìm kiếm giải pháp và đánh giá Trade-offs.
-*   **[[mospark_seo_geo_playbook]]**: Khung chiến lược & vận hành SEO/GEO (HubSpot Parity).
+## 1. HỆ THỐNG 3 MASTER AGENT SKILLS (.agents/skills/)
+
+Đây là 3 bộ kỹ năng thực thi cốt lõi của AI Agent:
+
+- **[[.agents/skills/product-master/SKILL.md|product-master]]**: Hệ thống quản trị và phương pháp luận sản phẩm toàn diện cho Product Lead / Tech Lead. Hợp nhất 5 giai đoạn: Định khung bài toán (Problem Framing), Định vị sản phẩm (Positioning), Hoạch định chiến lược & 4 Zones (Strategy), Đánh giá ưu tiên (RICE/UIC Prioritization), Lập lộ trình (Outcome-Driven Roadmap), và Thiết kế tính năng AI / Agentic Workflows.
+- **[[.agents/skills/web-platform-reporting/SKILL.md|web-platform-reporting]]**: Quy chuẩn và công cụ tạo báo cáo định kỳ (Weekly gửi Executive Leadership, Monthly gửi Ban Giám Đốc) cho Web Platform theo chuẩn 3 khối nội dung và 2 tầng chỉ số.
+- **[[.agents/skills/frontend-slides/SKILL.md|frontend-slides]]**: Tạo slide thuyết trình trực tiếp trên nền tảng Web bằng HTML/CSS/JS hoạt họa mượt mà, zero-dependency, chuẩn stage cố định 16:9 (1920×1080), hỗ trợ đầy đủ bộ preset phong cách (Bold Templates, Clean Modern, Editorial) không lỗi layout.
 
 ---
 
-## 🛠 Thư Viện Thực Thi (Operational Skills)
-Kích hoạt các kỹ năng này khi bắt tay vào làm việc cụ thể:
+## 2. THƯ VIỆN KHUNG TƯ DUY & PHƯƠNG PHÁP LUẬN SẢN PHẨM (03_SKILLS/)
 
-### 1. Chiến lược & Tài liệu
-*   **[[brd-momo]]**: Viết Business Requirements Document chuẩn MoMo.
-*   **[[use-case-document]]**: Cấu trúc tài liệu chi tiết cho từng Use Case.
-*   **[[pyramid-principle]]**: Cấu trúc thông tin logic (Kết luận trước).
-*   **[[Web2App-Pipeline]]**: Tối ưu luồng chuyển đổi Web-to-App.
+Kho tài liệu tham chiếu sâu (Single Source of Truth) phục vụ tra cứu chi tiết:
 
-### 2. GenAI & Content
-*   **[[mospark_genai_content]]**: Chiến lược nội dung chuẩn SEO/GEO.
-*   **[[momo-blog-prompt-1-outline]]**: Prompt lên Outline bài viết.
-*   **[[momo-blog-prompt-2-writer]]**: Prompt viết nội dung chi tiết.
-*   **[[momo-html-formatting-skill]]**: Chuẩn Design System cho báo cáo HTML.
-
-### 3. Audit & Đo lường
-*   **[[Seo-Geo-audit]]**: Quy trình kiểm soát chất lượng SEO và GEO.
-*   **[[web-tracking]]**: Setup và audit tracking GTM/GA4/Appsflyer.
-*   **[[mospark_seo_geo_score]]**: Hệ thống chấm điểm tự động.
-*   **[[Zero-Hallucination]]**: Kiểm soát tính xác thực của dữ liệu tài chính.
-*   **[[mospark_llms_robots_txt]]**: AI Crawler Policy (llms.txt).
+- **[[product-frameworks-master]]**: Thư viện Master các khung tư duy sản phẩm (Mô hình 4 Zone Geoffrey Moore, DHM Gibson Biddle, 4 Product Risks Marty Cagan, Cynefin, Kano, Ansoff, Hook, 3 Horizons).
+- **[[product-problem-framing]]**: Phương pháp luận phân tích và định khung bài toán (MITRE Problem Framing Canvas - Look Inward / Look Outward / Reframe).
+- **[[product-positioning-framework]]**: Phương pháp luận định vị sản phẩm theo mẫu Geoffrey Moore và 3 câu hỏi thẩm định của Pony Ma.
+- **[[product-strategy-framework]]**: Phương pháp luận hoạch định chiến lược sản phẩm từ Tầm nhìn ➔ Chiến lược ➔ OKRs ➔ Lộ trình.
+- **[[product-roadmap-planning]]**: Phương pháp luận lập kế hoạch lộ trình dựa trên kết quả đầu ra (Outcome-Driven Roadmap - Bảng Markdown).
+- **[[product-prioritization-framework]]**: Phương pháp luận đánh giá ưu tiên RICE Score & Ma trận 4 góc phần tư UIC.
+- **[[ai-product-manager-mindset]]**: Bộ khung tư duy (Mindset) và kỹ năng thực chiến (Skillset) cho AI PM & Web Product Lead.
 
 ---
 
-## 🎯 Mục tiêu chiến lược
-*   👉 **[[web-momo-okrs-2026]]**: 6M MUA, Web-to-App CR, AI Traffic.
+## 3. THƯ VIỆN QUẢN TRỊ FINTECH, QUY CHUẨN TÀI LIỆU & BÁO CÁO
+
+- **[[awesome-product-management]]**: Thư viện quy chuẩn Quản trị Sản phẩm chuẩn quốc tế (Tooling, Spec Documentation, Metrics, Reading List).
+- **[[awesome-fintech]]**: Thư viện Hệ sinh thái & Mô hình Tài chính Fintech (BaaS, Embedded Finance, APIs kết nối tài chính, Lending/Credit).
+- **[[brd-momo]]**: Quy chuẩn viết tài liệu BRD chuẩn CEO Standard (Problem Framing, JTBD, Product Job, Metrics).
+- **[[web-platform-reporting-framework]]**: Master Framework cho toàn bộ hệ thống báo cáo định kỳ của Web Platform.
+- **[[c-level-reporting-framework]]**: Khung trình bày báo cáo chiến lược dành cho C-Level (Business Impact & Growth).
 
 ---
 
-## 🚀 Cách sử dụng cho AI
-1. **Identify**: Xác định dự án đang ở bước nào trong [[orchestrator_engine]].
-2. **Reason**: Load các **[[01_FRAMEWORKS|Frameworks]]** phù hợp để phân tích vấn đề.
-3. **Execute**: Sử dụng **[[02_SKILLS|Skills]]** để tạo ra output chất lượng cao.
-4. **Verify**: Kiểm tra chéo với [[Zero-Hallucination]] và [[pyramid-principle]].
+## 4. THƯ VIỆN QUY CHUẨN ĐỒNG BỘ THUẬT NGỮ & TUÂN THỦ
+
+- **[[mospark-glossary]]**: Từ điển thuật ngữ chuẩn hóa các khái niệm sản phẩm và hệ thống trong hệ sinh thái MoSpark / MoMo Web Platform.
+- **[[momo-ymyl-guideline]]**: Quy chuẩn tuân thủ E-E-A-T và đánh giá rủi ro đối với mảng sản phẩm tài chính (Your Money Your Life).
+
 ---
 
-## Change Log
-- **Tháng 5/2026:** Khởi tạo tài liệu và chuẩn hóa cấu trúc thư mục.
+## 5. CHỈ ĐẠO CHIẾN LƯỢC & QUY TẮC THỰC THI (MANDATORY DIRECTIVES)
 
+- 👉 **[[MEETING_RECAPS]]**: Bối cảnh chiến lược và chỉ đạo trực tiếp từ Ban Giám đốc (anh Công, anh Tường).
+- 👉 **[[AGENTS]]**: Master Rules về văn phong Product Lead (Không emoji, không tên riêng PIC, Mermaid User Flow, Roadmap Table).
+- 👉 **[[decision_log]]**: Nhật ký các quyết định chiến lược và kỹ thuật đã thống nhất.

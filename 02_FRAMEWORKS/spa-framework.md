@@ -15,7 +15,7 @@
 
 ### 1. Executive Summary
 
-**Situation:** Các Cell Teams (Ví Trả Sau, Bảo Hiểm, Dịch Vụ Công...) ngày càng có nhu cầu mạnh mẽ trong việc đẩy mạnh thu hút người dùng mới (New Users) và tăng tương tác (MAU/MEU) thông qua các kênh tìm kiếm tự nhiên (Google Search, AI Search). 
+**Situation:** Các Cell Teams (Ví Trả Sau, Bảo Hiểm, Dịch Vụ Công...) ngày càng có nhu cầu mạnh mẽ trong việc đẩy mạnh thu hút người dùng mới (New Users) và tăng tương tác (MAU/MEU) thông qua các kênh tìm kiếm tự nhiên (Google Search, AI Search).
 
 **Complication:** Việc Cell Team tự phát triển Web hoặc làm việc với Web Platform theo kiểu "nhờ dev code giúp" mang lại nhiều rủi ro: chất lượng nội dung không đạt chuẩn E-E-A-T, SEO/GEO kém, thiếu trải nghiệm UX/UI nhất quán và tiêu tốn nhiều nguồn lực. Web Platform trước đây chỉ đóng vai trò hỗ trợ kỹ thuật thụ động, chưa cung cấp được một "playbook" trọn gói để scale up hiệu quả và kiểm soát chất lượng ở quy mô lớn.
 
@@ -26,7 +26,7 @@
 ### 2. Bối Cảnh Thị Trường (Internal Context)
 
 - **Hiện trạng vận hành:** Thiếu một quy chuẩn chung giữa GPD và các Cell Team. Yêu cầu làm Web thường là các task rời rạc, dẫn đến lãng phí tài nguyên và tạo ra các "Orphan Pages" hoặc "Zero-Traffic URLs".
-- **Nhu cầu nội bộ (Market Demand):** Cell Team cần traffic và conversion, nhưng không có chuyên môn về SEO/GEO và hệ thống GenAI pipeline. 
+- **Nhu cầu nội bộ (Market Demand):** Cell Team cần traffic và conversion, nhưng không có chuyên môn về SEO/GEO và hệ thống GenAI pipeline.
 - **Định vị mới của Web Platform:** Chuyển từ "Dev Support" sang "Growth Partner".
 
 ---
@@ -48,11 +48,36 @@
 **3.3 Pre-conditions Gate**
 Thiếu 1 trong các điều kiện sau - dừng lại không chuyển giai đoạn:
 
-| # | Pre-condition | Trạng thái | Owner giải quyết |
-|---|---|---|---|
-| P1 | File Business Context (12 fields) phải được điền đầy đủ và duyệt | Bắt buộc trước Gate 1 | Cell Team PO |
-| P2 | PO Cell Team ký cam kết dành tối thiểu 2 giờ/tuần duyệt content | Bắt buộc trước Gate 1 | Cell Team PO |
-| P3 | Ngân sách chạy Off-page/Vendor phải được phê duyệt | Bắt buộc trước Gate 2 | Cell Team Head |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Pre-condition</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trạng thái</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner giải quyết</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">File Business Context (12 fields) phải được điền đầy đủ và duyệt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bắt buộc trước Gate 1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cell Team PO</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PO Cell Team ký cam kết dành tối thiểu 2 giờ/tuần duyệt content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bắt buộc trước Gate 1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cell Team PO</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ngân sách chạy Off-page/Vendor phải được phê duyệt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bắt buộc trước Gate 2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cell Team Head</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -61,24 +86,70 @@ Thiếu 1 trong các điều kiện sau - dừng lại không chuyển giai đo�
 #### Job #1: Đánh giá cơ hội thị trường (reSearch - Discovery)
 > "Tôi muốn biết dịch vụ của tôi có tiềm năng trên Web không trước khi đổ tiền và dev vào làm."
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Cell Team cần biết Search Volume, Market Cap và dự phóng W2A của Use Case. |
-| Emotional | Tự tin đưa ra quyết định đầu tư, không sợ lãng phí nguồn lực. |
-| Social | Chứng minh được với Management rằng đây là kênh acquisition tiềm năng. |
-| Trigger | Khi có mục tiêu tăng trưởng OKR mới nhưng kênh In-app đã bão hòa. |
-| Giải pháp Flow | Điền Requirement Form → Nhận SEO/GEO Proposal Deck & Keyword Map (Miễn phí). |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cell Team cần biết Search Volume, Market Cap và dự phóng W2A của Use Case.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự tin đưa ra quyết định đầu tư, không sợ lãng phí nguồn lực.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chứng minh được với Management rằng đây là kênh acquisition tiềm năng.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khi có mục tiêu tăng trưởng OKR mới nhưng kênh In-app đã bão hòa.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giải pháp Flow</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điền Requirement Form → Nhận SEO/GEO Proposal Deck & Keyword Map (Miễn phí).</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Job #2: Thử nghiệm an toàn (Pilot - Plan)
 > "Tôi muốn chạy thử một bản MVP nhanh nhất có thể để chứng minh W2A CR có đạt như kỳ vọng không."
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Cần một Mini Web/Widget có tracking đầy đủ (Appsflyer, Umami) lên live trong thời gian ngắn. |
-| Emotional | An tâm vì rủi ro thấp, chỉ cần bỏ ra thời gian review, chưa tốn tiền chạy ads/vendor. |
-| Social | Cầm số liệu thực tế (Baseline) đi xin ngân sách mở rộng dễ dàng hơn. |
-| Trigger | Khi Gate 1 pass và Proposal Deck được thông qua. |
-| Giải pháp Flow | Web Platform build MVP → GenAI 10-15 bài → Live & Track W2A. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần một Mini Web/Widget có tracking đầy đủ (Appsflyer, Umami) lên live trong thời gian ngắn.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">An tâm vì rủi ro thấp, chỉ cần bỏ ra thời gian review, chưa tốn tiền chạy ads/vendor.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cầm số liệu thực tế (Baseline) đi xin ngân sách mở rộng dễ dàng hơn.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khi Gate 1 pass và Proposal Deck được thông qua.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giải pháp Flow</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform build MVP → GenAI 10-15 bài → Live & Track W2A.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -88,11 +159,36 @@ Framework S-P-A hoạt động theo cơ chế "Bóc vỏ hành" với 3 chặng 
 
 **Quy trình 3 Giai Đoạn:**
 
-| Stage | Giải pháp | Output (Deliverable) | Chi phí cho Cell Team |
-|---|---|---|---|
-| **S (reSearch)** | Discovery | SEO/GEO Proposal Deck + Bản đồ từ khóa. | 0đ (Brief 60 phút). |
-| **P (Pilot)** | MVP Plan | Live Mini Web/Widget + Dashboard đo lường W2A. | Nguồn lực PO (2h/tuần). |
-| **A (Action)** | Growth | Traffic quy mô lớn + Báo cáo đóng góp MAU/MEU. | 100% ngân sách Vendor/Media. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Stage</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giải pháp</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Output (Deliverable)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chi phí cho Cell Team</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>S (reSearch)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Discovery</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO/GEO Proposal Deck + Bản đồ từ khóa.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0đ (Brief 60 phút).</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P (Pilot)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MVP Plan</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Live Mini Web/Widget + Dashboard đo lường W2A.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nguồn lực PO (2h/tuần).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>A (Action)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Growth</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic quy mô lớn + Báo cáo đóng góp MAU/MEU.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">100% ngân sách Vendor/Media.</td>
+    </tr>
+  </tbody>
+</table>
 
 **Cổng Kiểm Soát (Stage Gates):**
 
@@ -103,21 +199,75 @@ Framework S-P-A hoạt động theo cơ chế "Bóc vỏ hành" với 3 chặng 
 
 ### 6. Success Metrics
 
-| Metric | Lane | Target | Timeframe | Tracking |
-|---|---|---|---|---|
-| **Average W2A CR (Pilot phase)** | Utility / Payment | > 5% | 30 ngày sau Pilot | Appsflyer + GA4 |
-| **Số lượng Use Case Onboard** | N/A | 10 Use Cases | Cuối 2026 | Internal Jira / MoSpark |
-| Time-to-Market (S to P) | N/A | < 14 ngày | Ongoing | Internal Tool |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Lane</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Timeframe</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tracking</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Average W2A CR (Pilot phase)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Utility / Payment</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">> 5%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">30 ngày sau Pilot</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Appsflyer + GA4</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Số lượng Use Case Onboard</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">N/A</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">10 Use Cases</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cuối 2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Internal Jira / MoSpark</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Time-to-Market (S to P)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">N/A</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 14 ngày</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ongoing</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Internal Tool</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ### 7. Dependencies & Constraints
 
-| Dependency | Mô tả | Blocker? | Status |
-|---|---|---|---|
-| Nguồn lực Web Platform | Team GPD phải đủ dev để build MVP Widget/Mini Web cho các Cell Team. | Có | Đang vận hành |
-| Appsflyer / Onelink Setup | Cơ sở hạ tầng tracking W2A phải chuẩn xác để qua Gate 2. | Có | Đã sẵn sàng |
-| GenAI Content Pipeline | Cần cho giai đoạn sinh 10-15 bài Pilot test nhanh. | Có | Đã tích hợp |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dependency</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Blocker?</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nguồn lực Web Platform</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Team GPD phải đủ dev để build MVP Widget/Mini Web cho các Cell Team.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang vận hành</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Appsflyer / Onelink Setup</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cơ sở hạ tầng tracking W2A phải chuẩn xác để qua Gate 2.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đã sẵn sàng</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GenAI Content Pipeline</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần cho giai đoạn sinh 10-15 bài Pilot test nhanh.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đã tích hợp</td>
+    </tr>
+  </tbody>
+</table>
 
 - **Constraints:**
   - Quy trình này đòi hỏi sự kỷ luật cao từ Cell Team (cung cấp Business Context chuẩn, review content đúng hạn).

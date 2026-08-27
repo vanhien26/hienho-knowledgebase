@@ -7,7 +7,6 @@ Nền tảng sản xuất nội dung bằng AI
 > - **PIC:** Trọng (Tech), Lộc (User Role)
 > - **Version:** 4.13 · June 2026
 
-
 ---
 
 ## 1. Executive Summary
@@ -36,22 +35,73 @@ Kiến trúc của GenAI Content được thiết kế dựa trên sự phân t�
 
 **Luồng tương tác:**
 
-| Input | Xử lý | Output | Gate |
-|---|---|---|---|
-| Business Context (PM) + SEO Inventory (Hiến) | GenAI Content Engine tiếp nhận context + keyword | AI Outline draft | - |
-| PM xem TOFU/MOFU/BOFU (Expand/Collapse Cluster), chọn Primary Keyword | Hệ thống generate Outline | Outline draft | - |
-| PM/Content review Outline | Chọn (Select) Outline phù hợp | **Outline Selected** | **Hard gate - bắt buộc** |
-| Outline Selected + Chọn Page Type (Blog/LP/Merchant...) push sang CMS Page Editor | Content paste bài (A) hoặc click GenAI Detail (B) | Trang Content Final | SEO/GEO Score gate |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Input</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Xử lý</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Output</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Gate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Business Context (PM) + SEO Inventory (Hiến)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GenAI Content Engine tiếp nhận context + keyword</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI Outline draft</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM xem TOFU/MOFU/BOFU (Expand/Collapse Cluster), chọn Primary Keyword</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hệ thống generate Outline</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Outline draft</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/Content review Outline</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chọn (Select) Outline phù hợp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Outline Selected</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hard gate - bắt buộc</strong></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Outline Selected + Chọn Page Type (Blog/LP/Merchant...) push sang CMS Page Editor</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content paste bài (A) hoặc click GenAI Detail (B)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang Content Final</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO/GEO Score gate</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ## 2. Stakeholder (Nhóm người dùng chính)
 
-| Vai trò | Trách nhiệm chính | Mục tiêu |
-| :--- | :--- | :--- |
-| **Content Writer** | Thực thi sản xuất bài viết | Tạo Use Case, quản lý từ khóa, thêm dữ liệu tham khảo, chỉnh sửa dàn ý và tạo bản nháp bài viết tự động. |
-| **Guideline Admin** | Quản trị tiêu chuẩn | Thiết lập và cập nhật hệ thống Prompt & Guidelines (SEO, AEO, GEO) để kiểm soát chất lượng đầu ra. |
-| **Web Product Lead** | Kiểm soát gate cuối | Review điểm Scoring và phê duyệt xuất bản (Sign-off). |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trách nhiệm chính</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục tiêu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Content Writer</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thực thi sản xuất bài viết</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tạo Use Case, quản lý từ khóa, thêm dữ liệu tham khảo, chỉnh sửa dàn ý và tạo bản nháp bài viết tự động.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Guideline Admin</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quản trị tiêu chuẩn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thiết lập và cập nhật hệ thống Prompt & Guidelines (SEO, AEO, GEO) để kiểm soát chất lượng đầu ra.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Product Lead</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kiểm soát gate cuối</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Review điểm Scoring và phê duyệt xuất bản (Sign-off).</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -116,14 +166,47 @@ Mỗi dự án SEO/GEO (PLG Project) trên MoSpark không chỉ đơn thuần l�
 - **Cơ chế Định tuyến đường dẫn:** Việc mapping 1-1 này nhằm tuân thủ tuyệt đối cơ chế định tuyến SEO/GEO của MoSpark: mọi bài viết Blog, tài liệu thuộc dự án bắt buộc phải nằm dưới URL của Microsite đó theo cấu trúc: `/{use-case}/blog*` (Ví dụ: `/phat-nguoi/blog/quy-dinh-phat-nguoi-o-to`).
 - **Phân tách thực thể:** Bản thân Microsite quản lý toàn bộ tài sản nội dung của Use Case đó. Blog, Landing Page, FAQ, Merchant Page... đều là các module phân phối thuộc Microsite - không phải các entity hoạt động độc lập:
 
-| Component | Nội dung quản lý | Owner |
-|---|---|---|
-| **Sub-pages** | Hub page, Spoke pages, Landing pages | PM/PO |
-| **Content** | Blog articles, Landing Pages, Merchant Pages, FAQs, Static content | PM/Content Team |
-| **Meta data** | Title, Description, OG tags, Schema markup | MoSpark auto + SEO Lead review |
-| **llms.txt** | AI crawler policy per Microsite | SEO Lead |
-| **Dashboard** | Traffic, W2A, Keyword ranking, SEO Inventory per Use Case | PM/PO view |
-| **Content management** | Toàn bộ pages (Blog/LP/Merchant...) thuộc Microsite | PM/Content Team |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Component</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung quản lý</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sub-pages</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hub page, Spoke pages, Landing pages</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/PO</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Content</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog articles, Landing Pages, Merchant Pages, FAQs, Static content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/Content Team</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Meta data</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Title, Description, OG tags, Schema markup</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark auto + Web Product Lead review</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>llms.txt</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI crawler policy per Microsite</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Dashboard</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic, W2A, Keyword ranking, SEO Inventory per Use Case</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/PO view</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Content management</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Toàn bộ pages (Blog/LP/Merchant...) thuộc Microsite</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/Content Team</td>
+    </tr>
+  </tbody>
+</table>
 
 Content được tạo theo 2 con đường - cả 2 đều yêu cầu Primary Keyword phải đăng ký trong Keyword Master Registry trước khi publish:
 - **Manual (CMS Page Editor trực tiếp):** Content paste bài viết vào CMS Page Editor, nhập Primary Keyword để trigger Unique ID Check.
@@ -133,19 +216,53 @@ Content được tạo theo 2 con đường - cả 2 đều yêu cầu Primary K
 
 Hiển thị toàn bộ trang nội dung (Pages) của project, phân biệt rõ bằng badge loại hình và nguồn gốc:
 
-| Loại nguồn | Badge nguồn | Badge định dạng | Columns hiển thị |
-|---|---|---|---|
-| **GenAI** | `GenAI` (tím) | `Blog` / `LP` / `FAQ` / `Merchant` | Title, Page Type, Primary Keyword, Status, Ngày tạo, Model, Cost |
-| **Manual** | `Manual` (xám) | `Blog` / `LP` / `FAQ` / `Merchant` | Title, Page Type, Primary Keyword, Status, Ngày tạo |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại nguồn</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Badge nguồn</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Badge định dạng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Columns hiển thị</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GenAI</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">GenAI</code> (tím)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Blog</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">LP</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">FAQ</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Merchant</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Title, Page Type, Primary Keyword, Status, Ngày tạo, Model, Cost</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Manual</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Manual</code> (xám)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Blog</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">LP</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">FAQ</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Merchant</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Title, Page Type, Primary Keyword, Status, Ngày tạo</td>
+    </tr>
+  </tbody>
+</table>
 
 **Content Management - Detail View (GenAI article/page):**
 
 Khi click vào trang GenAI, hiển thị 2 panel:
 
-| Panel | Nội dung |
-|---|---|
-| **Editor** | Full CMS page editor (phù hợp theo Page Type đã chọn) - chỉnh sửa nội dung, metadata, publish/unpublish |
-| **AI Usage** | Usage (input tokens / output tokens), Cost (ước tính theo API pricing), Model (tên model đã dùng để generate) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Panel</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Editor</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Full CMS page editor (phù hợp theo Page Type đã chọn) - chỉnh sửa nội dung, metadata, publish/unpublish</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>AI Usage</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Usage (input tokens / output tokens), Cost (ước tính theo API pricing), Model (tên model đã dùng để generate)</td>
+    </tr>
+  </tbody>
+</table>
 
 > **Lý do cần AI Usage panel:** PM/PO và Finance cần biết chi phí AI thực tế per trang và per Use Case để quản lý budget GenAI. Không có data này thì không thể scale có kiểm soát.
 
@@ -157,18 +274,78 @@ Chỉ hiển thị Editor - không có AI Usage panel vì không có API call.
 
 **Điều kiện tiên quyết:** PLG Project đã tạo và mapped với Microsite trước khi bắt đầu.
 
-| Bước | Hành động | Owner | Gate |
-|---|---|---|---|
-| **1** | PLG Project mapped vào Microsite | PM/PO | Prerequisite cứng - không bỏ qua |
-| **2** | Nhập Business Context đầy đủ theo template | PM + SEO Lead validate | Bắt buộc hoàn thành trước khi tạo keyword |
-| **3** | Xem SEO Inventory + Topic Cluster (Expand/Collapse UI) | PM chọn stage/cluster cần tấn công | TOFU/MOFU/BOFU hiển thị, PM mở rộng cluster để xem danh sách Primary Keywords |
-| **4** | Chọn / Áp dụng Primary Keyword từ Cluster | PM / Content Team | Trực tiếp trigger tạo content cho keyword, chạy Unique ID Check tự động toàn hệ thống |
-| **5** | AI generate Outline | Hệ thống | - |
-| **6** | **OUTLINE SELECTED & CHỌN PAGE TYPE** | PM/Content | **Hard gate** - PM duyệt outline và chọn định dạng đầu ra (Blog, Landing Page, FAQ, Merchant Page...) |
-| **7** | Outline & Page Type push sang CMS Page Editor | Tự động | CMS Page Editor khởi tạo giao diện tương ứng theo Page Type đã chọn |
-| **8** | Review brief + Chọn cách tạo bài | PM + Content Team | PM review và chỉnh sửa lại dàn ý (brief) trong Page Editor nếu cần - sau đó chọn cách tạo nội dung |
-| **9** | Review & SEO/GEO Score | Web Product Lead | Hard block nếu chưa pass bộ lọc SEO/GEO Score của Page Type tương ứng |
-| **10** | Publish | Content Team | Live trang trên momo.vn |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Bước</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hành động</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Gate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PLG Project mapped vào Microsite</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/PO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Prerequisite cứng - không bỏ qua</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhập Business Context đầy đủ theo template</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM + Web Product Lead validate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bắt buộc hoàn thành trước khi tạo keyword</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xem SEO Inventory + Topic Cluster (Expand/Collapse UI)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM chọn stage/cluster cần tấn công</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TOFU/MOFU/BOFU hiển thị, PM mở rộng cluster để xem danh sách Primary Keywords</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>4</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chọn / Áp dụng Primary Keyword từ Cluster</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM / Content Team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trực tiếp trigger tạo content cho keyword, chạy Unique ID Check tự động toàn hệ thống</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>5</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI generate Outline</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hệ thống</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>6</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>OUTLINE SELECTED & CHỌN PAGE TYPE</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/Content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hard gate</strong> - PM duyệt outline và chọn định dạng đầu ra (Blog, Landing Page, FAQ, Merchant Page...)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>7</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Outline & Page Type push sang CMS Page Editor</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự động</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CMS Page Editor khởi tạo giao diện tương ứng theo Page Type đã chọn</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>8</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Review brief + Chọn cách tạo bài</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM + Content Team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM review và chỉnh sửa lại dàn ý (brief) trong Page Editor nếu cần - sau đó chọn cách tạo nội dung</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>9</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Review & SEO/GEO Score</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hard block nếu chưa pass bộ lọc SEO/GEO Score của Page Type tương ứng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>10</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Publish</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content Team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Live trang trên momo.vn</td>
+    </tr>
+  </tbody>
+</table>
 
 **Bước 6 - Chọn Page Type (Định dạng phân phối):**
 Tại bước chọn Outline, PM quyết định loại trang mà content này sẽ hiển thị:
@@ -186,21 +363,64 @@ Tại bước chọn Outline, PM quyết định loại trang mà content này s
 
 **8.2 - Chọn cách tạo bài:**
 
-| Lựa chọn | Cơ chế | Khi nào dùng |
-|---|---|---|
-| **A - Manual** | Paste bài từ AI cá nhân (ChatGPT, Claude riêng) hoặc tự viết theo brief đã review | Đã có draft sẵn, hoặc muốn kiểm soát toàn bộ quá trình viết |
-| **B - GenAI Detail** | Click nút "GenAI Detail" trong CMS Page Editor - hệ thống AI generate full page content từ brief đã review | Chưa có draft, muốn AI của platform viết hoàn chỉnh từ brief |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Lựa chọn</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cơ chế</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Khi nào dùng</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>A - Manual</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Paste bài từ AI cá nhân (ChatGPT, Claude riêng) hoặc tự viết theo brief đã review</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đã có draft sẵn, hoặc muốn kiểm soát toàn bộ quá trình viết</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>B - GenAI Detail</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Click nút "GenAI Detail" trong CMS Page Editor - hệ thống AI generate full page content từ brief đã review</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa có draft, muốn AI của platform viết hoàn chỉnh từ brief</td>
+    </tr>
+  </tbody>
+</table>
 
 **Bước 3 - PM thấy gì trong SEO Inventory (Control Panel):**
 
-| Thông tin | Ý nghĩa với PM |
-|---|---|
-| Market Volume (total) | Market Sizing toàn Use Case - basis để set KPI và độ ưu tiên |
-| Keyword cluster theo TOFU (Expandable) | Các cụm chủ đề thông tin - mở ra để xem toàn bộ Primary Keywords |
-| Keyword cluster theo MOFU (Expandable) | Các cụm chủ đề so sánh/đánh giá - mở ra để xem toàn bộ Primary Keywords |
-| Keyword cluster theo BOFU (Expandable) | Các cụm chủ đề giao dịch - mở ra để xem toàn bộ Primary Keywords |
-| SoV MoMo hiện tại | MoMo đang chiếm bao nhiêu % thị trường - biết gap để set target |
-| Nút "Apply / Write Outline" | Bấm trực tiếp cạnh Keyword đã cluster trong Inventory để tự động tạo outline mà không cần copy-paste |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thông tin</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ý nghĩa với PM</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Market Volume (total)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Market Sizing toàn Use Case - basis để set KPI và độ ưu tiên</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Keyword cluster theo TOFU (Expandable)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các cụm chủ đề thông tin - mở ra để xem toàn bộ Primary Keywords</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Keyword cluster theo MOFU (Expandable)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các cụm chủ đề so sánh/đánh giá - mở ra để xem toàn bộ Primary Keywords</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Keyword cluster theo BOFU (Expandable)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các cụm chủ đề giao dịch - mở ra để xem toàn bộ Primary Keywords</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SoV MoMo hiện tại</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo đang chiếm bao nhiêu % thị trường - biết gap để set target</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nút "Apply / Write Outline"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bấm trực tiếp cạnh Keyword đã cluster trong Inventory để tự động tạo outline mà không cần copy-paste</td>
+    </tr>
+  </tbody>
+</table>
 
 **Luồng cập nhật trang đã có (Update Flow):**
 
@@ -215,7 +435,7 @@ Trang đã tồn tại có thể cập nhật theo 2 cách:
 1.  **Project-First Requirement (Ràng buộc bối cảnh):** Mọi **Primary Keyword** bắt buộc phải thuộc về một **PLG Project** cụ thể. Keyword không được phép tồn tại "mồ côi" vì Project là nơi cung cấp *Business Context* và định nghĩa cấu trúc URL.
 2.  **Strict 1-1 Mapping (Tính duy nhất):** Quy tắc **1 Bài viết ↔ 1 Primary Keyword**. Một Primary Keyword chỉ được đại diện cho một URL Master và một nội dung duy nhất. Nếu người dùng tạo trùng, hệ thống phải chặn và yêu cầu sử dụng luồng "Update/Enhance".
 3.  **Single Ownership (Phân cấp URL):** Một Primary Keyword chỉ thuộc về **duy nhất 1 PLG Project**. Điều này đảm bảo sự nhất quán trong URL Hierarchy (ví dụ: `/phat-nguoi/` vs `/merchant/`) và tránh tranh chấp Authority giữa các Use Case.
-4.  **Cross-Project Cannibalization Check (Kiểm soát Xung đột chéo):** Phạm vi quét của *Keyword Master Registry* phải mang tính **Global (Toàn cục)** toàn hệ thống MoSpark, không nằm cục bộ trong 1 Project. 
+4.  **Cross-Project Cannibalization Check (Kiểm soát Xung đột chéo):** Phạm vi quét của *Keyword Master Registry* phải mang tính **Global (Toàn cục)** toàn hệ thống MoSpark, không nằm cục bộ trong 1 Project.
     - *Ví dụ:* Nếu Project "Phạt Nguội" đã sở hữu keyword `quy định ô tô`, thì Project "Bảo Hiểm" **không được phép** tạo mới URL với keyword này.
     - *Xử lý:* Thay vì tạo 2 URL triệt tiêu nhau, hệ thống yêu cầu sử dụng chung 1 bài viết Authority và thực hiện **Cross-linking** (Bài viết Phạt Nguội chèn Banner/CTA bán Bảo Hiểm).
 5.  **Unique ID Check (Kho định danh):** Mọi Keyword khi nhập vào phải được đối soát với *Keyword Master Registry* của toàn hệ thống trước khi cho phép đi vào luồng sản xuất nội dung.
@@ -225,20 +445,103 @@ Trang đã tồn tại có thể cập nhật theo 2 cách:
 
 ### 6.4. Workflow Chi tiết - 10 Bước thực thi (GenAI Flow)
 
-| Bước | Tên Bước | Hành động | Input/Output | Owner |
-|---|---|---|---|---|
-| **1** | **Map Microsite** | PLG Project mapping vào Microsite tương ứng | Project linked to Microsite | PM/PO |
-| **2** | **Business Context** | Nhập đầy đủ 12 trường theo template (xem Section 7) | Context Layer - Source of Truth cho AI | PM/Growth + SEO Lead validate |
-| **3** | **SEO Inventory** | Xem Market Sizing, mở rộng TOFU/MOFU/BOFU cluster (Expand/Collapse UI) | Bảng Keyword Strategy tích hợp Business Context | PM/Growth |
-| **4** | **Keyword Apply** | Bấm nút **"Apply / Write Outline"** trực tiếp cạnh Keyword đã phân cụm | Keyword vào Master Registry, Unique ID Check tự động | PM / Content Team |
-| **5** | **AI Outline** | AI generate dàn ý thô dựa trên Business Context + Primary Keyword | Outline Draft | Hệ thống |
-| **6** | **OUTLINE SELECTED & PAGE TYPE** | PM/Content review, duyệt (Select) Outline **và chọn định dạng phân phối (Page Type)** | Outline & Page Type Confirmed | PM/Content - **Hard gate** |
-| **7** | **Push sang CMS Editor** | Tự động chuyển Outline và cấu trúc giao diện theo Page Type đã chọn | CMS Page Editor nhận structure | Tự động |
-| **8** | **Review & Edit Brief** | PM đọc lại dàn ý trong CMS Editor, chỉnh sửa nếu cần (lần review cuối trước khi viết) | Brief final trong CMS Page Editor | PM/Content Team |
-| **8A** | **Manual** | Paste bài viết từ AI cá nhân hoặc tự viết theo brief đã review | Content Page draft | Content Team |
-| **8B** | **GenAI Detail** | Click "GenAI Detail" trong CMS Editor - AI generate full page content từ brief | Content Page draft | AI (Claude API) |
-| **9** | **Review Quality** | Kiểm tra E-E-A-T, YMYL, SEO/GEO Score - sign-off | Verified content page | Web Product Lead - Hard gate |
-| **10** | **Publish** | Content Team publish từ CMS Page Editor | Live trên momo.vn (Blog/LP/FAQ...) | Content Team |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Bước</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Bước</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hành động</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Input/Output</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Map Microsite</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PLG Project mapping vào Microsite tương ứng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Project linked to Microsite</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/PO</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Business Context</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhập đầy đủ 12 trường theo template (xem Section 7)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Context Layer - Source of Truth cho AI</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/Growth + Web Product Lead validate</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>SEO Inventory</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xem Market Sizing, mở rộng TOFU/MOFU/BOFU cluster (Expand/Collapse UI)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảng Keyword Strategy tích hợp Business Context</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/Growth</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>4</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Keyword Apply</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bấm nút <strong>"Apply / Write Outline"</strong> trực tiếp cạnh Keyword đã phân cụm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Keyword vào Master Registry, Unique ID Check tự động</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM / Content Team</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>5</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>AI Outline</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI generate dàn ý thô dựa trên Business Context + Primary Keyword</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Outline Draft</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hệ thống</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>6</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>OUTLINE SELECTED & PAGE TYPE</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/Content review, duyệt (Select) Outline <strong>và chọn định dạng phân phối (Page Type)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Outline & Page Type Confirmed</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/Content - <strong>Hard gate</strong></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>7</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Push sang CMS Editor</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự động chuyển Outline và cấu trúc giao diện theo Page Type đã chọn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CMS Page Editor nhận structure</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự động</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>8</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Review & Edit Brief</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM đọc lại dàn ý trong CMS Editor, chỉnh sửa nếu cần (lần review cuối trước khi viết)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Brief final trong CMS Page Editor</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/Content Team</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>8A</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Manual</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Paste bài viết từ AI cá nhân hoặc tự viết theo brief đã review</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content Page draft</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content Team</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>8B</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GenAI Detail</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Click "GenAI Detail" trong CMS Editor - AI generate full page content từ brief</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content Page draft</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI (Claude API)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>9</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Review Quality</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kiểm tra E-E-A-T, YMYL, SEO/GEO Score - sign-off</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Verified content page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead - Hard gate</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>10</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Publish</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content Team publish từ CMS Page Editor</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Live trên momo.vn (Blog/LP/FAQ...)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content Team</td>
+    </tr>
+  </tbody>
+</table>
 
 ```mermaid
 graph TD
@@ -302,11 +605,40 @@ graph TD
 
 ### 6.6. Approval Gates
 
-| Gate | Bước | Owner | Condition | Consequence nếu fail |
-|---|---|---|---|---|
-| **Business Context Complete** | 2 | PM/Growth + Web Product Lead | Đủ 12 trường, chính xác, pháp lý clear | Block - không tạo được keyword |
-| **Outline Selected & Page Type Chosen** | 6 | PM/Content | PM bắt buộc click Select Outline và chọn Page Type đầu ra | Hard block - không push sang CMS Page Editor được |
-| **SEO/GEO Score Pass** | 9 | Web Product Lead | Bài viết/trang pass toàn bộ scoring criteria của Page Type đó, sign-off | Hard block - không publish được |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Gate</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Bước</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Condition</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Consequence nếu fail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Business Context Complete</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/Growth + Web Product Lead</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đủ 12 trường, chính xác, pháp lý clear</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Block - không tạo được keyword</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Outline Selected & Page Type Chosen</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/Content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM bắt buộc click Select Outline và chọn Page Type đầu ra</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hard block - không push sang CMS Page Editor được</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>SEO/GEO Score Pass</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">9</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bài viết/trang pass toàn bộ scoring criteria của Page Type đó, sign-off</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hard block - không publish được</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -328,7 +660,7 @@ sequenceDiagram
         Registry-->>Editor: OK
         Registry->>GenAI: Tạo record rỗng chờ Enhance
     end
-    
+
     Note over GenAI,Editor: Luồng Top-Down (GenAI)
     GenAI->>Registry: Tạo Primary Keyword
     Registry->>Editor: Khởi tạo Draft Page (theo Page Type)
@@ -347,7 +679,7 @@ sequenceDiagram
 
 3.  **Quản lý Tính Unique (Unique ID Check):**
     - **Vị trí kiểm soát:** Duy nhất tại module GenAI Content.
-    - **Logic:** Dù nội dung đến từ luồng nào, Primary Keyword (từ CMS Editor hoặc từ GenAI) đều phải "check-in" tại Keyword Master Registry. 
+    - **Logic:** Dù nội dung đến từ luồng nào, Primary Keyword (từ CMS Editor hoặc từ GenAI) đều phải "check-in" tại Keyword Master Registry.
     - Nếu Keyword đã tồn tại, hệ thống sẽ ngăn chặn việc tạo mới và yêu cầu user sử dụng trang hiện có để tránh "Content Cannibalization".
 
 ### 6.8. Luồng sản xuất Long Content Section cho Microsite & Merchant Page
@@ -523,7 +855,7 @@ Việc xác định rõ đơn giá cố định trên từng bài viết giúp P
 Hệ thống GenAI Content sẽ phục vụ sản xuất nội dung cho các dự án chiến lược sau:
 
 1. **Dự án Phạt Nguội (Pilot):** Sản xuất 20+ bài viết Blog chuẩn E-E-A-T và pSEO địa phương.
-2. **Dự án Merchant Directory (`/merchant`):** 
+2. **Dự án Merchant Directory (`/merchant`):**
    - Sản xuất tự động **Thông tin mô tả Merchant** (Intro).
    - Tạo bộ **FAQ & HowTo thanh toán** cho từng Merchant (Ví dụ: "Highlands Coffee có nhận MoMo không?").
    - Đảm bảo tính nhất quán của thông tin ưu đãi và phương thức thanh toán (VTS/QR).

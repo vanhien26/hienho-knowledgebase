@@ -47,11 +47,36 @@ Khi review nội dung do AI tạo ra (Claude/Gemini), luôn kiểm tra:
 ## 🛠 Thực thi: The Interrogation Log (Mẫu output)
 Khi được yêu cầu "Critical Thinking" cho một dự án, Agent hãy output theo format:
 
-| Giả định (Assumption) | Lỗ hổng / Nghi vấn (Challenge) | Cần Verify gì? | Priority |
-|:--- |:--- |:--- |:--- |
-| "User cần đọc hướng dẫn vay" | "User có thể chỉ muốn biết lãi suất thực tế ngay" | A/B test Simulation tool vs Long-form content | P1 |
-| "Traffic tăng sẽ tăng MAU" | "Traffic từ keyword 'là gì' thường có bounce rate cao" | Filter intent 'Buy/Do' trong keyword map | P1 |
-| "Copy layout của Wise.com" | "Context người dùng Việt Nam khác người dùng Wise" | Check JTBD local: User cần tin tưởng hay cần tốc độ? | P2 |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giả định (Assumption)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Lỗ hổng / Nghi vấn (Challenge)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cần Verify gì?</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Priority</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"User cần đọc hướng dẫn vay"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"User có thể chỉ muốn biết lãi suất thực tế ngay"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">A/B test Simulation tool vs Long-form content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Traffic tăng sẽ tăng MAU"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Traffic từ keyword 'là gì' thường có bounce rate cao"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Filter intent 'Buy/Do' trong keyword map</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Copy layout của Wise.com"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Context người dùng Việt Nam khác người dùng Wise"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Check JTBD local: User cần tin tưởng hay cần tốc độ?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

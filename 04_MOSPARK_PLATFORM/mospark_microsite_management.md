@@ -24,7 +24,7 @@ Mỗi Use Case của MoMo (Vay Nhanh, Phạt Nguội, BH xe máy, Cinema...) c�
 PM/PO chạy Use Case nhưng không có visibility toàn cục:
 - Không biết Use Case mình có Microsite chưa hay cần tạo mới.
 - Khi tạo Blog, không biết mình đang publish trong namespace nào - dễ tạo trùng URL hoặc gây Keyword Cannibalization.
-- SEO Lead không có single view để audit portfolio tổng thể: Use Case nào đang active, Use Case nào cần archive.
+- Web Product Lead không có single view để audit portfolio tổng thể: Use Case nào đang active, Use Case nào cần archive.
 - Không có nơi quản lý llms.txt per Use Case - AI crawler policy đang bị áp dụng chung toàn site thay vì granular theo Use Case.
 - **Sitemap không phản ánh Web Structure thực tế:** URL vào/ra sitemap phụ thuộc Dev cấu hình thủ công. Không ai kiểm soát được URL nào deserves to be indexed, URL nào gây crawl budget waste. Content Strategy định nghĩa Hub-Spoke-Blog nhưng sitemap không biết có hierarchy đó tồn tại.
 
@@ -37,7 +37,7 @@ Mỗi Microsite = 1 Use Case = 1 URL namespace trên momo.vn. Đây là **đơn 
 **4 vấn đề được giải quyết:**
 - PM/PO thấy tất cả Microsite của GPD trong 1 màn hình, tự tạo mới mà không cần Dev.
 - Hệ thống enforce "1 Use Case = 1 Microsite" - không để URL namespace chồng lắp.
-- SEO Lead có portfolio view để ưu tiên đầu tư và audit health toàn bộ Microsite.
+- Web Product Lead có portfolio view để ưu tiên đầu tư và audit health toàn bộ Microsite.
 - **MoSpark làm chủ Sitemap theo Web Structure:** mọi URL live tự động vào sitemap với đúng priority theo tầng (Hub > Tool > Spoke > Blog), mọi URL archive/410 tự động ra khỏi sitemap và submit GSC - không cần Dev can thiệp.
 
 ---
@@ -46,24 +46,81 @@ Mỗi Microsite = 1 Use Case = 1 URL namespace trên momo.vn. Đây là **đơn 
 
 ### 2.1. Microsite là gì
 
-| Thuật ngữ | Định nghĩa |
-|---|---|
-| **Microsite** | Tên trong platform - đơn vị quản lý nội dung của 1 Use Case trên MoSpark |
-| **Mini Web** | Tên hiển thị trên UI mà PM/PO thấy - đồng nghĩa với Microsite |
-| **URL Namespace** | Toàn bộ URL nằm dưới prefix của Microsite. Ví dụ: `/vay-nhanh`, `/vay-nhanh/blog/*` |
-| **Use Case ID** | Định danh duy nhất của Use Case (ví dụ: `vay-nhanh`, `phat-nguoi`). Không thay đổi sau khi tạo |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thuật ngữ</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Định nghĩa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Microsite</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tên trong platform - đơn vị quản lý nội dung của 1 Use Case trên MoSpark</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Mini Web</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tên hiển thị trên UI mà PM/PO thấy - đồng nghĩa với Microsite</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>URL Namespace</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Toàn bộ URL nằm dưới prefix của Microsite. Ví dụ: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/vay-nhanh</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/vay-nhanh/blog/*</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Use Case ID</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Định danh duy nhất của Use Case (ví dụ: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">vay-nhanh</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">phat-nguoi</code>). Không thay đổi sau khi tạo</td>
+    </tr>
+  </tbody>
+</table>
 
 Mỗi Microsite quản lý **7 thành phần**:
 
-| Component | Nội dung | Owner |
-|---|---|---|
-| **Sub-pages** | Hub page, Spoke pages, Landing pages thuộc Use Case | PM/PO |
-| **Content** | Blog articles, Static content | PM/Content Team |
-| **Meta data** | Title, Description, OG tags, Schema markup per page | MoSpark auto + SEO Lead review |
-| **Web Structure & Sitemap** | Hierarchy Hub-Spoke-Blog-Tool + XML Sitemap tự động theo lifecycle | MoSpark auto + SEO Lead govern |
-| **llms.txt** | AI crawler policy riêng cho Use Case này | SEO Lead |
-| **Dashboard** | Traffic, W2A conversion, Keyword ranking, SEO Inventory per Use Case | PM/PO view |
-| **Blog management** | Toàn bộ blog articles - GenAI và Manual | PM/Content Team |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Component</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sub-pages</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hub page, Spoke pages, Landing pages thuộc Use Case</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/PO</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Content</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog articles, Static content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/Content Team</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Meta data</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Title, Description, OG tags, Schema markup per page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark auto + Web Product Lead review</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Structure & Sitemap</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hierarchy Hub-Spoke-Blog-Tool + XML Sitemap tự động theo lifecycle</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark auto + Web Product Lead govern</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>llms.txt</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI crawler policy riêng cho Use Case này</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Dashboard</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic, W2A conversion, Keyword ranking, SEO Inventory per Use Case</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/PO view</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Blog management</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Toàn bộ blog articles - GenAI và Manual</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/Content Team</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2.2. Quan hệ Use Case - Microsite
 
@@ -77,12 +134,37 @@ Mỗi Microsite quản lý **7 thành phần**:
 
 ### 2.3. Microsite States (Vòng đời)
 
-| Trạng thái | Ý nghĩa | Điều kiện chuyển |
-|---|---|---|
-| **Draft** | Microsite đã tạo nhưng chưa có page nào live | Mặc định khi tạo mới |
-| **Active** | Có ít nhất 1 page live trên momo.vn | Khi publish page đầu tiên |
-| **Paused** | Tạm dừng - không publish thêm, pages cũ vẫn live | PM/PO hoặc SEO Lead set thủ công |
-| **Archived** | Toàn bộ pages đã 301/410, không còn serve traffic | Sau khi migrate hoặc sunset Use Case |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trạng thái</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ý nghĩa</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điều kiện chuyển</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Draft</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Microsite đã tạo nhưng chưa có page nào live</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mặc định khi tạo mới</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Active</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có ít nhất 1 page live trên momo.vn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khi publish page đầu tiên</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Paused</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tạm dừng - không publish thêm, pages cũ vẫn live</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/PO hoặc Web Product Lead set thủ công</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Archived</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Toàn bộ pages đã 301/410, không còn serve traffic</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sau khi migrate hoặc sunset Use Case</td>
+    </tr>
+  </tbody>
+</table>
 
 > **Quy tắc Archive:** Không được Archive khi Microsite vẫn có traffic > 100 sessions/tháng trong GSC. Phải set 301 redirect toàn bộ URL namespace sang đích mới trước khi Archive.
 
@@ -98,13 +180,54 @@ Content Strategy  →  Web Structure  →  Sitemap  →  Crawl Budget  →  Inde
 
 **Mô hình Hub-Spoke-Blog-Tool:**
 
-| Tầng | URL pattern | Vai trò SEO/Content | Sitemap Priority | Changefreq |
-|---|---|---|---|---|
-| **Hub** | `/{slug}` | Trang trụ cột - thu gom toàn bộ Link Equity của Use Case. Target transactional keywords. Conversion page. | `1.0` | `weekly` |
-| **Tool** | `/{slug}/tool/{name}` | Utility tool tạo unique data (calculator, checker, simulator). Không LLM nào fabricate được. Anti-LLM moat. | `0.9` | `weekly` |
-| **Spoke** | `/{slug}/{topic}` | Mở rộng topical authority theo chủ đề. MOFU content - comparison, guide, deep-dive. Dồn link về Hub. | `0.8` | `weekly` |
-| **Blog** | `/{slug}/blog/{article}` | Satellite content TOFU/MOFU. Capture informational queries. Dồn link về Spoke hoặc Hub. | `0.7` | `monthly` |
-| **Landing Page** | `/landing/{campaign}` | Campaign ngắn hạn. Không rank dài hạn. | **Excluded** | - |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tầng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL pattern</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò SEO/Content</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Sitemap Priority</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Changefreq</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hub</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/{slug}</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang trụ cột - thu gom toàn bộ Link Equity của Use Case. Target transactional keywords. Conversion page.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">1.0</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">weekly</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tool</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/{slug}/tool/{name}</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Utility tool tạo unique data (calculator, checker, simulator). Không LLM nào fabricate được. Anti-LLM moat.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">0.9</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">weekly</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Spoke</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/{slug}/{topic}</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mở rộng topical authority theo chủ đề. MOFU content - comparison, guide, deep-dive. Dồn link về Hub.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">0.8</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">weekly</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Blog</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/{slug}/blog/{article}</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Satellite content TOFU/MOFU. Capture informational queries. Dồn link về Spoke hoặc Hub.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">0.7</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">monthly</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Landing Page</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/landing/{campaign}</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Campaign ngắn hạn. Không rank dài hạn.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Excluded</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+  </tbody>
+</table>
 
 **Nguyên tắc quan trọng:**
 
@@ -145,25 +268,87 @@ Màn hình chính sau khi PM/PO đăng nhập MoSpark. Hiển thị toàn bộ M
 
 **Filters:**
 
-| Filter | Options |
-|---|---|
-| Pillar | Tất cả / P1 - Tài chính & Tín dụng / P2 - Bảo hiểm / P3 - Dịch vụ Công / P4 - Đời sống & Merchant |
-| Trạng thái | Tất cả / Draft / Active / Paused / Archived |
-| Owner | Tất cả / Tôi own / [Tên PM/PO] |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Filter</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Pillar</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tất cả / P1 - Tài chính & Tín dụng / P2 - Bảo hiểm / P3 - Dịch vụ Công / P4 - Đời sống & Merchant</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trạng thái</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tất cả / Draft / Active / Paused / Archived</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Owner</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tất cả / Tôi own / [Tên PM/PO]</td>
+    </tr>
+  </tbody>
+</table>
 
 **Danh sách Microsite - mỗi row hiển thị:**
 
-| Cột | Nội dung | Ghi chú |
-|---|---|---|
-| **Tên Microsite** | Tên Use Case + URL slug. Ví dụ: "Vay Nhanh · /vay-nhanh" | Clickable - vào Detail |
-| **Pillar** | P1 / P2 / P3 / P4 | Badge màu theo Pillar |
-| **Trạng thái** | Draft / Active / Paused / Archived | Badge trạng thái |
-| **Pages** | Số Sub-pages live / tổng | Ví dụ: "3 / 5 live" |
-| **Blogs** | Tổng blog (GenAI + Manual) / số live | Ví dụ: "12 blogs · 10 live" |
-| **Traffic 30d** | Sessions organic 30 ngày qua | Pull từ GSC |
-| **SEO Score avg** | Điểm trung bình Scoring Gate của các pages | Hiển thị màu: xanh ≥80 / vàng 60-79 / đỏ <60 |
-| **Owner** | Avatar PM/PO được assign | - |
-| **Actions** | Menu: Cài đặt / Xem Dashboard / Archive | - |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cột</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tên Microsite</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tên Use Case + URL slug. Ví dụ: "Vay Nhanh · /vay-nhanh"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Clickable - vào Detail</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Pillar</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1 / P2 / P3 / P4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Badge màu theo Pillar</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trạng thái</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Draft / Active / Paused / Archived</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Badge trạng thái</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Pages</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số Sub-pages live / tổng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ví dụ: "3 / 5 live"</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Blogs</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng blog (GenAI + Manual) / số live</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ví dụ: "12 blogs · 10 live"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Traffic 30d</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sessions organic 30 ngày qua</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Pull từ GSC</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>SEO Score avg</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điểm trung bình Scoring Gate của các pages</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiển thị màu: xanh ≥80 / vàng 60-79 / đỏ <60</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Owner</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Avatar PM/PO được assign</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Actions</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Menu: Cài đặt / Xem Dashboard / Archive</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 3.3. Sort mặc định
 
@@ -177,30 +362,79 @@ Traffic 30d giảm dần - Use Case có traffic cao nhất hiển thị trước
 
 - **Use Case ID phải duy nhất** trong toàn hệ thống.
 - **URL namespace phải chưa tồn tại** trên momo.vn (bao gồm cả legacy pages đang có trong sitemap).
-- **Chỉ Platform Admin và SEO Lead** được tạo Microsite mới. PM/PO request, không tự tạo.
+- **Chỉ Platform Admin và Web Product Lead** được tạo Microsite mới. PM/PO request, không tự tạo.
 
 > **Lý do restrict Create:** Tạo Microsite = tạo URL namespace mới trên momo.vn. Sai slug = ảnh hưởng indexing toàn domain. Không để PM/PO tự tạo không qua governance check.
 
 ### 4.2. Luồng tạo (5 bước)
 
-| Bước | Hành động | Validation |
-|---|---|---|
-| **1** | Chọn Use Case (từ danh sách có sẵn hoặc tạo mới) | Use Case ID không được trùng |
-| **2** | Đặt URL slug (ví dụ: `/vay-nhanh`) | Slug unique toàn domain, chỉ lowercase + gạch ngang, không dấu |
-| **3** | Chọn Pillar (P1 / P2 / P3 / P4) | Bắt buộc - quyết định governance rules áp dụng |
-| **4** | Assign PM/PO Owner | Ít nhất 1 owner bắt buộc |
-| **5** | Xác nhận tạo | Hệ thống khởi tạo Microsite ở trạng thái Draft + tạo 7 tabs rỗng |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Bước</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hành động</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Validation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chọn Use Case (từ danh sách có sẵn hoặc tạo mới)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Use Case ID không được trùng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đặt URL slug (ví dụ: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/vay-nhanh</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Slug unique toàn domain, chỉ lowercase + gạch ngang, không dấu</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chọn Pillar (P1 / P2 / P3 / P4)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bắt buộc - quyết định governance rules áp dụng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>4</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Assign PM/PO Owner</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ít nhất 1 owner bắt buộc</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>5</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xác nhận tạo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hệ thống khởi tạo Microsite ở trạng thái Draft + tạo 7 tabs rỗng</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 4.3. Governance tự động theo Pillar
 
 Khi chọn Pillar, hệ thống tự áp dụng governance rules tương ứng:
 
-| Pillar | Rules tự động áp dụng |
-|---|---|
-| P1 - Tài chính & Tín dụng | Named Author Policy bắt buộc trước publish / Disclaimer block tự động thiếu |
-| P2 - Bảo hiểm | Không cho phép geo-based URL (block nếu slug chứa tên tỉnh) |
-| P3 - Dịch vụ Công | llms.txt bắt buộc phải config trước khi publish page đầu tiên |
-| P4 - Đời sống & Merchant | 410 Gone policy cho URL campaign hết hạn - cảnh báo khi page > 90 ngày không update |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Pillar</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Rules tự động áp dụng</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1 - Tài chính & Tín dụng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Named Author Policy bắt buộc trước publish / Disclaimer block tự động thiếu</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2 - Bảo hiểm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không cho phép geo-based URL (block nếu slug chứa tên tỉnh)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P3 - Dịch vụ Công</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">llms.txt bắt buộc phải config trước khi publish page đầu tiên</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P4 - Đời sống & Merchant</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">410 Gone policy cho URL campaign hết hạn - cảnh báo khi page > 90 ngày không update</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -224,22 +458,69 @@ Khi click vào một Microsite trong List View, mở màn hình Detail với hea
 
 **Loại Sub-page:**
 
-| Loại | URL pattern | Vai trò |
-|---|---|---|
-| **Hub page** | `/{slug}` | Trang chính của Use Case. Mỗi Microsite chỉ có 1 Hub. |
-| **Spoke page** | `/{slug}/{topic}` | Trang chuyên sâu theo chủ đề. Không giới hạn số lượng. |
-| **Landing Page** | `/landing/{campaign}` | Campaign/promotion. Không rank dài hạn. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL pattern</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hub page</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/{slug}</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang chính của Use Case. Mỗi Microsite chỉ có 1 Hub.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Spoke page</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/{slug}/{topic}</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang chuyên sâu theo chủ đề. Không giới hạn số lượng.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Landing Page</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/landing/{campaign}</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Campaign/promotion. Không rank dài hạn.</td>
+    </tr>
+  </tbody>
+</table>
 
 **List view Sub-pages - mỗi row:**
 
-| Cột | Nội dung |
-|---|---|
-| Tên trang | Title + URL |
-| Loại | Hub / Spoke / Landing (badge) |
-| Trạng thái | Draft / Live / Paused |
-| SEO Score | Điểm Scoring Gate |
-| Traffic 30d | Sessions GSC |
-| Actions | Edit / Preview / Unpublish / Archive |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cột</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tên trang</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Title + URL</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loại</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hub / Spoke / Landing (badge)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trạng thái</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Draft / Live / Paused</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO Score</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điểm Scoring Gate</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic 30d</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sessions GSC</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Actions</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Edit / Preview / Unpublish / Archive</td>
+    </tr>
+  </tbody>
+</table>
 
 **Rules:**
 - Mỗi Microsite chỉ được có **1 Hub page**. Tạo Hub thứ 2 bị block.
@@ -254,10 +535,27 @@ Khi click vào một Microsite trong List View, mở màn hình Detail với hea
 
 **List view Blog:**
 
-| Loại | Badge | Columns |
-|---|---|---|
-| **GenAI** | `GenAI` (tím) | Title, Primary Keyword, Status, Ngày tạo, Model, Cost |
-| **Manual** | `Manual` (xám) | Title, Primary Keyword, Status, Ngày tạo |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Badge</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Columns</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GenAI</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">GenAI</code> (tím)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Title, Primary Keyword, Status, Ngày tạo, Model, Cost</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Manual</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Manual</code> (xám)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Title, Primary Keyword, Status, Ngày tạo</td>
+    </tr>
+  </tbody>
+</table>
 
 **Filters nhanh:**
 - Tất cả / GenAI / Manual
@@ -266,10 +564,24 @@ Khi click vào một Microsite trong List View, mở màn hình Detail với hea
 
 **Khi click vào bài GenAI - Detail view:**
 
-| Panel | Nội dung |
-|---|---|
-| **Editor** | Full blog editor - chỉnh sửa nội dung, metadata, publish/unpublish |
-| **AI Usage** | Input tokens / Output tokens / Cost (theo API pricing tại thời điểm generate) / Model name |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Panel</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Editor</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Full blog editor - chỉnh sửa nội dung, metadata, publish/unpublish</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>AI Usage</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Input tokens / Output tokens / Cost (theo API pricing tại thời điểm generate) / Model name</td>
+    </tr>
+  </tbody>
+</table>
 
 **Khi click vào bài Manual - Detail view:**
 - Chỉ hiển thị Editor. Không có AI Usage panel.
@@ -293,15 +605,44 @@ Cả 2 con đường đều yêu cầu Primary Keyword phải đăng ký trong K
 
 **Hiển thị dạng bảng - mỗi page 1 row:**
 
-| Cột | Nội dung |
-|---|---|
-| URL | Đường dẫn |
-| Title tag | Nội dung title - highlight đỏ nếu >60 ký tự hoặc thiếu keyword |
-| Meta description | Nội dung desc - highlight đỏ nếu >160 ký tự |
-| OG Title / OG Image | Trạng thái (Có / Thiếu) |
-| Schema markup | Loại schema đã áp dụng (Article, FAQPage, BreadcrumbList...) |
-| Canonical | URL canonical - cảnh báo nếu sai |
-| Status | Tự động (MoSpark generate) / Tuỳ chỉnh |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cột</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đường dẫn</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Title tag</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nội dung title - highlight đỏ nếu >60 ký tự hoặc thiếu keyword</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Meta description</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nội dung desc - highlight đỏ nếu >160 ký tự</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">OG Title / OG Image</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trạng thái (Có / Thiếu)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Schema markup</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loại schema đã áp dụng (Article, FAQPage, BreadcrumbList...)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Canonical</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL canonical - cảnh báo nếu sai</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Status</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự động (MoSpark generate) / Tuỳ chỉnh</td>
+    </tr>
+  </tbody>
+</table>
 
 **Actions:**
 - Click vào bất kỳ row để mở editor metadata của page đó.
@@ -330,7 +671,7 @@ Cả 2 con đường đều yêu cầu Primary Keyword phải đăng ký trong K
 - P3 (Dịch vụ Công): llms.txt **bắt buộc** phải Configured trước khi publish Hub page.
 - Các Pillar khác: Recommended nhưng không phải hard block.
 
-**Owner:** Chỉ SEO Lead có quyền chỉnh sửa. PM/PO xem được nhưng không edit.
+**Owner:** Chỉ Web Product Lead có quyền chỉnh sửa. PM/PO xem được nhưng không edit.
 
 ---
 
@@ -340,39 +681,108 @@ Cả 2 con đường đều yêu cầu Primary Keyword phải đăng ký trong K
 
 **A. Traffic Overview (30 ngày)**
 
-| Metric | Source |
-|---|---|
-| Organic Sessions | GSC |
-| Avg Position (top keywords) | GSC |
-| Clicks | GSC |
-| W2A Conversion (clicks → App open) | Appsflyer / Onelink |
-| New User (Install → Register) | Appsflyer |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Organic Sessions</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Avg Position (top keywords)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Clicks</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">W2A Conversion (clicks → App open)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Appsflyer / Onelink</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">New User (Install → Register)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Appsflyer</td>
+    </tr>
+  </tbody>
+</table>
 
 **B. SEO Inventory - Market View**
 
-| Thông tin | Ý nghĩa |
-|---|---|
-| Market Volume (total) | Tổng search volume thị trường của Use Case |
-| SoV MoMo hiện tại | MoMo đang chiếm bao nhiêu % |
-| SoV Gap | Khoảng cách vs market leader |
-| Keywords chưa có content | Cơ hội chưa khai thác - số lượng keyword có volume nhưng chưa có bài |
-| TOFU / MOFU / BOFU breakdown | Phân tầng volume theo funnel stage |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thông tin</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ý nghĩa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Market Volume (total)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng search volume thị trường của Use Case</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SoV MoMo hiện tại</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo đang chiếm bao nhiêu %</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SoV Gap</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khoảng cách vs market leader</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Keywords chưa có content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cơ hội chưa khai thác - số lượng keyword có volume nhưng chưa có bài</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TOFU / MOFU / BOFU breakdown</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phân tầng volume theo funnel stage</td>
+    </tr>
+  </tbody>
+</table>
 
 **C. Content Health**
 
-| Metric | Nội dung |
-|---|---|
-| Tổng pages | Live / Draft / Paused |
-| Tổng blogs | Live / Draft / Blocked |
-| Avg SEO Score | Trung bình tất cả pages live |
-| Pages cần review | Số pages có Score < 60 hoặc có Hard Block |
-| Blogs cần update | Blogs chưa update > 90 ngày (content decay signal) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng pages</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Live / Draft / Paused</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng blogs</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Live / Draft / Blocked</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Avg SEO Score</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình tất cả pages live</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Pages cần review</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số pages có Score < 60 hoặc có Hard Block</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blogs cần update</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blogs chưa update > 90 ngày (content decay signal)</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ### 5.6. Tab: Web Structure & Sitemap
 
-**Mục đích:** Hiển thị kiến trúc nội dung của Microsite dưới dạng hierarchy + quản lý Sitemap inclusion. Đây là nơi SEO Lead kiểm soát những URL nào được claim crawl budget trên momo.vn.
+**Mục đích:** Hiển thị kiến trúc nội dung của Microsite dưới dạng hierarchy + quản lý Sitemap inclusion. Đây là nơi Web Product Lead kiểm soát những URL nào được claim crawl budget trên momo.vn.
 
 **A. Web Structure View**
 
@@ -391,46 +801,130 @@ Hiển thị dạng tree (cây) toàn bộ URL của Microsite theo tầng:
 
 **Cảnh báo tự động:**
 
-| Tình huống | Warning |
-|---|---|
-| Chưa có Hub nhưng đã có Spoke hoặc Blog | "Microsite chưa có Hub page - Spoke/Blog không có anchor authority" |
-| Blog chưa có internal link về Spoke/Hub | "X bài Blog thiếu internal link về Spoke/Hub - orphan content" |
-| Spoke chưa có internal link về Hub | "X Spoke chưa link về Hub - Link Equity bị rò rỉ" |
-| Tool bị Blocked (Score < 60) | "Tool đang bị Blocked - mất PLG data signal" |
-| Hub Score < 80 | "Hub page chưa đạt chuẩn - ảnh hưởng authority toàn Microsite" |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tình huống</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Warning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa có Hub nhưng đã có Spoke hoặc Blog</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Microsite chưa có Hub page - Spoke/Blog không có anchor authority"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog chưa có internal link về Spoke/Hub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"X bài Blog thiếu internal link về Spoke/Hub - orphan content"</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Spoke chưa có internal link về Hub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"X Spoke chưa link về Hub - Link Equity bị rò rỉ"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tool bị Blocked (Score < 60)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Tool đang bị Blocked - mất PLG data signal"</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hub Score < 80</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Hub page chưa đạt chuẩn - ảnh hưởng authority toàn Microsite"</td>
+    </tr>
+  </tbody>
+</table>
 
 **B. Sitemap Management**
 
 Hiển thị bảng toàn bộ URL thuộc Microsite và trạng thái sitemap:
 
-| Cột | Nội dung |
-|---|---|
-| **URL** | Đường dẫn đầy đủ |
-| **Tầng** | Hub / Tool / Spoke / Blog / Landing |
-| **Trạng thái page** | Live / Draft / Paused / Archived |
-| **In Sitemap** | Auto-include / Auto-excluded / Force-include / Force-excluded |
-| **Priority** | Giá trị priority XML (1.0 / 0.9 / 0.8 / 0.7 / -) |
-| **Changefreq** | weekly / monthly / - |
-| **Last indexed** | Ngày Google/AI crawler index lần cuối (pull từ GSC) |
-| **Override** | SEO Lead force-include / force-exclude |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cột</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>URL</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đường dẫn đầy đủ</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tầng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hub / Tool / Spoke / Blog / Landing</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trạng thái page</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Live / Draft / Paused / Archived</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>In Sitemap</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto-include / Auto-excluded / Force-include / Force-excluded</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Priority</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giá trị priority XML (1.0 / 0.9 / 0.8 / 0.7 / -)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Changefreq</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">weekly / monthly / -</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Last indexed</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ngày Google/AI crawler index lần cuối (pull từ GSC)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Override</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead force-include / force-exclude</td>
+    </tr>
+  </tbody>
+</table>
 
 **Auto-include/exclude rules:**
 
 ```
 Tự động vào Sitemap:    Page Live + SEO Score ≥ 60 + Tầng != Landing Page
 Tự động ra Sitemap:     Page Archived hoặc 410 Gone hoặc Robots=noindex
-Landing Page:           Excluded by default (SEO Lead override nếu campaign dài hạn)
+Landing Page:           Excluded by default (Web Product Lead override nếu campaign dài hạn)
 ```
 
 **Actions trong tab này:**
 
-| Action | Who | Mô tả |
-|---|---|---|
-| **Force-include** | SEO Lead | Đưa URL vào sitemap dù bị auto-exclude |
-| **Force-exclude** | SEO Lead | Loại URL khỏi sitemap tạm thời mà không archive page |
-| **Override Priority** | SEO Lead | Thay đổi priority XML cho URL cụ thể |
-| **Submit to GSC** | SEO Lead | Trigger GSC ping ngay lập tức cho sitemap của Microsite này |
-| **Export Sitemap** | SEO Lead | Download file XML sitemap của Microsite để kiểm tra |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Action</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Who</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Force-include</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đưa URL vào sitemap dù bị auto-exclude</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Force-exclude</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loại URL khỏi sitemap tạm thời mà không archive page</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Override Priority</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thay đổi priority XML cho URL cụ thể</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Submit to GSC</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger GSC ping ngay lập tức cho sitemap của Microsite này</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Export Sitemap</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Download file XML sitemap của Microsite để kiểm tra</td>
+    </tr>
+  </tbody>
+</table>
 
 **Sitemap Submission Log:** Ghi lại toàn bộ lần submit: Timestamp - Người trigger - Lý do - Số URLs changed - GSC response.
 
@@ -438,17 +932,46 @@ Landing Page:           Excluded by default (SEO Lead override nếu campaign d�
 
 ### 5.7. Tab: Settings
 
-**Mục đích:** Cài đặt Microsite - chỉ Platform Admin và SEO Lead chỉnh sửa.
+**Mục đích:** Cài đặt Microsite - chỉ Platform Admin và Web Product Lead chỉnh sửa.
 
-| Cài đặt | Nội dung |
-|---|---|
-| **Tên Microsite** | Hiển thị trong platform (không ảnh hưởng URL) |
-| **Use Case ID** | Chỉ đọc sau khi tạo. Không thể thay đổi |
-| **URL Slug** | Chỉ đọc sau khi tạo. Thay đổi yêu cầu approval flow |
-| **Pillar** | Chỉ đọc. Thay đổi Pillar = thay đổi governance rules - không cho phép |
-| **Owner** | PM/PO được assign. Có thể thêm/xóa owner |
-| **Trạng thái** | Thay đổi: Active ↔ Paused. Archive là action riêng với confirmation |
-| **Archive Microsite** | Button riêng - yêu cầu confirm + checklist (xem Section 6.2) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cài đặt</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tên Microsite</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiển thị trong platform (không ảnh hưởng URL)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Use Case ID</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chỉ đọc sau khi tạo. Không thể thay đổi</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>URL Slug</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chỉ đọc sau khi tạo. Thay đổi yêu cầu approval flow</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Pillar</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chỉ đọc. Thay đổi Pillar = thay đổi governance rules - không cho phép</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Owner</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/PO được assign. Có thể thêm/xóa owner</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trạng thái</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thay đổi: Active ↔ Paused. Archive là action riêng với confirmation</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Archive Microsite</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Button riêng - yêu cầu confirm + checklist (xem Section 6.2)</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -456,43 +979,175 @@ Landing Page:           Excluded by default (SEO Lead override nếu campaign d�
 
 ### 6.1. Rules tạo mới
 
-| Rule | Mô tả | Enforcement |
-|---|---|---|
-| **1 Use Case = 1 Microsite** | Không tạo 2 Microsite cho cùng Use Case ID | Hard block - hệ thống block khi tạo |
-| **URL Slug unique toàn domain** | Slug không được trùng với bất kỳ URL namespace nào đang tồn tại | Hard block - validate trước khi submit |
-| **Slug format** | Chỉ lowercase, gạch ngang, không dấu, không ký tự đặc biệt | Validation real-time |
-| **Pillar bắt buộc** | Mọi Microsite phải thuộc 1 trong 4 Pillar | Bắt buộc trong create flow |
-| **Owner bắt buộc** | Ít nhất 1 PM/PO owner phải assign | Bắt buộc trước khi confirm tạo |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Rule</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Enforcement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1 Use Case = 1 Microsite</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không tạo 2 Microsite cho cùng Use Case ID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hard block - hệ thống block khi tạo</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>URL Slug unique toàn domain</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Slug không được trùng với bất kỳ URL namespace nào đang tồn tại</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hard block - validate trước khi submit</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Slug format</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chỉ lowercase, gạch ngang, không dấu, không ký tự đặc biệt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Validation real-time</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Pillar bắt buộc</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mọi Microsite phải thuộc 1 trong 4 Pillar</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bắt buộc trong create flow</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Owner bắt buộc</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ít nhất 1 PM/PO owner phải assign</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bắt buộc trước khi confirm tạo</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 6.2. Rules Archive
 
 Archive Microsite là action không thể reverse mà không có manual intervention. Trước khi Archive, hệ thống yêu cầu pass đủ checklist:
 
-| Checklist item | Validation |
-|---|---|
-| Traffic < 100 sessions/tháng (30 ngày qua) | Pull từ GSC tự động |
-| Toàn bộ pages đã set 301/410 | Kiểm tra redirect status của URL namespace |
-| Không có Ads campaign đang active | Check Ads Manager module |
-| SEO Lead approval | Sign-off bắt buộc |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Checklist item</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Validation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic < 100 sessions/tháng (30 ngày qua)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Pull từ GSC tự động</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Toàn bộ pages đã set 301/410</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kiểm tra redirect status của URL namespace</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có Ads campaign đang active</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Check Ads Manager module</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead approval</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sign-off bắt buộc</td>
+    </tr>
+  </tbody>
+</table>
 
 Nếu bất kỳ item nào chưa pass - hệ thống block Archive và hiển thị lý do cụ thể.
 
 ### 6.3. Permission Matrix
 
-| Hành động | PM/PO | Content Team | SEO Lead | Platform Admin |
-|---|---|---|---|---|
-| Xem Microsite List | Có | Có | Có | Có |
-| Tạo Microsite mới | Không (request) | Không | Có | Có |
-| Chỉnh sửa Settings | Không | Không | Có | Có |
-| Edit Sub-pages | Có | Không | Có | Có |
-| Edit Blog | Có | Có | Có | Có |
-| Edit Meta data | Không | Không | Có | Có |
-| Xem Web Structure & Sitemap | Có (view only) | Có (view only) | Có | Có |
-| Force-include / Force-exclude Sitemap | Không | Không | Có | Có |
-| Submit to GSC | Không | Không | Có | Có |
-| Edit llms.txt | Không | Không | Có | Có |
-| Xem Dashboard | Có | Có | Có | Có |
-| Archive Microsite | Không (request) | Không | Approve | Thực hiện |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hành động</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">PM/PO</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Content Team</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Web Product Lead</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Platform Admin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xem Microsite List</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tạo Microsite mới</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không (request)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chỉnh sửa Settings</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Edit Sub-pages</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Edit Blog</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Edit Meta data</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xem Web Structure & Sitemap</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có (view only)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có (view only)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Force-include / Force-exclude Sitemap</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Submit to GSC</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Edit llms.txt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xem Dashboard</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Archive Microsite</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không (request)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Approve</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thực hiện</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 6.4. Sitemap Governance Rules
 
@@ -500,29 +1155,92 @@ MoSpark là **hệ thống duy nhất** có quyền quyết định URL nào c�
 
 **Auto-Include:**
 
-| Điều kiện | Kết quả |
-|---|---|
-| Page live + SEO Score ≥ 60 + Tầng = Hub/Spoke/Blog/Tool | Auto-include với priority mặc định theo tầng, trong vòng 15 phút |
-| Tool page live + SEO Score ≥ 60 | Auto-include Priority 0.9 |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điều kiện</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Kết quả</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Page live + SEO Score ≥ 60 + Tầng = Hub/Spoke/Blog/Tool</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto-include với priority mặc định theo tầng, trong vòng 15 phút</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tool page live + SEO Score ≥ 60</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto-include Priority 0.9</td>
+    </tr>
+  </tbody>
+</table>
 
 **Auto-Exclude:**
 
-| Điều kiện | Kết quả |
-|---|---|
-| Page Archived hoặc 410 Gone | Auto-remove + auto-submit GSC trong 15 phút |
-| Page có Robots=noindex | Auto-remove (consistency: noindex không được khai báo trong sitemap) |
-| SEO Score < 60 | Không vào sitemap cho đến khi pass |
-| Landing Page | Excluded by default |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điều kiện</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Kết quả</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Page Archived hoặc 410 Gone</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto-remove + auto-submit GSC trong 15 phút</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Page có Robots=noindex</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto-remove (consistency: noindex không được khai báo trong sitemap)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO Score < 60</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không vào sitemap cho đến khi pass</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing Page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Excluded by default</td>
+    </tr>
+  </tbody>
+</table>
 
 **Priority mặc định theo tầng:**
 
-| Tầng | Priority | Changefreq |
-|---|---|---|
-| Hub | `1.0` | `weekly` |
-| Tool | `0.9` | `weekly` |
-| Spoke | `0.8` | `weekly` |
-| Blog | `0.7` | `monthly` |
-| Landing Page | excluded | - |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tầng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Priority</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Changefreq</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">1.0</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">weekly</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tool</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">0.9</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">weekly</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Spoke</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">0.8</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">weekly</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">0.7</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">monthly</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing Page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">excluded</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+  </tbody>
+</table>
 
 **Sitemap XML Structure:**
 
@@ -539,42 +1257,147 @@ momo.vn/sitemap.xml                            [Sitemap Index - auto-generate]
 
 ## 7. Integration với các Module khác
 
-| Module | Quan hệ với Microsite |
-|---|---|
-| **M1 - Landing Page Builder** | LP được tạo và quản lý trong tab Sub-pages của Microsite |
-| **M2 - GenAI Content Engine** | Blog GenAI phải được map với Microsite trước khi bắt đầu. Blog hiển thị trong tab Blog Management |
-| **M3 - Ads Manager** | Campaign Ads gắn với URL thuộc Microsite. Placement Registry kiểm tra conflict theo Microsite namespace |
-| **M4 - SEO/GEO Scoring Gate** | Score của mọi pages thuộc Microsite được aggregate vào Dashboard. Hard block apply per page |
-| **M5 - SEO Inventory** | Data SEO Inventory per Use Case hiển thị trong Dashboard tab của Microsite |
-| **M6 - llms.txt** | llms.txt per Microsite quản lý trong tab llms.txt. Merge với domain-level llms.txt khi serve |
-| **M9 - PLG Tool Builder** | Tool được gắn với Microsite như một Sub-page đặc biệt (type: Tool) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Module</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Quan hệ với Microsite</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M1 - Landing Page Builder</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LP được tạo và quản lý trong tab Sub-pages của Microsite</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M2 - GenAI Content Engine</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog GenAI phải được map với Microsite trước khi bắt đầu. Blog hiển thị trong tab Blog Management</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M3 - Ads Manager</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Campaign Ads gắn với URL thuộc Microsite. Placement Registry kiểm tra conflict theo Microsite namespace</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M4 - SEO/GEO Scoring Gate</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Score của mọi pages thuộc Microsite được aggregate vào Dashboard. Hard block apply per page</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M5 - SEO Inventory</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Data SEO Inventory per Use Case hiển thị trong Dashboard tab của Microsite</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M6 - llms.txt</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">llms.txt per Microsite quản lý trong tab llms.txt. Merge với domain-level llms.txt khi serve</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M9 - PLG Tool Builder</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tool được gắn với Microsite như một Sub-page đặc biệt (type: Tool)</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ## 8. Success Metrics
 
-| Metric | Target | Source |
-|---|---|---|
-| Time-to-live Microsite mới | Từ request → tạo xong < 1 ngày làm việc | Timestamp log |
-| % Microsite có llms.txt Configured | 100% Active Microsites | Platform audit |
-| % pages live với Score ≥ 80 | ≥ 80% | Scoring Gate aggregate |
-| Archive latency (URL chết đến Archive) | < 7 ngày từ khi traffic = 0 | GSC + Archive log |
-| Sitemap accuracy | 100% URL live (Score ≥ 60) có trong sitemap / 0% URL archived còn trong sitemap | Platform audit vs GSC |
-| Sitemap update latency | < 15 phút từ khi page live/archive → sitemap updated | Timestamp log |
-| % Microsite có Hub page live trước Spoke | 100% | Web Structure audit |
-| % Blog có internal link về Spoke/Hub | ≥ 90% | Crawl audit |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Time-to-live Microsite mới</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Từ request → tạo xong < 1 ngày làm việc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Timestamp log</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">% Microsite có llms.txt Configured</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">100% Active Microsites</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Platform audit</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">% pages live với Score ≥ 80</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">≥ 80%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Scoring Gate aggregate</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Archive latency (URL chết đến Archive)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 7 ngày từ khi traffic = 0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC + Archive log</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sitemap accuracy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">100% URL live (Score ≥ 60) có trong sitemap / 0% URL archived còn trong sitemap</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Platform audit vs GSC</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sitemap update latency</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 15 phút từ khi page live/archive → sitemap updated</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Timestamp log</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">% Microsite có Hub page live trước Spoke</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">100%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Structure audit</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">% Blog có internal link về Spoke/Hub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">≥ 90%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Crawl audit</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ## 9. Open Questions
 
-| # | Câu hỏi | Priority | Owner |
-|---|---|---|---|
-| 1 | Slug thay đổi sau khi tạo (rename use case) - luồng approval và redirect handling như thế nào? | CAO | Hiến + Trọng |
-| 2 | 1 PM/PO có thể own nhiều Microsite không? Có limit không? | TRUNG BINH | Bảo |
-| 3 | Khi merge 2 Use Case (ví dụ Vay Nhanh + CIC Score → Credit Hub) - Microsite merge hay 301 về Microsite mới? | TRUNG BINH | Hiến |
-| 4 | Dashboard pull GSC real-time hay cache 24h? | KỸ THUẬT | Trọng |
-| 5 | Landing Page nào hiện tại đang trong sitemap? Cần audit trước khi enforce exclude rule. | CAO | Hiến |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Câu hỏi</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Priority</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Slug thay đổi sau khi tạo (rename use case) - luồng approval và redirect handling như thế nào?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CAO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến + Trọng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1 PM/PO có thể own nhiều Microsite không? Có limit không?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TRUNG BINH</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khi merge 2 Use Case (ví dụ Vay Nhanh + CIC Score → Credit Hub) - Microsite merge hay 301 về Microsite mới?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TRUNG BINH</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dashboard pull GSC real-time hay cache 24h?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">KỸ THUẬT</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trọng</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing Page nào hiện tại đang trong sitemap? Cần audit trước khi enforce exclude rule.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CAO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -590,7 +1413,7 @@ momo.vn/sitemap.xml                            [Sitemap Index - auto-generate]
 Trước khi đọc từng module, cần nắm 3 nguyên tắc bất biến:
 
 1. **Microsite = đơn vị gốc.** Mọi entity (Blog, Sub-page, Ads, llms.txt, Sitemap entry) đều phải gắn với một Microsite ID. Không có entity nào tồn tại ngoài Microsite.
-2. **Automation first.** Sitemap, llms.txt merge, Keyword unique check - tất cả phải tự động. SEO Lead chỉ override khi cần, không phải tự làm từ đầu.
+2. **Automation first.** Sitemap, llms.txt merge, Keyword unique check - tất cả phải tự động. Web Product Lead chỉ override khi cần, không phải tự làm từ đầu.
 3. **Hard block thay vì soft warning cho các gate quan trọng.** Hub publish trước Spoke = hard block, không phải cảnh báo bỏ qua được.
 
 ---
@@ -599,80 +1422,274 @@ Trước khi đọc từng module, cần nắm 3 nguyên tắc bất biến:
 
 ### 1.1. Data Model
 
-| Field | Type | Required | Mô tả | Ghi chú |
-|---|---|---|---|---|
-| `microsite_id` | UUID | Có | Primary key, auto-generate | Không bao giờ thay đổi sau khi tạo |
-| `use_case_id` | string | Có | Unique identifier của Use Case. Ví dụ: `vay-nhanh` | Unique toàn hệ thống. Không thay đổi sau tạo |
-| `name` | string | Có | Tên hiển thị trong platform. Ví dụ: "Vay Nhanh" | Thay đổi được - không ảnh hưởng URL |
-| `slug` | string | Có | URL prefix. Ví dụ: `vay-nhanh` | Unique toàn domain. Không thay đổi sau tạo |
-| `pillar` | enum | Có | `P1` / `P2` / `P3` / `P4` | Quyết định governance rules áp dụng |
-| `status` | enum | Có | `draft` / `active` / `paused` / `archived` | State machine - xem 1.3 |
-| `owners` | array(user_id) | Có | Ít nhất 1 PM/PO owner | Nhiều owners được phép |
-| `created_by` | user_id | Có | SEO Lead hoặc Platform Admin tạo | Auto-assign từ session |
-| `created_at` | timestamp | Có | Auto | - |
-| `updated_at` | timestamp | Có | Auto update mỗi khi có thay đổi | - |
-| `pillar_rules` | object | Tự động | Rules được inject theo Pillar (xem 1.4) | Không edit trực tiếp |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Field</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Type</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Required</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">microsite_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Primary key, auto-generate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không bao giờ thay đổi sau khi tạo</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">use_case_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">string</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Unique identifier của Use Case. Ví dụ: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">vay-nhanh</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Unique toàn hệ thống. Không thay đổi sau tạo</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">name</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">string</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tên hiển thị trong platform. Ví dụ: "Vay Nhanh"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thay đổi được - không ảnh hưởng URL</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">slug</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">string</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL prefix. Ví dụ: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">vay-nhanh</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Unique toàn domain. Không thay đổi sau tạo</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">pillar</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">enum</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P1</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P2</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P3</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P4</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quyết định governance rules áp dụng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">status</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">enum</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">draft</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">active</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">paused</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">archived</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">State machine - xem 1.3</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">owners</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">array(user_id)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ít nhất 1 PM/PO owner</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhiều owners được phép</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">created_by</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">user_id</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead hoặc Platform Admin tạo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto-assign từ session</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">created_at</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">timestamp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">updated_at</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">timestamp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto update mỗi khi có thay đổi</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">pillar_rules</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">object</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự động</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Rules được inject theo Pillar (xem 1.4)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không edit trực tiếp</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 1.2. Validation Rules khi tạo mới
 
 **Tất cả checks phải pass trước khi commit vào DB:**
 
-| # | Rule | Error message khi fail |
-|---|---|---|
-| 1 | `use_case_id` chưa tồn tại trong bảng Microsites | "Use Case ID đã tồn tại. Mỗi Use Case chỉ có 1 Microsite." |
-| 2 | `slug` chưa tồn tại trong bảng Microsites | "URL slug đã được dùng bởi Microsite khác." |
-| 3 | `slug` không trùng với bất kỳ URL path nào đang có trong sitemap momo.vn | "URL slug này đã có trong sitemap. Kiểm tra lại với SEO Lead." |
-| 4 | `slug` format: chỉ lowercase a-z, 0-9, dấu gạch ngang (-). Không dấu. Không ký tự đặc biệt | "Slug không hợp lệ. Chỉ dùng chữ thường, số và dấu gạch ngang." |
-| 5 | `pillar` thuộc enum hợp lệ | "Pillar không hợp lệ." |
-| 6 | `owners` có ít nhất 1 user_id hợp lệ | "Cần assign ít nhất 1 owner." |
-| 7 | Người tạo có role `seo_lead` hoặc `platform_admin` | "Bạn không có quyền tạo Microsite. Liên hệ SEO Lead." |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Rule</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Error message khi fail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">use_case_id</code> chưa tồn tại trong bảng Microsites</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Use Case ID đã tồn tại. Mỗi Use Case chỉ có 1 Microsite."</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">slug</code> chưa tồn tại trong bảng Microsites</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"URL slug đã được dùng bởi Microsite khác."</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">slug</code> không trùng với bất kỳ URL path nào đang có trong sitemap momo.vn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"URL slug này đã có trong sitemap. Kiểm tra lại với Web Product Lead."</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">slug</code> format: chỉ lowercase a-z, 0-9, dấu gạch ngang (-). Không dấu. Không ký tự đặc biệt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Slug không hợp lệ. Chỉ dùng chữ thường, số và dấu gạch ngang."</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">pillar</code> thuộc enum hợp lệ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Pillar không hợp lệ."</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">owners</code> có ít nhất 1 user_id hợp lệ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Cần assign ít nhất 1 owner."</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người tạo có role <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">seo_lead</code> hoặc <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">platform_admin</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Bạn không có quyền tạo Microsite. Liên hệ Web Product Lead."</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 1.3. State Machine
 
 ```mermaid
 stateDiagram-v2
     [*] --> draft: Tạo Microsite mới
-    
+
     draft --> active: Publish page đầu tiên
     active --> paused: Set thủ công
     paused --> active: Set thủ công
-    
+
     active --> archived: Pass Archive Checklist
     paused --> archived: Pass Archive Checklist
     draft --> archived: Pass Archive Checklist
-    
+
     archived --> [*]: Đóng băng (Không thể reverse)
 ```
 
 **Transition rules:**
 
-| Từ | Sang | Trigger | Condition bắt buộc |
-|---|---|---|---|
-| `draft` | `active` | Khi page đầu tiên của Microsite được publish | Tự động |
-| `active` | `paused` | SEO Lead hoặc PM/PO set thủ công | Không có condition cứng |
-| `paused` | `active` | SEO Lead hoặc PM/PO set thủ công | Không có condition cứng |
-| `active` / `paused` | `archived` | SEO Lead trigger → Platform Admin confirm | Phải pass Archive Checklist (xem 1.5) |
-| `archived` | bất kỳ | **Không cho phép** | Block hoàn toàn - cần manual DB intervention |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Từ</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Sang</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trigger</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Condition bắt buộc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">draft</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">active</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khi page đầu tiên của Microsite được publish</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự động</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">active</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">paused</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead hoặc PM/PO set thủ công</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có condition cứng</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">paused</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">active</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead hoặc PM/PO set thủ công</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có condition cứng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">active</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">paused</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">archived</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead trigger → Platform Admin confirm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phải pass Archive Checklist (xem 1.5)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">archived</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">bất kỳ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Không cho phép</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Block hoàn toàn - cần manual DB intervention</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 1.4. Pillar Rules (inject tự động khi tạo)
 
-| Pillar | Rules inject |
-|---|---|
-| `P1` | `require_named_author: true` - Block publish Hub/Spoke nếu page chưa có Author field đầy đủ. `require_disclaimer: true` - Block publish nếu thiếu disclaimer block. |
-| `P2` | `block_geo_slug: true` - Validate: slug và tất cả sub-page URLs không được chứa tên tỉnh thành (danh sách 63 tỉnh). Block tạo Sub-page nếu vi phạm. |
-| `P3` | `require_llms_txt_before_publish: true` - Block publish Hub page nếu llms.txt của Microsite chưa ở trạng thái `configured`. |
-| `P4` | `alert_stale_page_days: 90` - Tạo alert nếu page không được update sau 90 ngày. Áp dụng cho Sub-pages loại Landing. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Pillar</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Rules inject</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P1</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">require_named_author: true</code> - Block publish Hub/Spoke nếu page chưa có Author field đầy đủ. <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">require_disclaimer: true</code> - Block publish nếu thiếu disclaimer block.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P2</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">block_geo_slug: true</code> - Validate: slug và tất cả sub-page URLs không được chứa tên tỉnh thành (danh sách 63 tỉnh). Block tạo Sub-page nếu vi phạm.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P3</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">require_llms_txt_before_publish: true</code> - Block publish Hub page nếu llms.txt của Microsite chưa ở trạng thái <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">configured</code>.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P4</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">alert_stale_page_days: 90</code> - Tạo alert nếu page không được update sau 90 ngày. Áp dụng cho Sub-pages loại Landing.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 1.5. Archive Checklist
 
 Hệ thống tự động kiểm tra, hiển thị pass/fail per item, block Archive nếu bất kỳ item nào fail:
 
-| # | Check | Source |
-|---|---|---|
-| 1 | Organic sessions 30 ngày qua < 100 | GSC API |
-| 2 | Toàn bộ URL trong namespace đã có redirect 301/308 hoặc 410 | Redirect table + crawl check |
-| 3 | Không có Ads campaign nào đang ở trạng thái `active` trong Ads Manager gắn với Microsite này | Ads Manager API |
-| 4 | SEO Lead đã confirm (trường `seo_lead_approval: true`) | Manual sign-off trong UI |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Check</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Organic sessions 30 ngày qua < 100</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC API</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Toàn bộ URL trong namespace đã có redirect 301/308 hoặc 410</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Redirect table + crawl check</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có Ads campaign nào đang ở trạng thái <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">active</code> trong Ads Manager gắn với Microsite này</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads Manager API</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead đã confirm (trường <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">seo_lead_approval: true</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Manual sign-off trong UI</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -686,7 +1703,7 @@ Hệ thống tự động kiểm tra, hiển thị pass/fail per item, block Arc
 
 **Approach:** File `momo.vn/llms.txt` được **auto-generate** bằng cách merge:
 ```
-[Domain-level policy - SEO Lead quản lý]
+[Domain-level policy - Web Product Lead quản lý]
 +
 [Per-Microsite sections - từng Microsite contribute 1 section]
 ```
@@ -695,7 +1712,7 @@ Hệ thống tự động kiểm tra, hiển thị pass/fail per item, block Arc
 
 ```markdown
 # MoMo - momo.vn
-[Domain-level content do SEO Lead viết - không auto-generate]
+[Domain-level content do Web Product Lead viết - không auto-generate]
 
 ---
 
@@ -712,23 +1729,81 @@ Mỗi khi Microsite llms.txt được update, hệ thống regenerate toàn bộ
 
 ### 2.3. Data Model
 
-| Field | Type | Mô tả |
-|---|---|---|
-| `microsite_id` | UUID | FK đến Microsite |
-| `status` | enum | `not_configured` / `configured` / `needs_review` |
-| `content` | text | Raw content của section này trong llms.txt |
-| `template_applied` | string | Template đã dùng: `P1_financial` / `P2_insurance` / `P3_public_service` / `P4_lifestyle` / `custom` |
-| `updated_by` | user_id | Chỉ SEO Lead được update |
-| `updated_at` | timestamp | Auto |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Field</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Type</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">microsite_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FK đến Microsite</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">status</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">enum</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">not_configured</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">configured</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">needs_review</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">content</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">text</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Raw content của section này trong llms.txt</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">template_applied</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">string</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Template đã dùng: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P1_financial</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P2_insurance</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P3_public_service</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P4_lifestyle</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">custom</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">updated_by</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">user_id</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chỉ Web Product Lead được update</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">updated_at</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">timestamp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2.4. Template mặc định theo Pillar
 
-| Pillar | Template ID | Nội dung gợi ý |
-|---|---|---|
-| `P1` | `P1_financial` | Use Case description + disclaimer AI không được đưa ra tư vấn tài chính cụ thể + danh sách allowed queries |
-| `P2` | `P2_insurance` | Use Case description + disclaimer giá bảo hiểm thay đổi + allow neutral comparison queries |
-| `P3` | `P3_public_service` | Use Case description + note data là real-time từ API + priority indexing context |
-| `P4` | `P4_lifestyle` | Use Case description + merchant data context + note campaign content có expiry |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Pillar</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Template ID</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung gợi ý</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P1</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P1_financial</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Use Case description + disclaimer AI không được đưa ra tư vấn tài chính cụ thể + danh sách allowed queries</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P2</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P2_insurance</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Use Case description + disclaimer giá bảo hiểm thay đổi + allow neutral comparison queries</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P3</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P3_public_service</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Use Case description + note data là real-time từ API + priority indexing context</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P4</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">P4_lifestyle</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Use Case description + merchant data context + note campaign content có expiry</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2.5. Trigger regenerate llms.txt root
 
@@ -737,7 +1812,7 @@ Hệ thống regenerate `momo.vn/llms.txt` khi:
 - Microsite status thay đổi sang `archived` (remove section khỏi merged file)
 - Microsite mới được tạo và llms.txt configured lần đầu
 
-**Output:** Serve static file hoặc generate on-the-fly với cache. SEO Lead không cần làm gì sau khi save - file tự cập nhật trong vòng 60 giây.
+**Output:** Serve static file hoặc generate on-the-fly với cache. Web Product Lead không cần làm gì sau khi save - file tự cập nhật trong vòng 60 giây.
 
 ### 2.6. Acceptance Criteria
 
@@ -767,19 +1842,72 @@ Sitemap Index chứa `<sitemap>` entries cho tất cả Microsite có status `ac
 
 ### 3.2. Data Model: Sitemap Entry
 
-| Field | Type | Mô tả |
-|---|---|---|
-| `sitemap_entry_id` | UUID | PK |
-| `microsite_id` | UUID | FK |
-| `page_id` | UUID | FK đến Sub-page hoặc Blog |
-| `url` | string | Full URL. Ví dụ: `https://momo.vn/vay-nhanh` |
-| `page_type` | enum | `hub` / `spoke` / `blog` / `tool` / `landing` |
-| `inclusion_mode` | enum | `auto` / `force_include` / `force_exclude` |
-| `priority` | decimal | 0.0 - 1.0 |
-| `changefreq` | enum | `daily` / `weekly` / `monthly` / `yearly` |
-| `last_modified` | timestamp | Ngày page được update lần cuối |
-| `included_in_sitemap` | boolean | Kết quả cuối cùng: có trong sitemap hay không |
-| `exclusion_reason` | string | Null nếu included. Ghi lý do nếu excluded: `low_score` / `landing_page` / `noindex` / `archived` / `force_excluded` |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Field</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Type</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">sitemap_entry_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PK</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">microsite_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FK</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">page_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FK đến Sub-page hoặc Blog</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">url</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">string</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Full URL. Ví dụ: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">https://momo.vn/vay-nhanh</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">page_type</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">enum</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">hub</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">spoke</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">blog</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">tool</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">landing</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">inclusion_mode</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">enum</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">auto</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">force_include</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">force_exclude</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">priority</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">decimal</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0.0 - 1.0</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">changefreq</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">enum</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">daily</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">weekly</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">monthly</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">yearly</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">last_modified</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">timestamp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ngày page được update lần cuối</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">included_in_sitemap</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">boolean</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kết quả cuối cùng: có trong sitemap hay không</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">exclusion_reason</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">string</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Null nếu included. Ghi lý do nếu excluded: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">low_score</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">landing_page</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">noindex</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">archived</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">force_excluded</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 3.3. Logic quyết định included_in_sitemap
 
@@ -809,27 +1937,93 @@ else:  # auto mode
 
 ### 3.4. Priority mặc định theo page_type
 
-| page_type | priority | changefreq |
-|---|---|---|
-| `hub` | `1.0` | `weekly` |
-| `tool` | `0.9` | `weekly` |
-| `spoke` | `0.8` | `weekly` |
-| `blog` | `0.7` | `monthly` |
-| `landing` | excluded | - |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">page_type</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">priority</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">changefreq</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">hub</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">1.0</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">weekly</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">tool</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">0.9</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">weekly</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">spoke</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">0.8</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">weekly</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">blog</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">0.7</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">monthly</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">landing</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">excluded</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+  </tbody>
+</table>
 
-SEO Lead override được bằng cách set trực tiếp `priority` và `changefreq` + set `inclusion_mode = force_include`.
+Web Product Lead override được bằng cách set trực tiếp `priority` và `changefreq` + set `inclusion_mode = force_include`.
 
 ### 3.5. Trigger Events
 
-| Event | Action | Latency target |
-|---|---|---|
-| Page status → `live` + seo_score ≥ 60 + page_type != `landing` | Thêm entry vào sitemap sub-microsite | < 15 phút |
-| Page seo_score vượt ngưỡng 60 (trước đó < 60) | Thêm entry vào sitemap | < 15 phút |
-| Page status → `archived` hoặc `410` | Remove entry khỏi sitemap + submit GSC | < 15 phút |
-| Page robots_noindex = true | Remove entry khỏi sitemap | < 15 phút |
-| SEO Lead force-include / force-exclude | Update ngay + submit GSC | < 5 phút |
-| SEO Lead click "Submit to GSC" | Ping GSC API với URL của sub-sitemap Microsite | Ngay lập tức |
-| Microsite status → `archived` | Remove sub-sitemap khỏi Sitemap Index + submit | < 15 phút |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Event</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Action</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Latency target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Page status → <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">live</code> + seo_score ≥ 60 + page_type != <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">landing</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thêm entry vào sitemap sub-microsite</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 15 phút</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Page seo_score vượt ngưỡng 60 (trước đó < 60)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thêm entry vào sitemap</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 15 phút</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Page status → <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">archived</code> hoặc <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">410</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Remove entry khỏi sitemap + submit GSC</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 15 phút</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Page robots_noindex = true</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Remove entry khỏi sitemap</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 15 phút</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead force-include / force-exclude</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Update ngay + submit GSC</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 5 phút</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead click "Submit to GSC"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ping GSC API với URL của sub-sitemap Microsite</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ngay lập tức</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Microsite status → <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">archived</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Remove sub-sitemap khỏi Sitemap Index + submit</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 15 phút</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 3.6. GSC Integration
 
@@ -840,28 +2034,89 @@ Dùng **Google Search Console Sitemap Submission API**:
 
 **Submission Log table:**
 
-| Field | Type |
-|---|---|
-| `log_id` | UUID |
-| `microsite_id` | UUID |
-| `trigger_type` | `auto_page_live` / `auto_page_archive` / `manual_seo_lead` |
-| `triggered_by` | user_id (null nếu auto) |
-| `sitemap_url` | string |
-| `urls_changed_count` | int |
-| `gsc_response_code` | int |
-| `submitted_at` | timestamp |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Field</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">log_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">microsite_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">trigger_type</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">auto_page_live</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">auto_page_archive</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">manual_seo_lead</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">triggered_by</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">user_id (null nếu auto)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">sitemap_url</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">string</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">urls_changed_count</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">int</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">gsc_response_code</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">int</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">submitted_at</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">timestamp</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 3.7. Web Structure Validation
 
 Hệ thống tự động check và hiển thị warnings sau khi mỗi page publish:
 
-| Condition | Warning type | Severity |
-|---|---|---|
-| Microsite có Spoke page live nhưng chưa có Hub live | `no_hub` | Error |
-| Blog page không có internal link href trỏ về domain momo.vn/{slug}/* | `orphan_blog` | Warning |
-| Spoke page không có internal link href trỏ về `/{slug}` (Hub) | `spoke_no_hub_link` | Warning |
-| Tool page bị Blocked (seo_score < 60) | `tool_blocked` | Warning |
-| Hub page seo_score < 80 | `hub_low_score` | Info |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Condition</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Warning type</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Severity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Microsite có Spoke page live nhưng chưa có Hub live</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">no_hub</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Error</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog page không có internal link href trỏ về domain momo.vn/{slug}/*</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">orphan_blog</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Warning</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Spoke page không có internal link href trỏ về <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/{slug}</code> (Hub)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">spoke_no_hub_link</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Warning</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tool page bị Blocked (seo_score < 60)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">tool_blocked</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Warning</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hub page seo_score < 80</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">hub_low_score</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Info</td>
+    </tr>
+  </tbody>
+</table>
 
 **Cách detect orphan:** Parse content HTML của page khi publish, extract tất cả `<a href>`, check xem có link nào match pattern. Không cần crawl external - chỉ parse content tại thời điểm save/publish.
 
@@ -873,7 +2128,7 @@ Hệ thống tự động check và hiển thị warnings sau khi mỗi page pub
 - [ ] Khi page archive/410: biến mất khỏi sub-sitemap trong vòng 15 phút + GSC submit tự động
 - [ ] Landing Page không bao giờ xuất hiện trong sitemap (trừ force_include)
 - [ ] Priority đúng theo page_type (hub=1.0, tool=0.9, spoke=0.8, blog=0.7)
-- [ ] SEO Lead có thể force-include/exclude và thay đổi priority từ UI
+- [ ] Web Product Lead có thể force-include/exclude và thay đổi priority từ UI
 - [ ] Nút "Submit to GSC" hoạt động và log kết quả vào Submission Log
 - [ ] Warning `no_hub` hiển thị khi Spoke live nhưng Hub chưa live
 - [ ] Tab Web Structure hiển thị tree view đúng theo tầng với traffic + score per node
@@ -884,35 +2139,156 @@ Hệ thống tự động check và hiển thị warnings sau khi mỗi page pub
 
 ### 4.1. Blog Entity Data Model
 
-| Field | Type | Required | Mô tả |
-|---|---|---|---|
-| `blog_id` | UUID | Có | PK |
-| `microsite_id` | UUID | Có | FK - Blog phải thuộc 1 Microsite |
-| `primary_keyword` | string | Có | Lowercase, chuẩn hóa. Unique per Microsite (Keyword Master Registry) |
-| `title` | string | Có | H1/Title tag |
-| `slug` | string | Có | URL path. Ví dụ: `lai-suat-vay-nhanh-2026` → URL: `/{microsite_slug}/blog/{blog_slug}` |
-| `status` | enum | Có | `draft` / `scheduled` / `live` / `archived` |
-| `creation_type` | enum | Có | `genai` / `manual` - Set khi tạo, **không thay đổi được sau đó** |
-| `seo_score` | int | Auto | 0-100 từ Scoring Gate |
-| `hard_block` | boolean | Auto | true nếu có Hard Block trong Scoring Gate |
-| `author_id` | user_id | Conditional | Bắt buộc với Microsite Pillar P1 (Named Author Policy) |
-| `created_by` | user_id | Có | Auto |
-| `created_at` | timestamp | Có | Auto |
-| `published_at` | timestamp | | Set khi status → live |
-| `updated_at` | timestamp | Có | Auto |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Field</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Type</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Required</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">blog_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PK</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">microsite_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FK - Blog phải thuộc 1 Microsite</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">primary_keyword</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">string</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lowercase, chuẩn hóa. Unique per Microsite (Keyword Master Registry)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">title</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">string</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">H1/Title tag</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">slug</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">string</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL path. Ví dụ: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">lai-suat-vay-nhanh-2026</code> → URL: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/{microsite_slug}/blog/{blog_slug}</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">status</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">enum</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">draft</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">scheduled</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">live</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">archived</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">creation_type</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">enum</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">genai</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">manual</code> - Set khi tạo, <strong>không thay đổi được sau đó</strong></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">seo_score</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">int</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0-100 từ Scoring Gate</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">hard_block</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">boolean</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">true nếu có Hard Block trong Scoring Gate</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">author_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">user_id</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Conditional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bắt buộc với Microsite Pillar P1 (Named Author Policy)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">created_by</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">user_id</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">created_at</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">timestamp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">published_at</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">timestamp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Set khi status → live</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">updated_at</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">timestamp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto</td>
+    </tr>
+  </tbody>
+</table>
 
 **Nếu creation_type = `genai`, thêm bảng Blog_GenAI_Usage:**
 
-| Field | Type | Mô tả |
-|---|---|---|
-| `blog_id` | UUID | FK |
-| `outline_id` | UUID | FK đến Outline đã được Selected trong GenAI flow |
-| `model_name` | string | Ví dụ: `claude-sonnet-4-6` |
-| `input_tokens` | int | Token count của prompt |
-| `output_tokens` | int | Token count của response |
-| `cost_usd` | decimal | Chi phí tính tại thời điểm API call theo pricing hiện tại |
-| `cost_locked_at` | timestamp | Timestamp lúc log cost - **không recalculate sau này** |
-| `generation_step` | enum | `outline` / `detail` - bước nào trigger API call |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Field</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Type</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">blog_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FK</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">outline_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FK đến Outline đã được Selected trong GenAI flow</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">model_name</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">string</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ví dụ: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">claude-sonnet-4-6</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">input_tokens</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">int</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Token count của prompt</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">output_tokens</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">int</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Token count của response</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">cost_usd</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">decimal</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chi phí tính tại thời điểm API call theo pricing hiện tại</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">cost_locked_at</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">timestamp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Timestamp lúc log cost - <strong>không recalculate sau này</strong></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">generation_step</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">enum</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">outline</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">detail</code> - bước nào trigger API call</td>
+    </tr>
+  </tbody>
+</table>
 
 > **Quan trọng - Cost logging:** `cost_usd` được tính và lock tại thời điểm API call. Không recalculate dù pricing thay đổi sau đó.
 
@@ -920,14 +2296,47 @@ Hệ thống tự động check và hiển thị warnings sau khi mỗi page pub
 
 **Rule:** Trong cùng 1 Microsite, không được có 2 Blog cùng `primary_keyword`.
 
-| Field | Type | Mô tả |
-|---|---|---|
-| `registry_id` | UUID | PK |
-| `microsite_id` | UUID | FK |
-| `primary_keyword` | string | Lowercase, chuẩn hóa (trim, lowercase, collapse spaces) |
-| `blog_id` | UUID | FK đến Blog đang sở hữu keyword này |
-| `registered_at` | timestamp | Khi nào keyword được đăng ký |
-| `source` | enum | `genai_flow` / `manual_editor` (Bottom-Up Sync từ Blog Editor) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Field</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Type</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">registry_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PK</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">microsite_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FK</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">primary_keyword</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">string</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lowercase, chuẩn hóa (trim, lowercase, collapse spaces)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">blog_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FK đến Blog đang sở hữu keyword này</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">registered_at</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">timestamp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khi nào keyword được đăng ký</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">source</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">enum</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">genai_flow</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">manual_editor</code> (Bottom-Up Sync từ Blog Editor)</td>
+    </tr>
+  </tbody>
+</table>
 
 **Unique constraint:** `(microsite_id, primary_keyword)` phải unique.
 
@@ -944,23 +2353,81 @@ normalized = keyword.strip().lower().replace(/\s+/g, ' ')
 
 **2 badge types:**
 
-| Badge | Màu | Khi nào hiển thị |
-|---|---|---|
-| `GenAI` | Tím (#8B5CF6) | `creation_type = genai` |
-| `Manual` | Xám (#6B7280) | `creation_type = manual` |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Badge</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Màu</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Khi nào hiển thị</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">GenAI</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tím (#8B5CF6)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">creation_type = genai</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Manual</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xám (#6B7280)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">creation_type = manual</code></td>
+    </tr>
+  </tbody>
+</table>
 
 **Columns trong List:**
 
-| Column | GenAI row | Manual row |
-|---|---|---|
-| Badge | `GenAI` (tím) | `Manual` (xám) |
-| Title | Có | Có |
-| Primary Keyword | Có | Có |
-| Status | Có | Có |
-| Ngày tạo | Có | Có |
-| Model | Có | Không hiển thị (empty cell) |
-| Cost | Có (USD, 4 decimals) | Không hiển thị |
-| SEO Score | Có | Có |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Column</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">GenAI row</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Manual row</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Badge</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">GenAI</code> (tím)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Manual</code> (xám)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Title</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Primary Keyword</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Status</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ngày tạo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Model</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không hiển thị (empty cell)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cost</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có (USD, 4 decimals)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không hiển thị</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO Score</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+    </tr>
+  </tbody>
+</table>
 
 **Filters:** Creation type / Status / Score (Pass ≥80 / Warning 60-79 / Blocked <60)
 
@@ -970,16 +2437,52 @@ normalized = keyword.strip().lower().replace(/\s+/g, ' ')
 
 ```
 +-----------------------------------+------------------+
-|                                   |                  |
-|         EDITOR PANEL              |  AI USAGE PANEL  |
-|   (full blog editor, metadata,    |                  |
-|    publish controls)              |  Model: claude-  |
-|                                   |  sonnet-4-6      |
-|                                   |  Input: 4,231    |
-|                                   |  Output: 1,847   |
-|                                   |  Cost: $0.0182   |
-|                                   |  (locked at      |
-|                                   |  2026-05-26)     |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">EDITOR PANEL</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI USAGE PANEL</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">(full blog editor, metadata,</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">publish controls)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Model: claude-</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">sonnet-4-6</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Input: 4,231</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Output: 1,847</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cost: $0.0182</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">(locked at</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-26)</td>
+    </tr>
+  </tbody>
+</table>
 +-----------------------------------+------------------+
 ```
 
@@ -987,12 +2490,37 @@ normalized = keyword.strip().lower().replace(/\s+/g, ' ')
 
 ### 4.5. Publish Gate
 
-| # | Check | Enforcement |
-|---|---|---|
-| 1 | `primary_keyword` đã đăng ký trong Keyword Master Registry | Hard block nếu chưa đăng ký |
-| 2 | `seo_score >= 60` và `hard_block = false` | Hard block nếu fail |
-| 3 | `author_id` không null (chỉ với Microsite P1) | Hard block nếu thiếu |
-| 4 | `seo_score < 80` | Warning (có thể bỏ qua) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Check</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Enforcement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">primary_keyword</code> đã đăng ký trong Keyword Master Registry</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hard block nếu chưa đăng ký</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">seo_score >= 60</code> và <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">hard_block = false</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hard block nếu fail</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">author_id</code> không null (chỉ với Microsite P1)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hard block nếu thiếu</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">seo_score < 80</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Warning (có thể bỏ qua)</td>
+    </tr>
+  </tbody>
+</table>
 
 **GenAI blog:** Bước 6 (Outline Selected) phải là `true` trước khi Blog Draft được tạo. Nếu Outline chưa được Select, nút "Push to Blog Editor" bị disabled.
 
@@ -1004,7 +2532,7 @@ normalized = keyword.strip().lower().replace(/\s+/g, ' ')
 
 Ví dụ: `/vay-nhanh/blog/lai-suat-vay-nhanh-2026`
 
-`blog_slug` auto-generate từ title (lowercase, no diacritics, gạch ngang). Cho phép SEO Lead edit thủ công trước khi publish. Không thay đổi sau khi live (cần redirect nếu đổi).
+`blog_slug` auto-generate từ title (lowercase, no diacritics, gạch ngang). Cho phép Web Product Lead edit thủ công trước khi publish. Không thay đổi sau khi live (cần redirect nếu đổi).
 
 ### 4.7. Acceptance Criteria
 
@@ -1031,10 +2559,30 @@ Widget là **Native Product Component** nhúng trực tiếp vào nội dung Blo
 
 **Hai loại Widget trong Blog:**
 
-| Loại | Shortcode | Owner | Governed bởi |
-|---|---|---|---|
-| **Primary Widget** | `[widget:{microsite_use_case_id}]` | Widget của cùng Use Case với Microsite | Blog Management (module này) |
-| **Cross-service Widget** | `[widget:{other_use_case_id}]` | Widget từ Use Case khác (cross-sell) | Ads Manager - ngoài scope module này |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Shortcode</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Governed bởi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Primary Widget</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[widget:{microsite_use_case_id}]</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget của cùng Use Case với Microsite</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog Management (module này)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cross-service Widget</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[widget:{other_use_case_id}]</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget từ Use Case khác (cross-sell)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads Manager - ngoài scope module này</td>
+    </tr>
+  </tbody>
+</table>
 
 > **Scope:** Chỉ cover Primary Widget. Cross-service Widget do Ads Manager quản lý, Blog Editor chỉ render shortcode nếu Ads Manager inject vào.
 
@@ -1042,27 +2590,117 @@ Widget là **Native Product Component** nhúng trực tiếp vào nội dung Blo
 
 **Bảng Widget_Library:**
 
-| Field | Type | Required | Mô tả |
-|---|---|---|---|
-| `widget_id` | UUID | Có | PK |
-| `use_case_id` | string | Có | Unique. Ví dụ: `phat-nguoi`, `vay-nhanh` |
-| `shortcode` | string | Có | Format chuẩn: `[widget:{use_case_id}]`. Auto-generate từ use_case_id |
-| `display_name` | string | Có | Tên hiển thị trong Editor dropdown. Ví dụ: "Tra cứu Phạt Nguội" |
-| `component_type` | enum | Có | `lookup` / `calculator` / `purchase_flow` / `registration` |
-| `status` | enum | Có | `active` / `inactive` |
-| `preview_thumbnail_url` | string | | URL ảnh preview của Widget |
-| `created_at` | timestamp | Có | Auto |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Field</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Type</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Required</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">widget_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PK</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">use_case_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">string</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Unique. Ví dụ: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">phat-nguoi</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">vay-nhanh</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">shortcode</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">string</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Format chuẩn: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">[widget:{use_case_id}]</code>. Auto-generate từ use_case_id</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">display_name</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">string</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tên hiển thị trong Editor dropdown. Ví dụ: "Tra cứu Phạt Nguội"</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">component_type</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">enum</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">lookup</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">calculator</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">purchase_flow</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">registration</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">status</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">enum</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">active</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">inactive</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">preview_thumbnail_url</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">string</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL ảnh preview của Widget</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">created_at</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">timestamp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto</td>
+    </tr>
+  </tbody>
+</table>
 
 **Bảng Blog_Widget:**
 
-| Field | Type | Required | Mô tả |
-|---|---|---|---|
-| `blog_widget_id` | UUID | Có | PK |
-| `blog_id` | UUID | Có | FK → Blog |
-| `widget_id` | UUID | Có | FK → Widget_Library |
-| `placement_mode` | enum | Có | `auto` / `manual` |
-| `auto_insert_disabled` | boolean | Có | Default `false`. Khi `true`: auto-placement bị tắt cho Blog này |
-| `shortcode_in_content` | boolean | Có | `true` nếu shortcode đang tồn tại trong content của Blog |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Field</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Type</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Required</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">blog_widget_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PK</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">blog_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FK → Blog</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">widget_id</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UUID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FK → Widget_Library</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">placement_mode</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">enum</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">auto</code> / <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">manual</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">auto_insert_disabled</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">boolean</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Default <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">false</code>. Khi <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">true</code>: auto-placement bị tắt cho Blog này</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">shortcode_in_content</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">boolean</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">true</code> nếu shortcode đang tồn tại trong content của Blog</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 5.3. Auto-placement Logic
 
@@ -1083,12 +2721,37 @@ else:
 
 **Vị trí auto-insert (theo thứ tự ưu tiên):**
 
-| Ưu tiên | Điều kiện | Vị trí insert |
-|---|---|---|
-| 1 | Bài có từ 2 `<h2>` trở lên | Trước `<h2>` cuối cùng trong bài |
-| 2 | Bài có `<h2>` nhưng chỉ 1 cái | Sau `<h2>` đầu tiên + 2 paragraph |
-| 3 | Bài không có `<h2>` nào | Sau paragraph thứ 3 (đếm từ đầu) |
-| 4 | Bài có dưới 3 paragraph | Cuối nội dung, trước `</article>` |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ưu tiên</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điều kiện</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vị trí insert</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bài có từ 2 <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><h2></code> trở lên</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trước <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><h2></code> cuối cùng trong bài</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bài có <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><h2></code> nhưng chỉ 1 cái</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sau <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><h2></code> đầu tiên + 2 paragraph</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bài không có <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"><h2></code> nào</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sau paragraph thứ 3 (đếm từ đầu)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bài có dưới 3 paragraph</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cuối nội dung, trước <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;"></article></code></td>
+    </tr>
+  </tbody>
+</table>
 
 **Auto-placement chỉ chạy một lần khi publish lần đầu. Không re-run khi update bài đã live.**
 
@@ -1139,7 +2802,7 @@ Khi bật: hệ thống sẽ không tự chèn Widget vào bài này khi publish
 [widget:phat-nguoi]
       ↓
 <div class="mospark-widget" data-widget="phat-nguoi" data-microsite="phat-nguoi">
-  <!-- Widget component render tại đây -->
+
 </div>
 ```
 
@@ -1152,7 +2815,7 @@ Khi bật: hệ thống sẽ không tự chèn Widget vào bài này khi publish
 
 ```html
 <div class="mospark-widget" data-widget="phat-nguoi">
-  <!-- Rendered by JS -->
+
   <noscript>
     <a href="https://onelink.momo.vn/..." class="widget-cta-fallback">
       Tra cứu Phạt Nguội trên MoMo
@@ -1165,22 +2828,71 @@ Khi bật: hệ thống sẽ không tự chèn Widget vào bài này khi publish
 
 Thêm column **Widget** vào Blog List View:
 
-| State | Hiển thị |
-|---|---|
-| Auto-insert hoạt động | `Auto` (xanh) |
-| Content writer đặt thủ công | `Manual` (xám) |
-| auto_insert_disabled = true | `Tắt` (đỏ) |
-| Không có Widget | `Chưa có` |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">State</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hiển thị</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto-insert hoạt động</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Auto</code> (xanh)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content writer đặt thủ công</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Manual</code> (xám)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">auto_insert_disabled = true</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Tắt</code> (đỏ)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có Widget</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Chưa có</code></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 5.8. Rules tổng hợp
 
-| # | Rule | Enforcement |
-|---|---|---|
-| 1 | Mỗi Blog chỉ có tối đa **1 Primary Widget** (cùng Use Case với Microsite) | Warning trong Editor nếu insert Primary Widget 2 lần |
-| 2 | Cross-service Widget (từ Use Case khác) không bị limit - do Ads Manager quản lý | Blog Editor không validate Cross-service, chỉ render shortcode |
-| 3 | Widget của Use Case `inactive` trong Widget_Library vẫn render shortcode đã có trong content cũ | Hiển thị warning trong Editor: "Widget này đang inactive" |
-| 4 | Khi Microsite archived → Widget của Microsite đó tự động set `inactive` | Alert tất cả Blogs đang có shortcode của Widget này |
-| 5 | Auto-placement chỉ chạy một lần khi publish lần đầu tiên | Không re-run khi update bài đã live |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Rule</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Enforcement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mỗi Blog chỉ có tối đa <strong>1 Primary Widget</strong> (cùng Use Case với Microsite)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Warning trong Editor nếu insert Primary Widget 2 lần</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cross-service Widget (từ Use Case khác) không bị limit - do Ads Manager quản lý</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog Editor không validate Cross-service, chỉ render shortcode</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget của Use Case <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">inactive</code> trong Widget_Library vẫn render shortcode đã có trong content cũ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiển thị warning trong Editor: "Widget này đang inactive"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khi Microsite archived → Widget của Microsite đó tự động set <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">inactive</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Alert tất cả Blogs đang có shortcode của Widget này</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto-placement chỉ chạy một lần khi publish lần đầu tiên</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không re-run khi update bài đã live</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 5.9. Acceptance Criteria
 
@@ -1203,16 +2915,57 @@ Thêm column **Widget** vào Blog List View:
 
 Hoài Anh cần confirm với Hiến trước khi code:
 
-| # | Câu hỏi cần confirm | Quyết định trong spec này |
-|---|---|---|
-| 1 | GSC Indexing API hay Sitemap Submission API? | **Sitemap Submission API** (submit URL của sub-sitemap) |
-| 2 | llms.txt: serve static file hay generate on-the-fly? | Cần Hoài Anh đề xuất - static (cache cần invalidate) hay dynamic (mỗi request merge) |
-| 3 | Orphan blog detection: real-time khi publish hay background job? | **Parse HTML khi publish** - real-time |
-| 4 | Blog_GenAI_Usage: lưu per generation hay aggregate per blog? | **Per generation** (có thể có nhiều API calls cho 1 blog: outline + detail) |
-| 5 | Sitemap sub-file: cache TTL bao lâu? | Đề xuất của Hoài Anh - target serve latency < 2s |
-| 6 | Landing Page URL pattern nằm ở đâu? `/{slug}/landing/*` hay `/landing/{slug}-*`? | Cần confirm với Bảo + Hiến trước khi code |
-| 7 | Widget rendering: server-side render hay client-side hydration? | Hoài Anh đề xuất - yêu cầu cứng: không CLS, fallback noscript bắt buộc |
-| 8 | Widget_Library được seed từ đâu? Dev hardcode hay có UI để thêm Widget mới? | Cần confirm với Bảo - hiện tại Phạt Nguội + BHYT + BH xe máy đang active |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Câu hỏi cần confirm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Quyết định trong spec này</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC Indexing API hay Sitemap Submission API?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sitemap Submission API</strong> (submit URL của sub-sitemap)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">llms.txt: serve static file hay generate on-the-fly?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần Hoài Anh đề xuất - static (cache cần invalidate) hay dynamic (mỗi request merge)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Orphan blog detection: real-time khi publish hay background job?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Parse HTML khi publish</strong> - real-time</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog_GenAI_Usage: lưu per generation hay aggregate per blog?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Per generation</strong> (có thể có nhiều API calls cho 1 blog: outline + detail)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sitemap sub-file: cache TTL bao lâu?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đề xuất của Hoài Anh - target serve latency < 2s</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing Page URL pattern nằm ở đâu? <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/{slug}/landing/<em></code> hay <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/landing/{slug}-</em></code>?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần confirm với Bảo + Hiến trước khi code</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget rendering: server-side render hay client-side hydration?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoài Anh đề xuất - yêu cầu cứng: không CLS, fallback noscript bắt buộc</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget_Library được seed từ đâu? Dev hardcode hay có UI để thêm Widget mới?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần confirm với Bảo - hiện tại Phạt Nguội + BHYT + BH xe máy đang active</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

@@ -21,7 +21,7 @@
 
 **Situation**
 
-Người dùng Việt Nam có nhu cầu đặt vé xe khách rất lớn và đang tìm kiếm trên Google với tổng lượng tìm kiếm ước tính hơn 5 triệu lượt/tháng (theo Inbound Plan 2025). Hành vi tìm kiếm trải dài qua nhiều intent: tuyến đường cụ thể ("vé xe Sài Gòn đi Đà Lạt"), nhà xe cụ thể ("vé xe Phương Trang"), điểm đến ("xe đi Đà Lạt"), và seasonal peak (vé xe Tết). MoMo hiện là đối tác đặt vé của hơn 500 nhà xe và đã có sản phẩm hoạt động trong App, nhưng web channel gần như vắng mặt trên Search - traffic organic năm 2024 chỉ đạt 84.466 sessions toàn năm, tương đương chưa đến 1,7% market share.
+Người dùng Việt Nam có nhu cầu đặt vé xe khách rất lớn và đang tìm kiếm trên Google với tổng lượng tìm kiếm ước tính hơn 5 triệu lượt/tháng (theo Media Team Plan 2025). Hành vi tìm kiếm trải dài qua nhiều intent: tuyến đường cụ thể ("vé xe Sài Gòn đi Đà Lạt"), nhà xe cụ thể ("vé xe Phương Trang"), điểm đến ("xe đi Đà Lạt"), và seasonal peak (vé xe Tết). MoMo hiện là đối tác đặt vé của hơn 500 nhà xe và đã có sản phẩm hoạt động trong App, nhưng web channel gần như vắng mặt trên Search - traffic organic năm 2024 chỉ đạt 84.466 sessions toàn năm, tương đương chưa đến 1,7% market share.
 
 **Complication**
 
@@ -45,47 +45,176 @@ Nền tảng để đáp ứng toàn bộ search intent: 8 loại trang (Routes,
 
 ### 2.1 Market Size
 
-| Metric | Giá trị | Ghi chú |
-|---|---|---|
-| Tổng lượng search/tháng (ước tính) | ~5.000.000 searches | Inbound Plan 2025 [cần verify GSC + Ahrefs] |
-| Market share momo.vn hiện tại (2024) | ~1,7% | 84.466 sessions / 5M market |
-| Target market share 2025 (Base Case 1) | 4,4% | 1.035.000 sessions |
-| Target market share 2025 (Base Case 3) | 5,2% | 1.500.000 sessions |
-| Số nhà xe trên MoMo | 500+ | Theo PPTX slide 4 |
-| Tickets processed (top merchant) | 571.861 (xe Phương Trang) | Dashboard BUS Performance |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giá trị</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng lượng search/tháng (ước tính)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~5.000.000 searches</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Media Team Plan 2025 [cần verify GSC + Ahrefs]</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Market share momo.vn hiện tại (2024)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~1,7%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">84.466 sessions / 5M market</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Target market share 2025 (Base Case 1)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4,4%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.035.000 sessions</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Target market share 2025 (Base Case 3)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5,2%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.500.000 sessions</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số nhà xe trên MoMo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">500+</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Theo PPTX slide 4</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tickets processed (top merchant)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">571.861 (xe Phương Trang)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dashboard BUS Performance</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2.2 Hiện Trạng Traffic
 
-| Năm | Total Sessions | Click to App | CR W2A |
-|---|---|---|---|
-| 2022 | ~17.886 | Chưa có data | - |
-| 2023 | 75.266 | 3.319 | ~4,4% |
-| 2024 | 84.466 | 9.085 | ~10,8% |
-| 2025 (Base Case 1 target) | 1.035.000 | 73.100 | ~7,1% |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Năm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Total Sessions</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Click to App</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">CR W2A</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2022</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~17.886</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa có data</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2023</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">75.266</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.319</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~4,4%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2024</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">84.466</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">9.085</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~10,8%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2025 (Base Case 1 target)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.035.000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">73.100</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~7,1%</td>
+    </tr>
+  </tbody>
+</table>
 
 *Nhận xét: CR W2A 2024 đạt 10,8% là tín hiệu tốt - người dùng đến từ organic có intent cao. Vấn đề là volume traffic quá thấp. Growth 2022-2024 chủ yếu đến từ tự nhiên, chưa có đầu tư có hệ thống.*
 
 ### 2.3 Competitive Landscape
 
-| Đối thủ | Điểm mạnh | Điểm yếu so với MoMo |
-|---|---|---|
-| VeXeRe (vexere.com) | Hàng nghìn trang programmatic, domain authority cao, blog du lịch tốt | Không có super-app ecosystem, không có MoMo Pay |
-| BusMap | App-first, dữ liệu realtime tốt | Web channel yếu hơn VeXeRe |
-| Baolau.vn | SEO blog mạnh, coverage tuyến đường rộng | Ít nhà xe hơn MoMo |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đối thủ</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điểm mạnh</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điểm yếu so với MoMo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">VeXeRe (vexere.com)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hàng nghìn trang programmatic, domain authority cao, blog du lịch tốt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có super-app ecosystem, không có MoMo Pay</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BusMap</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">App-first, dữ liệu realtime tốt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web channel yếu hơn VeXeRe</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Baolau.vn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO blog mạnh, coverage tuyến đường rộng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ít nhà xe hơn MoMo</td>
+    </tr>
+  </tbody>
+</table>
 
 **MoMo's moat:** Inventory nhà xe lớn (500+), hệ sinh thái thanh toán, user trust. Chưa được khai thác qua web channel.
 
 ### 2.4 Keyword Clusters
 
-| Cluster | Intent | Ví dụ keyword | Volume Est. |
-|---|---|---|---|
-| Routes | Commercial - Do | "vé xe Sài Gòn đi Đà Lạt" | Cao |
-| Bus Operator | Commercial - Do | "vé xe Phương Trang", "xe Điền Linh" | Cao |
-| Destination | Informational + Commercial | "xe đi Đà Lạt", "vé xe đi Nha Trang" | Cao |
-| Bus Terminal | Informational | "bến xe Miền Tây", "bến xe Miền Đông" | Trung bình |
-| Bus Type | Commercial | "xe limousine Sài Gòn Đà Lạt" | Trung bình |
-| Seasonal - Tết | Commercial - High urgency | "vé xe Tết 2026", "vé xe tết Sài Gòn" | Spike cao theo mùa |
-| Blog / Guide | Informational | "kinh nghiệm đi xe khách", "nhà xe uy tín" | Trung bình |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cluster</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Intent</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ví dụ keyword</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Volume Est.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Routes</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Commercial - Do</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"vé xe Sài Gòn đi Đà Lạt"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bus Operator</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Commercial - Do</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"vé xe Phương Trang", "xe Điền Linh"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Destination</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Informational + Commercial</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"xe đi Đà Lạt", "vé xe đi Nha Trang"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bus Terminal</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Informational</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"bến xe Miền Tây", "bến xe Miền Đông"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bus Type</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Commercial</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"xe limousine Sài Gòn Đà Lạt"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Seasonal - Tết</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Commercial - High urgency</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"vé xe Tết 2026", "vé xe tết Sài Gòn"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Spike cao theo mùa</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog / Guide</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Informational</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"kinh nghiệm đi xe khách", "nhà xe uy tín"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -119,12 +248,42 @@ Khác với use case Vay Nhanh hay BH có calculator giúp user convert mà khô
 
 **Thiếu 1 trong 4 - dừng lại.**
 
-| # | Pre-condition | Trạng thái | Owner giải quyết |
-|---|---|---|---|
-| P1 | Các landing pages (Routes, Destination, Operator...) hoàn thành xây dựng và được Google index trước thời điểm T | Đang triển khai | Web Platform + Dev |
-| P2 | Content API hoặc ChatGPT-generated content pipeline hoạt động và phủ đủ trang programmatic | Pilot - chưa confirm | Inbound + Tech |
-| P3 | Internal Link API hoặc cơ chế thay thế giữa các page types được cấu hình đúng | Chưa giải quyết | Tech |
-| P4 | Tracking web (GA4 event + Appsflyer W2A) được setup trước khi launch để có baseline data | Chưa setup | Web Data Tracking |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Pre-condition</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trạng thái</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner giải quyết</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các landing pages (Routes, Destination, Operator...) hoàn thành xây dựng và được Google index trước thời điểm T</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang triển khai</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform + Dev</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content API hoặc ChatGPT-generated content pipeline hoạt động và phủ đủ trang programmatic</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Pilot - chưa confirm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Media Team + Tech</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Internal Link API hoặc cơ chế thay thế giữa các page types được cấu hình đúng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa giải quyết</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tech</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tracking web (GA4 event + Appsflyer W2A) được setup trước khi launch để có baseline data</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa setup</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Data Tracking</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -132,63 +291,201 @@ Khác với use case Vay Nhanh hay BH có calculator giúp user convert mà khô
 
 ### Job 1: "Tôi cần tìm chuyến xe cụ thể từ A đến B, chọn nhà xe và giờ đi phù hợp"
 
-| Dimension | Chi tiết |
-|---|---|
-| Functional | Tra cứu chuyến xe theo tuyến đường + ngày đi, xem nhà xe, giờ khởi hành, giá vé |
-| Trigger | Cần đi về quê, đi du lịch, đi công tác - thường lên kế hoạch 1-7 ngày trước |
-| Emotional | Muốn chắc chắn chọn được nhà xe uy tín, không bị miss chuyến |
-| Social | Mua vé xong chia sẻ link lên nhóm chat cho cả nhà confirm giờ đi |
-| Search → App | "vé xe Sài Gòn Đà Lạt" → /ve-xe/ve-xe-khach-tu-ho-chi-minh-di-da-lat → Chọn chuyến → Mở App → Thanh toán |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chi tiết</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra cứu chuyến xe theo tuyến đường + ngày đi, xem nhà xe, giờ khởi hành, giá vé</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần đi về quê, đi du lịch, đi công tác - thường lên kế hoạch 1-7 ngày trước</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Muốn chắc chắn chọn được nhà xe uy tín, không bị miss chuyến</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mua vé xong chia sẻ link lên nhóm chat cho cả nhà confirm giờ đi</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"vé xe Sài Gòn Đà Lạt" → /ve-xe/ve-xe-khach-tu-ho-chi-minh-di-da-lat → Chọn chuyến → Mở App → Thanh toán</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Job 2: "Tôi đã biết nhà xe muốn đi, cần xem lịch + đặt vé nhanh"
 
-| Dimension | Chi tiết |
-|---|---|
-| Functional | Search tên nhà xe, xem tất cả tuyến đường nhà xe đó chạy, chọn tuyến phù hợp |
-| Trigger | Đã dùng nhà xe này trước đó và hài lòng, muốn dùng lại |
-| Emotional | Tiết kiệm thời gian so sánh - đã có preference nhà xe |
-| Social | Nhắn bạn: "Đi Phương Trang là ổn, mình hay đặt trên MoMo" - không cần giải thích thêm |
-| Search → App | "vé xe Phương Trang" / "xe Điền Linh Limousine" → /ve-xe/xe-phuong-trang → Chọn tuyến + chuyến → Mở App |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chi tiết</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search tên nhà xe, xem tất cả tuyến đường nhà xe đó chạy, chọn tuyến phù hợp</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đã dùng nhà xe này trước đó và hài lòng, muốn dùng lại</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tiết kiệm thời gian so sánh - đã có preference nhà xe</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhắn bạn: "Đi Phương Trang là ổn, mình hay đặt trên MoMo" - không cần giải thích thêm</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"vé xe Phương Trang" / "xe Điền Linh Limousine" → /ve-xe/xe-phuong-trang → Chọn tuyến + chuyến → Mở App</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Job 3: "Tôi muốn đến một điểm đến cụ thể, chưa biết chọn nhà xe nào"
 
-| Dimension | Chi tiết |
-|---|---|
-| Functional | Xem tất cả nhà xe có tuyến đến điểm đến mình muốn, so sánh giá và thời gian |
-| Trigger | Lên kế hoạch chuyến đi chưa rõ lịch trình - đang ở giai đoạn khám phá |
-| Emotional | Muốn có overview toàn diện trước khi quyết định |
-| Social | Share link trang Đà Lạt cho cả nhóm cùng chọn nhà xe và chuyến đi |
-| Search → App | "xe đi Đà Lạt", "vé xe đến Nha Trang" → /ve-xe/da-lat → Chọn nhà xe → Mở App |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chi tiết</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xem tất cả nhà xe có tuyến đến điểm đến mình muốn, so sánh giá và thời gian</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lên kế hoạch chuyến đi chưa rõ lịch trình - đang ở giai đoạn khám phá</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Muốn có overview toàn diện trước khi quyết định</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Share link trang Đà Lạt cho cả nhóm cùng chọn nhà xe và chuyến đi</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"xe đi Đà Lạt", "vé xe đến Nha Trang" → /ve-xe/da-lat → Chọn nhà xe → Mở App</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Job 4: "Tôi cần đặt vé xe Tết sớm trước khi hết chỗ"
 
-| Dimension | Chi tiết |
-|---|---|
-| Functional | Xem vé xe Tết còn hay hết, nhà xe nào còn chỗ, giá bao nhiêu |
-| Trigger | Gần đến Tết (tháng 11-12) + nghe người quen nói vé sắp hết |
-| Emotional | Lo lắng không có vé về quê - high urgency, high anxiety |
-| Social | Nhắn anh chị: "Còn vé Tết đó, đặt ngay đi trước khi hết" - tự mình đã check rồi |
-| Search → App | "vé xe Tết 2026", "mua vé xe Tết sớm" → /ve-xe/ve-xe-tet → Booking → Mở App |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chi tiết</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xem vé xe Tết còn hay hết, nhà xe nào còn chỗ, giá bao nhiêu</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gần đến Tết (tháng 11-12) + nghe người quen nói vé sắp hết</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lo lắng không có vé về quê - high urgency, high anxiety</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhắn anh chị: "Còn vé Tết đó, đặt ngay đi trước khi hết" - tự mình đã check rồi</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"vé xe Tết 2026", "mua vé xe Tết sớm" → /ve-xe/ve-xe-tet → Booking → Mở App</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Job 5: "Tôi muốn đi xe limousine/VIP cho chuyến đi thoải mái hơn"
 
-| Dimension | Chi tiết |
-|---|---|
-| Functional | Tìm nhà xe có dịch vụ limousine cho tuyến cụ thể, xem chất lượng xe |
-| Trigger | Chuyến đi xa (>3 giờ), đi cùng đối tác/người lớn tuổi, không muốn vé bình thường |
-| Emotional | Muốn thoải mái, thể hiện mình chọn lựa tốt |
-| Social | Book limousine cho cả team đi công tác - chọn MoMo trông chuyên nghiệp hơn đặt lẻ từng người |
-| Search → App | "xe limousine Sài Gòn Đà Lạt" → /ve-xe/limousine-tu-ho-chi-minh-di-da-lat → Mở App |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chi tiết</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tìm nhà xe có dịch vụ limousine cho tuyến cụ thể, xem chất lượng xe</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuyến đi xa (>3 giờ), đi cùng đối tác/người lớn tuổi, không muốn vé bình thường</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Muốn thoải mái, thể hiện mình chọn lựa tốt</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Book limousine cho cả team đi công tác - chọn MoMo trông chuyên nghiệp hơn đặt lẻ từng người</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"xe limousine Sài Gòn Đà Lạt" → /ve-xe/limousine-tu-ho-chi-minh-di-da-lat → Mở App</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Job 6: "Tôi cần thông tin về bến xe (giờ mở cửa, bến nào phù hợp, xe nào xuất phát từ bến này)"
 
-| Dimension | Chi tiết |
-|---|---|
-| Functional | Xem nhà xe xuất phát từ bến xe cụ thể, giờ chạy, cách di chuyển đến bến |
-| Trigger | Không rõ mình nên ra bến nào, cần chọn bến gần nơi ở |
-| Emotional | Lo lắng ra sai bến, miss xe |
-| Social | Tự tìm được thông tin bến xe mà không cần hỏi người quen - chủ động lộ trình |
-| Search → App | "bến xe Miền Đông đi Đà Nẵng" → /ve-xe/ben-xe-mien-dong-di-da-nang → Chọn nhà xe → Mở App |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chi tiết</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xem nhà xe xuất phát từ bến xe cụ thể, giờ chạy, cách di chuyển đến bến</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không rõ mình nên ra bến nào, cần chọn bến gần nơi ở</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lo lắng ra sai bến, miss xe</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự tìm được thông tin bến xe mà không cần hỏi người quen - chủ động lộ trình</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"bến xe Miền Đông đi Đà Nẵng" → /ve-xe/ben-xe-mien-dong-di-da-nang → Chọn nhà xe → Mở App</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -214,56 +511,232 @@ Khác với use case Vay Nhanh hay BH có calculator giúp user convert mà khô
 
 ### 5.2 URL Architecture
 
-| Page Type | URL Pattern | Ưu tiên | Volume Potential | Số URL ước tính |
-|---|---|---|---|---|
-| Home | /ve-xe | P1 | Cao (head term) | 1 |
-| Routes | /ve-xe/ve-xe-khach-tu-[A]-di-[B] | P1 | Rất cao | 500-1.000+ |
-| Destination | /ve-xe/[tinh-thanh-pho] | P1 | Cao | 63 tỉnh thành |
-| Bus Operator | /ve-xe/xe-[nha-xe] | P1 | Cao | 500+ nhà xe |
-| Bus Operator + Route | /ve-xe/nha-xe-[nha-xe]-tu-[A]-di-[B] | P1 | Rất cao (long-tail) | 2.000+ |
-| Bus Terminal | /ve-xe/ben-xe-[ben-xe] | P2 | Trung bình | 50-100 bến xe |
-| Bus Terminal + Destination | /ve-xe/ben-xe-[ben-xe]-di-[diem-den] | P2 | Trung bình | 200+ |
-| Bus Type (Limousine) | /ve-xe/limousine-tu-[A]-di-[B] | P2 | Trung bình | 100-200 |
-| LDP Tết | /ve-xe/ve-xe-tet | P1 (seasonal) | Spike cao tháng 11-1 | 1 (evergreen URL) |
-| Blog | /ve-xe/blog + articles | P2 | Trung bình - dài hạn | 200-800 bài |
-| Promotions | /ve-xe/khuyen-mai | P3 | Thấp | 1 |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Page Type</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL Pattern</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ưu tiên</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Volume Potential</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Số URL ước tính</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Home</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao (head term)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Routes</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/ve-xe-khach-tu-[A]-di-[B]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Rất cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">500-1.000+</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Destination</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/[tinh-thanh-pho]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">63 tỉnh thành</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bus Operator</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/xe-[nha-xe]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">500+ nhà xe</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bus Operator + Route</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/nha-xe-[nha-xe]-tu-[A]-di-[B]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Rất cao (long-tail)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.000+</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bus Terminal</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/ben-xe-[ben-xe]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">50-100 bến xe</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bus Terminal + Destination</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/ben-xe-[ben-xe]-di-[diem-den]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">200+</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bus Type (Limousine)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/limousine-tu-[A]-di-[B]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">100-200</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LDP Tết</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/ve-xe-tet</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1 (seasonal)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Spike cao tháng 11-1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1 (evergreen URL)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/blog + articles</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình - dài hạn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">200-800 bài</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Promotions</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/ve-xe/khuyen-mai</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thấp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 5.3 On-Page Component Anatomy (Các trang P1)
 
 **Routes Page - /ve-xe/ve-xe-khach-tu-[A]-di-[B]**
 
-| Block | Mô tả | SEO Purpose |
-|---|---|---|
-| Breadcrumb | MoMo > Vé xe khách > Vé xe đi từ A đến B | Schema BreadcrumbList |
-| H1 | "Danh sách các chuyến xe từ A đi B" | Primary keyword target |
-| Search Widget (Product) | Module tìm vé theo ngày/người | PLG hook - booking entry |
-| Long Content | Top XX nhà xe từ A đi B - có Table of Contents, outline từng nhà xe | Semantic depth, internal linking |
-| Navigation Block | 20 anchor text Routes liên quan (B đi C, D đi B...) | Internal linking, crawl depth |
-| Blog Embed | 3-4 bài blog liên quan | EEAT, semantic relevance |
-| FAQ | 5 câu hỏi về tuyến đường | FAQPage schema, AEO |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Block</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">SEO Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Breadcrumb</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo > Vé xe khách > Vé xe đi từ A đến B</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Schema BreadcrumbList</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">H1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Danh sách các chuyến xe từ A đi B"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Primary keyword target</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search Widget (Product)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Module tìm vé theo ngày/người</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PLG hook - booking entry</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Long Content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Top XX nhà xe từ A đi B - có Table of Contents, outline từng nhà xe</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Semantic depth, internal linking</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Navigation Block</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">20 anchor text Routes liên quan (B đi C, D đi B...)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Internal linking, crawl depth</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog Embed</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3-4 bài blog liên quan</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">EEAT, semantic relevance</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FAQ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5 câu hỏi về tuyến đường</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FAQPage schema, AEO</td>
+    </tr>
+  </tbody>
+</table>
 
 **Bus Operator Page - /ve-xe/xe-[nha-xe]**
 
-| Block | Mô tả | SEO Purpose |
-|---|---|---|
-| Breadcrumb | MoMo > Vé xe khách > Nhà xe | Schema BreadcrumbList |
-| H1 | "Đặt vé xe [Tên nhà xe] với mức giá tốt nhất trên MoMo" | Brand + commercial intent |
-| Giới thiệu nhà xe | Mô tả sơ lược, ảnh nhà xe | E-E-A-T |
-| Long Content | XX tuyến đường nhà xe hoạt động | Programmatic content |
-| FAQ | 5 câu hỏi về nhà xe | FAQPage schema |
-| Blog Embed | Bài blog liên quan | Internal linking |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Block</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">SEO Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Breadcrumb</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo > Vé xe khách > Nhà xe</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Schema BreadcrumbList</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">H1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Đặt vé xe [Tên nhà xe] với mức giá tốt nhất trên MoMo"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Brand + commercial intent</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giới thiệu nhà xe</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mô tả sơ lược, ảnh nhà xe</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">E-E-A-T</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Long Content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">XX tuyến đường nhà xe hoạt động</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Programmatic content</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FAQ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5 câu hỏi về nhà xe</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FAQPage schema</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog Embed</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bài blog liên quan</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Internal linking</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 5.4 Schema Requirements
 
-| Page Type | Schema |
-|---|---|
-| Routes, Bus Operator + Route | BusTrip, BusStop, Product, Offer |
-| Destination | ItemList, Place |
-| Bus Operator | LocalBusiness, Review |
-| Bus Terminal | Place, LocalBusiness |
-| Blog | Article, BreadcrumbList |
-| LDP Tết | Event, Offer |
-| Tất cả | FAQPage (trên các trang có FAQ block) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Page Type</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Schema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Routes, Bus Operator + Route</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BusTrip, BusStop, Product, Offer</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Destination</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">ItemList, Place</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bus Operator</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LocalBusiness, Review</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bus Terminal</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Place, LocalBusiness</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Article, BreadcrumbList</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LDP Tết</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Event, Offer</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tất cả</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">FAQPage (trên các trang có FAQ block)</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -279,16 +752,68 @@ Lý do chọn Transactions thay vì W2A: W2A đo việc user mở App nhưng ch�
 
 ### Targets (Base Case 1 - Recommended)
 
-| Metric | Lane | Target 2025 | Timeframe | Tracking |
-|---|---|---|---|---|
-| Transactions (vé bán được) | North Star | Establish baseline T+1, set target T+3 | T+12 | Appsflyer |
-| Click to App (W2A) | Tier B | 73.100 clicks | T+12 | GA4 + Appsflyer |
-| Organic Sessions | Tier B | 1.035.000 sessions | T+12 | GSC + GA4 |
-| W2A Conversion Rate | Tier B | ~7,1% | EOY 2025 | GA4 |
-| Organic Market Share | Tier B | 4,4% của 5M search/month | T+12 | GSC + SEO tools |
-| Keyword Top 10 (Routes) | Tier B | [cần define số lượng cụ thể] | T+6 | GSC |
-| Indexed Pages | Tier B | [cần define - ước tính 2.000+ URLs] | T+3 | GSC |
-
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Lane</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target 2025</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Timeframe</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tracking</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transactions (vé bán được)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">North Star</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Establish baseline T+1, set target T+3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T+12</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Appsflyer</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Click to App (W2A)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier B</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">73.100 clicks</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T+12</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GA4 + Appsflyer</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Organic Sessions</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier B</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.035.000 sessions</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T+12</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC + GA4</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">W2A Conversion Rate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier B</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~7,1%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">EOY 2025</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GA4</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Organic Market Share</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier B</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4,4% của 5M search/month</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T+12</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC + SEO tools</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Keyword Top 10 (Routes)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier B</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[cần define số lượng cụ thể]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T+6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Indexed Pages</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier B</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[cần define - ước tính 2.000+ URLs]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T+3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -296,19 +821,64 @@ Lý do chọn Transactions thay vì W2A: W2A đo việc user mở App nhưng ch�
 
 ### Dependencies
 
-| Dependency | Mô tả | Blocker? | Status |
-|---|---|---|---|
-| Web Platform - Page Build | Hoàn thành build 8 loại page types trước thời điểm T launch | Có | Đang triển khai |
-| Tech - Google Indexing | Các trang phải được Google index trước T để có thời gian rank | Có | Phụ thuộc P1 |
-| Tech - Content Pipeline | ChatGPT pipeline hoặc Content API generate long content cho programmatic pages | Có | Pilot chưa confirm |
-| Tech - Internal Link API | Cơ chế cross-link tự động giữa Routes/Operator/Destination | Có | Chưa giải quyết |
-| App Data Tracking | Appsflyer setup W2A attribution cho BUS | Có | Chưa setup |
-| Web Tracking (GA4) | Event tracking setup trước launch: page view, CTA click, booking initiation | Có | Chưa setup |
-| BU/PO OTA | Xác nhận danh sách nhà xe, tuyến đường, giá realtime được expose qua API cho web | Có | Cần confirm |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dependency</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Blocker?</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform - Page Build</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoàn thành build 8 loại page types trước thời điểm T launch</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang triển khai</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tech - Google Indexing</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các trang phải được Google index trước T để có thời gian rank</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phụ thuộc P1</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tech - Content Pipeline</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">ChatGPT pipeline hoặc Content API generate long content cho programmatic pages</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Pilot chưa confirm</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tech - Internal Link API</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cơ chế cross-link tự động giữa Routes/Operator/Destination</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa giải quyết</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">App Data Tracking</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Appsflyer setup W2A attribution cho BUS</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa setup</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Tracking (GA4)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Event tracking setup trước launch: page view, CTA click, booking initiation</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa setup</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BU/PO OTA</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xác nhận danh sách nhà xe, tuyến đường, giá realtime được expose qua API cho web</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần confirm</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Constraints
 
-- KHÔNG can thiệp UX/UI của booking flow - Inbound chỉ đề xuất Canonical, không yêu cầu chỉnh sửa trang payment
+- KHÔNG can thiệp UX/UI của booking flow - Media Team chỉ đề xuất Canonical, không yêu cầu chỉnh sửa trang payment
 - KHÔNG build mobile app riêng cho BUS web - toàn bộ transaction xảy ra trong MoMo App
 - Canonical phải được set đúng trên tất cả trang parameter (date, number of passengers) về trang canonical Routes/Operator
 - Content có liên quan đến giá vé phải được cập nhật realtime hoặc ghi rõ disclaimer "giá tham khảo, có thể thay đổi" để tránh YMYL violation
@@ -318,5 +888,5 @@ Lý do chọn Transactions thay vì W2A: W2A đo việc user mở App nhưng ch�
 
 ## Change Log
 
-- **Tháng 05/2025 (v1.0):** Khởi tạo BRD từ 3 input: Dashboard BUS Performance, Inbound Plan 2025, Advanced Mini Web PPTX. Base Case 1 được chọn làm reference target chính.
+- **Tháng 05/2025 (v1.0):** Khởi tạo BRD từ 3 input: Dashboard BUS Performance, Media Team Plan 2025, Advanced Mini Web PPTX. Base Case 1 được chọn làm reference target chính.
 - **Tháng 05/2026 (v2.0):** Apply BRD CEO Standard - (1) Fix Problem Statement: bỏ SEO language, reframe user-centric; (2) Fix Complication: bỏ technical SEO, giữ user experience framing; (3) Fix Resolution: product job first, không liệt kê features trước; (4) Fix North Star: W2A → Transactions; (5) Fix 6 Social JTBD: bữa tối test; (6) Remove Section 5.5 Technical Foundation (→ PRD); (7) Remove Quarterly Ramp + Pilot Gate (→ Action Plan); (8) Remove Backlink Budget + SEM Support khỏi Dependencies (→ Action Plan) (Hiến).

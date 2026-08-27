@@ -6,13 +6,36 @@ Từ 3 input (Business Context + Keyword Research CSV + Direction brief), skill 
 
 **BRD là tài liệu chiến lược - định nghĩa WHY và WHAT, không phải HOW.**
 
-| BRD trả lời | BRD KHÔNG trả lời |
-|---|---|
-| Vấn đề là gì? (Problem Framing) | Thực hiện như thế nào? (Action Plan) |
-| User đang cần làm gì? (JTBD) | Rủi ro khi execute ra sao? (Risk Assessment) |
-| Product job cốt lõi là gì? | Event tracking cụ thể thế nào? (PRD) |
-| Đo thành công bằng gì? | Content plan TOFU/MOFU/BOFU |
-| Cần gì để build? (Dependencies) | AB Test design ra sao? |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">BRD trả lời</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">BRD KHÔNG trả lời</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vấn đề là gì? (Problem Framing)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thực hiện như thế nào? (Action Plan)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User đang cần làm gì? (JTBD)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Rủi ro khi execute ra sao? (Risk Assessment)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Product job cốt lõi là gì?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Event tracking cụ thể thế nào? (PRD)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đo thành công bằng gì?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content plan TOFU/MOFU/BOFU</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần gì để build? (Dependencies)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AB Test design ra sao?</td>
+    </tr>
+  </tbody>
+</table>
 
 Hỗ trợ **2 loại dự án:**
 - **Use Case** (Vay Nhanh / Cinema / BHYT) - acquisition-focused, content-heavy
@@ -40,10 +63,24 @@ Bắt buộc ngay sau header metadata, trước Executive Summary.
 - KHÔNG bắt đầu bằng số liệu, không list data ngay trong problem statement
 - Define WHAT trước HOW
 
-| Sai | Đúng |
-|---|---|
-| "MoMo cần tăng traffic organic và W2A để đạt KPI Q2 cho vertical BH xe máy." | "72 triệu xe máy bắt buộc có bảo hiểm nhưng không ai biết có thể mua trong 3 phút trên điện thoại." |
-| "Dự án nhằm capture search traffic DVC để tăng install." | "Hàng triệu người search thủ tục hành chính mỗi ngày - không fintech nào đang serve intent này trên web." |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Sai</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đúng</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"MoMo cần tăng traffic organic và W2A để đạt KPI Q2 cho vertical BH xe máy."</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"72 triệu xe máy bắt buộc có bảo hiểm nhưng không ai biết có thể mua trong 3 phút trên điện thoại."</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Dự án nhằm capture search traffic DVC để tăng install."</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Hàng triệu người search thủ tục hành chính mỗi ngày - không fintech nào đang serve intent này trên web."</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Executive Summary - S-C-R Format
 
@@ -65,12 +102,32 @@ Mỗi BRD phải trả lời: **Product này có PLG hook không?**
 
 PLG hook là tính năng khiến user tự convert mà không cần campaign hay push.
 
-| Use Case | PLG Hook |
-|---|---|
-| Giá Vàng | Price Alert - user muốn tính năng → tự login MoMo |
-| Merchant Page | VTS badge - user xác nhận quán nhận VTS → tự kích hoạt |
-| Phạt Nguội | Widget tra cứu - user dùng xong → CTA nộp phạt |
-| Vay Nhanh | Loan Calculator - user tính xong → CTA apply |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Use Case</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">PLG Hook</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giá Vàng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Price Alert - user muốn tính năng → tự login MoMo</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Merchant Page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">VTS badge - user xác nhận quán nhận VTS → tự kích hoạt</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phạt Nguội</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget tra cứu - user dùng xong → CTA nộp phạt</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vay Nhanh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loan Calculator - user tính xong → CTA apply</td>
+    </tr>
+  </tbody>
+</table>
 
 Nếu không có PLG hook tự nhiên → ghi rõ trong Section 3 và đề xuất W2A conversion path thay thế.
 
@@ -84,10 +141,24 @@ Bắt buộc trong Section 3 - Định Hướng Dự Án.
 
 **Format:** `[User làm gì] - [User nhận được gì] - [Điều gì xảy ra tiếp theo].`
 
-| Sai | Đúng |
-|---|---|
-| "Dự án tăng organic traffic, W2A và acquire new users." | "User search thủ tục hành chính - tìm thấy MoMo - nhận đủ thông tin để hành động - mở App." |
-| "Xây dựng cluster bảo hiểm để phủ 7 keyword clusters." | "User cần BH xe máy tìm thấy thông tin giá, tra cứu hạn trong 1 trang - mua xong trong 3 phút." |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Sai</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đúng</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Dự án tăng organic traffic, W2A và acquire new users."</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"User search thủ tục hành chính - tìm thấy MoMo - nhận đủ thông tin để hành động - mở App."</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Xây dựng cluster bảo hiểm để phủ 7 keyword clusters."</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"User cần BH xe máy tìm thấy thông tin giá, tra cứu hạn trong 1 trang - mua xong trong 3 phút."</td>
+    </tr>
+  </tbody>
+</table>
 
 Business outcomes là phần tiếp theo ("N outcomes phát sinh:"), KHÔNG phải phần chính.
 
@@ -99,11 +170,28 @@ Business outcomes là phần tiếp theo ("N outcomes phát sinh:"), KHÔNG ph�
 
 User PHẢI nhận value trước khi được yêu cầu login hoặc convert.
 
-| Đúng | Sai |
-|---|---|
-| Widget giá vàng xem được không cần login; login chỉ để cài price alert | Yêu cầu login để xem bảng giá |
-| Tra cứu phạt nguội không cần tài khoản; nộp phạt mới cần mở App | Redirect thẳng sang App khi user mới vào trang |
-| Widget tra cứu BH miễn phí; gia hạn BH mới cần vào App | Ẩn kết quả tra cứu sau login wall |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đúng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Sai</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget giá vàng xem được không cần login; login chỉ để cài price alert</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Yêu cầu login để xem bảng giá</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra cứu phạt nguội không cần tài khoản; nộp phạt mới cần mở App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Redirect thẳng sang App khi user mới vào trang</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget tra cứu BH miễn phí; gia hạn BH mới cần vào App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ẩn kết quả tra cứu sau login wall</td>
+    </tr>
+  </tbody>
+</table>
 
 #### YMYL Standards
 
@@ -123,9 +211,24 @@ Nếu có điều kiện PHẢI giải quyết trước khi build → đưa vào
 
 **Thiếu 1 trong [N] - dừng lại.**
 
-| # | Pre-condition | Trạng thái | Owner giải quyết |
-|---|---|---|---|
-| P1 | [Điều kiện] | Chưa giải quyết | [Owner] |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Pre-condition</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trạng thái</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner giải quyết</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Điều kiện]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa giải quyết</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Owner]</td>
+    </tr>
+  </tbody>
+</table>
 ```
 
 **Pre-condition khác Risk:** Pre-condition = không có thì KHÔNG build. Risk = điều có thể xảy ra trong lúc build.
@@ -152,16 +255,48 @@ Nếu có điều kiện PHẢI giải quyết trước khi build → đưa vào
 
 ### Sections KHÔNG Được Có Trong BRD
 
-| Section | Thuộc về |
-|---|---|
-| Risk Assessment | PRD / Action Plan |
-| Tracking Event Schema | PRD / Action Plan |
-| AB Test Hypothesis | PRD / Action Plan |
-| Content Matrix (TOFU/MOFU/BOFU) | Action Plan |
-| Keyword detail Tier 3+ | File keyword research riêng |
-| Cross-sell Matrix | Action Plan |
-| Data Verification Checklist | Action Plan / SOP |
-| Next Steps / Deliverables | Action Plan |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Section</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thuộc về</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Risk Assessment</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PRD / Action Plan</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tracking Event Schema</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PRD / Action Plan</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AB Test Hypothesis</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PRD / Action Plan</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content Matrix (TOFU/MOFU/BOFU)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Action Plan</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Keyword detail Tier 3+</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">File keyword research riêng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cross-sell Matrix</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Action Plan</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Data Verification Checklist</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Action Plan / SOP</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Next Steps / Deliverables</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Action Plan</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -239,13 +374,36 @@ Từ keyword clusters, extract 3-6 Jobs có volume/impact cao nhất.
 
 > "[Quote mô tả nhu cầu user, viết ngôi thứ nhất]"
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | [User cần làm gì cụ thể] |
-| Emotional | [Cảm xúc / lo lắng / mong muốn] |
-| Social | [Áp lực xã hội / bối cảnh quan hệ] |
-| Trigger | [Điều gì khiến user search ngay lúc đó] |
-| Search → App | "[Query đại diện]" → [Page] → [Action] → App MoMo |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[User cần làm gì cụ thể]</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Cảm xúc / lo lắng / mong muốn]</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Áp lực xã hội / bối cảnh quan hệ]</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Điều gì khiến user search ngay lúc đó]</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"[Query đại diện]" → [Page] → [Action] → App MoMo</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** [URL hoặc tính năng sẽ serve job này]
 ```
@@ -302,11 +460,40 @@ Ví dụ: "KPI chính là Price Alert Sign-ups, không phải W2A. W2A sẽ th�
 **Format:**
 
 ```markdown
-| Metric | Lane | Target | Timeframe | Tracking |
-|---|---|---|---|---|
-| [North Star] | [Utility/Payment] | [Giá trị] | [Timeline] | [Tool] |
-| Organic sessions | Tier B | [Giá trị] | [Timeline] | GSC → GA4 |
-| W2A end-to-end | Tier B | [%] | [Timeline] | GA4 + Appsflyer |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Lane</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Timeframe</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tracking</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[North Star]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Utility/Payment]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Giá trị]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Timeline]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Tool]</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Organic sessions</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier B</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Giá trị]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Timeline]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC → GA4</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">W2A end-to-end</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier B</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[%]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Timeline]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GA4 + Appsflyer</td>
+    </tr>
+  </tbody>
+</table>
 ```
 
 ---
@@ -314,8 +501,18 @@ Ví dụ: "KPI chính là Price Alert Sign-ups, không phải W2A. W2A sẽ th�
 ### Section 7: Dependencies & Constraints
 
 ```markdown
-| Dependency | Mô tả | Blocker? | Status |
-|---|---|---|---|
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dependency</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Blocker?</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
 ```
 
 **Phân biệt:**
@@ -357,14 +554,47 @@ Trước khi hỏi user, kiểm tra conversation đã có:
 
 Sau khi đọc input, xác định gap. Hỏi **tối đa 1 lần**, gom tất cả vào 1 message.
 
-| Nhóm | Thông tin | Cách khai thác |
-|---|---|---|
-| **Identity** | Tên use case, URL, Owner, Timeframe | "Tên dự án? URL chính? Owner? Timeframe?" |
-| **Business Context** | Value prop, user target, hiện trạng, vấn đề cốt lõi | "Value prop là gì? Ai dùng? Baseline current state?" |
-| **Keyword Research** | CSV file gồm keywords + volume | "CSV có gồm keyword, search volume, intent hint không?" |
-| **Direction Brief** | Chiến lược, scope muốn build, KPI target | "Chiến lược là gì? Build cái gì? Target KPI?" |
-| **PLG Angle** | Có PLG hook không? User tự convert bằng cách nào? | "Tính năng nào khiến user tự vào App mà không cần push?" |
-| **Pre-conditions** | Có blocker cứng nào phải giải quyết trước? | "Có dependency nào không có thì không nên build không?" |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhóm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thông tin</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cách khai thác</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Identity</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tên use case, URL, Owner, Timeframe</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Tên dự án? URL chính? Owner? Timeframe?"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Business Context</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Value prop, user target, hiện trạng, vấn đề cốt lõi</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Value prop là gì? Ai dùng? Baseline current state?"</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Keyword Research</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CSV file gồm keywords + volume</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"CSV có gồm keyword, search volume, intent hint không?"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Direction Brief</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chiến lược, scope muốn build, KPI target</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Chiến lược là gì? Build cái gì? Target KPI?"</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>PLG Angle</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có PLG hook không? User tự convert bằng cách nào?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Tính năng nào khiến user tự vào App mà không cần push?"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Pre-conditions</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có blocker cứng nào phải giải quyết trước?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Có dependency nào không có thì không nên build không?"</td>
+    </tr>
+  </tbody>
+</table>
 
 **Không hỏi những gì đã có trong input. Chỉ hỏi gap.**
 
@@ -423,19 +653,60 @@ Sau khi đọc input, xác định gap. Hỏi **tối đa 1 lần**, gom tất c
 
 ## V. Edge Cases & Handling
 
-| Tình huống | Xử lý |
-|---|---|
-| **Keyword CSV format không chuẩn** | Hỏi: "CSV có column nào? (keyword, volume, difficulty, intent?)" → Map vào standard format |
-| **User không có baseline metrics** | Hỏi: "Có GSC access?" → Ghi "[cần measure]" + define tracking method |
-| **Use Case NEW (chưa tồn tại)** | Baseline = 0 nhưng phải explain ramp strategy: "Expect ramp 3-6 months để reach target" |
-| **Project quá nhỏ (1 page, 1 feature)** | Viết BRD rút gọn: shorten JTBD, giữ Problem Block + S-C-R + Dependencies |
-| **Use Case quá lớn (toàn Finance cluster)** | Viết BRD cluster-level. Hoặc chia multi-BRD per sub-use-case |
-| **User cung cấp slide + text + CSV mixed** | Đọc tất cả, extract thông tin, fill gaps. Không duplicate hỏi |
-| **W2A funnel không setup sẵn** | Ghi trong Dependencies - note blocker level. Không giả định W2A là North Star |
-| **Có hard blocker chưa giải quyết** | Đưa vào Pre-conditions Gate trong Section 3 |
-| **User muốn thêm Risk Assessment** | "Risk Assessment thuộc PRD/Action Plan. Sẽ tách ra khi viết PRD." |
-| **Seasonality / event impact lớn** | Flag trong Success Metrics - adjust target theo seasonality. Không đưa vào Risk |
-| **Competitor có ranking cao, user không biết tại sao** | Suggest: "Analyze competitor content depth, freshness, backlinks → đưa vào Section 2" |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tình huống</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Xử lý</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Keyword CSV format không chuẩn</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hỏi: "CSV có column nào? (keyword, volume, difficulty, intent?)" → Map vào standard format</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>User không có baseline metrics</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hỏi: "Có GSC access?" → Ghi "[cần measure]" + define tracking method</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Use Case NEW (chưa tồn tại)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Baseline = 0 nhưng phải explain ramp strategy: "Expect ramp 3-6 months để reach target"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Project quá nhỏ (1 page, 1 feature)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Viết BRD rút gọn: shorten JTBD, giữ Problem Block + S-C-R + Dependencies</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Use Case quá lớn (toàn Finance cluster)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Viết BRD cluster-level. Hoặc chia multi-BRD per sub-use-case</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>User cung cấp slide + text + CSV mixed</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đọc tất cả, extract thông tin, fill gaps. Không duplicate hỏi</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>W2A funnel không setup sẵn</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ghi trong Dependencies - note blocker level. Không giả định W2A là North Star</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Có hard blocker chưa giải quyết</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đưa vào Pre-conditions Gate trong Section 3</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>User muốn thêm Risk Assessment</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Risk Assessment thuộc PRD/Action Plan. Sẽ tách ra khi viết PRD."</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Seasonality / event impact lớn</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Flag trong Success Metrics - adjust target theo seasonality. Không đưa vào Risk</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Competitor có ranking cao, user không biết tại sao</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Suggest: "Analyze competitor content depth, freshness, backlinks → đưa vào Section 2"</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

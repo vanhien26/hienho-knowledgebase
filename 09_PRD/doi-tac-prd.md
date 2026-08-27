@@ -2,7 +2,7 @@
 
 > - **Use Case:** Merchant Pages
 > - **Main URL:** momo.vn/merchant / momo.vn/merchant/{slug}
-> - **BRD Ref:** 05_USE_CASE_MOMO/doi-tac-brd.md
+> - **BRD Ref:** 06_USE_CASE_MOMO/doi-tac-brd.md
 > - **Owner:** Web Product Lead (Hiến)
 > - **Engineering Lead:** Nhật
 > - **Architecture:** Hoài Anh (MoSpark integration)
@@ -31,12 +31,42 @@ Biến `momo.vn/merchant/{slug}` thành **SME Digital Presence product** - khôn
 
 **Success metrics:**
 
-| Metric | Baseline | Target | Timeframe |
-|---|---|---|---|
-| Organic sessions | 85K/quý (legacy) | >= 85K/quý (no regression) + growth theo merchant count | Q3 2026 |
-| SoV branded merchant queries | ~0% (legacy không có schema) | Top 3-5 cho 80% merchant queries | 90 ngày post-launch |
-| Merchant pages published | 39 (pilot) | Scale 500 Merchants tại TP.HCM (tập trung 50% Tạp hóa) | Q3-Q4 2026 |
-| VTS activation from `/merchant` | 0 (baseline) | [CẦN VERIFY - PO VTS set target] | Q3 2026 |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Baseline</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Timeframe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Organic sessions</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">85K/quý (legacy)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">>= 85K/quý (no regression) + growth theo merchant count</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q3 2026</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SoV branded merchant queries</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">~0% (legacy không có schema)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Top 3-5 cho 80% merchant queries</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">90 ngày post-launch</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Merchant pages published</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">39 (pilot)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Scale 500 Merchants tại TP.HCM (tập trung 50% Tạp hóa)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q3-Q4 2026</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">VTS activation from <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0 (baseline)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[CẦN VERIFY - PO VTS set target]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q3 2026</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 1.3 Scope
 
@@ -76,14 +106,54 @@ Biến `momo.vn/merchant/{slug}` thành **SME Digital Presence product** - khôn
 
 ### 2.1 Target Users
 
-| Segment | Mô tả | Job-to-be-done | Entry Point |
-|---|---|---|---|
-| Consumer - Intent cao | Đang ở trước hoặc chuẩn bị đến merchant, cần xác nhận payment method | Xác nhận ngay merchant nhận MoMo/VTS không, kích hoạt O2O | Google Search: "{Merchant} có nhận MoMo/VTS không" |
-| Consumer - VTS mới | Biết merchant hỗ trợ VTS nhưng chưa kích hoạt | Hiểu điều kiện + kích hoạt VTS ngay từ trang | Merchant page -> VTS module |
-| Consumer - HowTo | Lần đầu thanh toán MoMo tại merchant cụ thể | Hướng dẫn step-by-step không mất thời gian | Google Search: "Cách thanh toán MoMo tại {Merchant}" |
-| SME Merchant | Chủ quán nhỏ, không có website, không có ngân sách digital | Có Digital Presence miễn phí, được tìm thấy trên Google + AI | QR Soundbox / BD onboard / Organic discovery |
-| BD / Sales Team | Đi thực địa pitch/onboard đối tác mới | Có trang demo chuẩn làm "quà tặng" (Sales Kit) để thuyết phục chủ quán, hướng dẫn quán gắn link lên Google Maps/Social | Mobile browser (trình chiếu thực tế) |
-| BU Growth / Campaign | PM chạy các chương trình co-branded liên kết (Phê La, Highlands) | Điểm đáp truyền thông, hiển thị scheme ưu đãi và thu hút organic search | In-app Ads/Comm / Google Search (SEO) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Segment</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Job-to-be-done</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Entry Point</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Consumer - Intent cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang ở trước hoặc chuẩn bị đến merchant, cần xác nhận payment method</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xác nhận ngay merchant nhận MoMo/VTS không, kích hoạt O2O</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Google Search: "{Merchant} có nhận MoMo/VTS không"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Consumer - VTS mới</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Biết merchant hỗ trợ VTS nhưng chưa kích hoạt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiểu điều kiện + kích hoạt VTS ngay từ trang</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Merchant page -> VTS module</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Consumer - HowTo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lần đầu thanh toán MoMo tại merchant cụ thể</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hướng dẫn step-by-step không mất thời gian</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Google Search: "Cách thanh toán MoMo tại {Merchant}"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SME Merchant</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chủ quán nhỏ, không có website, không có ngân sách digital</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có Digital Presence miễn phí, được tìm thấy trên Google + AI</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">QR Soundbox / BD onboard / Organic discovery</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BD / Sales Team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đi thực địa pitch/onboard đối tác mới</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có trang demo chuẩn làm "quà tặng" (Sales Kit) để thuyết phục chủ quán, hướng dẫn quán gắn link lên Google Maps/Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobile browser (trình chiếu thực tế)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BU Growth / Campaign</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM chạy các chương trình co-branded liên kết (Phê La, Highlands)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điểm đáp truyền thông, hiển thị scheme ưu đãi và thu hút organic search</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">In-app Ads/Comm / Google Search (SEO)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2.2 User Journey (Web Channel)
 
@@ -243,13 +313,13 @@ Khách scan QR tại quầy / Soundbox
   * Listing POI / Địa điểm Ví Trả Sau: `/merchant/danh-sach/vi-tra-sau/{tinh-thanh}/diem-den/{poi-slug}` (Ví dụ: `momo.vn/merchant/danh-sach/vi-tra-sau/hcm/diem-den/cho-ben-thanh`, `momo.vn/merchant/danh-sach/vi-tra-sau/hn/diem-den/vincom-ba-trieu`)
 - [ ] **POI Taxonomy support:** Mall/TTTM, Chợ truyền thống, Tuyến phố mua sắm, Trường Đại học, Tòa nhà/Landmark, Sân bay/Nhà ga.
 - [ ] **Anti-thin content gate & Radius Fallback cho Ví Trả Sau:**
-  * Listing Hành chính: Publish nếu $\ge 5$ merchant active có hỗ trợ Ví Trả Sau trong khu vực. Nếu $< 5$, auto set `noindex, nofollow` + remove khỏi sitemap.
-  * Listing POI / Địa điểm: Publish nếu $\ge 3$ merchant active có hỗ trợ Ví Trả Sau.
-  * **Radius Fallback logic:** Nếu POI có $< 3$ merchants hỗ trợ VTS, tự động quét tọa độ và gom các VTS merchants lân cận trong bán kính 500m - 1km xung quanh tọa độ POI để hiển thị dưới nhãn *"Cửa hàng chấp nhận Ví Trả Sau gần {POI}"*. Nếu tổng cộng vẫn $< 3$, set `noindex, nofollow` + remove khỏi sitemap.
+  * Listing Hành chính: Publish nếu ≥ 5 merchant active có hỗ trợ Ví Trả Sau trong khu vực. Nếu < 5$, auto set `noindex, nofollow` + remove khỏi sitemap.
+  * Listing POI / Địa điểm: Publish nếu ≥ 3 merchant active có hỗ trợ Ví Trả Sau.
+  * **Radius Fallback logic:** Nếu POI có < 3 merchants hỗ trợ VTS, tự động quét tọa độ và gom các VTS merchants lân cận trong bán kính 500m - 1km xung quanh tọa độ POI để hiển thị dưới nhãn *"Cửa hàng chấp nhận Ví Trả Sau gần {POI}"*. Nếu tổng cộng vẫn < 3$, set `noindex, nofollow` + remove khỏi sitemap.
 - [ ] **Vận hành Map Widget (Bản đồ trực quan):**
   * Tích hợp Google Maps API (lazy load) hiển thị bản đồ nhỏ định vị các ghim vị trí (pins) của các cửa hàng chấp nhận Ví Trả Sau trong khu vực hoặc quanh POI.
   * Mỗi ghim hiển thị thông tin nhanh (Mini Card) khi click: Tên quán, khoảng cách đến POI, tình trạng Ví Trả Sau, và nút "Chỉ đường" (Deep-link sang ứng dụng Google Maps).
-- [ ] **Dynamic content bắt buộc (SEO/GEO Assets):** 
+- [ ] **Dynamic content bắt buộc (SEO/GEO Assets):**
   * FAQ Block: Tự sinh theo khu vực/địa điểm (Ví dụ: *"Cách dùng Ví Trả Sau MoMo tại Chợ Bến Thành"*, *"Ví Trả Sau có thanh toán tại Aeon Mall không"*).
   * Top 5 merchants: Xếp hạng theo rating và volume giao dịch MoMo thực tế.
   * Trust Badges: Nhãn nổi bật `Hỗ trợ Ví Trả Sau`, `Liên kết trực tiếp`, `Được XX khách MoMo tin dùng`.
@@ -497,12 +567,47 @@ graph TD
 
 **JTBD Mapping:**
 
-| Feature | User JTBD | Platform JTBD | Mismatch? | Verdict |
-|---|---|---|---|---|
-| Badge "Top Merchant" | Cần heuristic nhanh để phân biệt quán đáng ghé trong danh sách dài | Tăng CTR listing, phân biệt merchant tốt với merchant mờ nhạt | "Top giao dịch" khác "phù hợp với tôi" - tiêu chí hiện tại phục vụ platform nhiều hơn user | Giữ nhưng redesign tiêu chí - nên map sang rating/review thay vì transaction volume thuần |
-| Counter "XX khách tin dùng" | Cần social proof để giảm rủi ro quyết định khi chưa biết merchant | Tăng trust signal trên listing, giảm bounce | Không - user trong evaluate mode, counter đúng job | Giữ - JTBD rõ nhất trong 4, tương tự review count trên Google Maps |
-| "Quán đang hot" Pulse | Không rõ - user có thể đang lên kế hoạch, có dietary constraint, hoặc không ở gần đó | Inject urgency vào session, kích hành động ngay | Lớn - "hot lúc này" không map vào job cụ thể nào của user | Drop hoặc redesign trước sprint |
-| Recommendation Rail | Cần tiếp tục khám phá khi merchant vừa xem không phù hợp, không muốn back và search lại | Giảm bounce, tăng pages-per-session | Không - user trong navigate mode, rail đúng job | Giữ - phụ thuộc chất lượng recommendation |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Feature</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">User JTBD</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Platform JTBD</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mismatch?</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Verdict</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Badge "Top Merchant"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần heuristic nhanh để phân biệt quán đáng ghé trong danh sách dài</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng CTR listing, phân biệt merchant tốt với merchant mờ nhạt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Top giao dịch" khác "phù hợp với tôi" - tiêu chí hiện tại phục vụ platform nhiều hơn user</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giữ nhưng redesign tiêu chí - nên map sang rating/review thay vì transaction volume thuần</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Counter "XX khách tin dùng"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần social proof để giảm rủi ro quyết định khi chưa biết merchant</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng trust signal trên listing, giảm bounce</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không - user trong evaluate mode, counter đúng job</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giữ - JTBD rõ nhất trong 4, tương tự review count trên Google Maps</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Quán đang hot" Pulse</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không rõ - user có thể đang lên kế hoạch, có dietary constraint, hoặc không ở gần đó</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Inject urgency vào session, kích hành động ngay</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lớn - "hot lúc này" không map vào job cụ thể nào của user</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Drop hoặc redesign trước sprint</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Recommendation Rail</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần tiếp tục khám phá khi merchant vừa xem không phù hợp, không muốn back và search lại</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giảm bounce, tăng pages-per-session</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không - user trong navigate mode, rail đúng job</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giữ - phụ thuộc chất lượng recommendation</td>
+    </tr>
+  </tbody>
+</table>
 
 **Acceptance Criteria - Badge "Lọt Top Merchant" (3.15.1):**
 - [ ] Dynamic badge tự động gắn lên Merchant Card (Listing) và đầu Merchant Detail Page dựa trên transaction data nội bộ (MoMo internal, không expose raw number)
@@ -538,15 +643,60 @@ graph TD
 
 ### 4.1 W2A Trigger Points
 
-| Trigger | Placement | CTA Text | Deep Link |
-|---|---|---|---|
-| Post-payment-confirmation | Sau Payment Methods block | "Thanh toán bằng MoMo" | Onelink -> payment screen |
-| VTS intent | VTS Module | "Kích hoạt Ví Trả Sau" | Onelink -> VTS activation screen |
-| QR scan (offline) | QR code tại quầy/Soundbox | - | `momo.vn/merchant/{slug}?utm_source=qr&utm_medium=offline&utm_campaign=soundbox&utm_content={merchant_id}` |
-| Scroll depth (mobile) | Sticky bottom bar (sau hero) | "Mở MoMo" | Onelink |
-| Soundbox CTA | O2O Stack | "Đăng ký Soundbox" | App / form |
-| Swipe to Match save | Swipe right / "Túi Quà" panel | "Mở App kích hoạt" | Onelink -> claim deal / App home |
-| Doom Scroll sticky CTA | Bottom viewport on video feed | "Dùng App Nhận Hoàn Tiền" / "Mở Ví Trả Sau" | Onelink -> VTS / merchant campaign |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trigger</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Placement</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">CTA Text</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Deep Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Post-payment-confirmation</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sau Payment Methods block</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Thanh toán bằng MoMo"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Onelink -> payment screen</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">VTS intent</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">VTS Module</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Kích hoạt Ví Trả Sau"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Onelink -> VTS activation screen</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">QR scan (offline)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">QR code tại quầy/Soundbox</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/merchant/{slug}?utm_source=qr&utm_medium=offline&utm_campaign=soundbox&utm_content={merchant_id}</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Scroll depth (mobile)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sticky bottom bar (sau hero)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Mở MoMo"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Onelink</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Soundbox CTA</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">O2O Stack</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Đăng ký Soundbox"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">App / form</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Swipe to Match save</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Swipe right / "Túi Quà" panel</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Mở App kích hoạt"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Onelink -> claim deal / App home</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Doom Scroll sticky CTA</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bottom viewport on video feed</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Dùng App Nhận Hoàn Tiền" / "Mở Ví Trả Sau"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Onelink -> VTS / merchant campaign</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 4.2 Non-MoMo User Flow
 
@@ -572,16 +722,66 @@ graph TD
 
 Để tối ưu hóa hiển thị trên Google Search, AI Search (Gemini) và giải quyết chính xác bài toán đa dạng danh mục của đối tác MoMo (Siêu thị, Mua sắm, Du lịch, Giáo dục, Làm đẹp, Sức khỏe, F&B), hệ thống MoSpark CMS sẽ tự động cấu hình dynamic Schema.org Type và các thuộc tính tương ứng:
 
-| Nhóm Danh Mục | Schema.org Type | Thuộc tính bắt buộc (JSON-LD) | Ghi chú kỹ thuật |
-| :--- | :--- | :--- | :--- |
-| **Siêu Thị / Tiện Lợi** | `Supermarket` hoặc `ConvenienceStore` | name, address, openingHours, geo, telephone, image, paymentAccepted | Ánh xạ trực tiếp từ M4B NAP và giờ hoạt động. |
-| **Mua Sắm / Bán Lẻ** | `Store` hoặc chuyên biệt (e.g. `ClothingStore`) | name, address, openingHours, geo, telephone, image, paymentAccepted | Thêm schema `Offer` nếu đang chạy chương trình khuyến mãi. |
-| **Du Lịch / Khách Sạn** | `LodgingBusiness` hoặc `Hotel` | name, address, checkinTime, checkoutTime, amenities (wifi, pool...), geo | Cần bổ sung các tiện ích nghỉ dưỡng vào schema. |
-| **Giáo Dục / Trường Học** | `EducationalOrganization` hoặc `School` | name, address, telephone, logo, courses (nếu có) | Phục vụ intent tìm kiếm trường học/trung tâm chấp nhận MoMo. |
-| **Làm Đẹp / Spa** | `BeautySalon` hoặc `DaySpa` | name, address, openingHours, priceRange, menu (bảng giá dịch vụ) | Bắt buộc phải có `priceRange` và `menu`. |
-| **Y Tế / Sức Sức Khỏe** | `Pharmacy` hoặc `MedicalClinic` | name, address, openingHours, telephone, medicalSpecialty (nếu là phòng khám) | Đáp ứng nghiêm ngặt tiêu chuẩn E-E-A-T cho YMYL. |
-| **Ẩm Thực / F&B** | `Restaurant` hoặc `Cafe` | name, address, openingHours, menu (link thực đơn), servesCuisine, priceRange | Lồng ghép schema `MenuItem` cho các món ăn signature. |
-| **General SME / Khác** | `LocalBusiness` | name, address, telephone, openingHours, geo | Fallback schema mặc định khi không phân loại được ngành. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhóm Danh Mục</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Schema.org Type</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thuộc tính bắt buộc (JSON-LD)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú kỹ thuật</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Siêu Thị / Tiện Lợi</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Supermarket</code> hoặc <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">ConvenienceStore</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">name, address, openingHours, geo, telephone, image, paymentAccepted</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ánh xạ trực tiếp từ M4B NAP và giờ hoạt động.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Mua Sắm / Bán Lẻ</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Store</code> hoặc chuyên biệt (e.g. <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">ClothingStore</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">name, address, openingHours, geo, telephone, image, paymentAccepted</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thêm schema <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Offer</code> nếu đang chạy chương trình khuyến mãi.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Du Lịch / Khách Sạn</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">LodgingBusiness</code> hoặc <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Hotel</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">name, address, checkinTime, checkoutTime, amenities (wifi, pool...), geo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần bổ sung các tiện ích nghỉ dưỡng vào schema.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Giáo Dục / Trường Học</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">EducationalOrganization</code> hoặc <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">School</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">name, address, telephone, logo, courses (nếu có)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phục vụ intent tìm kiếm trường học/trung tâm chấp nhận MoMo.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Làm Đẹp / Spa</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">BeautySalon</code> hoặc <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">DaySpa</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">name, address, openingHours, priceRange, menu (bảng giá dịch vụ)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bắt buộc phải có <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">priceRange</code> và <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">menu</code>.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Y Tế / Sức Sức Khỏe</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Pharmacy</code> hoặc <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">MedicalClinic</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">name, address, openingHours, telephone, medicalSpecialty (nếu là phòng khám)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đáp ứng nghiêm ngặt tiêu chuẩn E-E-A-T cho YMYL.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Ẩm Thực / F&B</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Restaurant</code> hoặc <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Cafe</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">name, address, openingHours, menu (link thực đơn), servesCuisine, priceRange</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lồng ghép schema <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">MenuItem</code> cho các món ăn signature.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>General SME / Khác</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">LocalBusiness</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">name, address, telephone, openingHours, geo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Fallback schema mặc định khi không phân loại được ngành.</td>
+    </tr>
+  </tbody>
+</table>
 
 - [ ] **Lồng ghép Schema bổ trợ cố định:**
   - `FAQPage`: Tự động sinh ra mảng `mainEntity` chứa tối thiểu 3 câu hỏi thường gặp của quán.
@@ -604,11 +804,28 @@ Nhằm tối ưu chi phí (RAG tokens) và đảm bảo độ chính xác khi Ch
 
 ### 5.4 Core Web Vitals Targets
 
-| Metric | Target |
-|---|---|
-| LCP | < 2.5s |
-| CLS | < 0.1 |
-| INP | < 200ms |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LCP</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 2.5s</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CLS</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 0.1</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">INP</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 200ms</td>
+    </tr>
+  </tbody>
+</table>
 
 - [ ] Test trên 3G (Chrome DevTools throttling) trước launch mỗi batch merchant
 - [ ] Map widget (Phase II) không được block LCP - lazy load bắt buộc
@@ -617,16 +834,75 @@ Nhằm tối ưu chi phí (RAG tokens) và đảm bảo độ chính xác khi Ch
 
 ## 6. API & Data Requirements
 
-| API | Provider | Purpose | Auth | Rate Limit |
-|---|---|---|---|---|
-| M4B Merchant API | MoMo Internal | Auto-fill NAP data (name, address, phone, hours, logo) | Internal token | [CẦN VERIFY - Hoài Anh] |
-| VTS Merchant List API | MoMo Internal (PO VTS) | Verify merchant có trong VTS network | Internal token | [CẦN VERIFY] |
-| Campaign / Cashback API | MoMo Internal | Inject active cashback offers per merchant | Internal token | [CẦN VERIFY] |
-| Google Places / Maps API | Google | Google Map Search Crawler (Tên, địa chỉ, giờ hoạt động, tiện ích) & Review (Phase II) | API Key | 1000 req/day (free tier) |
-| Grabfood Menu API / Scraper | Grabfood | Cào tự động thực đơn & giá món ăn F&B | Scraper Token | [CẦN VERIFY] |
-| Shopeefood Menu API / Scraper | Shopeefood | Cào tự động thực đơn & giá món ăn F&B | Scraper Token | [CẦN VERIFY] |
-| Onelink / Appsflyer | Appsflyer | W2A deep link generation + attribution | [CẦN VERIFY - DA team] | - |
-| Chatbot KB Sync API | MoMo Internal (Duy) | Đồng bộ dữ liệu Structured KB (địa chỉ, giá, giờ mở cửa) từ CMS qua Chatbot DB | Internal token | Webhook On-Publish |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">API</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Provider</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Purpose</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Auth</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Rate Limit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M4B Merchant API</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo Internal</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto-fill NAP data (name, address, phone, hours, logo)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Internal token</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[CẦN VERIFY - Hoài Anh]</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">VTS Merchant List API</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo Internal (PO VTS)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Verify merchant có trong VTS network</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Internal token</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[CẦN VERIFY]</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Campaign / Cashback API</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo Internal</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Inject active cashback offers per merchant</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Internal token</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[CẦN VERIFY]</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Google Places / Maps API</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Google</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Google Map Search Crawler (Tên, địa chỉ, giờ hoạt động, tiện ích) & Review (Phase II)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">API Key</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1000 req/day (free tier)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Grabfood Menu API / Scraper</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Grabfood</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cào tự động thực đơn & giá món ăn F&B</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Scraper Token</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[CẦN VERIFY]</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Shopeefood Menu API / Scraper</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Shopeefood</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cào tự động thực đơn & giá món ăn F&B</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Scraper Token</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[CẦN VERIFY]</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Onelink / Appsflyer</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Appsflyer</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">W2A deep link generation + attribution</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[CẦN VERIFY - DA team]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chatbot KB Sync API</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo Internal (Duy)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đồng bộ dữ liệu Structured KB (địa chỉ, giá, giờ mở cửa) từ CMS qua Chatbot DB</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Internal token</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Webhook On-Publish</td>
+    </tr>
+  </tbody>
+</table>
 
 **Data freshness:**
 - NAP data: sync khi PM trigger (không real-time - merchant data ít thay đổi)
@@ -649,49 +925,203 @@ Nhằm tối ưu chi phí (RAG tokens) và đảm bảo độ chính xác khi Ch
 
 ## 7. Non-Functional Requirements
 
-| Category | Requirement |
-|---|---|
-| Performance | LCP < 2.5s trên 3G (Moto G4 profile Chrome DevTools) |
-| Availability | Theo SLA momo.vn chung [CẦN VERIFY] |
-| Mobile | Responsive, primary breakpoint 375px (iPhone SE). Desktop secondary. |
-| Browser support | Chrome latest 2, Safari latest 2, Samsung Internet latest 2 |
-| Schema validation | 0 errors trên Google Rich Results Test trước publish |
-| Redirect | 308 (bảo toàn method), không dùng 301 |
-| Sitemap | URL mới add ngay khi publish, URL redirect xóa ngay khi redirect set |
-| Tracking | Umami event tracking setup TRƯỚC launch (page view + CTA click + QR scan) |
-| Content uniqueness | Không duplicate FAQ/HowTo content giữa các merchant pages |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Category</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Requirement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Performance</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LCP < 2.5s trên 3G (Moto G4 profile Chrome DevTools)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Availability</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Theo SLA momo.vn chung [CẦN VERIFY]</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobile</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Responsive, primary breakpoint 375px (iPhone SE). Desktop secondary.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Browser support</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chrome latest 2, Safari latest 2, Samsung Internet latest 2</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Schema validation</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0 errors trên Google Rich Results Test trước publish</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Redirect</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">308 (bảo toàn method), không dùng 301</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sitemap</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL mới add ngay khi publish, URL redirect xóa ngay khi redirect set</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tracking</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Umami event tracking setup TRƯỚC launch (page view + CTA click + QR scan)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content uniqueness</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không duplicate FAQ/HowTo content giữa các merchant pages</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ## 8. Open Questions
 
-| # | Question | Owner | Due | Status |
-|---|---|---|---|---|
-| 1 | VTS activation target KPI từ `/merchant` là bao nhiêu? | PO VTS | T6/2026 | OPEN |
-| 2 | M4B API rate limit và auth method? | Hoài Anh | T6/2026 | OPEN |
-| 3 | Cashback campaign API contract (endpoint, payload structure)? | Campaign team | T6/2026 | RELEASE BOUND |
-| 4 | Onelink deep link spec cho từng O2O CTA (VTS screen path, Soundbox form)? | DA team | T6/2026 | OPEN (Gác Soundbox) |
-| 5 | GSC Coverage Report cho 39 pages pilot - indexing status? | Hiến | Tuần 2 T6 | OPEN |
-| 6 | `/thanh-toan-momo-{merchant}` legacy URLs: có mapping nào merchant -> slug không? | Hiến request | T6/2026 | OPEN |
-| 7 | Google Places API key provisioning cho Phase II? | Hoài Anh | Q3/2026 | OPEN |
-| 8 | Soundbox merchant verified list (BD team)? | BD/Soundbox | T6/2026 | N/A (Gác Soundbox) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Question</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Due</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">VTS activation target KPI từ <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant</code> là bao nhiêu?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PO VTS</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T6/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">OPEN</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M4B API rate limit và auth method?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoài Anh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T6/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">OPEN</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cashback campaign API contract (endpoint, payload structure)?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Campaign team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T6/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">RELEASE BOUND</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Onelink deep link spec cho từng O2O CTA (VTS screen path, Soundbox form)?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">DA team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T6/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">OPEN (Gác Soundbox)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC Coverage Report cho 39 pages pilot - indexing status?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tuần 2 T6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">OPEN</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/thanh-toan-momo-{merchant}</code> legacy URLs: có mapping nào merchant -> slug không?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến request</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T6/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">OPEN</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Google Places API key provisioning cho Phase II?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoài Anh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q3/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">OPEN</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Soundbox merchant verified list (BD team)?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BD/Soundbox</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T6/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">N/A (Gác Soundbox)</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ## 9. Dependencies
 
-| Dependency | Team | Type | Status |
-|---|---|---|---|
-| VTS merchant verified list | PO VTS | Blocking (VTS badge + module) | **DONE** (Đã verify từ M4B & PO VTS) |
-| VTS Terms Data (lãi suất, hạn mức, phí) | PO VTS | Blocking (YMYL - không sai được) | **DONE** (Đã verify từ PO VTS) |
-| M4B Merchant API | Hoài Anh | Blocking (Phase II auto-fill) | In progress |
-| MoSpark CMS template ready | Hoài Anh + Nhật | Blocking (scale beyond pilot) | In progress |
-| Campaign / Cashback API | Campaign team | Non-blocking (Release theo Mega) | **RELEASE BOUND** |
-| BD verified Soundbox merchant list | BD/Soundbox | Blocking (Soundbox CTA) | **N/A** (Tạm gác, chưa triển khai Soundbox trên Web) |
-| Onelink deep link specs | DA team | Blocking (W2A attribution) | OPEN (Gác Soundbox) |
-| Umami tracking setup | Thuận | Blocking (launch - phải có trước) | OPEN |
-| PAGE_ID → Merchant slug mapping | Hiến request | Blocking (legacy redirect audit) | OPEN |
-| Google Places API key | Hoài Anh | Non-blocking (Phase II only) | Not started |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dependency</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Team</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Type</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">VTS merchant verified list</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PO VTS</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blocking (VTS badge + module)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>DONE</strong> (Đã verify từ M4B & PO VTS)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">VTS Terms Data (lãi suất, hạn mức, phí)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PO VTS</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blocking (YMYL - không sai được)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>DONE</strong> (Đã verify từ PO VTS)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M4B Merchant API</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoài Anh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blocking (Phase II auto-fill)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">In progress</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark CMS template ready</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoài Anh + Nhật</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blocking (scale beyond pilot)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">In progress</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Campaign / Cashback API</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Campaign team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Non-blocking (Release theo Mega)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>RELEASE BOUND</strong></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BD verified Soundbox merchant list</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BD/Soundbox</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blocking (Soundbox CTA)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>N/A</strong> (Tạm gác, chưa triển khai Soundbox trên Web)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Onelink deep link specs</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">DA team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blocking (W2A attribution)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">OPEN (Gác Soundbox)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Umami tracking setup</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thuận</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blocking (launch - phải có trước)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">OPEN</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PAGE_ID → Merchant slug mapping</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến request</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blocking (legacy redirect audit)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">OPEN</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Google Places API key</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoài Anh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Non-blocking (Phase II only)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Not started</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -699,14 +1129,54 @@ Nhằm tối ưu chi phí (RAG tokens) và đảm bảo độ chính xác khi Ch
 
 ### 10.1 Phase Overview
 
-| Phase | Scope | Target | Exit Criteria |
-|---|---|---|---|
-| Phase I - Foundation | 39 SME pilot merchants live. 3 legacy `/page/` redirects done. Basic Hub page. Schema + tracking. | LIVE (2026-05-29) | 39/39 pages published. 308 redirects verified. GSC coverage report clean. Umami tracking firing. |
-| Phase I - Verify | GSC indexing check. CWV audit. Legacy redirect chain clean. VTS data verify. | Tuần 2 T6/2026 | 39 URLs indexed (GSC). 0 CWV regressions. Attribution flowing Appsflyer. |
-| Phase II - Auto-creation | MoSpark CMS workflow 2 luồng. SEO Inventory preview. QC Gate. Auto-sitemap. | Q3/2026 | PM có thể publish merchant page mà không cần kỹ thuật support. QC gate blocking thin content. |
-| Phase II - Deep data & Hub | Gallery, Review integration, Amenities. Hub (map + filters). Listing pSEO. Engagement Signals. | Q4/2026 | 80% pilot merchants có >= 3 ảnh. Hub map và listing pages active. Engagement signals live. |
-| Phase III - Gamification | Tinder Swipe, TikTok Doom Scroll, Facebook Social Feed widgets. Ads Manager integration. | Q4/2026+ | Gamified widgets active on Hub page. Impression and swipe/click tracking live. |
-| Long term | `/thanh-toan-momo-{merchant}` full audit + redirect. Top brand chains. | 2027 | Legacy cleanup complete. Top 20 brand chains có merchant page. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phase</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Scope</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Exit Criteria</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase I - Foundation</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">39 SME pilot merchants live. 3 legacy <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/page/</code> redirects done. Basic Hub page. Schema + tracking.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LIVE (2026-05-29)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">39/39 pages published. 308 redirects verified. GSC coverage report clean. Umami tracking firing.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase I - Verify</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC indexing check. CWV audit. Legacy redirect chain clean. VTS data verify.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tuần 2 T6/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">39 URLs indexed (GSC). 0 CWV regressions. Attribution flowing Appsflyer.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase II - Auto-creation</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark CMS workflow 2 luồng. SEO Inventory preview. QC Gate. Auto-sitemap.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q3/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM có thể publish merchant page mà không cần kỹ thuật support. QC gate blocking thin content.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase II - Deep data & Hub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gallery, Review integration, Amenities. Hub (map + filters). Listing pSEO. Engagement Signals.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q4/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">80% pilot merchants có >= 3 ảnh. Hub map và listing pages active. Engagement signals live.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase III - Gamification</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tinder Swipe, TikTok Doom Scroll, Facebook Social Feed widgets. Ads Manager integration.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q4/2026+</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gamified widgets active on Hub page. Impression and swipe/click tracking live.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Long term</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/thanh-toan-momo-{merchant}</code> full audit + redirect. Top brand chains.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2027</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Legacy cleanup complete. Top 20 brand chains có merchant page.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -714,17 +1184,92 @@ Nhằm tối ưu chi phí (RAG tokens) và đảm bảo độ chính xác khi Ch
 
 > Sprint length: 2 tuần. Owner = Lead dev/PIC chính của sprint, không phải exclusive.
 
-| Sprint | Thời gian | Focus | Key Deliverables | PRD Ref | Owner |
-|---|---|---|---|---|---|
-| **Sprint 0** | 10-20 Jun 2026 | Phase I Close & Verify | GSC index 39 URLs confirmed. CWV audit pass. UI template categories (Nhật). Share button (Nhật). CRUD lifecycle (Nhật). Content Distribution Flow (Trọng). Umami tracking setup (Thuận). | 3.1-3.5, 3.8 | Nhật + Trọng + Thuận |
-| **Sprint 1** | 23 Jun - 4 Jul | CMS Foundation | M4B API integration. Google Maps Crawler MVP. Bottom-up Manual path hoàn chỉnh. | 3.9 (Luồng 2 Manual) | Hoài Anh + Nhật |
-| **Sprint 2** | 7-18 Jul | CMS Auto-creation Full | M4B Sync path. SEO Inventory Preview UI. QC Gate (block publish nếu thiếu NAP). Auto-sitemap + Indexing API ping. | 3.9 (full) | Hoài Anh + Nhật |
-| **Sprint 3** | 21 Jul - 1 Aug | GenAI Image Pipeline | Gemini Banana - auto banner resize (1050x450) + og:image (1200x630). Gallery upload UI trong CMS. | 3.10 | Nhật + Hoài Anh |
-| **Sprint 4** | 4-15 Aug | Engagement Signals | Badge "Top Merchant" (3.15.1). Social Proof Counter (3.15.2). Recommendation Rail (3.15.4). [Hold: Activity Pulse - chờ redesign JTBD] | 3.15 | Nhật |
-| **Sprint 5** | 18-29 Aug | Hub Phase II | Interactive Map widget (lazy load, Google Maps). Smart Search autocomplete. Dynamic Filters (Quận, danh mục, "Có VTS"). | 3.6 Phase II | Nhật + Hoài Anh |
-| **Sprint 6** | 1-12 Sep | Listing Page pSEO | URL patterns for Admin (`/merchant/danh-sach/{tinh}/{quan}`) & POI (`/merchant/danh-sach/{tinh}/diem-den/{poi}`). Anti-thin gate (admin >= 5, POI >= 3 with radius fallback). FAQ Block auto-gen. BreadcrumbList schema. Internal linking mesh. | 3.7 | Nhật + Trọng |
-| **Sprint 7** | 15-26 Sep | Deep Data & Review | Google Places API integration. Review score display. Amenities block. Branch data inline. | 3.6 Phase II deep data | Hoài Anh + Nhật |
-| **Phase III** | Q4 2026 | Gamification | Swipe to Match (3.11). Doom Scroll Feed (3.12). Social Activity Feed (3.13). Ads Manager injection. | 3.11-3.13 | TBD |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Sprint</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thời gian</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Focus</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Key Deliverables</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">PRD Ref</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sprint 0</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">10-20 Jun 2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase I Close & Verify</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC index 39 URLs confirmed. CWV audit pass. UI template categories (Nhật). Share button (Nhật). CRUD lifecycle (Nhật). Content Distribution Flow (Trọng). Umami tracking setup (Thuận).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.1-3.5, 3.8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhật + Trọng + Thuận</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sprint 1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">23 Jun - 4 Jul</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CMS Foundation</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M4B API integration. Google Maps Crawler MVP. Bottom-up Manual path hoàn chỉnh.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.9 (Luồng 2 Manual)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoài Anh + Nhật</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sprint 2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">7-18 Jul</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CMS Auto-creation Full</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M4B Sync path. SEO Inventory Preview UI. QC Gate (block publish nếu thiếu NAP). Auto-sitemap + Indexing API ping.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.9 (full)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoài Anh + Nhật</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sprint 3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">21 Jul - 1 Aug</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GenAI Image Pipeline</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gemini Banana - auto banner resize (1050x450) + og:image (1200x630). Gallery upload UI trong CMS.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.10</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhật + Hoài Anh</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sprint 4</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4-15 Aug</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Engagement Signals</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Badge "Top Merchant" (3.15.1). Social Proof Counter (3.15.2). Recommendation Rail (3.15.4). [Hold: Activity Pulse - chờ redesign JTBD]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.15</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhật</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sprint 5</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">18-29 Aug</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hub Phase II</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Interactive Map widget (lazy load, Google Maps). Smart Search autocomplete. Dynamic Filters (Quận, danh mục, "Có VTS").</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.6 Phase II</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhật + Hoài Anh</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sprint 6</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1-12 Sep</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Listing Page pSEO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL patterns for Admin (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/danh-sach/{tinh}/{quan}</code>) & POI (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/danh-sach/{tinh}/diem-den/{poi}</code>). Anti-thin gate (admin >= 5, POI >= 3 with radius fallback). FAQ Block auto-gen. BreadcrumbList schema. Internal linking mesh.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhật + Trọng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sprint 7</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">15-26 Sep</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Deep Data & Review</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Google Places API integration. Review score display. Amenities block. Branch data inline.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.6 Phase II deep data</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoài Anh + Nhật</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phase III</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q4 2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gamification</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Swipe to Match (3.11). Doom Scroll Feed (3.12). Social Activity Feed (3.13). Ads Manager injection.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.11-3.13</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TBD</td>
+    </tr>
+  </tbody>
+</table>
 
 **Sprint 0 gate (20 Jun 2026):** Tất cả checklist Phase I trong BRD section 10.5 phải closed trước khi bắt đầu Sprint 1.
 
@@ -738,9 +1283,34 @@ Nhằm tối ưu chi phí (RAG tokens) và đảm bảo độ chính xác khi Ch
 
 ## Changelog
 
-| Version | Date | Author | Note |
-|---|---|---|---|
-| 0.1 | 2026-06-06 | Hiến | Initial draft từ BRD v2.6 |
-| 0.2 | 2026-06-09 | Hiến | Tích hợp Google Map Search Crawler (Mục 3.9 & 6) và Dynamic Json-LD Schema theo ngành hàng (Mục 5.2). |
-| 0.3 | 2026-06-10 | Hiến | Sync BRD v2.6: Thêm Section 3.15 Engagement Signals & Social Proof (Badge, Counter, Activity Pulse, Recommendation Rail) kèm JTBD mapping. Thêm Sprint Breakdown (Section 10.2). Fix BRD Ref path. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Version</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Date</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Author</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0.1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-06-06</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Initial draft từ BRD v2.6</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0.2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-06-09</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tích hợp Google Map Search Crawler (Mục 3.9 & 6) và Dynamic Json-LD Schema theo ngành hàng (Mục 5.2).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0.3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-06-10</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sync BRD v2.6: Thêm Section 3.15 Engagement Signals & Social Proof (Badge, Counter, Activity Pulse, Recommendation Rail) kèm JTBD mapping. Thêm Sprint Breakdown (Section 10.2). Fix BRD Ref path.</td>
+    </tr>
+  </tbody>
+</table>
 

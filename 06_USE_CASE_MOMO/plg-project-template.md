@@ -1,9 +1,9 @@
 # WEB PLATFORM x [BU_NAME] | [YEAR]
 
-**Bối cảnh dự án:** 
+**Bối cảnh dự án:**
 [Mô tả bối cảnh thị trường, mùa vụ, cơ hội và intent search của người dùng liên quan đến mảng sản phẩm. Ví dụ: H2/2026 là mùa Summer Camp, lễ 2/9...]
 
-**Mục tiêu dự án:** 
+**Mục tiêu dự án:**
 - Tăng cường khả năng hiển thị của [Use Case] trên các nền tảng Search Engine/AIO.
 - Tăng trưởng X2 Total Traffic, trong đó trọng điểm là Organic Traffic.
 - Tăng trưởng X2 các chỉ số cho luồng Web To App tác động đến MAU/Revenue.
@@ -32,15 +32,68 @@
 
 ### 2.1 Baseline & KPIs
 
-| Metric | [Year-1] Full Year | [Qx/Year] (Baseline) | [Hx/Year] (Actual) | [Target Timeframe] (Target) |
-|---|---|---|---|---|
-| Organic Traffic | [Value] | [Value] | [Value] | [Value] |
-| Total Traffic | [Value] | [Value] | [Value] | [Value] |
-| Booking Clicks | [Value] | [Value] | [Value] | [Value] |
-| Traffic to App (W2A Users) | [Value] | [Value] | [Value] | [Value] |
-| Transactions (via App) | [Value] | [Value] | [Value] | [Value] |
-| [Specific Conversion Metric] | [Value] | [Value] | [Value] | [Value] |
-| **% W2A (CR)** | **[Value]%** | **[Value]%** | **[Value]%** | **[Value]%+** |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">[Year-1] Full Year</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">[Qx/Year] (Baseline)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">[Hx/Year] (Actual)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">[Target Timeframe] (Target)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Organic Traffic</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Total Traffic</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Booking Clicks</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic to App (W2A Users)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transactions (via App)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Specific Conversion Metric]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Value]</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>% W2A (CR)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>[Value]%</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>[Value]%</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>[Value]%</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>[Value]%+</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 * **Ghi chú:**
 - **Mục tiêu:** Uplift [X]% mọi chỉ số [Timeframe].
@@ -48,11 +101,36 @@
 
 ### 2.2 Competitive Landscape
 
-| Competitor | Strengths | Weaknesses | MoMo Advantage |
-|---|---|---|---|
-| [Competitor 1] | [Strength] | [Weakness] | [Advantage] |
-| [Competitor 2] | [Strength] | [Weakness] | [Advantage] |
-| [Competitor 3] | [Strength] | [Weakness] | [Advantage] |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Competitor</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Strengths</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Weaknesses</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">MoMo Advantage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Competitor 1]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Strength]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Weakness]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Advantage]</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Competitor 2]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Strength]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Weakness]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Advantage]</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Competitor 3]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Strength]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Weakness]</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">[Advantage]</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -60,11 +138,32 @@
 
 Mục tiêu Uplift [X]% [Timeframe] dựa trên 3 trụ cột chiến lược:
 
-| # | Trụ Cột Chiến Lược | Trọng Tâm |
-|---|---|---|
-| **1** | **Expand Out-App Traffic** | Phủ sóng tìm kiếm Out-App ([Keyword Domains]). Biến Web thành kênh Acquisition. |
-| **2** | **Topical Authority ([Domain])** | Xây dựng "Bách khoa toàn thư" [Domain]. Phát triển content sâu để rank Google AI. |
-| **3** | **Web Product** | Chuyển dịch sang MoSpark. Trọng tâm: UX liền mạch & Triển khai luồng Web Payment. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trụ Cột Chiến Lược</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trọng Tâm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Expand Out-App Traffic</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phủ sóng tìm kiếm Out-App ([Keyword Domains]). Biến Web thành kênh Acquisition.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Topical Authority ([Domain])</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xây dựng "Bách khoa toàn thư" [Domain]. Phát triển content sâu để rank Google AI.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Product</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuyển dịch sang MoSpark. Trọng tâm: UX liền mạch & Triển khai luồng Web Payment.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

@@ -1,11 +1,8 @@
 # BRD: Merchant Hub - Cổng Thông Tin & Nền Tảng Đối Tác Merchant MoMo
 
 > - **Project:** Merchant Hub (Web Platform & Merchant Profile Identity)
-> - **Platform:** Web Platform (`momo.vn/merchant`, `momo.vn/cua-hang`)
 > - **Division:** Growth Platform Division (GPD)
 > - **Owner:** Web Platform Team (GPD)
-
----
 
 ## I. Executive Summary
 
@@ -20,25 +17,48 @@
 ### 1.2 Situation - Complication - Resolution
 * **Situation (Bối cảnh & Vai trò Website):** Khi phát sinh nhu cầu ăn uống, mua sắm, tìm tiệm làm đẹp, dịch vụ sửa chữa hay siêu thị tiện lợi gần nhất, phản xạ tự nhiên của người dùng là tra cứu trên Google hoặc các công cụ AI Search (ChatGPT, Gemini, Perplexity). Website `momo.vn` đóng vai trò là **"cửa ngõ hứng nhu cầu O2O và cổng định danh Merchant"**. Bằng các tiện ích tra cứu địa điểm, menu, bảng giá và kho voucher O2O trực tuyến, Website giải quyết tức thời nhu cầu của người dùng, từ đó thu thập dữ liệu vị trí và thiết lập Hồ sơ Cửa hàng (Merchant Profile).
 * **Complication (Khó khăn & Thách thức):** Nếu thông tin merchant chỉ nằm sâu trong ứng dụng di động đóng (App-only ecosystem), MoMo sẽ hoàn toàn vô hình trước hàng chục triệu lượt tìm kiếm tự nhiên ngoài Open Web. Hậu quả là lượng Traffic có ý định mua sắm cao (High purchase intent) sẽ chảy sang các nền tảng bên thứ ba (ShopeeFood, Grab, Foody), đồng thời việc ép người dùng tải App ngay lần đầu tìm kiếm địa điểm sẽ tạo ra rào cản đứt gãy lớn.
-* **Resolution (Giải pháp):** Xây dựng **Merchant Hub** hoạt động theo mô hình Product-Led Growth (PLG) & Hub-and-Spoke: Hứng traffic tự nhiên từ Open Web qua các Utility Category Spoke Pages (Đồ ăn, Đồ uống, Bách hoá, Làm đẹp, Mua sắm...) $\rightarrow$ Khởi tạo Hồ sơ Cửa hàng (Merchant Profile) $\rightarrow$ Điều hướng Web-to-App (W2A) để thu thập Voucher O2O & thực hiện giao dịch quét QR thanh toán tại shop.
+* **Resolution (Giải pháp):** Xây dựng **Merchant Hub** hoạt động theo mô hình Product-Led Growth (PLG) & Hub-and-Spoke: Hứng traffic tự nhiên từ Open Web qua các Utility Category Spoke Pages (Đồ ăn, Đồ uống, Bách hoá, Làm đẹp, Mua sắm...)  ➔  Khởi tạo Hồ sơ Cửa hàng (Merchant Profile)  ➔  Điều hướng Web-to-App (W2A) để thu thập Voucher O2O & thực hiện giao dịch quét QR thanh toán tại shop.
 
 ### 1.3 Product-Led Growth (PLG) Strategy
 Cơ chế PLG của Merchant Hub dựa trên 5 "Phễu Mồi Câu" (Acquisition & Engagement Hooks) giải quyết nhu cầu tìm kiếm tức thì ngoài Open Web để dẫn dắt người dùng tự nguyện khám phá cửa hàng và chuyển đổi sang App (Web-to-Merchant-to-App Flywheel):
 
-1. **Phễu Tra Cứu Địa Điểm & Menu (Acquisition Gate):** Xem vị trí Google Maps, menu/bản giá sản phẩm và đánh giá cửa hàng gần đây không cần đăng nhập $\rightarrow$ Bấm "Thu thập Voucher O2O" $\rightarrow$ Dẫn dắt kích hoạt App MoMo.
-2. **Phễu Săn Voucher O2O (Conversion Hook):** Nhận voucher giảm giá trực tiếp trên Web với 1-click $\rightarrow$ Thúc đẩy người dùng di chuyển đến cửa hàng offline quét mã MoMo / Ví Trả Sau để sử dụng voucher.
-3. **Phễu Đăng Ký Loa Soundbox (B2B Merchant Lead Gen Hook):** Landing page & Widget giới thiệu thiết bị Loa báo chuyển tiền Soundbox cho chủ cửa hàng $\rightarrow$ Điền form tư vấn nhận cuộc gọi từ bộ phận kinh doanh M4B.
-4. **Phễu Cửa Hàng Hỗ Trợ Ví Trả Sau (High-Value Intent Hook):** Tra cứu danh sách cửa hàng/chuỗi mua sắm chấp nhận thanh toán Ví Trả Sau 0% lãi suất $\rightarrow$ Dẫn dắt kích hoạt Ví Trả Sau và mua sắm đơn hàng giá trị cao.
-5. **Phễu Đánh Giá & MoMo Rewards (Retention Hook):** Người dùng quét QR thanh toán tại merchant được tích điểm đổi quà MoMo Rewards $\rightarrow$ Khuyến khích người dùng quay lại đánh giá cửa hàng trên Web Platform.
+1. **Phễu Tra Cứu Địa Điểm & Menu (Acquisition Gate):** Xem vị trí Google Maps, menu/bản giá sản phẩm và đánh giá cửa hàng gần đây không cần đăng nhập  ➔  Bấm "Thu thập Voucher O2O"  ➔  Dẫn dắt kích hoạt App MoMo.
+2. **Phễu Săn Voucher O2O (Conversion Hook):** Nhận voucher giảm giá trực tiếp trên Web với 1-click  ➔  Thúc đẩy người dùng di chuyển đến cửa hàng offline quét mã MoMo / Ví Trả Sau để sử dụng voucher.
+3. **Phễu Đăng Ký Loa Soundbox (B2B Merchant Lead Gen Hook):** Landing page & Widget giới thiệu thiết bị Loa báo chuyển tiền Soundbox cho chủ cửa hàng  ➔  Điền form tư vấn nhận cuộc gọi từ bộ phận kinh doanh M4B.
+4. **Phễu Cửa Hàng Hỗ Trợ Ví Trả Sau (High-Value Intent Hook):** Tra cứu danh sách cửa hàng/chuỗi mua sắm chấp nhận thanh toán Ví Trả Sau 0% lãi suất  ➔  Dẫn dắt kích hoạt Ví Trả Sau và mua sắm đơn hàng giá trị cao.
+5. **Phễu Đánh Giá & MoMo Rewards (Retention Hook):** Người dùng quét QR thanh toán tại merchant được tích điểm đổi quà MoMo Rewards  ➔  Khuyến khích người dùng quay lại đánh giá cửa hàng trên Web Platform.
 
 ### 1.4 Key Metrics & Targets
 
 #### Dual North Star Metrics
 
-| Platform Layer | North Star Metric | Definition | Target | Strategic Role |
-| :--- | :--- | :--- | :--- | :--- |
-| **Web Platform** *(Primary Goal)* | **Total Organic Web Traffic** | Tổng lượt truy cập tự nhiên từ Google Search và AI Search vào các trang Merchant Pages & Category Hubs mỗi tháng. | **1.5M - 2.5M Visits/tháng** | Mục tiêu cốt lõi: Hứng tối đa nhu cầu tìm kiếm địa điểm, ăn uống, mua sắm O2O ngoài Open Web (~15M+ volume/tháng). |
-| **In-App & Merchant Layer** *(Secondary Layer)* | **Voucher Redemption Rate & Soundbox Leads** | Tỷ lệ đổi Voucher O2O thành công tại shop & Tổng số Leads tư vấn mua thiết bị Soundbox từ chủ shop. | **Voucher Redemption >35%**<br>**Soundbox Leads $\ge 15.000$/tháng** | Đo lường hiệu quả O2O chuyển đổi traffic Web thành giao dịch thực tế tại cửa hàng & doanh thu phần cứng/dịch vụ M4B. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Platform Layer</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">North Star Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Definition</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Strategic Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Platform</strong> <em>(Primary Goal)</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Total Organic Web Traffic</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng lượt truy cập tự nhiên từ Google Search và AI Search vào các trang Merchant Pages & Category Hubs mỗi tháng.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1.5M - 2.5M Visits/tháng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mục tiêu cốt lõi: Hứng tối đa nhu cầu tìm kiếm địa điểm, ăn uống, mua sắm O2O ngoài Open Web (~15M+ volume/tháng).</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>In-App & Merchant Layer</strong> <em>(Secondary Layer)</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Voucher Redemption Rate & Soundbox Leads</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ lệ đổi Voucher O2O thành công tại shop & Tổng số Leads tư vấn mua thiết bị Soundbox từ chủ shop.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Voucher Redemption >35%</strong><br><strong>Soundbox Leads ≥ 15.000/tháng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đo lường hiệu quả O2O chuyển đổi traffic Web thành giao dịch thực tế tại cửa hàng & doanh thu phần cứng/dịch vụ M4B.</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Web Platform Metric Tree
 
@@ -59,16 +79,61 @@ Cơ chế PLG của Merchant Hub dựa trên 5 "Phễu Mồi Câu" (Acquisition 
 
 #### Phase 1 Pilot Targets (Cell Team Alignment T9 - T12/2026)
 
-| STT | Chỉ Số (Key Metric) | Baseline (H1/2026) | Target Phase 1 Pilot (T9 - T12/2026) | Ghi Chú Thực Thi |
-| :---: | :--- | :---: | :---: | :--- |
-| 1 | **Phase 1 Organic Traffic** | 450K/tháng | **1.500.000 Visits** | Mở rộng SEO Hub theo 14 nhóm ngành nghề chính & 53 ngành nghề phụ |
-| 2 | **Web-to-App Conversion Rate (W2A CVR)** | 18% | **>= 30% CVR** | Tỷ lệ từ xem Web Merchant Page sang Thu thập Voucher / Mở App MoMo |
-| 3 | **O2O Voucher Redemptions** | 35.000/tháng | **120.000 Redemptions** | Số lượt sử dụng voucher thành công khi quét QR thanh toán tại shop |
-| 4 | **Soundbox Qualified Leads** | 2.100/tháng | **8.500 Leads/tháng** | Leads chủ cửa hàng đăng ký tư vấn mua thiết bị Loa Soundbox từ Web |
-| 5 | **SEO Ranking (Merchant & Category Keywords)** | Top 15-30 | **Top 1 - Top 10 Keywords** | Đưa các cụm từ khóa địa điểm (`quán ăn gần đây`, `tiệm cà phê mo mo`...) lọt Top 1-10 |
-| 6 | **Merchant Profile Verified Rate** | 5% | **>25% Verified** | Tỷ lệ chủ cửa hàng thực hiện xác minh quyền sở hữu trang Merchant Page |
-
----
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">STT</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chỉ Số (Key Metric)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Baseline (H1/2026)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Target Phase 1 Pilot (T9 - T12/2026)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi Chú Thực Thi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phase 1 Organic Traffic</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">450K/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>1.500.000 Visits</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mở rộng SEO Hub theo 14 nhóm ngành nghề chính & 53 ngành nghề phụ</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web-to-App Conversion Rate (W2A CVR)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">18%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>>= 30% CVR</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ lệ từ xem Web Merchant Page sang Thu thập Voucher / Mở App MoMo</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>O2O Voucher Redemptions</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">35.000/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>120.000 Redemptions</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số lượt sử dụng voucher thành công khi quét QR thanh toán tại shop</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Soundbox Qualified Leads</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.100/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>8.500 Leads/tháng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Leads chủ cửa hàng đăng ký tư vấn mua thiết bị Loa Soundbox từ Web</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>SEO Ranking (Merchant & Category Keywords)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">Top 15-30</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Top 1 - Top 10 Keywords</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đưa các cụm từ khóa địa điểm (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">quán ăn gần đây</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">tiệm cà phê mo mo</code>...) lọt Top 1-10</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Merchant Profile Verified Rate</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>>25% Verified</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ lệ chủ cửa hàng thực hiện xác minh quyền sở hữu trang Merchant Page</td>
+    </tr>
+  </tbody>
+</table>
 
 ## II. Market Context & Strategy
 
@@ -76,7 +141,7 @@ Cơ chế PLG của Merchant Hub dựa trên 5 "Phễu Mồi Câu" (Acquisition 
 * **Quy mô thị trường Hộ kinh doanh & SME tại Việt Nam:**
   * **Hộ kinh doanh cá thể:** Hơn 5,2 triệu hộ kinh doanh cá thể đang hoạt động trên toàn quốc.
   * **Doanh nghiệp SME:** Hơn 900.000 doanh nghiệp vừa và nhỏ, trong đó nhóm bán lẻ và F&B chiếm hơn 45%.
-* **Cơ hội O2O từ M4B & GPD:** Việc MoMo sở hữu mạng lưới hàng trăm ngàn merchant chấp nhận thanh toán QR kết hợp với năng lực thu hút traffic tự nhiên trên Web tạo ra vòng lặp O2O hoàn chỉnh: Tìm kiếm trên Google $\rightarrow$ Xem Merchant Page $\rightarrow$ Thu thập Voucher O2O $\rightarrow$ Ghé cửa hàng quét QR MoMo / Ví Trả Sau $\rightarrow$ Đăng ký Loa Soundbox chống thất thoát.
+* **Cơ hội O2O từ M4B & GPD:** Việc MoMo sở hữu mạng lưới hàng trăm ngàn merchant chấp nhận thanh toán QR kết hợp với năng lực thu hút traffic tự nhiên trên Web tạo ra vòng lặp O2O hoàn chỉnh: Tìm kiếm trên Google  ➔  Xem Merchant Page  ➔  Thu thập Voucher O2O  ➔  Ghé cửa hàng quét QR MoMo / Ví Trả Sau  ➔  Đăng ký Loa Soundbox chống thất thoát.
 
 ### 2.2 Cross-BU Synergy & Data Consolidation
 MoMo sở hữu lợi thế cạnh tranh tuyệt đối khi kết hợp sức mạnh giữa **Web Platform (GPD)**, **M4B (Merchant Platform)**, **Ví Trả Sau (FS)** và **Loa Soundbox (VTTI/Hardware)**:
@@ -87,18 +152,66 @@ MoMo sở hữu lợi thế cạnh tranh tuyệt đối khi kết hợp sức m�
 ### 2.3 Search Demand Analysis
 Theo phân tích dữ liệu thực tế trên Open Web tại Việt Nam, tổng nhu cầu tìm kiếm địa điểm ăn uống, mua sắm, dịch vụ local và giải pháp kinh doanh vượt **15.8 triệu lượt/tháng**. Đây là hệ thống nhu cầu cốt lõi mà Merchant Hub tập trung hứng trọn qua mô hình Hub-and-Spoke:
 
-| STT | Nhu Cầu / Use Case / Ngành Nghề | Volume Search / Tháng | Đặc Điểm Ý Định Tìm Kiếm (Search Intent) & Vai Trò Trong Merchant Hub |
-| :---: | :--- | :---: | :--- |
-| **1** | **Đồ Ăn (Nhà hàng, Quán ăn, Fastfood)** | **5.200.000** | Nhu cầu F&B lớn nhất thị trường. Hứng từ khóa tìm quán ăn gần đây, tiệm bánh, nhà hàng buffet. |
-| **2** | **Đồ Uống (Cà phê, Trà sữa, Sinh tố)** | **3.800.000** | Traffic có tần suất lặp lại cao hàng ngày. Phễu kéo người dùng trẻ săn Voucher O2O 1-click. |
-| **3** | **Bách Hoá & Siêu Thị (Tạp hoá, Tiện lợi)** | **2.500.000** | Tìm siêu thị tiện lợi, tạp hoá gần đây, chợ truyền thống. Phễu đẩy thanh toán QR quét mã nhanh. |
-| **4** | **Làm Đẹp - Sức Khỏe (Spa, Hair, Nail, Gym)**| **1.600.000** | Nhu cầu dịch vụ chăm sóc cá nhân có ARPU cao. Phễu tư vấn ưu đãi Ví Trả Sau & Đặt lịch. |
-| **5** | **Mua Sắm (Thời trang, Điện máy, Mẹ & bé)** | **1.200.000** | Nhu cầu mua sắm sản phẩm giá trị lớn. Phễu chuyển đổi chính cho dịch vụ Ví Trả Sau 0%. |
-| **6** | **Dịch Vụ Xe & Nhà Cửa (Rửa xe, Giặt ủi)** | **850.000** | Tìm tiệm sửa xe, rửa xe, giặt ủi, dọn dẹp nhà cửa tại địa phương (Local GEO intent). |
-| **7** | **Loa Báo Chuyển Tiền / Soundbox** | **150.000** | Nhu cầu của chủ shop tìm giải pháp loa thông báo chuyển tiền tự động. Phễu B2B Lead Gen trực tiếp. |
-| **8** | **Điểm Chấp Nhận Thanh Toán MoMo** | **280.000** | Khách hàng chủ động tra cứu địa điểm dùng Ví MoMo, Ví Trả Sau và săn khuyến mãi MoMo Rewards. |
-
----
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">STT</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhu Cầu / Use Case / Ngành Nghề</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Volume Search / Tháng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đặc Điểm Ý Định Tìm Kiếm (Search Intent) & Vai Trò Trong Merchant Hub</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Đồ Ăn (Nhà hàng, Quán ăn, Fastfood)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>5.200.000</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhu cầu F&B lớn nhất thị trường. Hứng từ khóa tìm quán ăn gần đây, tiệm bánh, nhà hàng buffet.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Đồ Uống (Cà phê, Trà sữa, Sinh tố)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>3.800.000</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic có tần suất lặp lại cao hàng ngày. Phễu kéo người dùng trẻ săn Voucher O2O 1-click.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Bách Hoá & Siêu Thị (Tạp hoá, Tiện lợi)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>2.500.000</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tìm siêu thị tiện lợi, tạp hoá gần đây, chợ truyền thống. Phễu đẩy thanh toán QR quét mã nhanh.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>4</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Làm Đẹp - Sức Khỏe (Spa, Hair, Nail, Gym)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>1.600.000</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhu cầu dịch vụ chăm sóc cá nhân có ARPU cao. Phễu tư vấn ưu đãi Ví Trả Sau & Đặt lịch.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>5</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Mua Sắm (Thời trang, Điện máy, Mẹ & bé)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>1.200.000</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhu cầu mua sắm sản phẩm giá trị lớn. Phễu chuyển đổi chính cho dịch vụ Ví Trả Sau 0%.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>6</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Dịch Vụ Xe & Nhà Cửa (Rửa xe, Giặt ủi)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>850.000</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tìm tiệm sửa xe, rửa xe, giặt ủi, dọn dẹp nhà cửa tại địa phương (Local GEO intent).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>7</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Loa Báo Chuyển Tiền / Soundbox</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>150.000</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhu cầu của chủ shop tìm giải pháp loa thông báo chuyển tiền tự động. Phễu B2B Lead Gen trực tiếp.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>8</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Điểm Chấp Nhận Thanh Toán MoMo</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>280.000</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khách hàng chủ động tra cứu địa điểm dùng Ví MoMo, Ví Trả Sau và săn khuyến mãi MoMo Rewards.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## III. Product Strategy & Core Flows
 
@@ -122,18 +235,75 @@ Theo phân tích dữ liệu thực tế trên Open Web tại Việt Nam, tổng
 
 ### 3.4 Core Use Cases & KPIs Matrix
 
-| # | Use Case (Hệ Sinh Thái Merchant) | Search Volume | Mô tả Chức Năng & Luồng Trải Nghiệm | KPIs Cam Kết |
-|:---:|:---|:---:|:---|:---|
-| 1 | **Merchant Page chuẩn SEO** | **~5.2M** | Trang thông tin chi tiết cửa hàng (Địa chỉ Maps, Hotline, Giờ mở cửa, Menu, Đánh giá). | Top 1-3 Organic Search; Time-on-page >1.5 phút. |
-| 2 | **O2O Voucher Claim Engine** | **~3.8M** | Thu thập voucher giảm giá O2O trên Web với 1-click để sử dụng khi quét QR thanh toán tại shop. | Tỷ lệ Claim Voucher >15%; Tỷ lệ sử dụng tại shop >35%. |
-| 3 | **Soundbox Lead Gen** | **~150K** | Chủ shop xem tính năng Loa báo chuyển tiền Soundbox và điền form đăng ký tư vấn giải pháp. | >8.500 Leads tư vấn/tháng; Tỷ lệ chốt đơn >20%. |
-| 4 | **Local GEO Merchant Search** | **~2.5M** | Bản đồ tra cứu điểm bán chấp nhận MoMo theo bán kính GPS (500m, 1km, 3km) và theo Tỉnh thành/Quận huyện. | Hứng tệp tìm kiếm local; >300k lượt chỉ đường/tháng. |
-| 5 | **Ví Trả Sau Merchant Locator** | **~280K** | Bộ lọc chuyên biệt danh sách cửa hàng/chuỗi siêu thị cho phép thanh toán qua Ví Trả Sau 0% lãi suất. | >10.000 giao dịch Ví Trả Sau được kích hoạt/tháng. |
-| 6 | **Menu & Product Explorer** | **~1.2M** | Khách hàng xem thực đơn, hình ảnh món ăn, bảng giá dịch vụ trước khi quyết định đến cửa hàng. | Tỷ lệ xem Menu >45% tổng lượt truy cập trang Merchant. |
-| 7 | **Review & Rating Platform** | **~850K** | Xem đánh giá từ cộng đồng người dùng MoMo đã thực hiện giao dịch thực tế tại merchant. | >50.000 lượt đánh giá mới được gửi mỗi tháng. |
-| 8 | **Merchant Verification (Claim Store)** | **Internal** | Chủ cửa hàng xác minh quyền sở hữu trang Merchant Page để tự cập nhật Menu & phát hành Voucher. | >25% Merchant Active hoàn tất xác minh trang. |
-
----
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Use Case (Hệ Sinh Thái Merchant)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Search Volume</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả Chức Năng & Luồng Trải Nghiệm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">KPIs Cam Kết</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Merchant Page chuẩn SEO</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>~5.2M</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang thông tin chi tiết cửa hàng (Địa chỉ Maps, Hotline, Giờ mở cửa, Menu, Đánh giá).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Top 1-3 Organic Search; Time-on-page >1.5 phút.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>O2O Voucher Claim Engine</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>~3.8M</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thu thập voucher giảm giá O2O trên Web với 1-click để sử dụng khi quét QR thanh toán tại shop.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ lệ Claim Voucher >15%; Tỷ lệ sử dụng tại shop >35%.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Soundbox Lead Gen</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>~150K</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chủ shop xem tính năng Loa báo chuyển tiền Soundbox và điền form đăng ký tư vấn giải pháp.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">>8.500 Leads tư vấn/tháng; Tỷ lệ chốt đơn >20%.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Local GEO Merchant Search</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>~2.5M</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bản đồ tra cứu điểm bán chấp nhận MoMo theo bán kính GPS (500m, 1km, 3km) và theo Tỉnh thành/Quận huyện.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hứng tệp tìm kiếm local; >300k lượt chỉ đường/tháng.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Ví Trả Sau Merchant Locator</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>~280K</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bộ lọc chuyên biệt danh sách cửa hàng/chuỗi siêu thị cho phép thanh toán qua Ví Trả Sau 0% lãi suất.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">>10.000 giao dịch Ví Trả Sau được kích hoạt/tháng.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Menu & Product Explorer</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>~1.2M</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khách hàng xem thực đơn, hình ảnh món ăn, bảng giá dịch vụ trước khi quyết định đến cửa hàng.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ lệ xem Menu >45% tổng lượt truy cập trang Merchant.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Review & Rating Platform</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>~850K</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xem đánh giá từ cộng đồng người dùng MoMo đã thực hiện giao dịch thực tế tại merchant.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">>50.000 lượt đánh giá mới được gửi mỗi tháng.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Merchant Verification (Claim Store)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Internal</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chủ cửa hàng xác minh quyền sở hữu trang Merchant Page để tự cập nhật Menu & phát hành Voucher.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">>25% Merchant Active hoàn tất xác minh trang.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## IV. Target Personas & JTBD
 
@@ -144,19 +314,42 @@ Theo phân tích dữ liệu thực tế trên Open Web tại Việt Nam, tổng
 
 ### 4.2 Consumer Journey (4 Stages)
 1. **Giai đoạn 1 (Trigger):** Phát sinh nhu cầu ăn uống, mua sắm hoặc tìm dịch vụ gần vị trí hiện tại ("tìm quán cà phê đẹp gần đây", "tiệm giặt ủi quận 1").
-2. **Giai đoạn 2 (Search & Discovery):** Tìm kiếm trên Google / AI Search $\rightarrow$ Truyc cập trang Category Hub hoặc Merchant Page trên `momo.vn/merchant` không cần đăng nhập.
-3. **Giai đoạn 3 (Utility & Identification):** Xem menu, địa chỉ Google Maps, đánh giá $\rightarrow$ Bấm 1-click "Thu thập Voucher O2O" $\rightarrow$ Khởi tạo liên kết định danh trên Web.
-4. **Giai đoạn 4 (App Automation & Retention):** Chuyển đổi Web-to-App (W2A) mở App MoMo $\rightarrow$ Đến shop quét QR thanh toán sử dụng voucher $\rightarrow$ Tích điểm MoMo Rewards & Đánh giá cửa hàng.
+2. **Giai đoạn 2 (Search & Discovery):** Tìm kiếm trên Google / AI Search  ➔  Truyc cập trang Category Hub hoặc Merchant Page trên `momo.vn/merchant` không cần đăng nhập.
+3. **Giai đoạn 3 (Utility & Identification):** Xem menu, địa chỉ Google Maps, đánh giá  ➔  Bấm 1-click "Thu thập Voucher O2O"  ➔  Khởi tạo liên kết định danh trên Web.
+4. **Giai đoạn 4 (App Automation & Retention):** Chuyển đổi Web-to-App (W2A) mở App MoMo  ➔  Đến shop quét QR thanh toán sử dụng voucher  ➔  Tích điểm MoMo Rewards & Đánh giá cửa hàng.
 
 ### 4.3 Multi-sided JTBD Matrix
 
-| Đối tượng | Job-To-Be-Done chính (Job Statement) | Pain Points cần giải quyết | Thay đổi sau khi dùng Merchant Hub |
-| :--- | :--- | :--- | :--- |
-| **Chủ cửa hàng (Merchants)** | *"Giúp cửa hàng của tôi xuất hiện chuyên nghiệp trên Google, thu hút thêm nhiều khách hàng quanh khu vực ghé shop và tự động hóa việc nhận tiền chuyển khoản để tôi yên tâm kinh doanh."* | - Không có website riêng, chi phí làm SEO quá đắt.<br>- Khó thu hút khách mới xung quanh.<br>- Lo bị lãng quên hoặc bị lừa chuyển khoản giả. | - Có trang Merchant Page chuẩn SEO miễn phí.<br>- Tiếp cận tệp khách MoMo qua Voucher O2O.<br>- Trang bị Loa Soundbox đọc tiền tự động. |
-| **Khách hàng (Consumers)** | *"Giúp tôi nhanh chóng tìm được địa điểm ăn uống, mua sắm uy tín gần nhất với đầy đủ thông tin menu, bảng giá và voucher giảm giá để tiết kiệm thời gian và chi phí."* | - Thông tin cửa hàng trên mạng thiếu chính xác.<br>- Không biết cửa hàng có nhận thanh toán MoMo/Ví Trả Sau không.<br>- Bỏ lỡ các ưu đãi giảm giá tại shop. | - Tra cứu chuẩn xác menu/địa chỉ trên Web.<br>- Biết rõ điểm nhận MoMo & Ví Trả Sau.<br>- Săn Voucher O2O 1-click tiện lợi. |
-| **Nền tảng (MoMo Platform)** | *"Giúp MoMo hứng trọn lượng traffic tìm kiếm địa điểm O2O khổng lồ từ Open Web, chuyển đổi người dùng Web thành giao dịch tại shop và bán chéo giải pháp Soundbox/Ví Trả Sau."* | - Chi phí thu hút người dùng mới (CAC) ngày càng cao.<br>- Merchant M4B thiếu công cụ kéo traffic O2O.<br>- Nguồn leads bán phần cứng Soundbox bị hạn chế. | - Hứng traffic tự nhiên từ SEO Hub (Zero-ad cost).<br>- Tăng sản lượng giao dịch QR O2O In-App.<br>- Tạo nguồn leads bán Loa Soundbox liên tục. |
-
----
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đối tượng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Job-To-Be-Done chính (Job Statement)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Pain Points cần giải quyết</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thay đổi sau khi dùng Merchant Hub</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Chủ cửa hàng (Merchants)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>"Giúp cửa hàng của tôi xuất hiện chuyên nghiệp trên Google, thu hút thêm nhiều khách hàng quanh khu vực ghé shop và tự động hóa việc nhận tiền chuyển khoản để tôi yên tâm kinh doanh."</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Không có website riêng, chi phí làm SEO quá đắt.<br>- Khó thu hút khách mới xung quanh.<br>- Lo bị lãng quên hoặc bị lừa chuyển khoản giả.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Có trang Merchant Page chuẩn SEO miễn phí.<br>- Tiếp cận tệp khách MoMo qua Voucher O2O.<br>- Trang bị Loa Soundbox đọc tiền tự động.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Khách hàng (Consumers)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>"Giúp tôi nhanh chóng tìm được địa điểm ăn uống, mua sắm uy tín gần nhất với đầy đủ thông tin menu, bảng giá và voucher giảm giá để tiết kiệm thời gian và chi phí."</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Thông tin cửa hàng trên mạng thiếu chính xác.<br>- Không biết cửa hàng có nhận thanh toán MoMo/Ví Trả Sau không.<br>- Bỏ lỡ các ưu đãi giảm giá tại shop.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Tra cứu chuẩn xác menu/địa chỉ trên Web.<br>- Biết rõ điểm nhận MoMo & Ví Trả Sau.<br>- Săn Voucher O2O 1-click tiện lợi.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Nền tảng (MoMo Platform)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>"Giúp MoMo hứng trọn lượng traffic tìm kiếm địa điểm O2O khổng lồ từ Open Web, chuyển đổi người dùng Web thành giao dịch tại shop và bán chéo giải pháp Soundbox/Ví Trả Sau."</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Chi phí thu hút người dùng mới (CAC) ngày càng cao.<br>- Merchant M4B thiếu công cụ kéo traffic O2O.<br>- Nguồn leads bán phần cứng Soundbox bị hạn chế.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Hứng traffic tự nhiên từ SEO Hub (Zero-ad cost).<br>- Tăng sản lượng giao dịch QR O2O In-App.<br>- Tạo nguồn leads bán Loa Soundbox liên tục.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## V. Site Structure & SEO/GEO Strategy
 
@@ -166,32 +359,147 @@ Tích hợp trọn vẹn bộ danh mục **14 Ngành nghề chính** và **53 Ng
 
 #### A. Nhóm Trang Category Hubs & Spoke Pages (`/merchant/*`)
 
-| Ngành nghề chính (Level 1) | URL Category Canonical | Danh sách Ngành nghề phụ (Level 2) & URL Mở Rộng | Mục Tiêu SEO & Intent |
-| :--- | :--- | :--- | :--- |
-| **1. Đồ ăn** | `/merchant/do-an` | Khu ẩm thực (`/do-an/khu-am-thuc`)<br>Nhà hàng (`/do-an/nha-hang`)<br>Quán ăn đường phố (`/do-an/quan-an-duong-pho`)<br>Quán ăn nhanh (`/do-an/quan-an-nhanh`)<br>Tiệm ăn (`/do-an/tiem-an`)<br>Tiệm bánh kẹo (`/do-an/tiem-banh-keo`) | Hứng **~5.2M volume/tháng**. SEO các từ khóa địa điểm ăn uống, nhà hàng, quán ăn gần đây. |
-| **2. Đồ uống** | `/merchant/do-uong` | Cà phê (`/do-uong/ca-phe`)<br>Sinh tố (`/do-uong/sinh-to`)<br>Trà sữa (`/do-uong/tra-sua`) | Hứng **~3.8M volume/tháng**. SEO từ khóa tiệm cà phê, trà sữa, sinh tố gần bạn. |
-| **3. Bách hoá** | `/merchant/bach-hoa` | Chợ truyền thống (`/bach-hoa/cho-truyen-thong`)<br>Cửa hàng thực phẩm (`/bach-hoa/cua-hang-thuc-pham`)<br>Cửa hàng tiện lợi (`/bach-hoa/cua-hang-tien-loi`)<br>Máy bán hàng tự động (`/bach-hoa/may-ban-hang-tu-dong`)<br>Siêu thị (`/bach-hoa/sieu-thi`)<br>Tạp hóa (`/bach-hoa/tap-hoa`)<br>Trung tâm thương mại (`/bach-hoa/trung-tam-thuong-mai`) | Hứng **~2.5M volume/tháng**. SEO từ khóa siêu thị mini, tiệm tạp hoá, cửa hàng tiện lợi 24/7. |
-| **4. Làm đẹp - Sức khỏe** | `/merchant/lam-dep-suc-khoe` | Dịch vụ làm móng (`/lam-dep-suc-khoe/nail`)<br>Dịch vụ làm tóc (`/lam-dep-suc-khoe/lam-toc`)<br>Dịch vụ massage, spa (`/lam-dep-suc-khoe/massage-spa`)<br>Dịch vụ thẩm mỹ (`/lam-dep-suc-khoe/tham-my`)<br>Gym & Fitness (`/lam-dep-suc-khoe/gym-fitness`) | Hứng **~1.6M volume/tháng**. SEO các cụm từ khóa làm đẹp, spa, thẩm mỹ viện, phòng gym. |
-| **5. Mua sắm** | `/merchant/mua-sam` | Cửa hàng mẹ và bé (`/mua-sam/me-va-be`)<br>Cửa hàng thể thao (`/mua-sam/the-thao`)<br>Điện thoại/Máy tính (`/mua-sam/dien-thoai-may-tinh`)<br>Đồ lót (`/mua-sam/do-lot`)<br>Gia dụng khác (`/mua-sam/gia-dung`)<br>Giày dép (`/mua-sam/giay-dep`)<br>Hạt giống/cây kiểng (`/mua-sam/cay-kieng`)<br>Nhà sách/Đồ chơi (`/mua-sam/nha-sach-do-choi`)<br>Nội thất (`/mua-sam/noi-that`)<br>Phụ kiện thời trang (`/mua-sam/phu-kien-thoi-trang`)<br>Quần áo (`/mua-sam/quan-ao`)<br>Siêu thị điện máy (`/mua-sam/sieu-thi-dien-may`)<br>Thiết bị điện (`/mua-sam/thiet-bi-dien`)<br>Thiết bị y tế (`/mua-sam/thiet-bi-y-te`)<br>Trang sức (`/mua-sam/trang-suc`)<br>Văn phòng phẩm (`/mua-sam/van-phong-pham`)<br>Vật liệu xây dựng (`/mua-sam/vat-lieu-xay-dung`) | Hứng **~1.2M volume/tháng**. Phễu chính tư vấn thanh toán Ví Trả Sau 0% lãi suất. |
-| **6. Dịch vụ ô tô/xe máy** | `/merchant/dich-vu-o-to-xe-may` | Rửa xe (`/dich-vu-o-to-xe-may/rua-xe`)<br>Sửa chữa ô tô/xe máy (`/dich-vu-o-to-xe-may/sua-xe`) | Hứng **~550K volume/tháng**. Kết nối hệ sinh thái Vehicle Hub & M4B Garage. |
-| **7. Đặt dịch vụ & Vận chuyển** | `/merchant/dat-dich-vu-van-chuyen` | Đại lý du lịch (`/dat-dich-vu-van-chuyen/dai-ly-du-lich`)<br>Taxi/Xe máy (`/dat-dich-vu-van-chuyen/taxi-xe-may`)<br>Vé máy bay (`/dat-dich-vu-van-chuyen/ve-may-bay`)<br>Vé tàu hỏa (`/dat-dich-vu-van-chuyen/ve-tau-hoa`) | SEO dịch vụ du lịch, đại lý vé và vận tải liên kết MoMo. |
-| **8. Giải trí** | `/merchant/giai-tri` | Bar Club (`/giai-tri/bar-club`) | SEO dịch vụ giải trí về đêm, bar club chấp nhận MoMo. |
-| **9. Giáo dục** | `/merchant/giao-duc` | Giáo dục khác (`/giao-duc/trung-tam-hoc-tap`) | SEO các trung tâm đào tạo, trường học đóng học phí MoMo. |
-| **10. Hoạt động thể thao, vui chơi** | `/merchant/hoat-dong-the-thao` | Hoạt động thể thao (`/hoat-dong-the-thao/san-tap`)<br>Khu vui chơi giải trí (`/hoat-dong-the-thao/khu-vui-choi`) | SEO các địa điểm vui chơi giải trí gia đình, sân tập thể thao. |
-| **11. Nhà cửa & Bảo trì** | `/merchant/nha-cua-bao-tri` | Dịch vụ dọn dẹp (`/nha-cua-bao-tri/don-dep`)<br>Giặt ủi (`/nha-cua-bao-tri/giat-ui`)<br>Sửa chữa thiết bị, nội thất (`/nha-cua-bao-tri/sua-chua-noi-that`) | Hứng **~300K volume/tháng**. SEO tiệm giặt ủi, sửa đồ gia dụng tại địa phương. |
-| **12. Dịch vụ thú y** | `/merchant/dich-vu-thu-y` | Chăm sóc thú cưng (`/dich-vu-thu-y/pet-shop`) | SEO tiệm thú y, spa thú cưng, pet shop chấp nhận MoMo. |
-| **13. Bán lẻ** | `/merchant/ban-le` | Mua sắm/Bán hàng khác (`/ban-le/khac`) | Trang tổng hợp ngành bán lẻ chung. |
-| **14. Viễn thông** | `/merchant/vien-thong` | Mua thẻ cào điện thoại (`/vien-thong/the-cao`) | SEO điểm nạp tiền & đại lý viễn thông. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ngành nghề chính (Level 1)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL Category Canonical</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Danh sách Ngành nghề phụ (Level 2) & URL Mở Rộng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục Tiêu SEO & Intent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1. Đồ ăn</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/do-an</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khu ẩm thực (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/do-an/khu-am-thuc</code>)<br>Nhà hàng (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/do-an/nha-hang</code>)<br>Quán ăn đường phố (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/do-an/quan-an-duong-pho</code>)<br>Quán ăn nhanh (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/do-an/quan-an-nhanh</code>)<br>Tiệm ăn (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/do-an/tiem-an</code>)<br>Tiệm bánh kẹo (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/do-an/tiem-banh-keo</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hứng <strong>~5.2M volume/tháng</strong>. SEO các từ khóa địa điểm ăn uống, nhà hàng, quán ăn gần đây.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>2. Đồ uống</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/do-uong</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cà phê (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/do-uong/ca-phe</code>)<br>Sinh tố (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/do-uong/sinh-to</code>)<br>Trà sữa (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/do-uong/tra-sua</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hứng <strong>~3.8M volume/tháng</strong>. SEO từ khóa tiệm cà phê, trà sữa, sinh tố gần bạn.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>3. Bách hoá</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/bach-hoa</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chợ truyền thống (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/bach-hoa/cho-truyen-thong</code>)<br>Cửa hàng thực phẩm (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/bach-hoa/cua-hang-thuc-pham</code>)<br>Cửa hàng tiện lợi (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/bach-hoa/cua-hang-tien-loi</code>)<br>Máy bán hàng tự động (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/bach-hoa/may-ban-hang-tu-dong</code>)<br>Siêu thị (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/bach-hoa/sieu-thi</code>)<br>Tạp hóa (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/bach-hoa/tap-hoa</code>)<br>Trung tâm thương mại (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/bach-hoa/trung-tam-thuong-mai</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hứng <strong>~2.5M volume/tháng</strong>. SEO từ khóa siêu thị mini, tiệm tạp hoá, cửa hàng tiện lợi 24/7.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>4. Làm đẹp - Sức khỏe</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/lam-dep-suc-khoe</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dịch vụ làm móng (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/lam-dep-suc-khoe/nail</code>)<br>Dịch vụ làm tóc (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/lam-dep-suc-khoe/lam-toc</code>)<br>Dịch vụ massage, spa (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/lam-dep-suc-khoe/massage-spa</code>)<br>Dịch vụ thẩm mỹ (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/lam-dep-suc-khoe/tham-my</code>)<br>Gym & Fitness (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/lam-dep-suc-khoe/gym-fitness</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hứng <strong>~1.6M volume/tháng</strong>. SEO các cụm từ khóa làm đẹp, spa, thẩm mỹ viện, phòng gym.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>5. Mua sắm</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/mua-sam</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cửa hàng mẹ và bé (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/mua-sam/me-va-be</code>)<br>Cửa hàng thể thao (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/mua-sam/the-thao</code>)<br>Điện thoại/Máy tính (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/mua-sam/dien-thoai-may-tinh</code>)<br>Đồ lót (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/mua-sam/do-lot</code>)<br>Gia dụng khác (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/mua-sam/gia-dung</code>)<br>Giày dép (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/mua-sam/giay-dep</code>)<br>Hạt giống/cây kiểng (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/mua-sam/cay-kieng</code>)<br>Nhà sách/Đồ chơi (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/mua-sam/nha-sach-do-choi</code>)<br>Nội thất (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/mua-sam/noi-that</code>)<br>Phụ kiện thời trang (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/mua-sam/phu-kien-thoi-trang</code>)<br>Quần áo (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/mua-sam/quan-ao</code>)<br>Siêu thị điện máy (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/mua-sam/sieu-thi-dien-may</code>)<br>Thiết bị điện (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/mua-sam/thiet-bi-dien</code>)<br>Thiết bị y tế (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/mua-sam/thiet-bi-y-te</code>)<br>Trang sức (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/mua-sam/trang-suc</code>)<br>Văn phòng phẩm (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/mua-sam/van-phong-pham</code>)<br>Vật liệu xây dựng (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/mua-sam/vat-lieu-xay-dung</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hứng <strong>~1.2M volume/tháng</strong>. Phễu chính tư vấn thanh toán Ví Trả Sau 0% lãi suất.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>6. Dịch vụ ô tô/xe máy</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/dich-vu-o-to-xe-may</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Rửa xe (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/dich-vu-o-to-xe-may/rua-xe</code>)<br>Sửa chữa ô tô/xe máy (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/dich-vu-o-to-xe-may/sua-xe</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hứng <strong>~550K volume/tháng</strong>. Kết nối hệ sinh thái Vehicle Hub & M4B Garage.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>7. Đặt dịch vụ & Vận chuyển</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/dat-dich-vu-van-chuyen</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đại lý du lịch (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/dat-dich-vu-van-chuyen/dai-ly-du-lich</code>)<br>Taxi/Xe máy (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/dat-dich-vu-van-chuyen/taxi-xe-may</code>)<br>Vé máy bay (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/dat-dich-vu-van-chuyen/ve-may-bay</code>)<br>Vé tàu hỏa (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/dat-dich-vu-van-chuyen/ve-tau-hoa</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO dịch vụ du lịch, đại lý vé và vận tải liên kết MoMo.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>8. Giải trí</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/giai-tri</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bar Club (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/giai-tri/bar-club</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO dịch vụ giải trí về đêm, bar club chấp nhận MoMo.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>9. Giáo dục</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/giao-duc</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giáo dục khác (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/giao-duc/trung-tam-hoc-tap</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO các trung tâm đào tạo, trường học đóng học phí MoMo.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>10. Hoạt động thể thao, vui chơi</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/hoat-dong-the-thao</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoạt động thể thao (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/hoat-dong-the-thao/san-tap</code>)<br>Khu vui chơi giải trí (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/hoat-dong-the-thao/khu-vui-choi</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO các địa điểm vui chơi giải trí gia đình, sân tập thể thao.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>11. Nhà cửa & Bảo trì</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/nha-cua-bao-tri</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dịch vụ dọn dẹp (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/nha-cua-bao-tri/don-dep</code>)<br>Giặt ủi (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/nha-cua-bao-tri/giat-ui</code>)<br>Sửa chữa thiết bị, nội thất (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/nha-cua-bao-tri/sua-chua-noi-that</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hứng <strong>~300K volume/tháng</strong>. SEO tiệm giặt ủi, sửa đồ gia dụng tại địa phương.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>12. Dịch vụ thú y</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/dich-vu-thu-y</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chăm sóc thú cưng (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/dich-vu-thu-y/pet-shop</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO tiệm thú y, spa thú cưng, pet shop chấp nhận MoMo.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>13. Bán lẻ</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/ban-le</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mua sắm/Bán hàng khác (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/ban-le/khac</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang tổng hợp ngành bán lẻ chung.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>14. Viễn thông</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/vien-thong</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mua thẻ cào điện thoại (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/vien-thong/the-cao</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO điểm nạp tiền & đại lý viễn thông.</td>
+    </tr>
+  </tbody>
+</table>
 
 #### B. Nhóm Trang Landing Pages Use Case Độc Lập
 
-| Tên Trang / Use Case Page | URL Canonical | Cấu Trúc URL Mở Rộng | Mục Tiêu SEO & Intent |
-| :--- | :--- | :--- | :--- |
-| **Trang Chủ Merchant Hub** | `/merchant` | `/merchant` | Cổng tổng hợp tra cứu địa điểm & cửa hàng MoMo toàn quốc. |
-| **Loa Soundbox MoMo** | `/merchant/soundbox` | `/merchant/soundbox/dang-ky` | Landing page giới thiệu Loa báo chuyển tiền Soundbox & Form tư vấn B2B. |
-| **Ví Trả Sau Merchant Directory**| `/merchant/vi-tra-sau` | `/merchant/vi-tra-sau/{category-slug}` | Danh mục cửa hàng chấp nhận thanh toán Ví Trả Sau 0%. |
-| **Kho Voucher O2O** | `/merchant/voucher-o2o` | `/merchant/voucher-o2o/{tinh-thanh}` | Tổng hợp mã giảm giá & voucher O2O claim 1-click trên Web. |
-| **Merchant Detail Page** | `/merchant/{store-slug}` | `/merchant/{tinh-thanh}/{store-slug}` | Trang thông tin chi tiết từng cửa hàng chuẩn SEO JSON-LD. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Trang / Use Case Page</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL Canonical</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cấu Trúc URL Mở Rộng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục Tiêu SEO & Intent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trang Chủ Merchant Hub</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cổng tổng hợp tra cứu địa điểm & cửa hàng MoMo toàn quốc.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Loa Soundbox MoMo</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/soundbox</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/soundbox/dang-ky</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing page giới thiệu Loa báo chuyển tiền Soundbox & Form tư vấn B2B.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Ví Trả Sau Merchant Directory</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/vi-tra-sau</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/vi-tra-sau/{category-slug}</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Danh mục cửa hàng chấp nhận thanh toán Ví Trả Sau 0%.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Kho Voucher O2O</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/voucher-o2o</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/voucher-o2o/{tinh-thanh}</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng hợp mã giảm giá & voucher O2O claim 1-click trên Web.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Merchant Detail Page</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/{store-slug}</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant/{tinh-thanh}/{store-slug}</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang thông tin chi tiết từng cửa hàng chuẩn SEO JSON-LD.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 5.2 SEO & GEO Strategy & Schema Matrix
 1. **Cấu trúc URL Địa lý Phân cấp (Local GEO pSEO):** Kết hợp Cấu trúc Ngành nghề + Tỉnh thành/Quận huyện để phủ trọn các cụm từ khóa tìm kiếm local:
@@ -199,25 +507,50 @@ Tích hợp trọn vẹn bộ danh mục **14 Ngành nghề chính** và **53 Ng
    * `momo.vn/merchant/do-uong/ca-phe/ha-noi/cau-giay`
 2. **Chuẩn hóa Dữ liệu Thực thể Schema.org Matrix (Structured Data):**
 
-| Ngành nghề chính | Schema.org `@type` tương ứng | Đã khai báo thuộc tính JSON-LD |
-| :--- | :--- | :--- |
-| **Đồ ăn / Đồ uống** | `FoodEstablishment`, `Restaurant`, `CafeOrCoffeeShop`, `Bakery` | `name`, `image`, `address`, `geo` (latitude, longitude), `telephone`, `priceRange`, `openingHoursSpecification`, `menu`, `acceptsReservations` |
-| **Làm đẹp - Sức khỏe** | `BeautySalon`, `HairSalon`, `HealthClub`, `DaySpa` | `name`, `address`, `geo`, `telephone`, `priceRange`, `openingHoursSpecification` |
-| **Bách hoá / Mua sắm** | `Store`, `ConvenienceStore`, `DepartmentStore`, `GroceryStore` | `name`, `address`, `geo`, `telephone`, `priceRange`, `paymentAccepted` |
-| **Dịch vụ ô tô/xe máy** | `AutomotiveBusiness`, `AutoRepair`, `AutoWash` | `name`, `address`, `geo`, `telephone`, `priceRange` |
-| **Cửa hàng chung** | `LocalBusiness` | `name`, `address`, `geo`, `telephone`, `sameAs`, `hasMap` |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ngành nghề chính</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Schema.org <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">@type</code> tương ứng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đã khai báo thuộc tính JSON-LD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Đồ ăn / Đồ uống</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">FoodEstablishment</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Restaurant</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">CafeOrCoffeeShop</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Bakery</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">name</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">image</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">address</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">geo</code> (latitude, longitude), <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">telephone</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">priceRange</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">openingHoursSpecification</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">menu</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">acceptsReservations</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Làm đẹp - Sức khỏe</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">BeautySalon</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">HairSalon</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">HealthClub</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">DaySpa</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">name</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">address</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">geo</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">telephone</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">priceRange</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">openingHoursSpecification</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Bách hoá / Mua sắm</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Store</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">ConvenienceStore</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">DepartmentStore</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">GroceryStore</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">name</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">address</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">geo</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">telephone</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">priceRange</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">paymentAccepted</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Dịch vụ ô tô/xe máy</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">AutomotiveBusiness</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">AutoRepair</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">AutoWash</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">name</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">address</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">geo</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">telephone</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">priceRange</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cửa hàng chung</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">LocalBusiness</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">name</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">address</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">geo</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">telephone</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">sameAs</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">hasMap</code></td>
+    </tr>
+  </tbody>
+</table>
 
 3. **Tối ưu hóa Tìm kiếm AI (Generative Engine Optimization - GEO):** Xây dựng mục FAQ chuẩn hóa câu trả lời tự nhiên (Ví dụ: *"Quán cà phê ABC có nhận thanh toán MoMo và Ví Trả Sau không?"*) giúp các công cụ AI Search (ChatGPT, Gemini, Perplexity) trích dẫn nguồn `momo.vn/merchant` khi trả lời người dùng.
 
----
-
 ## VI. Gamification & Promotions
 
-* **Tích Điểm Merchant (MoMo Rewards Integration):** Người dùng quét QR thanh toán tại merchant được tích điểm đổi quà trên MoMo Rewards $\rightarrow$ Hiển thị tiến trình tích điểm trực tiếp trên Merchant Page để khuyến khích người dùng quay lại shop.
+* **Tích Điểm Merchant (MoMo Rewards Integration):** Người dùng quét QR thanh toán tại merchant được tích điểm đổi quà trên MoMo Rewards  ➔  Hiển thị tiến trình tích điểm trực tiếp trên Merchant Page để khuyến khích người dùng quay lại shop.
 * **Gói Quà Tặng Mở Cửa Hàng (Merchant Onboarding Package):** Tài trợ 100.000đ Voucher O2O cho 1.000 chủ shop mới tạo và xác minh trang Merchant Page đầu tiên.
 * **Vòng Quay May Mắn Soundbox (Soundbox Lucky Spin):** Chủ cửa hàng đăng ký tư vấn Loa Soundbox trên Web có cơ hội trúng 100% voucher miễn phí phí thuê loa 3 tháng.
-
----
 
 ## VII. Compliance & Risk Governance
 
@@ -227,14 +560,42 @@ Tích hợp trọn vẹn bộ danh mục **14 Ngành nghề chính** và **53 Ng
 
 ### 7.2 Risk Management Matrix
 
-| Rủi ro tiềm tàng | Mức độ | Phương án xử lý | Đơn vị chịu trách nhiệm |
-|---|:---:|---|---|
-| **Thông tin cửa hàng bị sai lệch** (Địa chỉ, Giờ mở cửa) do chủ shop thay đổi không báo. | Trung bình | Tích hợp nút *"Báo sai thông tin"* trên Web; cho phép cộng đồng người dùng đóng góp chỉnh sửa & tự động nhắc chủ shop qua App M4B. | Operations Team & M4B |
-| **Spam / Leads ảo đăng ký tư vấn Soundbox** từ form công khai trên Web. | Cao | Tích hợp reCAPTCHA v3, OTP xác thực số điện thoại chủ shop trước khi gửi Lead về CRM. | Technical Team & Sales M4B |
-| **Merchant lạm dụng phát hành Voucher O2O** để trục lợi gian lận. | Cao | Thiết lập hạn mức phát hành voucher tối đa/ngày; kiểm soát tự động qua hệ thống Fraud Detection của MoMo. | Risk Management & Financial Services |
-| **Quá tải truy cập trang Merchant** trong các chiến dịch khuyến mãi lớn. | Thấp | Tối ưu Caching CDN (Cloudflare/Akamai), Server-side Rendering (SSR) nhẹ giúp tốc độ tải trang di động <1.5s. | Web Platform Team |
-
----
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Rủi ro tiềm tàng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Mức độ</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phương án xử lý</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đơn vị chịu trách nhiệm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Thông tin cửa hàng bị sai lệch</strong> (Địa chỉ, Giờ mở cửa) do chủ shop thay đổi không báo.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tích hợp nút <em>"Báo sai thông tin"</em> trên Web; cho phép cộng đồng người dùng đóng góp chỉnh sửa & tự động nhắc chủ shop qua App M4B.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Operations Team & M4B</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Spam / Leads ảo đăng ký tư vấn Soundbox</strong> từ form công khai trên Web.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tích hợp reCAPTCHA v3, OTP xác thực số điện thoại chủ shop trước khi gửi Lead về CRM.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Technical Team & Sales M4B</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Merchant lạm dụng phát hành Voucher O2O</strong> để trục lợi gian lận.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thiết lập hạn mức phát hành voucher tối đa/ngày; kiểm soát tự động qua hệ thống Fraud Detection của MoMo.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Risk Management & Financial Services</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Quá tải truy cập trang Merchant</strong> trong các chiến dịch khuyến mãi lớn.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">Thấp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tối ưu Caching CDN (Cloudflare/Akamai), Server-side Rendering (SSR) nhẹ giúp tốc độ tải trang di động <1.5s.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform Team</td>
+    </tr>
+  </tbody>
+</table>
 
 ## VIII. Growth Roadmap & Changelog
 
@@ -247,7 +608,33 @@ Tích hợp trọn vẹn bộ danh mục **14 Ngành nghề chính** và **53 Ng
 
 ### 8.2 Change Log
 
-| Phiên bản | Ngày cập nhật | Người thực hiện | Nội dung thay đổi |
-|---|---|---|---|
-| **v2.0** | 2026-07-31 | Web Product Lead (GPD) | **Master BRD Upgrade:** Đại tu toàn bộ Merchant Hub BRD theo chuẩn cấu trúc `vehicle-hub-brd.md`. Bổ sung SCR Framework, PLG 5 Phễu Mồi Câu, Dual North Star Metrics, Bảng Phân Tích Nhu Cầu Tìm Kiếm (Search Demand Analysis), Tích hợp Bộ Taxonomy 14 Ngành nghề chính & 53 Ngành nghề phụ từ CSV, Schema.org Matrix, PDPD Compliance và Risk Management Matrix. |
-| **v1.0** | 2026-07-15 | Web Platform Team | Khởi tạo tài liệu BRD ban đầu cho dự án Merchant Hub (MoMo Merchant Page cho SME). |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phiên bản</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ngày cập nhật</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Người thực hiện</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung thay đổi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v2.1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-08-07</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Software Engineering Team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MoSpark CMS Merchant Feature Upgrades:</strong> Cập nhật tính năng quản trị Merchant List View (50 rows/page), hệ thống Quản lý Tags & Import CSV hàng loạt, công cụ Bulk Actions (Add/Remove Tag, Index/No-index, Bulk Remove), tính năng tự động trích xuất tọa độ Lat/Long từ Google Maps share link, và nâng cấp GenAI Options kèm bộ Prompt Long Content mới.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v2.0</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-07-31</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead (GPD)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Master BRD Upgrade:</strong> Đại tu toàn bộ Merchant Hub BRD theo chuẩn cấu trúc <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">vehicle-hub-brd.md</code>. Bổ sung SCR Framework, PLG 5 Phễu Mồi Câu, Dual North Star Metrics, Bảng Phân Tích Nhu Cầu Tìm Kiếm (Search Demand Analysis), Tích hợp Bộ Taxonomy 14 Ngành nghề chính & 53 Ngành nghề phụ từ CSV, Schema.org Matrix, PDPD Compliance và Risk Management Matrix.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v1.0</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-07-15</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform Team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khởi tạo tài liệu BRD ban đầu cho dự án Merchant Hub (MoMo Merchant Page cho SME).</td>
+    </tr>
+  </tbody>
+</table>

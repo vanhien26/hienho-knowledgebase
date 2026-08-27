@@ -2,7 +2,9 @@
 
 > - **Document:** Web Product Lead - Strategic & OKRs H2 2026
 > - **Division:** Growth Platform Division (GPD)
-> - **Role:** Web Product Lead (Out-App Traffic Team)
+> - **Unit:** Web Platform
+> - **Team:** Out-App Traffic Team
+> - **Role:** Web Product Lead
 > - **Owner:** Văn Hiến
 > - **Direct Manager:** Head of Web Platform
 > - **Version:** 1.1 · July 2026
@@ -21,7 +23,7 @@
 
 ### 1.2. Thực trạng H1/2026 & Định hướng Hành động H2/2026
 *   **Thực trạng H1/2026 (Nền tảng đã hoàn thành):**
-    *   *Traffic & Conversion:* Mang lại 5.9M click tự nhiên. Phễu chuyển đổi Ads Website (New to MoMo) đạt kết quả thực tế 36.8K Installs -> 7K MAU.
+    *   *Traffic & Conversion:* Mang lại 5.9M click tự nhiên. Phễu chuyển đổi Ads Website (New to MoMo) đạt kết quả thực tế 36.8K Installs ➔ 7K MAU.
     *   *Công cụ PLG:* Rollout giai đoạn 1 Use Case Phạt Nguội (tích hợp API kiểm tra vi phạm), CIC Simulator widget và hoàn tất thiết kế wireframe các công cụ giả lập tài chính Finhub. Hoàn thành thử nghiệm Local SEO cho 39 đối tác (Merchant).
     *   *Hạ tầng & Chất lượng:* Vận hành hệ thống MoSpark CMS; loại bỏ hơn 3.670 URL rác để tối ưu Crawl Budget; hoàn thành tích hợp Identity Platform (Edge Cookie) để định danh và đo lường hành vi người dùng ẩn danh từ Web vào App.
 *   **Định hướng Hành động H2/2026 (Mục tiêu thực thi):**
@@ -66,12 +68,42 @@ Chiến lược Web được tổ chức theo 3 lớp mục tiêu nhằm chuyể
 ### 2.3. 4 Growth Pillars (Kiến trúc Thị trường)
 momo.vn không tổ chức theo BU mà theo Product/Search Ecosystem. 4 Pillars đại diện cho 4 growth engine độc lập sở hữu các vertical thị trường dưới sự kiểm duyệt kỹ thuật của Web Product Lead:
 
-| Pillar | Use Cases tiêu biểu | Chiến lược Content | Ràng buộc quản trị (Hiến sở hữu & audit) |
-|---|---|---|---|
-| **P1 - Tài chính & Tín dụng** | CIC Score, Ví Trả Sau, Vay Nhanh | Hub-Spoke kết hợp các Interactive Tools (Tính lãi, Mô phỏng CIC) | **Named Author Policy** - Gate kiểm duyệt cứng bắt buộc trước khi launch |
-| **P2 - Bảo hiểm Công nghệ** | Bảo hiểm xe máy, BHYT, BHXH, Bảo hiểm ô tô | Neutral Aggregator - Cổng so sánh trung lập | **Không dùng geo-based URL** cho bảo hiểm |
-| **P3 - Dịch vụ Công & Tiện ích** | Phạt Nguội, Thanh toán Hóa đơn | API real-time kết hợp programmatic SEO (pSEO) cho 63 tỉnh | **GEO Optimization ready** trước khi rollout |
-| **P4 - Đời sống & Merchant** | Cinema, OTA, eSIM, Merchant | Intent-first, trang chi tiết Merchant (Merchant Detail Page) | **Noindex mandatory** cho các URL hết hạn |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Pillar</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Use Cases tiêu biểu</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chiến lược Content</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ràng buộc quản trị (Hiến sở hữu & audit)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P1 - Tài chính & Tín dụng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CIC Score, Ví Trả Sau, Vay Nhanh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hub-Spoke kết hợp các Interactive Tools (Tính lãi, Mô phỏng CIC)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Named Author Policy</strong> - Gate kiểm duyệt cứng bắt buộc trước khi launch</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P2 - Bảo hiểm Công nghệ</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo hiểm xe máy, BHYT, BHXH, Bảo hiểm ô tô</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Neutral Aggregator - Cổng so sánh trung lập</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Không dùng geo-based URL</strong> cho bảo hiểm</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P3 - Dịch vụ Công & Tiện ích</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phạt Nguội, Thanh toán Hóa đơn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">API real-time kết hợp programmatic SEO (pSEO) cho 63 tỉnh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GEO Optimization ready</strong> trước khi rollout</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P4 - Đời sống & Merchant</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cinema, OTA, eSIM, Merchant</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Intent-first, trang chi tiết Merchant (Merchant Detail Page)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Noindex mandatory</strong> cho các URL hết hạn</td>
+    </tr>
+  </tbody>
+</table>
 ---
 
 ## III. OKRS H2/2026 - WEB PRODUCT LEAD
@@ -79,50 +111,180 @@ momo.vn không tổ chức theo BU mà theo Product/Search Ecosystem. 4 Pillars 
 ### Objective 1: Xây dựng giải pháp tăng trưởng và thúc đẩy mục tiêu tăng trưởng Web Traffic và MAU
 *Focus: Traffic acquisition, conversion optimization, and simulation hooks.*
 
-| KR | Chỉ số cốt lõi | Tiêu chuẩn hoàn thành (H2/2026 Target) | Vai trò của Hiến (Web Product Lead) |
-|---|---|---|---|
-| **KR 1.1** | **Web Platform Projects (Own Use Cases)** | Đạt **Top 3 Ranking** cho nhóm từ khóa Phạt Nguội; scale-up Local SEO cho **500 Merchant Pages** (phát triển Merchant Detail và Merchant Listing định hướng Location Page giải quyết JTBD từ PLG Project). | Quản lý vòng đời sản phẩm Phạt Nguội (API realtime, cảnh báo vi phạm) và scale-up Local SEO cho hệ thống Merchant. |
-| **KR 1.2** | **Cell Team Growth Projects** | Các dự án Cell Team (Vehicle Hub, Cinema, eSIM, Bảo hiểm Ô tô) - trừ các dự án Inbound tham gia - đóng góp **3.0M PageViews/tháng**. | Hỗ trợ cấu trúc kỹ thuật web, pSEO và tracking cho các Cell Teams để đảm bảo ROI tăng trưởng. |
-| **KR 1.3** | **Overall Web-to-App Funnel** | Tối ưu phễu Web-to-App và scale-up traffic hướng tới mục tiêu đột phá đạt **1.0M MAU/tháng** vào cuối H2/2026 (lũy kế H2 đạt **>4.0M MAU**), đạt tỷ lệ chuyển đổi trung bình **>10%** (hướng tới target **12.5%**). | Chịu trách nhiệm tối ưu phễu chuyển đổi W2A và hạ tầng tracking của Web Platform. |
-| **KR 1.4** | **User Growth Contribution** | Phối hợp cùng User Growth triển khai dự án Ads Website đóng góp **>20K New Users** (REG) và **>14K New User MAU** thực tế. | Phối hợp kỹ thuật cùng User Growth tối ưu cơ chế Smart CTA, Universal Links. |
-| **KR 1.5** | **Financial Authority (Finhub)** | Hướng tới mục tiêu xây dựng toàn bộ hệ thống Utilities Tools về Finance tại MoMo thông qua việc phát hành thành công bộ **10 công cụ giả lập tài chính Finhub**. | Thiết lập logic toán học, kịch bản JTBD và thiết kế wireframe cho các công cụ giả lập để làm phễu organic traffic. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">KR</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chỉ số cốt lõi</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tiêu chuẩn hoàn thành (H2/2026 Target)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò của Hiến (Web Product Lead)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 1.1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Platform Projects (Own Use Cases)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đạt <strong>Top 3 Ranking</strong> cho nhóm từ khóa Phạt Nguội; scale-up Local SEO cho <strong>500 Merchant Pages</strong> (phát triển Merchant Detail và Merchant Listing định hướng Location Page giải quyết JTBD từ PLG Project).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quản lý vòng đời sản phẩm Phạt Nguội (API realtime, cảnh báo vi phạm) và scale-up Local SEO cho hệ thống Merchant.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 1.2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cell Team Growth Projects</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Các dự án Cell Team (Vehicle Hub, Cinema, eSIM, Bảo hiểm Ô tô) - trừ các dự án Media Team tham gia - đóng góp <strong>3.0M PageViews/tháng</strong>.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hỗ trợ cấu trúc kỹ thuật web, pSEO và tracking cho các Cell Teams để đảm bảo ROI tăng trưởng.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 1.3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Overall Web-to-App Funnel</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tối ưu phễu Web-to-App và scale-up traffic hướng tới mục tiêu đột phá đạt <strong>1.0M MAU/tháng</strong> vào cuối H2/2026 (lũy kế H2 đạt <strong>>4.0M MAU</strong>), đạt tỷ lệ chuyển đổi trung bình <strong>>10%</strong> (hướng tới target <strong>12.5%</strong>).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chịu trách nhiệm tối ưu phễu chuyển đổi W2A và hạ tầng tracking của Web Platform.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 1.4</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>User Growth Contribution</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phối hợp cùng User Growth triển khai dự án Ads Website đóng góp <strong>>20K New Users</strong> (REG) và <strong>>14K New User MAU</strong> thực tế.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phối hợp kỹ thuật cùng User Growth tối ưu cơ chế Smart CTA, Universal Links.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 1.5</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Financial Authority (Finhub)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hướng tới mục tiêu xây dựng toàn bộ hệ thống Utilities Tools về Finance tại MoMo thông qua việc phát hành thành công bộ <strong>10 công cụ giả lập tài chính Finhub</strong>.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thiết lập logic toán học, kịch bản JTBD và thiết kế wireframe cho các công cụ giả lập để làm phễu organic traffic.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ### Objective 2: Xây dựng và phát triển MoSpark trở thành nền tảng AI-Powered trong hoạt động GenAI Content
 *Focus: AI-powered scale, automation flow, content quality gate, and merchant data enrichment.*
 
-| KR | Chỉ số cốt lõi | Tiêu chuẩn hoàn thành (H2/2026 Target) | Vai trò của Hiến (Web Product Lead) |
-|---|---|---|---|
-| **KR 2.1** | **PLG Project** | Vận hành nền tảng quản trị **Topic Cluster**; ứng dụng GenAI để sản xuất nội dung theo **Content Plan** nhằm phục vụ mục tiêu tăng trưởng **Ranking & Traffic (PageViews)**. | Quản trị cấu trúc hệ thống, thiết lập content plan theo JTBD và trực tiếp giám sát chất lượng sản xuất/chỉ số traffic. |
-| **KR 2.2** | **GenAI Content** | Áp dụng các Model AI để sản xuất đa dạng định dạng nội dung, cắt giảm tối đa thời gian sản xuất, đảm bảo chuẩn business context và luôn tối ưu chi phí token. | Thiết lập framework prompt chuẩn hóa business context, tham gia đánh giá chất lượng đầu ra của Model AI và tối ưu chi phí token. |
-| **KR 2.3** | **Merchant-Led Growth** | Xây dựng chiến lược tăng trưởng thông qua các trang **Location Listing (Merchant Listing)** giải quyết JTBD từ **PLG Project** cho **500 Merchant Pages**. | Thiết kế cấu trúc các trang Location Listing trên MoSpark CMS để tối ưu Local SEO. |
-| **KR 2.4** | **Ads Manager & Utilities Tool** | Khai thác quảng cáo và điều phối hiển thị Dynamic placement banner tự động theo ngữ cảnh; phát triển các công cụ tiện ích/widget tra cứu (Calculator, Simulator tính lãi suất/trả góp, và tiện ích theo dõi Giá Vàng) làm phễu gián tiếp dẫn lưu lượng về các dịch vụ tài chính (Tiết kiệm, Đầu tư). | Tham gia tư vấn, điều phối inventory quảng cáo và phối hợp phát triển các công cụ tiện ích (Utilities). |
-| **KR 2.5** | **Content Quality Gate** | Đảm bảo **100% nội dung AI sinh ra đạt điểm số chất lượng ≥ 80 điểm** (không lỗi Core Web Vitals, không trùng lặp/lỗi SEO). | Quản trị bộ quy tắc chấm điểm (5 blocks) và cơ chế Hard-Block ngăn chặn xuất bản nội dung lỗi trên CMS. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">KR</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chỉ số cốt lõi</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tiêu chuẩn hoàn thành (H2/2026 Target)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò của Hiến (Web Product Lead)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 2.1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>PLG Project</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vận hành nền tảng quản trị <strong>Topic Cluster</strong>; ứng dụng GenAI để sản xuất nội dung theo <strong>Content Plan</strong> nhằm phục vụ mục tiêu tăng trưởng <strong>Ranking & Traffic (PageViews)</strong>.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quản trị cấu trúc hệ thống, thiết lập content plan theo JTBD và trực tiếp giám sát chất lượng sản xuất/chỉ số traffic.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 2.2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GenAI Content</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Áp dụng các Model AI để sản xuất đa dạng định dạng nội dung, cắt giảm tối đa thời gian sản xuất, đảm bảo chuẩn business context và luôn tối ưu chi phí token.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thiết lập framework prompt chuẩn hóa business context, tham gia đánh giá chất lượng đầu ra của Model AI và tối ưu chi phí token.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 2.3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Merchant-Led Growth</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xây dựng chiến lược tăng trưởng thông qua các trang <strong>Location Listing (Merchant Listing)</strong> giải quyết JTBD từ <strong>PLG Project</strong> cho <strong>500 Merchant Pages</strong>.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thiết kế cấu trúc các trang Location Listing trên MoSpark CMS để tối ưu Local SEO.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 2.4</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Ads Manager & Utilities Tool</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khai thác quảng cáo và điều phối hiển thị Dynamic placement banner tự động theo ngữ cảnh; phát triển các công cụ tiện ích/widget tra cứu (Calculator, Simulator tính lãi suất/trả góp, và tiện ích theo dõi Giá Vàng) làm phễu gián tiếp dẫn lưu lượng về các dịch vụ tài chính (Tiết kiệm, Đầu tư).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tham gia tư vấn, điều phối inventory quảng cáo và phối hợp phát triển các công cụ tiện ích (Utilities).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 2.5</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Content Quality Gate</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đảm bảo <strong>100% nội dung AI sinh ra đạt điểm số chất lượng ≥ 80 điểm</strong> (không lỗi Core Web Vitals, không trùng lặp/lỗi SEO).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quản trị bộ quy tắc chấm điểm (5 blocks) và cơ chế Hard-Block ngăn chặn xuất bản nội dung lỗi trên CMS.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ### Objective 3: Thiết lập quy chuẩn vận hành, quản trị an toàn thông tin & sức khỏe tên miền (Technical & Content Governance)
 *Focus: Quality gates, publish approvals, domain health, crawl budget optimization, and Agent-led search infrastructure.*
 
-| KR | Chỉ số cốt lõi | Tiêu chuẩn hoàn thành (H2/2026 Target) | Vai trò của Hiến (Web Product Lead) |
-|---|---|---|---|
-| **KR 3.1** | **Platform Guidelines** | Ban hành đầy đủ tài liệu quy chuẩn kỹ thuật (SEO/GEO standard, tracking rule) cho các Cell Teams. | Quản trị, cập nhật và đào tạo SOP, Playbook giúp Cell Teams tự vận hành sản phẩm Web đúng chuẩn. |
-| **KR 3.2** | **Quality Gate (Publish Approval)** | Phê duyệt kỹ thuật & nội dung nghiêm ngặt **100% dự án Web mới trước khi Go-live**, đáp ứng chuẩn Agent-Led Search. | Thực thi cổng duyệt Publish Gate, trực tiếp sign-off kỹ thuật (Schema markup, E-E-A-T entity, Named Author policy). |
-| **KR 3.3** | **Domain & Backlink Security** | Rà quét định kỳ, kiểm soát và **ngăn chặn triệt để các nguồn backlink xấu** (spam links) để bảo vệ Domain Authority. | Chịu trách nhiệm bảo vệ sức khỏe link profile của tên miền momo.vn, thực hiện disavow spam links định kỳ. |
-| **KR 3.4** | **URL Governance & Crawl Budget** | Rà soát định kỳ loại bỏ nội dung cũ lỗi thời để duy trì độ tươi mới (**Data Freshness**) và xử lý dứt điểm URL rác. | Loại bỏ crawl waste (chặn query parameter rác), tối ưu ngân sách cào dữ liệu của Googlebot và các AI Search crawlers. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">KR</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chỉ số cốt lõi</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tiêu chuẩn hoàn thành (H2/2026 Target)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò của Hiến (Web Product Lead)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 3.1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Platform Guidelines</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ban hành đầy đủ tài liệu quy chuẩn kỹ thuật (SEO/GEO standard, tracking rule) cho các Cell Teams.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quản trị, cập nhật và đào tạo SOP, Playbook giúp Cell Teams tự vận hành sản phẩm Web đúng chuẩn.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 3.2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Quality Gate (Publish Approval)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phê duyệt kỹ thuật & nội dung nghiêm ngặt <strong>100% dự án Web mới trước khi Go-live</strong>, đáp ứng chuẩn Agent-Led Search.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thực thi cổng duyệt Publish Gate, trực tiếp sign-off kỹ thuật (Schema markup, E-E-A-T entity, Named Author policy).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 3.3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Domain & Backlink Security</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Rà quét định kỳ, kiểm soát và <strong>ngăn chặn triệt để các nguồn backlink xấu</strong> (spam links) để bảo vệ Domain Authority.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chịu trách nhiệm bảo vệ sức khỏe link profile của tên miền momo.vn, thực hiện disavow spam links định kỳ.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 3.4</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>URL Governance & Crawl Budget</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Rà soát định kỳ loại bỏ nội dung cũ lỗi thời để duy trì độ tươi mới (<strong>Data Freshness</strong>) và xử lý dứt điểm URL rác.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loại bỏ crawl waste (chặn query parameter rác), tối ưu ngân sách cào dữ liệu của Googlebot và các AI Search crawlers.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ### Objective 4: Tư vấn giải pháp tăng trưởng và thúc đẩy năng lực triển khai cho các chiến dịch & Cell Teams (Growth Advisory & Enablement)
 *Focus: Growth consulting, conversion flow design, campaign support, and SPA framework enablement.*
 
-| KR | Chỉ số cốt lõi | Tiêu chuẩn hoàn thành (H2/2026 Target) | Vai trò của Hiến (Web Product Lead) |
-|---|---|---|---|
-| **KR 4.1** | **Conversion Performance Support** | Hỗ trợ Cell Teams giám sát chỉ số Web Performance (Core Web Vitals), **ngăn chặn các lỗi nghiêm trọng làm suy giảm CTR/CR**. | Giám sát sức khỏe trang đích của đối tác nội bộ, gửi technical request tối ưu hiệu suất sang Web Platform. |
-| **KR 4.2** | **Growth Advisory & W2A Flow** | Tư vấn thiết kế sitemap, cấu trúc cluster và luồng chuyển đổi W2A cho các dự án Inbound phụ trách: **Ví Trả Sau, Vay Nhanh, Destination Promotion Hub (MoMo Travel)**. | Đảm bảo cấu trúc thông tin chuẩn và tích hợp tối ưu CTA/deep-link để thúc đẩy chuyển đổi người dùng sang App. |
-| **KR 4.3** | **Campaign & Insurance Support** | Đồng hành cố vấn giải pháp kỹ thuật, cấu trúc SEO và tối ưu chuyển đổi cho các chiến dịch/dự án do Inbound làm Owner: **Bảo hiểm Y tế (BHYT), Bảo hiểm xe máy (BHXM)**. | PM kỹ thuật hỗ trợ Inbound, đảm bảo hạ tầng web, disavow spam links và tối ưu hóa onpage/offpage cho các dự án bảo hiểm. |
-| **KR 4.4** | **Growth Framework (SPA)** | Thẩm định tính khả thi (Feasibility) và tư vấn tăng trưởng cho các dự án mới của Cell Teams theo quy trình **SPA**. | Tư vấn hướng tiếp cận pSEO, cấu trúc SEO Inventory và kịch bản JTBD giúp Cell Teams tự triển khai Mini Web đúng hướng. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">KR</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chỉ số cốt lõi</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tiêu chuẩn hoàn thành (H2/2026 Target)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò của Hiến (Web Product Lead)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 4.1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Conversion Performance Support</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hỗ trợ Cell Teams giám sát chỉ số Web Performance (Core Web Vitals), <strong>ngăn chặn các lỗi nghiêm trọng làm suy giảm CTR/CR</strong>.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giám sát sức khỏe trang đích của đối tác nội bộ, gửi technical request tối ưu hiệu suất sang Web Platform.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 4.2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Growth Advisory & W2A Flow</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tư vấn thiết kế sitemap, cấu trúc cluster và luồng chuyển đổi W2A cho các dự án Media Team phụ trách: <strong>Ví Trả Sau, Vay Nhanh, Destination Promotion Hub (MoMo Travel)</strong>.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đảm bảo cấu trúc thông tin chuẩn và tích hợp tối ưu CTA/deep-link để thúc đẩy chuyển đổi người dùng sang App.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 4.3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Campaign & Insurance Support</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đồng hành cố vấn giải pháp kỹ thuật, cấu trúc SEO và tối ưu chuyển đổi cho các chiến dịch/dự án do Media Team làm Owner: <strong>Bảo hiểm Y tế (BHYT), Bảo hiểm xe máy (BHXM)</strong>.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM kỹ thuật hỗ trợ Media Team, đảm bảo hạ tầng web, disavow spam links và tối ưu hóa onpage/offpage cho các dự án bảo hiểm.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>KR 4.4</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Growth Framework (SPA)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thẩm định tính khả thi (Feasibility) và tư vấn tăng trưởng cho các dự án mới của Cell Teams theo quy trình <strong>SPA</strong>.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tư vấn hướng tiếp cận pSEO, cấu trúc SEO Inventory và kịch bản JTBD giúp Cell Teams tự triển khai Mini Web đúng hướng.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

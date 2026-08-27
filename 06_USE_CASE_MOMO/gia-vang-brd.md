@@ -38,16 +38,66 @@ Price alert là PLG hook của toàn bộ use case: chuyển anonymous visitor t
 
 ### 2.1 SEO Inventory - Volume Theo Cluster
 
-| Cluster | Volume Search/tháng | Số Keywords | Ghi chú |
-|---|---|---|---|
-| Giá vàng | 63.875.790 | 2.751 | Cluster lớn nhất, cạnh tranh cực cao |
-| Vàng SJC | 19.468.380 | 2.091 | Brand search, SJC.com.vn dominant |
-| Vàng nhẫn | 892.590 | 3.313 | Long-tail cao, cơ hội tốt |
-| Mua vàng | 634.630 | 1.336 | Transactional - ngoài scope |
-| Vàng miếng | 259.360 | 456 | Informational |
-| Tỷ giá vàng | 123.500 | 294 | Overlap tỷ giá ngoại tệ |
-| Vàng 24k | 87.060 | 443 | Informational |
-| **TỔNG ADDRESSABLE** | **~84.3M** | | Sau khi loại cluster ngoài scope |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cluster</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Volume Search/tháng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Số Keywords</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giá vàng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">63.875.790</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.751</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cluster lớn nhất, cạnh tranh cực cao</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vàng SJC</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">19.468.380</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.091</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Brand search, SJC.com.vn dominant</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vàng nhẫn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">892.590</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3.313</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Long-tail cao, cơ hội tốt</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mua vàng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">634.630</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.336</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transactional - ngoài scope</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vàng miếng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">259.360</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">456</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Informational</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ giá vàng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">123.500</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">294</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Overlap tỷ giá ngoại tệ</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vàng 24k</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">87.060</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">443</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Informational</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>TỔNG ADDRESSABLE</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>~84.3M</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sau khi loại cluster ngoài scope</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2.2 Competitor Landscape
 
@@ -69,13 +119,36 @@ Price alert là PLG hook của toàn bộ use case: chuyển anonymous visitor t
 
 ### 2.3 Gap Analysis - Điểm Yếu Của Tất Cả Competitors
 
-| Điểm yếu của Competitors | Cơ hội cho MoMo |
-|---|---|
-| Báo lớn: UX nặng quảng cáo, load chậm, không có financial context | Widget sạch, nhanh, có context tài chính (vàng vs tiết kiệm) |
-| Tất cả: không có price alert thông minh | Price alert là PLG hook - user chủ động login MoMo |
-| Tất cả: không cá nhân hóa, không kết nối tài chính cá nhân | Sau login: context hóa dựa trên portfolio MoMo của user |
-| Chuyên trang: thiếu tích hợp fintech ecosystem | Bridge tự nhiên sang tiết kiệm/đầu tư MoMo |
-| Brand sites (SJC, PNJ): thiếu context tài chính rộng hơn | So sánh đa chiều: vàng vs tỷ giá vs lãi suất tiết kiệm |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điểm yếu của Competitors</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cơ hội cho MoMo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Báo lớn: UX nặng quảng cáo, load chậm, không có financial context</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget sạch, nhanh, có context tài chính (vàng vs tiết kiệm)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tất cả: không có price alert thông minh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Price alert là PLG hook - user chủ động login MoMo</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tất cả: không cá nhân hóa, không kết nối tài chính cá nhân</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sau login: context hóa dựa trên portfolio MoMo của user</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuyên trang: thiếu tích hợp fintech ecosystem</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bridge tự nhiên sang tiết kiệm/đầu tư MoMo</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Brand sites (SJC, PNJ): thiếu context tài chính rộng hơn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">So sánh đa chiều: vàng vs tỷ giá vs lãi suất tiết kiệm</td>
+    </tr>
+  </tbody>
+</table>
 
 **Nhận định thực tế:** Chiếm Top 3 head keyword "giá vàng hôm nay" là không thực tế - báo lớn có domain authority áp đảo và đã build thói quen user từ nhiều năm. Chiến lược đúng là chiếm long-tail + sub-cluster + build product đủ tốt để user bookmark/return trực tiếp nhờ price alert.
 
@@ -107,11 +180,36 @@ User hoàn thành daily habit "tra giá vàng" trên MoMo với experience tốt
 
 **Đây là điều kiện tiên quyết, không phải rủi ro có thể chấp nhận.** Thiếu 1 trong 3 - dừng lại.
 
-| # | Pre-condition | Trạng thái | Owner giải quyết |
-|---|---|---|---|
-| P1 | API giá vàng real-time reliable - partnership hoặc aggregator có SLA uptime >99% | Chưa giải quyết | GPD + Legal |
-| P2 | BU Owner xác nhận - người chịu trách nhiệm vận hành và update long-term | Chưa xác định | Bảo escalate lên Công |
-| P3 | KPI framework aligned với leadership: Traffic + Price Alert Signups, không phải W2A Conversion Rate | Chưa align | Bảo present với Công |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Pre-condition</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trạng thái</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner giải quyết</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">API giá vàng real-time reliable - partnership hoặc aggregator có SLA uptime >99%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa giải quyết</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GPD + Legal</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BU Owner xác nhận - người chịu trách nhiệm vận hành và update long-term</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa xác định</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo escalate lên Công</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">KPI framework aligned với leadership: Traffic + Price Alert Signups, không phải W2A Conversion Rate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa align</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo present với Công</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -121,13 +219,36 @@ User hoàn thành daily habit "tra giá vàng" trên MoMo với experience tốt
 
 > "Hôm nay vàng bao nhiêu? SJC tăng hay giảm so hôm qua?"
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Xem giá vàng SJC, DOJI, PNJ ngay lập tức. Biết delta so hôm qua và xu hướng 7 ngày |
-| Emotional | Nắm bắt thị trường, không bị lỡ thông tin. Daily financial habit |
-| Social | Chia sẻ thông tin giá vàng với gia đình khi có biến động lớn |
-| Trigger | Mở điện thoại buổi sáng - Nghe tin thị trường biến động - Chuẩn bị mua/bán |
-| Search → App | "giá vàng hôm nay" → Widget (<1.5s) → Đọc xong → Price alert setup → MoMo login |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xem giá vàng SJC, DOJI, PNJ ngay lập tức. Biết delta so hôm qua và xu hướng 7 ngày</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nắm bắt thị trường, không bị lỡ thông tin. Daily financial habit</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chia sẻ thông tin giá vàng với gia đình khi có biến động lớn</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mở điện thoại buổi sáng - Nghe tin thị trường biến động - Chuẩn bị mua/bán</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"giá vàng hôm nay" → Widget (<1.5s) → Đọc xong → Price alert setup → MoMo login</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** Widget giá vàng realtime above-the-fold, load dưới 1.5s, không cần đăng nhập để xem giá.
 
@@ -137,13 +258,36 @@ User hoàn thành daily habit "tra giá vàng" trên MoMo với experience tốt
 
 > "Vàng đang tốt hay gửi tiết kiệm MoMo tốt hơn? Tôi có nên chuyển sang vàng không?"
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | So sánh hiệu suất vàng vs lãi suất tiết kiệm trong 30/90 ngày |
-| Emotional | Ra quyết định tài chính thông minh, không bị cảm tính |
-| Social | Tư vấn được cho người thân về cách phân bổ tài sản |
-| Trigger | Vàng biến động mạnh - Nhận tiền thưởng - Muốn đa dạng hóa |
-| Search → App | "nên mua vàng hay gửi tiết kiệm 2026" → Blog → Internal link sang widget → So sánh → "Mở tiết kiệm MoMo" |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">So sánh hiệu suất vàng vs lãi suất tiết kiệm trong 30/90 ngày</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ra quyết định tài chính thông minh, không bị cảm tính</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tư vấn được cho người thân về cách phân bổ tài sản</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vàng biến động mạnh - Nhận tiền thưởng - Muốn đa dạng hóa</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"nên mua vàng hay gửi tiết kiệm 2026" → Blog → Internal link sang widget → So sánh → "Mở tiết kiệm MoMo"</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** Bảng so sánh contextual "Vàng vs Tiết kiệm MoMo" embedded trong widget - PLG bridge tự nhiên nhất.
 
@@ -153,13 +297,36 @@ User hoàn thành daily habit "tra giá vàng" trên MoMo với experience tốt
 
 > "Tôi muốn mua vàng khi xuống 90 triệu/lượng - ai đó nhắc tôi khi đến ngưỡng đó."
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Nhận push notification khi vàng đạt ngưỡng giá user đặt |
-| Emotional | Không cần theo dõi thủ công hằng ngày, không bị lỡ cơ hội |
-| Social | "Anh cài alert trên MoMo, vàng lên 110 triệu rồi em ơi" - đây là "bữa tối test" |
-| Trigger | Muốn mua vàng nhưng thấy giá hiện tại chưa hợp lý |
-| Search → App | Widget → "Đặt cảnh báo giá" → Login MoMo → Push notification → Mở App khi alert fire |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhận push notification khi vàng đạt ngưỡng giá user đặt</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không cần theo dõi thủ công hằng ngày, không bị lỡ cơ hội</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Social</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Anh cài alert trên MoMo, vàng lên 110 triệu rồi em ơi" - đây là "bữa tối test"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Muốn mua vàng nhưng thấy giá hiện tại chưa hợp lý</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget → "Đặt cảnh báo giá" → Login MoMo → Push notification → Mở App khi alert fire</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** Price alert feature - đây là PLG hook cốt lõi của toàn bộ use case. Yêu cầu MoMo login để kích hoạt.
 
@@ -169,12 +336,32 @@ User hoàn thành daily habit "tra giá vàng" trên MoMo với experience tốt
 
 > "Vàng SJC khác vàng nhẫn chỗ nào? Loại nào phù hợp với người thường?"
 
-| Dimension | Nội dung |
-|---|---|
-| Functional | Hiểu sự khác biệt giữa các loại vàng. Biết cách đọc bảng giá |
-| Emotional | Không muốn bị thiệt thòi vì không hiểu biết |
-| Trigger | Lần đầu mua vàng - Nghe tin tức thị trường - Chuẩn bị mua vàng cho đám cưới |
-| Search → App | "vàng sjc là gì" → Blog cluster → Internal link → Widget → Price alert signup |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Functional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiểu sự khác biệt giữa các loại vàng. Biết cách đọc bảng giá</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Emotional</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không muốn bị thiệt thòi vì không hiểu biết</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trigger</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lần đầu mua vàng - Nghe tin tức thị trường - Chuẩn bị mua vàng cho đám cưới</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search → App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"vàng sjc là gì" → Blog cluster → Internal link → Widget → Price alert signup</td>
+    </tr>
+  </tbody>
+</table>
 
 **Giải pháp:** Blog cluster informational chất lượng cao targeting long-tail queries - funnel về widget + price alert.
 
@@ -186,11 +373,27 @@ User hoàn thành daily habit "tra giá vàng" trên MoMo với experience tốt
 
 ```
 momo.vn/gia-vang [Hub - Widget + Financial Context]
-    |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
     ├── momo.vn/gia-vang/sjc          - Sub-cluster: Vàng SJC
     ├── momo.vn/gia-vang/nhan-9999    - Sub-cluster: Vàng nhẫn 9999
     ├── momo.vn/gia-vang/ty-gia       - Sub-cluster: Tỷ giá vàng thế giới
-    |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
     └── Blog Cluster (long-tail capture)
          ├── /blog/gia-vang-hom-nay-bao-nhieu
          ├── /blog/nen-mua-vang-sjc-hay-vang-nhan
@@ -221,12 +424,37 @@ Widget là product - không phải component phụ trợ. Phải load nhanh, đ�
 
 ### 5.3 Data Source
 
-| Dữ liệu | Nguồn đề xuất | Phương án dự phòng |
-|---|---|---|
-| Giá SJC | Partnership SJC.com.vn (ưu tiên) | NHNN (chính thức nhưng cập nhật chậm) |
-| Giá DOJI, PNJ | API partner hoặc aggregator | WebGia |
-| Giá thế giới (XAU/USD) | Investing.com API / Kitco API | Gold-API.io |
-| Tỷ giá USD/VND | Vietcombank API (miễn phí) | NHNN |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dữ liệu</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nguồn đề xuất</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phương án dự phòng</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giá SJC</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Partnership SJC.com.vn (ưu tiên)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NHNN (chính thức nhưng cập nhật chậm)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giá DOJI, PNJ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">API partner hoặc aggregator</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">WebGia</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giá thế giới (XAU/USD)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Investing.com API / Kitco API</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gold-API.io</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ giá USD/VND</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vietcombank API (miễn phí)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">NHNN</td>
+    </tr>
+  </tbody>
+</table>
 
 **Lưu ý:** SJC và các thương hiệu vàng không có public API chính thức. Partnership chính thức với ít nhất 1 thương hiệu là điều kiện tiên quyết (Pre-condition P1).
 
@@ -261,14 +489,54 @@ Search "nên mua vàng hay gửi tiết kiệm 2026"
 
 **North Star Metric:** Price Alert Sign-ups (MoMo login từ widget) - đây là chỉ số duy nhất chứng minh product có business value, không phải chỉ là traffic play.
 
-| Metric | Target (6 tháng) | Source | Ghi chú |
-|---|---|---|---|
-| Price Alert Sign-ups | TBD sau pilot | GA4 + Appsflyer | North Star - PLG activation |
-| Monthly Unique Visitors (MUV) | 500K - 1M sessions | GA4 | Brand awareness indicator |
-| Return Rate (7 ngày) | ≥ 30% | GA4 | Daily habit indicator |
-| Widget engagement rate | ≥ 40% | GA4 Events | % user interact với widget |
-| Cross-sell click (tiết kiệm/đầu tư) | TBD | GA4 Events | Revenue pipeline proxy |
-| Long-tail keywords Top 10 | 50+ keywords | GSC | SEO authority build |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target (6 tháng)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Source</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Price Alert Sign-ups</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TBD sau pilot</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GA4 + Appsflyer</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">North Star - PLG activation</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Monthly Unique Visitors (MUV)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">500K - 1M sessions</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GA4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Brand awareness indicator</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Return Rate (7 ngày)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">≥ 30%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GA4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Daily habit indicator</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget engagement rate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">≥ 40%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GA4 Events</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">% user interact với widget</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cross-sell click (tiết kiệm/đầu tư)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TBD</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GA4 Events</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Revenue pipeline proxy</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Long-tail keywords Top 10</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">50+ keywords</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO authority build</td>
+    </tr>
+  </tbody>
+</table>
 
 **Quan trọng - KPI Alignment (Pre-condition P3):**
 KPI chính là Price Alert Sign-ups + Return Rate, không phải W2A Conversion Rate. W2A sẽ thấp do intent bridge indirect - đây là đặc tính của use case, không phải thất bại. Nếu leadership vẫn đo bằng W2A, phải align lại trước khi commit build - không phải sau khi launch.
@@ -277,14 +545,47 @@ KPI chính là Price Alert Sign-ups + Return Rate, không phải W2A Conversion 
 
 ## 7. Dependencies & Constraints
 
-| Dependency | Mô tả | Blocker? |
-|---|---|---|
-| API giá vàng reliable (uptime >99%) | Không có dữ liệu chính xác = toàn bộ product mất giá trị. Pre-condition P1 | Có - tuyệt đối |
-| Partnership hoặc legal clearance data source | SJC không có public API. Scraping có rủi ro pháp lý. Pre-condition P1 | Có - YMYL + legal |
-| KPI alignment với leadership | Nếu KPI vẫn là W2A, use case bị đánh giá sai. Pre-condition P3 | Có - quyết định đầu tư |
-| BU Owner xác nhận | Trang cross nhiều team - cần owner rõ ràng để vận hành long-term. Pre-condition P2 | Có - governance |
-| MoMo login integration cho Price Alert | Price alert là PLG core - không có login integration thì mất toàn bộ business value | Có - PLG hook |
-| Push notification permission | Alert giá vàng cần push notification - phụ thuộc App team | Có - product dependency |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dependency</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Blocker?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">API giá vàng reliable (uptime >99%)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có dữ liệu chính xác = toàn bộ product mất giá trị. Pre-condition P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - tuyệt đối</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Partnership hoặc legal clearance data source</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SJC không có public API. Scraping có rủi ro pháp lý. Pre-condition P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - YMYL + legal</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">KPI alignment với leadership</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nếu KPI vẫn là W2A, use case bị đánh giá sai. Pre-condition P3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - quyết định đầu tư</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BU Owner xác nhận</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang cross nhiều team - cần owner rõ ràng để vận hành long-term. Pre-condition P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - governance</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo login integration cho Price Alert</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Price alert là PLG core - không có login integration thì mất toàn bộ business value</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - PLG hook</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Push notification permission</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Alert giá vàng cần push notification - phụ thuộc App team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - product dependency</td>
+    </tr>
+  </tbody>
+</table>
 
 **Constraints:**
 - Widget phải có timestamp cập nhật rõ ràng - không hiển thị giá cũ không có cảnh báo

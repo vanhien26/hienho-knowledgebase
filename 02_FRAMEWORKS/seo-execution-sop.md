@@ -23,7 +23,7 @@ Mục tiêu: Đảm bảo 100% nội dung xuất bản đạt chuẩn **E-E-A-T*
 
 ### 2. Research & Intent Mapping
 *   **Action:** Gom cụm từ khóa (Keyword Clustering).
-*   **Xác định phễu:** Map các cụm từ khóa vào Web2App Funnel (Awareness -> Consideration -> App Open).
+*   **Xác định phễu:** Map các cụm từ khóa vào Web2App Funnel (Awareness ➔ Consideration ➔ App Open).
 *   **Khởi tạo dự án:** Tạo biến `Project: [Tên Use Case]` trên MoSpark để bắt đầu track resources.
 
 ### 3. Information Architecture (Thiết kế Cấu trúc)
@@ -49,7 +49,7 @@ Mục tiêu: Đảm bảo 100% nội dung xuất bản đạt chuẩn **E-E-A-T*
 
 ### 7. Đo lường Web-to-App (Post-launch)
 *   **Action:** Mở dashboard hằng tuần.
-*   **Metrics chính:** 
+*   **Metrics chính:**
     * CTR (Google Search Console).
     * Tỷ lệ App Open (Click Deep-link).
     * Số lượng Merchant quét mã thành công từ O2O loop (Nếu là Merchant Page).

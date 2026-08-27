@@ -23,7 +23,7 @@
 - **Vị thế:** Use Case trưởng thành và có tiềm năng lớn nhất của Web Platform.
 - **Thực trạng & Định hướng:** Cinema là Use Case có tiềm năng giao dịch lớn, tuy nhiên chưa được tối ưu hóa chuyên sâu về mặt kỹ thuật và trải nghiệm trong các chu kỳ trước, dẫn đến sự suy giảm về hiệu suất. Trọng tâm H2/2026 là tái cấu trúc toàn diện và chuyển dịch hạ tầng sang nền tảng MoSpark nhằm phục hồi và thúc đẩy đà tăng trưởng.
 - **Traffic:** ~1M organic/3 tháng Q1/2026. Top 1 SERP "vé xem phim", Top 3-5 cluster rạp.
-- **Business Model:** Commission per transaction (8 partner chains: CGV, Lotte, Galaxy, v.v.).
+- **Business Model:** Commission per transaction (13 partner chains (CGV, Lotte, Galaxy, BHD, Beta, Cinestar, Mega GS, Cinemax, DCINE, Starlight, Rio, Trung Tâm Chiếu Phim Quốc Gia, AEON Beta): CGV, Lotte, Galaxy, v.v.).
 - **Ecosystem Flow:** Discovery (SERP/AIO) → Web (momo.vn/cinema) → Transaction (App) → Retention.
 
 ### Complication
@@ -33,23 +33,74 @@ Mặc dù có Traffic lớn, tỷ lệ chuyển đổi hiện tại vẫn thấp
 3. **Rủi ro từ Google AIO:** Nếu không tổ chức lại dữ liệu để Google AI đọc hiểu, MoMo sẽ mất lượng lớn Traffic do người dùng xem kết quả trực tiếp trên Google thay vì bấm vào Web.
 4. **Nội dung lỗi thời do vận hành thủ công:** Trạng thái phim chưa được cập nhật tự động theo vòng đời. Phim hết suất chiếu rạp nhưng Web vẫn báo "Đang chiếu" gây trải nghiệm tệ. Hệ thống cần cơ chế tự động chuyển trạng thái và điều hướng người dùng sang các nền tảng OTT để không lãng phí Traffic.
 
-
-
 ---
 
 ## 2. Business Objectives
 
 ### 2.1 Hiện Trạng Performance
 
-| Metric | 2025 Full Year | Q1/2026 (Baseline) | H1/2026 (Actual) | H2/2026 (Target) |
-|---|---|---|---|---|
-| Organic Traffic | 6,387,700 | 1,066,000 | 2,010,041 | 4,020,082 |
-| Total Traffic | 12,425,040 | 2,980,000 | 4,035,028 | 8,070,056 |
-| Booking Clicks | 266,258 | 81,517 | 870,467 | 1,740,934 |
-| Traffic to App (W2A Users) | 78,735 | 9,866 | 38,079 | 76,158 |
-| Transactions (via App) | 52,311 | 9,212 | 48,830 | 97,660 |
-| Tickets Sold (Số vé bán) | N/A | N/A | 107,146 | 214,292 |
-| **% W2A (CR)** | **29.57%** | **12.10%** | **4.37%** | **4.50%+** |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">2025 Full Year</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Q1/2026 (Baseline)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">H1/2026 (Actual)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">H2/2026 (Target)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Organic Traffic</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6,387,700</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1,066,000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2,010,041</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4,020,082</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Total Traffic</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">12,425,040</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2,980,000</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4,035,028</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">8,070,056</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Booking Clicks</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">266,258</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">81,517</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">870,467</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1,740,934</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic to App (W2A Users)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">78,735</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">9,866</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">38,079</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">76,158</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transactions (via App)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">52,311</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">9,212</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">48,830</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">97,660</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tickets Sold (Số vé bán)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">N/A</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">N/A</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">107,146</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">214,292</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>% W2A (CR)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>29.57%</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>12.10%</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>4.37%</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>4.50%+</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 > **\* Ghi chú:**
 > - **Mục tiêu:** Uplift 100% mọi chỉ số H2/2026.
@@ -57,12 +108,42 @@ Mặc dù có Traffic lớn, tỷ lệ chuyển đổi hiện tại vẫn thấp
 
 ### 2.2 Competitive Landscape
 
-| Competitor | Strengths | Weaknesses | MoMo Advantage |
-|---|---|---|---|
-| moveek.com | Community review, long-tail phim indie | Không có transaction flow | Transaction liền mạch + ưu đãi |
-| vnpay.vn | Similar payment infra, hub lịch chiếu per chain | Traffic base nhỏ, brand yếu | MoMo brand recall mạnh hơn |
-| cgv.vn, galaxycine.vn | Authority gốc của chuỗi | User phải search từng chuỗi riêng | Hub aggregator - Nhiều chuỗi rạp |
-| rapchieuphim.com | Content depth, long-tail location | UX cũ, không có payment | End-to-end flow |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Competitor</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Strengths</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Weaknesses</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">MoMo Advantage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">moveek.com</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Community review, long-tail phim indie</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có transaction flow</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transaction liền mạch + ưu đãi</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">vnpay.vn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Similar payment infra, hub lịch chiếu per chain</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic base nhỏ, brand yếu</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo brand recall mạnh hơn</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">cgv.vn, galaxycine.vn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Authority gốc của chuỗi</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User phải search từng chuỗi riêng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hub aggregator - Nhiều chuỗi rạp</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">rapchieuphim.com</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content depth, long-tail location</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UX cũ, không có payment</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">End-to-end flow</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -70,11 +151,32 @@ Mặc dù có Traffic lớn, tỷ lệ chuyển đổi hiện tại vẫn thấp
 
 Mục tiêu Uplift 100% H2/2026 dựa trên **3 trụ cột chiến lược**:
 
-| # | Trụ Cột Chiến Lược | Trọng Tâm |
-|---|---|---|
-| **1** | **Expand Out-App Traffic** | Phủ sóng tìm kiếm Out-App (Phim rạp + OTT). Biến Web thành kênh Acquisition. |
-| **2** | **Topical Authority (Movies)** | Xây dựng "Bách khoa toàn thư" điện ảnh. Phát triển content sâu để rank Google AI. |
-| **3** | **Web Product** | Chuyển dịch sang MoSpark. Trọng tâm: UX liền mạch & Triển khai luồng Web Payment. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trụ Cột Chiến Lược</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trọng Tâm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Expand Out-App Traffic</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phủ sóng tìm kiếm Out-App (Phim rạp + OTT). Biến Web thành kênh Acquisition.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Topical Authority (Movies)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xây dựng "Bách khoa toàn thư" điện ảnh. Phát triển content sâu để rank Google AI.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Product</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuyển dịch sang MoSpark. Trọng tâm: UX liền mạch & Triển khai luồng Web Payment.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

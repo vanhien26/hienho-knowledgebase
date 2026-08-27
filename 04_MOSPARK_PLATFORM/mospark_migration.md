@@ -10,7 +10,7 @@ ark Migration - System Consolidation
 ---
 
 ## 1. Hệ thống hiện tại: Admin Panel Tool (CMS)
-Đây là hệ thống CMS trung tâm phục vụ quản lý và vận hành toàn bộ nội dung và tính năng Mini Web, Landing Page, Blog, News, FAQ, Guide trên Web MoMo hiện nay. 
+Đây là hệ thống CMS trung tâm phục vụ quản lý và vận hành toàn bộ nội dung và tính năng Mini Web, Landing Page, Blog, News, FAQ, Guide trên Web MoMo hiện nay.
 *   **Vai trò**: Nền tảng cốt lõi để các Division/Center quản trị nội dung độc lập.
 *   **Các Module đang vận hành**:
     *   **CMS**: Quản lý và xuất bản Mini Web & Landing Page.
@@ -21,7 +21,7 @@ ark Migration - System Consolidation
 ## 2. Nền tảng chiến lược: MoSpark (AI-powered Platform)
 MoSpark không phải là một hệ thống build mới hoàn toàn mà là **bản nâng cấp thế hệ mới** của Admin Panel Tool với tech stack tương thích AI-powered tốt hơn.
 *   **Triết lý**: Giữ lại những gì đang hoạt động tốt (Continuity), đồng thời mở ra khả năng mới về AI.
-*   **Thành tựu bước đầu**: Module **Landing Page Builder** đã chứng minh tính đúng đắn, giúp PM/PO có thể tự thao tác trực quan mà không phụ thuộc Dev/Inbound.
+*   **Thành tựu bước đầu**: Module **Landing Page Builder** đã chứng minh tính đúng đắn, giúp PM/PO có thể tự thao tác trực quan mà không phụ thuộc Dev/Media Team.
 *   **Vision**: Trở thành nền tảng AI-powered Web App/Content của MoMo giúp vận hành và tăng trưởng mọi sản phẩm Web - từ Landing Page đến Mini Web, từ Content đến Web Application.
 
 ## 3. Nguyên nhân (Causes)
@@ -31,11 +31,11 @@ MoSpark không phải là một hệ thống build mới hoàn toàn mà là **b
 ## 4. Hậu quả (Consequences)
 
 ### 3.1. Phân rã Vận hành (Operational Fragmentation)
-*   **Nỗi đau của Inbound**: Đội ngũ Inbound (quản lý toàn bộ nội dung) phải thoát ra và đăng nhập vào từng Cell Team để đăng bài. Ví dụ: Để đăng 1 bài blog về Vay, họ không thể đăng từ giao diện chính mà phải vào Cell Team Vay.
+*   **Nỗi đau của Media Team**: Đội ngũ Media Team (quản lý toàn bộ nội dung) phải thoát ra và đăng nhập vào từng Cell Team để đăng bài. Ví dụ: Để đăng 1 bài blog về Vay, họ không thể đăng từ giao diện chính mà phải vào Cell Team Vay.
 *   **Inconsistency**: Giao diện, Menu Header/Footer và các thành phần UI có thể bị lệch nhau giữa các Cell Team do không có sự quản lý tập trung.
 
 ### 3.2. Phân rã SEO & URL (URL Fragmentation)
-*   **Cấu trúc chồng chéo**: 
+*   **Cấu trúc chồng chéo**:
     *   Silo 1: `momo.vn/blog/*` (Hub content)
     *   Silo 2: `momo.vn/{use-case}/blog/*` (Vay, Cinema, Bảo hiểm...)
 *   **Rủi ro SEO**: Keyword Cannibalization (các trang tự cạnh tranh lẫn nhau), phân tán sức mạnh domain (Link Equity) và gây khó khăn cho việc tối ưu Authority cho toàn site.
@@ -45,11 +45,11 @@ MoSpark không phải là một hệ thống build mới hoàn toàn mà là **b
 
 ### 5.1. Hợp nhất Nền tảng (Consolidation)
 *   Chuyển toàn bộ dữ liệu từ CMS cũ và Admin Tool sang **MoSpark**.
-*   **Single Interface**: Inbound Team chỉ cần một lối vào duy nhất để quản trị mọi nội dung.
+*   **Single Interface**: Media Team chỉ cần một lối vào duy nhất để quản trị mọi nội dung.
 
 ### 5.2. Quản trị theo Use Case-based (Thay vì Cell Team)
 *   Thay thế việc phân quyền theo "Cửa sổ Cell Team" bằng việc quản trị theo "Use Case".
-*   Inbound Team có thể lọc nội dung theo Use Case ngay trên giao diện chính.
+*   Media Team có thể lọc nội dung theo Use Case ngay trên giao diện chính.
 
 **Use Case System - Core Feature:**
 
@@ -91,13 +91,48 @@ MoSpark sử dụng **Use Case** như một cơ chế phân loại và phân ph�
 
 ### 5.4. Migration Strategy - Zero Redirect Approach
 
-| Use Case | Current URL | MoSpark URL | Migration Action |
-|----------|-------------|-------------|------------------|
-| General | `/blog/*` | `/blog/*` | Direct migration (no URL change) |
-| Vay Nhanh | `/vay-nhanh/blog/*` | `/vay-nhanh/blog/*` | Direct migration (no URL change) |
-| Cinema | `/cinema/blog/*` | `/cinema/blog/*` | Direct migration (no URL change) |
-| BH Ô tô | `/bao-hiem-o-to/blog/*` | `/bao-hiem-o-to/blog/*` | Direct migration (no URL change) |
-| BH Xe máy | `/bao-hiem-xe-may/blog/*` | `/bao-hiem-xe-may/blog/*` | Direct migration (no URL change) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Use Case</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Current URL</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">MoSpark URL</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Migration Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">General</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Direct migration (no URL change)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vay Nhanh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/vay-nhanh/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/vay-nhanh/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Direct migration (no URL change)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cinema</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/cinema/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/cinema/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Direct migration (no URL change)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BH Ô tô</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/bao-hiem-o-to/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/bao-hiem-o-to/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Direct migration (no URL change)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BH Xe máy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/bao-hiem-xe-may/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/bao-hiem-xe-may/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Direct migration (no URL change)</td>
+    </tr>
+  </tbody>
+</table>
 
 **→ ZERO redirects needed!** Tất cả URLs được giữ nguyên.
 
@@ -134,12 +169,37 @@ MoSpark sử dụng **Use Case** như một cơ chế phân loại và phân ph�
 ### Phase 1: Foundation & Basic Blog (4-6 tuần)
 **Mục tiêu:** Thiết lập infrastructure và migrate Basic Blog
 
-| Task | Owner | Output |
-|------|-------|--------|
-| Setup MoSpark Blog Module (default path `/blog`) | Bảo/Web Platform | Blog CRUD interface |
-| Implement Project Tag system | Bảo/Web Platform | Tag-based filtering |
-| Migrate `/blog/*` content | Hiến + Inbound | All general blog posts |
-| Validate: Traffic, ranking, indexation | Hiến | SEO audit report |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Task</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Setup MoSpark Blog Module (default path <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/blog</code>)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo/Web Platform</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog CRUD interface</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Implement Project Tag system</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo/Web Platform</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tag-based filtering</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Migrate <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/blog/*</code> content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến + Media Team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">All general blog posts</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Validate: Traffic, ranking, indexation</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO audit report</td>
+    </tr>
+  </tbody>
+</table>
 
 **Success Criteria:**
 - 100% `/blog/*` content migrated
@@ -149,15 +209,52 @@ MoSpark sử dụng **Use Case** như một cơ chế phân loại và phân ph�
 ### Phase 2: Advanced Blog - Special Cases (6-8 tuần)
 **Mục tiêu:** Migrate 4 Use Cases đặc biệt với custom paths
 
-| Task | Owner | Output |
-|------|-------|--------|
-| Implement Blog Path Configuration | Bảo/Web Platform | Admin-configurable routing |
-| Add 4 special cases to config | Hiến | Config schema |
-| Migrate `/vay-nhanh/blog/*` | Hiến + Inbound | Vay Nhanh blog posts |
-| Migrate `/cinema/blog/*` | Hiến + Inbound | Cinema blog posts |
-| Migrate `/bao-hiem-o-to/blog/*` | Hiến + Inbound | BH Ô tô blog posts |
-| Migrate `/bao-hiem-xe-may/blog/*` | Hiến + Inbound | BH Xe máy blog posts |
-| Validate: Traffic retention per Use Case | Hiến | SEO audit report |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Task</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Implement Blog Path Configuration</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo/Web Platform</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Admin-configurable routing</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Add 4 special cases to config</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Config schema</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Migrate <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/vay-nhanh/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến + Media Team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vay Nhanh blog posts</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Migrate <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/cinema/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến + Media Team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cinema blog posts</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Migrate <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/bao-hiem-o-to/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến + Media Team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BH Ô tô blog posts</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Migrate <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/bao-hiem-xe-may/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến + Media Team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BH Xe máy blog posts</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Validate: Traffic retention per Use Case</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO audit report</td>
+    </tr>
+  </tbody>
+</table>
 
 **Success Criteria:**
 - 100% special case content migrated
@@ -167,12 +264,37 @@ MoSpark sử dụng **Use Case** như một cơ chế phân loại và phân ph�
 ### Phase 3: Optimization & Decommission (4 tuần)
 **Mục tiêu:** Optimize cross-blog experience và deprecate hệ thống cũ
 
-| Task | Owner | Output |
-|------|-------|--------|
-| Cross-blog internal linking | Bảo/Web Platform | Auto-suggest links |
-| Unified search across all blog paths | Bảo/Web Platform | Global search |
-| Analytics consolidation | DA (Hải) | Unified dashboard |
-| Deprecate Admin Tool V1 | Bảo | Shutdown old system |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Task</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cross-blog internal linking</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo/Web Platform</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto-suggest links</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Unified search across all blog paths</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo/Web Platform</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Global search</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Analytics consolidation</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">DA (Hải)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Unified dashboard</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Deprecate Admin Tool V1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Shutdown old system</td>
+    </tr>
+  </tbody>
+</table>
 
 **Success Criteria:**
 - Single interface for all blog management
@@ -183,19 +305,58 @@ MoSpark sử dụng **Use Case** như một cơ chế phân loại và phân ph�
 
 ## 8. Success Metrics (Migration Phase)
 
-| Metric | Baseline | Target | Timeline |
-|--------|----------|--------|----------|
-| **Traffic Retention** | 100% | >98% | 30 days post-migration per phase |
-| **Indexation Rate** | 0% | 100% | 14 days post-migration |
-| **Ranking Stability** | Current positions | No drop >2 positions | Per Use Case |
-| **Operational Speed** | X hours/week | 0.5X hours/week | 60 days post-migration |
-| **SEO/GEO Score Compliance** | 0% | >80% | Ongoing |
-| **Zero Redirect Success** | N/A | 100% URLs preserved | All phases |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Baseline</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Timeline</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Traffic Retention</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">100%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">>98%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">30 days post-migration per phase</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Indexation Rate</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">100%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">14 days post-migration</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Ranking Stability</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Current positions</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">No drop >2 positions</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Per Use Case</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Operational Speed</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">X hours/week</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0.5X hours/week</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">60 days post-migration</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>SEO/GEO Score Compliance</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">>80%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ongoing</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Zero Redirect Success</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">N/A</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">100% URLs preserved</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">All phases</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 *Document: BRD-MoSpark-Migration-2026 · v1
 ---
-
 
 ---
 

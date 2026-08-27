@@ -36,10 +36,27 @@ Hai file `robots.txt` và `llms.txt` cùng nhau tạo thành **AI Crawler Policy
 
 **Giải pháp:**
 
-| File | Action | Priority |
-|------|--------|----------|
-| `robots.txt` | Nâng cấp: fix param issue + add AI crawler policy | P0 - Làm trước |
-| `llms.txt` | Triển khai mới: master index + per-product full doc | P1 - Làm sau khi robots.txt ổn |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">File</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Action</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Priority</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">robots.txt</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nâng cấp: fix param issue + add AI crawler policy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P0 - Làm trước</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">llms.txt</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Triển khai mới: master index + per-product full doc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1 - Làm sau khi robots.txt ổn</td>
+    </tr>
+  </tbody>
+</table>
 
 **Robots.txt phải được nâng cấp trước.** `llms.txt` hoàn toàn vô nghĩa nếu AI search crawlers bị block hoặc bị ảnh hưởng bởi conflicting directives.
 
@@ -70,11 +87,36 @@ AI crawlers không còn là edge case trong server logs - chúng đang là một
 
 Mọi quyết định về robots.txt và llms.txt đều xoay quanh sự phân biệt này:
 
-| Loại | Mục đích | Ví dụ | MoMo nên? |
-|------|---------|-------|-----------|
-| **Search/RAG crawler** | Index real-time để trả lời user queries | OAI-SearchBot, Claude-SearchBot, PerplexityBot | **MUST ALLOW** |
-| **Training crawler** | Thu thập data để train LLM model | GPTBot, ClaudeBot, Google-Extended | **Policy decision** |
-| **Aggressive scraper** | Scrape không có referral benefit | Bytespider, CCBot | **Đề xuất block** |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục đích</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ví dụ</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">MoMo nên?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Search/RAG crawler</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Index real-time để trả lời user queries</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">OAI-SearchBot, Claude-SearchBot, PerplexityBot</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MUST ALLOW</strong></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Training crawler</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thu thập data để train LLM model</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GPTBot, ClaudeBot, Google-Extended</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Policy decision</strong></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Aggressive scraper</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Scrape không có referral benefit</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bytespider, CCBot</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Đề xuất block</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 Search crawlers = GEO visibility. Training crawlers = data licensing question. Aggressive scrapers = không có upside, chỉ có cost.
 
@@ -107,15 +149,52 @@ Sitemap: https://www.momo.vn/sitemap-1.1.xml
 
 **Phần Disallow paths - Đánh giá từng directive:**
 
-| Directive | Đánh giá | Ghi chú |
-|-----------|---------|---------|
-| `/error/500` | Đúng | Block trang lỗi |
-| `/Files` | Đúng | Block file storage |
-| `/help` | Cần xem lại | Help content có giá trị cho AI hiểu sản phẩm MoMo - đang block cả SEO lẫn AI |
-| `/inbienlai` | Đúng | Không cần index |
-| `/tim-kiem` | Đúng | Search result page, không có giá trị crawl |
-| `/_next/` | Đúng | Next.js static assets |
-| `/view-app/` | Đúng | App deep link view |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Directive</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đánh giá</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/error/500</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đúng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Block trang lỗi</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/Files</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đúng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Block file storage</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/help</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần xem lại</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Help content có giá trị cho AI hiểu sản phẩm MoMo - đang block cả SEO lẫn AI</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/inbienlai</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đúng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không cần index</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tim-kiem</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đúng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search result page, không có giá trị crawl</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/_next/</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đúng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Next.js static assets</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/view-app/</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đúng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">App deep link view</td>
+    </tr>
+  </tbody>
+</table>
 
 **Vấn đề 1 - `/help` đang bị block:**
 Nếu đây là trang hướng dẫn sử dụng sản phẩm, đây là content có giá trị cho cả SEO index lẫn AI understanding. Cần Web Platform + Web Platform confirm mục đích thực sự trước khi quyết định giữ hay bỏ directive này.
@@ -138,13 +217,42 @@ Canonical giải quyết indexation nhưng **không giải quyết crawl budget 
 
 **Phần Param hiện tại - Đánh giá:**
 
-| Param | Đánh giá | Ghi chú |
-|-------|---------|---------|
-| `/*fbclid=` | Đúng **Replaced** | Đã cover bởi `Disallow: /*?` |
-| `/*fromType=` | Đúng một phần **Replaced** | Đã cover bởi `Disallow: /*?` |
-| `/*flightType=` | Đúng một phần **Replaced** | Đã cover bởi `Disallow: /*?` |
-| `?date=` trên `/ve-xe` | **RESOLVED** | Cover bởi `Disallow: /*?` |
-| `Disallow: /*?` | **DEPLOYED** | Block toàn bộ URL có query string - thay thế tất cả param rules cũ |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Param</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đánh giá</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/*fbclid=</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đúng <strong>Replaced</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đã cover bởi <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Disallow: /*?</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/*fromType=</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đúng một phần <strong>Replaced</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đã cover bởi <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Disallow: /*?</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/*flightType=</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đúng một phần <strong>Replaced</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đã cover bởi <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Disallow: /*?</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">?date=</code> trên <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/ve-xe</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>RESOLVED</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cover bởi <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Disallow: /*?</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Disallow: /*?</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>DEPLOYED</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Block toàn bộ URL có query string - thay thế tất cả param rules cũ</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 3.3 Cải thiện robots.txt - Theo 3 lớp
 
@@ -367,11 +475,36 @@ Standard được Jeremy Howard (Answer.AI) đề xuất ngày 3/9/2024. Volunta
 
 ### 4.2 Vị trí trong hệ sinh thái file
 
-| File | Đối tượng | Timing | Mục đích |
-|------|-----------|--------|----------|
-| `robots.txt` | Search + AI crawlers | Crawl time | Allow/disallow crawling, training policy |
-| `sitemap.xml` | Search indexers | Index time | List URLs cần index |
-| `llms.txt` | LLMs | **Inference time** | Context để AI trả lời đúng về MoMo |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">File</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đối tượng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Timing</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục đích</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">robots.txt</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search + AI crawlers</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Crawl time</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Allow/disallow crawling, training policy</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">sitemap.xml</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search indexers</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Index time</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">List URLs cần index</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">llms.txt</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LLMs</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Inference time</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Context để AI trả lời đúng về MoMo</td>
+    </tr>
+  </tbody>
+</table>
 
 Ba file cùng tồn tại, phục vụ ba mục đích khác nhau. `robots.txt` là prerequisite - phải đúng trước khi `llms.txt` có tác dụng.
 
@@ -395,11 +528,36 @@ AI generate câu trả lời + cite nguồn
 
 ### 4.4 Ba layer của implementation đầy đủ
 
-| Layer | File | Mô tả | Phase |
-|-------|------|--------|-------|
-| 1 | `momo.vn/llms.txt` | Master index - tổng quan toàn bộ sản phẩm | Phase 1 |
-| 2 | `momo.vn/{product}/llms-full.txt` | Full documentation per product | Phase 1-2 |
-| 3 | `momo.vn/{page}/index.md` | Clean Markdown per page | Phase 3 - defer |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Layer</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">File</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phase</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/llms.txt</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Master index - tổng quan toàn bộ sản phẩm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 1</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/{product}/llms-full.txt</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Full documentation per product</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 1-2</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/{page}/index.md</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Clean Markdown per page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 3 - defer</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 4.5 Format chuẩn
 
@@ -502,11 +660,36 @@ momo.vn/quan-ly-chi-tieu/llms-full.txt
 
 ### 7.2 Nguồn content và cách generate
 
-| Nguồn | Có sẵn | Chất lượng cho AI | Dùng cho |
-|-------|--------|-------------------|---------|
-| Metadata (Title/Description/URL) | Có trong Supabase | Trung bình - viết cho SEO | Master `llms.txt` - link list |
-| Long Content (Rich Text/HTML, SSR) | Có trong CMS | Cao - có heading structure | `llms-full.txt` - body content |
-| `llms_summary` field (field mới) | Chưa có, cần add | Cao nhất - viết đúng mục đích | Master `llms.txt` - description per product |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nguồn</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Có sẵn</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chất lượng cho AI</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dùng cho</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Metadata (Title/Description/URL)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có trong Supabase</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình - viết cho SEO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Master <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">llms.txt</code> - link list</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Long Content (Rich Text/HTML, SSR)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có trong CMS</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao - có heading structure</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">llms-full.txt</code> - body content</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">llms_summary</code> field (field mới)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa có, cần add</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao nhất - viết đúng mục đích</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Master <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">llms.txt</code> - description per product</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 7.3 Nguyên tắc content
 
@@ -524,13 +707,42 @@ momo.vn/quan-ly-chi-tieu/llms-full.txt
 
 ### 7.4 Ownership
 
-| Deliverable | Content owner | Technical owner |
-|-------------|--------------|-----------------|
-| `robots.txt` nâng cấp | Web Platform (spec) | Web Platform (implement) |
-| `llms_summary` per product | Web Platform + BU | Web Platform (add field vào CMS) |
-| Long Content quality | Inbound + BU | - |
-| Auto-generate pipeline | - | Web Platform |
-| Quarterly review | Web Platform | Web Platform (URL check) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Deliverable</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Content owner</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Technical owner</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">robots.txt</code> nâng cấp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform (spec)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform (implement)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">llms_summary</code> per product</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform + BU</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform (add field vào CMS)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Long Content quality</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Media Team + BU</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto-generate pipeline</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quarterly review</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform (URL check)</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -562,14 +774,47 @@ Bước 6: Validate + monitor
 
 ### 8.2 Server requirements cho llms.txt
 
-| Requirement | Spec | Lý do |
-|-------------|------|-------|
-| URL | `https://momo.vn/llms.txt` (root) | AI crawlers expect ở đây theo spec |
-| Content-Type | `text/plain; charset=utf-8` | Không phải HTML hay JSON |
-| HTTP Status | 200 OK trực tiếp - không redirect | Redirect chain làm crawlers bỏ qua |
-| HTTPS | Bắt buộc | AI crawlers không fetch HTTP |
-| File size | Khuyến nghị dưới 50KB cho master | Context window efficiency |
-| Cache | Public, TTL 1 ngày | Không quá stale |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Requirement</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Spec</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Lý do</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">https://momo.vn/llms.txt</code> (root)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI crawlers expect ở đây theo spec</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content-Type</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">text/plain; charset=utf-8</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không phải HTML hay JSON</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">HTTP Status</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">200 OK trực tiếp - không redirect</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Redirect chain làm crawlers bỏ qua</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">HTTPS</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bắt buộc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI crawlers không fetch HTTP</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">File size</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khuyến nghị dưới 50KB cho master</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Context window efficiency</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cache</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Public, TTL 1 ngày</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không quá stale</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 8.3 Cấu trúc llms.txt master - Mẫu cho momo.vn
 
@@ -626,7 +871,7 @@ MoMo được vận hành bởi Service (Công ty Cổ phần Dịch vụ Di Đ�
 
 **Input hiện tại:**
 - Metadata: Title, Description, Keyword, URL - viết cho SEO, không phải cho AI
-- Long Content: Rich Text/HTML, SSR, do Inbound + BU viết, chứa noise (pricing tables, promotional copy, testimonials)
+- Long Content: Rich Text/HTML, SSR, do Media Team + BU viết, chứa noise (pricing tables, promotional copy, testimonials)
 - Không có Markdown version
 
 **Output cần đạt:**
@@ -635,7 +880,7 @@ MoMo được vận hành bởi Service (Công ty Cổ phần Dịch vụ Di Đ�
 
 ### 9.2 Option A - Thêm `llms_summary` field vào CMS
 
-**Mô tả:** Web Platform thêm field mới vào Supabase schema. Field này chứa 2-3 câu mô tả factual về sản phẩm - viết đúng cho AI đọc. Inbound/BU + Web Platform điền một lần, pipeline tự pull vào `llms.txt` master.
+**Mô tả:** Web Platform thêm field mới vào Supabase schema. Field này chứa 2-3 câu mô tả factual về sản phẩm - viết đúng cho AI đọc. Media Team/BU + Web Platform điền một lần, pipeline tự pull vào `llms.txt` master.
 
 **Gợi ý field spec:**
 - Field name: `llms_summary`
@@ -644,14 +889,32 @@ MoMo được vận hành bởi Service (Công ty Cổ phần Dịch vụ Di Đ�
 - Required: Không - nếu rỗng thì fallback về meta description
 - Visibility: Chỉ trong CMS admin, không render ra frontend
 
-| | |
-|--|--|
-| Ưu | Output chất lượng cao, đúng product positioning. Không phụ thuộc meta description viết cho SEO |
-| Nhược | Cần effort điền field mới cho tất cả product pages hiện có |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">--</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">--</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ưu</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Output chất lượng cao, đúng product positioning. Không phụ thuộc meta description viết cho SEO</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhược</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần effort điền field mới cho tất cả product pages hiện có</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 9.3 Option B - Structured Long Content với auto-tagging
 
-**Mô tả:** Web Platform định nghĩa heading structure chuẩn trong CMS template. Khi Inbound/BU dùng headings theo structure này, CMS tự động gán attributes vào HTML output. Pipeline extract đúng sections, bỏ qua noise.
+**Mô tả:** Web Platform định nghĩa heading structure chuẩn trong CMS template. Khi Media Team/BU dùng headings theo structure này, CMS tự động gán attributes vào HTML output. Pipeline extract đúng sections, bỏ qua noise.
 
 **Sections nên extract:**
 - Định nghĩa sản phẩm (H2: "X là gì?")
@@ -666,19 +929,55 @@ MoMo được vận hành bởi Service (Công ty Cổ phần Dịch vụ Di Đ�
 - Testimonial blocks
 - Promotional banner sections
 
-| | |
-|--|--|
-| Ưu | Inbound/BU viết bình thường, không cần biết về llms.txt. Filter noise tự động |
-| Nhược | Cần enforce heading structure trong CMS. Long Content hiện tại có thể cần migration |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">--</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">--</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ưu</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Media Team/BU viết bình thường, không cần biết về llms.txt. Filter noise tự động</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhược</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cần enforce heading structure trong CMS. Long Content hiện tại có thể cần migration</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 9.4 Option C - Pipeline-level filter (không thay đổi CMS)
 
 **Mô tả:** Giữ CMS như hiện tại. Pipeline fetch HTML từ SSR page, apply filter rules để strip noise (pricing tables, testimonials, promotional copy), convert toàn bộ sang Markdown.
 
-| | |
-|--|--|
-| Ưu | Không cần thay đổi CMS, không cần train Inbound/BU |
-| Nhược | Filter rules brittle - khi HTML structure thay đổi, pipeline break. Khó filter promotional copy hoàn toàn bằng pattern matching |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">--</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">--</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ưu</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không cần thay đổi CMS, không cần train Media Team/BU</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhược</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Filter rules brittle - khi HTML structure thay đổi, pipeline break. Khó filter promotional copy hoàn toàn bằng pattern matching</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 9.5 Đề xuất kết hợp
 
@@ -688,17 +987,38 @@ MoMo được vận hành bởi Service (Công ty Cổ phần Dịch vụ Di Đ�
 
 ### 9.6 Trigger generate
 
-| Option | Mô tả | Trade-off |
-|--------|-------|-----------|
-| Manual trigger qua CI/CD | Run pipeline khi có product change | Đơn giản nhất, phù hợp setup hiện tại |
-| CMS publish hook | Tự trigger khi editor publish | Near real-time, cần implement webhook |
-| Scheduled (nếu có cron) | Chạy định kỳ | Không real-time nhưng đảm bảo sync |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Option</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trade-off</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Manual trigger qua CI/CD</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Run pipeline khi có product change</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đơn giản nhất, phù hợp setup hiện tại</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CMS publish hook</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự trigger khi editor publish</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Near real-time, cần implement webhook</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Scheduled (nếu có cron)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chạy định kỳ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không real-time nhưng đảm bảo sync</td>
+    </tr>
+  </tbody>
+</table>
 
 Với setup hiện tại (CI/CD có, cron không có): **Manual trigger** là khả dụng ngay.
 
-### 9.7 Content rules cho Inbound/BU
+### 9.7 Content rules cho Media Team/BU
 
-Web Platform chịu trách nhiệm communicate rules sau đến Inbound/BU:
+Web Platform chịu trách nhiệm communicate rules sau đến Media Team/BU:
 
 **Nên làm:**
 - Dùng H2 cho section chính, H3 cho subsection - không skip heading level
@@ -718,13 +1038,36 @@ Web Platform chịu trách nhiệm communicate rules sau đến Inbound/BU:
 
 **Ad-hoc - Trigger ngay:**
 
-| Trigger | Action |
-|---------|--------|
-| Product mới có landing page | Thêm vào `llms.txt` + tạo `llms-full.txt` + điền `llms_summary` |
-| URL thay đổi hoặc permanent redirect | Update URL trong tất cả files + robots.txt nếu liên quan |
-| Product deprecated | Xóa khỏi `llms.txt`, archive `llms-full.txt` |
-| Phát hiện AI cite sai về MoMo | Review Long Content + re-generate |
-| Sản phẩm mới có tính thời gian (param issue) | Add param vào robots.txt Disallow trước khi launch |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trigger</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Product mới có landing page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thêm vào <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">llms.txt</code> + tạo <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">llms-full.txt</code> + điền <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">llms_summary</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL thay đổi hoặc permanent redirect</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Update URL trong tất cả files + robots.txt nếu liên quan</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Product deprecated</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xóa khỏi <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">llms.txt</code>, archive <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">llms-full.txt</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phát hiện AI cite sai về MoMo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Review Long Content + re-generate</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sản phẩm mới có tính thời gian (param issue)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Add param vào robots.txt Disallow trước khi launch</td>
+    </tr>
+  </tbody>
+</table>
 
 **Quarterly review:**
 
@@ -824,13 +1167,36 @@ Report monthly, so sánh với baseline đã ghi trước deploy.
 
 ### 11.5 Citation quality test - Monthly
 
-| Query | Kỳ vọng |
-|-------|---------|
-| "MoMo vay tiền như thế nào?" | Mention Vay Nhanh, đúng đối tác |
-| "eSIM du lịch Nhật Bản mua ở đâu?" | MoMo được mention |
-| "Ví điện tử VN nào có bảo hiểm xe máy?" | MoMo bảo hiểm được mention |
-| "MoMo là gì?" | Describe là super app, không chỉ payment app |
-| "Vay tiền online uy tín Việt Nam" | MoMo trong danh sách |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Query</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Kỳ vọng</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"MoMo vay tiền như thế nào?"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mention Vay Nhanh, đúng đối tác</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"eSIM du lịch Nhật Bản mua ở đâu?"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo được mention</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Ví điện tử VN nào có bảo hiểm xe máy?"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo bảo hiểm được mention</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"MoMo là gì?"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Describe là super app, không chỉ payment app</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Vay tiền online uy tín Việt Nam"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo trong danh sách</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

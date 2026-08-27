@@ -35,21 +35,69 @@ MoSpark không phải là một CMS nâng cấp. Đây là nền tảng cho phé
 
 ### 1.2. Nguyên tắc vận hành
 
-| Nguyên tắc | Ý nghĩa thực tế |
-|---|---|
-| **PM/PO self-service** | PM tạo Landing Page trong 1-2 ngày thay vì 1-2 tuần. Chạy Ads mà không cần nhờ Dev. |
-| **Quality gate bắt buộc** | Không có trang nào được live khi chưa qua SEO/GEO Scoring. Publish phải đúng ngay từ đầu. |
-| **Use Case là đơn vị gốc** | Mọi content, Ads, analytics đều gắn theo Use Case - không gắn theo Cell Team hay Division. |
-| **1 Keyword = 1 URL** | Hệ thống tự block nếu tạo 2 bài cùng primary keyword. Không để cạnh tranh nội bộ. |
-| **AI sản xuất, người chịu trách nhiệm** | AI draft, con người review và sign-off - đặc biệt với nội dung tài chính (YMYL). |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nguyên tắc</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ý nghĩa thực tế</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>PM/PO self-service</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM tạo Landing Page trong 1-2 ngày thay vì 1-2 tuần. Chạy Ads mà không cần nhờ Dev.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Quality gate bắt buộc</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có trang nào được live khi chưa qua SEO/GEO Scoring. Publish phải đúng ngay từ đầu.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Use Case là đơn vị gốc</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mọi content, Ads, analytics đều gắn theo Use Case - không gắn theo Cell Team hay Division.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1 Keyword = 1 URL</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hệ thống tự block nếu tạo 2 bài cùng primary keyword. Không để cạnh tranh nội bộ.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>AI sản xuất, người chịu trách nhiệm</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI draft, con người review và sign-off - đặc biệt với nội dung tài chính (YMYL).</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 1.3. Định vị
 
-| Chiều | CMS cũ (Admin Panel) | HubSpot | MoSpark |
-|---|---|---|---|
-| Mạnh nhất | Quản lý nội dung tĩnh | Đo lường sau publish | Quality gate + AI production trước publish |
-| Yếu nhất | Phụ thuộc Dev cho mọi thứ | Không có hard block | Visibility tracking sau publish (đang build) |
-| Phù hợp nhất | MoMo 2022-2024 | B2B Marketing platform | MoMo 2026+ - AI-native fintech growth |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chiều</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">CMS cũ (Admin Panel)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">HubSpot</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">MoSpark</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mạnh nhất</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quản lý nội dung tĩnh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đo lường sau publish</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quality gate + AI production trước publish</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Yếu nhất</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phụ thuộc Dev cho mọi thứ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có hard block</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Visibility tracking sau publish (đang build)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phù hợp nhất</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo 2022-2024</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">B2B Marketing platform</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo 2026+ - AI-native fintech growth</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -59,11 +107,32 @@ MoSpark không phải là một CMS nâng cấp. Đây là nền tảng cho phé
 
 momo.vn Website không còn là corporate site hay blog SEO đơn thuần. MoSpark được xây để hiện thực hóa 3 vai trò chiến lược:
 
-| Vai trò | Định nghĩa | MoSpark đóng góp gì |
-|---|---|---|
-| **Financial & Payment Authority** | Điểm đến uy tín, tiếng nói có thẩm quyền trong ngành tài chính/thanh toán Việt Nam | Quality Gate bắt buộc, Named Author Policy, E-E-A-T content chuẩn YMYL |
-| **Entry Point từ Search** | Điểm chạm đầu tiên đón traffic tìm kiếm tự nhiên - cả Google lẫn AI Search | SEO Inventory, GenAI Content Engine, llms.txt pipeline |
-| **Ecosystem Support Layer** | Nền tảng hỗ trợ toàn bộ hệ sinh thái kinh doanh & thanh toán của MoMo | Use Case ID gắn kết mọi module, Ads Manager, Web-to-App attribution |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Định nghĩa</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">MoSpark đóng góp gì</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Financial & Payment Authority</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điểm đến uy tín, tiếng nói có thẩm quyền trong ngành tài chính/thanh toán Việt Nam</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quality Gate bắt buộc, Named Author Policy, E-E-A-T content chuẩn YMYL</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Entry Point từ Search</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điểm chạm đầu tiên đón traffic tìm kiếm tự nhiên - cả Google lẫn AI Search</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO Inventory, GenAI Content Engine, llms.txt pipeline</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Ecosystem Support Layer</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nền tảng hỗ trợ toàn bộ hệ sinh thái kinh doanh & thanh toán của MoMo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Use Case ID gắn kết mọi module, Ads Manager, Web-to-App attribution</td>
+    </tr>
+  </tbody>
+</table>
 
 **Flow bất biến - mọi quyết định sản phẩm đều trace về đây:**
 ```
@@ -76,12 +145,42 @@ Mục tiêu không dừng ở pageview. Mục tiêu là kích hoạt hành vi ch
 
 momo.vn không tổ chức theo BU - tổ chức theo Product / Search Ecosystem. 4 Pillars là 4 growth engine độc lập, mỗi Pillar sở hữu một vertical thị trường để chiếm thị phần tìm kiếm:
 
-| Pillar | Use Cases | Chiến lược Content | Ràng buộc bắt buộc |
-|---|---|---|---|
-| **P1 - Tài chính & Tín dụng** | CIC Score, Ví Trả Sau, Vay Nhanh | Hub-Spoke + Interactive Tools (tính lãi, mô phỏng CIC) | Named Author Policy - hard gate trước launch |
-| **P2 - Bảo hiểm Công nghệ** | BH xe máy, BHYT, BHXH, BH ô tô | Neutral Aggregator - cổng so sánh trung lập | Không dùng geo-based URL cho bảo hiểm |
-| **P3 - Dịch vụ Công & Tiện ích** | Phạt Nguội, Hóa đơn | API real-time + pSEO (63 tỉnh) | llms.txt mandatory trước rollout |
-| **P4 - Đời sống & Merchant** | Cinema, OTA, eSIM, Merchant | Intent-first, Merchant Detail Page | Noindex mandatory cho URL hết hạn (410 Gone đã bỏ - hạ tầng không hỗ trợ) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Pillar</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Use Cases</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chiến lược Content</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ràng buộc bắt buộc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P1 - Tài chính & Tín dụng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CIC Score, Ví Trả Sau, Vay Nhanh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hub-Spoke + Interactive Tools (tính lãi, mô phỏng CIC)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Named Author Policy - hard gate trước launch</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P2 - Bảo hiểm Công nghệ</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BH xe máy, BHYT, BHXH, BH ô tô</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Neutral Aggregator - cổng so sánh trung lập</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không dùng geo-based URL cho bảo hiểm</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P3 - Dịch vụ Công & Tiện ích</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phạt Nguội, Hóa đơn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">API real-time + pSEO (63 tỉnh)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">llms.txt mandatory trước rollout</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P4 - Đời sống & Merchant</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cinema, OTA, eSIM, Merchant</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Intent-first, Merchant Detail Page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Noindex mandatory cho URL hết hạn (410 Gone đã bỏ - hạ tầng không hỗ trợ)</td>
+    </tr>
+  </tbody>
+</table>
 
 **Utility-First** là nguyên tắc vận hành: Interactive tools (calculator, simulator, checker) là core value thực sự - content là supporting layer tạo discoverability và giáo dục. Mỗi Use Case mới phải trả lời: "Utility tool của Use Case này là gì?"
 
@@ -117,7 +216,7 @@ Hậu quả: PM không prototype được, requirement "bay bổng" vì không t
 
 ### 3.3. Quản lý Web đang theo Cell Team, không theo Use Case
 
-- Inbound Team phải đăng nhập vào từng Cell Team (Vay, Cinema, Bảo hiểm...) để đăng 1 bài blog. Không có single interface.
+- Media Team phải đăng nhập vào từng Cell Team (Vay, Cinema, Bảo hiểm...) để đăng 1 bài blog. Không có single interface.
 - URL chồng chéo: `momo.vn/blog/*` và `momo.vn/{use-case}/blog/*` tồn tại song song, cạnh tranh lẫn nhau (Keyword Cannibalization).
 - Analytics bị phức tạp hóa do URL structure không thống nhất.
 - Ads conflict: nhiều Division muốn chạy Ads đồng thời trên cùng một trang, không có cơ chế quản lý.
@@ -126,14 +225,40 @@ Hậu quả: PM không prototype được, requirement "bay bổng" vì không t
 
 Scope rõ không kém scope có. Dưới đây là những gì MoSpark không làm - để tránh scope creep và giữ đúng mandate:
 
-| MoSpark KHÔNG phải | Lý do cần nói rõ |
-|---|---|
-| **Một CMS thụ động thay thế Admin Panel** | MoSpark là Growth OS có Quality Gate và AI Production tích hợp - không đơn thuần thay cái cũ bằng cái tương đương |
-| **Công cụ tự publish không kiểm soát** | Mọi trang đều phải qua SEO/GEO Scoring Gate - không có ngoại lệ, không có bypass dù PM/PO tự làm |
-| **Thay thế Dev hoàn toàn** | PM/PO tự làm LP và Ads Manager trong phạm vi đã build - module mới vẫn cần Dev theo spec |
-| **Platform để AI tự publish YMYL content** | AI draft - con người review và sign-off trước publish, bắt buộc với nội dung tài chính |
-| **Giải pháp mở rộng cho tất cả BU cùng lúc** | GTM bắt đầu từ User Growth - chứng minh giá trị trước, scale từng Pillar có dữ liệu sau |
-| **Hệ thống tích hợp Payment trực tiếp** | Excluded scope do rào cản pháp lý và after-sale service - không phải roadmap |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">MoSpark KHÔNG phải</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Lý do cần nói rõ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Một CMS thụ động thay thế Admin Panel</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark là Growth OS có Quality Gate và AI Production tích hợp - không đơn thuần thay cái cũ bằng cái tương đương</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Công cụ tự publish không kiểm soát</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mọi trang đều phải qua SEO/GEO Scoring Gate - không có ngoại lệ, không có bypass dù PM/PO tự làm</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Thay thế Dev hoàn toàn</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/PO tự làm LP và Ads Manager trong phạm vi đã build - module mới vẫn cần Dev theo spec</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Platform để AI tự publish YMYL content</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI draft - con người review và sign-off trước publish, bắt buộc với nội dung tài chính</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Giải pháp mở rộng cho tất cả BU cùng lúc</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GTM bắt đầu từ User Growth - chứng minh giá trị trước, scale từng Pillar có dữ liệu sau</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hệ thống tích hợp Payment trực tiếp</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Excluded scope do rào cản pháp lý và after-sale service - không phải roadmap</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -141,12 +266,42 @@ Scope rõ không kém scope có. Dưới đây là những gì MoSpark không l�
 
 ### 4.1. Nhóm người dùng
 
-| Persona | Ai | Pain point | Cần gì từ MoSpark |
-|---|---|---|---|
-| **PM/PO Cell Team** | PO Vay Nhanh, Cinema, Bảo Hiểm, Phạt Nguội... | Phụ thuộc Dev cho LP, Ads, content | Tự tạo LP, chạy Ads, nhập Business Context trong cùng ngày |
-| **Content Writer / Inbound** | Content Writers, Agency content | Đăng nhập nhiều CMS, prompt AI mỗi người mỗi kiểu | 1 interface duy nhất, AI pipeline chuẩn hóa, không cần học lại |
-| **Web Product Lead** | Văn Hiến | Audit thủ công từng trang, không có SoV visibility | Quality gate tự động, SoV dashboard, data để quyết định đầu tư Use Case nào |
-| **Platform Admin** | Bảo (Web Platform Manager) | Ads conflict giữa Division, không có inventory view | Placement Registry, enforce policy, không cần review từng campaign |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Persona</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ai</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Pain point</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cần gì từ MoSpark</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>PM/PO Cell Team</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PO Vay Nhanh, Cinema, Bảo Hiểm, Phạt Nguội...</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phụ thuộc Dev cho LP, Ads, content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự tạo LP, chạy Ads, nhập Business Context trong cùng ngày</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Content Writer / Media Team</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content Writers, Agency content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đăng nhập nhiều CMS, prompt AI mỗi người mỗi kiểu</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1 interface duy nhất, AI pipeline chuẩn hóa, không cần học lại</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Product Lead</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Văn Hiến</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Audit thủ công từng trang, không có SoV visibility</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quality gate tự động, SoV dashboard, data để quyết định đầu tư Use Case nào</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Platform Admin</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo (Web Platform Manager)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads conflict giữa Division, không có inventory view</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Placement Registry, enforce policy, không cần review từng campaign</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 4.2. Jobs To Be Done cụ thể
 
@@ -172,14 +327,61 @@ Scope rõ không kém scope có. Dưới đây là những gì MoSpark không l�
 
 MoSpark vận hành theo 5 lớp, phủ kín toàn bộ lifecycle từ market research đến conversion, đo lường và tối ưu liên tục:
 
-| Layer | Tên | Status | Modules | Vai trò |
-|---|---|---|---|---|
-| **L5** | Growth Intelligence | Phase 2-3 | GEO Citation Monitor, Experiment Engine, Revenue Attribution, Content Intelligence | Close feedback loop: đo lường toàn bộ vòng lặp, học hỏi, cải tiến compound |
-| **L4** | Performance Loop | Phase 2 | GSC Auto-Refresh, SoV Tracker, Content Decay Detection, Health Alert, Semantic Linking | Feed data ngược lại để tối ưu tiếp |
-| **L3** | Quality Gate | Active | SEO/GEO Scoring 100pt, Hard Block CWV, Legal Review, YMYL Guard | Block nội dung xấu trước publish |
-| **L2** | Distribution & Conversion + PLG | Active - Scaling | Ads Manager, Widget Library, PLG Tool Builder, Onelink, Umami Attribution | Convert traffic thành App user + PLG Tools tạo data moat chống LLM |
-| **L1** | Content Production | Active - Pilot | SEO Inventory, Business Context, 7-Step AI Workflow, Blog Editor | Sản xuất nội dung đạt chuẩn |
-| **F** | Foundation - Use Case System | Always-on | Use Case ID, Market Map, Keyword Registry, URL Governance, PLG Tool Registry | Đơn vị gốc kết nối tất cả modules |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Layer</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Status</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Modules</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>L5</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Growth Intelligence</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 2-3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GEO Citation Monitor, Experiment Engine, Revenue Attribution, Content Intelligence</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Close feedback loop: đo lường toàn bộ vòng lặp, học hỏi, cải tiến compound</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>L4</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Performance Loop</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC Auto-Refresh, SoV Tracker, Content Decay Detection, Health Alert, Semantic Linking</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Feed data ngược lại để tối ưu tiếp</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>L3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quality Gate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Active</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO/GEO Scoring 100pt, Hard Block CWV, Legal Review, YMYL Guard</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Block nội dung xấu trước publish</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>L2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Distribution & Conversion + PLG</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Active - Scaling</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads Manager, Widget Library, PLG Tool Builder, Onelink, Umami Attribution</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Convert traffic thành App user + PLG Tools tạo data moat chống LLM</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>L1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content Production</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Active - Pilot</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO Inventory, Business Context, 7-Step AI Workflow, Blog Editor</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sản xuất nội dung đạt chuẩn</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>F</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Foundation - Use Case System</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Always-on</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Use Case ID, Market Map, Keyword Registry, URL Governance, PLG Tool Registry</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đơn vị gốc kết nối tất cả modules</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 5.1. Layer 1 - Content Production
 
@@ -209,15 +411,60 @@ MoSpark vận hành theo 5 lớp, phủ kín toàn bộ lifecycle từ market re
 
 ### 5.5. Danh mục 7 loại trang chiến lược
 
-| URL Pattern | Loại trang | Vai trò SEO/GEO | Builder |
-|---|---|---|---|
-| `/{mini-web}` | Mini Web Use Case | Rank transactional keywords, capture intent mua hàng | Landing Page Builder |
-| `/{mini-web}/blog/*` | Growth Blog (Use Case) | Satellite content, dồn Link Equity về Mini Web | GenAI Content |
-| `/blog/*` | Growth Blog (General) | Informational keywords, Topical Authority | GenAI Content |
-| `/merchant*` | Merchant Page | Cross-sell, Local SEO | LP Builder + Merchant Module |
-| `/tin-tuc*` | News/Communications | Brand presence, PR | CMS |
-| `/hoi-dap*` | Help Center | User support, Featured Snippets | Help Center Module |
-| Landing Page | Campaign / Promotion | Conversion-focused, không cần rank dài hạn | LP Builder |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL Pattern</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại trang</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò SEO/GEO</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Builder</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/{mini-web}</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mini Web Use Case</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Rank transactional keywords, capture intent mua hàng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing Page Builder</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/{mini-web}/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Growth Blog (Use Case)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Satellite content, dồn Link Equity về Mini Web</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GenAI Content</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Growth Blog (General)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Informational keywords, Topical Authority</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GenAI Content</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Merchant Page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cross-sell, Local SEO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LP Builder + Merchant Module</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tin-tuc*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">News/Communications</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Brand presence, PR</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CMS</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/hoi-dap*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Help Center</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User support, Featured Snippets</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Help Center Module</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing Page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Campaign / Promotion</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Conversion-focused, không cần rank dài hạn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LP Builder</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -225,23 +472,140 @@ MoSpark vận hành theo 5 lớp, phủ kín toàn bộ lifecycle từ market re
 
 ### 6.1. Tổng quan
 
-| # | Module | Tên | Status | Phase | Owner |
-|---|---|---|---|---|---|
-| M1 | Landing Page Builder | Tự tạo Landing Page | Production - Q2 Onboarding GPD | 1 | Bảo + Thuận |
-| M2 | GenAI Content Engine | AI Content Production | Active - Pilot Phạt Nguội | 1 | Trọng (AI Tool/Model/Workflow), Thuận (GenAI Hình), Lộc (phân quyền User), Hiến (govern) |
-| M3 | Ads Manager | Web-to-App Conversion | V1.2 Production - Pilot User Growth | 1→2 | Thuận, Bảo |
-| M4 | SEO/GEO Scoring Gate | Quality Control | Active - All Page Types | 1 | Thuận (build), Hiến (govern) |
-| M5 | SEO Inventory | Market Map & SoV | Active (Manual) → Dashboard Integration | 1→2 | Thuận, Hiến |
-| M6 | AI Crawler Policy | llms.txt + robots.txt | robots.txt L1 Deployed | 1 | Hiến (spec), Web Platform |
-| M7 | Help Center Agentic | AI-powered FAQ | Registered - Agentic Org Program | 3 | TBD |
-| M8 | Migration | Admin Panel → MoSpark | Structure & Mapping Phase | 1 | Bảo + Thuận + Lộc |
-| M9 | PLG Tool Builder | Utility Tool Platform | Planning - Spec Phase | 2 | Bảo + Thuận + Hiến |
-| M10 | Experiment Engine | Native AB Testing | Planning | 2 | Thuận + DA |
-| M11 | Revenue Attribution | Web-to-App ROI Pipeline | Planning | 2 | Thuận + DA (Hải) |
-| M12 | Content Intelligence | Decay Detection + Opportunity | Planning | 2→3 | Thuận + Hiến |
-| M13 | GEO Citation Monitor | AI Engine Citation Tracking | Planning | 2 | Hiến (spec) + Thuận |
-| M14 | HRM API Sync (LnD) | Đồng bộ Data Nhân sự / Phân quyền | Ý tưởng | 3 | Bảo |
-| M15 | 2H Customer KB | Tích hợp Meeting Notes / JTBD | Ý tưởng | 3 | Bảo |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Module</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Status</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phase</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing Page Builder</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự tạo Landing Page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Production - Q2 Onboarding GPD</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo + Thuận</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GenAI Content Engine</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI Content Production</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Active - Pilot Phạt Nguội</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trọng (AI Tool/Model/Workflow), Thuận (GenAI Hình), Lộc (phân quyền User), Hiến (govern)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads Manager</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web-to-App Conversion</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">V1.2 Production - Pilot User Growth</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1→2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thuận, Bảo</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO/GEO Scoring Gate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quality Control</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Active - All Page Types</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thuận (build), Hiến (govern)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO Inventory</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Market Map & SoV</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Active (Manual) → Dashboard Integration</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1→2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thuận, Hiến</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI Crawler Policy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">llms.txt + robots.txt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">robots.txt L1 Deployed</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến (spec), Web Platform</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Help Center Agentic</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI-powered FAQ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Registered - Agentic Org Program</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TBD</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Migration</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Admin Panel → MoSpark</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Structure & Mapping Phase</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo + Thuận + Lộc</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M9</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PLG Tool Builder</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Utility Tool Platform</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Planning - Spec Phase</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo + Thuận + Hiến</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M10</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Experiment Engine</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Native AB Testing</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Planning</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thuận + DA</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M11</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Revenue Attribution</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web-to-App ROI Pipeline</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Planning</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thuận + DA (Hải)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M12</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content Intelligence</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Decay Detection + Opportunity</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Planning</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2→3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thuận + Hiến</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M13</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GEO Citation Monitor</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI Engine Citation Tracking</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Planning</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến (spec) + Thuận</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M14</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">HRM API Sync (LnD)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đồng bộ Data Nhân sự / Phân quyền</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ý tưởng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M15</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2H Customer KB</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tích hợp Meeting Notes / JTBD</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ý tưởng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -277,15 +641,60 @@ MoSpark vận hành theo 5 lớp, phủ kín toàn bộ lifecycle từ market re
 
 **7-Step Workflow:**
 
-| Bước | Hành động | Output | Owner |
-|---|---|---|---|
-| 1 | Tạo Use Case + Project Mapping | Use Case ID | PM/Growth |
-| 2 | Nhập Business Context 12 fields | Context Layer (Source of Truth) | PM/Growth + SEO Lead |
-| 3 | Tạo Primary Keyword + Secondary, check trùng | Keyword Master Registry | Content Team |
-| 4 | AI tạo dàn ý → Content edit → PM approve | Outline Final | Content + PM |
-| 5 | AI viết bài chi tiết theo Outline đã approve | Blog Detail Draft | AI (Claude API) |
-| 6 | Review chất lượng, SEO/GEO Score, sign-off | Verified Content | Web Product Lead |
-| 7 | Sync qua Blog Editor → Publish | Live on momo.vn | Content Team |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Bước</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hành động</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Output</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tạo Use Case + Project Mapping</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Use Case ID</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/Growth</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhập Business Context 12 fields</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Context Layer (Source of Truth)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/Growth + Web Product Lead</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tạo Primary Keyword + Secondary, check trùng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Keyword Master Registry</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content Team</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI tạo dàn ý → Content edit → PM approve</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Outline Final</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content + PM</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI viết bài chi tiết theo Outline đã approve</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog Detail Draft</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI (Claude API)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Review chất lượng, SEO/GEO Score, sign-off</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Verified Content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sync qua Blog Editor → Publish</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Live on momo.vn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content Team</td>
+    </tr>
+  </tbody>
+</table>
 
 **3 Rules không được phá vỡ:**
 - **Project-First:** Keyword không tồn tại nếu không gắn Use Case.
@@ -307,21 +716,77 @@ MoSpark vận hành theo 5 lớp, phủ kín toàn bộ lifecycle từ market re
 
 **So với Athena (In-App Ads):**
 
-| Chiều | Athena (App) | Ads Manager (Web) |
-|---|---|---|
-| User identity | Đã định danh, có lịch sử giao dịch | Anonymous (Web chưa có Login) |
-| Targeting | Audience Segment (behavioral) | URL context của trang (intent-based) |
-| Bidding | Có - 3 chiến lược | Priority-based, không bidding |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chiều</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Athena (App)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ads Manager (Web)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User identity</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đã định danh, có lịch sử giao dịch</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Anonymous (Web chưa có Login)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Targeting</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Audience Segment (behavioral)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL context của trang (intent-based)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bidding</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - 3 chiến lược</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Priority-based, không bidding</td>
+    </tr>
+  </tbody>
+</table>
 
 **5 Ad Formats:**
 
-| Format | Mức interrupt | Phù hợp với | Mục tiêu |
-|---|---|---|---|
-| **Native Widget (Shortcode)** | Rất thấp - PLG | Blog Article, Mini Web | W2A Conversion cao nhất |
-| **Balloon / Float Icon** | Thấp | Tất cả trang | Traffic + Awareness |
-| **Inline Banner** | Trung bình | Blog/News | Awareness |
-| **Sticky Bar** | Trung bình | Landing Page | Traffic |
-| **Popup** | Cao - *chỉ LP có promotion* | Landing Page | Traffic (hạn chế) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Format</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mức interrupt</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phù hợp với</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục tiêu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Native Widget (Shortcode)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Rất thấp - PLG</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog Article, Mini Web</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">W2A Conversion cao nhất</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Balloon / Float Icon</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thấp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tất cả trang</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic + Awareness</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Inline Banner</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog/News</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Awareness</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sticky Bar</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing Page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Popup</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao - <em>chỉ LP có promotion</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing Page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic (hạn chế)</td>
+    </tr>
+  </tbody>
+</table>
 
 **Phased Roadmap:**
 
@@ -344,13 +809,48 @@ MoSpark vận hành theo 5 lớp, phủ kín toàn bộ lifecycle từ market re
 
 **KPIs:**
 
-| Phase | Metric | Baseline | Target |
-|---|---|---|---|
-| Phase 1 | CTR (Traffic campaigns) | 2.4% | 4%+ |
-| Phase 1 | Dismiss Rate | 78.3% | < 65% |
-| Phase 1 | Time-to-live campaign | Nhiều ngày | < 1 ngày |
-| Phase 2 | Placement conflict rate | - | < 10% |
-| Phase 3 | Division self-service rate | - | 80%+ |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phase</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Baseline</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CTR (Traffic campaigns)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.4%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4%+</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dismiss Rate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">78.3%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 65%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Time-to-live campaign</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhiều ngày</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 1 ngày</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Placement conflict rate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">< 10%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phase 3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Division self-service rate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">80%+</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -362,14 +862,47 @@ MoSpark vận hành theo 5 lớp, phủ kín toàn bộ lifecycle từ market re
 
 **Scoring Model (100 điểm):**
 
-| Block | Điểm | Kiểm tra gì |
-|---|---|---|
-| 1 - Technical SEO + CWV | 30 | Canonical, Robots, H1, LCP/INP/CLS |
-| 2 - On-Page Content | 35 | Wordcount, Keyword density/placement, CTA |
-| 3 - Structured Data + GEO Signals | 20 | Schema, FAQ, Entity, datePublished, Fact Density |
-| 4 - OG/Social Meta | 5 | og:title, og:description, og:image |
-| 5 - Manual Review | 10 | Preview, Mobile check, GSC status, Sitemap |
-| **Tổng** | **100** | |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Block</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điểm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Kiểm tra gì</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1 - Technical SEO + CWV</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">30</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Canonical, Robots, H1, LCP/INP/CLS</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2 - On-Page Content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">35</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Wordcount, Keyword density/placement, CTA</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3 - Structured Data + GEO Signals</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">20</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Schema, FAQ, Entity, datePublished, Fact Density</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4 - OG/Social Meta</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">og:title, og:description, og:image</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5 - Manual Review</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">10</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Preview, Mobile check, GSC status, Sitemap</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tổng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>100</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"></td>
+    </tr>
+  </tbody>
+</table>
 
 **Publish Gate:**
 - Score < 60 hoặc có Hard Block → Nút Publish bị disable hoàn toàn.
@@ -418,11 +951,32 @@ SoV MoMo = Impression (GSC) / Total Volume Search
 
 **3 loại AI crawler, 3 cách xử lý:**
 
-| Loại | Ví dụ | Xử lý |
-|---|---|---|
-| Search/RAG crawler | OAI-SearchBot, Claude-SearchBot, PerplexityBot | **ALLOW** - phục vụ user queries real-time |
-| Training crawler | GPTBot, ClaudeBot, Google-Extended | **Policy decision** - chờ Legal |
-| Aggressive scraper | Bytespider, CCBot | **BLOCK** - không có referral benefit |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ví dụ</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Xử lý</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Search/RAG crawler</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">OAI-SearchBot, Claude-SearchBot, PerplexityBot</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>ALLOW</strong> - phục vụ user queries real-time</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Training crawler</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GPTBot, ClaudeBot, Google-Extended</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Policy decision</strong> - chờ Legal</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Aggressive scraper</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bytespider, CCBot</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>BLOCK</strong> - không có referral benefit</td>
+    </tr>
+  </tbody>
+</table>
 
 **llms.txt Architecture:**
 - `momo.vn/llms.txt` - Master index (Layer 1 - cần làm).
@@ -441,16 +995,33 @@ SoV MoMo = Impression (GSC) / Total Volume Search
 
 ### 6.9. M8 - Migration (Admin Panel → MoSpark)
 
-**Mục đích:** Hợp nhất toàn bộ nội dung từ Admin Panel cũ sang MoSpark. Single Interface cho Inbound Team.
+**Mục đích:** Hợp nhất toàn bộ nội dung từ Admin Panel cũ sang MoSpark. Single Interface cho Media Team.
 
 **Trạng thái:** Structure & Mapping Phase. Zero Redirect approach đã approve.
 
 **Blog 2-Tier (giữ nguyên URL, không redirect):**
 
-| Tier | URL | Use Cases |
-|---|---|---|
-| Tier 1 - Basic | `momo.vn/blog/*` | General, News, FAQ |
-| Tier 2 - Advanced | `momo.vn/{use-case}/blog/*` | Vay Nhanh, Cinema, BH Ô tô, BH Xe máy |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tier</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Use Cases</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier 1 - Basic</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">General, News, FAQ</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tier 2 - Advanced</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/{use-case}/blog/*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vay Nhanh, Cinema, BH Ô tô, BH Xe máy</td>
+    </tr>
+  </tbody>
+</table>
 
 **3 Migration Phases:** Foundation + `/blog/*` (4-6 tuần) → 4 special Use Case blogs (6-8 tuần) → Optimization + Decommission Admin Panel cũ (4 tuần).
 
@@ -466,38 +1037,135 @@ SoV MoMo = Impression (GSC) / Total Volume Search
 
 **Vì sao PLG Tool là core value, không phải nice-to-have:**
 
-| Kênh | Cơ chế chuyển đổi | Số bước đến intent cao nhất |
-|---|---|---|
-| Content Blog | User đọc → có thể click CTA → có thể download App | 3-4 bước, intent decay theo mỗi bước |
-| PLG Tool | User DÙNG tool để giải quyết việc → nhận kết quả → CTA sau result | 1-2 bước, intent ở đỉnh khi nhận kết quả |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Kênh</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cơ chế chuyển đổi</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Số bước đến intent cao nhất</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content Blog</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User đọc → có thể click CTA → có thể download App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3-4 bước, intent decay theo mỗi bước</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PLG Tool</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User DÙNG tool để giải quyết việc → nhận kết quả → CTA sau result</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1-2 bước, intent ở đỉnh khi nhận kết quả</td>
+    </tr>
+  </tbody>
+</table>
 
 Utility-First không phải slogan - đây là cơ chế chuyển đổi khác nhau về cấu trúc.
 
 **4 Tests phân biệt PLG Tool thực sự với widget thông thường:**
 
-| Test | Câu hỏi kiểm tra | Pass khi |
-|---|---|---|
-| **JTBD Test** | Tool giải quyết JTBD cụ thể mà không cần user download App trước? | User hoàn thành task trong 1 phiên trên web |
-| **Data Test** | Tool tạo interaction data mà LLM không thể có từ nguồn khác? | Data là unique: usage patterns, regional distribution, real-time inputs |
-| **1-2-3 Test** | User nhận kết quả trong 3 bước, không cần hướng dẫn? | No tutorial needed, no drop-off mid-flow |
-| **Funnel Test** | CTA sau kết quả dẫn về App feature tương ứng một cách tự nhiên? | CTA xuất hiện sau result, không interrupt trước |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Test</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Câu hỏi kiểm tra</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Pass khi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>JTBD Test</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tool giải quyết JTBD cụ thể mà không cần user download App trước?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User hoàn thành task trong 1 phiên trên web</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Data Test</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tool tạo interaction data mà LLM không thể có từ nguồn khác?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Data là unique: usage patterns, regional distribution, real-time inputs</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1-2-3 Test</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User nhận kết quả trong 3 bước, không cần hướng dẫn?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">No tutorial needed, no drop-off mid-flow</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Funnel Test</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CTA sau kết quả dẫn về App feature tương ứng một cách tự nhiên?</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CTA xuất hiện sau result, không interrupt trước</td>
+    </tr>
+  </tbody>
+</table>
 
 **3 Loại PLG Tool - Taxonomy:**
 
-| Loại | Cơ chế | Ví dụ trên momo.vn | Pillar |
-|---|---|---|---|
-| **Type A - Calculator** | User nhập thông số → tính theo công thức → kết quả số | Tính lãi vay, Tính phí BH xe máy, Tính lãi tiết kiệm, Tính mức phạt theo lỗi vi phạm | P1, P2, P3 |
-| **Type B - Checker / Lookup** | User nhập ID → query API real-time → kết quả cụ thể | Tra phạt nguội (biển số xe), Tra điểm tín dụng CIC, Tra BHXH eligibility | P1, P3 |
-| **Type C - Comparison / Aggregator** | Platform pull data nhiều nguồn → user filter → bảng so sánh | So sánh gói BH xe máy, So sánh gói cước viễn thông, So sánh lãi suất tiết kiệm | P2, P4 |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cơ chế</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ví dụ trên momo.vn</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Pillar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Type A - Calculator</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User nhập thông số → tính theo công thức → kết quả số</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tính lãi vay, Tính phí BH xe máy, Tính lãi tiết kiệm, Tính mức phạt theo lỗi vi phạm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1, P2, P3</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Type B - Checker / Lookup</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User nhập ID → query API real-time → kết quả cụ thể</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra phạt nguội (biển số xe), Tra điểm tín dụng CIC, Tra BHXH eligibility</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1, P3</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Type C - Comparison / Aggregator</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Platform pull data nhiều nguồn → user filter → bảng so sánh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">So sánh gói BH xe máy, So sánh gói cước viễn thông, So sánh lãi suất tiết kiệm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2, P4</td>
+    </tr>
+  </tbody>
+</table>
 
 **Mapping PLG Tools theo 4 Growth Pillars:**
 
-| Pillar | Tools cần build | Data được tạo ra | Priority |
-|---|---|---|---|
-| **P1 - Tài chính & Tín dụng** | Loan calculator, CIC score simulator, VTS eligibility checker | Nhu cầu vay theo khu vực, phân phối credit score người dùng thực tế | P0 |
-| **P2 - Bảo hiểm Công nghệ** | BH cost calculator (xe máy, ô tô, BHYT), Plan comparison | Phân phối mức phí thị trường, preference theo gói, demographic | P1 |
-| **P3 - Dịch vụ Công & Tiện ích** | Phạt nguội lookup (LIVE - mở rộng), BHXH checker, Hóa đơn lookup | Volume tra cứu theo loại vi phạm, khu vực, thời điểm | LIVE - scale |
-| **P4 - Đời sống & Merchant** | Merchant finder, Cinema showtime lookup | Demand theo khu vực, genre preference, payment pattern | P2 |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Pillar</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tools cần build</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Data được tạo ra</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Priority</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P1 - Tài chính & Tín dụng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loan calculator, CIC score simulator, VTS eligibility checker</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhu cầu vay theo khu vực, phân phối credit score người dùng thực tế</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P0</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P2 - Bảo hiểm Công nghệ</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BH cost calculator (xe máy, ô tô, BHYT), Plan comparison</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phân phối mức phí thị trường, preference theo gói, demographic</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P3 - Dịch vụ Công & Tiện ích</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phạt nguội lookup (LIVE - mở rộng), BHXH checker, Hóa đơn lookup</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Volume tra cứu theo loại vi phạm, khu vực, thời điểm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LIVE - scale</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P4 - Đời sống & Merchant</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Merchant finder, Cinema showtime lookup</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Demand theo khu vực, genre preference, payment pattern</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+    </tr>
+  </tbody>
+</table>
 
 **Builder Requirements - PM/PO phải tự làm được không qua Dev:**
 
@@ -528,13 +1196,42 @@ Không có competitor nào có data này. Không LLM nào có thể fabricate da
 
 **Success Metrics:**
 
-| Metric | Định nghĩa | Target |
-|---|---|---|
-| Tool sessions/tháng | Lượt sử dụng per tool | > 100K/tool P0 trong 6 tháng live |
-| Tool → CTA click rate | % user click CTA sau khi nhận result | > 15% |
-| Tool → Onelink (W2A proxy) | Sessions từ tool có click Onelink | Baseline Q3/2026 |
-| Data points collected | Anonymous interaction records | > 1M/tool/năm |
-| AI citation từ tool data | AI engines cite MoMo data insights trong responses | Measure Q4/2026 |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Định nghĩa</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tool sessions/tháng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lượt sử dụng per tool</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">> 100K/tool P0 trong 6 tháng live</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tool → CTA click rate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">% user click CTA sau khi nhận result</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">> 15%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tool → Onelink (W2A proxy)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sessions từ tool có click Onelink</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Baseline Q3/2026</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Data points collected</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Anonymous interaction records</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">> 1M/tool/năm</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI citation từ tool data</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI engines cite MoMo data insights trong responses</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Measure Q4/2026</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -548,13 +1245,36 @@ Không có competitor nào có data này. Không LLM nào có thể fabricate da
 
 **Capabilities:**
 
-| Capability | Mô tả |
-|---|---|
-| **Variant assignment** | URL-based (A/B routes riêng) hoặc component-based (in-page swap không reload) |
-| **Traffic split** | PM set % phân chia, system assign ngẫu nhiên + consistent per session |
-| **Statistical engine** | Tự tính significance khi đủ sample size. Alert khi p < 0.05 |
-| **Auto-winner** | Winner xác định → notify PM → 1-click promote variant lên production |
-| **Experiment log** | Full history: experiment ID, variants, duration, sample size, winner, uplift |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Capability</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Variant assignment</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL-based (A/B routes riêng) hoặc component-based (in-page swap không reload)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Traffic split</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM set % phân chia, system assign ngẫu nhiên + consistent per session</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Statistical engine</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự tính significance khi đủ sample size. Alert khi p < 0.05</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Auto-winner</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Winner xác định → notify PM → 1-click promote variant lên production</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Experiment log</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Full history: experiment ID, variants, duration, sample size, winner, uplift</td>
+    </tr>
+  </tbody>
+</table>
 
 **Integration:** Events từ experiment tự động gắn `experiment_id` + `variant` vào Umami. Success metric lấy từ downstream: Install, KYC, Transaction (Appsflyer pipeline).
 
@@ -573,12 +1293,42 @@ Không có competitor nào có data này. Không LLM nào có thể fabricate da
 
 **Pipeline 4 lớp:**
 
-| Layer | Track gì | Tool | Output |
-|---|---|---|---|
-| Web behavior | Session → Page → Content → Tool → CTA click | Umami per URL group | Content attribution |
-| Click | Onelink click → source URL → device | Appsflyer + Umami | Channel attribution |
-| Install funnel | Install → Register → KYC → Cashin | Appsflyer Track 2 | User funnel |
-| Revenue proxy | Transaction type + frequency per cohort | App event → BigQuery | Revenue signal |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Layer</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Track gì</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tool</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web behavior</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Session → Page → Content → Tool → CTA click</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Umami per URL group</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content attribution</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Click</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Onelink click → source URL → device</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Appsflyer + Umami</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Channel attribution</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Install funnel</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Install → Register → KYC → Cashin</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Appsflyer Track 2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User funnel</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Revenue proxy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transaction type + frequency per cohort</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">App event → BigQuery</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Revenue signal</td>
+    </tr>
+  </tbody>
+</table>
 
 **Unified View per Use Case:**
 ```
@@ -606,11 +1356,32 @@ Use Case: Vay Nhanh [tháng X/2026]
 
 **12a. Content Decay Detection:**
 
-| Signal | Threshold | Action |
-|---|---|---|
-| Traffic giảm > 20% trong 4 tuần liên tiếp | Warning | Alert Hiến + Inbound Team |
-| Traffic giảm > 50% trong 8 tuần | Critical | AI Enhancement queue - draft re-write |
-| Zero traffic > 90 ngày | Zero-traffic | URL audit: 410 Gone / Redirect / Rewrite decision |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Signal</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Threshold</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic giảm > 20% trong 4 tuần liên tiếp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Warning</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Alert Hiến + Media Team</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic giảm > 50% trong 8 tuần</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Critical</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI Enhancement queue - draft re-write</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Zero traffic > 90 ngày</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Zero-traffic</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL audit: 410 Gone / Redirect / Rewrite decision</td>
+    </tr>
+  </tbody>
+</table>
 
 GSC integration: weekly pull impression + click per URL. Dashboard severity: Warning / Critical / Zero count by Use Case và Pillar.
 
@@ -634,29 +1405,100 @@ GSC integration: weekly pull impression + click per URL. Dashboard severity: War
 
 **Monitoring Setup:**
 
-| AI Engine | Method | Frequency |
-|---|---|---|
-| ChatGPT (GPT-4o) | OpenAI API query + parse response | Weekly |
-| Perplexity | Perplexity API query + source detection | Weekly |
-| Google AI Overview | GSC AI referral data + manual sampling | Weekly |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">AI Engine</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Method</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Frequency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">ChatGPT (GPT-4o)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">OpenAI API query + parse response</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Weekly</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Perplexity</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Perplexity API query + source detection</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Weekly</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Google AI Overview</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC AI referral data + manual sampling</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Weekly</td>
+    </tr>
+  </tbody>
+</table>
 
 **Query Library - 20 Seed Queries × 4 Pillars:**
 
-| Pillar | Ví dụ seed queries |
-|---|---|
-| P1 - Tài chính | "vay tiền online uy tín VN", "check điểm tín dụng miễn phí", "ví điện tử có BNPL VN" |
-| P2 - Bảo hiểm | "bảo hiểm xe máy bắt buộc là gì", "so sánh gói bảo hiểm sức khỏe VN" |
-| P3 - Tiện ích | "tra cứu phạt nguội online", "kiểm tra BHXH còn bao nhiêu tháng" |
-| P4 - Đời sống | "thanh toán vé CGV bằng ví điện tử", "mua esim du lịch Thái Lan giá rẻ" |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Pillar</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ví dụ seed queries</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1 - Tài chính</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"vay tiền online uy tín VN", "check điểm tín dụng miễn phí", "ví điện tử có BNPL VN"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2 - Bảo hiểm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"bảo hiểm xe máy bắt buộc là gì", "so sánh gói bảo hiểm sức khỏe VN"</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P3 - Tiện ích</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"tra cứu phạt nguội online", "kiểm tra BHXH còn bao nhiêu tháng"</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P4 - Đời sống</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"thanh toán vé CGV bằng ví điện tử", "mua esim du lịch Thái Lan giá rẻ"</td>
+    </tr>
+  </tbody>
+</table>
 
 **Dashboard Metrics:**
 
-| Metric | Định nghĩa | Hiện tại | Target Year 1 |
-|---|---|---|---|
-| Citation Rate | % queries MoMo xuất hiện trong response | 0% | 30%+ (bắt đầu từ P3) |
-| Citation Position | Thứ tự xuất hiện trong response | N/A | Top 3 |
-| Citation Accuracy | Claim MoMo được cite có đúng không | N/A | 100% accurate |
-| Weekly trend | Change after llms.txt events | - | Positive correlation |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Định nghĩa</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hiện tại</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target Year 1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Citation Rate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">% queries MoMo xuất hiện trong response</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">30%+ (bắt đầu từ P3)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Citation Position</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thứ tự xuất hiện trong response</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">N/A</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Top 3</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Citation Accuracy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Claim MoMo được cite có đúng không</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">N/A</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">100% accurate</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Weekly trend</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Change after llms.txt events</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">-</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Positive correlation</td>
+    </tr>
+  </tbody>
+</table>
 
 **Trigger:** Citation Rate giảm đột ngột → check llms.txt status + content freshness + competitor action.
 
@@ -725,34 +1567,122 @@ Current: Tỉ lệ trích dẫn tổng thể còn thấp (từng ghi nhận 0% A
 
 ### 7.2. Platform KPIs
 
-| KPI | Định nghĩa | Nguồn | Target 2026 |
-|---|---|---|---|
-| Organic Sessions | Sessions từ Organic | GA4 | Tăng trưởng YoY per Use Case |
-| SoV per Use Case | Impression (GSC) / Total Volume Search | GSC + SEO Inventory | > 40% cho top 3 Use Case |
-| W2A Conversion Rate | Click Onelink / Web Sessions | Appsflyer + Umami | Baseline → +2% per campaign |
-| AI Citation Rate | MoMo được cite trong AI engine responses | Manual test + GA4 AI referral | 30% cho Primary Keywords |
-| Content Quality Score | % bài đạt ≥ 80 SEO/GEO Score | MoSpark internal | 100% bài mới ≥ 80 |
-| PM/PO Self-Service Rate | % LP/Campaign do PM/PO tự tạo | MoSpark logs | 80%+ |
-| Time-to-Publish | Từ brief đến live | MoSpark logs | LP < 1 ngày, Blog < 3 ngày |
-| Zero Hardcode Violation | Campaign bypass Ads Manager | Platform audit | 0 violations |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">KPI</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Định nghĩa</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nguồn</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target 2026</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Organic Sessions</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sessions từ Organic</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GA4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng trưởng YoY per Use Case</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SoV per Use Case</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Impression (GSC) / Total Volume Search</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC + SEO Inventory</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">> 40% cho top 3 Use Case</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">W2A Conversion Rate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Click Onelink / Web Sessions</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Appsflyer + Umami</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Baseline → +2% per campaign</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI Citation Rate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoMo được cite trong AI engine responses</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Manual test + GA4 AI referral</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">30% cho Primary Keywords</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content Quality Score</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">% bài đạt ≥ 80 SEO/GEO Score</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark internal</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">100% bài mới ≥ 80</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/PO Self-Service Rate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">% LP/Campaign do PM/PO tự tạo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark logs</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">80%+</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Time-to-Publish</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Từ brief đến live</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark logs</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LP < 1 ngày, Blog < 3 ngày</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Zero Hardcode Violation</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Campaign bypass Ads Manager</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Platform audit</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0 violations</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 7.3. OKR Alignment 2026
 
-| OKR | MoSpark đóng góp gì |
-|---|---|
-| O1: New User Growth via Organic & W2A | M2 (GenAI Content) + M3 (Ads Manager) → tăng organic traffic và W2A CR |
-| O2: Platform Stability & Technical Readiness | M4 (Scoring Gate) + M6 (AI Crawler Policy) → không có bad pages live |
-| O3: PLG/Utilities-Led SEO | M3 (Widget Library) + M2 (Tool content) → CIC checker, Loan calculator, Insurance tool |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">OKR</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">MoSpark đóng góp gì</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">O1: New User Growth via Organic & W2A</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M2 (GenAI Content) + M3 (Ads Manager) → tăng organic traffic và W2A CR</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">O2: Platform Stability & Technical Readiness</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M4 (Scoring Gate) + M6 (AI Crawler Policy) → không có bad pages live</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">O3: PLG/Utilities-Led SEO</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">M3 (Widget Library) + M2 (Tool content) → CIC checker, Loan calculator, Insurance tool</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 7.4. Measurement-First - Bắt buộc với mọi Spec
 
 "Tốc độ ship mà không có AB test thì không thể cải tiến." MoSpark không chỉ là nơi tạo trang - là nơi học hỏi và cải tiến liên tục. Mọi spec/BRD gửi cho Web Platform phải có 2 field bắt buộc trước khi bắt đầu build:
 
-| Field | Yêu cầu | PIC |
-|---|---|---|
-| **Tracking Event Schema** | List event cần track: event name, properties, trigger condition. Không skip với lý do "sẽ làm sau" | Hiến define standard, DA execute |
-| **AB Test Hypothesis** | Variant A (baseline) vs Variant B (thay đổi) + success metric cụ thể. Không phải "test xem sao" | PM/PO của Use Case đó |
-| **Success Metric trace về NSM** | Metric chính phải trace về New User / MAU / W2A CR - không chỉ pageview hay session | Hiến sign-off |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Field</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Yêu cầu</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">PIC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tracking Event Schema</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">List event cần track: event name, properties, trigger condition. Không skip với lý do "sẽ làm sau"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến define standard, DA execute</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>AB Test Hypothesis</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Variant A (baseline) vs Variant B (thay đổi) + success metric cụ thể. Không phải "test xem sao"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/PO của Use Case đó</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Success Metric trace về NSM</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Metric chính phải trace về New User / MAU / W2A CR - không chỉ pageview hay session</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến sign-off</td>
+    </tr>
+  </tbody>
+</table>
 
 Thiếu Tracking Event Schema hoặc AB Test Hypothesis - spec chưa complete, Web Platform không bắt đầu build.
 
@@ -783,13 +1713,36 @@ Use Case: Phạt Nguội
 
 ### 8.3. Quality Gate tổng hợp
 
-| Gate | Điều kiện pass |
-|---|---|
-| Business Context Complete | Đủ 12 fields, PM xác nhận pháp lý - không thể proceed nếu thiếu |
-| Outline Approval | PM approve outline trước khi AI viết bài |
-| SEO/GEO Score ≥ 60 | Không có Hard Block - Publish bị disable nếu fail |
-| CWV Pass | LCP ≤ 2.5s, INP ≤ 200ms, CLS ≤ 0.1 - Hard Block |
-| CTA Present | Field CTA không rỗng - Hard Block |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Gate</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điều kiện pass</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Business Context Complete</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đủ 12 fields, PM xác nhận pháp lý - không thể proceed nếu thiếu</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Outline Approval</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM approve outline trước khi AI viết bài</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO/GEO Score ≥ 60</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có Hard Block - Publish bị disable nếu fail</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CWV Pass</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LCP ≤ 2.5s, INP ≤ 200ms, CLS ≤ 0.1 - Hard Block</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CTA Present</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Field CTA không rỗng - Hard Block</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -799,55 +1752,207 @@ Use Case: Phạt Nguội
 
 **Mục tiêu:** Stabilize production pipeline + chứng minh W2A conversion với Phạt Nguội pilot.
 
-| Deliverable | Owner | Status |
-|---|---|---|
-| LP Builder - GPD Onboarding | Bảo | In Progress |
-| GenAI Content: Scale Financial (Vay, VTS, CIC) | Trọng + Hiến | In Progress |
-| Ads Manager Widget: Phạt Nguội + BHYT Shortcode | Thuận | In Progress |
-| Umami Live - Phạt Nguội | Thuận | This week |
-| SEO Inventory Dashboard v1 | Thuận (schema) + Hiến (data) | Planning |
-| robots.txt Layer 2+3 | Hiến (spec) + Web Platform | Planning |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Deliverable</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LP Builder - GPD Onboarding</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">In Progress</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GenAI Content: Scale Financial (Vay, VTS, CIC)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trọng + Hiến</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">In Progress</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads Manager Widget: Phạt Nguội + BHYT Shortcode</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thuận</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">In Progress</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Umami Live - Phạt Nguội</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thuận</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">This week</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SEO Inventory Dashboard v1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thuận (schema) + Hiến (data)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Planning</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">robots.txt Layer 2+3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến (spec) + Web Platform</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Planning</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Phase 2: Optimization Loops (Q3-Q4/2026)
 
 **Mục tiêu:** Đóng vòng lặp tối ưu - từ publish đến measure đến improve.
 
-| Deliverable | Timeline | Impact |
-|---|---|---|
-| Ads Manager Phase 2: Placement Registry + Conflict Resolution | Q3/2026 | Multi-Division song song |
-| GSC Auto-Refresh: Phát hiện Content Decay | Q3/2026 | AI Enhance tự động |
-| GEO SoV Dashboard: AI citation tracking per Use Case | Q3/2026 | Visibility vào AI Search |
-| Ads Manager Phase 3: Retargeting + Multi-tenant | Q4/2026 | PM self-service hoàn chỉnh |
-| llms.txt: Master index + per-product full doc | Q3/2026 | GEO first-mover |
-| Interactive Blocks: Calculator, Simulator | Q4/2026 | PLG/Utilities SEO, anti-LLM moat |
-| Health Alert: 404 + Traffic anomaly detection | Q4/2026 | Zero zero-traffic URL mới |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Deliverable</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Timeline</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Impact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads Manager Phase 2: Placement Registry + Conflict Resolution</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q3/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Multi-Division song song</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GSC Auto-Refresh: Phát hiện Content Decay</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q3/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI Enhance tự động</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GEO SoV Dashboard: AI citation tracking per Use Case</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q3/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Visibility vào AI Search</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads Manager Phase 3: Retargeting + Multi-tenant</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q4/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM self-service hoàn chỉnh</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">llms.txt: Master index + per-product full doc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q3/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GEO first-mover</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Interactive Blocks: Calculator, Simulator</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q4/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PLG/Utilities SEO, anti-LLM moat</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Health Alert: 404 + Traffic anomaly detection</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Q4/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Zero zero-traffic URL mới</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Phase 3: Agentic Growth (2027+)
 
 **Mục tiêu:** AI chủ động vận hành vòng lặp tăng trưởng, ít can thiệp thủ công.
 
-| Capability | Mô tả |
-|---|---|
-| White Space Discovery | AI phát hiện ngách thị trường chưa có đối thủ, đề xuất Use Case mới. |
-| Autonomous Campaign | AI lên plan, tạo content, setup Ads, monitor và optimize. |
-| Personalized LP | Nội dung thay đổi theo hành vi và nguồn traffic từng user. |
-| Agentic Help Center | AI Agent thay FAQ tĩnh, xử lý real-time support. |
-| Semantic Linking Engine | Vector embeddings tự gợi ý và chèn internal link tối ưu. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Capability</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">White Space Discovery</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI phát hiện ngách thị trường chưa có đối thủ, đề xuất Use Case mới.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Autonomous Campaign</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI lên plan, tạo content, setup Ads, monitor và optimize.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Personalized LP</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nội dung thay đổi theo hành vi và nguồn traffic từng user.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Agentic Help Center</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI Agent thay FAQ tĩnh, xử lý real-time support.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Semantic Linking Engine</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vector embeddings tự gợi ý và chèn internal link tối ưu.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ## 10. Rủi ro & Giảm thiểu
 
-| # | Rủi ro | Khả năng | Impact | Cách xử lý |
-|---|---|---|---|---|
-| R1 | PM publish message sai trên trang tài chính YMYL | Trung bình | Cao | Business Context 12 fields + Legal Workflow + SEO Lead sign-off |
-| R2 | Thuận overload khi deliver nhiều modules song song | Cao | Cao | Scope nhỏ theo Phase, gate rõ trước khi move module tiếp |
-| R3 | Division bypass Ads Manager - nhờ Dev hardcode | Trung bình | Cao | "No hardcode" policy do Bảo enforce + training PM/PO trước khi access |
-| R4 | Ads conflict giữa Division gây spam UX | Trung bình | Cao | Conflict Detection tự động (Phase 2) + Platform Admin resolve trước live |
-| R5 | Ads ảnh hưởng SEO - bounce rate tăng | Thấp | Cao | Hiến monitor SEO signals; guardrail cứng (1 Popup/session) |
-| R6 | Migration gây traffic drop | Thấp (Zero Redirect) | Rất cao | Monitor 2 tuần post-migration, rollback plan per phase |
-| R7 | AI Citation Rate không cải thiện sau llms.txt | Trung bình | Trung bình | Treat như infrastructure; review sau 6 tháng với 3 signals |
-| R8 | Cannibalization vẫn xảy ra qua edge cases | Thấp | Cao | Triple-layer prevention (Inventory + GenAI Registry + Blog Editor sync) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Rủi ro</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Khả năng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Impact</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cách xử lý</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM publish message sai trên trang tài chính YMYL</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Business Context 12 fields + Legal Workflow + Web Product Lead sign-off</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thuận overload khi deliver nhiều modules song song</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Scope nhỏ theo Phase, gate rõ trước khi move module tiếp</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Division bypass Ads Manager - nhờ Dev hardcode</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"No hardcode" policy do Bảo enforce + training PM/PO trước khi access</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads conflict giữa Division gây spam UX</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Conflict Detection tự động (Phase 2) + Platform Admin resolve trước live</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads ảnh hưởng SEO - bounce rate tăng</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thấp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến monitor SEO signals; guardrail cứng (1 Popup/session)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Migration gây traffic drop</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thấp (Zero Redirect)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Rất cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Monitor 2 tuần post-migration, rollback plan per phase</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AI Citation Rate không cải thiện sau llms.txt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Treat như infrastructure; review sau 6 tháng với 3 signals</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cannibalization vẫn xảy ra qua edge cases</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thấp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Triple-layer prevention (Inventory + GenAI Registry + Blog Editor sync)</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -855,37 +1960,109 @@ Use Case: Phạt Nguội
 
 ### 11.1. Phân vai
 
-| Vai trò | Trách nhiệm | Không làm |
-|---|---|---|
-| **Văn Hiến (Web Product Lead)** | Set SEO/GEO standard, govern Quality Gate, input Market data, sign-off YMYL, audit AI Citation | Không execute tracking, không direct với Dev mà không có spec |
-| **Bảo (Web Platform Manager)** | Product direction MoSpark, Placement Registry, enforce "no hardcode", PO Web Platform sprint | Không làm trực tiếp với Agency hay Inbound |
-| **Thuận + Lộc (Developers)** | Build tất cả modules theo spec, Widget Library, database | Không tham gia campaign creation khi đã có self-service |
-| **Trọng (Developer)** | GenAI Content Engine - AI Tool, Model, Workflow (lõi engine). Thuận lo GenAI Hình (Gallery), Lộc lo phân quyền User | Không build các module khác của MoSpark |
-| **Inbound Team (BMC)** | Content production theo brief Hiến, điền Business Context cùng PM, off-page | Không làm trực tiếp với Web Platform - technical request qua Hiến |
-| **PM/PO Cell Team** | Khởi tạo Use Case, xác nhận Business Context (chịu trách nhiệm pháp lý), approve Outline, tự tạo LP + Ads | Không chỉnh code hoặc nhờ Dev bypass MoSpark |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trách nhiệm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Không làm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Văn Hiến (Web Product Lead)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Set SEO/GEO standard, govern Quality Gate, input Market data, sign-off YMYL, audit AI Citation</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không execute tracking, không direct với Dev mà không có spec</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Bảo (Web Platform Manager)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Product direction MoSpark, Placement Registry, enforce "no hardcode", PO Web Platform sprint</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không làm trực tiếp với Agency hay Media Team</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Thuận + Lộc (Developers)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Build tất cả modules theo spec, Widget Library, database</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không tham gia campaign creation khi đã có self-service</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trọng (Developer)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GenAI Content Engine - AI Tool, Model, Workflow (lõi engine). Thuận lo GenAI Hình (Gallery), Lộc lo phân quyền User</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không build các module khác của MoSpark</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Media Team (BMC)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content production theo brief Hiến, điền Business Context cùng PM, off-page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không làm trực tiếp với Web Platform - technical request qua Hiến</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>PM/PO Cell Team</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khởi tạo Use Case, xác nhận Business Context (chịu trách nhiệm pháp lý), approve Outline, tự tạo LP + Ads</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không chỉnh code hoặc nhờ Dev bypass MoSpark</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 11.2. Escalation Path
 
 Platform issues → Bảo → Hiến review (nếu SEO impact).
-Content quality → Hiến → Inbound Team (nếu Inbound cần training).
+Content quality → Hiến → Media Team (nếu Media Team cần training).
 Resource/Policy → Hiến → Bảo → Công (VP).
 
 ---
 
-
-
 ## 13. Version Log
 
-| Phiên bản | Ngày | Nội dung |
-|---|---|---|
-| v2.6 | 2026-05-12 | Khởi tạo cấu trúc Growth OS. |
-| v2.7 | 2026-05-16 | Bổ sung GSC Loop & Semantic Linking. |
-| v2.8 | 2026-05-16 | Tái cấu trúc footer + version log. |
-| v3.0 | 2026-05-25 | Tái viết thành Product Vision + PRD đầy đủ. Tổng hợp 8 module. |
-| v3.1 | 2026-05-25 | Viết lại ngôn ngữ cho rõ hơn, bỏ văn phong hàn lâm. Bổ sung Bối cảnh Chiến lược từ meetings (Anh Công, Huy Lê, A.Tường). |
-| v3.2 | 2026-05-25 | Redesign Section 2: xóa meeting-transcript style, thay bằng Mandate Chiến lược (2.1) + 4 Growth Pillars (2.2) + đổi tên 2.2 cũ thành 2.3. Bổ sung Elegant Problem Statement (Section 1.1), MoSpark KHÔNG phải (Section 3.4), Measurement-First bắt buộc (Section 7.4). |
-| v3.3 | 2026-05-25 | Bổ sung 5 modules mới M9-M13: PLG Tool Builder (full spec với 4-test framework + 3 tool types + data pipeline), Experiment Engine, Revenue Attribution Pipeline, Content Intelligence Loop, GEO Citation Monitor. Update kiến trúc platform lên 5 lớp. Update Module Catalog table. Thêm 3 Mermaid diagrams cho M9: 4-Test Decision Framework, Tool Types + Pillar Mapping, Data Pipeline → GEO Moat. |
-| v3.4 | 2026-05-31 | **Consistency fix**: (1) M2 GenAI ownership sửa thành Trọng (AI Tool/Model/Workflow) + Thuận (GenAI Hình) + Lộc (phân quyền User) + Hiến (govern), bổ sung Trọng vào RACI 11.1; (2) Pillar P4 (2.2) bỏ 410 Gone thay Noindex (hạ tầng không hỗ trợ); (3) Escalation path 11.2 sửa Tuệ → Bảo (Tuệ nghỉ cuối T5/2026). |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phiên bản</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ngày</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v2.6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-12</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khởi tạo cấu trúc Growth OS.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v2.7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-16</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bổ sung GSC Loop & Semantic Linking.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v2.8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-16</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tái cấu trúc footer + version log.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v3.0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-25</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tái viết thành Product Vision + PRD đầy đủ. Tổng hợp 8 module.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v3.1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-25</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Viết lại ngôn ngữ cho rõ hơn, bỏ văn phong hàn lâm. Bổ sung Bối cảnh Chiến lược từ meetings (Anh Công, Huy Lê, A.Tường).</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v3.2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-25</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Redesign Section 2: xóa meeting-transcript style, thay bằng Mandate Chiến lược (2.1) + 4 Growth Pillars (2.2) + đổi tên 2.2 cũ thành 2.3. Bổ sung Elegant Problem Statement (Section 1.1), MoSpark KHÔNG phải (Section 3.4), Measurement-First bắt buộc (Section 7.4).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v3.3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-25</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bổ sung 5 modules mới M9-M13: PLG Tool Builder (full spec với 4-test framework + 3 tool types + data pipeline), Experiment Engine, Revenue Attribution Pipeline, Content Intelligence Loop, GEO Citation Monitor. Update kiến trúc platform lên 5 lớp. Update Module Catalog table. Thêm 3 Mermaid diagrams cho M9: 4-Test Decision Framework, Tool Types + Pillar Mapping, Data Pipeline → GEO Moat.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">v3.4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-05-31</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Consistency fix</strong>: (1) M2 GenAI ownership sửa thành Trọng (AI Tool/Model/Workflow) + Thuận (GenAI Hình) + Lộc (phân quyền User) + Hiến (govern), bổ sung Trọng vào RACI 11.1; (2) Pillar P4 (2.2) bỏ 410 Gone thay Noindex (hạ tầng không hỗ trợ); (3) Escalation path 11.2 sửa Tuệ → Bảo (Tuệ nghỉ cuối T5/2026).</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

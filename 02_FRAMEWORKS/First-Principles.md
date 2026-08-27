@@ -1,7 +1,7 @@
 # 🧠 First Principles - Deconstruction Skill
 
 ## 🎯 Mục tiêu
-Loại bỏ tư duy "Analogy" (làm vì người khác cũng làm) và thay bằng tư duy "First Principles" (làm vì nó dựa trên sự thật không thể chối cãi). 
+Loại bỏ tư duy "Analogy" (làm vì người khác cũng làm) và thay bằng tư duy "First Principles" (làm vì nó dựa trên sự thật không thể chối cãi).
 
 ---
 
@@ -26,10 +26,27 @@ Dựa trên các sự thật ở Bước 2 để thiết kế giải pháp mới
 
 ## 💡 Ví dụ: Web-to-App Conversion
 
-| Cách làm cũ (Analogy) | Sự thật nguyên tử (First Principles) | Giải pháp mới (Rebuild) |
-|:--- |:--- |:--- |
-| Gắn Smart Banner ở đầu trang vì trang nào cũng làm vậy. | Banner chiếm diện tích nhưng không giải quyết được Job ngay lúc đó. | Chỉ hiện nút "Mở App" ngay sau khi user đã nhận được giá trị (ví dụ: sau khi thấy kết quả tra cứu). |
-| Viết bài blog 2000 từ để rank SEO. | User cần câu trả lời trong 10 giây đầu tiên. | Viết 200 từ Answer-First + 1 Interactive Tool. Bỏ qua word count. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cách làm cũ (Analogy)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Sự thật nguyên tử (First Principles)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giải pháp mới (Rebuild)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gắn Smart Banner ở đầu trang vì trang nào cũng làm vậy.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Banner chiếm diện tích nhưng không giải quyết được Job ngay lúc đó.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chỉ hiện nút "Mở App" ngay sau khi user đã nhận được giá trị (ví dụ: sau khi thấy kết quả tra cứu).</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Viết bài blog 2000 từ để rank SEO.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User cần câu trả lời trong 10 giây đầu tiên.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Viết 200 từ Answer-First + 1 Interactive Tool. Bỏ qua word count.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

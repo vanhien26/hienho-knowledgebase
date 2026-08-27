@@ -51,13 +51,13 @@ Quy trình vận hành và kiểm soát chất lượng trên domain `momo.vn` �
 ```mermaid
 flowchart TD
     Hiến["Văn Hiến (GOVERN Standard)\nWeb Platform Lead"] -- Gửi Technical Request --> Bảo["Web Platform (BUILD Product)\nTech Lead: Thuận/Hiếu"]
-    Inbound["Inbound Team (EXECUTE Content)\nBMC"] -- Đăng ký / Submit Content --> Hiến
-    Hiến -- Phê duyệt / Sign-off Gate --> Inbound
+    Media Team["Media Team (EXECUTE Content)\nBMC"] -- Đăng ký / Submit Content --> Hiến
+    Hiến -- Phê duyệt / Sign-off Gate --> Media Team
 ```
 
 - **Govern (Giám sát & Quy chuẩn):** Do **Văn Hiến (Web Platform)** chịu trách nhiệm. Định nghĩa các tiêu chuẩn SEO/GEO, nghiên cứu thị trường, kiểm tra kỹ thuật (Sitemap, Schema, URL Governance) và là người phê duyệt cuối cùng (Publish Gate Sign-off) trước khi bất kỳ trang nào được đưa lên production.
 - **Build (Xây dựng Nền tảng):** Do **Bảo (Web Platform)** và đội ngũ kỹ sư (FE: Hùng, Thuận, Nhật; BE: Hiếu, Hoài Anh, Duy) phụ trách. Nhận yêu cầu kỹ thuật trực tiếp từ Hiến để phát triển các tính năng lõi trên MoSpark.
-- **Execute (Thực thi Nội dung):** Do **Inbound Marketing Team (BMC)** hoặc các **Cell Teams (BUs)** thực hiện sản xuất nội dung, bài blog, và chạy chiến dịch theo bộ khung chuẩn (Foundation Checklist) do Hiến ban hành.
+- **Execute (Thực thi Nội dung):** Do **Media Team Marketing Team (BMC)** hoặc các **Cell Teams (BUs)** thực hiện sản xuất nội dung, bài blog, và chạy chiến dịch theo bộ khung chuẩn (Foundation Checklist) do Hiến ban hành.
 
 ---
 
@@ -65,12 +65,37 @@ flowchart TD
 
 Hoạt động của GPD Web Platform hướng trực tiếp tới các chỉ số kinh doanh cốt lõi của MoMo:
 
-| Nhóm Chỉ số | Tên Chỉ số | Cách đo lường / Mục tiêu |
-| :--- | :--- | :--- |
-| **Mục tiêu Chính** | **Content Authority** | Lọt vào **Top 3-5 kết quả tìm kiếm** của Google cho 50+ từ khóa tài chính cốt lõi. |
-| **Lưu lượng (Traffic)**| **Organic Traffic (MUV)** | Tăng trưởng lượng người dùng truy cập tự nhiên hàng tháng (Mục tiêu 6 triệu). |
-| **Chuyển đổi** | **W2A Conversion Rate** | Tối ưu hóa tỷ funnel từ Web vào App: `Click CTA -> Onelink -> Install -> Register -> Active`. |
-| **Tầm nhìn AI** | **GEO / AEO Citation** | Tỷ lệ MoMo được trích dẫn nguồn trên các AI Search Engine (Google AI Overview, ChatGPT, Perplexity). |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhóm Chỉ số</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Chỉ số</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cách đo lường / Mục tiêu</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Mục tiêu Chính</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Content Authority</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lọt vào <strong>Top 3-5 kết quả tìm kiếm</strong> của Google cho 50+ từ khóa tài chính cốt lõi.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Lưu lượng (Traffic)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Organic Traffic (MUV)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng trưởng lượng người dùng truy cập tự nhiên hàng tháng (Mục tiêu 6 triệu).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Chuyển đổi</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>W2A Conversion Rate</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tối ưu hóa tỷ funnel từ Web vào App: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Click CTA -> Onelink -> Install -> Register -> Active</code>.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tầm nhìn AI</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GEO / AEO Citation</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tỷ lệ MoMo được trích dẫn nguồn trên các AI Search Engine (Google AI Overview, ChatGPT, Perplexity).</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

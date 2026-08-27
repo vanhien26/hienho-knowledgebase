@@ -15,14 +15,14 @@ Hệ thống được chia thành 3 nhóm người dùng chính:
 - **Quyền hạn:** **Chỉnh sửa và làm tất cả**. Có toàn quyền cấu hình platform, thay đổi luật Quality Gate, xem và can thiệp vào mọi dự án (Mini Web, LP, Ads, Content) của tất cả các Cell Team.
 - **Trách nhiệm chính:** Đảm bảo hệ thống chạy đúng policy, giải quyết các xung đột tài nguyên (VD: 2 Division cùng tranh một vị trí Ads), và định hướng chuẩn SEO/GEO chung.
 
-### 1.2. Inbound - Content Creator
-- **Đại diện:** Đội ngũ Content, SEO, Agency (Inbound Team).
+### 1.2. Media Team - Content Creator
+- **Đại diện:** Đội ngũ Content, SEO, Agency (Media Team).
 - **Quyền hạn:** Có quyền truy cập ngang (Cross-project access) vào **tất cả các nội dung** thuộc Blog / News / GenAI Content / Copywriting của Mini Web. Tuy nhiên, họ bị giới hạn các quyền liên quan đến cấu hình hệ thống hoặc chi tiêu (Ads).
 - **Trách nhiệm chính:** Sản xuất nội dung chuẩn SEO/E-E-A-T, quản lý Master Keyword Registry, tối ưu điểm SEO/GEO Score.
 
 ### 1.3. Cell Team - Use Case Owner (Tenant)
 - **Đại diện:** Product Manager (PM), Product Owner (PO), Growth Manager của từng BU cụ thể (VD: Vay Nhanh, Cinema, Bảo Hiểm).
-- **Quyền hạn:** Quản trị chính dự án (Mini Web, Landing Page, Blog vệ tinh) của **riêng họ**. Họ không thể nhìn thấy hoặc chỉnh sửa dự án của Cell Team khác. 
+- **Quyền hạn:** Quản trị chính dự án (Mini Web, Landing Page, Blog vệ tinh) của **riêng họ**. Họ không thể nhìn thấy hoặc chỉnh sửa dự án của Cell Team khác.
 - **Trách nhiệm chính:** Cung cấp và chịu trách nhiệm pháp lý cho `Business Context` (12 fields), tạo Landing Page chiến dịch, và tự setup chiến dịch Ads Manager chuyển đổi W2A.
 
 ---
@@ -34,7 +34,7 @@ Hệ thống được chia thành 3 nhóm người dùng chính:
 2. **Quality Gate là tuyệt đối (Hard-Rule):**
    - Phân quyền không bypass được Quality Gate. Ngay cả tài khoản Super Admin (Internal) nếu publish một bài viết có SEO Score < 60 điểm hoặc dính lỗi Core Web Vitals nghiêm trọng, hệ thống vẫn sẽ disable nút Publish.
 3. **Single Source of Truth cho Business Context:**
-   - Inbound Team viết bài bằng AI, nhưng **Cell Team (PM) là người duy nhất có quyền khóa (lock) và phê duyệt Business Context**. AI không bao giờ được phép chạy ra khỏi ranh giới Context do PM cung cấp.
+   - Media Team viết bài bằng AI, nhưng **Cell Team (PM) là người duy nhất có quyền khóa (lock) và phê duyệt Business Context**. AI không bao giờ được phép chạy ra khỏi ranh giới Context do PM cung cấp.
 
 ---
 
@@ -42,17 +42,72 @@ Hệ thống được chia thành 3 nhóm người dùng chính:
 
 Dưới đây là bảng phân quyền truy cập chi tiết (View / Edit / Approve / Admin) đối với các Module cốt lõi trên MoSpark:
 
-| Module / Tính năng | Internal (Web Platform) | Inbound | Cell Team (PM/PO) |
-|---|---|---|---|
-| **Tạo Use Case / Project mới** | Admin | No Access | Tạo & Yêu cầu duyệt |
-| **M1: Landing Page Builder** | Admin (All) | Edit Content (All) | View/Edit/Publish (Own Project) |
-| **M2: GenAI Context (12 fields)** | Admin | View Only | **Edit & Approve (Own Project)** |
-| **M2: Sản xuất GenAI Blog/News** | Admin (All) | **Create/Edit/Publish (All)** | View & Review Outline |
-| **M3: Ads Manager (Campaigns)**| Admin (All) | No Access | Create/Run (Own Placement) |
-| **M3: Cấu hình Ads Registry** | **Admin (Global)** | No Access | No Access |
-| **M4: SEO/GEO Quality Gate** | **Cấu hình Rule** | View Rules & Điểm | View Điểm |
-| **M5: SEO Inventory / Keyword** | Admin | Create/Edit (All) | View (Own Project) |
-| **mospark_chatbot: Web Chatbot** | Admin (All) | Edit Bot Data | View Analytics (Own Project) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Module / Tính năng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Internal (Web Platform)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Media Team</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cell Team (PM/PO)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tạo Use Case / Project mới</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Admin</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">No Access</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tạo & Yêu cầu duyệt</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M1: Landing Page Builder</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Admin (All)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Edit Content (All)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">View/Edit/Publish (Own Project)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M2: GenAI Context (12 fields)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Admin</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">View Only</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Edit & Approve (Own Project)</strong></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M2: Sản xuất GenAI Blog/News</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Admin (All)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Create/Edit/Publish (All)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">View & Review Outline</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M3: Ads Manager (Campaigns)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Admin (All)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">No Access</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Create/Run (Own Placement)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M3: Cấu hình Ads Registry</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Admin (Global)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">No Access</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">No Access</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M4: SEO/GEO Quality Gate</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cấu hình Rule</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">View Rules & Điểm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">View Điểm</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>M5: SEO Inventory / Keyword</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Admin</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Create/Edit (All)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">View (Own Project)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>mospark_chatbot: Web Chatbot</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Admin (All)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Edit Bot Data</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">View Analytics (Own Project)</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -61,13 +116,13 @@ Dưới đây là bảng phân quyền truy cập chi tiết (View / Edit / Appr
 Sự phân quyền này tạo ra một vòng lặp phối hợp nhịp nhàng, ví dụ trong luồng xuất bản **GenAI Content**:
 
 1. **Khởi tạo:** PM (Cell Team) tạo Use Case, nhập và xác nhận `Business Context` (Đảm bảo đúng policy sản phẩm, pháp lý).
-2. **Nghiên cứu:** Inbound Team vào chọn từ khóa từ SEO Inventory, không bị giới hạn bởi quyền của dự án.
-3. **Drafting:** Inbound Team chạy luồng GenAI (LLM tự động đọc Business Context mà PM đã chốt để viết bài).
+2. **Nghiên cứu:** Media Team vào chọn từ khóa từ SEO Inventory, không bị giới hạn bởi quyền của dự án.
+3. **Drafting:** Media Team chạy luồng GenAI (LLM tự động đọc Business Context mà PM đã chốt để viết bài).
 4. **Approve:** Tùy thuộc vào quy trình của từng BU, PM có thể vào check outline hoặc bài viết.
-5. **Publish:** Bài viết đi qua M4 (Quality Gate). Nếu pass, Inbound Team ấn Publish.
+5. **Publish:** Bài viết đi qua M4 (Quality Gate). Nếu pass, Media Team ấn Publish.
 6. **Analytics:** PM (Cell Team) quay lại hệ thống để xem dữ liệu Traffic và Web-to-App Conversion từ bài viết đó (Chỉ xem được số của BU mình).
 
-Với mô hình này, MoSpark vừa giữ được tính tự chủ (Cell Team không phải chờ Dev, Inbound không phải mượn tài khoản) vừa đảm bảo sự kiểm soát chặt chẽ từ trung ương (Web Platform).
+Với mô hình này, MoSpark vừa giữ được tính tự chủ (Cell Team không phải chờ Dev, Media Team không phải mượn tài khoản) vừa đảm bảo sự kiểm soát chặt chẽ từ trung ương (Web Platform).
 
 ---
 

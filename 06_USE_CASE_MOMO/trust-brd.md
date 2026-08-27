@@ -1,6 +1,6 @@
 # BRD: Báo Cáo Lừa Đảo & Bản Tin An Toàn Bảo Mật (Trust - Report Scam & Security Newsletter)
 
-> - **Project:** Use Case Báo Cáo Lừa Đảo (Trust) - Web Growth & Inbound Web Platform
+> - **Project:** Use Case Báo Cáo Lừa Đảo (Trust) - Web Growth & Media Team Web Platform
 > - **Main URL:** momo.vn/report-scam & momo.vn/atbm/ban-tin/{quy-nam}
 > - **Division:** Risk & Security (GPD Web Platform)
 > - **Version:** 1.3 · Tháng 6/2026
@@ -64,11 +64,36 @@ Xây dựng niềm tin số toàn diện từ trong ra ngoài (Inside out) dựa
 
 ### 2.1 Hiện trạng Web Assets
 
-| Asset | URL | Trạng thái | Ghi chú |
-|---|---|---|---|
-| Hub page | /report-scam | Chưa build | Landing page giới thiệu và thu thập báo cáo lừa đảo ẩn danh (Form nhập tay) |
-| Bản tin ATBM Quý | /atbm/ban-tin/{quy-nam} | Chưa build | Landing page long-form content tương tác giới thiệu hoạt động & số liệu ATBM từng Quý |
-| AEO/GEO Document | /report-scam/llms.txt | Chưa build | Chuẩn hóa thông tin cảnh báo an toàn cho AI Search Engines |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Asset</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trạng thái</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hub page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/report-scam</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa build</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing page giới thiệu và thu thập báo cáo lừa đảo ẩn danh (Form nhập tay)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bản tin ATBM Quý</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/atbm/ban-tin/{quy-nam}</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa build</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing page long-form content tương tác giới thiệu hoạt động & số liệu ATBM từng Quý</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AEO/GEO Document</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/report-scam/llms.txt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa build</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuẩn hóa thông tin cảnh báo an toàn cho AI Search Engines</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2.2 Phạm vi dự án (Scope & Out-of-Scope)
 *   **In-Scope:**
@@ -119,12 +144,32 @@ Xây dựng niềm tin số toàn diện từ trong ra ngoài (Inside out) dựa
 ### Job #TRUST-02 - Tố cáo nhanh chóng không cần đăng nhập (Scam Victim)
 *   > "Tôi muốn tố cáo nhanh thông tin kẻ lừa đảo mà không muốn mất thời gian tải app MoMo hay đăng ký tài khoản, để tôi có thể cảnh báo cộng đồng và hạn chế thiệt hại mà không gặp rào cản công nghệ."
 
-| Dimension | Nội dung |
-|---|---|
-| **Functional** | - Đọc và hiểu tính năng giới thiệu an toàn của MoMo.<br>- Điền nhanh các trường thông tin cơ bản về kẻ lừa đảo (SĐT/STK, hình ảnh bằng chứng) và nhấn gửi ẩn danh hoàn tất dưới 2 phút. |
-| **Emotional** | - Cảm thấy an tâm vì không bắt buộc để lại danh tính thực.<br>- Giải tỏa tâm lý muốn tố cáo nhanh khi vừa bị lừa đảo. |
-| **Social** | - Đóng góp thông tin hữu ích giúp bảo vệ cộng đồng khỏi kẻ lừa đảo. |
-| **Trigger** | - Người dùng (Non-MoMo) vừa phát hiện hoặc bị lừa đảo chuyển khoản qua tài khoản ví MoMo/Ngân hàng. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dimension</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Functional</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Đọc và hiểu tính năng giới thiệu an toàn của MoMo.<br>- Điền nhanh các trường thông tin cơ bản về kẻ lừa đảo (SĐT/STK, hình ảnh bằng chứng) và nhấn gửi ẩn danh hoàn tất dưới 2 phút.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Emotional</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Cảm thấy an tâm vì không bắt buộc để lại danh tính thực.<br>- Giải tỏa tâm lý muốn tố cáo nhanh khi vừa bị lừa đảo.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Social</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Đóng góp thông tin hữu ích giúp bảo vệ cộng đồng khỏi kẻ lừa đảo.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trigger</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Người dùng (Non-MoMo) vừa phát hiện hoặc bị lừa đảo chuyển khoản qua tài khoản ví MoMo/Ngân hàng.</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -136,7 +181,7 @@ Do dự án tập trung vào Landing Page giới thiệu và thu thập thủ c�
 *   **Form Completion Rate:** Đạt >= 70% (Tỷ lệ người dùng mở Form hoàn thành việc điền thông tin và bấm Submit thành công).
 *   **Average Submission Time:** Dưới 120 giây (Thời gian trung bình người dùng hoàn tất điền form thủ công).
 *   **CS Ticket Generation Success Rate:** 100% dữ liệu submit hợp lệ được tạo ticket tự động thành công trên hệ thống nghiệp vụ CS.
-*   **End-to-End Processing Latency (Thời gian xử lý E2E):** 
+*   **End-to-End Processing Latency (Thời gian xử lý E2E):**
     *   *Client-side Submission:* Dưới **3 giây** (từ lúc nhấn gửi biểu mẫu kèm tối đa 5 file bằng chứng đến khi hiển thị màn hình hoàn tất).
     *   *System-side Processing:* Dưới **5 giây** (từ lúc gửi thành công đến khi ticket nghiệp vụ được khởi tạo hoàn tất trên Risk System).
 
@@ -144,11 +189,36 @@ Do dự án tập trung vào Landing Page giới thiệu và thu thập thủ c�
 
 ## 6. Dependencies & Constraints
 
-| Dependency | Bộ phận | Vai trò | Trạng thái |
-|---|---|---|---|
-| **Risk & Security Team** | Risk | Duyệt các trường dữ liệu tối thiểu và logic xác thực báo cáo lừa đảo thủ công. | Pending |
-| **Legal & Compliance** | Legal | Duyệt nội dung điều khoản miễn trừ trách nhiệm và tuân thủ Nghị định 13. | Pending |
-| **Frontend/Backend Dev** | Tech | Triển khai giao diện tĩnh theo file thiết kế mẫu và API tiếp nhận submit form. | Active |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dependency</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Bộ phận</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trạng thái</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Risk & Security Team</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Risk</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Duyệt các trường dữ liệu tối thiểu và logic xác thực báo cáo lừa đảo thủ công.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Pending</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Legal & Compliance</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Legal</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Duyệt nội dung điều khoản miễn trừ trách nhiệm và tuân thủ Nghị định 13.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Pending</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Frontend/Backend Dev</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tech</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Triển khai giao diện tĩnh theo file thiết kế mẫu và API tiếp nhận submit form.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Active</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

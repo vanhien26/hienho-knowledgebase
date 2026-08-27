@@ -1,9 +1,9 @@
 # MOSPARK MASTER PRODUCT ROADMAP
 ## Lộ trình Năng lực Nền tảng Tăng trưởng (Growth OS) momo.vn
 
-> **Product Owners:** Văn Hiến (Web Product Lead) & Anh Bảo (Head of Web Platform)  
-> **Timeline:** H1/2026 (Đã hoàn thành) – H2/2026 (Hiện tại) – 2027+ (Tầm nhìn)  
-> **Status:** Active  
+> **Product Owners:** Văn Hiến (Web Product Lead) & Anh Bảo (Head of Web Platform)
+> **Timeline:** H1/2026 (Đã hoàn thành) – H2/2026 (Hiện tại) – 2027+ (Tầm nhìn)
+> **Status:** Active
 > **Version:** v3.6 (Cập nhật định hướng hạ tầng truyền thông và phân biệt dự án PLG)
 
 ---
@@ -92,7 +92,7 @@ Về mặt phạm vi sản phẩm hỗ trợ, MoSpark phân định rõ hai tr�
 
 ### 12. Umami Tracking & User Identity (Identify User)
 *   **Umami Base Tracking:** Tích hợp mã theo dõi cơ bản các lượt xem trang (PageView) và tương tác nút bấm (Clicks) cho các module Microsite, Landing Page, và Ads.
-*   **User Identity Back-end:** Hoàn thành phát triển logic phân tích định danh và luồng dữ liệu stitch hành vi người dùng (Anonymous -> Logged-in -> chèn tham số `?wui=` vào link deep-link Onelink -> đối khớp chuyển đổi KYC/giao dịch trong App MoMo).
+*   **User Identity Back-end:** Hoàn thành phát triển logic phân tích định danh và luồng dữ liệu stitch hành vi người dùng (Anonymous ➔ Logged-in ➔ chèn tham số `?wui=` vào link deep-link Onelink ➔ đối khớp chuyển đổi KYC/giao dịch trong App MoMo).
 
 ---
 
@@ -129,8 +129,8 @@ Về mặt phạm vi sản phẩm hỗ trợ, MoSpark phân định rõ hai tr�
 *   **Near Miss Keyword Recommender:** Thuật toán tự động phát hiện và gợi ý các từ khóa ở vị trí 4-15 có volume lớn để tối ưu hóa thứ hạng.
 
 ### 6. Blog Editor
-*   **Tích hợp SEO/GEO Scoring Gate (Cải tiến H2):** 
-    *   *Tính năng:* Tích hợp bộ kiểm duyệt và chấm điểm chất lượng trực tiếp vào Editor. 
+*   **Tích hợp SEO/GEO Scoring Gate (Cải tiến H2):**
+    *   *Tính năng:* Tích hợp bộ kiểm duyệt và chấm điểm chất lượng trực tiếp vào Editor.
     *   *Hard Block Gate:* Chặn nút Publish nếu điểm SEO/GEO < 60 hoặc vi phạm 1 trong 9 lỗi chặn cứng (Robots=noindex, thiếu canonical, LCP > 2.5s, CLS > 0.1, thiếu CTA...).
     *   *YMYL Compliance:* Tự động quét và chấm điểm E-E-A-T (Author Box hiển thị, link social thật của tác giả và Disclaimer).
 *   **CTA Manager (Max 2 CTAs):** Giới hạn tối đa 2 CTA trên một bài blog. Hỗ trợ quản lý vị trí, thiết kế nút bấm và tự sinh deep-link Onelink chuẩn hóa.
@@ -169,7 +169,7 @@ Về mặt phạm vi sản phẩm hỗ trợ, MoSpark phân định rõ hai tr�
 ### 12. Umami Tracking & User Identity (Identify User)
 *   **Hợp tác & Kiểm thử Hạ tầng (SSO / Edge Cookie Deployment):** Do phần back-end bên dưới đã hoàn thiện trong H1, H2 sẽ tập trung vào việc căn chỉnh hạ tầng (aim lại), cấu hình các Edge Middleware để deploy HttpOnly Cookie an toàn và chạy tích hợp định danh thực tế trên production.
 *   **GSC/GA4/BigQuery Integrated Dashboard:** Tích hợp dữ liệu từ Google Search Console, Google Analytics 4, BigQuery và Umami để hiển thị bức tranh toàn cảnh về traffic sources, engagement.
-*   **End-to-End W2A Funnel Stitching:** Đo lường chi tiết hành trình người dùng từ Click Web -> Click to App -> Open App -> Login -> MAU thực tế trên ứng dụng MoMo.
+*   **End-to-End W2A Funnel Stitching:** Đo lường chi tiết hành trình người dùng từ Click Web ➔ Click to App ➔ Open App ➔ Login ➔ MAU thực tế trên ứng dụng MoMo.
 
 ---
 
@@ -200,5 +200,5 @@ Về mặt phạm vi sản phẩm hỗ trợ, MoSpark phân định rõ hai tr�
 *   **Milestone 5 (Q2/2027):** Launching Autonomous Campaign Operation (AI tự vận hành chiến dịch) + Thử nghiệm Agentic Help Center cho các sản phẩm Tài chính.
 
 ---
-*Owner: Web Product Lead & Head of Web Platform | Growth Platform Division (GPD)*  
+*Owner: Web Product Lead & Head of Web Platform | Growth Platform Division (GPD)*
 *Document updated: 2026-07-10 22:28 (Local time)*

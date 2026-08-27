@@ -7,7 +7,6 @@ Nền tảng quản lý và phân phối quảng cáo tự động trên Web
 > - **PIC:** Thuận (Tech)
 > - **Version:** 3.4 · June 2026
 
-
 ---
 
 ## 1. Executive Summary
@@ -27,7 +26,7 @@ Thực tế đã chứng minh nhu cầu: trước khi có Ads Manager, MoMo đã
 Vấn đề sâu hơn là về mô hình vận hành. Khi Web MoMo scale với nhiều trang và nhiều Division muốn chạy Ads đồng thời, cơ chế hardcode thủ công sẽ tạo ra conflict placement, thiếu visibility tổng thể, không có measurement chuẩn, và Dev phải tham gia vào mỗi campaign - trái với triết lý của MoSpark.
 
 ### Resolution
- 
+
 Ads Manager tập trung vào nhiệm vụ tích hợp các định dạng quảng cáo hiện có từ Admin Tool như **Float**, **Balloon**, và cơ chế **A/B Testing** về nền tảng MoSpark, đồng thời cải thiện và chuẩn hóa các định dạng quảng cáo (Format Ads) cốt lõi gồm **Widget** và **Popup** để tối ưu hóa tỷ lệ chuyển đổi.
 
 Hệ thống được phát triển theo lộ trình 3 module kế tiếp nhau:
@@ -41,7 +40,7 @@ Hệ thống được phát triển theo lộ trình 3 module kế tiếp nhau:
 
 ### 2.1. Vai trò của Ads Manager trong hệ sinh thái MoSpark
 
-MoSpark là nền tảng Growth OS của MoMo Web nhằm mục đích tối ưu hóa nội dung và tăng trưởng người dùng. Trong hệ sinh thái MoSpark, **Ads Manager** đóng vai trò là động cơ khai thác hiệu quả toàn bộ traffic trên Web (bao gồm các trang Landing Page, Blog bài viết, FAQ, Merchant Page) để chuyển đổi thành hành vi mở App hoặc cài đặt App (Web-to-App). 
+MoSpark là nền tảng Growth OS của MoMo Web nhằm mục đích tối ưu hóa nội dung và tăng trưởng người dùng. Trong hệ sinh thái MoSpark, **Ads Manager** đóng vai trò là động cơ khai thác hiệu quả toàn bộ traffic trên Web (bao gồm các trang Landing Page, Blog bài viết, FAQ, Merchant Page) để chuyển đổi thành hành vi mở App hoặc cài đặt App (Web-to-App).
 
 Module này hoạt động như một lớp phân phối thông minh, giúp PM/PO tận dụng tối đa lượng lưu lượng truy cập hiện có nhằm thúc đẩy chuyển đổi trực tiếp sang App (W2A) mà không cần sự can thiệp của đội ngũ lập trình (Dev).
 
@@ -49,28 +48,108 @@ Module này hoạt động như một lớp phân phối thông minh, giúp PM/P
 
 MoSpark quản lý 7 loại trang chiến lược trên momo.vn. Ads Manager có thể phủ lên toàn bộ hệ sinh thái này:
 
-| URL Pattern | Loại trang | Vai trò của Ads Manager | Placement Type |
-|---|---|---|---|
-| `/{mini-web}` | Mini Web Use Case | Intent transactional cao | Use Case-specific |
-| `/{mini-web}*` | Advanced Mini Web | Traffic lớn, multi sub-page | Use Case-specific |
-| `/` | Trang chủ | High traffic, awareness | **Shared-source (GPD)** |
-| `/merchant*` | Merchant Page | Cross-sell opportunity | **Shared-source (GPD)** |
-| `/blog*` | Growth Articles | Awareness và soft nudge | Mixed (Global/UC) |
-| `/tin-tuc*` | Communications | Awareness | Shared-source (GPD) |
-| `/hoi-dap*` | Help Center | Low interrupt | Shared-source (GPD) |
-| `/huong-dan*` | Interactive Guides | Low interrupt | Shared-source (GPD) |
-| `/about-us*` | Corporate Pages | Brand trust | Shared-source (GPD) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">URL Pattern</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại trang</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò của Ads Manager</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Placement Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/{mini-web}</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mini Web Use Case</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Intent transactional cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Use Case-specific</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/{mini-web}*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Advanced Mini Web</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic lớn, multi sub-page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Use Case-specific</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang chủ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">High traffic, awareness</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Shared-source (GPD)</strong></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/merchant*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Merchant Page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cross-sell opportunity</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Shared-source (GPD)</strong></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/blog*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Growth Articles</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Awareness và soft nudge</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mixed (Global/UC)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tin-tuc*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Communications</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Awareness</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Shared-source (GPD)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/hoi-dap*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Help Center</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Low interrupt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Shared-source (GPD)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/huong-dan*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Interactive Guides</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Low interrupt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Shared-source (GPD)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/about-us*</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Corporate Pages</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Brand trust</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Shared-source (GPD)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2.3. Quan hệ với Athena (App Ads)
 
 Ads Manager trên MoSpark và Athena trên App là hai hệ thống độc lập, học hỏi tư duy từ nhau nhưng không tích hợp:
 
-| Chiều | Athena (App) | Ads Manager (Web/MoSpark) |
-|---|---|---|
-| User identity | Đã định danh, có lịch sử giao dịch | 100% Anonymous (Web hiện tại chưa có tính năng Login) |
-| Targeting chính | Audience Segment (behavioral) | URL context của trang (intent-based) |
-| Placement unit | Screen trong App | URL/Segment trên Web |
-| Bidding | Có - 3 chiến lược | Không - priority-based |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chiều</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Athena (App)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ads Manager (Web/MoSpark)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User identity</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đã định danh, có lịch sử giao dịch</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">100% Anonymous (Web hiện tại chưa có tính năng Login)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Targeting chính</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Audience Segment (behavioral)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL context của trang (intent-based)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Placement unit</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Screen trong App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">URL/Segment trên Web</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bidding</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có - 3 chiến lược</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không - priority-based</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -92,45 +171,153 @@ Existing user trên Web → [Ads Manager] → Reactivation message → App Open 
 
 ### 3.2. Hai mục tiêu phân phối
 
-| Objective | Định nghĩa | KPI | Loại trang phù hợp |
-|---|---|---|---|
-| **Traffic** | Dẫn user từ Web vào App - click CTA, mở Onelink | CTR, App Open Rate, Install | Mini Web Use Case, Landing Page |
-| **Awareness** | Tăng nhận diện tính năng MoMo với user đang browse | Impression, Reach | Blog, Utility Tool, Partner Page |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Objective</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Định nghĩa</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">KPI</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại trang phù hợp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Traffic</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dẫn user từ Web vào App - click CTA, mở Onelink</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CTR, App Open Rate, Install</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mini Web Use Case, Landing Page</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Awareness</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng nhận diện tính năng MoMo với user đang browse</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Impression, Reach</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog, Utility Tool, Partner Page</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 3.3. JTBD - Những việc cần được hoàn thành
 
 **User trên Web - Ad Format:**
 
-| Job | Context | Ads Manager serve như thế nào |
-|---|---|---|
-| "Biết MoMo có giải pháp cho việc tôi đang làm" | Đang xem trang bảo hiểm, BNPL, vay | Popup/Balloon - benefit cụ thể, CTA trực tiếp |
-| "Nhớ đến MoMo khi đang đọc nội dung" | Đang đọc blog tài chính | Balloon nhẹ, Inline Banner - không interrupt |
-| "Tìm ưu đãi để quyết định dùng MoMo" | Đang xem Landing Page khuyến mãi | Popup gắn Promotion Campaign |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Job</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Context</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ads Manager serve như thế nào</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Biết MoMo có giải pháp cho việc tôi đang làm"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang xem trang bảo hiểm, BNPL, vay</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Popup/Balloon - benefit cụ thể, CTA trực tiếp</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Nhớ đến MoMo khi đang đọc nội dung"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang đọc blog tài chính</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Balloon nhẹ, Inline Banner - không interrupt</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Tìm ưu đãi để quyết định dùng MoMo"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang xem Landing Page khuyến mãi</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Popup gắn Promotion Campaign</td>
+    </tr>
+  </tbody>
+</table>
 
 **User trên Web - Widget JTBD:**
 
-| Job | Context | Widget serve như thế nào |
-|---|---|---|
-| "Tôi muốn biết khoản vay sẽ trả bao nhiêu mỗi tháng" | Đang đọc bài so sánh gói vay | Loan Calculator - nhập số tiền/kỳ hạn → output ngay lập tức |
-| "Phí bảo hiểm xe tôi là bao nhiêu" | Đang tìm hiểu BH xe máy/ô tô | Insurance Calculator - nhập thông tin xe → phí ước tính |
-| "Kiểm tra xe tôi có bị phạt nguội không" | Đang đọc bài về giao thông | Phạt Nguội Lookup - nhập biển số → danh sách vi phạm + tổng tiền |
-| "Điểm tín dụng CIC của tôi là bao nhiêu" | Đang tìm hiểu điều kiện vay | CIC Score Lookup - nhập CCCD → điểm + xếp loại |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Job</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Context</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Widget serve như thế nào</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Tôi muốn biết khoản vay sẽ trả bao nhiêu mỗi tháng"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang đọc bài so sánh gói vay</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loan Calculator - nhập số tiền/kỳ hạn → output ngay lập tức</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Phí bảo hiểm xe tôi là bao nhiêu"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang tìm hiểu BH xe máy/ô tô</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Insurance Calculator - nhập thông tin xe → phí ước tính</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Kiểm tra xe tôi có bị phạt nguội không"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang đọc bài về giao thông</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phạt Nguội Lookup - nhập biển số → danh sách vi phạm + tổng tiền</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Điểm tín dụng CIC của tôi là bao nhiêu"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang tìm hiểu điều kiện vay</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CIC Score Lookup - nhập CCCD → điểm + xếp loại</td>
+    </tr>
+  </tbody>
+</table>
 
 **User trên Web - Component JTBD:**
 
-| Job | Context | Component serve như thế nào |
-|---|---|---|
-| "Nộp phạt nguội ngay sau khi tra cứu xong - không muốn mở App" | Vừa dùng Lookup Widget thấy có vi phạm | Nộp Phạt Component - multi-step inline: chọn khoản → xác nhận → thanh toán |
-| "Mua BH xe ngay khi đã biết phí - không cần thoát trang" | Calculator Widget vừa cho kết quả | Purchase Component - chọn gói → điền thông tin xe → thanh toán inline |
-| "Đặt vé xem phim ngay khi đang xem lịch chiếu" | Đang trên trang Cinema Use Case | Booking Component - chọn phim/suất/ghế → xác nhận → thanh toán inline |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Job</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Context</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Component serve như thế nào</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Nộp phạt nguội ngay sau khi tra cứu xong - không muốn mở App"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vừa dùng Lookup Widget thấy có vi phạm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nộp Phạt Component - multi-step inline: chọn khoản → xác nhận → thanh toán</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Mua BH xe ngay khi đã biết phí - không cần thoát trang"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Calculator Widget vừa cho kết quả</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Purchase Component - chọn gói → điền thông tin xe → thanh toán inline</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Đặt vé xem phim ngay khi đang xem lịch chiếu"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đang trên trang Cinema Use Case</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Booking Component - chọn phim/suất/ghế → xác nhận → thanh toán inline</td>
+    </tr>
+  </tbody>
+</table>
 
 **PM/PO Division:**
 
-| Job | Context | Ads Manager serve như thế nào |
-|---|---|---|
-| "Tự chạy Ads trên trang của Division mà không cần Dev" | Muốn go-live campaign hôm nay | Self-service campaign management trên MoSpark |
-| "Biết inventory nào có sẵn trên Web để đặt Ads" | Muốn biết slot trống/đã chiếm trên từng trang | Placement Registry - Module 2 |
-| "Biết Ads của mình hiệu quả không để tối ưu" | Sau khi campaign chạy 1 tuần | Umami dashboard per Division - Module 3 |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Job</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Context</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ads Manager serve như thế nào</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Tự chạy Ads trên trang của Division mà không cần Dev"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Muốn go-live campaign hôm nay</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Self-service campaign management trên MoSpark</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Biết inventory nào có sẵn trên Web để đặt Ads"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Muốn biết slot trống/đã chiếm trên từng trang</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Placement Registry - Module 2</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Biết Ads của mình hiệu quả không để tối ưu"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sau khi campaign chạy 1 tuần</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Umami dashboard per Division - Module 3</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -204,7 +391,6 @@ graph TD
     style P2_Gate fill:#fef2f2,stroke:#f87171,stroke-width:1px
 ```
 
-
 ### 4.2. Phase 1 (MVP) - Core Operations (Q2/2026)
 
 **Trạng thái:** V1.2 - Chuyển dịch trọng tâm từ Popup sang Native Component (Widget) để phù hợp định hướng PLG.
@@ -262,10 +448,24 @@ Admin view cho Web Platform team - toàn bộ placement và trạng thái sử d
 
 **Multi-tenant per Division:**
 
-| Role | Quyền hạn |
-|---|---|
-| Platform Admin (Web Platform) | Quản lý Placement Registry, resolve conflict, xem toàn bộ hệ thống |
-| Division Operator (PM/PO) | Tạo và vận hành campaign trong phạm vi placement của Division mình |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Role</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Quyền hạn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Platform Admin (Web Platform)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quản lý Placement Registry, resolve conflict, xem toàn bộ hệ thống</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Division Operator (PM/PO)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tạo và vận hành campaign trong phạm vi placement của Division mình</td>
+    </tr>
+  </tbody>
+</table>
 
 **Extended Formats:**
 
@@ -283,16 +483,66 @@ Mỗi Division có dashboard riêng - Campaign performance (Impression, Click, C
 
 Thay vì targeting theo Screen (như Athena), Ads Manager targeting theo loại trang. Format phải phù hợp với intent:
 
-| Format | Mức interrupt | Phù hợp với | Objective |
-|---|---|---|---|
-| **Widget: Calculator** | Rất Thấp - Utility tool, không interrupt | Blog Article, Mini Web Use Case | Intent Capture + PLG (anti-LLM moat) |
-| **Widget: Lookup** | Rất Thấp - Utility tool, không interrupt | Mini Web Use Case, Blog | Intent Capture + PLG (anti-LLM moat) |
-| **Component: Purchase Flow** | Thấp - Inline form trong trang, không redirect | Mini Web Use Case (BH, Phạt Nguội) | Inline Transaction (mua, nộp phạt) |
-| **Component: Booking Flow** | Thấp - Inline form trong trang, không redirect | Cinema, Bus, eSIM, OTA | Inline Transaction (đặt chỗ, đặt vé) |
-| **Balloon Standard / Float Icon** | Thấp - góc màn hình / icon nhỏ | Tất cả trang | Traffic + Awareness |
-| **Inline Banner** | Trung bình - trong content | Blog/News | Awareness |
-| **Sticky Bar** | Trung bình - dính đầu/cuối | Landing Page | Traffic |
-| **Popup / Bottom Sheet** | Cao - chiếm viewport | *Chỉ dùng cho Landing Page khuyến mãi* | Traffic (Hạn chế dùng) |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Format</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mức interrupt</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phù hợp với</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Objective</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Widget: Calculator</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Rất Thấp - Utility tool, không interrupt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog Article, Mini Web Use Case</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Intent Capture + PLG (anti-LLM moat)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Widget: Lookup</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Rất Thấp - Utility tool, không interrupt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mini Web Use Case, Blog</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Intent Capture + PLG (anti-LLM moat)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Component: Purchase Flow</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thấp - Inline form trong trang, không redirect</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mini Web Use Case (BH, Phạt Nguội)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Inline Transaction (mua, nộp phạt)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Component: Booking Flow</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thấp - Inline form trong trang, không redirect</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cinema, Bus, eSIM, OTA</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Inline Transaction (đặt chỗ, đặt vé)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Balloon Standard / Float Icon</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thấp - góc màn hình / icon nhỏ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tất cả trang</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic + Awareness</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Inline Banner</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình - trong content</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog/News</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Awareness</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sticky Bar</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình - dính đầu/cuối</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing Page</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Popup / Bottom Sheet</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao - chiếm viewport</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Chỉ dùng cho Landing Page khuyến mãi</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic (Hạn chế dùng)</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 5.2. Nguyên tắc Format-Page fit
 
@@ -322,7 +572,7 @@ Bên cạnh các định dạng hiển thị quảng cáo truyền thống (Ball
 
 2. **Cơ chế Cross-Traffic (Điều hướng chéo traffic):**
    - Tận dụng lưu lượng truy cập lớn của các trang tin tức/blog hoặc các trang dùng chung (Homepage, Merchant Page) để điều hướng dòng traffic sang các Use Case chuyển đổi cao thông qua các Widget nhúng.
-   - *Ví dụ:* Người dùng đang đọc bài viết Blog về *"Kinh nghiệm mua xe máy cũ"* ➔ Ads Manager tự động phát hiện ngữ cảnh và chèn **Widget Tra cứu Phí Bảo hiểm Xe máy** hoặc **Widget Ước tính khoản vay mua xe** trực tiếp vào giữa bài viết (thông qua Shortcode động).
+   - *Ví dụ:* Người dùng đang đọc bài viết Blog về *"Kinh nghiệm mua xe máy cũ"* -> Ads Manager tự động phát hiện ngữ cảnh và chèn **Widget Tra cứu Phí Bảo hiểm Xe máy** hoặc **Widget Ước tính khoản vay mua xe** trực tiếp vào giữa bài viết (thông qua Shortcode động).
 
 3. **Lợi ích chiến lược:**
    - **Zero-Interrupt Experience:** Native Widget hòa nhập hoàn hảo vào nội dung trang (Native Ad), nâng cao CTR mà không gây khó chịu hay làm suy giảm các chỉ số SEO/Core Web Vitals.
@@ -332,12 +582,47 @@ Bên cạnh các định dạng hiển thị quảng cáo truyền thống (Ball
 
 Ads Manager phân phối 4 loại entity khác nhau về chiều sâu tương tác và mục tiêu chuyển đổi. Đây là framework phân loại chuẩn để tránh nhầm lẫn khi spec và build:
 
-| Loại | Định nghĩa | Chiều sâu tương tác | Output cho User | Mục tiêu chính |
-|---|---|---|---|---|
-| **Ad Format** | Promotional message - user xem và click | Passive (view + click 1 bước) | Thông điệp + CTA dẫn sang App | Awareness / W2A Traffic |
-| **Widget** | Utility tool - user nhập input, nhận output ngay | Interactive 1 bước (nhập → kết quả) | Kết quả tính toán hoặc tra cứu cá nhân hóa | Intent Capture + PLG (anti-LLM moat) |
-| **Component** | Interactive flow - user thực hiện giao dịch multi-step | Interactive nhiều bước (nhập → preview → xác nhận → hoàn tất) | Giao dịch hoàn tất (hoặc handoff sang App) | Inline Transaction - giảm friction |
-| **Gamified Widget** | Công cụ khám phá giải trí - user vuốt, cuộn hoặc chạm để tìm ưu đãi | High Engagement (cử chỉ vuốt/cuộn dọc liên tục) | Danh sách ưu đãi đã lưu ("Túi Quà" - Local Storage) | Giữ chân người dùng + Capture intent ẩn danh + Dopamine hook |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Loại</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Định nghĩa</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chiều sâu tương tác</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Output cho User</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục tiêu chính</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Ad Format</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Promotional message - user xem và click</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Passive (view + click 1 bước)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thông điệp + CTA dẫn sang App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Awareness / W2A Traffic</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Widget</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Utility tool - user nhập input, nhận output ngay</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Interactive 1 bước (nhập → kết quả)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kết quả tính toán hoặc tra cứu cá nhân hóa</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Intent Capture + PLG (anti-LLM moat)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Component</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Interactive flow - user thực hiện giao dịch multi-step</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Interactive nhiều bước (nhập → preview → xác nhận → hoàn tất)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giao dịch hoàn tất (hoặc handoff sang App)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Inline Transaction - giảm friction</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Gamified Widget</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Công cụ khám phá giải trí - user vuốt, cuộn hoặc chạm để tìm ưu đãi</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">High Engagement (cử chỉ vuốt/cuộn dọc liên tục)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Danh sách ưu đãi đã lưu ("Túi Quà" - Local Storage)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giữ chân người dùng + Capture intent ẩn danh + Dopamine hook</td>
+    </tr>
+  </tbody>
+</table>
 
 **Nguyên tắc kiến trúc không thể bỏ qua:**
 
@@ -357,21 +642,91 @@ Widget là các utility tool độc lập. User nhập input, Widget trả về 
 
 #### Calculator Widgets
 
-| Widget | Use Case | Input | Output | W2A / Next Action |
-|---|---|---|---|---|
-| Loan Calculator | Vay Nhanh | Số tiền vay, kỳ hạn | Lãi suất ước tính, số tiền trả/tháng, tổng chi phí | "Vay ngay" → Onelink |
-| Insurance Premium Calculator | BH xe máy / BH ô tô | Loại xe, năm sản xuất, gói BH muốn mua | Phí bảo hiểm ước tính | "Mua ngay" → Purchase Component hoặc App |
-| BNPL Calculator | Ví Trả Sau | Giá trị đơn hàng, số kỳ trả góp | Số tiền trả mỗi kỳ, tổng chi phí | "Dùng Ví Trả Sau" → App |
-| Savings Calculator | Gửi tiết kiệm | Số tiền gốc, kỳ hạn, loại hình tiết kiệm | Lãi dự kiến, tổng nhận về khi đáo hạn | "Gửi tiết kiệm ngay" → App |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Widget</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Use Case</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Input</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Output</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">W2A / Next Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loan Calculator</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vay Nhanh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số tiền vay, kỳ hạn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lãi suất ước tính, số tiền trả/tháng, tổng chi phí</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Vay ngay" → Onelink</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Insurance Premium Calculator</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BH xe máy / BH ô tô</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Loại xe, năm sản xuất, gói BH muốn mua</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phí bảo hiểm ước tính</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Mua ngay" → Purchase Component hoặc App</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BNPL Calculator</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ví Trả Sau</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giá trị đơn hàng, số kỳ trả góp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số tiền trả mỗi kỳ, tổng chi phí</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Dùng Ví Trả Sau" → App</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Savings Calculator</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gửi tiết kiệm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số tiền gốc, kỳ hạn, loại hình tiết kiệm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lãi dự kiến, tổng nhận về khi đáo hạn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Gửi tiết kiệm ngay" → App</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Lookup Widgets
 
-| Widget | Use Case | Input | Output | W2A / Next Action |
-|---|---|---|---|---|
-| Phạt Nguội Lookup | Phạt Nguội | Biển số xe | Danh sách vi phạm, tổng tiền phạt | "Nộp phạt qua MoMo" → Purchase Component |
-| BHYT Lookup | BHXM / BHYT | Số CCCD hoặc mã BHYT | Thông tin BH, ngày hết hạn, nơi đăng ký KCB | "Gia hạn BHYT" → App |
-| CIC Score Lookup | Tín dụng / Vay Nhanh | Số CCCD | Điểm tín dụng CIC, xếp loại | "Xem vay được bao nhiêu" → Loan Calculator hoặc App |
-| Giá Vàng Lookup | Utility / Thanh toán | - (auto refresh) | Bảng giá vàng real-time theo nhà cung cấp | "Giao dịch vàng qua MoMo" → App |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Widget</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Use Case</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Input</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Output</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">W2A / Next Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phạt Nguội Lookup</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phạt Nguội</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Biển số xe</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Danh sách vi phạm, tổng tiền phạt</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Nộp phạt qua MoMo" → Purchase Component</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BHYT Lookup</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BHXM / BHYT</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số CCCD hoặc mã BHYT</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thông tin BH, ngày hết hạn, nơi đăng ký KCB</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Gia hạn BHYT" → App</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CIC Score Lookup</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tín dụng / Vay Nhanh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Số CCCD</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điểm tín dụng CIC, xếp loại</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Xem vay được bao nhiêu" → Loan Calculator hoặc App</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giá Vàng Lookup</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Utility / Thanh toán</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- (auto refresh)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảng giá vàng real-time theo nhà cung cấp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Giao dịch vàng qua MoMo" → App</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 5.7. Component Library (PLG Tool - Active Transaction Flow)
 
@@ -386,20 +741,75 @@ Component thực hiện toàn bộ flow trong Web. Authentication và payment đ
 
 #### Purchase Flow Components
 
-| Component | Use Case | Luồng trong Web | Điều kiện handoff sang App |
-|---|---|---|---|
-| Nộp Phạt Nguội | Phạt Nguội | Lookup kết quả → Chọn khoản phạt cần nộp → Preview tổng tiền → Xác nhận → Thanh toán | Auth + payment qua App nếu user chưa đăng nhập |
-| Mua BH Xe Máy | BH xe máy | Chọn gói → Nhập thông tin xe và chủ xe → Preview chi phí và coverage → Xác nhận → Thanh toán | Auth + payment qua App |
-| Mua BH Ô Tô | BH ô tô vật chất | Chọn loại BH → Nhập thông tin xe → Quote → Review coverage → Xác nhận → Thanh toán | Auth + payment qua App |
-| Mua BH Y Tế | BHYT | Chọn gói BH → Nhập thông tin người được BH → Review coverage và điều khoản → Thanh toán | Auth + payment qua App |
-| Nạp Điện Thoại | Telecom | Nhập số điện thoại → Chọn mệnh giá → Xác nhận → Thanh toán | Auth + payment qua App |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Component</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Use Case</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Luồng trong Web</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điều kiện handoff sang App</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nộp Phạt Nguội</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phạt Nguội</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lookup kết quả → Chọn khoản phạt cần nộp → Preview tổng tiền → Xác nhận → Thanh toán</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auth + payment qua App nếu user chưa đăng nhập</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mua BH Xe Máy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BH xe máy</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chọn gói → Nhập thông tin xe và chủ xe → Preview chi phí và coverage → Xác nhận → Thanh toán</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auth + payment qua App</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mua BH Ô Tô</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BH ô tô vật chất</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chọn loại BH → Nhập thông tin xe → Quote → Review coverage → Xác nhận → Thanh toán</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auth + payment qua App</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mua BH Y Tế</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">BHYT</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chọn gói BH → Nhập thông tin người được BH → Review coverage và điều khoản → Thanh toán</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auth + payment qua App</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nạp Điện Thoại</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Telecom</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhập số điện thoại → Chọn mệnh giá → Xác nhận → Thanh toán</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auth + payment qua App</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Booking Flow Components
 
-| Component | Use Case | Luồng trong Web | Điều kiện handoff sang App |
-|---|---|---|---|
-| Đặt Vé Cinema | Cinema | Chọn phim → Chọn rạp và suất chiếu → Chọn ghế → Nhập thông tin liên hệ → Xác nhận → Thanh toán | Auth + payment qua App |
-| Đặt Vé Bus | Bus / OTA | Chọn tuyến → Chọn ngày/giờ → Chọn ghế → Nhập thông tin hành khách → Xác nhận → Thanh toán | Auth + payment qua App |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Component</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Use Case</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Luồng trong Web</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Điều kiện handoff sang App</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đặt Vé Cinema</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cinema</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chọn phim → Chọn rạp và suất chiếu → Chọn ghế → Nhập thông tin liên hệ → Xác nhận → Thanh toán</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auth + payment qua App</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đặt Vé Bus</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bus / OTA</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chọn tuyến → Chọn ngày/giờ → Chọn ghế → Nhập thông tin hành khách → Xác nhận → Thanh toán</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auth + payment qua App</td>
+    </tr>
+  </tbody>
+</table>
 
 **Relationship giữa Widget và Component - Chuỗi tương tác:**
 
@@ -452,9 +862,9 @@ Gamified Widgets là các thành phần tương tác cao để giữ chân ngư�
 graph TD
     %% Định nghĩa các bước trong quy trình
     Start((Bắt đầu)) --> Demand[PM/PO Division có nhu cầu chạy Ads]
-    
+
     Demand --> CheckRegistry{Check Placement Registry<br/>Module 2+}
-    
+
     CheckRegistry -- "Slot trống?" --> CreateCampaign[Tạo Campaign trên MoSpark]
     CheckRegistry -- "Đã bị chiếm" --> Negotiate[Thương lượng / Chọn Slot khác]
     Negotiate --> CreateCampaign
@@ -468,7 +878,7 @@ graph TD
     end
 
     SetFrequency --> SelfCheck[Preview & Self-check]
-    
+
     subgraph Self_Check_List [Nội dung Self-check]
         SelfCheck -.-> |"Mobile/Desktop View"| Check1[Preview Viewport]
         SelfCheck -.-> |"Test Link"| Check2[Verify Onelink]
@@ -476,18 +886,18 @@ graph TD
     end
 
     Check1 & Check2 & Check3 --> Submit[Submit Campaign]
-    
+
     Submit --> Approval{Auto-Publish <br/> hoặc Ops Approve}
-    
+
     Approval -- "Reject (Sửa lại)" --> CreateCampaign
     Approval -- "Pass Checklist" --> Live[Campaign LIVE]
-    
+
     Live --> Monitor[Monitor qua Umami Dashboard]
-    
+
     Monitor --> Analysis{Hiệu quả?}
     Analysis -- "Tiếp tục" --> Monitor
     Analysis -- "Có vấn đề / Xong" --> Pause[Tự Pause Campaign<br/>Không cần Dev]
-    
+
     Pause --> End((Kết thúc))
 
     %% Định nghĩa Style
@@ -500,15 +910,35 @@ graph TD
 
 ### 6.2. Phân vai rõ ràng
 
-| Người | Vai trò trong Ads Manager |
-|---|---|
-| **Bảo (Platform Admin)** | Product direction, Quản lý Placement Registry, duyệt campaign (nếu cần), enforce "no hardcode" policy |
-| **Thuận** | Owner kỹ thuật, tập trung maintain platform và build Widget Library (Shortcode) |
-| **Văn Hiến** | Observe, advise về Content Standards và SEO/GEO impact |
-| **PM/PO Division** | Tạo campaign, self-check, submit |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Người</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai trò trong Ads Manager</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Bảo (Platform Admin)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Product direction, Quản lý Placement Registry, duyệt campaign (nếu cần), enforce "no hardcode" policy</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Thuận</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Owner kỹ thuật, tập trung maintain platform và build Widget Library (Shortcode)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Văn Hiến</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Observe, advise về Content Standards và SEO/GEO impact</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>PM/PO Division</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tạo campaign, self-check, submit</td>
+    </tr>
+  </tbody>
+</table>
 
 **Nguyên tắc MVP (Dưới 50 Campaigns):**
-- Giai đoạn MVP, ưu tiên cơ chế **Auto-Publish** sau khi PM/PO pass Content Standards Checklist để giảm rào cản vận hành. 
+- Giai đoạn MVP, ưu tiên cơ chế **Auto-Publish** sau khi PM/PO pass Content Standards Checklist để giảm rào cản vận hành.
 - Tech Lead (Thuận) được giải phóng khỏi khâu duyệt Campaign để tập trung phát triển Product Component (Widget). Nếu có conflict, Platform Admin (Bảo) sẽ xử lý.
 - Hiến observe health của hệ thống Ads về góc độ SEO/GEO: đảm bảo Ads không ảnh hưởng negative đến crawl và UX.
 - Mọi campaign phải đi qua Ads Manager - không hardcode vào code.
@@ -518,14 +948,40 @@ graph TD
 
 PM/PO tự review trước khi submit để tăng chất lượng và giảm vòng lặp:
 
-| Hạng mục | Câu hỏi tự kiểm tra |
-|---|---|
-| Benefit cụ thể | Message có nêu lợi ích rõ ràng, có thể verify không? |
-| CTA khớp destination | CTA text có khớp với trang đích sau khi click không? |
-| Onelink hoạt động | Đã test deeplink trước khi submit chưa? |
-| Format phù hợp | Format có phù hợp với loại trang đang nhắm không? |
-| Điều kiện tài chính | Nếu có số liệu tài chính, đã verify accuracy chưa? |
-| Image spec | Ảnh đúng kích thước theo format spec chưa? |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hạng mục</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Câu hỏi tự kiểm tra</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Benefit cụ thể</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Message có nêu lợi ích rõ ràng, có thể verify không?</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CTA khớp destination</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CTA text có khớp với trang đích sau khi click không?</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Onelink hoạt động</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đã test deeplink trước khi submit chưa?</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Format phù hợp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Format có phù hợp với loại trang đang nhắm không?</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điều kiện tài chính</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nếu có số liệu tài chính, đã verify accuracy chưa?</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Image spec</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ảnh đúng kích thước theo format spec chưa?</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 6.4. A/B Testing trên Landing Page Builder
 
@@ -533,45 +989,148 @@ A/B Testing là feature **owned hoàn toàn bởi Ads Manager**. Landing Page Bu
 
 #### Architecture & Ownership
 
-| Module | Trách nhiệm |
-|---|---|
-| **Landing Page Builder** | Tạo LP variants (A/B) và publish lên URL riêng biệt - không handle test logic |
-| **Ads Manager** | Toàn bộ test logic: nhận variant URLs, cấu hình split ratio, phân phối traffic, quản lý vòng đời test |
-| **Umami** | Đo lường per variant: Pageview, CTR, W2A, Scroll depth, Dismiss rate |
-| **PM/PO** | Review data, declare winner thủ công trong Ads Manager |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Module</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trách nhiệm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Landing Page Builder</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tạo LP variants (A/B) và publish lên URL riêng biệt - không handle test logic</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Ads Manager</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Toàn bộ test logic: nhận variant URLs, cấu hình split ratio, phân phối traffic, quản lý vòng đời test</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Umami</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đo lường per variant: Pageview, CTR, W2A, Scroll depth, Dismiss rate</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>PM/PO</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Review data, declare winner thủ công trong Ads Manager</td>
+    </tr>
+  </tbody>
+</table>
 
 #### 3 Loại A/B Test
 
-| Type | Mô tả | Khi nào dùng |
-|---|---|---|
-| **LP Variant** | 2 phiên bản Landing Page khác nhau hoàn toàn - layout, copy, CTA, thứ tự module | Test major structural change - high effort |
-| **Ad Creative** | Cùng 1 LP nhưng Balloon/Popup dẫn vào LP có 2 creative khác nhau (ảnh, headline, CTA text) | Test message/creative trước khi build LP mới - low effort |
-| **CTA/Copy trên LP** | Cùng 1 LP layout, chỉ thay đổi CTA text hoặc hero headline | Test micro copy - low effort |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Type</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mô tả</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Khi nào dùng</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>LP Variant</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2 phiên bản Landing Page khác nhau hoàn toàn - layout, copy, CTA, thứ tự module</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Test major structural change - high effort</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Ad Creative</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cùng 1 LP nhưng Balloon/Popup dẫn vào LP có 2 creative khác nhau (ảnh, headline, CTA text)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Test message/creative trước khi build LP mới - low effort</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>CTA/Copy trên LP</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cùng 1 LP layout, chỉ thay đổi CTA text hoặc hero headline</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Test micro copy - low effort</td>
+    </tr>
+  </tbody>
+</table>
 
 > **Phân biệt input:** LP Variant và CTA/Copy test cần PM tạo trang trước trong LP Builder, sau đó mang URL vào Ads Manager để setup test. Ad Creative test không cần LP Builder - cấu hình toàn bộ trong Ads Manager.
 
 #### Workflow A/B Test
 
-| Bước | Nơi thực hiện | Hành động |
-|---|---|---|
-| 1 | LP Builder | PM tạo Variant A (LP gốc) và Variant B (LP thay đổi), publish lên 2 URL riêng |
-| 2 | Ads Manager | PM tạo A/B Test mới: nhập URL Variant A + B |
-| 3 | Ads Manager | PM cấu hình split ratio (default 50/50, có thể adjust - ví dụ 80/20 để giảm risk) |
-| 4 | Ads Manager | PM set thời gian chạy test, activate |
-| 5 | Umami | Auto-track per variant: pageview, CTR, W2A, scroll depth |
-| 6 | Ads Manager | PM xem performance dashboard per variant sau tối thiểu 7 ngày |
-| 7 | Ads Manager | PM declare winner - pause Variant thua, promote Variant thắng làm primary |
-| 8 | LP Builder | Archive Variant thua - không delete, giữ để reference |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Bước</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nơi thực hiện</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hành động</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LP Builder</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM tạo Variant A (LP gốc) và Variant B (LP thay đổi), publish lên 2 URL riêng</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads Manager</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM tạo A/B Test mới: nhập URL Variant A + B</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads Manager</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM cấu hình split ratio (default 50/50, có thể adjust - ví dụ 80/20 để giảm risk)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads Manager</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM set thời gian chạy test, activate</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Umami</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Auto-track per variant: pageview, CTR, W2A, scroll depth</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads Manager</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM xem performance dashboard per variant sau tối thiểu 7 ngày</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads Manager</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM declare winner - pause Variant thua, promote Variant thắng làm primary</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LP Builder</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Archive Variant thua - không delete, giữ để reference</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Winner Declaration - Manual (PM)
 
 Không có auto-winner detection. PM tự phán quyết trong Ads Manager dựa trên:
 
-| Metric | Priority | Ghi chú |
-|---|---|---|
-| CTR | Primary | Click vào Onelink / App action |
-| W2A Rate | Secondary | Install → Register attributed từ Landing Page |
-| Dismiss Rate | Tertiary | Nếu test có Balloon/Popup dẫn vào LP |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Priority</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Ghi chú</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CTR</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Primary</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Click vào Onelink / App action</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">W2A Rate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Secondary</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Install → Register attributed từ Landing Page</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dismiss Rate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tertiary</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nếu test có Balloon/Popup dẫn vào LP</td>
+    </tr>
+  </tbody>
+</table>
 
 **Quy tắc vận hành:**
 - Chạy tối thiểu **7 ngày** trước khi review - ít hơn thì data quá ít để conclude
@@ -595,11 +1154,32 @@ A/B Testing chỉ áp dụng cho **Landing Page** trong Phase 1:
    *   Tự động phân phối Banner/Widget cá nhân hóa phù hợp với intent sử dụng khi người dùng quay lại các trang dùng chung.
 
 ### Lộ trình chi tiết theo Module
-| Module / Hạng mục | Timeline | Trọng tâm chi tiết |
-|---|---|---|
-| **Admin Tool & Format Integration** | Done - H1/2026 | Tích hợp Float, Balloon, A/B Testing từ Admin Tool về MoSpark; Nâng cấp định dạng Widget & Popup. |
-| **Ads Placement & Conflict Resolution** | Active - H2/2026 | Placement Registry MVP + Conflict Resolution + Inventory Dashboard + UX Guardrails Enforcement. |
-| **On-site Retargeting & Multi-tenant** | Active - H2/2026 | Ghi vết Local Storage + Cá nhân hóa Ads cho user ẩn danh + Phân quyền đa BU (RBAC). |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Module / Hạng mục</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Timeline</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trọng tâm chi tiết</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Admin Tool & Format Integration</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Done - H1/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tích hợp Float, Balloon, A/B Testing từ Admin Tool về MoSpark; Nâng cấp định dạng Widget & Popup.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Ads Placement & Conflict Resolution</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Active - H2/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Placement Registry MVP + Conflict Resolution + Inventory Dashboard + UX Guardrails Enforcement.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>On-site Retargeting & Multi-tenant</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Active - H2/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ghi vết Local Storage + Cá nhân hóa Ads cho user ẩn danh + Phân quyền đa BU (RBAC).</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -607,13 +1187,42 @@ A/B Testing chỉ áp dụng cho **Landing Page** trong Phase 1:
 
 ### 7.1. Ưu tiên triển khai theo loại trang
 
-| Priority | Use Case | Lý do |
-|---|---|---|
-| P0 | Mini Web Use Case (bảo hiểm, BNPL, vay, phạt nguội) | Intent transactional cao nhất, gần điểm convert |
-| P0 | Landing Page khuyến mãi | User đang tìm ưu đãi - highly receptive |
-| P1 | Blog/News tài chính | Traffic lớn, cơ hội Awareness |
-| P1 | Partner Page (/merchant) | Cross-sell opportunity |
-| P2 | Help Center, Guide | Chỉ Awareness nhẹ - không interrupt flow |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Priority</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Use Case</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Lý do</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mini Web Use Case (bảo hiểm, BNPL, vay, phạt nguội)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Intent transactional cao nhất, gần điểm convert</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Landing Page khuyến mãi</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User đang tìm ưu đãi - highly receptive</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Blog/News tài chính</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic lớn, cơ hội Awareness</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Partner Page (/merchant)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cross-sell opportunity</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Help Center, Guide</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chỉ Awareness nhẹ - không interrupt flow</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 7.2. Out of Scope
 
@@ -640,26 +1249,78 @@ User đã có app nhưng inactive → vào web tìm kiếm → thấy Ads nhắc
 
 **Module 1 - Baseline (đang đo):**
 
-| Metric | Baseline (hardcode Phase 0) | Target |
-|---|---|---|
-| CTR (Traffic campaigns) | 2.4% | 4%+ |
-| Dismiss Rate | 78.3% | Dưới 65% |
-| Time-to-live | Nhiều ngày (phụ thuộc Dev) | Trong 1 ngày làm việc |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Baseline (hardcode Phase 0)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CTR (Traffic campaigns)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2.4%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4%+</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dismiss Rate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">78.3%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dưới 65%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Time-to-live</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhiều ngày (phụ thuộc Dev)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trong 1 ngày làm việc</td>
+    </tr>
+  </tbody>
+</table>
 
 **Module 2 - Platform health:**
 
-| Metric | Target |
-|---|---|
-| Placement conflict rate | Dưới 10% submissions |
-| Zero hardcode violation | Không có campaign nào bypass platform |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Placement conflict rate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dưới 10% submissions</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Zero hardcode violation</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không có campaign nào bypass platform</td>
+    </tr>
+  </tbody>
+</table>
 
 **Module 3 - Business impact:**
 
-| Metric | Target |
-|---|---|
-| Division self-service rate | 80%+ campaign do Division tự vận hành |
-| Install attributed to Web Ads | TBD sau 1 tháng Module 3 data |
-| MAU contribution từ Web channel | TBD - align với mục tiêu MAU 16M/2026 |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Division self-service rate</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">80%+ campaign do Division tự vận hành</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Install attributed to Web Ads</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TBD sau 1 tháng Module 3 data</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MAU contribution từ Web channel</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">TBD - align với mục tiêu MAU 16M/2026</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 8.3. Success Gate per Module
 
@@ -677,13 +1338,54 @@ User đã có app nhưng inactive → vào web tìm kiếm → thấy Ads nhắc
 
 ## 9. Risks
 
-| # | Rủi ro | Khả năng | Impact | Mitigation |
-|---|---|---|---|---|
-| R1 | PM/PO publish message sai trên trang tài chính - ảnh hưởng YMYL trust | Trung bình (nhiều Division, nhiều operator) | Cao | Content Standards checklist + Thuận review trước khi live |
-| R2 | Placement conflict giữa các Division gây UX xấu hoặc Ads spam | Trung bình | Cao | Conflict detection tự động + Platform Admin resolve trước khi campaign live |
-| R3 | Ads impact negative đến SEO - crawl, UX signal (bounce rate tăng) | Thấp | Cao | Hiến observe và alert nếu phát hiện signal bất thường; global guardrail chặt |
-| R4 | Division không dùng platform - vẫn nhờ Dev hardcode | Trung bình | Cao | "No hardcode" policy enforce từ Bảo + training trước khi Division được access |
-| R5 | Thuận overload khi phải build M2+M3 trong cùng 2026 | Cao | Cao | Break scope nhỏ per module; gate rõ ràng trước khi move module |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">#</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Rủi ro</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Khả năng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Impact</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mitigation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/PO publish message sai trên trang tài chính - ảnh hưởng YMYL trust</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình (nhiều Division, nhiều operator)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content Standards checklist + Thuận review trước khi live</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Placement conflict giữa các Division gây UX xấu hoặc Ads spam</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Conflict detection tự động + Platform Admin resolve trước khi campaign live</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads impact negative đến SEO - crawl, UX signal (bounce rate tăng)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thấp</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiến observe và alert nếu phát hiện signal bất thường; global guardrail chặt</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Division không dùng platform - vẫn nhờ Dev hardcode</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trung bình</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"No hardcode" policy enforce từ Bảo + training trước khi Division được access</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">R5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thuận overload khi phải build M2+M3 trong cùng 2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cao</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Break scope nhỏ per module; gate rõ ràng trước khi move module</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -691,22 +1393,68 @@ User đã có app nhưng inactive → vào web tìm kiếm → thấy Ads nhắc
 
 ### Roadmap 2026
 
-| Phase | Timeline | Mục tiêu trọng tâm |
-|---|---|---|
-| **Phase 1: MVP & Core Ops** | **Q2/2026** | **Tích hợp các định dạng Ads từ Admin Tool (Float, Balloon, A/B Testing) về MoSpark.** Đồng thời cải thiện và chuẩn hóa các Format hiển thị (Widget, Popup) để tối ưu hóa phễu chuyển đổi Web-to-App. |
-| **Phase 2: Inventory Mgmt** | **Q3/2026** | Placement Registry MVP + Xử lý Conflict tự động + Tích hợp hiển thị Reach Estimate. |
-| **Phase 3: Retargeting & Gamification** | **Q4/2026** | Kích hoạt On-site Retargeting (bám đuổi qua Local Storage) + Gamified Discovery Widgets (Swipe to Match, Doom Scroll, Social Feed) + Phân quyền Division tự chạy Ads. |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phase</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Timeline</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục tiêu trọng tâm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phase 1: MVP & Core Ops</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Q2/2026</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tích hợp các định dạng Ads từ Admin Tool (Float, Balloon, A/B Testing) về MoSpark.</strong> Đồng thời cải thiện và chuẩn hóa các Format hiển thị (Widget, Popup) để tối ưu hóa phễu chuyển đổi Web-to-App.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phase 2: Inventory Mgmt</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Q3/2026</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Placement Registry MVP + Xử lý Conflict tự động + Tích hợp hiển thị Reach Estimate.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phase 3: Retargeting & Gamification</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Q4/2026</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kích hoạt On-site Retargeting (bám đuổi qua Local Storage) + Gamified Discovery Widgets (Swipe to Match, Doom Scroll, Social Feed) + Phân quyền Division tự chạy Ads.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Action Plan (Chỉ focus Phase 1)
 
 Nhằm giải quyết dứt điểm các mục tiêu tích hợp và nâng cấp định dạng trong Phase 1 (Q2/2026), danh sách hành động của đội ngũ được quy hoạch cụ thể:
 
-| Deliverable | Owner | Mục đích |
-|---|---|---|
-| Admin Tool Ads Integration | Thuận | Code tích hợp, chuyển dịch các định dạng quảng cáo Float và Balloon từ Admin Tool cũ về chạy trực tiếp trên MoSpark. |
-| A/B Testing Engine v1 | Thuận | Phát triển động cơ A/B Testing trên MoSpark (split traffic, đo lường metrics của LP variant và Ad creative). |
-| Ads Format Improvement | Thuận | Cải thiện UX/UI và tối ưu hiệu suất hiển thị của Widget (nhúng CMS Shortcode) và Popup để giảm dismiss rate. |
-| PM/PO Playbook | Bảo + Hiến advise | Tài liệu hướng dẫn PM/PO cấu hình ads, widget và các tiêu chuẩn kiểm duyệt nội dung (Content Standards). |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Deliverable</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Owner</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục đích</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Admin Tool Ads Integration</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thuận</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Code tích hợp, chuyển dịch các định dạng quảng cáo Float và Balloon từ Admin Tool cũ về chạy trực tiếp trên MoSpark.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">A/B Testing Engine v1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thuận</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phát triển động cơ A/B Testing trên MoSpark (split traffic, đo lường metrics của LP variant và Ad creative).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads Format Improvement</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thuận</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cải thiện UX/UI và tối ưu hiệu suất hiển thị của Widget (nhúng CMS Shortcode) và Popup để giảm dismiss rate.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM/PO Playbook</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo + Hiến advise</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tài liệu hướng dẫn PM/PO cấu hình ads, widget và các tiêu chuẩn kiểm duyệt nội dung (Content Standards).</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Kế hoạch Nâng cấp Tính năng trong H2/2026 (Phase 2 & 3 Implementation)
 
@@ -718,11 +1466,32 @@ Nhằm giải quyết dứt điểm các mục tiêu tích hợp và nâng cấp
    *   Tự động phân phối Banner/Widget cá nhân hóa phù hợp với intent sử dụng khi người dùng quay lại các trang dùng chung.
 
 ### Lộ trình chi tiết theo Module
-| Module / Hạng mục | Timeline | Trọng tâm chi tiết |
-|---|---|---|
-| **Admin Tool & Format Integration** | Done - H1/2026 | Tích hợp Float, Balloon, A/B Testing từ Admin Tool về MoSpark; Nâng cấp định dạng Widget & Popup. |
-| **Ads Placement & Conflict Resolution** | Active - H2/2026 | Placement Registry MVP + Conflict Resolution + Inventory Dashboard + UX Guardrails Enforcement. |
-| **On-site Retargeting & Multi-tenant** | Active - H2/2026 | Ghi vết Local Storage + Cá nhân hóa Ads cho user ẩn danh + Phân quyền đa BU (RBAC). |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Module / Hạng mục</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Timeline</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trọng tâm chi tiết</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Admin Tool & Format Integration</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Done - H1/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tích hợp Float, Balloon, A/B Testing từ Admin Tool về MoSpark; Nâng cấp định dạng Widget & Popup.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Ads Placement & Conflict Resolution</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Active - H2/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Placement Registry MVP + Conflict Resolution + Inventory Dashboard + UX Guardrails Enforcement.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>On-site Retargeting & Multi-tenant</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Active - H2/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ghi vết Local Storage + Cá nhân hóa Ads cho user ẩn danh + Phân quyền đa BU (RBAC).</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
@@ -744,7 +1513,7 @@ Nhằm giải quyết dứt điểm các mục tiêu tích hợp và nâng cấp
   - Cập nhật JTBD (3.3): Thêm Widget JTBD và Component JTBD để phân biệt rõ nhu cầu của user theo từng loại entity.
   - Cập nhật Format table (5.1): Tách "Native Widget (Product Component)" thành 4 rows riêng biệt: Calculator, Lookup, Purchase Flow, Booking Flow.
   - Bổ sung concept Shortcode chain: `[widget:phat-nguoi] [component:nop-phat]` - Widget output có thể pre-fill vào Component input.
-- **Tháng 5/2026 (v3.0):** 
+- **Tháng 5/2026 (v3.0):**
   - Điều chỉnh định hướng MVP: Giảm ưu tiên Popup, tập trung vào **Native Product Component (Widget)**.
   - Cập nhật luồng vận hành (Workflow): Áp dụng cơ chế Auto-Publish cho PM/PO (scale <50 campaigns) để giảm nút thắt cổ chai ở Tech Lead.
   - Đẩy nhanh lộ trình (Roadmap): Native Widget được đôn lên làm trọng tâm của Q2/2026.

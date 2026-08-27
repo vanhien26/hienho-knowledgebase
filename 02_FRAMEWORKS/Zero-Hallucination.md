@@ -37,11 +37,32 @@ Khi review nội dung do AI tạo ra, Agent phải:
 
 ## 💡 Ví dụ: Kiểm soát nội dung "Vay Nhanh"
 
-| Nội dung AI tạo | Hallucination Risk | Cách xử lý |
-|:--- |:--- |:--- |
-| "Lãi suất vay nhanh chỉ từ 1%/tháng." | **Cao** (Số liệu nhạy cảm) | Check momo.vn/vay-nhanh ➔ Đính chính số thực ➔ Ghi rõ ngày cập nhật. |
-| "Theo báo cáo của MoMo năm 2025..." | **Trung bình** (Trích dẫn) | Tìm báo cáo gốc ➔ Nếu không thấy ➔ Xóa claim này. |
-| "Thủ tục cực kỳ đơn giản." | **Thấp** (Định tính) | Cụ thể hóa bằng: "Chỉ cần CCCD, duyệt trong 1 phút". |
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội dung AI tạo</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hallucination Risk</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cách xử lý</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Lãi suất vay nhanh chỉ từ 1%/tháng."</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cao</strong> (Số liệu nhạy cảm)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Check momo.vn/vay-nhanh ➔ Đính chính số thực ➔ Ghi rõ ngày cập nhật.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Theo báo cáo của MoMo năm 2025..."</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trung bình</strong> (Trích dẫn)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tìm báo cáo gốc ➔ Nếu không thấy ➔ Xóa claim này.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Thủ tục cực kỳ đơn giản."</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Thấp</strong> (Định tính)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cụ thể hóa bằng: "Chỉ cần CCCD, duyệt trong 1 phút".</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
