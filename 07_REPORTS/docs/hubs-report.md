@@ -166,7 +166,7 @@ graph TD
 #### 4. Priorities & Action Items (Kế Hoạch & Tiến Độ Thực Thi)
 * **Go-live Master Hub & 5 Subpages:** Xuất bản Master Hub `/tien-ich-giao-thong` và 5 Subpages chuyên biệt (`/gia-xang`, `/cay-xang`, `/tram-sac`, `/tim-garage`, `/epass`).
 * **Hạ tầng 0-CAPTCHA & Captcha Module:** Duy trì hạ tầng tra cứu phạt nguội 0-CAPTCHA public, tích hợp Captcha Module bảo mật chống DDoS cho luồng đăng ký Bảo hiểm Ô tô.
-* **Quản trị dữ liệu dùng chung qua Algify:** Thống nhất cơ chế vận hành 3 Sheet dữ liệu dùng chung (Cây xăng, Trạm sạc VinFast/V-Green, Garage) và quy chuẩn hiển thị thương hiệu đối tác.
+* **Quản trị dữ liệu dùng chung qua Apify:** Thống nhất cơ chế vận hành 3 Sheet dữ liệu dùng chung (Cây xăng, Trạm sạc VinFast/V-Green, Garage) và quy chuẩn hiển thị thương hiệu đối tác.
 
 ---
 

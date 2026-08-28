@@ -346,7 +346,7 @@ Căn cứ biên bản họp chiến lược ngày 08/08, 19/08 và 25/08/2026, t
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left; font-weight:700;">Transformation Zone</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Traffic: 500k - 1.000.000 PV/tháng.<br/>Mục tiêu bứt phá: Tăng gấp 2 đến gấp 5 lần (x2 - x5).</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- <strong>Financial Hub:</strong> CIC Điểm tín dụng, Vay Nhanh, Tiết kiệm, Tiệm Vàng Online, Ví Trả Sau, Sàn Đầu Tư, Bảo hiểm toàn diện.<br/>- <strong>Vehicle Hub:</strong> Tra cứu phạt nguội, Giá xăng dầu, Cây xăng, Trạm sạc EV, Garage sửa xe, Thu phí không dừng ePass/VETC.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hợp nhất toàn bộ các nhánh Bảo hiểm rời rạc (13, 216, 736) và Vay Nhanh (735) vào Financial Hub. Đồng bộ dữ liệu Vehicle Hub qua Algify.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hợp nhất toàn bộ các nhánh Bảo hiểm rời rạc (13, 216, 736) và Vay Nhanh (735) vào Financial Hub. Đồng bộ dữ liệu Vehicle Hub qua Apify.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left; font-weight:700;">Incubator Zone</td>
@@ -421,7 +421,7 @@ graph TD
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tương tác Tiện ích / Subpage</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sử dụng công cụ tương tác (Check CIC, Tra cứu phạt nguội, So sánh giá vé, Tính lãi tiết kiệm).</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark Interactive Widgets kết nối API Real-time / Sheet dữ liệu Algify.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark Interactive Widgets kết nối API Real-time / Sheet dữ liệu Apify.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform</td>
     </tr>
     <tr>

@@ -52,7 +52,7 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 
 ---
 > **Thành phần:** Web Product Lead x Technical Lead (Web Dev) x Content Strategy Team x InsurTech Tech Team
-> **Mục tiêu:** Thống nhất danh mục 5 Subpages Go-live Tháng 8, cơ chế dùng chung 3 Sheet dữ liệu (Cây xăng, Trạm sạc, Gara) qua Algify, bổ sung Spoke ePass, thiết kế giao diện Hero Section & Badge danh mục, quy chuẩn hiển thị logo cây xăng/trạm sạc, và xử lý Captcha Module cho Bảo hiểm Ô tô.
+> **Mục tiêu:** Thống nhất danh mục 5 Subpages Go-live Tháng 8, cơ chế dùng chung 3 Sheet dữ liệu (Cây xăng, Trạm sạc, Gara) qua Apify, bổ sung Spoke ePass, thiết kế giao diện Hero Section & Badge danh mục, quy chuẩn hiển thị logo cây xăng/trạm sạc, và xử lý Captcha Module cho Bảo hiểm Ô tô.
 
 #### 1. Scope & Cấu Trúc Go-Live Vehicle Hub Tháng 8/2026
 * **Trang chủ Master Hub:** Vehicle Hub (`momo.vn/tien-ich-giao-thong`).
@@ -67,9 +67,9 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
   * **Danh mục Sản phẩm & Dịch vụ:** Thêm nhãn (Badge), phân nhóm danh mục (Categories) nhưng hiển thị toàn bộ tiện ích, không thu gọn/ẩn bớt.
   * **Bảo hiểm Ô tô & Xe máy:** Tích hợp trực tiếp Widget/Component mua bảo hiểm lên trang Vehicle Hub.
 
-#### 2. Quản Trị Dữ Liệu Dùng Chung (Data Architecture & Algify)
+#### 2. Quản Trị Dữ Liệu Dùng Chung (Data Architecture & Apify)
 * **Chuẩn hóa 3 Sheet dữ liệu:** Dữ liệu Garage, Cây xăng và Trạm sạc được đóng gói thành 3 Google Sheets chuẩn hóa để dùng chung đồng bộ cho cả Kênh Web và App MoMo.
-* **Hạ tầng Algify:** Web Dev trực tiếp hướng dẫn và triển khai tích hợp Algify vào sáng thứ Sáu (21/08/2026) để kết nối dữ liệu.
+* **Hạ tầng Apify:** Web Dev trực tiếp hướng dẫn và triển khai tích hợp Apify vào sáng thứ Sáu (21/08/2026) để kết nối dữ liệu.
 * **Quy chuẩn hiển thị Cây xăng:**
   * Đã có dữ liệu và logo chính thức cho **PVOil** và **Comeco (Petro)** (Content Team chịu trách nhiệm cung cấp file logo).
   * Các thương hiệu cây xăng khác chưa có dữ liệu/logo: Hiển thị logo mặc định (Default Logo) và vẫn giữ hiển thị trên giao diện bản đồ.

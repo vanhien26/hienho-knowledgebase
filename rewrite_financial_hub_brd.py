@@ -1,40 +1,44 @@
-# BRD: Financial Master Hub (momo.vn/tai-chinh)
+import os
 
-> - **Tên Dự Án:** Financial Master Hub (Cổng Khám Phá & Ra Quyết Định Dịch Vụ Tài Chính MoMo)
+brd_content = """# BRD: Financial Master Hub (momo.vn/tai-chinh)
+
+> - **Tên Dự Án:** Financial Master Hub (Cổng Tiện Ích & Điều Hướng Tài Chính MoMo)
 > - **Phân Khối Phụ Trách:** Growth Platform Division x Financial Services Division (CreditTech)
 > - **Đội Ngũ Triển Khai:** Web Development Team, Backend Team, SEO & Content Team, Product Growth Team
-> - **Phiên Bản:** v3.1 - Tháng 8/2026
+> - **Phiên Bản:** v3.0 - Tháng 8/2026
 > - **Trạng Thái:** Aligned & Production Ready (`momo.vn/tai-chinh`)
 
 ---
 
-**MoMo Financial Master Hub:** Rút ngắn hành trình từ nhu cầu tìm kiếm đến quyết định sử dụng dịch vụ tài chính MoMo (Pre-install Discovery & Decision Gateway).
+**MoMo Financial Master Hub:** Hợp nhất hệ sinh thái tài chính từ 11 trang rời rạc thành Cổng Khám Phá & Ra Quyết Định Tài Chính Toàn Diện (Unified Financial Discovery & Decision Gateway).
 
 ---
 
 ## 1. PHÁT BIỂU VẤN ĐỀ (PROBLEM STATEMENT)
 
-1. **Người dùng không nhận diện được hệ sinh thái tài chính toàn diện của MoMo để giải quyết JTBD (Jobs-To-Be-Done):** Trước đây, các sản phẩm tài chính trên Web tồn tại dưới dạng 11 trang đích độc lập nằm rời rạc (`/tiet-kiem-online`, `/vay-nhanh`, `/vi-tra-sau`, `/the-tin-dung`...). Khi người dùng có nhu cầu tài chính tổng thể (như tính toán thu nhập ròng, tìm kênh tiết kiệm sinh lời, kiểm tra lịch sử tín dụng CIC để vay vốn, hay quản lý thuế), họ chỉ tiếp cận một trang đơn lẻ từ Google rồi rời đi, hoàn toàn không biết MoMo có đầy đủ giải pháp từ Tín Dụng, Tiết Kiệm, Đầu Tư đến Ngân Hàng.
-2. **Khoảng cách lớn giữa Tra cứu thông tin và Kích hoạt giao dịch đầu tiên (Time-to-First-Value):** Người dùng bị đẩy quá nhanh sang bước tải app hoặc yêu cầu định danh (eKYC) phức tạp trong khi chưa được trải nghiệm giá trị cụ thể của sản phẩm trên Web, dẫn đến tỷ lệ bỏ cuộc (drop-off) cao sau khi cài đặt.
-3. **Chưa khai thác tối đa dung lượng tìm kiếm toàn ngành 101.89 triệu lượt/tháng:** Nhu cầu tìm kiếm tài chính tại Việt Nam rất lớn nhưng phân tán. Thiếu một Cổng Trung Tâm (Master Hub) có năng lực kết nối chuyên đề để thâu tóm các từ khóa có lượng truy cập cao và chuyển đổi thành người dùng định danh.
+Trước đây, các sản phẩm và dịch vụ tài chính của MoMo trên Kênh Web tồn tại dưới dạng **11 trang đích độc lập (standalone landing pages)** nằm rải rác (`/tiet-kiem-online`, `/vay-nhanh`, `/vi-tra-sau`, `/chuyen-tien`, `/the-tin-dung`...). Thực trạng phân mảnh này dẫn đến 3 điểm nghẽn nghiêm trọng:
+
+1. **Trải nghiệm phân mảnh, người dùng không nhận diện được hệ sinh thái tài chính của MoMo để giải quyết trọn vẹn JTBD (Jobs-To-Be-Done):** Người dùng khi có nhu cầu tài chính tổng thể (như tính toán thu nhập ròng, lập kế hoạch chi tiêu, tìm kiếm kênh gửi tiết kiệm sinh lời, tra cứu nợ CIC để vay vốn) hoàn toàn không biết MoMo có đầy đủ các sản phẩm tài chính tương ứng. Họ chỉ tiếp cận một trang đơn lẻ từ kết quả tìm kiếm Google rồi rời đi (Bounce), không thấy được bức tranh giải pháp tài chính toàn diện.
+2. **Khoảng cách lớn giữa Tra cứu thông tin và Giao dịch đầu tiên (Time-to-First-Value):** 11 trang cũ chủ yếu là bài viết tĩnh hoặc form thu thập thông tin cơ bản. Người dùng bị đẩy quá nhanh sang bước tải app hoặc yêu cầu đăng nhập/eKYC khi chưa được "nếm thử giá trị" (Pre-install Discovery), dẫn đến tỷ lệ drop-off cao sau khi cài đặt.
+3. **Lãng phí tiềm năng thị trường 101.89 triệu lượt tìm kiếm/tháng:** Tổng dung lượng tìm kiếm toàn ngành tài chính đạt hơn 101 triệu lượt/tháng trên 24 thị trường cốt lõi, nhưng các trang rời rạc không tạo được sức mạnh liên kết chuyên đề (Topical Authority) dạng Hub-and-Spoke, khiến Kênh Web bỏ lỡ các từ khóa có lượng truy cập khổng lồ.
 
 ---
 
 ## 2. GIẢ THUYẾT GIẢI PHÁP (SOLUTION HYPOTHESIS)
 
-Nếu MoMo xây dựng **Financial Master Hub (`momo.vn/tai-chinh`)** làm cổng khám phá tập trung, bao phủ toàn diện 5 trụ cột dịch vụ tài chính (*Tín Dụng & Vay, Tiết Kiệm & Lãi Suất, Đầu Tư & Tích Sản, Ngân Hàng & Thẻ, Thu Nhập & Thuế*), đồng thời cung cấp **Bộ Công Cụ Tiện Ích Tương Tác Trực Tiếp (Interactive Tools & Calculators)** không cần đăng nhập cho từng bài toán thực tế:
-* Người dùng sẽ tự nhận diện nhu cầu và trải nghiệm giá trị tính toán ngay lập tức trên Web (Instant Value).
-* Hiểu rõ sản phẩm tài chính của MoMo giải quyết bài toán của mình như thế nào trước khi tải app.
-* Tạo động lực rõ ràng để mở App, hoàn tất eKYC và kích hoạt Giao dịch Tài chính Đầu tiên (1st Financial Transaction).
+Nếu MoMo hợp nhất 11 trang rời rạc thành một **Trang Cổng Trung Tâm Financial Master Hub (`momo.vn/tai-chinh`)** kết hợp mạng lưới 24 trang vệ tinh chuyên sâu, đồng thời cung cấp **Bộ Công Cụ Tiện Ích Tương Tác Trực Tiếp (Interactive Tools & Calculators)** không cần đăng nhập cho từng JTBD cụ thể (Lương, Thuế, Tiết kiệm, Lãi suất, CIC, Trả góp):
+* Người dùng sẽ tự nhận ra nhu cầu và trải nghiệm giá trị tính toán ngay lập tức trên Web (Instant First Value).
+* Hiểu rõ sản phẩm MoMo giải quyết bài toán tài chính của họ như thế nào trước khi tải app.
+* Tạo động lực mạnh mẽ để mở App, hoàn tất eKYC và kích hoạt Giao dịch Tài chính Đầu tiên (1st Financial Transaction).
 
 ---
 
 ## 3. MỤC TIÊU KINH DOANH (BUSINESS OBJECTIVES)
 
-1. **Xây dựng Cổng Dịch Vụ Tài Chính Toàn Diện (Master Financial Gateway):** Thiết lập `momo.vn/tai-chinh` thành trung tâm điều hướng và thâu tóm nhu cầu tìm kiếm cho toàn bộ 5 khối dịch vụ tài chính (101.89M lượt tìm kiếm/tháng).
-2. **Kiểm chứng giá trị của Pre-install Product Discovery & Interactive Tools:** Chứng minh việc cho người dùng tính toán và trải nghiệm công cụ trực quan trước cài đặt giúp rút ngắn thời gian tiếp cận giá trị (Time-to-First-Value) và tăng tỷ lệ kích hoạt tài chính in-app.
-3. **Đánh chiếm dứt điểm các Quick Wins hàng đầu (P0):** Tận dụng thẩm quyền tên miền của MoMo (DR 78) để chiếm lĩnh Top 1-3 Google ở các mảng có rào cản kỹ thuật thấp và chênh lệch DR lớn: Tính Lương Gross-Net 2026, Quyết Toán Thuế TNCN, Tra cứu CIC/Điểm Tín Dụng, Tiết Kiệm Live và Cổng 34 Ngân Hàng.
-4. **Hạ tầng Công cụ Tiện ích Dùng chung (Embeddable Widgets):** Chuẩn hóa các bộ công cụ tính toán để nhúng linh hoạt vào mọi điểm chạm trên toàn bộ Kênh Web MoMo.
+1. **Hợp nhất và mở rộng hệ sinh thái Web Acquisition:** Chuyển đổi 11 trang đơn lẻ thành 1 Master Gateway (`momo.vn/tai-chinh`), 24 trang dịch vụ chuyên sâu và Programmatic Hub cho 34 Ngân hàng đối tác nhằm thâu tóm thị trường tìm kiếm 101.89M lượt/tháng.
+2. **Kiểm chứng giá trị của Pre-install Product Discovery & Interactive Tools:** Chứng minh việc cho người dùng trải nghiệm công cụ tính toán trực quan trước cài đặt giúp rút ngắn thời gian tiếp cận giá trị (Time-to-First-Value) và tăng tỷ lệ chuyển đổi từ Web Session ➔ 1st Financial Transaction in-app.
+3. **Đánh chiếm dứt điểm các Quick Wins hàng đầu (P0):** Tận dụng thẩm quyền tên miền vượt trội của MoMo (DR 78) so với các đối thủ Fintech/Aggregators (DR 45-58) để chiếm lĩnh Top 1-3 Google ở các mảng: Tính Lương Gross-Net 2026, Quyết Toán Thuế TNCN, Tra cứu CIC/Điểm Tín Dụng, Tiết Kiệm Live và Cổng 34 Ngân Hàng.
+4. **Xây dựng hạ tầng Công cụ Dùng chung (Embeddable Widgets Foundation):** Thiết lập kiến trúc các widget tính toán độc lập để nhúng linh hoạt vào mọi điểm chạm trên toàn bộ hệ thống Web MoMo.
 
 ---
 
@@ -43,42 +47,21 @@ Nếu MoMo xây dựng **Financial Master Hub (`momo.vn/tai-chinh`)** làm cổn
 | Phân Loại | Nội Dung Chi Tiết |
 | :--- | :--- |
 | **FACT (Sự Thật Hệ Thống)** | - MoMo là sản phẩm App-first; Web không thay thế App.<br/>- Trang Web <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn</code> không yêu cầu đăng nhập.<br/>- Người dùng bắt buộc phải hoàn tất định danh eKYC trên App MoMo trước khi đủ điều kiện mở sổ tiết kiệm, mở ví trả sau, vay tiêu dùng hoặc đầu tư chứng chỉ quỹ. |
-| **OBSERVATION (Quan Sát Dữ Liệu)** | - Các trang sản phẩm độc lập trước đây chủ yếu thúc đẩy tải app nhanh nhưng thiếu bước giáo dục và trải nghiệm sản phẩm trước cài đặt, dẫn đến tỷ lệ drop-off lớn sau khi cài đặt/mở App.<br/>- Phần lớn nhu cầu tìm kiếm tài chính tập trung vào dạng tra cứu/công cụ tính toán (Tool Intent) thay vì đọc bài viết chữ đơn thuần. |
+| **OBSERVATION (Quan Sát Dữ Liệu)** | - 11 trang sản phẩm độc lập trước đây có CTR nhấp CTA cao (94.51%) nhưng người dùng bị thiếu ngữ cảnh toàn diện về hệ sinh thái tài chính MoMo.<br/>- Phần lớn nhu cầu tìm kiếm tài chính tập trung vào dạng tra cứu/công cụ tính toán (Tool Intent) thay vì đọc bài viết chữ đơn thuần. |
 | **AVAILABLE SIGNALS (Tín Hiệu Có Sẵn)** | - Nguồn truy cập (Source / Referrer / UTM Campaign).<br/>- Chủ đề tìm kiếm (Search Query / Topic Cluster).<br/>- Dữ liệu người dùng tự nhập trên công cụ Web (Mức lương, Số tiền gửi, Số tiền vay, Nhóm nợ tín dụng).<br/>- Thiết bị và bối cảnh truy cập (Mobile vs Desktop). |
 | **ASSUMPTION (Giả Định Cần Test)** | - Cung cấp công cụ tính toán miễn phí không cần đăng nhập (No-login Tool) trên Web sẽ tạo ra nhóm người dùng tải app có ý định sử dụng (Intent) và độ gắn kết sản phẩm cao hơn đáng kể so với việc chỉ hiển thị bài viết giới thiệu tĩnh. |
 
 ---
 
-## 5. TỔNG QUAN SẢN PHẨM & CÁC TRỤ CỘT DỊCH VỤ (PRODUCT OVERVIEW)
+## 5. TỔNG QUAN SẢN PHẨM & LUỒNG TRẢI NGHIỆM (PRODUCT OVERVIEW & USER FLOW)
 
-### 5.1 Năm Trụ Cột Dịch Vụ Tài Chính Tại Financial Hub
+### 5.1 Kiến Trúc Sản Phẩm 2 Tầng (Hub-and-Spoke Architecture)
 
-Financial Hub quy hoạch toàn bộ giải pháp tài chính MoMo thành 5 khối nghiệp vụ chính:
+Financial Hub được tổ chức thành 2 tầng rõ rệt:
+* **Tầng 1 - Master Gateway (`momo.vn/tai-chinh`):** Đóng vai trò là đầu mối phân luồng, hiển thị Dashboard thị trường trực quan (Giá vàng, Tỷ giá, Lãi suất ngân hàng), Hero Widget tính lãi tiết kiệm và danh mục các giải pháp tài chính theo từng nhóm nhu cầu (JTBD).
+* **Tầng 2 - 24 Trang Chuyên Sâu & Programmatic Hub (`/tai-chinh/[dich-vu]`):** Giải quyết chi tiết từng bài toán nghiệp vụ với công cụ tính toán tương tác riêng biệt (Tính lương Gross-Net, Quyết toán thuế, Giả lập lãi suất vay, Tra cứu CIC, So sánh 34 ngân hàng).
 
-1. **Khối Tín Dụng, Vay Vốn & Sức Khỏe Tín Dụng:**
-   * *Dịch vụ:* Vay Tín Chấp (Vay Nhanh), Trả Góp (Ví Trả Sau), Vay Thế Chấp (Mua Nhà), Tra Cứu CIC, Điểm Tín Dụng, Xóa Nợ Xấu.
-   * *Công cụ cốt lõi:* Máy tính lịch trả nợ giảm dần, Máy tính trả góp 0%, Widget tự đánh giá nhóm nợ 1-5.
-2. **Khối Tiết Kiệm & Lãi Suất Ngân Hàng:**
-   * *Dịch vụ:* Gửi Tiết Kiệm Online (Đối tác Bản Việt, VPBank), Bảng So Sánh Lãi Suất 30+ Ngân Hàng.
-   * *Công cụ cốt lõi:* Hero Widget tính lãi đơn gửi 1 lần vs lãi kép gửi tích lũy định kỳ hàng tháng.
-3. **Khối Đầu Tư, Chứng Khoán & Tích Sản:**
-   * *Dịch vụ:* Giá Vàng SJC/9999 Realtime, Chứng Khoán, Cổ Phiếu, Chứng Chỉ Quỹ SIP từ 10.000đ, Trái Phiếu.
-   * *Công cụ cốt lõi:* Bảng giá vàng & biểu đồ biến động lịch sử, Bộ giả lập lãi kép đầu tư Quỹ mở SIP.
-4. **Khối Ngân Hàng & Thẻ Thanh Toán:**
-   * *Dịch vụ:* Programmatic Hub 34 Ngân Hàng, Thẻ Tín Dụng Hoàn Tiền, Thẻ Visa/Mastercard, Napas 247, Thẻ Ghi Nợ ATM.
-   * *Công cụ cốt lõi:* Ma trận so sánh quyền lợi & phí thường niên thẻ tín dụng, Cổng tra cứu Swift code/hotline 34 bank.
-5. **Khối Tiện Ích Thu Nhập & Thuế:**
-   * *Dịch vụ:* Tính Lương Gross - Net luật mới 2026, Quyết Toán Thuế TNCN Tự Động, Tỷ Giá Ngoại Tệ & Quy Đổi Live.
-   * *Công cụ cốt lõi:* Máy tính Gross-Net 2026 kèm thanh trượt phân bổ 50/30/20, Bộ chuyển đổi ngoại tệ live.
-
-### 5.2 Cơ Chế Hợp Nhất Hệ Sinh Thái & Bảo Toàn Thẩm Quyền SEO
-
-Để bảo vệ 100% thứ hạng SEO và lượng truy cập hiện có của các trang sản phẩm độc lập (`/tiet-kiem-online`, `/vay-nhanh`, `/vi-tra-sau`, `/the-tin-dung`...), hệ thống giữ nguyên cấu trúc URL gốc và thực hiện hợp nhất trải nghiệm qua **3 Cơ Chế**:
-* **Trang Cổng Trung Tâm (`momo.vn/tai-chinh`):** Đóng vai trò là mặt tiền tổng hợp Dashboard thị trường và điều hướng phân luồng theo đúng JTBD.
-* **Thanh Điều Hướng Thống Nhất (Global Financial Navigation Bar):** Xuất hiện đồng bộ trên tất cả các trang sản phẩm, kết nối liền mạch 5 trụ cột dịch vụ.
-* **Cơ Chế Bán Chéo Theo Ngữ Cảnh (Contextual Cross-Sell Engine):** Nhúng đề xuất giải pháp liên quan ngay sau khi người dùng nhận kết quả tính toán trên công cụ.
-
-### 5.3 Sơ Đồ Luồng Trải Nghiệm Người Dùng (Visual User Flow)
+### 5.2 Sơ Đồ Luồng Trải Nghiệm Người Dùng (Visual User Flow)
 
 ```mermaid
 graph TD
@@ -90,7 +73,7 @@ graph TD
     F --> G["7. Giao Dịch Tài Chính Đầu Tiên (1st Value Achieved)<br/>(Mở sổ tiết kiệm / Nhận lương ứng / Kích hoạt Ví Trả Sau)"]
 ```
 
-### 5.4 Bảng Phân Tích Chi Tiết Các Bước Trải Nghiệm
+### 5.3 Bảng Phân Tích Chi Tiết Các Bước Trải Nghiệm
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.85em;">
   <thead>
@@ -145,15 +128,15 @@ graph TD
 
 ## 6. ĐỐI SOÁT BENCHMARK QUỐC TẾ (REFERENCE & BENCHMARK)
 
-* **NerdWallet & Bankrate (Hoa Kỳ):** Cổng tài chính hàng đầu chuyển đổi hàng triệu lượt tìm kiếm thành người dùng sản phẩm tài chính nhờ hệ thống **Interactive Calculators** và so sánh minh bạch theo từng bài toán của người dùng (Mua nhà, Mở thẻ, Gửi tiết kiệm).
-* **Revolut (<18 & Products Hub):** Tiếp cận người dùng bằng định vị giải pháp theo từng phân khúc, giải thích rõ năng lực sản phẩm (Product Capabilities) trước khi dùng phần thưởng (Reward) để thúc đẩy hoàn tất cài đặt và định danh.
+* **NerdWallet & Bankrate (Hoa Kỳ):** Mô hình thành công điển hình trong việc chuyển đổi traffic tìm kiếm tài chính thành khách hàng sử dụng dịch vụ thông qua hệ thống **Interactive Calculators** và **So sánh đa đối tác minh bạch**. Người dùng khám phá giá trị qua công cụ trước, sau đó mới đăng ký mở thẻ/khoản vay.
+* **Revolut (<18 & Financial Hub):** Tiếp cận người dùng bằng định vị giải pháp theo từng phân khúc (Segment Proposition), giải thích rõ năng lực sản phẩm (Product Capabilities) trước khi dùng phần thưởng (Reward) để thúc đẩy hoàn tất cài đặt và định danh.
 
 ---
 
 ## 7. CƠ SỞ ĐẶT CƯỢC SẢN PHẨM (WHY BETTING ON THIS MVP)
 
 * **`[HYPOTHESIS]`** Một phần lớn tỷ lệ drop-off sau cài đặt bắt nguồn từ việc người dùng chưa thấy đủ sự liên quan của sản phẩm (Product Relevance) trước khi phải đầu tư công sức vào quy trình eKYC phức tạp.
-* **`[HYPOTHESIS]`** Xây dựng Financial Hub tập trung sẽ tạo sức mạnh liên kết chuyên đề (Topical Authority), giúp website MoMo vượt mặt các bài viết tĩnh của đối thủ và chiếm lĩnh Top 1-3 Google.
+* **`[HYPOTHESIS]`** Hợp nhất 11 trang rời rạc thành mô hình Hub-and-Spoke sẽ gia tăng thẩm quyền chuyên đề (Topical Authority), giúp website MoMo vượt mặt các bài viết tĩnh của đối thủ và chiếm lĩnh Top 1-3 Google.
 * **`[HYPOTHESIS]`** Việc triển khai công cụ tính toán không cần đăng nhập (No-login Client-side Tools) sẽ giữ chân người dùng lâu hơn gấp 3-5 lần (Dwell time) và thúc đẩy tỷ lệ nhấp chuyển đổi sang App có chủ đích cao hơn.
 * **`[RECOMMENDATION]`** Tập trung toàn lực triển khai **4 Cụm Quick Win** (Tính Lương, Thuế TNCN, Tra cứu CIC, Tiết Kiệm Live, Programmatic 34 Bank) trong Sprint 1 & 2 để gặt hái kết quả tăng trưởng MAU ngay lập tức trước khi đầu tư hạ tầng Realtime phức tạp cho các Big Bet (Giá Vàng, Tỷ Giá).
 
@@ -175,7 +158,7 @@ graph TD
       <td style="border:1px solid #94a3b8; padding:6px;"><strong>Kênh Web (Top-of-Funnel)</strong></td>
       <td style="border:1px solid #94a3b8; padding:6px;"><strong>Monthly Pageviews (MPV)</strong></td>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;"><strong>≥ 1.000.000 lượt/tháng</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px;">Quy mô truy cập toàn bộ hệ thống Financial Hub (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/tai-chinh</code> và các trang tiện ích liên quan).</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Quy mô truy cập toàn bộ hệ thống Financial Hub (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/tai-chinh</code> và các trang vệ tinh).</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:6px;"><strong>Kênh Web (Engagement)</strong></td>
@@ -518,12 +501,12 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
     <tr>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;"><strong>Phase 1</strong></td>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 8 - 9/2026</td>
-      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Đánh Chiếm Quick Wins & Ra Mắt Master Gateway</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Đánh Chiếm Quick Wins & Hạ Tầng Master Hub</strong></td>
       <td style="border:1px solid #94a3b8; padding:6px;">
         - Ra mắt Master Gateway <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/tai-chinh</code> với Hero Widget Tính Lãi Tiết Kiệm Live.<br/>
-        - Triển khai Bộ Đôi Công Cụ Thu Nhập & Thuế 2026 (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tinh-luong</code> & <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/thue-tncn</code>).<br/>
-        - Ra mắt Cổng Tra Cứu CIC & Điểm Tín Dụng (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tra-cuu-cic</code> & <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/xoa-no-xau</code>).<br/>
-        - Xuất bản Programmatic Hub cho 34 Ngân Hàng đối tác (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/ngan-hang/[slug]</code>) và Cổng Napas 247 (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/napas</code>).
+        - Triển khai Bộ Đôi Công Cụ Thu Nhập & Thuế 2026 (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tai-chinh/tinh-luong</code> & <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tai-chinh/thue-tncn</code>).<br/>
+        - Ra mắt Cổng Tra Cứu CIC & Điểm Tín Dụng (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tai-chinh/tra-cuu-cic</code> & <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tai-chinh/xoa-no-xau</code>).<br/>
+        - Xuất bản Programmatic Hub cho 34 Ngân Hàng đối tác và Cổng Napas 247.
       </td>
     </tr>
     <tr style="background-color:#f8fafc;">
@@ -531,16 +514,16 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 10 - 11/2026</td>
       <td style="border:1px solid #94a3b8; padding:6px;"><strong>Mở Rộng Core Drivers & Tích Hợp Realtime Feeds</strong></td>
       <td style="border:1px solid #94a3b8; padding:6px;">
-        - Tích hợp Engine dữ liệu Giá Vàng SJC/9999 (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/gia-vang</code>) & Tỷ Giá Ngoại Tệ Realtime (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/ty-gia</code>).<br/>
-        - Ra mắt Ma Trận So Sánh Thẻ Tín Dụng (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/the-tin-dung</code>) & Thẻ Quốc Tế Visa/Mastercard.<br/>
-        - Phát triển Máy Tính Trả Góp 0% (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tra-gop</code>) và Cổng Đăng Ký Vay Nhanh (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/vay-tin-chap</code>) / Vay Mua Nhà (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/vay-the-chap</code>).<br/>
-        - Xây dựng Bộ Giả Lập Đầu Tư Quỹ Mở / Tích Lũy SIP từ 10.000đ (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/chung-chi-quy</code>).
+        - Tích hợp Engine dữ liệu Giá Vàng SJC/9999 & Tỷ Giá Ngoại Tệ Realtime.<br/>
+        - Ra mắt Ma Trận So Sánh Thẻ Tín Dụng & Thẻ Quốc Tế Visa/Mastercard.<br/>
+        - Phát triển Máy Tính Trả Góp 0% và Cổng Đăng Ký Vay Nhanh / Vay Mua Nhà.<br/>
+        - Xây dựng Bộ Giả Lập Đầu Tư Quỹ Mở / Tích Lũy SIP từ 10.000đ.
       </td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;"><strong>Phase 3</strong></td>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 12/2026 - Q1/2027</td>
-      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Cá Nhân Hóa Tự Động & Tối Ưu Phễu Web-to-App</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Cá Nhân Hóa Tự Động & Scale Toàn Ngành</strong></td>
       <td style="border:1px solid #94a3b8; padding:6px;">
         - Triển khai Real-time Personalization dựa trên dữ liệu người dùng tự khai báo trên Web.<br/>
         - Đóng gói toàn bộ Embeddable Widgets cho các đối tác ngoài (Affiliate & Partner Web).<br/>
@@ -549,3 +532,9 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
     </tr>
   </tbody>
 </table>
+"""
+
+with open('05_HUBS/financial-hub-brd.md', 'w', encoding='utf-8') as f:
+    f.write(brd_content)
+
+print("Successfully rewritten 05_HUBS/financial-hub-brd.md according to the Golden BRD Framework!")

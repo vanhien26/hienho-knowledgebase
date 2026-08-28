@@ -169,9 +169,9 @@ Thanh Menu Header (Header Navigation Bar) xuất hiện đồng bộ trên Trang
 
 ---
 
-### 3.4 Sitemap Architecture (Tổng Hợp 32 URLs)
+### 3.4 Sitemap Architecture (Tổng Hợp 21 URLs)
 
-Hệ sinh thái Tiện Ích Giao Thông bao gồm **32 URLs** được phân bổ theo 8 nhóm chức năng cốt lõi:
+Hệ sinh thái Tiện Ích Giao Thông bao gồm **21 URLs** được phân bổ theo 8 nhóm chức năng cốt lõi:
 
 #### 1. Trang Chủ Master Hub
 
@@ -183,71 +183,57 @@ Hệ sinh thái Tiện Ích Giao Thông bao gồm **32 URLs** được phân b�
 
 | STT | URL | Mô Tả Chức Năng |
 | :---: | :--- | :--- |
-| 2 | `https://www.momo.vn/tien-ich-giao-thong/oto` | Chuyên trang tổng hợp ô tô, bảng giá xe & thông số kỹ thuật. |
-| 3 | `https://www.momo.vn/tien-ich-giao-thong/xe-may` | Chuyên trang xe máy, xe tay ga, xe số & xe côn tay. |
-| 4 | `https://www.momo.vn/tien-ich-giao-thong/xe-dien` | Chuyên trang xe máy điện, ô tô điện & xu hướng xanh. |
-| 5 | `https://www.momo.vn/tien-ich-giao-thong/xe-tai` | Chuyên trang xe tải, xe bán tải & phương tiện thương mại. |
-| 6 | `https://www.momo.vn/tien-ich-giao-thong/hang-xe/[brand]` | Danh sách dòng xe theo thương hiệu (Toyota, Honda, VinFast...). |
-| 7 | `https://www.momo.vn/tien-ich-giao-thong/hang-xe/[brand]/[model]` | Chi tiết thông số, giá lăn bánh & phụ tùng từng mẫu xe cụ thể. |
+| 2 | `https://www.momo.vn/tien-ich-giao-thong/hang-xe/[brand]` | Danh sách dòng xe theo thương hiệu (Toyota, Honda, VinFast...). |
+| 3 | `https://www.momo.vn/tien-ich-giao-thong/hang-xe/[brand]/[model]` | Chi tiết thông số, giá lăn bánh & phụ tùng từng mẫu xe cụ thể. |
 
 #### 3. Phạt Nguội & Cẩm Nang Luật (Traffic Fines & Regulations)
 
 | STT | URL | Mô Tả Chức Năng |
 | :---: | :--- | :--- |
-| 8 | `https://www.momo.vn/tien-ich-giao-thong/tra-cuu-muc-phat` | Từ điển tra cứu mức phạt giao thông ô tô/xe máy theo Nghị định. |
-| 9 | `https://www.momo.vn/tien-ich-giao-thong/bien-bao-giao-thong` | Danh mục & ý nghĩa các loại biển báo đường bộ chuẩn QCVN. |
-| 10 | `https://www.momo.vn/tien-ich-giao-thong/kinh-nghiem-lai-xe` | Cẩm nang mẹo lái xe an toàn, bảo dưỡng xe & luật giao thông mới. |
+| 4 | `https://www.momo.vn/tien-ich-giao-thong/tra-cuu-muc-phat` | Từ điển tra cứu mức phạt giao thông ô tô/xe máy theo Nghị định. |
+| 5 | `https://www.momo.vn/tien-ich-giao-thong/bien-bao-giao-thong` | Danh mục & ý nghĩa các loại biển báo đường bộ chuẩn QCVN. |
+| 6 | `https://www.momo.vn/tien-ich-giao-thong/kinh-nghiem-lai-xe` | Cẩm nang mẹo lái xe an toàn, bảo dưỡng xe & luật giao thông mới. |
 
 #### 4. Bản Đồ Tiện Ích & Nhiên Liệu (Maps & Fuel Stations)
 
 | STT | URL | Mô Tả Chức Năng |
 | :---: | :--- | :--- |
-| 11 | `https://www.momo.vn/tien-ich-giao-thong/tram-sac` | Bản đồ & tìm kiếm trạm sạc xe điện toàn quốc theo GPS. |
-| 12 | `https://www.momo.vn/tien-ich-giao-thong/tram-sac/vinfast` | Chuyên trang trạm sạc xe điện VinFast, V-Green. |
-| 13 | `https://www.momo.vn/tien-ich-giao-thong/cay-xang` | Bản đồ tìm cây xăng gần nhất chấp nhận thanh toán MoMo. |
-| 14 | `https://www.momo.vn/tien-ich-giao-thong/gia-xang` | Cập nhật bảng giá xăng dầu RON 95, E5, Diesel kỳ điều hành. |
+| 7 | `https://www.momo.vn/tien-ich-giao-thong/tram-sac` | Bản đồ & tìm kiếm trạm sạc xe điện toàn quốc theo GPS. |
+| 8 | `https://www.momo.vn/tien-ich-giao-thong/tram-sac/vinfast` | Chuyên trang trạm sạc xe điện VinFast, V-Green. |
+| 9 | `https://www.momo.vn/tien-ich-giao-thong/cay-xang` | Bản đồ tìm cây xăng gần nhất chấp nhận thanh toán MoMo. |
+| 10 | `https://www.momo.vn/tien-ich-giao-thong/gia-xang` | Cập nhật bảng giá xăng dầu RON 95, E5, Diesel kỳ điều hành. |
 
 #### 5. Công Cụ Tính Toán & So Sánh (Calculators & Comparison)
 
 | STT | URL | Mô Tả Chức Năng |
 | :---: | :--- | :--- |
-| 15 | `https://www.momo.vn/tien-ich-giao-thong/lan-banh` | Tính chi phí lăn bánh ô tô (Thuế trước bạ, biển số, phí đường bộ). |
-| 16 | `https://www.momo.vn/tien-ich-giao-thong/chi-phi-nuoi-xe` | Công cụ tính tổng chi phí vận hành & nuôi xe hàng tháng. |
-| 17 | `https://www.momo.vn/tien-ich-giao-thong/so-sanh-xe` | So sánh thông số kỹ thuật & giá bán giữa 2-3 mẫu xe. |
+| 11 | `https://www.momo.vn/tien-ich-giao-thong/lan-banh` | Tính chi phí lăn bánh ô tô (Thuế trước bạ, biển số, phí đường bộ). |
+| 12 | `https://www.momo.vn/tien-ich-giao-thong/chi-phi-nuoi-xe` | Công cụ tính tổng chi phí vận hành & nuôi xe hàng tháng. |
+| 13 | `https://www.momo.vn/tien-ich-giao-thong/so-sanh-xe` | So sánh thông số kỹ thuật & giá bán giữa 2-3 mẫu xe. |
 
 #### 6. Pháp Lý, Đăng Kiểm & Hồ Sơ Xe (Vehicle Paperwork & Legal)
 
 | STT | URL | Mô Tả Chức Năng |
 | :---: | :--- | :--- |
-| 18 | `https://www.momo.vn/tien-ich-giao-thong/dang-kiem` | Tra cứu hạn đăng kiểm & đặt lịch kiểm định xe. |
-| 19 | `https://www.momo.vn/tien-ich-giao-thong/ho-so-xe` | Quản lý sổ Garage / Sổ tay thông tin xe cá nhân. |
-| 20 | `https://www.momo.vn/tien-ich-giao-thong/diem-gplx` | Tra cứu điểm Giấy phép lái xe (12 điểm GPLX). |
-| 21 | `https://www.momo.vn/tien-ich-giao-thong/sang-ten-xe` | Hướng dẫn thủ tục rút hồ sơ & sang tên đổi chủ xe. |
-| 22 | `https://www.momo.vn/tien-ich-giao-thong/bien-so-xe` | Tra cứu mã tỉnh thành biển số xe trên toàn quốc. |
-| 23 | `https://www.momo.vn/tien-ich-giao-thong/bien-so-dep` | Ý nghĩa phong thủy biển số xe & kết quả đấu giá biển đẹp. |
-| 24 | `https://www.momo.vn/tien-ich-giao-thong/bao-hiem-o-to` | Mua & so sánh bảo hiểm TNDS, Thân vỏ xe 9 hãng. |
+| 14 | `https://www.momo.vn/tien-ich-giao-thong/dang-kiem` | Tra cứu hạn đăng kiểm & đặt lịch kiểm định xe. |
+| 15 | `https://www.momo.vn/tien-ich-giao-thong/bao-hiem-o-to` | Mua & so sánh bảo hiểm TNDS, Thân vỏ xe 9 hãng. |
 
 #### 7. Bãi Đỗ, Cứu Hộ, Bảo Dưỡng & Giao Thông (Mobility Services)
 
 | STT | URL | Mô Tả Chức Năng |
 | :---: | :--- | :--- |
-| 25 | `https://www.momo.vn/tien-ich-giao-thong/bai-do-xe` | Tìm kiếm & đặt chỗ bãi đỗ ô tô / xe máy (VETC Parking). |
-| 26 | `https://www.momo.vn/tien-ich-giao-thong/cuu-ho` | Gọi cứu hộ xe 24/7 (Kéo xe, vá lốp, kích bình). |
-| 27 | `https://www.momo.vn/tien-ich-giao-thong/tram-thu-phi` | Tra cứu biểu phí ePass / VETC các trạm thu phí BOT. |
-| 28 | `https://www.momo.vn/tien-ich-giao-thong/camera-giao-thong` | Xem camera giao thông quan sát điểm kẹt xe realtime. |
-| 29 | `https://www.momo.vn/tien-ich-giao-thong/bao-duong` | Đặt lịch bảo dưỡng, rửa xe & chăm sóc xe (Detailing). |
-| 30 | `https://www.momo.vn/tien-ich-giao-thong/chuyen-di` | Nhật ký chuyến đi & công cụ quản lý lộ trình. |
+| 16 | `https://www.momo.vn/tien-ich-giao-thong/bai-do-xe` | Tìm kiếm & đặt chỗ bãi đỗ ô tô / xe máy (VETC Parking). |
+| 17 | `https://www.momo.vn/tien-ich-giao-thong/cuu-ho` | Gọi cứu hộ xe 24/7 (Kéo xe, vá lốp, kích bình). |
+| 18 | `https://www.momo.vn/tien-ich-giao-thong/tram-thu-phi` | Tra cứu biểu phí ePass / VETC các trạm thu phí BOT. |
+| 19 | `https://www.momo.vn/tien-ich-giao-thong/camera-giao-thong` | Xem camera giao thông quan sát điểm kẹt xe realtime. |
+| 20 | `https://www.momo.vn/tien-ich-giao-thong/bao-duong` | Đặt lịch bảo dưỡng, rửa xe & chăm sóc xe (Detailing). |
+| 21 | `https://www.momo.vn/tien-ich-giao-thong/chuyen-di` | Nhật ký chuyến đi & công cụ quản lý lộ trình. |
 
-#### 8. Đối Tác Dịch Vụ (Partner Ecosystem)
 
-| STT | URL | Mô Tả Chức Năng |
-| :---: | :--- | :--- |
-| 31 | `https://www.momo.vn/tien-ich-giao-thong/doi-tac` | Danh sách đối tác thuộc hệ sinh thái Giao thông MoMo. |
-| 32 | `https://www.momo.vn/tien-ich-giao-thong/doi-tac/[slug]` | Trang chi tiết thông tin thương hiệu đối tác liên kết. |
 
 ---
 
-#### 9. Standalone Root Pages Liên Kết Hệ Sinh Thái
+#### 8. Standalone Root Pages Liên Kết Hệ Sinh Thái
 
 Các trang sản phẩm độc lập có cấu trúc đường dẫn Root URL cấp 1 (`https://www.momo.vn/[slug]`), giữ nguyên vai trò SEO và giao dịch chuyên sâu, kết nối hai chiều với Master Hub theo Growth Strategy:
 
@@ -325,29 +311,36 @@ Các trang sản phẩm độc lập có cấu trúc đường dẫn Root URL c�
 
 ### 4.3 RACI Matrix (16 Hạng Mục Chi Tiết Phối Hợp)
 
-| Nhóm & Hạng Mục Công Việc Chi Tiết | Web Platform (Web & W2A) | InsurTech Cell (KPI & Bảo Hiểm) | VTTI (API & Giao Thông) |
-| :--- | :---: | :---: | :---: |
-| **I. CHIẾN LƯỢC, CHỈ SỐ & KẾ HOẠCH VẬN HÀNH** | | | |
-| 1.1 Thống nhất Mục tiêu & Khung KPI Đồng Sở Hữu | **A / R (Chủ trì Web)** | **A / R (Đồng sở hữu)** | **A / R (Đồng sở hữu)** |
-| 1.2 Lập Kế Hoạch Sprint 1 Tháng & Check-in 2 Tuần/Lần | **A / R (Chủ trì)** | **A / R (Đồng chủ trì)** | R (Tham gia API) |
-| **II. GIAO DIỆN WEB & PHỄU CHUYỂN ĐỔI (W2A)** | | | |
-| 2.1 Xây dựng Trang Chủ Master Hub (`/tien-ich-giao-thong`) | **A / R (Chủ trì)** | C (Góp ý phễu BH) | C (Cung cấp API) |
-| 2.2 Phát triển Widget 3-in-1 Trước Khi Lăn Bánh | **A / R (Chủ trì)** | C (Góp ý phễu) | C (Cung cấp API) |
-| 2.3 Cấu hình Điểm Chạm Chuyển Đổi (Onelink & Dynamic QR) | **A / R (Chủ trì)** | C (Góp ý luồng BH) | C (Cung cấp Schema API) |
-| 2.4 Xây dựng Bảng Giá Xăng & Máy Tính Đầy Bình (`/gia-xang`) | **A / R (Chủ trì Web)** | I (Theo dõi) | C (Cung cấp Data API) |
-| **III. QUẢN TRỊ DỮ LIỆU ĐỊA ĐIỂM & BẢN ĐỒ TIỆN ÍCH** | | | |
-| 3.1 Cung cấp Danh sách Cây Xăng Toàn Quốc (API / Sheet) | A (Nghiệm thu Web) | I (Theo dõi) | **A / R (Chủ trì API & Data)** |
-| 3.2 Cung cấp Danh mục Trạm Sạc Xe Điện EV (VinFast, V-Green) | A (Nghiệm thu Web) | I (Theo dõi) | **A / R (Chủ trì API & Data)** |
-| 3.3 Cung cấp Mạng Lưới Garage, Vá Lốp & Cứu Hộ | A (Nghiệm thu Web) | I (Theo dõi) | **A / R (Chủ trì API & Data)** |
-| 3.4 Xây dựng Bản Đồ Tìm Kiếm Địa Điểm GPS trên Web | **A / R (Chủ trì)** | I (Theo dõi) | C (Hỗ trợ API) |
-| **IV. BỘ CÔNG CỤ DỰ TOÁN CHI PHÍ & CHUYỂN TIẾP LEAD BẢO HIỂM** | | | |
-| 4.1 Tra Cứu Biểu Phí BOT & Nút Mở App Nạp ePass (`/tram-thu-phi`) | **A / R (Xây Web & CTA)** | I (Theo dõi) | **A / R (Cung cấp API ePass)** |
-| 4.2 Máy Tính Chi Phí Lăn Bánh, Nuôi Xe & Dự Toán Phí BH | **A / R (Chủ trì Web Tool)** | C (Góp ý công thức BH) | I (Theo dõi) |
-| 4.3 Tra Cứu Đăng Kiểm, 12 Điểm GPLX & Phong Thủy Biển Số | **A / R (Chủ trì Web)** | C (Góp ý nghiệp vụ) | C (Góp ý luật GT) |
-| 4.4 Bắt & Chuyển Tiếp Dữ Liệu Biển Số Xe Cho InsurTech | **A / R (Bắt Lead Web)** | **A / R (Nhận Auto-fill)** | C (Hỗ trợ Data xe) |
-| **V. CẨM NANG HƯỚNG DẪN TRÊN WEB & BÁO CÁO GIẢI TRÌNH** | | | |
-| 5.1 Cổng Cẩm Nang Giao Thông, FAQ & Giải Đáp Luật Trên Web | **A / R (Chủ trì Web)** | C (Duyệt luật BH) | C (Duyệt luật GT) |
-| 5.2 Báo Cáo Tiến Độ Sản Phẩm Web & Hiệu Quả W2A (IVP) | **A / R (Chủ trì tổng hợp)** | **A / R (Đồng chủ trì Báo cáo)** | R (Báo cáo API) |
+| Nhóm & Hạng Mục Công Việc Chi Tiết | Web Platform (Web & W2A) | InsurTech Cell (Đầu mối FS & KPI) |
+| :--- | :---: | :---: |
+| **I. CHIẾN LƯỢC, CHỈ SỐ & KẾ HOẠCH VẬN HÀNH** | | |
+| 1.1 Thống nhất Mục tiêu & Khung KPI Đồng Sở Hữu | **A / R (Chủ trì)** | **A / R (Đồng sở hữu)** |
+| 1.2 Lập Kế Hoạch Sprint 1 Tháng & Check-in 2 Tuần/Lần | **A / R (Chủ trì)** | **A / R (Đồng chủ trì & Đầu mối API)** |
+| **II. GIAO DIỆN WEB & PHỄU CHUYỂN ĐỔI (W2A)** | | |
+| 2.1 Xây dựng Trang Chủ Master Hub (`/tien-ich-giao-thong`) | **A / R (Chủ trì)** | C (Góp ý phễu BH & Điều phối API) |
+| 2.2 Phát triển Widget 3-in-1 Trước Khi Lăn Bánh | **A / R (Chủ trì)** | C (Góp ý phễu & Điều phối API) |
+| 2.3 Cổng Phạt Nguội & Tối ưu Location Pages (`/phat-nguoi`) | **A / R (Chủ trì)** | C (Cross-sell BH & Duyệt logic) |
+| 2.4 Cấu hình Điểm Chạm Chuyển Đổi (Onelink & Dynamic QR) | **A / R (Chủ trì)** | C (Góp ý luồng BH & Schema API) |
+| 2.5 Xây dựng Bảng Giá Xăng & Máy Tính Đầy Bình (`/gia-xang`) | **A / R (Chủ trì)** | C (Điều phối Data API) |
+| **III. QUẢN TRỊ DỮ LIỆU ĐỊA ĐIỂM & BẢN ĐỒ TIỆN ÍCH** | | |
+| 3.1 Cung cấp Danh sách Cây Xăng Toàn Quốc (API / Sheet) | A (Nghiệm thu Web) | **A / R (Cung cấp API & Data qua VTTI)** |
+| 3.2 Cung cấp Danh mục Trạm Sạc Xe Điện EV (VinFast, V-Green) | A (Nghiệm thu Web) | **A / R (Cung cấp API & Data qua VTTI)** |
+| 3.3 Cung cấp Mạng Lưới Garage, Vá Lốp & Cứu Hộ | A (Nghiệm thu Web) | **A / R (Cung cấp API & Data qua VTTI)** |
+| 3.4 Xây dựng Bản Đồ Tìm Kiếm Địa Điểm GPS trên Web | **A / R (Chủ trì)** | C (Hỗ trợ API) |
+| **IV. BỘ CÔNG CỤ DỰ TOÁN CHI PHÍ & CHUYỂN TIẾP LEAD BẢO HIỂM** | | |
+| 4.1 Tra Cứu Biểu Phí BOT & Nút Mở App Nạp ePass (`/tram-thu-phi`) | **A / R (Chủ trì Web)** | **A / R (Đầu mối API ePass từ VTTI)** |
+| 4.2 Máy Tính Chi Phí Lăn Bánh, Nuôi Xe & Dự Toán Phí BH | **A / R (Chủ trì Web)** | C (Góp ý công thức BH) |
+| 4.3 Xây Dựng Trang Tra Cứu Đăng Kiểm (`/dang-kiem`) | **A / R (Chủ trì Web)** | C (Góp ý nghiệp vụ) |
+| 4.4 Bắt & Chuyển Tiếp Dữ Liệu Biển Số Xe Cho InsurTech | **A / R (Bắt Lead Web)** | **A / R (Nhận Auto-fill & Xử lý data)** |
+| **V. CẨM NANG HƯỚNG DẪN TRÊN WEB & BÁO CÁO GIẢI TRÌNH** | | |
+| 5.1 Cổng Cẩm Nang Giao Thông, FAQ & Giải Đáp Luật Trên Web | **A / R (Chủ trì Web)** | C (Duyệt nội dung & Luật) |
+| 5.2 Báo Cáo Tiến Độ Sản Phẩm Web & Hiệu Quả W2A (IVP) | **A / R (Chủ trì tổng hợp)** | **A / R (Đồng chủ trì Báo cáo)** |
+| **VI. KẾ HOẠCH GROWTH, TRUYỀN THÔNG & TỐI ƯU CẢI TIẾN** | | |
+| 6.1 Xây dựng chiến lược SEO Content & Inbound Marketing | **A / R (Chủ trì Web)** | C (Góp ý từ khóa) |
+| 6.2 Hoạch định ngân sách Truyền thông, SEM & Paid Ads | C (Hỗ trợ Landing Page) | **A / R (Cấp ngân sách & Chạy Ads)** |
+| 6.3 Triển khai In-App Marketing (Push, CRM, Banner) | I (Theo dõi) | **A / R (Chủ trì In-App)** |
+| 6.4 Thiết lập Tracking Analytics, Đo lường & A/B Testing | **A / R (Chủ trì Web)** | C (Hỗ trợ công cụ) |
+| 6.5 Đánh giá Conversion Rate (CR) và Tối ưu Cải tiến | **A / R (Tối ưu phễu Web)** | **A / R (Tối ưu phễu In-App)** |
 
 ---
 
@@ -355,7 +348,12 @@ Các trang sản phẩm độc lập có cấu trúc đường dẫn Root URL c�
 
 | Phiên Bản | Ngày Cập Nhật | Đội Ngũ Thực Hiện | Nội Dung Thay Đổi Chi Tiết |
 | :---: | :---: | :---: | :--- |
-| **v8.2** | 2026-08-26 | Web Product Lead | **Tinh Gọn Ma Trận RACI Chỉ Gồm 3 Đơn Vị Nòng Cốt:** Bỏ Content Team khỏi ma trận RACI; quy hoạch toàn bộ ma trận chỉ gồm **3 đơn vị nòng cốt: Web Platform, InsurTech Cell và VTTI**; Web Platform chủ trì xây dựng cổng cẩm nang giao thông & FAQ trên Web. |
+| **v8.5** | 2026-08-28 | Web Product Lead | **Bổ sung Nhóm Kế Hoạch Growth & Truyền Thông vào RACI:** Bổ sung Nhóm VI vào ma trận RACI nhằm đảm bảo sản phẩm sau khi Go-live có kế hoạch truyền thông (GTM) rõ ràng. Web Platform chủ trì SEO/Inbound & Tracking Web; InsurTech Cell chủ trì ngân sách Paid Ads & In-App Marketing. Hai bên đồng sở hữu khâu Đánh giá CR và Cải tiến liên tục. |
+| **v8.4** | 2026-08-28 | Web Product Lead | **Lược bỏ VTTI khỏi RACI Matrix:** Chuyển đổi RACI về cơ chế hợp tác song phương (Bilateral) giữa 2 đơn vị nòng cốt: **Web Platform** và **InsurTech Cell**. FS/InsurTech sẽ đóng vai trò là đầu mối (Proxy) duy nhất để làm việc, điều phối API và Data từ VTTI, giúp Web Platform không cần giao tiếp chéo nhiều bên gây chậm trễ tiến độ. |
+| **v8.3** | 2026-08-28 | Web Product Lead | **Tiếp Tục Tinh Gọn Kênh Pháp Lý & Biển Số:** Lược bỏ 5 trang tiện ích ngách (`/ho-so-xe`, `/diem-gplx`, `/sang-ten-xe`, `/bien-so-xe`, `/bien-so-dep`) để dồn trọng tâm vào luồng chuyển đổi lõi. Sitemap tổng nội khu vực giảm xuống còn **21 URLs**. |
+| **v8.2** | 2026-08-26 | Web Product Lead | **Tinh Gọn Ma Trận RACI Chỉ Gồm 3 Đơn Vị Nòng Cốt:** Bỏ Content Team khỏi ma trận RACI; quy hoạch toàn bộ ma trận chỉ gồm **2 đơn vị nòng cốt: Web Platform và InsurTech Cell**; Web Platform chủ trì xây dựng cổng cẩm nang giao thông & FAQ trên Web. |
+| **v8.3** | 2026-08-28 | Web Product Lead | **Tiếp Tục Tinh Gọn Kênh Pháp Lý & Biển Số:** Lược bỏ 5 trang tiện ích ngách (`/ho-so-xe`, `/diem-gplx`, `/sang-ten-xe`, `/bien-so-xe`, `/bien-so-dep`) để dồn trọng tâm vào luồng chuyển đổi lõi. Sitemap tổng nội khu vực giảm xuống còn **21 URLs**. |
+| **v8.2** | 2026-08-28 | Web Product Lead | **Tinh Gọn Ecosystem (Loại bỏ Danh Mục Xe & Đối Tác):** Hủy bỏ 4 trang danh mục xe (`/oto`, `/xe-may`, `/xe-dien`, `/xe-tai`) và 2 trang danh mục đối tác (`/doi-tac`, `/doi-tac/[slug]`) để tập trung hoàn toàn vào luồng tiện ích giao thông và công cụ. Cập nhật Sitemap tổng nội khu vực xuống còn **26 URLs**. |
 | **v8.1** | 2026-08-26 | Web Product Lead | **Loại Bỏ Tiện Ích Metro Khỏi Phạm Vi Vehicle Hub:** Loại bỏ trang `/metro` (Lịch trình & Giá vé Metro) và từ khóa liên quan; chuẩn hóa Sitemap toàn bộ hệ sinh thái thành **32 URLs** và dung lượng tìm kiếm toàn thị trường thành **20.106.020 lượt/tháng (20 Chủ đề)**. |
 
 ---
@@ -364,11 +362,13 @@ Các trang sản phẩm độc lập có cấu trúc đường dẫn Root URL c�
 
 | Phiên Bản | Ngày Cập Nhật | Đội Ngũ Thực Hiện | Nội Dung Thay Đổi Chi Tiết |
 | :---: | :---: | :---: | :--- |
+| **v8.3** | 2026-08-28 | Web Product Lead | **Tiếp Tục Tinh Gọn Kênh Pháp Lý & Biển Số:** Lược bỏ 5 trang tiện ích ngách (`/ho-so-xe`, `/diem-gplx`, `/sang-ten-xe`, `/bien-so-xe`, `/bien-so-dep`) để dồn trọng tâm vào luồng chuyển đổi lõi. Sitemap tổng nội khu vực giảm xuống còn **21 URLs**. |
+| **v8.2** | 2026-08-28 | Web Product Lead | **Tinh Gọn Ecosystem (Loại bỏ Danh Mục Xe & Đối Tác):** Hủy bỏ 4 trang danh mục xe (`/oto`, `/xe-may`, `/xe-dien`, `/xe-tai`) và 2 trang danh mục đối tác (`/doi-tac`, `/doi-tac/[slug]`) để tập trung hoàn toàn vào luồng tiện ích giao thông và công cụ. Cập nhật Sitemap tổng nội khu vực xuống còn **26 URLs**. |
 | **v8.1** | 2026-08-26 | Web Product Lead | **Loại Bỏ Tiện Ích Metro Khỏi Phạm Vi Vehicle Hub:** Loại bỏ trang `/metro` (Lịch trình & Giá vé Metro) và từ khóa liên quan; chuẩn hóa Sitemap toàn bộ hệ sinh thái thành **32 URLs** và dung lượng tìm kiếm toàn thị trường thành **20.106.020 lượt/tháng (20 Chủ đề)**. |
-| **v8.0** | 2026-08-26 | Web Product Lead | **Loại Bỏ Hoàn Toàn FS/FinHub & Chuẩn Hóa Nhóm IV Cho InsurTech:** Khẳng định dự án chỉ gồm **3 đơn vị nòng cốt: Web Platform, InsurTech Cell (Bảo hiểm) và VTTI (Giao thông/ePass)** (phối hợp Content Team); Nhóm IV quy hoạch thành **Bộ công cụ dự toán chi phí & chuyển tiếp Lead cho InsurTech** (Auto-fill Bảo hiểm Thân vỏ & TNDS). |
+| **v8.0** | 2026-08-26 | Web Product Lead | **Loại Bỏ Hoàn Toàn FS/FinHub & Chuẩn Hóa Nhóm IV Cho InsurTech:** Khẳng định dự án chỉ gồm **2 đơn vị nòng cốt: Web Platform và InsurTech Cell** (phối hợp Content Team); Nhóm IV quy hoạch thành **Bộ công cụ dự toán chi phí & chuyển tiếp Lead cho InsurTech** (Auto-fill Bảo hiểm Thân vỏ & TNDS). |
 | **v7.9** | 2026-08-26 | Web Product Lead | **Xác Lập Vai Trò Nòng Cốt Giữa FS & VTTI:** Chuẩn hóa quyền sở hữu: **FS (Financial Services / InsurTech) là chủ sở hữu chính về Khung KPI, Mục tiêu Tăng trưởng (Growth) và Doanh thu bán chéo**; **VTTI là chủ sở hữu các API Sản phẩm và Dữ liệu Đối tác** (ePass, Cây xăng, Trạm sạc EV, Garage); **Web Platform chủ trì Kênh Web và phễu W2A**. |
 | **v7.8** | 2026-08-26 | Web Product Lead | **Phân Rã Ma Trận RACI Chi Tiết:** Phân rã toàn bộ ma trận phối hợp thành **16 hạng mục công việc cụ thể phân bổ trong 5 nhóm rõ ràng**; loại bỏ hoàn toàn các thuật ngữ học thuật phức tạp, chuẩn hóa ngôn ngữ thực tế và đồng bộ giữa BRD và file Excel Master. |
-| **v7.7** | 2026-08-26 | Web Product Lead | **Chuẩn Hóa Đội Ngũ Nòng Cốt:** Loại bỏ User Growth; chuẩn hóa cơ cấu hợp tác trực tiếp giữa **3 đơn vị nòng cốt: Web Platform, InsurTech Cell và VTTI** (phối hợp Content Team); nâng cấp ma trận RACI thành 7 Dòng Hoạt Động Product & Growth. |
+| **v7.7** | 2026-08-26 | Web Product Lead | **Chuẩn Hóa Đội Ngũ Nòng Cốt:** Loại bỏ User Growth; chuẩn hóa cơ cấu hợp tác trực tiếp giữa **2 đơn vị nòng cốt: Web Platform và InsurTech Cell** (phối hợp Content Team); nâng cấp ma trận RACI thành 7 Dòng Hoạt Động Product & Growth. |
 | **v7.5** | 2026-08-24 | Web Product Lead | **Chuẩn Hóa Toàn Bộ Sitemap 33 URLs:** Cập nhật bảng tổng hợp Sitemap toàn bộ 33 URLs thuộc hệ sinh thái Tiện Ích Giao Thông theo 8 nhóm chức năng chính; chuẩn hóa định dạng cột `STT`, `URL` (sử dụng domain chuẩn `https://www.momo.vn/`), `Mô Tả Chức Năng` và loại bỏ cột Router. |
 | **v7.4** | 2026-08-20 | Web Product Lead | **Cập Nhật Scope Go-Live Tháng 8 & Quản Trị Dữ Liệu Algify:** Thống nhất danh mục 5 Subpages Go-live Tháng 8 gồm **ePass (`/epass`), Giá xăng (`/gia-xang`), Cây xăng (`/cay-xang`), Trạm sạc EV (`/tram-sac`), Garage (`/tim-garage`)**. Đóng gói 3 Sheet dữ liệu (Garage, Cây xăng, Trạm sạc) dùng chung Web & App qua hạ tầng Algify. Cập nhật giao diện Hero Section (3 promotions cố định), nhãn Badge danh mục (show all), quy chuẩn logo Cây xăng (PVOil, Comeco chính thức, cây khác dùng default logo), bộ lọc hãng Trạm sạc EV và hạ tầng Captcha Bảo hiểm Ô tô. |
 | **v7.3** | 2026-08-20 | Web Product Lead | **Tinh Gọn Phối Hợp Đội Ngũ (Mục 3.5.C):** Cô đọng phần Team Alignment chỉ đề cập các hạng mục công việc lớn của từng đội ngũ (User Growth: hạ tầng Onelink & tracking; Web Platform: thiết lập Entry Points trên Web; App Product Team/Cell Teams: quản trị luồng sản phẩm In-App), không sa đà vào các tham số hay kỹ thuật triển khai chi tiết. |

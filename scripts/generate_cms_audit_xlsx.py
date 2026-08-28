@@ -94,7 +94,7 @@ def build_cms_audit_excel():
         elif p_name in ['Tiện ích giao thông'] or p_parent in ['Tiện ích giao thông']:
             target_zone = 'Transformation Zone'
             proposed_hub = '3. Vehicle Hub'
-            action_req = 'Đồng bộ dữ liệu qua Algify & Tối ưu phễu W2A Phạt nguội/Bảo hiểm.'
+            action_req = 'Đồng bộ dữ liệu qua Apify & Tối ưu phễu W2A Phạt nguội/Bảo hiểm.'
         elif p_name in ['Student Pass'] or 'Student' in p_name:
             target_zone = 'Incubator Zone'
             proposed_hub = '5. Student Hub'
@@ -274,7 +274,7 @@ def build_cms_audit_excel():
 
     zones_data = [
         ('Performance Zone', 'Traffic >= 1.000.000 PV/tháng.\nTăng trưởng: +20% đến +30%.', 'Cinema Hub, Travel & OTA Hub', 'Gộp 52 thể loại phim và 54 tỉnh thành thành Dynamic Facets. Chuẩn hóa trang cụm rạp đối tác.'),
-        ('Transformation Zone', 'Traffic: 500k - 1.000.000 PV/tháng.\nMục tiêu bứt phá: x2 đến x5.', 'Financial Hub (CIC, Vay Nhanh, Vàng, Tiết kiệm, Bảo hiểm),\nVehicle Hub (Phạt nguội, Giá xăng, Cây xăng, Trạm sạc EV)', 'Hợp nhất toàn bộ gốc Bảo hiểm rời rạc (13, 216, 736) và Vay Nhanh (735) vào Financial Hub. Đồng bộ dữ liệu Vehicle qua Algify.'),
+        ('Transformation Zone', 'Traffic: 500k - 1.000.000 PV/tháng.\nMục tiêu bứt phá: x2 đến x5.', 'Financial Hub (CIC, Vay Nhanh, Vàng, Tiết kiệm, Bảo hiểm),\nVehicle Hub (Phạt nguội, Giá xăng, Cây xăng, Trạm sạc EV)', 'Hợp nhất toàn bộ gốc Bảo hiểm rời rạc (13, 216, 736) và Vay Nhanh (735) vào Financial Hub. Đồng bộ dữ liệu Vehicle qua Apify.'),
         ('Incubator Zone', 'Dự án mới / Đột phá.\nCam kết tối thiểu: 500.000 PV/tháng.', 'Student Hub, Cổng Tra cứu Xổ Số & Vietlott,\nNew User Personalization Flow', 'Quy hoạch cấu trúc Student Hub hoàn chỉnh; tích hợp module Xổ số Native QR; tối ưu Onboarding New User.'),
         ('Productivity Zone & Self-serve', 'Hạ tầng & Tiện ích nghiệp vụ BU.\nMục tiêu: Tự động hóa 100%, không tốn Dev.', 'Utilities & Billpay, Payment Core, Donation / Ví Nhân Ái,\nMerchant & Partner Hub, Brand/Life/Trust, In-App Webviews', 'Chuyển giao quyền tự xuất bản cho BU qua Admin Tool theo Template TLDR chuẩn hóa kèm Guardrails. Lưu trữ 34 campaign cũ.')
     ]
@@ -447,7 +447,7 @@ def build_cms_audit_excel():
         ('2. Financial Hub', 'Transformation Zone (Ưu tiên #1)', 'Tiết kiệm, Đầu tư & Vàng Online', 'Bảng so sánh lãi suất ngân hàng, Giá vàng 24/7, Tỷ giá ngoại tệ, Chứng chỉ quỹ', 'Top 1-3 Google Search từ khóa Tra cứu tài chính', 'Real-time Financial Price Tracker API, Native QR Payment'),
         ('2. Financial Hub', 'Transformation Zone (Ưu tiên #1)', 'Trung tâm Bảo hiểm Toàn diện', 'Bảo hiểm ô tô (TNDS, Vật chất, Thủy kích), Bảo hiểm xe máy, Bảo hiểm sức khỏe/Y tế', 'Tăng tỷ lệ Cross-sell Bảo hiểm từ các cổng tiện ích', 'Hợp nhất toàn bộ gốc Bảo hiểm rời rạc (13, 216, 736); Captcha Module'),
         ('3. Vehicle Hub', 'Transformation Zone', 'Tra cứu Phạt nguội & Nộp phạt', 'Màn hình kết quả Inline, Cross-sell Bảo hiểm & Gói thông báo tự động', 'Tăng trưởng Login App, Nộp phạt In-App & Đăng ký gói', 'Mapping tự động mã lỗi CSGT với bài viết hướng dẫn luật GenAI'),
-        ('3. Vehicle Hub', 'Transformation Zone', 'Cổng Tiện ích Giao thông', 'Bản đồ Cây xăng (PVOil, Comeco), Bản đồ Trạm sạc EV, Garage sửa xe, Thu phí ePass/VETC', 'Top 1 thị trường tiện ích giao thông số', '3 Google Sheets chuẩn hóa qua Algify, Dynamic Filtering theo hãng xe'),
+        ('3. Vehicle Hub', 'Transformation Zone', 'Cổng Tiện ích Giao thông', 'Bản đồ Cây xăng (PVOil, Comeco), Bản đồ Trạm sạc EV, Garage sửa xe, Thu phí ePass/VETC', 'Top 1 thị trường tiện ích giao thông số', '3 Google Sheets chuẩn hóa qua Apify, Dynamic Filtering theo hãng xe'),
         ('4. Travel & OTA Hub', 'Performance Zone', 'Vé máy bay, Tàu hỏa, Xe khách', 'Đặt vé máy bay nội địa/quốc tế, Vé xe Tết Phương Trang, Vé tàu hỏa', 'Giữ vững vị thế Top OTA Payment Hub', 'OTA Booking Widget, Dynamic Destination Entity Database'),
         ('4. Travel & OTA Hub', 'Performance Zone', 'Khách sạn & Trải nghiệm', 'Đặt phòng khách sạn theo giờ, Vé khu vui chơi, Cẩm nang du lịch 54 tỉnh thành', 'Tăng trưởng giao dịch OTA In-App', 'Database Destination Engine, Quick Wins Landing Pages'),
         ('5. Student Hub', 'Incubator Zone', 'Cổng Thông Tin Sinh Viên', 'Trang tổng quan Sinh viên, Trường học (50+ Đại học), Bảng xếp hạng trường', 'Đạt mốc 500.000 PV/tháng để giữ trạng thái Chiến lược', 'Mini-web cho từng trường đại học, Student Pass Gamification'),

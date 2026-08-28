@@ -1,4 +1,6 @@
-# BRD: Financial Master Hub (momo.vn/tai-chinh)
+import os
+
+brd_content = """# BRD: Financial Master Hub (momo.vn/tai-chinh)
 
 > - **Tên Dự Án:** Financial Master Hub (Cổng Khám Phá & Ra Quyết Định Dịch Vụ Tài Chính MoMo)
 > - **Phân Khối Phụ Trách:** Growth Platform Division x Financial Services Division (CreditTech)
@@ -549,3 +551,9 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
     </tr>
   </tbody>
 </table>
+"""
+
+with open('05_HUBS/financial-hub-brd.md', 'w', encoding='utf-8') as f:
+    f.write(brd_content)
+
+print("Successfully refined 05_HUBS/financial-hub-brd.md with sharp focus on Financial Hub & 5 Core Pillars!")
