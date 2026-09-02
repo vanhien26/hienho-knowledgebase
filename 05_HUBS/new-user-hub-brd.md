@@ -12,16 +12,18 @@
 
 ### 1.1 Thách Thức Kép Trong Thu Hút Người Dùng Mới (Acquisition & Activation Pain Points)
 1. **Điểm gãy giữa Click Ads và Cài Đặt/Đăng Ký (Install -> REG Drop-off):** 
-   Việc quảng cáo đẩy người dùng thô từ trình duyệt về App Store/Google Play tạo ra ma sát cực lớn. Dữ liệu thực tế cho thấy tỷ lệ chuyển đổi từ Install sang Đăng ký thành công (REG) chỉ đạt **38.14%** (rớt gần 61.86% ngay tại luồng đăng ký ban đầu).
+   Việc quảng cáo đẩy người dùng thô từ trình duyệt về App Store/Google Play tạo ra ma sát cực lớn. Dữ liệu thực tế ghi nhận tỷ lệ chuyển đổi từ Install sang Đăng ký thành công (REG) chỉ đạt **32.10%** (rớt **67.90%** ngay tại luồng đăng ký sau khi tải App).
 2. **Khoảng cách giữa Cài Đặt và Giao Dịch Đầu Tiên (Install -> 1st Transaction Gap):**
-   Phần lớn giá trị sản phẩm MoMo chỉ được khám phá sau quá trình đăng ký và eKYC In-App. Với những nhóm người dùng chưa có nhu cầu đủ rõ hoặc thuộc phân khúc nhạy cảm như U18, việc bắt đầu nỗ lực cài đặt mà chưa thấy rõ lợi ích dẫn đến việc bỏ dở ứng dụng trước khi phát sinh giao dịch đầu tiên (rút ngắn Time-to-First-Value).
+   Phần lớn giá trị sản phẩm MoMo chỉ được khám phá sau quá trình đăng ký và eKYC In-App. Việc bắt người dùng cài đặt khi chưa hiểu rõ lợi ích dẫn đến bỏ dở ứng dụng trước khi phát sinh giao dịch đầu tiên.
 
-### 1.2 Dữ Liệu Cơ Sở (Baseline Data) & Phân Tích Phễu
-Số liệu thực tế phễu Web Ads thu hút New User:
-* **Total Installs:** 5,252 lượt
-* **Registrations (REG):** 2,003 lượt (CVR Install -> REG: **38.14%**)
-* **Bank Mappings (Map):** 1,181 lượt (CVR REG -> Map: **58.96%**; CVR Install -> Map: **22.49%**)
-* **Monthly Active Users (MAU):** 618 người dùng (CVR Map -> MAU: **52.33%**)
+### 1.2 Dữ Liệu Thực Tế Chốt Tháng 08/2026 (August 2026 Full Funnel Data)
+Số liệu phễu Web-to-App New User chính thức được ghi nhận trong Tháng 08/2026:
+* **Ad Views (Impressions):** 1.799.806 lượt hiển thị quảng cáo ngoài Web.
+* **Ad Clicks:** 61.927 lượt nhấp (CTR: **3.44%**).
+* **Total App Installs:** **10.058 lượt** (CR Install/Click: **16.24%**; chính thức vượt mốc 10K, tăng +91.9% MoM so với Tháng 7; gói `CHAOMOMO` chiếm > 86%).
+* **Registrations (REG):** **3.229 lượt** (CVR Install -> REG: **32.10%**).
+* **Bank Mappings (Map Bank - N2MM):** **1.818 lượt** (CVR REG -> Map: **56.30%**; riêng tệp iOS xuất sắc đạt **71.27% Map/REG** với 923 Map Bank).
+* **Active MAU (Phát sinh giao dịch):** **1.029 người dùng** (CVR Map -> MAU: **56.60%**).
 
 ### 1.3 Triết Lý Sản Phẩm Cốt Lõi: "Trải Nghiệm Trước, Cài Đặt Sau"
 Thống nhất xây dựng **New User Master Hub (`momo.vn/welcome`)** làm trang cửa ngõ giáo dục giá trị và cá nhân hóa nhu cầu trước khi tải App:
@@ -34,40 +36,40 @@ Thống nhất xây dựng **New User Master Hub (`momo.vn/welcome`)** làm tran
   <thead>
     <tr style="background-color:#f1f5f9;">
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chỉ số Chiến lược</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Baseline Cũ</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Baseline Cũ (T7/2026)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Thực tế Tháng 08/2026</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Mục tiêu H2 (Mỗi tháng)</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Tỷ lệ Tăng trưởng</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cơ sở & Phương pháp Đo lường</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>New to MoMo (N2MM)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">~1,000 users</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>5,000 users/tháng</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>x 5.0 lần</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người dùng mới hoàn tất đăng ký & liên kết ngân hàng qua nguồn Web-to-App.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1.280 users</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">1.818 users</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>5.000 users/tháng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người dùng mới hoàn tất đăng ký & liên kết ngân hàng qua Web-to-App.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Total Installs</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,252 installs</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>30,000 installs/tháng</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>x 5.7 lần</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5.242 installs</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">10.058 installs</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>20.000 - 30.000 installs/tháng</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng lượt tải App ghi nhận attribution qua AppsFlyer OneLink.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>CVR Install -> REG</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">38.14%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700;">32.10%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>≥ 50.0% - 60.0%</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">Tối ưu ma sát</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nâng cao nhờ cơ chế chọn quà trước gắn kết tâm lý người dùng.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nâng cao nhờ cơ chế chọn quà trước và luồng Hybrid Onboarding tại momo.vn/welcome.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Traffic Mix (Paid vs Organic)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">90% Paid / 10% Organic</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>60% Paid / 40% Organic</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">Tối ưu CAC</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kết hợp Ads Performance với Intent Search (pSEO/GEO) thu hút traffic tự nhiên.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Active MAU (Kích hoạt)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">669 MAU</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">1.029 MAU</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>2.500 MAU/tháng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người dùng mới phát sinh ít nhất 1 giao dịch thực tế trên App.</td>
     </tr>
   </tbody>
 </table>

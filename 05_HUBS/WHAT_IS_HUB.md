@@ -91,6 +91,7 @@ Toàn bộ các Hubs trên Web MoMo được quản lý theo **Ma trận 3 Tần
 │   (mospark.mservice.io)  │ • Financial Hub            │   - End User: momo.vn/merchant │
 │ • Cinema Hub             │ • New User Hub             │   - SME User: m.momo.vn        │
 │                          │                            │ • Student Hub                  │
+│                          │                            │ • Lottery Hub (momo.vn/ve-so)  │
 └──────────────────────────┴────────────────────────────┴────────────────────────────────┘
 ```
 
@@ -101,6 +102,7 @@ Toàn bộ các Hubs trên Web MoMo được quản lý theo **Ma trận 3 Tần
 3. **INCUBATOR HUBS (Ươm tạo & Thử nghiệm Tệp mới):** Các Hub đang thử nghiệm sản phẩm ngách:
    * **SME / Merchant Hub:** Cấu trúc 2 giao diện: End User (`momo.vn/merchant`) & SME/Salesman (`m.momo.vn`).
    * **Student Hub:** Cẩm nang & Review Trường học cho sinh viên U18-U23 (`momo.vn/sinh-vien`).
+   * **Lottery Hub (`momo.vn/ve-so`):** Cổng tra cứu KQXS 41 đài, Dò vé số tự động và Mua vé Vietlott / XSKT trực tiếp qua Native QR MoMo.
 
 ## 4. CẤU TRÚC 4 THÀNH PHẦN CỦA MỘT WEB HUB CHUẨN
 

@@ -416,7 +416,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">18</td>
       <td style="border:1px solid #94a3b8; padding:5px;"><strong>CIC (Điểm tín dụng)</strong></td>
       <td style="border:1px solid #94a3b8; padding:5px;">Tín Dụng & Vay Vốn</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:right;"><strong>95,630</strong></td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:right;"><strong>339,000</strong></td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">4.65</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#15803d;">Dễ (Low)</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#1e40af;">14.6</td>
@@ -491,7 +491,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
     </tr>
     <tr style="background-color:#f1f5f9; font-weight:700;">
       <td style="border:1.5px solid #64748b; padding:6px; text-align:center;" colspan="3">TỔNG CREDITTECH (DEDUPLICATED)</td>
-      <td style="border:1.5px solid #64748b; padding:6px; text-align:right;"><strong>101,896,660</strong></td>
+      <td style="border:1.5px solid #64748b; padding:6px; text-align:right;"><strong>102,140,030</strong></td>
       <td style="border:1.5px solid #64748b; padding:6px; text-align:center;">—</td>
       <td style="border:1.5px solid #64748b; padding:6px; text-align:center;">—</td>
       <td style="border:1.5px solid #64748b; padding:6px; text-align:center;">—</td>
@@ -503,49 +503,78 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
 
 ---
 
-## 10. LỘ TRÌNH TRIỂN KHAI 11 DỰ ÁN CỐT LÕI (ROADMAP & MILESTONES)
+## 10. LỘ TRÌNH TRIỂN KHAI TOÀN DIỆN CÁC DỰ ÁN FINANCIAL HUB (THỰC TẾ TRIỂN KHAI)
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.85em;">
   <thead>
     <tr style="background-color:#f1f5f9;">
-      <th style="border:1.5px solid #64748b; padding:6px; text-align:center; font-weight:700;">Giai Đoạn</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:center; font-weight:700;">Giai Đoạn (Phase)</th>
       <th style="border:1.5px solid #64748b; padding:6px; text-align:center; font-weight:700;">Thời Gian</th>
-      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Tên Giai Đoạn</th>
-      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Chi Tiết Triển Khai & Mục Tiêu Cốt Lõi</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Tên Dự Án / Module Trọng Tâm</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Chi Tiết Triển Khai & Nhiệm Vụ Kỹ Thuật</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:center; font-weight:700;">Trạng Thái</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;"><strong>Phase 1</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 8 - 9/2026</td>
-      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Đánh Chiếm Quick Wins & Ra Mắt Master Gateway</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px;">
-        - Ra mắt Master Gateway <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/tai-chinh</code> với Hero Widget Tính Lãi Tiết Kiệm Live.<br/>
-        - Triển khai Bộ Đôi Công Cụ Thu Nhập & Thuế 2026 (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tinh-luong</code> & <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/thue-tncn</code>).<br/>
-        - Ra mắt Cổng Tra Cứu CIC & Điểm Tín Dụng (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tra-cuu-cic</code> & <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/xoa-no-xau</code>).<br/>
-        - Xuất bản Programmatic Hub cho 34 Ngân Hàng đối tác (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/ngan-hang/[slug]</code>) và Cổng Napas 247 (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/napas</code>).
-      </td>
+    <!-- PHASE 1 - THÁNG 8/2026 -->
+    <tr style="background-color:#f0fdf4;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;" rowspan="4"><strong>Phase 1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 8/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 1: Master Financial Hub</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Xây dựng trang cổng trung tâm, thiết kế Mega Menu 5 nhóm nhu cầu tài chính, thanh Trợ thủ đồng hành và các thẻ điều hướng sản phẩm.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#15803d; background-color:#dcfce7;">Done</td>
+    </tr>
+    <tr style="background-color:#f0fdf4;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 8/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 2: CIC, Tiết Kiệm</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Công cụ CIC Simulator và Nợ Xấu.<br/>Công cụ tiết lãi suất tiết kiệm cho TKO</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#15803d; background-color:#dcfce7;">Done</td>
+    </tr>
+    <tr style="background-color:#fefce8;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 8/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 3: Content Strategy & Blog Tài Chính</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Thiết lập quy trình tự động hóa xuất bản cẩm nang tài chính bằng AI độc lập trên MoSpark</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#b45309; background-color:#fef9c3;">In Progress</td>
+    </tr>
+    <tr style="background-color:#f0fdf4;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 8/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 4: Tra Cứu Giá Vàng Realtime</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Xây dựng bảng giá vàng realtime (SJC, PNJ, DOJI, 24K, 9999, Nhẫn trơn), biểu đồ lịch sử 7-30 ngày</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#15803d; background-color:#dcfce7;">Done</td>
+    </tr>
+    <!-- PHASE 1 - THÁNG 9/2026 -->
+    <tr style="background-color:#fefce8;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;" rowspan="3"><strong>Phase 1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 9/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 5: Tính Lương & Thuế TNCN 2026</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Bộ công cụ tính lương Gross - Net (áp dụng luật thuế mới 2026) và cẩm nang tự quyết toán/hoàn thuế TNCN.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#b45309; background-color:#fef9c3;">In Progress</td>
+    </tr>
+    <tr style="background-color:#fefce8;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 9/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 7: Bộ Quy Đổi Ngoại Tệ & Tỷ Giá</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Trang Cổng Master /ty-gia và Hệ thống Programmatic Subpages theo từng cặp tiền (/tai-chinh/ty-gia/[pair-slug]: USD/VND, JPY/VND, EUR/VND, KRW/VND, CNY/VND, GBP/VND...) kèm biểu đồ biến động lịch sử và so sánh tỷ giá đa ngân hàng.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#b45309; background-color:#fef9c3;">In Progress</td>
+    </tr>
+    <tr style="background-color:#eff6ff;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 9/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 8: Thực Tập Sinh Đầu Tư (Chứng Khoán)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Công cụ tra cứu, hướng dẫn và giả lập Đầu Tư Chứng Khoán</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#1d4ed8; background-color:#dbeafe;">Planned</td>
+    </tr>
+    <!-- PHASE 2 - THÁNG 10/2026 -->
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;" rowspan="2"><strong>Phase 2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 10/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 9: Bổ sung các công cụ tính toán tài chính</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Công cụ 'Có Tiền Đầu Tư Gì?' phân bổ tài sản Lump Sum (An toàn, Tăng trưởng, Mạo hiểm), Bộ giả lập Lãi kép tích lũy SIP và FIRE.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#1d4ed8; background-color:#dbeafe;">Planned</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;"><strong>Phase 2</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 10 - 11/2026</td>
-      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Mở Rộng Core Drivers & Tích Hợp Realtime Feeds</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px;">
-        - Tích hợp Engine dữ liệu Giá Vàng SJC/9999 (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/gia-vang</code>) & Tỷ Giá Ngoại Tệ Realtime (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/ty-gia</code>).<br/>
-        - Ra mắt Ma Trận So Sánh Thẻ Tín Dụng (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/the-tin-dung</code>) & Thẻ Quốc Tế Visa/Mastercard.<br/>
-        - Phát triển Máy Tính Trả Góp 0% (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tra-gop</code>) và Cổng Đăng Ký Vay Nhanh (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/vay-tin-chap</code>) / Vay Mua Nhà (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/vay-the-chap</code>).<br/>
-        - Xây dựng Bộ Giả Lập Đầu Tư Quỹ Mở / Tích Lũy SIP từ 10.000đ (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/chung-chi-quy</code>).
-      </td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;"><strong>Phase 3</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 12/2026 - Q1/2027</td>
-      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Cá Nhân Hóa Tự Động & Tối Ưu Phễu Web-to-App</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px;">
-        - Triển khai Real-time Personalization dựa trên dữ liệu người dùng tự khai báo trên Web.<br/>
-        - Đóng gói toàn bộ Embeddable Widgets cho các đối tác ngoài (Affiliate & Partner Web).<br/>
-        - Tối ưu hóa phễu chuyển đổi Web-to-App cho phân khúc Sinh Viên (U18 - U23) và Nhà Đầu Tư Mới (F0).
-      </td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 10/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 9: Trung Tâm Đầu Tư & Tích Sản FIRE</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Công cụ 'Có Tiền Đầu Tư Gì?' phân bổ tài sản Lump Sum (An toàn, Tăng trưởng, Mạo hiểm), Bộ giả lập Lãi kép tích lũy SIP và FIRE.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#1d4ed8; background-color:#dbeafe;">Planned</td>
     </tr>
   </tbody>
 </table>
