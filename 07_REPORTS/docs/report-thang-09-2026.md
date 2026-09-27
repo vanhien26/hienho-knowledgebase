@@ -1,34 +1,34 @@
-# BÁO CÁO TỔNG QUAN THÁNG 09/2026 - WEB PLATFORM (CẬP NHẬT MTD 25/09/2026)
+# BÁO CÁO TỔNG QUAN THÁNG 09/2026 - WEB PLATFORM (CẬP NHẬT MTD 26/09/2026)
 
 > **Đơn vị thực hiện:** Web Platform Team (Growth Platform Division)  
-> **Khung thời gian:** Tháng 09/2026 (Dữ liệu MTD tính đến 25/09/2026 - 25 ngày)  
+> **Khung thời gian:** Tháng 09/2026 (Dữ liệu MTD tính đến 26/09/2026 - 26 ngày)  
 > **Khung mục tiêu năm 2026:** Target Tháng 09: 3.509.044 PVs (North Star Dec 2026: 4.000.000 PVs/tháng)  
-> **Trạng thái tổng thể:** AHEAD OF SCHEDULE (Lũy kế 25 ngày đạt 3.254.040 PVs, hoàn thành 92.73% Target Tháng 09 - Vượt tiến độ thời gian 83.33%)
+> **Trạng thái tổng thể:** AHEAD OF SCHEDULE (Lũy kế 26 ngày đạt 3.416.331 PVs, hoàn thành 97.36% Target Tháng 09 - Vượt xa tiến độ thời gian 86.67%)
 
 ---
 
 ## I. KEY HIGHLIGHTS & BUSINESS IMPACT
 
-- **Tiến độ Target MTD (25 ngày đầu tháng):** Lũy kế 25 ngày đạt **3.254.040 Pageviews**, hoàn thành **92.73% Target Tháng 9** (3,51M PVs). Trung bình vận hành bứt phá tăng tốc đạt **130.162 PVs/ngày**.
-- **Ước tính trọn tháng (Run-rate Forecast 30d):** Toàn Tháng 9 ước tính đạt **3.904.848 Pageviews** (đạt **111.28% Target Tháng 9** - **VƯỢT TARGET CHÍNH THỨC +11.28% ~ +395.804 PVs**).
-- **Yêu cầu 5 ngày cuối (26/09 - 30/09):** Tổng số PV còn thiếu chỉ là **255.004 PVs**, tương ứng tốc độ chạy chỉ cần **51.001 PVs/ngày** để cán mốc Target gốc.
-- **Cơ cấu Kênh Traffic MTD 25d:**
-  - **Organic (Top 1):** **1.261.534 PVs** (38.8% tổng Web) - Cột mốc lịch sử vượt 1.26 TRIỆU PV.
-  - **Paid:** **1.074.948 PVs** (33.0% tổng Web) - Vượt 1.07 TRIỆU PV.
-  - **Direct:** **585.411 PVs** (18.0% tổng Web).
-  - **Referral:** **304.732 PVs** (9.4% tổng Web).
-  - **Others:** **27.415 PVs** (0.8% tổng Web).
+- **Tiến độ Target MTD (26 ngày đầu tháng):** Lũy kế 26 ngày đạt **3.416.331 Pageviews**, hoàn thành **97.36% Target Tháng 9** (3,51M PVs). Traffic ngày 26/09 đạt **162.291 PVs/ngày**. Nhịp độ vận hành trung bình bứt phá lên **131.397 PVs/ngày**.
+- **Ước tính trọn tháng (Run-rate Forecast 30d):** Toàn Tháng 9 ước tính đạt **3.941.919 Pageviews** (đạt **112.34% Target Tháng 9** - **VƯỢT TARGET CHÍNH THỨC +12.34% ~ +432.875 PVs**).
+- **Yêu cầu 4 ngày cuối (27/09 - 30/09):** Tổng số PV còn thiếu chỉ là **92.713 PVs**, tương ứng tốc độ chạy chỉ cần **23.178 PVs/ngày** để cán mốc Target gốc.
+- **Cơ cấu Kênh Traffic MTD 26d:**
+  - **Organic (Top 1):** **1.334.900 PVs** (39.07% tổng Web) - Cột mốc lịch sử vượt 1.33 TRIỆU PV.
+  - **Paid:** **1.119.567 PVs** (32.77% tổng Web) - Vượt 1.11 TRIỆU PV.
+  - **Direct:** **622.990 PVs** (18.24% tổng Web).
+  - **Referral:** **310.802 PVs** (9.10% tổng Web).
+  - **Others:** **28.072 PVs** (0.82% tổng Web).
 
-### Bảng Tổng Hợp Hiệu Suất 5 Strategic Hubs (MTD 25/09/2026):
+### Bảng Tổng Hợp Hiệu Suất 5 Strategic Hubs (MTD 26/09/2026):
 
-| Web Hub | Phân loại 4 Zone | Actual MTD 25d | Daily Pace | Forecast 30d | Target Sept | % Projected | Trạng Thái & Trọng Tâm Vận Hành |
+| Web Hub | Phân loại 4 Zone | Actual MTD 26d | Daily Pace | Forecast 30d | Target Sept | % Projected | Trạng Thái & Trọng Tâm Vận Hành |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| **New User Hub** | Transformation | **341.953 PV** | 13.678/d | **410.344 PV** | 300.000 PV | **136.8%** | VƯỢT TARGET HUB CHÍNH THỨC (+36.8%) |
-| **Cinema Hub** | Performance | **981.056 PV** | 39.242/d | **1.177.267 PV** | 1.500.000 PV | **78.5%** | Movie Booking, Pilot UI NCC & Mini Game |
-| **Financial Hub** | Transformation | **208.148 PV** | 8.326/d | **249.778 PV** | 500.000 PV | **50.0%** | Master Hub Live, Go-live Lương/Tỷ Giá/Vàng |
-| **Vehicle Hub** | Transformation | **59.023 PV** | 2.361/d | **70.828 PV** | 200.000 PV | **35.4%** | Phạt nguội API, Staging Garage & BH Ô tô Ads |
-| **Student Hub** | Incubator | **6.269 PV** | 251/d | **7.523 PV** | 100.000 PV | **7.5%** | University Ratings & Student Pass |
-| **TỔNG CỘNG HUBS** | All Zones Summary | **1.596.449 PV** | 63.858/d | **1.915.739 PV** | 2.600.000 PV | **73.7%** | Chiếm 49.1% tổng traffic toàn Kênh Web |
+| **New User Hub** | Transformation | **369.416 PV** | 14.208/d | **426.249 PV** | 300.000 PV | **142.1%** | **VƯỢT TARGET HUB CHÍNH THỨC (+42.1%)** |
+| **Cinema Hub** | Performance | **1.033.573 PV** | 39.753/d | **1.192.584 PV** | 1.500.000 PV | **79.5%** | **CỘT MỐC VƯỢT >1M PV MTD**, Pilot UI NCC & Mini Game |
+| **Financial Hub** | Transformation | **224.768 PV** | 8.645/d | **259.348 PV** | 500.000 PV | **51.9%** | Master Hub Live, Go-live Lương/Tỷ Giá/Vàng |
+| **Vehicle Hub** | Transformation | **60.444 PV** | 2.325/d | **69.743 PV** | 200.000 PV | **34.9%** | Phạt nguội API, Staging Garage & BH Ô tô Ads |
+| **Student Hub** | Incubator | **6.356 PV** | 244/d | **7.334 PV** | 100.000 PV | **7.3%** | University Ratings & Student Pass |
+| **TỔNG CỘNG HUBS** | All Zones Summary | **1.694.557 PV** | 65.175/d | **1.955.258 PV** | 2.600.000 PV | **75.2%** | Chiếm 49.6% tổng traffic toàn Kênh Web |
 
 ### Cập nhật Trọng tâm Sản phẩm & Nội dung Các Hubs:
 

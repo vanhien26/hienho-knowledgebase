@@ -567,29 +567,29 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
 
 ---
 
-### 3. ĐÁNH GIÁ PERFORMANCE & DỰ BÁO RUN-RATE TARGET THÁNG 9/2026 (CẬP NHẬT 25/09/2026)
+### 3. ĐÁNH GIÁ PERFORMANCE & DỰ BÁO RUN-RATE TARGET THÁNG 9/2026 (CẬP NHẬT 26/09/2026)
 
 * **Chỉ tiêu Target Tháng 9 (Total Pageviews):** **3.509.044 PVs**.
-* **Số thực tế MTD 25 ngày (01/09 - 25/09):** **3.254.040 PVs** (Đạt **92.73%** Target, vượt tiến độ **83.33%** thời gian).
-* **Nhịp độ thực tế (Daily Rate):** **130.162 PV/ngày** (Bứt phá tăng tốc mạnh những ngày cuối tháng).
-* **Dự báo Run-rate 30 ngày (EOM Forecast):** **3.904.848 PVs** (Đạt **111.28%** Target - **VƯỢT TARGET CHÍNH THỨC +11.28% ~ +395.804 PVs**).
-* **Số PV còn thiếu (26/09 - 30/09):** **255.004 PVs** (Tốc độ chạy yêu cầu 5 ngày cuối chỉ cần: **51.001 PV/ngày**).
+* **Số thực tế MTD 26 ngày (01/09 - 26/09):** **3.416.331 PVs** (Đạt **97.36%** Target, vượt xa tiến độ **86.67%** thời gian).
+* **Traffic 1 ngày gần nhất (26/09):** **162.291 PVs/ngày**.
+* **Nhịp độ thực tế (Daily Rate):** **131.397 PV/ngày** (Bứt phá tăng tốc rất mạnh trong những ngày vừa qua).
+* **Dự báo Run-rate 30 ngày (EOM Forecast):** **3.941.919 PVs** (Đạt **112.34%** Target - **VƯỢT TARGET CHÍNH THỨC +12.34% ~ +432.875 PVs**).
+* **Số PV còn thiếu (27/09 - 30/09):** Chỉ còn **92.713 PVs** (Tốc độ chạy yêu cầu 4 ngày cuối cực kỳ nhẹ nhàng: chỉ **23.178 PV/ngày**).
 
-### Breakdown Cơ cấu Kênh Traffic MTD 25d (01/09 - 25/09):
-* **Organic (Top 1):** **1.261.534 PVs** (38.8% tổng Web) - Cột mốc lịch sử **vượt 1.26 TRIỆU PV**, vươn xa ở Top 1 nguồn traffic Web.
-* **Paid:** **1.074.948 PVs** (33.0% tổng Web) - Chính thức **vượt mốc 1.07 TRIỆU PV**.
-* **Direct:** **585.411 PVs** (18.0% tổng Web).
-* **Referral:** **304.732 PVs** (9.4% tổng Web).
-* **Others:** **27.415 PVs** (0.8% tổng Web).
+### Breakdown Cơ cấu Kênh Traffic MTD 26d (01/09 - 26/09):
+* **Organic (Top 1):** **1.334.900 PVs** (39.07% tổng Web) - Chính thức **vượt mốc 1.33 TRIỆU PV**, giữ vững vị trí chủ lực.
+* **Paid:** **1.119.567 PVs** (32.77% tổng Web) - Đã **vượt mốc 1.11 TRIỆU PV**.
+* **Direct:** **622.990 PVs** (18.24% tổng Web).
+* **Referral:** **310.802 PVs** (9.10% tổng Web).
+* **Others:** **28.072 PVs** (0.82% tổng Web).
 
-### Breakdown Theo Strategic Hubs & Top Verticals MTD 25d:
-* **New User (Transformation Zone):** **341.953 PVs** (10.5% total traffic) - Forecast 30d: **410.344 PVs** (**VƯỢT TARGET HUB +36.8%**).
-* **Cinema Hub (Performance Zone):** **981.056 PVs** (30.1% total traffic) - Forecast 30d đạt **1.177.267 PVs**.
-* **Game (Incubator Zone):** **239.067 PVs** (7.3% total traffic) - Giữ vững vị trí Top 2 vertical toàn Web.
-* **Financial Hub (Transformation Zone):** **208.148 PVs** (6.4% total traffic) - Forecast 30d đạt **249.778 PVs** (50.0% Target).
-* **Home MoMo & Tiktok:** lần lượt đạt **205.219 PVs** (6.3%) và **188.279 PVs** (5.8%).
-* **Vé Xe & Vehicle Hub:** lần lượt đạt **68.464 PVs** (2.1%) và **59.023 PVs** (1.8% - Forecast: 70.828 PV).
-* **Student Hub (Incubator Zone):** **6.269 PVs** (0.2% - Forecast: 7.523 PV).
+### Breakdown Theo Strategic Hubs & Top Verticals MTD 26d:
+* **New User Hub (Transformation Zone):** **369.416 PVs** (10.8% total traffic) - Daily pace: 14.208 PV/d | Forecast 30d: **426.249 PVs** (**VƯỢT TARGET HUB CHÍNH THỨC +42.1%**).
+* **Cinema Hub (Performance Zone):** **1.033.573 PVs** (30.3% total traffic) - Daily pace: 39.753 PV/d | Forecast 30d: **1.192.584 PVs** - **CHÍNH THỨC VƯỢT MỐC LỊCH SỬ >1 TRIỆU PVS MTD!**
+* **Financial Hub (Transformation Zone):** **224.768 PVs** (6.6% total traffic) - Daily pace: 8.645 PV/d | Forecast 30d: **259.348 PVs** (51.9% Target).
+* **Vehicle Hub (Transformation Zone):** **60.444 PVs** (1.8% total traffic) - Daily pace: 2.325 PV/d | Forecast 30d: **69.743 PVs** (34.9% Target).
+* **Student Hub (Incubator Zone):** **6.356 PVs** (0.2% total traffic) - Daily pace: 244 PV/d | Forecast 30d: **7.334 PVs** (7.3% Target).
+* **Tổng Cộng 5 Hubs:** **1.694.557 PVs** (Chiếm **49.6%** tổng traffic toàn Web) - Daily pace: 65.175 PV/d | Forecast 30d: **1.955.258 PVs** (75.2% Target Hubs).
 
 ---
 
@@ -597,7 +597,7 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
 
 ### A. Dự Án Game
 * **Tăng trưởng T5 -> T8 Full Month:** 101k (T5) -> 140k (T6) -> 209k (T7) -> **449k PVs (T8)** (gấp 4.4 lần).
-* **MTD Tháng 9 (25d):** 239.067 PVs -> Run-rate 30d: **286.880 PVs/tháng**.
+* **MTD Tháng 9 (26d):** **248.560 PVs** -> Run-rate 30d: **286.800 PVs/tháng**.
 * **Cơ cấu Kênh:** Paid (45-47%) & Referral (32-40%) chiếm >80%. Organic ~50k PVs/tháng.
 * **Action Items:**
   1. Dùng GenAI Pipeline tạo 20 SEO Landing Pages nạp game nâng Organic lên **150k PV/tháng**.
@@ -605,10 +605,10 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
   3. Luồng Native Web QR Payment nạp game out-app + App Sync.
 
 ### B. 5 Use Cases Ngách
-1. **Hỏi Đáp / FAQ (Incubator):** **82.039 PVs** MTD 25d. Run-rate **98.447 PV/tháng** (+900%). Dùng GenAI Pipeline xuất bản FAQ Page Schema.
+1. **Hỏi Đáp / FAQ (Incubator):** **86.415 PVs** MTD 26d. Run-rate **99.710 PV/tháng** (+900%). Dùng GenAI Pipeline xuất bản FAQ Page Schema.
 2. **Xổ Số / Vietlott (Incubator):** Target **500.000 PV/tháng**. Dựng cổng tra cứu KQXS + Native Web QR Payment mua vé + Onelink Sync.
-3. **Vé Xe & OTA (Transformation):** MTD 25d đạt **95.671 PVs** (Vé xe 68.5k, OTA 27.2k). Run-rate **114.805 PV/tháng**. Nhúng Web Booking Widget, CTR >= 8%.
-4. **Merchant / Soundbox (Productivity):** MTD 25d đạt **58.003 PVs**. Run-rate **69.604 PV/tháng**. Landing Page Merchant Hub + Form Lead B2B.
+3. **Vé Xe & OTA (Transformation):** MTD 26d đạt **98.243 PVs** (Vé xe 69.8k, OTA 28.4k). Run-rate **113.357 PV/tháng**. Nhúng Web Booking Widget, CTR >= 8%.
+4. **Merchant / Soundbox (Productivity):** MTD 26d đạt **59.845 PVs**. Run-rate **69.052 PV/tháng**. Landing Page Merchant Hub + Form Lead B2B.
 5. **Audit Nhóm Others (Governance):** Audit URL Tagging, chuyển 50% về đúng Hubs.
 
 ---
@@ -629,14 +629,14 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
 
 Đã khởi tạo sheet chuyên biệt **Hubs Performance** trong file Excel SSOT (`07_REPORTS/web_performance_tracking.xlsx`) để theo dõi riêng hiệu suất 5 Web Hubs chiến lược qua công thức `SUMIFS` tự động:
 
-| Web Hub | Phân loại 4 Zone | Actual MTD 25d | Daily Pace | Forecast 30d | Target Sept | % Projected | Trọng tâm Tối ưu |
+| Web Hub | Phân loại 4 Zone | Actual MTD 26d | Daily Pace | Forecast 30d | Target Sept | % Projected | Trọng tâm Tối ưu |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| **New User Hub** | Transformation | **341,953 PV** | 13,678/d | **410,344 PV** | 300,000 PV | **136.8%** | **VƯỢT TARGET HUB CHÍNH THỨC (+36.8%)** |
-| **Cinema Hub** | Performance | **981,056 PV** | 39,242/d | **1,177,267 PV** | 1,500,000 PV | **78.5%** | Movie Booking & Actor Profiles |
-| **Financial Hub** | Transformation | **208,148 PV** | 8,326/d | **249,778 PV** | 500,000 PV | **50.0%** | CIC Score & Salary/Exchange Widgets |
-| **Vehicle Hub** | Transformation | **59,023 PV** | 2,361/d | **70,828 PV** | 200,000 PV | **35.4%** | API Phạt nguội + Maps + Tiện Ích Giao Thông |
-| **Student Hub** | Incubator | **6,269 PV** | 251/d | **7,523 PV** | 100,000 PV | **7.5%** | University Ratings & Student Pass |
-| **TỔNG CỘNG HUBS** | All Zones Summary | **1,596,449 PV** | 63,858/d | **1,915,739 PV** | 2,600,000 PV | **73.7%** | Chiếm 49.1% tổng traffic toàn Web |
+| **New User Hub** | Transformation | **369,416 PV** | 14,208/d | **426,249 PV** | 300,000 PV | **142.1%** | **VƯỢT TARGET HUB CHÍNH THỨC (+42.1%)** |
+| **Cinema Hub** | Performance | **1,033,573 PV** | 39,753/d | **1,192,584 PV** | 1,500,000 PV | **79.5%** | **CỘT MỐC LỊCH SỬ VƯỢT >1 TRIỆU PV MTD** |
+| **Financial Hub** | Transformation | **224,768 PV** | 8,645/d | **259,348 PV** | 500,000 PV | **51.9%** | CIC Score & Salary/Exchange Widgets |
+| **Vehicle Hub** | Transformation | **60,444 PV** | 2,325/d | **69,743 PV** | 200,000 PV | **34.9%** | API Phạt nguội + Maps + Garage Staging |
+| **Student Hub** | Incubator | **6,356 PV** | 244/d | **7,334 PV** | 100,000 PV | **7.3%** | University Ratings & Student Pass |
+| **TỔNG CỘNG HUBS** | All Zones Summary | **1,694,557 PV** | 65,175/d | **1,955,258 PV** | 2,600,000 PV | **75.2%** | Chiếm 49.6% tổng traffic toàn Web |
 
 ---
 

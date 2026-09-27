@@ -136,18 +136,18 @@ Cơ chế PLG của Cinema Hub dựa trên 5 Phễu Mồi Câu (Acquisition & En
   </tbody>
 </table>
 
-### 1.5 Báo Cáo Hiệu Suất MTD 25/09/2026 & Tiến Độ Thực Thi Sản Phẩm
+### 1.5 Báo Cáo Hiệu Suất MTD 26/09/2026 & Tiến Độ Thực Thi Sản Phẩm
 
-#### A. Dữ Liệu Hiệu Suất Vận Hành MTD 25 Ngày (01/09 - 25/09/2026)
-* **Lưu lượng MTD 25d:** Đạt **981.056 Pageviews** (chiếm **30.15% tổng lưu lượng Kênh Web**), giữ vững vị thế động cơ kéo traffic số 1 toàn sàn.
-* **Tốc độ vận hành (Daily Pace):** Đạt **39.242 PV/ngày**.
-* **Dự báo trọn tháng (Run-rate Forecast 30d):** Ước tính đạt **1.177.267 PVs** (đạt 78.5% Target Hub 1.5M).
-* **Phân rã theo Sub-pages MTD 25d:**
-  * Trang Cụm rạp (Cinema_Cineplex): **388.407 PVs** (39.6% Hub)
-  * Trang Chi tiết phim (Cinema_Page): **384.186 PVs** (39.2% Hub)
-  * Trang Blog điện ảnh (Cinema_Blog): **139.183 PVs** (14.2% Hub)
-  * Trang chủ Cinema & News: Lần lượt đạt **60.676 PVs** và **8.367 PVs**
-* **Paid Traffic MTD 25d:** Đạt **356.066 Pageviews** (chiếm 33.1% tổng Paid toàn Kênh Web).
+#### A. Dữ Liệu Hiệu Suất Vận Hành MTD 26 Ngày (01/09 - 26/09/2026)
+* **Lưu lượng MTD 26d:** Đạt **1.033.573 Pageviews** (chiếm **30.25% tổng lưu lượng Kênh Web**), chính thức **VƯỢT MỐC LỊCH SỬ >1 TRIỆU PVS MTD**, giữ vững vị thế động cơ kéo traffic số 1 toàn sàn.
+* **Tốc độ vận hành (Daily Pace):** Đạt **39.753 PV/ngày**.
+* **Dự báo trọn tháng (Run-rate Forecast 30d):** Ước tính đạt **1.192.584 PVs** (đạt 79.5% Target Hub 1.5M).
+* **Phân rã theo Sub-pages MTD 26d:**
+  - Trang Cụm rạp (Cinema_Cineplex): **407.962 PVs** (39.5% Hub)
+  - Trang Chi tiết phim (Cinema_Page): **418.064 PVs** (40.4% Hub)
+  - Trang Blog điện ảnh (Cinema_Blog): **139.759 PVs** (13.5% Hub)
+  - Trang chủ Cinema & News: Lần lượt đạt **60.334 PVs** và **8.397 PVs**
+* **Paid Traffic MTD 26d:** Đạt **356.556 Pageviews** (chiếm 31.8% tổng Paid toàn Kênh Web).
 
 #### B. Cột Mốc Sản Phẩm & Chiến Lược Vận Hành Mới
 * **Tự Chủ Sản Xuất Content:** Web Platform Team chủ động 100% quy trình sản xuất nội dung review/tin tức điện ảnh qua MoSpark GenAI Pipeline, tự chủ vận hành không lệ thuộc vào nguồn lực Cell Team.

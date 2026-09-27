@@ -3003,6 +3003,11 @@ MoSpark không còn là CMS đơn thuần mà là một sản phẩm phần mề
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5.0</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Product Roadmap & Content Strategy Realignment</strong>: (1) Cinema Hub: Tự chủ 100% content qua MoSpark, Go-live UI trang rạp (pilot NCC), Reusable Mini Game Framework. (2) Vehicle Hub: Staging trang Tìm Garage (Go-live 30/09), hỗ trợ InsurTech Blog BH Ô Tông (Ads 550M hết 2026). (3) Financial Hub: Hoàn thiện Master Hub homepage (7 Utilities), Go-live Tính Lương, Tỷ Giá, Giá Vàng; Staging Phân Bổ Lương; phát triển Tool & Page Chứng Chỉ Quỹ Phase 2.</td>
     </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-09-27</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5.1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Performance Synchronization (MTD 26/09/2026)</strong>: Đồng bộ dữ liệu MTD 26 ngày Tháng 9/2026 trên toàn bộ báo cáo và Master SSOT: Total Pageviews 3.416.331 PV (97.36% Target), Run-rate forecast 3.941.919 PV (112.34% Target - Vượt Target +12.34%). Single day 26/09 đạt 162.291 PVs. Cinema Hub cán mốc lịch sử >1 TRIỆU PVs (1.033.573 PV), New User Hub 369k PV (Vượt Target Hub +42.1%), Financial Hub 224k PV, Vehicle Hub 60.4k PV, Student Hub 6.3k PV.</td>
+    </tr>
   </tbody>
 </table>
 

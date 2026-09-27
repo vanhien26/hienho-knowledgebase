@@ -96,17 +96,17 @@ Kênh Website vận hành dựa trên các tiện ích tra cứu miễn phí đ�
 
 > **Lưu ý về chỉ số:** Các chỉ số tổng Target Phase 1 Pilot (*Total Traffic 500.000, %CTR W2A ≥ 5.0% - 10.0%, Logged-in MAU 250.000, New Vehicle Profiles 100.000*) **đã được Ban Giám Đốc phê duyệt chính thức**. 
 
-### 1.4 Báo Cáo Hiệu Suất MTD 25/09/2026 & Cột Mốc Sản Phẩm Mới
+### 1.4 Báo Cáo Hiệu Suất MTD 26/09/2026 & Cột Mốc Sản Phẩm Mới
 
-#### A. Dữ Liệu Hiệu Suất Vận Hành MTD 25 Ngày (01/09 - 25/09/2026)
-* **Lưu lượng MTD 25d:** Đạt **59.023 Pageviews** (chiếm 1.8% tổng lưu lượng Kênh Web).
-* **Tốc độ vận hành (Daily Pace):** Đạt **2.361 PV/ngày**.
-* **Dự báo trọn tháng (Run-rate Forecast 30d):** Ước tính đạt **70.828 PVs** (35.4% Target Hub 200K).
-* **Phân rã theo Verticals MTD 25d:**
-  * Phạt Nguội: **35.918 PVs** (60.9% Hub)
-  * Bảo Hiểm Ô Tô: **16.108 PVs** (27.3% Hub)
-  * Bảo Hiểm Xe Máy: **5.581 PVs** (9.5% Hub)
-  * Phí Không Dừng & Tiện Ích Giao Thông: Lần lượt đạt **881 PVs** và **535 PVs**
+#### A. Dữ Liệu Hiệu Suất Vận Hành MTD 26 Ngày (01/09 - 26/09/2026)
+* **Lưu lượng MTD 26d:** Đạt **60.444 Pageviews** (chiếm 1.8% tổng lưu lượng Kênh Web).
+* **Tốc độ vận hành (Daily Pace):** Đạt **2.325 PV/ngày**.
+* **Dự báo trọn tháng (Run-rate Forecast 30d):** Ước tính đạt **69.743 PVs** (34.9% Target Hub 200K).
+* **Phân rã theo Verticals MTD 26d:**
+  * Phạt Nguội: **36.960 PVs** (61.1% Hub)
+  * Bảo Hiểm Ô Tô: **16.486 PVs** (27.3% Hub)
+  * Bảo Hiểm Xe Máy: **5.602 PVs** (9.3% Hub)
+  * Phí Không Dừng & Tiện Ích Giao Thông: Lần lượt đạt **888 PVs** và **508 PVs**
 
 #### B. Tiến Độ Sản Phẩm & Content Realignment
 * **Tự Chủ Sản Xuất Content PLG:** Web Platform Team tiếp tục chủ động sản xuất nội dung bài viết chuyên sâu trên các dự án PLG (Phạt nguội, Giá xăng, Trạm sạc, Đăng kiểm) qua GenAI Pipeline.

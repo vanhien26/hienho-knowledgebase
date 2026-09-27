@@ -32,11 +32,11 @@ Nếu MoMo xây dựng **Financial Master Hub (`momo.vn/tai-chinh`)** làm cổn
 ## 3. MỤC TIÊU KINH DOANH & BÁO CÁO HIỆU SUẤT MTD (BUSINESS OBJECTIVES & PERFORMANCE)
 
 1. **Xây dựng Cổng Dịch Vụ Tài Chính Toàn Diện (Master Financial Gateway):** Thiết lập `momo.vn/tai-chinh` thành trung tâm điều hướng và thâu tóm nhu cầu tìm kiếm cho toàn bộ 5 khối dịch vụ tài chính (101.89M lượt tìm kiếm/tháng).
-2. **Báo Cáo Hiệu Suất Vận Hành MTD 25 Ngày (01/09 - 25/09/2026):**
-   * **Total MTD Traffic:** Đạt **208.148 Pageviews** (chiếm 6.4% tổng lưu lượng Kênh Web).
-   * **Daily Pace:** Đạt **8.326 PV/ngày**.
-   * **Dự báo trọn tháng (Run-rate Forecast 30d):** Ước tính đạt **249.778 PVs** (50.0% Target Hub 500K).
-   * **Phân rã Top Verticals MTD 25d:** Vay Nhanh **92.201 PVs** (44.3% Hub), Tra cứu CIC **67.562 PVs** (32.5% Hub), Ví Trả Sau **35.071 PVs** (16.8% Hub), Bổ trợ **13.314 PVs**.
+2. **Báo Cáo Hiệu Suất Vận Hành MTD 26 Ngày (01/09 - 26/09/2026):**
+   * **Total MTD Traffic:** Đạt **224.768 Pageviews** (chiếm 6.6% tổng lưu lượng Kênh Web).
+   * **Daily Pace:** Đạt **8.645 PV/ngày**.
+   * **Dự báo trọn tháng (Run-rate Forecast 30d):** Ước tính đạt **259.348 PVs** (51.9% Target Hub 500K).
+   * **Phân rã Top Verticals MTD 26d:** Vay Nhanh **96.532 PVs** (43.0% Hub), Tra cứu CIC **72.107 PVs** (32.1% Hub), Ví Trả Sau **39.539 PVs** (17.6% Hub), Bổ trợ **16.590 PVs**.
 3. **Cột Mốc Tiến Độ Sản Phẩm & Content Mới:**
    * **Phối hợp Inbound Content:** Phối hợp với Inbound Content Team triển khai quy trình viết và duyệt content blog tài chính đạt chuẩn E-E-A-T / YMYL.
    * **Hoàn thiện Trang chủ Master Hub (`/tai-chinh`):** Đã hoàn thiện 100% hiển thị bộ 7 Utilities: CIC, Tính Lương, Phân Bổ Lương, Tỷ Giá, Giá Vàng, Ví Trả Sau, Vay Nhanh.
