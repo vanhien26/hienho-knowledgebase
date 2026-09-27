@@ -111,14 +111,30 @@ graph TD
     C & D --> E["Front-end Web Hubs (momo.vn)"]
 ```
 
-### 2.2 Các Trụ Cột Kỹ Thuật MoSpark & Phân Định Scope
 1. **PM/PO Self-Service (MoBase Landing Page Builder):** Cho phép PM/PO các Cell Team tự tạo Landing Page và Widget theo chuẩn thiết kế MoBase Design System trong 1-2 ngày thay vì chờ 1-2 tuần Dev sprint.
-2. **GenAI Produ## 3. BÁO CÁO CHI TIẾT CÁC WEB HUBS (BÁO CÁO CHUẨN C-LEVEL)
+2. **GenAI Production Engine & Anti-Cannibalization:** Vận hành quy trình sản xuất nội dung 7 bước dựa trên Business Context (12 fields) do PM xác nhận; kiểm tra Keyword Master Registry để tránh trùng lặp từ khóa (1 Keyword = 1 URL) và triển khai hạ tầng `llms.txt` cho AI Search.
+3. **Ads Manager & Web-to-App Attribution:** Quản trị tập trung các slot quảng cáo out-app (Native Widget, Balloon, Banner), giảm xung đột hiển thị giữa các Division và đo lường luồng chuyển đổi người dùng từ Web vào App (W2A CVR) qua Umami và AppsFlyer.
+4. **Phân định Scope Ranh giới Vận hành:** Bài toán tối ưu xếp hạng SEO/GEO thuộc Scope chuyên môn của Media Team. Web Software Team tập trung phát triển hạ tầng kỹ thuật MoSpark, tối ưu UI/UX MoBase, tự động hóa pSEO và đảm bảo hiệu năng tải trang.
+
+## 3. BÁO CÁO CHI TIẾT CÁC WEB HUBS (BÁO CÁO CHUẨN C-LEVEL)
+
+### Dashboard Hiệu Suất 5 Strategic Hubs (Cập Nhật MTD 25/09/2026 - 25 Ngày)
+
+| Web Hub | Phân loại 4 Zone | Actual MTD 25d (01-25/09) | Daily Pace | Forecast 30d | Target Sept | % Projected | Trạng Thái Vận Hành MTD 25d |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
+| **New User Hub** | Transformation | **341.953 PV** | 13.678/d | **410.344 PV** | 300.000 PV | **136.8%** | VƯỢT TARGET HUB CHÍNH THỨC (+36.8%) |
+| **Cinema Hub** | Performance | **981.056 PV** | 39.242/d | **1.177.267 PV** | 1.500.000 PV | **78.5%** | Movie Booking & Cineplex UI Pages |
+| **Financial Hub** | Transformation | **208.148 PV** | 8.326/d | **249.778 PV** | 500.000 PV | **50.0%** | CIC Score, Vay Nhanh & Widget Lương/Tỷ Giá |
+| **Vehicle Hub** | Transformation | **59.023 PV** | 2.361/d | **70.828 PV** | 200.000 PV | **35.4%** | Phạt nguội API post-20/09 & Trạm Sạc |
+| **Student Hub** | Incubator | **6.269 PV** | 251/d | **7.523 PV** | 100.000 PV | **7.5%** | University Ratings & Student Pass |
+| **TỔNG CỘNG HUBS** | All Zones Summary | **1.596.449 PV** | 63.858/d | **1.915.739 PV** | 2.600.000 PV | **73.7%** | Chiếm 49.1% tổng lưu lượng toàn Kênh Web |
+
+---
 
 ### 3.1. Cinema Hub (momo.vn/cinema)
 
 #### 1. Key Highlights & Business Impact
-* **Business Context:** Cinema Hub từng là động cơ kéo lưu lượng tự nhiên (Organic Traffic) out-app lớn nhất ngoài mảng tài chính tại MoMo, nhưng gặp điểm nghẽn chuyển đổi do rào cản bắt buộc tải App để hoàn tất thanh toán vé rạp. Trong H2/2026, dự án tái cấu trúc toàn diện trên hạ tầng MoSpark thúc đẩy tăng trưởng và bổ sung luồng thanh toán QR Code trực tiếp ngoài Web.
+* **Business Context:** Cinema Hub từng là động cơ kéo lưu lượng tự nhiên (Organic Traffic) out-app lớn nhất ngoài mảng tài chính tại MoMo. Trong H2/2026, dự án tái cấu trúc toàn diện trên hạ tầng MoSpark thúc đẩy tăng trưởng và bổ sung luồng thanh toán QR Code trực tiếp ngoài Web.
 * **Trạng thái Alignment:** VP/BU Head Alignment (Phối hợp giữa Web Platform x MDS-Movies BU).
 * **Mục tiêu Chiến lược:** Mở rộng quy mô lượt xem trang, tối ưu thứ hạng từ khóa xếp hạng phim trên Google Search/AI Search và chuẩn hóa vị trí nút CTA để thúc đẩy bán vé rạp.
 
@@ -132,14 +148,14 @@ graph TD
   * `Tickets Sold/month`: ~35.000 Vé rạp/tháng *(Tích lũy H2: 214.292 Vé rạp)*
 
 #### 3. Cross-team Collaboration & Support Needed
-* **MDS-Movies BU:** Sở hữu mục tiêu doanh số vé rạp; cung cấp API lịch chiếu, giá vé đối tác rạp và xử lý nghiệp vụ booking in-app. Phối hợp xây dựng Cinema Entities và tối ưu Off-page SEO.
-* **SEO Vendor & Media Team:** Phối hợp vận hành AI Content Pipeline cho blog/review phim và đẩy mạnh thứ hạng từ khóa điện ảnh.
+* **MDS-Movies BU:** Sở hữu mục tiêu doanh số vé rạp; cung cấp API lịch chiếu, giá vé đối tác rạp và phối hợp thử nghiệm các chiến dịch phim rạp mới.
+* **Web Platform Content Team:** Tự chủ 100% quy trình sản xuất nội dung bài viết review/tin tức điện ảnh qua MoSpark GenAI Pipeline, không lệ thuộc vào nguồn lực Cell Team.
 
 #### 4. Priorities & Action Items (Kế Hoạch & Tiến Độ Thực Thi)
-* **Roll out Nhiệm Vụ (Gamification Missions) trên 2 Phim Trọng Điểm:** Triển khai tính năng Nhiệm Vụ (Missions) cho 2 bộ phim chiếu rạp hot đang được đẩy mạnh trong tuần nhằm bứt phá lưu lượng truy cập (MPV), gia tăng tương tác đọc bài review/xem trailer và thúc đẩy CTR đặt vé.
-* **Tối ưu luồng Đặt vé & Deep Linking:** Triển khai UI step-by-step tăng trải nghiệm và phát triển Deep Linking cho Lịch chiếu (URL riêng từng suất chiếu giúp Google Crawlers/AI hiển thị trực tiếp).
-* **Tích hợp Thanh toán QR trên Web (Native Web Payment):** Xây dựng cơ chế thanh toán QR 1-on-1 trực tiếp ngoài Web không bắt buộc tải App hoặc đăng nhập rườm rà, giảm đứt gãy luồng thanh toán.
-* **Chuyển đổi MoSpark CMS & Sync Dữ Liệu:** Chuyển đổi hệ thống từ Admin Tool cũ sang MoSpark CMS và kết nối API tự động đồng bộ dữ liệu phim từ TMDB.
+* **Go-live UI/UX Mới Trang Rạp (Thí điểm NCC):** Đã Go-live giao diện UI/UX trang rạp mới, đang áp dụng thử nghiệm tại **Trung Tâm Chiếu Phim Quốc Gia (NCC)** để đánh giá hiệu suất Impression/Click CTR trước khi roll-out toàn bộ, bảo vệ traffic của các cụm rạp best-performing (CGV, Lotte, Galaxy).
+* **Reusable Mini Game Framework cho Phim:** Hoạch định và xây dựng mô-đun Mini Game tương tác đơn giản dạng Reusable Framework áp dụng đồng loạt cho tất cả các đầu phim chiếu rạp.
+* **Tự Chủ Sản Xuất Blog Content:** Duy trì tự chủ sản xuất nội dung bài viết điện ảnh qua MoSpark GenAI Pipeline để phủ từ khóa tìm kiếm tự nhiên.
+* **Xây dựng Trang Diễn Viên chuẩn SEO Entity (Actor Pages):** Khởi chạy các trang Profile Diễn Viên điện ảnh (Hồng Đào, Võ Tấn Phát) để đón đầu tìm kiếm tự nhiên.
 
 ---
 
@@ -159,23 +175,23 @@ graph TD
   * `Saved Vehicle Profile`: 100.000 Hồ sơ xe tích lũy *(phục vụ Master Target 500.000 Thẻ Xe Số In-App)*
 
 #### 3. Cross-team Collaboration & Support Needed
-* **VTTI BU:** Cung cấp giải pháp nộp phạt nguội trực tiếp, phối hợp tích hợp cơ sở dữ liệu Thẻ Xe Số (Vehicle Profile L1-L3) và theo dõi MAU active có xe.
-* **InsurTech BU:** Cung cấp API tiện ích (Giá Xăng, Đăng Kiểm, Bảo hiểm Ô tô VCX/TNDS, BHXM) và phối hợp thiết kế các gói Combo Cross-sell (Tra cứu phạt nguội + voucher bảo hiểm / ưu đãi ePass).
-* **Media Team:** Phối hợp đẩy Off-page SEO và tối ưu vị trí xếp hạng Top 3 Google Search cụm từ khóa giao thông.
+* **InsurTech BU:** Phối hợp triển khai chiến dịch Ads **550 triệu VND (đến hết 2026)** cho Bảo Hiểm Ô Tô, tối ưu UI/UX trang đích và acquire New User.
+* **VTTI BU:** Cung cấp dữ liệu vị trí trạm sạc, cây xăng và garage sửa xe toàn quốc; bảo đảm ổn định API Phạt Nguội.
 
 #### 4. Priorities & Action Items (Kế Hoạch & Tiến Độ Thực Thi)
-* **Go-live Master Hub & 5 Subpages:** Xuất bản Master Hub `/tien-ich-giao-thong` và 5 Subpages chuyên biệt (`/gia-xang`, `/cay-xang`, `/tram-sac`, `/tim-garage`, `/epass`).
-* **Hạ tầng 0-CAPTCHA & Captcha Module:** Duy trì hạ tầng tra cứu phạt nguội 0-CAPTCHA public, tích hợp Captcha Module bảo mật chống DDoS cho luồng đăng ký Bảo hiểm Ô tô.
-* **Quản trị dữ liệu dùng chung qua Apify:** Thống nhất cơ chế vận hành 3 Sheet dữ liệu dùng chung (Cây xăng, Trạm sạc VinFast/V-Green, Garage) và quy chuẩn hiển thị thương hiệu đối tác.
+* **Staging & Go-live Trang Tìm Garage:** Đã hoàn thành đưa lên **Staging** trang **Tìm Garage (`/tien-ich-giao-thong/tim-garage`)**, dự kiến chính thức **Go-live trước khi hết Tháng 09/2026**.
+* **Đồng Hành InsurTech BU & Campaign Ads 550 triệu:** Phối hợp hỗ trợ Cell Team triển khai bài viết Blog cho Bảo Hiểm Ô Tô (chạy ngân sách Ads 550tr hết 2026), tối ưu UI/UX và phễu acquire New User.
+* **Tự Chủ Sản Xuất Content PLG:** Web Platform Team tiếp tục chủ động sản xuất bài viết chuyên sâu trên các dự án PLG (Phạt nguội, Giá xăng, Trạm sạc, Đăng kiểm).
+* **Duy Trì Hạ Tầng 0-CAPTCHA & Phạt Nguội Post-API:** Đảm bảo hệ thống tra cứu phạt nguội hoạt động mượt mà sau khi API nối lại kết nối từ 20/09.
 
 ---
 
 ### 3.3. Financial Hub (momo.vn/tai-chinh)
 
 #### 1. Key Highlights & Business Impact
-* **Business Context:** Người dùng có xu hướng tìm kiếm và so sánh các công cụ tài chính cá nhân out-app trước khi giao dịch. Financial Hub vận hành bộ Simulator Widget (giá vàng, tỷ giá, tiết kiệm, chứng khoán) và Chuyên trang Điểm Tín Dụng CIC, giúp định hình điểm chạm tài chính tin cậy ngoài Web để người dùng thẩm thấu giá trị trước khi điều hướng mở dịch vụ trên App MoMo *(Đã chốt URL chính thức: `momo.vn/tai-chinh`, 301 redirect từ `/trung-tam-tai-chinh`)*.
+* **Business Context:** Người dùng có xu hướng tìm kiếm và so sánh các công cụ tài chính cá nhân out-app trước khi giao dịch. Financial Hub vận hành bộ Simulator Widget và Chuyên trang Điểm Tín Dụng CIC, giúp định hình điểm chạm tài chính tin cậy ngoài Web *(URL chính thức: `momo.vn/tai-chinh`, 301 redirect từ `/trung-tam-tai-chinh`)*.
 * **Trạng thái Alignment:** VP/BU Head Alignment (Phối hợp giữa Web Platform x FinHub BU).
-* **Mục tiêu Chiến lược:** Xây dựng Trung tâm tương tác tài chính cá nhân out-app (`/tai-chinh`) và Chuyên trang tra cứu điểm tín dụng CIC (`/diem-tin-dung`), sẵn sàng đón mốc 8 triệu lượt check CIC toàn dân vào ngày 01/01/2027.
+* **Mục tiêu Chiến lược:** Xây dựng Trung tâm tương tác tài chính cá nhân out-app (`/tai-chinh`) và Chuyên trang tra cứu điểm tín dụng CIC (`/diem-tin-dung`).
 
 #### 2. Success Metrics (Bộ Chỉ Số Chuẩn Hóa Web & Business)
 * **Web Metrics (Chỉ số Kênh Web):**
@@ -185,12 +201,15 @@ graph TD
   * `MEU (Monthly Engaged Users)`: 500.000 Users/tháng *(Active MAU/MEU từ nguồn Web)*
 
 #### 3. Cross-team Collaboration & Support Needed
-* **FinHub / FS BU:** Sở hữu OKR mảng Finhub & CIC; cung cấp API dữ liệu điểm tín dụng CIC, tỷ giá, giá vàng, Tiết kiệm và kiểm duyệt tuân thủ tiêu chuẩn NHNN/YMYL.
-* **Content Team:** Vận hành AI Content Pipeline sản xuất bài viết kiến thức tài chính chuẩn YMYL (E-E-A-T), bổ sung Named Author Policy và disclaimer pháp lý.
+* **Inbound Content Team:** Phối hợp chặt chẽ triển khai quy trình sản xuất, viết và duyệt nội dung Blog tài chính đạt chuẩn E-E-A-T / YMYL.
+* **FinHub Cell Team:** Phối hợp làm **Tool & Page Chứng Chỉ Quỹ (`/tai-chinh/chung-chi-quy`)** và nghiệm thu Staging trang Phân Bổ Lương.
 
 #### 4. Priorities & Action Items (Kế Hoạch & Tiến Độ Thực Thi)
-* **Vận hành Simulator Widgets:** Duy trì vận hành ổn định bộ công cụ Tracker giá vàng 24/7, tỷ giá ngoại tệ, tính lãi tiết kiệm và máy tính Vay Nhanh / BNPL Calculator.
-* **Tối ưu Chuyên trang CIC:** Phát triển chuyên trang `/diem-tin-dung` hỗ trợ tra cứu điểm tín dụng CIC miễn phí và lập kế hoạch nội dung SEO/GEO cho đợt reset dữ liệu CIC toàn dân 2027.
+* **Hoàn Thiện Trang Chủ Master Hub (`/tai-chinh`):** Đã hoàn thiện trang chủ Tài Chính hiển thị bộ 7 Utilities nổi bật: CIC, Tính Lương, Phân Bổ Lương, Tỷ Giá, Giá Vàng, Ví Trả Sau, Vay Nhanh.
+* **Go-live 3 Trang Chi Tiết:** Đã Go-live chính thức 3 sub-page: **Tính Lương (`/tai-chinh/tinh-luong`)**, **Tỷ Giá (`/tai-chinh/ty-gia`)**, **Giá Vàng (`/tai-chinh/gia-vang`)**.
+* **Staging Trang Phân Bổ Lương:** Đã hoàn tất đưa lên **Staging** trang **Phân Bổ Lương (`/tai-chinh/phan-bo-luong`)**.
+* **Phát Triển Tool & Page Chứng Chỉ Quỹ Phase 2:** Đang trong quá trình phối hợp với Cell Team phát triển Tool và Page Chứng Chỉ Quỹ (`/tai-chinh/chung-chi-quy`).
+* **Phối Hợp Inbound Content:** Triển khai quy trình phối hợp viết và duyệt content blog tài chính đồng bộ với các công cụ vừa go-live.
 
 ---
 
@@ -213,7 +232,8 @@ graph TD
 * **MDS / Student Pass BU:** Đồng hành chủ trì chương trình Student Pass Ambassador, cung cấp nội dung diễn giả cho Student Pass Webinar và duyệt thông tin ưu đãi đối tác giáo dục.
 
 #### 4. Priorities & Action Items (Kế Hoạch & Tiến Độ Thực Thi)
-* **Phase 1 (Q3 - Q4):** Triển khai hạ tầng University Review/Rating & Khởi chạy mạng lưới Student Pass Ambassador tại các trường đại học.
+* **Cung cấp Công cụ Self-Serve Trang School Detail:** Đã bàn giao công cụ tự phục vụ (Self-serve / Page Builder) cho Cell Team (S-Hub BU) chủ động quản lý, chỉnh sửa và vận hành trang **School Detail** (Chi tiết Trường Đại Học / Ratings) không phụ thuộc Dev.
+* **Phase 1 (Q3 - Q4):** Phát triển hạ tầng University Review/Rating & Khởi chạy mạng lưới Student Pass Ambassador tại các trường đại học.
 * **Phase 2 (Q4):** Xây dựng và phát hành chuyên mục Student Pass Webinar / Workshop trên Kênh Web MoMo.
 
 ---

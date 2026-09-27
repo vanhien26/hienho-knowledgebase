@@ -2993,6 +2993,16 @@ MoSpark không còn là CMS đơn thuần mà là một sản phẩm phần mề
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4.7</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Merchant & Widget Specifications Refinement</strong>: (1) Tích hợp Google Map Search Crawler & Dynamic Schema/Amenities theo 7 ngành hàng vào Merchant BRD & PRD. (2) Tái định nghĩa chi tiết JTBD cho 10 core Utilities và loại bỏ static shortcode specifications khỏi Widget Store BRD.</td>
     </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-09-26</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4.9</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Performance Synchronization (MTD 25/09/2026)</strong>: Đồng bộ dữ liệu MTD 25 ngày Tháng 9/2026 trên toàn bộ báo cáo 5 Hubs và Master SSOT: Total Pageviews 3.254.040 PV (92.73% Target), Run-rate forecast 3.904.848 PV (111.28% Target - Vượt Target +11.28%). Cinema Hub 981k PV, New User Hub 342k PV (Vượt Target Hub +36.8%), Financial Hub 208k PV, Vehicle Hub 59k PV, Student Hub 6.2k PV.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-09-26</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5.0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Product Roadmap & Content Strategy Realignment</strong>: (1) Cinema Hub: Tự chủ 100% content qua MoSpark, Go-live UI trang rạp (pilot NCC), Reusable Mini Game Framework. (2) Vehicle Hub: Staging trang Tìm Garage (Go-live 30/09), hỗ trợ InsurTech Blog BH Ô Tông (Ads 550M hết 2026). (3) Financial Hub: Hoàn thiện Master Hub homepage (7 Utilities), Go-live Tính Lương, Tỷ Giá, Giá Vàng; Staging Phân Bổ Lương; phát triển Tool & Page Chứng Chỉ Quỹ Phase 2.</td>
+    </tr>
   </tbody>
 </table>
 

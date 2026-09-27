@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "type": "mtd_snapshot",
+    "period": "2026-09-01_to_2026-09-09",
+    "source_file": "07_REPORTS/web_performance_tracking.xlsx",
+    "origin_file": "/Users/hienhv/Downloads/Web Performance Tracking.xlsx",
+    "source_last_updated": "2026-09-09 09:33",
+    "saved_date": "2026-09-17",
+    "target_sep_2026": 3509044,
+    "target_oct_2026": 3665607,
+    "target_nov_2026": 3829155,
+    "target_dec_2026": 4000000,
+    "unit": "Pageviews (cnt_pv, DISTINCT event_id)"
+  },
+  "overall": {
+    "sep_mtd_pv": 1870691,
+    "aug_mtd_same_window_pv": 1708172,
+    "net_change_vs_aug_mtd": 162519,
+    "growth_vs_aug_mtd_pct": 9.51,
+    "aug_full_month_pv": 3465363,
+    "pct_of_sep_target": 53.31,
+    "daily_rate_sep_mtd": 207854,
+    "forecast_30d_runrate": 6235624,
+    "forecast_vs_target_pct": 177.69,
+    "note_forecast": "Run-rate 30d bi thoi phong do Paid spike Cinema_Page trong 9d dau thang, khong dung de suy ra full month. Dung de theo doi nhịp MTD, khong thay the forecast cuoi thang."
+  },
+  "by_channel_sep_mtd": [
+    { "channel": "Paid", "sep_mtd": 717786, "share_pct": 38.37, "aug_mtd": 310152 },
+    { "channel": "Organic", "sep_mtd": 705349, "share_pct": 37.7, "aug_mtd": 875078 },
+    { "channel": "Direct", "sep_mtd": 260559, "share_pct": 13.93, "aug_mtd": 370527 },
+    { "channel": "Referral", "sep_mtd": 167435, "share_pct": 8.95, "aug_mtd": 139852 },
+    { "channel": "Others", "sep_mtd": 19562, "share_pct": 1.05, "aug_mtd": 12563 }
+  ],
+  "by_hub_sep_mtd": [
+    { "hub": "Cinema Hub", "sep_mtd": 680579, "aug_mtd": 389928 },
+    { "hub": "Others", "sep_mtd": 307102, "aug_mtd": 207211 },
+    { "hub": "Game", "sep_mtd": 134554, "aug_mtd": 149908 },
+    { "hub": "New User", "sep_mtd": 129379, "aug_mtd": 197579 },
+    { "hub": "Financial Hub", "sep_mtd": 116451, "aug_mtd": 121003 },
+    { "hub": "Home MoMo", "sep_mtd": 108904, "aug_mtd": 102117 },
+    { "hub": "Tiktok", "sep_mtd": 101155, "aug_mtd": 95225 },
+    { "hub": "Hoi dap", "sep_mtd": 46396, "aug_mtd": 20470 },
+    { "hub": "Ve Xe", "sep_mtd": 39484, "aug_mtd": 52702 },
+    { "hub": "Merchant", "sep_mtd": 31805, "aug_mtd": 38764 },
+    { "hub": "Phat Nguoi", "sep_mtd": 24770, "aug_mtd": 138202 },
+    { "hub": "Sim", "sep_mtd": 23537, "aug_mtd": 30882 },
+    { "hub": "OTA", "sep_mtd": 16288, "aug_mtd": 28121 }
+  ],
+  "top_projects_sep_mtd": [
+    { "project": "Cinema_Page", "sep_mtd": 464840 },
+    { "project": "Others", "sep_mtd": 307102 },
+    { "project": "Cinema_Cineplex Page", "sep_mtd": 180947 },
+    { "project": "Game", "sep_mtd": 134554 },
+    { "project": "New User", "sep_mtd": 129379 },
+    { "project": "Home MoMo", "sep_mtd": 108904 },
+    { "project": "Tiktok", "sep_mtd": 101155 },
+    { "project": "Vay Nhanh", "sep_mtd": 48772 },
+    { "project": "Hoi dap", "sep_mtd": 46396 },
+    { "project": "Diem Tin Dung", "sep_mtd": 40452 },
+    { "project": "Ve Xe", "sep_mtd": 39484 },
+    { "project": "Merchant", "sep_mtd": 31805 },
+    { "project": "Phat Nguoi", "sep_mtd": 24770 }
+  ],
+  "tiktok_paid_note": {
+    "conclusion": "Paid cao do Nap Xu Tiktok chay ads, de ket qua SEO.",
+    "detail": "Tiktok Sep MTD 101.155 PVs (vs 95.225 Aug MTD): Paid 65.587 (vs 9.571, +56.016), Organic 31.526 (vs 81.359, -49.833). Tong flat (+5.930) nhung mix chuyen tu Organic sang Paid. Phu hop gia thuyet ads de SEO.",
+    "updated_by": "2026-09-17",
+    "source": "MTD Pivot 2026-09-09, cutoff 09/09/2026 09:33"
+  },
+  "flags": [
+    "Cinema_Page Paid dot bien 324.430 PVs trong 9d (vs 2.728 Aug MTD) - kiem tra Ads phim rap hot, khong phai Organic.",
+    "Paid cao do Nap Xu Tiktok chay ads, de ket qua SEO: Tiktok Paid 65.587 vs 9.571 Aug MTD (+585%), Organic 31.526 vs 81.359 (-61%). Tong Tiktok flat 101.155 vs 95.225.",
+    "Others Paid 177.045 PVs (vs 20.190 Aug MTD) - can audit URL tagging, tranh double-count.",
+    "Phat Nguoi giam manh (24.770 vs 138.202 Aug MTD) do API tat 01-20/09, khop ghi nhan trong WEB_PERFORMANCE_TRACKING_MASTER.",
+    "Organic giam -169.729 PVs vs Aug MTD (-19,4%), Paid tang +407.634 PVs bu dap - can ban ve chat luong traffic."
+  ],
+  "files": [
+    "07_REPORTS/web_performance_tracking.xlsx",
+    "07_REPORTS/data/mtd_pivot_2026-09-09.csv",
+    "07_REPORTS/data/fullmonth_pivot_2026-09-09.csv",
+    "07_REPORTS/data/monthly_09_2026_mtd.json"
+  ]
+}

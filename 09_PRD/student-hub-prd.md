@@ -97,18 +97,17 @@ Tích hợp các công cụ giải quyết trực tiếp "nỗi đau" hàng ngà
 ### 4.1 Master Site Structure
 * **Lộ Trình Triển Khai Kiến Trúc Trang (2-Phase Architecture Roadmap):**
   * **Phase 1 (Hiện tại - Single-Page + Modal Popups):** Hiện tại **chưa triển khai các trang con (Sub-pages)** cho Ngành đào tạo, Học bổng, Việc làm, Nhà trọ. Tất cả nội dung chi tiết được hiển thị trực tiếp trên một trang trường học duy nhất (`momo.vn/sinh-vien/[ten-truong-ma-truong]`) thông qua **Modal Popups / Drawers / Anchor Links (`#nganh-dao-tao`, `#hoc-bong`, `#viec-lam`, `#nha-tro`, `#review`)** nhằm tập trung sức mạnh SEO Domain Authority và tối ưu tốc độ tải trang.
-  * **Phase 2 (Mở rộng Programmatic Sub-Pages):** Các đường dẫn trang con chuyên biệt (`/sinh-vien/[ten-truong]/nha-tro`, `/ambassador`, `/workshop`, `/review`) sẽ được mở rộng trong Phase 2 khi quy mô traffic tự nhiên tăng trưởng.
+  * **Phase 2 (Mở rộng Programmatic Sub-Pages):** Fast-track ra mắt Cổng Việc Làm Master (`/sinh-vien/viec-lam`) và trang Đại sứ (`/ambassador`) trong Phase 2 (Tháng 9/2026); các Cổng Master Nhà Trọ (`/nha-tro`) và Workshop (`/workshop`) mở rộng trong Phase 3.
  (`/sinh-vien`)
 Cấu trúc đường dẫn URL chuẩn phân cấp Subdirectory phân rã từ gốc `/sinh-vien`:
 
 ```
 momo.vn/sinh-vien (Trang chủ Student Hub / Discovery Hub)
+├── /sinh-vien/viec-lam (Cổng Master Việc Làm Sinh Viên & AI Resume Builder)
+├── /sinh-vien/nha-tro (Cổng Master Nhà Trọ & KTX Sinh Viên - Dynamic Query ?truong=[slug])
+├── /sinh-vien/workshop (Cổng Master Webinar & Event Workshop Sinh Viên)
+├── /sinh-vien/ambassador (Trang Showcase Đại sứ Sinh viên MoMo & Tuyển dụng Ambassador)
 └── /sinh-vien/[ten-truong-ma-truong] (Trang chi tiết Trường ĐH - Ví dụ: /sinh-vien/ton-duc-thang-tdtu)
-    ├── /sinh-vien/[ten-truong-ma-truong]/nha-tro (Trang danh sách & chi tiết Nhà trọ / KTX an toàn gần trường)
-    ├── /sinh-vien/[ten-truong-ma-truong]/ambassador (Trang Đại sứ Sinh viên MoMo & Tuyển dụng Campus Ambassador)
-    ├── /sinh-vien/[ten-truong-ma-truong]/workshop (Trang sự kiện, Webinar & Workshop kỹ năng/AI sinh viên)
-    ├── /sinh-vien/[ten-truong-ma-truong]/review (Trang tổng hợp bài đánh giá Review & Rating UGC chi tiết)
-    └── ?campus=[campus-id] (Bộ lọc xem bài Review & Địa điểm theo mã cơ sở chi nhánh)
 ```
 
 ### 4.2 URL Routing Matrix
@@ -131,7 +130,7 @@ momo.vn/sinh-vien (Trang chủ Student Hub / Discovery Hub)
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/sinh-vien/[ten-truong-ma-truong]</code></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>School Landing Page</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang trường chuyên biệt (VD: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/sinh-vien/ton-duc-thang-tdtu</code>), thông tin học phí, môi trường học, review tổng quan.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang trường chuyên biệt (VD: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/sinh-vien/ton-duc-thang-tdtu</code>), thông tin học phí, môi trường học, review tổng quan (tích hợp Inline Block / Modal Drawer #review).</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Review ngay (Mở App)</em></td>
     </tr>
     <tr>
@@ -151,12 +150,6 @@ momo.vn/sinh-vien (Trang chủ Student Hub / Discovery Hub)
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sub-page Workshop & Event</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chuỗi bài viết & đăng ký tham gia Webinar "Career & AI Talk", sự kiện CLB trường ĐH.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Đăng ký tham gia Workshop</em></td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">momo.vn/sinh-vien/[ten-truong-ma-truong]/review</code></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sub-page Review UGC Chi Tiết</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bài viết đánh giá 5 sao góc nhìn sinh viên thực tế theo từng cơ sở (Campus A, B, N).</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>Viết Review (Mở App)</em></td>
     </tr>
   </tbody>
 </table>
@@ -208,9 +201,11 @@ Lưới 6 icon điều hướng 1-touch truy cập nhanh các dịch vụ trọn
 * **CTA Chuyển đổi trực tiếp:** Nút *"Nộp học phí ngay"* dẫn dắt trực tiếp qua OneLink sang phễu Nộp học phí In-App.
 * **Khối thông tin Học bổng:** Hiển thị danh sách học bổng của trường (Học bổng Xuất sắc 23.4 triệu, Học bổng Toàn phần 15.6 triệu) kèm điều kiện xét tuyển.
 
-### 5.6 Cổng Việc Làm & Thực Tập (Jobs & Internship Board)
-* Hiển thị danh sách vị trí việc làm part-time và thực tập sinh từ các chuỗi F&B, siêu thị, cửa hàng đối tác của MoMo.
-* Thông tin minh bạch: Mức lương theo giờ/tháng, địa điểm làm việc, đánh giá môi trường làm việc, nút CTA *"Ứng tuyển ngay"*.
+### 5.6 Cổng Việc Làm & AI Resume Master (`momo.vn/sinh-vien/viec-lam`)
+* **Master Gateway URL:** `momo.vn/sinh-vien/viec-lam` (Cổng Master Việc Làm Sinh Viên & AI Resume Builder).
+* **Bản đồ Việc làm 5km Campus:** Hiển thị danh sách vị trí việc làm part-time và thực tập sinh từ các chuỗi F&B, siêu thị, cửa hàng đối tác của MoMo (Highlands, Circle K, KFC, Co.opmart...) lọc theo bán kính 5km quanh campus.
+* **AI Resume Builder & ATS Scoring:** Tạo & tải CV tự động chuẩn ATS trên Web, phân tích điểm tương thích CV với bản tả công việc (JD).
+* **Luồng Chuyển Đổi 1-Tap Student Pass:** Ứng tuyển nhanh thông qua xác thực Thẻ Sinh Viên Số In-App qua OneLink, mở khóa gói voucher ưu đãi HSSV & Ví Trả Sau 0% (không yêu cầu nhận lương qua Ví).
 
 ### 5.7 Student Pass Digital Card Verification Flow
 * **Quy trình xác thực 100% In-App (kích hoạt qua OneLink):**

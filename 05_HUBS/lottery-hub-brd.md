@@ -5,7 +5,7 @@
 > - **Main URL:** momo.vn/ve-so
 > - **Division:** Growth Platform Division (Web Platform)
 > - **Governance:** Web Product Lead
-> - **Version:** 2.4 · Tháng 08/2026
+> - **Version:** 2.6 · Tháng 09/2026
 > - **Status:** Active / Sẵn sàng triển khai
 > - **Business Model:** Utility-Led Product-Led Growth (PLG), Chuyển đổi Web-to-App, Phí giao dịch thanh toán & Doanh thu hợp tác phân phối
 
@@ -48,7 +48,7 @@ Xây dựng **Cổng Tiện Ích Vé Số & Mua Vé Số Trực Tuyến (MoMo Lo
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
     <tr style="background-color:#f1f5f9;">
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tệp Dữ Liệu</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cụm Từ Khóa Tìm Kiếm</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nội Dung Trọng Tâm</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Số Lượng Keywords</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tổng Search Volume</th>
@@ -57,28 +57,28 @@ Xây dựng **Cổng Tiện Ích Vé Số & Mua Vé Số Trực Tuyến (MoMo Lo
   </thead>
   <tbody>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>xo-so.csv</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cụm Xổ Số Truyền Thống</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra cứu KQXS 3 miền, kết quả trực tiếp, xổ số các tỉnh thành</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5.114</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1.445.235.780</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">93,56%</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>vietlott.csv</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cụm Vietlott & Điện Toán</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vietlott SMS, Power 6/55, Mega 6/45, Keno, Max 3D, Lotto 5/35</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.319</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>86.246.420</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5,58%</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>xskt.csv</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cụm Từ Khóa Viết Tắt XSKT</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Từ khóa viết tắt tra cứu XSKT theo đài và khu vực</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">281</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>12.743.240</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">0,82%</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>ve-so.csv</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cụm Dò Vé & Mua Vé Trực Tuyến</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dò vé số, cơ cấu trúng giải, vé số cào, đại lý vé số</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.673</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>532.760</strong></td>
@@ -492,48 +492,26 @@ Google xếp vertical vé số và tài chính trúng thưởng vào nhóm phân
 
 ## 6. Kiến Trúc Web, Luồng Chuyển Đổi & Ma Trận Đài (Architecture & Station Matrix)
 
-### 6.1 Kiến Trúc Sitemap Master `momo.vn/ve-so`
+### 6.1 Cấu Trúc Sitemap Đơn Giản & Gọn Nhẹ (Chỉ 5 Nhóm Trang Chính)
+
+Để tránh tạo trang tràn lan thiếu kiểm soát, toàn bộ Web Hub được khống chế gọn gàng trong **chỉ 5 nhóm trang cốt lõi**:
+
+1. **Trang Chủ Master (`momo.vn/ve-so`):** 1 trang duy nhất ➔ Xem kết quả tổng hợp 3 miền & Vietlott hôm nay, dò vé nhanh.
+2. **Trang 6 Dòng Vietlott (`momo.vn/ve-so/vietlott/...`):** 7 trang ➔ Xem Jackpot tích lũy, bảng KQXS kỳ mới nhất và khay chọn mua vé.
+3. **Trang 41 Đài Tỉnh Thành (`momo.vn/ve-so/[ma-dai]`):** 41 đài ➔ Tra kết quả đài địa phương, quay số nóng/lạnh, thần số học và chọn 6 vé.
+4. **Trang Theo Thứ Trong Tuần (`momo.vn/ve-so/[mien]/[thu]`):** 21 trang ➔ Xem nhanh kết quả tất cả các đài quay cùng ngày trong tuần.
+5. **Cẩm Nang & Tiện Ích (`momo.vn/ve-so/blog` & `/ve-so/do-so`):** ~20 trang ➔ Hướng dẫn cách chơi, công cụ tính thuế và cào vé số nhận quà.
+
+> **Quy tắc kiểm soát:** 100% các trang đài tỉnh thành và trang thứ trong tuần sử dụng chung **1 Dynamic Template** duy nhất, tự động đổ dữ liệu từ API, tuyệt đối không viết thủ công hay tạo trang rác trùng lặp.
 
 ```
-momo.vn/ve-so (Master Lottery Hub)
+momo.vn/ve-so (Master Hub)
 │
-├── LỚP 1: THEO 3 MIỀN & THỨ TRONG TUẦN (21 URLs)
-│   ├── /ve-so/mien-nam/thu-hai ... /ve-so/mien-nam/chu-nhat
-│   ├── /ve-so/mien-bac/thu-hai ... /ve-so/mien-bac/chu-nhat
-│   └── /ve-so/mien-trung/thu-hai ... /ve-so/mien-trung/chu-nhat
-│
-├── LỚP 2: THEO 41 ĐÀI PHÁT HÀNH TỈNH THÀNH (41 URLs)
-│   ├── /ve-so/da-lat (Đà Lạt / Lâm Đồng)
-│   ├── /ve-so/ho-chi-minh (TP. Hồ Chí Minh)
-│   ├── /ve-so/khanh-hoa (Khánh Hòa)
-│   ├── /ve-so/can-tho (Cần Thơ)
-│   ├── /ve-so/binh-duong (Bình Dương)
-│   └── /ve-so/[ma-dai] ... (Đồng Tháp, Kiên Giang, Bạc Liêu...)
-│
-├── LỚP 3: TIỆN ÍCH PLG & THỐNG KÊ CHU KỲ
-│   ├── /ve-so/do-so (Interactive Smart Ticket Checker)
-│   ├── /ve-so/truc-tiep (Cổng Xem Quay Số Real-time Tốc Độ Cao)
-│   ├── /ve-so/mien-bac/30-ngay (Thống kê kết quả 30 ngày)
-│   └── /ve-so/mien-nam/30-ngay
-│
-├── CHUYÊN MỤC VIETLOTT (7 Dòng Sản Phẩm Cốt Lõi)
-│   ├── /ve-so/vietlott (Landing Page Tổng Hợp Vietlott)
-│   ├── /ve-so/vietlott/power-6-55 (Jackpot Live & Khay chọn số)
-│   ├── /ve-so/vietlott/mega-6-45
-│   ├── /ve-so/vietlott/keno (Xổ nhanh 8 phút)
-│   ├── /ve-so/vietlott/bingo-18 (Xổ nhanh 6 phút)
-│   ├── /ve-so/vietlott/max-3d (Max 3D & 3D+)
-│   ├── /ve-so/vietlott/max-3d-pro
-│   └── /ve-so/vietlott/lotto-5-35 (Cơ chế chia độc đắc 12 tỷ)
-│
-└── CẨM NANG & HƯỚNG DẪN CÁCH CHƠI (Blog E-E-A-T Knowledge Hub)
-    ├── /ve-so/blog (Hub Tổng Hợp Cẩm Nang)
-    ├── /ve-so/blog/cach-choi-power-6-55-va-bao-so
-    ├── /ve-so/blog/so-sanh-max-3d-va-max-3d-pro
-    ├── /ve-so/blog/co-che-chia-doc-dac-lotto-5-35
-    ├── /ve-so/blog/huong-dan-keno-va-bingo-18
-    ├── /ve-so/blog/huong-dan-cai-dat-va-sua-loi-vietlott-sms
-    └── /ve-so/blog/quy-dinh-thue-tncn-trung-so
+├── /ve-so/vietlott (Landing Vietlott & 6 game: power-6-55, mega-6-45, keno...)
+├── /ve-so/[ma-dai] (41 đài tỉnh thành: ho-chi-minh, da-lat, can-tho...)
+├── /ve-so/[mien]/[thu] (21 trang theo thứ: mien-nam/thu-hai...)
+├── /ve-so/do-so & /ve-so/tinh-thue (Bộ tiện ích dò vé & tính thuế)
+└── /ve-so/blog (Sổ tay cẩm nang & hướng dẫn cách chơi)
 ```
 
 ### 6.2 Cấu Trúc Hiển Thị Kết Quả Vietlott 3 Cấp Độ & Mô Hình Trang Hybrid (3-Tier Vietlott Results Architecture)
@@ -909,11 +887,116 @@ graph TD
 
 ---
 
+### 8.3 Đặc Tả Kỹ Thuật API Kết Quả Xổ Số Trực Tiếp (Real-Time Lottery Feed API Specifications v1.1)
+
+Hệ thống MoSpark Growth Engine kết nối trực tiếp với API cấp dữ liệu kết quả xổ số Việt Nam (`api.hp-connect.vn`) theo các thông số kỹ thuật chuẩn hóa:
+
+* **Base Endpoint:** `GET https://api.hp-connect.vn/api/v1/lottery-results`
+* **Format & Protocol:** JSON UTF-8 (Header: `Accept: application/json`), Public REST API (No Auth Token).
+* **Quy tắc Query Parameter:**
+  * *Xem Kỳ Mới Nhất:* Truyền `productid={id}` (Trả về 1 Object).
+  * *Xem Theo Khoảng Mã Kỳ (Vietlott Group A):* Truyền `productid={id}&fromid={id1}&toid={id2}` (Trả về Array).
+  * *Xem Theo Khoảng Ngày (Traditional Group B):* Truyền `productid={id}&fromdate={dd-MM-yyyy}&todate={dd-MM-yyyy}` (Trả về Array).
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nhóm Sản Phẩm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">productid</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Sản Phẩm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tham Số Khoảng Tìm Kiếm</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cấu Trúc Dữ Liệu Kết Quả Đã Định Nghĩa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;" rowspan="6"><strong>Nhóm A: Vietlott (Tùy chọn Query theo Mã Kỳ)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>1</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mega 6/45</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>fromid</code> / <code>toid</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>id</code>, <code>date</code>, <code>termDate</code>, <code>result</code> (6 số), <code>statistical</code> (Jackpot amount/count, Giải nhất).</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>2</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Power 6/55</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>fromid</code> / <code>toid</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>id</code>, <code>date</code>, <code>termDate</code>, <code>result</code> (6 số + 1 bóng JP2), <code>statistical</code> (Jackpot 1 & 2).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>4</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Max 3D</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>fromid</code> / <code>toid</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>id</code>, <code>date</code>, <code>termDate</code>, <code>result</code> mảng đối tượng các hạng giải (Nhất, Nhì, Ba, Khuyến khích).</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>6</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Keno (8 Phút)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>fromid</code> / <code>toid</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>id</code>, <code>date</code>, <code>time</code> (hh:mm:ss), <code>result</code> (20 con số xổ nhanh).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>12</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Max 3D Pro</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>fromid</code> / <code>toid</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>id</code>, <code>date</code>, <code>termDate</code>, <code>result</code> mảng đối tượng giải (Đặc biệt: 2 bộ ba số, Nhất, Nhì, Ba).</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>16</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lotto 5/35</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>fromid</code> / <code>toid</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>id</code>, <code>date</code>, <code>result</code> (5 số + 1 số đặc biệt), <code>statistical</code> (currentJackpot, jackpotAmount...).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;" rowspan="6"><strong>Nhóm B: XSKT & Điện Toán (Bắt buộc Query theo Ngày)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>7</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">XSMB - Miền Bắc</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>fromdate</code> / <code>todate</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>id</code>, <code>date</code>, <code>termDate</code>, <code>result</code> 27 giải, <code>code</code> mảng mã ký hiệu vé phụ đặc biệt.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>14</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">XSMN - Miền Nam</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>fromdate</code> / <code>todate</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mảng các đài mở thưởng trong ngày (phân biệt qua <code>area</code>), đầy đủ 18 giải (dacbiet ➔ giaitam).</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>15</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">XSMT - Miền Trung</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>fromdate</code> / <code>todate</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mảng các đài mở thưởng trong ngày (phân biệt qua <code>area</code>), đầy đủ 18 giải (dacbiet ➔ giaitam).</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>9</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xổ số 6x36</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>fromdate</code> / <code>todate</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>id</code>, <code>date</code>, <code>termDate</code>, <code>result</code> chuỗi 6 con số.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>10</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thần Tài</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>fromdate</code> / <code>todate</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>id</code>, <code>date</code>, <code>termDate</code>, <code>result</code> chuỗi 4 chữ số.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>11</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Điện toán 123</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>fromdate</code> / <code>todate</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>id</code>, <code>date</code>, <code>termDate</code>, <code>result</code> chuỗi 3 bộ số (1 số, 2 số, 3 số).</td>
+    </tr>
+  </tbody>
+</table>
+
+**Danh Mục Mã Đài (Area Code Mapping):**
+* **KTMN - Miền Nam (21 Mã):** `HCM` (TP.HCM), `DTHAP` (Đồng Tháp), `CMAU` (Cà Mau), `BTRE` (Bến Tre), `VTAU` (Vũng Tàu), `BLIEU` (Bạc Liêu), `DNAI` (Đồng Nai), `CTHO` (Cần Thơ), `STRANG` (Sóc Trăng), `TNINH` (Tây Ninh), `AGIANG` (An Giang), `BTHUAN` (Bình Thuận), `VLONG` (Vĩnh Long), `BDUONG` (Bình Dương), `TVINH` (Trà Vinh), `LAN` (Long An), `BPHUOC` (Bình Phước), `HGIANG` (Hậu Giang), `TGIANG` (Tiền Giang), `KGIANG` (Kiên Giang), `DLAT` (Đà Lạt).
+* **KTMT - Miền Trung (14 Mã):** `KTUM` (Kon Tum), `KHOA` (Khánh Hòa), `PYEN` (Phú Yên), `TTHUE` (Thừa Thiên Huế), `DLAK` (Đắc Lắc), `QNAM` (Quảng Nam), `DNANG` (Đà Nẵng), `BDINH` (Bình Định), `QBINH` (Quảng Bình), `QTRI` (Quảng Trị), `GLAI` (Gia Lai), `NTHUAN` (Ninh Thuận), `DNONG` (Đắc Nông), `QNGAI` (Quảng Ngãi).
+
+---
+
 ## 9. Lộ Trình Triển Khai (Roadmap & Milestones)
 
 | Giai đoạn | Thời gian | Tên Giai Đoạn | Chi Tiết Triển Khai & Mục Tiêu |
 | --- | --- | --- | --- |
-| Giai đoạn 1 | 01/09 - 15/09/2026 | Technical Foundation & Master Hub MVP | Dựng Master Hub `momo.vn/ve-so`, Widget KQXS Real-time 3 miền & Vietlott; deploy 5 cụm Quick Wins (Dò vé số thông minh tại `/ve-so/do-so`, Sổ tay Vietlott SMS E-E-A-T tại `/ve-so/blog/`, Bảng tính thuế). |
+| Giai đoạn 1 | 01/09 - 15/09/2026 | Technical Foundation & Master Hub MVP | Dựng Master Hub `momo.vn/ve-so`, Widget KQXS Real-time 3 miền & Vietlott kết nối API `api.hp-connect.vn`; deploy 5 cụm Quick Wins (Dò vé số thông minh tại `/ve-so/do-so`, Sổ tay Vietlott SMS E-E-A-T tại `/ve-so/blog/`, Bảng tính thuế). |
 | Giai đoạn 2 | 16/09 - 30/09/2026 | Web Ticket Picker & Native QR Payment | Tích hợp khay chọn số trực tiếp trên Web cho Power 6/55, Mega 6/45, Keno và XSKT; kích hoạt cổng thanh toán Native Web Dynamic QR Code và SMS Dispatcher 9969. |
 | Giai đoạn 3 | 01/10 - 15/10/2026 | Station Matrix & Day-of-Week pSEO | Deploy hệ thống 41 trang đài tỉnh thành (`/ve-so/da-lat`, `/ve-so/ho-chi-minh`...) tích hợp Module Số Nóng/Lạnh, Thần Số Học, Khay 6 vé và 21 trang theo thứ trong tuần; kích hoạt bộ lọc IP Geo-location. |
 | Giai đoạn 4 | 16/10 - 31/10/2026 | PLG Automation & W2A Funnel Optimization | Hoàn thiện cơ chế cảnh báo Jackpot > 100 tỷ, trigger chia độc đắc Lotto 5/35 > 12 tỷ, đồng bộ vé điện tử và tối ưu hóa phễu chuyển đổi Web-to-App. |
@@ -921,6 +1004,8 @@ graph TD
 ---
 
 ## Change Log
+- **Tháng 09/2026 (v2.6):** Nghiệm thu hoàn thành 100% việc kết nối API dữ liệu kết quả xổ số thực tế (`api.hp-connect.vn`) và thiết kế hoàn chỉnh giao diện UI/UX cho công cụ Tra cứu / Dò vé số tự động (Smart Ticket Checker) XSKT 3 miền và Vietlott.
+- **Tháng 09/2026 (v2.5):** Bổ sung mục 8.3 Đặc tả kỹ thuật API Kết quả xổ số v1.1 (`https://api.hp-connect.vn/api/v1/lottery-results`), định nghĩa ma trận 12 `productid`, quy tắc query theo mã kỳ / ngày quay và danh mục 35 mã đài `area` cho XSMN và XSMT.
 - **Tháng 08/2026 (v2.4):** Bổ sung mục 6.3 Cấu trúc trang Đài tỉnh thành & Module tiện ích tương tác 41 Đài (Bảng Số Nóng/Lạnh & Smart Shuffle, Công cụ Thần số học & Phong thủy bản mệnh, Khay chọn tối đa 6 vé & Thanh toán kép Dynamic QR / SMS 9969, Thẻ vận may Viral Card, Nuôi số bản mệnh); loại bỏ triệt để tính năng Mua chung (Co-buying) để phù hợp chính sách sản phẩm MoMo.
 - **Tháng 08/2026 (v2.3):** Bổ sung mục 2.4 Tiêu chuẩn đánh giá của Google (YMYL & E-E-A-T); chuẩn hóa toàn bộ đường dẫn cẩm nang sang `/ve-so/blog/` (hiển thị UI là "Cẩm Nang"); định hình mô hình Hybrid Product Page kết hợp PLG (Dò vé & Mua vé) và Content (Luật chơi & FAQ) cho 6 dòng game Vietlott.
 - **Tháng 08/2026 (v2.2):** Bổ sung mục 6.2 Kiến trúc hiển thị kết quả Vietlott 3 cấp độ.

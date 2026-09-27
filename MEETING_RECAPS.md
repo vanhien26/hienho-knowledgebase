@@ -7,7 +7,67 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 
 ## DANH SÁCH BẢN GHI RECAPS
 
-### Bản ghi ngày 25/08/2026: Chiến Lược Web Platform, Quick Wins TikTok, Định Hướng Cinema Hub, Tiệm Sưu Tầm & Cơ Chế Accountability
+### Bản ghi ngày 26/09/2026 (Chiều): Cập Nhật Tiến Độ Sản Phẩm & Nội Dung 3 Web Hubs (Cinema, Vehicle, Financial)
+> **Thành phần:** Web Product Lead x Web Platform Team x Cell Teams (Movies, InsurTech, FinHub, Inbound Content)  
+> **Mục tiêu:** Cập nhật cột mốc sản phẩm, tiến độ Go-live/Staging và chiến lược tự chủ sản xuất nội dung trên 3 Hubs trọng điểm.
+
+#### 1. Cinema Hub (`momo.vn/cinema`)
+* **Tự chủ Content:** Web Platform Team chủ động 100% sản xuất nội dung review/tin tức điện ảnh qua MoSpark GenAI, không lệ thuộc vào nguồn lực Cell Team.
+* **Thí điểm UI/UX Trang Rạp tại NCC:** Đã Go-live giao diện UI/UX mới và áp dụng thử nghiệm tại **Trung Tâm Chiếu Phim Quốc Gia (NCC)** để đo lường hiệu suất Impression/Click CTR thực tế trước khi áp dụng toàn bộ, bảo vệ traffic của các cụm rạp best-performing.
+* **Reusable Mini Game Framework:** Hoạch định tạo 1 mô-đun Mini Game đơn giản áp dụng đồng loạt cho tất cả các đầu phim chiếu rạp.
+
+#### 2. Vehicle Hub (`momo.vn/tien-ich-giao-thong`)
+* **Tự chủ Content PLG:** Tiếp tục chủ động sản xuất bài viết chuyên sâu trên các dự án PLG (Phạt nguội, Giá xăng, Trạm sạc, Đăng kiểm).
+* **Staging Trang Tìm Garage:** Trang **Tìm Garage (`/tien-ich-giao-thong/tim-garage`)** đã lên **Staging**, dự kiến Go-live trước 30/09/2026.
+* **Hỗ trợ InsurTech BU & Ads Budget 550 triệu:** Hỗ trợ Cell Team triển khai Blog Bảo Hiểm Ô Tô (được duyệt ngân sách **Paid Ads 550 triệu VND** đến hết 2026), tối ưu UI/UX và phễu acquire New User.
+
+#### 3. Financial Hub (`momo.vn/tai-chinh`)
+* **Phối hợp Inbound Content:** Phối hợp cùng Inbound Content Team triển khai quy trình viết và duyệt content blog tài chính chuẩn E-E-A-T.
+* **Hoàn thiện Trang Chủ Master Hub:** Đã hoàn thiện trang chủ `momo.vn/tai-chinh` hiển thị bộ 7 Utilities: **CIC, Tính Lương, Phân Bổ Lương, Tỷ Giá, Giá Vàng, Ví Trả Sau, Vay Nhanh**.
+* **Go-Live 3 Trang Chi Tiết:** Đã chính thức Go-live 3 sub-page: **Tính Lương (`/tai-chinh/tinh-luong`)**, **Tỷ Giá (`/tai-chinh/ty-gia`)**, **Giá Vàng (`/tai-chinh/gia-vang`)**.
+* **Staging Trang Phân Bổ Lương:** Đã lên **Staging** trang **Phân Bổ Lương (`/tai-chinh/phan-bo-luong`)**.
+* **Khởi chạy Phase 2 Chứng Chỉ Quỹ:** Đang phối hợp FinHub Cell Team xây dựng **Tool & Page Chứng Chỉ Quỹ (`/tai-chinh/chung-chi-quy`)**.
+
+---
+
+### Bản ghi ngày 26/09/2026: Quy Chuẩn Nhận Số Liệu Tracking T+1 & Lưu Vết Daily MTD Performance
+> **Thành phần:** Executive Leadership x Web Product Lead x Web Analytics Team  
+> **Mục tiêu:** Thống nhất quy chuẩn xử lý file tracking hiệu suất Web Platform theo mô hình T+1 và cơ chế tự động lưu vết snapshot Daily MTD.
+
+#### 1. Quy chuẩn Nhận Dữ Liệu Tracking (T+1 Rule)
+* **Bản chất Dữ liệu T+1:** Mọi file Excel/Data Tracking do người dùng cung cấp hoặc yêu cầu kiểm tra tại ngày T (ví dụ ngày 26/09) là dữ liệu lũy kế (MTD) ghi nhận thực tế tính đến hết ngày T-1 (tức 25/09 - 25 ngày MTD).
+* **Ứng dụng Vận hành:** Khi nhận yêu cầu kiểm tra file tracking mới, AI Agent sẽ xác định chính xác số ngày cắt dữ liệu MTD (ví dụ `Update to: 25` = 25 ngày) để tính Daily Pace trung bình (`Total MTD / 25`) và Run-rate Forecast 30 ngày (`Daily Pace * 30`).
+
+#### 2. Cơ chế Lưu Vết Snapshot Daily Performance
+* **Tự động Snapshot:** Mỗi lần đọc file tracking mới từ người dùng, AI Agent có trách nhiệm ghi nhận và lưu vết snapshot dữ liệu MTD vào file SSOT `07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md` và xuất dữ liệu JSON/CSV theo ngày vào thư mục `07_REPORTS/data/`.
+* **Đồng bộ Báo cáo:** Tự động đồng bộ số liệu MTD mới nhất vào toàn bộ hệ thống báo cáo (Báo cáo Tổng quan Kênh Web Tháng 9, 5 Báo cáo Hubs chuyên biệt, Master Hubs Report, Master Doc).
+* **Đánh giá Nhịp chạy (Daily Pace Progression):** Theo dõi sự biến động nhịp chạy hàng ngày giữa các lần cắt dữ liệu (ví dụ: từ 117K PV/ngày lên 130K PV/ngày) để đánh giá gia tốc tăng trưởng của các dự án trọng điểm.
+
+---
+
+### Bản ghi ngày 08/09/2026: Tiến Độ Triển Khai Kỹ Thuật & Cập Nhật Sản Phẩm Các Web Hubs
+> **Thành phần:** Executive Leadership x Web Product Lead x Cell Teams (FinHub, InsurTech, VTTI, S-Hub, Movies)
+> **Mục tiêu:** Cập nhật tiến độ sản phẩm và triển khai kỹ thuật tuần 2 Tháng 9/2026 trên 4 Web Hubs chiến lược: Financial Hub, Vehicle Hub, Student Hub và Cinema Hub.
+
+#### 1. Financial Hub (`momo.vn/tai-chinh`)
+* **Tiến độ Sản phẩm:** Hoàn thiện 2 tính năng Simulator Widgets mới ở bản Demo: **Phân bổ lương (Salary Allocation Calculator)** và **Tỷ giá (Exchange Rate Tracker)**, sẵn sàng tích hợp vào Master Hub `/tai-chinh`.
+
+#### 2. Vehicle Hub (`momo.vn/tien-ich-giao-thong`)
+* **Tiến độ Triển khai:** 
+  * **Đã Go-live:** Trang Master Hub (`momo.vn/tien-ich-giao-thong`).
+  * **Môi trường Staging (STG):** Trang Cây Xăng, Trạm Sạc, Blog & Blog Detail.
+  * **Kế hoạch Tuần Này:** Tích hợp thành công **API Giá Xăng** (Petrolimex/PVOil API) phục vụ tra cứu thời gian thực.
+
+#### 3. Student Hub (`momo.vn/sinh-vien`)
+* **Công cụ Tự vận hành (Self-Serve):** Đã bàn giao công cụ kéo-thả Page Builder / Self-Serve Tool cho Cell Team (S-Hub BU) chủ động quản lý, vận hành và chỉnh sửa nội dung trang **School Detail (Chi tiết Trường Đại Học / Ratings)**.
+
+#### 4. Cinema Hub (`momo.vn/cinema`)
+* **Tiến độ Sản phẩm Đang Triển Khai:**
+  1. **API View Comment & Leaderboard:** Tích hợp API View hiển thị lượt xem/tương tác bình luận và Bảng Xếp Hạng (Leaderboard) vinh danh Top Reviewers.
+  2. **Gamification New Game Phim "Lên Hương":** Xây dựng mô-đun game/nhiệm vụ tương tác mới dành riêng cho chiến dịch đẩy phim "Lên Hương".
+  3. **Build Trang Diễn Viên (Actor Pages):** Xây dựng các trang Profile Diễn Viên điện ảnh chuẩn SEO Entity (bắt đầu với diễn viên **Hồng Đào**, **Võ Tấn Phát**).
+
+---
 > **Thành phần:** Executive Leadership x Web Product Lead x Technical Lead x BU Cinema Lead
 > **Mục tiêu:** Thống nhất định vị Branding/Media Value của Web, nhân rộng Quick Wins (Case study Nạp xu TikTok), phương pháp luận đánh giá đối thủ thị trường phân mảnh (Competitor Score 1-2-3), chiến lược chuẩn hóa trang rạp phim Cinema Hub, mô hình Tiệm Sưu Tầm (Rolex/Hermès Model) và Playbook trách nhiệm giải trình (Accountability & Escalation).
 
@@ -760,3 +820,25 @@ Thống nhất tính theo số tuyệt đối (Absolute Number), phân rã chi t
     * **11/09/2026:** Cell Team hoàn thành phát hành các API dữ liệu phục vụ Web.
     * **11/09 - 25/09/2026 (2 tuần):** Tích hợp kỹ thuật Frontend - Backend và thực hiện kiểm thử chất lượng (QC/Test).
     * **25/09/2026:** Chính thức bàn giao và Go-live Phase 1.1.
+
+---
+
+### Bản ghi ngày 13/09/2026: Đánh Giá Tổng Quan Run-Rate Traffic Tháng 9 & Định Hướng Chiến Lược Use Cases
+> **Thành phần:** Senior Web Management x Web Product Lead x AI Agent (Antigravity)
+> **Mục tiêu:** Rà soát số liệu Total MTD Tháng 9, đánh giá kịch bản hoàn thành Target Tháng 9 (3.509.044 PVs), định hướng xử lý sự cố tạm tắt API Phạt Nguội và chốt định hướng chiến lược cho các mảng Game, FAQ, Xổ Số Vietlott, Du Lịch, Merchant.
+
+#### 1. Số Liệu Tổng Quan (Total Metrics) & Đánh Giá Target Tháng 9
+* **Chỉ tiêu Target Tháng 9 (Total Pageviews):** **3.509.044 PVs**.
+* **Thực tế Total MTD 8 ngày (01/09 - 08/09):** **1.081.402 PVs**.
+* **Tốc độ tăng trưởng tổng (Total Daily Rate):** **135.175 PV/ngày**.
+* **Dự báo Total Run-rate 30 ngày (EOM Forecast):** **4.055.257 PVs** (Đạt **115,56%** Target - **Trên đà VƯỢT TARGET**).
+* **Sự cố API Phạt Nguội:** Tạm tắt API từ 01/09 - 20/09. Dự kiến mở lại từ 21/09 sẽ đóng góp thêm +70k - +90k PVs trong 10 ngày cuối tháng.
+
+#### 2. Định Hướng Chiến Lược Các Dự Án & Use Cases
+* **Cinema Hub:** Tiếp tục làm Động cơ kéo Traffic chính (Run-rate ~1,93M PVs/tháng).
+* **Game Hub:** Đưa mảng Game (Run-rate ~235k PVs/tháng) vào chiến lược bứt phá: áp dụng Case Study Nạp Xu TikTok tạo 20 Landing Pages SEO nạp game, nhúng Student Hub và mở luồng Native Web QR Payment out-app.
+* **5 Use Cases Ngách:** Kích hoạt FAQ Schema cho mảng Hỏi Đáp (+900%, Run-rate 113k PVs); mở luồng KQXS + Native Web QR Payment Vietlott; nhúng Booking Widget cho Vé xe & OTA (146k PVs); dựng Landing Page cho Merchant/Soundbox (87k PVs); Audit URL Tagging làm sạch 732k PVs nhóm Others.
+
+#### 3. Tài Liệu Quản Trị Chi Tiết (SSOT Master Reference)
+* Toàn bộ dữ liệu lịch sử chi tiết (Full Month & MTD) theo từng dự án x từng kênh, breakdown chỉ số và bộ công thức SUMIFS cho Google Sheets được quản lý tập trung tại file:
+  👉 **[](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md)**

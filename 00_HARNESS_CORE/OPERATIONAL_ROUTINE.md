@@ -6,8 +6,8 @@ perational Routine (Web Product Lead)
 ---
 
 ## 0. AI Interaction Protocol (Bắt buộc)
-Trước khi xử lý bất kỳ câu hỏi hoặc yêu cầu nào, AI phải tuân thủ [[momo-thinking-protocol]] theo cấu trúc 3 bước:
-1.  **ĐỌC**: Xác định SSOT và bối cảnh trong Vault.
+Trước khi xử lý bất kỳ câu hỏi hoặc yêu cầu nào (đặc biệt là lập báo cáo, rà soát hiệu suất các dự án Hubs), AI phải tuân thủ [[momo-thinking-protocol]] theo cấu trúc 3 bước:
+1.  **ĐỌC**: Nạp bối cảnh từ `MEETING_RECAPS.md` và **BẮT BUỘC tham chiếu hiệu suất thực tế từ `07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`** làm Single Source of Truth (SSOT).
 2.  **DÙNG**: Chọn Framework và Skill phù hợp.
 3.  **TRẢ**: Cấu trúc câu trả lời Actionable & Strategic.
 

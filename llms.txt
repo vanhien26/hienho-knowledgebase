@@ -1,0 +1,22 @@
+# MoMo
+
+> MoMo (momo.vn) là siêu ứng dụng tài chính và cổng tiện ích đời sống hàng đầu Việt Nam. Nền tảng cung cấp hệ sinh thái thanh toán, quản lý phương tiện giao thông, nhiên liệu và năng lượng số cho hơn 31 triệu người dùng.
+
+Nền tảng được vận hành bởi Công ty Cổ phần Dịch vụ Di Động Trực Tuyến (M_Service), được cấp phép bởi Ngân hàng Nhà nước Việt Nam. Dưới đây là danh mục các tiện ích và trang thông tin đang hoạt động chính thức trên môi trường Production.
+
+## Tiện ích giao thông và xe cộ (Vehicle Hub Production)
+
+Cổng dịch vụ số toàn diện dành cho chủ xe ô tô và xe máy tại Việt Nam:
+
+- [Tiện Ích Giao Thông MoMo](https://www.momo.vn/tien-ich-giao-thong): Cổng tổng hợp tiện ích vòng đời phương tiện; kiểm tra tình trạng xe qua biển số tức thì, tạo hồ sơ xe điện tử tự động và kết nối hệ sinh thái dịch vụ giao thông.
+- [Bảng Giá Xăng Dầu Hôm Nay](https://www.momo.vn/tien-ich-giao-thong/gia-xang): Cập nhật biểu giá xăng dầu Petrolimex, PVOil realtime theo kỳ điều hành 15:00 thứ Năm hàng tuần của Liên Bộ Công Thương - Tài Chính (RON 95-V, E5 RON 92, Dầu DO Vùng 1 & Vùng 2); công cụ tính tiền đổ đầy bình và dự toán chi phí nhiên liệu theo số Km.
+- [Bản Đồ Cây Xăng Gần Đây](https://www.momo.vn/tien-ich-giao-thong/cay-xang): Định vị mạng lưới trạm xăng mở cửa 24/7 trên toàn quốc (Petrolimex, PVOil, Saigon Petro, Comeco), tra cứu loại nhiên liệu cung cấp, tìm đường đi ngắn nhất và hỗ trợ quét mã thanh toán MoMo tại trụ bơm.
+- [Bản Đồ Trạm Sạc Xe Điện EV](https://www.momo.vn/tien-ich-giao-thong/tram-sac): Định vị hệ thống trạm sạc ô tô điện và xe máy điện trên toàn quốc (VinFast, V-Green), lọc theo chuẩn công suất sạc AC/DC (60kW, 150kW, 250kW), kiểm tra cổng sạc trống và lên kế hoạch sạc theo lộ trình.
+
+## Cẩm nang và kiến thức phương tiện (Production)
+
+- [Blog Tiện Ích Giao Thông](https://www.momo.vn/tien-ich-giao-thong/blog): Chuyên trang kiến thức vận hành và bảo dưỡng ô tô xe máy, kinh nghiệm lái xe an toàn, hướng dẫn thủ tục đăng kiểm và phân tích quy định giao thông đường bộ.
+
+## Cổng thông tin nền tảng (Production)
+
+- [Trang Chủ MoMo](https://www.momo.vn): Cổng thông tin chính thức siêu ứng dụng tài chính MoMo.
