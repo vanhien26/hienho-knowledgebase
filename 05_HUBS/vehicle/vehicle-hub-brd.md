@@ -96,17 +96,17 @@ Kênh Website vận hành dựa trên các tiện ích tra cứu miễn phí đ�
 
 > **Lưu ý về chỉ số:** Các chỉ số tổng Target Phase 1 Pilot (*Total Traffic 500.000, %CTR W2A ≥ 5.0% - 10.0%, Logged-in MAU 250.000, New Vehicle Profiles 100.000*) **đã được Ban Giám Đốc phê duyệt chính thức**. 
 
-### 1.4 Báo Cáo Hiệu Suất MTD 26/09/2026 & Cột Mốc Sản Phẩm Mới
+### 1.4 Báo Cáo Hiệu Suất MTD 27/09/2026 & Cột Mốc Sản Phẩm Mới
 
-#### A. Dữ Liệu Hiệu Suất Vận Hành MTD 26 Ngày (01/09 - 26/09/2026)
-* **Lưu lượng MTD 26d:** Đạt **60.444 Pageviews** (chiếm 1.8% tổng lưu lượng Kênh Web).
-* **Tốc độ vận hành (Daily Pace):** Đạt **2.325 PV/ngày**.
-* **Dự báo trọn tháng (Run-rate Forecast 30d):** Ước tính đạt **69.743 PVs** (34.9% Target Hub 200K).
-* **Phân rã theo Verticals MTD 26d:**
-  * Phạt Nguội: **36.960 PVs** (61.1% Hub)
-  * Bảo Hiểm Ô Tô: **16.486 PVs** (27.3% Hub)
-  * Bảo Hiểm Xe Máy: **5.602 PVs** (9.3% Hub)
-  * Phí Không Dừng & Tiện Ích Giao Thông: Lần lượt đạt **888 PVs** và **508 PVs**
+#### A. Dữ Liệu Hiệu Suất Vận Hành MTD 27 Ngày (01/09 - 27/09/2026)
+* **Lưu lượng MTD 27d:** Đạt **61.907 Pageviews** (chiếm 1.76% tổng lưu lượng Kênh Web).
+* **Tốc độ vận hành (Daily Pace):** Đạt **2.293 PV/ngày**.
+* **Dự báo trọn tháng (Run-rate Forecast 30d):** Ước tính đạt **68.786 PVs** (34.4% Target Hub 200K).
+* **Phân rã theo Verticals MTD 27d:**
+  * Phạt Nguội: **37.109 PVs** (59.9% Hub)
+  * Bảo Hiểm Ô Tô: **17.398 PVs** (28.1% Hub)
+  * Bảo Hiểm Xe Máy: **5.826 PVs** (9.4% Hub)
+  * Phí Không Dừng & Tiện Ích Giao Thông: Lần lượt đạt **952 PVs** và **622 PVs**
 
 #### B. Tiến Độ Sản Phẩm & Content Realignment
 * **Tự Chủ Sản Xuất Content PLG:** Web Platform Team tiếp tục chủ động sản xuất nội dung bài viết chuyên sâu trên các dự án PLG (Phạt nguội, Giá xăng, Trạm sạc, Đăng kiểm) qua GenAI Pipeline.
@@ -896,6 +896,30 @@ Hệ thống chuẩn hóa 1.631 bản ghi triệu chứng xe thành cấu trúc 
 * Giúp Google index và hiển thị Rich Snippets trực tiếp khi người dùng tìm kiếm các câu hỏi kỹ thuật chuyên sâu trên Google Search.
 
 ---
+
+---
+
+### 3.20 Đặc Tả Kỹ Thuật P0 Priority: Chuyên Trang Chi Tiết Dòng Xe & Báo Giá Bảo Hiểm Ô Tô Real-time (/hang-xe/[brand]/[model])
+
+Chuyên trang Chi Tiết Dòng Xe (`momo.vn/tien-ich-giao-thong/hang-xe/[brand]/[model]`, VD: `/hang-xe/vinfast/vf3`, `/hang-xe/toyota/camry`) được đưa lên **P0 Priority trong tuần**, tập trung vào 2 khối chức năng cốt lõi:
+
+#### A. Khối 1 (P0 Core): Widget Báo Giá Bảo Hiểm Ô Tô Real-time (InsurTech API Integration)
+- **Cơ chế tích hợp:** Gọi trực tiếp REST API từ InsurTech Car Insurance Engine (`POST /api/v1/insurance/car/quote`).
+- **Input Parameters:** `make`, `model`, `variant` (phiên bản chi tiết), `manufacture_year` (2017-2026), `seats`, `engine_type` (Electric/Petrol/Diesel/Hybrid), `usage_type` (PERSONAL/COMMERCIAL).
+- **Output Trả về & Hiển thị:**
+  - **Phí Bảo hiểm TNDS Bắt buộc:** Nộp cố định theo quy định Bộ Tài Chính (VD: `480.700 VNĐ/năm` đã có VAT cho ô tô dưới 6 chỗ).
+  - **Phí Bảo hiểm Thân vỏ / Vật chất xe:** Tính toán tự động theo ma trận giá trị thị trường thực tế (VD: Tỷ lệ phí ~1.30% x Giá trị xe). Trả về mức phí so sánh của 9 hãng bảo hiểm đối tác (Bảo Việt, PVI, Liberty, PJICO, MIC...).
+- **Chuyển đổi Web-to-App:** Nút CTA **[Mua Bảo Hiểm Nhận GCN Điện Tử 30s]** kích hoạt Dynamic QR Code Modal (Desktop) hoặc Appsflyer Onelink Deep Link (Mobile) mở trực tiếp màn hình In-App với đầy đủ thông tin xe pre-filled.
+
+#### B. Khối 2 (P0 Core): Danh Sách Tên Xe & Biến Thể Chi Tiết (Car Trim Catalog)
+- **Dữ liệu nạp:** Truy xuất trực tiếp từ Master Catalog 1,534 biến thể xe ô tô (`Car Data.xlsx`).
+- **Nội dung hiển thị:**
+  - Liệt kê toàn bộ các biến thể con (Trims/Variants) thuộc Dòng xe đang xem (VD với VinFast VF3: `VF3 Plus`, `VF3 Base`...).
+  - Bảng thông số kỹ thuật chi tiết: Số chỗ (`Seats`), Loại động cơ (`Engine type`), Dung lượng pin/mức tiêu thụ nhiên liệu, Giá niêm yết năm 2026 và Khai thác mức phí bảo hiểm thân vỏ tối thiểu tương ứng từng phiên bản.
+
+#### C. Khối Bổ Trợ: Định Vị Hạ Tầng Dịch Vụ Tương Thích
+- **Dòng xe Điện (EV):** Tự động nhúng bản đồ định vị **Trạm sạc V-Green / VinFast** gần nhất theo vị trí GPS.
+- **Dòng xe Xăng/Dầu:** Tự động nhúng bản đồ định vị **Gara sửa chữa & Trung tâm bảo hành chính hãng** từ Master Dataset 11,001 gara đối tác.
 
 ## IV. RISK & ROADMAP
 

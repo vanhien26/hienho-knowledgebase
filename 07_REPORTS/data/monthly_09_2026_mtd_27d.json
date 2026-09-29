@@ -1,0 +1,94 @@
+{
+  "snapshot_metadata": {
+    "read_date": "2026-09-28",
+    "as_of_date": "2026-09-27",
+    "data_convention": "T+1",
+    "days_elapsed": 27,
+    "days_in_month": 30
+  },
+  "overall_performance": {
+    "target_sept_pv": 3509044,
+    "actual_mtd_pv": 3513717,
+    "progress_target_pct": 100.13,
+    "time_elapsed_pct": 90.0,
+    "daily_pace_pv": 130137.67,
+    "forecast_30d_pv": 3904130,
+    "forecast_target_pct": 111.26,
+    "surplus_pv": 395086,
+    "target_status": "TARGET_ACHIEVED_EARLY",
+    "days_ahead_of_schedule": 3,
+    "day_27_single_day_pv": 97386
+  },
+  "channels_breakdown_mtd_27d": {
+    "organic": {
+      "pv": 1410764,
+      "share_pct": 39.52
+    },
+    "paid": {
+      "pv": 1156315,
+      "share_pct": 32.39
+    },
+    "direct": {
+      "pv": 657712,
+      "share_pct": 18.42
+    },
+    "referral": {
+      "pv": 316660,
+      "share_pct": 8.87
+    },
+    "others": {
+      "pv": 28647,
+      "share_pct": 0.8
+    }
+  },
+  "hubs_dashboard_mtd_27d": {
+    "new_user_hub": {
+      "actual_mtd_pv": 394377,
+      "daily_pace": 14606.56,
+      "forecast_30d": 438196.7,
+      "target_sept": 300000,
+      "projected_pct": 146.07,
+      "status": "EXCEEDED_TARGET"
+    },
+    "cinema_hub": {
+      "actual_mtd_pv": 1086874,
+      "daily_pace": 40254.59,
+      "forecast_30d": 1207637.8,
+      "target_sept": 1500000,
+      "projected_pct": 80.51,
+      "status": "MILESTONE_1.08M_PV"
+    },
+    "financial_hub": {
+      "actual_mtd_pv": 221176,
+      "daily_pace": 8191.7,
+      "forecast_30d": 245751.1,
+      "target_sept": 500000,
+      "projected_pct": 49.15,
+      "status": "ON_TRACK"
+    },
+    "vehicle_hub": {
+      "actual_mtd_pv": 61907,
+      "daily_pace": 2292.85,
+      "forecast_30d": 68785.6,
+      "target_sept": 200000,
+      "projected_pct": 34.39,
+      "status": "RECOVERING"
+    },
+    "student_hub": {
+      "actual_mtd_pv": 6438,
+      "daily_pace": 238.44,
+      "forecast_30d": 7153.3,
+      "target_sept": 100000,
+      "projected_pct": 7.15,
+      "status": "INCUBATING"
+    },
+    "total_hubs": {
+      "actual_mtd_pv": 1770772,
+      "daily_pace": 65584.15,
+      "forecast_30d": 1967524.4,
+      "target_sept": 2600000,
+      "projected_pct": 75.67,
+      "web_share_pct": 50.39
+    }
+  }
+}

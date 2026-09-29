@@ -118,16 +118,16 @@ graph TD
 
 ## 3. BÁO CÁO CHI TIẾT CÁC WEB HUBS (BÁO CÁO CHUẨN C-LEVEL)
 
-### Dashboard Hiệu Suất 5 Strategic Hubs (Cập Nhật MTD 26/09/2026 - 26 Ngày)
+### Dashboard Hiệu Suất 5 Strategic Hubs (Cập Nhật MTD 27/09/2026 - 27 Ngày)
 
-| Web Hub | Phân loại 4 Zone | Actual MTD 26d (01-26/09) | Daily Pace | Forecast 30d | Target Sept | % Projected | Trạng Thái Vận Hành MTD 26d |
+| Web Hub | Phân loại 4 Zone | Actual MTD 27d (01-27/09) | Daily Pace | Forecast 30d | Target Sept | % Projected | Trạng Thái Vận Hành MTD 27d |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| **New User Hub** | Transformation | **369.416 PV** | 14.208/d | **426.249 PV** | 300.000 PV | **142.1%** | **VƯỢT TARGET HUB CHÍNH THỨC (+42.1%)** |
-| **Cinema Hub** | Performance | **1.033.573 PV** | 39.753/d | **1.192.584 PV** | 1.500.000 PV | **79.5%** | **CỘT MỐC VƯỢT >1M PV MTD**, Movie Booking & Cineplex UI |
-| **Financial Hub** | Transformation | **224.768 PV** | 8.645/d | **259.348 PV** | 500.000 PV | **51.9%** | CIC Score, Vay Nhanh & Widget Lương/Tỷ Giá |
-| **Vehicle Hub** | Transformation | **60.444 PV** | 2.325/d | **69.743 PV** | 200.000 PV | **34.9%** | Phạt nguội API, Staging Garage & BH Ô tô Ads |
-| **Student Hub** | Incubator | **6.356 PV** | 244/d | **7.334 PV** | 100.000 PV | **7.3%** | University Ratings & Student Pass |
-| **TỔNG CỘNG HUBS** | All Zones Summary | **1.694.557 PV** | 65.175/d | **1.955.258 PV** | 2.600.000 PV | **75.2%** | Chiếm 49.6% tổng lưu lượng toàn Kênh Web |
+| **New User Hub** | Transformation | **394.377 PV** | 14.607/d | **438.197 PV** | 300.000 PV | **146.1%** | **VƯỢT TARGET HUB CHÍNH THỨC (+46.1%)** |
+| **Cinema Hub** | Performance | **1.086.874 PV** | 40.255/d | **1.207.638 PV** | 1.500.000 PV | **80.5%** | **CÁN MỐC >1.08M PV MTD**, Forecast trọn tháng >1.2M |
+| **Financial Hub** | Transformation | **221.176 PV** | 8.192/d | **245.751 PV** | 500.000 PV | **49.2%** | CIC Score, Vay Nhanh & Widget Lương/Tỷ Giá |
+| **Vehicle Hub** | Transformation | **61.907 PV** | 2.293/d | **68.786 PV** | 200.000 PV | **34.4%** | Phạt nguội API, Staging Garage & BH Ô tô Ads |
+| **Student Hub** | Incubator | **6.438 PV** | 238/d | **7.153 PV** | 100.000 PV | **7.2%** | University Ratings & Student Pass |
+| **TỔNG CỘNG HUBS** | All Zones Summary | **1.770.772 PV** | 65.584/d | **1.967.524 PV** | 2.600.000 PV | **75.7%** | Chiếm 50.4% tổng lưu lượng toàn Kênh Web |
 
 ---
 

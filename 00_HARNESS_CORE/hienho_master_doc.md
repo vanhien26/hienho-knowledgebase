@@ -3008,6 +3008,11 @@ MoSpark không còn là CMS đơn thuần mà là một sản phẩm phần mề
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5.1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Performance Synchronization (MTD 26/09/2026)</strong>: Đồng bộ dữ liệu MTD 26 ngày Tháng 9/2026 trên toàn bộ báo cáo và Master SSOT: Total Pageviews 3.416.331 PV (97.36% Target), Run-rate forecast 3.941.919 PV (112.34% Target - Vượt Target +12.34%). Single day 26/09 đạt 162.291 PVs. Cinema Hub cán mốc lịch sử >1 TRIỆU PVs (1.033.573 PV), New User Hub 369k PV (Vượt Target Hub +42.1%), Financial Hub 224k PV, Vehicle Hub 60.4k PV, Student Hub 6.3k PV.</td>
     </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-09-28</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5.2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Performance Milestone Synchronization (MTD 27/09/2026)</strong>: Chính thức VƯỢT TARGET THÁNG 9 TRƯỚC HẠN 3 NGÀY: Total Pageviews 3.513.717 PV (100.13% Target Tháng 9 3.51M). Run-rate forecast 3.904.130 PV (111.26% Target). Single day 27/09 đạt 97.386 PVs. Organic Traffic cán mốc >1.41 TRIỆU PVs (39.5%), Cinema Hub đạt 1.086.874 PVs (Forecast trọn tháng 1.2M), New User Hub 394.3k PV (Vượt Target Hub +46.1%), Financial Hub 221.1k PV, Vehicle Hub 61.9k PV, Student Hub 6.4k PV.</td>
+    </tr>
   </tbody>
 </table>
 
