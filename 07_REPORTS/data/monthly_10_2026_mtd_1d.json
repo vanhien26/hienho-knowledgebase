@@ -1,0 +1,61 @@
+{
+  "file_source": "/Users/hienhv/Downloads/Web Performance Tracking (1).xlsx",
+  "read_timestamp": "2026-10-02 13:47:20",
+  "report_type": "MTD 1 Ngày (01/10/2026 - Mở Màn Tháng 10)",
+  "days_elapsed": 1,
+  "days_in_month": 31,
+  "target_oct_pv": 3665607,
+  "actual_mtd_pv": 146146,
+  "progress_pct": 3.99,
+  "daily_pace": 146146.0,
+  "forecast_31d": 4530526,
+  "channels": {
+    "organic": {
+      "pv": 99214,
+      "pct": 67.89
+    },
+    "direct": {
+      "pv": 32593,
+      "pct": 22.3
+    },
+    "referral": {
+      "pv": 9859,
+      "pct": 6.75
+    },
+    "paid": {
+      "pv": 3845,
+      "pct": 2.63
+    },
+    "others": {
+      "pv": 635,
+      "pct": 0.43
+    }
+  },
+  "hubs": {
+    "new_user": {
+      "pv": 22280,
+      "target": 300000,
+      "pct": 7.43
+    },
+    "cinema": {
+      "pv": 68385,
+      "target": 1117378,
+      "pct": 6.12
+    },
+    "financial": {
+      "pv": 6704,
+      "target": 450000,
+      "pct": 1.49
+    },
+    "vehicle": {
+      "pv": 1413,
+      "target": 100000,
+      "pct": 1.41
+    },
+    "student": {
+      "pv": 78,
+      "target": 100000,
+      "pct": 0.08
+    }
+  }
+}

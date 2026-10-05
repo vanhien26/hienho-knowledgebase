@@ -7,6 +7,10 @@
 
 ## I. KEY HIGHLIGHTS & BUSINESS IMPACT
 
+- **Khai thác 3 dạng sản phẩm cốt lõi cho Vehicle Hub:**
+  - **Mô-đun Widget đa dạng kích thước (Embeddable Widget Components):** Thiết kế linh hoạt các size UI (Large, Medium, Small) để nhúng trực tiếp Bảng giá xăng dầu thời gian thực vào các bài viết cẩm nang và trang liên quan.
+  - **Bản đồ tra cứu địa điểm tương tác (Interactive Location Maps):** Tích hợp bản đồ hiển thị chi tiết các điểm dịch vụ giao thông (Bản đồ Cây xăng, Trạm sạc EV VinFast/V-Green, Tìm Garage sửa xe).
+  - **Bộ công cụ tính toán dịch vụ (Interactive Calculators):** Xây dựng công cụ Tính tiền xăng dầu thông minh, quy đổi số tiền/lít xăng ra quãng đường di chuyển ước tính cho xe máy và ô tô.
 - **Khôi phục và tối ưu đà tăng trưởng Phạt Nguội:** Sau sự cố kỹ thuật ngắt kết nối API tạm thời từ ngày 01/09 đến 20/09 làm ảnh hưởng ngắn hạn đến traffic, luồng API Phạt Nguội đã chính thức được khôi phục từ 21/09, kéo nhịp truy cập tra cứu phạt nguội hồi phục nhanh chóng về mức trung bình toàn sàn.
 - **Tập trung hóa Master Hub Giao Thông:** Hoàn thiện và vận hành ổn định Master Hub `momo.vn/tien-ich-giao-thong` quy tụ chuỗi tiện ích cốt lõi bao gồm Giá xăng, Trạm sạc EV, Cây xăng và Thu phí không dừng ePass (bắt đầu ghi nhận lượt truy cập tự nhiên đầu tiên).
 - **Hoàn thành Staging Tiện ích Mới:** Đưa thành công chuyên trang Tìm Garage (`/tien-ich-giao-thong/tim-garage`) lên môi trường Staging, sẵn sàng Go-live chính thức trước ngày 30/09.
@@ -27,6 +31,7 @@
 ## III. PRIORITIES FOR THE NEXT 30 DAYS
 
 - **Go-live trang Tìm Garage & Trạm Sạc VinFast:** Chính thức xuất bản chuyên trang Tìm Garage (`/tien-ich-giao-thong/tim-garage`) và Trạm Sạc VinFast tích hợp Location API trên Production trước ngày 30/09.
+- **Tối ưu 3 dạng sản phẩm trên Master Hub:** Hoàn thiện đóng gói các Widget Component (bảng giá xăng), Location Detail Maps (bản đồ trạm sạc/cây xăng) và Calculator (tính tiền xăng/quãng đường đi được) để nhúng rộng rãi trên toàn bộ hệ thống bài viết SEO.
 - **Duy trì ổn định luồng API Phạt Nguội:** Giám sát hạ tầng kỹ thuật đảm bảo Uptime cho luồng API tra cứu Phạt nguội, duy trì nhịp hồi phục traffic.
 - **Tích hợp API Thời gian thực:** Hoàn thiện kết nối API Giá Xăng (Petrolimex/PVOil) cập nhật biến động giá xăng dầu real-time.
 - **Đóng gói Component Captcha cho Bảo Hiểm:** Phối hợp với InsurTech Tech Team xử lý xong Captcha Module để đóng gói component mua Bảo hiểm Ô tô/Xe máy trực tiếp trên Web.

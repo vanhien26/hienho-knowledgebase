@@ -19,6 +19,10 @@
 - **Memory Source Files:** 
   1. [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md)
   2. [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md)
+- **Automated Tracking Report Trigger Rule:** Khi người dùng yêu cầu *"đọc tracking report mới nhất"* (hoặc bất kỳ câu lệnh tương tự về việc cập nhật/lấy số tracking), AI Agent **BẮT BUỘC tự động chạy script `python3 scripts/sync_tracking_report.py`** để:
+  1. Quét tự động file `*Web Performance Tracking*.xlsx` mới nhất trong thư mục `/Users/hienhv/Downloads/`.
+  2. Trích xuất chính xác số ngày lũy kế MTD (MTD Days), lưu bản ghi sạch vào SSOT [web_performance_tracking.xlsx](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/web_performance_tracking.xlsx) và tạo JSON snapshot.
+  3. Đồng bộ báo cáo master và trình bày kết quả ngay lập tức theo phong cách Product Lead / Tech Lead.
 - **Rule:** Khi thực hiện bất kỳ yêu cầu nào liên quan đến Web Platform, các dự án Hubs (Cinema Hub, Financial Hub, Vehicle Hub, Student Hub...), lập kế hoạch, viết PRD, phân tích số liệu hoặc chuẩn bị báo cáo, AI Agent (Antigravity) **BẮT BUỘC phải chủ động đọc và tham chiếu số liệu hiệu suất thực tế từ file [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md) và file [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md) trước**.
 - **Mục đích:** Đảm bảo toàn bộ bối cảnh chiến lược của Ban Giám Đốc, định hướng của các Hubs và dữ liệu hiệu suất Single Source of Truth (SSOT) chuẩn xác luôn được đưa vào context xử lý tự động trước khi xuất bản bất kỳ báo cáo nào.
 
@@ -55,3 +59,35 @@
 - **TUYỆT ĐỐI KHÔNG tự ý sinh/vẽ ảnh:** Không dùng công cụ sinh ảnh, không tạo hình ảnh minh họa trừ khi có yêu cầu rõ ràng từ người dùng.
 - **Hạn chế tối đa sơ đồ (Diagrams) trong câu trả lời thông thường:** Không chèn sơ đồ luồng/quy trình rườm rà vào các câu trả lời phân tích trao đổi hàng ngày. Ưu tiên **Bảng biểu Markdown (Tables)** và **Gạch đầu dòng phân tích trực diện, sắc sảo**.
 - **Phạm vi duy nhất cho phép dùng Mermaid:** Chỉ sử dụng Mermaid `graph TD` / `graph LR` khi viết tài liệu đặc tả luồng người dùng (User Flow) trong các file BRD/PRD chính thức.
+
+---
+
+## 📊 QUY CHUẨN AGENDA BÁO CÁO THÁNG WEB PLATFORM (MONTHLY BUSINESS REVIEW STANDARD)
+
+Khi người dùng yêu cầu viết **Monthly Report cho Web Platform**, AI Agent **BẮT BUỘC** áp dụng chính xác **Agenda 4 phần chuẩn** sau:
+
+1. **Nguyên tắc vận hành:** *Report để cung cấp thông tin, Meeting để thảo luận và ra quyết định.* Phục vụ CEO và BOM nhận diện nhanh rủi ro trọng yếu và ra quyết định điều hành.
+2. **Gắn nhãn phân loại:** 
+   - `[R] – Reporting`: Cung cấp thông tin & kết quả hoạt động; dùng cho pre-read, không trình bày lại trong cuộc họp.
+   - `[D] – Discussion`: Nội dung có vấn đề cần thảo luận, xin ý kiến alignment, cần hỗ trợ hoặc ra quyết định (trọng tâm cuộc họp).
+3. **Agenda 4 phần chuẩn mực cho Web Platform:**
+   - **Phần 1: Product & Business Performance `[R]`:** 
+     - Bảng theo dõi mục tiêu và thực tế (Target vs. Actual) chuẩn 6 dòng chỉ số: `Total page views (target)`, `% Growth Rate (target)`, `Total page views (Actual)`, `Net add`, `% Growth Rate`, `% Target Rate`.
+     - **Nguyên tắc "So What?" (Không đọc lại số liệu):** Tuyệt đối không diễn giải lại các con số người đọc đã nhìn thấy trong bảng. Phần phân tích bắt buộc tập trung vào kết quả thực chất: bản chất sự dịch chuyển lưu lượng, nguyên nhân cốt lõi đằng sau sự tăng/giảm, rủi ro đánh đổi và hành động điều chỉnh chiến lược.
+   - **Phần 2: Cinema / Financial `[R]`:** 
+     - Chi tiết hiệu suất của 2 dự án trọng điểm lớn nhất (Cinema Hub và Financial Hub).
+     - Với từng dự án: Chi tiết số liệu hiệu suất, Key Highlights đạt được trong tháng, Next Actions cho tháng tới.
+   - **Phần 3: New User `[R]`:** 
+     - Mô tả luồng Ads (Paid Search, Ads Campaigns) và phễu Web-to-App.
+     - Số lượng Installs, New Registered Users (New Reg), Mapbank, MAU bóc tách theo từng chiến dịch (dữ liệu AppsFlyer GPD).
+   - **Phần 4: Discussion Topics `[D]`:** 
+     - Các chủ đề trọng tâm cần đưa ra thảo luận trong cuộc họp (tối đa 0–2 topics).
+     - Cấu trúc chuẩn 3 phần: `Problem Statement` ➔ `Status / Issues` (kèm số liệu data points) ➔ `Recommendations`.
+4. **Quy định trình bày:**
+   - Tuyệt đối không dùng Emoji/Icon; không dùng tên riêng cá nhân/PIC (thay bằng tên đội ngũ chuyên môn).
+   - Không đưa phần CX, không đưa chỉ số kỹ thuật sâu (CWV, P90, 4xx/5xx), không đưa Ticket tồn đọng.
+   - **Định vị kênh cốt lõi:** **Organic là kênh chủ lực và mang lại giá trị thực chất nhất của Web Platform**. Tuyệt đối **không tô điểm cho Paid**, không xem việc đốt tiền Paid là thành tích tăng trưởng. Paid tăng mà Organic giảm là tín hiệu cảnh báo rủi ro về độ lành mạnh của sàn Web.
+   - **Tiêu đề gạch đầu dòng (Bullet Lead-ins):** Sử dụng thuật ngữ tiếng Anh ngắn gọn, chuẩn Product Lead (ví dụ: `Target Overachievement:`, `Direct Traffic & Brand Strength:`, `SEO to GEO Transition:`, `Key Highlights:`, `Next Actions:`...) để thay thế cho các câu mở đầu tiếng Việt dài dòng.
+   - Không lặp lại số liệu thô; tập trung diễn giải ý nghĩa kinh doanh, bài học và quyết định vận hành.
+   - Đảm bảo quyền truy cập cho Ban Giám Đốc và các đầu mối tổng hợp (`tuong.nguyen`, `tram.phan1`, `nga.nguyen1`).
+

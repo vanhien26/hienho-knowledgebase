@@ -1,0 +1,60 @@
+{
+  "file_source": "/Users/hienhv/Downloads/Web Performance Tracking.xlsx",
+  "read_timestamp": "2026-10-01 15:21:53",
+  "report_type": "Full Month (Chốt Sổ 30 Ngày T9/2026)",
+  "days_elapsed": 30,
+  "target_sept_pv": 3509044,
+  "actual_sept_pv": 3950763,
+  "progress_pct": 112.59,
+  "daily_pace": 131692.1,
+  "surplus_pv": 441719,
+  "channels": {
+    "organic": {
+      "pv": 1623796,
+      "pct": 41.1
+    },
+    "paid": {
+      "pv": 1197093,
+      "pct": 30.3
+    },
+    "direct": {
+      "pv": 755896,
+      "pct": 19.13
+    },
+    "referral": {
+      "pv": 345132,
+      "pct": 8.74
+    },
+    "others": {
+      "pv": 30942,
+      "pct": 0.78
+    }
+  },
+  "hubs": {
+    "new_user": {
+      "pv": 462878,
+      "target": 300000,
+      "pct": 154.29
+    },
+    "cinema": {
+      "pv": 1220075,
+      "target": 964394,
+      "pct": 126.51
+    },
+    "financial": {
+      "pv": 246979,
+      "target": 250000,
+      "pct": 98.79
+    },
+    "vehicle": {
+      "pv": 66808,
+      "target": 200000,
+      "pct": 33.4
+    },
+    "student": {
+      "pv": 7248,
+      "target": 100000,
+      "pct": 7.25
+    }
+  }
+}

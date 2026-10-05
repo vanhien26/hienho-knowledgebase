@@ -16,47 +16,325 @@
 2. **Khoảng cách giữa Cài Đặt và Giao Dịch Đầu Tiên (Install -> 1st Transaction Gap):**
    Phần lớn giá trị sản phẩm MoMo chỉ được khám phá sau quá trình đăng ký và eKYC In-App. Việc bắt người dùng cài đặt khi chưa hiểu rõ lợi ích dẫn đến bỏ dở ứng dụng trước khi phát sinh giao dịch đầu tiên.
 
-### 1.2 Dữ Liệu Thực Tế Chuỗi Tăng Trưởng New User (Tháng 7, 8 & MTD Tháng 9/2026)
-Dữ liệu đo lường thực tế phễu Balloon Ads thu hút New User từ tháng 7 đến giữa tháng 9/2026:
+### 1.2 Dữ Liệu Thực Tế Chuỗi Tăng Trưởng New User (Tháng 7, Tháng 8 & Chính Thức Tháng 9/2026)
+Dữ liệu đo lường thực tế phễu Ads thu hút New User từ tháng 7 đến hết tháng 9/2026 (Nguồn dữ liệu tracking chính thức):
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
     <tr style="background-color:#f1f5f9;">
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chỉ Số Phễu (Balloon Ads Metric)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chỉ Số Phễu (Ads New User Funnel)</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">Tháng 07/2026</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">Tháng 08/2026</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">Tháng 09/2026 (MTD)</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đánh Giá Xu Hướng & Ghi Chú</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">Tháng 09/2026 (Full Month)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đánh Giá Xu Hướng & Tăng Trưởng MoM</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1. View Balloon Ads (Impressions)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">588.464</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1.064.439</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; font-weight:700; color:#16a34a;">1.434.440</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lượt hiển thị tăng mạnh nhờ mở rộng độ phủ Balloon Ads trên Web.</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>2. Click Balloon Ads (Lượt nhấp)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">24.467</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">50.145</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; font-weight:700;">45.532</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Lượt nhấp MTD Tháng 9 tiệm cận tổng lượt nhấp Tháng 8.</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>3. Tỷ lệ CTR (% Click / View)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">4,2%</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">4,7%</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; font-weight:700; color:#dc2626;">3,2%</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CTR giảm nhẹ do hiện tượng bão hòa banner đại trà chung chung.</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>4. Total Install App (Cài đặt)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>1. Total Install App</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">5.239</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">10.041</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; font-weight:700; color:#16a34a;">6.849</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MTD Tháng 9 đã đạt 6.849 Installs (Run-rate dự kiến cán mốc ~9K-10K Installs).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; font-weight:700; color:#16a34a;">10.501</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng +4.6% MoM và tăng gấp 2.0 lần (+100.4%) so với Tháng 7.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>2. Đăng Ký Tài Khoản (REG)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1.682</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">3.229</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; font-weight:700; color:#16a34a;">3.569</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng +10.5% MoM; CVR Install -> REG tăng từ 32.1% lên 34.0%.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>3. Liên Kết Ngân Hàng (Map Bank / N2MM)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">948</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1.818</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; font-weight:700; color:#16a34a;">2.239 (~2.3K)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng trưởng bứt phá +23.2% MoM; CVR REG -> Map tăng lên 62.7%.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>4. Active MAU (Giao dịch đầu)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">536</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1.029</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; font-weight:700; color:#16a34a;">1.306 (~1.3K)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng +26.9% MoM; CVR Map -> MAU duy trì mức cao 58.3%.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Chi Tiết Phân Bổ 13 Campaign Ads Kênh Web Tháng 09/2026 (Nguồn Dữ Liệu CSV Pivot)
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.85em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:6px 8px; text-align:left; font-weight:700;">Tên Chiến Dịch (Campaign Tracking Code)</th>
+      <th style="border:1.5px solid #64748b; padding:6px 8px; text-align:center; font-weight:700;">Hệ Điều Hành</th>
+      <th style="border:1.5px solid #64748b; padding:6px 8px; text-align:right; font-weight:700;">Installs</th>
+      <th style="border:1.5px solid #64748b; padding:6px 8px; text-align:right; font-weight:700;">REG</th>
+      <th style="border:1.5px solid #64748b; padding:6px 8px; text-align:right; font-weight:700;">CVR REG</th>
+      <th style="border:1.5px solid #64748b; padding:6px 8px; text-align:right; font-weight:700;">Map Bank</th>
+      <th style="border:1.5px solid #64748b; padding:6px 8px; text-align:right; font-weight:700;">CVR Map</th>
+      <th style="border:1.5px solid #64748b; padding:6px 8px; text-align:right; font-weight:700;">Active MAU</th>
+      <th style="border:1.5px solid #64748b; padding:6px 8px; text-align:right; font-weight:700;">CVR End-to-End</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:left;"><code>260805_NEW_WEB_N2MM_INS_C.CHAOMOMO</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:center;">Android</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700;">4.826</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">1.619</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">33,5%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">939</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">58,0%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">521</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">10,8%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:left;"><code>260805_NEW_WEB_N2MM_INS_C.CHAOMOMO</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:center; font-weight:700; color:#1e40af;">iOS</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700;">3.864</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">1.373</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">35,5%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">1.005</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">73,2%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">591</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">15,3%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:left;"><code>260805_NEW_WEB_N2MM_INS_C.PSN-CINEMA</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:center; font-weight:700; color:#1e40af;">iOS</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700;">903</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">278</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">30,8%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">189</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">68,0%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">124</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">13,7%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:left;"><code>260805_NEW_WEB_N2MM_INS_C.PSN-CINEMA</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:center;">Android</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">272</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">102</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">37,5%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">43</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">42,2%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">29</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">10,7%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:left;"><code>260805_NEW_WEB_N2MM_INS_C.PSN-MERCHANT</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:center;">Android</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">200</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">71</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">35,5%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">19</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">26,8%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">12</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">6,0%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:left;"><code>251007_NEW_INTERNAL_WEB_N2MM_INS_WEB_BRT_C.CHAOMOMO</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:center;">Android</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">134</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">36</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">26,9%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">14</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">38,9%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">10</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">7,5%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:left;"><code>260805_NEW_WEB_N2MM_INS_C.PSN-MERCHANT</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:center; font-weight:700; color:#1e40af;">iOS</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">117</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">28</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">23,9%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">22</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">78,6%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">14</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">12,0%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:left;"><code>251007_NEW_INTERNAL_WEB_N2MM_INS_WEB_BRT_C.CHAOMOMO</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:center; font-weight:700; color:#1e40af;">iOS</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">82</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">17</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">20,7%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">13</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">76,5%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">5</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">6,1%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:left;"><code>260805_NEW_WEB_N2MM_INS_C.PSN-CINEMA_G.BalloonPU-cinema-rap-lotte-cinema</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:center; font-weight:700; color:#1e40af;">iOS</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">38</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">24</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">63,2%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">17</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">70,8%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">14</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">36,8%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:left;"><code>260805_NEW_WEB_N2MM_INS_C.PNS-BAOHIEM</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:center; font-weight:700; color:#1e40af;">iOS</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">31</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">9</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">29,0%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">8</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">88,9%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">5</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">16,1%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:left;"><code>260805_NEW_WEB_N2MM_INS_C.PNS-BAOHIEM</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:center;">Android</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">25</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">7</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">28,0%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">4</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">57,1%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">1</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">4,0%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:left;"><code>260805_NEW_WEB_N2MM_INS_C.PSN-CINEMA_G.BalloonPU-cinema-rap-lotte-cinema</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:center;">Android</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">8</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">5</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">62,5%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">3</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">60,0%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">2</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right; font-weight:700; color:#16a34a;">25,0%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:left;"><code>260707_NEW_INTERNAL_WEB_ALL_INS_WEB_BRT_C.PXTĐH26</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:center;">Android</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">1</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">0</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">0,0%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">0</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">0,0%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">0</td>
+      <td style="border:1px solid #94a3b8; padding:6px 8px; text-align:right;">0,0%</td>
+    </tr>
+    <tr style="background-color:#e2e8f0; font-weight:700;">
+      <td style="border:1.5px solid #64748b; padding:6px 8px; text-align:left;" colspan="2">Tổng Toàn Sàn (13 Campaigns)</td>
+      <td style="border:1.5px solid #64748b; padding:6px 8px; text-align:right; color:#16a34a;">10.501</td>
+      <td style="border:1.5px solid #64748b; padding:6px 8px; text-align:right; color:#16a34a;">3.569</td>
+      <td style="border:1.5px solid #64748b; padding:6px 8px; text-align:right;">34,0%</td>
+      <td style="border:1.5px solid #64748b; padding:6px 8px; text-align:right; color:#16a34a;">2.276</td>
+      <td style="border:1.5px solid #64748b; padding:6px 8px; text-align:right; color:#16a34a;">63,8%</td>
+      <td style="border:1.5px solid #64748b; padding:6px 8px; text-align:right; color:#16a34a;">1.328</td>
+      <td style="border:1.5px solid #64748b; padding:6px 8px; text-align:right; color:#16a34a;">12,6%</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Tổng Hợp Theo Kênh / Cụm Sản Phẩm (Placement Aggregation)
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.88em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 10px; text-align:left; font-weight:700;">Cụm Sản Phẩm / Kênh</th>
+      <th style="border:1.5px solid #64748b; padding:8px 10px; text-align:right; font-weight:700;">Installs</th>
+      <th style="border:1.5px solid #64748b; padding:8px 10px; text-align:right; font-weight:700;">Tỷ Trọng Installs</th>
+      <th style="border:1.5px solid #64748b; padding:8px 10px; text-align:right; font-weight:700;">REG</th>
+      <th style="border:1.5px solid #64748b; padding:8px 10px; text-align:right; font-weight:700;">Map Bank (N2MM)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 10px; text-align:right; font-weight:700;">Active MAU</th>
+      <th style="border:1.5px solid #64748b; padding:8px 10px; text-align:right; font-weight:700;">CVR (Install -> MAU)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:left;"><strong>1. C.CHAOMOMO (Quảng cáo đại trà)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right; font-weight:700;">8.906</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">84,8%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">3.045</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right; font-weight:700;">1.971</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">1.127</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">12,7%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:left;"><strong>2. Cinema Hub (Rạp phim & Lotte)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right; font-weight:700;">1.221</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">11,6%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">409</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right; font-weight:700;">252</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">169</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right; font-weight:700; color:#16a34a;">13,8%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:left;"><strong>3. Merchant Hub (Đối tác)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">317</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">3,0%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">99</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">41</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">26</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">8,2%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:left;"><strong>4. Bảo Hiểm (InsurTech)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">56</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">0,5%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">16</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">12</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">10,7%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:left;"><strong>5. Khác (PXTĐH26)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">0,0%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">0</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">0,0%</td>
+    </tr>
+  </tbody>
+</table>
+
+#### So Sánh Hiệu Suất Theo Hệ Điều Hành (Android vs iOS)
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.88em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 10px; text-align:left; font-weight:700;">Hệ Điều Hành</th>
+      <th style="border:1.5px solid #64748b; padding:8px 10px; text-align:right; font-weight:700;">Installs</th>
+      <th style="border:1.5px solid #64748b; padding:8px 10px; text-align:right; font-weight:700;">Tỷ Trọng Installs</th>
+      <th style="border:1.5px solid #64748b; padding:8px 10px; text-align:right; font-weight:700;">REG</th>
+      <th style="border:1.5px solid #64748b; padding:8px 10px; text-align:right; font-weight:700;">CVR REG</th>
+      <th style="border:1.5px solid #64748b; padding:8px 10px; text-align:right; font-weight:700;">Map Bank</th>
+      <th style="border:1.5px solid #64748b; padding:8px 10px; text-align:right; font-weight:700;">CVR (Map/REG)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 10px; text-align:right; font-weight:700;">Active MAU</th>
+      <th style="border:1.5px solid #64748b; padding:8px 10px; text-align:right; font-weight:700;">End-to-End CVR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:left;"><strong>Android</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right; font-weight:700;">5.466</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">52,1%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">1.840</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">33,7%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">1.022</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">55,5%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">575</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">10,5%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:left;"><strong>iOS</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right; font-weight:700;">5.035</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">47,9%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">1.729</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right;">34,3%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right; font-weight:700; color:#16a34a;">1.254</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right; font-weight:700; color:#16a34a;">72,5%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right; font-weight:700; color:#16a34a;">753</td>
+      <td style="border:1px solid #94a3b8; padding:8px 10px; text-align:right; font-weight:700; color:#16a34a;">15,0%</td>
     </tr>
   </tbody>
 </table>
@@ -74,7 +352,7 @@ Thống nhất xây dựng **New User Master Hub (`momo.vn/welcome`)** làm tran
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chỉ số Chiến lược</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Baseline Cũ (T7/2026)</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Thực tế Tháng 08/2026</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">MTD Tháng 09/2026</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Thực tế Tháng 09/2026</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Mục tiêu H2 (Mỗi tháng)</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cơ sở & Phương pháp Đo lường</th>
     </tr>
@@ -82,9 +360,9 @@ Thống nhất xây dựng **New User Master Hub (`momo.vn/welcome`)** làm tran
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>New to MoMo (N2MM)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1.280 users</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">948 users</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1.818 users</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">~1.250 users</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">2.239 users (~2.3K)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>5.000 users/tháng</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người dùng mới hoàn tất đăng ký & liên kết ngân hàng qua Web-to-App.</td>
     </tr>
@@ -92,23 +370,23 @@ Thống nhất xây dựng **New User Master Hub (`momo.vn/welcome`)** làm tran
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Total Installs</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5.239 installs</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">10.041 installs</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">6.849 installs</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">10.501 installs</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>20.000 - 30.000 installs/tháng</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng lượt tải App ghi nhận attribution qua AppsFlyer OneLink.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>CVR Install -> REG</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">38.14%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">32.10%</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">32.50%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">32.10%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">33.99%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>≥ 50.0% - 60.0%</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nâng cao nhờ cơ chế chọn quà trước và luồng Hybrid Onboarding tại momo.vn/welcome.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Active MAU (Kích hoạt)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">669 MAU</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">536 MAU</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1.029 MAU</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">~750 MAU</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center; font-weight:700; color:#16a34a;">1.306 MAU (~1.3K)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>2.500 MAU/tháng</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người dùng mới phát sinh ít nhất 1 giao dịch thực tế trên App.</td>
     </tr>

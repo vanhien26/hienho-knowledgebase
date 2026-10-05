@@ -124,3 +124,18 @@ graph TD
 | **Giai đoạn 3** | **Thứ 5 (01/10)** | Testing & InsurTech Integration QA | Kiểm thử tích hợp luồng gọi API Báo giá Bảo hiểm real-time, test Dynamic QR / Onelink chuyển đổi Web-to-App. |
 | **Giai đoạn 4** | **Thứ 6 (02/10)** | Staging Review & SEO Schema Injection | Đưa trang lên môi trường Staging, kiểm tra JSON-LD Schema (`AutoRental`, `Car`, `FAQPage`), kiểm tra tốc độ tải trang Mobile. |
 | **Giai đoạn 5** | **Cuối tuần (03 - 05/10)** | Production Go-Live & Paid Ads Ready | Chính thức Go-live toàn bộ 264 trang Dòng xe. Sẵn sàng tiếp nhận Paid Ads Campaign 550M từ InsurTech BU. |
+
+## V. CẤU TRÚC GIAO DIỆN 8 BLOCK CHUẨN HOÁ (PAGE BLOCK ARCHITECTURE)
+
+Toàn bộ chuyên trang Chi Tiết Dòng Xe (`/hang-xe/[brand]/[model]`) được thiết kế dạng 8 Block Section dọc tối ưu cho Mobile Viewport và Google Indexing:
+
+| Block STT | Tên Khối Giao Diện | Vai Trò & Tương Tác UX | Dữ Liệu & API Nạp | Nút Hành Động & W2A Hook |
+| :---: | :--- | :--- | :--- | :--- |
+| **Block 1** | **Hero Section & Thẻ Tổng Quan Dòng Xe** | Hiển thị Tên xe, Hãng sản xuất, Ảnh đại diện, Huy hiệu Phân khúc, Tùy chọn Năm sản xuất (2017 - 2026). | Local Dynamic Storage / CMS `car_models` | Nút **[Thêm Xe Vào Ví Xe In-App]** |
+| **Block 2** | **Widget Báo Giá Bảo Hiểm Real-time (P0 Core)** | Chọn Biến thể xe & Năm sản xuất ➔ Tính ngay Phí TNDS Bắt buộc & Phí Thân vỏ 9 hãng bảo hiểm. | REST API InsurTech `/quote` | Nút **[Mua Bảo Hiểm Nhận GCN Điện Tử 30s]** (QR / Onelink) |
+| **Block 3** | **Danh Sách Biến Thể Chi Tiết (P0 Core Catalog)** | Bảng liệt kê toàn bộ các phiên bản xe (Trims/Variants) kèm số chỗ, động cơ, giá niêm yết và phí bảo hiểm tối thiểu. | Database Master 1,534 biến thể (`Car Data.xlsx`) | Nút **[Báo Giá Phiên Bản Này]** |
+| **Block 4** | **Máy Tính Giá Lăn Bánh & Thuế Trước Bạ** | Dự toán Tổng chi phí đăng ký xe mới (Thuế trước bạ, Phí biển số, Phí đường bộ, Phí đăng kiểm, BH TNDS). | Calculator Engine Client-side (`/lan-banh` logic) | Nút **[Xem Chi Tiết Bảng Phí Lăn Bánh]** |
+| **Block 5** | **Widget Dự Toán Chi Phí Nuôi Xe Hàng Tháng** | Tự động tính 8 khoản phí nuôi xe (Xăng/Điện, Gửi xe, Rửa xe, Bảo dưỡng, BH, Vietmap/4G, Phụ kiện, Dự phòng). | Pre-filled Widget từ `/chi-phi-nuoi-xe` Spec | Nút **[Mở Rộng Bảng Tính & So Sánh Xe]** |
+| **Block 6** | **Bản Đồ Định Vị Hạ Tầng Dịch Vụ Tương Thích** | • Xe Điện: Bản đồ Trạm sạc V-Green/VinFast theo GPS.<br>• Xe Xăng/Dầu: Bản đồ Gara sửa chữa & Trung tâm bảo hành chính hãng. | Master Dataset Trạm sạc & 11,001 Gara đối tác | Nút **[Tìm Trạm Sạc / Gara Gần Nhất]** |
+| **Block 7** | **Bài Viết Đánh Giá Chuyên Sâu & Cẩm Nang (pSEO)** | Đánh giá ưu/nhược điểm dòng xe, cẩm nang bảo dưỡng, lịch thay dầu định kỳ và kinh nghiệm sử dụng thực tế. | MoSpark GenAI Pipeline / CMS Content | Link bài viết liên quan nội khu |
+| **Block 8** | **Footer Internal Links & FAQPage Schema** | Hệ thống Link nội bộ kết nối 264 trang dòng xe cùng hãng/phân khúc & Khối câu hỏi thường gặp có cấu trúc. | JSON-LD Schema (`AutoRental`, `Car`, `FAQPage`) | Dynamic Internal Links |
