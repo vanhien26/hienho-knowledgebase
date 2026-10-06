@@ -113,14 +113,14 @@
 
 ### 4.1. Định Hướng Trải Nghiệm: Educate-First & Value-Driven Landing Gateway
 Thay vì một trang chuyển hướng mù (blind redirect), `momo.vn/download` được tái thiết kế thành **Trang Đích Giới Thiệu Giá Trị & Kích Hoạt Chuyển Đổi**:
-- **Nguyên tắc Above the Fold (Action-First):** Ngay khi truy cập, người dùng nhìn thấy ngay lý do phải tải (Gói quà tân thủ) và nút CTA hành động trực tiếp mà không cần cuộn trang.
+- **Nguyên tắc Above the Fold (Action-First):** Ngay khi truy cập, người dùng nhìn thấy ngay lý do phải tải (Gói quà người dùng mới) và nút CTA hành động trực tiếp mà không cần cuộn trang.
 - **Nguyên tắc Below the Fold (Educate-Next):** Khi cuộn trang, người dùng được khám phá hệ sinh thái dịch vụ toàn diện của MoMo theo dạng khối trực quan, cô đọng (TLDR), giải quyết thắc mắc "MoMo có gì cho tôi?".
 
 ### 4.2. Bố Cục Giao Diện & Khối Nội Dung (Information Architecture & Wireframe Spec)
 
 1. **Khối 1: Hero Section (Above the Fold)**
    - **Headline & Value Proposition:** Thông điệp ngắn gọn, trực diện (Ví dụ: *"MoMo - Trợ thủ tài chính và thanh toán hàng ngày của hơn 30 triệu người Việt"*).
-   - **Gói quà Tân thủ (Welcome Incentive Badge):** Nổi bật thông điệp tặng gói quà voucher trải nghiệm (500.000đ - 1.000.000đ) khi đăng ký tài khoản mới.
+   - **Gói quà Người dùng mới (New User) (Welcome Incentive Badge):** Nổi bật thông điệp tặng gói quà voucher trải nghiệm (500.000đ - 1.000.000đ) khi đăng ký tài khoản mới.
    - **Khối Nút CTA Thích Ứng Theo Thiết Bị (Adaptive CTA Cluster):**
      - *Trên iOS:* Nút chính `Tải trên App Store` (kèm icon Apple) + Nút phụ `Đã có MoMo? Mở Ứng Dụng`.
      - *Trên Android:* Nút chính `Tải trên Google Play` (kèm icon Google Play) + Nút phụ `Đã có MoMo? Mở Ứng Dụng`.
@@ -163,7 +163,7 @@ Thay vì một trang chuyển hướng mù (blind redirect), `momo.vn/download` 
 graph TD
     A["User Click momo.vn/download từ các Touchpoint"] --> B{"Phát hiện Loại Thiết bị (Device Sniffer)"}
     
-    B -- "Desktop / Laptop" --> C["Trang Desktop Portal: Hiển thị Dynamic QR Code + Gói Quà Tân Thủ"]
+    B -- "Desktop / Laptop" --> C["Trang Desktop Portal: Hiển thị Dynamic QR Code + Gói Quà Người Dùng Mới"]
     C --> C1["User dùng Mobile quét mã QR"]
     C1 --> D{"Phát hiện Môi trường Mobile"}
     
@@ -181,7 +181,7 @@ graph TD
     G -- "Chưa Cài App MoMo" --> I["Điều hướng sang Store (App Store / Google Play)"]
     I --> J["Tải và Cài đặt Ứng Dụng"]
     J --> K["Mở Lần Đầu (Deferred Deep Link Sync)"]
-    K --> L["Kích hoạt Tài khoản & Nhận Gói Quà Tân Thủ (New User Activation)"]
+    K --> L["Kích hoạt Tài khoản & Nhận Gói Quà Người Dùng Mới (New User Activation)"]
 ```
 
 ### 5.2. Bảng Phân Tích Chi Tiết Các Bước (Step Breakdown Table)
@@ -228,7 +228,7 @@ graph TD
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">5</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Post-Install Context Continuity</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mở app lần đầu sau cài đặt lập tức thấy màn hình chào mừng cùng gói quà tặng tân thủ đã hứa.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mở app lần đầu sau cài đặt lập tức thấy màn hình chào mừng cùng gói quà tặng người dùng mới đã hứa.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AppsFlyer Deferred Deep Link SDK Callback & In-App Onboarding Router.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobile App MoMo</td>
     </tr>
@@ -277,7 +277,7 @@ graph TD
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">
         <ul>
           <li>Loại bỏ nhánh code logic Windows Phone lỗi thời.</li>
-          <li>Xây dựng giao diện Desktop Portal có Dynamic QR Code và gói quà tân thủ.</li>
+          <li>Xây dựng giao diện Desktop Portal có Dynamic QR Code và gói quà người dùng mới.</li>
           <li>Xây dựng giao diện trung gian tối giản (Bouncer UI) cho In-App Browser (Zalo, FB).</li>
           <li>Gắn sự kiện GA4 đo lường tỷ lệ rớt (drop-off) thực tế trước khi redirect.</li>
         </ul>
@@ -303,7 +303,7 @@ graph TD
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">
         <ul>
           <li>Cấu hình Mobile SDK đọc dữ liệu Deferred Deep Link khi người dùng mở app lần đầu.</li>
-          <li>Cá nhân hóa luồng Onboarding: điều hướng thẳng tới gói quà tân thủ đã cam kết ngoài Web.</li>
+          <li>Cá nhân hóa luồng Onboarding: điều hướng thẳng tới gói quà người dùng mới đã cam kết ngoài Web.</li>
           <li>Đánh giá hiệu suất toàn diện và rà soát audit danh mục link chiến dịch toàn sàn.</li>
         </ul>
       </td>

@@ -28,17 +28,35 @@ def parse_and_sync():
     print(f"Thời gian cập nhật file: {datetime.fromtimestamp(os.path.getmtime(latest_file)).strftime('%Y-%m-%d %H:%M:%S')}")
 
     wb = openpyxl.load_workbook(latest_file, data_only=True)
+    
+    # Check days elapsed from Vehicle or Overall Performance cell (1,1) or (1,2)
+    days_elapsed = 4 # Default for Oct 4d
+    if 'Vehicle' in wb.sheetnames:
+        c_val = wb['Vehicle'].cell(1, 2).value
+        if c_val and str(c_val).startswith("Update to:"):
+            try:
+                days_elapsed = int(str(c_val).replace("Update to:", "").strip())
+            except:
+                pass
+    elif 'Overall Performance' in wb.sheetnames:
+        c_val = wb['Overall Performance'].cell(1, 1).value
+        if c_val and str(c_val).startswith("Update to:"):
+            try:
+                days_elapsed = int(str(c_val).replace("Update to:", "").strip())
+            except:
+                pass
+
     ws_pivot = wb['MTD Pivot']
     oct_col_idx = 9 # Col 9 is 2026-10-01 MTD!
     
     # Read exact Grand Total from Pivot table
-    grand_total_oct_1d = 146146
+    grand_total_oct_4d = 558009
     for r in range(ws_pivot.max_row, 1, -1):
         c1 = ws_pivot.cell(r, 1).value
         if c1 and 'grand total' in str(c1).lower():
             v = ws_pivot.cell(r, oct_col_idx).value
             if v:
-                grand_total_oct_1d = int(v)
+                grand_total_oct_4d = int(v)
                 break
 
     totals_by_hub = defaultdict(int)
@@ -59,50 +77,50 @@ def parse_and_sync():
             except:
                 pass
 
-    total_oct_1d = grand_total_oct_1d
-    days_elapsed = 1 # MTD 01/10
+    total_oct_4d = grand_total_oct_4d
     target_oct_pv = 3665607 # Target T10
     
-    hubs_oct_1d = defaultdict(int)
+    hubs_oct_4d = defaultdict(int)
     for group_hub, pv in totals_by_hub.items():
         if 'New User' in str(group_hub):
-            hubs_oct_1d['new_user'] += pv
+            hubs_oct_4d['new_user'] += pv
         elif 'Cinema Hub' in str(group_hub):
-            hubs_oct_1d['cinema'] += pv
+            hubs_oct_4d['cinema'] += pv
         elif 'Financial Hub' in str(group_hub):
-            hubs_oct_1d['financial'] += pv
+            hubs_oct_4d['financial'] += pv
         elif any(k in str(group_hub) for k in ['Phạt Nguội', 'Vehicle', 'Bảo Hiểm Ô Tô', 'Bảo Hiểm Xe Máy', 'Phí Không Dừng', 'Tiện Ích Giao Thông']):
-            hubs_oct_1d['vehicle'] += pv
+            hubs_oct_4d['vehicle'] += pv
         elif 'Student Hub' in str(group_hub):
-            hubs_oct_1d['student'] += pv
+            hubs_oct_4d['student'] += pv
 
-    daily_pace = total_oct_1d / days_elapsed
-    forecast_31d = total_oct_1d * 31
+    daily_pace = total_oct_4d / days_elapsed
+    forecast_31d = daily_pace * 31
 
     summary = {
         "file_source": latest_file,
         "read_timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "report_type": "MTD 1 Ngày (01/10/2026 - Mở Màn Tháng 10)",
+        "report_type": f"MTD {days_elapsed} Ngày (01/10 - 04/10/2026 - Lũy Kế 4 Ngày Tháng 10)",
         "days_elapsed": days_elapsed,
         "days_in_month": 31,
         "target_oct_pv": target_oct_pv,
-        "actual_mtd_pv": total_oct_1d,
-        "progress_pct": round((total_oct_1d / target_oct_pv) * 100, 2),
+        "actual_mtd_pv": total_oct_4d,
+        "progress_pct": round((total_oct_4d / target_oct_pv) * 100, 2),
         "daily_pace": round(daily_pace, 2),
         "forecast_31d": round(forecast_31d, 2),
+        "forecast_pct": round((forecast_31d / target_oct_pv) * 100, 2),
         "channels": {
-            "organic": {"pv": totals_by_channel.get('Organic', 0), "pct": round(totals_by_channel.get('Organic', 0) / total_oct_1d * 100, 2)},
-            "direct": {"pv": totals_by_channel.get('Direct', 0), "pct": round(totals_by_channel.get('Direct', 0) / total_oct_1d * 100, 2)},
-            "referral": {"pv": totals_by_channel.get('Referral', 0), "pct": round(totals_by_channel.get('Referral', 0) / total_oct_1d * 100, 2)},
-            "paid": {"pv": totals_by_channel.get('Paid', 0), "pct": round(totals_by_channel.get('Paid', 0) / total_oct_1d * 100, 2)},
-            "others": {"pv": totals_by_channel.get('Others', 0), "pct": round(totals_by_channel.get('Others', 0) / total_oct_1d * 100, 2)}
+            "organic": {"pv": totals_by_channel.get('Organic', 0), "pct": round(totals_by_channel.get('Organic', 0) / total_oct_4d * 100, 2)},
+            "direct": {"pv": totals_by_channel.get('Direct', 0), "pct": round(totals_by_channel.get('Direct', 0) / total_oct_4d * 100, 2)},
+            "referral": {"pv": totals_by_channel.get('Referral', 0), "pct": round(totals_by_channel.get('Referral', 0) / total_oct_4d * 100, 2)},
+            "paid": {"pv": totals_by_channel.get('Paid', 0), "pct": round(totals_by_channel.get('Paid', 0) / total_oct_4d * 100, 2)},
+            "others": {"pv": totals_by_channel.get('Others', 0), "pct": round(totals_by_channel.get('Others', 0) / total_oct_4d * 100, 2)}
         },
         "hubs": {
-            "new_user": {"pv": hubs_oct_1d['new_user'], "target": 300000, "pct": round(hubs_oct_1d['new_user']/300000*100, 2)},
-            "cinema": {"pv": hubs_oct_1d['cinema'], "target": 1117378, "pct": round(hubs_oct_1d['cinema']/1117378*100, 2)},
-            "financial": {"pv": hubs_oct_1d['financial'], "target": 450000, "pct": round(hubs_oct_1d['financial']/450000*100, 2)},
-            "vehicle": {"pv": hubs_oct_1d['vehicle'], "target": 100000, "pct": round(hubs_oct_1d['vehicle']/100000*100, 2)},
-            "student": {"pv": hubs_oct_1d['student'], "target": 100000, "pct": round(hubs_oct_1d['student']/100000*100, 2)}
+            "new_user": {"pv": hubs_oct_4d['new_user'], "target": 300000, "pct": round(hubs_oct_4d['new_user']/300000*100, 2), "forecast": round(hubs_oct_4d['new_user']/days_elapsed*31, 2)},
+            "cinema": {"pv": hubs_oct_4d['cinema'], "target": 1117378, "pct": round(hubs_oct_4d['cinema']/1117378*100, 2), "forecast": round(hubs_oct_4d['cinema']/days_elapsed*31, 2)},
+            "financial": {"pv": hubs_oct_4d['financial'], "target": 450000, "pct": round(hubs_oct_4d['financial']/450000*100, 2), "forecast": round(hubs_oct_4d['financial']/days_elapsed*31, 2)},
+            "vehicle": {"pv": hubs_oct_4d['vehicle'], "target": 100000, "pct": round(hubs_oct_4d['vehicle']/100000*100, 2), "forecast": round(hubs_oct_4d['vehicle']/days_elapsed*31, 2)},
+            "student": {"pv": hubs_oct_4d['student'], "target": 100000, "pct": round(hubs_oct_4d['student']/100000*100, 2), "forecast": round(hubs_oct_4d['student']/days_elapsed*31, 2)}
         }
     }
 
@@ -111,7 +129,7 @@ def parse_and_sync():
     print(f"Đã lưu bản SSOT sạch vào {SSOT_EXCEL}")
 
     # Write snapshot JSON
-    json_path = os.path.join(BASE_DIR, "07_REPORTS/data/monthly_10_2026_mtd_1d.json")
+    json_path = os.path.join(BASE_DIR, f"07_REPORTS/data/monthly_10_2026_mtd_{days_elapsed}d.json")
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(summary, f, ensure_ascii=False, indent=2)
     print(f"Đã tạo JSON snapshot tại {json_path}")
@@ -120,5 +138,5 @@ def parse_and_sync():
 
 if __name__ == "__main__":
     res = parse_and_sync()
-    print("\n=== KẾT QUẢ TRÍCH XUẤT TỰ ĐỘNG THÁNG 10 (MTD 01/10/2026 - chuẩn 146,146) ===")
+    print(f"\n=== KẾT QUẢ TRÍCH XUẤT TỰ ĐỘNG THÁNG 10 (MTD {res['days_elapsed']} NGÀY) ===")
     print(json.dumps(res, ensure_ascii=False, indent=2))

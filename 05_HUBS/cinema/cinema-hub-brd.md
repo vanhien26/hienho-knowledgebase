@@ -136,18 +136,18 @@ Cơ chế PLG của Cinema Hub dựa trên 5 Phễu Mồi Câu (Acquisition & En
   </tbody>
 </table>
 
-### 1.5 Báo Cáo Hiệu Suất MTD 27/09/2026 & Tiến Độ Thực Thi Sản Phẩm
+### 1.5 Báo Cáo Hiệu Suất Chốt Sổ Tháng 9/2026 (Full Month 30d) & Tiến Độ Thực Thi Sản Phẩm
 
-#### A. Dữ Liệu Hiệu Suất Vận Hành MTD 27 Ngày (01/09 - 27/09/2026)
-* **Lưu lượng MTD 27d:** Đạt **1.086.874 Pageviews** (chiếm **30.93% tổng lưu lượng Kênh Web**), giữ vững vị thế động cơ kéo traffic số 1 toàn sàn.
-* **Tốc độ vận hành (Daily Pace):** Đạt **40.255 PV/ngày**.
-* **Dự báo trọn tháng (Run-rate Forecast 30d):** Ước tính đạt **1.207.638 PVs** (đạt 80.5% Target Hub 1.5M - **FORECAST TRỌN THÁNG BỨT PHÁ VƯỢT >1.2 TRIỆU PVS**).
-* **Phân rã theo Sub-pages MTD 27d:**
-  - Trang Chi tiết phim (Cinema_Page): **609.544 PVs** (56.1% Hub)
-  - Trang Cụm rạp (Cinema_Cineplex): **411.613 PVs** (37.9% Hub)
-  - Trang Blog điện ảnh (Cinema_Blog): **38.594 PVs** (3.6% Hub)
-  - Trang chủ Cinema & News: Lần lượt đạt **25.226 PVs** và **1.827 PVs**
-* **Paid Traffic MTD 27d:** Đạt **356.556 Pageviews** (chiếm 30.8% tổng Paid toàn Kênh Web).
+#### A. Dữ Liệu Hiệu Suất Vận Hành Trọn Tháng 9/2026 (01/09 - 30/09/2026)
+* **Lưu lượng Chốt Sổ Trọn Tháng 9:** Đạt **1.220.075 Pageviews** (chiếm **30,88% tổng lưu lượng Kênh Web**), giữ vững vị thế động cơ kéo traffic số 1 toàn sàn.
+* **Tỷ lệ hoàn thành Target:** Đạt **126,51% Target Tháng 9** (964.394 PVs) - **VƯỢT TARGET HUB CHÍNH THỨC +26,5% ~ +255.681 PVs** (Cán mốc kỷ lục lịch sử >1.22 triệu PVs).
+* **Tốc độ vận hành (Daily Pace):** Đạt **40.669 PV/ngày**.
+* **Phân rã theo Sub-pages Full Month T9:**
+  - Trang Chi tiết phim (Cinema_Page): **670.360 PVs** (54,9% Hub)
+  - Trang Cụm rạp (Cinema_Cineplex): **448.653 PVs** (36,8% Hub)
+  - Trang Blog điện ảnh (Cinema_Blog): **46.732 PVs** (3,8% Hub)
+  - Trang chủ Cinema & News: Lần lượt đạt **29.742 PVs** và **2.016 PVs**
+* **Paid Traffic Full Month T9:** Đạt **374.701 Pageviews** (chiếm 31,3% tổng Paid toàn Kênh Web).
 
 #### B. Cột Mốc Sản Phẩm & Chiến Lược Vận Hành Mới
 * **Tự Chủ Sản Xuất Content:** Web Platform Team chủ động 100% quy trình sản xuất nội dung review/tin tức điện ảnh qua MoSpark GenAI Pipeline, tự chủ vận hành không lệ thuộc vào nguồn lực Cell Team.

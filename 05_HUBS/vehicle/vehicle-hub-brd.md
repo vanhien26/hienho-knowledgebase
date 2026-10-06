@@ -76,7 +76,7 @@ Kênh Website vận hành dựa trên các tiện ích tra cứu miễn phí đ�
 
 * **Nhóm Tiện Ích Bản Đồ Local & Công Cụ Hỗ Trợ Lộ Trình (Local GEO & Calculators):**
   8. **Trạm Sạc Xe Điện (`/tien-ich-giao-thong/tram-sac`):** Định vị trạm sạc VinFast, V-Green theo vị trí GPS và đề xuất gói bảo hiểm xe điện.
-  9. **Bản Đồ Garage & Bảo Dưỡng (`/tien-ich-giao-thong/tim-garage`):** Định vị garage sửa chữa ô tô/xe máy, trung tâm rửa xe & detailing gần nhất.
+  9. **Bản Đồ Garage & Bảo Dưỡng (`/tien-ich-giao-thong/garage`):** Định vị garage sửa chữa ô tô/xe máy, trung tâm rửa xe & detailing gần nhất.
   10. **Bãi Đỗ Xe & Cứu Hộ Đường Bộ 24/7 (`/tien-ich-giao-thong/bai-do-xe`):** Bản đồ bãi đỗ xe ô tô, dịch vụ gọi xe cứu hộ sự cố khẩn cấp và công cụ dự toán chi phí nuôi xe/thuế trước bạ.
 
 ---
@@ -96,21 +96,22 @@ Kênh Website vận hành dựa trên các tiện ích tra cứu miễn phí đ�
 
 > **Lưu ý về chỉ số:** Các chỉ số tổng Target Phase 1 Pilot (*Total Traffic 500.000, %CTR W2A ≥ 5.0% - 10.0%, Logged-in MAU 250.000, New Vehicle Profiles 100.000*) **đã được Ban Giám Đốc phê duyệt chính thức**. 
 
-### 1.4 Báo Cáo Hiệu Suất MTD 27/09/2026 & Cột Mốc Sản Phẩm Mới
+### 1.4 Báo Cáo Hiệu Suất Chốt Sổ Tháng 9/2026 (Full Month 30d) & Cột Mốc Sản Phẩm Mới
 
-#### A. Dữ Liệu Hiệu Suất Vận Hành MTD 27 Ngày (01/09 - 27/09/2026)
-* **Lưu lượng MTD 27d:** Đạt **61.907 Pageviews** (chiếm 1.76% tổng lưu lượng Kênh Web).
-* **Tốc độ vận hành (Daily Pace):** Đạt **2.293 PV/ngày**.
-* **Dự báo trọn tháng (Run-rate Forecast 30d):** Ước tính đạt **68.786 PVs** (34.4% Target Hub 200K).
-* **Phân rã theo Verticals MTD 27d:**
-  * Phạt Nguội: **37.109 PVs** (59.9% Hub)
-  * Bảo Hiểm Ô Tô: **17.398 PVs** (28.1% Hub)
-  * Bảo Hiểm Xe Máy: **5.826 PVs** (9.4% Hub)
-  * Phí Không Dừng & Tiện Ích Giao Thông: Lần lượt đạt **952 PVs** và **622 PVs**
+#### A. Dữ Liệu Hiệu Suất Vận Hành Chốt Sổ Tháng 9/2026 (01/09 - 30/09/2026)
+* **Lưu lượng Chốt Sổ (Full Month 30d):** Đạt **66.808 Pageviews** (chiếm 1.69% tổng lưu lượng Kênh Web).
+* **Tỷ lệ hoàn thành Target:** Đạt **33,40% Target Tháng 9** (200.000 PVs).
+* **Tốc độ vận hành (Daily Pace):** Đạt **2.227 PV/ngày**.
+* **Phân rã theo Verticals Chốt Sổ Tháng 9:**
+  * Phạt Nguội: **39.382 PVs** (59.0% Hub)
+  * Bảo Hiểm Ô Tô: **19.022 PVs** (28.5% Hub)
+  * Bảo Hiểm Xe Máy: **6.178 PVs** (9.2% Hub)
+  * Phí Không Dừng: **1.047 PVs** (1.6% Hub)
+  * Tiện Ích Giao Thông: **1.179 PVs** (1.8% Hub)
 
 #### B. Tiến Độ Sản Phẩm & Content Realignment
 * **Tự Chủ Sản Xuất Content PLG:** Web Platform Team tiếp tục chủ động sản xuất nội dung bài viết chuyên sâu trên các dự án PLG (Phạt nguội, Giá xăng, Trạm sạc, Đăng kiểm) qua GenAI Pipeline.
-* **Staging Trang Tìm Garage:** Đã hoàn thành đưa lên **Staging** trang **Tìm Garage (`/tien-ich-giao-thong/tim-garage`)**, dự kiến chính thức **Go-live trước 30/09/2026**.
+* **Staging Trang Tìm Garage:** Đã hoàn thành đưa lên **Staging** trang **Tìm Garage (`/tien-ich-giao-thong/garage`)**, dự kiến chính thức **Go-live trước 30/09/2026**.
 * **Hỗ Trợ InsurTech BU & Ads Budget 550 Triệu:** Phối hợp hỗ trợ Cell Team triển khai hệ thống Blog cho **Bảo Hiểm Ô Tô** (được duyệt ngân sách **Paid Ads 550 triệu VND** chạy từ nay đến hết 2026), tối ưu UI/UX và phễu acquire New User.
 
 ##### Số Liệu Baseline Thực Tế Kênh Web (Full Month T5 - T8/2026 & T9 MTD)
@@ -179,7 +180,7 @@ Toàn bộ 19 thị trường ngành (23.2 triệu search volume) và các tính
 | Vòng Đời Chủ Xe | Tần Suất Hành Vi | Ý Định Tìm Kiếm (Intent) | Danh Sách Sản Phẩm & Tiện Ích Web Tương Ứng | Mục Tiêu Kinh Doanh & W2A Hook |
 | :--- | :---: | :--- | :--- | :--- |
 | **Vòng Đời 1:<br>Vận Hành Hàng Ngày**<br>*(Daily Mobility)* | Hàng ngày / Hàng tuần | Tìm kiếm tức thời, tra cứu giá & dẫn đường: Cây xăng gần nhất, trạm sạc EV, nạp tiền ePass, bãi gửi xe, giá xăng dầu. | • Bảng giá xăng dầu (`/gia-xang`) & Xăng E10 (`/xang-e10`)<br>• Bản đồ Cây xăng (`/cay-xang`) & Trạm sạc EV (`/tram-sac`)<br>• Thu phí tự động ePass (`/phi-khong-dung`, `/tram-thu-phi`)<br>• Bản đồ bãi đỗ xe 24/7 (`/bai-do-xe`)<br>• Kênh trực tiếp Camera giao thông (`/camera-giao-thong`) | **Tần suất sử dụng cao (High Frequency):** Thúc đẩy thanh toán mã QR tại trụ bơm, nạp tài khoản giao thông 0đ phí, gia tăng số lượng Active Users hàng tháng (MAU). |
-| **Vòng Đời 2:<br>Bảo Trì & Sự Cố**<br>*(Maintenance & Repair)* | Định kỳ 3 - 6 tháng / Khẩn cấp | Giải quyết sự cố & bảo dưỡng định kỳ: Tìm garage uy tín, dự toán chi phí sửa xe tránh vẽ bệnh, gọi xe kéo cứu hộ, rửa xe. | • Tìm Garage & Sửa xe (`/tim-garage`)<br>• Tool Dự toán chi phí sửa chữa chuẩn (Fair Price Estimator)<br>• Cứu hộ giao thông khẩn cấp 24/7 (`/cuu-ho`)<br>• Dịch vụ Rửa xe & Detailing chăm sóc xe | **Giải quyết việc tức thì (Action Fulfillment):** Đặt lịch hẹn bảo dưỡng giữ chỗ, gọi Hotline cứu hộ 1-chạm, phát triển mạng lưới điểm chấp nhận thanh toán MoMo (M4B Garage). |
+| **Vòng Đời 2:<br>Bảo Trì & Sự Cố**<br>*(Maintenance & Repair)* | Định kỳ 3 - 6 tháng / Khẩn cấp | Giải quyết sự cố & bảo dưỡng định kỳ: Tìm garage uy tín, dự toán chi phí sửa xe tránh vẽ bệnh, gọi xe kéo cứu hộ, rửa xe. | • Tìm Garage & Sửa xe (`/garage`)<br>• Tool Dự toán chi phí sửa chữa chuẩn (Fair Price Estimator)<br>• Cứu hộ giao thông khẩn cấp 24/7 (`/cuu-ho`)<br>• Dịch vụ Rửa xe & Detailing chăm sóc xe | **Giải quyết việc tức thì (Action Fulfillment):** Đặt lịch hẹn bảo dưỡng giữ chỗ, gọi Hotline cứu hộ 1-chạm, phát triển mạng lưới điểm chấp nhận thanh toán MoMo (M4B Garage). |
 | **Vòng Đời 3:<br>Pháp Lý & Giấy Tờ**<br>*(Legal & Paperwork)* | Định kỳ 6 - 24 tháng | Bắt buộc theo luật định: Tra cứu vi phạm phạt nguội CSGT, hạn kiểm định đăng kiểm, mua bảo hiểm TNDS, tra cứu biển số xe. | • Cổng tra cứu Phạt nguội 0-CAPTCHA (`/phat-nguoi` & 63 tỉnh)<br>• Tra cứu & Đặt lịch Đăng kiểm (`/dang-kiem`)<br>• Bảo hiểm bắt buộc TNDS xe máy & ô tô<br>• Tra cứu Phong thủy biển số xe (`/phong-thuy-bien-so`) | **Móc câu hút Traffic khổng lồ (Traffic Magnets):** Khai thác 6.5M volume phạt nguội, thúc đẩy nộp phạt trực tuyến xóa cảnh báo đăng kiểm, thanh toán dịch vụ công. |
 | **Vòng Đời 4:<br>Tài Chính & Tài Sản**<br>*(Financial & Asset)* | 1 - 5 năm / Khi mua bán xe | Quyết định tài chính lớn: Định giá xe thị trường, tính chi phí lăn bánh, dự toán chi phí nuôi xe hàng tháng, mua bảo hiểm thân vỏ, vay mua xe. | • Công cụ Định giá xe thông minh (`/dinh-gia-xe`)<br>• Máy tính Dự toán chi phí lăn bánh (`/lan-banh`)<br>• Máy tính Chi phí nuôi ô tô hàng tháng (`/chi-phi-nuoi-xe`)<br>• Đặt lên bàn cân So sánh xe (`/so-sanh-xe`)<br>• Hệ thống 264 trang chi tiết Dòng xe (`/hang-xe/*`)<br>• Sàn so sánh Bảo hiểm vật chất thân vỏ 9 hãng | **Doanh thu trực tiếp (Direct Monetization):** Giá trị đơn hàng lớn (High ARPU/LTV), tạo Lead chất lượng cao cho Bảo hiểm thân vỏ và Gói vay mua xe đối tác ngân hàng MoMo. |
 
@@ -230,7 +231,7 @@ Thanh Menu Header (Header Navigation Bar) xuất hiện đồng bộ trên Trang
 | **Logo & Brand Anchor** | Logo MoMo + Chữ *"Tiện Ích Giao Thông"* | `momo.vn/tien-ich-giao-thong` | Điểm neo thương hiệu, nhấp để quay về Trang chủ Hub trung tâm. |
 | **Menu 1: Tra Cứu Vi Phạm** | Dropdown Menu (Kèm nhãn *Hot*) | • Tra cứu phạt nguội: `/phat-nguoi`<br>• Biểu phí mức phạt: `/tien-ich-giao-thong/tra-cuu-muc-phat` | Dẫn luồng người dùng vào công cụ tra cứu vi phạm camera và bảng tra cứu mức phạt giao thông theo Nghị định 100/123. |
 | **Menu 2: Nhiên Liệu & Trạm Sạc** | Dropdown Menu | • Bảng giá xăng dầu hôm nay: `/tien-ich-giao-thong/gia-xang`<br>• Cây xăng gần nhất: `/tien-ich-giao-thong/cay-xang`<br>• Trạm sạc xe điện EV: `/tien-ich-giao-thong/tram-sac` | Nhóm tiện ích hàng ngày, hỗ trợ kiểm tra biến động giá xăng dầu và định vị trạm tiếp nhiên liệu/trạm sạc theo vị trí GPS. |
-| **Menu 3: Dịch Vụ & Bảo Dưỡng** | Dropdown Menu | • Garage & Sửa xe: `/tien-ich-giao-thong/tim-garage`<br>• Bãi đỗ xe & Cứu hộ 24/7: `/tien-ich-giao-thong/bai-do-xe`<br>• Tra cứu hạn đăng kiểm: `/tien-ich-giao-thong/dang-kiem` | Hỗ trợ tìm kiếm garage bảo dưỡng, gọi xe cứu hộ khẩn cấp và theo dõi chu kỳ kiểm định phương tiện. |
+| **Menu 3: Dịch Vụ & Bảo Dưỡng** | Dropdown Menu | • Garage & Sửa xe: `/tien-ich-giao-thong/garage`<br>• Bãi đỗ xe & Cứu hộ 24/7: `/tien-ich-giao-thong/bai-do-xe`<br>• Tra cứu hạn đăng kiểm: `/tien-ich-giao-thong/dang-kiem` | Hỗ trợ tìm kiếm garage bảo dưỡng, gọi xe cứu hộ khẩn cấp và theo dõi chu kỳ kiểm định phương tiện. |
 | **Menu 4: Bảo Hiểm Phương Tiện** | Dropdown Menu | • Bảo hiểm ô tô 9 hãng: `/bao-hiem-o-to`<br>• Bảo hiểm xe máy điện tử: `/bao-hiem-xe-may` | Dẫn sang các trang sản phẩm độc lập để so sánh quyền lợi và mua bảo hiểm bắt buộc TNDS / Thân vỏ trực tuyến. |
 | **Menu 5: Thu Phí Không Dừng** | Link Đơn (Single Link) | • ePass: `/phi-khong-dung` | Hướng dẫn liên kết tài khoản thu phí tự động và kích hoạt tính năng nạp tiền tự động (Auto-Topup) khi qua trạm BOT. |
 | **Menu 6: Tiện Ích Mở Rộng** | Link Đơn (Single Link) | • Phong thủy & Đấu giá biển số: `/tien-ich-giao-thong/phong-thuy-bien-so` | Công cụ giải mã ý nghĩa phong thủy 5 số cuối và tra cứu kết quả đấu giá biển số đẹp. |
@@ -792,9 +793,9 @@ Nhằm tối ưu hóa năng lực hiển thị Rich Snippets trên Google Search
 
 ---
 
-### 3.17 Đặc Tả Kỹ Thuật: Chuyên Trang Tìm Garage & Sửa Xe Thông Minh (/tim-garage)
+### 3.17 Đặc Tả Kỹ Thuật: Chuyên Trang Tìm Garage & Sửa Xe Thông Minh (/garage)
 
-Chuyên trang Tìm Garage (`/tien-ich-giao-thong/tim-garage`) khai thác dung lượng 422.430 lượt tìm kiếm/tháng (thuộc cụm thị trường Sửa chữa & Garage 934.000 search/tháng), giải quyết trực diện 2 nỗi đau lớn nhất của tài xế: "Sợ bị chặt chém / vẽ bệnh khi vào garage lạ" và "Cần tìm nhanh garage gần nhất chuyên trị đúng dòng xe của mình".
+Chuyên trang Tìm Garage (`/tien-ich-giao-thong/garage`) khai thác dung lượng 422.430 lượt tìm kiếm/tháng (thuộc cụm thị trường Sửa chữa & Garage 934.000 search/tháng), giải quyết trực diện 2 nỗi đau lớn nhất của tài xế: "Sợ bị chặt chém / vẽ bệnh khi vào garage lạ" và "Cần tìm nhanh garage gần nhất chuyên trị đúng dòng xe của mình".
 
 #### A. Hai Công Cụ Tương Tác Cốt Lõi (Core Interactive Utilities)
 1. **Bộ Lọc Thông Minh Dòng Xe & Vị Trí (Smart Garage Matcher):**
@@ -809,7 +810,7 @@ Chuyên trang Tìm Garage (`/tien-ich-giao-thong/tim-garage`) khai thác dung l�
 
 #### B. Mô Hình Phân Tầng Hiển Thị (Tiered Architecture)
 * **Tầng 1 - Danh mục Garage Phổ Thông (Chiếm 95% thị trường):** Tuyệt đối KHÔNG tạo trang URL chi tiết con (tránh lỗi Thin Content / Doorway Pages của Google). Khi người dùng bấm vào garage, giao diện hiển thị dạng **Quick-view Bottom Sheet (Mobile) / Drawer (Desktop)** gồm: Tên garage, Khoảng cách km, Đánh giá sao, Giờ mở cửa, Dịch vụ thế mạnh, Nút "Gọi ngay" và Nút "Chỉ đường Maps".
-* **Tầng 2 - Chuỗi Garage Đối Tác Chiến Lược MoMo (Chiếm 5% thị trường):** Xây dựng trang chi tiết riêng biệt dạng `/tim-garage/doi-tac/{partner-slug}` cho các chuỗi garage lớn (Auto365, Tiên Phong Auto, Bosch Car Service...) có hợp đồng đối tác, bảng giá niêm yết, tính năng đặt lịch online và voucher giảm giá khi quét MoMo.
+* **Tầng 2 - Chuỗi Garage Đối Tác Chiến Lược MoMo (Chiếm 5% thị trường):** Xây dựng trang chi tiết riêng biệt dạng `/garage/doi-tac/{partner-slug}` cho các chuỗi garage lớn (Auto365, Tiên Phong Auto, Bosch Car Service...) có hợp đồng đối tác, bảng giá niêm yết, tính năng đặt lịch online và voucher giảm giá khi quét MoMo.
 
 #### C. Cấu Trúc Nội Dung 6 Khối Chuẩn Hóa
 1. **Khối 1 (Hero Section):** H1 chuẩn SEO (`Tìm Garage Ô Tô Gần Nhất - Bảng Giá Bảo Dưỡng & Sửa Chữa Minh Bạch`) + Smart Search Bar (Quận/Huyện, tên đường) + Nút định vị GPS "Tìm quanh tôi" + Quick Filter Chips.
@@ -870,7 +871,7 @@ Hệ thống CMS quản lý tập trung theo mô hình 4 bảng quan hệ và 1 
 
 ### 3.19 Đặc Tả Kỹ Thuật: Bộ Dữ Liệu Master 1.631 Triệu Chứng Xe & Công Cụ Bác Sĩ Bắt Bệnh Ô Tô Thông Minh (Car Symptom Diagnostic Tool)
 
-Chuyên trang Tìm Garage (`/tim-garage`) và Cứu Hộ (`/cuu-ho`) tích hợp **Bộ Dữ Liệu Master 1.631 Triệu Chứng Xe Chuẩn Cơ Khí** nhằm giải quyết trực diện câu hỏi của chủ xe khi xe gặp sự cố: *"Xe có tiếng kêu / hiện tượng lạ này là bị hỏng cái gì, có nguy hiểm không và sửa hết bao nhiêu tiền?"*.
+Chuyên trang Tìm Garage (`/garage`) và Cứu Hộ (`/cuu-ho`) tích hợp **Bộ Dữ Liệu Master 1.631 Triệu Chứng Xe Chuẩn Cơ Khí** nhằm giải quyết trực diện câu hỏi của chủ xe khi xe gặp sự cố: *"Xe có tiếng kêu / hiện tượng lạ này là bị hỏng cái gì, có nguy hiểm không và sửa hết bao nhiêu tiền?"*.
 
 #### A. Cấu Trúc Master Data Phân Cấp 5 Tầng (Symptom Taxonomy)
 Hệ thống chuẩn hóa 1.631 bản ghi triệu chứng xe thành cấu trúc cây phân cấp logic:
@@ -887,12 +888,12 @@ Hệ thống chuẩn hóa 1.631 bản ghi triệu chứng xe thành cấu trúc 
   * *Chẩn đoán hư hỏng nghi ngờ:* Tên linh kiện khả năng cao bị lỗi (ví dụ: `Hỏng rô-tuyn cân bằng hoặc rách cao su giảm xóc`).
   * *Phân cấp an toàn:* 
     * `Mức Đỏ (Nguy hiểm khẩn cấp):` Cảnh báo nguy cơ mất lái hoặc cháy nổ ➔ **Nút W2A:** *"Bấm Gọi Cứu Hộ Ô Tô Cẩu Xe Ngay"* (`/cuu-ho`).
-    * `Mức Vàng / Xanh (Khuyến cáo sửa chữa):` Xe vẫn chạy được tạm thời ➔ **Nút W2A:** *"Đặt Lịch Kiểm Tra Tại Garage Chuyên Môn Gần Nhất"* (`/tim-garage`).
+    * `Mức Vàng / Xanh (Khuyến cáo sửa chữa):` Xe vẫn chạy được tạm thời ➔ **Nút W2A:** *"Đặt Lịch Kiểm Tra Tại Garage Chuyên Môn Gần Nhất"* (`/garage`).
   * *Báo giá sửa chữa chuẩn thị trường (Fair Price):* Dự toán khoảng giá thay thế linh kiện OEM hoặc chính hãng để tài xế không bị kê giá.
 
 #### C. Chiến Lược SEO Khai Thác 1.631 Triệu Chứng (pSEO, FAQPage Schema & Master Keyword Research)
 * Toàn bộ 1.630 triệu chứng xe và bộ từ khóa gợi ý (Seed Keywords) đã được chuẩn hóa tại Sheet `Symptoms` trong file SSOT `vehicle-hub-roadmap.xlsx` sẵn sàng cho công tác Keyword Research chuyên sâu (Search Volume, KD, Search Intent).
-* Toàn bộ 1.631 mô tả triệu chứng được tự động sinh thành **Hệ thống câu hỏi thường gặp có cấu trúc (Schema `FAQPage`)** nhúng vào chân trang `/tim-garage` và 264 trang dòng xe `/hang-xe/*`.
+* Toàn bộ 1.631 mô tả triệu chứng được tự động sinh thành **Hệ thống câu hỏi thường gặp có cấu trúc (Schema `FAQPage`)** nhúng vào chân trang `/garage` và 264 trang dòng xe `/hang-xe/*`.
 * Giúp Google index và hiển thị Rich Snippets trực tiếp khi người dùng tìm kiếm các câu hỏi kỹ thuật chuyên sâu trên Google Search.
 
 ---
@@ -931,6 +932,35 @@ Toàn bộ chuyên trang Chi Tiết Dòng Xe (`/hang-xe/[brand]/[model]`) đư�
 - **Dòng xe Điện (EV):** Tự động nhúng bản đồ định vị **Trạm sạc V-Green / VinFast** gần nhất theo vị trí GPS.
 - **Dòng xe Xăng/Dầu:** Tự động nhúng bản đồ định vị **Gara sửa chữa & Trung tâm bảo hành chính hãng** từ Master Dataset 11,001 gara đối tác.
 
+---
+
+---
+
+### 3.21 Đặc Tả Kỹ Thuật: Chuyên Trang & Tool Mô Phỏng Mức Khấu Trừ Bảo Hiểm Ô Tô (/muc-khau-tru)
+
+Chuyên trang & Tool Mô Phỏng Mức Khấu Trừ Bảo Hiểm Ô Tô (`momo.vn/bao-hiem-o-to` & `momo.vn/tien-ich-giao-thong/muc-khau-tru`) áp dụng 100% đặc tả kỹ thuật từ tài liệu PRD chính thức (`PRD Tool mô phỏng mức khấu trừ, trang Bảo hiểm thân vỏ ô tô (web).docx`).
+
+#### A. User Story & Tương Tác UX
+- **User Story:** Là chủ xe đang tìm hiểu bảo hiểm thân vỏ, tôi muốn biết chọn mức khấu trừ cao hơn thì phí giảm bao nhiêu và mỗi lần có sự cố tôi tự trả bao nhiêu, để chọn mức hợp với mình trước khi xem báo giá 9 hãng.
+- **Hành vi:** Mặc định chọn mức `500.000đ` (Phí gốc ví dụ xe 800tr là `8.000.000đ/năm`). Khi chọn 1 trong 4 mức ➔ 2 ô kết quả & Thanh ví dụ sửa 8tr cập nhật tức thì (0ms). Bấm CTA *"Xem báo giá 9 hãng"* ➔ Cuộn `#bao-gia` + Bắn Event `cta_click`.
+
+#### B. Hằng Số Định Phí Năm 2026 & Công Thức Tính Toán
+- **Phí gốc ví dụ ($BASE\_PREMIUM$):** `8.000.000đ/năm` (Xe 800 triệu).
+- **Chi phí sửa chữa ví dụ ($REPAIR\_COST$):** `8.000.000đ/vụ`.
+- **4 Mức Khấu Trừ & Tỷ Lệ Giảm Phí:**
+  1. `Mức 500.000đ:` Giảm 0% ➔ Phí đóng `8.000.000đ/năm` (Mức phí gốc) | Bạn tự trả `500.000đ` | Hãng trả `7.500.000đ`.
+  2. `Mức 1.000.000đ:` Giảm 5% ➔ Phí đóng `7.600.000đ/năm` (Rẻ hơn 400.000đ/năm) | Bạn tự trả `1.000.000đ` | Hãng trả `7.000.000đ`.
+  3. `Mức 2.000.000đ:` Giảm 10% ➔ Phí đóng `7.200.000đ/năm` (Rẻ hơn 800.000đ/năm) | Bạn tự trả `2.000.000đ` | Hãng trả `6.000.000đ`.
+  4. `Mức 5.000.000đ:` Giảm 20% ➔ Phí đóng `6.400.000đ/năm` (Rẻ hơn 1.600.000đ/năm) | Bạn tự trả `5.000.000đ` | Hãng trả `3.000.000đ`.
+
+#### C. Bảng Trạng Thái Test Oracle Cho QA & Dev
+| Mức Khấu Trừ | Tỷ Lệ Giảm | Phí Mỗi Năm (Ô 1) | Badge Tiết Kiệm | Bạn Tự Trả (Ô 2) | Dòng Phụ Ô 2 | Thanh Ví Dụ (Bạn Trả / Hãng Trả) |
+| :---: | :---: | :---: | :--- | :---: | :--- | :---: |
+| **500.000đ** | **0%** | **8.000.000đ** | Mức phí gốc | **500.000đ** | Hãng bảo hiểm chi trả phần còn lại. | **500.000đ / 7.500.000đ** |
+| **1.000.000đ** | **5%** | **7.600.000đ** | Rẻ hơn 400.000đ mỗi năm (giảm 5%) | **1.000.000đ** | Nhiều hơn 500.000đ so với mức 500.000đ… | **1.000.000đ / 7.000.000đ** |
+| **2.000.000đ** | **10%** | **7.200.000đ** | Rẻ hơn 800.000đ mỗi năm (giảm 10%) | **2.000.000đ** | Nhiều hơn 1.500.000đ so với mức 500.000đ… | **2.000.000đ / 6.000.000đ** |
+| **5.000.000đ** | **20%** | **6.400.000đ** | Rẻ hơn 1.600.000đ mỗi năm (giảm 20%) | **5.000.000đ** | Nhiều hơn 4.500.000đ so với mức 500.000đ… | **5.000.000đ / 3.000.000đ** |
+
 ## IV. RISK & ROADMAP
 
 ### 4.1 Risk Management
@@ -949,8 +979,8 @@ Toàn bộ chuyên trang Chi Tiết Dòng Xe (`/hang-xe/[brand]/[model]`) đư�
 | :--- | :---: | :--- | :--- |
 | **Phase 1.0** | Tháng 8/2026 | **Master Hub Foundation** | • Dựng khung HTML/CSS **Trang chủ `/tien-ich-giao-thong`**.<br>• Tích hợp Widget tra cứu 3-in-1, Schema @graph chuẩn hóa.<br>• **CHÍNH THỨC GO-LIVE TRÊN PRODUCTION.** |
 | **Phase 1.1** | Tuần 1-2 Tháng 9/2026 | **Traffic Magnets & Hệ Sinh Thái Nhiên Liệu** | • **Bảng Giá Xăng Dầu (`/gia-xang`):** 1 URL duy nhất, 7 loại nhiên liệu Euro 5, máy tính xăng 3 chế độ.<br>• **Bản Đồ Cây Xăng (`/cay-xang`):** 1 Master Map + 10 Trang con Local SEO trọng điểm + Nhân bản 63 tỉnh/thành (`/cay-xang/[tinh]`).<br>• **Trạm Sạc EV (`/tram-sac`) & Gara (`/gara`):** 1 Master Map + 6 Trang con trạm sạc + Cụm trang định vị gara gần bạn (`/gara/[tinh]`).<br>• **Chuyên Đề Xăng E10 (`/xang-e10`):** Lộ trình năng lượng xanh Chính phủ, tác động động cơ.<br>• **Bộ Tiện Ích Xăng Dầu:** Tính chi phí xăng, Tra cứu xe tương thích E10, Gợi ý cây xăng tuyến A ➔ B. |
-| **Phase 1.2** | Tuần 3-4 Tháng 9/2026 | **Phạt Nguội Revamp, Định Giá Xe & Chuyên Trang Garage** | • **Revamp UI Tra Cứu Phạt Nguội (`/phat-nguoi` & `/phat-nguoi/[tinh]`):** 2 nhánh kết quả nộp phạt In-App, Programmatic SEO 63 tỉnh/thành.<br>• **Định Giá Xe Thông Minh (`/dinh-gia-xe`):** Tích hợp API In-App Vehicle Center, 2 luồng nhập, 4 khối hiển thị, Lead vay mua xe & Bảo hiểm thân vỏ.<br>• **Bản Đồ Garage & Sửa Xe Thông Minh (`/tim-garage`):** Tích hợp Smart Matcher lọc chuyên môn dòng xe + Máy tính dự toán chi phí sửa chữa chuẩn (Fair Price Estimator), Quick-view Drawer tránh Thin Content và kết nối đặt lịch đối tác.<br>• **Cẩm Nang SEO:** Xuất bản 122 bài viết cẩm nang giao thông gắn internal link sâu. |
-| **Phase 2** | Tháng 10/2026 | **UI/UX Hãng/Dòng Xe VinFast, Chuyên Trang Garage, Định Giá Xe & Hoãn Đăng Kiểm/Cứu Hộ** | • **Tập trung Trọng tâm UI/UX VinFast (`/hang-xe/vinfast/*`):** Tối ưu giao diện Hãng xe VinFast & toàn bộ các Dòng xe VinFast (VF3, VF5, VF7, VF8, VF9, VFe34), tích hợp trạm sạc V-Green real-time, báo giá bảo hiểm pin/xe điện.<br>• **Chuyên Trang Garage (`/tim-garage`) & Top Garage Chi Tiết (`/tim-garage/[id]`):** Go-live trang tìm garage và chuỗi trang garage chi tiết đối tác.<br>• **Chuyên Trang Định Giá Xe (`/dinh-gia-xe`):** Công cụ định giá xe thông minh nạp ma trận 1,534 biến thể (`Car Data.xlsx`), biểu đồ trượt giá & lead vay/bảo hiểm.<br>• **Tạm hoãn (Scope Paused):** Tạm thời chưa triển khai trang Đăng Kiểm (`/dang-kiem`) và Cứu Hộ (`/cuu-ho`).<br>• **Mục tiêu W2A CTR:** Đạt mốc **8.0% - 10.0%**. |
+| **Phase 1.2** | Tuần 3-4 Tháng 9/2026 | **Phạt Nguội Revamp, Định Giá Xe & Chuyên Trang Garage** | • **Revamp UI Tra Cứu Phạt Nguội (`/phat-nguoi` & `/phat-nguoi/[tinh]`):** 2 nhánh kết quả nộp phạt In-App, Programmatic SEO 63 tỉnh/thành.<br>• **Định Giá Xe Thông Minh (`/dinh-gia-xe`):** Tích hợp API In-App Vehicle Center, 2 luồng nhập, 4 khối hiển thị, Lead vay mua xe & Bảo hiểm thân vỏ.<br>• **Bản Đồ Garage & Sửa Xe Thông Minh (`/garage`):** Tích hợp Smart Matcher lọc chuyên môn dòng xe + Máy tính dự toán chi phí sửa chữa chuẩn (Fair Price Estimator), Quick-view Drawer tránh Thin Content và kết nối đặt lịch đối tác.<br>• **Cẩm Nang SEO:** Xuất bản 122 bài viết cẩm nang giao thông gắn internal link sâu. |
+| **Phase 2** | Tháng 10/2026 | **UI/UX VinFast, Chuyên Trang Garage, Định Giá Xe & Chuyên Trang Mức Khấu Trừ Bảo Hiểm** | • **Trọng tâm UI/UX VinFast (`/hang-xe/vinfast/*`):** Giao diện Hãng & toàn bộ Dòng xe VinFast (VF3, VF5, VF7, VF8, VF9, VFe34), trạm sạc V-Green & BH Pin.<br>• **Chuyên Trang Garage (`/garage`) & Garage Chi Tiết (`/garage/[id]`):** Go-live trang tìm garage & chuỗi garage chi tiết.<br>• **Chuyên Trang Định Giá Xe (`/dinh-gia-xe`):** Nạp ma trận 1,534 biến thể xe (`Car Data.xlsx`), biểu đồ trượt giá & lead vay/bảo hiểm.<br>• **Bổ sung Chuyên Trang Mức Khấu Trừ Bảo Hiểm (`/muc-khau-tru`):** Tool tư vấn & tính toán mức miễn thường khấu trừ (500k, 1tr, 2tr) tối ưu phí bảo hiểm thân vỏ.<br>• **Tạm hoãn (Scope Paused):** Tạm chưa làm trang Đăng Kiểm (`/dang-kiem`) và Cứu Hộ (`/cuu-ho`).<br>• **Mục tiêu W2A CTR:** Đạt mốc **8.0% - 10.0%**. |
 
 ---
 
@@ -974,10 +1004,10 @@ Dự án áp dụng mô hình hợp tác song phương (Bilateral) với đầu 
 | :---: | :--- | :---: | :--- |
 | **v8.31** | 2026-09-14 | Web Product Lead | **Chuẩn Hóa Bộ Công Thức & 8 Nhóm Trường Chi Tiêu Thực Tế Cho Tool Nuôi Xe (/chi-phi-nuoi-xe):** Cập nhật Mục 3.18 tái cấu trúc toàn diện máy tính chi phí nuôi ô tô thành 8 Module Toggle/Slider thực tế phản ánh chính xác hành vi mở ví của chủ xe (Nhiên liệu theo KM, Gửi xe bãi/nhà, Rửa xe định kỳ, Bảo dưỡng chuẩn hãng, Bảo hiểm TNDS & Thân vỏ, Thuê bao Vietmap/4G, Sắm sửa phụ kiện/đồ chơi xe, Quỹ dự phòng phạt giao thông); tích hợp công thức tổng hợp, chỉ số đối so sánh chuẩn phân khúc Class Benchmark và cơ chế quy đổi ngày/tháng/năm. Cập nhật đồng bộ Tool 3 trong Sheet Utilities của vehicle-hub-roadmap.xlsx. |
 | **v8.30** | 2026-09-13 | Web Product Lead | **Xây Dựng Master Document Kiến Trúc Menu & Điều Hướng Dự Án (vehicle-hub-navigation.md):** Khởi tạo file đặc tả chuyên sâu 05_HUBS/vehicle-hub-navigation.md quy chuẩn toàn bộ hệ thống điều hướng: Header Mega Menu 4 cột Vòng Đời, Mobile Drawer & Sticky Quick Action Bar, In-Hub Contextual Subnav, Footer SEO Sitemap Matrix, Master URL Routing 20 nhóm trang, Payload JSON Schema cho Dynamic CMS Render và Tracking Event Schema. Đồng bộ tham chiếu tại Sheet Readme (Row 16) trong vehicle-hub-roadmap.xlsx. |
-| **v8.29** | 2026-09-13 | Web Product Lead | **Tích Hợp Master Data 1.631 Triệu Chứng Xe & Công Cụ Bác Sĩ Ô Tô Thông Minh (Mục 3.19 & Roadmap):** Bổ sung Mục 3.19 đặc tả cấu trúc cây phân cấp 5 tầng cho 1.631 triệu chứng hư hỏng xe và 39 hệ thống phụ cơ khí; thiết kế luồng trải nghiệm công cụ Bác Sĩ Ô Tô 1-Chạm (Symptom Checker) trên trang /tim-garage và /cuu-ho giúp chẩn đoán pan bệnh, phân loại mức độ nguy hiểm (Đỏ - Gọi cứu hộ khẩn cấp vs Vàng - Đặt lịch garage) và dự toán chi phí sửa chữa chuẩn thị trường; khai thác 1.631 mô tả triệu chứng làm bộ FAQPage Schema kéo Long-tail SEO. Cập nhật đồng bộ vào vehicle-hub-roadmap.xlsx (Utilities Tool 13, Roadmap Row 13, Content Row 17). |
+| **v8.29** | 2026-09-13 | Web Product Lead | **Tích Hợp Master Data 1.631 Triệu Chứng Xe & Công Cụ Bác Sĩ Ô Tô Thông Minh (Mục 3.19 & Roadmap):** Bổ sung Mục 3.19 đặc tả cấu trúc cây phân cấp 5 tầng cho 1.631 triệu chứng hư hỏng xe và 39 hệ thống phụ cơ khí; thiết kế luồng trải nghiệm công cụ Bác Sĩ Ô Tô 1-Chạm (Symptom Checker) trên trang /garage và /cuu-ho giúp chẩn đoán pan bệnh, phân loại mức độ nguy hiểm (Đỏ - Gọi cứu hộ khẩn cấp vs Vàng - Đặt lịch garage) và dự toán chi phí sửa chữa chuẩn thị trường; khai thác 1.631 mô tả triệu chứng làm bộ FAQPage Schema kéo Long-tail SEO. Cập nhật đồng bộ vào vehicle-hub-roadmap.xlsx (Utilities Tool 13, Roadmap Row 13, Content Row 17). |
 | **v8.28** | 2026-09-13 | Web Product Lead | **Chuẩn Hóa Khung Kiến Trúc 4 Vòng Đời Chủ Xe Trên Web Platform (Mục 2.2 & Toàn Bộ Roadmap):** Bổ sung Mục 2.2 xác lập Khung kiến trúc 4 vòng đời chủ xe bao quát 19 thị trường ngành (VĐ1: Vận Hành Hàng Ngày, VĐ2: Bảo Trì & Sự Cố, VĐ3: Pháp Lý & Giấy Tờ, VĐ4: Tài Chính & Tài Sản); ánh xạ toàn diện 17 dịch vụ, các subpages, các tools và các luồng W2A tương ứng. Cập nhật đồng bộ toàn bộ file Excel vehicle-hub-roadmap.xlsx: bổ sung bảng quy hoạch vào Sheet Readme, gắn mã định danh Vòng Đời vào cột Track của Sheet Roadmap và cột Nhóm Tính Năng của Sheet Content. |
 | **v8.27** | 2026-09-13 | Web Product Lead | **Chuẩn Hóa Tool Nuôi Ô Tô Thông Minh & Kiến Trúc Dữ Liệu CMS 264 Dòng Xe Liền Mạch (Mục 3.18 & Roadmap):** Loại bỏ xe máy khỏi phạm vi tính toán nuôi xe; chuẩn hóa luồng input 3 bước: [Hãng > Dòng] + [KM] + [Multi-select Dịch vụ] ➔ [Show Hạng xe A, B, C] + [Total Price hàng tháng & Class Benchmark]; thiết lập cơ chế liên kết 2 chiều giữa Tool Nuôi Xe và 264 trang chi tiết dòng xe qua Embedded Pre-filled Widget và URL query params; hoàn thiện kiến trúc CMS Master Data 4 bảng (brands, vehicle_classes, car_models, car_variants) kèm bảng cấu hình toàn cục system_global_configs và cơ chế kế thừa 4 tầng. Cập nhật đồng bộ vào vehicle-hub-roadmap.xlsx (Utilities Tool 3, Content Row 18-19, Roadmap Phase 2). |
-| **v8.26** | 2026-09-12 | Web Product Lead | **Đặc Tả Kỹ Thuật Chuyên Trang Garage (/tim-garage) & Bổ Sung Vào Master Roadmap:** Bổ sung Mục 3.17 đặc tả toàn diện chuyên trang Tìm Garage & Sửa Xe Thông Minh; tích hợp 2 tool lõi: Bộ lọc thông minh theo chuyên môn dòng xe (Smart Matcher) và Máy tính dự toán chi phí sửa chữa chuẩn thị trường (Fair Price Estimator - Tool 12 trong sheet Utilities); áp dụng mô hình phân tầng Tiered Model (Quick-view Drawer cho garage phổ thông tránh Thin Content, trang chi tiết riêng cho chuỗi đối tác); cấu trúc 6 block chuẩn hóa. Cập nhật đồng bộ toàn bộ 4 sheet trong vehicle-hub-roadmap.xlsx (Roadmap, Content, Utilities, Sitemap). |
+| **v8.26** | 2026-09-12 | Web Product Lead | **Đặc Tả Kỹ Thuật Chuyên Trang Garage (/garage) & Bổ Sung Vào Master Roadmap:** Bổ sung Mục 3.17 đặc tả toàn diện chuyên trang Tìm Garage & Sửa Xe Thông Minh; tích hợp 2 tool lõi: Bộ lọc thông minh theo chuyên môn dòng xe (Smart Matcher) và Máy tính dự toán chi phí sửa chữa chuẩn thị trường (Fair Price Estimator - Tool 12 trong sheet Utilities); áp dụng mô hình phân tầng Tiered Model (Quick-view Drawer cho garage phổ thông tránh Thin Content, trang chi tiết riêng cho chuỗi đối tác); cấu trúc 6 block chuẩn hóa. Cập nhật đồng bộ toàn bộ 4 sheet trong vehicle-hub-roadmap.xlsx (Roadmap, Content, Utilities, Sitemap). |
 | **v8.25** | 2026-09-09 | Web Product Lead | **Chuẩn Hóa & Rút Gọn Tên Sheet (Sheet Names) Trong File Excel Roadmap:** Rút gọn tối đa tên toàn bộ 11 sheet trong file vehicle-hub-roadmap.xlsx thành các từ đơn/ngắn gọn (Readme, Roadmap, Market Sizing, Content, Traffic, Resources, Utilities, Schema, Sitemap, Tracking Flow, Tracking Classes), giúp giao diện thanh tab trên Excel trực quan, không bị tràn màn hình và dễ thao tác nhanh giữa các bộ phận. |
 | **v8.24** | 2026-09-09 | Web Product Lead | **Tinh Gọn File Excel Roadmap - Bỏ Sheet KPI Và Sheet Param:** Xóa bỏ 2 sheet 'KPIs & Target Metrics' và 'Bộ Param Master Registry' trong file vehicle-hub-roadmap.xlsx theo yêu cầu tinh gọn; tập trung file Excel vào đúng 11 sheet nòng cốt về Lộ trình triển khai (Roadmap), Quy mô thị trường (Market Sizing), Cấu trúc trang (Content Structure), Lưu lượng thực tế (Traffic Full Month), Nguồn lực (Resources), Thuật toán công cụ (Utilities & Formula Specs), Kiến trúc Schema (Schema Specs & Scripts), Quản trị URL (Subpages Directory) và Sự kiện tracking (Event Tracking Flow & Tracking Class). |
 | **v8.23** | 2026-09-08 | Web Product Lead | **Bổ Sung Kiến Trúc Schema JSON-LD & Script Mẫu Chuẩn Cho Từng Trang (Mục 3.16 & Sheet Mới Trong Excel):** Bổ sung Mục 3.16 đặc tả toàn diện kiến trúc Schema JSON-LD cấu trúc `@graph` hợp nhất cho toàn bộ các trang đã go-live và sắp triển khai (Master Hub, Giá Xăng, Cây Xăng, Trạm Sạc EV, Phạt Nguội, Định Giá Xe, Xăng E10, ePass, Đăng Kiểm, Bãi Đỗ, Cứu Hộ, Bảo Hiểm). Đồng thời bổ sung sheet 'Schema Specs & Scripts' trong vehicle-hub-roadmap.xlsx cung cấp mã JSON-LD chuẩn để Web Frontend và SEO Team nhúng trực tiếp. |

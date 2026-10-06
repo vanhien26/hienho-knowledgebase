@@ -18,7 +18,7 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 
 #### 2. Vehicle Hub (`momo.vn/tien-ich-giao-thong`)
 * **Tự chủ Content PLG:** Tiếp tục chủ động sản xuất bài viết chuyên sâu trên các dự án PLG (Phạt nguội, Giá xăng, Trạm sạc, Đăng kiểm).
-* **Staging Trang Tìm Garage:** Trang **Tìm Garage (`/tien-ich-giao-thong/tim-garage`)** đã lên **Staging**, dự kiến Go-live trước 30/09/2026.
+* **Staging Trang Tìm Garage:** Trang **Tìm Garage (`/tien-ich-giao-thong/garage`)** đã lên **Staging**, dự kiến Go-live trước 30/09/2026.
 * **Hỗ trợ InsurTech BU & Ads Budget 550 triệu:** Hỗ trợ Cell Team triển khai Blog Bảo Hiểm Ô Tô (được duyệt ngân sách **Paid Ads 550 triệu VND** đến hết 2026), tối ưu UI/UX và phễu acquire New User.
 
 #### 3. Financial Hub (`momo.vn/tai-chinh`)
@@ -120,7 +120,7 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
   1. **Giá xăng dầu:** `/tien-ich-giao-thong/gia-xang`
   2. **Bản đồ Cây xăng:** `/tien-ich-giao-thong/cay-xang`
   3. **Trạm sạc xe điện EV:** `/tien-ich-giao-thong/tram-sac`
-  4. **Garage & Sửa xe:** `/tien-ich-giao-thong/tim-garage`
+  4. **Garage & Sửa xe:** `/tien-ich-giao-thong/garage`
   5. **Thu phí không dừng ePass:** `/tien-ich-giao-thong/epass` (Bổ sung mới vào cấu trúc Hub).
 * **Tối ưu Giao diện UI/UX:**
   * **Hero Section:** Cập nhật 3 chương trình khuyến mãi (Promotion) cố định.

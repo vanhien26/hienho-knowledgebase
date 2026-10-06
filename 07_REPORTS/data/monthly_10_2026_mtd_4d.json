@@ -1,14 +1,15 @@
 {
   "file_source": "/Users/hienhv/Downloads/Web Performance Tracking.xlsx",
-  "read_timestamp": "2026-10-05 12:17:37",
-  "report_type": "MTD 1 Ngày (01/10/2026 - Mở Màn Tháng 10)",
-  "days_elapsed": 1,
+  "read_timestamp": "2026-10-05 13:09:30",
+  "report_type": "MTD 4 Ngày (01/10 - 04/10/2026 - Lũy Kế 4 Ngày Tháng 10)",
+  "days_elapsed": 4,
   "days_in_month": 31,
   "target_oct_pv": 3665607,
   "actual_mtd_pv": 558009,
   "progress_pct": 15.22,
-  "daily_pace": 558009.0,
-  "forecast_31d": 17298279,
+  "daily_pace": 139502.25,
+  "forecast_31d": 4324569.75,
+  "forecast_pct": 117.98,
   "channels": {
     "organic": {
       "pv": 379995,
@@ -35,27 +36,32 @@
     "new_user": {
       "pv": 81447,
       "target": 300000,
-      "pct": 27.15
+      "pct": 27.15,
+      "forecast": 631214.25
     },
     "cinema": {
       "pv": 269291,
       "target": 1117378,
-      "pct": 24.1
+      "pct": 24.1,
+      "forecast": 2087005.25
     },
     "financial": {
       "pv": 23107,
       "target": 450000,
-      "pct": 5.13
+      "pct": 5.13,
+      "forecast": 179079.25
     },
     "vehicle": {
       "pv": 5034,
       "target": 100000,
-      "pct": 5.03
+      "pct": 5.03,
+      "forecast": 39013.5
     },
     "student": {
       "pv": 276,
       "target": 100000,
-      "pct": 0.28
+      "pct": 0.28,
+      "forecast": 2139.0
     }
   }
 }
