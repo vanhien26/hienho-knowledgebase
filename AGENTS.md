@@ -24,6 +24,7 @@
   2. Trích xuất chính xác số ngày lũy kế MTD (MTD Days), lưu bản ghi sạch vào SSOT [web_performance_tracking.xlsx](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/web_performance_tracking.xlsx) và tạo JSON snapshot.
   3. Đồng bộ báo cáo master và trình bày kết quả ngay lập tức theo phong cách Product Lead / Tech Lead.
 - **Rule:** Khi thực hiện bất kỳ yêu cầu nào liên quan đến Web Platform, các dự án Hubs (Cinema Hub, Financial Hub, Vehicle Hub, Student Hub...), lập kế hoạch, viết PRD, phân tích số liệu hoặc chuẩn bị báo cáo, AI Agent (Antigravity) **BẮT BUỘC phải chủ động đọc và tham chiếu số liệu hiệu suất thực tế từ file [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md) và file [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md) trước**.
+- **Utility Tracking SSOT Rule:** Khi Kỹ sư (Dev) hoặc người dùng hỏi về: gắn tracking, đo lường công cụ, sự kiện Umami, Event Name cho tool/widget/calculator, schema tham số (`provider`, `amount`) hoặc cách track cho bất kỳ tiện ích nào, AI Agent **BẮT BUỘC chỉ định và trích xuất trực tiếp từ file SSOT [`umami_utility_tracking.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/umami_utility_tracking.md)**.
 - **Mục đích:** Đảm bảo toàn bộ bối cảnh chiến lược của Ban Giám Đốc, định hướng của các Hubs và dữ liệu hiệu suất Single Source of Truth (SSOT) chuẩn xác luôn được đưa vào context xử lý tự động trước khi xuất bản bất kỳ báo cáo nào.
 
 ---

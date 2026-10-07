@@ -1,0 +1,67 @@
+{
+  "file_source": "/Users/hienhv/Downloads/Web Performance Tracking.xlsx",
+  "read_timestamp": "2026-10-06 16:37:05",
+  "report_type": "MTD 6 Ngày (01/10 - 04/10/2026 - Lũy Kế 4 Ngày Tháng 10)",
+  "days_elapsed": 6,
+  "days_in_month": 31,
+  "target_oct_pv": 3665607,
+  "actual_mtd_pv": 673212,
+  "progress_pct": 18.37,
+  "daily_pace": 112202.0,
+  "forecast_31d": 3478262.0,
+  "forecast_pct": 94.89,
+  "channels": {
+    "organic": {
+      "pv": 453983,
+      "pct": 67.44
+    },
+    "direct": {
+      "pv": 140704,
+      "pct": 20.9
+    },
+    "referral": {
+      "pv": 57014,
+      "pct": 8.47
+    },
+    "paid": {
+      "pv": 18277,
+      "pct": 2.71
+    },
+    "others": {
+      "pv": 3234,
+      "pct": 0.48
+    }
+  },
+  "hubs": {
+    "new_user": {
+      "pv": 98417,
+      "target": 300000,
+      "pct": 32.81,
+      "forecast": 508487.83
+    },
+    "cinema": {
+      "pv": 312323,
+      "target": 1117378,
+      "pct": 27.95,
+      "forecast": 1613668.83
+    },
+    "financial": {
+      "pv": 29765,
+      "target": 450000,
+      "pct": 6.61,
+      "forecast": 153785.83
+    },
+    "vehicle": {
+      "pv": 6380,
+      "target": 100000,
+      "pct": 6.38,
+      "forecast": 32963.33
+    },
+    "student": {
+      "pv": 325,
+      "target": 100000,
+      "pct": 0.33,
+      "forecast": 1679.17
+    }
+  }
+}

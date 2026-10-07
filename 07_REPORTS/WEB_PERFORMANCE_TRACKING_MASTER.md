@@ -585,7 +585,7 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
 ### Breakdown Theo Strategic Hubs Full Month Tháng 9 (30d):
 * **New User Hub (Transformation Zone):** **462.878 PVs** (11.7% total traffic) - **VƯỢT TARGET HUB CHÍNH THỨC +54.3%** (Target 300K).
 * **Cinema Hub (Performance Zone):** **1.220.075 PVs** (30.9% total traffic) - **VƯỢT TARGET HUB CHÍNH THỨC +26.5%** (Target 964.4K) - Cán mốc kỷ lục lịch sử >1.22 TRIỆU PVs!
-* **Financial Hub (Transformation Zone):** **246.979 PVs** (6.3% total traffic) - Đạt **98.8%** Target (Target 250K).
+* **Financial Hub (Transformation Zone):** **246.305 PVs** (6.2% total traffic) - Đạt **98.5%** Target (Target 250K).
 * **Vehicle Hub (Transformation Zone):** **66.808 PVs** (1.7% total traffic) - Đạt **33.4%** Target (Target 200K).
 * **Student Hub (Incubator Zone):** **7.248 PVs** (0.2% total traffic) - Đạt **7.3%** Target (Target 100K).
 * **Tổng Cộng 5 Hubs:** **2.003.988 PVs** (Chiếm **50.7%** tổng traffic toàn Web) - **VƯỢT TARGET TỔNG 5 HUBS +10.5%** (Target 1.814M).
@@ -632,7 +632,7 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
 | **New User Hub** | Transformation | **462,878 PV** | 15,429/d | 300,000 PV | **154.3%** | **VƯỢT TARGET HUB CHÍNH THỨC (+54.3%)** |
 | **Cinema Hub** | Performance | **1,220,075 PV** | 40,669/d | 964,394 PV | **126.5%** | **VƯỢT TARGET HUB CHÍNH THỨC +26.5% (MỐC KỶ LỤC >1.22M)** |
-| **Financial Hub** | Transformation | **246,979 PV** | 8,233/d | 250,000 PV | **98.8%** | **TIỆM CẬN HOÀN THÀNH 98.8% TARGET T9** |
+| **Financial Hub** | Transformation | **246,305 PV** | 8,210/d | 250,000 PV | **98.5%** | **TIỆM CẬN HOÀN THÀNH 98.5% TARGET T9** |
 | **Vehicle Hub** | Transformation | **66,808 PV** | 2,227/d | 200,000 PV | **33.4%** | Phạt nguội API, Staging Garage & BH Ô tô Ads |
 | **Student Hub** | Incubator | **7,248 PV** | 242/d | 100,000 PV | **7.3%** | University Ratings & Student Pass |
 | **TỔNG CỘNG HUBS** | All Zones Summary | **2,003,988 PV** | 66,800/d | 1,814,394 PV | **110.5%** | **VƯỢT TARGET TỔNG 5 HUBS +10.5% (Chiếm 50.7% Web)** |

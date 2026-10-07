@@ -54,7 +54,7 @@ Phân tích vấn đề người dùng đặt ra theo 3 góc nhìn quản trị:
 ### Tầng 3: SSOT Knowledge Domain Layer (Tầng Tri Thức Chuẩn Thuần)
 Định tuyến trực tiếp đến đúng nguồn dữ liệu gốc (Single Source of Truth) trong repo:
 - **Tăng trưởng & OKRs:** Thư mục [`01_STRATEGIC_PLAN/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/01_STRATEGIC_PLAN).
-- **Hạ tầng MoSpark:** Thư mục [`04_MOSPARK_PLATFORM/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM).
+- **Hạ tầng MoSpark & Tracking Tools:** Thư mục [`04_MOSPARK_PLATFORM/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM) và file SSOT [`umami_utility_tracking.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/umami_utility_tracking.md) (Quy chuẩn bắt buộc cho Event Tracking mọi Utility Tools & Calculators).
 - **Các cụm Hubs:** Thư mục [`05_HUBS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS).
 - **Các Use Case BRD:** Thư mục [`06_USE_CASE_MOMO/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO).
 - **Báo cáo & Số liệu thực tế:** Thư mục [`07_REPORTS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS) và [`00_HARNESS_CORE/WEB_PERFORMANCE_HISTORICAL_DATA.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/WEB_PERFORMANCE_HISTORICAL_DATA.md).
