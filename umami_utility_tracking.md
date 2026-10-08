@@ -8,7 +8,7 @@ Tài liệu này cung cấp đặc tả kỹ thuật chi tiết dành cho đội
 
 ### 1.1 Nguyên Tắc Vàng: Mã Usecase Đồng Nhất Với MoSpark Tool ID
 
-* **Single Source of Truth (SSOT):** Mã `usecase` trong tracking **BẮT BUỘC** lấy chính xác theo mã định danh công cụ (`tool_id` / `widget_id`) được khởi tạo và quản lý trong **MoSpark Component Registry**.
+* **Single Source of Truth (SSOT):** Mã `usecase` trong tracking **BẮT BUỘC** lấy chính xác theo mã định danh công cụ (`tool_id` / `widget_id`) được khởi tạo và quản lý trong **MoSpark Component Registry** (Trang quản lý: [MoSpark Utility Tool Templates](https://mospark.mservice.io/utility-tool-templates?pageSize=10&currentPage=1&sorters[0][field]=updated_at&sorters[0][order]=desc)).
 * **Mục đích:** Đảm bảo dữ liệu hành vi trên Umami có thể ánh xạ 1-1 với cấu hình CMS trên MoSpark, giúp hệ thống tự động bóc tách hiệu suất (Traffic, Usage, W2A Conversion) trực tiếp trên MoSpark Admin Dashboard mà không cần mapping thủ công.
 * **Ví dụ quy chuẩn MoSpark:**
   * Công cụ tra cứu CIC: Mã đăng ký trong MoSpark là `cic_lookup` $\rightarrow$ Event Name: `web_cic_lookup_[object]_[action]`.
@@ -87,18 +87,34 @@ export const trackUmamiEvent = (
 
 ## 2. DANH MỤC MASTER MOSPARK TOOL ID & ĐẶC TẢ CHI TIẾT
 
-| STT | Tên Utility Tool Thực Tế | MoSpark Tool ID (`usecase`) | Nhóm Nghiệp Vụ / Hub |
-| :--- | :--- | :--- | :--- |
-| 1 | Mua / Nạp Thẻ Game Trực Tuyến | `game_card_topup` | Digital Goods / Dịch vụ số |
-| 2 | Tính Lương Gross Sang Net | `gross_net_calculator` | Financial Hub |
-| 3 | Phân Bổ Ngân Sách Thu Nhập 50/30/20 | `salary_allocation_calculator` | Financial Hub |
-| 4 | Tra Cứu Phạt Nguội Giao Thông | `traffic_fine_lookup` | Vehicle Hub |
-| 5 | Tra Cứu Giá Xăng Dầu Hôm Nay | `fuel_price_lookup` | Vehicle Hub |
-| 6 | Tra Cứu Thẻ Bảo Hiểm Y Tế (BHYT) | `bhyt_lookup` | InsurTech / Dịch vụ công |
-| 7 | Bảng Tỷ Giá Ngoại Tệ FX | `exchange_rate_lookup` | Financial Hub |
-| 8 | Bảng Giá Vàng SJC / PNJ | `gold_price_lookup` | Financial Hub |
-| 9 | Tra Cứu Điểm Tín Dụng & Nợ Xấu CIC | `cic_lookup` | Financial Hub |
-| 10 | Tìm Kiếm Garage & Cứu Hộ Giao Thông | `garage_lookup` | Vehicle Hub |
+Toàn bộ 24 công cụ tiện ích (Utility Tools / Widgets) được đăng ký và quản lý chính thức trên **MoSpark Component Registry**:
+
+| STT | Tên Utility Tool Trên MoSpark | MoSpark Tool ID (`slug` / `usecase`) | Nhóm Nghiệp Vụ / Hub | Mô Tả Chức Năng |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | Bảng tỷ giá | `exchange_rate_table` | Financial Hub | Theo dõi bảng tỷ giá ngoại tệ trực tuyến từ Vietcombank |
+| 2 | Chuyển đổi ngoại tệ | `currency_converter` | Financial Hub | Tra cứu và quy đổi tiền tệ trực tuyến giữa các đồng ngoại tệ |
+| 3 | CIC Lookup | `cic_lookup` | Financial Hub | Tra cứu điểm tín dụng CIC (Nhập CMND/CCCD $\rightarrow$ điểm + xếp hạng) |
+| 4 | CIC Score Simulator | `cic_score_simulator` | Financial Hub | Công cụ mô phỏng/giả lập điểm CIC theo các chỉ số |
+| 5 | Công cụ chuyển đổi trả góp Ví Trả Sau | `paylater_converter` | Financial Hub / BNPL | Tính toán chuyển đổi trả góp linh hoạt các khoản mua sắm |
+| 6 | Công cụ tính bảo hiểm xã hội | `bhxh_simulator` | Financial Hub / InsurTech | Giả lập tính mức đóng và hưởng bảo hiểm xã hội (BHXH) |
+| 7 | Công cụ tính lương Net \| Gross | `salary_converter` | Financial Hub | Tính toán quy đổi lương Gross sang Net và ngược lại |
+| 8 | Công cụ tính Ước tính chi phí di chuyển | `fuel_cost_calculator` | Vehicle Hub | Tính toán ước tính chi phí xăng dầu/di chuyển theo quãng đường |
+| 9 | Công cụ ước tính khoản vay | `fast_money` | Financial Hub / Credit | Ước tính khoản vay Vay Nhanh / FastMoney và tiền trả hàng tháng |
+| 10 | Danh sách cây xăng | `gas_station_section` | Vehicle Hub | Section cây xăng dạng grid nhiều cột hiển thị trên trang |
+| 11 | Danh sách cây xăng thu gọn | `gas_station_minimal` | Vehicle Hub | Danh sách cây xăng thu gọn gắn tại Blog kèm CTA dẫn về trang cây xăng |
+| 12 | Danh sách trạm sạc | `charging_station_section` | Vehicle Hub | Section trạm sạc xe điện dạng grid hiển thị trên trang |
+| 13 | Danh sách trạm sạc thu gọn | `charging_station_minimal` | Vehicle Hub | Danh sách trạm sạc xe điện thu gọn (5 trạm) kèm CTA dẫn về cây xăng |
+| 14 | Form Bảo Hiểm Ô Tô | `car_insurance_form` | Vehicle Hub / InsurTech | Form đăng ký và báo giá bảo hiểm ô tô trực tuyến |
+| 15 | Form Bảo Hiểm Xe Máy | `motorbike_insurance_form` | Vehicle Hub / InsurTech | Form đăng ký và mua bảo hiểm xe máy trực tuyến |
+| 16 | Giá Xăng Dầu Hôm Nay | `fuel_price` | Vehicle Hub | Bảng giá xăng dầu RON 95, E5 RON 92, Dầu Diesel cập nhật |
+| 17 | Gold Price | `gold_price` | Financial Hub | Tra cứu giá vàng SJC, PNJ, DOJI mua vào - bán ra theo thời gian |
+| 18 | Lãi suất ngân hàng | `bank_interest_rate` | Financial Hub | Bảng so sánh lãi suất tiền gửi tiết kiệm các ngân hàng lớn |
+| 19 | Nạp Thẻ Game Widget | `nap_the_game` | Digital Goods / Utility | Nạp / Mua thẻ game trực tuyến (Zing, Garena, Vcoin...) |
+| 20 | Phân bổ lương | `salary_allocation` | Financial Hub | Công cụ tính phân bổ thu nhập hàng tháng theo hũ 50/30/20 |
+| 21 | Phim đang chiếu | `cinema_dang_chieu` | Cinema Hub | Danh sách phim đang chiếu tại rạp kèm lịch chiếu và đặt vé |
+| 22 | Tìm lãi tốt nhất | `best_bank_interest` | Financial Hub | Tính toán và tìm kiếm ngân hàng có lãi suất tiết kiệm tốt nhất |
+| 23 | Tính lãi tiết kiệm | `saving` | Financial Hub | Công cụ tính tiền lãi nhận được khi gửi tiết kiệm online |
+| 24 | Traffic Fine Lookup | `traffic_fine_lookup` | Vehicle Hub | Tra cứu phạt nguội ô tô / xe máy / xe máy điện toàn quốc |
 
 ---
 
@@ -307,34 +323,36 @@ graph LR
 
 ---
 
-### TOOL 7: BẢNG TỶ GIÁ NGOẠI TỆ THỜI GIAN THỰC (`exchange_rate_lookup`)
+### TOOL 7A: BẢNG TỶ GIÁ NGOẠI TỆ (`exchange_rate_table`)
 
 #### 1. Mô Tả Tool & Job-To-Be-Done (JTBD)
-* **Mô tả:** Công cụ quy đổi tỷ giá tiền tệ trực tiếp giữa VND và các ngoại tệ phổ biến (USD, EUR, JPY, KRW...) theo dữ liệu ngân hàng.
-* **JTBD:** Khi chuẩn bị đi du lịch, mua hàng quốc tế hoặc gửi kiều hối, tôi muốn kiểm tra tỷ giá quy đổi chính xác theo thời gian thực để tính toán số tiền VND cần chuẩn bị.
+* **Mô tả:** Bảng danh mục theo dõi tỷ giá niêm yết của các đồng ngoại tệ phổ biến (USD, EUR, JPY, KRW...) từ Ngân hàng Vietcombank.
+* **JTBD:** Khi cần cập nhật biến động tỷ giá ngoại tệ hôm nay, tôi muốn xem bảng tổng hợp tỷ giá mua/bán của các đồng tiền chính để nắm bắt tình hình thị trường.
 
-#### 2. User Flow & Điểm Chạm Tracking
-
-```mermaid
-graph LR
-    Step1["1. View Bảng Tỷ Giá"] --> Step2["2. Đổi Cặp Tiền Quy Đổi"]
-    Step2 --> Step3["3. Click Xem Biểu Đồ Lịch Sử"]
-```
-
-| Bước | Tên Giai Đoạn | Trải Nghiệm Người Dùng (UX) | Hạ Tầng / Cơ Chế Kỹ Thuật | Nền Tảng |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | Discovery | Xem bảng danh mục tỷ giá ngoại tệ hôm nay | Render FX table | Web |
-| 2 | Conversion Calculation | Chọn cặp tiền tệ và nhập số tiền cần quy đổi | Tính tỷ giá chéo client-side | Web |
-| 3 | Deep-dive Intent | Click xem biến động tỷ giá 30 ngày qua | Render historical chart | Web |
-
-#### 3. Cách Track & Event Name
+#### 2. Cách Track & Event Name
 
 | Event Name | Action | Payload Chuẩn (`umami data`) | Khi Nào Bắn Event? |
 | :--- | :--- | :--- | :--- |
-| `web_exchange_rate_lookup_form_view` | `view` | `{ page_name: "ty_gia", form_name: "fx_converter_form" }` | Tải xong giao diện |
-| `web_exchange_rate_lookup_form_submit` | `submit` | `{ page_name: "ty_gia", base_currency: "USD", target_currency: "VND" }` | Bấm quy đổi tiền tệ |
-| `web_exchange_rate_lookup_result_card_display` | `display` | `{ page_name: "ty_gia", result_status: "success", base_currency: "USD" }` | Hiển thị kết quả quy đổi |
-| `web_exchange_rate_lookup_btn_click` | `click` | `{ page_name: "ty_gia", button_name: "view_chart_history", click_url: "https://onelink.momo.vn/..." }` | Bấm xem biểu đồ hoặc mở App |
+| `web_exchange_rate_table_result_card_view` | `view` | `{ page_name: "ty_gia", provider: "vietcombank" }` | Tải xong bảng tỷ giá trên trang |
+| `web_exchange_rate_table_tab_select` | `select` | `{ page_name: "ty_gia", currency: "USD" }` | Click chọn xem chi tiết 1 ngoại tệ |
+| `web_exchange_rate_table_btn_click` | `click` | `{ page_name: "ty_gia", button_name: "open_fx_in_app", click_url: "https://onelink.momo.vn/..." }` | Bấm nút mở App xem thêm |
+
+---
+
+### TOOL 7B: CHUYỂN ĐỔI NGOẠI TỆ (`currency_converter`)
+
+#### 1. Mô Tả Tool & Job-To-Be-Done (JTBD)
+* **Mô tả:** Công cụ tương tác cho phép người dùng quy đổi tiền tệ trực tiếp (ví dụ: nhập 100 USD -> trả kết quả 2.571.000 VND).
+* **JTBD:** Khi chuẩn bị đi du lịch hoặc thanh toán kiều hối/mua hàng quốc tế, tôi muốn nhập số ngoại tệ cụ thể để biết chính xác giá trị quy đổi sang VND.
+
+#### 2. Cách Track & Event Name
+
+| Event Name | Action | Payload Chuẩn (`umami data`) | Khi Nào Bắn Event? |
+| :--- | :--- | :--- | :--- |
+| `web_currency_converter_form_view` | `view` | `{ page_name: "ty_gia", form_name: "fx_converter_form" }` | Tải xong công cụ quy đổi |
+| `web_currency_converter_form_submit` | `submit` | `{ page_name: "ty_gia", base_currency: "USD", target_currency: "VND" }` | Bấm nút quy đổi tiền tệ |
+| `web_currency_converter_result_card_display` | `display` | `{ page_name: "ty_gia", result_status: "success", base_currency: "USD" }` | Hiển thị kết quả quy đổi |
+| `web_currency_converter_btn_click` | `click` | `{ page_name: "ty_gia", button_name: "view_chart_history", click_url: "https://onelink.momo.vn/..." }` | Bấm xem biểu đồ hoặc mở App |
 
 ---
 
@@ -368,36 +386,37 @@ graph LR
 
 ---
 
-### TOOL 9: TRA CỨU ĐIỂM TÍN DỤNG & NỢ XẤU CIC (`cic_lookup`)
+### TOOL 9A: TRA CỨU ĐIỂM TÍN DỤNG CIC (`cic_lookup`)
 
 #### 1. Mô Tả Tool & Job-To-Be-Done (JTBD)
-* **Mô tả:** Công cụ hỗ trợ người dùng kiểm tra nhanh điều kiện tín dụng và nguy cơ nợ xấu trước khi nộp hồ sơ vay vốn hoặc mở thẻ tín dụng.
-* **JTBD:** Khi có kế hoạch vay ngân hàng hoặc mở thẻ tín dụng, tôi muốn kiểm tra trước lịch sử tín dụng xem mình có thuộc diện nợ xấu hay không để chủ động khắc phục.
+* **Mô tả:** Công cụ tra cứu điểm tín dụng CIC chính thức cho phép người dùng nhập thông tin CMND/CCCD để xem ngay điểm số tín dụng và phân hạng rủi ro.
+* **JTBD:** Khi muốn biết tình trạng nợ xấu hoặc điểm tín dụng thực tế của bản thân, tôi muốn tra cứu bằng số CMND/CCCD để biết ngay điểm số và xếp hạng CIC.
 
-#### 2. User Flow & Điểm Chạm Tracking
-
-```mermaid
-graph LR
-    Step1["1. View Simulator"] --> Step2["2. Bấm 'Kiểm Tra Điều Kiện'"]
-    Step2 --> Step3["3. Hiển Thị Xếp Hạng CIC"]
-    Step3 --> Step4["4. Click Mở Ví Trả Sau / Vay Nhanh"]
-```
-
-| Bước | Tên Giai Đoạn | Trải Nghiệm Người Dùng (UX) | Hạ Tầng / Cơ Chế Kỹ Thuật | Nền Tảng |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | Discovery | Nhìn thấy công cụ kiểm tra điều kiện tín dụng | Render credit simulator | Web |
-| 2 | Execution | Điền khảo sát lịch sử trả nợ và bấm submit | Phân tích phân hạng rủi ro | Web |
-| 3 | Result Display | Hiển thị nhóm tín dụng ước tính (Nhóm 1 đến Nhóm 5) | Render credit band score card | Web |
-| 4 | Conversion | Click mở sản phẩm Ví Trả Sau hoặc Vay Nhanh MoMo | Điều hướng OneLink sang BU Tài chính | Web sang App |
-
-#### 3. Cách Track & Event Name
+#### 2. Cách Track & Event Name
 
 | Event Name | Action | Payload Chuẩn (`umami data`) | Khi Nào Bắn Event? |
 | :--- | :--- | :--- | :--- |
-| `web_cic_lookup_form_view` | `view` | `{ page_name: "cic", form_name: "cic_simulator_form" }` | Tải xong giao diện |
-| `web_cic_lookup_form_submit` | `submit` | `{ page_name: "cic", form_name: "cic_simulator_form", form_status: "success" }` | Bấm nút kiểm tra |
-| `web_cic_lookup_result_card_display` | `display` | `{ page_name: "cic", credit_tier: "tier_1_good", result_status: "eligible" }` | Hiển thị kết quả điểm tín dụng |
-| `web_cic_lookup_btn_click` | `click` | `{ page_name: "cic", button_name: "apply_paylater_in_app", click_url: "https://onelink.momo.vn/..." }` | Bấm mở Ví Trả Sau in-app |
+| `web_cic_lookup_form_view` | `view` | `{ page_name: "cic", form_name: "cic_lookup_form" }` | Tải xong giao diện tra cứu |
+| `web_cic_lookup_form_submit` | `submit` | `{ page_name: "cic", form_name: "cic_lookup_form", input_status: "filled" }` | Nhập CCCD và bấm tra cứu |
+| `web_cic_lookup_result_card_display` | `display` | `{ page_name: "cic", credit_score_range: "600_700", credit_tier: "tier_2_medium" }` | Hiển thị kết quả điểm và xếp hạng |
+| `web_cic_lookup_btn_click` | `click` | `{ page_name: "cic", button_name: "open_cic_detail_in_app", click_url: "https://onelink.momo.vn/..." }` | Bấm nút xem báo cáo CIC đầy đủ in-app |
+
+---
+
+### TOOL 9B: MÔ PHỎNG ĐIỂM TÍN DỤNG CIC (`cic_score_simulator`)
+
+#### 1. Mô Tả Tool & Job-To-Be-Done (JTBD)
+* **Mô tả:** Công cụ mô phỏng giả lập điểm tín dụng CIC dựa trên khảo sát các chỉ số lịch sử tài chính, nợ thẻ tín dụng, và thói quen trả nợ.
+* **JTBD:** Khi chuẩn bị đăng ký khoản vay hoặc mở thẻ tín dụng mới, tôi muốn ước tính trước điểm CIC dựa trên hành vi tài chính hiện tại để biết khả năng được phê duyệt khoản vay.
+
+#### 2. Cách Track & Event Name
+
+| Event Name | Action | Payload Chuẩn (`umami data`) | Khi Nào Bắn Event? |
+| :--- | :--- | :--- | :--- |
+| `web_cic_score_simulator_form_view` | `view` | `{ page_name: "cic", form_name: "cic_simulator_form" }` | Tải xong công cụ mô phỏng |
+| `web_cic_score_simulator_form_submit` | `submit` | `{ page_name: "cic", form_name: "cic_simulator_form", form_status: "success" }` | Điền chỉ số và bấm mô phỏng |
+| `web_cic_score_simulator_result_card_display` | `display` | `{ page_name: "cic", simulated_score: "545", credit_tier: "tier_3_average" }` | Hiển thị kết quả mô phỏng điểm CIC |
+| `web_cic_score_simulator_btn_click` | `click` | `{ page_name: "cic", button_name: "apply_paylater_in_app", click_url: "https://onelink.momo.vn/..." }` | Bấm mở Ví Trả Sau hoặc Vay Nhanh in-app |
 
 ---
 

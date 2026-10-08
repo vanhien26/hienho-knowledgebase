@@ -592,6 +592,32 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
 
 ---
 
+### 3.1. CẬP NHẬT HIỆU SUẤT MTD 6 NGÀY THÁNG 10/2026 (01/10 - 06/10/2026)
+
+* **File nguồn trích xuất:** `C:\Users\hien.ho\Downloads\Web Performance Tracking.xlsx` (Cập nhật ngày 07/10/2026).
+* **Chỉ tiêu Target Tháng 10 (Total Pageviews):** **3.665.607 PVs**.
+* **Thực tế MTD 6 ngày (01/10 - 06/10):** **584.179 PVs** (Target Sheet) / **673.212 PVs** (Pivot Grand Total).
+* **Tiến độ hoàn thành Target MTD:** **15.94% ~ 16.0% Target**.
+* **Nhịp chạy trung bình (Daily Pace 6d):** **97.363 PV/ngày** (Target Sheet) / **112.202 PV/ngày** (Pivot Grand Total).
+* **Dự báo Run-rate 31 ngày:** **3.018.258 PVs** (Đạt **82.34%** Target T10, thiếu **-17.66% ~ -647.349 PVs** nếu giữ nhịp phẳng hiện tại).
+* **Nhịp chạy tối thiểu cần đạt 25 ngày còn lại:** **123.257 PV/ngày** (Tăng **+26.6%** so với 6 ngày đầu tháng) để vừa tròn 100% KPI.
+
+### Breakdown Cơ cấu Kênh Traffic MTD 6d Tháng 10:
+* **Organic (Top 1):** **453.983 PVs** (67.43% tổng Web) - Duy trì vị thế trụ cột cốt lõi.
+* **Direct:** **140.704 PVs** (20.90% tổng Web).
+* **Referral:** **57.014 PVs** (8.47% tổng Web).
+* **Paid:** **18.277 PVs** (2.71% tổng Web) - Đã tối ưu kiểm soát chặt ngân sách Paid.
+* **Others:** **3.234 PVs** (0.48% tổng Web).
+
+### Breakdown Theo Strategic Hubs MTD 6d Tháng 10:
+* **Cinema Hub:** **312.323 PVs** (Chiếm 46.4% tổng Web).
+* **Financial Hub:** **29.897 PVs** (Chiếm 4.4% tổng Web).
+* **New User Hub:** **12.029 PVs** (Chiếm 1.8% tổng Web).
+* **Vehicle Hub:** **6.208 PVs** (Chiếm 0.9% tổng Web).
+* **Student Hub:** **325 PVs** (Chiếm 0.05% tổng Web).
+
+---
+
 ## 4. CHIẾN LƯỢC DỰ ÁN GAME & 5 USE CASES NGÁCH
 
 ### A. Dự Án Game
