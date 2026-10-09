@@ -69,7 +69,7 @@ Financial Hub quy hoạch toàn bộ giải pháp tài chính MoMo thành 5 kh�
    * *Công cụ cốt lõi:* Máy tính lịch trả nợ giảm dần, Máy tính trả góp 0%, Widget tự đánh giá nhóm nợ 1-5.
 2. **Khối Tiết Kiệm & Lãi Suất Ngân Hàng:**
    * *Dịch vụ:* Gửi Tiết Kiệm Online (Đối tác Bản Việt, VPBank), Bảng So Sánh Lãi Suất 30+ Ngân Hàng.
-   * *Công cụ cốt lõi:* Hero Widget tính lãi đơn gửi 1 lần vs lãi kép gửi tích lũy định kỳ hàng tháng.
+   * *Công cụ cốt lõi:* Hero Widget tính lãi đơn gửi 1 lần vs lãi kép gửi tích lũy định kỳ hàng tháng; tích hợp Trợ lý MoMo AI đề xuất tối ưu theo công thức bù đắp chênh lệch lãi ròng (Net Yield Gap).
 3. **Khối Đầu Tư, Chứng Khoán & Tích Sản:**
    * *Dịch vụ:* Giá Vàng SJC/9999 Realtime, Chứng Khoán, Cổ Phiếu, Chứng Chỉ Quỹ SIP từ 10.000đ, Trái Phiếu.
    * *Công cụ cốt lõi:* Bảng giá vàng & biểu đồ biến động lịch sử, Bộ giả lập lãi kép đầu tư Chứng Chỉ Quỹ (SIP).
@@ -102,7 +102,39 @@ Khối **MoMo Gợi Ý** tuyệt đối không sử dụng câu chữ tĩnh (Sta
    - *Câu gợi ý động:* "Với mức lương [50 triệu]/tháng, bạn đang đóng [6.4 triệu] tiền thuế TNCN mỗi tháng. Mẹo tối ưu: Hãy khai báo tối đa người phụ thuộc hợp lệ để giảm trừ thuế, đồng thời phân bổ 40% dòng tiền thặng dư vào danh mục tích sản cân bằng (50% Tiết Kiệm an toàn + 50% Quỹ Mở tăng trưởng)."
    - *Icon ưu tiên:* Thực Tập Sinh Đầu Tư Quỹ Mở, Tiết Kiệm Kỳ Hạn Lớn, Báo Cáo CIC Hạng Cao.
 
+#### Quy Chuẩn Đề Xuất Trợ Lý MoMo AI Cho Utility Tính Lãi Tiết Kiệm (Công Thức Bù Đắp Chênh Lệch Lãi Ròng - Net Yield Gap):
 
+Thay vì hiển thị câu chữ đếm số lượng ngân hàng hình thức gây trùng lặp với bảng so sánh, khối Trợ lý MoMo AI vận hành theo kịch bản chung duy nhất: **Bù đắp chênh lệch lãi ròng giữa phương án người dùng chọn và giải pháp tối ưu trên MoMo**.
+
+1. **Công thức toán học:**
+   $$\Delta \text{Lãi} = P \times (r_{\text{tối ưu}} - r_{\text{người dùng}}) \times \frac{T}{12}$$
+   - $P$: Số tiền người dùng nhập (VND).
+   - $T$: Kỳ hạn gửi được chọn (tháng).
+   - $r_{\text{người dùng}}$: Lãi suất của ngân hàng người dùng đang chọn (%).
+   - $r_{\text{tối ưu}}$: Lãi suất cao nhất trong danh mục đối tác Tiết Kiệm Online trên MoMo (hoặc Top 1 thị trường) cho cùng kỳ hạn $T$ (%).
+
+2. **Ma trận hiển thị động (Dynamic Content):**
+   - **Khi $\Delta \text{Lãi} > 0$ (chiếm >95% lượt tra cứu):**
+     - *Nội dung hiển thị:* "Gửi tại **[Tên Bank Tối Ưu]** giúp bạn nhận thêm **+[Delta Lãi] đ** tiền lãi (đạt **[r tối ưu]%**/năm). Mở sổ online ngay trên MoMo, không cần đến quầy."
+     - *Ví dụ thực tế:* *"Gửi tại **BVBank trên MoMo** giúp bạn nhận thêm **+1.000.000 đ** tiền lãi (đạt **5,70%**/năm). Mở sổ online ngay trên MoMo, không cần đến quầy."*
+     - *Nút CTA:* `Gửi Tiết Kiệm Nhận Thêm +[Delta Lãi] đ` *(Ví dụ: `Gửi Tiết Kiệm Nhận Thêm +1.000.000 đ`)*
+     - *Đích đến:* Deeplink mở sổ Tiết Kiệm Online trên App MoMo điền sẵn số tiền $P$ và kỳ hạn $T$.
+   - **Khi $\Delta \text{Lãi} \le 0$ (người dùng đã chọn ngân hàng Top 1):**
+     - *Nội dung hiển thị:* "[Tên Bank] đang có mức lãi suất tốt nhất thị trường cho kỳ hạn này (**[r tối ưu]%**/năm). Mở sổ online trên MoMo để nhận thêm quà tặng tài chính."
+     - *Nút CTA:* `Mở Sổ Tiết Kiệm Online Ngay`
+     - *Đích đến:* Deeplink mở danh mục Tiết Kiệm trên App MoMo.
+
+3. **Cấu trúc dữ liệu Frontend Contract:**
+   ```typescript
+   interface SavingRecommendation {
+     diffAmount: number;         // Tiền chênh lệch (VND), ví dụ: 1000000
+     optimalBankName: string;    // Tên ngân hàng tối ưu, ví dụ: "BVBank"
+     optimalRate: number;        // Lãi suất tối ưu, ví dụ: 5.70
+     message: string;            // Đoạn text hiển thị trong Box AI
+     ctaText: string;            // Nhãn hiển thị trên nút CTA
+     deeplink: string;           // Deeplink mở App MoMo kèm tham số
+   }
+   ```
 
 Toàn bộ các công cụ tính toán (Tools) và trang đích trên Kênh Web đóng vai trò là "Cỗ Máy Thu Hút Lưu Lượng" để phân luồng và đề xuất theo ngữ cảnh (Contextual Suggestion) trực tiếp vào **3 Sản Phẩm Trọng Điểm Cần Đẩy Của FinHub**:
 

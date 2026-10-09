@@ -27,6 +27,6 @@
 ## III. PRIORITIES FOR THE NEXT 30 DAYS
 
 - **Go-live UI/UX trang Rạp toàn quốc:** Bàn giao giao diện UI/UX mới cho các cụm rạp CGV, Lotte, BHS, Galaxy.
-- **Reusable Mini Game Framework:** Dựng bộ khung Game Framework dùng chung cho toàn sàn Web thay vì làm riêng từng phim.
+- **Reusable Mini Game Framework:** Dựng bộ khung Game Framework dùng chung cho toàn nền tảng Web thay vì làm riêng từng phim.
 - **SEO Entity & Cụm Phim Tháng 10:** Build hệ thống trang Diễn viên / Đạo diễn và đẩy bài viết chuẩn SEO cho cụm phim hot ("Chị Chị Em Em 3", "Mẹ Mìn", "Án Mạng Xém Hoàn Hảo").
 - **Clean out-date content:** Chuyển hướng 301 các bài viết cũ hết hạn và chốt cam kết sản xuất tối thiểu 200 bài/tháng với Cell Team.

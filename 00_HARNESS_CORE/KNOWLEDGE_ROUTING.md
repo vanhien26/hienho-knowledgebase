@@ -60,6 +60,7 @@ Phân tích vấn đề người dùng đặt ra theo 3 góc nhìn quản trị:
 - **Báo cáo & Số liệu thực tế:** Thư mục [`07_REPORTS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS) và [`00_HARNESS_CORE/WEB_PERFORMANCE_HISTORICAL_DATA.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/WEB_PERFORMANCE_HISTORICAL_DATA.md).
 - **Đặc tả PRD:** Thư mục [`09_PRD/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD).
 - **Tư duy & Triết lý Lãnh đạo:** File [`10_LEADERSHIP_MINDSET/leadership-mindset.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/10_LEADERSHIP_MINDSET/leadership-mindset.md).
+- **Tin tức & Thị trường (Gemini Spark):** Thư mục [`11_NEWS_FEED/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/11_NEWS_FEED).
 
 ### Tầng 4: Master Skill & Framework Execution Layer (Tầng Thực Thi Master Skills)
 Kích hoạt 3 Master Skills trong thư mục [`.agents/skills/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/.agents/skills) kết hợp cùng kho tham chiếu [`03_SKILLS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS):
@@ -72,7 +73,7 @@ Kiểm soát chuẩn định dạng đầu ra theo đúng chỉ dẫn [`AGENTS.m
 - **Cấu trúc câu trả lời:** Đi thẳng vào bản chất ➔ Nêu rõ Context ➔ Action Items cụ thể ➔ Chỉ số KPIs / Số liệu thực tế.
 - **Biểu diễn luồng người dùng:** Sơ đồ Mermaid (`graph TD` hoặc `graph LR`) + Bảng phân tích chi tiết các bước.
 - **Biểu diễn lộ trình:** Bảng Markdown (`Table`).
-- **Quy chuẩn văn phong:** Không Emoji/Icon trong tiêu đề/bảng/danh sách, không tên riêng cá nhân PIC (thay bằng tên team chuyên môn), không từ ngữ hoa mỹ kiểu AI.
+- **Quy chuẩn văn phong:** Không Emoji/Icon trong tiêu đề/bảng/danh sách, không tên riêng cá nhân PIC (thay bằng tên team chuyên môn), không dùng từ "sàn Web" (chỉ dùng "nền tảng Web", "Kênh Web", "Web Platform" hoặc "Web"), không từ ngữ hoa mỹ kiểu AI.
 
 ---
 

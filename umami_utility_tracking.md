@@ -99,6 +99,8 @@ export const trackUmamiEvent = (
 | 8 | Bảng Giá Vàng SJC / PNJ | `gold_price_lookup` | Financial Hub |
 | 9 | Tra Cứu Điểm Tín Dụng & Nợ Xấu CIC | `cic_lookup` | Financial Hub |
 | 10 | Tìm Kiếm Garage & Cứu Hộ Giao Thông | `garage_lookup` | Vehicle Hub |
+| 11 | Tính Lãi Tiết Kiệm Ngân Hàng | `saving_interest_calculator` | Financial Hub |
+| 12 | Mini Game Quýt (Gamification) | `game_quyt` | Entertainment / Gamification |
 
 ---
 
@@ -432,6 +434,76 @@ graph LR
 | `web_garage_lookup_result_card_display` | `display` | `{ page_name: "garage", total_results: 15 }` | Hiển thị danh sách kết quả |
 | `web_garage_lookup_btn_click` | `click` | `{ page_name: "garage", button_name: "call_rescue_hotline", garage_id: "gar_001" }` | Click gọi cứu hộ khẩn cấp |
 | `web_garage_lookup_btn_click` | `click` | `{ page_name: "garage", button_name: "get_direction", garage_id: "gar_001" }` | Click xem chỉ đường tới garage |
+
+---
+
+### TOOL 11: TÍNH LÃI TIẾT KIỆM NGÂN HÀNG (`saving_interest_calculator`)
+
+#### 1. Mô Tả Tool & Job-To-Be-Done (JTBD)
+* **Mô tả:** Công cụ tính toán lãi suất tiết kiệm theo số tiền, kỳ hạn và ngân hàng; tích hợp Trợ lý MoMo AI tính toán bù đắp chênh lệch lãi ròng (Net Yield Gap) và kích hoạt phễu Web-to-App mở sổ Tiết Kiệm Online trên MoMo.
+* **JTBD:** Khi có một khoản tiền nhàn rỗi, tôi muốn tính toán nhanh số tiền lãi nhận được và biết ngân hàng nào đang có lãi suất cao hơn để tối đa hóa lợi nhuận mà không tốn công đến từng quầy ngân hàng tra cứu.
+
+#### 2. User Flow & Điểm Chạm Tracking
+
+```mermaid
+graph LR
+    Step1["1. View Calculator"] --> Step2["2. Nhập Tiền & Chọn Kỳ Hạn"]
+    Step2 --> Step3["3. Chọn Ngân Hàng & Tính Lãi"]
+    Step3 --> Step4["4. Hiển Thị Box Đề Xuất MoMo AI"]
+    Step4 --> Step5["5. Click CTA Mở Sổ Online"]
+```
+
+| Bước | Tên Giai Đoạn | Trải Nghiệm Người Dùng (UX) | Hạ Tầng / Cơ Chế Kỹ Thuật | Nền Tảng |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | Discovery | Truy cập trang tiện ích tính lãi tiết kiệm | Render calculator widget | Web |
+| 2 | Input | Chọn số tiền gửi (pills/input) và kỳ hạn (1, 3, 6, 12, 24 tháng) | Client state update | Web |
+| 3 | Compare | Chọn ngân hàng cụ thể và xem kết quả tính toán chi tiết | Client math calculation | Web |
+| 4 | AI Recommendation | Render Box Trợ lý MoMo AI hiển thị số tiền nhận thêm (+Delta Lãi) | Net Yield Gap Recommendation Engine | Web |
+| 5 | Action (W2A) | Click nút "Gửi Tiết Kiệm Nhận Thêm +X đ" mở App MoMo | OneLink deeplink router | Web-to-App |
+
+#### 3. Cách Track & Event Name
+
+| Event Name | Action | Payload Chuẩn (`umami data`) | Khi Nào Bắn Event? |
+| :--- | :--- | :--- | :--- |
+| `web_saving_calc_form_view` | `view` | `{ page_name: "tinh_lai_tiet_kiem", form_name: "saving_calc_form" }` | Tải xong giao diện |
+| `web_saving_calc_amount_select` | `select` | `{ page_name: "tinh_lai_tiet_kiem", amount: 100000000 }` | Chọn số tiền gửi nhanh |
+| `web_saving_calc_term_select` | `select` | `{ page_name: "tinh_lai_tiet_kiem", term: 12 }` | Chọn kỳ hạn gửi |
+| `web_saving_calc_provider_select` | `select` | `{ page_name: "tinh_lai_tiet_kiem", provider: "ACB" }` | Chọn ngân hàng gửi |
+| `web_saving_calc_result_card_display` | `display` | `{ page_name: "tinh_lai_tiet_kiem", diff_amount: 1000000, optimal_provider: "BVBank" }` | Hiển thị thẻ kết quả và Box MoMo AI |
+| `web_saving_calc_btn_click` | `click` | `{ page_name: "tinh_lai_tiet_kiem", button_name: "open_saving_in_app", optimal_provider: "BVBank", diff_amount: 1000000, click_url: "https://onelink.momo.vn/..." }` | Click CTA mở sổ tiết kiệm trên App |
+
+---
+
+### TOOL 12: MINI GAME QUÝT (`game_quyt`)
+
+#### 1. Mô Tả Tool & Job-To-Be-Done (JTBD)
+* **Mô tả:** Mini game tương tác giải trí "Game Quýt" trên Web MoMo, đóng vai trò công cụ Gamification thu hút lưu lượng, gia tăng thời gian onsite (Time-on-site / Engagement) và dẫn dắt người dùng tải App / mở App MoMo để nhận quà hoặc tiếp tục lượt chơi.
+* **JTBD:** Khi người dùng truy cập Web MoMo, tôi muốn trải nghiệm nhanh một trò chơi giải trí nhẹ nhàng, vui nhộn ngay trên trình duyệt mà không cần cài đặt phức tạp, từ đó có động lực tải và mở App MoMo để nhận phần thưởng thực tế hoặc mở khóa các màn chơi tiếp theo.
+
+#### 2. User Flow & Điểm Chạm Tracking
+
+```mermaid
+graph LR
+    Step1["1. View Game"] --> Step2["2. Play Game"]
+    Step2 --> Step3["3. Click Tải App (W2A)"]
+```
+
+| Bước | Tên Giai Đoạn | Trải Nghiệm Người Dùng (UX) | Hạ Tầng / Cơ Chế Kỹ Thuật | Nền Tảng |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | Discovery | Truy cập trang và nhìn thấy màn hình giới thiệu / giao diện Game Quýt | Tải DOM & Render game canvas/container | Web |
+| 2 | Engagement | Click nút "Chơi Ngay" và bắt đầu lượt tương tác game | Khởi tạo game loop / update local state | Web |
+| 3 | Conversion | Click nút "Tải App MoMo" / "Mở App Nhận Quà" (CTA W2A) | Router điều hướng OneLink kèm tham số `wui` | Web sang App |
+
+#### 3. Cách Track & Event Name
+
+| Event Name | Action | Payload Chuẩn (`umami data`) | Khi Nào Bắn Event? |
+| :--- | :--- | :--- | :--- |
+| `web_game_quyt_game_view` | `view` | `{ page_name: "game_quyt", game_name: "quyt", form_name: "game_quyt_container" }` | Khi giao diện game tải xong và hiển thị trên màn hình |
+| `web_game_quyt_play_btn_click` | `click` | `{ page_name: "game_quyt", button_name: "play_now", game_name: "quyt" }` | Khi click nút "Chơi ngay" bắt đầu lượt chơi |
+| `web_game_quyt_btn_click` | `click` | `{ page_name: "game_quyt", button_name: "download_app", game_name: "quyt", click_url: "https://onelink.momo.vn/...", auth_status: "anonymous" }` | Khi click nút "Tải App" / "Mở App Nhận Quà" dẫn sang OneLink |
+
+*(Tùy chọn bổ sung nếu game có màn kết thúc tính điểm:)*
+* `web_game_quyt_result_card_display` (Action: `display`): Bắn khi người dùng kết thúc lượt chơi với payload `{ page_name: "game_quyt", score: 100, result_status: "completed" }`.
 
 ---
 

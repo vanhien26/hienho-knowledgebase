@@ -39,7 +39,8 @@ Khi triển khai tính năng hoặc gắn tracking trên Web, Kỹ sư tham chi�
 ├── 07_REPORTS/                         # Master Data Tracking hiệu suất thực tế & Báo cáo MTD
 ├── 08_DECISION_LOG/                    # Nhật ký quyết định kiến trúc và sản phẩm
 ├── 09_PRD/                             # Đặc tả yêu cầu sản phẩm chi tiết (PRDs)
-└── 10_LEADERSHIP_MINDSET/              # Tư duy quản trị và triết lý sản phẩm
+├── 10_LEADERSHIP_MINDSET/              # Tư duy quản trị và triết lý sản phẩm
+└── 11_NEWS_FEED/                       # Cổng tiếp nhận tin tức thị trường (Gemini Spark)
 ```
 
 ---
