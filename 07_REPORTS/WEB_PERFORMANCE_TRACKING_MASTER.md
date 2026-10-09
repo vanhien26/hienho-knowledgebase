@@ -616,7 +616,33 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
 * **Vehicle Hub:** **6.208 PVs** (Chiếm 0.9% tổng Web).
 * **Student Hub:** **325 PVs** (Chiếm 0.05% tổng Web).
 
+### 3.2. CẬP NHẬT HIỆU SUẤT MTD 7 NGÀY THÁNG 10/2026 (01/10 - 07/10/2026)
+
+* **File nguồn trích xuất:** `C:\Users\hien.ho\Downloads\Web Performance Tracking (1).xlsx` (Cập nhật ngày 08/10/2026).
+* **Chỉ tiêu Target Tháng 10 (Total Pageviews):** **3.665.607 PVs**.
+* **Thực tế MTD 7 ngày (01/10 - 07/10):** **793.244 PVs** (Target Sheet) / **794.202 PVs** (Pivot Grand Total).
+* **Gia tốc tăng trưởng trong ngày 07/10 (Day 7):** Đạt **+120.990 PVs/ngày** (Bứt phá vượt bậc so với nhịp bình quân các ngày trước).
+* **Tiến độ hoàn thành Target MTD:** **21.67% Target** (bám sát mốc 22.58% thời gian trôi qua của tháng).
+* **Nhịp chạy trung bình (Daily Pace 7d):** **113.457 PV/ngày** (Tăng từ 112.202 PV/ngày ở mốc 6d).
+* **Dự báo Run-rate 31 ngày:** **3.517.180 PVs** (Đạt **95.95%** Target T10, khoảng cách hụt chỉ còn **-4.05% ~ -148.427 PVs**).
+* **Nhịp chạy tối thiểu cần đạt 24 ngày còn lại:** **119.642 PV/ngày** (Chỉ cần tăng thêm **+5.45%** so với nhịp hiện tại để cán mốc 100% KPI).
+
+### Breakdown Cơ cấu Kênh Traffic MTD 7d Tháng 10:
+* **Organic (Top 1):** **525.544 PVs** (66.17% tổng Web) - Tăng vọt +19.55% so với cùng kỳ T9 MTD 7d (439.591 PVs). Trụ cột vững chắc nhất của toàn sàn.
+* **Direct:** **170.010 PVs** (21.41% tổng Web) - Duy trì sức mạnh nhận diện thương hiệu MoMo rất cao.
+* **Referral:** **68.085 PVs** (8.57% tổng Web).
+* **Paid:** **26.352 PVs** (3.32% tổng Web) - Kiểm soát chặt chi phí, không lãng phí ngân sách Ads.
+* **Others:** **4.211 PVs** (0.53% tổng Web).
+
+### Breakdown Theo Strategic Hubs MTD 7d Tháng 10:
+* **Cinema Hub:** **356.404 PVs** (Chiếm 44.88% tổng Web, đạt 31.90% Target 1.117M; Forecast 31d đạt 1.578M PVs - vượt target +41.25%).
+* **New User Hub:** **115.988 PVs** (Tính cả Download 99.6k PVs, chiếm 14.61% tổng Web; Forecast 31d đạt 513.6k PVs - vượt target 300k +71.2%).
+* **Financial Hub:** **36.576 PVs** (Theo nhóm Pivot) / **39.264 PVs** (Tính toàn bộ dự án tài chính, chiếm 4.61% - 4.94% tổng Web; Đạt 8.13% - 8.73% Target 450k; Forecast 31d đạt 161.9k - 173.8k PVs, nguy cơ hụt ~62% - 64% so với target tham vọng).
+* **Vehicle Hub:** **8.003 PVs** (Chiếm 1.01% tổng Web, đạt 8.00% Target 100k; Forecast 31d đạt 35.4k PVs).
+* **Student Hub:** **392 PVs** (Chiếm 0.05% tổng Web, đạt 0.39% Target 100k; Forecast 31d đạt 1.7k PVs).
+
 ---
+
 
 ## 4. CHIẾN LƯỢC DỰ ÁN GAME & 5 USE CASES NGÁCH
 

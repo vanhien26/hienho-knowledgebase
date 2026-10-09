@@ -1,0 +1,115 @@
+{
+  "file_source": "C:\\Users\\hien.ho\\Downloads\\Web Performance Tracking (1).xlsx",
+  "read_timestamp": "2026-10-08 13:52:13",
+  "report_type": "MTD 7 Ngày (01/10 - 07/10/2026 - Lũy Kế 7 Ngày Tháng 10)",
+  "days_elapsed": 7,
+  "days_in_month": 31,
+  "remaining_days": 24,
+  "target_oct_pv": 3665607,
+  "actual_mtd_pv": 793244,
+  "actual_pivot_pv": 794202,
+  "progress_pct": 21.67,
+  "daily_pace": 113457.43,
+  "forecast_31d": 3517180.29,
+  "forecast_pct": 95.95,
+  "required_daily_pace": 119641.88,
+  "pace_gap_pct": 5.45,
+  "channels": {
+    "organic": {
+      "pv": 525544,
+      "pct": 66.17
+    },
+    "direct": {
+      "pv": 170010,
+      "pct": 21.41
+    },
+    "referral": {
+      "pv": 68085,
+      "pct": 8.57
+    },
+    "paid": {
+      "pv": 26352,
+      "pct": 3.32
+    },
+    "others": {
+      "pv": 4211,
+      "pct": 0.53
+    }
+  },
+  "hubs": {
+    "cinema": {
+      "pv": 356404,
+      "target": 1117378,
+      "progress_pct": 31.9,
+      "daily_pace": 50914.86,
+      "forecast_31d": 1578360.57,
+      "forecast_pct": 141.25,
+      "share_pct": 44.88
+    },
+    "financial": {
+      "pv": 36576,
+      "pv_all_projects": 39264,
+      "target": 450000,
+      "progress_pct": 8.13,
+      "daily_pace": 5225.14,
+      "forecast_31d": 161979.43,
+      "forecast_pct": 36.0,
+      "share_pct": 4.61
+    },
+    "new_user": {
+      "pv_direct_hub": 16334,
+      "pv_total_with_download": 115988,
+      "target": 300000,
+      "progress_pct": 38.66,
+      "daily_pace": 16569.71,
+      "forecast_31d": 513661.14,
+      "forecast_pct": 171.22,
+      "share_pct": 14.61
+    },
+    "vehicle": {
+      "pv": 8003,
+      "target": 100000,
+      "progress_pct": 8.0,
+      "daily_pace": 1143.29,
+      "forecast_31d": 35441.86,
+      "forecast_pct": 35.44,
+      "share_pct": 1.01
+    },
+    "student": {
+      "pv": 392,
+      "target": 100000,
+      "progress_pct": 0.39,
+      "daily_pace": 56.0,
+      "forecast_31d": 1736.0,
+      "forecast_pct": 1.74,
+      "share_pct": 0.05
+    }
+  },
+  "other_notable_projects": {
+    "game": {
+      "pv": 47137,
+      "daily_pace": 6733.86,
+      "forecast_31d": 208749.57
+    },
+    "tiktok": {
+      "pv": 30799,
+      "daily_pace": 4399.86,
+      "forecast_31d": 136395.57
+    },
+    "faq_hoidap": {
+      "pv": 20297,
+      "daily_pace": 2899.57,
+      "forecast_31d": 89886.71
+    },
+    "ve_xe": {
+      "pv": 14666,
+      "daily_pace": 2095.14,
+      "forecast_31d": 64949.43
+    },
+    "merchant": {
+      "pv": 13927,
+      "daily_pace": 1989.57,
+      "forecast_31d": 61676.71
+    }
+  }
+}
