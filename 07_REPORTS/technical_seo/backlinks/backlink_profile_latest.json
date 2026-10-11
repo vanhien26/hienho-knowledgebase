@@ -1,0 +1,87 @@
+{
+  "source": "Google Search Console - Top Linking Sites (www.momo.vn)",
+  "export_date": "2026-10-10",
+  "total_referring_domains": 1000,
+  "total_linking_pages": 118757,
+  "distribution_buckets": {
+    "ge_1000_pages": {
+      "sites_count": 5,
+      "linking_pages": 103773,
+      "pct": 87.4
+    },
+    "100_to_999_pages": {
+      "sites_count": 32,
+      "linking_pages": 10229,
+      "pct": 8.6
+    },
+    "10_to_99_pages": {
+      "sites_count": 105,
+      "linking_pages": 2625,
+      "pct": 2.2
+    },
+    "1_to_9_pages": {
+      "sites_count": 858,
+      "linking_pages": 2130,
+      "pct": 1.8
+    }
+  },
+  "top_concentrations": [
+    {
+      "domain": "topcv.vn",
+      "linking_pages": 70100,
+      "target_urls_count": 7,
+      "pct": 59.0
+    },
+    {
+      "domain": "cvs.vn",
+      "linking_pages": 24825,
+      "target_urls_count": 11,
+      "pct": 20.9
+    }
+  ],
+  "structural_insights": {
+    "top_2_pct": 79.9,
+    "top_5_pct": 87.4,
+    "sitewide_patterns_9_domains_pct": 85.6,
+    "authority_trapped": "94.925 liên kết chỉ trỏ vào 7-11 URL tuyển dụng (careers), 0 liên kết trỏ vào các trang thương mại của Hubs (Vay Nhanh, Bảo Hiểm Ô Tô). Giải thích lý do Share of Voice thấp dù profile backlink lớn.",
+    "editorial_domains_share_pct": 5.0,
+    "editorial_domains": [
+      "congly.vn",
+      "baophapluat.vn",
+      "thuonghieucongluan.com.vn",
+      "baolangson.vn",
+      "baodanang.vn",
+      "phunuvietnam.vn",
+      "baodongthap.vn",
+      "nghean24h.vn"
+    ]
+  },
+  "toxic_audit_summary": {
+    "audit_date": "2026-10-10",
+    "total_disavow_candidates": 147,
+    "total_linking_pages": 353,
+    "profile_share_pct": 0.30,
+    "tiers": {
+      "A1_strong_gambling": {
+        "domains": 67,
+        "linking_pages": 109,
+        "status": "DISAVOWED_CANDIDATE"
+      },
+      "A2_moderate_suspicious": {
+        "domains": 45,
+        "linking_pages": 112,
+        "status": "REVIEW_DISAVOW"
+      },
+      "A3_low_quality_scraper": {
+        "domains": 35,
+        "linking_pages": 132,
+        "status": "MONITOR"
+      }
+    },
+    "artifacts": {
+      "detail_csv": "07_REPORTS/technical_seo/backlinks/backlink_audit_detail_2026-10-10.csv",
+      "disavow_txt": "07_REPORTS/technical_seo/backlinks/backlink_disavow_candidates_2026-10-10.txt",
+      "baseline_csv": "07_REPORTS/technical_seo/backlinks/backlink_disavow_baseline_2026-10-10.csv"
+    }
+  }
+}

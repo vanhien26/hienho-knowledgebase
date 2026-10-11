@@ -1,0 +1,84 @@
+{
+  "source": "Google Search Console - Crawl Stats (www.momo.vn)",
+  "export_date": "2026-10-10",
+  "window": {
+    "start": "2026-07-12",
+    "end": "2026-10-06",
+    "total_requests": 1810416,
+    "host_status": "No problems"
+  },
+  "monthly_run_rate": {
+    "2026-07": {
+      "days": 12,
+      "requests_per_day": 20008,
+      "download_mb_per_day": 799,
+      "kb_per_request": 40.9,
+      "response_time_ms": 1008
+    },
+    "2026-08": {
+      "days": 31,
+      "requests_per_day": 22186,
+      "download_mb_per_day": 2043,
+      "kb_per_request": 94.3,
+      "response_time_ms": 839
+    },
+    "2026-09": {
+      "days": 30,
+      "requests_per_day": 21114,
+      "download_mb_per_day": 2031,
+      "kb_per_request": 98.5,
+      "response_time_ms": 789
+    },
+    "2026-10": {
+      "days": 6,
+      "requests_per_day": 14850,
+      "download_mb_per_day": 564,
+      "kb_per_request": 38.9,
+      "response_time_ms": 852
+    }
+  },
+  "status_code_breakdown_pct": {
+    "200_ok": 94.11,
+    "404_not_found": 4.14,
+    "301_redirect": 1.71,
+    "others": 0.04
+  },
+  "crawl_purpose_pct": {
+    "refresh": 95.97,
+    "discovery": 4.03
+  },
+  "file_type_pct": {
+    "html": 73.68,
+    "javascript": 19.94,
+    "image": 0.09,
+    "css_other": 6.29
+  },
+  "bot_distribution_pct": {
+    "googlebot_smartphone": 51.2,
+    "page_resource_load": 20.14,
+    "adsbot": 15.3,
+    "googlebot_desktop": 12.54
+  },
+  "key_findings": [
+    {
+      "metric": "Break 01/10",
+      "severity": "HIGH",
+      "detail": "Requests/ngày giảm 29.7% so với T9 (21.114 xuống 14.850). Download giảm 72%. KB/req quay lại mức trước 05/08. Dấu hiệu thay đổi cấu trúc robots.txt hoặc deploy."
+    },
+    {
+      "metric": "404 Waste",
+      "severity": "HIGH",
+      "detail": "404 chiếm 4.14% tương đương ~75.000 requests, lãng phí ~860 requests/ngày bị đốt vào URL chết thay vì crawl content mới."
+    },
+    {
+      "metric": "Discovery Squeeze",
+      "severity": "MEDIUM",
+      "detail": "Discovery chỉ đạt 4.03%, 95.97% dành cho Refresh. Content mới từ Cinema và Financial khó tranh chấp crawl budget."
+    },
+    {
+      "metric": "Lag Risk Q4",
+      "severity": "CRITICAL",
+      "detail": "Organic T10 hiện tăng +20.4% do chạy trên nền index T9. Độ trễ 2-6 tuần khiến rủi ro sụt giảm traffic sẽ bộc lộ cuối T10 hoặc đầu T11."
+    }
+  ]
+}

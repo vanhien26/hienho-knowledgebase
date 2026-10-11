@@ -1,0 +1,238 @@
+{
+  "file_source": "/Users/hienhv/Downloads/Web Performance Tracking (2).xlsx",
+  "read_timestamp": "2026-10-10 19:38:01",
+  "report_type": "MTD 9 Ngày (01/10 - 09/10/2026 - Lũy Kế 9 Ngày Tháng 10)",
+  "days_elapsed": 9,
+  "days_in_month": 31,
+  "target_oct_pv": 3665607,
+  "actual_mtd_pv": 903977,
+  "progress_pct": 24.66,
+  "daily_pace": 100441.89,
+  "forecast_31d": 3113698.56,
+  "forecast_pct": 84.94,
+  "channels": {
+    "organic": {
+      "pv": 586630,
+      "pct": 64.89
+    },
+    "direct": {
+      "pv": 199641,
+      "pct": 22.08
+    },
+    "referral": {
+      "pv": 76577,
+      "pct": 8.47
+    },
+    "paid": {
+      "pv": 36333,
+      "pct": 4.02
+    },
+    "others": {
+      "pv": 4796,
+      "pct": 0.53
+    }
+  },
+  "hubs": {
+    "new_user": {
+      "pv": 22259,
+      "target": 300000,
+      "pct": 7.42,
+      "forecast": 76669.89
+    },
+    "cinema": {
+      "pv": 391925,
+      "target": 1117378,
+      "pct": 35.08,
+      "forecast": 1349963.89
+    },
+    "financial": {
+      "pv": 43309,
+      "target": 450000,
+      "pct": 9.62,
+      "forecast": 149175.44
+    },
+    "vehicle": {
+      "pv": 9688,
+      "target": 100000,
+      "pct": 9.69,
+      "forecast": 33369.78
+    },
+    "student": {
+      "pv": 467,
+      "target": 100000,
+      "pct": 0.47,
+      "forecast": 1608.56
+    }
+  },
+  "crawl_stats": {
+    "source": "Google Search Console - Crawl Stats (www.momo.vn)",
+    "export_date": "2026-10-10",
+    "window": {
+      "start": "2026-07-12",
+      "end": "2026-10-06",
+      "total_requests": 1810416,
+      "host_status": "No problems"
+    },
+    "monthly_run_rate": {
+      "2026-07": {
+        "days": 12,
+        "requests_per_day": 20008,
+        "download_mb_per_day": 799,
+        "kb_per_request": 40.9,
+        "response_time_ms": 1008
+      },
+      "2026-08": {
+        "days": 31,
+        "requests_per_day": 22186,
+        "download_mb_per_day": 2043,
+        "kb_per_request": 94.3,
+        "response_time_ms": 839
+      },
+      "2026-09": {
+        "days": 30,
+        "requests_per_day": 21114,
+        "download_mb_per_day": 2031,
+        "kb_per_request": 98.5,
+        "response_time_ms": 789
+      },
+      "2026-10": {
+        "days": 6,
+        "requests_per_day": 14850,
+        "download_mb_per_day": 564,
+        "kb_per_request": 38.9,
+        "response_time_ms": 852
+      }
+    },
+    "status_code_breakdown_pct": {
+      "200_ok": 94.11,
+      "404_not_found": 4.14,
+      "301_redirect": 1.71,
+      "others": 0.04
+    },
+    "crawl_purpose_pct": {
+      "refresh": 95.97,
+      "discovery": 4.03
+    },
+    "file_type_pct": {
+      "html": 73.68,
+      "javascript": 19.94,
+      "image": 0.09,
+      "css_other": 6.29
+    },
+    "bot_distribution_pct": {
+      "googlebot_smartphone": 51.2,
+      "page_resource_load": 20.14,
+      "adsbot": 15.3,
+      "googlebot_desktop": 12.54
+    },
+    "key_findings": [
+      {
+        "metric": "Break 01/10",
+        "severity": "HIGH",
+        "detail": "Requests/ngày giảm 29.7% so với T9 (21.114 xuống 14.850). Download giảm 72%. KB/req quay lại mức trước 05/08. Dấu hiệu thay đổi cấu trúc robots.txt hoặc deploy."
+      },
+      {
+        "metric": "404 Waste",
+        "severity": "HIGH",
+        "detail": "404 chiếm 4.14% tương đương ~75.000 requests, lãng phí ~860 requests/ngày bị đốt vào URL chết thay vì crawl content mới."
+      },
+      {
+        "metric": "Discovery Squeeze",
+        "severity": "MEDIUM",
+        "detail": "Discovery chỉ đạt 4.03%, 95.97% dành cho Refresh. Content mới từ Cinema và Financial khó tranh chấp crawl budget."
+      },
+      {
+        "metric": "Lag Risk Q4",
+        "severity": "CRITICAL",
+        "detail": "Organic T10 hiện tăng +20.4% do chạy trên nền index T9. Độ trễ 2-6 tuần khiến rủi ro sụt giảm traffic sẽ bộc lộ cuối T10 hoặc đầu T11."
+      }
+    ]
+  },
+  "backlink_profile": {
+    "source": "Google Search Console - Top Linking Sites (www.momo.vn)",
+    "export_date": "2026-10-10",
+    "total_referring_domains": 1000,
+    "total_linking_pages": 118757,
+    "distribution_buckets": {
+      "ge_1000_pages": {
+        "sites_count": 5,
+        "linking_pages": 103773,
+        "pct": 87.4
+      },
+      "100_to_999_pages": {
+        "sites_count": 32,
+        "linking_pages": 10229,
+        "pct": 8.6
+      },
+      "10_to_99_pages": {
+        "sites_count": 105,
+        "linking_pages": 2625,
+        "pct": 2.2
+      },
+      "1_to_9_pages": {
+        "sites_count": 858,
+        "linking_pages": 2130,
+        "pct": 1.8
+      }
+    },
+    "top_concentrations": [
+      {
+        "domain": "topcv.vn",
+        "linking_pages": 70100,
+        "target_urls_count": 7,
+        "pct": 59.0
+      },
+      {
+        "domain": "cvs.vn",
+        "linking_pages": 24825,
+        "target_urls_count": 11,
+        "pct": 20.9
+      }
+    ],
+    "structural_insights": {
+      "top_2_pct": 79.9,
+      "top_5_pct": 87.4,
+      "sitewide_patterns_9_domains_pct": 85.6,
+      "authority_trapped": "94.925 liên kết chỉ trỏ vào 7-11 URL tuyển dụng (careers), 0 liên kết trỏ vào các trang thương mại của Hubs (Vay Nhanh, Bảo Hiểm Ô Tô). Giải thích lý do Share of Voice thấp dù profile backlink lớn.",
+      "editorial_domains_share_pct": 5.0,
+      "editorial_domains": [
+        "congly.vn",
+        "baophapluat.vn",
+        "thuonghieucongluan.com.vn",
+        "baolangson.vn",
+        "baodanang.vn",
+        "phunuvietnam.vn",
+        "baodongthap.vn",
+        "nghean24h.vn"
+      ]
+    },
+    "toxic_audit_summary": {
+      "audit_date": "2026-10-10",
+      "total_disavow_candidates": 147,
+      "total_linking_pages": 353,
+      "profile_share_pct": 0.3,
+      "tiers": {
+        "A1_strong_gambling": {
+          "domains": 67,
+          "linking_pages": 109,
+          "status": "DISAVOWED_CANDIDATE"
+        },
+        "A2_moderate_suspicious": {
+          "domains": 45,
+          "linking_pages": 112,
+          "status": "REVIEW_DISAVOW"
+        },
+        "A3_low_quality_scraper": {
+          "domains": 35,
+          "linking_pages": 132,
+          "status": "MONITOR"
+        }
+      },
+      "artifacts": {
+        "detail_csv": "07_REPORTS/technical_seo/backlinks/backlink_audit_detail_2026-10-10.csv",
+        "disavow_txt": "07_REPORTS/technical_seo/backlinks/backlink_disavow_candidates_2026-10-10.txt",
+        "baseline_csv": "07_REPORTS/technical_seo/backlinks/backlink_disavow_baseline_2026-10-10.csv"
+      }
+    }
+  }
+}

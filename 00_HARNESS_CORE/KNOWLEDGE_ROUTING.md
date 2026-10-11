@@ -57,10 +57,11 @@ Phân tích vấn đề người dùng đặt ra theo 3 góc nhìn quản trị:
 - **Hạ tầng MoSpark & Tracking Tools:** Thư mục [`04_MOSPARK_PLATFORM/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM) và file SSOT [`umami_utility_tracking.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/umami_utility_tracking.md) (Quy chuẩn bắt buộc cho Event Tracking mọi Utility Tools & Calculators).
 - **Các cụm Hubs:** Thư mục [`05_HUBS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS).
 - **Các Use Case BRD:** Thư mục [`06_USE_CASE_MOMO/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO).
-- **Báo cáo & Số liệu thực tế:** Thư mục [`07_REPORTS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS) và [`00_HARNESS_CORE/WEB_PERFORMANCE_HISTORICAL_DATA.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/WEB_PERFORMANCE_HISTORICAL_DATA.md).
+- **Báo cáo & Số liệu thực tế:** Thư mục [`07_REPORTS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS) và file SSOT [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md).
 - **Đặc tả PRD:** Thư mục [`09_PRD/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD).
 - **Tư duy & Triết lý Lãnh đạo:** File [`10_LEADERSHIP_MINDSET/leadership-mindset.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/10_LEADERSHIP_MINDSET/leadership-mindset.md).
 - **Tin tức & Thị trường (Gemini Spark):** Thư mục [`11_NEWS_FEED/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/11_NEWS_FEED).
+- **Quản lý Đầu việc & Tasklist Dự án:** Thư mục [`12_TASK_MANAGEMENT/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/12_TASK_MANAGEMENT) và file chuẩn [`TASK_OPERATING_MODEL.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/12_TASK_MANAGEMENT/TASK_OPERATING_MODEL.md).
 
 ### Tầng 4: Master Skill & Framework Execution Layer (Tầng Thực Thi Master Skills)
 Kích hoạt 3 Master Skills trong thư mục [`.agents/skills/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/.agents/skills) kết hợp cùng kho tham chiếu [`03_SKILLS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS):
