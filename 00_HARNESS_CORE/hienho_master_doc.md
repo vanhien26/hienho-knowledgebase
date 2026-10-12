@@ -74,10 +74,13 @@
 2. **Agent-Led Search, SEO & GEO:** Tối ưu hóa hiển thị (Visibility) trên các công cụ tìm kiếm truyền thống và nền tảng AI Search (ChatGPT, Gemini, Perplexity) để thu hút High-intent users.
 3. **AI-Powered Operations:** Phối hợp cùng SE Team đưa các giải pháp, công cụ AI vào MoSpark Platform để tự động hóa và tối ưu hóa việc sản xuất, vận hành nội dung.
 
-**Scope quản lý & Dự án Chiến lược (5 Strategic Projects):**
-- Trực tiếp phối hợp tư vấn và triển khai 5 dự án chiến lược cốt lõi của Web Platform trong H2/2026: **Vehicle Hub, SMEs Hub, Cinema Hub, Student Hub, Financial Hub**.
-- Đảm bảo các Hub này được thiết kế theo đúng mô hình Product-Led Growth (sử dụng Utility Tool làm "mồi") và hướng tới Web-to-App Conversion cao nhất.
-- Đóng vai trò là cầu nối (Layer 3 - Product Lead) trực tiếp lấy yêu cầu và tư vấn giải pháp (SPA Framework) với PO/PM/MKT của từng Cell Team.
+**Scope quản lý & Danh mục Dự án Chiến lược (Ma trận 3+1 Zones):**
+- **Performance Zone (Duy nhất):** **Cinema Hub** (`/cinema`) - Trọng tâm: Migration 100% sang MoSpark CMS + Revised UI (MoBase), Native Web Dynamic QR Payment & Suất chiếu Deep Link.
+- **Transformation Zone (2 Mũi nhọn bứt phá quy mô):**
+  - **Financial Hub** (`/tai-chinh`): 7 Simulator Widgets (CIC, Tính lương, Phân bổ lương, Tỷ giá, Giá vàng, Lãi suất Net Yield Gap, Chứng chỉ quỹ), mở phễu Vay Nhanh & Ví Trả Sau.
+  - **Vehicle Hub** (`/tien-ich-giao-thong`): VTTI (Phạt nguội 0-CAPTCHA, Đóng phạt trực tuyến, ePass, Đăng kiểm, Giá xăng, Trạm sạc EV, Garage) và InsurTech (Bảo hiểm ô tô/xe máy). Trọng tâm: Migration MoSpark + Revised UI.
+- **Incubation Zone (Toàn bộ phân hệ còn lại):** **Insurance Hub** (`/bao-hiem`), **Travel Hub** (`/du-lich-di-lai`), **Student Hub** (`/sinh-vien`), **Lottery Hub** (`/ve-so`), **Payment Hub** (`/thanh-toan-so`), **Game Hub** (`/nap-the-game`), **Merchant Hub** (`/merchant`), **New User Hub** (`/download`) và **Home Web** (`momo.vn`).
+- **Productivity Zone (Hạ tầng Nền tảng):** **MoSpark Platform** (`mospark.mservice.io`) và **Web User Login & Auth Platform** (`m.momo.vn` - Platform chuyên biệt quản trị xác thực, SSO, Web Login và User Session).
 
 **Platform Health & Governance (Vẫn duy trì):**
 - Tiếp tục đảm bảo Technical Foundation (On-page, Schema, URL Governance) và Content Foundation được tuân thủ chặt chẽ.
@@ -542,22 +545,22 @@ flowchart TD
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Front-End Team Leader \</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoBase</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoBase, Cinema Hub, LnD Hub</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Quản trị MoBase Design System, R&D UI/UX Front-end, build các Hub Cinema và LnD.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cinema Hub, BMC Campaign</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Owner Cinema Hub; triển khai các BMC Campaign; quản trị MoBase Design System, R&D UI/UX Front-end.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Nhật Bùi</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Senior FE Developer</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">LDP Builder, Merchant SMEs Hub, Student Hub</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Triển khai Landing Page Builder, template Merchant Page, tích hợp Chatbot KB và CRUD.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Financial Hub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Owner Financial Hub end-to-end từ UI/UX đến build các Utility tools (calculator, simulator...).</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Thuận Võ</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Senior FE Developer</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Ads Manager, New User, Financial Hub, Vehicle Hub</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phân phối Ads/Widget, đo lường Umami, MoSpark Multimodal Studio (ComfyUI backend).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vehicle Hub, New User (Quiz/Game)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Owner Vehicle Hub và các Quiz/Game phục vụ New User; Ads Manager/Widget, đo lường Umami, MoSpark Multimodal Studio (ComfyUI backend).</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trọng Trần</strong></td>
@@ -571,23 +574,23 @@ flowchart TD
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Senior FE Developer \</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dev Ops</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark Auth, Infrastructure, CMS Access</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phân quyền user access, bảo mật Admin Panel, tối ưu hạ tầng, R&D giải pháp kỹ thuật mới.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiệu suất & Hạ tầng website, Access Control</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">DevOps: chịu trách nhiệm hiệu suất và hiệu năng website, hạ tầng, quản lý phân quyền (MoSpark Auth, CMS Access), xử lý các rủi ro kỹ thuật.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hiếu Nguyễn</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Back-End Team Leader \</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Widget Lead</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tracking Pipeline, User Identity, Web APIs</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đồng bộ Onelink, GA4/GTM/Umami, đối soát BigQuery, quản lý Identity Cross Platform.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hỗ trợ API: Payment Hub, Financial Hub</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hỗ trợ API cho các dự án cần thiết (Payment Hub, Financial Hub); Tracking Pipeline (Onelink, GA4/GTM/Umami), đối soát BigQuery, quản lý Identity Cross Platform.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Duy Trần</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Senior BE Developer</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chatbot/KB Solution, Admin Panel Tool</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chịu trách nhiệm backend Chatbot, RAG Knowledge Base Sync từ MoSpark và backend API microsites.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vé Số, BMC Campaign (Ví Trả Sau, Vay Nhanh)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Backend cho Vé Số và các dự án BMC (Ví Trả Sau, Vay Nhanh); RAG Knowledge Base Sync từ MoSpark và backend API microsites.</td>
     </tr>
   </tbody>
 </table>
@@ -610,14 +613,14 @@ flowchart TD
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hiến Hồ</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T5/2026</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trực tiếp điều phối 5 Strategic Hubs (Vehicle, SMEs, Cinema, Student, Financial). Hợp tác SE Team phát triển MoSpark GenAI. Set standard Technical SEO/GEO.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chịu trách nhiệm toàn bộ dự án trên kênh Web (không giới hạn theo từng Hub). Xây dựng Platform MoSpark: PLG Project, Editor, Microsite, Utility. Follow Dashboard Tracking cùng Data Analyst (Hải). Tư vấn các Cell Team triển khai dự án trên Web. Set standard Technical SEO/GEO.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Senior Product Marketing</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hoan Trần</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">T7/2026</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Content Strategy & Content Production qua MoSpark (cho các dự án Cell Teams). R&D mô hình AI.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vận hành Content Strategy cho toàn bộ dự án trên Web; chuẩn hóa Context, Prompt, Skill trong PLG Project; cùng Trọng xây dựng luồng tối ưu sản xuất Content Production; đề xuất ý tưởng Gamification cho các dự án (Cinema).</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Senior Product Designer</td>
@@ -628,9 +631,9 @@ flowchart TD
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Data Analyst</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hải Huỳnh</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hải Huỳnh (thuộc DA Team)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dedicated</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dedicated cho Web</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Data analysis, Full Funnel tracking, Monthly Performance Reporting.</td>
     </tr>
   </tbody>
@@ -2340,6 +2343,7 @@ Spoke: /thanh-toan-momo-{brand} → Breadcrumb về VTS Hub → Related merchant
 - momo.vn có backlink profile bất thường: tỷ lệ backlinks/referring domain cực cao (~96K backlinks/domain)
 - Có toxic anchor text nghiêm trọng trong backlink profile (cần disavow liên tục)
 - Nhiều BU đang thuê agency off-page riêng lẻ - thiếu coordination
+- **[Verify 10/10/2026 - GSC Top Linking Sites]:** 1.000 site / 118.757 linking pages, tập trung cực đoan - topcv.vn (70.100 pages -> 7 target) + cvs.vn (24.825 -> 11) = 79,9% toàn bộ; 9 site pattern site-wide (≥500 pages, ratio >20x) giữ 85,6%. Authority bị bẫy trên trang tuyển dụng, không đến trang thương mại (giải thích SoV Vay Nhanh 6%, BH ô tô 0%). Khối editorial chính thống chỉ ~5% (8 domain tin tức). **Link bẩn audit:** 147 domain candidate / 353 pg (0,30%) - trọng tâm 105+ gambling domain (chiến dịch link spam/negative SEO); VERIFY tay: ai-hay.vn (5.511pg -> 1.430 target), c99.nl (384pg), 2game.vn. Draft disavow: `07_REPORTS/backlink_disavow_candidates_2026-10-10.txt`.
 
 **Scope của Hiến:**
 - Set Off-Page Standard: tiêu chí chất lượng backlink (DR, relevance, anchor text policy)
@@ -2365,6 +2369,14 @@ Spoke: /thanh-toan-momo-{brand} → Breadcrumb về VTS Hub → Related merchant
 **[2026-05-15] - Backlink Audit Q2**
 - Participants: Hiến, Hạnh (Media Team)
 - Key decisions: Identify 15 domains uy tín cho outreach. Thống nhất SOP disavow hàng tháng cho các toxic links mới.
+
+**[2026-10-10] - GSC Data Consolidation (Crawl Stats + Top Linking Sites)**
+- Inputs: Crawl Stats 12/07 - 06/10 (1.810.416 requests) + Top Linking Sites (1.000 site / 118.757 pages) + Tracking MTD T10.
+- Key findings: Crawl T10 giảm 29,7% vs T9 (break cấu trúc ngày 01/10, cần điều tra robots.txt/deploy); 404 chiếm 4,14% (~860 req/ngày); Discovery chỉ 4,03%; backlink tập trung 79,9% vào 2 site job board.
+- **Link bẩn audit hoàn tất:** phân loại 1.000 site → 147 domain disavow candidate / 353 pg (0,30%): A1 gambling strong 67, A2 gambling pattern 36, B networks 18 (5 domain `*digitalbank` DNS chung name-services.com), C spam dirs 26. VERIFY tay: ai-hay.vn (1.430 target), c99.nl, 2game.vn. Nhận diện 105+ domain gambling = chiến dịch link spam/negative SEO nhắm momo.vn.
+- Outputs: `07_REPORTS/backlink_disavow_candidates_2026-10-10.txt` (draft GSC format) + `backlink_audit_detail_2026-10-10.csv`.
+- Key decisions: (1) Media Team review draft disavow, verify nhóm VERIFY tay rồi submit; topcv.vn/cvs.vn KHÔNG disavow (legitimate); (2) Bổ sung báo cáo Top Linked Pages làm input cho BRD v2 (bảng hiện tại chỉ có count, thiếu URL đích); (3) Đề xuất chuyển KPI off-page từ tổng backlink sang referring domains đến trang thương mại + editorial link ratio - đưa vào revision BRD Off-Page; (4) Kết nối với Action Items URL Governance (410 Gone) để giải phóng crawl budget.
+- Full recap: MEETING_RECAPS.md bản ghi 10/10/2026.
 
 ---
 

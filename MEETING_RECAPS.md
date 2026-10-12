@@ -7,6 +7,86 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 
 ## DANH SÁCH BẢN GHI RECAPS
 
+### Bản ghi ngày 10/10/2026: Tổng Hợp Đánh Giá Run-rate Target Tháng 10, Crawl Budget & Backlink Profile
+> **Thành phần:** Web Product Lead x Web Analytics x GSC Data Export (10/10/2026)
+> **Mục tiêu:** Tổng hợp 3 nguồn dữ liệu - Tracking MTD Tháng 10, GSC Crawl Stats, GSC Top Linking Sites - thành một đánh giá khả năng đạt Target tháng 10 và rủi ro chuyển tiếp cho Quý 4/2026.
+
+#### 1. Run-rate Đạt Target Tháng 10 (MTD 9 Ngày: 01/10 - 09/10)
+
+| Chỉ số | Giá trị |
+| :--- | :---: |
+| Target Tháng 10 | 3.665.607 PV |
+| Lũy kế MTD 9 ngày | 903.977 PV (24,66% Target / 29,03% thời gian) |
+| Daily pace hiện tại | 100.442 PV/ngày |
+| Dự phóng 31 ngày | 3.113.699 PV = **84,94% Target** (thiếu ~552K PV) |
+| Pace yêu cầu 22 ngày còn lại | **125.529 PV/ngày (+25% so với pace hiện tại)** |
+| So với pace Tháng 9 (131.692/ngày) | Thấp hơn 23,7% |
+
+- **Nguyên nhân Gap là 2 kênh:** Paid co về 89,9% (39.903 -> 4.037 PV/ngày so với T9) và Referral -26%. Organic ngược lại **tăng +20,4%** (54.127 -> 65.181 PV/ngày), chiếm 64,89% traffic MTD.
+- **Gap tập trung ở Hub:** Financial dự phóng chỉ 33% Target (-301K), New User 25,5% (-223K), Student 1,6% (-98K), Vehicle 33,4% (-67K). Chỉ Cinema vượt (+232K).
+- **3 Kịch bản:** Base (giữ pace) 84,9% / Target hit ~102% (cần Paid về 18-20K PV/ngày + Financial utilities bứt tốc) / Best ~110% (Paid full mức T9 + campaign 20/10, 11.11).
+
+#### 2. Crawl Budget (GSC Crawl Stats: 12/07 - 06/10/2026 - 1.810.416 requests, Host "No problems")
+
+| Tháng | Req/ngày | Download/ngày | KB/req | Resp time |
+| :--- | ---: | ---: | ---: | ---: |
+| T7 (12 ngày) | 20.008 | 799 MB | 40,9 | 1.008ms |
+| T8 | 22.186 | 2.043 MB | 94,3 | 839ms |
+| T9 | 21.114 | 2.031 MB | 98,5 | 789ms |
+| **T10 (6 ngày)** | **14.850** | **564 MB** | **38,9** | 852ms |
+
+- **2 điểm gãy cấu trúc:** 05/08 (KB/req x2,3 lần) và **01/10** (Req -29,7% vs T9, Download -72%, KB/req quay ngược về đúng mức trước 05/08). Sự đối xứng này cho thấy thay đổi cấu trúc (robots.txt / deploy / template weight), không phải mùa vụ.
+- **Chất lượng crawl:** 200 OK 94,11% / **404 = 4,14% (~860 request/ngày bị đốt)** / 301 1,71%.
+- **Cơ cấu purpose:** Refresh 95,97% / **Discovery chỉ 4,03%** - content mới tranh phần crawl rất nhỏ.
+- **File type:** HTML 73,68% / JS 19,94% / Image chỉ 0,09%.
+- **Bot:** Smartphone 51,2% - Desktop 12,54% / AdsBot 15,3% / Page resource load 20,14%.
+- **Cảnh báo leading indicator:** Crawl T10 sụp 29,7% nhưng Organic MTD T10 vẫn +20,4% - traffic đang chạy trên nền crawl của T9. Lag 2-6 tuần nghĩa là tác động thật sẽ lộ ra cuối T10 / đầu T11, đúng lúc Q4 cần giữ nhịp 4M PV.
+
+#### 3. Backlink Profile (GSC Top Linking Sites: 1.000 site / 118.757 linking pages)
+
+| Bucket | Số site | Linking pages | Tỷ trọng |
+| :--- | ---: | ---: | ---: |
+| ≥1.000 pages | 5 | 103.773 | **87,4%** |
+| 100-999 pages | 32 | 10.229 | 8,6% |
+| 10-99 pages | 105 | 2.625 | 2,2% |
+| 1-9 pages | 858 | 2.130 | **1,8%** |
+
+- **Tập trung cực đoan:** topcv.vn 70.100 pages -> 7 target (59,0%) + cvs.vn 24.825 -> 11 (20,9%) = **2 site giữ 79,9%**; Top 5 = 87,4%; Top 20 = 93,3%.
+- **9 site pattern site-wide** (≥500 pages, tỷ lệ pages/target >20x) giữ **85,6%** toàn bộ linking pages - xác nhận hiện trạng Task 5.17 (~96K backlinks/domain).
+- **Authority bị bẫy trên trang tuyển dụng:** topcv + cvs chỉ trỏ vào 7-11 URL careers, không rò rỉ sang trang thương mại. Đây là lý do cấu trúc giải thích nghịch lý: backlink đồ sộ nhưng SoV Vay Nhanh 6%, BH ô tô 0%.
+- **Khối editorial chính thống chỉ ~5%:** congly.vn, thuonghieucongluan.com.vn, baophapluat.vn, baolangson.vn, baodanang.vn, phunuvietnam.vn, baodongthap.vn, nghean24h.vn - phần tài sản duy nhất nên nhân rộng.
+- **Cờ đỏ review disavow:** ai-hay.vn (5.511 pages -> **1.430 target pages** - footprint bất thường), c99.nl (384/1), aeroleads.com (227/1), clashofclansviet.com (528/1), zegashop.com, ideashop.vn, cadoco.vn.
+- **[Audit link bẩn hoàn tất 10/10/2026]** - phân loại toàn bộ 1.000 site, kết quả 147 domain candidate / 353 linking pages (0,30% profile):
+  - A1 Gambling strong (bet/casino/slot trong domain): 67 site / 109 pg
+  - A2 Gambling pattern (digit + win/vip/club/88/789): 36 site / 45 pg
+  - B Link networks (5 domain `*digitalbank` DNS chung name-services.com + multi-TLD): 18 site / 28 pg
+  - C Spam directory/affiliate: 26 site / 171 pg
+  - VERIFY tay (chưa disavow): c99.nl (384 pg), 2game.vn (16 pg)
+  - Output: `07_REPORTS/backlink_disavow_candidates_2026-10-10.txt` (draft GSC format) + `backlink_audit_detail_2026-10-10.csv`
+  - Kết luận: **105+ domain gambling = chiến dịch link spam/negative SEO nhắm vào momo.vn**; volume toxic chỉ 0,30% nên Google nhiều khả năng đã ignore, disavow là bảo hiểm cho YMYL. Vấn đề cấu trúc thật vẫn là 85,6% site-wide job board - không disavow được, phải sửa bằng cách đưa link về trang thương mại.
+
+#### 4. Nhận Định Kết Hợp (3 nguồn dữ liệu)
+
+- **Cùng chỉ về một điểm:** quyền lực xếp hạng của momo.vn đang tập trung nơi không tạo doanh thu (trang tuyển dụng + template footer), crawl budget đang co lại đúng lúc cần đẩy content mới, và Discovery chỉ 4%.
+- **Rủi ro Quý 4:** Organic T10 đangneo được nhờ đà crawl T9 - đà đó đang hết. Base case 84,9% Target T10 khó đổi nếu không xử lý break 01/10 và không trả lại ngân sách Paid.
+- **Mâu thuẫn logic cần chốt mid-month:** Target T10 (3,67M) cao hơn T9 (3,51M) trong khi T9 vượt nhờ cú bùng Paid cuối tháng, còn T10 Paid đang co 90%. Giả định tăng target mà giữ nguyên cấu trúc spend là chưa validate.
+
+#### 5. Recommendations & Action Items
+
+| # | Action | Mục tiêu / KPI | Ưu tiên | Owner |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | Điều tra break 01/10: soi robots.txt hiện tại vs trước 01/10, đối chiếu deploy log | Khôi phục crawl về ~21K req/ngày | Cao nhất | Web Dev |
+| 2 | Scale lại Paid T10 (campaign 20/10, 11.11, ngân sách BH Ô tô 550 triệu) | Về 18-20K PV/ngày để chạm pace 118K | Cao nhất | Growth/Ads |
+| 3 | Đẩy Financial Hub utilities go-live nửa đầu tháng (Phân Bổ Lương, Chứng Chỉ Quỹ Phase 2) | Financial từ 9,6% lên >= run-rate 24,6% | Cao | Web Platform x FinHub Cell |
+| 4 | Chuyển URL chết sang **410 Gone** + gỡ khỏi sitemap (thay vì để 404) | Tiết kiệm ~860 req/ngày crawl budget | Cao | Web Dev theo Zero-Traffic Audit |
+| 5 | Review + disavow đợt 1: ai-hay.vn, c99.nl, aeroleads.com, clashofclansviet.com | Chặn toxic footprint, hoàn tất SOP disavow T10 | Trung bình | Media Team, audit lại trước khi submit |
+| 6 | Xuất thêm GSC Top Linked Pages (bản hiện tại chỉ có count, thiếu URL đích) | Biết authority rơi vào careers hay trang thương mại | Trung bình | SEO execute |
+| 7 | Chuyển KPI off-page từ tổng backlink sang: referring domains đến trang thương mại + editorial link ratio | Loại vanity metric | Trung bình | Đưa vào BRD Off-Page v2 revision |
+| 8 | Internal link + sitemap ping ngay khi URL mới go-live (Cinema, Financial) | Nâng Discovery trên 4,03% | Trung bình | Web Platform |
+| 9 | Nhân rộng 8 domain tin tức đang cho kết quả, mở scope list 15 domains outreach | Tăng khối editorial từ ~5% | Dài hạn | Inbound/Media |
+
+---
+
 ### Bản ghi ngày 26/09/2026 (Chiều): Cập Nhật Tiến Độ Sản Phẩm & Nội Dung 3 Web Hubs (Cinema, Vehicle, Financial)
 > **Thành phần:** Web Product Lead x Web Platform Team x Cell Teams (Movies, InsurTech, FinHub, Inbound Content)  
 > **Mục tiêu:** Cập nhật cột mốc sản phẩm, tiến độ Go-live/Staging và chiến lược tự chủ sản xuất nội dung trên 3 Hubs trọng điểm.

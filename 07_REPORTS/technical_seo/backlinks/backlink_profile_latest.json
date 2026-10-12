@@ -1,0 +1,90 @@
+{
+  "source": "Google Search Console - Top Linking Sites (www.momo.vn)",
+  "export_date": "2026-10-11",
+  "total_referring_domains": 1000,
+  "total_linking_pages": 118757,
+  "distribution_buckets": {
+    "ge_1000_pages": {
+      "sites_count": 5,
+      "linking_pages": 103773,
+      "pct": 87.4
+    },
+    "100_to_999_pages": {
+      "sites_count": 32,
+      "linking_pages": 10229,
+      "pct": 8.6
+    },
+    "10_to_99_pages": {
+      "sites_count": 105,
+      "linking_pages": 2625,
+      "pct": 2.2
+    },
+    "1_to_9_pages": {
+      "sites_count": 858,
+      "linking_pages": 2130,
+      "pct": 1.8
+    }
+  },
+  "top_concentrations": [
+    {
+      "domain": "topcv.vn",
+      "linking_pages": 70100,
+      "target_urls_count": 7,
+      "pct": 59.0
+    },
+    {
+      "domain": "cvs.vn",
+      "linking_pages": 24825,
+      "target_urls_count": 11,
+      "pct": 20.9
+    },
+    {
+      "domain": "ai-hay.vn",
+      "linking_pages": 5511,
+      "target_urls_count": 1430,
+      "pct": 4.6
+    },
+    {
+      "domain": "thuonghieucongluan.com.vn",
+      "linking_pages": 1685,
+      "target_urls_count": 33,
+      "pct": 1.4
+    },
+    {
+      "domain": "momo.careers",
+      "linking_pages": 1652,
+      "target_urls_count": 19,
+      "pct": 1.4
+    },
+    {
+      "domain": "mcredit.com.vn",
+      "linking_pages": 779,
+      "target_urls_count": 1,
+      "pct": 0.7
+    },
+    {
+      "domain": "saigonsneaker.com",
+      "linking_pages": 757,
+      "target_urls_count": 1,
+      "pct": 0.6
+    },
+    {
+      "domain": "congly.vn",
+      "linking_pages": 658,
+      "target_urls_count": 31,
+      "pct": 0.6
+    },
+    {
+      "domain": "nghean24h.vn",
+      "linking_pages": 623,
+      "target_urls_count": 4,
+      "pct": 0.5
+    },
+    {
+      "domain": "clashofclansviet.com",
+      "linking_pages": 528,
+      "target_urls_count": 1,
+      "pct": 0.4
+    }
+  ]
+}

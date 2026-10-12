@@ -1,0 +1,58 @@
+{
+  "lastFull": {
+    "month": "2026-09",
+    "pv": 3952859,
+    "prevPv": 3465363,
+    "target": 3509044
+  },
+  "running": {
+    "month": "2026-10",
+    "daysElapsed": 9,
+    "daysInMonth": 31,
+    "report": "monthly_10_2026_mtd_9d.json",
+    "pv": 903977,
+    "target": 3665607,
+    "dailyPace": 100441.89,
+    "forecast31d": 3113698.56,
+    "forecastPct": 84.94
+  },
+  "channels": {
+    "organic": 586630,
+    "direct": 199641,
+    "referral": 76577,
+    "paid": 36333,
+    "others": 4796
+  },
+  "hubs": [
+    {
+      "id": "cinema",
+      "name": "Cinema Hub",
+      "pv": 391925,
+      "target": 1117378
+    },
+    {
+      "id": "financial",
+      "name": "Financial Hub",
+      "pv": 43309,
+      "target": 450000
+    },
+    {
+      "id": "new_user",
+      "name": "New User Hub",
+      "pv": 22259,
+      "target": 300000
+    },
+    {
+      "id": "vehicle",
+      "name": "Vehicle Hub",
+      "pv": 9688,
+      "target": 100000
+    },
+    {
+      "id": "student",
+      "name": "Student Hub",
+      "pv": 467,
+      "target": 100000
+    }
+  ]
+}

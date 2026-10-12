@@ -76,33 +76,73 @@ Hàng triệu người dùng Internet phát sinh nhu cầu tra cứu hàng ngày
   </tbody>
 </table>
 
-## 3. PHÂN LOẠI HUBS (THEO 3 TẦNG VẬN HÀNH)
+## 3. PHÂN LOẠI HUBS (THEO MA TRẬN 3+1 ZONES QUẢN TRỊ CHIẾN LƯỢC)
 
-Toàn bộ các Hubs trên Web MoMo được quản lý theo **Ma trận 3 Tầng Chiến Lược**:
+Toàn bộ các Hubs và phân hệ trên Web MoMo được quản trị theo **Ma trận 3+1 Zones** nhằm tập trung tối đa hỏa lực, chống dàn trải tài nguyên:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                                   WEB PLATFORM HUBS                                    │
+│                        MA TRẬN QUẢN TRỊ DANH MỤC WEB MOMO                              │
 ├──────────────────────────┬────────────────────────────┬────────────────────────────────┤
-│ 1. FOUNDATION HUBS       │ 2. TRANSFORMATION HUBS     │ 3. INCUBATOR HUBS              │
-│ (Duy trì & Evergreen)    │ (Nâng cấp & Scale lớn)     │ (Ươm tạo & Thử nghiệm)         │
+│ 1. PERFORMANCE ZONE      │ 2. TRANSFORMATION ZONE     │ 3. INCUBATION ZONE             │
+│ (CVR & Giữ nhịp ổn định) │ (Bứt phá Quy mô Toàn Web)  │ (Ươm tạo & Xác thực Baseline)  │
 ├──────────────────────────┼────────────────────────────┼────────────────────────────────┤
-│ • Platform Hub (MoSpark) │ • Vehicle Hub              │ • SME / Merchant Hub           │
-│   (mospark.mservice.io)  │ • Financial Hub            │   - End User: momo.vn/merchant │
-│ • Cinema Hub             │ • New User Hub             │   - SME User: m.momo.vn        │
-│                          │                            │ • Student Hub                  │
-│                          │                            │ • Lottery Hub (momo.vn/ve-so)  │
-└──────────────────────────┴────────────────────────────┴────────────────────────────────┘
+│ • Cinema Hub             │ • Financial Hub            │ • Insurance Hub                │
+│   (momo.vn/cinema)       │   (momo.vn/tai-chinh)      │   (momo.vn/bao-hiem)           │
+│                          │ • Vehicle Hub              │ • Travel Hub                   │
+│                          │   (momo.vn/tien-ich-giao-  │   (momo.vn/du-lich-di-lai)     │
+│                          │    thong)                  │ • Student Hub                  │
+│                          │                            │   (momo.vn/sinh-vien)          │
+│                          │                            │ • Lottery Hub                  │
+│                          │                            │   (momo.vn/ve-so)              │
+│                          │                            │ • Payment Hub                  │
+│                          │                            │   (momo.vn/thanh-toan-so)      │
+│                          │                            │ • Game Hub                     │
+│                          │                            │   (momo.vn/nap-the-game)       │
+│                          │                            │ • Merchant Hub                 │
+│                          │                            │   (momo.vn/merchant)           │
+│                          │                            │ • New User Hub                 │
+│                          │                            │   (momo.vn/download)           │
+│                          │                            │ • Home Web                     │
+│                          │                            │   (momo.vn)                    │
+├──────────────────────────┴────────────────────────────┴────────────────────────────────┤
+│ 4. PRODUCTIVITY ZONE (Hạ tầng Kỹ thuật Nền tảng & Quản trị Hệ thống)                   │
+│ • MoSpark CMS Platform (mospark.mservice.io - MoLanding V2, Blog, MoBase Revised UI)   │
+│ • Web User Login & Auth Platform (m.momo.vn - Quản lý Web Auth, SSO & User Session)    │
+│ • GenAI Content Pipeline, Widget Store, Ads Manager, Umami Tracking, URL Governance    │
+└────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-1. **FOUNDATION HUBS (Duy trì Hiệu suất Nền & Hạ tầng):**
-   * **Platform Hub (MoSpark CMS Growth Engine - `mospark.mservice.io`):** Động cơ backend quản trị tập trung.
-   * **Cinema Hub (`momo.vn/cinema`):** Hub front-end vận hành như "Evergreen Engine" giữ nhịp Organic Traffic & bán vé phim.
-2. **TRANSFORMATION HUBS (Nâng cấp & Scale lớn):** 3 mũi nhọn chuyển đổi trọng điểm H2/2026, được tập trung tài nguyên nâng cấp bứt phá (Hồ sơ xe 500k profiles, Master Hub tài chính & 8M check CIC 2027, phễu New User toàn trang).
-3. **INCUBATOR HUBS (Ươm tạo & Thử nghiệm Tệp mới):** Các Hub đang thử nghiệm sản phẩm ngách:
-   * **SME / Merchant Hub:** Cấu trúc 2 giao diện: End User (`momo.vn/merchant`) & SME/Salesman (`m.momo.vn`).
-   * **Student Hub:** Cẩm nang & Review Trường học cho sinh viên U18-U23 (`momo.vn/sinh-vien`).
-   * **Lottery Hub (`momo.vn/ve-so`):** Cổng tra cứu KQXS 41 đài, Dò vé số tự động và Mua vé Vietlott / XSKT trực tiếp qua Native QR MoMo.
+### Chi tiết 4 Phân Nhóm Quản Trị:
+
+1. **PERFORMANCE ZONE (Duy nhất 1 dự án):**
+   * **Cinema Hub (`momo.vn/cinema`):** "Evergreen Engine" giữ nhịp Organic Traffic chủ lực toàn Web (chiếm 60% - 70% traffic). Trọng tâm hành động: **Migration 100% sang MoSpark CMS + Revised UI**, tích hợp Native Web Dynamic QR Payment và Deep Link suất chiếu trực tiếp để tối ưu hóa tỷ lệ chuyển đổi mua vé ngoài Web.
+
+2. **TRANSFORMATION ZONE (Duy nhất 2 dự án):**
+   * **Financial Hub (`momo.vn/tai-chinh`):** Định vị Financial Authority số 1 của MoMo. Tích hợp 7 Simulator Widgets (CIC, Tính lương, Phân bổ lương, Tỷ giá, Giá vàng, Lãi suất tiết kiệm Net Yield Gap, Chứng chỉ quỹ), mở phễu bán chéo Vay Nhanh & Ví Trả Sau. Chuẩn bị chiến dịch đón đầu mốc 8 triệu lượt check CIC toàn dân năm 2027.
+   * **Vehicle Hub (`momo.vn/tien-ich-giao-thong`):** Trụ cột tăng trưởng quy mô số 1 ngoài Web (>16.2M searches/tháng). Tích hợp liên phân hệ:
+     - **VTTI:** Phạt nguội 0-CAPTCHA, Đóng phạt trực tuyến C08/DVCQG, ePass/VETC, Đăng kiểm, Cây xăng Petrolimex/PVOil, Trạm sạc EV, Tìm garage, Cứu hộ.
+     - **InsurTech:** Bảo hiểm bắt buộc TNDS xe máy, Bảo hiểm thân vỏ ô tô.
+     - **Trọng tâm kỹ thuật:** **Migration sang MoSpark CMS + Revised UI**, đặt mục tiêu tạo lập 260K - 500K Hồ sơ phương tiện (Vehicle Profile).
+
+3. **INCUBATION ZONE (Toàn bộ các Hubs & Dự án còn lại):**
+   * **Insurance Hub (`momo.vn/bao-hiem`):** Cổng tra cứu và cẩm nang bảo hiểm con người & an sinh xã hội: BHXH, BHYT, Bảo hiểm tai nạn cá nhân, Bệnh hiểm nghèo. Tách biệt hoàn toàn khỏi bảo hiểm xe để định hình Topical Authority chuyên biệt.
+   * **Travel Hub (`momo.vn/du-lich-di-lai`):** Cổng dịch vụ Di chuyển & Du lịch: Vé máy bay, vé xe khách liên tỉnh, vé tàu hỏa, thanh toán quốc tế và mua SIM & eSIM du lịch quốc tế nhận QR tức thì ngoài Web.
+   * **Student Hub (`momo.vn/sinh-vien`):** Cẩm nang & đánh giá trường đại học, công cụ tính điểm xét tuyển THPT/học bạ, cổng tài chính tân sinh viên và đặc quyền Student Pass (đã bàn giao Self-Serve Builder cho Cell Team).
+   * **Lottery Hub (`momo.vn/ve-so`):** Cổng kết quả xổ số kiến thiết 3 miền sạch (Zero-Ad Experience) phủ 41 đài tỉnh thành, tra cứu theo ngày, dò vé số tự động, hướng dẫn Vietlott SMS và mua vé Vietlott/XSKT qua Native QR MoMo.
+   * **Payment Hub (`momo.vn/thanh-toan-so`):** Dịch vụ thanh toán số & Subscriptions định kỳ: Apple Services, Google Services, ChatGPT Plus, Spotify, Netflix, Steam...
+   * **Game Hub (`momo.vn/nap-the-game`):** Cổng nạp thẻ game, liên kết NPH game, nạp game đa nền tảng, nạp xu TikTok và tokens giải trí trực tiếp ngoài Web.
+   * **Merchant Hub (`momo.vn/merchant`):** Cổng giải pháp cho Doanh nghiệp & Tiểu thương SME: Giải pháp QR Đa Năng, Loa Soundbox, cổng tiếp nhận đăng ký mở điểm chấp nhận thanh toán (không gắn với `m.momo.vn`).
+   * **New User Hub (`momo.vn/download`):** Cổng chuyển đổi người dùng mới vãng lai (Acquisition Gateway), tối ưu hóa luồng quét QR theo hệ điều hành (iOS, Android) để nhận gói quà tân thủ 1.000.000đ.
+   * **Home Web (`momo.vn`):** Trang chủ thương hiệu độc lập, định vị Financial Authority & Trust Defense, điều hướng người dùng toàn trang, giữ vai trò Root Authority cho toàn bộ domain.
+
+4. **PRODUCTIVITY ZONE (Hạ tầng Kỹ thuật Nền tảng Dùng chung):**
+   * **MoSpark CMS Platform (`mospark.mservice.io`):** Động cơ backend CMS tăng trưởng tập trung, MoLanding V2, Widget Store, Ads Manager, GenAI Content Pipeline.
+   * **Web User Login & Auth Platform (`m.momo.vn`):** **Hạ tầng quản lý đăng nhập và định danh người dùng ngoài Web:** Xử lý xác thực người dùng (Web Login via Phone OTP / App QR Scan), Single Sign-On (SSO), Quản lý phiên truy cập (Session Management) và ánh xạ định danh người dùng (Web Identity Mapping) giữa Web và App MoMo. Tách biệt hoàn toàn khỏi các Hubs nghiệp vụ.
+   * **Umami Analytics Tracking Engine:** Hệ thống đo lường sự kiện độc lập, theo dõi chính xác từng hành vi sử dụng công cụ (Click, Calculate, Input, Select) theo quy chuẩn SSOT `umami_utility_tracking.md`.
+   * **Hạ tầng Quản trị Sức khỏe Web (URL Governance & SEO/GEO):** Hệ thống rà soát thanh lọc URL 0-traffic, kiểm soát ngân sách crawl bot, tối ưu Core Web Vitals và bảo vệ vị thế trích dẫn trên AI Search (ChatGPT, Gemini, Perplexity).
+
+---
 
 ## 4. CẤU TRÚC 4 THÀNH PHẦN CỦA MỘT WEB HUB CHUẨN
 

@@ -1,0 +1,16 @@
+{
+  "processed": {
+    "6bb113e75b3452033945f5347231c5b3d23398ade6abaa72a0529f23fbdc7f0c": {
+      "file": "backlink_sample.csv",
+      "format": "backlink",
+      "at": "2026-10-11T16:36:02.695303",
+      "pushed": true
+    },
+    "d618f2e1bbe5d25de45ca2b398e6ec673e55699efe2af24be0326c4486ab4f6f": {
+      "file": "sample_tasks.md",
+      "format": "tasks",
+      "at": "2026-10-11T16:36:30.675069",
+      "pushed": false
+    }
+  }
+}

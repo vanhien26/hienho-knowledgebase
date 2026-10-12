@@ -142,11 +142,11 @@ Cơ chế PLG của Cinema Hub dựa trên 5 Phễu Mồi Câu (Acquisition & En
 * **Lưu lượng Chốt Sổ Trọn Tháng 9:** Đạt **1.220.075 Pageviews** (chiếm **30,88% tổng lưu lượng Kênh Web**), giữ vững vị thế động cơ kéo traffic số 1 toàn sàn.
 * **Tỷ lệ hoàn thành Target:** Đạt **126,51% Target Tháng 9** (964.394 PVs) - **VƯỢT TARGET HUB CHÍNH THỨC +26,5% ~ +255.681 PVs** (Cán mốc kỷ lục lịch sử >1.22 triệu PVs).
 * **Tốc độ vận hành (Daily Pace):** Đạt **40.669 PV/ngày**.
-* **Phân rã theo Sub-pages Full Month T9:**
-  - Trang Chi tiết phim (Cinema_Page): **670.360 PVs** (54,9% Hub)
-  - Trang Cụm rạp (Cinema_Cineplex): **448.653 PVs** (36,8% Hub)
-  - Trang Blog điện ảnh (Cinema_Blog): **46.732 PVs** (3,8% Hub)
-  - Trang chủ Cinema & News: Lần lượt đạt **29.742 PVs** và **2.016 PVs**
+* **Phân rã theo Sub-pages Full Month T9 (Quy chuẩn Tracking mới):**
+  - Trang phim chi tiết (`Cinema_Page`): **670.360 PVs** (54,9% Hub)
+  - Trang Rạp phim (`Cinema_Cineplex`): **448.653 PVs** (36,8% Hub)
+  - `Cinema_Blog`: **46.732 PVs** (3,8% Hub)
+  - `Cinema_Home Page (Trang chủ Cinema)` & `Tin tức`: Lần lượt đạt **29.742 PVs** và **2.016 PVs**
 * **Paid Traffic Full Month T9:** Đạt **374.701 Pageviews** (chiếm 31,3% tổng Paid toàn Kênh Web).
 
 #### B. Cột Mốc Sản Phẩm & Chiến Lược Vận Hành Mới

@@ -64,30 +64,30 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
 | **Cinema_Blog** | Others | 389 | 151 | 70 | 71 |
 | **Cinema_Blog** | Paid | 18 | 11 | 57 | 69 |
 | **Cinema_Blog** | Referral | 4,091 | 3,713 | 3,866 | 3,356 |
-| **Cinema_Cineplex Page** | Direct | 12,886 | 13,805 | 15,061 | 14,529 |
-| **Cinema_Cineplex Page** | Organic | 352,702 | 379,527 | 389,838 | 384,126 |
-| **Cinema_Cineplex Page** | Others | 5,230 | 2,856 | 641 | 411 |
-| **Cinema_Cineplex Page** | Paid | 118 | 127 | 2,372 | 15,523 |
-| **Cinema_Cineplex Page** | Referral | 3,765 | 4,136 | 4,127 | 4,095 |
-| **Cinema_Home Page** | Direct | 3,531 | 3,726 | 4,467 | 4,512 |
-| **Cinema_Home Page** | Organic | 27,516 | 29,603 | 32,885 | 27,509 |
-| **Cinema_Home Page** | Others | 1,453 | 841 | 272 | 246 |
-| **Cinema_Home Page** | Paid | 89 | 177 | 368 | 1,708 |
-| **Cinema_Home Page** | Referral | 1,061 | 1,180 | 1,002 | 1,022 |
+| **Trang Rạp phim** | Direct | 12,886 | 13,805 | 15,061 | 14,529 |
+| **Trang Rạp phim** | Organic | 352,702 | 379,527 | 389,838 | 384,126 |
+| **Trang Rạp phim** | Others | 5,230 | 2,856 | 641 | 411 |
+| **Trang Rạp phim** | Paid | 118 | 127 | 2,372 | 15,523 |
+| **Trang Rạp phim** | Referral | 3,765 | 4,136 | 4,127 | 4,095 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Direct | 3,531 | 3,726 | 4,467 | 4,512 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Organic | 27,516 | 29,603 | 32,885 | 27,509 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Others | 1,453 | 841 | 272 | 246 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Paid | 89 | 177 | 368 | 1,708 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Referral | 1,061 | 1,180 | 1,002 | 1,022 |
 | **Cinema_Landing Page** | Direct | 7 | 15 | 8 | 5 |
 | **Cinema_Landing Page** | Organic | 133 | 200 | 75 | 88 |
 | **Cinema_Landing Page** | Others | 2 | 5 | 0 | 7 |
 | **Cinema_Landing Page** | Referral | 3 | 2 | 2 | 4 |
-| **Cinema_News** | Direct | 175 | 261 | 285 | 178 |
-| **Cinema_News** | Organic | 1,969 | 2,670 | 3,941 | 2,798 |
-| **Cinema_News** | Others | 19 | 21 | 3 | 22 |
-| **Cinema_News** | Paid | 0 | 2 | 17 | 32 |
-| **Cinema_News** | Referral | 232 | 167 | 239 | 106 |
-| **Cinema_Page** | Direct | 195,502 | 44,159 | 39,230 | 30,205 |
-| **Cinema_Page** | Organic | 293,345 | 269,361 | 256,968 | 265,423 |
-| **Cinema_Page** | Others | 7,614 | 3,940 | 969 | 833 |
-| **Cinema_Page** | Paid | 1,207 | 24,271 | 3,457 | 19,946 |
-| **Cinema_Page** | Referral | 9,588 | 11,405 | 9,283 | 7,898 |
+| **Tin tức** | Direct | 175 | 261 | 285 | 178 |
+| **Tin tức** | Organic | 1,969 | 2,670 | 3,941 | 2,798 |
+| **Tin tức** | Others | 19 | 21 | 3 | 22 |
+| **Tin tức** | Paid | 0 | 2 | 17 | 32 |
+| **Tin tức** | Referral | 232 | 167 | 239 | 106 |
+| **Trang phim chi tiết** | Direct | 195,502 | 44,159 | 39,230 | 30,205 |
+| **Trang phim chi tiết** | Organic | 293,345 | 269,361 | 256,968 | 265,423 |
+| **Trang phim chi tiết** | Others | 7,614 | 3,940 | 969 | 833 |
+| **Trang phim chi tiết** | Paid | 1,207 | 24,271 | 3,457 | 19,946 |
+| **Trang phim chi tiết** | Referral | 9,588 | 11,405 | 9,283 | 7,898 |
 | **Cross Border** | Direct | 245 | 351 | 209 | 139 |
 | **Cross Border** | Organic | 2,242 | 2,081 | 2,099 | 2,380 |
 | **Cross Border** | Others | 62 | 29 | 12 | 15 |
@@ -343,30 +343,30 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
 | **Cinema_Blog** | Others | 136 | 17 | 18 | 16 | 17 |
 | **Cinema_Blog** | Paid | 3 | 3 | 2 | 35 | 61 |
 | **Cinema_Blog** | Referral | 1,293 | 1,235 | 1,245 | 1,174 | 823 |
-| **Cinema_Cineplex Page** | Direct | 3,651 | 4,397 | 4,625 | 4,706 | 7,473 |
-| **Cinema_Cineplex Page** | Organic | 107,339 | 125,573 | 115,461 | 118,598 | 108,844 |
-| **Cinema_Cineplex Page** | Others | 1,961 | 749 | 245 | 103 | 110 |
-| **Cinema_Cineplex Page** | Paid | 35 | 52 | 19 | 3,213 | 3,290 |
-| **Cinema_Cineplex Page** | Referral | 1,025 | 1,421 | 1,177 | 1,312 | 1,107 |
-| **Cinema_Home Page** | Direct | 1,050 | 1,155 | 1,498 | 1,870 | 990 |
-| **Cinema_Home Page** | Organic | 8,250 | 9,750 | 10,876 | 8,833 | 6,722 |
-| **Cinema_Home Page** | Others | 493 | 250 | 110 | 107 | 49 |
-| **Cinema_Home Page** | Paid | 9 | 45 | 12 | 225 | 176 |
-| **Cinema_Home Page** | Referral | 263 | 449 | 369 | 312 | 246 |
+| **Trang Rạp phim** | Direct | 3,651 | 4,397 | 4,625 | 4,706 | 7,473 |
+| **Trang Rạp phim** | Organic | 107,339 | 125,573 | 115,461 | 118,598 | 108,844 |
+| **Trang Rạp phim** | Others | 1,961 | 749 | 245 | 103 | 110 |
+| **Trang Rạp phim** | Paid | 35 | 52 | 19 | 3,213 | 3,290 |
+| **Trang Rạp phim** | Referral | 1,025 | 1,421 | 1,177 | 1,312 | 1,107 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Direct | 1,050 | 1,155 | 1,498 | 1,870 | 990 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Organic | 8,250 | 9,750 | 10,876 | 8,833 | 6,722 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Others | 493 | 250 | 110 | 107 | 49 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Paid | 9 | 45 | 12 | 225 | 176 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Referral | 263 | 449 | 369 | 312 | 246 |
 | **Cinema_Landing Page** | Direct | 1 | 3 | 4 | 0 | 6 |
 | **Cinema_Landing Page** | Organic | 23 | 69 | 28 | 18 | 30 |
 | **Cinema_Landing Page** | Others | 0 | 2 | 0 | 7 | 0 |
 | **Cinema_Landing Page** | Referral | 0 | 1 | 0 | 0 | 0 |
-| **Cinema_News** | Direct | 58 | 70 | 94 | 74 | 42 |
-| **Cinema_News** | Organic | 628 | 826 | 1,005 | 980 | 553 |
-| **Cinema_News** | Others | 10 | 3 | 2 | 11 | 1 |
-| **Cinema_News** | Paid | 0 | 0 | 0 | 10 | 4 |
-| **Cinema_News** | Referral | 121 | 46 | 56 | 47 | 23 |
-| **Cinema_Page** | Direct | 46,890 | 15,496 | 15,156 | 9,552 | 7,497 |
-| **Cinema_Page** | Organic | 100,811 | 85,155 | 80,637 | 73,070 | 88,920 |
-| **Cinema_Page** | Others | 2,821 | 1,125 | 436 | 184 | 248 |
-| **Cinema_Page** | Paid | 657 | 24,006 | 1,828 | 1,577 | 274,657 |
-| **Cinema_Page** | Referral | 2,938 | 4,798 | 3,226 | 1,937 | 1,748 |
+| **Tin tức** | Direct | 58 | 70 | 94 | 74 | 42 |
+| **Tin tức** | Organic | 628 | 826 | 1,005 | 980 | 553 |
+| **Tin tức** | Others | 10 | 3 | 2 | 11 | 1 |
+| **Tin tức** | Paid | 0 | 0 | 0 | 10 | 4 |
+| **Tin tức** | Referral | 121 | 46 | 56 | 47 | 23 |
+| **Trang phim chi tiết** | Direct | 46,890 | 15,496 | 15,156 | 9,552 | 7,497 |
+| **Trang phim chi tiết** | Organic | 100,811 | 85,155 | 80,637 | 73,070 | 88,920 |
+| **Trang phim chi tiết** | Others | 2,821 | 1,125 | 436 | 184 | 248 |
+| **Trang phim chi tiết** | Paid | 657 | 24,006 | 1,828 | 1,577 | 274,657 |
+| **Trang phim chi tiết** | Referral | 2,938 | 4,798 | 3,226 | 1,937 | 1,748 |
 | **Cross Border** | Direct | 87 | 134 | 98 | 30 | 39 |
 | **Cross Border** | Organic | 722 | 706 | 739 | 684 | 616 |
 | **Cross Border** | Others | 14 | 11 | 4 | 9 | 1 |
@@ -590,6 +590,68 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
 * **Student Hub (Incubator Zone):** **7.248 PVs** (0.2% total traffic) - Đạt **7.3%** Target (Target 100K).
 * **Tổng Cộng 5 Hubs:** **2.003.988 PVs** (Chiếm **50.7%** tổng traffic toàn Web) - **VƯỢT TARGET TỔNG 5 HUBS +10.5%** (Target 1.814M).
 
+### Phễu Chuyển Đổi Web-to-App & New User Full Month Tháng 9 (30d):
+* **Total Installs (Cài đặt):** **10.501** (Tăng +4.6% MoM so với T8 là 10.041; gấp 2.0 lần so với baseline T7 là 5.239).
+* **Đăng Ký Tài Khoản (REG):** **3.569** (Tăng +10.5% MoM; CVR Install -> REG tăng lên **34.0%**).
+* **Liên Kết Ngân Hàng (Map Bank / N2MM):** **2.276** (Bứt phá **+25.2% MoM**; CVR REG -> Map tăng vọt từ 56.3% lên **63.8%**).
+* **Active MAU (Kích hoạt giao dịch đầu):** **1.328** (Tăng **+29.1% MoM**; CVR Map -> MAU đạt **58.3%**).
+* **End-to-End CVR (Install -> Map N2MM):** Đạt **21.7%** (Tăng +3.6 p.p so với T7 & T8).
+* **Phân bổ theo hệ điều hành:** iOS mang lại 1.254 Map Bank (55.1% N2MM) và 753 MAU (56.7% MAU) với CVR REG->Map kỷ lục 72.5%; Android mang lại 1.022 Map Bank và 575 MAU.
+
+| Cụm Kênh / Placement | Installs | Tỷ Trọng | REG (CVR) | Map Bank (CVR) | Active MAU | End-to-End CVR |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: |
+| **C.CHAOMOMO (Banner đại trà)** | 8.906 | 84,8% | 3.045 (34,2%) | 1.971 (64,7%) | 1.127 | 12,7% |
+| **Cinema Hub (Rạp phim & Lotte)** | 1.221 | 11,6% | 409 (33,5%) | 252 (61,6%) | 169 | **13,8%** |
+| **Merchant Hub (Đối tác)** | 317 | 3,0% | 99 (31,2%) | 41 (41,4%) | 26 | 8,2% |
+| **Bảo Hiểm (InsurTech)** | 56 | 0,5% | 16 (28,6%) | 12 (75,0%) | 6 | 10,7% |
+| **Khác (PXTĐH26)** | 1 | 0,0% | 0 (0,0%) | 0 (0,0%) | 0 | 0,0% |
+| **Tổng Toàn Nền Tảng** | **10.501** | **100,0%** | **3.569 (34,0%)** | **2.276 (63,8%)** | **1.328** | **12,6%** |
+
+---
+
+### 3.2 CẬP NHẬT HIỆU SUẤT MTD THÁNG 10/2026 (LŨY KẾ 9 NGÀY: 01/10 - 09/10/2026)
+
+Dữ liệu trích xuất tự động từ tệp tracking mới nhất `Web Performance Tracking (2).xlsx` (cắt số T+1 đến hết ngày 09/10/2026):
+
+* **Target Tháng 10:** 3.665.607 PV.
+* **Lũy kế MTD 9 ngày (Actual):** 903.977 PV (Đạt **24.66%** Target sau 9/31 ngày = 29.03% thời gian).
+* **Nhịp chạy trung bình ngày (Daily Pace):** 100.441,89 PV/ngày.
+* **Dự phóng cả tháng (Forecast 31 ngày):** 3.113.698,56 PV (Đạt **84.94%** Target tháng).
+
+#### Bảng Cơ Cấu Kênh Traffic MTD 9 Ngày Tháng 10:
+
+| Kênh (Channel) | Lũy Kế MTD (PV) | Tỷ Trọng (%) | Đánh Giá Tín Hiệu & Độ Lành Mạnh |
+| :--- | :---: | :---: | :--- |
+| **Organic** | 586.630 | 64.89% | Kênh cốt lõi chủ lực áp đảo, phản ánh nền tảng Web tăng trưởng tự nhiên vững chắc. |
+| **Direct** | 199.641 | 22.08% | Nhận diện thương hiệu và tỷ lệ người dùng ghi nhớ URL trực tiếp duy trì mức cao. |
+| **Referral** | 76.577 | 8.47% | Lưu lượng điều hướng đối tác và liên kết ngoài ổn định. |
+| **Paid** | 36.333 | 4.02% | Ngân sách quảng cáo thu gọn tối đa, nền tảng không phụ thuộc vào dòng tiền Paid. |
+| **Others** | 4.796 | 0.53% | Lưu lượng chưa gắn tag hoặc chiến dịch thử nghiệm quy mô nhỏ. |
+| **TỔNG CỘNG** | **903.977** | **100.00%** | **Organic + Direct chiếm 86.97% tổng lưu lượng toàn Web.** |
+
+#### Bảng Theo Dõi Hiệu Suất Theo Web Hubs MTD 9 Ngày:
+
+| Web Hub | Zone | Lũy Kế MTD (PV) | Target Tháng 10 | % Đạt Target | Nhịp Chạy (PV/ngày) | Dự Phóng 31 Ngày (PV) | Trạng Thái & Dự Báo |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
+| **Cinema Hub** | Performance | 391.925 | 1.117.378 | 35.08% | 43.547 | 1.349.964 | Dự kiến vượt Target +20.8%, tiếp tục là đầu kéo tăng trưởng chính. |
+| **Financial Hub** | Transformation | 43.309 | 450.000 | 9.62% | 4.812 | 149.175 | Tiến độ chậm so với run-rate; chờ lực đẩy từ các tiện ích mới go-live. |
+| **New User Hub** | Incubation | 22.259 | 300.000 | 7.42% | 2.473 | 76.670 | Đã tách độc lập Home Web (56.260 PV); chiến dịch Paid chưa bung lớn. |
+| **Vehicle Hub** | Transformation | 9.688 | 100.000 | 9.69% | 1.076 | 33.370 | Phạt nguội duy trì đều đặn; cần đẩy nhanh tiến độ Garage và Bảo hiểm. |
+| **Student Hub** | Incubation | 467 | 100.000 | 0.47% | 52 | 1.609 | Cần kích hoạt phân phối công cụ xếp hạng trường và gói đặc quyền SV. |
+| **Home Web** | Platform | 56.260 | - | - | 6.251 | 193.784 | Tách độc lập khỏi New User Hub để phản ánh đúng traffic cổng vào. |
+
+#### Bảng Phân Rã Lưu Lượng Cinema Hub Sub-pages (MTD 9 Ngày Tháng 10):
+
+| Phân Hệ Sub-page | Tên Quy Chuẩn Tracking | Lũy Kế MTD (PV) | Tỷ Trọng Hub (%) | Kênh Chủ Lực | Ghi Chú & Định Hướng |
+| :--- | :--- | :---: | :---: | :--- | :--- |
+| **Trang Rạp phim** | `Cinema_Cineplex` | **238.254** | **60.79%** | Organic (97.1%) | Đầu kéo Organic mạnh nhất Hub; cụm rạp CGV, Lotte, NCC |
+| **Trang phim chi tiết** | `Cinema_Page` | **135.729** | **34.63%** | Organic (89.0%) | Lượng tìm kiếm phim chiếu rạp; kết thúc tài trợ Paid |
+| **Cinema_Home Page (Trang chủ Cinema)** | `Cinema_Home Page` | **11.839** | **3.02%** | Organic (87.0%) | Cổng vào tổng quan Cinema Hub, Direct chiếm 9.8% |
+| **Cinema_Blog** | `Cinema_Blog` | **5.083** | **1.30%** | Organic (83.0%) | Bài viết review/điện ảnh do GenAI tự chủ sản xuất |
+| **Tin tức** | `Cinema_News` | **996** | **0.25%** | Organic (86.0%) | Tin vắn điện ảnh, tin khuyến mãi |
+| **Cinema_Landing Page** | `Cinema_Landing Page` | **24** | **0.01%** | Organic (91.7%) | Landing page chiến dịch cũ |
+| **TỔNG CỘNG CINEMA HUB** | `Cinema Hub` | **391.925** | **100.00%** | **Organic (92.4%)** | **Vượt nhịp Target (+20.8%)** |
+
 ---
 
 ### 3.1. CẬP NHẬT HIỆU SUẤT MTD 6 NGÀY THÁNG 10/2026 (01/10 - 06/10/2026)
@@ -671,7 +733,7 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
 
 ### Mapping Tên Pivot:
 * **Vehicle Sheet:** Phạt nguội, Bảo Hiểm Ô Tô, Bảo Hiểm Xe Máy, Phí Không Dừng, Tiện Ích Giao Thông.
-* **Cinema Sheet:** Cinema_Blog, Cinema_Cineplex Page, Cinema_Home Page, Cinema_Landing Page, Cinema_News, Cinema_Page.
+* **Cinema Sheet:** Cinema_Blog, Trang Rạp phim (Cinema_Cineplex), Cinema_Home Page (Trang chủ Cinema), Cinema_Landing Page, Tin tức (Cinema_News), Trang phim chi tiết (Cinema_Page).
 * **Financial Sheet:** Vay Nhanh, Tín Dụng FastMoney, Ví Trả Sau, Điểm Tín Dụng, Tiết Kiệm Online, Túi Thần Tài, Chứng Khoán, Chứng Chỉ Quỹ, Ngân Hàng, Trả Góp, Bảo Hiểm Y Tế.
 
 ---
@@ -709,5 +771,95 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
 * **Go-Live 3 Trang Chi Tiết:** Đã chính thức Go-live 3 sub-page: Tính Lương (`/tai-chinh/tinh-luong`), Tỷ Giá (`/tai-chinh/ty-gia`), Giá Vàng (`/tai-chinh/gia-vang`).
 * **Staging Trang Phân Bổ Lương:** Đã lên Staging trang Phân Bổ Lương (`/tai-chinh/phan-bo-luong`).
 * **Phát triển Phase 2 Chứng Chỉ Quỹ:** Đang phối hợp FinHub Cell Team xây dựng Tool & Page Chứng Chỉ Quỹ (`/tai-chinh/chung-chi-quy`).
+
+---
+
+## 7. CRAWL BUDGET & BACKLINK AUTHORITY (GSC DATA EXPORT 10/10/2026)
+
+Nguồn: Google Search Console - Crawl Stats (`www.momo.vn`, window 12/07 - 06/10/2026) và Top Linking Sites (1.000 site). Dữ liệu này là **leading indicator** cho traffic Organic những tuần kế tiếp, đọc cùng lúc với phần MTD T10 ở mục 3.2.
+
+### 7.1 Crawl Budget - Volume & Chất Lượng
+
+| Tháng | Req/ngày | Download/ngày | KB/req | Resp time |
+| :--- | ---: | ---: | ---: | ---: |
+| T7 (12 ngày) | 20.008 | 799 MB | 40,9 | 1.008ms |
+| T8 | 22.186 | 2.043 MB | 94,3 | 839ms |
+| T9 | 21.114 | 2.031 MB | 98,5 | 789ms |
+| **T10 (6 ngày)** | **14.850** | **564 MB** | **38,9** | 852ms |
+
+* **Tổng request window:** 1.810.416 - Host status: No problems.
+* **Break 01/10:** Req/ngày **-29,7%** so với T9, Download **-72%**, KB/req quay về đúng mức trước breakpoint 05/08 - dấu hiệu thay đổi cấu trúc (robots.txt / deploy), không phải mùa vụ. Ngày 04/10 đáy 10.391 req.
+* **404 = 4,14%** (~75.000 request, ~860/ngày bị đốt) - trực tiếp liên kết Zero-Traffic URL Audit (3.670 URLs). Google recrawl 404 nhiều lần nhưng dừng nhanh với 410 Gone.
+* **Discovery chỉ 4,03%** (Refresh 95,97%) - content mới(Cinema GenAI, Financial utilities) tranh phần crawl rất nhỏ.
+* **Cơ cấu:** HTML 73,68% / JS 19,94% / Image 0,09%. Bot: Smartphone 51,2% / Desktop 12,54% / AdsBot 15,3% / Page resource load 20,14%.
+* **Rủi ro Q4:** Crawl T10 sụp 29,7% trong khi Organic MTD T10 vẫn +20,4% - traffic đang chạy trên nền crawl T9. Lag 2-6 tuần, tác động thật dự kiến lộ cuối T10 / đầu T11.
+
+### 7.2 Backlink Authority Concentration (1.000 site / 118.757 linking pages)
+
+| Bucket | Số site | Linking pages | Tỷ trọng |
+| :--- | ---: | ---: | ---: |
+| ≥1.000 pages | 5 | 103.773 | **87,4%** |
+| 100-999 pages | 32 | 10.229 | 8,6% |
+| 10-99 pages | 105 | 2.625 | 2,2% |
+| 1-9 pages | 858 | 2.130 | **1,8%** |
+
+* **Tập trung:** topcv.vn (70.100 pages -> 7 target) + cvs.vn (24.825 -> 11) = **79,9%** toàn bộ linking pages. 9 site pattern site-wide giữ 85,6%.
+* **Authority bẫy trên trang tuyển dụng:** 94.925 link chỉ trỏ vào 7-11 URL careers, không đến trang thương mại - lý do cấu trúc giải thích SoV thấp ở Vay Nhanh (6%) và BH ô tô (0%).
+* **Khối editorial chính thống chỉ ~5%:** 8 domain tin tức (congly.vn, baophapluat.vn, thuonghieucongluan.com.vn, baolangson.vn, baodanang.vn, phunuvietnam.vn, baodongthap.vn, nghean24h.vn) - tài sản duy nhất nên nhân rộng.
+* **Cờ đỏ disavow đợt 1:** ai-hay.vn (5.511 pages -> 1.430 target - footprint bất thường), c99.nl, aeroleads.com, clashofclansviet.com.
+* **Hành động bổ sung dữ liệu:** xuất thêm GSC Top Linked Pages (bản này chỉ có count, thiếu URL đích) để xác định authority đang rơi vào trang nào.
+
+### 7.3 Action Items Liên Quan
+
+| # | Action | Mục tiêu | Ưu tiên |
+| :--- | :--- | :--- | :--- |
+| 1 | Điều tra break 01/10 (robots.txt + deploy log) | Khôi phục crawl về ~21K req/ngày | Cao nhất |
+| 2 | Chuyển URL chết sang 410 Gone + gỡ khỏi sitemap | Tiết kiệm ~860 req/ngày | Cao |
+| 3 | Review + disavow đợt 1 (4 domain cờ đỏ) | Chặn toxic footprint | Trung bình |
+| 4 | Internal link + sitemap ping khi URL mới go-live | Nâng Discovery trên 4,03% | Trung bình |
+| 5 | Chuyển KPI off-page sang referring domains đến trang thương mại | Loại vanity metric | Trung bình |
+
+* Chi tiết đầy đủ và Recommendations: xem Bản ghi ngày 10/10/2026 trong `MEETING_RECAPS.md`.
+
+---
+
+## 8. PHỄU CHUYỂN ĐỔI NEW USER & ACTIVE MAU (WEB-TO-APP PERFORMANCE)
+
+Dữ liệu Single Source of Truth (SSOT) phễu chuyển đổi người dùng mới từ Nền Tảng Web (Balloon Ads, Contextual Sticky Bar, Hub Placements) được lưu trữ tại `07_REPORTS/data/web_performance_new_user_funnel_09_2026.csv`.
+
+### 8.1 Chuỗi Hiệu Suất Tăng Trưởng Phễu Toàn Sàn (Tháng 7 - Tháng 9/2026)
+
+| Giai Đoạn Phễu (Funnel Stage) | Tháng 07/2026 | Tháng 08/2026 | Tháng 09/2026 | Tăng Trưởng MoM (T9 vs T8) | Tăng Trưởng vs Baseline T7 |
+| :--- | ---: | ---: | ---: | :--- | :--- |
+| **1. Total Installs (Cài đặt)** | 5.239 | 10.041 | **10.501** | +4,6% | +100,4% (gấp 2.0 lần) |
+| **2. Đăng Ký Tài Khoản (REG)** | 1.682 | 3.229 | **3.569** | +10,5% | +112,2% |
+| *-- Tỷ lệ CVR (REG / Install)* | 32,1% | 32,1% | **34,0%** | +1,9 p.p | +1,9 p.p |
+| **3. Liên Kết Ngân Hàng (Map Bank / N2MM)** | 948 | 1.818 | **2.276** | +25,2% | +140,1% (gấp 2.4 lần) |
+| *-- Tỷ lệ CVR (Map / REG)* | 56,3% | 56,3% | **63,8%** | +7,5 p.p | +7,5 p.p |
+| **4. Active MAU (Giao dịch đầu tiên)** | 536 | 1.029 | **1.328** | +29,1% | +147,8% (gấp 2.5 lần) |
+| *-- Tỷ lệ CVR (MAU / Map)* | 56,5% | 56,6% | **58,3%** | +1,7 p.p | +1,8 p.p |
+| **End-to-End CVR (Install -> Map N2MM)** | **18,1%** | **18,1%** | **21,7%** | **+3,6 p.p** | **+3,6 p.p** |
+| **End-to-End CVR (Install -> Active MAU)** | **10,2%** | **10,2%** | **12,6%** | **+2,4 p.p** | **+2,4 p.p** |
+
+### 8.2 Tổng Hợp Hiệu Suất Theo Kênh / Placement (Tháng 09/2026)
+
+| Cụm Sản Phẩm / Placement | Installs | Tỷ Trọng | REG | CVR REG | Map Bank | CVR Map | Active MAU | End-to-End CVR |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| **C.CHAOMOMO (Banner đại trà)** | 8.906 | 84,8% | 3.045 | 34,2% | 1.971 | 64,7% | 1.127 | 12,7% |
+| **Cinema Hub (Rạp phim & Lotte)** | 1.221 | 11,6% | 409 | 33,5% | 252 | 61,6% | 169 | **13,8%** |
+| **Merchant Hub (Đối tác)** | 317 | 3,0% | 99 | 31,2% | 41 | 41,4% | 26 | 8,2% |
+| **Bảo Hiểm (InsurTech)** | 56 | 0,5% | 16 | 28,6% | 12 | 75,0% | 6 | 10,7% |
+| **Khác (PXTĐH26)** | 1 | 0,0% | 0 | 0,0% | 0 | 0,0% | 0 | 0,0% |
+| **Tổng Toàn Sàn** | **10.501** | **100,0%** | **3.569** | **34,0%** | **2.276** | **63,8%** | **1.328** | **12,6%** |
+
+### 8.3 So Sánh Hiệu Suất Nền Tảng (Android vs iOS - Tháng 09/2026)
+
+| Hệ Điều Hành | Installs | Tỷ Trọng | REG | CVR REG | Map Bank | CVR Map | Active MAU | End-to-End CVR |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| **Android** | 5.466 | 52,1% | 1.840 | 33,7% | 1.022 | 55,5% | 575 | 10,5% |
+| **iOS** | 5.035 | 47,9% | 1.729 | 34,3% | **1.254** | **72,5%** | **753** | **15,0%** |
+
+* **Đặc tính cốt lõi:** Người dùng iOS áp đảo về chất lượng chuyển đổi: CVR từ REG sang Map Bank đạt **72,5%** (cao hơn Android +17,0 p.p), mang lại **55,1% tổng số lượng N2MM** và **56,7% tổng số Active MAU** toàn sàn dù lượng cài đặt thấp hơn.
+
 
 
