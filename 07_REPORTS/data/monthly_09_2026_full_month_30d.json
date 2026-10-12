@@ -56,5 +56,15 @@
       "target": 100000,
       "pct": 7.25
     }
+  },
+  "conversion_funnel": {
+    "installs": 10501,
+    "reg": 3569,
+    "reg_cvr": 34.0,
+    "map_bank": 2276,
+    "map_cvr": 63.8,
+    "active_mau": 1328,
+    "mau_cvr": 58.3,
+    "end_to_end_cvr": 12.6
   }
 }

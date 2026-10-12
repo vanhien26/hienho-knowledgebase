@@ -590,6 +590,23 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
 * **Student Hub (Incubator Zone):** **7.248 PVs** (0.2% total traffic) - Đạt **7.3%** Target (Target 100K).
 * **Tổng Cộng 5 Hubs:** **2.003.988 PVs** (Chiếm **50.7%** tổng traffic toàn Web) - **VƯỢT TARGET TỔNG 5 HUBS +10.5%** (Target 1.814M).
 
+### Phễu Chuyển Đổi Web-to-App & New User Full Month Tháng 9 (30d):
+* **Total Installs (Cài đặt):** **10.501** (Tăng +4.6% MoM so với T8 là 10.041; gấp 2.0 lần so với baseline T7 là 5.239).
+* **Đăng Ký Tài Khoản (REG):** **3.569** (Tăng +10.5% MoM; CVR Install -> REG tăng lên **34.0%**).
+* **Liên Kết Ngân Hàng (Map Bank / N2MM):** **2.276** (Bứt phá **+25.2% MoM**; CVR REG -> Map tăng vọt từ 56.3% lên **63.8%**).
+* **Active MAU (Kích hoạt giao dịch đầu):** **1.328** (Tăng **+29.1% MoM**; CVR Map -> MAU đạt **58.3%**).
+* **End-to-End CVR (Install -> Map N2MM):** Đạt **21.7%** (Tăng +3.6 p.p so với T7 & T8).
+* **Phân bổ theo hệ điều hành:** iOS mang lại 1.254 Map Bank (55.1% N2MM) và 753 MAU (56.7% MAU) với CVR REG->Map kỷ lục 72.5%; Android mang lại 1.022 Map Bank và 575 MAU.
+
+| Cụm Kênh / Placement | Installs | Tỷ Trọng | REG (CVR) | Map Bank (CVR) | Active MAU | End-to-End CVR |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: |
+| **C.CHAOMOMO (Banner đại trà)** | 8.906 | 84,8% | 3.045 (34,2%) | 1.971 (64,7%) | 1.127 | 12,7% |
+| **Cinema Hub (Rạp phim & Lotte)** | 1.221 | 11,6% | 409 (33,5%) | 252 (61,6%) | 169 | **13,8%** |
+| **Merchant Hub (Đối tác)** | 317 | 3,0% | 99 (31,2%) | 41 (41,4%) | 26 | 8,2% |
+| **Bảo Hiểm (InsurTech)** | 56 | 0,5% | 16 (28,6%) | 12 (75,0%) | 6 | 10,7% |
+| **Khác (PXTĐH26)** | 1 | 0,0% | 0 (0,0%) | 0 (0,0%) | 0 | 0,0% |
+| **Tổng Toàn Sàn** | **10.501** | **100,0%** | **3.569 (34,0%)** | **2.276 (63,8%)** | **1.328** | **12,6%** |
+
 ---
 
 ### 3.2 CẬP NHẬT HIỆU SUẤT MTD THÁNG 10/2026 (LŨY KẾ 9 NGÀY: 01/10 - 09/10/2026)
@@ -739,5 +756,46 @@ Nguồn: Google Search Console - Crawl Stats (`www.momo.vn`, window 12/07 - 06/1
 | 5 | Chuyển KPI off-page sang referring domains đến trang thương mại | Loại vanity metric | Trung bình |
 
 * Chi tiết đầy đủ và Recommendations: xem Bản ghi ngày 10/10/2026 trong `MEETING_RECAPS.md`.
+
+---
+
+## 8. PHỄU CHUYỂN ĐỔI NEW USER & ACTIVE MAU (WEB-TO-APP PERFORMANCE)
+
+Dữ liệu Single Source of Truth (SSOT) phễu chuyển đổi người dùng mới từ Nền Tảng Web (Balloon Ads, Contextual Sticky Bar, Hub Placements) được lưu trữ tại `07_REPORTS/data/web_performance_new_user_funnel_09_2026.csv`.
+
+### 8.1 Chuỗi Hiệu Suất Tăng Trưởng Phễu Toàn Sàn (Tháng 7 - Tháng 9/2026)
+
+| Giai Đoạn Phễu (Funnel Stage) | Tháng 07/2026 | Tháng 08/2026 | Tháng 09/2026 | Tăng Trưởng MoM (T9 vs T8) | Tăng Trưởng vs Baseline T7 |
+| :--- | ---: | ---: | ---: | :--- | :--- |
+| **1. Total Installs (Cài đặt)** | 5.239 | 10.041 | **10.501** | +4,6% | +100,4% (gấp 2.0 lần) |
+| **2. Đăng Ký Tài Khoản (REG)** | 1.682 | 3.229 | **3.569** | +10,5% | +112,2% |
+| *-- Tỷ lệ CVR (REG / Install)* | 32,1% | 32,1% | **34,0%** | +1,9 p.p | +1,9 p.p |
+| **3. Liên Kết Ngân Hàng (Map Bank / N2MM)** | 948 | 1.818 | **2.276** | +25,2% | +140,1% (gấp 2.4 lần) |
+| *-- Tỷ lệ CVR (Map / REG)* | 56,3% | 56,3% | **63,8%** | +7,5 p.p | +7,5 p.p |
+| **4. Active MAU (Giao dịch đầu tiên)** | 536 | 1.029 | **1.328** | +29,1% | +147,8% (gấp 2.5 lần) |
+| *-- Tỷ lệ CVR (MAU / Map)* | 56,5% | 56,6% | **58,3%** | +1,7 p.p | +1,8 p.p |
+| **End-to-End CVR (Install -> Map N2MM)** | **18,1%** | **18,1%** | **21,7%** | **+3,6 p.p** | **+3,6 p.p** |
+| **End-to-End CVR (Install -> Active MAU)** | **10,2%** | **10,2%** | **12,6%** | **+2,4 p.p** | **+2,4 p.p** |
+
+### 8.2 Tổng Hợp Hiệu Suất Theo Kênh / Placement (Tháng 09/2026)
+
+| Cụm Sản Phẩm / Placement | Installs | Tỷ Trọng | REG | CVR REG | Map Bank | CVR Map | Active MAU | End-to-End CVR |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| **C.CHAOMOMO (Banner đại trà)** | 8.906 | 84,8% | 3.045 | 34,2% | 1.971 | 64,7% | 1.127 | 12,7% |
+| **Cinema Hub (Rạp phim & Lotte)** | 1.221 | 11,6% | 409 | 33,5% | 252 | 61,6% | 169 | **13,8%** |
+| **Merchant Hub (Đối tác)** | 317 | 3,0% | 99 | 31,2% | 41 | 41,4% | 26 | 8,2% |
+| **Bảo Hiểm (InsurTech)** | 56 | 0,5% | 16 | 28,6% | 12 | 75,0% | 6 | 10,7% |
+| **Khác (PXTĐH26)** | 1 | 0,0% | 0 | 0,0% | 0 | 0,0% | 0 | 0,0% |
+| **Tổng Toàn Sàn** | **10.501** | **100,0%** | **3.569** | **34,0%** | **2.276** | **63,8%** | **1.328** | **12,6%** |
+
+### 8.3 So Sánh Hiệu Suất Nền Tảng (Android vs iOS - Tháng 09/2026)
+
+| Hệ Điều Hành | Installs | Tỷ Trọng | REG | CVR REG | Map Bank | CVR Map | Active MAU | End-to-End CVR |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| **Android** | 5.466 | 52,1% | 1.840 | 33,7% | 1.022 | 55,5% | 575 | 10,5% |
+| **iOS** | 5.035 | 47,9% | 1.729 | 34,3% | **1.254** | **72,5%** | **753** | **15,0%** |
+
+* **Đặc tính cốt lõi:** Người dùng iOS áp đảo về chất lượng chuyển đổi: CVR từ REG sang Map Bank đạt **72,5%** (cao hơn Android +17,0 p.p), mang lại **55,1% tổng số lượng N2MM** và **56,7% tổng số Active MAU** toàn sàn dù lượng cài đặt thấp hơn.
+
 
 

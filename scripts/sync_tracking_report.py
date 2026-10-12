@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 import os
+import sys
 import glob
+import argparse
 import openpyxl
 import json
 from datetime import datetime
@@ -10,7 +12,16 @@ DOWNLOADS_DIR = "/Users/hienhv/Downloads"
 BASE_DIR = "/Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base"
 SSOT_EXCEL = os.path.join(BASE_DIR, "07_REPORTS/web_performance_tracking.xlsx")
 
+_parser = argparse.ArgumentParser(description="Sync Web Performance Tracking")
+_parser.add_argument("--file", help="Duong dan file xlsx tracking (mac dinh: tim moi nhat trong Downloads)")
+_parser.add_argument("--no-push", action="store_true", help="Parse va ghi SSOT, khong push sang hubs-momo")
+_args, _unknown = _parser.parse_known_args()
+
 def find_latest_tracking_file():
+    if _args.file:
+        if not os.path.exists(_args.file):
+            raise FileNotFoundError(f"File khong ton tai: {_args.file}")
+        return _args.file
     pattern = os.path.join(DOWNLOADS_DIR, "*[Ww]eb*[Pp]erformance*[Tt]racking*.xlsx")
     files = glob.glob(pattern)
     if not files:
@@ -190,26 +201,27 @@ def parse_and_sync():
         json.dump(summary_hubs, f, ensure_ascii=False, indent=2)
     print(f"Đã tạo summary.json siêu nhẹ cho hubs-momo tại {summary_path}")
 
-    # Auto push to hubs-momo if available locally
-    hubs_repo = "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo"
-    if os.path.exists(hubs_repo):
-        sync_script = os.path.join(hubs_repo, "scripts/sync-kb.py")
-        if os.path.exists(sync_script):
-            import subprocess
-            import sys
-            p_res = subprocess.run([sys.executable, sync_script, "--base", BASE_DIR], capture_output=True, text=True)
-            if p_res.returncode == 0:
-                print(f"Đã tự động đẩy dữ liệu sang hubs-momo thành công: Cả /dashboard (Số liệu) và /bang-tin (Tasklist)!")
-            else:
-                print(f"Cảnh báo khi sync sang hubs-momo: {p_res.stderr.strip()}")
-        else:
-            build_script = os.path.join(hubs_repo, "scripts/build-dashboard-data.py")
-            if os.path.exists(build_script):
+    # Auto push to hubs-momo if available locally (skip khi --no-push)
+    if not _args.no_push:
+        hubs_repo = "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo"
+        if os.path.exists(hubs_repo):
+            sync_script = os.path.join(hubs_repo, "scripts/sync-kb.py")
+            if os.path.exists(sync_script):
                 import subprocess
-                import sys
-                p_res = subprocess.run([sys.executable, build_script, "--base", BASE_DIR], capture_output=True, text=True)
+                p_res = subprocess.run([sys.executable, sync_script, "--base", BASE_DIR], capture_output=True, text=True)
                 if p_res.returncode == 0:
-                    print(f"Đã tự động đẩy dữ liệu sang hubs-momo (/dashboard) thành công!")
+                    print(f"Đã tự động đẩy dữ liệu sang hubs-momo thành công: Cả /dashboard (Số liệu) và /bang-tin (Tasklist)!")
+                else:
+                    print(f"Cảnh báo khi sync sang hubs-momo: {p_res.stderr.strip()}")
+            else:
+                build_script = os.path.join(hubs_repo, "scripts/build-dashboard-data.py")
+                if os.path.exists(build_script):
+                    import subprocess
+                    p_res = subprocess.run([sys.executable, build_script, "--base", BASE_DIR], capture_output=True, text=True)
+                    if p_res.returncode == 0:
+                        print(f"Đã tự động đẩy dữ liệu sang hubs-momo (/dashboard) thành công!")
+    else:
+        print("[no-push] Bo qua push sang hubs-momo (dieu phoi boi intake.py).")
 
     return summary
 

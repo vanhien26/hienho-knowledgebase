@@ -15,7 +15,8 @@ Thay vào đó, Web Platform áp dụng nguyên tắc **Ship Mỗi Tuần (Weekl
 - **Chu kỳ vận hành tuần:**
   - Đầu tuần: Chốt danh sách task cam kết ship trong tuần (trạng thái `To Do` / `In Progress`).
   - Trong tuần: Kỹ sư và nhân sự chuyên môn tập trung thực thi, phối hợp liên ngành.
-  - Cuối tuần: Rà soát đầu việc đã ship. Task hoàn thành chuyển sang `Done`; task phát sinh blocker được đánh giá và chuyển tiếp sang tuần tiếp theo với giải pháp xử lý cụ thể.
+  - Cuối tuần: Rà soát đầu việc đã ship. Task hoàn thành chuyển sang `Done`.
+- **Quy tắc Carry-Forward (Bắt buộc):** Bất kỳ task nào ở tuần hiện tại **chưa chuyển sang `Done`** (vẫn ở `To Do` / `In Progress` / `Blocked`) sẽ **tự động được chuyển tiếp (carry-forward) sang tuần kế tiếp** khi chạy rollover. Task carry-forward được đánh dấu rõ trong cột Mô tả/AC (chèn suffix `[carry từ Tuần N]`) để phân biệt với task mới lên kế hoạch trong tuần đó. Task không được phép "mất" giữa các tuần - chỉ Done mới kết thúc vòng đời.
 
 ---
 
