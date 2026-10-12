@@ -14,6 +14,7 @@
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
 | Phát triển Content Plan Cinema | Phát triển content plan từ Blog, Diễn Viên, Film Detail | Hoan | Hiến (định hướng) | `In Progress` |
+| Sản xuất Blog Cinema (100 bài) | Sản xuất và xuất bản 100 bài blog review/điện ảnh/phim chiếu rạp qua MoSpark GenAI Pipeline chuẩn SEO/GEO | Hoan | Hiến (định hướng) | `In Progress` |
 | Tối ưu Core Web Vitals (LCP) | Tối ưu CWV các trang trên MoSpark (LCP < 2.0s, ...) | Hùng | Web Dev | `In Progress` |
 | Build Sitemap cho Cinema | Xây dựng cấu trúc sitemap chuyên biệt cho toàn bộ trang Cinema | Hùng | Hoài Anh | `In Progress` |
 | Thiết kế Mini Game Hidden Puzzle | Thiết kế Mini Game Tìm Hidden Puzzle và show mass trang Cinema | Hùng | Hoan | `In Progress` |

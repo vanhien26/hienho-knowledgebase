@@ -72,6 +72,7 @@ Mọi file tuần tuân thủ nghiêm ngặt bảng chuẩn 5 cột tinh gọn:
 ### I. Strategic Projects
 1. **Cinema (Hùng, Hoan, Hoài Anh):**
    - Content plan từ Blog, Diễn Viên, Film Detail.
+   - Sản xuất 100 bài blog điện ảnh/review/phim chiếu rạp qua MoSpark GenAI Pipeline chuẩn SEO/GEO.
    - Tối ưu Core Web Vitals (LCP < 2.0s) trên MoSpark.
    - Xây dựng Sitemap chuyên biệt cho cụm Cinema.
    - Thiết kế Mini Game Tìm Hidden Puzzle và hiển thị mass.
