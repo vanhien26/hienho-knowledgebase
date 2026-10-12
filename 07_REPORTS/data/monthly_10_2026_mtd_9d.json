@@ -1,6 +1,6 @@
 {
   "file_source": "/Users/hienhv/Downloads/Web Performance Tracking (2).xlsx",
-  "read_timestamp": "2026-10-11 16:39:39",
+  "read_timestamp": "2026-10-12 08:48:13",
   "report_type": "MTD 9 Ngày (01/10 - 09/10/2026 - Lũy Kế 9 Ngày Tháng 10)",
   "days_elapsed": 9,
   "days_in_month": 31,
@@ -62,6 +62,71 @@
       "target": 100000,
       "pct": 0.47,
       "forecast": 1608.56
+    }
+  },
+  "cinema_breakdown": {
+    "Trang Rạp phim": {
+      "pv": 238254,
+      "pct_hub": 60.79,
+      "channels": {
+        "Direct": 4528,
+        "Organic": 231461,
+        "Others": 244,
+        "Paid": 269,
+        "Referral": 1752
+      }
+    },
+    "Trang phim chi tiết": {
+      "pv": 135729,
+      "pct_hub": 34.63,
+      "channels": {
+        "Direct": 11995,
+        "Organic": 120833,
+        "Others": 352,
+        "Paid": 213,
+        "Referral": 2336
+      }
+    },
+    "Cinema_Home Page (Trang chủ Cinema)": {
+      "pv": 11839,
+      "pct_hub": 3.02,
+      "channels": {
+        "Direct": 1159,
+        "Organic": 10304,
+        "Others": 33,
+        "Paid": 61,
+        "Referral": 282
+      }
+    },
+    "Cinema_Blog": {
+      "pv": 5083,
+      "pct_hub": 1.3,
+      "channels": {
+        "Direct": 355,
+        "Organic": 4218,
+        "Others": 2,
+        "Paid": 6,
+        "Referral": 502
+      }
+    },
+    "Tin tức": {
+      "pv": 996,
+      "pct_hub": 0.25,
+      "channels": {
+        "Direct": 73,
+        "Organic": 857,
+        "Others": 2,
+        "Paid": 1,
+        "Referral": 63
+      }
+    },
+    "Cinema_Landing Page": {
+      "pv": 24,
+      "pct_hub": 0.01,
+      "channels": {
+        "Direct": 2,
+        "Organic": 22
+      }
     }
   },
   "crawl_stats": {

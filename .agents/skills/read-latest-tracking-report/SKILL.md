@@ -32,3 +32,13 @@ Khi người dùng đưa ra câu lệnh:
    - Trình bày bảng phân bổ Kênh Traffic (Organic, Paid, Direct, Referral, Others).
    - Trình bày bảng Dashboard 5 Strategic Hubs (New User, Cinema, Financial, Vehicle, Student).
    - Đảm bảo tuân thủ phong cách Product/Tech Lead: **KHÔNG dùng Emoji/Icon**, **KHÔNG nêu tên riêng cá nhân**, sử dụng **Markdown Tables**.
+
+## 4. QUY CHUẨN ĐẶT TÊN SUB-PAGES CINEMA HUB (CINEMA TRACKING NAMING CONVENTION)
+Khi trích xuất, phân tích hoặc trình bày dữ liệu Cinema Hub trong các báo cáo Web Tracking, bắt buộc tuân thủ đúng quy chuẩn:
+- `Cinema_home Page` / `Cinema_Home Page` ➔ **Cinema_Home Page (Trang chủ Cinema)** (giữ nguyên mã kỹ thuật, thêm ghi chú trong ngoặc đơn).
+- `Cinema_Cineplex` / `Cinema_Cineplex Page` ➔ **Trang Rạp phim**.
+- `Cinema_News` ➔ **Tin tức**.
+- `Cinema_Page` ➔ **Trang phim chi tiết**.
+- `Cinema_Blog` ➔ **Cinema_Blog**.
+- `Cinema_Landing Page` ➔ **Cinema_Landing Page**.
+

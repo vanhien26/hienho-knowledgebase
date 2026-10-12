@@ -40,6 +40,14 @@
 | **Transformation** | **New User Hub** | 22.259 | 300.000 | 76.670 | **25.5%** |
 | **Incubator** | **Student Hub** | 467 | 100.000 | 1.609 | **1.6%** |
 
+### Phân Rã Sub-pages Cinema Hub (Quy Chuẩn Tracking Mới):
+- **Trang Rạp phim (`Cinema_Cineplex`):** **238.254 PVs** (60.79% Hub) — Organic chiếm 97.1%.
+- **Trang phim chi tiết (`Cinema_Page`):** **135.729 PVs** (34.63% Hub) — Organic chiếm 89.0%.
+- **Cinema_Home Page (Trang chủ Cinema):** **11.839 PVs** (3.02% Hub) — Cổng vào tổng quan Hub.
+- **Cinema_Blog:** **5.083 PVs** (1.30% Hub) — Bài viết review điện ảnh GenAI.
+- **Tin tức (`Cinema_News`):** **996 PVs** (0.25% Hub) — Tin tức, khuyến mãi phim.
+- **Cinema_Landing Page:** **24 PVs** (0.01% Hub) — Landing page sự kiện cũ.
+
 ---
 
 ## 4. TÍN HIỆU KỸ THUẬT & HỒ SƠ TÊN MIỀN (TECHNICAL SEO SIGNALS)

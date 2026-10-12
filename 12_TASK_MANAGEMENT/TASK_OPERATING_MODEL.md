@@ -109,9 +109,16 @@ Mọi file tuần tuân thủ nghiêm ngặt bảng chuẩn 5 cột tinh gọn:
    - Bổ sung kích thước 1200x630 và cơ chế chỉnh sửa/làm mờ Watermark logo MoMo trên Image Template.
    - Hiển thị Search Volume và số lượt view cạnh mỗi bài viết trên Microsite Blog Management.
 
-3. **PLG Project & MoBase (Trọng, Hùng, Nhật):**
+3. **PLG Project & MoBase (Trọng, Hoan, Hùng, Nhật):**
    - Quản trị Topic Cluster và đồng bộ 1-1 với CMS Editor.
+   - Xây dựng PLG Project cho Blog Common và kết nối vào các bài Blog.
    - Chuẩn hóa Design Token V2 và đồng bộ thư viện component dùng chung.
 
 4. **Tìm Kiếm /tim-kiem (Duy, Hoài Anh):**
    - Xây dựng Knowledge Base để phản hồi chính xác kết quả tìm kiếm trên trang `/tim-kiem`.
+
+5. **Blog Common (Duy, Hùng):**
+   - Migration toàn bộ bài viết blog từ hệ thống Admin Tool cũ sang nền tảng MoSpark.
+
+6. **Dashboard Tracking (Hiến, Thuận):**
+   - Nghiên cứu giải pháp sử dụng crawl data từ hạ tầng Datasef của công ty phục vụ Dashboard Web Tracking.

@@ -17,6 +17,18 @@ _parser.add_argument("--file", help="Duong dan file xlsx tracking (mac dinh: tim
 _parser.add_argument("--no-push", action="store_true", help="Parse va ghi SSOT, khong push sang hubs-momo")
 _args, _unknown = _parser.parse_known_args()
 
+# Quy chuẩn đặt tên dự án / Sub-pages cho Cinema Hub trong Web Performance Tracking
+CINEMA_PROJECT_NAME_MAP = {
+    "Cinema_Cineplex Page": "Trang Rạp phim",
+    "Cinema_Cineplex": "Trang Rạp phim",
+    "Cinema_Page": "Trang phim chi tiết",
+    "Cinema_Home Page": "Cinema_Home Page (Trang chủ Cinema)",
+    "Cinema_home Page": "Cinema_home Page (Trang chủ Cinema)",
+    "Cinema_News": "Tin tức",
+    "Cinema_Blog": "Cinema_Blog",
+    "Cinema_Landing Page": "Cinema_Landing Page",
+}
+
 def find_latest_tracking_file():
     if _args.file:
         if not os.path.exists(_args.file):
@@ -72,6 +84,7 @@ def parse_and_sync():
 
     totals_by_hub = defaultdict(int)
     totals_by_channel = defaultdict(int)
+    cinema_subpages = defaultdict(lambda: {"total": 0, "channels": defaultdict(int)})
     
     for r in range(3, ws_pivot.max_row):
         proj = ws_pivot.cell(r, 1).value
@@ -85,6 +98,10 @@ def parse_and_sync():
                 pv = int(pv)
                 totals_by_hub[group_hub] += pv
                 totals_by_channel[group_channel] += pv
+                if 'Cinema Hub' in str(group_hub):
+                    p_name = CINEMA_PROJECT_NAME_MAP.get(str(proj), str(proj))
+                    cinema_subpages[p_name]["total"] += pv
+                    cinema_subpages[p_name]["channels"][group_channel] += pv
             except:
                 pass
 
@@ -111,6 +128,20 @@ def parse_and_sync():
     shutil.copy2(latest_file, SSOT_EXCEL)
     print(f"Đã lưu bản SSOT sạch vào {SSOT_EXCEL}")
 
+    # Cập nhật chuẩn hóa label dự án Cinema trong sheet 'Cinema' của SSOT Excel
+    try:
+        wb_ssot = openpyxl.load_workbook(SSOT_EXCEL)
+        if 'Cinema' in wb_ssot.sheetnames:
+            ws_c = wb_ssot['Cinema']
+            ws_c.cell(9, 1).value = 'Trang Rạp phim'
+            ws_c.cell(16, 1).value = 'Trang phim chi tiết'
+            ws_c.cell(30, 1).value = 'Cinema_Home Page (Trang chủ Cinema)'
+            ws_c.cell(37, 1).value = 'Tin tức'
+            wb_ssot.save(SSOT_EXCEL)
+            print(f"Đã cập nhật chuẩn hóa tên sub-pages Cinema trong sheet 'Cinema' ({SSOT_EXCEL})")
+    except Exception as e:
+        print(f"Lưu ý: Không thể cập nhật label sheet Cinema: {e}")
+
     summary = {
         "file_source": latest_file,
         "read_timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -136,6 +167,14 @@ def parse_and_sync():
             "financial": {"pv": hubs_oct_4d['financial'], "target": 450000, "pct": round(hubs_oct_4d['financial']/450000*100, 2), "forecast": round(hubs_oct_4d['financial']/days_elapsed*31, 2)},
             "vehicle": {"pv": hubs_oct_4d['vehicle'], "target": 100000, "pct": round(hubs_oct_4d['vehicle']/100000*100, 2), "forecast": round(hubs_oct_4d['vehicle']/days_elapsed*31, 2)},
             "student": {"pv": hubs_oct_4d['student'], "target": 100000, "pct": round(hubs_oct_4d['student']/100000*100, 2), "forecast": round(hubs_oct_4d['student']/days_elapsed*31, 2)}
+        },
+        "cinema_breakdown": {
+            name: {
+                "pv": data["total"],
+                "pct_hub": round((data["total"] / hubs_oct_4d['cinema'] * 100) if hubs_oct_4d['cinema'] else 0, 2),
+                "channels": dict(data["channels"])
+            }
+            for name, data in sorted(cinema_subpages.items(), key=lambda x: x[1]["total"], reverse=True)
         }
     }
 
@@ -232,3 +271,7 @@ if __name__ == "__main__":
     print(f"- Run-rate Forecast 31d: {res['forecast_31d']:,.0f} ({res['forecast_pct']}%)")
     print(f"- Crawl Stats Status: Loaded (Requests T10: {res.get('crawl_stats', {}).get('monthly_run_rate', {}).get('2026-10', {}).get('requests_per_day', 'N/A')} req/ngày)")
     print(f"- Backlink Profile Status: Loaded (Total Referring Sites: {res.get('backlink_profile', {}).get('total_referring_domains', 'N/A')}, Disavow Candidates: {res.get('backlink_profile', {}).get('toxic_audit_summary', {}).get('total_disavow_candidates', 'N/A')})")
+    if "cinema_breakdown" in res:
+        print(f"\n--- Phân rã Cinema Sub-pages MTD {res['days_elapsed']}d (Quy chuẩn Tracking mới) ---")
+        for p_name, p_data in res["cinema_breakdown"].items():
+            print(f"  * {p_name}: {p_data['pv']:,} PVs ({p_data['pct_hub']}%)")

@@ -89,3 +89,22 @@
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
 | Audit Độ Phủ Tìm Kiếm | Đo lường tỷ lệ kết quả chính xác và khảo sát phản hồi người dùng | Duy | Hoài Anh | `To Do` |
+
+---
+
+### 5. Blog Common
+- **Nhân sự phụ trách:** Duy, Hùng
+
+| Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
+| :--- | :--- | :--- | :--- | :---: |
+| Migration Blog Admin Tool Qua MoSpark | Migration toàn bộ blog ở Admin Tool qua nền tảng MoSpark | Duy | Hùng | `To Do` |
+
+---
+
+### 6. Dashboard Tracking
+- **Nhân sự phụ trách:** Hiến, Thuận
+
+| Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
+| :--- | :--- | :--- | :--- | :---: |
+| Nghiên Cứu Crawl Data Từ Datasef | Tiến hành nghiên cứu giải pháp sử dụng crawl data từ Datasef của công ty phục vụ Dashboard Tracking | Hiến | Thuận | `To Do` |
+

@@ -64,30 +64,30 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
 | **Cinema_Blog** | Others | 389 | 151 | 70 | 71 |
 | **Cinema_Blog** | Paid | 18 | 11 | 57 | 69 |
 | **Cinema_Blog** | Referral | 4,091 | 3,713 | 3,866 | 3,356 |
-| **Cinema_Cineplex Page** | Direct | 12,886 | 13,805 | 15,061 | 14,529 |
-| **Cinema_Cineplex Page** | Organic | 352,702 | 379,527 | 389,838 | 384,126 |
-| **Cinema_Cineplex Page** | Others | 5,230 | 2,856 | 641 | 411 |
-| **Cinema_Cineplex Page** | Paid | 118 | 127 | 2,372 | 15,523 |
-| **Cinema_Cineplex Page** | Referral | 3,765 | 4,136 | 4,127 | 4,095 |
-| **Cinema_Home Page** | Direct | 3,531 | 3,726 | 4,467 | 4,512 |
-| **Cinema_Home Page** | Organic | 27,516 | 29,603 | 32,885 | 27,509 |
-| **Cinema_Home Page** | Others | 1,453 | 841 | 272 | 246 |
-| **Cinema_Home Page** | Paid | 89 | 177 | 368 | 1,708 |
-| **Cinema_Home Page** | Referral | 1,061 | 1,180 | 1,002 | 1,022 |
+| **Trang Rạp phim** | Direct | 12,886 | 13,805 | 15,061 | 14,529 |
+| **Trang Rạp phim** | Organic | 352,702 | 379,527 | 389,838 | 384,126 |
+| **Trang Rạp phim** | Others | 5,230 | 2,856 | 641 | 411 |
+| **Trang Rạp phim** | Paid | 118 | 127 | 2,372 | 15,523 |
+| **Trang Rạp phim** | Referral | 3,765 | 4,136 | 4,127 | 4,095 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Direct | 3,531 | 3,726 | 4,467 | 4,512 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Organic | 27,516 | 29,603 | 32,885 | 27,509 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Others | 1,453 | 841 | 272 | 246 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Paid | 89 | 177 | 368 | 1,708 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Referral | 1,061 | 1,180 | 1,002 | 1,022 |
 | **Cinema_Landing Page** | Direct | 7 | 15 | 8 | 5 |
 | **Cinema_Landing Page** | Organic | 133 | 200 | 75 | 88 |
 | **Cinema_Landing Page** | Others | 2 | 5 | 0 | 7 |
 | **Cinema_Landing Page** | Referral | 3 | 2 | 2 | 4 |
-| **Cinema_News** | Direct | 175 | 261 | 285 | 178 |
-| **Cinema_News** | Organic | 1,969 | 2,670 | 3,941 | 2,798 |
-| **Cinema_News** | Others | 19 | 21 | 3 | 22 |
-| **Cinema_News** | Paid | 0 | 2 | 17 | 32 |
-| **Cinema_News** | Referral | 232 | 167 | 239 | 106 |
-| **Cinema_Page** | Direct | 195,502 | 44,159 | 39,230 | 30,205 |
-| **Cinema_Page** | Organic | 293,345 | 269,361 | 256,968 | 265,423 |
-| **Cinema_Page** | Others | 7,614 | 3,940 | 969 | 833 |
-| **Cinema_Page** | Paid | 1,207 | 24,271 | 3,457 | 19,946 |
-| **Cinema_Page** | Referral | 9,588 | 11,405 | 9,283 | 7,898 |
+| **Tin tức** | Direct | 175 | 261 | 285 | 178 |
+| **Tin tức** | Organic | 1,969 | 2,670 | 3,941 | 2,798 |
+| **Tin tức** | Others | 19 | 21 | 3 | 22 |
+| **Tin tức** | Paid | 0 | 2 | 17 | 32 |
+| **Tin tức** | Referral | 232 | 167 | 239 | 106 |
+| **Trang phim chi tiết** | Direct | 195,502 | 44,159 | 39,230 | 30,205 |
+| **Trang phim chi tiết** | Organic | 293,345 | 269,361 | 256,968 | 265,423 |
+| **Trang phim chi tiết** | Others | 7,614 | 3,940 | 969 | 833 |
+| **Trang phim chi tiết** | Paid | 1,207 | 24,271 | 3,457 | 19,946 |
+| **Trang phim chi tiết** | Referral | 9,588 | 11,405 | 9,283 | 7,898 |
 | **Cross Border** | Direct | 245 | 351 | 209 | 139 |
 | **Cross Border** | Organic | 2,242 | 2,081 | 2,099 | 2,380 |
 | **Cross Border** | Others | 62 | 29 | 12 | 15 |
@@ -343,30 +343,30 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
 | **Cinema_Blog** | Others | 136 | 17 | 18 | 16 | 17 |
 | **Cinema_Blog** | Paid | 3 | 3 | 2 | 35 | 61 |
 | **Cinema_Blog** | Referral | 1,293 | 1,235 | 1,245 | 1,174 | 823 |
-| **Cinema_Cineplex Page** | Direct | 3,651 | 4,397 | 4,625 | 4,706 | 7,473 |
-| **Cinema_Cineplex Page** | Organic | 107,339 | 125,573 | 115,461 | 118,598 | 108,844 |
-| **Cinema_Cineplex Page** | Others | 1,961 | 749 | 245 | 103 | 110 |
-| **Cinema_Cineplex Page** | Paid | 35 | 52 | 19 | 3,213 | 3,290 |
-| **Cinema_Cineplex Page** | Referral | 1,025 | 1,421 | 1,177 | 1,312 | 1,107 |
-| **Cinema_Home Page** | Direct | 1,050 | 1,155 | 1,498 | 1,870 | 990 |
-| **Cinema_Home Page** | Organic | 8,250 | 9,750 | 10,876 | 8,833 | 6,722 |
-| **Cinema_Home Page** | Others | 493 | 250 | 110 | 107 | 49 |
-| **Cinema_Home Page** | Paid | 9 | 45 | 12 | 225 | 176 |
-| **Cinema_Home Page** | Referral | 263 | 449 | 369 | 312 | 246 |
+| **Trang Rạp phim** | Direct | 3,651 | 4,397 | 4,625 | 4,706 | 7,473 |
+| **Trang Rạp phim** | Organic | 107,339 | 125,573 | 115,461 | 118,598 | 108,844 |
+| **Trang Rạp phim** | Others | 1,961 | 749 | 245 | 103 | 110 |
+| **Trang Rạp phim** | Paid | 35 | 52 | 19 | 3,213 | 3,290 |
+| **Trang Rạp phim** | Referral | 1,025 | 1,421 | 1,177 | 1,312 | 1,107 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Direct | 1,050 | 1,155 | 1,498 | 1,870 | 990 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Organic | 8,250 | 9,750 | 10,876 | 8,833 | 6,722 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Others | 493 | 250 | 110 | 107 | 49 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Paid | 9 | 45 | 12 | 225 | 176 |
+| **Cinema_Home Page (Trang chủ Cinema)** | Referral | 263 | 449 | 369 | 312 | 246 |
 | **Cinema_Landing Page** | Direct | 1 | 3 | 4 | 0 | 6 |
 | **Cinema_Landing Page** | Organic | 23 | 69 | 28 | 18 | 30 |
 | **Cinema_Landing Page** | Others | 0 | 2 | 0 | 7 | 0 |
 | **Cinema_Landing Page** | Referral | 0 | 1 | 0 | 0 | 0 |
-| **Cinema_News** | Direct | 58 | 70 | 94 | 74 | 42 |
-| **Cinema_News** | Organic | 628 | 826 | 1,005 | 980 | 553 |
-| **Cinema_News** | Others | 10 | 3 | 2 | 11 | 1 |
-| **Cinema_News** | Paid | 0 | 0 | 0 | 10 | 4 |
-| **Cinema_News** | Referral | 121 | 46 | 56 | 47 | 23 |
-| **Cinema_Page** | Direct | 46,890 | 15,496 | 15,156 | 9,552 | 7,497 |
-| **Cinema_Page** | Organic | 100,811 | 85,155 | 80,637 | 73,070 | 88,920 |
-| **Cinema_Page** | Others | 2,821 | 1,125 | 436 | 184 | 248 |
-| **Cinema_Page** | Paid | 657 | 24,006 | 1,828 | 1,577 | 274,657 |
-| **Cinema_Page** | Referral | 2,938 | 4,798 | 3,226 | 1,937 | 1,748 |
+| **Tin tức** | Direct | 58 | 70 | 94 | 74 | 42 |
+| **Tin tức** | Organic | 628 | 826 | 1,005 | 980 | 553 |
+| **Tin tức** | Others | 10 | 3 | 2 | 11 | 1 |
+| **Tin tức** | Paid | 0 | 0 | 0 | 10 | 4 |
+| **Tin tức** | Referral | 121 | 46 | 56 | 47 | 23 |
+| **Trang phim chi tiết** | Direct | 46,890 | 15,496 | 15,156 | 9,552 | 7,497 |
+| **Trang phim chi tiết** | Organic | 100,811 | 85,155 | 80,637 | 73,070 | 88,920 |
+| **Trang phim chi tiết** | Others | 2,821 | 1,125 | 436 | 184 | 248 |
+| **Trang phim chi tiết** | Paid | 657 | 24,006 | 1,828 | 1,577 | 274,657 |
+| **Trang phim chi tiết** | Referral | 2,938 | 4,798 | 3,226 | 1,937 | 1,748 |
 | **Cross Border** | Direct | 87 | 134 | 98 | 30 | 39 |
 | **Cross Border** | Organic | 722 | 706 | 739 | 684 | 616 |
 | **Cross Border** | Others | 14 | 11 | 4 | 9 | 1 |
@@ -605,7 +605,7 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
 | **Merchant Hub (Đối tác)** | 317 | 3,0% | 99 (31,2%) | 41 (41,4%) | 26 | 8,2% |
 | **Bảo Hiểm (InsurTech)** | 56 | 0,5% | 16 (28,6%) | 12 (75,0%) | 6 | 10,7% |
 | **Khác (PXTĐH26)** | 1 | 0,0% | 0 (0,0%) | 0 (0,0%) | 0 | 0,0% |
-| **Tổng Toàn Sàn** | **10.501** | **100,0%** | **3.569 (34,0%)** | **2.276 (63,8%)** | **1.328** | **12,6%** |
+| **Tổng Toàn Nền Tảng** | **10.501** | **100,0%** | **3.569 (34,0%)** | **2.276 (63,8%)** | **1.328** | **12,6%** |
 
 ---
 
@@ -640,6 +640,18 @@ Dữ liệu trích xuất tự động từ tệp tracking mới nhất `Web Per
 | **Student Hub** | Incubation | 467 | 100.000 | 0.47% | 52 | 1.609 | Cần kích hoạt phân phối công cụ xếp hạng trường và gói đặc quyền SV. |
 | **Home Web** | Platform | 56.260 | - | - | 6.251 | 193.784 | Tách độc lập khỏi New User Hub để phản ánh đúng traffic cổng vào. |
 
+#### Bảng Phân Rã Lưu Lượng Cinema Hub Sub-pages (MTD 9 Ngày Tháng 10):
+
+| Phân Hệ Sub-page | Tên Quy Chuẩn Tracking | Lũy Kế MTD (PV) | Tỷ Trọng Hub (%) | Kênh Chủ Lực | Ghi Chú & Định Hướng |
+| :--- | :--- | :---: | :---: | :--- | :--- |
+| **Trang Rạp phim** | `Cinema_Cineplex` | **238.254** | **60.79%** | Organic (97.1%) | Đầu kéo Organic mạnh nhất Hub; cụm rạp CGV, Lotte, NCC |
+| **Trang phim chi tiết** | `Cinema_Page` | **135.729** | **34.63%** | Organic (89.0%) | Lượng tìm kiếm phim chiếu rạp; kết thúc tài trợ Paid |
+| **Cinema_Home Page (Trang chủ Cinema)** | `Cinema_Home Page` | **11.839** | **3.02%** | Organic (87.0%) | Cổng vào tổng quan Cinema Hub, Direct chiếm 9.8% |
+| **Cinema_Blog** | `Cinema_Blog` | **5.083** | **1.30%** | Organic (83.0%) | Bài viết review/điện ảnh do GenAI tự chủ sản xuất |
+| **Tin tức** | `Cinema_News` | **996** | **0.25%** | Organic (86.0%) | Tin vắn điện ảnh, tin khuyến mãi |
+| **Cinema_Landing Page** | `Cinema_Landing Page` | **24** | **0.01%** | Organic (91.7%) | Landing page chiến dịch cũ |
+| **TỔNG CỘNG CINEMA HUB** | `Cinema Hub` | **391.925** | **100.00%** | **Organic (92.4%)** | **Vượt nhịp Target (+20.8%)** |
+
 ---
 
 ## 4. CHIẾN LƯỢC DỰ ÁN GAME & 5 USE CASES NGÁCH
@@ -669,7 +681,7 @@ Dữ liệu trích xuất tự động từ tệp tracking mới nhất `Web Per
 
 ### Mapping Tên Pivot:
 * **Vehicle Sheet:** Phạt nguội, Bảo Hiểm Ô Tô, Bảo Hiểm Xe Máy, Phí Không Dừng, Tiện Ích Giao Thông.
-* **Cinema Sheet:** Cinema_Blog, Cinema_Cineplex Page, Cinema_Home Page, Cinema_Landing Page, Cinema_News, Cinema_Page.
+* **Cinema Sheet:** Cinema_Blog, Trang Rạp phim (Cinema_Cineplex), Cinema_Home Page (Trang chủ Cinema), Cinema_Landing Page, Tin tức (Cinema_News), Trang phim chi tiết (Cinema_Page).
 * **Financial Sheet:** Vay Nhanh, Tín Dụng FastMoney, Ví Trả Sau, Điểm Tín Dụng, Tiết Kiệm Online, Túi Thần Tài, Chứng Khoán, Chứng Chỉ Quỹ, Ngân Hàng, Trả Góp, Bảo Hiểm Y Tế.
 
 ---
