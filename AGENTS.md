@@ -33,7 +33,7 @@
 
 - **Phong cách:** Thực tế, cô đọng, ngắn gọn, tự nhiên chuẩn Product Lead / Tech Lead. Đi thẳng vào bản chất vấn đề, số liệu và gạch đầu dòng.
 - **TUYỆT ĐỐI KHÔNG:** 
-  - **Không dùng từ "sàn Web":** Bắt buộc chỉ dùng **"nền tảng Web"**, **"Kênh Web"**, **"Web Platform"** hoặc **"Web"**.
+  - **TUYỆT ĐỐI KHÔNG dùng các từ "sàn", "sàn Web", "toàn sàn":** Bắt buộc chỉ dùng **"toàn Website"**, **"nền tảng Web"**, **"Kênh Web"**, **"Web Platform"** hoặc **"Web"**.
   - **Không dùng bất kỳ Emoji / Icon nào** trong nội dung tiêu đề, bảng biểu và danh sách của bài báo cáo (Report).
   - **Không đề cập tên riêng của cá nhân / PIC** (như `[Hiến]`, `[Thuận]`, `[Trọng]`, `[Nhật]`, `Hiếu`...) trong bài báo cáo. Thay thế bằng tên đội ngũ chuyên môn (như `Web Dev`, `Backend Team`, `Content Team`, `SEO Vendor`...).
   - Không dùng văn chương màu mè, sáo rỗng, hoa mỹ kiểu AI (ví dụ: *"bệ phóng phát triển"*, *"bứt phá ngoạn mục"*, *"khẳng định vị thế uy tín"*, *"hành trình chuyển đổi"*...).

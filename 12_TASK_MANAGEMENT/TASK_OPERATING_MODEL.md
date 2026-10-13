@@ -72,21 +72,25 @@ Mọi file tuần tuân thủ nghiêm ngặt bảng chuẩn 5 cột tinh gọn:
 ### I. Strategic Projects
 1. **Cinema (Hùng, Hoan, Hoài Anh):**
    - Content plan từ Blog, Diễn Viên, Film Detail.
+   - Sản xuất 100 bài blog điện ảnh/review/phim chiếu rạp qua MoSpark GenAI Pipeline chuẩn SEO/GEO.
    - Tối ưu Core Web Vitals (LCP < 2.0s) trên MoSpark.
    - Xây dựng Sitemap chuyên biệt cho cụm Cinema.
    - Thiết kế Mini Game Tìm Hidden Puzzle và hiển thị mass.
    - Migration hệ thống rạp đối tác qua MoSpark.
 
-2. **Financial (Nhật, Hiếu, Thuận, Hoan):**
+2. **Financial (Nhật, Hiếu, Thuận, Hoan, Hiến, Hùng):**
+   - Phối hợp BU Bank lên Content Structure trang Bank Detail và hoàn thiện UI.
+   - Xây dựng Content Plan cho cụm trang Tỷ Giá và Chứng Chỉ Quỹ.
+   - Go Live trang Tỷ Giá theo từng cặp tiền tệ.
+   - Triển khai và Go Live Mega Menu điều hướng cho toàn bộ cụm trang Tài Chính.
    - Đồng bộ API Chứng Chỉ Quỹ và Lãi tiết kiệm.
-   - Xây dựng Menu Header cho trang Finance.
    - Định nghĩa Umami EventName cho toàn bộ Utilities trên Knowledgebase SSOT.
    - Tự động hóa gắn tracking Umami cho từng Tool/Widget.
-   - Xuất bản 5 trang Sub-page tỷ giá ngoại tệ.
    - Sản xuất 30 bài blog chất lượng cao cho Financial.
 
 3. **Vehicle (Thuận, Hoan, Hoài Anh):**
    - Go Live trang Hãng xe và Model Xe (ưu tiên cụm Vinfast).
+   - Triển khai trang Phong Thủy theo đúng Prototype.
    - Nghiên cứu kết nối API Database Garage của Cell Team.
    - Review và khôi phục API Phạt Nguội 0-CAPTCHA trên Production.
 
@@ -94,6 +98,7 @@ Mọi file tuần tuân thủ nghiêm ngặt bảng chuẩn 5 cột tinh gọn:
    - Go Live Quýt Game (phiên bản 2D và 3D).
    - Đề xuất và triển khai giải pháp update trang Download.
    - Cải tiến giao diện và tỷ lệ chuyển đổi trang Bonbon.
+   - Tạo trang Tải App để acquire nhóm intent search, điều hướng từ trang /download và xây dựng luồng tạo OneLink.
 
 5. **Game/App (Thuận, Hiếu):**
    - Follow tiếp các dự án Nạp thẻ Game theo provider (Zing, Garena, VTC, Soha...) và đồng bộ mệnh giá live.

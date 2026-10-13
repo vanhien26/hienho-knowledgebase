@@ -652,6 +652,24 @@ Dữ liệu trích xuất tự động từ tệp tracking mới nhất `Web Per
 | **Cinema_Landing Page** | `Cinema_Landing Page` | **24** | **0.01%** | Organic (91.7%) | Landing page chiến dịch cũ |
 | **TỔNG CỘNG CINEMA HUB** | `Cinema Hub` | **391.925** | **100.00%** | **Organic (92.4%)** | **Vượt nhịp Target (+20.8%)** |
 
+#### Bảng Phễu Chuyển Đổi Web-to-App MTD Tháng 10/2026 (Dữ Liệu AppsFlyer Đầu Tháng):
+
+* **Total Installs (Cài đặt):** **4.638 installs** (Daily Pace ~421/ngày; Dự phóng cả tháng ~13.080 installs, vượt mức 10.501 của Tháng 9).
+* **Đăng Ký Tài Khoản (REG):** **1.512 users** (CVR Install -> REG: **32.60%**).
+* **Liên Kết Ngân Hàng (Map Bank / N2MM):** **931 users** (CVR REG -> Map: **61.57%**; CVR Install -> Map: **20.07%**; Dự phóng cả tháng ~2.624 N2MM).
+* **Active MAU (Kích hoạt giao dịch đầu):** **479 users** (CVR Map -> MAU: **51.45%**; Dự phóng cả tháng ~1.350 MAU).
+* **Đột phá Cinema Hub:** Đạt **1.307 Installs** (chiếm 28.2% toàn Website) và **190 Active MAU** (chiếm 39.7% toàn Website) - **vượt toàn bộ thành tích cả Tháng 9 cộng lại của Cinema Hub (1.221 Installs)** chỉ trong 11 ngày đầu tháng!
+
+| Cụm Kênh / Placement | Installs | Tỷ Trọng | REG | CVR REG | Map Bank | CVR Map | Active MAU | End-to-End CVR |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| **C.CHAOMOMO (Banner đại trà)** | 3.202 | 69,0% | 985 | 30,8% | 602 | 61,1% | 276 | 8,6% |
+| **Cinema Hub (Rạp phim & Lotte)** | **1.307** | **28,2%** | **495** | **37,9%** | **310** | **62,6%** | **190** | **14,5%** |
+| **Merchant Hub (Đối tác)** | 101 | 2,2% | 20 | 19,8% | 12 | 60,0% | 9 | 8,9% |
+| **Bảo Hiểm (InsurTech)** | 28 | 0,6% | 12 | 42,9% | 7 | 58,3% | 4 | 14,3% |
+| **TỔNG CỘNG MTD THÁNG 10** | **4.638** | **100,0%** | **1.512** | **32,6%** | **931** | **61,6%** | **479** | **10,3%** |
+
+* **So sánh nền tảng:** iOS chiếm **56.7% Installs (2.628)**, mang lại **605 Map Bank (65.0% N2MM)** và **313 Active MAU (65.3% MAU)** với CVR REG->Map đạt **68.5%**; Android đạt 2.010 Installs, 326 Map Bank và 166 MAU.
+
 ---
 
 ### 3.1. CẬP NHẬT HIỆU SUẤT MTD 6 NGÀY THÁNG 10/2026 (01/10 - 06/10/2026)
@@ -762,7 +780,7 @@ Dữ liệu trích xuất tự động từ tệp tracking mới nhất `Web Per
 
 ### B. Vehicle Hub
 * **Tự chủ Content PLG:** Tiếp tục chủ động sản xuất bài viết chuyên sâu trên các dự án PLG (Phạt nguội, Giá xăng, Trạm sạc, Đăng kiểm).
-* **Staging Trang Tìm Garage:** Đã lên Staging trang Tìm Garage (`/tien-ich-giao-thong/tim-garage`), dự kiến chính thức Go-live trước 30/09/2026.
+* **Staging Trang Garage:** Đã lên Staging trang Garage (`/tien-ich-giao-thong/garage`), dự kiến chính thức Go-live trước 30/09/2026.
 * **Hỗ trợ InsurTech BU & Ads Budget 550 triệu:** Hỗ trợ Cell Team triển khai Blog Bảo Hiểm Ô Tô (được duyệt ngân sách Paid Ads 550 triệu VND hết 2026), tối ưu UI/UX và acquire New User.
 
 ### C. Financial Hub
@@ -827,7 +845,7 @@ Nguồn: Google Search Console - Crawl Stats (`www.momo.vn`, window 12/07 - 06/1
 
 Dữ liệu Single Source of Truth (SSOT) phễu chuyển đổi người dùng mới từ Nền Tảng Web (Balloon Ads, Contextual Sticky Bar, Hub Placements) được lưu trữ tại `07_REPORTS/data/web_performance_new_user_funnel_09_2026.csv`.
 
-### 8.1 Chuỗi Hiệu Suất Tăng Trưởng Phễu Toàn Sàn (Tháng 7 - Tháng 9/2026)
+### 8.1 Chuỗi Hiệu Suất Tăng Trưởng Phễu Toàn Nền Tảng Web (Tháng 7 - Tháng 9/2026)
 
 | Giai Đoạn Phễu (Funnel Stage) | Tháng 07/2026 | Tháng 08/2026 | Tháng 09/2026 | Tăng Trưởng MoM (T9 vs T8) | Tăng Trưởng vs Baseline T7 |
 | :--- | ---: | ---: | ---: | :--- | :--- |
@@ -850,7 +868,7 @@ Dữ liệu Single Source of Truth (SSOT) phễu chuyển đổi người dùng 
 | **Merchant Hub (Đối tác)** | 317 | 3,0% | 99 | 31,2% | 41 | 41,4% | 26 | 8,2% |
 | **Bảo Hiểm (InsurTech)** | 56 | 0,5% | 16 | 28,6% | 12 | 75,0% | 6 | 10,7% |
 | **Khác (PXTĐH26)** | 1 | 0,0% | 0 | 0,0% | 0 | 0,0% | 0 | 0,0% |
-| **Tổng Toàn Sàn** | **10.501** | **100,0%** | **3.569** | **34,0%** | **2.276** | **63,8%** | **1.328** | **12,6%** |
+| **Tổng Toàn Nền Tảng Web** | **10.501** | **100,0%** | **3.569** | **34,0%** | **2.276** | **63,8%** | **1.328** | **12,6%** |
 
 ### 8.3 So Sánh Hiệu Suất Nền Tảng (Android vs iOS - Tháng 09/2026)
 
@@ -859,7 +877,7 @@ Dữ liệu Single Source of Truth (SSOT) phễu chuyển đổi người dùng 
 | **Android** | 5.466 | 52,1% | 1.840 | 33,7% | 1.022 | 55,5% | 575 | 10,5% |
 | **iOS** | 5.035 | 47,9% | 1.729 | 34,3% | **1.254** | **72,5%** | **753** | **15,0%** |
 
-* **Đặc tính cốt lõi:** Người dùng iOS áp đảo về chất lượng chuyển đổi: CVR từ REG sang Map Bank đạt **72,5%** (cao hơn Android +17,0 p.p), mang lại **55,1% tổng số lượng N2MM** và **56,7% tổng số Active MAU** toàn sàn dù lượng cài đặt thấp hơn.
+* **Đặc tính cốt lõi:** Người dùng iOS áp đảo về chất lượng chuyển đổi: CVR từ REG sang Map Bank đạt **72,5%** (cao hơn Android +17,0 p.p), mang lại **55,1% tổng số lượng N2MM** và **56,7% tổng số Active MAU** toàn Website dù lượng cài đặt thấp hơn.
 
 
 

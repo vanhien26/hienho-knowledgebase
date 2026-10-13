@@ -240,7 +240,7 @@ Hệ thống URL Kênh Web Vehicle Hub được quy hoạch thành **2 Nhóm C�
 │ GROUP A: SPOKE PAGES      │   │ GROUP A: LOCAL GEO PAGES  │   │ GROUP B: STANDALONE PAGES │
 │ /gia-xang/                │   │ /tram-sac/                │   │ /phat-nguoi/              │
 │ /dang-kiem/               │   │ /cay-xang/                │   │ /bao-hiem-o-to/           │
-│ /hang-xe/                 │   │ /tim-garage/              │   │ /bao-hiem-xe-may/         │
+│ /hang-xe/                 │   │ /garage/                  │   │ /bao-hiem-xe-may/         │
 │ /dinh-gia-xe/             │   │ /bai-do-xe/               │   │ /phi-khong-dung/          │
 │ /cuu-ho/                  │   └─────────────┬─────────────┘   └───────────────────────────┘
 │ /blog/ (GenAI Content)    │                 │
@@ -328,7 +328,7 @@ Hệ thống URL Kênh Web Vehicle Hub được quy hoạch thành **2 Nhóm C�
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Garage Sửa Xe & Bảo Dưỡng</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tien-ich-giao-thong/tim-garage/</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tien-ich-giao-thong/garage/</code></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">Spoke Sub-page</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Danh sách garage, trung tâm chăm sóc ô tô uy tín địa phương</td>
     </tr>
@@ -635,7 +635,7 @@ Dạng trang **Merchant Listing (Danh mục cửa hàng/đối tác M4B)** kết
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Form đăng ký nhận tin báo giá xăng tự động chiều thứ 5</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GEO Local Pages</strong><br><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tram-sac/</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tim-garage/</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GEO Local Pages</strong><br><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tram-sac/</code>, <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/garage/</code></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Filter Bar & Map View</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">"Tôi muốn lọc trạm sạc/garage đúng nhu cầu."</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thanh lọc trạm sạc xe điện (VinFast, V-Green & các đối tác / công suất kW) hoặc garage.</td>
@@ -894,7 +894,7 @@ Mỗi loại trang bắt buộc khai báo mã JSON-LD chuẩn trong thẻ `<head
 ### 4.3 Sitemap & Technical SEO
 
 1. **Cấu trúc Sub-Sitemaps Index (`sitemap_index.xml`):**
-   * `sitemap-vehicle-hub.xml`: Trang chủ `/tien-ich-giao-thong/` và các Spoke Pages (`/gia-xang/`, `/tram-sac/`, `/cay-xang/`, `/tim-garage/`) (`priority: 1.0`, `changefreq: daily`).
+   * `sitemap-vehicle-hub.xml`: Trang chủ `/tien-ich-giao-thong/` và các Spoke Pages (`/gia-xang/`, `/tram-sac/`, `/cay-xang/`, `/garage/`) (`priority: 1.0`, `changefreq: daily`).
    * `sitemap-phat-nguoi.xml`: Trang Tra Cứu Phạt Nguội (`/phat-nguoi/`) (`priority: 0.9`, `changefreq: daily`).
    * `sitemap-blog.xml`: Bài viết cẩm nang giao thông (`priority: 0.8`, `changefreq: daily`).
    * `sitemap-bao-hiem.xml`: Trang Bảo Hiểm Ô Tô (`/bao-hiem-o-to/`) & Xe Máy (`/bao-hiem-xe-may/`) (`priority: 0.9`, `changefreq: weekly`).

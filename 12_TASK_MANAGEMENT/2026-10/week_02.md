@@ -14,6 +14,7 @@
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
 | Phát triển Content Plan Cinema | Phát triển content plan từ Blog, Diễn Viên, Film Detail | Hoan | Hiến (định hướng) | `In Progress` |
+| Sản xuất Blog Cinema (100 bài) | Sản xuất và xuất bản 100 bài blog review/điện ảnh/phim chiếu rạp qua MoSpark GenAI Pipeline chuẩn SEO/GEO | Hoan | Hiến (định hướng) | `In Progress` |
 | Tối ưu Core Web Vitals (LCP) | Tối ưu CWV các trang trên MoSpark (LCP < 2.0s, ...) | Hùng | Web Dev | `In Progress` |
 | Build Sitemap cho Cinema | Xây dựng cấu trúc sitemap chuyên biệt cho toàn bộ trang Cinema | Hùng | Hoài Anh | `In Progress` |
 | Thiết kế Mini Game Hidden Puzzle | Thiết kế Mini Game Tìm Hidden Puzzle và show mass trang Cinema | Hùng | Hoan | `In Progress` |
@@ -22,15 +23,18 @@
 ---
 
 ### 2. Financial
-- **Nhân sự phụ trách:** Nhật, Hiếu, Thuận, Hoan
+- **Nhân sự phụ trách:** Nhật, Hiếu, Thuận, Hoan, Hiến, Hùng
 
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
+| Phối Hợp BU Bank Lên Content Structure | Phối hợp BU Bank lên Content Structure chi tiết cho trang Bank Detail | Hiến | BU Bank | `In Progress` |
+| Triển Khai UI Trang Bank | Thiết kế và hoàn thiện UI cho trang Bank (Hub Ngân Hàng) | Hiến | Nhật | `In Progress` |
+| Content Plan Cho Tỷ Giá Và Quỹ | Xây dựng Content Plan chi tiết cho cụm trang Tỷ Giá và Chứng Chỉ Quỹ | Hoan | Hiến | `In Progress` |
+| Go Live Trang Tỷ Giá Theo Cặp Tiền Tệ | Hoàn thiện và Go Live trang Tỷ Giá theo từng cặp tiền tệ | Nhật | Web Dev | `In Progress` |
+| Go Live Mega Menu Cho Trang Tài Chính | Triển khai và Go Live Mega Menu điều hướng cho toàn bộ cụm trang Tài Chính | Nhật | Hùng | `In Progress` |
 | Đồng bộ API CCQ / Lãi Tiết Kiệm | Kết nối và đồng bộ dữ liệu API của Chứng Chỉ Quỹ và Lãi tiết kiệm | Hiếu | Backend | `In Progress` |
-| Build Menu Header cho Trang Finance | Xây dựng thanh điều hướng Menu Header cho toàn trang Finance | Nhật | Hiến (linh hoạt) | `In Progress` |
 | Define EventName Umami trên Knowledgebase | Định nghĩa trên Repo Knowledgebase của Hiến các EventName của Umami cho toàn bộ Utilities | Hiến | Nhật, Thuận | `In Progress` |
 | Auto Gắn Tracking Umami Từng Tool | Tự động hóa việc gắn tracking Umami cho từng Tool/Widget tài chính | Thuận | Nhật | `In Progress` |
-| Xuất bản Sub-page Tỷ Giá (5 trang) | Xuất bản 5 trang Sub-page tỷ giá ngoại tệ hoàn chỉnh | Nhật | Web Dev | `In Progress` |
 | Sản xuất Blog Financial (30 bài) | Sản xuất 30 bài blog chuẩn SEO/GEO cho nhóm nội dung Financial | Hoan | Hiến (định hướng) | `In Progress` |
 
 ---
@@ -41,6 +45,7 @@
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
 | Go Live Hãng xe và Model Xe | Go Live trang Hãng xe và Model Xe (chủ yếu là Vinfast) | Thuận | Hoan | `In Progress` |
+| Triển Khai Trang Phong Thủy | Triển khai trang Phong Thủy theo đúng Prototype đã phê duyệt | Thuận | Design | `In Progress` |
 | Nghiên cứu API Database Garage | Nghiên cứu API cho Database Garage (Sử dụng API của Cell Team) | Thuận | Cell Team | `In Progress` |
 | Review & Khôi phục API Phạt Nguội | Review API Phạt Nguội và khôi phục trên Production | Thuận | Hoài Anh | `In Progress` |
 
@@ -54,6 +59,7 @@
 | Go Live Quýt Game | Go Live trang Quýt game (2 phiên bản là 2D và 3D) | Thuận | Web Dev | `In Progress` |
 | Giải pháp Update Trang Download | Đề xuất và triển khai giải pháp update cho trang Download | Hiếu | Growth | `In Progress` |
 | Cải tiến Lại Trang Bonbon | Tối ưu hóa giao diện và trải nghiệm chuyển đổi trang Bonbon | Hiến | Web Dev | `In Progress` |
+| Tạo Trang Tải App (Intent Search & OneLink) | Tạo trang Tải App để acquire nhóm intent search, điều hướng từ trang /download và xây dựng luồng OneLink (mặc định về homepage trên desktop) | Hiến | Hiếu, Thuận | `In Progress` |
 
 ---
 

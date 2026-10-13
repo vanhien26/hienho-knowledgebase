@@ -179,7 +179,7 @@ graph TD
 * **VTTI BU:** Cung cấp dữ liệu vị trí trạm sạc, cây xăng và garage sửa xe toàn quốc; bảo đảm ổn định API Phạt Nguội.
 
 #### 4. Priorities & Action Items (Kế Hoạch & Tiến Độ Thực Thi)
-* **Staging & Go-live Trang Tìm Garage:** Đã hoàn thành đưa lên **Staging** trang **Tìm Garage (`/tien-ich-giao-thong/tim-garage`)**, dự kiến chính thức **Go-live trước khi hết Tháng 09/2026**.
+* **Staging & Go-live Trang Garage:** Đã hoàn thành đưa lên **Staging** trang **Garage (`/tien-ich-giao-thong/garage`)**, dự kiến chính thức **Go-live trước khi hết Tháng 09/2026**.
 * **Đồng Hành InsurTech BU & Campaign Ads 550 triệu:** Phối hợp hỗ trợ Cell Team triển khai bài viết Blog cho Bảo Hiểm Ô Tô (chạy ngân sách Ads 550tr hết 2026), tối ưu UI/UX và phễu acquire New User.
 * **Tự Chủ Sản Xuất Content PLG:** Web Platform Team tiếp tục chủ động sản xuất bài viết chuyên sâu trên các dự án PLG (Phạt nguội, Giá xăng, Trạm sạc, Đăng kiểm).
 * **Duy Trì Hạ Tầng 0-CAPTCHA & Phạt Nguội Post-API:** Đảm bảo hệ thống tra cứu phạt nguội hoạt động mượt mà sau khi API nối lại kết nối từ 20/09.

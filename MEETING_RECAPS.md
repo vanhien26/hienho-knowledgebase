@@ -7,6 +7,24 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 
 ## DANH SÁCH BẢN GHI RECAPS
 
+### Bản ghi ngày 13/10/2026: Cập Nhật Tiến Độ Go-Live & On UAT Các Dự Án Financial Hub
+> **Thành phần:** Web Product Lead x Web Development Team x FS Team  
+> **Mục tiêu:** Cập nhật trạng thái Go-live, On UAT và thẩm định API kỹ thuật của hệ thống công cụ và tiện ích Financial Hub.
+
+#### 1. Các Sản Phẩm Đã Go-Live Chính Thức
+- **Bảng Lãi Suất 40 Ngân Hàng & Tool Tính Tiền Lãi (`/tai-chinh/lai-suat`):** Đã chính thức Go-live với 2 cấu phần cốt lõi: Bảng so sánh lãi suất tiền gửi/vay 40 ngân hàng thương mại và Tool tính tiền lãi gửi tiết kiệm theo số tiền người dùng tự nhập, tự động tính toán và hiển thị ngân hàng có lãi suất tối ưu nhất.
+- **Phân Bổ Lương 50/30/20 & Hũ Tài Chính (`/tai-chinh/phan-bo-luong`):** Đã chính thức Go-live, hỗ trợ chia ngân sách tự động theo quy tắc 50/30/20 và mô hình 6 Hũ tài chính, kết nối tính năng Hũ Chi Tiêu in-app.
+
+#### 2. Các Sản Phẩm Đang On UAT (Dự Kiến Go-Live Trong Tuần Này)
+- **Hệ Thống Sub-page Tỷ Giá (5 Cặp Tiền Tệ Phổ Biến):** Đã on UAT các trang chi tiết cặp ngoại tệ lưu lượng lớn nhất (USD, EUR, JPY, GBP, CNY...) tích hợp công cụ quy đổi hai chiều, bảng tỷ giá đa ngân hàng và biểu đồ biến động; chốt kế hoạch Go-live trong tuần này.
+- **Mega Menu Header Mới Trên Financial Hub (`/tai-chinh`):** Đã on UAT kiến trúc Mega Menu 4 trụ cột tài chính. Cơ chế điều hướng UX: Khi người dùng nhấp sang các trang con có menu chức năng riêng, Mega Menu chính sẽ tự động co lại thành Top Menu toàn cục cố định, đảm bảo trải nghiệm liền mạch không bị xung đột điều hướng. Chốt Go-live trong tuần này.
+
+#### 3. Tiến Độ Kỹ Thuật Đang Thẩm Định (In Review)
+- **API Lãi Suất Tiền Gửi Trên MoMo (`/tai-chinh/gui-tiet-kiem`):** Đang trong giai đoạn review kỹ thuật API lãi suất tiền gửi của các đối tác liên kết (Bản Việt, VPBank) với chính sách ưu đãi cộng thêm tới +0.2% lãi suất để chuẩn bị phát hành.
+- **API Dữ Liệu Chứng Chỉ Quỹ (`/tai-chinh/chung-chi-quy`):** Đang review kết nối API dữ liệu giá NAV và tỷ suất sinh lời của các quỹ mở đối tác từ BU CVS, chuẩn bị dựng giao diện bảng giá và bộ giả lập tích sản SIP.
+
+---
+
 ### Bản ghi ngày 10/10/2026: Tổng Hợp Đánh Giá Run-rate Target Tháng 10, Crawl Budget & Backlink Profile
 > **Thành phần:** Web Product Lead x Web Analytics x GSC Data Export (10/10/2026)
 > **Mục tiêu:** Tổng hợp 3 nguồn dữ liệu - Tracking MTD Tháng 10, GSC Crawl Stats, GSC Top Linking Sites - thành một đánh giá khả năng đạt Target tháng 10 và rủi ro chuyển tiếp cho Quý 4/2026.

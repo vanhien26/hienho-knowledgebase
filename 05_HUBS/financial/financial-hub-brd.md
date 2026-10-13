@@ -37,12 +37,17 @@ Nếu MoMo xây dựng **Financial Master Hub (`momo.vn/tai-chinh`)** làm cổn
    * **Daily Pace:** Đạt **8.210 PV/ngày**.
    * **Tỷ lệ hoàn thành Target:** Đạt **98,52% Target Tháng 9** (250.000 PVs) - **TIỆM CẬN HOÀN THÀNH 98,5% TARGET THÁNG 9**.
    * **Phân rã Top Verticals Full Month T9:** Vay Nhanh **108.614 PVs** (44.1% Hub), Tra cứu CIC **80.354 PVs** (32.6% Hub), Ví Trả Sau **42.245 PVs** (17.2% Hub), Bổ trợ **15.092 PVs** (6.1% Hub).
-3. **Cột Mốc Tiến Độ Sản Phẩm & Content Mới:**
-   * **Phối hợp Inbound Content:** Phối hợp với Inbound Content Team triển khai quy trình viết và duyệt content blog tài chính đạt chuẩn E-E-A-T / YMYL.
-   * **Hoàn thiện Trang chủ Master Hub (`/tai-chinh`):** Đã hoàn thiện 100% hiển thị bộ 7 Utilities: CIC, Tính Lương, Phân Bổ Lương, Tỷ Giá, Giá Vàng, Ví Trả Sau, Vay Nhanh.
-   * **Go-Live 3 Trang Chi Tiết:** Chính thức Go-live 3 sub-page: **Tính Lương (`/tai-chinh/tinh-luong`)**, **Tỷ Giá (`/tai-chinh/ty-gia`)**, **Giá Vàng (`/tai-chinh/gia-vang`)**.
-   * **Staging Trang Phân Bổ Lương:** Đã lên **Staging** trang **Phân Bổ Lương (`/tai-chinh/phan-bo-luong`)**.
-   * **Khởi chạy Phase 2 Chứng Chỉ Quỹ:** Đang trong quá trình phối hợp với FinHub Cell Team phát triển **Tool & Page Chứng Chỉ Quỹ (`/tai-chinh/chung-chi-quy`)**.
+3. **Cột Mốc Tiến Độ Sản Phẩm & Content Mới (Cập nhật 13/10/2026):**
+   * **Đã Go-Live Chính Thức:**
+     - **Bảng Lãi Suất 40 Ngân Hàng & Tool Tính Tiền Lãi (`/tai-chinh/lai-suat`):** Cung cấp bảng tra cứu lãi suất 40 bank toàn cảnh thị trường và công cụ tính lãi gửi tiết kiệm theo số tiền nhập vào, tự động gợi ý ngân hàng có lãi suất tối ưu nhất.
+     - **Phân Bổ Lương 50/30/20 & Hũ Tài Chính (`/tai-chinh/phan-bo-luong`):** Chính thức Go-live phục vụ chia ngân sách tự động và kết nối Hũ Chi Tiêu in-app.
+     - **Bộ 3 Cổng Tiện Ích Đã Go-Live Trước Đó:** Tính Lương (`/tai-chinh/tinh-luong`), Tỷ Giá (`/tai-chinh/ty-gia`), Giá Vàng (`/tai-chinh/gia-vang`).
+   * **Đang On UAT (Dự Kiến Go-Live Trong Tuần Này):**
+     - **Sub-pages Tỷ Giá (5 Cặp Tiền Tệ Phổ Biến):** Hệ thống trang con chi tiết theo cặp tiền (USD, EUR, JPY, GBP, CNY...) kèm tool đổi tiền trực tiếp và biểu đồ so sánh.
+     - **Mega Menu Header Mới Trên `/tai-chinh`:** Điều hướng 4 trụ cột tài chính. Khi click sang trang con có menu riêng, Mega Menu chính sẽ tự động đóng vai trò Top Menu toàn cục cố định.
+   * **Đang Review Kỹ Thuật (API Review):**
+     - **API Lãi Suất Gửi Tiết Kiệm MoMo (`/tai-chinh/gui-tiet-kiem`):** Thẩm định tích hợp API lãi suất tiền gửi ưu đãi đối tác (Bản Việt +0.2% lãi suất, VPBank).
+     - **API Dữ Liệu Chứng Chỉ Quỹ (`/tai-chinh/chung-chi-quy`):** Thẩm định API giá NAV và tỷ suất sinh lời quỹ mở phục vụ bảng giá tra cứu và tool tích sản SIP.
 4. **Hạ tầng Công cụ Tiện ích Dùng chung (Embeddable Widgets):** Chuẩn hóa các bộ công cụ tính toán để nhúng linh hoạt vào mọi điểm chạm trên toàn bộ Kênh Web MoMo.
 
 ---
@@ -60,25 +65,22 @@ Nếu MoMo xây dựng **Financial Master Hub (`momo.vn/tai-chinh`)** làm cổn
 
 ## 5. TỔNG QUAN SẢN PHẨM & CÁC TRỤ CỘT DỊCH VỤ (PRODUCT OVERVIEW)
 
-### 5.1 Năm Trụ Cột Dịch Vụ Tài Chính Tại Financial Hub
+### 5.1 Bốn Trụ Cột Dịch Vụ Tài Chính Tại Financial Hub
 
-Financial Hub quy hoạch toàn bộ giải pháp tài chính MoMo thành 5 khối nghiệp vụ chính:
+Financial Hub quy hoạch toàn bộ giải pháp tài chính MoMo thành 4 trụ cột chiến lược:
 
-1. **Khối Tín Dụng, Vay Vốn & Sức Khỏe Tín Dụng:**
-   * *Dịch vụ:* Chuyên trang Điểm Tín Dụng & Tra Cứu CIC (`momo.vn/diem-tin-dung`), Vay Tín Chấp (Vay Nhanh), Trả Góp (Ví Trả Sau), Vay Thế Chấp (Mua Nhà), Xóa Nợ Xấu.
-   * *Công cụ cốt lõi:* Máy tính lịch trả nợ giảm dần, Máy tính trả góp 0%, Widget tự đánh giá nhóm nợ 1-5.
-2. **Khối Tiết Kiệm & Lãi Suất Ngân Hàng:**
-   * *Dịch vụ:* Gửi Tiết Kiệm Online (Đối tác Bản Việt, VPBank), Bảng So Sánh Lãi Suất 30+ Ngân Hàng.
-   * *Công cụ cốt lõi:* Hero Widget tính lãi đơn gửi 1 lần vs lãi kép gửi tích lũy định kỳ hàng tháng; tích hợp Trợ lý MoMo AI đề xuất tối ưu theo công thức bù đắp chênh lệch lãi ròng (Net Yield Gap).
-3. **Khối Đầu Tư, Chứng Khoán & Tích Sản:**
-   * *Dịch vụ:* Giá Vàng SJC/9999 Realtime, Chứng Khoán, Cổ Phiếu, Chứng Chỉ Quỹ SIP từ 10.000đ, Trái Phiếu.
-   * *Công cụ cốt lõi:* Bảng giá vàng & biểu đồ biến động lịch sử, Bộ giả lập lãi kép đầu tư Chứng Chỉ Quỹ (SIP).
-4. **Khối Ngân Hàng & Thẻ Thanh Toán:**
-   * *Dịch vụ:* Programmatic Hub 34 Ngân Hàng, Thẻ Tín Dụng Hoàn Tiền, Thẻ Visa/Mastercard, Napas 247, Thẻ Ghi Nợ ATM.
-   * *Công cụ cốt lõi:* Ma trận so sánh quyền lợi & phí thường niên thẻ tín dụng, Cổng tra cứu Swift code/hotline 34 bank.
-5. **Khối Tiện Ích Thu Nhập & Thuế:**
-   * *Dịch vụ:* Tính Lương Gross - Net luật mới 2026, Quyết Toán Thuế TNCN Tự Động, Tỷ Giá Ngoại Tệ & Quy Đổi Live.
-   * *Công cụ cốt lõi:* Máy tính Gross-Net 2026 kèm thanh trượt phân bổ 50/30/20, Bộ chuyển đổi ngoại tệ live.
+1. **Trụ Cột Tín Dụng (Credit & Borrowing):**
+   * *Dịch vụ:* Chuyên trang Điểm Tín Dụng & Tra Cứu CIC (`momo.vn/diem-tin-dung`), Vay Tín Chấp (Vay Nhanh), Trả Góp (Ví Trả Sau), Vay Mua Nhà / Xe, Xóa Nợ Xấu.
+   * *Công cụ cốt lõi:* Máy tính lịch trả nợ giảm dần, Máy tính trả góp 0%, Widget tự đánh giá nhóm nợ 1-5, Bảng lãi suất vay ngân hàng.
+2. **Trụ Cột Tích Lũy (Savings & Accumulation):**
+   * *Dịch vụ:* Gửi Tiết Kiệm Online MoMo (Đối tác Bản Việt, VPBank với ưu đãi +0.2% lãi suất), Túi Thần Tài, Bảng So Sánh Lãi Suất 40 Ngân Hàng Toàn Cảnh (`momo.vn/tai-chinh/lai-suat`).
+   * *Công cụ cốt lõi:* Bảng tra cứu lãi suất 40 bank và Tool tính tiền lãi gửi tiết kiệm theo số tiền người dùng tự nhập (hiển thị ngân hàng tối ưu nhất), Bộ tính quỹ dự phòng khẩn cấp.
+3. **Trụ Cột Đầu Tư (Investment & Wealth Building):**
+   * *Dịch vụ:* Giá Vàng SJC/9999 Realtime (`momo.vn/tai-chinh/gia-vang`), Tỷ Giá Ngoại Tệ & Đổi Tiền (`momo.vn/tai-chinh/ty-gia`), Chứng Khoán (`momo.vn/chung-khoan`), Chứng Chỉ Quỹ SIP (`momo.vn/tai-chinh/chung-chi-quy`), Tự Do Tài Chính FIRE.
+   * *Công cụ cốt lõi:* Bảng giá vàng realtime & công cụ quy đổi, Cổng tra cứu tỷ giá 30+ ngoại tệ và 5 sub-page cặp tiền, Bảng giá NAV và Máy tính tích sản SIP từ 10.000đ/ngày, Bộ giả lập FIRE.
+4. **Trụ Cột Chi Tiêu (Spending & Cash Flow):**
+   * *Dịch vụ:* Tính Lương Gross - Net luật mới 2026 (`momo.vn/tai-chinh/tinh-luong`), Phân Bổ Lương 50/30/20 & Hũ Tài Chính (`momo.vn/tai-chinh/phan-bo-luong`), Lương Hưu & BHXH Một Lần (`momo.vn/tai-chinh/luong-huu`), Cổng Danh Bạ 34 Ngân Hàng (`momo.vn/tai-chinh/ngan-hang`).
+   * *Công cụ cốt lõi:* Máy tính Gross-Net 2026 tích hợp khấu trừ bảo hiểm 10.5% và thuế TNCN 7 bậc, Tool chia ngân sách 50/30/20 và 6 hũ tài chính kết nối Hũ Chi Tiêu in-app, Tool tính lương hưu luật mới.
 
 ### 5.2 Cơ Chế Điều Hướng Trọng Tâm Đến 3 Sản Phẩm FinHub (Driven-Traffic Engine)
 
@@ -595,64 +597,108 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
     </tr>
   </thead>
   <tbody>
+    <!-- PHASE 0 -->
+    <tr style="background-color:#f0fdf4;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;" rowspan="2"><strong>Phase 0</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 7/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Ví Trả Sau</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Tool tính trả góp Ví Trả Sau. Nhập giá trị món hàng và kỳ hạn (3 - 12 tháng) để xem số tiền thanh toán mỗi tháng, phí chuyển đổi và so sánh phương án miễn lãi 45 ngày.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#15803d; background-color:#dcfce7;">Done</td>
+    </tr>
+    <tr style="background-color:#f0fdf4;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 7/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Vay Nhanh</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Tool tính lịch trả nợ vay tiêu dùng. Nhập số tiền vay (5 - 100 triệu) và kỳ hạn (6 - 48 tháng) để tính số tiền trả hàng tháng theo dư nợ giảm dần, chi tiết gốc, lãi và tổng lãi thực tế.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#15803d; background-color:#dcfce7;">Done</td>
+    </tr>
     <!-- PHASE 1 - THÁNG 8/2026 -->
     <tr style="background-color:#f0fdf4;">
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;" rowspan="4"><strong>Phase 1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;" rowspan="6"><strong>Phase 1</strong></td>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 8/2026</td>
-      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 1: Master Financial Hub</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px;">Xây dựng trang cổng trung tâm, thiết kế Mega Menu 5 nhóm nhu cầu tài chính, thanh Trợ thủ đồng hành và các thẻ điều hướng sản phẩm.</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Financial Hub & Mega Menu</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Cổng trung tâm điều hướng dịch vụ tài chính theo 4 trụ cột (Tín Dụng, Tích Lũy, Đầu Tư, Chi Tiêu). Đang on UAT Mega Menu Header mới (khi sang trang con có menu riêng sẽ tự động co thành Top menu toàn cục). Quy hoạch Cổng 34 Ngân Hàng.</td>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#15803d; background-color:#dcfce7;">Done</td>
     </tr>
     <tr style="background-color:#f0fdf4;">
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 8/2026</td>
-      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 2: CIC, Tiết Kiệm</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px;">Công cụ CIC Simulator và Nợ Xấu.<br/>Công cụ tiết lãi suất tiết kiệm cho TKO</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Điểm Tín Dụng (/diem-tin-dung)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Tool tự đánh giá điểm tín dụng CIC (thang điểm 150 - 750), xếp hạng nhóm nợ 1-5 và nhận gợi ý cải thiện hồ sơ vay.</td>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#15803d; background-color:#dcfce7;">Done</td>
-    </tr>
-    <tr style="background-color:#fefce8;">
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 8/2026</td>
-      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 3: Content Strategy & Blog Tài Chính</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px;">Thiết lập quy trình tự động hóa xuất bản cẩm nang tài chính bằng AI độc lập trên MoSpark</td>
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#b45309; background-color:#fef9c3;">In Progress</td>
     </tr>
     <tr style="background-color:#f0fdf4;">
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 8/2026</td>
-      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 4: Tra Cứu Giá Vàng Realtime</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px;">Xây dựng bảng giá vàng realtime (SJC, PNJ, DOJI, 24K, 9999, Nhẫn trơn), biểu đồ lịch sử 7-30 ngày</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Giá Vàng (/tai-chinh/gia-vang)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Bảng tra cứu giá vàng trực tuyến (SJC, DOJI, PNJ, nhẫn trơn 9999) theo thời gian thực kèm biểu đồ lịch sử và tool quy đổi chỉ, lượng ra tiền mặt.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#15803d; background-color:#dcfce7;">Done</td>
+    </tr>
+    <tr style="background-color:#f0fdf4;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 8/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Tính Lương (/tai-chinh/tinh-luong)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Tool tính lương Net từ Gross tự động khấu trừ 10.5% bảo hiểm bắt buộc và thuế TNCN lũy tiến 7 bậc 2026 trên cùng một màn hình (kèm tính năng chuyển đổi ngược lại).</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#15803d; background-color:#dcfce7;">Done</td>
+    </tr>
+    <tr style="background-color:#f0fdf4;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 8/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Bảo Hiểm Xã Hội</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Tool tính tiền rút BHXH một lần theo quy định pháp lý mới nhất.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#15803d; background-color:#dcfce7;">Done</td>
+    </tr>
+    <tr style="background-color:#f0fdf4;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 8/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Lương Hưu (/tai-chinh/luong-huu)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Tool dự toán lương hưu và tuổi nghỉ hưu theo lộ trình luật BHXH mới.</td>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#15803d; background-color:#dcfce7;">Done</td>
     </tr>
     <!-- PHASE 1 - THÁNG 9/2026 -->
-    <tr style="background-color:#fefce8;">
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;" rowspan="3"><strong>Phase 1</strong></td>
+    <tr style="background-color:#f0fdf4;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;" rowspan="5"><strong>Phase 1</strong></td>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 9/2026</td>
-      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 5: Tính Lương & Thuế TNCN 2026</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px;">Bộ công cụ tính lương Gross - Net (áp dụng luật thuế mới 2026) và cẩm nang tự quyết toán/hoàn thuế TNCN.</td>
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#b45309; background-color:#fef9c3;">In Progress</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Tỷ Giá Master (/tai-chinh/ty-gia)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Cổng tra cứu tỷ giá thị trường và tool quy đổi ngoại tệ (30+ đồng tiền từ 20+ ngân hàng).</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#15803d; background-color:#dcfce7;">Done</td>
     </tr>
     <tr style="background-color:#fefce8;">
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 9/2026</td>
-      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 7: Bộ Quy Đổi Ngoại Tệ & Tỷ Giá</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px;">Trang Cổng Master /ty-gia và Hệ thống Programmatic Subpages theo từng cặp tiền (/tai-chinh/ty-gia/[pair-slug]: USD/VND, JPY/VND, EUR/VND, KRW/VND, CNY/VND, GBP/VND...) kèm biểu đồ biến động lịch sử và so sánh tỷ giá đa ngân hàng.</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Sub-page Tỷ Giá theo cặp tiền</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Đang on UAT 5 cặp tiền tệ phổ biến nhất (USD, EUR, JPY, GBP, CNY...) kèm tool đổi tiền trực tiếp và biểu đồ so sánh đa ngân hàng; dự kiến Go-live trong tuần này.</td>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#b45309; background-color:#fef9c3;">In Progress</td>
     </tr>
-    <tr style="background-color:#eff6ff;">
+    <tr style="background-color:#f0fdf4;">
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 9/2026</td>
-      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 8: Bảng Giá Chứng Khoán & Quỹ Mở (/chung-khoan & /tai-chinh/chung-chi-quy)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px;">Bảng giá tra cứu chỉ số chứng khoán (/chung-khoan) và Cổng tra cứu giá NAV & tích sản chứng chỉ quỹ mở SIP quy hoạch trực thuộc Financial Hub (/tai-chinh/chung-chi-quy).</td>
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#1d4ed8; background-color:#dbeafe;">Planned</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Phân Bổ Lương (/tai-chinh/phan-bo-luong)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Đã Go-live: Tool lập ngân sách chi tiêu và chia hũ tiền lương theo quy tắc 50/30/20 và mô hình 6 Hũ tài chính, kết nối Hũ Chi Tiêu in-app.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#15803d; background-color:#dcfce7;">Done</td>
+    </tr>
+    <tr style="background-color:#fefce8;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 9/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Gửi Tiết Kiệm (/tai-chinh/gui-tiet-kiem)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Đang review API lãi suất tiền gửi đối tác trên MoMo (Bản Việt, VPBank) với chính sách ưu đãi +0.2% lãi suất, chuẩn bị tích hợp cổng mở sổ online.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#b45309; background-color:#fef9c3;">In Progress</td>
+    </tr>
+    <tr style="background-color:#f0fdf4;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 9/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Lãi Suất 40 Ngân Hàng (/tai-chinh/lai-suat)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Đã Go-live: Bảng tra cứu lãi suất 40 ngân hàng toàn cảnh thị trường và công cụ tính lãi gửi tiết kiệm theo số tiền, tự động hiển thị ngân hàng có lãi suất tối ưu nhất.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#15803d; background-color:#dcfce7;">Done</td>
     </tr>
     <!-- PHASE 2 - THÁNG 10/2026 -->
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;" rowspan="2"><strong>Phase 2</strong></td>
+    <tr style="background-color:#fefce8;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;" rowspan="3"><strong>Phase 2</strong></td>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 10/2026</td>
-      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 9: Bổ sung các công cụ tính toán tài chính</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px;">Công cụ 'Có Tiền Đầu Tư Gì?' phân bổ tài sản Lump Sum (An toàn, Tăng trưởng, Mạo hiểm), Bộ giả lập Lãi kép tích lũy SIP và FIRE.</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Chứng Khoán & Quỹ Mở (/chung-khoan & /tai-chinh/chung-chi-quy)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Đang review API dữ liệu giá NAV và tỷ suất sinh lời của quỹ mở (/tai-chinh/chung-chi-quy) từ BU CVS; chuẩn bị xây dựng bảng giá tra cứu và tool tích sản SIP. Bảng giá chỉ số chứng khoán (/chung-khoan).</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#b45309; background-color:#fef9c3;">In Progress</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 10/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Quản Lý Dòng Tiền & Tiêu Dùng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Tool tính dòng tiền tự do và quỹ khẩn cấp (tích hợp thành Module mở rộng trong /tai-chinh/phan-bo-luong) đo lường số tháng cầm cự tài chính nếu mất nguồn thu.</td>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#1d4ed8; background-color:#dbeafe;">Planned</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 10/2026</td>
-      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Dự Án 10: Tự Do Tài Chính & Tích Sản FIRE (/tai-chinh/tu-do-tai-chinh)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px;">Bộ giả lập Tự Do Tài Chính (FIRE Number = Chi phí năm x 25) và Lãi kép tích lũy định kỳ SIP từ 10.000đ/ngày.</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Đầu Tư & Tích Sản FIRE (/tai-chinh/tu-do-tai-chinh)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Tool lập kế hoạch tự do tài chính và nghỉ hưu sớm theo quy tắc 4% an toàn và lộ trình tích sản hàng tháng.</td>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#1d4ed8; background-color:#dbeafe;">Planned</td>
     </tr>
   </tbody>
