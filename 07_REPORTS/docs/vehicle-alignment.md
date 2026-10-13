@@ -177,7 +177,7 @@ Hệ sinh thái Kênh Web được chia làm **2 Nhóm Cấu Trúc Rõ Ràng**:
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Garage Sửa Xe & Bảo Dưỡng</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tien-ich-giao-thong/tim-garage</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tien-ich-giao-thong/garage</code></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>272.000</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Danh sách garage, trung tâm chăm sóc ô tô uy tín theo địa phương</td>
     </tr>

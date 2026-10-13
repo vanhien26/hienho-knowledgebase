@@ -406,7 +406,7 @@ Mỗi loại trang bắt buộc khai báo mã JSON-LD chuẩn trong thẻ `<head
 #### B. Standalone Utility Page (`/[usecase-slug]/`)
 Khai báo Schema `@type`: `WebApplication`, `GovernmentService` (nếu có), `FAQPage`.
 
-#### C. GEO Local Pages (`/tram-sac/`, `/tim-garage/`, `/bai-do-xe/`)
+#### C. GEO Local Pages (`/tram-sac/`, `/garage/`, `/bai-do-xe/`)
 Khai báo Schema `@type`: `LocalBusiness` / `AutomotiveBusiness` / `EVChargingStation` / `ParkingFacility`.
 
 ---

@@ -54,7 +54,7 @@
   * Sự cố ngắt kết nối API Phạt Nguội từ 01/09 đến 20/09 bộc lộ rủi ro khi dựa vào một nguồn traffic duy nhất.
 - **Hành động tái cấu trúc & Đa dạng hóa dịch vụ:**
   * Ngay khi API khôi phục ngày 21/09, nhịp traffic Phạt Nguội đang hồi phục trở lại.
-  * Tiến hành đa dạng hóa hạ tầng: Lên Staging chuyên trang **Tìm Garage sửa xe** (`/tien-ich-giao-thong/tim-garage`), chuẩn bị Go-live **Trạm Sạc VinFast** tích hợp Location API.
+  * Tiến hành đa dạng hóa hạ tầng: Lên Staging chuyên trang **Garage sửa xe** (`/tien-ich-giao-thong/garage`), chuẩn bị Go-live **Trạm Sạc VinFast** tích hợp Location API.
   * **Hợp lực cùng InsurTech BU:** Triển khai Blog Bảo Hiểm Ô Tô với ngân sách Paid Ads 550 triệu VNĐ (từ nay đến hết năm 2026) để acquiring tệp chủ xe U30-45 chất lượng cao.
 
 ---
