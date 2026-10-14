@@ -97,7 +97,7 @@ Mọi file tuần tuân thủ nghiêm ngặt bảng chuẩn 5 cột tinh gọn:
 4. **New User (Thuận, Hiếu, Hiến):**
    - Go Live Quýt Game (phiên bản 2D và 3D).
    - Đề xuất và triển khai giải pháp update tối ưu trang Download (`/download`) hiện hữu.
-   - Xây dựng trang mới Tải App (tách biệt trang Download) nhằm acquire nhóm search intent cài đặt ví/app, tiếp nhận điều hướng từ `/download` và xây dựng luồng OneLink thông minh (mặc định về homepage trên desktop).
+   - Xây dựng trang mới Tải App (`/tai-app`, tách biệt trang Download) chuẩn Utility Download Center nhằm acquire nhóm search intent cài đặt ví/app, tiếp nhận điều hướng từ `/download` và xây dựng luồng OneLink thông minh (mặc định fallback về `/tai-app` kèm Dynamic QR Code quét tức thì thay vì văng về homepage trên desktop).
    - Cải tiến giao diện và tỷ lệ chuyển đổi trang Bonbon.
 
 5. **Game/App (Thuận, Hiếu):**

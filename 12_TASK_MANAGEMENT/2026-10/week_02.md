@@ -60,7 +60,7 @@
 | :--- | :--- | :--- | :--- | :---: |
 | Go Live Quýt Game | Go Live trang Quýt game (2 phiên bản là 2D và 3D) | Thuận | Web Dev | `In Progress` |
 | Giải pháp Update Trang Download | Đề xuất và triển khai giải pháp update cho trang Download hiện hữu | Hiếu | Growth | `In Progress` |
-| Tạo Trang Mới Tải App | Xây dựng trang Tải App mới (tách biệt trang Download) để acquire nhóm intent search, tiếp nhận điều hướng từ /download và cấu hình OneLink (mặc định về homepage nếu mở desktop) | Hiến | Hiếu, Thuận | `In Progress` |
+| Tạo Trang Mới Tải App | Xây dựng trang Tải App mới (`/tai-app`, tách biệt trang Download) chuẩn Utility Download Center, tiếp nhận điều hướng từ `/download` và cấu hình OneLink Default Fallback về `/tai-app` kèm Dynamic QR Code quét tức thì (thay vì văng về homepage khi mở desktop) | Hiến | Hiếu, Thuận | `In Progress` |
 | Cải tiến Lại Trang Bonbon | Tối ưu hóa giao diện và trải nghiệm chuyển đổi trang Bonbon | Hiến | Web Dev | `In Progress` |
 
 ---

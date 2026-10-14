@@ -491,21 +491,21 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
 ### 4.2 Giai Đoạn 2: Thi Cử, Học Vấn & Ngã Rẽ Trưởng Thành (13 – 22 Tuổi)
 
 #### Tình huống 2.1: Kỳ Thi Chuyển Cấp 3 (`school3`)
-- **Mở đầu dẫn dắt:** Bạn tốt nghiệp cấp 2. Nhiều người khuyên bạn nên học một nghề cụ thể để nhanh đi làm, trong khi bạn bè cùng lớp đều nộp hồ sơ vào trường cấp 3 công lập.
+- **Bối cảnh dẫn dắt (Narrative Vignette):** Mâm cơm tối mùa hè oi ả dưới ánh đèn tuýp nhấp nháy. Trên mặt bàn gỗ tróc sơn là tờ phiếu đăng ký nguyện vọng vào lớp 10. Bố ngồi trầm ngâm rít từng điếu thuốc lào, mắt nhìn đăm đăm vào khoảng sân tối. Mẹ cẩn thận vuốt thẳng từng nếp gấp của cuốn học bạ loại giỏi rồi khẽ thở dài: *"Nhà mình dạo này kẹt tiền quá con ơi, hay con tính đường học nghề cho đỡ học phí ba năm..."* Bạn nhìn vào mắt mẹ, nơi những vết chân chim hằn sâu nỗi âu lo sinh kế, lòng ngổn ngang giữa giấc mơ đèn sách và gánh nặng của gia đình.
 - **Lựa chọn:**
-  1. *Thi vào trường THPT công lập:* Tăng cơ hội vào đại học, tốn thêm học phí gia đình 3 năm.
-  2. *Vào trường trung cấp / trường nghề:* Học kỹ năng thực hành, ra trường đi làm sớm kiếm tiền ngay từ năm 18 tuổi.
-  3. *Nộp đơn vào trường năng khiếu nghệ thuật / thể thao:* Yêu cầu có chỉ số năng khiếu tích lũy từ nhỏ.
-  4. *Nghỉ học đi làm phụ gia đình:* Kiếm tiền ngay, học vấn dừng lại ở bậc trung học cơ sở.
-  5. *Học bổ túc văn hóa ban đêm / Trường nghề vừa học vừa làm (Dành cho người từng nghỉ học ở tuổi 12):* Tạo cơ hội phục hồi học vấn, vừa có thu nhập vừa lấy bằng cấp 3 để cải thiện hệ số lương sau này.
+  1. *Thi vào trường THPT công lập:* Quyết tâm theo đuổi con đường học vấn dài hạn. Mẹ gật đầu nuốt nước mắt vào trong, nhận thêm việc dọn dẹp nhà buổi tối để gom tiền đóng học phí đầu năm (`sm` +5, chi phí gia đình tăng, khắc sâu quyết tâm đổi đời `memory: 'academic_pursuit'`).
+  2. *Vào trường trung cấp / trường nghề thực hành:* Học nghề kỹ thuật (điện lạnh, cơ khí, ẩm thực). Bạn tự nhủ 18 tuổi sẽ tự nuôi sống bản thân, giảm bớt gánh nặng trên đôi vai gầy của bố mẹ (`grit` +3, ra trường có thu nhập sớm từ năm 18 tuổi).
+  3. *Nộp đơn vào trường năng khiếu nghệ thuật / thể thao:* (Điều kiện: có chỉ số năng khiếu `arts >= 5` từ nhỏ). Dấn thân vào con đường nghệ thuật chông gai, chấp nhận chi phí đồ nghề đắt đỏ để nuôi dưỡng đam mê ấp ủ từ thuở bé (`arts` +5, `sm` +3).
+  4. *Nghỉ học hẳn để đi làm phụ bố mẹ:* Gấp lại trang sách khi tuổi đời mới tròn 15. Bạn bắt đầu chuỗi ngày bươn chải tại xưởng gỗ hoặc phụ việc quán cơm, kiếm từng đồng tiền tươi gửi về đỡ đần đàn em thơ dại (`income` kích hoạt sớm, học vấn dừng lại ở THCS, `so` +5).
+  5. *Học bổ túc văn hóa ban đêm vừa học vừa làm:* (Dành cho người từng nghỉ học ở tuổi 12). Ban ngày bốc vác mưu sinh, ban đêm cắp sách tới lớp học tình thương. Một con đường gian nan nhưng thắp lên cơ hội lấy bằng tốt nghiệp cấp 3 để cải thiện hệ số lương sau này (`grit` +4, `sm` +3).
 - **Dữ liệu thực tế đi kèm (Fact):** Tại Việt Nam, tỷ lệ phân luồng học sinh sau THCS vào học nghề hiện đạt khoảng 15–20%, trong khi mục tiêu giáo dục hướng tới 30% để đáp ứng nhu cầu thị trường lao động.
 
 #### Tình huống 2.2: Cửa Ngõ Đại Học & Áp Lực Thi Lại (`college` & `retake`)
-- **Mở đầu dẫn dắt:** Kỳ thi tuyển sinh đại học vừa công bố kết quả. Điểm số của bạn suýt soát điểm chuẩn trường đại học mơ ước.
+- **Bối cảnh dẫn dắt (Narrative Vignette):** Tiếng loa phát thanh bến xe miền Tây ồn ã xen lẫn mùi khói xăng dầu nồng nặc. Bác bưu tá đạp xe vào tận ngõ đưa tận tay phong bì kết quả thi tốt nghiệp THPT: bạn thiếu đúng 0,5 điểm để chạm vào cánh cổng trường đại học mơ ước. Ba đứng tựa cửa nhìn ra ngõ, mẹ lặng lẽ mở chiếc hòm gỗ cũ kỹ dưới đáy giường kiểm tra xem còn bao nhiêu chỉ vàng tích cóp từ ngày cưới. Không gian gia đình chùng xuống trong sự im lặng nghẹt thở.
 - **Lựa chọn:**
-  1. *Quyết tâm thi lại (Ôn thi thêm 1 năm):* Mất 1 năm không có thu nhập, gia đình tốn thêm tiền ăn học, tăng áp lực tâm lý (`h` -5).
-  2. *Học một trường đại học tư hoặc trường ngoài nguyện vọng:* Học phí cao hơn, ra trường đúng tiến độ.
-  3. *Bỏ đại học, đi làm lao động hoặc học nghề ngắn hạn:* Có tiền ngay, tích lũy kinh nghiệm làm việc sớm.
+  1. *Quyết tâm ở lại thành phố ôn thi thêm một năm:* Vừa làm gia sư ban đêm vừa vùi đầu vào sách vở tại thư viện công cộng. Áp lực nhìn bạn bè cùng trang lứa rạng rỡ bước vào giảng đường khiến giấc ngủ chập chờn (`h` -5, `grit` +3, hoãn thu nhập 1 năm).
+  2. *Học một trường ngoài công lập hoặc trường ngoài nguyện vọng:* Chấp nhận mức học phí cao hơn gấp đôi. Gia đình làm thủ tục vay vốn sinh viên chính sách; bạn tự hứa vừa học vừa chạy bàn trang trải chi phí (`debt` tăng nhẹ theo diện khoanh nợ sinh viên, tốt nghiệp đúng tiến độ).
+  3. *Gấp lại giấc mơ giảng đường, bước thẳng vào thị trường lao động:* Xách ba lô xin làm công nhân xưởng may hoặc tài xế giao vận công nghệ. Đồng tiền kiếm được bằng mồ hôi giúp bạn tự lập tài chính ngay lập tức, dù trong lòng phảng phất nỗi buồn mỗi khi đi ngang cổng trường đại học (`income` ổn định sớm, `so` -2).
 - **Dữ liệu thực tế đi kèm (Fact):** Tại các quốc gia Đông Á như Hàn Quốc, Trung Quốc và Việt Nam, áp lực thi đại học tạo nên hiện tượng hàng trăm ngàn thí sinh dành từ 1 đến 3 năm chỉ để thi lại nhằm vào được các trường top đầu (KICE / Bộ GD&ĐT).
 
 ---
@@ -513,27 +513,28 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
 ### 4.3 Giai Đoạn 3: Lập Nghiệp, Dòng Tiền & Cám Dỗ Chi Tiêu (23 – 30 Tuổi)
 
 #### Tình huống 3.1: Nhận Tháng Lương Đầu Tiên & Phân Bổ Ngân Sách
-- **Mở đầu dẫn dắt:** Bạn nhận tháng lương chính thức đầu tiên trị giá 10 triệu đồng. Bạn bè rủ đi ăn mừng và mua sắm tự thưởng.
+- **Bối cảnh dẫn dắt (Narrative Vignette):** Chuông điện thoại rung lên lúc 17h30 ngày làm việc cuối tháng. Màn hình sáng lên thông báo biến động số dư: +10.000.000 VNĐ — khoản tiền lương chính thức đầu tiên trong cuộc đời sau bao năm tháng thử việc và mài đũng quần trên ghế nhà trường. Tiếng hò reo của nhóm đồng nghiệp rủ nhau đi ăn lẩu nướng ăn mừng; trên bản tin mạng xã hội tràn ngập hình ảnh chiếc điện thoại thông minh đời mới kèm lời mời chào: *"Sở hữu ngay chỉ với 0 đồng trả trước, duyệt hồ sơ tín dụng trong 5 phút"*.
 - **Lựa chọn:**
-  1. *Tự thưởng chiếc điện thoại trả góp đời mới:* Mất 30% lương mỗi tháng để trả góp nợ tiêu dùng trong 12 tháng tới. Hạnh phúc tức thời tăng (`h` +6), nhưng dòng tiền khả dụng bị co hẹp.
-  2. *Áp dụng nguyên tắc chia 3 hũ (50/30/20):* 50% tiền trọ ăn uống, 30% sinh hoạt cá nhân, 20% trích lập ngay vào quỹ khẩn cấp sinh lời.
-  3. *Để toàn bộ trong tài khoản thanh toán không tính toán:* Dễ bị chi tiêu cảm xúc cuốn trôi sau 2 tuần.
+  1. *Tự thưởng chiếc điện thoại trả góp đời mới & liên hoan thâu đêm:* Cảm giác thỏa mãn tức thời khi cầm món đồ công nghệ sang trọng trên tay (`h` +6). Nhưng ngay tháng sau, thông báo trừ nợ 3 triệu đồng/tháng khiến dòng tiền sinh hoạt co thắt nghẹt thở, mở đầu cho chuỗi ngày trả góp mệt mỏi (`debt` +18 triệu, `purchasingPower` giảm).
+  2. *Áp dụng nghiêm ngặt nguyên tắc 3 hũ ngân sách (50/30/20):* Trích ngay 2 triệu gửi về quê biếu bố mẹ mua thuốc, 2 triệu nạp vào Quỹ khẩn cấp sinh lời, 5 triệu chi tiêu tiền trọ ăn uống, 1 triệu duy trì quan hệ bạn bè. Bạn làm chủ đồng tiền ngay từ tháng đầu đi làm (`assets.emergencyFund` +2 triệu, hình thành phản xạ tài chính an toàn).
+  3. *Để mặc tiền trong tài khoản thanh toán và chi tiêu theo cảm xúc:* Không ghi chép, không chia hũ. Chỉ sau 10 ngày đầu tháng, tài khoản báo động đỏ và bạn phải ăn mì gói qua ngày chờ kỳ lương tiếp theo (`money` cạn kiệt, `h` -3).
+- **Tiếng vọng ký ức (Echo Trigger):** Nếu có cờ `secret_spending` (Ăn vụng tiền thối năm 6 tuổi), game hiện dòng nhắc nhở: *"Cảm giác chi tiêu bốc đồng hôm nay gợi lại vị ngọt cay đắng của que kẹo giấu mẹ năm nào."*
 - **Dữ liệu thực tế đi kèm (Fact):** Khảo sát tài chính cá nhân chỉ ra hơn 60% người trẻ dưới 30 tuổi tại các đô thị không duy trì được khoản dự phòng đủ sống trong 3 tháng nếu đột ngột mất việc.
 
 #### Tình huống 3.2: Mua Xe Máy / Phương Tiện Đi Lại (`buy`)
-- **Mở đầu dẫn dắt:** Nơi làm việc cách chỗ ở 12km. Bạn cần một phương tiện đi lại ổn định.
+- **Bối cảnh dẫn dắt (Narrative Vignette):** Cơn mưa rào trút nước như xối xả đúng giờ tan tầm. Chiếc xe máy cà tàng bố để lại khạc ra làn khói đen rồi chết máy giữa dòng nước ngập ngang đầu gối trên đường về phòng trọ. Bạn gồng mình dắt bộ 3 cây số dưới mưa, chiếc áo mưa rách bươm, khói bụi cay xè khóe mắt. Ngày mai bạn có buổi thuyết trình dự án then chốt với đối tác. Một phương tiện di chuyển tin cậy không còn là sở thích, mà là chiếc cần câu cơm sống còn mỗi ngày.
 - **Lựa chọn:**
-  1. *Vay tiêu dùng mua xe tay ga cao cấp (trả góp 2 năm):* Trả trước ít, nhưng gánh lãi suất thực tế 18–25%/năm.
-  2. *Mua một chiếc xe số cũ bằng tiền tích lũy:* Ngoại hình bình thường nhưng không nợ nần, tiết kiệm chi phí xăng xe.
-  3. *Đi xe buýt / phương tiện công cộng:* Tiết kiệm tối đa, tốn thời gian di chuyển (`so` -2).
+  1. *Vay tiêu dùng mua xe tay ga cao cấp (trả góp 24 tháng):* Tự tin lướt đi trên phố, nâng cao diện mạo cá nhân khi gặp gỡ đối tác (`so` +3). Nhưng bạn phải gánh mức lãi suất thực tế 22%/năm; mỗi tháng tiền gốc và lãi nuốt trọn 25% thu nhập của bạn.
+  2. *Mua một chiếc xe số cũ thanh lý bằng tiền tích lũy cá nhân:* Dáng vẻ bình dân, trầy xước vài chỗ nhưng máy móc bền bỉ. Bạn trả dứt điểm trong một lần, không nợ một đồng lãi suất nào, giữ trọn tiền mặt để chuẩn bị cho những bước ngoặt lớn hơn (`money` trừ nhẹ, không phát sinh nợ).
+  3. *Tiếp tục đi xe buýt công cộng và xe ôm công nghệ:* Tiết kiệm chi phí đầu tư phương tiện, nhưng phải dậy từ 5h30 sáng mỗi ngày, mất 3 tiếng di chuyển khiến năng lượng làm việc bị bào mòn (`hl` -2, thời gian cá nhân co hẹp).
 - **Dữ liệu thực tế đi kèm (Fact):** Nợ tiêu dùng không kiểm soát ở độ tuổi 22–27 là nguyên nhân chính khiến điểm tín dụng cá nhân bị xếp vào nhóm nợ chú ý hoặc nợ xấu trên hệ thống CIC.
 
 #### Tình huống 3.3: Lập Gia Đình, Tổ Chức Hôn Lễ Hay Duy Trì Độc Thân (`wedding`)
-- **Mở đầu dẫn dắt:** Bước sang tuổi 28, công việc dần ổn định. Bạn và người yêu đứng trước ngưỡng cửa hôn nhân và bài toán chi phí đám cưới.
+- **Bối cảnh dẫn dắt (Narrative Vignette):** Buổi gặp gỡ dạm ngõ giữa hai bên gia đình trong một phòng ăn nhỏ ấm cúng. Sau những câu chuyện hỏi thăm sức khỏe, câu chuyện chuyển dần sang khâu chuẩn bị hôn lễ. Mẹ bạn đời khẽ đặt chén trà xuống, giọng trầm ngâm: *"Cả đời con gái người ta chỉ có một lần, họ hàng ở quê trông vào nhiều lắm, làm sơ sài quá thì tội nghiệp cho cháu..."* Bạn và người yêu nắm chặt tay nhau dưới gầm bàn; trong tài khoản chung hai đứa tích cóp bấy lâu mới gom được vỏn vẹn 80 triệu đồng.
 - **Lựa chọn:**
-  1. *Tổ chức đám cưới hoành tráng (vay mượn thêm để nở mày nở mặt hai bên gia đình):* Tăng Hạnh phúc (`h` +6) và Thể diện xã hội (`so` +5), nhưng gánh khoản nợ tiệc cưới 100 triệu đồng phải trả góp trong 2 năm.
-  2. *Lễ cưới ấm cúng, tinh gọn và dùng toàn bộ tiền mừng làm vốn tích lũy gia đình:* Gắn kết hai bên bền chặt (`so` +4), bổ sung ngay 60 triệu đồng vào Quỹ tích sản chung.
-  3. *Tạm hoãn kết hôn, tập trung tự do tài chính và thăng tiến sự nghiệp cá nhân:* Tiết kiệm chi phí, nhưng chịu áp lực định kiến gia đình (`h` -3).
+  1. *Vay mượn thêm 100 triệu để tổ chức đám cưới hoành tráng 40 bàn tiệc:* Rạng rỡ thể diện hai họ, những bức ảnh cưới lung linh trên mạng xã hội nhận hàng ngàn lượt tương tác chúc phúc (`h` +6, `so` +5). Nhưng đêm tân hôn khép lại bằng việc ngồi bóc từng phong bì mừng cưới trong thắc thỏm để tính tiền bù lỗ tiền cỗ nhà hàng.
+  2. *Lễ cưới ấm cúng, tinh gọn và dùng tiền mừng làm vốn gầy dựng tổ ấm:* Chỉ mời gia đình ruột thịt và bạn bè chí cốt. Chi phí vừa vặn với số tiền có sẵn; số tiền mừng 60 triệu gom được chuyển thẳng vào Quỹ tích sản chung để chuẩn bị cho kế hoạch sinh con (`so` +4, `assets` +60 triệu, tâm lý thảnh thơi).
+  3. *Tạm hoãn kết hôn, thỏa thuận cùng nhau tập trung phát triển sự nghiệp cá nhân:* Tiết kiệm được khoản chi phí lớn ban đầu nhưng phải đối mặt với những lời dò xét, thúc giục của họ hàng mỗi dịp Tết về quê (`h` -3, áp lực tâm lý gia đình).
 - **Dữ liệu thực tế đi kèm (Fact):** Khảo sát đời sống gia đình tại Việt Nam chỉ ra chi phí tổ chức đám cưới trung bình từ 150 đến 300 triệu đồng; gần 40% các cặp vợ chồng trẻ đối mặt với xung đột tài chính trong 2 năm đầu hôn nhân do áp lực trả nợ chi phí cưới hỏi.
 
 ---
@@ -541,25 +542,26 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
 ### 4.4 Giai Đoạn 4: Hôn Nhân, Nhà Cửa & Biến Cố Dòng Tiền (31 – 45 Tuổi)
 
 #### Tình huống 4.1: Mua Nhà Đất Hay Thuê Nhà Dài Hạn (`house`)
-- **Mở đầu dẫn dắt:** Bạn và bạn đời tích lũy được một khoản tiền tương đương 30% giá trị một căn hộ (giá trị căn hộ tự động co giãn từ 900 triệu đến 2,4 tỷ đồng theo đúng số vốn đối ứng 30% bạn đang có).
+- **Bối cảnh dẫn dắt (Narrative Vignette):** Đêm mùa hè oi ả trong căn phòng trọ 18m2, tiếng quạt trần quay kẽo kẹt không xua nổi hơi nóng hầm hập phả xuống từ mái tôn xi-măng. Đứa con nhỏ khóc ngặt nghẽo vì rôm sảy, vợ bạn thức trắng đêm bế con đi đi lại lại trong phòng. Sáng hôm sau, chủ nhà trọ gõ cửa đưa thông báo tháng tới tăng giá điện và tiền phòng. Hai vợ chồng nhìn nhau lặng thinh, trên bàn là tập hồ sơ dự án căn hộ chung cư kèm dòng cam kết từ ngân hàng: *"Chỉ cần thanh toán trước 30%, thời hạn vay vốn lên tới 20 năm"*.
 - **Lựa chọn:**
-  1. *Vay thế chấp 70% ngân hàng trong 15–20 năm để mua nhà (áp dụng cơ chế dư nợ giảm dần):* Có tài sản cố định, an cư lập nghiệp, trích từ 30–40% thu nhập trả gốc và lãi giảm dần theo từng năm.
-  2. *Tiếp tục thuê nhà và đem toàn bộ tiền tích lũy đi đầu tư sinh lời:* Linh hoạt dòng tiền, nhưng chịu rủi ro chủ nhà tăng giá thuê và biến động thị trường đầu tư.
+  1. *Ký hợp đồng vay thế chấp 70% ngân hàng trong 15–20 năm (áp dụng dư nợ giảm dần):* Khoảnh khắc tra chiếc chìa khóa vào cánh cửa căn nhà đầu tiên của đời mình xúc động đến nghẹn ngào (`h` +8). Nhưng từ đây, bạn bước vào chuỗi ngày không được phép ốm, không được phép mất việc, trích đều đặn 35% thu nhập hàng tháng để trả nợ gốc và lãi.
+  2. *Tiếp tục thuê căn hộ dịch vụ tiện nghi và đem toàn bộ tiền tích lũy đi đầu tư sinh lời:* Dòng tiền linh hoạt, không chịu áp lực nợ nần đè nặng mỗi sớm mai thức dậy. Tuy nhiên, bạn phải đối mặt với cảm giác bất an mỗi khi chủ nhà thông báo lấy lại nhà để bán hoặc tăng giá thuê đột ngột.
+- **Tiếng vọng ký ức (Echo Trigger):** Nếu có cờ `storm_roof` (Đêm bão tốc mái năm 9 tuổi), game hiện dòng hoài niệm: *"Đứng giữa căn nhà kiên cố của chính mình, bạn rưng rưng nhớ về góc tường ẩm ướt đêm mưa bão năm 9 tuổi bên bố mẹ."*
 - **Dữ liệu thực tế đi kèm (Fact):** Tỷ lệ nợ trên thu nhập (DTI - Debt-to-Income) an toàn được các chuyên gia tài chính khuyến nghị là dưới 35% tổng thu nhập hàng tháng để tránh nguy cơ mất thanh khoản khi lãi suất thả nổi tăng.
 
 #### Tình huống 4.2: Khởi Nghiệp Mở Cửa Hàng / Doanh Nghiệp Riêng (`bizfund` & `bizop`)
-- **Mở đầu dẫn dắt:** Sau 8 năm đi làm thuê, bạn quyết định mở một quán cà phê / nhà hàng kinh doanh riêng. Bạn huy động vốn thế nào?
+- **Bối cảnh dẫn dắt (Narrative Vignette):** Tờ thông báo tái cơ cấu tổ chức và tinh giản biên chế dán trước cửa sảnh công ty. Những đồng nghiệp xấp xỉ tuổi 40 nhìn nhau bằng ánh mắt bất an; làn sóng nhân sự trẻ với mức lương thấp hơn và thành thạo công nghệ mới đang sẵn sàng lấp đầy mọi vị trí. Chiều muộn, một người bạn chí cốt hẹn bạn ra quán cà phê ven đường, đặt lên bàn bản kế hoạch mở xưởng kinh doanh riêng: *"Hoặc là đánh đổi một lần để tự làm chủ vận mệnh của mình, hoặc ngồi yên chờ ngày nhận quyết định cho thôi việc..."*
 - **Lựa chọn:**
-  1. *Vay ngân hàng và thế chấp sổ đỏ của gia đình:* Vốn lớn, nhưng áp lực trả nợ đè nặng lên cả gia đình.
-  2. *Rủ bạn thân góp vốn chung 50/50:* Giảm áp lực vốn, nhưng có nguy cơ mâu thuẫn quản trị sau 2 năm.
-  3. *Mở quy mô nhỏ bằng số tiền tự tiết kiệm:* An toàn, nếu thất bại không bị rơi vào cảnh nợ nần.
+  1. *Đem giấy tờ nhà đất của gia đình thế chấp ngân hàng để huy động vốn lớn:* Cơ hội bứt phá đưa gia đình lên nấc thang kinh tế mới (`income` tiềm năng tăng gấp 3), nhưng áp lực trả lãi hàng tháng khiến bạn mất ngủ triền miên; nếu công việc kinh doanh đổ vỡ, cả gia đình sẽ đứng trước nguy cơ mất trắng mái ấm sinh tồn.
+  2. *Góp vốn 50/50 cùng bạn thân bằng số tiền tiết kiệm cá nhân:* San sẻ gánh nặng vốn liếng, không ảnh hưởng đến tài sản cốt lõi của gia đình. Tuy nhiên sau 18 tháng, những bất đồng về quản trị dòng tiền và chia sẻ lợi nhuận bắt đầu đặt tình bạn mười năm trước thử thách nghiệt ngã.
+  3. *Mở mô hình kinh doanh nhỏ từ tốn bằng vốn tự có, giữ một chân đi làm thuê:* Tăng trưởng chậm rãi nhưng kiểm soát chặt chẽ từng đồng vốn lưu động; nếu thất bại chỉ mất khoản tiền nhàn rỗi mà không kéo gia đình vào cảnh nợ nần bần cùng.
 - **Dữ liệu thực tế đi kèm (Fact):** Thống kê doanh nghiệp của OECD và VCCI cho thấy khoảng 50% doanh nghiệp và hộ kinh doanh cá thể đóng cửa sau 3 năm đầu tiên do thiếu hụt dòng tiền lưu động.
 
 #### Tình huống 4.3: Người Thân Nhờ Đứng Tên Vay / Bảo Lãnh Tín Dụng (`cosign`)
-- **Mở đầu dẫn dắt:** Một người họ hàng thân thiết làm ăn thua lỗ và nhờ bạn đứng tên ký hợp đồng bảo lãnh khoản vay 200 triệu đồng tại ngân hàng.
+- **Bối cảnh dẫn dắt (Narrative Vignette):** Cơn mưa chiều mịt mù trút xuống hiên nhà. Người anh em ruột thịt / họ hàng thân thiết bước vào với gương mặt hốc hác, quầng mắt thâm đen vì chuỗi ngày trốn nợ. Người ấy ngồi thụp xuống ghế, nắm chặt tay bạn van lơn: *"Công việc làm ăn của em vỡ lở rồi anh ơi, chủ nợ kéo đến tận nhà đập phá dọa nạt vợ con. Ngân hàng chỉ chịu giải ngân cho em đảo nợ nếu có người thân đứng tên bảo lãnh tín dụng 200 triệu đồng. Em xin anh cứu mạng gia đình em lần này, em cày cuốc trả đúng từng tháng không để anh chịu thiệt một đồng..."*
 - **Lựa chọn:**
-  1. *Nhận lời ký bảo lãnh vì nể nang gia đình:* Tăng điểm quan hệ gia đình trong ngắn hạn (`so` +5), nhưng đối mặt rủi ro 65% người vay mất khả năng chi trả và bạn phải gánh toàn bộ khoản nợ.
-  2. *Khéo léo từ chối và hỗ trợ một khoản tiền nhỏ trong khả năng:* Mất lòng người thân tạm thời, bảo vệ an toàn tài chính cho gia đình mình.
+  1. *Đặt bút ký bảo lãnh vì nể nang tình máu mủ ruột rà:* Giữ trọn thể diện và chữ tình trong dòng họ (`so` +5), người thân cảm kích rơi nước mắt. Nhưng 8 tháng sau, điện thoại bạn liên tục réo vang từ bộ phận thu hồi nợ: người vay đã cắt liên lạc, và toàn bộ khoản nợ 200 triệu kèm lãi phạt chuyển thẳng sang tên bạn gánh chịu.
+  2. *Khéo léo từ chối ký giấy bảo lãnh, nhưng hỗ trợ 10–20 triệu tiền mặt trong khả năng:* Người thân trách móc xa lánh, không khí gia đình rạn nứt tạm thời (`so` -3). Nhưng bạn bảo vệ nguyên vẹn sự an toàn tài chính của vợ con mình trước cơn bão nợ nần không đáy của người khác.
 - **Dữ liệu thực tế đi kèm (Fact):** Hơn 70% các trường hợp đứng tên bảo lãnh vay hộ giữa người thân kết thúc bằng tranh chấp tài chính và rạn nứt quan hệ gia đình khi có nợ quá hạn.
 
 ---
@@ -567,17 +569,18 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
 ### 4.5 Giai Đoạn 5: Khủng Hoảng Trung Niên, Sức Khỏe & Tích Sản (46 – 65 Tuổi)
 
 #### Tình huống 5.1: Cú Sốc Chi Phí Sức Khỏe Đột Xuất (`ills`)
-- **Mở đầu dẫn dắt:** Một biến cố sức khỏe bất ngờ xảy ra (phát hiện bệnh lý tim mạch hoặc cần phẫu thuật gấp). Chi phí điều trị ước tính 80 triệu đồng.
-- **Lựa chọn & Tình trạng tài chính lúc này:**
-  - *Nếu người chơi ĐÃ CÓ bảo hiểm và quỹ khẩn cấp sinh lời:* Bảo hiểm thanh toán 80%, phần còn lại trích từ quỹ dự phòng mà không phải bán tháo tài sản.
-  - *Nếu người chơi KHÔNG CÓ quỹ dự phòng:* Buộc phải bán gấp xe, rút tiền đầu tư non hoặc vay mượn với lãi suất cao.
+- **Bối cảnh dẫn dắt (Narrative Vignette):** 2 giờ sáng, tiếng còi xe cấp cứu xé toang màn đêm tĩnh mịch. Cơn đau thắt ngực đột ngột khiến bạn ngã quỵ trên nền gạch hoa, mồ hôi vã ra như tắm, hơi thở đứt quãng. Trong phòng chờ bệnh viện nồng nặc mùi thuốc sát trùng, bác sĩ bước ra với tập hồ sơ bệnh án: *"Bệnh nhân cần phẫu thuật đặt stent tim khẩn cấp trong đêm nay. Chi phí ước tính 90 triệu đồng, người nhà vui lòng qua quầy thanh toán nộp tạm ứng ngay"*. Vợ bạn run rẩy đứng trước cửa quầy viện phí giữa đêm lạnh.
+- **Lựa chọn & Tình trạng dòng tiền:**
+  - *Nếu người chơi ĐÃ CÓ bảo hiểm và Quỹ khẩn cấp sinh lời:* Tấm thẻ bảo hiểm chi trả 80% viện phí, 18 triệu còn lại được trích êm thấm từ Quỹ dự phòng sinh lời (`emergencyFund`). Bạn vượt qua cơn thập tử nhất sinh mà không phải phiền lụy đến con cái hay bán non bất kỳ tài sản nào (`hl` phục hồi nhanh, tâm lý an yên).
+  - *Nếu người chơi KHÔNG CÓ quỹ dự phòng và đang ngập nợ:* Vợ con phải gọi điện khắp lượt danh bạ vay mượn với lãi suất cắt cổ, thậm chí rao bán gấp chiếc xe máy duy nhất của gia đình với giá rẻ mạt để gom đủ tiền phẫu thuật (`hl` suy giảm nặng nề, nợ nần chồng chất đẩy gia đình vào vòng xoáy tái nghèo).
+- **Tiếng vọng ký ức (Echo Trigger):** Nếu từng có cờ `debt_shame` (Bị đọc tên nợ tiền học năm 9 tuổi), game hiện dòng xúc cảm: *"Cảm giác đứng trước quầy viện phí hôm nay làm sống lại nỗi nghẹn ngào ngày xưa khi mẹ vét từng đồng tiền lẻ dưới đáy hòm."*
 - **Dữ liệu thực tế đi kèm (Fact):** Báo cáo của WHO cho biết tại các nước đang phát triển, chi phí y tế tự chi trả không qua bảo hiểm là nguyên nhân hàng đầu đẩy hàng triệu hộ gia đình tái nghèo mỗi năm.
 
 #### Tình huống 5.2: Chuẩn Bị Quỹ Hưu Trí & Phụ Dưỡng Cha Mẹ Già (`retire`)
-- **Mở đầu dẫn dắt:** Con cái đã tốt nghiệp đại học và tự lập. Cha mẹ hai bên già yếu cần người chăm sóc. Bạn sắp bước vào tuổi nghỉ hưu.
+- **Bối cảnh dẫn dắt (Narrative Vignette):** Chiều Chủ nhật bình yên, con trai và con dâu bế cháu nội về thăm nhà. Sau bữa cơm ấm cúng, người con trai ngập ngừng đặt lên bàn cuốn sổ đặt cọc mua nhà: *"Bố mẹ ơi, tụi con đang tính mua căn hộ nhỏ để tiện đi làm, nhưng còn thiếu 300 triệu tiền đối ứng. Bố mẹ cho tụi con mượn cuốn sổ tiết kiệm dưỡng già, sau này tụi con làm ăn khấm khá sẽ phụng dưỡng bố mẹ chu đáo..."* Hai vợ chồng ngồi lặng nhìn mái tóc hoa râm của nhau, nghĩ về chuỗi ngày tuổi già không còn sức lao động sắp tới.
 - **Lựa chọn:**
-  1. *Duy trì thói quen tích sản định kỳ qua chứng chỉ quỹ / hưu trí tự nguyện:* Tự chủ tài chính tuổi già, không phụ thuộc vào tiền chu cấp của con cái.
-  2. *Dồn toàn bộ tiền dưỡng già cho con cái mua nhà:* Tăng tình cảm với con cái, nhưng đối mặt với rủi ro trắng tay khi về già nếu con cái gặp khó khăn.
+  1. *Dồn toàn bộ tiền tiết kiệm dưỡng già cho con cái mua nhà:* Con cái xúc động, tình cảm gia đình gắn kết bền chặt (`so` +5). Nhưng bạn tự đặt mình vào thế bị động: nếu công việc làm ăn của con cái gặp trắc trở, bạn sẽ trở thành gánh nặng phụ thuộc hoàn toàn vào chu cấp của thế hệ sau.
+  2. *Giữ lại 60% làm quỹ hưu trí tự chủ, chỉ hỗ trợ con cái 40% trong khả năng:* Con cái hơi hụt hẫng lúc ban đầu nhưng thấu hiểu. Bạn duy trì kỷ luật dòng tiền qua Chứng chỉ quỹ / Hưu trí tự nguyện, tự chủ kinh tế tuổi già để con cái yên tâm lập nghiệp mà không phải bận lòng nuôi bố mẹ.
 - **Dữ liệu thực tế đi kèm (Fact):** Việt Nam đang là một trong những quốc gia có tốc độ già hóa dân số nhanh nhất thế giới. Dự kiến đến năm 2036, Việt Nam sẽ chính thức bước vào giai đoạn dân số già, tạo áp lực lớn lên hệ thống an sinh xã hội nếu người lao động không tự chuẩn bị tài chính hưu trí.
 
 ---
@@ -585,29 +588,50 @@ Từ nền tảng xuất thân và các quyết định ở tuổi 12, nhân v�
 ### 4.6 Giai Đoạn 6: Tuổi Già, Di Sản & Giấy Chứng Nhận Cuộc Đời (66 – 100 Tuổi)
 
 #### Tình huống 6.1: Nơi Ở Tuổi Xế Chiều (`oldhome`)
-- **Mở đầu dẫn dắt:** Sức khỏe suy giảm, bạn không thể tự mình nấu nướng và sinh hoạt một mình.
+- **Bối cảnh dẫn dắt (Narrative Vignette):** Đôi bàn tay đã run rẩy, mắt đã mờ đục sau bảy thập kỷ phong trần. Những bậc cầu thang căn nhà cũ trở thành thử thách nặng nề mỗi ngày. Các con bạn đều bận rộn với guồng quay mưu sinh và nuôi dạy con cái, bữa cơm sum vầy thưa dần. Một buổi chiều ngồi bên khung cửa sổ nhìn lá vàng rơi, bạn tự hỏi bản thân muốn trải qua những năm tháng xế chiều như thế nào để giữ trọn sự tự tôn và an yên.
 - **Lựa chọn:**
-  1. *Dọn về sống chung với gia đình người con trưởng:* Gần gũi con cháu, nhưng có thể nảy sinh khác biệt thế hệ trong sinh hoạt hàng ngày.
-  2. *Vào viện dưỡng lão chất lượng cao (chi trả bằng lương hưu hoặc cho thuê căn nhà hiện tại):* Được chăm sóc y tế chuyên nghiệp, tự do không làm phiền con cái.
-  3. *Tiếp tục ở lại nhà cũ và thuê người chăm sóc theo giờ:* Quen thuộc không gian sống, tốn kém chi phí cố định hàng tháng.
+  1. *Ở lại căn nhà cũ cùng gia đình người con trưởng:* Được nghe tiếng cười đùa của con cháu mỗi ngày (`so` +4), nhưng đôi khi cảm thấy chạnh lòng trước những khác biệt sinh hoạt và nhịp sống gấp gáp của giới trẻ.
+  2. *Chủ động vào viện dưỡng lão chất lượng cao bằng lương hưu và tiền tích sản:* Có đội ngũ y bác sĩ chăm sóc chuyên nghiệp 24/7, sinh hoạt cùng những người bạn đồng niên (`hl` +4, `h` +4). Bạn giữ trọn phẩm giá và sự tự do tuổi già, để con cái rảnh tay phấn đấu cho tương lai của chúng.
+  3. *Tiếp tục ở lại nhà cũ và thuê người chăm sóc theo giờ:* Quen thuộc không gian sống gắn bó cả đời người, chi trả chi phí sinh hoạt từ nguồn thu nhập thụ động bền vững.
 
 #### Tình huống 6.2: Lập Di Chúc & Phân Chia Di Sản (`will`)
-- **Mở đầu dẫn dắt:** Bạn bước sang tuổi 80, trí tuệ còn minh mẫn. Luật sư khuyên bạn nên hoàn tất việc lập di chúc hợp pháp.
+- **Bối cảnh dẫn dắt (Narrative Vignette):** Nằm trên chiếc giường gỗ quen thuộc, ngoài sân tiếng chim hót líu lo dưới tán cây mà bạn đã tự tay vun trồng từ ba mươi năm trước. Trí tuệ vẫn còn sáng suốt, luật sư gia đình ngồi bên cạnh mở chiếc cặp tài liệu. Các con bạn tề tựu đông đủ ngoài hiên nhà. Bạn nhìn lại chặng đường một đời người đã qua — những thăng trầm cơm áo, những đêm mất ngủ vì nợ nần, những quyết định sáng suốt và cả những sai lầm đã tôi luyện nên bản lĩnh của bạn.
 - **Lựa chọn:**
-  1. *Chia đều toàn bộ tài sản cho các con một cách công khai, minh bạch:* Giữ gìn hòa khí gia đình, tránh tranh chấp tài sản sau này.
-  2. *Trích một phần tài sản thành lập quỹ khuyến học dòng họ hoặc đóng góp xã hội:* Để lại giá trị nhân văn bền vững.
+  1. *Phân chia tài sản công khai, minh bạch và lập văn bản công chứng rõ ràng:* Không để lại bất kỳ kẽ hở nào cho sự tranh chấp giữa các con. Các thế hệ sau gắn kết yêu thương, gìn giữ hòa khí gia đình (`so` +6, di sản bình an).
+  2. *Trích một phần tài sản thành lập Quỹ Khuyến Học mang tên dòng họ và đóng góp xã hội:* Phần còn lại chia đều cho con cái. Bạn khép lại vòng đời không chỉ bằng những con số tài sản, mà bằng một giá trị nhân văn trường tồn truyền cảm hứng cho thế hệ mai sau (`h` +8, Enlightenment Score đạt mức tối đa).
 
 ---
 
-### 4.7 Cơ Chế Tái Thiết Cuộc Đời & Trạm Chiêm Nghiệm Dòng Tiền (The Financial Reflection & Legacy Engine)
+### 4.7 Bộ Sưu Tập Đoạn Văn Tự Sự Cuộc Đời (The Life Epilogues & Eulogy Generator)
 
-#### 4.7.1 Triết Lý Bài Học Kế Thừa Trong Quản Trị Tài Chính
+Khi nhân vật dừng bước (sống thọ trọn vẹn hoặc tạ thế sớm), màn hình **Giấy Chứng Nhận Cuộc Đời** sẽ hiển thị một đoạn tự sự đúc kết mang tính điện ảnh cao, được tạo tự động dựa trên toàn bộ nhật ký quyết định của người chơi:
+
+1. **Biến thể Tạ Thế Sớm Tuổi 38 (Kiệt sức gánh nợ vì bảo lãnh tín dụng):**
+   > *"Bạn ra đi vào một buổi chiều mưa tầm tã tuổi 38, trên chiếc bàn làm việc ngổn ngang những tờ giấy báo đòi nợ của người thân mà bạn từng đứng tên bảo lãnh. Một đời sống vì chữ tình và nể nang thể diện, bạn đã gánh trên vai món nợ không phải của mình cho đến hơi thở cuối cùng. Bài học để lại cho kiếp sau: Lòng tốt không đi kèm giới hạn tài chính sẽ trở thành bi kịch tự hủy diệt."*
+
+2. **Biến thể Tạ Thế Sớm Tuổi 52 (Bạo bệnh không có quỹ dự phòng sau khi vỡ nợ kinh doanh):**
+   > *"Bạn nhắm mắt ở tuổi 52 tại căn gác trọ nhỏ ven đô. Cơn bạo bệnh ập đến đúng lúc công việc làm ăn đổ vỡ và tài khoản không còn một đồng dự phòng. Cả thanh xuân liều lĩnh chạy theo những thương vụ bấp bênh mà quên lập tấm khiên bảo vệ, bạn dừng bước khi bao ước mơ còn dang dở. Bài học để lại cho kiếp sau: Xây lâu đài cát mà không có móng, một con sóng dữ cũng đủ cuốn phăng tất cả."*
+
+3. **Biến thể Sống Thọ Tuổi 82 (An nhàn tự chủ nhờ quy tắc 50/30/20 và tích sản bền bỉ):**
+   > *"Bạn thanh thản chìm vào giấc ngủ thiên thu ở tuổi 82 giữa vòng tay ấm áp của con cháu. Xuất phát điểm từ một đứa trẻ xóm trọ nghèo khó, bạn đã kiên trì kỷ luật với từng đồng lương, vững vàng vượt qua cám dỗ chi tiêu và bão giá lạm phát. Bạn để lại cho đời một khối sản nghiệp bền vững và tấm gương về sự tự do tài chính đích thực."*
+
+4. **Biến thể Sống Thọ Tuổi 78 (Gia đình hòa thuận, để lại di sản khuyến học dòng họ):**
+   > *"Trút hơi thở cuối cùng ở tuổi 78, nụ cười bình yên vẫn đọng trên khóe mắt bạn. Không chỉ nuôi dạy con cái thành tài và giữ trọn mái ấm hòa thuận, bạn còn để lại một Quỹ Khuyến Học thắp sáng ước mơ cho hàng chục đứa trẻ nghèo trong dòng họ. Cuộc đời bạn là minh chứng sống động: Giá trị lớn nhất của tiền bạc là tạo ra di sản yêu thương."*
+
+5. **Biến thể Xa Xứ Hồi Hương Tuổi 76 (Cần cù mưu sinh, tái thiết quê hương):**
+   > *"Bạn khép lại hành trình 76 năm cuộc đời trong căn nhà ba gian khang trang ngát hương hoa bưởi tại quê nhà. Nửa đời người bươn chải xứ người gửi từng đồng kiều hối về phụng dưỡng cha mẹ, nửa đời sau vững vàng làm chủ cơ nghiệp trên mảnh đất quê hương. Mồ hôi và nghị lực của bạn đã viết nên câu chuyện tái thiết diệu kỳ."*
+
+---
+
+### 4.8 Cơ Chế Tái Thiết Cuộc Đời & Trạm Chiêm Nghiệm Dòng Tiền (The Financial Reflection & Legacy Engine)
+
+#### 4.8.1 Triết Lý Bài Học Kế Thừa Trong Quản Trị Tài Chính
 Cơ chế Tái Thiết Cuộc Đời (Metaprogression Engine) trong "Một Đời Người" được thiết kế dựa trên triết lý Tâm lý học hành vi kết hợp cơ chế phát triển lũy tiến (Roguelite Progression) chuẩn mực:
 - Mỗi vòng đời khép lại là một bài học đắt giá về dòng tiền và quản trị rủi ro cá nhân.
 - Người chơi không bắt đầu lại từ con số 0 vô nghĩa; sai lầm chí mạng hoặc bản lĩnh vượt khó của vòng đời trước được chuyển hóa thành **"Bài Học Trí Tuệ Kế Thừa" (Financial Wisdom Legacy Perk)** mang sang vòng đời tiếp theo.
 - Thông điệp giáo dục cốt lõi: *"Phải trải qua bao nhiêu vòng đời trải nghiệm, bạn mới tích lũy đủ kỷ luật tài chính để đạt được tự do và an tâm trước bão giông tiền bạc?"*
 
-#### 4.7.2 Màn Hình Trạm Chiêm Nghiệm Cuộc Đời (The Reflection Station)
+#### 4.8.2 Màn Hình Trạm Chiêm Nghiệm Cuộc Đời (The Reflection Station)
 Khi nhân vật qua đời (do tuổi già tự nhiên hoặc tử vong sớm vì kiệt quệ tài chính / bạo bệnh), giao diện chuyển sang không gian tĩnh lặng màu xám khói sang trọng với các thành phần chính:
 1. **Nhãn Định Danh Vòng Đời:** Hiển thị rõ nét *"Vòng Đời Thứ [N]"* ở góc trên để người chơi nhận diện tiến trình lũy tiến của mình.
 2. **Tấm Gương Soi Chiếu Dòng Tiền (Financial Reflection Mirror):**
@@ -617,7 +641,7 @@ Khi nhân vật qua đời (do tuổi già tự nhiên hoặc tử vong sớm v�
    - Dựa trên nguyên nhân dừng bước hoặc thành tựu nổi bật của vòng đời vừa kết thúc, hệ thống mở khóa Bài Học Trí Tuệ tương ứng.
    - Người chơi được chọn mang theo 1 Bài Học Trí Tuệ vào vòng đời kế tiếp để thay đổi vận mệnh và phản xạ dòng tiền.
 
-#### 4.7.3 Danh Mục 6 Bài Học Trí Tuệ Kế Thừa (Financial Wisdom Legacy Perks)
+#### 4.8.3 Danh Mục 6 Bài Học Trí Tuệ Kế Thừa (Financial Wisdom Legacy Perks)
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
@@ -668,7 +692,7 @@ Khi nhân vật qua đời (do tuổi già tự nhiên hoặc tử vong sớm v�
   </tbody>
 </table>
 
-#### 4.7.4 Biên Niên Sử Vòng Đời (The Multi-Life Chronicle)
+#### 4.8.4 Biên Niên Sử Vòng Đời (The Multi-Life Chronicle)
 Hệ thống kết nối chuỗi các vòng đời thành **Biên Niên Sử Vòng Đời (Multi-Life Tree)** có thể chia sẻ:
 - **Phả Hệ Các Đời:** Hiển thị cây hành trình: *Vòng đời 1 (Nguyễn Văn An - Xóm trọ công nhân - Mất năm 38 tuổi vì bạo bệnh) ➔ Vòng đời 2 (Lê Thị Mai - Tiểu thương chợ phiên - Mất năm 52 tuổi vì vỡ nợ hụi) ➔ Vòng đời 3 (Trần Hữu Bình - Nhân viên công sở - Thọ 82 tuổi an nhàn hưu trí)*.
 - **Điểm Giác Ngộ Tài Chính (Enlightenment Score: 0 – 100):** Tính toán dựa trên số lượng Bài Học Trí Tuệ đã tích lũy và mức cải thiện tài sản ròng qua từng vòng đời.
