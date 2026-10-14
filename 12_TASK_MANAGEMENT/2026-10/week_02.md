@@ -36,6 +36,7 @@
 | Define EventName Umami trên Knowledgebase | Định nghĩa trên Repo Knowledgebase của Hiến các EventName của Umami cho toàn bộ Utilities | Hiến | Nhật, Thuận | `In Progress` |
 | Auto Gắn Tracking Umami Từng Tool | Tự động hóa việc gắn tracking Umami cho từng Tool/Widget tài chính | Thuận | Nhật | `In Progress` |
 | Sản xuất Blog Financial (30 bài) | Sản xuất 30 bài blog chuẩn SEO/GEO cho nhóm nội dung Financial | Hoan | Hiến (định hướng) | `In Progress` |
+| Tạo/301 Và Mapping Bài CIC / Vay Nhanh | Tạo mới/301 và mapping các bài cho nhóm CIC và Vay Nhanh theo sheet: https://docs.google.com/spreadsheets/d/1FF9a-Fay3TKkFRFEYQUZ9aAZsQP_MEdbJ01sHy0S4n8/edit?gid=0#gid=0 | Hoan | Web Dev | `To Do` |
 
 ---
 
@@ -48,6 +49,7 @@
 | Triển Khai Trang Phong Thủy | Triển khai trang Phong Thủy theo đúng Prototype đã phê duyệt | Thuận | Design | `In Progress` |
 | Nghiên cứu API Database Garage | Nghiên cứu API cho Database Garage (Sử dụng API của Cell Team) | Thuận | Cell Team | `In Progress` |
 | Review & Khôi phục API Phạt Nguội | Review API Phạt Nguội và khôi phục trên Production | Thuận | Hoài Anh | `In Progress` |
+| Bổ Sung Author Vehicle Hub | Bổ sung Author cho các bài thuộc Vehicle Hub | Hoan | Thuận | `To Do` |
 
 ---
 
@@ -105,6 +107,7 @@
 | PLG Project Cho Blog Common | Tạo PLG Project và nối vào các bài Blog trên nền tảng MoSpark | Hoan | Trọng | `In Progress` |
 | Cập Nhật Dashboard PLG | Cập nhật dashboard PLG, bổ sung cột số view cho từng bài/PLG | Trọng | Hoan | `To Do` |
 | Setup Tìm Kiếm / Tạo Ảnh Tự Động | Setup phần tìm kiếm và tạo ảnh tự động cho PLG | Trọng | Hoan | `To Do` |
+| Cập Nhật llms.txt Tổng Cho momo.vn | Cập nhật file llms.txt tổng cho toàn bộ momo.vn | Hoan | Web Dev | `To Do` |
 
 ---
 
