@@ -103,6 +103,8 @@
 | :--- | :--- | :--- | :--- | :---: |
 | Quản Trị Topic Cluster | Chuẩn hóa việc phân loại Cluster từ khóa và đồng bộ với danh mục bài viết trên Blog CMS | Trọng | Hoan | `In Progress` |
 | PLG Project Cho Blog Common | Tạo PLG Project và nối vào các bài Blog trên nền tảng MoSpark | Hoan | Trọng | `In Progress` |
+| Cập Nhật Dashboard PLG | Cập nhật dashboard PLG, bổ sung cột số view cho từng bài/PLG | Trọng | Hoan | `To Do` |
+| Setup Tìm Kiếm / Tạo Ảnh Tự Động | Setup phần tìm kiếm và tạo ảnh tự động cho PLG | Trọng | Hoan | `To Do` |
 
 ---
 
