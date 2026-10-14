@@ -1,0 +1,25 @@
+# Mỗi lần push có đổi BRD, báo repo web (hubs-momo) chạy sync.
+name: Notify web BRD update
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*brd*.md'
+      - '**/*BRD*.md'
+      - '!.claude/**'
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Gửi repository_dispatch sang hubs-momo
+        env:
+          TOKEN: ${{ secrets.BRD_SYNC_TOKEN }}
+        run: |
+          curl -fsS -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $TOKEN" \
+            https://api.github.com/repos/vanhien26/hubs-momo/dispatches \
+            -d '{"event_type":"brd-updated","client_payload":{"sha":"${{ github.sha }}"}}'
