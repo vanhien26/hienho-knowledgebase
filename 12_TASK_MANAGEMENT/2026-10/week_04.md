@@ -52,6 +52,7 @@
 | :--- | :--- | :--- | :--- | :---: |
 | Tổng Kết Lượt Chơi Quýt Game 2D & 3D | Đánh giá tổng số lượt chơi game và số lượng New Users tải App từ chiến dịch Quýt game | Thuận | Hải | `To Do` |
 | Đo Lường Hiệu Quả Trang Download | Phân tích tỷ lệ chuyển đổi tải App MoMo sau khi hoàn thiện giải pháp update trang Download | Hiếu | Growth | `To Do` |
+| Tổng Kết Đóng Góp Từ Trang Tải App Mới | Đánh giá số New Users thu hút từ search intent và tối ưu hóa luồng OneLink cho tháng tiếp theo | Hiến | Hải, Thuận | `To Do` |
 | Tổng Kết Đóng Góp Từ Trang Bonbon | Nghiệm thu toàn diện kết quả cải tiến và chốt số lượng người dùng mới thu hút từ trang Bonbon | Hiến | Hải, Web Dev | `To Do` |
 
 ---

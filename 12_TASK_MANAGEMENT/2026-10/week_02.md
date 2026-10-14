@@ -59,9 +59,9 @@
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
 | Go Live Quýt Game | Go Live trang Quýt game (2 phiên bản là 2D và 3D) | Thuận | Web Dev | `In Progress` |
-| Giải pháp Update Trang Download | Đề xuất và triển khai giải pháp update cho trang Download | Hiếu | Growth | `In Progress` |
+| Giải pháp Update Trang Download | Đề xuất và triển khai giải pháp update cho trang Download hiện hữu | Hiếu | Growth | `In Progress` |
+| Tạo Trang Mới Tải App | Xây dựng trang Tải App mới (tách biệt trang Download) để acquire nhóm intent search, tiếp nhận điều hướng từ /download và cấu hình OneLink (mặc định về homepage nếu mở desktop) | Hiến | Hiếu, Thuận | `In Progress` |
 | Cải tiến Lại Trang Bonbon | Tối ưu hóa giao diện và trải nghiệm chuyển đổi trang Bonbon | Hiến | Web Dev | `In Progress` |
-| Tạo Trang Tải App (Intent Search & OneLink) | Tạo trang Tải App để acquire nhóm intent search, điều hướng từ trang /download và xây dựng luồng OneLink (mặc định về homepage trên desktop) | Hiến | Hiếu, Thuận | `In Progress` |
 
 ---
 

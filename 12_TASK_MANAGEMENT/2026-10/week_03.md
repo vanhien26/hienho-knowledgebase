@@ -48,6 +48,7 @@
 | :--- | :--- | :--- | :--- | :---: |
 | Đo Lường Tỷ Lệ Chuyển Đổi Quýt Game 2D & 3D | Đo lường tỷ lệ người chơi hoàn thành game và click nút nhận quà cài đặt App MoMo | Thuận | Hải | `To Do` |
 | Đo Lường Hiệu Quả Trang Download | Đánh giá tỷ lệ click cài đặt App sau khi trang Download được cập nhật theo đề xuất đã chốt | Hiếu | Growth | `To Do` |
+| Đo Lường Hiệu Quả Trang Tải App Mới | Theo dõi lượng organic traffic acquire từ search intent và tỷ lệ chuyển đổi OneLink của trang Tải App | Hiến | Hải, Thuận | `To Do` |
 | Đo Lường Hiệu Quả Trang Bonbon | Theo dõi tỷ lệ chuyển đổi người dùng mới trên trang Bonbon sau cải tiến | Hiến | Hải | `To Do` |
 
 ---
