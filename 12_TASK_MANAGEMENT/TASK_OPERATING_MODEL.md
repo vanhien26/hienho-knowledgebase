@@ -112,11 +112,12 @@ Mọi file tuần tuân thủ nghiêm ngặt bảng chuẩn 5 cột tinh gọn:
 2. **Blog Editor (Trọng, Duy):**
    - Nâng cấp giao diện người dùng bộ chấm điểm SEO/GEO Scoring.
    - Bổ sung kích thước 1200x630 và cơ chế chỉnh sửa/làm mờ Watermark logo MoMo trên Image Template.
-   - Hiển thị Search Volume và số lượt view cạnh mỗi bài viết trên Microsite Blog Management.
+   - Hiển thị số lượt View đo lường từ Umami và Search Volume cạnh mỗi bài viết trên Microsite Blog Management.
 
 3. **PLG Project & MoBase (Trọng, Hoan, Hùng, Nhật):**
    - Quản trị Topic Cluster và đồng bộ 1-1 với CMS Editor.
    - Xây dựng PLG Project cho Blog Common và kết nối vào các bài Blog.
+   - Xây dựng Dashboard trực quan theo dõi pipeline bài viết PLG (Outline, Draft, Đang Chờ Duyệt, Published và Tổng bài).
    - Chuẩn hóa Design Token V2 và đồng bộ thư viện component dùng chung.
 
 4. **Tìm Kiếm /tim-kiem (Duy, Hoài Anh):**

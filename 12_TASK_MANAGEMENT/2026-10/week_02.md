@@ -94,7 +94,7 @@
 | :--- | :--- | :--- | :--- | :---: |
 | Cải Thiện UI SEO/GEO Scoring | Cải thiện lại giao diện người dùng cho bộ chấm điểm SEO/GEO Scoring | Trọng | Hiến | `In Progress` |
 | Review Image Template & Watermark | Bổ sung kích thước 1200x630 và cho điều chỉnh Watermark logo MoMo (Xóa/làm mờ) | Trọng | Design | `In Progress` |
-| Show Volume - Lượt View Blog Management | Blog Management ở Microsite: show bên cạnh mỗi bài viết là Volume - Lượt View | Trọng | Duy | `In Progress` |
+| Show Volume - Lượt View Blog Management | Bổ sung thêm cột hiển thị số lượt View đo lường từ Umami và Search Volume của từng bài viết trong giao diện quản lý Blog Microsite | Trọng | Duy | `In Progress` |
 
 ---
 
@@ -105,6 +105,7 @@
 | :--- | :--- | :--- | :--- | :---: |
 | Quản Trị Topic Cluster | Chuẩn hóa việc phân loại Cluster từ khóa và đồng bộ với danh mục bài viết trên Blog CMS | Trọng | Hoan | `In Progress` |
 | PLG Project Cho Blog Common | Tạo PLG Project và nối vào các bài Blog trên nền tảng MoSpark | Hoan | Trọng | `In Progress` |
+| Dashboard Pipeline Bài Viết PLG | Xây dựng giao diện Dashboard trực quan theo dõi pipeline bài viết: hiển thị số bài đang viết Outline, Draft, Đang Chờ Duyệt, Published và Tổng số bài | Trọng | Hoan | `In Progress` |
 | Cập Nhật Dashboard PLG | Cập nhật dashboard PLG, bổ sung cột số view cho từng bài/PLG | Trọng | Hoan | `To Do` |
 | Setup Tìm Kiếm / Tạo Ảnh Tự Động | Setup phần tìm kiếm và tạo ảnh tự động cho PLG | Trọng | Hoan | `To Do` |
 | Cập Nhật llms.txt Tổng Cho momo.vn | Cập nhật file llms.txt tổng cho toàn bộ momo.vn | Hoan | Web Dev | `To Do` |

@@ -71,5 +71,14 @@
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
 | Nghiệm Thu UI SEO/GEO Scoring | Đánh giá trải nghiệm người dùng với UI chấm điểm SEO/GEO mới cùng Product Lead và Content Writers | Trọng | Hiến | `To Do` |
+| Nghiệm Thu Cột View & Volume Microsite | Kiểm thử độ chính xác của số lượt View (Umami) và Volume bài viết hiển thị trên Blog Management | Trọng | Duy | `To Do` |
 
-*(Các hạng mục Platform khác: không có đầu việc product-side trong tuần - đầu việc triển khai theo ticket board SE Team.)*
+---
+
+### 2. PLG Project
+- **Nhân sự phụ trách:** Trọng, Hoan
+
+| Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
+| :--- | :--- | :--- | :--- | :---: |
+| UAT Dashboard Pipeline Bài Viết | Kiểm thử hiển thị thống kê chính xác số lượng bài viết theo từng trạng thái (Outline, Draft, Chờ duyệt, Published) và Tổng bài | Trọng | Hoan | `To Do` |
+

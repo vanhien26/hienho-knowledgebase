@@ -82,6 +82,7 @@
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
 | Review Hiệu Năng Sản Xuất Nội Dung | Tổng kết số lượng bài viết được tạo ra từ PLG Project trong tháng và tối ưu quy trình sản xuất | Trọng | Hoan | `To Do` |
+| Nghiệm Thu Dashboard Pipeline PLG | Đánh giá tính hữu dụng của Dashboard quản trị nội dung PLG và chốt số lượng bài theo từng trạng thái (Outline/Draft/Chờ duyệt/Published) | Trọng | Hoan | `To Do` |
 
 ### 3. MoBase
 - **Nhân sự phụ trách:** Hùng, Nhật
