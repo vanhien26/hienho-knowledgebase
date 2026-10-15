@@ -77,5 +77,721 @@
       "2026-03": 943058,
       "2026-04": 998474
     }
+  },
+  "projects_55": {
+    "New User": {
+      "total_pv": 990952,
+      "t1": 159662,
+      "t2": 292125,
+      "t3": 168920,
+      "t4": 370245,
+      "channels": {
+        "Direct": 424354,
+        "Organic": 24930,
+        "Others": 14239,
+        "Paid": 5704,
+        "Referral": 521725
+      }
+    },
+    "Ví Trả Sau": {
+      "total_pv": 715970,
+      "t1": 234424,
+      "t2": 304495,
+      "t3": 101530,
+      "t4": 75521,
+      "channels": {
+        "Direct": 20408,
+        "Organic": 24149,
+        "Others": 10480,
+        "Paid": 657270,
+        "Referral": 3663
+      }
+    },
+    "Home MoMo": {
+      "total_pv": 973748,
+      "t1": 235192,
+      "t2": 269152,
+      "t3": 256371,
+      "t4": 213033,
+      "channels": {
+        "Direct": 351940,
+        "Organic": 353986,
+        "Others": 41093,
+        "Paid": 20496,
+        "Referral": 206233
+      }
+    },
+    "Tin tức": {
+      "total_pv": 817890,
+      "t1": 268385,
+      "t2": 215071,
+      "t3": 217054,
+      "t4": 117380,
+      "channels": {
+        "Direct": 57387,
+        "Organic": 198725,
+        "Others": 339044,
+        "Paid": 110031,
+        "Referral": 112703
+      }
+    },
+    "Tiktok": {
+      "total_pv": 615003,
+      "t1": 144061,
+      "t2": 149202,
+      "t3": 190524,
+      "t4": 131216,
+      "channels": {
+        "Direct": 16453,
+        "Organic": 282464,
+        "Others": 7628,
+        "Paid": 305751,
+        "Referral": 2707
+      }
+    },
+    "Khuyến mãi": {
+      "total_pv": 1345734,
+      "t1": 169026,
+      "t2": 350765,
+      "t3": 721919,
+      "t4": 104024,
+      "channels": {
+        "Direct": 86722,
+        "Organic": 125315,
+        "Others": 151007,
+        "Paid": 892071,
+        "Referral": 90619
+      }
+    },
+    "Cinema_Home Page (Trang chủ Cinema)": {
+      "total_pv": 143931,
+      "t1": 29017,
+      "t2": 48237,
+      "t3": 35248,
+      "t4": 31429,
+      "channels": {
+        "Direct": 14756,
+        "Organic": 118113,
+        "Others": 4041,
+        "Paid": 737,
+        "Referral": 6284
+      }
+    },
+    "Vay Nhanh": {
+      "total_pv": 291393,
+      "t1": 58540,
+      "t2": 45268,
+      "t3": 92667,
+      "t4": 94918,
+      "channels": {
+        "Direct": 11026,
+        "Organic": 142388,
+        "Others": 5100,
+        "Paid": 121841,
+        "Referral": 11038
+      }
+    },
+    "Trang Rạp phim": {
+      "total_pv": 1626136,
+      "t1": 278195,
+      "t2": 595430,
+      "t3": 398046,
+      "t4": 354465,
+      "channels": {
+        "Direct": 56037,
+        "Organic": 1533930,
+        "Others": 18414,
+        "Paid": 1935,
+        "Referral": 15820
+      }
+    },
+    "Trang phim chi tiết": {
+      "total_pv": 1296625,
+      "t1": 236224,
+      "t2": 357628,
+      "t3": 280941,
+      "t4": 421832,
+      "channels": {
+        "Direct": 170960,
+        "Organic": 951400,
+        "Others": 26858,
+        "Paid": 5904,
+        "Referral": 141503
+      }
+    },
+    "TnC": {
+      "total_pv": 85543,
+      "t1": 24289,
+      "t2": 24061,
+      "t3": 21520,
+      "t4": 15673,
+      "channels": {
+        "Direct": 74562,
+        "Organic": 5408,
+        "Others": 3354,
+        "Paid": 668,
+        "Referral": 1551
+      }
+    },
+    "Hỏi đáp": {
+      "total_pv": 457845,
+      "t1": 121152,
+      "t2": 126521,
+      "t3": 103897,
+      "t4": 106275,
+      "channels": {
+        "Direct": 21897,
+        "Organic": 404046,
+        "Others": 4907,
+        "Paid": 5736,
+        "Referral": 21259
+      }
+    },
+    "Game": {
+      "total_pv": 136117,
+      "t1": 36585,
+      "t2": 44465,
+      "t3": 23548,
+      "t4": 31519,
+      "channels": {
+        "Direct": 6550,
+        "Organic": 120469,
+        "Others": 3604,
+        "Paid": 465,
+        "Referral": 5029
+      }
+    },
+    "Others": {
+      "total_pv": 510894,
+      "t1": 142729,
+      "t2": 122345,
+      "t3": 125109,
+      "t4": 120711,
+      "channels": {
+        "Direct": 69333,
+        "Organic": 363028,
+        "Others": 22100,
+        "Paid": 20947,
+        "Referral": 35486
+      }
+    },
+    "Campaign": {
+      "total_pv": 100012,
+      "t1": 37725,
+      "t2": 44456,
+      "t3": 14793,
+      "t4": 3038,
+      "channels": {
+        "Direct": 14537,
+        "Organic": 21204,
+        "Others": 13861,
+        "Paid": 44896,
+        "Referral": 5514
+      }
+    },
+    "Blog": {
+      "total_pv": 918388,
+      "t1": 209327,
+      "t2": 260457,
+      "t3": 229537,
+      "t4": 219067,
+      "channels": {
+        "Direct": 39086,
+        "Organic": 831411,
+        "Others": 7537,
+        "Paid": 17556,
+        "Referral": 22798
+      }
+    },
+    "Guide": {
+      "total_pv": 143501,
+      "t1": 38031,
+      "t2": 33548,
+      "t3": 35903,
+      "t4": 36019,
+      "channels": {
+        "Direct": 50127,
+        "Organic": 81370,
+        "Others": 3264,
+        "Paid": 2574,
+        "Referral": 6166
+      }
+    },
+    "Cinema_Blog": {
+      "total_pv": 170146,
+      "t1": 37913,
+      "t2": 43134,
+      "t3": 44906,
+      "t4": 44193,
+      "channels": {
+        "Direct": 8939,
+        "Organic": 148077,
+        "Others": 906,
+        "Paid": 45,
+        "Referral": 12179
+      }
+    },
+    "Trung Tâm Tài Chính": {
+      "total_pv": 60282,
+      "t1": 12790,
+      "t2": 13831,
+      "t3": 18186,
+      "t4": 15475,
+      "channels": {
+        "Direct": 15988,
+        "Organic": 25096,
+        "Others": 5265,
+        "Paid": 9246,
+        "Referral": 4687
+      }
+    },
+    "Bảo Hiểm Xe Máy": {
+      "total_pv": 30455,
+      "t1": 6593,
+      "t2": 14225,
+      "t3": 8268,
+      "t4": 1369,
+      "channels": {
+        "Direct": 379,
+        "Organic": 6526,
+        "Others": 814,
+        "Paid": 22164,
+        "Referral": 572
+      }
+    },
+    "P2P": {
+      "total_pv": 29145,
+      "t1": 7043,
+      "t2": 6926,
+      "t3": 7367,
+      "t4": 7809,
+      "channels": {
+        "Direct": 3903,
+        "Organic": 21011,
+        "Others": 614,
+        "Paid": 355,
+        "Referral": 3262
+      }
+    },
+    "Dịch vụ liên kết": {
+      "total_pv": 31012,
+      "t1": 8148,
+      "t2": 7879,
+      "t3": 8171,
+      "t4": 6814,
+      "channels": {
+        "Direct": 7288,
+        "Organic": 14105,
+        "Others": 6059,
+        "Paid": 875,
+        "Referral": 2685
+      }
+    },
+    "Bảo Hiểm Y Tế": {
+      "total_pv": 17250,
+      "t1": 5344,
+      "t2": 3297,
+      "t3": 4473,
+      "t4": 4136,
+      "channels": {
+        "Direct": 715,
+        "Organic": 14511,
+        "Others": 338,
+        "Paid": 701,
+        "Referral": 985
+      }
+    },
+    "Điểm Tín Dụng": {
+      "total_pv": 11243,
+      "t1": 502,
+      "t2": 1418,
+      "t3": 4186,
+      "t4": 5137,
+      "channels": {
+        "Direct": 346,
+        "Organic": 10510,
+        "Others": 129,
+        "Paid": 67,
+        "Referral": 191
+      }
+    },
+    "Vé Xe": {
+      "total_pv": 229571,
+      "t1": 34559,
+      "t2": 43192,
+      "t3": 48344,
+      "t4": 103476,
+      "channels": {
+        "Direct": 24797,
+        "Organic": 194879,
+        "Others": 3879,
+        "Paid": 270,
+        "Referral": 5746
+      }
+    },
+    "Data": {
+      "total_pv": 15637,
+      "t1": 1703,
+      "t2": 1380,
+      "t3": 1937,
+      "t4": 10617,
+      "channels": {
+        "Direct": 776,
+        "Organic": 4780,
+        "Others": 673,
+        "Paid": 8922,
+        "Referral": 486
+      }
+    },
+    "Merchant": {
+      "total_pv": 19294,
+      "t1": 5058,
+      "t2": 3679,
+      "t3": 4746,
+      "t4": 5811,
+      "channels": {
+        "Direct": 8415,
+        "Organic": 3365,
+        "Others": 6978,
+        "Paid": 53,
+        "Referral": 483
+      }
+    },
+    "Mở tài khoản ngân hàng": {
+      "total_pv": 7648,
+      "t1": 2276,
+      "t2": 1756,
+      "t3": 1771,
+      "t4": 1845,
+      "channels": {
+        "Direct": 397,
+        "Organic": 6456,
+        "Others": 81,
+        "Paid": 438,
+        "Referral": 276
+      }
+    },
+    "OTA": {
+      "total_pv": 34046,
+      "t1": 10491,
+      "t2": 7218,
+      "t3": 8753,
+      "t4": 7584,
+      "channels": {
+        "Direct": 5180,
+        "Organic": 25525,
+        "Others": 604,
+        "Paid": 187,
+        "Referral": 2550
+      }
+    },
+    "Túi Thần Tài": {
+      "total_pv": 5731,
+      "t1": 1422,
+      "t2": 1434,
+      "t3": 1767,
+      "t4": 1108,
+      "channels": {
+        "Direct": 393,
+        "Organic": 4878,
+        "Others": 144,
+        "Paid": 38,
+        "Referral": 278
+      }
+    },
+    "Bảo Hiểm Ô Tô": {
+      "total_pv": 60319,
+      "t1": 20816,
+      "t2": 13298,
+      "t3": 15388,
+      "t4": 10817,
+      "channels": {
+        "Direct": 3989,
+        "Organic": 39078,
+        "Others": 5928,
+        "Paid": 8637,
+        "Referral": 2687
+      }
+    },
+    "Mở Thẻ Tín Dụng": {
+      "total_pv": 5196,
+      "t1": 1515,
+      "t2": 1070,
+      "t3": 1380,
+      "t4": 1231,
+      "channels": {
+        "Direct": 175,
+        "Organic": 4547,
+        "Others": 75,
+        "Paid": 198,
+        "Referral": 201
+      }
+    },
+    "Quản Lý Chi Tiêu": {
+      "total_pv": 4471,
+      "t1": 1510,
+      "t2": 934,
+      "t3": 1054,
+      "t4": 973,
+      "channels": {
+        "Direct": 508,
+        "Organic": 3460,
+        "Others": 97,
+        "Paid": 66,
+        "Referral": 340
+      }
+    },
+    "Chứng Khoán": {
+      "total_pv": 3569,
+      "t1": 1058,
+      "t2": 731,
+      "t3": 1115,
+      "t4": 665,
+      "channels": {
+        "Direct": 150,
+        "Organic": 3089,
+        "Others": 57,
+        "Paid": 24,
+        "Referral": 249
+      }
+    },
+    "Application Store": {
+      "total_pv": 4609,
+      "t1": 1178,
+      "t2": 1179,
+      "t3": 1087,
+      "t4": 1165,
+      "channels": {
+        "Direct": 263,
+        "Organic": 2555,
+        "Others": 58,
+        "Paid": 19,
+        "Referral": 1714
+      }
+    },
+    "Sim": {
+      "total_pv": 14244,
+      "t1": 3136,
+      "t2": 5679,
+      "t3": 3556,
+      "t4": 1873,
+      "channels": {
+        "Direct": 1023,
+        "Organic": 4165,
+        "Others": 923,
+        "Paid": 6615,
+        "Referral": 1518
+      }
+    },
+    "Thanh Toán Khoản Vay": {
+      "total_pv": 2729,
+      "t1": 744,
+      "t2": 590,
+      "t3": 658,
+      "t4": 737,
+      "channels": {
+        "Direct": 127,
+        "Organic": 2356,
+        "Others": 43,
+        "Paid": 71,
+        "Referral": 132
+      }
+    },
+    "Hoàn Tiền Mua Sắm": {
+      "total_pv": 3399,
+      "t1": 761,
+      "t2": 510,
+      "t3": 689,
+      "t4": 1439,
+      "channels": {
+        "Direct": 469,
+        "Organic": 2380,
+        "Others": 90,
+        "Paid": 7,
+        "Referral": 453
+      }
+    },
+    "Trust": {
+      "total_pv": 5022,
+      "t1": 1367,
+      "t2": 1042,
+      "t3": 1317,
+      "t4": 1296,
+      "channels": {
+        "Direct": 1947,
+        "Organic": 2313,
+        "Others": 176,
+        "Paid": 72,
+        "Referral": 514
+      }
+    },
+    "Billpay": {
+      "total_pv": 4281,
+      "t1": 1091,
+      "t2": 824,
+      "t3": 1186,
+      "t4": 1180,
+      "channels": {
+        "Direct": 545,
+        "Organic": 2941,
+        "Others": 99,
+        "Paid": 52,
+        "Referral": 644
+      }
+    },
+    "Tiết Kiệm Online": {
+      "total_pv": 2052,
+      "t1": 449,
+      "t2": 529,
+      "t3": 622,
+      "t4": 452,
+      "channels": {
+        "Direct": 122,
+        "Organic": 1829,
+        "Others": 20,
+        "Paid": 16,
+        "Referral": 65
+      }
+    },
+    "Phí Không Dừng": {
+      "total_pv": 1240,
+      "t1": 346,
+      "t2": 430,
+      "t3": 201,
+      "t4": 263,
+      "channels": {
+        "Direct": 25,
+        "Organic": 1180,
+        "Others": 2,
+        "Paid": 14,
+        "Referral": 19
+      }
+    },
+    "Esim": {
+      "total_pv": 8418,
+      "t1": 745,
+      "t2": 1852,
+      "t3": 2252,
+      "t4": 3569,
+      "channels": {
+        "Direct": 1429,
+        "Organic": 3336,
+        "Others": 396,
+        "Paid": 2549,
+        "Referral": 708
+      }
+    },
+    "Thanh Toán Thẻ Tín Dụng": {
+      "total_pv": 1381,
+      "t1": 383,
+      "t2": 312,
+      "t3": 359,
+      "t4": 327,
+      "channels": {
+        "Direct": 111,
+        "Organic": 1141,
+        "Others": 60,
+        "Paid": 21,
+        "Referral": 48
+      }
+    },
+    "Chứng Chỉ Quỹ": {
+      "total_pv": 1197,
+      "t1": 266,
+      "t2": 318,
+      "t3": 394,
+      "t4": 219,
+      "channels": {
+        "Direct": 50,
+        "Organic": 1044,
+        "Others": 14,
+        "Paid": 15,
+        "Referral": 74
+      }
+    },
+    "Student Pass": {
+      "total_pv": 1342,
+      "t1": 258,
+      "t2": 312,
+      "t3": 368,
+      "t4": 404,
+      "channels": {
+        "Direct": 113,
+        "Organic": 1013,
+        "Others": 44,
+        "Paid": 7,
+        "Referral": 165
+      }
+    },
+    "Điện": {
+      "total_pv": 1262,
+      "t1": 317,
+      "t2": 218,
+      "t3": 357,
+      "t4": 370,
+      "channels": {
+        "Direct": 133,
+        "Organic": 998,
+        "Others": 15,
+        "Paid": 29,
+        "Referral": 87
+      }
+    },
+    "Sàn Đầu Tư": {
+      "total_pv": 170,
+      "t1": 66,
+      "t2": 42,
+      "t3": 38,
+      "t4": 24,
+      "channels": {
+        "Direct": 8,
+        "Organic": 146,
+        "Others": 1,
+        "Paid": 4,
+        "Referral": 11
+      }
+    },
+    "Phạt Nguội": {
+      "total_pv": 215,
+      "t1": 0,
+      "t2": 0,
+      "t3": 0,
+      "t4": 215,
+      "channels": {
+        "Direct": 32,
+        "Organic": 91,
+        "Others": 32,
+        "Paid": 0,
+        "Referral": 60
+      }
+    },
+    "Vé số": {
+      "total_pv": 9,
+      "t1": 1,
+      "t2": 2,
+      "t3": 3,
+      "t4": 3,
+      "channels": {
+        "Direct": 4,
+        "Organic": 5,
+        "Others": 0,
+        "Paid": 0,
+        "Referral": 0
+      }
+    },
+    "Soundbox": {
+      "total_pv": 1,
+      "t1": 0,
+      "t2": 0,
+      "t3": 0,
+      "t4": 1,
+      "channels": {
+        "Direct": 0,
+        "Organic": 0,
+        "Others": 1,
+        "Paid": 0,
+        "Referral": 0
+      }
+    }
   }
 }
