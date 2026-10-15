@@ -70,13 +70,15 @@ Mọi file tuần tuân thủ nghiêm ngặt bảng chuẩn 5 cột tinh gọn:
 ## 5. DANH MỤC DỰ ÁN TRỌNG ĐIỂM THÁNG 10/2026
 
 ### I. Strategic Projects
-1. **Cinema (Hùng, Hoan, Hoài Anh):**
+1. **Cinema (Hùng, Hoan, Hoài Anh, Hiến):**
    - Content plan từ Blog, Diễn Viên, Film Detail.
    - Sản xuất 100 bài blog điện ảnh/review/phim chiếu rạp qua MoSpark GenAI Pipeline chuẩn SEO/GEO.
    - Tối ưu Core Web Vitals (LCP < 2.0s) trên MoSpark.
    - Xây dựng Sitemap chuyên biệt cho cụm Cinema.
    - Thiết kế Mini Game Tìm Hidden Puzzle và hiển thị mass.
    - Migration hệ thống rạp đối tác qua MoSpark.
+   - Đồng bộ API View Comment Review và hiển thị Viewcount cho User Review trong Film Detail.
+   - Nghiên cứu và xây dựng cấu trúc trang Community hiển thị toàn bộ bài Post Review của người dùng theo từng phim.
 
 2. **Financial (Nhật, Hiếu, Thuận, Hoan, Hiến, Hùng):**
    - Phối hợp BU Bank lên Content Structure trang Bank Detail và hoàn thiện UI.
@@ -88,11 +90,15 @@ Mọi file tuần tuân thủ nghiêm ngặt bảng chuẩn 5 cột tinh gọn:
    - Tự động hóa gắn tracking Umami cho từng Tool/Widget.
    - Sản xuất 30 bài blog chất lượng cao cho Financial.
 
-3. **Vehicle (Thuận, Hoan, Hoài Anh):**
+3. **Vehicle (Thuận, Hoan, Hoài Anh, Hiến):**
    - Go Live trang Hãng xe và Model Xe (ưu tiên cụm Vinfast).
    - Triển khai trang Phong Thủy theo đúng Prototype.
    - Nghiên cứu kết nối API Database Garage của Cell Team.
    - Review và khôi phục API Phạt Nguội 0-CAPTCHA trên Production.
+   - Rà soát danh mục lỗi vi phạm trên MoSpark để Cell Team đối soát và chuẩn hóa lại mức phạt.
+   - Xây dựng trang Nộp Phạt vi phạm giao thông trực tuyến.
+   - Xây dựng trang Tra cứu mức phạt giao thông theo hành vi và loại phương tiện.
+   - Nghiên cứu và triển khai cụm trang Phạt Nguội + Địa Điểm (tỉnh thành, vị trí camera).
 
 4. **New User (Thuận, Hiếu, Hiến):**
    - Go Live Quýt Game (phiên bản 2D và 3D).

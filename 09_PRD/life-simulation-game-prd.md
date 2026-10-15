@@ -162,14 +162,13 @@ interface CharacterState {
 }
 ```
 
-### 3.2 Cơ Chế Tính Lạm Phát & Sức Mua Thực Tế (Inflation & Purchasing Power Engine)
+### 3.2 Cơ Chế Tính Lạm Phát & Dòng Tiền Đời Sống Thực Tế (Inflation & Cashflow Engine)
 
-Lạm phát không được trình bày bằng tỷ lệ phần trăm trừu tượng mà thể hiện qua **"Thước Đo Bát Phở" (The Pho Index)**:
-- Năm 18 tuổi: 1 Bát phở = 35.000 VNĐ.
-- Sau mỗi 5 năm: Tỷ lệ lạm phát tích lũy đẩy giá bát phở lên (Năm 25 tuổi: 45.000 VNĐ, năm 35 tuổi: 60.000 VNĐ, năm 50 tuổi: 90.000 VNĐ).
+Lạm phát không sử dụng các thước đo quy đổi trừu tượng làm phức tạp nhận thức người chơi, mà vận hành theo nguyên lý "Show, Don't Tell" thông qua sự leo thang chi phí sinh hoạt thực tế bằng đơn vị Việt Nam Đồng (VNĐ):
+- Chi phí sinh hoạt cơ bản và các hóa đơn đời sống tự động điều chỉnh tăng dần qua từng chu kỳ 5 năm (Năm 18 tuổi: tiền ăn 1,5 triệu/tháng, tiền trọ 1,2 triệu; đến năm 35 tuổi: sinh hoạt gia đình 15 triệu/tháng; năm 50 tuổi: viện phí cấp cứu và chăm sóc sức khỏe 50 triệu).
 - **Hệ quả dòng tiền:**
-  - Nếu người chơi để tiền mặt nằm yên (`money` giữ nguyên): Sức mua thực tế giảm tương ứng với tỷ lệ tăng giá bát phở.
-  - Nếu tiền được gửi vào công cụ sinh lời hàng ngày hoặc quỹ tích sản: Tỷ suất sinh lời bù đắp hoặc vượt trượt giá, bảo toàn tài sản.
+  - Nếu người chơi để tiền mặt nhàn rỗi nằm yên (`money` giữ nguyên trong tài khoản thanh toán): Giá trị thực tế của khoản tiền bị hao mòn trước sự tăng giá của hàng hóa và dịch vụ đời sống.
+  - Nếu tiền được phân bổ vào các công cụ sinh lời hàng ngày hoặc tích sản dài hạn: Tỷ suất sinh lời bù đắp sự trượt giá, giúp gia tăng tài sản ròng bền vững.
 
 ### 3.3 Thuật Toán Quản Trị Nợ, Dư Nợ Giảm Dần & Co Giãn Vốn Mua Nhà (Solvency & Financial Engine)
 
@@ -201,7 +200,7 @@ Nhằm khắc phục triệt để lỗi logic nợ phình to vô hạn và phá
 
 6. **Hiệu Chỉnh Trần Tài Sản Ròng Về Già:**
    - Điều chỉnh hệ số thu nhập giai đoạn 50–65 tuổi và chi phí chăm sóc sức khỏe tuổi già, đưa mức tài sản ròng trung vị của nhóm chọn toàn phương án tốt về vùng **4,2 – 5,0 tỷ VNĐ danh nghĩa** (tương đương sức mua thực tế ~1,0 – 1,3 tỷ VNĐ ở hiện giá).
-   - Thẻ kết quả hiển thị song song cả hai giá trị: Tài sản danh nghĩa và Sức mua thực tế quy đổi theo giá trị bát phở.
+   - Thẻ kết quả hiển thị minh bạch các chỉ số tài chính: Tổng tài sản ròng tích lũy (VNĐ), Dư nợ còn lại (VNĐ), và tình trạng hoàn thành Khế ước tiền kiếp.
 
 ### 3.4 Cơ Chế Xác Suất & Kích Hoạt Tử Vong Sớm (Early Death Engine)
 
@@ -383,7 +382,7 @@ Giai đoạn 0–12 tuổi được thiết kế như chiếc neo cảm xúc (Em
   - *Lựa chọn 2:* Đề nghị nghỉ học sớm để đi làm phụ bố mẹ -> Mở ra nhánh lao động sớm, tăng Gắn kết gia đình (`so` +4).
 - **Tình huống 1.4C (Gánh Hàng Chợ Phiên Cùng Mẹ & Chiếc Cân Đồng):** Mẹ bị sốt phát ban đúng phiên chợ Tết đông khách nhất năm. Một mình bạn ngồi trông sạp hàng rau quả, tay thoăn thoắt bấm máy tính, cân từng mớ rau và thối tiền lẻ cho khách mua hàng tấp nập.
   - *Lựa chọn 1:* Giữ trọn sự minh bạch, cẩn thận ghi chép từng đồng tiền vào cuốn sổ tay giao đủ cho mẹ -> Tăng Nhạy bén kinh doanh (`sm` +3), hình thành tính trung thực tiền bạc (`memory: 'market_ledger'`).
-  - *Lựa chọn 2:* Trích bớt một phần tiền lời nhỏ mua tô phở nóng và thuốc hạ sốt mang về cho mẹ -> Tăng Tình cảm (`so` +5), mẹ ôm bạn vào lòng rưng rưng khen ngợi.
+  - *Lựa chọn 2:* Trích bớt một phần tiền lời nhỏ mua một bát cháo nóng và thuốc hạ sốt mang về cho mẹ -> Tăng Tình cảm (`so` +5), mẹ ôm bạn vào lòng rưng rưng khen ngợi.
 
 #### 4.1.3 Cơ Chế "Hộp Ký Ức Tuổi Thơ" & Tiếng Vọng Khi Trưởng Thành (Adult Echoes)
 
@@ -645,7 +644,7 @@ Khi nhân vật qua đời (do tuổi già tự nhiên hoặc tử vong sớm v�
 
 | Tên Bài Học Kế Thừa | Điều Kiện Kích Hoạt Từ Vòng Đời Trước | Hiệu Ứng Thực Tế Ở Vòng Đời Kế Tiếp | Ý Nghĩa Giáo Dục Tài Chính |
 | :--- | :--- | :--- | :--- |
-| **Bản Lĩnh Vượt Bão Giá**<br>(`inflation_vigilance`) | Vòng đời trước bị sụt giảm hơn 50% sức mua (`purchasingPower < 0.5 * initial`) do duy trì tỷ lệ tiền mặt trên 70% trong 10 năm liên tiếp. | Từ năm 18 tuổi, tự động kích hoạt tính năng "Cảnh Báo Lạm Phát Bát Phở"; giảm 20% mức sụt giảm sức mua tích lũy qua các chu kỳ kinh tế. | Hiểu rõ tiền mặt không sinh lời là tài sản bốc hơi nhanh nhất theo thời gian. |
+| **Bản Lĩnh Vượt Bão Giá**<br>(`inflation_vigilance`) | Vòng đời trước bị hao mòn tài sản nghiêm trọng do duy trì tỷ lệ tiền mặt nhàn rỗi trên 70% trong 10 năm liên tiếp. | Từ năm 18 tuổi, tự động kích hoạt tính năng "Nhạy Bén Dòng Tiền"; giảm 20% mức trượt giá chi phí sinh hoạt qua các chu kỳ kinh tế. | Hiểu rõ tiền mặt không sinh lời là tài sản bốc hơi nhanh nhất theo thời gian. |
 | **Tỉnh Táo Trước Nể Nang**<br>(`cosign_immunity`) | Vòng đời trước từng gánh nợ thay hoặc rơi vào vỡ nợ do đứng tên vay hộ / bảo lãnh tín dụng cho người thân. | Tại tình huống nhờ bảo lãnh nợ ở tuổi 35–45, xuất hiện thêm lựa chọn "Khéo Léo Từ Chối Không Mất Lòng" mà không bị giảm điểm Quan hệ gia đình (`so` giữ nguyên). | Tách bạch ranh giới cảm xúc nể nang và an toàn tài chính cá nhân. |
 | **Phản Xạ Lập Quỹ Phòng Thân**<br>(`buffer_instinct`) | Vòng đời trước từng phải bán tháo tài sản hoặc kiệt quệ tài chính khi gặp biến cố tai nạn / ốm đau do không có quỹ dự phòng. | Ngay tại mốc bắt đầu có nguồn thu nhập đầu tiên (`first_income_age`: 15, 18, 22 hoặc 23 tuổi), hệ thống tự động trích 15% thu nhập vào Quỹ khẩn cấp sinh lời; miễn dịch với bẫy chi tiêu cảm xúc tháng đầu. | Biến việc trích lập quỹ dự phòng khẩn cấp thành nguyên tắc bất di bất dịch trước khi chi tiêu. |
 | **Trân Trọng Bữa Cơm Nhà**<br>(`frugal_anchor`) | Vòng đời trước xuất thân nghèo khó hoặc từng mắc nợ thẻ tín dụng vượt quá 3 tháng lương vì lối sống hào nhoáng ở giai đoạn 20–30 tuổi. | Giảm 25% chi phí sinh hoạt phung phí ở giai đoạn 20–30 tuổi mà chỉ số Hạnh phúc (`h`) không bị giảm. | Thấu hiểu giá trị giản đơn, chủ động ngăn ngừa bẫy lạm phát lối sống. |
@@ -686,7 +685,7 @@ graph TD
 | Bước | Tên Giai Đoạn | Trải Nghiệm Người Dùng (UX) | Hạ Tầng / Cơ Chế Kỹ Thuật | Nền Tảng |
 | :---: | :--- | :--- | :--- | :---: |
 | **1** | Cầu Nại Hà, Chén Canh Mạnh Bà & Ước Mơ Tái Sinh (Prologue & Reborn) | Trải qua 4 cảnh điện ảnh: Bước qua Cầu Nại Hà đêm chàm tím (nhãn "Bạn"), ghé Quán Canh Mạnh Bà nhận chén canh xanh ngọc, uống canh và chọn 1 trong 4 Ước Mơ Tiền Kiếp; mở mắt trong hình hài em bé với thị giác nhòe mờ chuyển rõ và bấm "Cất tiếng khóc chào đời" để mở Thẻ Giấy Khai Sinh. | Three.js Canvas, shader làm mờ Depth-of-Field nhãn quan sơ sinh, Web Audio API kích hoạt âm thanh tiếng khóc và quạt trần, engine sinh thẻ khai sinh Client-side. | Web |
-| **2** | Vòng Lặp Ra Quyết Định (Life Run: Kho 24 Mốc Đa Nhánh) | Chơi qua chuỗi quyết định chọn lọc từ kho 24 kịch bản tùy biến theo xuất thân và trục vận mệnh: Học vấn, bẫy việc làm sinh viên, chi phí hẹn hò, mua xe, kết hôn, bão sa thải, hụi đất nền, mua nhà, học phí trường tư của con, xung đột hôn nhân, khởi nghiệp, bảo hiểm, phụng dưỡng cha mẹ già bại liệt, lừa đảo công nghệ cao, sang tên sổ đỏ. Giá bát phở tăng dần phản ánh lạm phát thực tế. | Hàm `finances()` tính dư nợ giảm dần, State Management trong trình duyệt, hàng đợi sự kiện `S.queue`. | Web |
+| **2** | Vòng Lặp Ra Quyết Định (Life Run: Kho 24 Mốc Đa Nhánh) | Chơi qua chuỗi quyết định chọn lọc từ kho 24 kịch bản tùy biến theo xuất thân và trục vận mệnh: Học vấn, bẫy việc làm sinh viên, chi phí hẹn hò, mua xe, kết hôn, bão sa thải, hụi đất nền, mua nhà, học phí trường tư của con, xung đột hôn nhân, khởi nghiệp, bảo hiểm, phụng dưỡng cha mẹ già bại liệt, lừa đảo công nghệ cao, sang tên sổ đỏ. Chi phí sinh hoạt và các hóa đơn leo thang tự nhiên phản ánh lạm phát thực tế. | Hàm `finances()` tính dư nợ giảm dần, State Management trong trình duyệt, hàng đợi sự kiện `S.queue`. | Web |
 | **3** | Xử Lý Biến Cố & Ngắt Hàng Đợi Tử Vong Sớm | Đối mặt bão giá, bệnh tật, bảo lãnh tín dụng. Nếu nợ nần kiệt quệ dẫn đến Sức khỏe rơi về 0, hệ thống kích hoạt tử vong sớm và ngắt toàn bộ các mốc tuổi còn lại. | Thuật toán ngắt hàng đợi `triggerEarlyDeath()`, tự động chuyển trạng thái sang Giấy Chứng Nhận Tạ Thế Sớm. | Web |
 | **4** | Giấy Chứng Nhận Cuộc Đời (Đóng Dấu "ĐÃ GIỮ LỜI" / "CHƯA TRỌN") | Xuất thẻ Certificate theo 2 biến thể: Sống thọ (tông sáng trang nhã) hoặc Tạ thế sớm (tông trầm slate); kiểm tra khế ước tiền kiếp và đóng con dấu tròn mực đỏ: **"ĐÃ GIỮ LỜI"** (nếu đạt chuẩn) hoặc **"CHƯA TRỌN"** (nếu thất hứa). | HTML5 Canvas to Image Export, logic kiểm tra điều kiện `karmicVow.isFulfilled`, tích hợp OpenGraph meta tags động theo từng biến thể. | Web |
 | **5** | Tải Thẻ Kết Quả & Lan Tỏa Xã Hội (Social Share) | Tải thẻ kết quả có con dấu ước mơ hoặc xuất ảnh Phả Hệ Vòng Đời về máy, nhấp nút chia sẻ trực tiếp lên Facebook, Threads, Zalo để so sánh thành tích và số phận với bạn bè. | Web Share API tích hợp sẵn trên trình duyệt, fallback sang copy link kèm ảnh preview. | Web |

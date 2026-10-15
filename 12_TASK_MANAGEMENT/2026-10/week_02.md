@@ -2,7 +2,7 @@
 
 > **Lead Quản trị chung:** Hiến (Nắm overall các dự án, tham gia linh hoạt, không gán task cụ thể)  
 > **Tháng thực thi:** 10/2026  
-> **Trạng thái tuần:** Đang thực thi (In Progress)  
+> **Trạng thái tuần:** Đã hoàn thành đợt 2 (Done)  
 
 ---
 
@@ -13,12 +13,12 @@
 
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
-| Phát triển Content Plan Cinema | Phát triển content plan từ Blog, Diễn Viên, Film Detail | Hoan | Hiến (định hướng) | `In Progress` |
-| Sản xuất Blog Cinema (100 bài) | Sản xuất và xuất bản 100 bài blog review/điện ảnh/phim chiếu rạp qua MoSpark GenAI Pipeline chuẩn SEO/GEO | Hoan | Hiến (định hướng) | `In Progress` |
-| Tối ưu Core Web Vitals (LCP) | Tối ưu CWV các trang trên MoSpark (LCP < 2.0s, ...) | Hùng | Web Dev | `In Progress` |
-| Build Sitemap cho Cinema | Xây dựng cấu trúc sitemap chuyên biệt cho toàn bộ trang Cinema | Hùng | Hoài Anh | `In Progress` |
-| Thiết kế Mini Game Hidden Puzzle | Thiết kế Mini Game Tìm Hidden Puzzle và show mass trang Cinema | Hùng | Hoan | `In Progress` |
-| Migration Cụm Rạp qua MoSpark | Di chuyển các trang cụm rạp đối tác qua nền tảng MoSpark | Hùng | Web Dev | `In Progress` |
+| Phát triển Content Plan Cinema | Phát triển content plan từ Blog, Diễn Viên, Film Detail | Hoan | Hiến (định hướng) | `Done` |
+| Sản xuất Blog Cinema (100 bài) | Sản xuất và xuất bản 100 bài blog review/điện ảnh/phim chiếu rạp qua MoSpark GenAI Pipeline chuẩn SEO/GEO | Hoan | Hiến (định hướng) | `Done` |
+| Tối ưu Core Web Vitals (LCP) | Tối ưu CWV các trang trên MoSpark (LCP < 2.0s, ...) | Hùng | Web Dev | `Done` |
+| Build Sitemap cho Cinema | Xây dựng cấu trúc sitemap chuyên biệt cho toàn bộ trang Cinema | Hùng | Hoài Anh | `Done` |
+| Thiết kế Mini Game Hidden Puzzle | Thiết kế Mini Game Tìm Hidden Puzzle và show mass trang Cinema | Hùng | Hoan | `Done` |
+| Migration Cụm Rạp qua MoSpark | Di chuyển các trang cụm rạp đối tác qua nền tảng MoSpark | Hùng | Web Dev | `Done` |
 
 ---
 
@@ -27,15 +27,15 @@
 
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
-| Phối Hợp BU Bank Lên Content Structure | Phối hợp BU Bank lên Content Structure chi tiết cho trang Bank Detail | Hiến | BU Bank | `In Progress` |
-| Triển Khai UI Trang Bank | Thiết kế và hoàn thiện UI cho trang Bank (Hub Ngân Hàng) | Hiến | Nhật | `In Progress` |
-| Content Plan Cho Tỷ Giá Và Quỹ | Xây dựng Content Plan chi tiết cho cụm trang Tỷ Giá và Chứng Chỉ Quỹ | Hoan | Hiến | `In Progress` |
-| Go Live Trang Tỷ Giá Theo Cặp Tiền Tệ | Hoàn thiện và Go Live trang Tỷ Giá theo từng cặp tiền tệ | Nhật | Web Dev | `In Progress` |
-| Go Live Mega Menu Cho Trang Tài Chính | Triển khai và Go Live Mega Menu điều hướng cho toàn bộ cụm trang Tài Chính | Nhật | Hùng | `In Progress` |
-| Đồng bộ API CCQ / Lãi Tiết Kiệm | Kết nối và đồng bộ dữ liệu API của Chứng Chỉ Quỹ và Lãi tiết kiệm | Hiếu | Backend | `In Progress` |
-| Define EventName Umami trên Knowledgebase | Định nghĩa trên Repo Knowledgebase của Hiến các EventName của Umami cho toàn bộ Utilities | Hiến | Nhật, Thuận | `In Progress` |
-| Auto Gắn Tracking Umami Từng Tool | Tự động hóa việc gắn tracking Umami cho từng Tool/Widget tài chính | Thuận | Nhật | `In Progress` |
-| Sản xuất Blog Financial (30 bài) | Sản xuất 30 bài blog chuẩn SEO/GEO cho nhóm nội dung Financial | Hoan | Hiến (định hướng) | `In Progress` |
+| Phối Hợp BU Bank Lên Content Structure | Phối hợp BU Bank lên Content Structure chi tiết cho trang Bank Detail | Hiến | BU Bank | `Done` |
+| Triển Khai UI Trang Bank | Thiết kế và hoàn thiện UI cho trang Bank (Hub Ngân Hàng) | Hiến | Nhật | `Done` |
+| Content Plan Cho Tỷ Giá Và Quỹ | Xây dựng Content Plan chi tiết cho cụm trang Tỷ Giá và Chứng Chỉ Quỹ | Hoan | Hiến | `Done` |
+| Go Live Trang Tỷ Giá Theo Cặp Tiền Tệ | Hoàn thiện và Go Live trang Tỷ Giá theo từng cặp tiền tệ | Nhật | Web Dev | `Done` |
+| Go Live Mega Menu Cho Trang Tài Chính | Triển khai và Go Live Mega Menu điều hướng cho toàn bộ cụm trang Tài Chính | Nhật | Hùng | `Done` |
+| Đồng bộ API CCQ / Lãi Tiết Kiệm | Kết nối và đồng bộ dữ liệu API của Chứng Chỉ Quỹ và Lãi tiết kiệm | Hiếu | Backend | `Done` |
+| Define EventName Umami trên Knowledgebase | Định nghĩa trên Repo Knowledgebase của Hiến các EventName của Umami cho toàn bộ Utilities | Hiến | Nhật, Thuận | `Done` |
+| Auto Gắn Tracking Umami Từng Tool | Tự động hóa việc gắn tracking Umami cho từng Tool/Widget tài chính | Thuận | Nhật | `Done` |
+| Sản xuất Blog Financial (30 bài) | Sản xuất 30 bài blog chuẩn SEO/GEO cho nhóm nội dung Financial | Hoan | Hiến (định hướng) | `Done` |
 | Tạo/301 Và Mapping Bài CIC / Vay Nhanh | Tạo mới/301 và mapping các bài cho nhóm CIC và Vay Nhanh theo sheet: https://docs.google.com/spreadsheets/d/1FF9a-Fay3TKkFRFEYQUZ9aAZsQP_MEdbJ01sHy0S4n8/edit?gid=0#gid=0 | Hoan | Web Dev | `To Do` |
 
 ---
@@ -45,10 +45,10 @@
 
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
-| Go Live Hãng xe và Model Xe | Go Live trang Hãng xe và Model Xe (chủ yếu là Vinfast) | Thuận | Hoan | `In Progress` |
-| Triển Khai Trang Phong Thủy | Triển khai trang Phong Thủy theo đúng Prototype đã phê duyệt | Thuận | Design | `In Progress` |
-| Nghiên cứu API Database Garage | Nghiên cứu API cho Database Garage (Sử dụng API của Cell Team) | Thuận | Cell Team | `In Progress` |
-| Review & Khôi phục API Phạt Nguội | Review API Phạt Nguội và khôi phục trên Production | Thuận | Hoài Anh | `In Progress` |
+| Go Live Hãng xe và Model Xe | Go Live trang Hãng xe và Model Xe (chủ yếu là Vinfast) | Thuận | Hoan | `Done` |
+| Triển Khai Trang Phong Thủy | Triển khai trang Phong Thủy theo đúng Prototype đã phê duyệt | Thuận | Design | `Done` |
+| Nghiên cứu API Database Garage | Nghiên cứu API cho Database Garage (Sử dụng API của Cell Team) | Thuận | Cell Team | `Done` |
+| Review & Khôi phục API Phạt Nguội | Review API Phạt Nguội và khôi phục trên Production | Thuận | Hoài Anh | `Done` |
 | Bổ Sung Author Vehicle Hub | Bổ sung Author cho các bài thuộc Vehicle Hub | Hoan | Thuận | `To Do` |
 
 ---
@@ -58,10 +58,10 @@
 
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
-| Go Live Quýt Game | Go Live trang Quýt game (2 phiên bản là 2D và 3D) | Thuận | Web Dev | `In Progress` |
-| Giải pháp Update Trang Download | Đề xuất và triển khai giải pháp update cho trang Download hiện hữu | Hiếu | Growth | `In Progress` |
-| Tạo Trang Mới Tải App | Xây dựng trang Tải App mới (`/tai-app`, tách biệt trang Download) chuẩn Utility Download Center, tiếp nhận điều hướng từ `/download` và cấu hình OneLink Default Fallback về `/tai-app` kèm Dynamic QR Code quét tức thì (thay vì văng về homepage khi mở desktop) | Hiến | Hiếu, Thuận | `In Progress` |
-| Cải tiến Lại Trang Bonbon | Tối ưu hóa giao diện và trải nghiệm chuyển đổi trang Bonbon | Hiến | Web Dev | `In Progress` |
+| Go Live Quýt Game | Go Live trang Quýt game (2 phiên bản là 2D và 3D) | Thuận | Web Dev | `Done` |
+| Giải pháp Update Trang Download | Đề xuất và triển khai giải pháp update cho trang Download hiện hữu | Hiếu | Growth | `Done` |
+| Tạo Trang Mới Tải App | Xây dựng trang Tải App mới (`/tai-app`, tách biệt trang Download) chuẩn Utility Download Center, tiếp nhận điều hướng từ `/download` và cấu hình OneLink Default Fallback về `/tai-app` kèm Dynamic QR Code quét tức thì (thay vì văng về homepage khi mở desktop) | Hiến | Hiếu, Thuận | `Done` |
+| Cải tiến Lại Trang Bonbon | Tối ưu hóa giao diện và trải nghiệm chuyển đổi trang Bonbon | Hiến | Web Dev | `Done` |
 
 ---
 
@@ -70,8 +70,8 @@
 
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
-| Tích hợp Nạp Thẻ Game Theo Provider | Follow tiếp các dự án Nạp thẻ Game theo provider (Zing, Garena, VTC, Soha) và đồng bộ mệnh giá | Thuận | Backend | `In Progress` |
-| Xây dựng Trang ChatGPT | Triển khai giao diện và luồng thanh toán mua gói tài khoản ChatGPT trên nền tảng Web MoMo | Hiếu | Thuận | `In Progress` |
+| Tích hợp Nạp Thẻ Game Theo Provider | Follow tiếp các dự án Nạp thẻ Game theo provider (Zing, Garena, VTC, Soha) và đồng bộ mệnh giá | Thuận | Backend | `Done` |
+| Xây dựng Trang ChatGPT | Triển khai giao diện và luồng thanh toán mua gói tài khoản ChatGPT trên nền tảng Web MoMo | Hiếu | Thuận | `Done` |
 
 ---
 
@@ -82,8 +82,8 @@
 
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
-| Nghiên Cứu Giải Pháp Blog Section | Nghiên cứu và xây dựng giải pháp cho Blog Section tích hợp vào Puck Editor | Duy | Frontend | `In Progress` |
-| Bổ Sung Template Menu Header Cho Hubs | Bổ sung thêm Template cho Menu Header cho các dự án Hub | Nhật | Design | `In Progress` |
+| Nghiên Cứu Giải Pháp Blog Section | Nghiên cứu và xây dựng giải pháp cho Blog Section tích hợp vào Puck Editor | Duy | Frontend | `Done` |
+| Bổ Sung Template Menu Header Cho Hubs | Bổ sung thêm Template cho Menu Header cho các dự án Hub | Nhật | Design | `Done` |
 
 ---
 
@@ -92,9 +92,9 @@
 
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
-| Cải Thiện UI SEO/GEO Scoring | Cải thiện lại giao diện người dùng cho bộ chấm điểm SEO/GEO Scoring | Trọng | Hiến | `In Progress` |
-| Review Image Template & Watermark | Bổ sung kích thước 1200x630 và cho điều chỉnh Watermark logo MoMo (Xóa/làm mờ) | Trọng | Design | `In Progress` |
-| Show Volume - Lượt View Blog Management | Bổ sung thêm cột hiển thị số lượt View đo lường từ Umami và Search Volume của từng bài viết trong giao diện quản lý Blog Microsite | Trọng | Duy | `In Progress` |
+| Cải Thiện UI SEO/GEO Scoring | Cải thiện lại giao diện người dùng cho bộ chấm điểm SEO/GEO Scoring | Trọng | Hiến | `Done` |
+| Review Image Template & Watermark | Bổ sung kích thước 1200x630 và cho điều chỉnh Watermark logo MoMo (Xóa/làm mờ) | Trọng | Design | `Done` |
+| Show Volume - Lượt View Blog Management | Bổ sung thêm cột hiển thị số lượt View đo lường từ Umami và Search Volume của từng bài viết trong giao diện quản lý Blog Microsite | Trọng | Duy | `Done` |
 
 ---
 
@@ -103,9 +103,9 @@
 
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
-| Quản Trị Topic Cluster | Chuẩn hóa việc phân loại Cluster từ khóa và đồng bộ với danh mục bài viết trên Blog CMS | Trọng | Hoan | `In Progress` |
-| PLG Project Cho Blog Common | Tạo PLG Project và nối vào các bài Blog trên nền tảng MoSpark | Hoan | Trọng | `In Progress` |
-| Dashboard Pipeline Bài Viết PLG | Xây dựng giao diện Dashboard trực quan theo dõi pipeline bài viết: hiển thị số bài đang viết Outline, Draft, Đang Chờ Duyệt, Published và Tổng số bài | Trọng | Hoan | `In Progress` |
+| Quản Trị Topic Cluster | Chuẩn hóa việc phân loại Cluster từ khóa và đồng bộ với danh mục bài viết trên Blog CMS | Trọng | Hoan | `Done` |
+| PLG Project Cho Blog Common | Tạo PLG Project và nối vào các bài Blog trên nền tảng MoSpark | Hoan | Trọng | `Done` |
+| Dashboard Pipeline Bài Viết PLG | Xây dựng giao diện Dashboard trực quan theo dõi pipeline bài viết: hiển thị số bài đang viết Outline, Draft, Đang Chờ Duyệt, Published và Tổng số bài | Trọng | Hoan | `Done` |
 | Cập Nhật Dashboard PLG | Cập nhật dashboard PLG, bổ sung cột số view cho từng bài/PLG | Trọng | Hoan | `To Do` |
 | Setup Tìm Kiếm / Tạo Ảnh Tự Động | Setup phần tìm kiếm và tạo ảnh tự động cho PLG | Trọng | Hoan | `To Do` |
 | Cập Nhật llms.txt Tổng Cho momo.vn | Cập nhật file llms.txt tổng cho toàn bộ momo.vn | Hoan | Web Dev | `To Do` |
@@ -117,7 +117,7 @@
 
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
-| Đồng Bộ Component & Token V2 | Đảm bảo các component mới tuân thủ đúng chuẩn Design Token V2 | Hùng | Nhật | `In Progress` |
+| Đồng Bộ Component & Token V2 | Đảm bảo các component mới tuân thủ đúng chuẩn Design Token V2 | Hùng | Nhật | `Done` |
 
 ---
 
@@ -126,7 +126,7 @@
 
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
-| Xây dựng Knowledge Base Cho Tìm Kiếm | Xây dựng Knowledge Base để phản hồi chính xác kết quả tìm kiếm trên trang /tim-kiem | Duy | Hoài Anh | `In Progress` |
+| Xây dựng Knowledge Base Cho Tìm Kiếm | Xây dựng Knowledge Base để phản hồi chính xác kết quả tìm kiếm trên trang /tim-kiem | Duy | Hoài Anh | `Done` |
 
 ---
 
@@ -135,7 +135,7 @@
 
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
-| Migration Blog Admin Tool Qua MoSpark | Migration toàn bộ blog ở Admin Tool qua nền tảng MoSpark | Duy | Hùng | `In Progress` |
+| Migration Blog Admin Tool Qua MoSpark | Migration toàn bộ blog ở Admin Tool qua nền tảng MoSpark | Duy | Hùng | `Done` |
 
 ---
 
@@ -144,5 +144,5 @@
 
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
-| Nghiên Cứu Crawl Data Từ Datasef | Tiến hành nghiên cứu giải pháp sử dụng crawl data từ Datasef của công ty để phục vụ Dashboard Tracking | Hiến | Thuận | `In Progress` |
+| Nghiên Cứu Crawl Data Từ Datasef | Tiến hành nghiên cứu giải pháp sử dụng crawl data từ Datasef của công ty để phục vụ Dashboard Tracking | Hiến | Thuận | `Done` |
 
