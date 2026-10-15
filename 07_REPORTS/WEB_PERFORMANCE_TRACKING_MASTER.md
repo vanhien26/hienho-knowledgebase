@@ -652,23 +652,23 @@ Dữ liệu trích xuất tự động từ tệp tracking mới nhất `Web Per
 | **Cinema_Landing Page** | `Cinema_Landing Page` | **24** | **0.01%** | Organic (91.7%) | Landing page chiến dịch cũ |
 | **TỔNG CỘNG CINEMA HUB** | `Cinema Hub` | **391.925** | **100.00%** | **Organic (92.4%)** | **Vượt nhịp Target (+20.8%)** |
 
-#### Bảng Phễu Chuyển Đổi Web-to-App MTD Tháng 10/2026 (Dữ Liệu AppsFlyer Đầu Tháng):
+#### Bảng Phễu Chuyển Đổi Web-to-App MTD 13 Ngày Tháng 10/2026 (Dữ Liệu AppsFlyer GPD Cập Nhật 13/10/2026):
 
-* **Total Installs (Cài đặt):** **4.638 installs** (Daily Pace ~421/ngày; Dự phóng cả tháng ~13.080 installs, vượt mức 10.501 của Tháng 9).
-* **Đăng Ký Tài Khoản (REG):** **1.512 users** (CVR Install -> REG: **32.60%**).
-* **Liên Kết Ngân Hàng (Map Bank / N2MM):** **931 users** (CVR REG -> Map: **61.57%**; CVR Install -> Map: **20.07%**; Dự phóng cả tháng ~2.624 N2MM).
-* **Active MAU (Kích hoạt giao dịch đầu):** **479 users** (CVR Map -> MAU: **51.45%**; Dự phóng cả tháng ~1.350 MAU).
-* **Đột phá Cinema Hub:** Đạt **1.307 Installs** (chiếm 28.2% toàn Website) và **190 Active MAU** (chiếm 39.7% toàn Website) - **vượt toàn bộ thành tích cả Tháng 9 cộng lại của Cinema Hub (1.221 Installs)** chỉ trong 11 ngày đầu tháng!
+* **Total Installs (Cài đặt):** **4.949 installs** (Tăng thêm **+311 installs**; Daily Pace ~381/ngày; Dự phóng cả tháng ~11.801 installs, vượt mức 10.501 của Tháng 9).
+* **Đăng Ký Tài Khoản (REG):** **1.564 users** (Tăng thêm **+52 users**; CVR Install -> REG: **31.60%**).
+* **Liên Kết Ngân Hàng (Map Bank / N2MM):** **942 users** (Tăng thêm **+11 users**; CVR REG -> Map: **60.23%**; CVR Install -> Map: **19.03%**; Dự phóng cả tháng ~2.246 N2MM).
+* **Active MAU (Kích hoạt giao dịch đầu):** **484 users** (Tăng thêm **+5 MAU**; CVR Map -> MAU: **51.38%**; Dự phóng cả tháng ~1.154 MAU).
+* **Đột phá Cinema Hub:** Đạt **1.354 Installs** (chiếm 27.4% toàn Website) và **191 Active MAU** (chiếm 39.5% toàn Website) - tiếp tục bứt phá mạnh mẽ với End-to-End CVR đạt **14.1%** (cao gấp 1.8 lần bình quân).
 
 | Cụm Kênh / Placement | Installs | Tỷ Trọng | REG | CVR REG | Map Bank | CVR Map | Active MAU | End-to-End CVR |
 | :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| **C.CHAOMOMO (Banner đại trà)** | 3.202 | 69,0% | 985 | 30,8% | 602 | 61,1% | 276 | 8,6% |
-| **Cinema Hub (Rạp phim & Lotte)** | **1.307** | **28,2%** | **495** | **37,9%** | **310** | **62,6%** | **190** | **14,5%** |
-| **Merchant Hub (Đối tác)** | 101 | 2,2% | 20 | 19,8% | 12 | 60,0% | 9 | 8,9% |
-| **Bảo Hiểm (InsurTech)** | 28 | 0,6% | 12 | 42,9% | 7 | 58,3% | 4 | 14,3% |
-| **TỔNG CỘNG MTD THÁNG 10** | **4.638** | **100,0%** | **1.512** | **32,6%** | **931** | **61,6%** | **479** | **10,3%** |
+| **C.CHAOMOMO (Banner đại trà)** | 3.459 | 69,9% | 1.021 | 29,5% | 608 | 59,5% | 278 | 8,0% |
+| **Cinema Hub (Rạp phim & Lotte)** | **1.354** | **27,4%** | **507** | **37,4%** | **313** | **61,7%** | **191** | **14,1%** |
+| **Merchant Hub (Đối tác)** | 105 | 2,1% | 23 | 21,9% | 14 | 60,9% | 11 | 10,5% |
+| **Bảo Hiểm (InsurTech)** | 31 | 0,6% | 13 | 41,9% | 7 | 53,8% | 4 | 12,9% |
+| **TỔNG CỘNG MTD 13D THÁNG 10** | **4.949** | **100,0%** | **1.564** | **31,6%** | **942** | **60,2%** | **484** | **9,8%** |
 
-* **So sánh nền tảng:** iOS chiếm **56.7% Installs (2.628)**, mang lại **605 Map Bank (65.0% N2MM)** và **313 Active MAU (65.3% MAU)** với CVR REG->Map đạt **68.5%**; Android đạt 2.010 Installs, 326 Map Bank và 166 MAU.
+* **So sánh nền tảng:** iOS chiếm **56.0% Installs (2.772)**, mang lại **611 Map Bank (64.9% N2MM)** và **316 Active MAU (65.3% MAU)** với CVR REG->Map đạt **67.0%**; Android đạt 2.177 Installs (44.0%), 331 Map Bank (CVR REG->Map đạt 50.8%) và 168 Active MAU.
 
 ---
 

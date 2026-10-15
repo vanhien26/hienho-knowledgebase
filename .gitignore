@@ -14,3 +14,5 @@ Thumbs.db
 *.log
 .claude/
 scratch/
+__pycache__/
+*.pyc

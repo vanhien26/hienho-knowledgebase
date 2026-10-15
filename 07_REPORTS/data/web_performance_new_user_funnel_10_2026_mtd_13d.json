@@ -1,0 +1,144 @@
+{
+  "report_date": "2026-10-13",
+  "days_elapsed": 13,
+  "total": {
+    "installs": 4949,
+    "delta_installs": 311,
+    "reg": 1564,
+    "delta_reg": 52,
+    "map": 942,
+    "delta_map": 11,
+    "mau": 484,
+    "delta_mau": 5,
+    "cr_reg": 31.6,
+    "cr_map_reg": 60.23,
+    "cr_map_ins": 19.03,
+    "cr_mau_map": 51.38,
+    "end_to_end_cr": 9.78,
+    "forecast_installs_31d": 11801,
+    "forecast_map_31d": 2246,
+    "forecast_mau_31d": 1154
+  },
+  "by_os": {
+    "android": {
+      "installs": 2177,
+      "reg": 652,
+      "map": 331,
+      "mau": 168
+    },
+    "ios": {
+      "installs": 2772,
+      "reg": 912,
+      "map": 611,
+      "mau": 316
+    }
+  },
+  "by_grp": {
+    "C.CHAOMOMO (Banner đại trà)": {
+      "installs": 3459,
+      "reg": 1021,
+      "map": 608,
+      "mau": 278
+    },
+    "Cinema Hub (Rạp phim & Lotte)": {
+      "installs": 1354,
+      "reg": 507,
+      "map": 313,
+      "mau": 191
+    },
+    "Merchant Hub (Đối tác)": {
+      "installs": 105,
+      "reg": 23,
+      "map": 14,
+      "mau": 11
+    },
+    "Bảo Hiểm (InsurTech)": {
+      "installs": 31,
+      "reg": 13,
+      "map": 7,
+      "mau": 4
+    }
+  },
+  "campaigns": [
+    {
+      "campaign": "260805_NEW_WEB_N2MM_INS_C.CHAOMOMO_android",
+      "month": "Oct 2026",
+      "installs": 1750,
+      "reg": 509,
+      "map": 262,
+      "mau": 130
+    },
+    {
+      "campaign": "260805_NEW_WEB_N2MM_INS_C.CHAOMOMO_ios",
+      "month": "Oct 2026",
+      "installs": 1619,
+      "reg": 490,
+      "map": 333,
+      "mau": 141
+    },
+    {
+      "campaign": "260805_NEW_WEB_N2MM_INS_C.PSN-CINEMA_ios",
+      "month": "Oct 2026",
+      "installs": 1061,
+      "reg": 398,
+      "map": 262,
+      "mau": 161
+    },
+    {
+      "campaign": "260805_NEW_WEB_N2MM_INS_C.PSN-CINEMA_android",
+      "month": "Oct 2026",
+      "installs": 293,
+      "reg": 109,
+      "map": 51,
+      "mau": 30
+    },
+    {
+      "campaign": "260805_NEW_WEB_N2MM_INS_C.PSN-MERCHANT_android",
+      "month": "Oct 2026",
+      "installs": 61,
+      "reg": 12,
+      "map": 7,
+      "mau": 5
+    },
+    {
+      "campaign": "251007_NEW_INTERNAL_WEB_N2MM_INS_WEB_BRT_C.CHAOMOMO_android",
+      "month": "Oct 2026",
+      "installs": 58,
+      "reg": 15,
+      "map": 8,
+      "mau": 2
+    },
+    {
+      "campaign": "260805_NEW_WEB_N2MM_INS_C.PSN-MERCHANT_ios",
+      "month": "Oct 2026",
+      "installs": 44,
+      "reg": 11,
+      "map": 7,
+      "mau": 6
+    },
+    {
+      "campaign": "251007_NEW_INTERNAL_WEB_N2MM_INS_WEB_BRT_C.CHAOMOMO_ios",
+      "month": "Oct 2026",
+      "installs": 32,
+      "reg": 7,
+      "map": 5,
+      "mau": 5
+    },
+    {
+      "campaign": "260805_NEW_WEB_N2MM_INS_C.PNS-BAOHIEM_ios",
+      "month": "Oct 2026",
+      "installs": 16,
+      "reg": 6,
+      "map": 4,
+      "mau": 3
+    },
+    {
+      "campaign": "260805_NEW_WEB_N2MM_INS_C.PNS-BAOHIEM_android",
+      "month": "Oct 2026",
+      "installs": 15,
+      "reg": 7,
+      "map": 3,
+      "mau": 1
+    }
+  ]
+}
