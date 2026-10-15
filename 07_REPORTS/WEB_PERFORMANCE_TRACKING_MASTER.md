@@ -6,11 +6,62 @@ Tài liệu này là **Single Source of Truth (SSOT) chuyên biệt** lưu trữ
 
 # 📊 BẢNG DỮ LIỆU LỊCH SỬ CHI TIẾT KÊNH WEB PLATFORM (WEB PERFORMANCE HISTORICAL DATA)
 
-Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (Historical Data)** từ Tháng 5/2026 đến Tháng 9/2026 MTD của tất cả các dự án, sub-projects và kênh truy cập (Organic, Paid, Direct, Referral, Others, Cross).
+Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (Historical Data)** từ Tháng 1/2026 đến Tháng 10/2026 MTD (trong đó T1 - T4/2026 được trích xuất từ GA4 & Google Search Console, T5/2026 trở đi được đồng bộ tự động từ BigQuery) của tất cả các dự án, sub-projects và kênh truy cập (Organic, Paid, Direct, Referral, Others, Cross).
 
 ---
 
-## 1. DỮ LIỆU TRỌN THÁNG (FULL MONTH: THÁNG 5 - THÁNG 8/2026)
+## 1.0 DỮ LIỆU LỊCH SỬ GA4 & GSC NỬA ĐẦU NĂM (FULL MONTH: THÁNG 1 - THÁNG 4/2026)
+
+Dữ liệu giai đoạn T1 - T4/2026 được chuẩn hóa từ nguồn GA4 (tệp `download.csv`, tổng 11.993.338 PV, độ phủ 99,69%) và Google Search Console (tệp `Performance-on-Search-2026-10-15.zip`, tổng 3.844.026 Clicks, 130.681.259 Impressions) nhằm hoàn thiện Single Source of Truth trước khi BigQuery đồng bộ chính thức từ Tháng 5/2026.
+
+### Bảng Cơ Cấu Kênh Truy Cập Toàn Website (GA4 Pageviews):
+
+| Kênh (Channel) | T1 (Jan Full) | T2 (Feb Full) | T3 (Mar Full) | T4 (Apr Full) | Tổng Lũy Kế T1-T4 | Tỷ Trọng (%) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Organic** | 1.341.520 | 1.778.048 | 1.506.731 | 1.513.423 | **6.139.722** | **51,35%** |
+| **Paid** | 542.134 | 713.478 | 845.345 | 175.402 | **2.276.359** | **19,04%** |
+| **Direct** | 325.968 | 363.331 | 325.975 | 559.600 | **1.574.874** | **13,17%** |
+| **Referral** | 222.703 | 454.540 | 293.426 | 283.498 | **1.254.167** | **10,49%** |
+| **Others** | 160.088 | 153.070 | 240.949 | 157.039 | **711.146** | **5,95%** |
+| **TỔNG CỘNG** | **2.592.413** | **3.462.467** | **3.212.426** | **2.688.962** | **11.956.268** | **100,00%** |
+
+### Bảng Phân Bổ Strategic Hubs & Cụm Sản Phẩm:
+
+| Web Hub / Cụm Sản Phẩm | T1 (Jan Full) | T2 (Feb Full) | T3 (Mar Full) | T4 (Apr Full) | Tổng Lũy Kế T1-T4 | Tỷ Trọng (%) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Cinema Hub** | 581.349 | 1.044.429 | 759.142 | 851.919 | **3.236.839** | **27,07%** |
+| **SEO Content (Blog/Tin tức/Guide)** | 805.910 | 986.268 | 1.308.304 | 582.762 | **3.683.244** | **30,81%** |
+| **Financial Hub** | 298.718 | 355.760 | 204.287 | 179.857 | **1.038.622** | **8,69%** |
+| **New User** | 159.662 | 292.125 | 168.920 | 370.245 | **990.952** | **8,29%** |
+| **Homepage / Brand** | 235.192 | 269.152 | 256.371 | 213.033 | **973.748** | **8,14%** |
+| **Game / Entertainment** | 175.775 | 180.468 | 209.891 | 157.367 | **723.501** | **6,05%** |
+| **Vehicle Hub** | 50.944 | 65.700 | 69.137 | 114.422 | **300.203** | **2,51%** |
+| **Nhóm Khác (Billpay, TnC, Merchant)** | 284.863 | 268.565 | 236.374 | 219.357 | **1.009.159** | **8,44%** |
+
+### Bảng Phân Rã Chi Tiết Cinema Hub Subpages (T1 - T4):
+
+| Phân Vùng Trang Cinema | T1 (Jan Full) | T2 (Feb Full) | T3 (Mar Full) | T4 (Apr Full) | Tổng Lũy Kế T1-T4 | Tỷ Trọng Hub (%) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Trang Rạp phim (`/cinema/rap/*`)** | 278.195 | 595.430 | 398.046 | 354.465 | **1.626.136** | **50,24%** |
+| **Trang phim chi tiết (`/cinema/*-[id]`)** | 201.110 | 293.372 | 230.915 | 375.414 | **1.100.811** | **34,01%** |
+| **Cinema_Blog (`/cinema/blog/*`)** | 37.913 | 43.134 | 44.906 | 44.193 | **170.146** | **5,26%** |
+| **Cinema_Home Page (`/cinema`)** | 29.017 | 48.237 | 35.248 | 31.429 | **143.931** | **4,45%** |
+| **Lịch chiếu (`/cinema/lich-chieu`)** | 16.265 | 41.381 | 28.031 | 24.848 | **110.525** | **3,41%** |
+| **Khác** | 18.849 | 22.875 | 21.996 | 21.570 | **85.290** | **2,63%** |
+
+### Bảng Hiệu Suất Tìm Kiếm Google Search Console (GSC Performance T1 - T4):
+
+| Tháng | Clicks (Lượt nhấp) | Impressions (Lượt hiển thị) | CTR Trung Bình | Vị Trí Trung Bình |
+| :--- | :---: | :---: | :---: | :---: |
+| **Tháng 1 (31 ngày)** | 839.341 | 30.299.727 | 2,79% | 7,0 |
+| **Tháng 2 (28 ngày)** | 1.063.153 | 35.011.047 | 2,95% | 6,5 |
+| **Tháng 3 (31 ngày)** | 943.058 | 31.962.782 | 2,95% | 6,1 |
+| **Tháng 4 (30 ngày)** | 998.474 | 33.407.703 | 2,99% | 6,3 |
+| **TỔNG LŨY KẾ T1-T4** | **3.844.026** | **130.681.259** | **2,92%** | **6,5** |
+
+---
+
+## 1.1 DỮ LIỆU TRỌN THÁNG BIGQUERY (FULL MONTH: THÁNG 5 - THÁNG 8/2026)
 
 | Dự Án (Project) | Kênh (Channel) | T5 (May Full) | T6 (Jun Full) | T7 (Jul Full) | T8 (Aug Full) |
 | :--- | :--- | :---: | :---: | :---: | :---: |

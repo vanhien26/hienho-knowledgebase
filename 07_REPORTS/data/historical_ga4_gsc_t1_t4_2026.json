@@ -1,0 +1,81 @@
+{
+  "title": "Web Platform Historical Performance Baseline T1-T4 2026",
+  "generated_at": "2026-10-15 06:43:13",
+  "total_pv_ga4": 11956268,
+  "total_pv_ga4_grand_total": 11993338,
+  "coverage_pct": 99.69,
+  "monthly_pageviews": {
+    "2026-01": 2592413,
+    "2026-02": 3462467,
+    "2026-03": 3212426,
+    "2026-04": 2688962
+  },
+  "channels": {
+    "organic": {
+      "pv": 6139722,
+      "pct": 51.35
+    },
+    "paid": {
+      "pv": 2276359,
+      "pct": 19.04
+    },
+    "direct": {
+      "pv": 1574874,
+      "pct": 13.17
+    },
+    "referral": {
+      "pv": 1254167,
+      "pct": 10.49
+    },
+    "others": {
+      "pv": 711146,
+      "pct": 5.95
+    }
+  },
+  "strategic_hubs": {
+    "cinema_hub": {
+      "pv": 3236839,
+      "pct": 27.07
+    },
+    "seo_content_hub": {
+      "pv": 3683244,
+      "pct": 30.81
+    },
+    "financial_hub": {
+      "pv": 1038622,
+      "pct": 8.69
+    },
+    "new_user_hub": {
+      "pv": 990952,
+      "pct": 8.29
+    },
+    "brand_homepage": {
+      "pv": 973748,
+      "pct": 8.14
+    },
+    "game_entertainment": {
+      "pv": 723501,
+      "pct": 6.05
+    },
+    "vehicle_hub": {
+      "pv": 300203,
+      "pct": 2.51
+    },
+    "others": {
+      "pv": 1009159,
+      "pct": 8.44
+    }
+  },
+  "google_search_console": {
+    "total_clicks": 3844026,
+    "total_impressions": 130681259,
+    "avg_ctr_pct": 2.92,
+    "avg_position": 6.5,
+    "clicks_by_month": {
+      "2026-01": 839341,
+      "2026-02": 1063153,
+      "2026-03": 943058,
+      "2026-04": 998474
+    }
+  }
+}

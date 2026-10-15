@@ -1,0 +1,71 @@
+{
+  "file_source": "GA4 download.csv & GSC Performance Jan-Apr 2026",
+  "read_timestamp": "2026-10-15 06:43:13",
+  "report_type": "Full Month (Chốt Sổ 30 Ngày T4/2026)",
+  "month": "2026-04",
+  "days_elapsed": 30,
+  "actual_pv": 2688962,
+  "daily_pace": 89632.1,
+  "channels": {
+    "organic": {
+      "pv": 1513423,
+      "pct": 56.28
+    },
+    "paid": {
+      "pv": 175402,
+      "pct": 6.52
+    },
+    "direct": {
+      "pv": 559600,
+      "pct": 20.81
+    },
+    "referral": {
+      "pv": 283498,
+      "pct": 10.54
+    },
+    "others": {
+      "pv": 157039,
+      "pct": 5.84
+    }
+  },
+  "hubs": {
+    "cinema": {
+      "pv": 851919,
+      "pct": 31.68
+    },
+    "content": {
+      "pv": 582762,
+      "pct": 21.67
+    },
+    "financial": {
+      "pv": 179857,
+      "pct": 6.69
+    },
+    "new_user": {
+      "pv": 370245,
+      "pct": 13.77
+    },
+    "game": {
+      "pv": 157367,
+      "pct": 5.85
+    },
+    "brand": {
+      "pv": 213033,
+      "pct": 7.92
+    },
+    "vehicle": {
+      "pv": 120013,
+      "pct": 4.46
+    },
+    "others": {
+      "pv": 213766,
+      "pct": 7.95
+    }
+  },
+  "google_search_console": {
+    "clicks": 998474,
+    "impressions": 33407703,
+    "avg_ctr_pct": 2.99,
+    "avg_position": 6.3
+  }
+}
