@@ -52,6 +52,7 @@
 | :--- | :--- | :--- | :--- | :---: |
 | Tổng Kết Lượt Chơi Quýt Game 2D & 3D | Đánh giá tổng số lượt chơi game và số lượng New Users tải App từ chiến dịch Quýt game | Thuận | Hải | `To Do` |
 | Đo Lường Hiệu Quả Trang Download | Phân tích tỷ lệ chuyển đổi tải App MoMo sau khi hoàn thiện giải pháp update trang Download | Hiếu | Growth | `To Do` |
+| Tổng Kết Đóng Góp Từ Trang Tải App Mới | Đánh giá số New Users thu hút từ search intent và tối ưu hóa luồng OneLink cho tháng tiếp theo | Hiến | Hải, Thuận | `To Do` |
 | Tổng Kết Đóng Góp Từ Trang Bonbon | Nghiệm thu toàn diện kết quả cải tiến và chốt số lượng người dùng mới thu hút từ trang Bonbon | Hiến | Hải, Web Dev | `To Do` |
 
 ---
@@ -81,6 +82,7 @@
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
 | Review Hiệu Năng Sản Xuất Nội Dung | Tổng kết số lượng bài viết được tạo ra từ PLG Project trong tháng và tối ưu quy trình sản xuất | Trọng | Hoan | `To Do` |
+| Nghiệm Thu Dashboard Pipeline PLG | Đánh giá tính hữu dụng của Dashboard quản trị nội dung PLG và chốt số lượng bài theo từng trạng thái (Outline/Draft/Chờ duyệt/Published) | Trọng | Hoan | `To Do` |
 
 ### 3. MoBase
 - **Nhân sự phụ trách:** Hùng, Nhật

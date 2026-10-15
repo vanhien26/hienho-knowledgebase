@@ -426,6 +426,11 @@ Nhằm tối ưu hóa đồng thời tốc độ chuyển đổi của quảng c
 * **Định vị:** Nhóm U18 (học sinh cấp 3 chuẩn bị bước vào Đại học / Tân sinh viên) được chọn làm phân khúc thử nghiệm đầu tiên (Validation Segment).
 * **Touchpoint chuyên biệt:** Trang Master Hub `momo.vn/welcome` đóng vai trò là cửa ngõ chính, thay thế cho các trang landing page ngắn hạn, tích hợp gói quà tân thủ và bộ voucher tiếp sức mùa nhập học.
 
+### 2.4 Cửa Ngõ Tải Ứng Dụng Tiện Ích Độc Lập (`momo.vn/tai-app`)
+* **Định vị & Phân tách với `/download`:** Tách biệt hoàn toàn luồng Tải Ứng Dụng mới khỏi trang `/download` (vốn được ITC sử dụng riêng cho cơ chế ép Update App). Trang `momo.vn/tai-app` được thiết kế theo triết lý **Trung tâm Tiện ích Tải Ứng Dụng Thuần Túy (Zero Marketing Noise)**, không tiếp thị thẻ quà hay sự kiện có thời hạn.
+* **Quy chuẩn kỹ thuật OneLink:** Thiết lập làm Default Web Fallback (`af_web_dp = https://momo.vn/tai-app`) cho toàn bộ OneLink trên máy tính, hiển thị Dynamic QR Code quét tức thì để triệt tiêu tỷ lệ rớt phễu.
+* **Tài liệu đặc tả chi tiết:** Tham chiếu PRD đầy đủ tại [`05_HUBS/new-user/tai-app-landing-prd.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/new-user/tai-app-landing-prd.md).
+
 ---
 
 ## III. Mô Hình Tăng Trưởng Song Mã (Dual Acquisition Engine)

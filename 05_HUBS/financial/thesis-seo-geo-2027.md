@@ -1,0 +1,1 @@
+../../01_STRATEGIC_PLAN/thesis-seo-geo-2027.md

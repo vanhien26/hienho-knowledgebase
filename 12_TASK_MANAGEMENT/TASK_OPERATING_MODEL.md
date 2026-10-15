@@ -70,13 +70,15 @@ Mọi file tuần tuân thủ nghiêm ngặt bảng chuẩn 5 cột tinh gọn:
 ## 5. DANH MỤC DỰ ÁN TRỌNG ĐIỂM THÁNG 10/2026
 
 ### I. Strategic Projects
-1. **Cinema (Hùng, Hoan, Hoài Anh):**
+1. **Cinema (Hùng, Hoan, Hoài Anh, Hiến):**
    - Content plan từ Blog, Diễn Viên, Film Detail.
    - Sản xuất 100 bài blog điện ảnh/review/phim chiếu rạp qua MoSpark GenAI Pipeline chuẩn SEO/GEO.
    - Tối ưu Core Web Vitals (LCP < 2.0s) trên MoSpark.
    - Xây dựng Sitemap chuyên biệt cho cụm Cinema.
    - Thiết kế Mini Game Tìm Hidden Puzzle và hiển thị mass.
    - Migration hệ thống rạp đối tác qua MoSpark.
+   - Đồng bộ API View Comment Review và hiển thị Viewcount cho User Review trong Film Detail.
+   - Nghiên cứu và xây dựng cấu trúc trang Community hiển thị toàn bộ bài Post Review của người dùng theo từng phim.
 
 2. **Financial (Nhật, Hiếu, Thuận, Hoan, Hiến, Hùng):**
    - Phối hợp BU Bank lên Content Structure trang Bank Detail và hoàn thiện UI.
@@ -88,17 +90,21 @@ Mọi file tuần tuân thủ nghiêm ngặt bảng chuẩn 5 cột tinh gọn:
    - Tự động hóa gắn tracking Umami cho từng Tool/Widget.
    - Sản xuất 30 bài blog chất lượng cao cho Financial.
 
-3. **Vehicle (Thuận, Hoan, Hoài Anh):**
+3. **Vehicle (Thuận, Hoan, Hoài Anh, Hiến):**
    - Go Live trang Hãng xe và Model Xe (ưu tiên cụm Vinfast).
    - Triển khai trang Phong Thủy theo đúng Prototype.
    - Nghiên cứu kết nối API Database Garage của Cell Team.
    - Review và khôi phục API Phạt Nguội 0-CAPTCHA trên Production.
+   - Rà soát danh mục lỗi vi phạm trên MoSpark để Cell Team đối soát và chuẩn hóa lại mức phạt.
+   - Xây dựng trang Nộp Phạt vi phạm giao thông trực tuyến.
+   - Xây dựng trang Tra cứu mức phạt giao thông theo hành vi và loại phương tiện.
+   - Nghiên cứu và triển khai cụm trang Phạt Nguội + Địa Điểm (tỉnh thành, vị trí camera).
 
 4. **New User (Thuận, Hiếu, Hiến):**
    - Go Live Quýt Game (phiên bản 2D và 3D).
-   - Đề xuất và triển khai giải pháp update trang Download.
+   - Đề xuất và triển khai giải pháp update tối ưu trang Download (`/download`) hiện hữu.
+   - Xây dựng trang mới Tải App (`/tai-app`, tách biệt trang Download) chuẩn Utility Download Center nhằm acquire nhóm search intent cài đặt ví/app, tiếp nhận điều hướng từ `/download` và xây dựng luồng OneLink thông minh (mặc định fallback về `/tai-app` kèm Dynamic QR Code quét tức thì thay vì văng về homepage trên desktop).
    - Cải tiến giao diện và tỷ lệ chuyển đổi trang Bonbon.
-   - Tạo trang Tải App để acquire nhóm intent search, điều hướng từ trang /download và xây dựng luồng tạo OneLink.
 
 5. **Game/App (Thuận, Hiếu):**
    - Follow tiếp các dự án Nạp thẻ Game theo provider (Zing, Garena, VTC, Soha...) và đồng bộ mệnh giá live.
@@ -112,11 +118,12 @@ Mọi file tuần tuân thủ nghiêm ngặt bảng chuẩn 5 cột tinh gọn:
 2. **Blog Editor (Trọng, Duy):**
    - Nâng cấp giao diện người dùng bộ chấm điểm SEO/GEO Scoring.
    - Bổ sung kích thước 1200x630 và cơ chế chỉnh sửa/làm mờ Watermark logo MoMo trên Image Template.
-   - Hiển thị Search Volume và số lượt view cạnh mỗi bài viết trên Microsite Blog Management.
+   - Hiển thị số lượt View đo lường từ Umami và Search Volume cạnh mỗi bài viết trên Microsite Blog Management.
 
 3. **PLG Project & MoBase (Trọng, Hoan, Hùng, Nhật):**
    - Quản trị Topic Cluster và đồng bộ 1-1 với CMS Editor.
    - Xây dựng PLG Project cho Blog Common và kết nối vào các bài Blog.
+   - Xây dựng Dashboard trực quan theo dõi pipeline bài viết PLG (Outline, Draft, Đang Chờ Duyệt, Published và Tổng bài).
    - Chuẩn hóa Design Token V2 và đồng bộ thư viện component dùng chung.
 
 4. **Tìm Kiếm /tim-kiem (Duy, Hoài Anh):**

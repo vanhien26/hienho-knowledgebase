@@ -1,0 +1,309 @@
+{
+  "file_source": "/Users/hienhv/Downloads/Web Performance Tracking.xlsx",
+  "read_timestamp": "2026-10-15 11:20:04",
+  "report_type": "MTD 14 Ngày (01/10 - 14/10/2026 - Lũy Kế 14 Ngày Tháng 10)",
+  "days_elapsed": 14,
+  "days_in_month": 31,
+  "target_oct_pv": 3665607,
+  "actual_mtd_pv": 1664082,
+  "progress_pct": 45.4,
+  "daily_pace": 118863.0,
+  "forecast_31d": 3684753.0,
+  "forecast_pct": 100.52,
+  "channels": {
+    "organic": {
+      "pv": 977376,
+      "pct": 58.73
+    },
+    "direct": {
+      "pv": 408402,
+      "pct": 24.54
+    },
+    "referral": {
+      "pv": 128237,
+      "pct": 7.71
+    },
+    "paid": {
+      "pv": 133479,
+      "pct": 8.02
+    },
+    "others": {
+      "pv": 16588,
+      "pct": 1.0
+    }
+  },
+  "hubs": {
+    "new_user": {
+      "pv": 57034,
+      "target": 300000,
+      "pct": 19.01,
+      "forecast": 126289.57
+    },
+    "cinema": {
+      "pv": 631896,
+      "target": 1117378,
+      "pct": 56.55,
+      "forecast": 1399198.29
+    },
+    "financial": {
+      "pv": 102495,
+      "target": 450000,
+      "pct": 22.78,
+      "forecast": 226953.21
+    },
+    "vehicle": {
+      "pv": 12358,
+      "target": 100000,
+      "pct": 12.36,
+      "forecast": 27364.14
+    },
+    "student": {
+      "pv": 959,
+      "target": 100000,
+      "pct": 0.96,
+      "forecast": 2123.5
+    }
+  },
+  "cinema_breakdown": {
+    "Trang Rạp phim": {
+      "pv": 389601,
+      "pct_hub": 61.66,
+      "channels": {
+        "Direct": 9127,
+        "Organic": 369958,
+        "Others": 3540,
+        "Paid": 4101,
+        "Referral": 2875
+      }
+    },
+    "Trang phim chi tiết": {
+      "pv": 210379,
+      "pct_hub": 33.29,
+      "channels": {
+        "Direct": 18762,
+        "Organic": 185009,
+        "Others": 772,
+        "Paid": 2191,
+        "Referral": 3645
+      }
+    },
+    "Cinema_Home Page (Trang chủ Cinema)": {
+      "pv": 19073,
+      "pct_hub": 3.02,
+      "channels": {
+        "Direct": 2395,
+        "Organic": 15888,
+        "Others": 102,
+        "Paid": 220,
+        "Referral": 468
+      }
+    },
+    "Cinema_Blog": {
+      "pv": 9639,
+      "pct_hub": 1.53,
+      "channels": {
+        "Direct": 695,
+        "Organic": 7875,
+        "Others": 39,
+        "Paid": 49,
+        "Referral": 981
+      }
+    },
+    "Cinema_Landing Page": {
+      "pv": 1705,
+      "pct_hub": 0.27,
+      "channels": {
+        "Direct": 60,
+        "Organic": 1460,
+        "Others": 6,
+        "Paid": 141,
+        "Referral": 38
+      }
+    },
+    "Tin tức": {
+      "pv": 1499,
+      "pct_hub": 0.24,
+      "channels": {
+        "Direct": 103,
+        "Organic": 1295,
+        "Others": 10,
+        "Paid": 16,
+        "Referral": 75
+      }
+    }
+  },
+  "crawl_stats": {
+    "source": "Google Search Console - Crawl Stats (www.momo.vn)",
+    "export_date": "2026-10-10",
+    "window": {
+      "start": "2026-07-12",
+      "end": "2026-10-06",
+      "total_requests": 1810416,
+      "host_status": "No problems"
+    },
+    "monthly_run_rate": {
+      "2026-07": {
+        "days": 12,
+        "requests_per_day": 20008,
+        "download_mb_per_day": 799,
+        "kb_per_request": 40.9,
+        "response_time_ms": 1008
+      },
+      "2026-08": {
+        "days": 31,
+        "requests_per_day": 22186,
+        "download_mb_per_day": 2043,
+        "kb_per_request": 94.3,
+        "response_time_ms": 839
+      },
+      "2026-09": {
+        "days": 30,
+        "requests_per_day": 21114,
+        "download_mb_per_day": 2031,
+        "kb_per_request": 98.5,
+        "response_time_ms": 789
+      },
+      "2026-10": {
+        "days": 6,
+        "requests_per_day": 14850,
+        "download_mb_per_day": 564,
+        "kb_per_request": 38.9,
+        "response_time_ms": 852
+      }
+    },
+    "status_code_breakdown_pct": {
+      "200_ok": 94.11,
+      "404_not_found": 4.14,
+      "301_redirect": 1.71,
+      "others": 0.04
+    },
+    "crawl_purpose_pct": {
+      "refresh": 95.97,
+      "discovery": 4.03
+    },
+    "file_type_pct": {
+      "html": 73.68,
+      "javascript": 19.94,
+      "image": 0.09,
+      "css_other": 6.29
+    },
+    "bot_distribution_pct": {
+      "googlebot_smartphone": 51.2,
+      "page_resource_load": 20.14,
+      "adsbot": 15.3,
+      "googlebot_desktop": 12.54
+    },
+    "key_findings": [
+      {
+        "metric": "Break 01/10",
+        "severity": "HIGH",
+        "detail": "Requests/ngày giảm 29.7% so với T9 (21.114 xuống 14.850). Download giảm 72%. KB/req quay lại mức trước 05/08. Dấu hiệu thay đổi cấu trúc robots.txt hoặc deploy."
+      },
+      {
+        "metric": "404 Waste",
+        "severity": "HIGH",
+        "detail": "404 chiếm 4.14% tương đương ~75.000 requests, lãng phí ~860 requests/ngày bị đốt vào URL chết thay vì crawl content mới."
+      },
+      {
+        "metric": "Discovery Squeeze",
+        "severity": "MEDIUM",
+        "detail": "Discovery chỉ đạt 4.03%, 95.97% dành cho Refresh. Content mới từ Cinema và Financial khó tranh chấp crawl budget."
+      },
+      {
+        "metric": "Lag Risk Q4",
+        "severity": "CRITICAL",
+        "detail": "Organic T10 hiện tăng +20.4% do chạy trên nền index T9. Độ trễ 2-6 tuần khiến rủi ro sụt giảm traffic sẽ bộc lộ cuối T10 hoặc đầu T11."
+      }
+    ]
+  },
+  "backlink_profile": {
+    "source": "Google Search Console - Top Linking Sites (www.momo.vn)",
+    "export_date": "2026-10-11",
+    "total_referring_domains": 1000,
+    "total_linking_pages": 118757,
+    "distribution_buckets": {
+      "ge_1000_pages": {
+        "sites_count": 5,
+        "linking_pages": 103773,
+        "pct": 87.4
+      },
+      "100_to_999_pages": {
+        "sites_count": 32,
+        "linking_pages": 10229,
+        "pct": 8.6
+      },
+      "10_to_99_pages": {
+        "sites_count": 105,
+        "linking_pages": 2625,
+        "pct": 2.2
+      },
+      "1_to_9_pages": {
+        "sites_count": 858,
+        "linking_pages": 2130,
+        "pct": 1.8
+      }
+    },
+    "top_concentrations": [
+      {
+        "domain": "topcv.vn",
+        "linking_pages": 70100,
+        "target_urls_count": 7,
+        "pct": 59.0
+      },
+      {
+        "domain": "cvs.vn",
+        "linking_pages": 24825,
+        "target_urls_count": 11,
+        "pct": 20.9
+      },
+      {
+        "domain": "ai-hay.vn",
+        "linking_pages": 5511,
+        "target_urls_count": 1430,
+        "pct": 4.6
+      },
+      {
+        "domain": "thuonghieucongluan.com.vn",
+        "linking_pages": 1685,
+        "target_urls_count": 33,
+        "pct": 1.4
+      },
+      {
+        "domain": "momo.careers",
+        "linking_pages": 1652,
+        "target_urls_count": 19,
+        "pct": 1.4
+      },
+      {
+        "domain": "mcredit.com.vn",
+        "linking_pages": 779,
+        "target_urls_count": 1,
+        "pct": 0.7
+      },
+      {
+        "domain": "saigonsneaker.com",
+        "linking_pages": 757,
+        "target_urls_count": 1,
+        "pct": 0.6
+      },
+      {
+        "domain": "congly.vn",
+        "linking_pages": 658,
+        "target_urls_count": 31,
+        "pct": 0.6
+      },
+      {
+        "domain": "nghean24h.vn",
+        "linking_pages": 623,
+        "target_urls_count": 4,
+        "pct": 0.5
+      },
+      {
+        "domain": "clashofclansviet.com",
+        "linking_pages": 528,
+        "target_urls_count": 1,
+        "pct": 0.4
+      }
+    ]
+  }
+}
