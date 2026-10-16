@@ -1,0 +1,495 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+SYNC INVENTORY TO HUBS-MOMO PIPELINE
+Tự động quét toàn bộ kho từ khóa Use Cases (05_HUBS/inventory/),
+áp dụng động cơ Keyword Intelligence (Multi-signal Intent Classifier,
+Semantic Domain Filter, SERP Cannibalization Shield)
+và đồng bộ trực tiếp sang hubs-momo (react-web-momo) phục vụ giao diện & nội dung.
+"""
+
+import sys
+import os
+import glob
+import csv
+import re
+import math
+import json
+from collections import defaultdict, Counter
+
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+INVENTORY_DIR = os.path.join(BASE_DIR, "05_HUBS", "inventory")
+HUBS_REPO = "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo"
+
+# Thêm scripts vào path để import thư viện lib
+sys.path.insert(0, BASE_DIR)
+from scripts.lib.keyword_intelligence import (
+    MultiSignalIntentClassifier,
+    SemanticDomainFilter,
+    SERPCannibalizationShield,
+    InternalLinkingTopologyEngine,
+    GEODirectAnswerGenerator
+)
+
+# Đầu ra dữ liệu
+LOCAL_DATA_DIR = os.path.join(BASE_DIR, "07_REPORTS", "data")
+LOCAL_OUTPUT_PATH = os.path.join(LOCAL_DATA_DIR, "inventory_clusters_summary.json")
+LOCAL_MD_PATH = os.path.join(BASE_DIR, "07_REPORTS", "KEYWORD_INVENTORY_MASTER.md")
+
+HUBS_DASHBOARD_DATA = os.path.join(HUBS_REPO, "lib", "dashboard", "seo-inventory-clusters.json")
+HUBS_PUBLIC_DATA = os.path.join(HUBS_REPO, "data", "seo-clusters-summary.json")
+
+STOPWORDS = {
+    'và', 'là', 'của', 'ở', 'tại', 'cho', 'với', 'trong', 'các', 'những',
+    'được', 'có', 'ra', 'khi', 'về', 'này', 'đó', 'từ', 'theo', 'như',
+    'để', 'lại', 'thì', 'người', 'cái', 'làm', 'hay', 'bao', 'nhiêu',
+    'gì', 'sao', 'nao', 'nào', 'mấy'
+}
+
+TELEX_FIXES = {
+    'ddaaus': 'đấu',
+    'ddieenj': 'điện',
+    'ddoof': 'đồ',
+    'ddoongf': 'đồng',
+    'ngan hang': 'ngân hàng',
+    'tiet kiem': 'tiết kiệm',
+    'lai suat': 'lãi suất',
+    'bien so': 'biển số',
+    'bao hiem': 'bảo hiểm',
+    'o to': 'ô tô',
+    'xe may': 'xe máy',
+}
+
+def clean_val(val):
+    if not val:
+        return ""
+    val = val.strip()
+    if val.startswith('="') and val.endswith('"'):
+        return val[2:-1]
+    return val
+
+def normalize_text(text):
+    text = text.lower().strip()
+    for err, fix in TELEX_FIXES.items():
+        text = text.replace(err, fix)
+    text = re.sub(r'\s+', ' ', text)
+    return text
+
+def calculate_opportunity_score(volume, cpc, competition, intent):
+    intent_weights = {
+        'Transactional': 2.0,
+        'Tool/Calculator': 1.8,
+        'Commercial': 1.5,
+        'Informational': 1.0,
+        'Navigational': 0.7
+    }
+    weight = intent_weights.get(intent, 1.0)
+    
+    comp_val = competition.lower()
+    comp_factor = 0.2
+    if 'high' in comp_val:
+        comp_factor = 0.8
+    elif 'medium' in comp_val:
+        comp_factor = 0.5
+    elif 'low' in comp_val:
+        comp_factor = 0.2
+        
+    vol_score = math.log10(volume + 1) if volume > 0 else 0
+    cpc_bonus = min(cpc * 0.2, 0.5)
+    
+    score = vol_score * (1.2 - comp_factor) * weight * (1.0 + cpc_bonus)
+    return round(score, 2)
+
+def classify_quadrant(volume, competition, intent):
+    comp_val = competition.lower()
+    is_high_comp = 'high' in comp_val or 'medium' in comp_val
+    if volume >= 1500 and not is_high_comp:
+        return 'Quick Win'
+    elif volume >= 5000 and is_high_comp:
+        return 'Strategic Pillar'
+    elif volume >= 200 and intent in ['Commercial', 'Tool/Calculator', 'Transactional']:
+        return 'Commercial Converter'
+    else:
+        return 'Long-tail / Supporting'
+
+def build_adaptive_clusters(canonical_clusters, top_n_clusters=5):
+    """
+    Gom cụm các Canonical Leaders theo các nhóm thực thể chủ đạo
+    """
+    token_counter = Counter()
+    for item in canonical_clusters:
+        tokens = [t for t in item['keyword'].split() if len(t) > 2 and t not in STOPWORDS]
+        for t in tokens:
+            token_counter[t] += item['total_cluster_volume']
+            
+    top_tokens = [tok for tok, _ in token_counter.most_common(12)]
+    clusters = defaultdict(list)
+    unassigned = []
+    
+    for item in canonical_clusters:
+        matched = False
+        for tok in top_tokens:
+            if tok in item['keyword']:
+                clusters[tok.capitalize()].append(item)
+                matched = True
+                break
+        if not matched:
+            unassigned.append(item)
+            
+    result_clusters = []
+    sorted_clusters = sorted(clusters.items(), key=lambda x: sum(k['total_cluster_volume'] for k in x[1]), reverse=True)
+    
+    for cluster_name, items in sorted_clusters[:top_n_clusters]:
+        tot_vol = sum(k['total_cluster_volume'] for k in items)
+        top_kws = sorted(items, key=lambda x: (x['opportunity_score'], x['volume']), reverse=True)[:3]
+        result_clusters.append({
+            'cluster_name': f"Nhóm {cluster_name}",
+            'count': len(items),
+            'total_volume': tot_vol,
+            'top_keywords': [
+                {
+                    'keyword': k['keyword'],
+                    'volume': k['volume'],
+                    'cluster_volume': k['total_cluster_volume'],
+                    'intent': k['intent'],
+                    'score': k['opportunity_score'],
+                    'secondary_synonyms': k.get('secondary_keywords', [])[:3]
+                } for k in top_kws
+            ]
+        })
+        
+    return result_clusters
+
+def process_single_csv(csv_path, sector):
+    usecase_slug = os.path.splitext(os.path.basename(csv_path))[0]
+    usecase_name = usecase_slug.replace('-', ' ').replace('_', ' ').title()
+    
+    raw_keywords = []
+    outliers_filtered = 0
+    
+    with open(csv_path, 'r', encoding='utf-8-sig', errors='replace') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            kw_raw = row.get('Keyword', '')
+            if not kw_raw:
+                continue
+            kw = normalize_text(clean_val(kw_raw))
+            
+            # 1. Dynamic Domain Outlier Filtering (Lỗ hổng 1)
+            is_out, _ = SemanticDomainFilter.is_outlier(kw, sector, usecase_slug)
+            if is_out:
+                outliers_filtered += 1
+                continue
+                
+            try:
+                vol = int(clean_val(row.get('Volume', '0')) or 0)
+            except ValueError:
+                vol = 0
+            try:
+                cpc = float(clean_val(row.get('CPC', '0')) or 0.0)
+            except ValueError:
+                cpc = 0.0
+            comp = clean_val(row.get('PPC Competition', 'Low'))
+            
+            # 2. Multi-Signal Weighted Intent Classifier (Lỗ hổng 1)
+            intent_res = MultiSignalIntentClassifier.classify(kw)
+            intent = intent_res['intent']
+            opp_score = calculate_opportunity_score(vol, cpc, comp, intent)
+            quadrant = classify_quadrant(vol, comp, intent)
+            
+            raw_keywords.append({
+                'keyword': kw,
+                'volume': vol,
+                'cpc': cpc,
+                'competition': comp,
+                'intent': intent,
+                'intent_confidence': intent_res['confidence'],
+                'opportunity_score': opp_score,
+                'quadrant': quadrant
+            })
+            
+    if not raw_keywords:
+        return None
+        
+    # 3. SERP Intent Fingerprinting & Cannibalization Shield (Lỗ hổng 2)
+    canonical_clusters, merge_log = SERPCannibalizationShield.cluster_and_shield(raw_keywords)
+    
+    total_volume = sum(k['volume'] for k in raw_keywords)
+    
+    # Đếm số lượng theo Intent & Quadrant của các Canonical Topics
+    intent_counts = Counter(k['intent'] for k in canonical_clusters)
+    quadrant_counts = Counter(k['quadrant'] for k in canonical_clusters)
+    
+    top_opportunities = sorted(canonical_clusters, key=lambda x: (x['opportunity_score'], x['volume']), reverse=True)[:10]
+    pillar_item = sorted(canonical_clusters, key=lambda x: x['total_cluster_volume'], reverse=True)[0]
+    
+    sub_clusters = build_adaptive_clusters(canonical_clusters)
+    
+    return {
+        'id': usecase_slug,
+        'name': usecase_name,
+        'sector': sector,
+        'file_name': os.path.basename(csv_path),
+        'total_raw_keywords': len(raw_keywords) + outliers_filtered,
+        'clean_keywords_count': len(raw_keywords),
+        'outliers_filtered_count': outliers_filtered,
+        'canonical_topics_count': len(canonical_clusters),
+        'cannibalization_merged_count': len(merge_log),
+        'total_volume': total_volume,
+        'pillar_keyword': {
+            'keyword': pillar_item['keyword'],
+            'volume': pillar_item['volume'],
+            'cluster_volume': pillar_item['total_cluster_volume'],
+            'intent': pillar_item['intent'],
+            'secondary_synonyms': pillar_item.get('secondary_keywords', [])[:5]
+        },
+        'intent_breakdown': dict(intent_counts),
+        'quadrant_breakdown': dict(quadrant_counts),
+        'top_opportunities': [
+            {
+                'keyword': k['keyword'],
+                'volume': k['volume'],
+                'cluster_volume': k['total_cluster_volume'],
+                'cpc': k['cpc'],
+                'competition': k['competition'],
+                'intent': k['intent'],
+                'score': k['opportunity_score'],
+                'quadrant': k['quadrant'],
+                'secondary_synonyms': k.get('secondary_keywords', [])[:3]
+            } for k in top_opportunities
+        ],
+        'sub_clusters': sub_clusters
+    }
+
+def main():
+    print(f"Bắt đầu quét và đồng bộ kho Inventory từ: {INVENTORY_DIR}")
+    if not os.path.exists(INVENTORY_DIR):
+        print(f"Lỗi: Không tìm thấy thư mục {INVENTORY_DIR}")
+        sys.exit(1)
+        
+    sectors = sorted([d for d in os.listdir(INVENTORY_DIR) if os.path.isdir(os.path.join(INVENTORY_DIR, d)) and not d.startswith('.')])
+    
+    all_usecases = []
+    sector_summary = {}
+    total_kws_all = 0
+    total_vol_all = 0
+    total_cannibalized_all = 0
+    total_outliers_all = 0
+    
+    for s in sectors:
+        s_dir = os.path.join(INVENTORY_DIR, s)
+        csv_files = sorted(glob.glob(os.path.join(s_dir, '*.csv')))
+        s_usecases = []
+        s_kws = 0
+        s_vol = 0
+        s_cannibalized = 0
+        s_outliers = 0
+        
+        for fpath in csv_files:
+            res = process_single_csv(fpath, s)
+            if res:
+                s_usecases.append(res)
+                all_usecases.append(res)
+                s_kws += res['clean_keywords_count']
+                s_vol += res['total_volume']
+                s_cannibalized += res['cannibalization_merged_count']
+                s_outliers += res['outliers_filtered_count']
+                
+        sector_summary[s] = {
+            'usecase_count': len(s_usecases),
+            'total_keywords': s_kws,
+            'total_volume': s_vol,
+            'cannibalized_merged': s_cannibalized,
+            'outliers_filtered': s_outliers
+        }
+        total_kws_all += s_kws
+        total_vol_all += s_vol
+        total_cannibalized_all += s_cannibalized
+        total_outliers_all += s_outliers
+        print(f"- Phân khối {s:15s}: {len(s_usecases):3d} use cases | {s_kws:7,d} kws | {s_cannibalized:5,d} cannibalized merged | {s_vol:12,d} vol")
+        
+    print(f"\nTổng kết: {len(all_usecases)} use cases | {total_kws_all:,} từ khóa sạch | {total_cannibalized_all:,} từ khóa được gom chống ăn thịt | {total_outliers_all:,} từ khóa nhiễu bị chặn.")
+    
+    # 0. Làm giàu dữ liệu: Tính toán Mạng lưới Liên kết nội bộ (Silo Topology) & GEO Direct Answers
+    print("Đang tính toán mạng lưới liên kết nội bộ (Internal Linking Topology) & GEO Direct Answers...")
+    for uc in all_usecases:
+        # A. Internal Linking Matrix
+        silo = InternalLinkingTopologyEngine.build_silo_matrix(uc, all_usecases)
+        uc['internal_links'] = silo
+        
+        # B. GEO Optimization Block
+        p_kw = uc['pillar_keyword']['keyword']
+        p_intent = uc['pillar_keyword']['intent']
+        uc['geo_optimization'] = {
+            'direct_answer_snippet': GEODirectAnswerGenerator.generate_direct_answer_snippet(uc['name'], p_kw, p_intent, uc['sector']),
+            'entity_facts': GEODirectAnswerGenerator.generate_entity_factsheet(uc['name'], uc['sector'], p_intent)
+        }
+
+    # 1. Đóng gói Snapshot Master & SSOT Local
+    data_payload = {
+        'version': '3.1-enterprise',
+        'generated_at': '2026-10-16',
+        'stats': {
+            'total_usecases': len(all_usecases),
+            'total_keywords': total_kws_all,
+            'total_volume': total_vol_all,
+            'total_cannibalized_shielded': total_cannibalized_all,
+            'total_outliers_pruned': total_outliers_all,
+            'total_sectors': len(sectors)
+        },
+        'sector_summary': sector_summary,
+        'usecases': all_usecases
+    }
+    
+    os.makedirs(LOCAL_DATA_DIR, exist_ok=True)
+    with open(LOCAL_OUTPUT_PATH, 'w', encoding='utf-8') as f:
+        json.dump(data_payload, f, ensure_ascii=False, indent=2)
+    print(f"Đã lưu Snapshot SSOT tại: {LOCAL_OUTPUT_PATH}")
+    
+    # 2. Tổng hợp Danh mục Quick Wins Toàn Nền Tảng (Cross-Hub Quick Wins Portfolio)
+    all_quick_wins = []
+    for uc in all_usecases:
+        for opp in uc['top_opportunities']:
+            if opp['quadrant'] == 'Quick Win':
+                all_quick_wins.append({
+                    'keyword': opp['keyword'],
+                    'volume': opp['volume'],
+                    'cluster_volume': opp['cluster_volume'],
+                    'intent': opp['intent'],
+                    'score': opp['score'],
+                    'usecase': uc['name'],
+                    'usecase_id': uc['id'],
+                    'sector': uc['sector'],
+                    'synonyms': opp.get('secondary_synonyms', [])
+                })
+    all_quick_wins.sort(key=lambda x: (x['score'], x['volume']), reverse=True)
+    
+    # Xuất Báo cáo Quick Wins Markdown
+    qw_md_path = os.path.join(BASE_DIR, "07_REPORTS", "QUICK_WINS_PORTFOLIO.md")
+    qw_md = f"""# DANH MỤC TỪ KHÓA QUICK WINS TOÀN WEB PLATFORM (HIGH ROI OPPORTUNITIES)
+
+Tập hợp các từ khóa có **Search Volume cao ($\ge 1.500$) và Mức độ Cạnh tranh Thấp (Low PPC Competition)** trên toàn bộ 188 Use Cases của Web Platform. Đây là các chủ đề ưu tiên P0 mang lại lưu lượng truy cập nhanh nhất với chi phí nội dung tối thiểu.
+
+- **Tổng số từ khóa Quick Wins phát hiện:** {len(all_quick_wins):,} từ khóa
+- **Tổng dung lượng tìm kiếm Quick Wins:** {sum(x['volume'] for x in all_quick_wins):,} lượt/tháng
+
+---
+
+## TOP 50 TỪ KHÓA QUICK WINS ƯU TIÊN SẢN XUẤT P0
+
+| STT | Từ Khóa Quick Win | Search Volume | Search Intent | Điểm Cơ Hội | Use Case | Phân Khối Ngành | Biến Thể Đồng Nghĩa Đã Gom Cụm |
+| :---: | :--- | :---: | :---: | :---: | :--- | :--- | :--- |
+"""
+    for idx, qw in enumerate(all_quick_wins[:50], 1):
+        syn_str = ", ".join(qw['synonyms'][:2]) if qw['synonyms'] else "Độc lập"
+        qw_md += f"| {idx} | `{qw['keyword']}` | {qw['volume']:,} | `{qw['intent']}` | {qw['score']} | {qw['usecase']} | {qw['sector']} | {syn_str} |\n"
+
+    with open(qw_md_path, 'w', encoding='utf-8') as f:
+        f.write(qw_md)
+    print(f"Đã xuất bản Danh mục Quick Wins tại: {qw_md_path}")
+
+    # 3. Tạo Báo cáo Master Markdown
+    md_content = f"""# TỔNG QUAN TÀI NGUYÊN TỪ KHÓA & TOPIC CLUSTERS WEB PLATFORM (SSOT INVENTORY V2)
+
+Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ chống ăn thịt từ khóa (Cannibalization Shield) từ kho `05_HUBS/inventory/`.
+- **Tổng số Use Cases:** {len(all_usecases)}
+- **Tổng số từ khóa theo dõi:** {total_kws_all:,}
+- **Tổng số từ khóa trùng Intent được gom cụm (Shielded):** {total_cannibalized_all:,}
+- **Tổng số từ khóa nhiễu bị loại bỏ:** {total_outliers_all:,}
+- **Tổng dung lượng tìm kiếm thị trường:** {total_vol_all:,} lượt/tháng
+
+---
+
+## 1. TỔNG HỢP THEO PHÂN KHỐI NGÀNH (SECTORS)
+
+| Phân Khối Ngành | Số Lượng Use Cases | Từ Khóa Sạch | Từ Khóa Gom Chống Cannibalization | Dung Lượng Tìm Kiếm (Volume/Tháng) |
+| :--- | :---: | :---: | :---: | :---: |
+"""
+    for sec, stats in sorted(sector_summary.items(), key=lambda x: x[1]['total_volume'], reverse=True):
+        md_content += f"| {sec} | {stats['usecase_count']:,} | {stats['total_keywords']:,} | {stats['cannibalized_merged']:,} | {stats['total_volume']:,} |\n"
+
+    md_content += """\n---\n\n## 2. TOP USE CASES CÓ QUY MÔ LỚN NHẤT\n\n| STT | Use Case | Phân Khối | Số Từ Khóa | Gom Cannibalized | Search Volume | Từ Khóa Cột Trụ (Pillar KW) | Top Quick Win |\n| :---: | :--- | :--- | :---: | :---: | :---: | :--- | :--- |\n"""
+
+    top_usecases = sorted(all_usecases, key=lambda x: x['total_volume'], reverse=True)[:25]
+    for idx, uc in enumerate(top_usecases, 1):
+        pkw = uc['pillar_keyword']['keyword']
+        pvol = uc['pillar_keyword']['cluster_volume']
+        qwin = next((k['keyword'] for k in uc['top_opportunities'] if k['quadrant'] == 'Quick Win'), 'N/A')
+        md_content += f"| {idx} | {uc['name']} | {uc['sector']} | {uc['clean_keywords_count']:,} | {uc['cannibalization_merged_count']:,} | {uc['total_volume']:,} | {pkw} ({pvol:,}) | {qwin} |\n"
+
+    with open(LOCAL_MD_PATH, 'w', encoding='utf-8') as f:
+        f.write(md_content)
+    print(f"Đã cập nhật tài liệu báo cáo tại: {LOCAL_MD_PATH}")
+
+    # 4. Xuất Modular Chunks & Đẩy trực tiếp sang hubs-momo
+    if os.path.exists(HUBS_REPO):
+        # A. Cập nhật Dashboard Payload siêu nhẹ
+        os.makedirs(os.path.dirname(HUBS_DASHBOARD_DATA), exist_ok=True)
+        dashboard_payload = {
+            'stats': data_payload['stats'],
+            'sector_summary': sector_summary,
+            'top_usecases': sorted(all_usecases, key=lambda x: x['total_volume'], reverse=True)[:35],
+            'recent_sync': data_payload['generated_at']
+        }
+        with open(HUBS_DASHBOARD_DATA, 'w', encoding='utf-8') as f:
+            json.dump(dashboard_payload, f, ensure_ascii=False, indent=2)
+        print(f"Đã push sang hubs-momo (Dashboard): {HUBS_DASHBOARD_DATA}")
+        
+        # B. Cập nhật File Tổng tương thích ngược
+        os.makedirs(os.path.dirname(HUBS_PUBLIC_DATA), exist_ok=True)
+        with open(HUBS_PUBLIC_DATA, 'w', encoding='utf-8') as f:
+            json.dump(data_payload, f, ensure_ascii=False, indent=2)
+        print(f"Đã push sang hubs-momo (Data layer master): {HUBS_PUBLIC_DATA}")
+
+        # C. TRIỂN KHAI MODULAR CHUNKING: data/seo-clusters/index.json + chunks từng use case
+        modular_dir = os.path.join(HUBS_REPO, "data", "seo-clusters")
+        os.makedirs(modular_dir, exist_ok=True)
+
+        # Index siêu nhẹ (~45 KB)
+        index_payload = {
+            'version': '3.0-modular',
+            'generated_at': data_payload['generated_at'],
+            'stats': data_payload['stats'],
+            'sector_summary': sector_summary,
+            'quick_wins_count': len(all_quick_wins),
+            'usecases': [
+                {
+                    'id': uc['id'],
+                    'name': uc['name'],
+                    'sector': uc['sector'],
+                    'total_volume': uc['total_volume'],
+                    'clean_keywords_count': uc['clean_keywords_count'],
+                    'pillar_keyword': uc['pillar_keyword']['keyword'],
+                    'pillar_volume': uc['pillar_keyword']['cluster_volume'],
+                    'pillar_intent': uc['pillar_keyword']['intent'],
+                    'quick_wins_count': len([k for k in uc['top_opportunities'] if k['quadrant'] == 'Quick Win']),
+                    'chunk_url': f"/data/seo-clusters/{uc['sector']}/{uc['id']}.json"
+                } for uc in all_usecases
+            ]
+        }
+        index_file = os.path.join(modular_dir, "index.json")
+        with open(index_file, 'w', encoding='utf-8') as f:
+            json.dump(index_payload, f, ensure_ascii=False, indent=2)
+        print(f"Đã tạo Modular Index siêu nhẹ tại: {index_file} ({round(os.path.getsize(index_file)/1024, 1)} KB)")
+
+        # Xuất file Quick Wins độc lập
+        qw_file = os.path.join(modular_dir, "quick-wins.json")
+        with open(qw_file, 'w', encoding='utf-8') as f:
+            json.dump({'quick_wins': all_quick_wins[:100]}, f, ensure_ascii=False, indent=2)
+        print(f"Đã tạo Quick Wins JSON tại: {qw_file}")
+
+        # Xuất từng Chunk Use Case độc lập
+        chunk_count = 0
+        for uc in all_usecases:
+            sec_dir = os.path.join(modular_dir, uc['sector'])
+            os.makedirs(sec_dir, exist_ok=True)
+            uc_file = os.path.join(sec_dir, f"{uc['id']}.json")
+            with open(uc_file, 'w', encoding='utf-8') as f:
+                json.dump(uc, f, ensure_ascii=False, indent=2)
+            chunk_count += 1
+        print(f"Đã phân rã và xuất bản thành công {chunk_count} Modular Chunks tại {modular_dir}/<sector>/<id>.json!")
+    else:
+        print(f"Cảnh báo: Không tìm thấy hubs-momo tại {HUBS_REPO}")
+
+if __name__ == '__main__':
+    main()

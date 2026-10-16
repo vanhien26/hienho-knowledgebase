@@ -391,7 +391,13 @@ def main():
     ap.add_argument("--rollover", action="store_true", help="Tao file tuan tiep theo tu template")
     ap.add_argument("--week", type=int, help="Ghi vao week_XX cu the (cho task parser)")
     ap.add_argument("--overwrite", action="store_true", help="Cho phep ghi de week file da ton tai (task parser)")
+    ap.add_argument("--sync-inventory", action="store_true", help="Gom cum toan bo Inventory va push sang hubs-momo")
     args = ap.parse_args()
+
+    if args.sync_inventory:
+        inv_script = os.path.join(BASE_DIR, "scripts", "sync_inventory_to_hubs.py")
+        subprocess.run([sys.executable, inv_script], check=True)
+        return
 
     if args.verify:
         verify_health()
