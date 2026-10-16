@@ -104,6 +104,11 @@ Khối **MoMo Gợi Ý** tuyệt đối không sử dụng câu chữ tĩnh (Sta
    - *Câu gợi ý động:* "Với mức lương [50 triệu]/tháng, bạn đang đóng [6.4 triệu] tiền thuế TNCN mỗi tháng. Mẹo tối ưu: Hãy khai báo tối đa người phụ thuộc hợp lệ để giảm trừ thuế, đồng thời phân bổ 40% dòng tiền thặng dư vào danh mục tích sản cân bằng (50% Tiết Kiệm an toàn + 50% Quỹ Mở tăng trưởng)."
    - *Icon ưu tiên:* Thực Tập Sinh Đầu Tư Quỹ Mở, Tiết Kiệm Kỳ Hạn Lớn, Báo Cáo CIC Hạng Cao.
 
+> [!NOTE] **Tài Liệu Đặc Tả Kỹ Thuật & Bộ Ma Trận Copy Catchy Đầy Đủ:**
+> Toàn bộ logic công thức, cơ chế Toggle Cà Khịa (Roast Mode), nút Lắc Quẻ Re-roll, mã nguồn TypeScript (`src/utils/aiProposalEngine.ts`) và mã Umami Tracking chuẩn hóa được tổng hợp độc lập tại:
+> 👉 **[momo-ai-proposal-engine-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD/momo-ai-proposal-engine-prd.md)** (hoặc link nội bộ Hub: [05_HUBS/financial/momo-ai-proposal-engine-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/financial/momo-ai-proposal-engine-prd.md)).
+
+
 #### Quy Chuẩn Đề Xuất Trợ Lý MoMo AI Cho Utility Tính Lãi Tiết Kiệm (Công Thức Bù Đắp Chênh Lệch Lãi Ròng - Net Yield Gap):
 
 Thay vì hiển thị câu chữ đếm số lượng ngân hàng hình thức gây trùng lặp với bảng so sánh, khối Trợ lý MoMo AI vận hành theo kịch bản chung duy nhất: **Bù đắp chênh lệch lãi ròng giữa phương án người dùng chọn và giải pháp tối ưu trên MoMo**.

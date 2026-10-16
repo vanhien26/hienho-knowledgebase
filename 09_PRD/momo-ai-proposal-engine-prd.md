@@ -1,0 +1,636 @@
+# ĐẶC TẢ SẢN PHẨM & KỸ THUẬT: MOMO AI PROPOSAL ENGINE (RULE-BASED DYNAMIC RECOMMENDATION)
+## BỘ MÁY GỢI Ý & PHẢN HỒI THÔNG MINH CHO CÔNG CỤ TÍNH TOÁN WEB PLATFORM
+
+---
+
+## THÔNG TIN TỔNG QUAN (METADATA)
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hạng Mục</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chi Tiết</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tên Tính Năng / Engine</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MoMo AI Proposal Engine (Client-Side Dynamic Rule Engine)</strong></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Mã Tài Liệu</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>PRD-WEB-AI-PROPOSAL-2026-V1</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phạm Vi Áp Dụng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Toàn bộ 26 công cụ tài chính & tiện ích tính toán trực thuộc Kênh Web MoMo</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trọng Tâm Triển Khai (Wave 1)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">
+        1. Tính Lương Gross - Net (<code>/tai-chinh/tinh-luong</code>)<br/>
+        2. Chia Hóa Đơn Du Lịch (<code>/tai-chinh/cong-cu/chia-tien-du-lich</code>)<br/>
+        3. Phân Bổ Lương 50/30/20 (<code>/tai-chinh/phan-bo-luong</code>)<br/>
+        4. Dự Toán Đám Cưới &amp; Thuê Nhà (Dòng Tiền Cột Mốc)
+      </td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trạng Thái</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>APPROVED &amp; READY FOR DEV BUILD</strong></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Đội Ngũ Triển Khai</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Frontend Team (Lead), Content/Copywriting Team, QA Team</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## 1. MỤC TIÊU SẢN PHẨM & NGUYÊN TẮC KIẾN TRÚC
+
+### 1.1 Vấn Đề Thực Tế (Problem Statement)
+- Các công cụ tính toán tài chính trên Web thường cho ra kết quả số liệu rất chính xác nhưng **khô cứng và thiếu cảm xúc**.
+- Thành phần *"Trợ lý MoMo AI"* hiện tại trên trang Tính Lương đang sử dụng mẫu câu tĩnh rập khuôn (*"Lương thực nhận chiếm 89% tổng Gross. Bạn có thể trích từ 2.670.000đ/tháng..."*), khiến người dùng có cảm giác đọc tài liệu ngân hàng hơn là một người bạn trợ lý tài chính thông minh.
+- Việc gọi API LLM thực thụ (OpenAI / Claude / Gemini) để sinh câu thoại theo thời gian thực gặp 3 rào cản chí mạng:
+  1. **Độ trễ cao (1.5s - 3s):** Phá vỡ trải nghiệm tính toán tức thì (Zero-Latency UI).
+  2. **Chi phí token tích lũy:** Hàng triệu lượt tính toán mỗi tháng sẽ phát sinh chi phí hạ tầng lớn.
+  3. **Rủi ro sai lệch số liệu tài chính (Hallucination):** Khó kiểm soát tuyệt đối tính chuẩn xác của các khuyến nghị tài chính cá nhân.
+
+### 1.2 Giải Pháp: Client-Side Pseudo-AI Engine
+- Thay thế hoàn toàn backend LLM bằng **Bộ máy ma trận điều kiện chạy 100% tại Client (Client-Side Rule Matrix)**.
+- Kết hợp công thức toán học nội suy với kho câu từ **catchy, nhẹ nhàng, hài hước, mang hơi thở đời thường và văn hóa mạng xã hội (Gen Z / Dân văn phòng)**.
+- Đảm bảo thời gian phản hồi là **0ms**, chi phí vận hành bằng **0đ**, 100% an toàn thương hiệu và tối đa hóa tỷ lệ nhấp chuyển đổi (CTR) vào ứng dụng MoMo.
+
+---
+
+## 2. KIẾN TRÚC MA TRẬN QUY TẮC & KHO NỘI DUNG (RULE & COPY MATRIX)
+
+Mỗi công cụ được cấu hình theo mô hình:
+$$\text{Output Data} \longrightarrow \text{Condition Evaluator} \longrightarrow \text{Persona Tone Mode} \longrightarrow \text{Randomized Witty Copy} + \text{Dynamic CTA}$$
+
+---
+
+### 2.1 Công Cụ 1: Tính Lương Gross Sang Net (`/tai-chinh/tinh-luong`)
+
+#### Biến Số Đầu Vào
+- `gross`: Lương Gross (VND).
+- `net`: Lương Net thực nhận (VND).
+- `tax`: Thuế TNCN phải nộp (VND).
+- `insurance`: Tổng tiền bảo hiểm bắt buộc BHXH, BHYT, BHTN (VND).
+- `deduction = gross - net`: Tổng số tiền bị khấu trừ (VND).
+- `net_ratio = Math.round((net / gross) * 100)`: Tỷ lệ thực nhận (%).
+- `save_target = Math.round(net * 0.15)`: Khuyến nghị tích lũy 15% Net (VND).
+
+#### Ma Trận Quy Tắc & Kho Nội Dung
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.85em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Nhánh Logic</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Điều Kiện Kích Hoạt</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Nội Dung Chế Độ Mặc Định (Gentle Mode)</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Nội Dung Chế Độ Cà Khịa (Roast Mode)</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Nhãn Nút CTA &amp; Deep Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Thu Nhập Phổ Thông (15M - 25M Gross)</strong><br/><em>(Case thực tế trong ảnh)</em></td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><code>gross &gt;= 15M &amp;&amp; gross &lt;= 25M</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">
+        - <em>Var 1:</em> "{net_ratio}% lương Net đã về bản an toàn! Trích ngay {save_target}đ cất vào Túi Thần Tài để tiền sinh lời mỗi ngày trước khi tiêu sạch nhé."<br/>
+        - <em>Var 2:</em> "Ví của bạn giữ lại được {net}đ sau nghĩa vụ bảo hiểm. Cài đặt tự động chia tiền vào Hũ Tiết Kiệm để tạo quỹ phòng thân an tâm công tác."
+      </td>
+      <td style="border:1px solid #94a3b8; padding:6px;">
+        - <em>Var 1:</em> "'Bốc hơi' mất {deduction}đ tiền thuế và bảo hiểm nhưng ví vẫn còn {net}đ cầm cự. Trích ngay {save_target}đ vào Hũ trước khi các hội săn sale tìm đến bạn!"<br/>
+        - <em>Var 2:</em> "Lương 20 củ mà tháng nào cũng kêu hết tiền. Đừng để {net}đ này biến thành 50 ly trà sữa vô tội vạ. Khóa tiền ngay kẻo cuối tháng lại ăn mì tôm!"
+      </td>
+      <td style="border:1px solid #94a3b8; padding:6px;">
+        <strong>Khóa 15% vào Hũ Tiết Kiệm</strong><br/>
+        <code>momo://app?action=spending_jar&amp;tab=savings</code>
+      </td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Thuế Cắn Sâu (Gross &gt; 30M)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><code>tax &gt;= 2.5M</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">
+        - <em>Var 1:</em> "Mức đóng góp ngân sách {tax}đ khẳng định năng lực vượt trội của bạn. Bù đắp cho dòng tiền cá nhân bằng cách gửi Tiết Kiệm Online MoMo nhận thêm +0.2% lãi suất ưu đãi."<br/>
+        - <em>Var 2:</em> "Thu nhập vững vàng! Đây là thời điểm vàng để tái cơ cấu danh mục tài sản tăng trưởng qua chứng chỉ quỹ mở."
+      </td>
+      <td style="border:1px solid #94a3b8; padding:6px;">
+        - <em>Var 1:</em> "Nhìn lương Gross thì oai phong, nhìn thuế TNCN trừ tận {tax}đ thì muốn trầm cảm. Đóng thuế bằng cả tháng lương người ta thế này thì phải bắt tiền làm việc bù lại gấp!"<br/>
+        - <em>Var 2:</em> "Chào người hùng gánh còng lưng ngân sách! Để xoa dịu nỗi đau mất {tax}đ, mở ngay sổ tiết kiệm Bản Việt để lấy lại tiền lãi mỗi tháng nào."
+      </td>
+      <td style="border:1px solid #94a3b8; padding:6px;">
+        <strong>Gửi Tiết Kiệm Bù Thuế (+0.2%)</strong><br/>
+        <code>momo://app?action=saving_online&amp;partner=bvbank</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Fresher / Miễn Thuế (Gross &lt; 11M)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><code>tax === 0</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">
+        - <em>Var 1:</em> "Thuế TNCN bằng 0đ là điểm khởi đầu lý tưởng. Chỉ cần 10.000đ/ngày, bạn đã có thể bắt đầu tích sản cùng chương trình Thực Tập Sinh Đầu Tư."<br/>
+        - <em>Var 2:</em> "Bảo vệ toàn vẹn {net}đ thu nhập bằng cách đặt hạn mức chi tiêu tuần, xây dựng nền tảng tài chính kỷ luật."
+      </td>
+      <td style="border:1px solid #94a3b8; padding:6px;">
+        - <em>Var 1:</em> "Lương chưa kịp ấm ví đã sợ bay màu? Đừng đợi lương trăm triệu mới tiết kiệm, bắt đầu tích tiểu thành đại từ 10.000đ mỗi ngày để 2 năm nữa tự tin đổi điện thoại mới!"<br/>
+        - <em>Var 2:</em> "Chưa phải đóng thuế là một đặc ân của tuổi trẻ. Đừng tiêu sạch {net}đ trong 10 ngày đầu tháng rồi những ngày sau sống bằng niềm tin nhé."
+      </td>
+      <td style="border:1px solid #94a3b8; padding:6px;">
+        <strong>Tích Sản Từ 10.000đ/Ngày</strong><br/>
+        <code>momo://app?action=micro_investing_sip</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+### 2.2 Công Cụ 2: Bảng Tra Cứu & Tính Lãi Suất 40 Ngân Hàng (`/tai-chinh/lai-suat`)
+
+#### Biến Số Đầu Vào
+- `selected_bank`: Tên ngân hàng người dùng đang chọn so sánh.
+- `amount`: Số tiền gửi tiết kiệm dự kiến (VND).
+- `term`: Kỳ hạn gửi (tháng).
+- `user_interest`: Tiền lãi tại ngân hàng đã chọn.
+- `momo_interest`: Tiền lãi tại đối tác MoMo (Bản Việt / VPBank với ưu đãi +0.2%).
+- `gap_interest = momo_interest - user_interest`: Số tiền lãi chênh lệch nhận thêm khi gửi qua MoMo.
+
+#### Ma Trận Quy Tắc & Kho Nội Dung
+- **Điều kiện 1: Ngân hàng đã chọn có lãi suất thấp hơn đối tác MoMo (`gap_interest > 0`):**
+  - *Gentle:* "Gửi tại {selected_bank} bạn nhận {user_interest}đ. Nếu gửi qua đối tác Bản Việt/VPBank trên MoMo, bạn nhận thêm chênh lệch {gap_interest}đ tiền lãi mỗi năm."
+  - *Roast:* "Cùng là số tiền này mà gửi ở đây bạn đang 'tặng không' cho ngân hàng {gap_interest}đ tiền lãi. Bấm mở sổ trên MoMo nhận thêm +0.2% lãi suất, đủ tiền uống trà sữa cả năm!"
+  - *CTA:* **Mở Sổ Lãi Cao Nhất (+0.2%)** (`momo://app?action=saving_online`)
+- **Điều kiện 2: Số tiền gửi nhỏ chưa đủ mở sổ kỳ hạn (`amount < 10.000.000đ`):**
+  - *Gentle:* "Số tiền chưa đủ mở sổ kỳ hạn lớn? Để ngay vào Túi Thần Tài để nhận tiền lời tự động chi trả mỗi ngày, rút ra bất kỳ lúc nào vẫn bảo toàn lãi."
+  - *Roast:* "Tiền ít không có nghĩa là để ví nằm im! {amount}đ để trong tài khoản thường chỉ được 0.1%/năm, thả vào Túi Thần Tài mỗi sáng mở mắt ra có ngay tiền ăn sáng."
+  - *CTA:* **Sinh Lời Mỗi Ngày Với Túi Thần Tài** (`momo://app?action=tui_than_tai`)
+
+---
+
+### 2.3 Công Cụ 3: Phân Bổ Lương 50/30/20 & Hũ Tài Chính (`/tai-chinh/phan-bo-luong`)
+
+#### Biến Số Đầu Vào
+- `need_ratio`, `want_ratio`, `save_ratio`: Tỷ lệ % phân bổ cho Thiết yếu, Mong muốn, Tích lũy.
+- `want_amount`, `save_amount`: Số tiền tương ứng.
+
+#### Ma Trận Quy Tắc & Kho Nội Dung
+- **Điều kiện 1: Hũ Mong Muốn (Chi tiêu linh hoạt) vượt quá 35%:**
+  - *Gentle:* "Khoản chi tiêu cho sở thích đang chiếm {want_ratio}% thu nhập. Hãy cân nhắc cài đặt hạn mức Hũ Chi Tiêu tuần để bảo vệ quỹ tiết kiệm tương lai."
+  - *Roast:* "Nghe nói bạn định tiết kiệm, nhưng cái giỏ hàng Shopee và ly trà sữa size L đã nói 'không'. Khóa trần hạn mức bằng Hũ Chi Tiêu ngay trước khi ăn mì tôm vào ngày 20!"
+  - *CTA:* **Cài Hạn Mức Hũ Chi Tiêu** (`momo://app?action=spending_jar`)
+- **Điều kiện 2: Hũ Tích Lũy mỏng (< 10%):**
+  - *Gentle:* "Tỷ lệ tích lũy {save_ratio}% là khá mỏng trước các rủi ro bất ngờ. Đặt mục tiêu nâng dần lên 15-20% bằng tính năng tích lũy tự động định kỳ."
+  - *Roast:* "Tương lai đang gọi nhưng tài khoản tích lũy không bắt máy! Không tích lũy từ bây giờ thì lúc có biến chỉ biết ngửa tay than trời. Bật tự động tích lũy Túi Thần Tài ngay!"
+  - *CTA:* **Bật Tích Lũy Tự Động** (`momo://app?action=tui_than_tai`)
+
+---
+
+### 2.4 Công Cụ 4: Cổng Tỷ Giá & Quy Đổi Ngoại Tệ (`/tai-chinh/ty-gia`)
+
+#### Biến Số Đầu Vào
+- `currency`: Mã ngoại tệ (USD, EUR, JPY, GBP, THB, KRW...).
+- `amount`: Số tiền ngoại tệ quy đổi.
+- `direction`: Hướng đổi (Ngoại tệ sang VND hoặc ngược lại).
+
+#### Ma Trận Quy Tắc & Kho Nội Dung
+- **Điều kiện 1: Quy đổi ngoại tệ du lịch phổ biến (USD, JPY, THB, KRW):**
+  - *Gentle:* "Theo dõi sát biểu đồ biến động để chọn thời điểm đổi tiền tối ưu nhất. Khi đi du lịch, bạn có thể quét thanh toán trực tiếp qua MoMo tại nhiều quốc gia."
+  - *Roast:* "Tính đổi tiền đi vi vu nước ngoài hả bạn ơi? Đổi tiền mặt cồng kềnh dễ rơi mất, dùng MoMo quét mã QR thanh toán quốc tế không tốn phí chuyển đổi cồng kềnh!"
+  - *CTA:* **Khám Phá Thanh Toán Quốc Tế MoMo** (`momo://app?action=international_payment`)
+- **Điều kiện 2: Nhận tiền kiều hối gửi về (`currency === 'USD' && amount >= 500`):**
+  - *Gentle:* "Nhận tiền kiều hối trực tiếp vào MoMo 24/7 hoàn toàn miễn phí, quy đổi sang VND theo tỷ giá ưu đãi và rút về tài khoản ngân hàng liên kết tức thì."
+  - *Roast:* "Tiền kiều hối người thân gửi về mà chạy ra quầy xếp hàng ký giấy tờ thì quá mất thời gian. Nhận thẳng vào Ví MoMo trong 30 giây, an toàn tuyệt đối!"
+  - *CTA:* **Nhận Tiền Quốc Tế Miễn Phí** (`momo://app?action=folder_remittances`)
+
+---
+
+### 2.5 Công Cụ 5: Bảng Giá Vàng & Quy Đổi Vàng SJC, 9999 (`/tai-chinh/gia-vang`)
+
+#### Biến Số Đầu Vào
+- `gold_type`: Loại vàng (SJC, Nhẫn 9999, PNJ, DOJI).
+- `spread`: Chênh lệch giá mua vào - bán ra (VND/lượng).
+- `quantity`: Số lượng chỉ/lượng người dùng muốn quy đổi.
+
+#### Ma Trận Quy Tắc & Kho Nội Dung
+- **Điều kiện 1: Chênh lệch mua bán lớn (`spread >= 1.500.000đ`):**
+  - *Gentle:* "Biên độ chênh lệch mua bán đang ở mức {spread}đ/lượng. Nhà đầu tư nên cân nhắc rủi ro ngắn hạn trước khi giải ngân khối lượng lớn."
+  - *Roast:* "Vàng nhảy múa từng giờ, mua đu đỉnh là tối về mất ngủ! Thay vì ôm tiền chờ đợi, trích vốn nhàn rỗi tích sản Chứng Chỉ Quỹ mở trên MoMo để phân tán rủi ro."
+  - *CTA:* **Đa Dạng Danh Mục Với Quỹ Mở** (`momo://app?action=mutual_fund`)
+- **Điều kiện 2: Quy đổi số lượng nhỏ lẻ (`quantity < 1` chỉ):**
+  - *Gentle:* "Tích lũy vàng từng phân/chỉ nhỏ là chiến lược bảo toàn sức mua tuyệt vời. Bạn có thể mua Vàng Tài Lộc online trực tiếp trên ứng dụng MoMo."
+  - *Roast:* "Chưa đủ tiền mua nguyên cây vàng thì mua từng phân vàng online! Không lo cất giấu dưới gối sợ trộm, mở MoMo mua tích sản từ vài trăm ngàn."
+  - *CTA:* **Mua Vàng Tài Lộc Online** (`momo://app?action=gold_accumulate`)
+
+---
+
+### 2.6 Công Cụ 6: Điểm Tín Dụng & CIC Simulator (`/diem-tin-dung`)
+
+#### Biến Số Đầu Vào
+- `credit_score`: Điểm tín dụng ước tính (150 - 750).
+- `risk_tier`: Phân loại nợ (Hạng 1 đến Hạng 5).
+
+#### Ma Trận Quy Tắc & Kho Nội Dung
+- **Điều kiện 1: Điểm tín dụng Tốt / Rất Tốt (`credit_score >= 650`):**
+  - *Gentle:* "Điểm tín dụng của bạn thuộc nhóm Ưu tú ({credit_score} điểm). Bạn đủ điều kiện kích hoạt các gói hạn mức tài chính cao nhất trên MoMo."
+  - *Roast:* "Uy tín ngời ngời, hồ sơ sạch không tì vết! Điểm đẹp thế này mà không mở Ví Trả Sau hạn mức tới 20 triệu để nhận 45 ngày miễn lãi thì quá phí."
+  - *CTA:* **Mở Ví Trả Sau Hạn Mức Tối Đa** (`momo://app?action=vi_tra_sau`)
+- **Điều kiện 2: Điểm tín dụng thấp / Có nguy cơ trả trễ (`credit_score < 550`):**
+  - *Gentle:* "Hồ sơ của bạn đang có cảnh báo rủi ro tín dụng. Hãy ưu tiên thanh toán dứt điểm các khoản dư nợ thẻ và hóa đơn đúng hạn để cải thiện điểm số."
+  - *Roast:* "Cảnh báo đỏ! Lịch sử trả trễ đang kéo điểm tín dụng của bạn xuống dốc. Cài đặt ngay tính năng Tự động thanh toán hóa đơn trên MoMo để không bao giờ bị dính phạt nợ xấu nữa!"
+  - *CTA:* **Cài Tự Động Thanh Toán Hóa Đơn** (`momo://app?action=auto_bill_pay`)
+
+---
+
+### 2.7 Công Cụ 7: Dự Toán Lương Hưu & BHXH 1 Lần (`/tai-chinh/luong-huu`)
+
+#### Biến Số Đầu Vào
+- `mode`: Chế độ tính (`rut_mot_lan` hoặc `luong_huu`).
+- `lump_sum`: Tiền rút BHXH 1 lần ước tính.
+- `monthly_pension`: Lương hưu hàng tháng dự kiến.
+
+#### Ma Trận Quy Tắc & Kho Nội Dung
+- **Điều kiện 1: Người dùng chọn tính Rút BHXH 1 lần:**
+  - *Gentle:* "Rút một lần giúp bạn giải quyết dòng tiền trước mắt ({lump_sum}đ), nhưng bạn sẽ mất đi quyền lợi thẻ BHYT miễn phí trọn đời và lương hưu hàng tháng."
+  - *Roast:* "Rút một cục {lump_sum}đ tiêu vèo cái là hết, rồi về già sống bằng tình thương hả bạn ơi? Nếu bắt buộc phải rút, nhớ trích ngay 40% gửi Tiết Kiệm Online để tự tạo sổ hưu riêng!"
+  - *CTA:* **Gửi Tiết Kiệm Làm Quỹ Hưu Trí** (`momo://app?action=saving_online`)
+- **Điều kiện 2: Lương hưu dự kiến thấp (`monthly_pension < 5.000.000đ`):**
+  - *Gentle:* "Lương hưu dự kiến {monthly_pension}đ/tháng có thể chịu áp lực lớn từ lạm phát. Hãy chủ động lập quỹ hưu trí bổ sung ngay từ hôm nay."
+  - *Roast:* "Nghỉ hưu với {monthly_pension}đ/tháng sau 20 năm nữa thì chỉ đủ tiền ăn bánh mì uống nước lọc. Bắt đầu tích sản SIP từ 10.000đ/ngày để khi về hưu được an nhàn đi du lịch!"
+  - *CTA:* **Lập Kế Hoạch Tự Do Tài Chính FIRE** (`momo://app?action=fire_simulator`)
+
+---
+
+### 2.8 Công Cụ 8: Trả Góp Ví Trả Sau (`/vi-tra-sau`)
+
+#### Biến Số Đầu Vào
+- `item_amount`: Giá trị món hàng cần mua.
+- `term`: Kỳ hạn trả góp (3, 6, 9, 12 tháng).
+
+#### Ma Trận Quy Tắc & Kho Nội Dung
+- **Điều kiện: Món đồ giá trị lớn (`item_amount >= 15.000.000đ`):**
+  - *Gentle:* "Chia nhỏ thanh toán thành các kỳ hạn linh hoạt giúp bạn chủ động dòng tiền, giữ lại số tiền nhàn rỗi sinh lời trên Túi Thần Tài."
+  - *Roast:* "Mê món đồ {item_amount}đ này quá rồi đúng không? Đừng rút hết tiền tiết kiệm mua đứt, chọn trả góp qua Ví Trả Sau mỗi tháng chỉ từ vài trăm ngàn để ví không bị viêm màng!"
+  - *CTA:* **Kích Hoạt Ví Trả Sau Nhận 20 Triệu** (`momo://app?action=vi_tra_sau`)
+
+---
+
+### 2.9 Công Cụ 9: Lịch Trả Nợ Vay Nhanh (`/vay-nhanh`)
+
+#### Biến Số Đầu Vào
+- `loan_amount`: Số tiền cần vay (VND).
+- `monthly_payment`: Số tiền trả gốc và lãi hàng tháng theo dư nợ giảm dần.
+
+#### Ma Trận Quy Tắc & Kho Nội Dung
+- **Điều kiện: Tính toán lịch trả nợ vay tiêu dùng:**
+  - *Gentle:* "Lãi suất tính trên dư nợ giảm dần minh bạch. Mỗi tháng bạn cần thanh toán {monthly_payment}đ, giải ngân trực tiếp vào Ví MoMo chỉ sau 1 phút duyệt hồ sơ."
+  - *Roast:* "Cần tiền gấp thì vay ngân hàng uy tín trên MoMo, tuyệt đối tránh xa các app 'tín dụng đen' ngoài mạng! Số tiền trả mỗi tháng cố định {monthly_payment}đ, rõ ràng từng đồng."
+  - *CTA:* **Thẩm Định Hạn Mức Vay Trong 1 Phút** (`momo://app?action=vay_nhanh`)
+
+---
+
+### 2.10 Công Cụ 10: Chia Hóa Đơn Du Lịch Nhóm (`/tai-chinh/cong-cu/chia-tien-du-lich`)
+
+#### Biến Số Đầu Vào
+- `user_net_balance`: Số dư bù trừ của người xem bảng tính (> 0 là chủ nợ, < 0 là con nợ).
+- `max_creditor`: Tên người ứng tiền nhiều nhất.
+- `avg_per_person`: Chi phí bình quân đầu người.
+
+#### Ma Trận Quy Tắc & Kho Nội Dung
+- **Điều kiện 1: Thủ quỹ ứng tiền hộ nhiều (`user_net_balance > 1.000.000đ`):**
+  - *Gentle:* "Bạn đã ứng trước số tiền lớn cho cả chuyến đi. Nhấn nút nhắc nợ để bạn bè thanh toán dứt điểm vào tài khoản MoMo của bạn nhanh chóng."
+  - *Roast:* "Bồ tát sống của cả chuyến đi là đây! Bạn đã quẹt thẻ hộ cả nhóm tận {user_net_balance}đ. Gửi bảng này vào nhóm chat đòi nợ ngay kẻo tình bạn thì còn mà tiền thì bay màu!"
+  - *CTA:* **Sao Chép Nhắc Nợ Kèm Link MoMo** (`clipboard_copy_summary`)
+- **Điều kiện 2: Con nợ lớn nhất nhóm (`user_net_balance < -500.000đ`):**
+  - *Gentle:* "Phần chi phí cần thanh toán lại của bạn là {abs_balance}đ. Chuyển khoản 1 chạm qua MoMo để hoàn tất công nợ chuyến đi."
+  - *Roast:* "Hôm đi hết mình, hôm về hết hồn! Bạn đang nợ {max_creditor} số tiền {abs_balance}đ. Bắn tiền dứt điểm qua MoMo trong 3 giây để giữ vững danh hiệu người bạn văn minh sòng phẳng nào."
+  - *CTA:* **Bắn MoMo Cho {max_creditor} Ngay** (`momo://app?action=p2p_transfer`)
+- **Điều kiện 3: Chuyến đi chi phí bình quân cao (`avg_per_person > 3.000.000đ`):**
+  - *Gentle:* "Chuyến đi có mức chi tiêu chất lượng cao ({avg_per_person}đ/người). Để chuẩn bị tốt cho chuyến tới, nhóm bạn có thể mở Quỹ Nhóm MoMo để cùng nhau tích lũy sinh lời hàng tháng."
+  - *Roast:* "Nhóm mình đi du lịch hay đi thị sát đời sống giới thượng lưu vậy? Tiêu sương sương {avg_per_person}đ/người. Lần sau trước khi xách vali đi, mở Quỹ Nhóm MoMo tích tiền trước kẻo về nhà lại ăn bánh mì trừ bữa!"
+  - *CTA:* **Mở Quỹ Nhóm Cho Chuyến Tới** (`momo://app?action=group_fund`)
+
+---
+
+### 2.11 Công Cụ 11: Tích Sản FIRE & Tự Do Tài Chính (`/tai-chinh/tu-do-tai-chinh`)
+
+#### Biến Số Đầu Vào
+- `retire_age`: Độ tuổi mong muốn nghỉ hưu.
+- `target_asset`: Khối tài sản cần có theo quy tắc 4% an toàn.
+
+#### Ma Trận Quy Tắc & Kho Nội Dung
+- **Điều kiện: Muốn nghỉ hưu sớm trước 40 tuổi (`retire_age <= 40`):**
+  - *Gentle:* "Để nghỉ hưu ở tuổi {retire_age}, bạn cần xây dựng danh mục tài sản sinh lời ròng {target_asset}đ. Bắt đầu phân bổ định kỳ vào chứng chỉ quỹ tăng trưởng ngay hôm nay."
+  - *Roast:* "Muốn 35 tuổi đã thảnh thơi đi câu cá ngắm hoàng hôn? Với tốc độ tiêu tiền hiện tại thì 65 tuổi bạn vẫn đang cày deadline đấy! Bắt tay vào tích sản SIP ngay hôm nay."
+  - *CTA:* **Bắt Đầu Tích Sản SIP Với Quỹ Mở** (`momo://app?action=mutual_fund_sip`)
+
+---
+
+### 2.12 Công Cụ 12: Soi Danh Mục Quỹ Mở & NAV (`/tai-chinh/chung-chi-quy`)
+
+#### Biến Số Đầu Vào
+- `fund_return_1y`: Tỷ suất sinh lời 1 năm gần nhất của quỹ (%).
+
+#### Ma Trận Quy Tắc & Kho Nội Dung
+- **Điều kiện: Quỹ có tỷ suất sinh lời vượt trội (`fund_return_1y >= 12%`):**
+  - *Gentle:* "Quỹ ghi nhận tỷ suất sinh lời {fund_return_1y}%/năm, vượt trội so với lãi suất tiền gửi thông thường. Thích hợp cho mục tiêu đầu tư trung và dài hạn từ 10.000đ."
+  - *Roast:* "Gửi tiết kiệm được 5%, trong khi quỹ mở làm ăn tốt mang về {fund_return_1y}%/năm. Không cần có bằng tài chính, chỉ cần từ 10k là đã có chuyên gia quản lý vốn hộ bạn rồi!"
+  - *CTA:* **Tham Gia Thực Tập Sinh Đầu Tư Chỉ Từ 10k** (`momo://app?action=micro_investing_sip`)
+
+---
+
+### 2.13 Công Cụ 13: Dự Toán Chi Phí Đám Cưới & Điểm Hòa Vốn
+
+- **Điều kiện: Tổng chi tiệc cưới vượt quá dự kiến mừng cưới:**
+  - *Gentle:* "Chi phí tiệc cưới đang chênh lệch cao so với dự phòng. Hãy cân nhắc tối ưu các khoản decor hoặc kích hoạt nguồn vốn đòn bẩy ngắn hạn an toàn."
+  - *Roast:* "Tính toán cho thấy đám cưới cần tối thiểu 35 mâm cỗ để hòa vốn. Nhưng nếu hội bạn thân rủ nhau đi phong bì 300k thì cô dâu chú rể chuẩn bị tinh thần rửa bát trừ nợ! Bật Ví Trả Sau để có sẵn 20 triệu dự phòng khẩn cấp nào."
+  - *CTA:* **Mở Hạn Mức Ví Trả Sau Dự Phòng** (`momo://app?action=vi_tra_sau`)
+
+---
+
+### 2.14 Công Cụ 14: Dự Toán Chi Phí Thuê Nhà & Ra Ở Riêng
+
+- **Điều kiện: Tiền thuê nhà > 35% tổng thu nhập hàng tháng:**
+  - *Gentle:* "Chi phí nhà ở vượt quá ngưỡng an toàn tài chính (30%). Nên tìm bạn ở ghép hoặc lựa chọn khu vực có chi phí tối ưu hơn."
+  - *Roast:* "Căn phòng có ban công chill thật đấy, nhưng tiền thuê ngốn gần nửa tháng lương thì tối về chỉ có nước ngắm trăng uống nước lọc. Đi làm cả tháng chỉ để nuôi chủ nhà thôi bạn ơi!"
+  - *CTA:* **Lập Kế Hoạch Ngân Sách Thuê Nhà** (`momo://app?action=spending_jar`)
+
+---
+
+## 3. ĐẶC TẢ GIAO DIỆN & THÀNH PHẦN FRONTEND (UI/UX SPEC)
+
+### 3.1 Cấu Trúc Khung Hiển Thị (Component Box Layout)
+
+```text
+┌────────────────────────────────────────────────────────────────────────┐
+│ [✨ ICON] TRỢ LÝ MOMO AI                 [🔘 Chế độ Cà Khịa: ON/OFF]   │
+├────────────────────────────────────────────────────────────────────────┤
+│ "Câu nhận xét catchy, hóm hỉnh theo đúng số liệu tính toán..."        │
+│                                                                        │
+│ [🔄 Lắc quẻ lời khuyên khác]                                           │
+├────────────────────────────────────────────────────────────────────────┤
+│ [            NÚT BẤM CTA ĐỘNG (Ví dụ: Khóa tiền vào Hũ ngay)         ] │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### 3.2 Quy Chuẩn Thiết Kế Visual (Design Tokens)
+- **Container Background:** `#FFF5F8` (Hồng phấn MoMo nhạt) với border `1px solid #FCE7F0`, bo góc `rounded-2xl` (16px).
+- **Header Tag:** Font chữ đậm `text-xs font-bold text-pink-600 uppercase tracking-wider`.
+- **Toggle Switch:** Nút gạt chuyển đổi giữa `Nhẹ nhàng` và `Cà khịa` (Roast Mode), lưu trạng thái vào `localStorage` của người dùng.
+- **Message Body:** Font chữ `text-sm text-slate-800 leading-relaxed font-normal`. Các con số tiền bạc và tỷ lệ % bắt buộc in đậm `font-bold text-slate-900`.
+- **Nút Re-roll:** Icon xoay tròn nhỏ `text-xs font-medium text-slate-500 hover:text-pink-600 transition-colors cursor-pointer`.
+- **CTA Button:** Button lớn full-width chuẩn Mobase UI, nền hồng `bg-pink-500 hover:bg-pink-600 text-white font-bold h-11 rounded-xl shadow-sm`.
+
+---
+
+## 4. MÃ NGUỒN TYPESCRIPT SẴN SÀNG TRIỂN KHAI (CODE IMPLEMENTATION)
+
+Đội ngũ Frontend có thể đưa trực tiếp 2 file mã nguồn này vào dự án Web Platform:
+
+### File 1: Engine Logic & Kho Dữ Liệu (`src/utils/aiProposalEngine.ts`)
+
+```typescript
+// src/utils/aiProposalEngine.ts
+
+export type ProposalMode = 'GENTLE' | 'ROAST';
+
+export interface SalaryParams {
+  gross: number;
+  net: number;
+  tax: number;
+  insurance: number;
+  mode?: ProposalMode;
+}
+
+export interface ProposalOutput {
+  tag: string;
+  message: string;
+  ctaText: string;
+  deeplink: string;
+}
+
+export const getSalaryAiProposal = (params: SalaryParams, seed: number = 0): ProposalOutput => {
+  const { gross, net, tax, mode = 'GENTLE' } = params;
+  const netRatio = Math.round((net / gross) * 100);
+  const deduction = (gross - net).toLocaleString('vi-VN');
+  const netStr = net.toLocaleString('vi-VN');
+  const taxStr = tax.toLocaleString('vi-VN');
+  const saveTarget = Math.round(net * 0.15).toLocaleString('vi-VN');
+
+  // Case 1: Thuế cao (Tax >= 2.5M)
+  if (tax >= 2500000) {
+    if (mode === 'ROAST') {
+      const quotes = [
+        `Nhìn lương Gross thì oai phong, nhìn thuế TNCN trừ tận ${taxStr}đ thì muốn trầm cảm. Đóng thuế bạc triệu thế này thì phải bắt tiền làm việc bù lại gấp!`,
+        `Chào người hùng gánh còng lưng ngân sách! Để xoa dịu nỗi đau mất ${taxStr}đ, mở ngay sổ tiết kiệm Bản Việt để lấy lại tiền lãi mỗi tháng nào.`
+      ];
+      return {
+        tag: "MOMO AI CÀ KHỊA",
+        message: quotes[seed % quotes.length],
+        ctaText: "Gửi Tiết Kiệm Bù Thuế (+0.2%)",
+        deeplink: "momo://app?action=saving_online&partner=bvbank"
+      };
+    }
+    return {
+      tag: "MOMO AI GỢI Ý",
+      message: `Mức đóng góp ngân sách ${taxStr}đ khẳng định năng lực vượt trội của bạn. Bù đắp cho dòng tiền cá nhân bằng cách gửi Tiết Kiệm Online MoMo nhận thêm +0.2% lãi suất ưu đãi.`,
+      ctaText: "Gửi Tiết Kiệm Nhận +0.2%",
+      deeplink: "momo://app?action=saving_online&partner=bvbank"
+    };
+  }
+
+  // Case 2: Thu nhập phổ thông văn phòng (15M - 25M)
+  if (gross >= 15000000 && gross <= 25000000) {
+    if (mode === 'ROAST') {
+      const quotes = [
+        `'Bốc hơi' mất ${deduction}đ tiền thuế và bảo hiểm nhưng ví vẫn còn ${netStr}đ cầm cự. Trích ngay ${saveTarget}đ vào Hũ trước khi các hội săn sale Shopee tìm đến bạn!`,
+        `Lương 20 củ mà tháng nào cũng kêu hết tiền. Đừng để ${netStr}đ này biến thành 50 ly trà sữa vô tội vạ. Khóa tiền ngay kẻo cuối tháng lại ăn mì tôm!`
+      ];
+      return {
+        tag: "MOMO AI CÀ KHỊA",
+        message: quotes[seed % quotes.length],
+        ctaText: "Khóa 15% Vào Hũ Tiết Kiệm",
+        deeplink: "momo://app?action=spending_jar&tab=savings"
+      };
+    }
+    return {
+      tag: "MOMO AI GỢI Ý",
+      message: `${netRatio}% lương Net đã về bản an toàn! Trích ngay ${saveTarget}đ cất vào Túi Thần Tài để tiền sinh lời mỗi ngày trước khi tiêu sạch nhé.`,
+      ctaText: "Khóa 15% Vào Hũ Tiết Kiệm",
+      deeplink: "momo://app?action=spending_jar&tab=savings"
+    };
+  }
+
+  // Case 3: Thu nhập dưới mức chịu thuế (Tax == 0)
+  if (tax === 0) {
+    if (mode === 'ROAST') {
+      return {
+        tag: "MOMO AI CÀ KHỊA",
+        message: `Lương chưa kịp ấm ví đã sợ bay màu? Đừng đợi lương trăm triệu mới tiết kiệm, bắt đầu tích sản từ 10.000đ mỗi ngày để 2 năm nữa tự tin đổi iPhone mới!`,
+        ctaText: "Tích Sản Từ 10.000đ/Ngày",
+        deeplink: "momo://app?action=micro_investing_sip"
+      };
+    }
+    return {
+      tag: "MOMO AI GỢI Ý",
+      message: `Thuế TNCN bằng 0đ là điểm khởi đầu lý tưởng. Chỉ cần 10.000đ/ngày, bạn đã có thể bắt đầu tích sản cùng chương trình Thực Tập Sinh Đầu Tư.`,
+      ctaText: "Tích Sản Từ 10.000đ/Ngày",
+      deeplink: "momo://app?action=micro_investing_sip"
+    };
+  }
+
+  // Case mặc định
+  return {
+    tag: "MOMO AI GỢI Ý",
+    message: `Lương thực nhận đạt ${netRatio}% tổng thu nhập. Thiết lập kỷ luật trích ${saveTarget}đ vào Túi Thần Tài để xây dựng nền tảng tài chính bền vững.`,
+    ctaText: "Quản Lý Tài Chính Tự Động",
+    deeplink: "momo://app?action=financial_hub"
+  };
+};
+```
+
+---
+
+### File 2: Component React Hiển Thị (`src/components/AiProposalBox.tsx`)
+
+```tsx
+// src/components/AiProposalBox.tsx
+import React, { useState } from 'react';
+import { getSalaryAiProposal, ProposalMode, SalaryParams } from '../utils/aiProposalEngine';
+
+export const AiProposalBox: React.FC<SalaryParams> = (props) => {
+  const [mode, setMode] = useState<ProposalMode>('ROAST'); // Mặc định mở chế độ Cà Khịa để tăng tương tác
+  const [seed, setSeed] = useState<number>(0);
+
+  const proposal = getSalaryAiProposal({ ...props, mode }, seed);
+
+  const handleReRoll = () => {
+    setSeed(prev => prev + 1);
+    if (typeof window !== 'undefined' && (window as any).umami) {
+      (window as any).umami.track('ai_proposal_reroll', { tool: 'tinh_luong', seed: seed + 1 });
+    }
+  };
+
+  const handleToggleMode = () => {
+    const nextMode: ProposalMode = mode === 'ROAST' ? 'GENTLE' : 'ROAST';
+    setMode(nextMode);
+    if (typeof window !== 'undefined' && (window as any).umami) {
+      (window as any).umami.track('ai_proposal_toggle_roast', { tool: 'tinh_luong', mode: nextMode });
+    }
+  };
+
+  const handleClickCta = () => {
+    if (typeof window !== 'undefined' && (window as any).umami) {
+      (window as any).umami.track('ai_proposal_click_cta', { 
+        tool: 'tinh_luong', 
+        mode, 
+        cta_text: proposal.ctaText,
+        deeplink: proposal.deeplink 
+      });
+    }
+    window.location.href = proposal.deeplink;
+  };
+
+  return (
+    <div className="mt-4 overflow-hidden rounded-2xl border border-pink-100 bg-[#FFF5F8] p-4 sm:p-5 transition-all shadow-sm">
+      {/* Header Bar */}
+      <div className="flex items-center justify-between pb-2">
+        <div className="flex items-center gap-1.5">
+          <span className="text-pink-500 font-bold text-sm">✨</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-pink-600">
+            {proposal.tag}
+          </span>
+        </div>
+
+        {/* Roast Mode Toggle */}
+        <button
+          type="button"
+          onClick={handleToggleMode}
+          className="flex items-center gap-1.5 text-[11px] font-semibold text-slate-500 hover:text-pink-600 transition-colors"
+          title="Bật/Tắt chế độ Cà Khịa"
+        >
+          <span>Cà khịa</span>
+          <span className={`inline-block h-3.5 w-7 rounded-full transition-colors relative ${mode === 'ROAST' ? 'bg-pink-500' : 'bg-slate-300'}`}>
+            <span className={`absolute top-0.5 h-2.5 w-2.5 rounded-full bg-white transition-transform ${mode === 'ROAST' ? 'translate-x-3.5' : 'translate-x-0.5'}`} />
+          </span>
+        </button>
+      </div>
+
+      {/* Message Content */}
+      <div className="mt-1 text-sm leading-relaxed text-slate-800">
+        <p>{proposal.message}</p>
+      </div>
+
+      {/* Sub-actions: Re-roll */}
+      <div className="mt-2.5 flex items-center justify-between">
+        <button
+          type="button"
+          onClick={handleReRoll}
+          className="text-[11px] text-slate-400 hover:text-slate-600 flex items-center gap-1 transition-colors"
+        >
+          <span>🔄</span>
+          <span>Xem lời khuyên khác</span>
+        </button>
+      </div>
+
+      {/* Main Dynamic CTA Button */}
+      <button
+        type="button"
+        onClick={handleClickCta}
+        className="mt-4 w-full h-11 rounded-xl bg-pink-500 hover:bg-pink-600 active:scale-[0.99] text-white font-bold text-sm shadow-xs transition-all flex items-center justify-center gap-2"
+      >
+        <span>{proposal.ctaText}</span>
+      </button>
+    </div>
+  );
+};
+```
+
+---
+
+## 5. BỘ CHỈ SỐ ĐO LƯỜNG & SỰ KIỆN UMAMI TRACKING
+
+Đội ngũ kỹ thuật đảm bảo gắn 4 sự kiện chuẩn vào Umami để đo lường hiệu quả chuyển đổi thực tế:
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.85em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Hành Động Người Dùng</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Tên Sự Kiện (Umami Event Name)</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Tham Số Kèm Theo (Event Properties)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px;">Hiển thị khung AI Proposal</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><code>ai_proposal_impression</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><code>{ tool: string, mode: 'GENTLE'|'ROAST', logic_tier: string }</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px;">Bấm nút Lắc quẻ / Lời khuyên khác</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><code>ai_proposal_reroll</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><code>{ tool: string, seed: number }</code></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px;">Gạt nút Bật/Tắt Cà khịa</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><code>ai_proposal_toggle_roast</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><code>{ tool: string, next_mode: 'GENTLE'|'ROAST' }</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px;">Bấm nút CTA điều hướng vào App</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><code>ai_proposal_click_cta</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><code>{ tool: string, cta_text: string, deeplink: string }</code></td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## 6. KẾ HOẠCH BÀN GIAO & TIÊU CHÍ NGHIỆM THU (ACCEPTANCE CRITERIA)
+
+- **Tiêu chí 1 (Zero-Latency):** Mọi sự thay đổi về số liệu nhập (lương Gross, bảo hiểm, người phụ thuộc) phải cập nhật ngay lập tức nội dung gợi ý AI trong vòng `< 10ms`, không có hiện tượng giật/lag.
+- **Tiêu chí 2 (Dynamic Deep Link):** Nhãn nút CTA và URL Deep Link phải thay đổi tương ứng theo từng ngữ cảnh số liệu (không dùng hardcode tĩnh).
+- **Tiêu chí 3 (Cross-Browser LocalStorage):** Chế độ chọn `Cà khịa` hoặc `Nhẹ nhàng` phải được lưu vào `localStorage` để khi người dùng reload trang hoặc chuyển sang công cụ khác không bị mất tùy chọn.
+- **Tiêu chí 4 (Tracking Validation):** Đầy đủ 4 sự kiện Umami bắn thành công trong tab Network của DevTools.

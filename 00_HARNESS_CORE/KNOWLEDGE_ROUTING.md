@@ -56,6 +56,7 @@ Phân tích vấn đề người dùng đặt ra theo 3 góc nhìn quản trị:
 - **Tăng trưởng & OKRs:** Thư mục [`01_STRATEGIC_PLAN/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/01_STRATEGIC_PLAN).
 - **Hạ tầng MoSpark & Tracking Tools:** Thư mục [`04_MOSPARK_PLATFORM/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM) và file SSOT [`umami_utility_tracking.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/umami_utility_tracking.md) (Quy chuẩn bắt buộc cho Event Tracking mọi Utility Tools & Calculators).
 - **Các cụm Hubs:** Thư mục [`05_HUBS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS).
+- **Dataset Từ Khóa & SEO Inventory Gốc (Use Case Inventory):** Thư mục SSOT [`05_HUBS/inventory/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/inventory/) (kho dữ liệu CSV nguyên bản bóc tách từng từ khóa và search volume cho Financial, vehicle-hub, insurtech, ota, telco, hospital, Lottery, trust...).
 - **Các Use Case BRD:** Thư mục [`06_USE_CASE_MOMO/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO).
 - **Báo cáo & Số liệu thực tế:** Thư mục [`07_REPORTS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS) và file SSOT [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md).
 - **Đặc tả PRD:** Thư mục [`09_PRD/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD).
@@ -68,6 +69,7 @@ Kích hoạt 3 Master Skills trong thư mục [`.agents/skills/`](file:///Users/
 - **Product Master (`product-master`):** Kích hoạt cho các bài toán định khung vấn đề, định vị sản phẩm, hoạch định chiến lược 4 Zone, đánh giá ưu tiên RICE/UIC, lập lộ trình và thiết kế luồng AI.
 - **Web Platform Reporting (`web-platform-reporting`):** Kích hoạt cho đóng gói báo cáo định kỳ Weekly gửi Executive Leadership và Monthly gửi Ban Giám Đốc.
 - **Frontend Slides (`frontend-slides`):** Kích hoạt khi cần khởi tạo slide thuyết trình Web hiện đại bằng HTML/CSS hoạt họa chuẩn Stage 16:9 (1920×1080) zero dependencies, phục vụ thuyết trình trực tiếp, pitch deck, reporting và export.
+- **Keyword Clustering & Content Strategy (`keyword-clustering-strategy`):** Kích hoạt khi xử lý kho dữ liệu từ khóa Use Case (`05_HUBS/inventory/`), lọc ngữ nghĩa (Semantic Filtering), gom cụm SERP Intent, kiến trúc Topic Cluster, xác định Potential Keywords và xây dựng Content Strategy / Content Plan gắn với Web-to-App.
 
 ### Tầng 5: Optimal Output Packaging Layer (Tầng Đóng Gói Câu Trả Lời Tối Ưu)
 Kiểm soát chuẩn định dạng đầu ra theo đúng chỉ dẫn [`AGENTS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/AGENTS.md):
