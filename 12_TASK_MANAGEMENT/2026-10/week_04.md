@@ -98,4 +98,13 @@
 | :--- | :--- | :--- | :--- | :---: |
 | Audit Độ Phủ & Tỷ Lệ Tìm Kiếm Chính Xác | Đo lường tỷ lệ trả về kết quả 200 OK trên Knowledge Base và khảo sát phản hồi người dùng | Duy | Hoài Anh | `To Do` |
 
+---
+
+### 5. Quiz
+- **Nhân sự phụ trách:** Thuận, Hải
+
+| Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
+| :--- | :--- | :--- | :--- | :---: |
+| Đo Lường Tương Tác Quiz Blog | Đánh giá tỷ lệ người đọc tham gia trả lời Quiz và tác động tới time-on-page của các bài viết Blog | Thuận | Hải | `To Do` |
+
 *(Blog Editor: không có đầu việc product-side trong tuần - đầu việc triển khai theo ticket board SE Team.)*

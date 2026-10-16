@@ -2,20 +2,20 @@
   "version": "3.1-enterprise",
   "generated_at": "2026-10-16",
   "stats": {
-    "total_usecases": 188,
-    "total_keywords": 275244,
-    "total_volume": 1764705890,
-    "total_cannibalized_shielded": 127341,
-    "total_outliers_pruned": 2688,
+    "total_usecases": 190,
+    "total_keywords": 277418,
+    "total_volume": 1764814670,
+    "total_cannibalized_shielded": 128143,
+    "total_outliers_pruned": 2690,
     "total_sectors": 11
   },
   "sector_summary": {
     "Financial": {
-      "usecase_count": 103,
-      "total_keywords": 132129,
-      "total_volume": 150770400,
-      "cannibalized_merged": 51130,
-      "outliers_filtered": 275
+      "usecase_count": 105,
+      "total_keywords": 134303,
+      "total_volume": 150879180,
+      "cannibalized_merged": 51932,
+      "outliers_filtered": 277
     },
     "Lottery": {
       "usecase_count": 4,
@@ -424,7 +424,26 @@
             "volume": 1381830
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Acb là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến acb một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -509,7 +528,7 @@
         {
           "keyword": "đăng ký bidv online",
           "volume": 390,
-          "cluster_volume": 930,
+          "cluster_volume": 910,
           "cpc": 0.65,
           "competition": "Low",
           "intent": "Transactional",
@@ -652,7 +671,7 @@
             {
               "keyword": "đăng ký bidv online",
               "volume": 390,
-              "cluster_volume": 930,
+              "cluster_volume": 910,
               "intent": "Transactional",
               "score": 5.86,
               "secondary_synonyms": [
@@ -801,7 +820,26 @@
             "volume": 56310
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bidv là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến bidv một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -1156,7 +1194,26 @@
             "volume": 374200
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Eximbank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến eximbank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -1455,7 +1512,26 @@
             "volume": 594300
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Ngân hàng indovinabank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến indovina bank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -1607,7 +1683,26 @@
             "volume": 1381830
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Lpbank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến lpbank  một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -1964,7 +2059,26 @@
             "volume": 13740
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Mb bank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến msb một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -3105,7 +3219,26 @@
             "volume": 723520
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Vietcombank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến vietcombank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -3513,7 +3646,26 @@
             "volume": 879960
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Vietinbank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến vietinbank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -3811,7 +3963,26 @@
             "volume": 1754410
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 2,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 1,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Mbbank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến ab bank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -4188,7 +4359,26 @@
             "volume": 1770840
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Agribank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến agribank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -4519,7 +4709,26 @@
             "volume": 157700
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bac a bank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến bac a bank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -4863,7 +5072,26 @@
             "volume": 1381830
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Vàng bạc hải hồng là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến bac một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -5253,7 +5481,26 @@
             "volume": 39500
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bản do việt nam là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến ban viet một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -5565,7 +5812,26 @@
             "volume": 157700
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Ngân hàng baoviet là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến bao viet bank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -5901,7 +6167,26 @@
             "volume": 344920
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Mbb chia cổ tức là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến chia co tuc một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -6311,7 +6596,26 @@
             "volume": 800
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Chứng chỉ quỹ là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến chung chi quy một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -6651,7 +6955,26 @@
             "volume": 33980
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Chứng chỉ tiền gửi là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến chung chi tien gui một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -7088,7 +7411,26 @@
             "volume": 1391860
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 2,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 1,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bảng giá chứng khoán là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng so sánh và lựa chọn giải pháp chung khoan một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -7165,7 +7507,7 @@
         {
           "keyword": "nạp tiền vào tài khoản ngân hàng",
           "volume": 1000,
-          "cluster_volume": 1290,
+          "cluster_volume": 1340,
           "cpc": 0.28,
           "competition": "Low",
           "intent": "Transactional",
@@ -7173,8 +7515,8 @@
           "quadrant": "Commercial Converter",
           "secondary_synonyms": [
             "nạp tiền vào tài khoản ngân hàng vietcombank",
-            "nạp tiền vào tài khoản ngân hàng techcombank",
-            "nạp tiền vào tài khoản ngân hàng vietinbank"
+            "nạp tiền vào ngân hàng",
+            "nạp tiền vào tài khoản ngân hàng techcombank"
           ]
         },
         {
@@ -7354,18 +7696,18 @@
         {
           "cluster_name": "Nhóm Khoản",
           "count": 42,
-          "total_volume": 5240,
+          "total_volume": 5290,
           "top_keywords": [
             {
               "keyword": "nạp tiền vào tài khoản ngân hàng",
               "volume": 1000,
-              "cluster_volume": 1290,
+              "cluster_volume": 1340,
               "intent": "Transactional",
               "score": 6.34,
               "secondary_synonyms": [
                 "nạp tiền vào tài khoản ngân hàng vietcombank",
-                "nạp tiền vào tài khoản ngân hàng techcombank",
-                "nạp tiền vào tài khoản ngân hàng vietinbank"
+                "nạp tiền vào ngân hàng",
+                "nạp tiền vào tài khoản ngân hàng techcombank"
               ]
             },
             {
@@ -7393,7 +7735,7 @@
         {
           "cluster_name": "Nhóm Tiền",
           "count": 18,
-          "total_volume": 1000,
+          "total_volume": 950,
           "top_keywords": [
             {
               "keyword": "nạp tiền vào alipay",
@@ -7416,12 +7758,10 @@
             {
               "keyword": "nạp tiền ngân hàng",
               "volume": 90,
-              "cluster_volume": 140,
+              "cluster_volume": 90,
               "intent": "Transactional",
               "score": 3.92,
-              "secondary_synonyms": [
-                "nạp tiền vào ngân hàng"
-              ]
+              "secondary_synonyms": []
             }
           ]
         },
@@ -7499,7 +7839,26 @@
             "volume": 1770840
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Chuyển khoản là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến chuyen khoan một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -7773,7 +8132,26 @@
             "volume": 370320
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Cic là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến cic một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -8185,7 +8563,26 @@
             "volume": 7200
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Cổ phiếu là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến co phieu một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -8595,7 +8992,26 @@
             "volume": 34190
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Cổ tức là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến co tuc một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -8970,7 +9386,26 @@
             "volume": 67903310
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Coin marketcap là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến crypto một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -9360,7 +9795,26 @@
             "volume": 84700
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Luật đầu tư 2025 là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến dau tu một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -9635,7 +10089,26 @@
             "volume": 61310
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Điểm tín dụng cic là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến diem tin dung một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -10044,7 +10517,26 @@
             "volume": 1577270
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 2,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 1,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Giá dô là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến doi tien một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -10341,7 +10833,26 @@
             "volume": 21540
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Dòng tiền là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến dong tien một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -10673,7 +11184,26 @@
             "volume": 190270
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Ngân hàng dông á là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến donga bank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -11310,7 +11840,26 @@
             "volume": 2656060
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Gdp là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến gdp một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -11730,7 +12279,26 @@
             "volume": 933120
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 2,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 1,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Giá vàng hôm nay là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến gia vang một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -11942,7 +12510,26 @@
             "volume": 905240
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Khí nhà kính là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến giam phat một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -12232,7 +12819,26 @@
             "volume": 58070
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 2,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Giảm trừ gia cảnh là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến giam tru gia canh một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -12661,7 +13267,26 @@
             "volume": 6722150
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Lãi suất gửi tiết kiệm ngân hàng là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng so sánh và lựa chọn giải pháp gui tiet kiem một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -13006,7 +13631,26 @@
             "volume": 173420
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Hdbank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến hd bank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -13412,7 +14056,26 @@
             "volume": 1770840
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Vietcombanking là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến internet banking một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -13766,15 +14429,34 @@
             "volume": 21670
           },
           {
-            "target_id": "the-tra-truoc",
-            "target_name": "The Tra Truoc",
-            "target_url": "/the-tra-truoc/",
-            "suggested_anchor": "thẻ trả trước",
+            "target_id": "tai-san",
+            "target_name": "Tai San",
+            "target_url": "/tai-san/",
+            "suggested_anchor": "tài sản",
             "similarity_score": 0.05,
-            "volume": 1460
+            "volume": 104910
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Lập kế hoạch tài chính cá nhân là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến ke hoach tai chinh một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -14147,7 +14829,26 @@
             "volume": 190270
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Kienlong bank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến kien long bank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -14415,6 +15116,14 @@
             "volume": 33400
           },
           {
+            "target_id": "tieu-san",
+            "target_name": "Tieu San",
+            "target_url": "/tieu-san/",
+            "suggested_anchor": "tiêu sản là gì",
+            "similarity_score": 0.086,
+            "volume": 3870
+          },
+          {
             "target_id": "nam-a-bank",
             "target_name": "Nam A Bank",
             "target_url": "/nam-a-bank/",
@@ -14429,17 +15138,28 @@
             "suggested_anchor": "quỹ dự phòng tài chính",
             "similarity_score": 0.083,
             "volume": 860
-          },
-          {
-            "target_id": "doi-tien",
-            "target_name": "Doi Tien",
-            "target_url": "/doi-tien/",
-            "suggested_anchor": "giá dô",
-            "similarity_score": 0.077,
-            "volume": 623230
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Kiều hối là gì là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến kieu hoi một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -14724,7 +15444,26 @@
             "volume": 56310
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Ký quỹ là gì là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến ky quy một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -15101,7 +15840,26 @@
             "volume": 383220
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 2,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Công thức tính lãi kép ngân hàng là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng tra cứu và tính toán lai kep một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -16336,7 +17094,26 @@
             "volume": 10990
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Lạm phát là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến lam phat một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -16736,7 +17513,26 @@
             "volume": 7915560
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Mã chứng khoán là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến ma chung khoan một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -17084,7 +17880,26 @@
             "volume": 1460
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Thẻ master card là gì là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến masteer card một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -17522,7 +18337,26 @@
             "volume": 464530
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Mbbank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến mbbank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -18252,7 +19086,26 @@
             "volume": 272040
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Viet com bank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến nam a bank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -18600,7 +19453,26 @@
             "volume": 40200
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Napas là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến napas một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -18800,7 +19672,7 @@
         {
           "cluster_name": "Nhóm Ncb",
           "count": 2655,
-          "total_volume": 67930,
+          "total_volume": 67920,
           "top_keywords": [
             {
               "keyword": "ncbi",
@@ -18934,7 +19806,26 @@
             "volume": 56040
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Cmanga là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến ncb một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -19436,7 +20327,7 @@
         {
           "keyword": "mua bán ngoại tệ",
           "volume": 480,
-          "cluster_volume": 760,
+          "cluster_volume": 780,
           "cpc": 1.07,
           "competition": "Low",
           "intent": "Transactional",
@@ -19444,8 +20335,8 @@
           "quadrant": "Commercial Converter",
           "secondary_synonyms": [
             "mua ngoại tệ",
-            "giá mua bán ngoại tệ",
-            "mua bán ngoại tệ techcombank"
+            "mua bán ngoại tệ online",
+            "giá mua bán ngoại tệ"
           ]
         },
         {
@@ -19684,13 +20575,13 @@
             {
               "keyword": "mua bán ngoại tệ",
               "volume": 480,
-              "cluster_volume": 760,
+              "cluster_volume": 780,
               "intent": "Transactional",
               "score": 6.51,
               "secondary_synonyms": [
                 "mua ngoại tệ",
-                "giá mua bán ngoại tệ",
-                "mua bán ngoại tệ techcombank"
+                "mua bán ngoại tệ online",
+                "giá mua bán ngoại tệ"
               ]
             },
             {
@@ -19708,12 +20599,10 @@
             {
               "keyword": "mua ngoại tệ online",
               "volume": 50,
-              "cluster_volume": 70,
+              "cluster_volume": 50,
               "intent": "Transactional",
               "score": 5.07,
-              "secondary_synonyms": [
-                "mua bán ngoại tệ online"
-              ]
+              "secondary_synonyms": []
             }
           ]
         }
@@ -19758,7 +20647,26 @@
             "volume": 67903310
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 1,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Tyỷ giá usd là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến ngoai te một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -20166,7 +21074,26 @@
             "volume": 16030
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 1,
+            "volume": 13070
+          },
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Nợ xấu là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến no xau một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -20350,7 +21277,26 @@
             "volume": 215790
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Nợ là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến no một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -20727,7 +21673,26 @@
             "volume": 173420
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Mbbank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến ocb một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -21051,7 +22016,26 @@
             "volume": 10780
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Oceanbank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến ocean bank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -21356,7 +22340,26 @@
             "volume": 175520
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 1,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Chúng khoan ssi là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến phai sinh một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -21679,7 +22682,26 @@
             "volume": 157700
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Pvcombank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến pvcom bank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -21973,7 +22995,26 @@
             "volume": 10990
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 1,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Quỹ dự phòng tài chính là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến quy du phong một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -22356,7 +23397,26 @@
             "volume": 1391860
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Quỹ etf là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến quy etf một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -22615,7 +23675,26 @@
             "volume": 439860
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Quỹ hưu trí là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến quy huu tri một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -22998,7 +24077,26 @@
             "volume": 7915560
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Quỹ mở la gi là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến quy mo một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -23153,7 +24251,7 @@
         {
           "keyword": "làm thẻ sacombank online",
           "volume": 140,
-          "cluster_volume": 210,
+          "cluster_volume": 190,
           "cpc": 0.63,
           "competition": "Low",
           "intent": "Transactional",
@@ -23161,8 +24259,8 @@
           "quadrant": "Long-tail / Supporting",
           "secondary_synonyms": [
             "cách làm thẻ sacombank online",
-            "làm thẻ visa sacombank online",
-            "sacombank làm thẻ online"
+            "sacombank làm thẻ online",
+            "làm thẻ online sacombank"
           ]
         },
         {
@@ -23388,7 +24486,26 @@
             "volume": 157700
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Sacombank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến sacombank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -23693,7 +24810,26 @@
             "volume": 190270
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Saigon commercial bank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến saigonbank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -24078,7 +25214,26 @@
             "volume": 370320
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Mbbank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến scb một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -24346,7 +25501,26 @@
             "volume": 29650
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Mb bank atm là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến seabank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -24670,10 +25844,397 @@
             "volume": 1381830
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Shbest là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến shb một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
+        "entity_facts": [
+          {
+            "entity_field": "Phân loại giải pháp",
+            "value": "Tiện ích Web Financial - MoMo Web Platform"
+          },
+          {
+            "entity_field": "Đối tượng áp dụng",
+            "value": "Toàn bộ người dùng cá nhân có nhu cầu tra cứu và giao dịch trực tuyến"
+          },
+          {
+            "entity_field": "Thời gian xử lý",
+            "value": "Xử lý tức thì (Real-time), hỗ trợ 24/7 không phụ thuộc giờ hành chính"
+          },
+          {
+            "entity_field": "Hạ tầng kỹ thuật",
+            "value": "Kết nối API trực tiếp từ hệ thống đối tác liên kết chính thức"
+          },
+          {
+            "entity_field": "Tiêu chuẩn bảo mật",
+            "value": "Bảo mật đa tầng, đạt chứng chỉ bảo mật quốc tế PCI DSS Level 1"
+          },
+          {
+            "entity_field": "Kênh thao tác liền mạch",
+            "value": "Trình duyệt Web (Desktop/Mobile) kết hợp chuyển tiếp Web-to-App MoMo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tai-san",
+      "name": "Tai San",
+      "sector": "Financial",
+      "file_name": "tai-san.csv",
+      "total_raw_keywords": 1967,
+      "clean_keywords_count": 1965,
+      "outliers_filtered_count": 2,
+      "canonical_topics_count": 1256,
+      "cannibalization_merged_count": 709,
+      "total_volume": 104910,
+      "pillar_keyword": {
+        "keyword": "tài sản",
+        "volume": 33100,
+        "cluster_volume": 34750,
+        "intent": "Informational",
+        "secondary_synonyms": [
+          "tài sản là gì",
+          "tài sản có là gì",
+          "tài sản có",
+          "tài sản để lại",
+          "tại sao tài sản"
+        ]
+      },
+      "intent_breakdown": {
+        "Informational": 1194,
+        "Transactional": 17,
+        "Tool/Calculator": 33,
+        "Commercial": 9,
+        "Navigational": 3
+      },
+      "quadrant_breakdown": {
+        "Quick Win": 7,
+        "Long-tail / Supporting": 1248,
+        "Commercial Converter": 1
+      },
+      "top_opportunities": [
+        {
+          "keyword": "tài sản",
+          "volume": 33100,
+          "cluster_volume": 34750,
+          "cpc": 0.79,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 5.23,
+          "quadrant": "Quick Win",
+          "secondary_synonyms": [
+            "tài sản là gì",
+            "tài sản có là gì",
+            "tài sản có"
+          ]
+        },
+        {
+          "keyword": "hợp đồng mua bán tài sản",
+          "volume": 210,
+          "cluster_volume": 210,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Transactional",
+          "score": 4.65,
+          "quadrant": "Commercial Converter",
+          "secondary_synonyms": []
+        },
+        {
+          "keyword": "tài sản phạm nhật vượng",
+          "volume": 9900,
+          "cluster_volume": 14410,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 4.0,
+          "quadrant": "Quick Win",
+          "secondary_synonyms": [
+            "tài sản của phạm nhật vượng",
+            "tài sản phạm nhật vượng hôm nay",
+            "tài sản tỷ phú phạm nhật vượng"
+          ]
+        },
+        {
+          "keyword": "tài sản số",
+          "volume": 5400,
+          "cluster_volume": 6030,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 3.73,
+          "quadrant": "Quick Win",
+          "secondary_synonyms": [
+            "tài sản số là gì",
+            "ctcp tài sản số",
+            "tài sản số nft"
+          ]
+        },
+        {
+          "keyword": "tài sản elon musk",
+          "volume": 2400,
+          "cluster_volume": 6060,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 3.38,
+          "quadrant": "Quick Win",
+          "secondary_synonyms": [
+            "tài sản của elon musk",
+            "tài sản elon musk hiện tại",
+            "tài sản của elon musk hiện tại"
+          ]
+        },
+        {
+          "keyword": "tài sản công",
+          "volume": 2400,
+          "cluster_volume": 2540,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 3.38,
+          "quadrant": "Quick Win",
+          "secondary_synonyms": [
+            "tài sản công vn",
+            "thế nào là tài sản công",
+            "tài sản công tphcm"
+          ]
+        },
+        {
+          "keyword": "tài sản mã hóa",
+          "volume": 2400,
+          "cluster_volume": 2880,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 3.38,
+          "quadrant": "Quick Win",
+          "secondary_synonyms": [
+            "tài sản mã hóa là gì",
+            "tcbs tài sản mã hóa",
+            "thế nào là tài sản mã hóa"
+          ]
+        },
+        {
+          "keyword": "phí định giá tài sản",
+          "volume": 50,
+          "cluster_volume": 70,
+          "cpc": 0.27,
+          "competition": "Low",
+          "intent": "Tool/Calculator",
+          "score": 3.24,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": [
+            "chi phí định giá tài sản"
+          ]
+        },
+        {
+          "keyword": "tài sản ròng là gì",
+          "volume": 1600,
+          "cluster_volume": 2170,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 3.2,
+          "quadrant": "Quick Win",
+          "secondary_synonyms": [
+            "tài sản ròng",
+            "tài sản ròng của ronaldo",
+            "tài sản ròng của messi"
+          ]
+        },
+        {
+          "keyword": "tài sản cố định là gì",
+          "volume": 1000,
+          "cluster_volume": 2110,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 3.0,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": [
+            "tài sản cố định",
+            "thế nào là tài sản cố định",
+            "icon tài sản cố định"
+          ]
+        }
+      ],
+      "sub_clusters": [
+        {
+          "cluster_name": "Nhóm Tài",
+          "count": 1245,
+          "total_volume": 103360,
+          "top_keywords": [
+            {
+              "keyword": "tài sản",
+              "volume": 33100,
+              "cluster_volume": 34750,
+              "intent": "Informational",
+              "score": 5.23,
+              "secondary_synonyms": [
+                "tài sản là gì",
+                "tài sản có là gì",
+                "tài sản có"
+              ]
+            },
+            {
+              "keyword": "hợp đồng mua bán tài sản",
+              "volume": 210,
+              "cluster_volume": 210,
+              "intent": "Transactional",
+              "score": 4.65,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "tài sản phạm nhật vượng",
+              "volume": 9900,
+              "cluster_volume": 14410,
+              "intent": "Informational",
+              "score": 4.0,
+              "secondary_synonyms": [
+                "tài sản của phạm nhật vượng",
+                "tài sản phạm nhật vượng hôm nay",
+                "tài sản tỷ phú phạm nhật vượng"
+              ]
+            }
+          ]
+        },
+        {
+          "cluster_name": "Nhóm Luật",
+          "count": 2,
+          "total_volume": 900,
+          "top_keywords": [
+            {
+              "keyword": "luật đấu giá",
+              "volume": 880,
+              "cluster_volume": 880,
+              "intent": "Informational",
+              "score": 2.94,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "tải bộ luật dân sự 2015",
+              "volume": 20,
+              "cluster_volume": 20,
+              "intent": "Informational",
+              "score": 1.32,
+              "secondary_synonyms": []
+            }
+          ]
+        },
+        {
+          "cluster_name": "Nhóm Định",
+          "count": 3,
+          "total_volume": 100,
+          "top_keywords": [
+            {
+              "keyword": "thông báo lựa chọn tổ chức thẩm định giá",
+              "volume": 40,
+              "cluster_volume": 40,
+              "intent": "Tool/Calculator",
+              "score": 2.9,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "ủy quyền định đoạt",
+              "volume": 40,
+              "cluster_volume": 40,
+              "intent": "Informational",
+              "score": 1.61,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "ủy quyền định đoạt quyền sử dụng đất",
+              "volume": 20,
+              "cluster_volume": 20,
+              "intent": "Informational",
+              "score": 1.32,
+              "secondary_synonyms": []
+            }
+          ]
+        }
+      ],
+      "internal_links": {
+        "parent_hub": {
+          "title": "Tài Chính & Ngân Hàng",
+          "url": "/tai-chinh",
+          "anchor": "Cổng dịch vụ Tài chính MoMo"
+        },
+        "peer_in_silo": [
+          {
+            "target_id": "tieu-san",
+            "target_name": "Tieu San",
+            "target_url": "/tieu-san/",
+            "suggested_anchor": "tiêu sản là gì",
+            "similarity_score": 0.2,
+            "volume": 3870
+          },
+          {
+            "target_id": "tu-do-tai-chinh",
+            "target_name": "Tu Do Tai Chinh",
+            "target_url": "/tu-do-tai-chinh/",
+            "suggested_anchor": "tự do tài chính",
+            "similarity_score": 0.111,
+            "volume": 1240
+          },
+          {
+            "target_id": "doi-tien",
+            "target_name": "Doi Tien",
+            "target_url": "/doi-tien/",
+            "suggested_anchor": "giá dô",
+            "similarity_score": 0.103,
+            "volume": 623230
+          },
+          {
+            "target_id": "ty-gia",
+            "target_name": "Ty Gia",
+            "target_url": "/ty-gia/",
+            "suggested_anchor": "tỷ giá vcb",
+            "similarity_score": 0.097,
+            "volume": 7915560
+          }
+        ],
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 2,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 2,
+            "volume": 13070
+          }
+        ]
+      },
+      "geo_optimization": {
+        "direct_answer_snippet": "Tài sản là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến tai san một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
         "entity_facts": [
           {
             "entity_field": "Phân loại giải pháp",
@@ -25100,7 +26661,26 @@
             "volume": 6722150
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Qr code vnpay là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến thanh toan qr một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -25794,7 +27374,26 @@
             "volume": 344920
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Thẻ ghi nợ la gi là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến the ghi no một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -26241,7 +27840,26 @@
             "volume": 48720
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 1,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Thẻ tín dụng là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến the tin dung một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -26550,7 +28168,26 @@
             "volume": 1140
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Thẻ trả trước là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến the tra truoc một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -26810,7 +28447,7 @@
         {
           "cluster_name": "Nhóm Visa",
           "count": 247,
-          "total_volume": 29270,
+          "total_volume": 29300,
           "top_keywords": [
             {
               "keyword": "thanh toán visa",
@@ -26994,7 +28631,26 @@
             "volume": 344920
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Thẻ tín dụng là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến the visa một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -27294,7 +28950,26 @@
             "volume": 439860
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Thu nhập là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến thu nhap một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -27648,7 +29323,26 @@
             "volume": 860
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Thuế thu nhập cá nhân là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến thue tncn một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -28026,7 +29720,26 @@
             "volume": 383220
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 2,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 1,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Thuế là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến thue một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -28766,7 +30479,26 @@
             "volume": 7915560
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Tiền ảo là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến tien ao một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -29159,7 +30891,26 @@
             "volume": 1229580
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 1,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Tiền điện tử là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến tien dien tu một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -29459,7 +31210,26 @@
             "volume": 34560
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 1,
+            "volume": 13070
+          },
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Số tiền giang là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến tien so một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -29735,10 +31505,337 @@
             "volume": 1775500
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Kiệm là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến tiet kiem một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
+        "entity_facts": [
+          {
+            "entity_field": "Phân loại giải pháp",
+            "value": "Tiện ích Web Financial - MoMo Web Platform"
+          },
+          {
+            "entity_field": "Đối tượng áp dụng",
+            "value": "Toàn bộ người dùng cá nhân có nhu cầu tra cứu và giao dịch trực tuyến"
+          },
+          {
+            "entity_field": "Thời gian xử lý",
+            "value": "Xử lý tức thì (Real-time), hỗ trợ 24/7 không phụ thuộc giờ hành chính"
+          },
+          {
+            "entity_field": "Hạ tầng kỹ thuật",
+            "value": "Kết nối API trực tiếp từ hệ thống đối tác liên kết chính thức"
+          },
+          {
+            "entity_field": "Tiêu chuẩn bảo mật",
+            "value": "Bảo mật đa tầng, đạt chứng chỉ bảo mật quốc tế PCI DSS Level 1"
+          },
+          {
+            "entity_field": "Kênh thao tác liền mạch",
+            "value": "Trình duyệt Web (Desktop/Mobile) kết hợp chuyển tiếp Web-to-App MoMo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tieu-san",
+      "name": "Tieu San",
+      "sector": "Financial",
+      "file_name": "tieu-san.csv",
+      "total_raw_keywords": 209,
+      "clean_keywords_count": 209,
+      "outliers_filtered_count": 0,
+      "canonical_topics_count": 116,
+      "cannibalization_merged_count": 93,
+      "total_volume": 3870,
+      "pillar_keyword": {
+        "keyword": "tiêu sản là gì",
+        "volume": 1000,
+        "cluster_volume": 1820,
+        "intent": "Informational",
+        "secondary_synonyms": [
+          "tiêu sản",
+          "tiêu sản là j",
+          "tiêu sản là những gì",
+          "tiêu sản và",
+          "tiêu sản là sao"
+        ]
+      },
+      "intent_breakdown": {
+        "Informational": 110,
+        "Commercial": 5,
+        "Transactional": 1
+      },
+      "quadrant_breakdown": {
+        "Long-tail / Supporting": 116
+      },
+      "top_opportunities": [
+        {
+          "keyword": "tiêu sản là gì",
+          "volume": 1000,
+          "cluster_volume": 1820,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 3.0,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": [
+            "tiêu sản",
+            "tiêu sản là j",
+            "tiêu sản là những gì"
+          ]
+        },
+        {
+          "keyword": "tiêu thụ tài sản do phạm tội mà có",
+          "volume": 320,
+          "cluster_volume": 390,
+          "cpc": 0.01,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 2.51,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": [
+            "tiêu thụ tài sản do người khác phạm tội có",
+            "tiêu thụ tài sản người phạm tội",
+            "tiêu thụ tài sản do người khác phạm tội"
+          ]
+        },
+        {
+          "keyword": "tiêu chí đánh giá sản phẩm stem",
+          "volume": 40,
+          "cluster_volume": 80,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Commercial",
+          "score": 2.42,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": [
+            "tiêu chí đánh giá sản phẩm",
+            "tiêu chí đánh giá sản phẩm ocop"
+          ]
+        },
+        {
+          "keyword": "mua tiêu sản là gì",
+          "volume": 10,
+          "cluster_volume": 10,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Transactional",
+          "score": 2.08,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": [
+            "mua tiêu sản"
+          ]
+        },
+        {
+          "keyword": "tiêu sản và tài sản",
+          "volume": 110,
+          "cluster_volume": 290,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 2.05,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": [
+            "tiêu sản và tài sản là gì",
+            "tiêu sản tài sản",
+            "tiêu sản là gì tài sản là gì"
+          ]
+        },
+        {
+          "keyword": "tiêu chí đánh giá sản phẩm công nghệ",
+          "volume": 20,
+          "cluster_volume": 20,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Commercial",
+          "score": 1.98,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": []
+        },
+        {
+          "keyword": "tiêu thụ tài sản do người khác phạm",
+          "volume": 90,
+          "cluster_volume": 100,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 1.96,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": [
+            "tiêu thụ tài sản do người khác mà có",
+            "tiêu thụ tài sản do",
+            "tiêu thụ tài sản do người khác"
+          ]
+        },
+        {
+          "keyword": "tiêu sản tiếng anh là gì",
+          "volume": 70,
+          "cluster_volume": 80,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 1.85,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": [
+            "tài sản và tiêu sản tiếng anh",
+            "tiêu sản tiếng anh la gì",
+            "tiêu sản trong tiếng anh"
+          ]
+        },
+        {
+          "keyword": "mục tiêu của sản xuất điện là",
+          "volume": 70,
+          "cluster_volume": 100,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 1.85,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": [
+            "mục tiêu sản xuất",
+            "mục tiêu sản xuất điện là",
+            "mục tiêu của sản xuất điện là trắc nghiệm"
+          ]
+        },
+        {
+          "keyword": "tiêu chuẩn 6s trong sản xuất",
+          "volume": 40,
+          "cluster_volume": 40,
+          "cpc": 0.08,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 1.64,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": []
+        }
+      ],
+      "sub_clusters": [
+        {
+          "cluster_name": "Nhóm Sản",
+          "count": 116,
+          "total_volume": 3870,
+          "top_keywords": [
+            {
+              "keyword": "tiêu sản là gì",
+              "volume": 1000,
+              "cluster_volume": 1820,
+              "intent": "Informational",
+              "score": 3.0,
+              "secondary_synonyms": [
+                "tiêu sản",
+                "tiêu sản là j",
+                "tiêu sản là những gì"
+              ]
+            },
+            {
+              "keyword": "tiêu thụ tài sản do phạm tội mà có",
+              "volume": 320,
+              "cluster_volume": 390,
+              "intent": "Informational",
+              "score": 2.51,
+              "secondary_synonyms": [
+                "tiêu thụ tài sản do người khác phạm tội có",
+                "tiêu thụ tài sản người phạm tội",
+                "tiêu thụ tài sản do người khác phạm tội"
+              ]
+            },
+            {
+              "keyword": "tiêu chí đánh giá sản phẩm stem",
+              "volume": 40,
+              "cluster_volume": 80,
+              "intent": "Commercial",
+              "score": 2.42,
+              "secondary_synonyms": [
+                "tiêu chí đánh giá sản phẩm",
+                "tiêu chí đánh giá sản phẩm ocop"
+              ]
+            }
+          ]
+        }
+      ],
+      "internal_links": {
+        "parent_hub": {
+          "title": "Tài Chính & Ngân Hàng",
+          "url": "/tai-chinh",
+          "anchor": "Cổng dịch vụ Tài chính MoMo"
+        },
+        "peer_in_silo": [
+          {
+            "target_id": "tai-san",
+            "target_name": "Tai San",
+            "target_url": "/tai-san/",
+            "suggested_anchor": "tài sản",
+            "similarity_score": 0.2,
+            "volume": 104910
+          },
+          {
+            "target_id": "kieu-hoi",
+            "target_name": "Kieu Hoi",
+            "target_url": "/kieu-hoi/",
+            "suggested_anchor": "kiều hối là gì",
+            "similarity_score": 0.086,
+            "volume": 6060
+          },
+          {
+            "target_id": "tra-gop",
+            "target_name": "Tra Gop",
+            "target_url": "/tra-gop/",
+            "suggested_anchor": "mua điện thoại trả góp",
+            "similarity_score": 0.083,
+            "volume": 69140
+          },
+          {
+            "target_id": "thue",
+            "target_name": "Thue",
+            "target_url": "/thue/",
+            "suggested_anchor": "thuế",
+            "similarity_score": 0.081,
+            "volume": 1577270
+          }
+        ],
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 1,
+            "volume": 13070
+          }
+        ]
+      },
+      "geo_optimization": {
+        "direct_answer_snippet": "Tiêu sản là gì là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến tieu san một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
         "entity_facts": [
           {
             "entity_field": "Phân loại giải pháp",
@@ -30175,7 +32272,26 @@
             "volume": 1460
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Thẻ tín dụng là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến tin dung một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -30600,7 +32716,26 @@
             "volume": 58070
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Lương gross sang net là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến tinh luong một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -31011,7 +33146,26 @@
             "volume": 879960
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Tpbank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến tpbank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -31436,22 +33590,22 @@
         ],
         "cross_silo_bridges": [
           {
-            "target_id": "gia-xe",
+            "target_id": "bien-so-dep",
             "target_sector": "vehicle-hub",
-            "target_name": "Gia Xe",
-            "target_url": "/gia-xe/",
-            "suggested_anchor": "xe máy điện",
-            "overlap_tokens": 3,
-            "volume": 3280480
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 2,
+            "volume": 13070
           },
           {
-            "target_id": "thue-truoc-ba",
+            "target_id": "dinh-gia-xe",
             "target_sector": "vehicle-hub",
-            "target_name": "Thue Truoc Ba",
-            "target_url": "/thue-truoc-ba/",
-            "suggested_anchor": "thuế trước bạ",
-            "overlap_tokens": 3,
-            "volume": 20500
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
           }
         ]
       },
@@ -31807,7 +33961,26 @@
             "volume": 173420
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Trái phiếu là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến trai phieu một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -32109,7 +34282,26 @@
             "volume": 905240
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Tự do tài chính là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến tu do tai chinh một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -32542,7 +34734,26 @@
             "volume": 1577270
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 2,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 1,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Tỷ giá vcb là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến ty gia một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -32831,7 +35042,26 @@
             "volume": 21540
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Ủy thác là gì là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến uy thac một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -33234,7 +35464,26 @@
             "volume": 933120
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 2,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 1,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Giá vàng hôm nay là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến vang một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -34928,7 +37177,26 @@
             "volume": 464530
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Nạp tiền vào ví airpay là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến vi dien tu một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -35584,7 +37852,26 @@
             "volume": 157700
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Vib là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến vib một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -35970,7 +38257,26 @@
             "volume": 905240
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 1,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Vietinbank ipay là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến vietbank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -36312,7 +38618,26 @@
             "volume": 1210990
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Vốn lưu động là gi là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến von luu dong một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -36733,7 +39058,26 @@
             "volume": 10780
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 0,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Vpbank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến vpbank một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -37106,7 +39450,26 @@
             "volume": 39500
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 1,
+            "volume": 14690
+          },
+          {
+            "target_id": "bien-so-dep",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Dep",
+            "target_url": "/bien-so-dep/",
+            "suggested_anchor": "biển số đẹp",
+            "overlap_tokens": 0,
+            "volume": 13070
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Agribank là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến vrb một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -42854,17 +45217,7 @@
             "volume": 39950
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 0,
-            "volume": 839810
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bệnh viện bạch mai là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến benh vien một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -43154,17 +45507,7 @@
             "volume": 3596670
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 0,
-            "volume": 839810
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bmi calculator 2 là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến bmi một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -43463,17 +45806,7 @@
             "volume": 39950
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 1,
-            "volume": 839810
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Đặt lịch khám bệnh viện đại học y hà nội là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến dat lich kham benh một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -43890,17 +46223,7 @@
             "volume": 3596670
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 1,
-            "volume": 839810
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Chỉ số bmi là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến tinh bmi một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -44323,17 +46646,7 @@
             "volume": 3596670
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 1,
-            "volume": 839810
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Tính tdee là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng tra cứu và tính toán tinh calo một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -44641,22 +46954,22 @@
         ],
         "cross_silo_bridges": [
           {
-            "target_id": "du-lich-viet-nam",
-            "target_sector": "ota",
-            "target_name": "Du Lich Viet Nam",
-            "target_url": "/du-lich-viet-nam/",
-            "suggested_anchor": "du lịch việt nam",
-            "overlap_tokens": 1,
-            "volume": 118270
+            "target_id": "bao-duong-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bao Duong Xe",
+            "target_url": "/bao-duong-xe/",
+            "suggested_anchor": "bảo dưỡng ô tô",
+            "overlap_tokens": 2,
+            "volume": 36540
           },
           {
-            "target_id": "du-lich-han-quoc",
+            "target_id": "du-lich-singapore",
             "target_sector": "ota",
-            "target_name": "Du Lich Han Quoc",
-            "target_url": "/du-lich-han-quoc/",
-            "suggested_anchor": "tour hàn quốc",
+            "target_name": "Du Lich Singapore",
+            "target_url": "/du-lich-singapore/",
+            "suggested_anchor": "du lịch singapore",
             "overlap_tokens": 1,
-            "volume": 34800
+            "volume": 15680
           }
         ]
       },
@@ -45355,22 +47668,22 @@
         ],
         "cross_silo_bridges": [
           {
-            "target_id": "du-lich-my",
-            "target_sector": "ota",
-            "target_name": "Du Lich My",
-            "target_url": "/du-lich-my/",
-            "suggested_anchor": "visa du lịch mỹ",
+            "target_id": "ly-thuyet-lai-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Ly Thuyet Lai Xe",
+            "target_url": "/ly-thuyet-lai-xe/",
+            "suggested_anchor": "600 câu lý thuyết",
             "overlap_tokens": 2,
-            "volume": 30380
+            "volume": 250510
           },
           {
-            "target_id": "visa-du-lich",
-            "target_sector": "ota",
-            "target_name": "Visa Du Lich",
-            "target_url": "/visa-du-lich/",
-            "suggested_anchor": "visa du lịch mỹ",
+            "target_id": "bao-duong-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bao Duong Xe",
+            "target_url": "/bao-duong-xe/",
+            "suggested_anchor": "bảo dưỡng ô tô",
             "overlap_tokens": 2,
-            "volume": 30380
+            "volume": 36540
           }
         ]
       },
@@ -45661,22 +47974,22 @@
         ],
         "cross_silo_bridges": [
           {
-            "target_id": "du-lich-han-quoc",
-            "target_sector": "ota",
-            "target_name": "Du Lich Han Quoc",
-            "target_url": "/du-lich-han-quoc/",
-            "suggested_anchor": "tour hàn quốc",
-            "overlap_tokens": 1,
-            "volume": 34800
+            "target_id": "ly-thuyet-lai-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Ly Thuyet Lai Xe",
+            "target_url": "/ly-thuyet-lai-xe/",
+            "suggested_anchor": "600 câu lý thuyết",
+            "overlap_tokens": 2,
+            "volume": 250510
           },
           {
-            "target_id": "du-lich-my",
-            "target_sector": "ota",
-            "target_name": "Du Lich My",
-            "target_url": "/du-lich-my/",
-            "suggested_anchor": "visa du lịch mỹ",
-            "overlap_tokens": 1,
-            "volume": 30380
+            "target_id": "bao-duong-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bao Duong Xe",
+            "target_url": "/bao-duong-xe/",
+            "suggested_anchor": "bảo dưỡng ô tô",
+            "overlap_tokens": 2,
+            "volume": 36540
           }
         ]
       },
@@ -45765,7 +48078,7 @@
         {
           "keyword": "mua bảo hiểm xe máy online",
           "volume": 1900,
-          "cluster_volume": 6520,
+          "cluster_volume": 6550,
           "cpc": 0.19,
           "competition": "Medium",
           "intent": "Transactional",
@@ -45867,7 +48180,7 @@
         {
           "keyword": "mua bảo hiểm xe máy trên momo",
           "volume": 70,
-          "cluster_volume": 330,
+          "cluster_volume": 300,
           "cpc": 0.07,
           "competition": "Low",
           "intent": "Transactional",
@@ -45914,7 +48227,7 @@
             {
               "keyword": "mua bảo hiểm xe máy online",
               "volume": 1900,
-              "cluster_volume": 6520,
+              "cluster_volume": 6550,
               "intent": "Transactional",
               "score": 4.77,
               "secondary_synonyms": [
@@ -46097,22 +48410,22 @@
         ],
         "cross_silo_bridges": [
           {
-            "target_id": "bien-so-xe (1)",
+            "target_id": "bao-duong-xe",
             "target_sector": "vehicle-hub",
-            "target_name": "Bien So Xe (1)",
-            "target_url": "/bien-so-xe (1)/",
-            "suggested_anchor": "biển đăng ký xe",
-            "overlap_tokens": 3,
-            "volume": 969650
+            "target_name": "Bao Duong Xe",
+            "target_url": "/bao-duong-xe/",
+            "suggested_anchor": "bảo dưỡng ô tô",
+            "overlap_tokens": 6,
+            "volume": 36540
           },
           {
-            "target_id": "bien-so-xe",
+            "target_id": "sang-ten-xe",
             "target_sector": "vehicle-hub",
-            "target_name": "Bien So Xe",
-            "target_url": "/bien-so-xe/",
-            "suggested_anchor": "biển đăng ký xe",
-            "overlap_tokens": 3,
-            "volume": 969650
+            "target_name": "Sang Ten Xe",
+            "target_url": "/sang-ten-xe/",
+            "suggested_anchor": "sangtenxe",
+            "overlap_tokens": 5,
+            "volume": 81250
           }
         ]
       },
@@ -46496,13 +48809,13 @@
             "volume": 36540
           },
           {
-            "target_id": "thue-truoc-ba",
-            "target_sector": "vehicle-hub",
-            "target_name": "Thue Truoc Ba",
-            "target_url": "/thue-truoc-ba/",
-            "suggested_anchor": "thuế trước bạ",
-            "overlap_tokens": 4,
-            "volume": 20500
+            "target_id": "du-lich-singapore",
+            "target_sector": "ota",
+            "target_name": "Du Lich Singapore",
+            "target_url": "/du-lich-singapore/",
+            "suggested_anchor": "du lịch singapore",
+            "overlap_tokens": 2,
+            "volume": 15680
           }
         ]
       },
@@ -46896,22 +49209,22 @@
         ],
         "cross_silo_bridges": [
           {
-            "target_id": "du-lich-my",
-            "target_sector": "ota",
-            "target_name": "Du Lich My",
-            "target_url": "/du-lich-my/",
-            "suggested_anchor": "visa du lịch mỹ",
-            "overlap_tokens": 3,
-            "volume": 30380
+            "target_id": "bien-so-xe (1)",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Xe (1)",
+            "target_url": "/bien-so-xe (1)/",
+            "suggested_anchor": "biển đăng ký xe",
+            "overlap_tokens": 1,
+            "volume": 969650
           },
           {
-            "target_id": "visa-du-lich",
-            "target_sector": "ota",
-            "target_name": "Visa Du Lich",
-            "target_url": "/visa-du-lich/",
-            "suggested_anchor": "visa du lịch mỹ",
-            "overlap_tokens": 3,
-            "volume": 30380
+            "target_id": "bien-so-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Bien So Xe",
+            "target_url": "/bien-so-xe/",
+            "suggested_anchor": "biển đăng ký xe",
+            "overlap_tokens": 1,
+            "volume": 969650
           }
         ]
       },
@@ -47316,19 +49629,19 @@
         ],
         "cross_silo_bridges": [
           {
+            "target_id": "dinh-gia-xe",
+            "target_sector": "vehicle-hub",
+            "target_name": "Dinh Gia Xe",
+            "target_url": "/dinh-gia-xe/",
+            "suggested_anchor": "định giá biển số xe",
+            "overlap_tokens": 3,
+            "volume": 14690
+          },
+          {
             "target_id": "bien-so-xe (1)",
             "target_sector": "vehicle-hub",
             "target_name": "Bien So Xe (1)",
             "target_url": "/bien-so-xe (1)/",
-            "suggested_anchor": "biển đăng ký xe",
-            "overlap_tokens": 1,
-            "volume": 969650
-          },
-          {
-            "target_id": "bien-so-xe",
-            "target_sector": "vehicle-hub",
-            "target_name": "Bien So Xe",
-            "target_url": "/bien-so-xe/",
             "suggested_anchor": "biển đăng ký xe",
             "overlap_tokens": 1,
             "volume": 969650
@@ -47691,17 +50004,7 @@
             "volume": 1508210
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 0,
-            "volume": 839810
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Đặt phòng flamingo cát bà là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến dat resort một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -48004,17 +50307,7 @@
             "volume": 12090
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 1,
-            "volume": 839810
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Du lịch ấn độ là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến du lich an do một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -48360,17 +50653,7 @@
             "volume": 1990
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 1,
-            "volume": 839810
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Tour dài loan là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến du lich dai loan một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -48806,26 +51089,7 @@
             "volume": 63440
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 1,
-            "volume": 839810
-          },
-          {
-            "target_id": "bao-hiem-xe",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem Xe",
-            "target_url": "/bao-hiem-xe/",
-            "suggested_anchor": "bảo hiểm xe máy",
-            "overlap_tokens": 1,
-            "volume": 109720
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Tour hàn quốc là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến du lich han quoc một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -49197,6 +51461,15 @@
             "suggested_anchor": "bảo hiểm xã hội",
             "overlap_tokens": 0,
             "volume": 839810
+          },
+          {
+            "target_id": "bhxh",
+            "target_sector": "insurtech",
+            "target_name": "Bhxh",
+            "target_url": "/bhxh/",
+            "suggested_anchor": "bảo hiểm xã hội",
+            "overlap_tokens": 0,
+            "volume": 440940
           }
         ]
       },
@@ -49571,26 +51844,7 @@
             "volume": 35560
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bhxh",
-            "target_sector": "insurtech",
-            "target_name": "Bhxh",
-            "target_url": "/bhxh/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 3,
-            "volume": 440940
-          },
-          {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 2,
-            "volume": 839810
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Visa du lịch mỹ là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến du lich my một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -50026,17 +52280,7 @@
             "volume": 12090
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 1,
-            "volume": 839810
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Du lịch nhật là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến du lich nhat một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -50325,6 +52569,15 @@
             "suggested_anchor": "bảo hiểm xã hội",
             "overlap_tokens": 2,
             "volume": 839810
+          },
+          {
+            "target_id": "bao-hiem-xe",
+            "target_sector": "insurtech",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 2,
+            "volume": 109720
           }
         ]
       },
@@ -50751,17 +53004,7 @@
             "volume": 7440
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 2,
-            "volume": 839810
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Tour thái lan là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến du lich thai lan một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -51184,17 +53427,7 @@
             "volume": 30380
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 0,
-            "volume": 839810
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Du lịch trung quốc là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến du lich trung quoc một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -51607,26 +53840,7 @@
             "volume": 1508210
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bhxh",
-            "target_sector": "insurtech",
-            "target_name": "Bhxh",
-            "target_url": "/bhxh/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 2,
-            "volume": 440940
-          },
-          {
-            "target_id": "bao-hiem-chay-no",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem Chay No",
-            "target_url": "/bao-hiem-chay-no/",
-            "suggested_anchor": "bảo hiểm cháy nổ bắt buộc",
-            "overlap_tokens": 1,
-            "volume": 5310
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Du lịch việt nam là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến du lich viet nam một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -52000,26 +54214,7 @@
             "volume": 12090
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bhxh",
-            "target_sector": "insurtech",
-            "target_name": "Bhxh",
-            "target_url": "/bhxh/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 1,
-            "volume": 440940
-          },
-          {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 0,
-            "volume": 839810
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Khu du lịch đại nam là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến du lich một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -52340,17 +54535,7 @@
             "volume": 34800
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 0,
-            "volume": 839810
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Giá vé phà cần giờ vũng tàu là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến gia pha một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -52751,26 +54936,7 @@
             "volume": 1990
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bhxh",
-            "target_sector": "insurtech",
-            "target_name": "Bhxh",
-            "target_url": "/bhxh/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 1,
-            "volume": 440940
-          },
-          {
-            "target_id": "bhyt",
-            "target_sector": "insurtech",
-            "target_name": "Bhyt",
-            "target_url": "/bhyt/",
-            "suggested_anchor": "bảo hiểm y tế",
-            "overlap_tokens": 1,
-            "volume": 188660
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Thác bản giốc là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến tour du lich một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -53216,17 +55382,7 @@
             "volume": 8470
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 2,
-            "volume": 839810
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Vé cáp treo núi bà đen là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến ve cap treo một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -53599,26 +55755,7 @@
             "volume": 35560
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bhxh",
-            "target_sector": "insurtech",
-            "target_name": "Bhxh",
-            "target_url": "/bhxh/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 3,
-            "volume": 440940
-          },
-          {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 2,
-            "volume": 839810
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Visa du lịch mỹ là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến visa du lich một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -56564,7 +58701,17 @@
             "volume": 2340
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "thau-chi",
+            "target_sector": "Financial",
+            "target_name": "Thau Chi",
+            "target_url": "/thau-chi/",
+            "suggested_anchor": "vay thau chi la gi",
+            "overlap_tokens": 3,
+            "volume": 33980
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Đăng ky 3g mobi là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến data 3g một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -56985,7 +59132,17 @@
             "volume": 2340
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "thau-chi",
+            "target_sector": "Financial",
+            "target_name": "Thau Chi",
+            "target_url": "/thau-chi/",
+            "suggested_anchor": "vay thau chi la gi",
+            "overlap_tokens": 1,
+            "volume": 33980
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Tổng đai mobifone là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến data 4g một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -57275,7 +59432,17 @@
             "volume": 36230
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "thau-chi",
+            "target_sector": "Financial",
+            "target_name": "Thau Chi",
+            "target_url": "/thau-chi/",
+            "suggested_anchor": "vay thau chi la gi",
+            "overlap_tokens": 0,
+            "volume": 33980
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Sim mobi 5g là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến data 5g một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -57690,7 +59857,17 @@
             "volume": 1309260
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "thau-chi",
+            "target_sector": "Financial",
+            "target_name": "Thau Chi",
+            "target_url": "/thau-chi/",
+            "suggested_anchor": "vay thau chi la gi",
+            "overlap_tokens": 1,
+            "volume": 33980
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Nạp 3g viettel là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến nap data một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -58105,7 +60282,17 @@
             "volume": 24060
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "thau-chi",
+            "target_sector": "Financial",
+            "target_name": "Thau Chi",
+            "target_url": "/thau-chi/",
+            "suggested_anchor": "vay thau chi la gi",
+            "overlap_tokens": 1,
+            "volume": 33980
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Dinh giá sim là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến sim một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -58934,6 +61121,15 @@
         ],
         "cross_silo_bridges": [
           {
+            "target_id": "bao-hiem-xe",
+            "target_sector": "insurtech",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 2,
+            "volume": 109720
+          },
+          {
             "target_id": "ngan-hang",
             "target_sector": "Financial",
             "target_name": "Ngan Hang",
@@ -58941,15 +61137,6 @@
             "suggested_anchor": "vietcom",
             "overlap_tokens": 1,
             "volume": 6722150
-          },
-          {
-            "target_id": "vay",
-            "target_sector": "Financial",
-            "target_name": "Vay",
-            "target_url": "/vay/",
-            "suggested_anchor": "vay nhanh",
-            "overlap_tokens": 1,
-            "volume": 1224540
           }
         ]
       },
@@ -59348,6 +61535,15 @@
         ],
         "cross_silo_bridges": [
           {
+            "target_id": "bao-hiem-xe",
+            "target_sector": "insurtech",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 2,
+            "volume": 109720
+          },
+          {
             "target_id": "ngan-hang",
             "target_sector": "Financial",
             "target_name": "Ngan Hang",
@@ -59355,15 +61551,6 @@
             "suggested_anchor": "vietcom",
             "overlap_tokens": 0,
             "volume": 6722150
-          },
-          {
-            "target_id": "Techcombank",
-            "target_sector": "Financial",
-            "target_name": "Techcombank",
-            "target_url": "/Techcombank/",
-            "suggested_anchor": "techcombank",
-            "overlap_tokens": 0,
-            "volume": 1754410
           }
         ]
       },
@@ -59784,6 +61971,15 @@
         ],
         "cross_silo_bridges": [
           {
+            "target_id": "bao-hiem-xe",
+            "target_sector": "insurtech",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 6,
+            "volume": 109720
+          },
+          {
             "target_id": "bao-hiem",
             "target_sector": "insurtech",
             "target_name": "Bao Hiem",
@@ -59791,15 +61987,6 @@
             "suggested_anchor": "bảo hiểm xã hội",
             "overlap_tokens": 4,
             "volume": 839810
-          },
-          {
-            "target_id": "bao-hiem-o-to",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem O To",
-            "target_url": "/bao-hiem-o-to/",
-            "suggested_anchor": "bảo hiểm ô tô",
-            "overlap_tokens": 2,
-            "volume": 46950
           }
         ]
       },
@@ -60129,6 +62316,15 @@
         ],
         "cross_silo_bridges": [
           {
+            "target_id": "tai-san",
+            "target_sector": "Financial",
+            "target_name": "Tai San",
+            "target_url": "/tai-san/",
+            "suggested_anchor": "tài sản",
+            "overlap_tokens": 2,
+            "volume": 104910
+          },
+          {
             "target_id": "tra-gop",
             "target_sector": "Financial",
             "target_name": "Tra Gop",
@@ -60136,15 +62332,6 @@
             "suggested_anchor": "mua điện thoại trả góp",
             "overlap_tokens": 2,
             "volume": 69140
-          },
-          {
-            "target_id": "vay",
-            "target_sector": "Financial",
-            "target_name": "Vay",
-            "target_url": "/vay/",
-            "suggested_anchor": "vay nhanh",
-            "overlap_tokens": 1,
-            "volume": 1224540
           }
         ]
       },
@@ -60325,7 +62512,7 @@
           "secondary_synonyms": [
             "cách đăng ký biển số xe trên vneid",
             "đăng ký biển số xe dvc",
-            "đăng ký biển số xe ktx"
+            "đăng ký biển số xe ntn"
           ]
         },
         {
@@ -60753,7 +62940,7 @@
           "secondary_synonyms": [
             "cách đăng ký biển số xe trên vneid",
             "đăng ký biển số xe dvc",
-            "đăng ký biển số xe ktx"
+            "đăng ký biển số xe ntn"
           ]
         },
         {
@@ -61398,6 +63585,15 @@
         ],
         "cross_silo_bridges": [
           {
+            "target_id": "bao-hiem-xe",
+            "target_sector": "insurtech",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 2,
+            "volume": 109720
+          },
+          {
             "target_id": "thau-chi",
             "target_sector": "Financial",
             "target_name": "Thau Chi",
@@ -61405,15 +63601,6 @@
             "suggested_anchor": "vay thau chi la gi",
             "overlap_tokens": 2,
             "volume": 33980
-          },
-          {
-            "target_id": "ngan-hang",
-            "target_sector": "Financial",
-            "target_name": "Ngan Hang",
-            "target_url": "/ngan-hang/",
-            "suggested_anchor": "vietcom",
-            "overlap_tokens": 1,
-            "volume": 6722150
           }
         ]
       },
@@ -61893,13 +64080,13 @@
         ],
         "cross_silo_bridges": [
           {
-            "target_id": "bao-hiem",
+            "target_id": "bao-hiem-xe",
             "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
             "overlap_tokens": 1,
-            "volume": 839810
+            "volume": 109720
           },
           {
             "target_id": "bao-hiem-o-to",
@@ -62314,13 +64501,13 @@
         ],
         "cross_silo_bridges": [
           {
-            "target_id": "bao-hiem",
+            "target_id": "bao-hiem-xe",
             "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 1,
-            "volume": 839810
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 2,
+            "volume": 109720
           },
           {
             "target_id": "du-no",
@@ -62639,22 +64826,22 @@
         ],
         "cross_silo_bridges": [
           {
-            "target_id": "ngan-hang",
-            "target_sector": "Financial",
-            "target_name": "Ngan Hang",
-            "target_url": "/ngan-hang/",
-            "suggested_anchor": "vietcom",
-            "overlap_tokens": 1,
-            "volume": 6722150
+            "target_id": "bao-hiem-xe",
+            "target_sector": "insurtech",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 4,
+            "volume": 109720
           },
           {
-            "target_id": "vay",
-            "target_sector": "Financial",
-            "target_name": "Vay",
-            "target_url": "/vay/",
-            "suggested_anchor": "vay nhanh",
-            "overlap_tokens": 1,
-            "volume": 1224540
+            "target_id": "bhyt",
+            "target_sector": "insurtech",
+            "target_name": "Bhyt",
+            "target_url": "/bhyt/",
+            "suggested_anchor": "bảo hiểm y tế",
+            "overlap_tokens": 3,
+            "volume": 188660
           }
         ]
       },
@@ -62988,6 +65175,15 @@
         ],
         "cross_silo_bridges": [
           {
+            "target_id": "bao-hiem-xe",
+            "target_sector": "insurtech",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 5,
+            "volume": 109720
+          },
+          {
             "target_id": "thau-chi",
             "target_sector": "Financial",
             "target_name": "Thau Chi",
@@ -62995,15 +65191,6 @@
             "suggested_anchor": "vay thau chi la gi",
             "overlap_tokens": 4,
             "volume": 33980
-          },
-          {
-            "target_id": "du-no",
-            "target_sector": "Financial",
-            "target_name": "Du No",
-            "target_url": "/du-no/",
-            "suggested_anchor": "dư nợ",
-            "overlap_tokens": 3,
-            "volume": 1140
           }
         ]
       },
@@ -63573,6 +65760,15 @@
         ],
         "cross_silo_bridges": [
           {
+            "target_id": "bao-hiem-xe",
+            "target_sector": "insurtech",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 1,
+            "volume": 109720
+          },
+          {
             "target_id": "bao-hiem-o-to",
             "target_sector": "insurtech",
             "target_name": "Bao Hiem O To",
@@ -63580,15 +65776,6 @@
             "suggested_anchor": "bảo hiểm ô tô",
             "overlap_tokens": 1,
             "volume": 46950
-          },
-          {
-            "target_id": "ngan-hang",
-            "target_sector": "Financial",
-            "target_name": "Ngan Hang",
-            "target_url": "/ngan-hang/",
-            "suggested_anchor": "vietcom",
-            "overlap_tokens": 0,
-            "volume": 6722150
           }
         ]
       },
@@ -64268,6 +66455,15 @@
         ],
         "cross_silo_bridges": [
           {
+            "target_id": "bao-hiem-xe",
+            "target_sector": "insurtech",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 1,
+            "volume": 109720
+          },
+          {
             "target_id": "bao-hiem-o-to",
             "target_sector": "insurtech",
             "target_name": "Bao Hiem O To",
@@ -64275,15 +66471,6 @@
             "suggested_anchor": "bảo hiểm ô tô",
             "overlap_tokens": 1,
             "volume": 46950
-          },
-          {
-            "target_id": "ngan-hang",
-            "target_sector": "Financial",
-            "target_name": "Ngan Hang",
-            "target_url": "/ngan-hang/",
-            "suggested_anchor": "vietcom",
-            "overlap_tokens": 0,
-            "volume": 6722150
           }
         ]
       },
@@ -64917,7 +67104,7 @@
         {
           "cluster_name": "Nhóm Giá",
           "count": 502,
-          "total_volume": 730840,
+          "total_volume": 730980,
           "top_keywords": [
             {
               "keyword": "giá xe vision",
@@ -65128,6 +67315,15 @@
         ],
         "cross_silo_bridges": [
           {
+            "target_id": "bao-hiem-xe",
+            "target_sector": "insurtech",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 4,
+            "volume": 109720
+          },
+          {
             "target_id": "vay",
             "target_sector": "Financial",
             "target_name": "Vay",
@@ -65135,15 +67331,6 @@
             "suggested_anchor": "vay nhanh",
             "overlap_tokens": 3,
             "volume": 1224540
-          },
-          {
-            "target_id": "tra-gop",
-            "target_sector": "Financial",
-            "target_name": "Tra Gop",
-            "target_url": "/tra-gop/",
-            "suggested_anchor": "mua điện thoại trả góp",
-            "overlap_tokens": 3,
-            "volume": 69140
           }
         ]
       },
@@ -65596,13 +67783,13 @@
             "volume": 33980
           },
           {
-            "target_id": "du-no",
-            "target_sector": "Financial",
-            "target_name": "Du No",
-            "target_url": "/du-no/",
-            "suggested_anchor": "dư nợ",
-            "overlap_tokens": 3,
-            "volume": 1140
+            "target_id": "bao-hiem-xe",
+            "target_sector": "insurtech",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 4,
+            "volume": 109720
           }
         ]
       },
@@ -66045,13 +68232,13 @@
             "volume": 33980
           },
           {
-            "target_id": "du-no",
-            "target_sector": "Financial",
-            "target_name": "Du No",
-            "target_url": "/du-no/",
-            "suggested_anchor": "dư nợ",
+            "target_id": "bao-hiem-xe",
+            "target_sector": "insurtech",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
             "overlap_tokens": 2,
-            "volume": 1140
+            "volume": 109720
           }
         ]
       },
@@ -66406,13 +68593,13 @@
         ],
         "cross_silo_bridges": [
           {
-            "target_id": "bao-hiem",
+            "target_id": "bao-hiem-xe",
             "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
             "overlap_tokens": 2,
-            "volume": 839810
+            "volume": 109720
           },
           {
             "target_id": "vi-tra-sau",
@@ -67233,6 +69420,15 @@
         ],
         "cross_silo_bridges": [
           {
+            "target_id": "bao-hiem-xe",
+            "target_sector": "insurtech",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 2,
+            "volume": 109720
+          },
+          {
             "target_id": "ngan-hang",
             "target_sector": "Financial",
             "target_name": "Ngan Hang",
@@ -67240,15 +69436,6 @@
             "suggested_anchor": "vietcom",
             "overlap_tokens": 0,
             "volume": 6722150
-          },
-          {
-            "target_id": "Techcombank",
-            "target_sector": "Financial",
-            "target_name": "Techcombank",
-            "target_url": "/Techcombank/",
-            "suggested_anchor": "techcombank",
-            "overlap_tokens": 0,
-            "volume": 1754410
           }
         ]
       },
@@ -67342,7 +69529,7 @@
         {
           "keyword": "thủ tục mua bán xe ô tô cũ khác tỉnh",
           "volume": 320,
-          "cluster_volume": 390,
+          "cluster_volume": 400,
           "cpc": 0.0,
           "competition": "Low",
           "intent": "Transactional",
@@ -67413,7 +69600,7 @@
         {
           "keyword": "mua xe máy cũ không sang tên có được không",
           "volume": 140,
-          "cluster_volume": 230,
+          "cluster_volume": 240,
           "cpc": 0.0,
           "competition": "Low",
           "intent": "Transactional",
@@ -67421,8 +69608,8 @@
           "quadrant": "Long-tail / Supporting",
           "secondary_synonyms": [
             "mua xe máy cũ có sang tên được không",
-            "có nên sang tên khi mua xe máy cũ",
-            "mua xe máy cũ có cần sang tên"
+            "cách sang tên khi mua xe máy cũ",
+            "có nên sang tên khi mua xe máy cũ"
           ]
         },
         {
@@ -67548,7 +69735,7 @@
             {
               "keyword": "thủ tục mua bán xe ô tô cũ khác tỉnh",
               "volume": 320,
-              "cluster_volume": 390,
+              "cluster_volume": 400,
               "intent": "Transactional",
               "score": 5.01,
               "secondary_synonyms": [
@@ -67684,6 +69871,15 @@
         ],
         "cross_silo_bridges": [
           {
+            "target_id": "bao-hiem-xe",
+            "target_sector": "insurtech",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 5,
+            "volume": 109720
+          },
+          {
             "target_id": "vay-the-chap",
             "target_sector": "Financial",
             "target_name": "Vay The Chap",
@@ -67691,15 +69887,6 @@
             "suggested_anchor": "vậy tiền",
             "overlap_tokens": 4,
             "volume": 114110
-          },
-          {
-            "target_id": "vi-tra-sau",
-            "target_sector": "Financial",
-            "target_name": "Vi Tra Sau",
-            "target_url": "/vi-tra-sau/",
-            "suggested_anchor": "ví trả sau momo",
-            "overlap_tokens": 4,
-            "volume": 21540
           }
         ]
       },
@@ -68090,6 +70277,15 @@
         ],
         "cross_silo_bridges": [
           {
+            "target_id": "bao-hiem-xe",
+            "target_sector": "insurtech",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 2,
+            "volume": 109720
+          },
+          {
             "target_id": "ngan-hang",
             "target_sector": "Financial",
             "target_name": "Ngan Hang",
@@ -68097,15 +70293,6 @@
             "suggested_anchor": "vietcom",
             "overlap_tokens": 0,
             "volume": 6722150
-          },
-          {
-            "target_id": "Techcombank",
-            "target_sector": "Financial",
-            "target_name": "Techcombank",
-            "target_url": "/Techcombank/",
-            "suggested_anchor": "techcombank",
-            "overlap_tokens": 0,
-            "volume": 1754410
           }
         ]
       },
@@ -68315,7 +70502,7 @@
         {
           "cluster_name": "Nhóm Lái",
           "count": 903,
-          "total_volume": 324850,
+          "total_volume": 324780,
           "top_keywords": [
             {
               "keyword": "thi bằng lái xe máy bao nhiêu tiền",
@@ -68354,7 +70541,7 @@
         {
           "cluster_name": "Nhóm Thi",
           "count": 146,
-          "total_volume": 53600,
+          "total_volume": 53630,
           "top_keywords": [
             {
               "keyword": "thi bang lai a1",
@@ -68560,13 +70747,13 @@
             "volume": 33980
           },
           {
-            "target_id": "lai-suat",
-            "target_sector": "Financial",
-            "target_name": "Lai Suat",
-            "target_url": "/lai-suat/",
-            "suggested_anchor": "lãi suất ngân hàng",
-            "overlap_tokens": 2,
-            "volume": 1210990
+            "target_id": "bao-hiem-xe",
+            "target_sector": "insurtech",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 4,
+            "volume": 109720
           }
         ]
       },
@@ -68959,6 +71146,15 @@
         ],
         "cross_silo_bridges": [
           {
+            "target_id": "bao-hiem-xe",
+            "target_sector": "insurtech",
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 5,
+            "volume": 109720
+          },
+          {
             "target_id": "vi-tra-sau",
             "target_sector": "Financial",
             "target_name": "Vi Tra Sau",
@@ -68966,15 +71162,6 @@
             "suggested_anchor": "ví trả sau momo",
             "overlap_tokens": 5,
             "volume": 21540
-          },
-          {
-            "target_id": "mua-truoc-tra-sau",
-            "target_sector": "Financial",
-            "target_name": "Mua Truoc Tra Sau",
-            "target_url": "/mua-truoc-tra-sau/",
-            "suggested_anchor": "mua trước trả sau",
-            "overlap_tokens": 5,
-            "volume": 2350
           }
         ]
       },
@@ -69351,13 +71538,13 @@
         ],
         "cross_silo_bridges": [
           {
-            "target_id": "bao-hiem",
+            "target_id": "bao-hiem-xe",
             "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
-            "overlap_tokens": 1,
-            "volume": 839810
+            "target_name": "Bao Hiem Xe",
+            "target_url": "/bao-hiem-xe/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 2,
+            "volume": 109720
           },
           {
             "target_id": "thau-chi",
@@ -69462,7 +71649,7 @@
         {
           "keyword": "đăng ký epass",
           "volume": 260,
-          "cluster_volume": 440,
+          "cluster_volume": 430,
           "cpc": 0.01,
           "competition": "Low",
           "intent": "Transactional",
@@ -69612,12 +71799,12 @@
         {
           "cluster_name": "Nhóm Epass",
           "count": 35,
-          "total_volume": 1820,
+          "total_volume": 1810,
           "top_keywords": [
             {
               "keyword": "đăng ký epass",
               "volume": 260,
-              "cluster_volume": 440,
+              "cluster_volume": 430,
               "intent": "Transactional",
               "score": 4.84,
               "secondary_synonyms": [
@@ -69649,7 +71836,7 @@
         {
           "cluster_name": "Nhóm Dán",
           "count": 30,
-          "total_volume": 1780,
+          "total_volume": 1790,
           "top_keywords": [
             {
               "keyword": "dán epass",
@@ -69676,11 +71863,12 @@
             {
               "keyword": "đăng ký dán thẻ epass",
               "volume": 10,
-              "cluster_volume": 20,
+              "cluster_volume": 30,
               "intent": "Transactional",
               "score": 2.08,
               "secondary_synonyms": [
-                "đăng ký dán thẻ epass tại nhà"
+                "đăng ký dán thẻ epass tại nhà",
+                "đăng ký thẻ epass"
               ]
             }
           ]
@@ -69811,13 +71999,13 @@
             "volume": 21540
           },
           {
-            "target_id": "bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Bao Hiem",
-            "target_url": "/bao-hiem/",
-            "suggested_anchor": "bảo hiểm xã hội",
+            "target_id": "mua-truoc-tra-sau",
+            "target_sector": "Financial",
+            "target_name": "Mua Truoc Tra Sau",
+            "target_url": "/mua-truoc-tra-sau/",
+            "suggested_anchor": "mua trước trả sau",
             "overlap_tokens": 3,
-            "volume": 839810
+            "volume": 2350
           }
         ]
       },

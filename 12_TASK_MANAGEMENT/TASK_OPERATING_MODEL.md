@@ -134,3 +134,7 @@ Mọi file tuần tuân thủ nghiêm ngặt bảng chuẩn 5 cột tinh gọn:
 
 6. **Dashboard Tracking (Hiến, Thuận):**
    - Nghiên cứu giải pháp sử dụng crawl data từ hạ tầng Datasef của công ty phục vụ Dashboard Web Tracking.
+
+7. **Quiz Platform (Thuận):**
+   - Tích hợp component Quiz tương tác trong bài Blog (đặt ngay bên trên phần Author) nhằm thúc đẩy mức độ tương tác và time-on-page.
+

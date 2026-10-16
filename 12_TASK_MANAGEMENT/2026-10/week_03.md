@@ -89,3 +89,13 @@
 | :--- | :--- | :--- | :--- | :---: |
 | UAT Dashboard Pipeline Bài Viết | Kiểm thử hiển thị thống kê chính xác số lượng bài viết theo từng trạng thái (Outline, Draft, Chờ duyệt, Published) và Tổng bài | Trọng | Hoan | `In Progress` |
 
+---
+
+### 3. Quiz
+- **Nhân sự phụ trách:** Thuận, Web Dev
+
+| Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
+| :--- | :--- | :--- | :--- | :---: |
+| Bổ Sung Quiz Trong Bài Blog | Bổ sung component Quiz tương tác trong bài viết Blog, đặt vị trí hiển thị ngay bên trên phần Author | Thuận | Web Dev | `In Progress` |
+
+

@@ -1,11 +1,11 @@
 # TỔNG QUAN TÀI NGUYÊN TỪ KHÓA & TOPIC CLUSTERS WEB PLATFORM (SSOT INVENTORY V2)
 
 Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ chống ăn thịt từ khóa (Cannibalization Shield) từ kho `05_HUBS/inventory/`.
-- **Tổng số Use Cases:** 188
-- **Tổng số từ khóa theo dõi:** 275,244
-- **Tổng số từ khóa trùng Intent được gom cụm (Shielded):** 127,341
-- **Tổng số từ khóa nhiễu bị loại bỏ:** 2,688
-- **Tổng dung lượng tìm kiếm thị trường:** 1,764,705,890 lượt/tháng
+- **Tổng số Use Cases:** 190
+- **Tổng số từ khóa theo dõi:** 277,418
+- **Tổng số từ khóa trùng Intent được gom cụm (Shielded):** 128,143
+- **Tổng số từ khóa nhiễu bị loại bỏ:** 2,690
+- **Tổng dung lượng tìm kiếm thị trường:** 1,764,814,670 lượt/tháng
 
 ---
 
@@ -14,7 +14,7 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
 | Phân Khối Ngành | Số Lượng Use Cases | Từ Khóa Sạch | Từ Khóa Gom Chống Cannibalization | Dung Lượng Tìm Kiếm (Volume/Tháng) |
 | :--- | :---: | :---: | :---: | :---: |
 | Lottery | 4 | 8,380 | 4,034 | 1,544,755,370 |
-| Financial | 103 | 132,129 | 51,130 | 150,770,400 |
+| Financial | 105 | 134,303 | 51,932 | 150,879,180 |
 | vehicle-hub | 29 | 67,930 | 40,485 | 21,206,840 |
 | other | 6 | 18,340 | 10,956 | 19,968,380 |
 | PS | 6 | 5,350 | 1,953 | 12,608,240 |
