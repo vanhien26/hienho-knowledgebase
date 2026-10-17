@@ -1,145 +1,169 @@
-# HƯỚNG DẪN SỬ DỤNG KHO DỮ LIỆU & CÔNG CỤ WEB PLATFORM (MOMO WEB BASE)
+# MOMO WEB PLATFORM — KNOWLEDGE BASE & TECH OPERATING SYSTEM
 
-Kho lưu trữ (repository) này là hệ thống **Single Source of Truth (SSOT)** và **Bộ công cụ tự động hóa** phục vụ toàn bộ hoạt động kỹ thuật, dữ liệu và quản trị sản phẩm của **Kênh Web MoMo (`momo.vn`)**.
+> Hệ thống Tri thức Single Source of Truth (SSOT) và Bộ công cụ Tự động hóa Kỹ thuật dành cho **SEO / GEO & Product Lead** phục vụ toàn bộ chiến lược tăng trưởng, tối ưu hóa công cụ tìm kiếm thế hệ mới và phễu chuyển đổi Web-to-App của Kênh Web MoMo (`momo.vn`).
 
 ---
 
-## 1. BẮT ĐẦU NHANH (QUICK START)
+## 1. TỔNG QUAN HỆ ĐIỀU HÀNH KỸ THUẬT
 
-### Cài đặt Môi trường
-Kho lưu trữ sử dụng Python 3.9+ cho các công cụ tự động hóa, xử lý dữ liệu Excel và xuất bản báo cáo:
+Kho lưu trữ này không phải là một tập tài liệu lưu trữ tĩnh, mà là **Hệ điều hành tri thức (Knowledge OS)** tích hợp trực tiếp giữa tư duy Quản trị Sản phẩm hướng tăng trưởng (Product-Led Growth) và Năng lực Kỹ thuật SEO / Generative Engine Optimization (GEO) chuyên sâu.
+
+Hệ thống được thiết kế để giải quyết 3 bài toán cốt lõi:
+1. **SEO to GEO Transformation:** Chuyển đổi cấu trúc thông tin từ SEO từ khóa truyền thống sang Semantic Topic Clustering, Direct Answers, Knowledge Graph và tối ưu hóa hiện diện trên các công cụ tìm kiếm AI (Google AI Overviews, Bing Copilot, Perplexity).
+2. **Market Intelligence & Seasonality:** Tự động hóa phân tích dữ liệu thị trường từ hơn 3.7 triệu lượt tìm kiếm hàng tháng, giải mã chu kỳ mùa vụ 5 năm từ Google Trends để quy hoạch nội dung đón đầu nhu cầu người dùng.
+3. **Product-Led Growth & Web-to-App Funnel:** Xây dựng các tiện ích công cộng tương tác cao (Utilities, Calculators, Lookups), áp dụng cơ chế Zero-Gate và 0-CAPTCHA để thu hút lưu lượng tự nhiên (Organic Traffic) và chuyển đổi thành người dùng Mobile App thông qua phễu đo lường bảo mật Zero-PII.
+
+---
+
+## 2. NĂNG LỰC KỸ THUẬT & CÁC BỘ CÔNG CỤ PYTHON (PYTHON SKILLS & ENGINES)
+
+Toàn bộ logic xử lý dữ liệu, kiểm toán thuật toán và tự động hóa được đóng gói trong thư mục [`scripts/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/) với 4 phân hệ chuyên biệt:
+
+### 2.1. Phân Hệ SEO & GEO Engineering Engine
+
+| Tập tin Script | Chức năng Kỹ thuật & Nghiệp vụ | Đầu ra & Ứng dụng |
+| :--- | :--- | :--- |
+| [`scripts/simulate_pipeline_refactor.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/simulate_pipeline_refactor.py) | Động cơ gom cụm ngữ nghĩa (Semantic Clustering), triệt tiêu xung đột từ khóa (Zero Cannibalization), phân bổ lại từ khóa sai danh mục và sinh cấu trúc Silo URL động dựa trên ngưỡng Volume thực tế | [`07_REPORTS/CONTENT_PLAN_REFACTOR_REVIEW.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/CONTENT_PLAN_REFACTOR_REVIEW.md) |
+| [`scripts/generate_content_plan.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/generate_content_plan.py) | Tự động lập kế hoạch nội dung 7 tầng chuẩn Product Lead: phân bổ Intent (TOFU/MOFU/BOFU), outline H2/H3 E-E-A-T, Schema JSON-LD, Silo Linking và CTA Hooks Web-to-App | [`06_USE_CASE_MOMO/content-plans/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO/content-plans/) |
+| [`scripts/cron_gsc_cannibalization.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/cron_gsc_cannibalization.py) | Quét API Google Search Console để phát hiện hiện tượng "ăn thịt từ khóa" giữa các URLs cùng nhắm một truy vấn tìm kiếm | Cảnh báo URL xung đột và đề xuất Canonical/301 Redirect |
+| [`scripts/cron_gsc_keyword_ranking.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/cron_gsc_keyword_ranking.py) | Tự động hóa trích xuất biến động thứ hạng từ khóa trọng điểm, CTR và lượt hiển thị thực tế từ GSC API | Báo cáo biến động vị trí Top 3, Top 10 |
+| [`scripts/ingest_bing_ai.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/ingest_bing_ai.py) | Đo lường GEO: Giám sát tần suất trích dẫn thương hiệu MoMo trên Bing Copilot và các câu trả lời tổng hợp AI | Đánh giá thị phần nhận diện AI Engine |
+| [`scripts/google_suggest_expander.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/google_suggest_expander.py) | Mở rộng tập từ khóa ngữ nghĩa đường dài (Long-tail Keywords) thông qua Google Suggest API thời gian thực | Bộ từ khóa bổ trợ (Secondary Synonyms) |
+| [`scripts/serp_competitor_analyzer.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/serp_competitor_analyzer.py) | Phân tích khoảng trống nội dung (Content Gap) so với đối thủ cạnh tranh trực tiếp trên SERP | Báo cáo cơ hội Quick Wins |
+
+### 2.2. Phân Hệ Phân Tích Thị Trường & Mùa Vụ (Market Intelligence & Seasonality)
+
+| Tập tin Script | Chức năng Kỹ thuật & Nghiệp vụ | Đầu ra & Ứng dụng |
+| :--- | :--- | :--- |
+| [`scripts/cron_theme_seasonality.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/cron_theme_seasonality.py) | Khai thác dữ liệu lịch sử 5 năm (`today 5-y`) từ Google Trends, chuẩn hóa 12 tháng dương lịch (mảng 12 số nguyên, đỉnh bằng 100) có cơ chế Resume Cache và Exponential Backoff | [`07_REPORTS/data/theme_seasonality.json`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data/theme_seasonality.json) |
+| [`scripts/sync_inventory_to_hubs.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/sync_inventory_to_hubs.py) | Đồng bộ dữ liệu Market Keyword Inventory từ 10 ngành kinh doanh vào các Web Hubs | Kho từ khóa SSOT tại [`05_HUBS/inventory/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/inventory/) |
+| [`scripts/simulate_reallocation.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/simulate_reallocation.py) | Kiểm toán phân loại danh mục, tái cấu trúc các từ khóa thất lạc giữa các khối (Xổ số, Ngân hàng, Bảo hiểm, Xe) | Tối ưu hóa cấu trúc chuyên trang |
+
+### 2.3. Phân Hệ Đo Lường Hiệu Suất Nền Tảng (Performance Tracking & Behavioral Analytics)
+
+| Tập tin Script | Chức năng Kỹ thuật & Nghiệp vụ | Đầu ra & Ứng dụng |
+| :--- | :--- | :--- |
+| [`scripts/sync_tracking_report.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/sync_tracking_report.py) | Tự động quét file tracking mới nhất trong Downloads, trích xuất số ngày lũy kế MTD T+1, nhịp chạy hàng ngày (Daily Pace), dự phóng Run-rate và cập nhật SSOT | [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md) |
+| [`scripts/fetch_clarity.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/fetch_clarity.py) | Tích hợp Microsoft Clarity API để bóc tách hành vi người dùng, tỷ lệ Dead Clicks, Rage Clicks và độ sâu cuộn trang | Tối ưu hóa UX/UI cho các Web Hubs |
+| [`scripts/sync_all_data.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/sync_all_data.py) | Đường ống đồng bộ hợp nhất: Clarity API, Performance Tracking, Google Trends và Bing Copilot | Đồng bộ toàn bộ dữ liệu chỉ với 1 lệnh |
+
+### 2.4. Phân Hệ Báo Cáo Cấp Quản Trị (Executive Reporting & Deliverables)
+
+| Tập tin Script | Chức năng Kỹ thuật & Nghiệp vụ | Đầu ra & Ứng dụng |
+| :--- | :--- | :--- |
+| [`scripts/tools/generate_report_html.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/tools/generate_report_html.py) | Động cơ kết xuất báo cáo hiệu suất dạng trang Web HTML Responsive phục vụ trình chiếu trực quan | File HTML Interactive Report |
+| [`scripts/tools/generate_pptx.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/tools/generate_pptx.py) | Tự động hóa tạo bộ Slide PowerPoint (.pptx) chuẩn layout MoMo cho các buổi Monthly Business Review | File thuyết trình Ban Giám Đốc |
+| [`scripts/cli.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/cli.py) | Trình điều khiển dòng lệnh hợp nhất (Unified CLI) điều phối toàn bộ các công cụ trong hệ thống | CLI Runner tập trung |
+
+---
+
+## 3. CÁC LỆNH VẬN HÀNH DÒNG LỆNH (QUICK COMMANDS)
 
 ```bash
-# Cài đặt thư viện phụ thuộc
+# 1. Cài đặt các thư viện phụ thuộc
 pip install -r scripts/requirements.txt
-```
 
-### Các Lệnh Thường Dùng (CLI Commands)
-
-```bash
-# 1. Đồng bộ số liệu tracking MTD mới nhất từ file tải về trong Downloads
+# 2. Đồng bộ số liệu tracking MTD mới nhất từ file tải về trong thư mục Downloads
 python3 scripts/sync_tracking_report.py
 
-# 2. Xem danh sách công cụ tự động hóa đang hoạt động
-python3 scripts/cli.py info
+# 3. Đồng bộ toàn bộ dữ liệu nền tảng (Clarity, Tracking, Trends, Copilot)
+python3 scripts/sync_all_data.py
 
-# 3. Xuất bản báo cáo Slide deck định dạng HTML responsive
-python3 scripts/cli.py report-html 07_REPORTS/data/monthly_09_2026_mtd.json
+# 4. Chạy kiểm toán và tái cấu trúc Topic Clusters / Silo URLs
+python3 scripts/simulate_pipeline_refactor.py
 
-# 4. Xuất bản slide thuyết trình PowerPoint (.pptx) chuẩn layout MoMo
-python3 scripts/cli.py report-pptx 07_REPORTS/data/monthly_09_2026_mtd.json
+# 5. Cập nhật dữ liệu mùa vụ Google Trends 5 năm cho các Themes
+python3 scripts/cron_theme_seasonality.py
 
-# 5. Nén và chuẩn hóa định dạng Markdown toàn bộ thư mục
-python3 scripts/cli.py md-process 05_HUBS
+# 6. Kiểm tra xung đột ăn thịt từ khóa trên Google Search Console
+python3 scripts/cron_gsc_cannibalization.py
+
+# 7. Xuất bản báo cáo thuyết trình PowerPoint tháng mới nhất
+python3 scripts/cli.py report-pptx 07_REPORTS/data/monthly_10_2026_consolidated.json
 ```
 
 ---
 
-## 2. HƯỚNG DẪN DÀNH CHO SOFTWARE ENGINEER
+## 4. KHUNG CHIẾN LƯỢC & TƯ DUY QUẢN TRỊ SẢN PHẨM (PRODUCT & SEO FRAMEWORKS)
 
-Kỹ sư phát triển Web tham chiếu và thực hiện các tác vụ kỹ thuật theo các quy chuẩn sau:
+### 4.1. Định Vị Kênh Web MoMo: Web Destination & Organic Core
+* **Organic Search là Kênh Chủ Lực:** Giá trị cốt lõi của Web Platform nằm ở khả năng thu hút lưu lượng tự nhiên dài hạn với chi phí cận biên bằng 0. Tuyệt đối không xem việc chi ngân sách Paid Ads là thành tích tăng trưởng thực chất.
+* **Mô Hình Web Destination:** Chuyển đổi từ website giới thiệu tính năng một chiều sang hệ sinh thái các Điểm đến Thông tin (Web Hubs) cung cấp giá trị tra cứu trực tiếp trước khi người dùng cần tải App.
+* **Nguyên Tắc Đo Lường Độc Lập:** Lưu lượng truy cập In-App Webview không được tính vào KPI tăng trưởng chung của toàn Website.
 
-### Tác vụ 1: Gắn Tracking cho Công Cụ Tiện Ích Mới (Lookup / Calculator / Tool)
-- **Tài liệu quy chuẩn bắt buộc:** Mở file [`umami_utility_tracking.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/umami_utility_tracking.md).
-- **Quy tắc đặt tên sự kiện (Event Name):** Bắt buộc tuân thủ công thức:
-  ```
-  web_[mospark_tool_id]_[object]_[action]
-  ```
-  *Ví dụ:* `web_salary_calculator_calculate_click`, `web_traffic_fine_lookup_submit`.
-- **Tham số payload gửi kèm:**
-  - Luôn gửi: `provider` (tên đối tác/ngân hàng/hãng), `amount` (số tiền nguyên thủy nếu có), `source_page` (URL trang hiện tại).
-  - **Quy tắc bảo mật Zero-PII:** Tuyệt đối không gửi số điện thoại, CCCD, biển số xe đầy đủ hoặc thông tin cá nhân vào payload Umami.
+### 4.2. Ma Trận Kiến Trúc 3+1 Zones Quản Trị Danh Mục Hubs
+Toàn bộ các phân hệ Web được phân bổ theo 4 nhóm chiến lược chi tiết tại [`05_HUBS/WHAT_IS_HUB.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/WHAT_IS_HUB.md):
+1. **Performance Zone (Khai thác & Giữ nhịp):** Cinema Hub — Tối đa hóa lưu lượng tìm kiếm phim, lịch chiếu và đặt vé rạp.
+2. **Transformation Zone (Chuyển đổi chiến lược):** Financial Hub (Lãi suất, Vay, CIC, Tỷ giá) và Vehicle Hub (Phạt nguội, Đăng kiểm, Giá xăng, Showroom).
+3. **Incubation Zone (Ươm tạo & Mở rộng):** Insurance, Travel/OTA, Student Hub, Lottery, Payment, Game Hub.
+4. **Foundation Zone (Hạ tầng nền tảng):** New User Experience, MoSpark CMS, Edge Middleware và Home Web.
 
-### Tác vụ 2: Tích Hợp Xác Thực Người Dùng & Phễu Chuyển Đổi Web-to-App
-- **Đăng nhập ngoài Web:** Sử dụng hạ tầng `m.momo.vn` (Central Web Login) để người dùng quét QR qua App MoMo hoặc nhận OTP điện thoại. Tuyệt đối không tự viết form thu thập mật khẩu trực tiếp trên Web.
-- **Gắn mã chuyển đổi Web-to-App (W2A OneLink):**
-  - Đọc tài liệu [`04_MOSPARK_PLATFORM/mospark_user_identity_tracking.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM/mospark_user_identity_tracking.md).
-  - Mọi nút bấm mở App / tải App (OneLink) phải được gắn tự động tham số `?wui=[identityId]` lấy từ cookie Edge Middleware để AppsFlyer ghi nhận chuyển đổi.
-
-### Tác vụ 3: Xây Dựng Giao Diện & Tiện Ích (Revised UI & Widgets)
-- **Design System:** Sử dụng thư viện chuẩn `@momo-webplatform/mobase` cho các thành phần giao diện mới.
-- **Nguyên tắc trải nghiệm:** Không chặn người dùng bằng popup bắt buộc đăng nhập (Zero-Gate) và không dùng CAPTCHA (0-CAPTCHA) trên các công cụ tra cứu công cộng.
-- **Phân phối Widget:** Tham khảo tài liệu [`04_MOSPARK_PLATFORM/mospark_widget_store.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM/mospark_widget_store.md) để đóng gói widget nhúng vào MoSpark CMS.
-
-### Tác vụ 4: Sử Dụng Thư Viện Tiện Ích Codebase (`scripts/lib/`)
-- Khi viết script thao tác file Excel: Sử dụng `from scripts.lib.excel_utils import load_workbook_safe, save_with_backup` để tự động tạo file sao lưu `.bak` trước khi ghi đè dữ liệu.
-- Khi viết script thao tác Markdown: Sử dụng `from scripts.lib.md_utils import compress_markdown` để dọn dẹp khoảng trắng và comment thừa.
+### 4.3. Phễu Chuyển Đổi Web-to-App (PLG Funnel)
+* **Zero-Gate & 0-CAPTCHA:** Mọi công cụ tiện ích (tính lãi tiết kiệm, tra cứu phạt nguội, tính bảo hiểm xã hội) đều mở công khai, giải quyết trọn vẹn nhu cầu tức thì của người dùng mà không bắt buộc đăng nhập hay giải mã captcha.
+* **Identity Tracking & W2A Attribution:** Sử dụng định danh Web User ID qua cookie Edge Middleware kết hợp tham số OneLink (`?wui=[identityId]`) để phân bổ chính xác nguồn đóng góp người dùng mới từ Web sang App mà vẫn đảm bảo tiêu chuẩn an toàn thông tin Zero-PII.
 
 ---
 
-## 3. HƯỚNG DẪN DÀNH CHO PRODUCT MANAGER
+## 5. BẢN ĐỒ KIẾN TRÚC TRI THỨC (KNOWLEDGE ROUTING ARCHITECTURE)
 
-Quản lý sản phẩm thực hiện tra cứu số liệu, quản lý danh mục và chuẩn bị tài liệu dự án:
-
-### Tác vụ 1: Kiểm Tra Số Liệu Hiệu Suất Kênh Web Thực Tế
-- **Nguồn dữ liệu chân lý duy nhất (SSOT):** Mở file [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md).
-- **Cập nhật số liệu mới:** Khi nhận file tracking từ Data Team, tải file về máy và chạy script `python3 scripts/sync_tracking_report.py`. Hệ thống sẽ tự động cập nhật bảng master, tính toán số ngày lũy kế MTD T+1, nhịp chạy hàng ngày (Daily Pace) và dự phóng cả tháng (Run-rate).
-
-### Tác vụ 2: Tra Cứu Kiến Trúc Danh Mục Hubs & Use Cases
-- Mở file [`05_HUBS/WHAT_IS_HUB.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/WHAT_IS_HUB.md) để nắm:
-  - Khung quản trị 3+1 Zones (Performance: Cinema Hub; Transformation: Financial Hub, Vehicle Hub; Incubation: Insurance, Travel, Student, Lottery, Payment, Game, Merchant, New User, Home Web).
-  - Khái niệm mô hình Hub-and-Spoke và cấu trúc 4 khối thành phần của một Web Hub chuẩn.
-- Đọc tài liệu đặc tả từng Hub chi tiết trong thư mục [`05_HUBS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS).
-
-### Tác vụ 3: Nắm Bắt Bối Cảnh Chỉ Đạo Chiến Lược & Quyết Định Quá Khứ
-- **Chỉ đạo của Ban Giám Đốc:** Đọc [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md) trước mỗi cuộc họp hoặc trước khi lập kế hoạch mới.
-- **Lịch sử các quyết định kiến trúc đã chốt:** Tra cứu tại [`08_DECISION_LOG/decision_log.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_DECISION_LOG/decision_log.md) để tránh thảo luận lại các vấn đề đã có kết luận thống nhất.
-
-### Tác vụ 4: Soạn Thảo Tài Liệu BRD / PRD Mới
-- Lấy mẫu khung chuẩn hóa tại [`09_PRD/_template-prd.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD/_template-prd.md).
-- Quy chuẩn bắt buộc khi viết tài liệu:
-  - Luồng người dùng (User Flow) bắt buộc dùng sơ đồ Mermaid (`graph TD` hoặc `graph LR`) kèm bảng mô tả từng bước.
-  - Lộ trình phát triển (Roadmap) bắt buộc dùng bảng Markdown (`Table`).
-  - Không dùng Emoji / Icon trong nội dung tiêu đề, bảng biểu và danh sách.
-  - Không đề cập tên riêng cá nhân/PIC (thay bằng tên đội ngũ chuyên môn như `Web Dev`, `Cell Team`, `Media Team`...).
-
----
-
-## 4. BẢN ĐỒ TRA CỨU NHANH THEO NHU CẦU (CHEATSHEET)
-
-| Bạn Cần Làm Gì? | Mở Tệp Tin / Thư Mục Nào? | Ghi Chú |
-|---|---|---|
-| Gắn mã tracking Umami cho tiện ích Web | [`umami_utility_tracking.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/umami_utility_tracking.md) | SSOT quy chuẩn Event Tracking duy nhất |
-| Xem dữ liệu hiệu suất MTD & lịch sử Traffic | [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md) | SSOT hiệu suất Kênh Web |
-| Xem định nghĩa Hub & danh mục 10 Web Hubs | [`05_HUBS/WHAT_IS_HUB.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/WHAT_IS_HUB.md) | Khung kiến trúc và ma trận 3+1 Zones |
-| Xem chỉ đạo của BOM trong các cuộc họp | [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md) | Nhật ký biên bản họp định kỳ |
-| Tra cứu các quyết định kiến trúc đã chốt | [`08_DECISION_LOG/decision_log.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/08_DECISION_LOG/decision_log.md) | Bảng log Fork Points từ tháng 4/2026 đến nay |
-| Tìm hiểu quy tắc vận hành dành cho AI Agent | [`AGENTS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/AGENTS.md) | Bộ luật xử lý thông tin và văn phong bắt buộc |
-| Bản đồ định tuyến tri thức toàn hệ thống | [`00_HARNESS_CORE/KNOWLEDGE_ROUTING.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/KNOWLEDGE_ROUTING.md) | Quy trình định tuyến 5 tầng tri thức |
-| Lấy mẫu viết đặc tả sản phẩm (PRD/BRD) | [`09_PRD/_template-prd.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD/_template-prd.md) | Khung tài liệu chuẩn 4 phần |
-| Chạy các công cụ xuất báo cáo và nén file | [`scripts/cli.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/cli.py) | Unified CLI Runner |
-
----
-
-## 5. SƠ ĐỒ CẤU TRÚC THƯ MỤC CODEBASE
+Hệ thống thư mục được tổ chức theo cấu trúc phân cấp chặt chẽ:
 
 ```
 .
-├── README.md                           # Hướng dẫn sử dụng kho dữ liệu và công cụ (File này)
-├── AGENTS.md                           # Bộ quy tắc vận hành bắt buộc dành cho AI Agent
+├── README.md                           # Bản đặc tả hệ điều hành tri thức & bộ công cụ (File này)
+├── AGENTS.md                           # Bộ quy tắc vận hành và chuẩn mực phản hồi của AI Agent
 ├── MEETING_RECAPS.md                   # Nhật ký biên bản họp và chỉ đạo chiến lược của BOM
-├── umami_utility_tracking.md           # SSOT: Quy chuẩn Event Tracking mọi công cụ tiện ích
+├── umami_utility_tracking.md           # SSOT: Quy chuẩn Event Tracking cho toàn bộ tiện ích Web
 │
-├── 00_HARNESS_CORE/                    # Bản đồ định tuyến tri thức (KNOWLEDGE_ROUTING.md) & Master Doc
-├── 01_STRATEGIC_PLAN/                  # Kế hoạch chiến lược tăng trưởng, OKRs và chính sách URL
+├── 00_HARNESS_CORE/                    # Lõi định tuyến tri thức (KNOWLEDGE_ROUTING.md) & Master Doc
+├── 01_STRATEGIC_PLAN/                  # Chiến lược tăng trưởng, OKRs, Thesis SEO-to-GEO 2027
 ├── 02_FRAMEWORKS/                      # Khung tư duy (First Principles, JTBD, SEO/GEO Playbook)
-├── 03_SKILLS/                          # Bộ kỹ năng quản trị sản phẩm và chuẩn mực viết BRD
-├── 04_MOSPARK_PLATFORM/                # Kiến trúc CMS MoSpark, Microsite, Identity, Widget Store
-├── 05_HUBS/                            # Tài liệu đặc tả 10 Strategic Hubs (WHAT_IS_HUB.md, Cinema, Vehicle...)
-├── 06_USE_CASE_MOMO/                   # Hồ sơ phân tích chi tiết từng Use Case & bài toán kinh doanh
-├── 07_REPORTS/                         # SSOT Performance Tracking (Master Excel, Markdown Report & MTD Data)
-├── 08_DECISION_LOG/                    # Nhật ký lưu vết các quyết định chiến lược (decision_log.md)
-├── 09_PRD/                             # Kho lưu trữ đặc tả yêu cầu sản phẩm chi tiết (PRDs)
+├── 03_SKILLS/                          # Bộ kỹ năng quản trị sản phẩm và chuẩn mực viết BRD/PRD
+├── 04_MOSPARK_PLATFORM/                # Kiến trúc CMS MoSpark, Microsites, Widget Store, Edge Identity
+├── 05_HUBS/                            # Tài liệu đặc tả Strategic Hubs & Kho Keyword Inventory (3.7M+ Vol)
+│   ├── cinema/                         # Cinema Hub (Lịch chiếu, rạp phim, diễn viên)
+│   ├── financial/                      # Financial Hub (Tiết kiệm, Vay, CIC, Tỷ giá, Vàng)
+│   ├── vehicle/                        # Vehicle Hub (Phạt nguội, Đăng kiểm, Showroom, Model xe)
+│   ├── student/                        # Student Hub (Đặc quyền sinh viên, cổng thông tin trường)
+│   ├── inventory/                      # Kho dữ liệu từ khóa thô theo từng ngành (CSV Datasets)
+│   └── WHAT_IS_HUB.md                  # Khung lý luận và phân vùng 3+1 Zones
+├── 06_USE_CASE_MOMO/                   # Hồ sơ nghiên cứu Use Case & Content Plans chuẩn hóa chống ăn thịt
+├── 07_REPORTS/                         # SSOT Performance Tracking (Master Excel, Markdown Report, MTD Data)
+│   ├── WEB_PERFORMANCE_TRACKING_MASTER.md # Báo cáo hiệu suất Web Master cập nhật liên tục
+│   ├── docs/                           # Kho báo cáo tháng chính thức (Tháng 01 đến Tháng 10/2026)
+│   ├── data/                           # Dữ liệu snapshot JSON MTD, Seasonality và GSC Credentials
+│   └── technical_seo/                  # Dữ liệu kiểm toán Backlink, Disavow và Crawl Stats
+├── 08_DECISION_LOG/                    # Nhật ký lưu vết các quyết định kiến trúc then chốt (ADR)
+├── 09_PRD/                             # Kho lưu trữ đặc tả yêu cầu sản phẩm chi tiết (PRD chuẩn mực)
 ├── 10_LEADERSHIP_MINDSET/              # Tư duy quản trị và triết lý sản phẩm của Lãnh đạo
-├── 11_NEWS_FEED/                       # Cổng tiếp nhận tin tức thị trường tự động (Gemini Spark)
-└── scripts/                            # Bộ công cụ tự động hóa, sync tracking, export slide & CLI Engine
+├── 11_NEWS_FEED/                       # Cổng tiếp nhận tin tức thị trường tự động
+├── 12_TASK_MANAGEMENT/                 # Quản trị tiến độ thực thi công việc theo từng tuần/tháng
+├── 13_INTAKE/                          # Cổng tiếp nhận và phân loại dữ liệu đầu vào tự động
+└── scripts/                            # Động cơ tự động hóa Python (SEO/GEO, Trends, Tracking, CLI)
+    ├── lib/                            # Thư viện tiện ích xử lý Excel và Markdown an toàn
+    └── tools/                          # Bộ công cụ sinh báo cáo HTML Responsive và PowerPoint Slide
 ```
 
 ---
 
-## 6. QUY TẮC BẮT BUỘC KHI ĐÓNG GÓP TÀI LIỆU (REPO STANDARDS)
+## 6. QUY CHUẨN ĐO LƯỜNG & VẬN HÀNH BẮT BUỘC (STANDARDS & GOVERNANCE)
 
-1. **Thuật ngữ:** Tuyệt đối không dùng từ *"sàn Web"*. Bắt buộc dùng: *"nền tảng Web"*, *"Kênh Web"*, *"Web Platform"* hoặc *"Web"*.
-2. **Hình thức:** Tuyệt đối không dùng Emoji / Icon trong nội dung tiêu đề, bảng biểu và danh sách của bài báo cáo.
-3. **Định danh:** Tuyệt đối không đưa tên riêng cá nhân/PIC vào tài liệu báo cáo; sử dụng tên đội ngũ chuyên môn (`Web Dev`, `Web Product Lead`, `Cell Team`...).
-4. **Định vị kinh doanh:** Organic Search là kênh cốt lõi mang lại giá trị bền vững; không tô điểm cho Paid Ads.
+Mọi kỹ sư, quản lý sản phẩm và chuyên viên dữ liệu khi đóng góp vào hệ thống bắt buộc tuân thủ 4 nguyên tắc sau:
+
+1. **Chuẩn Mực Đo Lường Tiện Ích (Utility Tracking Standard):**
+   * Tham chiếu duy nhất tại [`umami_utility_tracking.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/umami_utility_tracking.md).
+   * Cú pháp sự kiện bắt buộc: `web_[mospark_tool_id]_[object]_[action]`.
+   * Tuân thủ nguyên tắc Zero-PII: Tuyệt đối không gửi thông tin định danh cá nhân vào payload tracking.
+
+2. **Chuẩn Mực Soạn Thảo Tài Liệu (Documentation Formatting):**
+   * Luồng người dùng (User Flow) bắt buộc sử dụng sơ đồ trực quan Mermaid (`graph TD` hoặc `graph LR`) kèm Bảng Phân Tích Chi Tiết Các Bước.
+   * Lộ trình phát triển (Roadmap) bắt buộc trình bày dưới dạng Bảng Markdown (`Table`).
+   * Không sử dụng Emoji / Icon trong tiêu đề, bảng biểu và danh sách của tài liệu báo cáo.
+   * Không sử dụng tên riêng cá nhân/PIC trong báo cáo; thay thế bằng tên đội ngũ chuyên môn (`Web Dev`, `Product Lead`, `SEO Team`...).
+
+3. **Chuẩn Hóa Thuật Ngữ Kiến Trúc Thông Tin:**
+   * **Cấu trúc phân cấp chuẩn:** `Hub ➔ Theme ➔ Cluster / Article`.
+   * **Thuật ngữ nền tảng:** Tuyệt đối không dùng từ *"sàn Web"*. Bắt buộc dùng: *"toàn Website"*, *"nền tảng Web"*, *"Kênh Web"*, *"Web Platform"* hoặc *"Web"*.
+
+4. **Nguyên Tắc Xử Lý Dữ Liệu Tracking:**
+   * Mọi cập nhật số liệu hiệu suất Web Platform bắt buộc chạy qua script `python3 scripts/sync_tracking_report.py` để đảm bảo tính toàn vẹn và đồng bộ từ file gốc đến SSOT Markdown.

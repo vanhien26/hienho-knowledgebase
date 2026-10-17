@@ -11,6 +11,7 @@ Triển khai toàn diện 5 yêu cầu tái cấu trúc Content Plan & SEO Clust
 """
 
 import os
+import sys
 import glob
 import re
 import json
@@ -19,6 +20,7 @@ import pandas as pd
 from collections import defaultdict, Counter
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.insert(0, BASE_DIR)
 INVENTORY_DIR = os.path.join(BASE_DIR, "05_HUBS", "inventory")
 REPORT_FILE = os.path.join(BASE_DIR, "07_REPORTS", "CONTENT_PLAN_REFACTOR_REVIEW.md")
 JSON_OUTPUT = os.path.join(BASE_DIR, "07_REPORTS", "data", "content_plan_refactor_audit.json")
@@ -377,22 +379,28 @@ BANK_THEMES = {
     'Eximbank': ['eximbank', 'exim bank']
 }
 
+from scripts.sync_inventory_to_hubs import MERGE_MAP, VIETNAMESE_THEME_NAMES
+
 # Đọc toàn bộ các CSV vào raw database
 all_csv_paths = glob.glob(os.path.join(INVENTORY_DIR, "*", "*.csv"))
-theme_raw_dfs = {}
+theme_raw_dfs = defaultdict(list)
 for p in all_csv_paths:
     sec = os.path.basename(os.path.dirname(p))
     t_slug = os.path.splitext(os.path.basename(p))[0]
     clean_s = re.sub(r'[\s_]*\(\d+\)$', '', t_slug).strip()
-    theme_raw_dfs[f"{sec}/{clean_s}"] = (clean_csv(p), sec, clean_s)
+    canonical_s = MERGE_MAP.get(clean_s, clean_s)
+    df_clean = clean_csv(p)
+    if not df_clean.empty:
+        theme_raw_dfs[(sec, canonical_s)].append(df_clean)
 
 reallocated_moves = []
 # Map cuối cùng của keywords theo từng theme: (sec, theme_slug) -> list of rows
 theme_keywords = defaultdict(list)
 
 # Bước 1: Reallocation audit
-for key, (df, sec, t_slug) in theme_raw_dfs.items():
-    for idx, r in df.iterrows():
+for (sec, t_slug), dfs in theme_raw_dfs.items():
+    combined_df = pd.concat(dfs, ignore_index=True)
+    for idx, r in combined_df.iterrows():
         kw = r['clean_kw']
         vol = r['clean_vol']
         cpc = r['cpc']
@@ -526,7 +534,11 @@ for (sec, t_slug), rows in theme_keywords.items():
             max_v = max(it['vol'] for it in items)
             max_cpc = max(it['cpc'] for it in items)
             # Chọn canonical: Ưu tiên có dấu, sau đó là volume cao nhất, sau đó là có khoảng trắng
-            sorted_it = sorted(items, key=lambda x: (x['has_accent'], x['vol'], len(x['kw'].split())), reverse=True)
+            def sort_key(x):
+                kw_str = x['kw']
+                is_exact_brand = 1 if kw_str in ['vietlott', 'epass', 'vetc', 'mbbank', 'vietcombank', 'techcombank', 'bidv', 'agribank', 'acb'] else 0
+                return (is_exact_brand, x['has_accent'], x['vol'], len(kw_str.split()))
+            sorted_it = sorted(items, key=sort_key, reverse=True)
             canonical_kw = sorted_it[0]['kw']
             comp_val = sorted_it[0]['comp']
             variants = [it['kw'] for it in items if it['kw'] != canonical_kw]
@@ -573,7 +585,7 @@ for (sec, t_slug), kws in sorted(theme_deduped_keywords.items()):
     
     # Sắp xếp kws giảm dần theo volume
     kws.sort(key=lambda x: x['volume'], reverse=True)
-    theme_display_name = t_slug.replace('-', ' ').title()
+    theme_display_name = VIETNAMESE_THEME_NAMES.get(t_slug, t_slug.replace('-', ' ').title())
     
     # 1. Nhóm từ khóa vào các Sub-clusters
     assigned_clusters = defaultdict(list)
@@ -627,8 +639,8 @@ for (sec, t_slug), kws in sorted(theme_deduped_keywords.items()):
         primary_k = cluster_kws[0]
         p_vol = primary_k['volume']
         
-        # Nếu primary_kw trùng với pillar_kw thì bỏ qua không tạo child page trùng lặp với Pillar
-        if primary_k['keyword'] == top_overall_kw['keyword'] and len(sorted_clusters) > 1:
+        # Nếu primary_kw trùng với pillar_kw hoặc chỉ có duy nhất 1 cluster thì bỏ qua để tránh cannibalization
+        if primary_k['keyword'] == top_overall_kw['keyword'] or len(sorted_clusters) == 1:
             continue
             
         # Kiểm tra ngưỡng 500
