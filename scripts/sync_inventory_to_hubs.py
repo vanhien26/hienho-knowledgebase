@@ -33,7 +33,30 @@ from scripts.lib.keyword_intelligence import (
 )
 
 MERGE_MAP = {
-    'vang': 'gia-vang'
+    # Financial
+    'vang': 'gia-vang',
+    'tiet-kiem': 'gui-tiet-kiem',
+    'no': 'no-xau',
+    'thu-nhap': 'thue-tncn',
+    # Lottery
+    'xskt': 'xo-so',
+    # Insurtech
+    'bao-hiem-y-te': 'bhyt',
+    'bao-hiem-xe': 'bao-hiem-xe-may',
+    'bao-hiem-than-vo': 'bao-hiem-o-to',
+    'bao-hiem-vat-chat': 'bao-hiem-o-to',
+    'dong-bao-hiem': 'bhxh',
+    'bao-hiem': 'bhxh',
+    'bao-hiem-benh': 'bao-hiem-tai-nan',
+    # PS
+    'nap-xu-tiktok': 'nap-tiktok',
+    # OTA
+    'du-lich-my': 'visa-du-lich',
+    # Vehicle Hub
+    'bien-so': 'bien-so-xe',
+    'garage-o-to': 'gara-o-to',
+    'cuu-ho-o-to': 'cuu-ho-xe',
+    'trạm-sac': 'tram-sac',
 }
 
 SECTOR_SPECIFIC_RULES = {
@@ -53,13 +76,15 @@ SECTOR_SPECIFIC_RULES = {
         ('Định giá & Mua bán xe', ['giá xe', 'gia xe', 'định giá', 'dinh gia', 'lăn bánh', 'lan banh', 'mua xe', 'bán xe', 'trả góp xe']),
     ],
     'insurtech': [
-        ('Bảo hiểm & Quyền lợi', ['bảo hiểm', 'bao hiem', 'bắt buộc', 'tự nguyện', 'vật chất', 'tnds', 'bồi thường', 'quyền lợi', 'phí bảo hiểm', 'bhxh', 'bhyt']),
-        ('Thủ tục & Quyền lợi', ['bồi thường', 'boi thuong', 'thủ tục', 'hồ sơ', 'chi trả', 'khiếu nại']),
+        ('Quy định & Mức bồi thường', ['bồi thường', 'boi thuong', 'chi trả', 'mức phạt', 'bắt buộc', 'tnds', 'quy định', 'luật', 'nghị định', 'hồ sơ']),
+        ('Biểu phí & Mua bảo hiểm', ['phí', 'biểu phí', 'giá', 'bao nhiêu tiền', 'mua', 'đóng', 'nộp', 'tái tục', 'online', 'trực tuyến']),
+        ('Tra cứu & Hạn sử dụng', ['tra cứu', 'kiểm tra', 'check', 'thời hạn', 'hạn sử dụng', 'mã số', 'thẻ', 'sổ']),
+        ('Quyền lợi & Chế độ', ['quyền lợi', 'khám chữa bệnh', 'bệnh viện', 'thanh toán', 'hưởng', 'chế độ', 'thai sản', 'hưu trí', 'ốm đau']),
     ],
     'Lottery': [
-        ('Kết quả xổ số', ['kết quả', 'ket qua', 'xsmb', 'xsmn', 'xsmt', 'trực tiếp', 'truc tiep', 'kqsx', 'sxmb', 'sxmn', 'sxmt']),
+        ('Kết quả xổ số', ['kết quả', 'ket qua', 'xsmb', 'xsmn', 'xsmt', 'sxtt', 'trực tiếp', 'truc tiep', 'kqsx', 'sxmb', 'sxmn', 'sxmt', 'xo so', 'xổ số', 'xô số', 'xô sô', 'xo số', 'xskt', 'kiến thiết', 'kien thiet', 'hôm nay', 'hom nay', 'miền bắc', 'miền nam', 'miền trung', 'minh ngọc', 'minhngoc']),
         ('Thống kê & Soi cầu', ['thống kê', 'thong ke', 'soi cầu', 'soi cau', 'lô gan', 'chu kỳ', 'tần suất', 'đầu đuôi', 'bạch thủ']),
-        ('Cơ cấu & Đổi thưởng', ['giải thưởng', 'giai thuong', 'trúng thưởng', 'đổi vé', 'lãnh thưởng', 'thời hạn']),
+        ('Cơ cấu & Đổi thưởng', ['giải thưởng', 'giai thuong', 'trúng thưởng', 'đổi vé', 'lãnh thưởng', 'thời hạn', 'cơ cấu', 'co cau', 'vé số', 've so']),
     ],
     'PS': [
         ('Lịch chiếu & Suất chiếu', ['lịch chiếu', 'lich chieu', 'suất chiếu', 'suat chieu', 'gio chieu', 'chiếu rạp', 'phim chiếu']),
@@ -353,8 +378,10 @@ def main():
 
         slug_groups = defaultdict(list)
         for fpath in csv_files:
-            slug = os.path.splitext(os.path.basename(fpath))[0]
-            canonical_slug = MERGE_MAP.get(slug, slug)
+            raw_slug = os.path.splitext(os.path.basename(fpath))[0]
+            # Tự động loại bỏ hậu tố nhân bản như (1), (2), _copy...
+            clean_slug = re.sub(r'[\s_]*\(\d+\)$', '', raw_slug).strip()
+            canonical_slug = MERGE_MAP.get(clean_slug, clean_slug)
             slug_groups[canonical_slug].append(fpath)
 
         s_usecases = []
@@ -364,6 +391,8 @@ def main():
         s_outliers = 0
         
         for canonical_slug, paths in slug_groups.items():
+            # Ưu tiên tệp có thời gian sửa đổi (mtime) mới nhất
+            paths.sort(key=lambda p: os.path.getmtime(p), reverse=True)
             res = process_csv_paths(paths, s, canonical_slug)
             if res:
                 s_usecases.append(res)
@@ -384,9 +413,9 @@ def main():
         total_vol_all += s_vol
         total_cannibalized_all += s_cannibalized
         total_outliers_all += s_outliers
-        print(f"- Phân khối {s:15s}: {len(s_usecases):3d} use cases | {s_kws:7,d} kws | {s_cannibalized:5,d} cannibalized merged | {s_vol:12,d} vol")
+        print(f"- Hub {s:15s}: {len(s_usecases):3d} themes | {s_kws:7,d} kws | {s_cannibalized:5,d} cannibalized merged | {s_vol:12,d} vol")
         
-    print(f"\nTổng kết: {len(all_usecases)} use cases | {total_kws_all:,} từ khóa sạch | {total_cannibalized_all:,} từ khóa được gom chống ăn thịt | {total_outliers_all:,} từ khóa nhiễu bị chặn.")
+    print(f"\nTổng kết: {len(all_usecases)} themes | {total_kws_all:,} từ khóa sạch | {total_cannibalized_all:,} từ khóa được gom chống ăn thịt | {total_outliers_all:,} từ khóa nhiễu bị chặn.")
     
     # 0. Làm giàu dữ liệu: Tính toán Mạng lưới Liên kết nội bộ (Silo Topology) & GEO Direct Answers
     print("Đang tính toán mạng lưới liên kết nội bộ (Internal Linking Topology) & GEO Direct Answers...")
@@ -470,7 +499,7 @@ Tập hợp các từ khóa có **Search Volume cao ($\ge 1.500$) và Mức đ�
     md_content = f"""# TỔNG QUAN TÀI NGUYÊN TỪ KHÓA & TOPIC CLUSTERS WEB PLATFORM (SSOT INVENTORY V2)
 
 Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ chống ăn thịt từ khóa (Cannibalization Shield) từ kho `05_HUBS/inventory/`.
-- **Tổng số Use Cases:** {len(all_usecases)}
+- **Tổng số Themes:** {len(all_usecases)}
 - **Tổng số từ khóa theo dõi:** {total_kws_all:,}
 - **Tổng số từ khóa trùng Intent được gom cụm (Shielded):** {total_cannibalized_all:,}
 - **Tổng số từ khóa nhiễu bị loại bỏ:** {total_outliers_all:,}
@@ -478,15 +507,15 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
 
 ---
 
-## 1. TỔNG HỢP THEO PHÂN KHỐI NGÀNH (SECTORS)
+## 1. TỔNG HỢP THEO HUBS
 
-| Phân Khối Ngành | Số Lượng Use Cases | Từ Khóa Sạch | Từ Khóa Gom Chống Cannibalization | Dung Lượng Tìm Kiếm (Volume/Tháng) |
+| Hub | Số Lượng Themes | Từ Khóa Sạch | Từ Khóa Gom Chống Cannibalization | Dung Lượng Tìm Kiếm (Volume/Tháng) |
 | :--- | :---: | :---: | :---: | :---: |
 """
     for sec, stats in sorted(sector_summary.items(), key=lambda x: x[1]['total_volume'], reverse=True):
         md_content += f"| {sec} | {stats['usecase_count']:,} | {stats['total_keywords']:,} | {stats['cannibalized_merged']:,} | {stats['total_volume']:,} |\n"
 
-    md_content += """\n---\n\n## 2. TOP USE CASES CÓ QUY MÔ LỚN NHẤT\n\n| STT | Use Case | Phân Khối | Số Từ Khóa | Gom Cannibalized | Search Volume | Từ Khóa Cột Trụ (Pillar KW) | Top Quick Win |\n| :---: | :--- | :--- | :---: | :---: | :---: | :--- | :--- |\n"""
+    md_content += """\n---\n\n## 2. TOP THEMES CÓ QUY MÔ LỚN NHẤT\n\n| STT | Theme | Hub | Số Từ Khóa | Gom Cannibalized | Search Volume | Từ Khóa Cột Trụ (Pillar KW) | Top Quick Win |\n| :---: | :--- | :--- | :---: | :---: | :---: | :--- | :--- |\n"""
 
     top_usecases = sorted(all_usecases, key=lambda x: x['total_volume'], reverse=True)[:25]
     for idx, uc in enumerate(top_usecases, 1):

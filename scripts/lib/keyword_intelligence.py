@@ -241,6 +241,10 @@ class SemanticDomainFilter:
         if len(kw) < 2 or len(kw) > 120:
             return True, "Invalid keyword length (<2 or >120 chars)"
 
+        # 4. Kiểm tra ngoại lệ đặc thù từng Theme
+        if usecase_slug == 'bao-hiem-nhan-tho' and any(term in kw for term in ['bảo hiểm y tế', 'bảo hiểm y tê', 'bhyt']):
+            return True, "Outlier: BHYT keyword in life insurance theme"
+
         return False, "valid"
 
 

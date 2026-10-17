@@ -39,6 +39,10 @@
   - **Không đề cập tên riêng của cá nhân / PIC** (như `[Hiến]`, `[Thuận]`, `[Trọng]`, `[Nhật]`, `Hiếu`...) trong bài báo cáo. Thay thế bằng tên đội ngũ chuyên môn (như `Web Dev`, `Backend Team`, `Content Team`, `SEO Vendor`...).
   - Không dùng văn chương màu mè, sáo rỗng, hoa mỹ kiểu AI (ví dụ: *"bệ phóng phát triển"*, *"bứt phá ngoạn mục"*, *"khẳng định vị thế uy tín"*, *"hành trình chuyển đổi"*...).
   - Không viết dài dòng lê thê, không lặp lại ý.
+- **Chuẩn hóa Thuật ngữ Kiến trúc Thông tin (Information Architecture Terminology):**
+  - **Hub:** Bắt buộc dùng thay cho "Phân Khối Ngành", "Phân ngành", "Sector" (ví dụ: Cinema Hub, Financial Hub, Vehicle Hub, Insurtech Hub, OTA Hub, Lottery Hub...).
+  - **Theme:** Bắt buộc dùng thay cho "Use Case", "Use case" (ví dụ: trong Financial Hub có các Themes: Tỷ giá, Giá vàng, Tiết kiệm ngân hàng, Vay tín chấp...).
+  - Cấu trúc phân cấp 3 tầng chuẩn mực: **Hub ➔ Theme ➔ Cluster/Article**.
 - **Cấu trúc viết:** Nhìn vào hiểu ngay ➔ Nêu rõ Context ➔ Action Items ➔ KPIs / Số liệu thực tế.
 
 ---

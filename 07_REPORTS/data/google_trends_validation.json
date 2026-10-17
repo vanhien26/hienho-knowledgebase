@@ -1,0 +1,794 @@
+{
+  "generated_at": "2026-10-17T16:39:20.281982",
+  "sample_size": 20,
+  "total_keywords_analyzed": 20,
+  "has_trend_count": 17,
+  "no_trend_count": 3,
+  "trend_percentage": 85.0,
+  "results": [
+    {
+      "keyword": "xsmn",
+      "inventory_volume": 101000000,
+      "trend_data": {
+        "avg_interest": 59.301886792452834,
+        "max_interest": 70.0,
+        "min_interest": 42.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "Đồng Nai",
+            "interest": 42
+          },
+          {
+            "region": "Lâm Đồng",
+            "interest": 42
+          },
+          {
+            "region": "Bà Rịa - Vũng Tàu",
+            "interest": 42
+          },
+          {
+            "region": "Bình Dương",
+            "interest": 41
+          },
+          {
+            "region": "Hồ Chí Minh",
+            "interest": 40
+          }
+        ],
+        "related_queries": [
+          {
+            "query": "xsmn đài chính hôm nay",
+            "value": 2300
+          },
+          {
+            "query": "xsmn az",
+            "value": 300
+          },
+          {
+            "query": "xsmn vt",
+            "value": 250
+          },
+          {
+            "query": "quay thử xsmn",
+            "value": 40
+          }
+        ]
+      }
+    },
+    {
+      "keyword": "sxttmn",
+      "inventory_volume": 101000000,
+      "trend_data": {
+        "avg_interest": 0.0,
+        "max_interest": 0.0,
+        "min_interest": 0.0,
+        "has_trend": false,
+        "top_regions": [],
+        "related_queries": []
+      }
+    },
+    {
+      "keyword": "xsmb",
+      "inventory_volume": 83100000,
+      "trend_data": {
+        "avg_interest": 60.094339622641506,
+        "max_interest": 72.0,
+        "min_interest": 35.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "Lạng Sơn",
+            "interest": 97
+          },
+          {
+            "region": "Hải Phòng",
+            "interest": 97
+          },
+          {
+            "region": "Quảng Ninh",
+            "interest": 97
+          },
+          {
+            "region": "Ninh Bình",
+            "interest": 97
+          },
+          {
+            "region": "Lào Cai",
+            "interest": 97
+          }
+        ],
+        "related_queries": [
+          {
+            "query": "xsmb hôm qua",
+            "value": 300
+          },
+          {
+            "query": "dự đoán xsmb thần tài",
+            "value": 90
+          },
+          {
+            "query": "xsmb hn",
+            "value": 80
+          },
+          {
+            "query": "sxmb xsmb hôm nay trực tiếp mien bac",
+            "value": 80
+          },
+          {
+            "query": "thống kê giải đặc biệt",
+            "value": 60
+          }
+        ]
+      }
+    },
+    {
+      "keyword": "xổ so miền bắc",
+      "inventory_volume": 83100000,
+      "trend_data": {
+        "avg_interest": 0.0,
+        "max_interest": 0.0,
+        "min_interest": 0.0,
+        "has_trend": false,
+        "top_regions": [],
+        "related_queries": []
+      }
+    },
+    {
+      "keyword": "xổ số miền nam",
+      "inventory_volume": 68000000,
+      "trend_data": {
+        "avg_interest": 82.28301886792453,
+        "max_interest": 100.0,
+        "min_interest": 53.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "Hậu Giang",
+            "interest": 62
+          },
+          {
+            "region": "Cà Mau",
+            "interest": 61
+          },
+          {
+            "region": "tỉnh Kiên Giang",
+            "interest": 61
+          },
+          {
+            "region": "Vĩnh Long",
+            "interest": 60
+          },
+          {
+            "region": "Bến Tre",
+            "interest": 60
+          }
+        ],
+        "related_queries": [
+          {
+            "query": "xổ số miền nam t2",
+            "value": 850
+          },
+          {
+            "query": "xổ số miền nam 24",
+            "value": 80
+          },
+          {
+            "query": "xổ số miền nam thứ ba tuần rồi",
+            "value": 50
+          },
+          {
+            "query": "xổ số miền nam thứ năm tuần rồi",
+            "value": 50
+          },
+          {
+            "query": "xổ số miền nam hàng tuần",
+            "value": 50
+          }
+        ]
+      }
+    },
+    {
+      "keyword": "xô sô miên băc",
+      "inventory_volume": 68000000,
+      "trend_data": {
+        "avg_interest": 7.056603773584905,
+        "max_interest": 13.0,
+        "min_interest": 4.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "Cao Bằng",
+            "interest": 100
+          },
+          {
+            "region": "Thái Nguyên",
+            "interest": 49
+          },
+          {
+            "region": "Yên Bái",
+            "interest": 48
+          },
+          {
+            "region": "Hưng Yên",
+            "interest": 48
+          },
+          {
+            "region": "Bắc Kạn",
+            "interest": 48
+          }
+        ],
+        "related_queries": [
+          {
+            "query": "kêt qua xô sô miên băc hôm nay",
+            "value": 60
+          },
+          {
+            "query": "xem kêt qua xô sô miên băc",
+            "value": 50
+          }
+        ]
+      }
+    },
+    {
+      "keyword": "xo số mien bac",
+      "inventory_volume": 68000000,
+      "trend_data": {
+        "avg_interest": 33.43396226415094,
+        "max_interest": 47.0,
+        "min_interest": 23.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "Lạng Sơn",
+            "interest": 100
+          },
+          {
+            "region": "Điện Biên",
+            "interest": 100
+          },
+          {
+            "region": "Hà Giang",
+            "interest": 96
+          },
+          {
+            "region": "Hà Tĩnh",
+            "interest": 70
+          },
+          {
+            "region": "Lào Cai",
+            "interest": 67
+          }
+        ],
+        "related_queries": []
+      }
+    },
+    {
+      "keyword": "xo số mien nam",
+      "inventory_volume": 68000000,
+      "trend_data": {
+        "avg_interest": 55.81132075471698,
+        "max_interest": 77.0,
+        "min_interest": 35.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "Bạc Liêu",
+            "interest": 37
+          },
+          {
+            "region": "Quảng Ngãi",
+            "interest": 37
+          },
+          {
+            "region": "Long An",
+            "interest": 37
+          },
+          {
+            "region": "An Giang",
+            "interest": 35
+          },
+          {
+            "region": "Ninh Thuận",
+            "interest": 35
+          }
+        ],
+        "related_queries": []
+      }
+    },
+    {
+      "keyword": "xo số miền nam",
+      "inventory_volume": 68000000,
+      "trend_data": {
+        "avg_interest": 73.66037735849056,
+        "max_interest": 100.0,
+        "min_interest": 46.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "Tây Ninh",
+            "interest": 50
+          },
+          {
+            "region": "Tiền Giang",
+            "interest": 50
+          },
+          {
+            "region": "Trà Vinh",
+            "interest": 49
+          },
+          {
+            "region": "Cần Thơ",
+            "interest": 47
+          },
+          {
+            "region": "Vĩnh Long",
+            "interest": 47
+          }
+        ],
+        "related_queries": []
+      }
+    },
+    {
+      "keyword": "xô số miền nam",
+      "inventory_volume": 68000000,
+      "trend_data": {
+        "avg_interest": 16.358490566037737,
+        "max_interest": 21.0,
+        "min_interest": 10.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "Hưng Yên",
+            "interest": 19
+          },
+          {
+            "region": "Nghệ An",
+            "interest": 17
+          },
+          {
+            "region": "Hậu Giang",
+            "interest": 16
+          },
+          {
+            "region": "Cà Mau",
+            "interest": 13
+          },
+          {
+            "region": "Bình Dương",
+            "interest": 12
+          }
+        ],
+        "related_queries": []
+      }
+    },
+    {
+      "keyword": "giá vàng hôm nay",
+      "inventory_volume": 9140000,
+      "sector": "Financial",
+      "theme": "gia-vang",
+      "trend_data": {
+        "avg_interest": 38.924528301886795,
+        "max_interest": 100.0,
+        "min_interest": 16.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "Lai Châu",
+            "interest": 98
+          },
+          {
+            "region": "Cao Bằng",
+            "interest": 98
+          },
+          {
+            "region": "Điện Biên",
+            "interest": 97
+          },
+          {
+            "region": "Sơn La",
+            "interest": 97
+          },
+          {
+            "region": "Nam Định",
+            "interest": 96
+          }
+        ],
+        "related_queries": [
+          {
+            "query": "giá vàng the giới hôm nay xauusd",
+            "value": 5400
+          },
+          {
+            "query": "giá vàng ngọc thịnh hôm nay",
+            "value": 2450
+          },
+          {
+            "query": "giá vàng ngọc thịnh đà nẵng hôm nay",
+            "value": 1450
+          },
+          {
+            "query": "giá bạc thế giới hôm nay",
+            "value": 900
+          },
+          {
+            "query": "giá xăng hôm nay",
+            "value": 650
+          }
+        ]
+      }
+    },
+    {
+      "keyword": "giâ vàng hôm nay",
+      "inventory_volume": 9140000,
+      "sector": "Financial",
+      "theme": "gia-vang",
+      "trend_data": {
+        "avg_interest": 0.0,
+        "max_interest": 0.0,
+        "min_interest": 0.0,
+        "has_trend": false,
+        "top_regions": [],
+        "related_queries": []
+      }
+    },
+    {
+      "keyword": "tỷ giá usd",
+      "inventory_volume": 246000,
+      "sector": "Financial",
+      "theme": "ty-gia",
+      "trend_data": {
+        "avg_interest": 1.4150943396226414,
+        "max_interest": 2.0,
+        "min_interest": 1.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "Hồ Chí Minh",
+            "interest": 7
+          },
+          {
+            "region": "Bình Phước",
+            "interest": 5
+          },
+          {
+            "region": "Tây Ninh",
+            "interest": 4
+          },
+          {
+            "region": "Thừa Thiên Huế",
+            "interest": 4
+          },
+          {
+            "region": "Hà Nội",
+            "interest": 4
+          }
+        ],
+        "related_queries": [
+          {
+            "query": "giá dầu thế giới",
+            "value": 120
+          },
+          {
+            "query": "tỷ giá usd hiện tại",
+            "value": 60
+          },
+          {
+            "query": "tỷ giá usd agribank hôm nay",
+            "value": 50
+          },
+          {
+            "query": "tỷ giá usd tự do hôm nay",
+            "value": 40
+          }
+        ]
+      }
+    },
+    {
+      "keyword": "usd to vnd",
+      "inventory_volume": 246000,
+      "sector": "Financial",
+      "theme": "ty-gia",
+      "trend_data": {
+        "avg_interest": 3.2830188679245285,
+        "max_interest": 4.0,
+        "min_interest": 3.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "Hồ Chí Minh",
+            "interest": 18
+          },
+          {
+            "region": "Đà Nẵng",
+            "interest": 13
+          },
+          {
+            "region": "Lào Cai",
+            "interest": 10
+          },
+          {
+            "region": "Khánh Hòa",
+            "interest": 9
+          },
+          {
+            "region": "Bình Dương",
+            "interest": 8
+          }
+        ],
+        "related_queries": [
+          {
+            "query": "exchange rate usd to vnd",
+            "value": 200
+          },
+          {
+            "query": "usd to vnd rate",
+            "value": 160
+          },
+          {
+            "query": "usd to vnd today",
+            "value": 140
+          },
+          {
+            "query": "22 usd to vnd",
+            "value": 100
+          },
+          {
+            "query": "240 usd to vnd",
+            "value": 60
+          }
+        ]
+      }
+    },
+    {
+      "keyword": "vay nhanh",
+      "inventory_volume": 135000,
+      "sector": "Financial",
+      "theme": "vay-tin-chap",
+      "trend_data": {
+        "avg_interest": 1.0,
+        "max_interest": 1.0,
+        "min_interest": 1.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "An Giang",
+            "interest": 4
+          },
+          {
+            "region": "Bạc Liêu",
+            "interest": 4
+          },
+          {
+            "region": "Kon Tum",
+            "interest": 4
+          },
+          {
+            "region": "Tây Ninh",
+            "interest": 4
+          },
+          {
+            "region": "Ninh Thuận",
+            "interest": 4
+          }
+        ],
+        "related_queries": [
+          {
+            "query": "vay nhanh vhntdng",
+            "value": 40450
+          },
+          {
+            "query": "vay nhanh thaimarket.vn",
+            "value": 32400
+          },
+          {
+            "query": "vay nhanh thaimarket",
+            "value": 24100
+          },
+          {
+            "query": "pt vay nhanh",
+            "value": 7000
+          },
+          {
+            "query": "app vay 500k nhanh nhất",
+            "value": 2700
+          }
+        ]
+      }
+    },
+    {
+      "keyword": "vay nhanh online",
+      "inventory_volume": 27100,
+      "sector": "Financial",
+      "theme": "vay-tin-chap",
+      "trend_data": {
+        "avg_interest": 21.830188679245282,
+        "max_interest": 30.0,
+        "min_interest": 14.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "Quảng Bình",
+            "interest": 22
+          },
+          {
+            "region": "tỉnh Kiên Giang",
+            "interest": 22
+          },
+          {
+            "region": "Bình Thuận",
+            "interest": 20
+          },
+          {
+            "region": "Gia Lai",
+            "interest": 19
+          },
+          {
+            "region": "Yên Bái",
+            "interest": 19
+          }
+        ],
+        "related_queries": []
+      }
+    },
+    {
+      "keyword": "lãi suất gửi tiết kiệm ngân hàng",
+      "inventory_volume": 12100,
+      "sector": "Financial",
+      "theme": "gui-tiet-kiem",
+      "trend_data": {
+        "avg_interest": 46.35849056603774,
+        "max_interest": 81.0,
+        "min_interest": 24.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "Bắc Kạn",
+            "interest": 100
+          },
+          {
+            "region": "Cao Bằng",
+            "interest": 62
+          },
+          {
+            "region": "Điện Biên",
+            "interest": 58
+          },
+          {
+            "region": "Lai Châu",
+            "interest": 51
+          },
+          {
+            "region": "Kon Tum",
+            "interest": 47
+          }
+        ],
+        "related_queries": [
+          {
+            "query": "lãi suất ngân hàng hiện nay",
+            "value": 50
+          }
+        ]
+      }
+    },
+    {
+      "keyword": "lãi suất tiền gửi tiết kiệm ngân hàng",
+      "inventory_volume": 8100,
+      "sector": "Financial",
+      "theme": "gui-tiet-kiem",
+      "trend_data": {
+        "avg_interest": 13.679245283018869,
+        "max_interest": 23.0,
+        "min_interest": 7.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "Thanh Hoá",
+            "interest": 15
+          },
+          {
+            "region": "Vĩnh Phúc",
+            "interest": 15
+          },
+          {
+            "region": "Phú Thọ",
+            "interest": 14
+          },
+          {
+            "region": "Hải Dương",
+            "interest": 14
+          },
+          {
+            "region": "Hòa Bình",
+            "interest": 14
+          }
+        ],
+        "related_queries": []
+      }
+    },
+    {
+      "keyword": "ví trả sau momo",
+      "inventory_volume": 6600,
+      "sector": "Financial",
+      "theme": "vi-tra-sau",
+      "trend_data": {
+        "avg_interest": 45.0188679245283,
+        "max_interest": 60.0,
+        "min_interest": 25.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "Hồ Chí Minh",
+            "interest": 31
+          },
+          {
+            "region": "Cần Thơ",
+            "interest": 30
+          },
+          {
+            "region": "Sóc Trăng",
+            "interest": 28
+          },
+          {
+            "region": "Hậu Giang",
+            "interest": 25
+          },
+          {
+            "region": "Sơn La",
+            "interest": 25
+          }
+        ],
+        "related_queries": [
+          {
+            "query": "ví trả sau momo dùng như nào",
+            "value": 100
+          },
+          {
+            "query": "cách đăng ký ví trả sau momo",
+            "value": 50
+          }
+        ]
+      }
+    },
+    {
+      "keyword": "ví trả sau",
+      "inventory_volume": 2400,
+      "sector": "Financial",
+      "theme": "vi-tra-sau",
+      "trend_data": {
+        "avg_interest": 75.22641509433963,
+        "max_interest": 100.0,
+        "min_interest": 40.0,
+        "has_trend": true,
+        "top_regions": [
+          {
+            "region": "Sóc Trăng",
+            "interest": 54
+          },
+          {
+            "region": "Lai Châu",
+            "interest": 49
+          },
+          {
+            "region": "Lào Cai",
+            "interest": 48
+          },
+          {
+            "region": "Hồ Chí Minh",
+            "interest": 46
+          },
+          {
+            "region": "Cần Thơ",
+            "interest": 46
+          }
+        ],
+        "related_queries": [
+          {
+            "query": "ví trả sau momo dùng như nào",
+            "value": 60
+          }
+        ]
+      }
+    }
+  ]
+}
