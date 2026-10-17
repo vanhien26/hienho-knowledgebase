@@ -70,7 +70,8 @@ def main():
     all_rows = []
     start_row = 0
     batch_size = 25000
-    max_rows = int(os.environ.get("GSC_MAX_ROWS", "100000"))
+    max_rows = int(os.environ.get("GSC_MAX_ROWS", "500000"))
+    top_queries_per_url = int(os.environ.get("GSC_TOP_QUERIES_PER_URL", "20"))
 
     print(f"[INFO] Bắt đầu quét đa phân trang (Tối đa {max_rows:,} dòng, {batch_size:,} dòng/lần gọi)...")
 
@@ -133,8 +134,7 @@ def main():
             }
         url_stats[url]["total_clicks"] += clicks
         url_stats[url]["total_impressions"] += impressions
-        if len(url_stats[url]["top_queries"]) < 5:
-            url_stats[url]["top_queries"].append({"query": q, "clicks": clicks, "impressions": impressions, "position": round(position, 1)})
+        url_stats[url]["top_queries"].append({"query": q, "clicks": clicks, "impressions": impressions, "position": round(position, 1)})
 
         # Gom nhóm Query
         if q not in query_map:
@@ -189,13 +189,17 @@ def main():
         "total_cannibalized_queries": len(cannibalized_queries),
         "critical_count": sum(1 for c in cannibalized_queries if c["risk_level"] == "CRITICAL"),
         "moderate_count": sum(1 for c in cannibalized_queries if c["risk_level"] == "MODERATE"),
-        "top_cannibalized": cannibalized_queries[:500]
+        "top_cannibalized": cannibalized_queries
     }
     with open(matrix_file, "w", encoding="utf-8") as f:
         json.dump(report_data, f, ensure_ascii=False, indent=2)
 
     # B. File Danh mục Toàn bộ URLs đang sống và có traffic từ Google
     active_urls_file = os.path.join(output_dir, "gsc_live_active_urls.json")
+    for stats in url_stats.values():
+        stats["top_queries"].sort(key=lambda x: (x["clicks"], x["impressions"]), reverse=True)
+        stats["total_queries"] = len(stats["top_queries"])
+        stats["top_queries"] = stats["top_queries"][:top_queries_per_url]
     sorted_urls = sorted(url_stats.values(), key=lambda x: x["total_clicks"], reverse=True)
     with open(active_urls_file, "w", encoding="utf-8") as f:
         json.dump({
@@ -204,6 +208,24 @@ def main():
             "total_active_urls": len(sorted_urls),
             "urls": sorted_urls
         }, f, ensure_ascii=False, indent=2)
+
+    # D. Map đầy đủ Query -> các URL MoMo đang rank (SSOT cho "keyword đã có bài chưa")
+    # Format gọn: query -> [[url, clicks, impressions, position], ...] sắp theo clicks giảm dần
+    query_page_file = os.path.join(output_dir, "gsc_query_page_map.json")
+    with open(query_page_file, "w", encoding="utf-8") as f:
+        json.dump({
+            "generated_at": datetime.now().isoformat(),
+            "period": f"{start_date} -> {end_date}",
+            "total_rows": len(all_rows),
+            "truncated": len(all_rows) >= max_rows,
+            "total_queries": len(query_map),
+            "fields": ["url", "clicks", "impressions", "position"],
+            "queries": {
+                q: [[p["url"], p["clicks"], p["impressions"], p["position"]]
+                    for p in sorted(pages, key=lambda x: (x["clicks"], x["impressions"]), reverse=True)]
+                for q, pages in query_map.items()
+            },
+        }, f, ensure_ascii=False, separators=(",", ":"))
 
     # C. Cập nhật và làm giàu kho momo_live_urls.json
     sitemap_file = os.path.join(output_dir, "momo_live_urls.json")
@@ -214,8 +236,9 @@ def main():
                 existing_sitemap_urls = set(json.load(f).get("urls", []))
         except Exception:
             pass
+    existing_sitemap_urls = {u.split("#")[0] for u in existing_sitemap_urls}
 
-    merged_live_urls = sorted(list(existing_sitemap_urls.union(url_stats.keys())))
+    merged_live_urls = sorted(existing_sitemap_urls.union(u.split("#")[0] for u in url_stats))
     with open(sitemap_file, "w", encoding="utf-8") as f:
         json.dump({
             "generated_at": datetime.now().isoformat(),
@@ -230,6 +253,9 @@ def main():
     print(f"- Tổng số Query bị Cannibalization: {len(cannibalized_queries):,} (Critical: {report_data['critical_count']:,}, Moderate: {report_data['moderate_count']:,})")
     print(f"- Đã lưu Ma trận Cannibalization vào: {matrix_file}")
     print(f"- Đã lưu Danh sách Active URLs vào: {active_urls_file}")
+    print(f"- Đã lưu Query -> Page map ({len(query_map):,} queries) vào: {query_page_file}")
+    if len(all_rows) >= max_rows:
+        print(f"[WARN] Chạm trần GSC_MAX_ROWS={max_rows:,}, dữ liệu long-tail có thể bị thiếu. Tăng GSC_MAX_ROWS để quét đủ.")
     print(f"- Đã cập nhật SSOT Live URLs ({len(merged_live_urls):,} URLs) vào: {sitemap_file}")
 
 if __name__ == "__main__":
