@@ -18,7 +18,7 @@
 | Build UI/UX Viewcount Cho User Review | Thiết kế và hoàn thiện UI/UX hiển thị Viewcount cho từng User Review trong trang Film Detail | Hùng | Design | `In Progress` |
 | Nghiên Cứu Trang Community Post Review | Nghiên cứu và xây dựng cấu trúc trang Community hiển thị toàn bộ bài Post Review của user theo từng phim | Hiến | Hùng | `In Progress` |
 | Hoàn thiện Content Plan Đợt 1 | Xuất bản đợt bài viết đầu tiên cho cụm Diễn Viên và Film Detail đạt tiêu chuẩn E-E-A-T | Hoan | Hiến (định hướng) | `In Progress` |
-| Submit Sitemap Cinema lên GSC | Gửi sitemap mới lên Google Search Console và kiểm tra độ bao phủ lập chỉ mục URL | Hùng | Hoài Anh | `In Progress` |
+| Submit Sitemap Cinema lên GSC | Gửi sitemap mới lên Google Search Console và kiểm tra độ bao phủ lập chỉ mục URL | Hoài Anh | Hùng | `In Progress` |
 
 ---
 
@@ -44,7 +44,7 @@
 | Xây Dựng Trang Tra Cứu Mức Phạt | Xây dựng trang tra cứu mức phạt giao thông theo từ khóa, hành vi vi phạm và loại phương tiện | Hiến | Thuận | `In Progress` |
 | Triển Khai Phạt Nguội + Địa Điểm | Nghiên cứu và triển khai cụm trang Phạt Nguội kết hợp Địa Điểm (tỉnh thành, vị trí camera) mở rộng intent search địa phương | Hiến | Thuận | `In Progress` |
 | Tối ưu Liên Kết Trang Model Xe Vinfast | Đánh giá lưu lượng và bổ sung internal link từ trang Vinfast trỏ về các tiện ích đăng kiểm, trạm sạc | Thuận | Hoan | `In Progress` |
-| Giám sát Hoạt Động API Phạt Nguội Live | Kiểm tra tỷ lệ tra cứu thành công và độ ổn định của API CSGT trên Production sau khi khôi phục | Thuận | Hoài Anh | `In Progress` |
+| Giám sát Hoạt Động API Phạt Nguội Live | Kiểm tra tỷ lệ tra cứu thành công và độ ổn định của API CSGT trên Production sau khi khôi phục | Hoài Anh | Thuận | `In Progress` |
 
 ---
 
@@ -97,5 +97,15 @@
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
 | Bổ Sung Quiz Trong Bài Blog | Bổ sung component Quiz tương tác trong bài viết Blog, đặt vị trí hiển thị ngay bên trên phần Author | Thuận | Web Dev | `In Progress` |
+ 
+---
+ 
+### 4. Tìm Kiếm (/tim-kiem)
+- **Nhân sự phụ trách:** Hoài Anh, Duy
+ 
+| Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
+| :--- | :--- | :--- | :--- | :---: |
+| Quản Trị & Cập Nhật Knowledge Base Tìm Kiếm | Rà soát dữ liệu câu hỏi thường gặp và đồng bộ từ khóa mới vào Knowledge Base của trang /tim-kiem | Hoài Anh | Duy | `In Progress` |
+
 
 

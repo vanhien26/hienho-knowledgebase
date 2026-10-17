@@ -16,7 +16,7 @@
 | Phát triển Content Plan Cinema | Phát triển content plan từ Blog, Diễn Viên, Film Detail | Hoan | Hiến (định hướng) | `Done` |
 | Sản xuất Blog Cinema (100 bài) | Sản xuất và xuất bản 100 bài blog review/điện ảnh/phim chiếu rạp qua MoSpark GenAI Pipeline chuẩn SEO/GEO | Hoan | Hiến (định hướng) | `Done` |
 | Tối ưu Core Web Vitals (LCP) | Tối ưu CWV các trang trên MoSpark (LCP < 2.0s, ...) | Hùng | Web Dev | `Done` |
-| Build Sitemap cho Cinema | Xây dựng cấu trúc sitemap chuyên biệt cho toàn bộ trang Cinema | Hùng | Hoài Anh | `Done` |
+| Build Sitemap cho Cinema | Xây dựng cấu trúc sitemap chuyên biệt cho toàn bộ trang Cinema | Hoài Anh | Hùng | `Done` |
 | Thiết kế Mini Game Hidden Puzzle | Thiết kế Mini Game Tìm Hidden Puzzle và show mass trang Cinema | Hùng | Hoan | `Done` |
 | Migration Cụm Rạp qua MoSpark | Di chuyển các trang cụm rạp đối tác qua nền tảng MoSpark | Hùng | Web Dev | `Done` |
 
@@ -48,7 +48,7 @@
 | Go Live Hãng xe và Model Xe | Go Live trang Hãng xe và Model Xe (chủ yếu là Vinfast) | Thuận | Hoan | `Done` |
 | Triển Khai Trang Phong Thủy | Triển khai trang Phong Thủy theo đúng Prototype đã phê duyệt | Thuận | Design | `Done` |
 | Nghiên cứu API Database Garage | Nghiên cứu API cho Database Garage (Sử dụng API của Cell Team) | Thuận | Cell Team | `Done` |
-| Review & Khôi phục API Phạt Nguội | Review API Phạt Nguội và khôi phục trên Production | Thuận | Hoài Anh | `Done` |
+| Review & Khôi phục API Phạt Nguội | Review API Phạt Nguội và khôi phục trên Production | Hoài Anh | Thuận | `Done` |
 | Bổ Sung Author Vehicle Hub | Bổ sung Author cho các bài thuộc Vehicle Hub | Hoan | Thuận | `To Do` |
 
 ---
@@ -126,7 +126,7 @@
 
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
-| Xây dựng Knowledge Base Cho Tìm Kiếm | Xây dựng Knowledge Base để phản hồi chính xác kết quả tìm kiếm trên trang /tim-kiem | Duy | Hoài Anh | `Done` |
+| Xây dựng Knowledge Base Cho Tìm Kiếm | Xây dựng Knowledge Base để phản hồi chính xác kết quả tìm kiếm trên trang /tim-kiem | Hoài Anh | Duy | `Done` |
 
 ---
 

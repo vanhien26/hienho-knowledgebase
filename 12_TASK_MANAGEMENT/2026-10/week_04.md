@@ -16,7 +16,7 @@
 | :--- | :--- | :--- | :--- | :---: |
 | Nghiệm thu Content Plan Cinema | Đánh giá lưu lượng truy cập và thứ hạng tìm kiếm tự nhiên của các bài viết mới xuất bản | Hoan | Hiến (định hướng) | `To Do` |
 | Tổng kết CWV Toàn Cụm Cinema | Báo cáo chi tiết chỉ số LCP đạt mức xanh (< 2.0s) trên 100% trang thuộc phân hệ Cinema | Hùng | Web Dev | `To Do` |
-| Audit Độ Bao Phủ Sitemap Cinema | Đảm bảo 100% URLs trong sitemap Cinema trả về mã 200 OK và được Googlebot thu thập dữ liệu | Hùng | Hoài Anh | `To Do` |
+| Audit Độ Bao Phủ Sitemap Cinema | Đảm bảo 100% URLs trong sitemap Cinema trả về mã 200 OK và được Googlebot thu thập dữ liệu | Hoài Anh | Hùng | `To Do` |
 | Đánh giá Hiệu Quả Mini Game | Thống kê số lượt tham gia tìm mảnh ghép Hidden Puzzle và tỷ lệ click nhận voucher vé xem phim | Hùng | Hoan, Hải | `To Do` |
 
 ---
@@ -41,7 +41,7 @@
 | :--- | :--- | :--- | :--- | :---: |
 | Đánh Giá Hiệu Quả Trang Vinfast | Tổng kết lượt xem trang và thứ hạng SEO của cụm trang Hãng xe và Model xe Vinfast | Thuận | Hoan | `To Do` |
 | Kế Hoạch Đưa Database Garage Live | Hoàn thiện báo cáo nghiên cứu khả thi và lộ trình đưa Database Garage Cell Team vào sản phẩm | Thuận | Cell Team | `To Do` |
-| Giám Sát Tải API Phạt Nguội Cuối Tháng | Đảm bảo cổng tra cứu phạt nguội 0-CAPTCHA vận hành thông suốt khi lưu lượng tăng cao cuối tháng | Thuận | Hoài Anh | `To Do` |
+| Giám Sát Tải API Phạt Nguội Cuối Tháng | Đảm bảo cổng tra cứu phạt nguội 0-CAPTCHA vận hành thông suốt khi lưu lượng tăng cao cuối tháng | Hoài Anh | Thuận | `To Do` |
 
 ---
 
@@ -96,7 +96,7 @@
 
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
-| Audit Độ Phủ & Tỷ Lệ Tìm Kiếm Chính Xác | Đo lường tỷ lệ trả về kết quả 200 OK trên Knowledge Base và khảo sát phản hồi người dùng | Duy | Hoài Anh | `To Do` |
+| Audit Độ Phủ & Tỷ Lệ Tìm Kiếm Chính Xác | Đo lường tỷ lệ trả về kết quả 200 OK trên Knowledge Base và khảo sát phản hồi người dùng | Hoài Anh | Duy | `To Do` |
 
 ---
 

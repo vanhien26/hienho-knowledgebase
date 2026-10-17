@@ -106,7 +106,7 @@ Khối **MoMo Gợi Ý** tuyệt đối không sử dụng câu chữ tĩnh (Sta
 
 > [!NOTE] **Tài Liệu Đặc Tả Kỹ Thuật & Bộ Ma Trận Copy Catchy Đầy Đủ:**
 > Toàn bộ logic công thức, cơ chế Toggle Cà Khịa (Roast Mode), nút Lắc Quẻ Re-roll, mã nguồn TypeScript (`src/utils/aiProposalEngine.ts`) và mã Umami Tracking chuẩn hóa được tổng hợp độc lập tại:
-> 👉 **[momo-ai-proposal-engine-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD/momo-ai-proposal-engine-prd.md)** (hoặc link nội bộ Hub: [05_HUBS/financial/momo-ai-proposal-engine-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/financial/momo-ai-proposal-engine-prd.md)).
+> 👉 **[momo-ai-proposal-engine-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD/momo-ai-proposal-engine-prd.md)**.
 
 
 #### Quy Chuẩn Đề Xuất Trợ Lý MoMo AI Cho Utility Tính Lãi Tiết Kiệm (Công Thức Bù Đắp Chênh Lệch Lãi Ròng - Net Yield Gap):
