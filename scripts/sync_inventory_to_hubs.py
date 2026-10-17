@@ -27,9 +27,60 @@ from scripts.lib.keyword_intelligence import (
     MultiSignalIntentClassifier,
     SemanticDomainFilter,
     SERPCannibalizationShield,
+    MoMoDomainSERPShield,
     InternalLinkingTopologyEngine,
     GEODirectAnswerGenerator
 )
+
+MERGE_MAP = {
+    'vang': 'gia-vang'
+}
+
+SECTOR_SPECIFIC_RULES = {
+    'Financial': [
+        ('Tỷ giá & Ngoại tệ', ['tỷ giá', 'ty gia', 'đô la', 'usd', 'ngoại tệ', 'ngoai te', 'euro', 'dxy', 'vnd', 'chuyển đổi']),
+        ('Giá vàng & Kim loại quý', ['giá vàng', 'gia vang', 'vàng sjc', 'vàng 9999', 'nhẫn trơn', 'vàng miếng', 'vàng tây']),
+        ('Lãi suất & Tiền gửi', ['lãi suất', 'lai suat', 'tiết kiệm', 'tiet kiem', 'gửi tiền', 'gui tien', 'kỳ hạn', 'ky han', 'rút tiền']),
+        ('Vay vốn & Tín chấp', ['vay', 'vay vốn', 'vay von', 'vay tiền', 'vay tien', 'tín chấp', 'tin chap', 'thế chấp', 'the chap', 'trả góp', 'tra gop', 'hạn mức']),
+        ('Thẻ & Tài khoản', ['thẻ', 'the atm', 'thẻ tín dụng', 'the tin dung', 'mở thẻ', 'mo the', 'tài khoản', 'tai khoan', 'số tài khoản', 'phát hành thẻ']),
+        ('Biểu phí & Thủ tục', ['phí', 'biểu phí', 'bieu phi', 'thủ tục', 'thu tuc', 'hồ sơ', 'ho so', 'điều kiện', 'dieu kien', 'hướng dẫn', 'huong dan', 'cách']),
+        ('Tra cứu & Chi nhánh', ['tra cứu', 'tra cuu', 'chi nhánh', 'chi nhanh', 'phòng giao dịch', 'tổng đài', 'tong dai', 'hotline', 'địa chỉ', 'dia chi', 'swift']),
+    ],
+    'vehicle-hub': [
+        ('Phạt nguội & Luật giao thông', ['phạt nguội', 'phat nguoi', 'lỗi vi phạm', 'mức phạt', 'nghị định', 'trừ điểm', 'bằng lái', 'giấy phép', 'camera']),
+        ('Bảo dưỡng & Nuôi xe', ['bảo dưỡng', 'bao duong', 'thay nhớt', 'chi phí', 'nuôi xe', 'xăng dầu', 'giá xăng', 'tiêu hao', 'đăng kiểm', 'sang tên']),
+        ('Gara & Cứu hộ', ['gara', 'garage', 'cứu hộ', 'cuu ho', 'sửa xe', 'sua xe', 'rửa xe', 'rua xe', 'vá lốp', 'kéo xe']),
+        ('Định giá & Mua bán xe', ['giá xe', 'gia xe', 'định giá', 'dinh gia', 'lăn bánh', 'lan banh', 'mua xe', 'bán xe', 'trả góp xe']),
+    ],
+    'insurtech': [
+        ('Bảo hiểm & Quyền lợi', ['bảo hiểm', 'bao hiem', 'bắt buộc', 'tự nguyện', 'vật chất', 'tnds', 'bồi thường', 'quyền lợi', 'phí bảo hiểm', 'bhxh', 'bhyt']),
+        ('Thủ tục & Quyền lợi', ['bồi thường', 'boi thuong', 'thủ tục', 'hồ sơ', 'chi trả', 'khiếu nại']),
+    ],
+    'Lottery': [
+        ('Kết quả xổ số', ['kết quả', 'ket qua', 'xsmb', 'xsmn', 'xsmt', 'trực tiếp', 'truc tiep', 'kqsx', 'sxmb', 'sxmn', 'sxmt']),
+        ('Thống kê & Soi cầu', ['thống kê', 'thong ke', 'soi cầu', 'soi cau', 'lô gan', 'chu kỳ', 'tần suất', 'đầu đuôi', 'bạch thủ']),
+        ('Cơ cấu & Đổi thưởng', ['giải thưởng', 'giai thuong', 'trúng thưởng', 'đổi vé', 'lãnh thưởng', 'thời hạn']),
+    ],
+    'PS': [
+        ('Lịch chiếu & Suất chiếu', ['lịch chiếu', 'lich chieu', 'suất chiếu', 'suat chieu', 'gio chieu', 'chiếu rạp', 'phim chiếu']),
+        ('Giá vé & Khuyến mãi', ['giá vé', 'gia ve', 'vé rẻ', 've re', 'khuyến mãi', 'khuyen mai', 'ưu đãi', 'voucher', 'combo', 'giảm giá']),
+        ('Cụm rạp & Đặt vé', ['rạp', 'cgv', 'lotte', 'bhd', 'galaxy', 'cinestar', 'đặt vé', 'dat ve']),
+        ('Review & Đánh giá phim', ['review', 'đánh giá', 'danh gia', 'nội dung', 'diễn viên', 'trailer', 'phim hay', 'top phim']),
+    ],
+    'hospital': [
+        ('Đặt khám & Bác sĩ', ['đặt khám', 'dat kham', 'bác sĩ', 'bac si', 'bệnh viện', 'benh vien', 'phòng khám', 'chuyên khoa']),
+        ('Chỉ số & Sức khỏe', ['bmi', 'calo', 'cân nặng', 'chiều cao', 'dinh dưỡng', 'sức khỏe']),
+    ],
+    'ota': [
+        ('Đặt phòng & Resort', ['khách sạn', 'khach san', 'resort', 'homestay', 'đặt phòng', 'dat phong', 'villa']),
+        ('Vé máy bay & Di chuyển', ['vé máy bay', 've may bay', 'chuyến bay', 'vé tàu', 'vé xe', 'xe khách', 'cáp treo']),
+        ('Tour & Điểm đến', ['tour', 'du lịch', 'du lich', 'hành trình', 'lịch trình', 'visa', 'điểm đến']),
+    ],
+    'telco': [
+        ('Gói cước & Data 4G/5G', ['data', '4g', '5g', '3g', 'gói cước', 'goi cuoc', 'nạp data', 'dung lượng']),
+        ('SIM & Tài khoản', ['sim', 'sim số', 'chính chủ', 'esim', 'tài khoản điện thoại', 'nạp thẻ']),
+    ]
+}
 
 # Đầu ra dữ liệu
 LOCAL_DATA_DIR = os.path.join(BASE_DIR, "07_REPORTS", "data")
@@ -112,38 +163,41 @@ def classify_quadrant(volume, competition, intent):
     else:
         return 'Long-tail / Supporting'
 
-def build_adaptive_clusters(canonical_clusters, top_n_clusters=5):
+def build_adaptive_clusters(canonical_clusters, sector=None, top_n_clusters=5):
     """
-    Gom cụm các Canonical Leaders theo các nhóm thực thể chủ đạo
+    Gom cụm các Canonical Leaders theo các nhóm thực thể chủ đạo chuẩn ngữ nghĩa phân tách theo Sector
     """
-    token_counter = Counter()
-    for item in canonical_clusters:
-        tokens = [t for t in item['keyword'].split() if len(t) > 2 and t not in STOPWORDS]
-        for t in tokens:
-            token_counter[t] += item['total_cluster_volume']
-            
-    top_tokens = [tok for tok, _ in token_counter.most_common(12)]
     clusters = defaultdict(list)
-    unassigned = []
-    
+    rules = SECTOR_SPECIFIC_RULES.get(sector, [])
+
     for item in canonical_clusters:
+        kw = item['keyword'].lower()
         matched = False
-        for tok in top_tokens:
-            if tok in item['keyword']:
-                clusters[tok.capitalize()].append(item)
+        for topic_name, triggers in rules:
+            if any(tr in kw for tr in triggers):
+                clusters[topic_name].append(item)
                 matched = True
                 break
         if not matched:
-            unassigned.append(item)
-            
+            intent = item['intent']
+            intent_fallback_names = {
+                'Tool/Calculator': 'Công cụ & Tra cứu trực tuyến',
+                'Commercial': 'So sánh & Đánh giá giải pháp',
+                'Transactional': 'Đăng ký & Giao dịch trực tuyến',
+                'Informational': 'Cẩm nang & Hướng dẫn chi tiết',
+                'Navigational': 'Cổng dịch vụ & Liên hệ'
+            }
+            fb_name = intent_fallback_names.get(intent, 'Chủ đề liên quan')
+            clusters[fb_name].append(item)
+
     result_clusters = []
     sorted_clusters = sorted(clusters.items(), key=lambda x: sum(k['total_cluster_volume'] for k in x[1]), reverse=True)
-    
+
     for cluster_name, items in sorted_clusters[:top_n_clusters]:
         tot_vol = sum(k['total_cluster_volume'] for k in items)
-        top_kws = sorted(items, key=lambda x: (x['opportunity_score'], x['volume']), reverse=True)[:3]
+        top_kws = sorted(items, key=lambda x: (x['opportunity_score'], x['volume']), reverse=True)[:5]
         result_clusters.append({
-            'cluster_name': f"Nhóm {cluster_name}",
+            'cluster_name': cluster_name,
             'count': len(items),
             'total_volume': tot_vol,
             'top_keywords': [
@@ -157,85 +211,102 @@ def build_adaptive_clusters(canonical_clusters, top_n_clusters=5):
                 } for k in top_kws
             ]
         })
-        
+
     return result_clusters
 
-def process_single_csv(csv_path, sector):
-    usecase_slug = os.path.splitext(os.path.basename(csv_path))[0]
+def process_csv_paths(csv_paths, sector, canonical_slug):
+    usecase_slug = canonical_slug
     usecase_name = usecase_slug.replace('-', ' ').replace('_', ' ').title()
     
-    raw_keywords = []
+    raw_keywords_map = {}
     outliers_filtered = 0
-    
-    with open(csv_path, 'r', encoding='utf-8-sig', errors='replace') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            kw_raw = row.get('Keyword', '')
-            if not kw_raw:
-                continue
-            kw = normalize_text(clean_val(kw_raw))
-            
-            # 1. Dynamic Domain Outlier Filtering (Lỗ hổng 1)
-            is_out, _ = SemanticDomainFilter.is_outlier(kw, sector, usecase_slug)
-            if is_out:
-                outliers_filtered += 1
-                continue
-                
-            try:
-                vol = int(clean_val(row.get('Volume', '0')) or 0)
-            except ValueError:
-                vol = 0
-            try:
-                cpc = float(clean_val(row.get('CPC', '0')) or 0.0)
-            except ValueError:
-                cpc = 0.0
-            comp = clean_val(row.get('PPC Competition', 'Low'))
-            
-            # 2. Multi-Signal Weighted Intent Classifier (Lỗ hổng 1)
-            intent_res = MultiSignalIntentClassifier.classify(kw)
-            intent = intent_res['intent']
-            opp_score = calculate_opportunity_score(vol, cpc, comp, intent)
-            quadrant = classify_quadrant(vol, comp, intent)
-            
-            raw_keywords.append({
-                'keyword': kw,
-                'volume': vol,
-                'cpc': cpc,
-                'competition': comp,
-                'intent': intent,
-                'intent_confidence': intent_res['confidence'],
-                'opportunity_score': opp_score,
-                'quadrant': quadrant
-            })
-            
+    total_raw_rows = 0
+
+    for csv_path in csv_paths:
+        with open(csv_path, 'r', encoding='utf-8-sig', errors='replace') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                total_raw_rows += 1
+                kw_raw = row.get('Keyword', '')
+                if not kw_raw:
+                    continue
+                kw = normalize_text(clean_val(kw_raw))
+                if kw in raw_keywords_map:
+                    continue
+
+                # 1. Dynamic Domain Outlier Filtering
+                is_out, _ = SemanticDomainFilter.is_outlier(kw, sector, usecase_slug)
+                if is_out:
+                    outliers_filtered += 1
+                    continue
+
+                try:
+                    vol = int(clean_val(row.get('Volume', '0')) or 0)
+                except ValueError:
+                    vol = 0
+                try:
+                    cpc = float(clean_val(row.get('CPC', '0')) or 0.0)
+                except ValueError:
+                    cpc = 0.0
+                comp = clean_val(row.get('PPC Competition', 'Low'))
+
+                # 2. Multi-Signal Weighted Intent Classifier
+                intent_res = MultiSignalIntentClassifier.classify(kw)
+                intent = intent_res['intent']
+                opp_score = calculate_opportunity_score(vol, cpc, comp, intent)
+                quadrant = classify_quadrant(vol, comp, intent)
+
+                raw_keywords_map[kw] = {
+                    'keyword': kw,
+                    'volume': vol,
+                    'cpc': cpc,
+                    'competition': comp,
+                    'intent': intent,
+                    'intent_confidence': intent_res['confidence'],
+                    'opportunity_score': opp_score,
+                    'quadrant': quadrant
+                }
+
+    raw_keywords = list(raw_keywords_map.values())
     if not raw_keywords:
         return None
-        
-    # 3. SERP Intent Fingerprinting & Cannibalization Shield (Lỗ hổng 2)
+
+    # 3. SERP Intent Fingerprinting & Cannibalization Shield
     canonical_clusters, merge_log = SERPCannibalizationShield.cluster_and_shield(raw_keywords)
-    
+
     total_volume = sum(k['volume'] for k in raw_keywords)
-    
-    # Đếm số lượng theo Intent & Quadrant của các Canonical Topics
+
     intent_counts = Counter(k['intent'] for k in canonical_clusters)
     quadrant_counts = Counter(k['quadrant'] for k in canonical_clusters)
-    
+
     top_opportunities = sorted(canonical_clusters, key=lambda x: (x['opportunity_score'], x['volume']), reverse=True)[:10]
     pillar_item = sorted(canonical_clusters, key=lambda x: x['total_cluster_volume'], reverse=True)[0]
-    
-    sub_clusters = build_adaptive_clusters(canonical_clusters)
-    
+
+    sub_clusters = build_adaptive_clusters(canonical_clusters, sector=sector)
+
+    # 4. Domain SERP Cannibalization Shield
+    shield_eval = MoMoDomainSERPShield.evaluate_cannibalization_risk(pillar_item['keyword'], sector=sector, check_live_serp=False)
+    cannibalization_shield = {
+        'risk_level': shield_eval['risk_level'],
+        'verdict': shield_eval['verdict'],
+        'action': shield_eval['action'],
+        'serp_rank': shield_eval.get('serp_rank'),
+        'top_live_url': shield_eval.get('top_live_url'),
+        'rationale': shield_eval['rationale']
+    }
+
     return {
         'id': usecase_slug,
         'name': usecase_name,
         'sector': sector,
-        'file_name': os.path.basename(csv_path),
-        'total_raw_keywords': len(raw_keywords) + outliers_filtered,
+        'file_name': ", ".join([os.path.basename(p) for p in csv_paths]),
+        'total_raw_keywords': total_raw_rows,
         'clean_keywords_count': len(raw_keywords),
         'outliers_filtered_count': outliers_filtered,
         'canonical_topics_count': len(canonical_clusters),
         'cannibalization_merged_count': len(merge_log),
         'total_volume': total_volume,
+        'cannibalization_shield': cannibalization_shield,
         'pillar_keyword': {
             'keyword': pillar_item['keyword'],
             'volume': pillar_item['volume'],
@@ -279,14 +350,21 @@ def main():
     for s in sectors:
         s_dir = os.path.join(INVENTORY_DIR, s)
         csv_files = sorted(glob.glob(os.path.join(s_dir, '*.csv')))
+
+        slug_groups = defaultdict(list)
+        for fpath in csv_files:
+            slug = os.path.splitext(os.path.basename(fpath))[0]
+            canonical_slug = MERGE_MAP.get(slug, slug)
+            slug_groups[canonical_slug].append(fpath)
+
         s_usecases = []
         s_kws = 0
         s_vol = 0
         s_cannibalized = 0
         s_outliers = 0
         
-        for fpath in csv_files:
-            res = process_single_csv(fpath, s)
+        for canonical_slug, paths in slug_groups.items():
+            res = process_csv_paths(paths, s, canonical_slug)
             if res:
                 s_usecases.append(res)
                 all_usecases.append(res)

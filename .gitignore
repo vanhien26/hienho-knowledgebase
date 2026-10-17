@@ -14,3 +14,9 @@ Thumbs.db
 *.log
 .claude/
 scratch/
+__pycache__/
+*.pyc
+
+# Secrets & Credentials
+*credentials*.json
+*secret*.json

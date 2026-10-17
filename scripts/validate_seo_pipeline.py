@@ -155,6 +155,32 @@ class PipelineValidator:
         else:
             self.log("WARN", "Content Plans Index", "Chưa tìm thấy tệp mục lục INDEX.md tại 06_USE_CASE_MOMO/content-plans/")
 
+        # Tầng 6: Kiểm thử MoMo Domain SERP & Sitemap Shield SSOT
+        live_urls_json = os.path.join(BASE_DIR, "07_REPORTS", "data", "momo_live_urls.json")
+        if os.path.exists(live_urls_json):
+            with open(live_urls_json, 'r', encoding='utf-8') as f:
+                urls_data = json.load(f)
+            url_count = len(urls_data.get('urls', []))
+            if url_count >= 1400:
+                self.log("PASS", "MoMo Live URLs SSOT", f"Kho dữ liệu momo_live_urls.json chứa {url_count:,} URLs thực tế từ sitemap.")
+            else:
+                self.log("WARN", "MoMo Live URLs SSOT", f"Số lượng URLs momo thấp hơn dự kiến: {url_count}")
+        else:
+            self.log("FAIL", "MoMo Live URLs SSOT", "Không tìm thấy file momo_live_urls.json tại 07_REPORTS/data/")
+
+        # Kiểm thử logic phân giải rủi ro tự ăn thịt từ khóa
+        try:
+            sys.path.append(os.path.join(BASE_DIR, "scripts", "lib"))
+            from keyword_intelligence import MoMoDomainSERPShield
+            r_exist = MoMoDomainSERPShield.evaluate_cannibalization_risk('tiết kiệm online', check_live_serp=False)
+            r_new = MoMoDomainSERPShield.evaluate_cannibalization_risk('kinh nghiệm nuôi cá rồng', check_live_serp=False)
+            if r_exist.get('action') in ['UPDATE_OR_REDIRECT', 'PROTECT_AND_LINK'] and r_new.get('action') == 'ALLOCATE_NEW':
+                self.log("PASS", "Domain Cannibalization Shield", "Phân loại chuẩn xác: Chặn tạo mới với URL đã có ('tiết kiệm online') và Cấp phép với từ khóa sạch ('nuôi cá rồng').")
+            else:
+                self.log("FAIL", "Domain Cannibalization Shield", f"Logic nhận diện lỗi: {r_exist.get('action')} / {r_new.get('action')}")
+        except Exception as e:
+            self.log("FAIL", "Domain Cannibalization Shield", f"Lỗi khởi chạy module: {e}")
+
         # Tổng kết
         print("\n" + "="*55)
         print(f"KẾT QUẢ KIỂM THỬ: {self.passes} PASS | {self.warnings} WARN | {self.fails} FAIL")

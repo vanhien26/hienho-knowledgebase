@@ -6,9 +6,25 @@ Giải quyết 2 lỗ hổng cốt lõi:
 2. SERP Intent Fingerprinting & Anti-Cannibalization Shield (Triệt tiêu xung đột từ khóa cùng Intent).
 """
 
+import os
 import re
+import json
 import math
+import ssl
+import urllib.request
+import urllib.parse
 from collections import defaultdict, Counter
+
+try:
+    import lxml.html
+    HAS_LXML = True
+except ImportError:
+    HAS_LXML = False
+
+# Bỏ qua kiểm tra chứng chỉ SSL cho môi trường cào dữ liệu
+ssl_ctx = ssl.create_default_context()
+ssl_ctx.check_hostname = False
+ssl_ctx.verify_mode = ssl.CERT_NONE
 
 # Từ điển chuẩn hóa thực thể đồng nghĩa & viết tắt (Synonyms & Entities Dictionary)
 SYNONYM_MAP = {
@@ -350,6 +366,277 @@ class SERPCannibalizationShield:
             c.pop('_tokens', None)
 
         return canonical_clusters, merge_log
+
+
+class MoMoDomainSERPShield:
+    """
+    Cơ chế đối soát Domain SERP Cannibalization trực tiếp trên Google / Search Engine & MoMo Live Inventory:
+    Kiểm tra xem tên miền momo.vn đã có bài viết/URL nào đang xếp hạng hoặc đã index cho Intent/Keyword này chưa.
+
+    Ma trận Rủi ro 4 Cấp độ (Domain SERP Cannibalization Matrix):
+    1. CRITICAL (Top 1-3 SERP): MoMo đã sở hữu thứ hạng tuyệt đối.
+       -> Khuyến nghị: PROTECT_AND_LINK (Không tạo URL mới. Tránh tự ăn thịt PageRank).
+    2. MODERATE (Top 4-20 SERP - Striking Distance): MoMo đã có URL xếp hạng tiềm năng.
+       -> Khuyến nghị: REFRESH_EXISTING_URL (Không tạo URL mới. Tối ưu On-page URL cũ để đẩy vào Top 3).
+    3. LOW (Không có trong Top 20 SERP, nhưng momo.vn đã có URL live / indexed phù hợp):
+       -> Khuyến nghị: CONSOLIDATE_OR_EXPAND (Cập nhật hoặc gộp thực thể vào trang cũ thay vì tạo trang rời rạc).
+    4. ZERO (Không có trong Top 20 SERP và chưa từng xuất hiện trên momo.vn):
+       -> Khuyến nghị: SAFE_TO_ALLOCATE (Đèn xanh cấp phép phân bổ từ khóa tạo mới trên Web Platform).
+    """
+    USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'
+    _live_urls_cache = None
+    _gsc_matrix_cache = None
+
+    @classmethod
+    def _get_gsc_matrix(cls) -> dict:
+        if cls._gsc_matrix_cache is not None:
+            return cls._gsc_matrix_cache
+        matrix_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "07_REPORTS", "data", "gsc_cannibalization_matrix.json"))
+        if os.path.exists(matrix_path):
+            try:
+                with open(matrix_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    cls._gsc_matrix_cache = {item['query'].lower().strip(): item for item in data.get('top_cannibalized', [])}
+                    return cls._gsc_matrix_cache
+            except Exception:
+                pass
+        cls._gsc_matrix_cache = {}
+        return cls._gsc_matrix_cache
+
+    @classmethod
+    def _get_live_urls(cls) -> list:
+        if cls._live_urls_cache is not None:
+            return cls._live_urls_cache
+        
+        # Thử nạp từ file SSOT nội bộ
+        json_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "07_REPORTS", "data", "momo_live_urls.json"))
+        if os.path.exists(json_path):
+            try:
+                with open(json_path, 'r', encoding='utf-8') as f:
+                    cls._live_urls_cache = json.load(f).get('urls', [])
+                    return cls._live_urls_cache
+            except Exception:
+                pass
+        
+        cls._live_urls_cache = []
+        return cls._live_urls_cache
+
+    @staticmethod
+    def _remove_accents(text: str) -> str:
+        import unicodedata
+        text = unicodedata.normalize('NFD', text)
+        text = re.sub(r'[\u0300-\u036f]', '', text)
+        text = text.replace('đ', 'd').replace('Đ', 'D')
+        return text
+
+    @classmethod
+    def find_sitemap_matches(cls, query: str, sector: str = None, threshold: float = 0.6) -> list:
+        """Kiểm tra đối chiếu với toàn bộ URLs đã xuất bản chính thức trên momo.vn kèm lọc Cross-Sector"""
+        live_urls = cls._get_live_urls()
+        if not live_urls:
+            return []
+
+        clean_q = cls._remove_accents(query.lower()).strip()
+        q_slug = re.sub(r'[^a-z0-9]+', '-', clean_q).strip('-')
+        q_tokens = set([t for t in clean_q.split() if len(t) > 1 and t not in STOPWORDS])
+        if not q_tokens:
+            q_tokens = set(clean_q.split())
+
+        # Khớp chính xác slug theo ranh giới từ để tránh lỗi dính từ (ví dụ scotty-giai-cuu dính ty-gia)
+        slug_boundary_regex = re.compile(r'(^|[-/])' + re.escape(q_slug) + r'([-/]|$)')
+
+        # Danh sách chặn tiền tố chéo Sector để triệt tiêu việc Cinema blog ăn vào Tài chính / Xổ số
+        forbidden_prefixes = []
+        if sector == 'Financial':
+            forbidden_prefixes = ['/cinema/', '/xsmb', '/xsmn', '/xsmt', '/xo-so', '/ve-so', '/game-app', '/nap-the-game']
+        elif sector == 'vehicle-hub':
+            forbidden_prefixes = ['/cinema/', '/tai-chinh/', '/xsmb']
+        elif sector in ['Lottery', 'hospital', 'insurtech', 'telco', 'ota']:
+            forbidden_prefixes = ['/cinema/']
+
+        exact_matches = []
+        token_matches = []
+
+        for u in live_urls:
+            path = u.replace('https://www.momo.vn/', '').lower()
+
+            # Chặn chéo sector
+            if any(fb in u for fb in forbidden_prefixes):
+                continue
+
+            # 1. Khớp chính xác slug theo ranh giới từ
+            if slug_boundary_regex.search(path):
+                exact_matches.append(u)
+                continue
+
+            path_tokens = set(re.findall(r'[a-z0-9]+', path))
+            overlap = q_tokens.intersection(path_tokens)
+            if not overlap:
+                continue
+
+            coverage = len(overlap) / len(q_tokens)
+            jaccard = len(overlap) / len(q_tokens.union(path_tokens))
+
+            # Yêu cầu độ tương đồng Jaccard hợp lý để tránh bài viết dài ngẫu nhiên chứa 2 từ đơn
+            if coverage >= 0.65 and jaccard >= 0.20:
+                score = coverage * 10.0 + jaccard * 10.0
+                if sector == 'Financial' and ('tai-chinh' in path or 'ty-gia' in path or 'ngan-hang' in path):
+                    score += 5.0
+                token_matches.append((score, u))
+
+        if exact_matches:
+            return exact_matches[:3]
+        token_matches.sort(key=lambda x: x[0], reverse=True)
+        return [u for _, u in token_matches[:3]]
+
+    @classmethod
+    def check_live_serp_presence(cls, query: str, limit: int = 20) -> dict:
+        """Kiểm tra sự hiện diện của momo.vn trên bảng xếp hạng tìm kiếm tự nhiên (Organic SERP)"""
+        if not HAS_LXML:
+            return {'error': 'lxml is not available', 'momo_rankings': []}
+
+        headers = {
+            'User-Agent': cls.USER_AGENT,
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Language': 'vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7'
+        }
+        data = urllib.parse.urlencode({'q': query, 'kl': 'vn-vi'}).encode('utf-8')
+        req = urllib.request.Request('https://html.duckduckgo.com/html/', data=data, headers=headers)
+        
+        momo_rankings = []
+        try:
+            with urllib.request.urlopen(req, timeout=8, context=ssl_ctx) as resp:
+                html_text = resp.read().decode('utf-8', errors='ignore')
+                tree = lxml.html.fromstring(html_text)
+                rank = 0
+                for r in tree.xpath('//div[contains(@class, "result__body")]'):
+                    a = r.xpath('.//a[contains(@class, "result__url")]')
+                    title_el = r.xpath('.//h2[contains(@class, "result__title")]//a')
+                    snippet_el = r.xpath('.//a[contains(@class, "result__snippet")]')
+                    if a and title_el:
+                        rank += 1
+                        raw_url = a[0].get('href', '').strip()
+                        if '/l/?kh=-1&uddg=' in raw_url:
+                            parsed = urllib.parse.parse_qs(urllib.parse.urlparse(raw_url).query).get('uddg')
+                            if parsed:
+                                raw_url = parsed[0]
+                        domain = urllib.parse.urlparse(raw_url).netloc.lower()
+                        if 'momo.vn' in domain:
+                            title = title_el[0].text_content().strip()
+                            snippet = snippet_el[0].text_content().strip() if snippet_el else ""
+                            momo_rankings.append({
+                                'rank': rank,
+                                'url': raw_url,
+                                'title': title,
+                                'snippet': snippet
+                            })
+                    if rank >= limit:
+                        break
+        except Exception as e:
+            return {'error': str(e), 'momo_rankings': []}
+            
+        return {'momo_rankings': momo_rankings}
+
+    @classmethod
+    def evaluate_cannibalization_risk(cls, query: str, sector: str = None, check_live_serp: bool = True) -> dict:
+        """Đánh giá toàn diện rủi ro Domain Cannibalization và trả về Ma trận Quyết định chuẩn xác"""
+        # 1. Đối soát trước với dữ liệu thực tế từ Google Search Console (GSC Ground Truth)
+        clean_q_key = query.lower().strip()
+        gsc_match = cls._get_gsc_matrix().get(clean_q_key)
+        if gsc_match:
+            pages = gsc_match.get('competing_pages', [])
+            # Lọc bỏ pages cross-sector bị rác nếu có
+            if sector == 'Financial':
+                pages = [p for p in pages if '/cinema/' not in p['url']]
+            top_p = pages[0] if pages else None
+            top_url = top_p['url'] if top_p else None
+            best_rank = int(round(top_p['position'])) if top_p and top_p.get('position') else None
+            risk_level = gsc_match.get('risk_level', 'CRITICAL')
+            action = gsc_match.get('recommended_action', 'CANONICAL_OR_301_CONSOLIDATE')
+            verdict = "BLOCK_NEW_URL" if risk_level == "CRITICAL" else "CONSOLIDATE"
+            rationale = (
+                f"Google Search Console xác nhận {len(pages)} URLs của momo.vn đang cạnh tranh trực tiếp truy vấn này "
+                f"({gsc_match.get('total_impressions', 0):,} impressions, {gsc_match.get('total_clicks', 0):,} clicks). "
+                f"URL nhận nhiều click nhất: {top_url} (Top ~{best_rank}). "
+                f"Hành động tối ưu: Hợp nhất (Consolidate) nội dung hoặc cắm Canonical về URL chính để tránh tự ăn thịt thứ hạng."
+            )
+            return {
+                'query': query,
+                'risk_level': risk_level,
+                'verdict': verdict,
+                'action': action,
+                'serp_rank': best_rank,
+                'ranking_url': top_url,
+                'ranking_title': None,
+                'sitemap_matches': [p['url'] for p in pages],
+                'top_live_url': top_url,
+                'rationale': rationale,
+                'competing_pages': pages,
+                'live_rankings': []
+            }
+
+        momo_rankings = []
+        if check_live_serp:
+            serp_res = cls.check_live_serp_presence(query, limit=20)
+            momo_rankings = serp_res.get('momo_rankings', [])
+        
+        best_rank = momo_rankings[0]['rank'] if momo_rankings else None
+        top_url = momo_rankings[0]['url'] if momo_rankings else None
+        top_title = momo_rankings[0]['title'] if momo_rankings else None
+
+        # Đối soát với Sitemap SSOT nội bộ có phân rã sector
+        sitemap_hits = cls.find_sitemap_matches(query, sector=sector)
+
+        # Phân loại theo Ma trận
+        if best_rank is not None and best_rank <= 3:
+            risk_level = "CRITICAL"
+            verdict = "BLOCK_NEW_URL"
+            action = "PROTECT_AND_LINK"
+            rationale = (
+                f"Tên miền momo.vn đang giữ vị trí Top {best_rank} ({top_url}) trên SERP. "
+                f"Tuyệt đối KHÔNG tạo URL mới vì sẽ gây hiện tượng tự ăn thịt thứ hạng (Self-Cannibalization). "
+                f"Hành động tối ưu: Giữ URL hiện tại, cắm widget tra cứu/chuyển đổi và tối ưu internal link."
+            )
+        elif best_rank is not None and 4 <= best_rank <= 20:
+            risk_level = "MODERATE"
+            verdict = "BLOCK_NEW_URL"
+            action = "REFRESH_EXISTING_URL"
+            rationale = (
+                f"Tên miền momo.vn đã có URL xếp hạng Top {best_rank} ({top_url}) trong vùng Striking Distance (Top 4-20). "
+                f"Tuyệt đối KHÔNG tạo trang mới để cạnh tranh. "
+                f"Hành động tối ưu: Thực hiện Content Refresh & On-page Upgrade trên chính URL này để đưa bài viết vào Top 3."
+            )
+        elif sitemap_hits:
+            risk_level = "LOW"
+            verdict = "CONSOLIDATE"
+            action = "UPDATE_OR_REDIRECT"
+            first_idx = sitemap_hits[0]
+            rationale = (
+                f"momo.vn đã có URL chính thức xuất bản trên hệ thống: {first_idx}. "
+                f"Hành động tối ưu: Cập nhật nội dung hoặc bổ sung Sub-intent vào URL này, tránh tạo URL mới trùng lặp."
+            )
+        else:
+            risk_level = "ZERO"
+            verdict = "SAFE_TO_ALLOCATE"
+            action = "ALLOCATE_NEW"
+            rationale = (
+                f"Tên miền momo.vn chưa có bài viết nào trên SERP hoặc trong hệ thống cho chủ đề này. "
+                f"Đèn xanh (Green Light): Cho phép phân bổ từ khóa và tạo mới trang trên Web Platform."
+            )
+
+        return {
+            'query': query,
+            'risk_level': risk_level,
+            'verdict': verdict,
+            'action': action,
+            'serp_rank': best_rank,
+            'ranking_url': top_url,
+            'ranking_title': top_title,
+            'sitemap_matches': sitemap_hits,
+            'top_live_url': top_url or (sitemap_hits[0] if sitemap_hits else None),
+            'rationale': rationale,
+            'live_rankings': momo_rankings
+        }
 
 
 class StructuredSchemaGenerator:
