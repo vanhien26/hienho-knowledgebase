@@ -1,0 +1,19 @@
+{
+  "source": "bing_ai_performance",
+  "exported_at": "2026-10-17T17:16:39.173773+07:00",
+  "period": {
+    "start": "2026-04-17",
+    "end": "2026-10-15",
+    "days": 182
+  },
+  "totals": {
+    "citations": 615358,
+    "avg_cited_pages": 432.18
+  },
+  "missing_fields": [
+    "pages",
+    "queries"
+  ],
+  "queries": [],
+  "pages": []
+}

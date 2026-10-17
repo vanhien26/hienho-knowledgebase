@@ -18,5 +18,8 @@ __pycache__/
 *.pyc
 
 # Secrets & Credentials
+.env
+.env.*
+*.env
 *credentials*.json
 *secret*.json

@@ -1,0 +1,138 @@
+#!/usr/bin/env python3
+"""
+MASTER SYNCHRONIZATION PIPELINE - WEB PLATFORM (momo.vn)
+Tập hợp toàn bộ các luồng sync dữ liệu thành 1 lệnh điều phối duy nhất:
+1. Web Performance Tracking (Excel MTD, Target vs Actual, Hubs Sync)
+2. Microsoft Clarity Data Export (Traffic, Kênh AiPlatform, AI Sessions, 5 Frustration metrics)
+3. Google Trends Validation (Rolling top themes, Geo-intent, Rising queries)
+4. Bing AI Performance Ingest (Copilot citations)
+5. Inventory & Clusters Sync to Web Hubs (react-web-momo)
+"""
+
+import os
+import sys
+import subprocess
+import argparse
+import time
+from datetime import datetime
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parents[1]
+SCRIPTS_DIR = BASE_DIR / "scripts"
+
+def run_step(step_name, command_args, continue_on_error=True):
+    """Thực thi 1 bước đồng bộ với logging rõ ràng."""
+    print(f"\n{'='*70}")
+    print(f"▶ [SYNC STEP] {step_name.upper()}")
+    print(f"{'='*70}")
+    start_time = time.time()
+    
+    cmd = [sys.executable] + command_args
+    try:
+        res = subprocess.run(cmd, cwd=str(BASE_DIR), capture_output=False, text=True)
+        elapsed = time.time() - start_time
+        if res.returncode == 0:
+            print(f"✓ [{step_name}] Hoàn thành thành công ({elapsed:.1f}s)")
+            return True, elapsed
+        else:
+            print(f"✗ [{step_name}] Thất bại với exit code {res.returncode} ({elapsed:.1f}s)")
+            if not continue_on_error:
+                sys.exit(res.returncode)
+            return False, elapsed
+    except Exception as e:
+        elapsed = time.time() - start_time
+        print(f"✗ [{step_name}] Lỗi ngoại lệ: {e} ({elapsed:.1f}s)")
+        if not continue_on_error:
+            sys.exit(1)
+        return False, elapsed
+
+def main():
+    parser = argparse.ArgumentParser(description="Master Data & API Sync Runner for MoMo Web Platform")
+    parser.add_argument("--skip-clarity", action="store_true", help="Bỏ qua kéo dữ liệu Microsoft Clarity")
+    parser.add_argument("--reprocess-clarity", action="store_true", help="Chỉ reprocess Clarity từ raw data có sẵn (tiết kiệm quota)")
+    parser.add_argument("--skip-tracking", action="store_true", help="Bỏ qua sync Web Performance Tracking")
+    parser.add_argument("--skip-trends", action="store_true", help="Bỏ qua Google Trends validation")
+    parser.add_argument("--skip-hubs", action="store_true", help="Bỏ qua sync sang Web Hubs (react-web-momo)")
+    args = parser.parse_args()
+
+    overall_start = time.time()
+    results = {}
+
+    print("\n" + "#"*70)
+    print(f"# KHỞI CHẠY TỔNG ĐỒNG BỘ NỀN TẢNG WEB PLATFORM (MASTER SYNC)")
+    print(f"# Thời gian: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print("#"*70)
+
+    # 1. Luồng Web Performance Tracking
+    if not args.skip_tracking:
+        tracking_script = SCRIPTS_DIR / "sync_tracking_report.py"
+        if tracking_script.exists():
+            success, elapsed = run_step("Web Performance Tracking MTD", [str(tracking_script)])
+            results["Web Tracking (MTD)"] = ("SUCCESS" if success else "FAILED", elapsed)
+        else:
+            results["Web Tracking (MTD)"] = ("SKIPPED (File not found)", 0)
+    else:
+        results["Web Tracking (MTD)"] = ("SKIPPED (User flag)", 0)
+
+    # 2. Luồng Microsoft Clarity Data Export API
+    if not args.skip_clarity:
+        clarity_script = SCRIPTS_DIR / "fetch_clarity.py"
+        if clarity_script.exists():
+            clarity_args = [str(clarity_script)]
+            if args.reprocess_clarity:
+                clarity_args.append("--reprocess")
+            success, elapsed = run_step("Microsoft Clarity API (AI & Frustration)", clarity_args)
+            results["Clarity Data Export"] = ("SUCCESS" if success else "FAILED", elapsed)
+        else:
+            results["Clarity Data Export"] = ("SKIPPED (File not found)", 0)
+    else:
+        results["Clarity Data Export"] = ("SKIPPED (User flag)", 0)
+
+    # 3. Luồng Google Trends Validation (Top Financial Themes Rolling)
+    if not args.skip_trends:
+        trends_script = SCRIPTS_DIR / "cron_google_trends_validation.py"
+        if trends_script.exists():
+            # Chạy rolling an toàn cho 5 themes tài chính trụ cột
+            success, elapsed = run_step("Google Trends Demand Validation", [
+                str(trends_script),
+                "--sector", "Financial",
+                "--themes", "gia-vang,ty-gia,vay-tin-chap,vi-tra-sau,gui-tiet-kiem",
+                "--kws-per-theme", "2"
+            ])
+            results["Google Trends Validation"] = ("SUCCESS" if success else "FAILED", elapsed)
+        else:
+            results["Google Trends Validation"] = ("SKIPPED (File not found)", 0)
+    else:
+        results["Google Trends Validation"] = ("SKIPPED (User flag)", 0)
+
+    # 4. Luồng Bing Webmaster / Copilot AI Ingest (Nếu có file export mới)
+    bing_script = SCRIPTS_DIR / "ingest_bing_ai.py"
+    if bing_script.exists():
+        success, elapsed = run_step("Bing AI Copilot Performance Ingest", [str(bing_script)])
+        results["Bing Copilot Ingest"] = ("SUCCESS" if success else "FAILED", elapsed)
+
+    # 5. Luồng Sync Inventory & Clusters sang Web Hubs
+    if not args.skip_hubs:
+        hubs_script = SCRIPTS_DIR / "sync_inventory_to_hubs.py"
+        if hubs_script.exists():
+            success, elapsed = run_step("Sync Inventory & Clusters to Web Hubs", [str(hubs_script)])
+            results["Web Hubs Distribution"] = ("SUCCESS" if success else "FAILED", elapsed)
+        else:
+            results["Web Hubs Distribution"] = ("SKIPPED (File not found)", 0)
+    else:
+        results["Web Hubs Distribution"] = ("SKIPPED (User flag)", 0)
+
+    # Báo cáo tổng kết Master Sync
+    total_elapsed = time.time() - overall_start
+    print("\n" + "="*70)
+    print("BÁO CÁO TỔNG KẾT TIẾN TRÌNH MASTER SYNC HOÀN TẤT")
+    print("="*70)
+    print(f"Tổng thời gian thực thi: {total_elapsed:.1f} giây\n")
+    print(f"{'Luồng đồng bộ':<35} | {'Trạng thái':<15} | {'Thời gian'}")
+    print("-" * 70)
+    for name, (status, elap) in results.items():
+        print(f"{name:<35} | {status:<15} | {elap:.1f}s")
+    print("="*70 + "\n")
+
+if __name__ == "__main__":
+    main()

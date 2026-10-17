@@ -39,12 +39,15 @@ def main():
         target_dir = extra_args[0] if extra_args else str(ROOT_DIR)
         print(f"Processing markdown files in {target_dir}...")
         process_markdown_directory(target_dir, compress=True, remove_yaml=False)
+    elif command in ("sync", "sync-all"):
+        sys.exit(subprocess.call([sys.executable, str(ROOT_DIR / "scripts" / "sync_all_data.py")] + extra_args))
     elif command == "info":
         print(f"Web Platform Unified CLI Engine")
         print(f"Root Directory: {ROOT_DIR}")
         print(f"Active Tools:")
         for tool in TOOLS_DIR.glob("*.py"):
             print(f"  - {tool.name}")
+        print("  - sync / sync-all (Master Data & API Sync Runner)")
     else:
         print(f"Unknown command: {command}", file=sys.stderr)
         print("Available commands: report-html, report-pptx, md-process, info")

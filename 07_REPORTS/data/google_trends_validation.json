@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T16:39:20.281982",
+  "generated_at": "2026-10-17T21:50:33.990929",
   "sample_size": 20,
   "total_keywords_analyzed": 20,
   "has_trend_count": 17,
@@ -368,7 +368,7 @@
       "sector": "Financial",
       "theme": "gia-vang",
       "trend_data": {
-        "avg_interest": 38.924528301886795,
+        "avg_interest": 38.867924528301884,
         "max_interest": 100.0,
         "min_interest": 16.0,
         "has_trend": true,
@@ -497,7 +497,7 @@
         "top_regions": [
           {
             "region": "Hồ Chí Minh",
-            "interest": 18
+            "interest": 19
           },
           {
             "region": "Đà Nẵng",
@@ -583,7 +583,7 @@
           },
           {
             "query": "vay nhanh thaimarket",
-            "value": 24100
+            "value": 24150
           },
           {
             "query": "pt vay nhanh",
@@ -602,7 +602,7 @@
       "sector": "Financial",
       "theme": "vay-tin-chap",
       "trend_data": {
-        "avg_interest": 21.830188679245282,
+        "avg_interest": 21.81132075471698,
         "max_interest": 30.0,
         "min_interest": 14.0,
         "has_trend": true,
@@ -616,15 +616,15 @@
             "interest": 22
           },
           {
-            "region": "Bình Thuận",
-            "interest": 20
-          },
-          {
             "region": "Gia Lai",
             "interest": 19
           },
           {
             "region": "Yên Bái",
+            "interest": 19
+          },
+          {
+            "region": "Hậu Giang",
             "interest": 19
           }
         ],
@@ -637,22 +637,18 @@
       "sector": "Financial",
       "theme": "gui-tiet-kiem",
       "trend_data": {
-        "avg_interest": 46.35849056603774,
+        "avg_interest": 46.264150943396224,
         "max_interest": 81.0,
         "min_interest": 24.0,
         "has_trend": true,
         "top_regions": [
-          {
-            "region": "Bắc Kạn",
-            "interest": 100
-          },
           {
             "region": "Cao Bằng",
             "interest": 62
           },
           {
             "region": "Điện Biên",
-            "interest": 58
+            "interest": 59
           },
           {
             "region": "Lai Châu",
@@ -660,7 +656,11 @@
           },
           {
             "region": "Kon Tum",
-            "interest": 47
+            "interest": 48
+          },
+          {
+            "region": "Thái Bình",
+            "interest": 46
           }
         ],
         "related_queries": [
@@ -677,7 +677,7 @@
       "sector": "Financial",
       "theme": "gui-tiet-kiem",
       "trend_data": {
-        "avg_interest": 13.679245283018869,
+        "avg_interest": 13.641509433962264,
         "max_interest": 23.0,
         "min_interest": 7.0,
         "has_trend": true,
@@ -691,15 +691,15 @@
             "interest": 15
           },
           {
-            "region": "Phú Thọ",
-            "interest": 14
-          },
-          {
             "region": "Hải Dương",
             "interest": 14
           },
           {
             "region": "Hòa Bình",
+            "interest": 14
+          },
+          {
+            "region": "Hà Tĩnh",
             "interest": 14
           }
         ],
@@ -712,7 +712,7 @@
       "sector": "Financial",
       "theme": "vi-tra-sau",
       "trend_data": {
-        "avg_interest": 45.0188679245283,
+        "avg_interest": 45.075471698113205,
         "max_interest": 60.0,
         "min_interest": 25.0,
         "has_trend": true,
@@ -745,7 +745,7 @@
           },
           {
             "query": "cách đăng ký ví trả sau momo",
-            "value": 50
+            "value": 40
           }
         ]
       }
@@ -756,14 +756,14 @@
       "sector": "Financial",
       "theme": "vi-tra-sau",
       "trend_data": {
-        "avg_interest": 75.22641509433963,
+        "avg_interest": 75.0754716981132,
         "max_interest": 100.0,
         "min_interest": 40.0,
         "has_trend": true,
         "top_regions": [
           {
             "region": "Sóc Trăng",
-            "interest": 54
+            "interest": 53
           },
           {
             "region": "Lai Châu",
@@ -774,11 +774,11 @@
             "interest": 48
           },
           {
-            "region": "Hồ Chí Minh",
-            "interest": 46
+            "region": "Cần Thơ",
+            "interest": 47
           },
           {
-            "region": "Cần Thơ",
+            "region": "Hồ Chí Minh",
             "interest": 46
           }
         ],
