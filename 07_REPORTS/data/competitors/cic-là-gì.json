@@ -1,0 +1,1421 @@
+{
+  "query": "cic là gì",
+  "generated_at": "2026-10-18 12:24:34",
+  "domain_cannibalization_shield": {
+    "query": "cic là gì",
+    "risk_level": "LOW",
+    "verdict": "CONSOLIDATE",
+    "action": "UPDATE_OR_REDIRECT",
+    "serp_rank": null,
+    "ranking_url": null,
+    "ranking_title": null,
+    "sitemap_matches": [
+      "https://www.momo.vn/blog/cic-la-gi-tat-ca-nhung-gi-ban-can-biet-ve-ho-so-tin-dung-cic-c116dt2617"
+    ],
+    "top_live_url": "https://www.momo.vn/blog/cic-la-gi-tat-ca-nhung-gi-ban-can-biet-ve-ho-so-tin-dung-cic-c116dt2617",
+    "rationale": "momo.vn đã có URL chính thức xuất bản trên hệ thống: https://www.momo.vn/blog/cic-la-gi-tat-ca-nhung-gi-ban-can-biet-ve-ho-so-tin-dung-cic-c116dt2617. Hành động tối ưu: Cập nhật nội dung hoặc bổ sung Sub-intent vào URL này, tránh tạo URL mới trùng lặp.",
+    "live_rankings": []
+  },
+  "analysis": {
+    "query": "cic là gì",
+    "competitors_crawled": 5,
+    "avg_word_count": 2326,
+    "max_word_count": 10291,
+    "recommended_target_words": 11835,
+    "dominant_format": "Interactive Tool / Calculator",
+    "top_competitor_entities": [
+      "cic",
+      "tra",
+      "điểm",
+      "cách",
+      "nhân",
+      "kiểm",
+      "check",
+      "liên",
+      "quan",
+      "tin"
+    ],
+    "gaps_detected": [
+      "Chưa tối ưu Schema FAQPage để chiếm đoạt vị trí Rich Snippets trên kết quả tìm kiếm.",
+      "Thiếu cơ chế chuyển tiếp liền mạch sang ứng dụng tài chính / giao dịch tức thì (Web-to-App).",
+      "Thiếu bảng đối soát so sánh trực quan đa chiều giữa các phương án."
+    ],
+    "beating_outline": [
+      "## H2 1: Tổng quan & Định nghĩa chuẩn xác về cic là gì",
+      "## H2 2: Bảng so sánh chi tiết & Tiêu chí lựa chọn tối ưu nhất",
+      "## H2 3: Công cụ tính toán / Tra cứu trực tuyến trên Nền tảng Web MoMo (Vượt trội đối thủ)",
+      "### H3 3.1: Hướng dẫn các bước thao tác và tính toán kết quả theo thời gian thực",
+      "## H2 4: Hướng dẫn quy trình & Thủ tục thực hiện từng bước đơn giản",
+      "## H2 5: 5 Lưu ý quan trọng & Rủi ro thường gặp cần phòng tránh",
+      "## H2 6: Giải đáp thắc mắc thường gặp (FAQs chuẩn Schema)",
+      "## H2 7: Giải pháp liên kết và nhận quyền lợi tối đa qua Ứng dụng MoMo"
+    ],
+    "keyword_extraction": {
+      "engines": {
+        "yake": true,
+        "rake": true,
+        "semantic_rerank": true,
+        "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2"
+      },
+      "excluded_low_quality_pages": 2,
+      "table_stakes": [
+        {
+          "phrase": "cách thức kiểm tra cic cá nhân 3.1",
+          "coverage": 2,
+          "coverage_pct": 66.7,
+          "score": 6.273,
+          "is_question": true,
+          "variants": [
+            "cách thức kiểm tra cic cá nhân 3.1",
+            "cách thức kiểm tra cic cá nhân",
+            "phương thức kiểm tra cic cá nhân"
+          ]
+        },
+        {
+          "phrase": "trung tâm thông tin tín dụng quốc gia việt nam",
+          "coverage": 2,
+          "coverage_pct": 66.7,
+          "score": 5.495,
+          "is_question": false,
+          "variants": [
+            "trung tâm thông tin tín dụng quốc gia việt nam"
+          ]
+        },
+        {
+          "phrase": "kiểm tra hoạt động thông tin tín dụng",
+          "coverage": 2,
+          "coverage_pct": 66.7,
+          "score": 4.424,
+          "is_question": false,
+          "variants": [
+            "kiểm tra hoạt động thông tin tín dụng",
+            "quyền tự kiểm tra thông tin tín dụng"
+          ]
+        }
+      ],
+      "differentiators": [
+        {
+          "phrase": "xr 78 o 5 p",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 5.748,
+          "is_question": false,
+          "variants": [
+            "xr 78 o 5 p",
+            "xr 78 o 5 svg"
+          ]
+        },
+        {
+          "phrase": "ma 5 sfl table td",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 5.43,
+          "is_question": false,
+          "variants": [
+            "ma 5 sfl table td",
+            "ma 5 sfl table th"
+          ]
+        },
+        {
+          "phrase": "giáo viên trung học nghề hạng i",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 5.154,
+          "is_question": false,
+          "variants": [
+            "giáo viên trung học nghề hạng i",
+            "giáo viên trung học nghề hạng ii"
+          ]
+        },
+        {
+          "phrase": "đơn vị liên quan thuộc ngân hàng nhà nước",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 4.627,
+          "is_question": false,
+          "variants": [
+            "đơn vị liên quan thuộc ngân hàng nhà nước",
+            "ngân hàng nhà nước chi nhánh tỉnh"
+          ]
+        },
+        {
+          "phrase": "cic credit",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 4.237,
+          "is_question": false,
+          "variants": [
+            "cic credit",
+            "cic credit connect"
+          ]
+        },
+        {
+          "phrase": "tin pháp luật hành chính thuế",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 3.542,
+          "is_question": false,
+          "variants": [
+            "tin pháp luật hành chính thuế",
+            "wto biểu thuế"
+          ]
+        },
+        {
+          "phrase": "lâm nghiệp quốc phòng sở hữu trí tuệ tài chính",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 3.304,
+          "is_question": false,
+          "variants": [
+            "lâm nghiệp quốc phòng sở hữu trí tuệ tài chính"
+          ]
+        },
+        {
+          "phrase": "0938 36 1919 giải đáp pl",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 3.191,
+          "is_question": false,
+          "variants": [
+            "0938 36 1919 giải đáp pl"
+          ]
+        },
+        {
+          "phrase": "ô “ đăng ký ” phía",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 3.116,
+          "is_question": true,
+          "variants": [
+            "ô “ đăng ký ” phía"
+          ]
+        },
+        {
+          "phrase": "tiền lương lĩnh vực khác ngoại giao nông nghiệp",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.811,
+          "is_question": false,
+          "variants": [
+            "tiền lương lĩnh vực khác ngoại giao nông nghiệp"
+          ]
+        },
+        {
+          "phrase": "văn bản luật việt nam văn bản tiếng",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.729,
+          "is_question": false,
+          "variants": [
+            "văn bản luật việt nam văn bản tiếng"
+          ]
+        },
+        {
+          "phrase": "16 zs 0 q 3",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.637,
+          "is_question": false,
+          "variants": [
+            "16 zs 0 q 3"
+          ]
+        },
+        {
+          "phrase": "hàng tháng luật sư tư vấn hỏi đáp",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.609,
+          "is_question": false,
+          "variants": [
+            "hàng tháng luật sư tư vấn hỏi đáp"
+          ]
+        },
+        {
+          "phrase": "quá trình xét duyệt có thể mất 1",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.592,
+          "is_question": false,
+          "variants": [
+            "quá trình xét duyệt có thể mất 1"
+          ]
+        },
+        {
+          "phrase": "1 qoq 2 k 3",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.552,
+          "is_question": false,
+          "variants": [
+            "1 qoq 2 k 3"
+          ]
+        },
+        {
+          "phrase": "đơn vị trực thuộc tổ chức tín dụng",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.514,
+          "is_question": false,
+          "variants": [
+            "đơn vị trực thuộc tổ chức tín dụng"
+          ]
+        },
+        {
+          "phrase": "4 ihw 4 u svg",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.456,
+          "is_question": false,
+          "variants": [
+            "4 ihw 4 u svg"
+          ]
+        },
+        {
+          "phrase": "tóm tắt nhanh nội dung bài viết",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.377,
+          "is_question": false,
+          "variants": [
+            "tóm tắt nhanh nội dung bài viết"
+          ]
+        },
+        {
+          "phrase": "hoàn tất quá trình xác thực bước 5",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.376,
+          "is_question": false,
+          "variants": [
+            "hoàn tất quá trình xác thực bước 5"
+          ]
+        },
+        {
+          "phrase": "thực hiện hoạt động thông tin tín dụng",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.362,
+          "is_question": false,
+          "variants": [
+            "thực hiện hoạt động thông tin tín dụng"
+          ]
+        }
+      ],
+      "top_keyphrases": [
+        {
+          "phrase": "cách thức kiểm tra cic cá nhân 3.1",
+          "coverage": 2,
+          "coverage_pct": 66.7,
+          "score": 6.273,
+          "is_question": true,
+          "variants": [
+            "cách thức kiểm tra cic cá nhân 3.1",
+            "cách thức kiểm tra cic cá nhân",
+            "phương thức kiểm tra cic cá nhân"
+          ]
+        },
+        {
+          "phrase": "trung tâm thông tin tín dụng quốc gia việt nam",
+          "coverage": 2,
+          "coverage_pct": 66.7,
+          "score": 5.495,
+          "is_question": false,
+          "variants": [
+            "trung tâm thông tin tín dụng quốc gia việt nam"
+          ]
+        },
+        {
+          "phrase": "kiểm tra hoạt động thông tin tín dụng",
+          "coverage": 2,
+          "coverage_pct": 66.7,
+          "score": 4.424,
+          "is_question": false,
+          "variants": [
+            "kiểm tra hoạt động thông tin tín dụng",
+            "quyền tự kiểm tra thông tin tín dụng"
+          ]
+        },
+        {
+          "phrase": "xr 78 o 5 p",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 5.748,
+          "is_question": false,
+          "variants": [
+            "xr 78 o 5 p",
+            "xr 78 o 5 svg"
+          ]
+        },
+        {
+          "phrase": "ma 5 sfl table td",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 5.43,
+          "is_question": false,
+          "variants": [
+            "ma 5 sfl table td",
+            "ma 5 sfl table th"
+          ]
+        },
+        {
+          "phrase": "giáo viên trung học nghề hạng i",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 5.154,
+          "is_question": false,
+          "variants": [
+            "giáo viên trung học nghề hạng i",
+            "giáo viên trung học nghề hạng ii"
+          ]
+        },
+        {
+          "phrase": "đơn vị liên quan thuộc ngân hàng nhà nước",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 4.627,
+          "is_question": false,
+          "variants": [
+            "đơn vị liên quan thuộc ngân hàng nhà nước",
+            "ngân hàng nhà nước chi nhánh tỉnh"
+          ]
+        },
+        {
+          "phrase": "cic credit",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 4.237,
+          "is_question": false,
+          "variants": [
+            "cic credit",
+            "cic credit connect"
+          ]
+        },
+        {
+          "phrase": "tin pháp luật hành chính thuế",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 3.542,
+          "is_question": false,
+          "variants": [
+            "tin pháp luật hành chính thuế",
+            "wto biểu thuế"
+          ]
+        },
+        {
+          "phrase": "lâm nghiệp quốc phòng sở hữu trí tuệ tài chính",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 3.304,
+          "is_question": false,
+          "variants": [
+            "lâm nghiệp quốc phòng sở hữu trí tuệ tài chính"
+          ]
+        },
+        {
+          "phrase": "0938 36 1919 giải đáp pl",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 3.191,
+          "is_question": false,
+          "variants": [
+            "0938 36 1919 giải đáp pl"
+          ]
+        },
+        {
+          "phrase": "ô “ đăng ký ” phía",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 3.116,
+          "is_question": true,
+          "variants": [
+            "ô “ đăng ký ” phía"
+          ]
+        },
+        {
+          "phrase": "tiền lương lĩnh vực khác ngoại giao nông nghiệp",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.811,
+          "is_question": false,
+          "variants": [
+            "tiền lương lĩnh vực khác ngoại giao nông nghiệp"
+          ]
+        },
+        {
+          "phrase": "văn bản luật việt nam văn bản tiếng",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.729,
+          "is_question": false,
+          "variants": [
+            "văn bản luật việt nam văn bản tiếng"
+          ]
+        },
+        {
+          "phrase": "16 zs 0 q 3",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.637,
+          "is_question": false,
+          "variants": [
+            "16 zs 0 q 3"
+          ]
+        },
+        {
+          "phrase": "hàng tháng luật sư tư vấn hỏi đáp",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.609,
+          "is_question": false,
+          "variants": [
+            "hàng tháng luật sư tư vấn hỏi đáp"
+          ]
+        },
+        {
+          "phrase": "quá trình xét duyệt có thể mất 1",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.592,
+          "is_question": false,
+          "variants": [
+            "quá trình xét duyệt có thể mất 1"
+          ]
+        },
+        {
+          "phrase": "1 qoq 2 k 3",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.552,
+          "is_question": false,
+          "variants": [
+            "1 qoq 2 k 3"
+          ]
+        },
+        {
+          "phrase": "đơn vị trực thuộc tổ chức tín dụng",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.514,
+          "is_question": false,
+          "variants": [
+            "đơn vị trực thuộc tổ chức tín dụng"
+          ]
+        },
+        {
+          "phrase": "4 ihw 4 u svg",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "score": 2.456,
+          "is_question": false,
+          "variants": [
+            "4 ihw 4 u svg"
+          ]
+        }
+      ],
+      "entities": {
+        "brand_org": [],
+        "numeric": [
+          {
+            "entity": "100%",
+            "count": 6
+          },
+          {
+            "entity": "3 ngày",
+            "count": 4
+          },
+          {
+            "entity": "5 năm",
+            "count": 3
+          },
+          {
+            "entity": "0.875",
+            "count": 3
+          },
+          {
+            "entity": "360 ngày",
+            "count": 2
+          },
+          {
+            "entity": "0.625",
+            "count": 2
+          },
+          {
+            "entity": "22.000",
+            "count": 2
+          },
+          {
+            "entity": "22,000",
+            "count": 2
+          },
+          {
+            "entity": "100.000",
+            "count": 2
+          },
+          {
+            "entity": "60 phút",
+            "count": 1
+          },
+          {
+            "entity": "10 ngày",
+            "count": 1
+          },
+          {
+            "entity": "90 ngày",
+            "count": 1
+          },
+          {
+            "entity": "180 ngày",
+            "count": 1
+          },
+          {
+            "entity": "1.167",
+            "count": 1
+          },
+          {
+            "entity": "1.125",
+            "count": 1
+          }
+        ]
+      },
+      "per_page": [
+        {
+          "rank": 2,
+          "domain": "thuvienphapluat.vn",
+          "phrases": [
+            {
+              "phrase": "trung tâm thông tin tín dụng quốc gia việt nam",
+              "score": 3.378
+            },
+            {
+              "phrase": "ô “ đăng ký ” phía",
+              "score": 3.116
+            },
+            {
+              "phrase": "đơn vị liên quan thuộc ngân hàng nhà nước",
+              "score": 2.682
+            },
+            {
+              "phrase": "quá trình xét duyệt có thể mất 1",
+              "score": 2.592
+            },
+            {
+              "phrase": "đơn vị trực thuộc tổ chức tín dụng",
+              "score": 2.514
+            },
+            {
+              "phrase": "cách thức kiểm tra cic cá nhân 3.1",
+              "score": 2.496
+            },
+            {
+              "phrase": "kiểm tra hoạt động thông tin tín dụng",
+              "score": 2.495
+            },
+            {
+              "phrase": "thực hiện hoạt động thông tin tín dụng",
+              "score": 2.362
+            },
+            {
+              "phrase": ">> văn bản hợp nhất 112",
+              "score": 2.23
+            },
+            {
+              "phrase": "cic credit",
+              "score": 2.125
+            },
+            {
+              "phrase": "cách thức kiểm tra cic cá nhân",
+              "score": 2.12
+            },
+            {
+              "phrase": "cic credit connect",
+              "score": 2.112
+            },
+            {
+              "phrase": "thành phố trực thuộc trung ương cung cấp",
+              "score": 2.034
+            },
+            {
+              "phrase": "kiểm tra lịch sử tín dụng",
+              "score": 2.019
+            },
+            {
+              "phrase": "2026 hướng dẫn giao dịch ngoại tệ",
+              "score": 1.993
+            },
+            {
+              "phrase": "ngân hàng nhà nước chi nhánh tỉnh",
+              "score": 1.945
+            },
+            {
+              "phrase": "tín dụng",
+              "score": 1.91
+            },
+            {
+              "phrase": "điều 1 thông tư 03",
+              "score": 1.904
+            },
+            {
+              "phrase": "vụ quản lý ngoại hối cung cấp",
+              "score": 1.874
+            },
+            {
+              "phrase": "3 ngày ngày làm việc hành chính",
+              "score": 1.737
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "domain": "luatvietnam.vn",
+          "phrases": [
+            {
+              "phrase": "lâm nghiệp quốc phòng sở hữu trí tuệ tài chính",
+              "score": 3.304
+            },
+            {
+              "phrase": "0938 36 1919 giải đáp pl",
+              "score": 3.191
+            },
+            {
+              "phrase": "tiền lương lĩnh vực khác ngoại giao nông nghiệp",
+              "score": 2.811
+            },
+            {
+              "phrase": "văn bản luật việt nam văn bản tiếng",
+              "score": 2.729
+            },
+            {
+              "phrase": "hàng tháng luật sư tư vấn hỏi đáp",
+              "score": 2.609
+            },
+            {
+              "phrase": "giáo viên trung học nghề hạng i",
+              "score": 2.585
+            },
+            {
+              "phrase": "giáo viên trung học nghề hạng ii",
+              "score": 2.569
+            },
+            {
+              "phrase": "tính lương gross",
+              "score": 2.181
+            },
+            {
+              "phrase": "1900 6192 lh quảng cáo",
+              "score": 2.142
+            },
+            {
+              "phrase": "4.1 xác minh thông tin cá nhân",
+              "score": 2.002
+            },
+            {
+              "phrase": "luật việt nam",
+              "score": 1.947
+            },
+            {
+              "phrase": "tin pháp luật hành chính thuế",
+              "score": 1.872
+            },
+            {
+              "phrase": "cấp độ an ninh mạng",
+              "score": 1.832
+            },
+            {
+              "phrase": "văn bản ubnd văn bản",
+              "score": 1.759
+            },
+            {
+              "phrase": "tính bảo hiểm",
+              "score": 1.75
+            },
+            {
+              "phrase": "việt nam",
+              "score": 1.707
+            },
+            {
+              "phrase": "lĩnh vực khác",
+              "score": 1.685
+            },
+            {
+              "phrase": "wto biểu thuế",
+              "score": 1.67
+            },
+            {
+              "phrase": "phương thức kiểm tra cic cá nhân",
+              "score": 1.657
+            },
+            {
+              "phrase": "ngân hàng tính",
+              "score": 1.629
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "domain": "www.homecredit.vn",
+          "phrases": [
+            {
+              "phrase": "xr 78 o 5 p",
+              "score": 2.912
+            },
+            {
+              "phrase": "xr 78 o 5 svg",
+              "score": 2.835
+            },
+            {
+              "phrase": "ma 5 sfl table td",
+              "score": 2.761
+            },
+            {
+              "phrase": "ma 5 sfl table th",
+              "score": 2.67
+            },
+            {
+              "phrase": "16 zs 0 q 3",
+              "score": 2.637
+            },
+            {
+              "phrase": "1 qoq 2 k 3",
+              "score": 2.552
+            },
+            {
+              "phrase": "4 ihw 4 u svg",
+              "score": 2.456
+            },
+            {
+              "phrase": "tóm tắt nhanh nội dung bài viết",
+              "score": 2.377
+            },
+            {
+              "phrase": "hoàn tất quá trình xác thực bước 5",
+              "score": 2.376
+            },
+            {
+              "phrase": "tránh tải nhầm ứng dụng giả mạo",
+              "score": 2.328
+            },
+            {
+              "phrase": "bản báo cáo đầy đủngay lập tức",
+              "score": 2.312
+            },
+            {
+              "phrase": "cic – kết nối nhu cầu vay",
+              "score": 2.221
+            },
+            {
+              "phrase": "báo cáo cic gốc khá cao",
+              "score": 2.133
+            },
+            {
+              "phrase": "trung tâm thông tin tín dụng quốc gia việt nam",
+              "score": 2.118
+            },
+            {
+              "phrase": "khoảng 28.000 – 100.000 vnd",
+              "score": 2.109
+            },
+            {
+              "phrase": "bấm chọn đồng ý khai thác báo cáo",
+              "score": 2.085
+            },
+            {
+              "phrase": "bảo mật thông tin bạn quen thao tác",
+              "score": 2.083
+            },
+            {
+              "phrase": "sđt chính chủbáo cáo tín dụng đầy đủ",
+              "score": 2.055
+            },
+            {
+              "phrase": "quyền tự kiểm tra thông tin tín dụng",
+              "score": 1.929
+            },
+            {
+              "phrase": "display",
+              "score": 1.721
+            }
+          ]
+        }
+      ]
+    },
+    "information_gain": {
+      "question_gaps": [
+        "ô “ đăng ký ” phía",
+        "2026 hướng dẫn giao dịch ngoại tệ"
+      ],
+      "numeric_data_available": [
+        {
+          "entity": "100%",
+          "count": 6
+        },
+        {
+          "entity": "3 ngày",
+          "count": 4
+        },
+        {
+          "entity": "5 năm",
+          "count": 3
+        },
+        {
+          "entity": "0.875",
+          "count": 3
+        },
+        {
+          "entity": "360 ngày",
+          "count": 2
+        },
+        {
+          "entity": "0.625",
+          "count": 2
+        },
+        {
+          "entity": "22.000",
+          "count": 2
+        },
+        {
+          "entity": "22,000",
+          "count": 2
+        },
+        {
+          "entity": "100.000",
+          "count": 2
+        },
+        {
+          "entity": "60 phút",
+          "count": 1
+        },
+        {
+          "entity": "10 ngày",
+          "count": 1
+        },
+        {
+          "entity": "90 ngày",
+          "count": 1
+        },
+        {
+          "entity": "180 ngày",
+          "count": 1
+        },
+        {
+          "entity": "1.167",
+          "count": 1
+        },
+        {
+          "entity": "1.125",
+          "count": 1
+        }
+      ],
+      "competitor_utility_signals": [
+        {
+          "signal": "tra cứu",
+          "pages": 3
+        },
+        {
+          "signal": "máy tính",
+          "pages": 1
+        },
+        {
+          "signal": "so sánh",
+          "pages": 1
+        }
+      ],
+      "momo_missing_keyphrases": [
+        "cách thức kiểm tra cic cá nhân 3.1",
+        "xr 78 o 5 p",
+        "ma 5 sfl table td",
+        "giáo viên trung học nghề hạng i",
+        "tin pháp luật hành chính thuế",
+        "lâm nghiệp quốc phòng sở hữu trí tuệ tài chính",
+        "ô “ đăng ký ” phía",
+        "tiền lương lĩnh vực khác ngoại giao nông nghiệp",
+        "văn bản luật việt nam văn bản tiếng",
+        "16 zs 0 q 3",
+        "hàng tháng luật sư tư vấn hỏi đáp",
+        "quá trình xét duyệt có thể mất 1",
+        "1 qoq 2 k 3",
+        "tóm tắt nhanh nội dung bài viết",
+        "hoàn tất quá trình xác thực bước 5",
+        "tránh tải nhầm ứng dụng giả mạo",
+        "bản báo cáo đầy đủngay lập tức",
+        ">> văn bản hợp nhất 112",
+        "tính lương gross",
+        "1900 6192 lh quảng cáo"
+      ],
+      "recommended_unique_angles": [
+        "Bổ sung mục Giải đáp trực tiếp (Direct Answer) cho các câu hỏi đối thủ bỏ trống: ô “ đăng ký ” phía; 2026 hướng dẫn giao dịch ngoại tệ",
+        "Nhúng bảng số liệu động (lãi suất/phí/biểu phí theo thời gian thực) thay vì nội dung tĩnh sao chép được.",
+        "Gắn Schema FAQPage + BreadcrumbList + cơ chế Web-to-App để chiếm Rich Snippet và chuyển đổi."
+      ]
+    },
+    "content_gap": {
+      "momo_analyzed": true,
+      "competitor_concepts": 50,
+      "momo_covered": 16,
+      "missing_in_momo": 34,
+      "gap_pct": 68.0,
+      "momo_covered_concepts": [
+        {
+          "phrase": "trung tâm thông tin tín dụng quốc gia việt nam",
+          "coverage": 2,
+          "coverage_pct": 66.7,
+          "is_question": false,
+          "matched_momo_phrase": "trung tâm thông tin tín dụng quốc gia việt nam",
+          "similarity": 1.0
+        },
+        {
+          "phrase": "kiểm tra hoạt động thông tin tín dụng",
+          "coverage": 2,
+          "coverage_pct": 66.7,
+          "is_question": false,
+          "matched_momo_phrase": "hỗ trợ tra cứu thông tin tín dụng trực tiếp",
+          "similarity": 0.799
+        },
+        {
+          "phrase": "đơn vị liên quan thuộc ngân hàng nhà nước",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false,
+          "matched_momo_phrase": "thuộc ngân hàng nhà nước",
+          "similarity": 0.93
+        },
+        {
+          "phrase": "cic credit",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false,
+          "matched_momo_phrase": "điểm tín dụng cic",
+          "similarity": 0.834
+        },
+        {
+          "phrase": "0938 36 1919 giải đáp pl",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false,
+          "matched_momo_phrase": "1900 54 54 41",
+          "similarity": 0.89
+        },
+        {
+          "phrase": "đơn vị trực thuộc tổ chức tín dụng",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false,
+          "matched_momo_phrase": "công ty tài chính cung cấp báo cáo tín dụng",
+          "similarity": 0.747
+        },
+        {
+          "phrase": "4 ihw 4 u svg",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false,
+          "matched_momo_phrase": "điểm cic 4",
+          "similarity": 0.859
+        },
+        {
+          "phrase": "thực hiện hoạt động thông tin tín dụng",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false,
+          "matched_momo_phrase": "hỗ trợ tra cứu thông tin tín dụng trực tiếp",
+          "similarity": 0.863
+        },
+        {
+          "phrase": "cic – kết nối nhu cầu vay",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false,
+          "matched_momo_phrase": "khả năng vay",
+          "similarity": 0.86
+        },
+        {
+          "phrase": "sđt chính chủbáo cáo tín dụng đầy đủ",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false,
+          "matched_momo_phrase": "xác định chính xác hồ sơ tín dụng",
+          "similarity": 0.74
+        },
+        {
+          "phrase": "kiểm tra lịch sử tín dụng",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false,
+          "matched_momo_phrase": "hồ sơ tín dụng cictrước",
+          "similarity": 0.75
+        },
+        {
+          "phrase": "4.1 xác minh thông tin cá nhân",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false,
+          "matched_momo_phrase": "thông tin cá nhân bao gồm",
+          "similarity": 0.755
+        },
+        {
+          "phrase": "tín dụng",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false,
+          "matched_momo_phrase": "tín dụng",
+          "similarity": 1.0
+        },
+        {
+          "phrase": "điều 1 thông tư 03",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false,
+          "matched_momo_phrase": "hiểu cic",
+          "similarity": 0.762
+        },
+        {
+          "phrase": "văn bản ubnd văn bản",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false,
+          "matched_momo_phrase": "khoản",
+          "similarity": 0.738
+        },
+        {
+          "phrase": "ngân hàng tính",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false,
+          "matched_momo_phrase": "ngân hàng",
+          "similarity": 0.989
+        }
+      ],
+      "missing_concepts": [
+        {
+          "phrase": "cách thức kiểm tra cic cá nhân 3.1",
+          "coverage": 2,
+          "coverage_pct": 66.7,
+          "is_question": true
+        },
+        {
+          "phrase": "xr 78 o 5 p",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        },
+        {
+          "phrase": "ma 5 sfl table td",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        },
+        {
+          "phrase": "giáo viên trung học nghề hạng i",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        },
+        {
+          "phrase": "tin pháp luật hành chính thuế",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        },
+        {
+          "phrase": "lâm nghiệp quốc phòng sở hữu trí tuệ tài chính",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        },
+        {
+          "phrase": "ô “ đăng ký ” phía",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": true
+        },
+        {
+          "phrase": "tiền lương lĩnh vực khác ngoại giao nông nghiệp",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        },
+        {
+          "phrase": "văn bản luật việt nam văn bản tiếng",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        },
+        {
+          "phrase": "16 zs 0 q 3",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        },
+        {
+          "phrase": "hàng tháng luật sư tư vấn hỏi đáp",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        },
+        {
+          "phrase": "quá trình xét duyệt có thể mất 1",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        },
+        {
+          "phrase": "1 qoq 2 k 3",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        },
+        {
+          "phrase": "tóm tắt nhanh nội dung bài viết",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        },
+        {
+          "phrase": "hoàn tất quá trình xác thực bước 5",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        },
+        {
+          "phrase": "tránh tải nhầm ứng dụng giả mạo",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        },
+        {
+          "phrase": "bản báo cáo đầy đủngay lập tức",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        },
+        {
+          "phrase": ">> văn bản hợp nhất 112",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        },
+        {
+          "phrase": "tính lương gross",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        },
+        {
+          "phrase": "1900 6192 lh quảng cáo",
+          "coverage": 1,
+          "coverage_pct": 33.3,
+          "is_question": false
+        }
+      ],
+      "momo_phrases_sample": [
+        "cic",
+        "chia sẻ facebook",
+        "điểm cic",
+        "tín dụng",
+        "vay",
+        "kiểm tra cic",
+        "tín dụng cic",
+        "kiểm tra",
+        "kiểm tra điểm",
+        "điểm",
+        "điểm tín dụng",
+        "thẻ tín dụng",
+        "chính",
+        "chia sẻ linkedin",
+        "ngân hàng",
+        "tài chính",
+        "trả",
+        "bạn",
+        "thông tin",
+        "nhóm"
+      ]
+    }
+  },
+  "competitors": [
+    {
+      "rank": 1,
+      "title": "CIC là gì? Cách đăng nhập để kiểm tra CIC cá nhân miễn phí [Cập nhật 17 ...",
+      "url": "https://techcombank.com/thong-tin/blog/cic-la-gi",
+      "domain": "techcombank.com",
+      "snippet": "CIC là gì, cách xem lịch sử tín dụng cá nhân, tra cứu báo cáo tín dụng trực tuyến miễn phí và những lưu ý quan trọng trước khi đăng ký vay hoặc mở thẻ tín dụng online cập nhật 17/10/2026.",
+      "h1": [
+        "CIC là gì? Cách đăng nhập để kiểm tra CIC cá nhân miễn phí [Cập nhật 17/10/2026]"
+      ],
+      "h2": [
+        "1. CIC là gì?",
+        "2. CIC hoạt động như thế nào?",
+        "3. Thang điểm CIC mới nhất",
+        "4. 2 Cách check CIC online, nợ xấu cá nhân miễn phí",
+        "5. Giải đáp thắc mắc khi kiểm tra điểm tín dụng, nợ xấu qua CIC",
+        "Các bài viết liên quan"
+      ],
+      "h3": [
+        "4.2. Tra cứu CIC cá nhân miễn phí qua ứng dụng CIC Connect",
+        "5.1. Khi nào bị tính là nợ xấu?",
+        "5.2. Cách để cải thiện điểm tín dụng?",
+        "5.3. Kiểm tra CIC của người khác được không?",
+        "5.4. Tra cứu nợ xấu có mất phí không?",
+        "5.5. Nợ xấu có ảnh hưởng đến việc xin visa không?"
+      ],
+      "word_count": 40,
+      "schemas": [],
+      "has_table": true,
+      "has_form_or_tool": true,
+      "format_type": "Interactive Tool / Calculator",
+      "page_title": "CIC là gì? Cách đăng nhập để kiểm tra CIC cá nhân miễn phí [Cập nhật 17/10/2026] | Techcombank",
+      "body_text": "Cá nhân expand_more Cá nhân Hộ kinh doanh Doanh nghiệp vừa và nhỏ Doanh nghiệp lớn Nhà đầu tư Về chúng tôi Tuyển dụng Khám phá: Inspire Priority Private Thông tin mới Công cụ & Tiện ích Hỗ trợ Liên hệ"
+    },
+    {
+      "rank": 2,
+      "title": "CIC là gì? Cách thức kiểm tra CIC cá nhân",
+      "url": "https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/tu-van-phap-luat/42047/cic-la-gi-quy-dinh-ve-nhiem-vu-va-quyen-han-cua-cic",
+      "domain": "thuvienphapluat.vn",
+      "snippet": "Hiện nay, hoạt động quản lý thông tin về ngân hàng được CIC quản lý một cách chặt chẽ, trong đó có thông tin về nợ xấu,…Vậy CIC là gì? Quy định về nhiệm vụ và quyền hạn của CIC thế nào?",
+      "h1": [
+        "CIC là gì? Cách thức kiểm tra CIC cá nhân"
+      ],
+      "h2": [
+        "1. CIC là gì?",
+        "2. Trách nhiệm phối hợp của các đơn vị liên quan thuộc Ngân hàng Nhà nước với CIC",
+        "3. Cách thức kiểm tra CIC cá nhân"
+      ],
+      "h3": [
+        "3.1. Kiểm tra CIC cá nhân trên website",
+        "3.2. Kiểm tra CIC cá nhân trên ứng dụng CIC Credit Connect",
+        "lĩnh vực Tiền tệ - Ngân hàng",
+        "CIC, kiểm tra CIC cá nhân, Trung tâm thông tin tín dụng Quốc gia Việt Nam,"
+      ],
+      "word_count": 740,
+      "schemas": [],
+      "has_table": true,
+      "has_form_or_tool": true,
+      "format_type": "Interactive Tool / Calculator",
+      "page_title": "CIC là gì? Cách thức kiểm tra CIC cá nhân",
+      "body_text": "CIC là gì? Cách thức kiểm tra CIC cá nhân Về vấn đề này, THƯ VIỆN PHÁP LUẬT giải đáp như sau: 1. CIC là gì? CIC (Credit Information Centre) là tên viết tắt bằng Tiếng Anh của Trung tâm Thông tin tín dụng Quốc gia Việt Nam được quy định tại Điều 1 Thông tư 03/2013/TT-NHNN. 2. Trách nhiệm phối hợp của các đơn vị liên quan thuộc Ngân hàng Nhà nước với CIC Theo khoản 2 Điều 13 Thông tư 03/2013/TT-NHNN (sửa đổi tại Thông tư 27/2017/TT-NHNN) thì trách nhiệm phối hợp của các đơn vị liên quan thuộc Ngân hàng Nhà nước với CIC như sau: - Cơ quan Thanh tra, giám sát Ngân hàng + Cung cấp cho CIC các thông tin sau: danh sách tổ chức tín dụng, chi nhánh, đơn vị trực thuộc tổ chức tín dụng, chi nhánh ngân hàng nước ngoài được thành lập, giải thể, phá sản, mua bán, sáp nhập; cổ đông hoặc thành viên sáng lập, cổ đông lớn của tổ chức tín dụng; vốn tự có của tổ chức tín dụng và các thông tin liên quan đến hoạt động tín dụng của tổ chức tín dụng, chi nhánh ngân hàng nước ngoài; + Chủ trì và phối hợp với CIC thực hiện thanh tra, kiểm tra hoạt động thông tin tín dụng tại tổ chức tín dụng, chi nhánh ngân hàng nước ngoài. + Vụ Dự báo, thống kê cung cấp cho CIC số liệu thống kê về hoạt động tín dụng của ngành; - Vụ Quản lý Ngoại hối cung cấp cho CIC số liệu về tình hình vay, trả nợ nước ngoài của tổ chức, cá nhân trong nước theo thẩm quyền; - Vụ Tín dụng các ngành kinh tế cung cấp cho CIC các trường hợp được cho vay vượt quy định của Ngân hàng Nhà nước; - Ngân hàng Nhà nước chi nhánh tỉnh, thành phố trực thuộc Trung ương cung cấp cho CIC số liệu về tình hình vay, trả nợ nước ngoài của các tổ chức, cá nhân trong nước; phối hợp với CIC trong việc thực hiện hoạt động thông tin tín dụng trên địa bàn. 3. Cách thức kiểm tra CIC cá nhân 3.1. Kiểm tra CIC cá nhân trên website Bước 1: Truy cập vào website https://cic.gov.vn/ và bấm vào ô “Đăng ký” phía trên góc phải màn hình. Bước 2: Nhập thông tin đăng ký, bao gồm các nội dung như sau: - Họ và tên; - Ngày sinh; - Số điện thoại; - Số CMND/CCCD; ngày cấp; nơi cấp. - Email; - Giới tính; - Ảnh CMND/CCCD (mặt trước, mặt sau, chân dung) - Địa điểm; Bước 3: Thiết lập mật khẩu Bước 4: Nhập mã OTP được gửi về số điện thoại mà đã đăng ký, sau đó ấn “tiếp tục“ Bước 5: Nhân viên CIC sẽ gọi điện thoại cho bạn để xác thực thông tin qua hình thức hỏi – đáp Bước 6: Sau khi tạo tài khoản thành công, kết quả đăng ký, tên đăng nhập, mật khẩu sẽ được gửi qua SMS/Email của bạn. Bước 7: Đăng nhập vào hệ thống CIC, và kiểm tra lịch sử tín dụng ở phần thông tin cá nhân. 3.2. Kiểm tra CIC cá nhân trên ứng dụng CIC Credit Connect Bước 1: Tải về cài đặt ứng dụng CIC cho điện thoại. Bước 2: Đăng ký tài khoản CIC theo các bước yêu cầu của hệ thống Bước 3: Đăng nhập tài khoản khi CIC xét duyệt thành công. Quá trình xét duyệt có thể mất 1-3 ngày ngày làm việc hành chính. Bước 4: Sử dụng tính năng tra cứu kiểm tra nợ xấu theo các bước yêu cầu của hệ thống Bước 5: Nhận kết quả tra cứu Quốc Đạt >> Thông tư 55/2026/TT-NHNN sửa đổi Thông tư 18/2025 về giám sát quỹ tín dụng và tài chính vi mô ra sao? >> Văn bản hợp nhất 112/2026 hướng dẫn giao dịch ngoại tệ giữa Ngân hàng Nhà nước và tổ chức tín dụng được phép hoạt động ngoại hối ra sao? var lastP = $(\".divModelDetail > p:last-child\"); var strong = $(lastP).find(\"strong\"); var ahref = $(lastP).find(\"a\"); if (strong != null && strong != undefined && $(strong).html() != null && $(strong).html() != undefined) { $(lastP).prepend(\"<sapn>Chuyên viên pháp lý </sapn>\"); var tvls = $(\".tvls\"); if (tvls != null && tvls != undefined) { $(lastP).hide(); } }"
+    },
+    {
+      "rank": 3,
+      "title": "CIC là gì? Cách tra CIC online miễn phí? Rơi vào nợ ... - VIB",
+      "url": "https://www.vib.com.vn/vn/cam-nang/ngan-hang-so/tien-ich-va-trai-nghiem/cic-la-gi",
+      "domain": "www.vib.com.vn",
+      "snippet": "CIC là gì? Cách tra CIC online miễn phí và nợ xấu sẽ gây hậu quả gì? Khám phá ngay để bảo vệ tài chính của bạn!",
+      "h1": [],
+      "h2": [],
+      "h3": [],
+      "word_count": 0,
+      "schemas": [],
+      "has_table": false,
+      "has_form_or_tool": true,
+      "format_type": "Interactive Tool / Calculator",
+      "page_title": "Challenge Validation",
+      "body_text": ""
+    },
+    {
+      "rank": 4,
+      "title": "CIC là gì? Cách tra điểm CIC online, kiểm tra nợ xấu miễn phí",
+      "url": "https://hdbank.com.vn/vi/news/detail/tin-tuc-khac/diem-tin-dung-cic",
+      "domain": "hdbank.com.vn",
+      "snippet": "Điểm tín dụng CIC là gì? Làm thế nào để tra cứu CIC cá nhân? Điểm tín dụng (thường gọi là CIC) là một tiêu chí đầu tiên cần phải xem xét khi làm thủ tục vay ngân hàng và các công ty tài chính. Đây là căn cứ quan trọng để ngân hàng xem xét khách hàng có đủ điều kiện để vay vốn hay không. Vậy điểm tín ...",
+      "h1": [],
+      "h2": [],
+      "h3": [],
+      "word_count": 51,
+      "schemas": [],
+      "has_table": false,
+      "has_form_or_tool": true,
+      "format_type": "Interactive Tool / Calculator",
+      "page_title": "CIC là gì? Cách tra điểm CIC online, kiểm tra nợ xấu miễn phí",
+      "body_text": "Tin tức18/10/2026 12:24Chia sẻ25Bis Nguyễn Thị Minh Khai, P. Sài Gòn, TP. Hồ Chí Minh19006060info@hdbank.com.vnFax: (028) 62 915 900SWIFT code: HDBCVNVXBản quyền © 2023 thuộc về HDBankĐiều khoản sử dụngQuyền riêng tưSơ đồ trangTải app HDBank Kết nối với HDBank Bản quyền © 2023 thuộc về HDBank"
+    },
+    {
+      "rank": 5,
+      "title": "CIC là gì? Hướng dẫn cách kiểm tra CIC online - LuatVietnam",
+      "url": "https://luatvietnam.vn/linh-vuc-khac/cic-la-gi-883-98155-article.html",
+      "domain": "luatvietnam.vn",
+      "snippet": "Bạn là khách hàng của các ngân hàng tín dụng đang muốn tìm hiểu về các khái niệm CIC là gì? Cách kiểm tra CIC online như thế nào? Vậy hãy đọc ngay bài viết dưới đây để biết các định nghĩa, cách kiểm tra CIC online miễn phí.",
+      "h1": [
+        "CIC là gì? Hướng dẫn cách kiểm tra CIC online"
+      ],
+      "h2": [
+        "1. CIC là gì? Điểm CIC là gì?",
+        "2. CIC hoạt động như thế nào?",
+        "3. Các yếu tố ảnh hưởng đến điểm CIC",
+        "4. Phương thức kiểm tra CIC cá nhân",
+        "Tin cùng chuyên mục"
+      ],
+      "h3": [
+        "4.1 Xác minh thông tin cá nhân trên trang website của CIC",
+        "4.2 Xác minh thông tin trên ứng dụng CIC Credit Connect",
+        "Văn bản liên quan",
+        "Luật sư tư vấn",
+        "Tin liên quan",
+        "Giáo viên trung học nghề hạng II phải đáp ứng yêu cầu nào?",
+        "Giáo viên trung học nghề hạng II phải đáp ứng yêu cầu nào?",
+        "Giáo viên trung học nghề hạng I phải đáp ứng yêu cầu nào?",
+        "Giáo viên trung học nghề hạng I phải đáp ứng yêu cầu nào?",
+        "Chuyên gia năng suất chất lượng phải được đào tạo chuyên môn như thế nào?",
+        "Chuyên gia năng suất chất lượng phải được đào tạo chuyên môn như thế nào?",
+        "Hệ thống thông tin được chia thành mấy cấp độ an ninh mạng? Tiêu chí xác định thế nào?",
+        "Hệ thống thông tin được chia thành mấy cấp độ an ninh mạng? Tiêu chí xác định thế nào?",
+        "Tổng hợp văn bản về phòng cháy, chữa cháy mới nhất",
+        "Tổng hợp văn bản về phòng cháy, chữa cháy mới nhất"
+      ],
+      "word_count": 508,
+      "schemas": [
+        "BreadcrumbList",
+        "WebSite",
+        "Organization",
+        "NewsArticle",
+        "LocalBusiness",
+        "Person"
+      ],
+      "has_table": false,
+      "has_form_or_tool": true,
+      "format_type": "Interactive Tool / Calculator",
+      "page_title": "CIC là gì? Hướng dẫn cách kiểm tra CIC online",
+      "body_text": "Văn bản Văn bản mới Văn bản luật Việt Nam Văn bản tiếng Anh Văn bản UBND Văn bản của Đảng Công văn Văn bản hợp nhất Tiêu chuẩn Việt Nam Quy chuẩn Việt Nam Công ước Hiệp định Hiệp ước Dự thảo Lĩnh vực tra cứu văn bản An ninh quốc gia An ninh trật tự Báo chí-Truyền hình Bảo hiểm Cán bộ-Công chức-Viên chức Chính sách Chứng khoán Cơ cấu tổ chức Cổ phần-Cổ phần hoá Công nghiệp COVID-19 Cư trú-Hộ khẩu Dân sự Đất đai-Nhà ở Đấu thầu-Cạnh tranh Đầu tư Địa giới hành chính Điện lực Doanh nghiệp Giáo dục-Đào tạo-Dạy nghề Giao thông Hải quan Hàng hải Hàng không Hành chính Hình sự Hóa chất Hôn nhân gia đình Kế toán-Kiểm toán Khiếu nại-Tố cáo Khoa học-Công nghệ Lao động-Tiền lương Lĩnh vực khác Ngoại giao Nông nghiệp-Lâm nghiệp Quốc phòng Sở hữu trí tuệ Tài chính-Ngân hàng Tài nguyên-Môi trường Thi đua-Khen thưởng-Kỷ luật Thông tin-Truyền thông Thực phẩm-Dược phẩm Thuế-Phí-Lệ phí Thương mại-Quảng cáo Thủy hải sản Tiết kiệm-Phòng, chống tham nhũng, lãng phí Tòa án Tư pháp-Hộ tịch Văn hóa-Thể thao-Du lịch Vi phạm hành chính Xây dựng Xuất nhập cảnh Xuất nhập khẩu Y tế-Sức khỏe Xem thêm Tin tức pháp luật Tin văn bản mới Tin pháp luật Hành chính Thuế - Phí Đất đai - Nhà ở Bảo hiểm Cán bộ - công chức Lao động Dân sự Giao thông Biểu mẫu Media Luật Lĩnh vực khác Xem thêm Tiện ích Thuật ngữ pháp lý Tra cứu giá đất Tra cứu diện tích tách thửa Tính thuế thu nhập cá nhân Tính bảo hiểm thất nghiệp Tính bảo hiểm xã hội 1 lần Tính lương Gross - Net Tra cứu mức lương tối thiểu Tính lãi suất vay ngân hàng Tính lãi suất tiết kiệm ngân hàng Tính VAT online Giá xăng hôm nay Tính tiền chế độ thai sản Tra cứu mặt hàng không giảm thuế Biểu thuế nhập khẩu WTO Biểu thuế ASEAN Tra cứu mã ngành nghề kinh doanh Thông tin về dịch Covid-19 Xem thêm Bản tin luật Điểm tin văn bản mới Văn bản hàng tuần Bản tin hiệu lực Chính sách mới hàng tháng Luật sư tư vấn Hỏi đáp cùng chuyên gia Danh sách Luật sư/ VP Luật Pháp lý doanh nghiệp Thủ tục doanh nghiệp Biểu mẫu Lịch pháp lý Phiên bản tiếng Anh Hệ thống Bản án - Án lệ AI Luật - Trợ lý pháp lý thông minh Pháp lý doanh nghiệp Dịch vụ Tra cứu văn bản Phân tích văn bản Dịch vụ dịch thuật Dịch vụ nội dung Tổng đài tư vấn Giới thiệu Hướng dẫn sử dụng Liên hệ Hỗ trợ: 0938 36 1919 Giải đáp PL: 1900 6192 LH quảng cáo: [email protected] Tải ứng dụng Android: IOS: Theo dõi chúng tôi trên: .st0 { fill: #fdfefe } .st1 { fill: #0180c7 }"
+    },
+    {
+      "rank": 6,
+      "title": "Check CIC là gì? Cách kiểm tra và biết mình có nợ xấu không",
+      "url": "https://www.homecredit.vn/blog/cic-la-gi-101",
+      "domain": "www.homecredit.vn",
+      "snippet": "Check CIC là tự tra cứu báo cáo tín dụng của bạn trên CIC. Hướng dẫn kiểm tra CIC cá nhân bằng CCCD qua app chính thống, ví điện tử, tổ chức tín dụng và cách đọc kết quả nợ xấu.",
+      "h1": [
+        "Check CIC là gì? Cách kiểm tra và biết mình có nợ xấu không"
+      ],
+      "h2": [
+        "1. Check CIC là gì? Khái niệm và phí",
+        "2. 4 cách kiểm tra CIC cá nhân bằng CCCD",
+        "3. Cách đọc kết quả CIC: 5 thông tin cần xem",
+        "4. Kết quả CIC của bạn nói gì? Nên làm gì tiếp theo?",
+        "5. Tại sao check CIC không được?",
+        "6. Bao lâu thì thông tin CIC được cập nhật một lần?",
+        "7. Giải đáp thắc mắc thường gặp khi tra cứu CIC",
+        "Nhật ký liên quan"
+      ],
+      "h3": [
+        "2.1. Tra cứu CIC cá nhân online qua ứng dụng CIC",
+        "2.2. Check CIC trên MoMo",
+        "2.3. Kiểm tra CIC bằng CCCD/CMND tại ngân hàng hoặc tổ chức tín dụng",
+        "2.4. Tra cứu CIC miễn phí qua website cic.gov.vn",
+        "7.1. Check CIC cá nhân có mất phí không?",
+        "7.2. CIC trắng là gì?",
+        "7.3. Có tự xóa nợ xấu trên CIC được không?",
+        "7.4. Có kiểm tra CIC của người khác được không?",
+        "7.5. Kiểm tra CIC bằng CCCD gắn chip như thế nào?",
+        "7.6. CIC có quyết định việc tôi được vay hay không?",
+        "7.7. Check CIC nhiều lần có làm giảm điểm tín dụng không?",
+        "Thẻ tín dụng nội địa là gì? Khác gì so với thẻ tín dụng quốc tế",
+        "Dư nợ cuối kỳ là gì? Cách tính đơn giản bạn cần biết",
+        "Các dòng laptop HP giá rẻ trả góp cho sinh viên 2026",
+        "Có nên mua laptop cũ trả góp? Mua laptop trả góp laptop ở đâu uy tín?"
+      ],
+      "word_count": 10291,
+      "schemas": [],
+      "has_table": true,
+      "has_form_or_tool": false,
+      "format_type": "Comparison & Data Table",
+      "page_title": "Check CIC là gì? Cách kiểm tra và biết mình có nợ xấu không",
+      "body_text": "Sản phẩmTin tứcHỗ trợVề chúng tôiTải ứng dụng.css-1s3gfp1{background-color:#fff;box-shadow:0.5rem 1rem 1.5rem 0 rgba(237, 237, 237, 0.32);}.css-170eydb{background-color:#fff;box-shadow:0.5rem 1rem 1.5rem 0 rgba(237, 237, 237, 0.32);}.css-xr78o5{padding:0.5rem 1rem;}.css-xr78o5 svg{font-size:1rem;color:#afafaf;}.css-xr78o5 .MuiBreadcrumbs-ol{gap:10px;-webkit-box-flex-wrap:nowrap;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;position:relative;overflow:hidden;}.css-xr78o5 .MuiBreadcrumbs-ol::after{content:\"\";width:3em;height:100%;position:absolute;bottom:0;right:0;background-color:#fff;-webkit-mask-image:linear-gradient(to left, black, transparent);-webkit-transition:0.2s;transition:0.2s;}.css-xr78o5 .MuiTypography-root{font-size:0.75rem;color:#383838;white-space:nowrap;font-weight:400;letter-spacing:0.12px;}.css-xr78o5 p.MuiTypography-root{color:#e11e31;}@media (min-width:1200px){.css-xr78o5{padding:1rem 7.5rem;}.css-xr78o5 svg{font-size:1.5rem;}.css-xr78o5 .MuiBreadcrumbs-ol{gap:24px;}.css-xr78o5 .MuiTypography-root{font-size:0.875rem;letter-spacing:0.14px;}}.css-bknvnd{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;padding-left:16px;padding-right:16px;padding:0.5rem 1rem;}@media (min-width:600px){.css-bknvnd{padding-left:24px;padding-right:24px;}}@media (min-width:1200px){.css-bknvnd{max-width:1200px;}}@media (min-width: 1200px){.css-bknvnd{max-width:1440px;}}.css-bknvnd svg{font-size:1rem;color:#afafaf;}.css-bknvnd .MuiBreadcrumbs-ol{gap:10px;-webkit-box-flex-wrap:nowrap;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;position:relative;overflow:hidden;}.css-bknvnd .MuiBreadcrumbs-ol::after{content:\"\";width:3em;height:100%;position:absolute;bottom:0;right:0;background-color:#fff;-webkit-mask-image:linear-gradient(to left, black, transparent);-webkit-transition:0.2s;transition:0.2s;}.css-bknvnd .MuiTypography-root{font-size:0.75rem;color:#383838;white-space:nowrap;font-weight:400;letter-spacing:0.12px;}.css-bknvnd p.MuiTypography-root{color:#e11e31;}@media (min-width:1200px){.css-bknvnd{padding:1rem 7.5rem;}.css-bknvnd svg{font-size:1.5rem;}.css-bknvnd .MuiBreadcrumbs-ol{gap:24px;}.css-bknvnd .MuiTypography-root{font-size:0.875rem;letter-spacing:0.14px;}}.css-1rmzyqr{margin:0;font-size:1rem;font-weight:400;letter-spacing:0.16px;font-family:Lexend,sans-serif,serif,-apple-system;line-height:1.5;color:#ffffff;}.css-nhb8h9{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0;margin:0;list-style:none;}.css-ct9vl7{-webkit-text-decoration:none;text-decoration:none;}.css-ct9vl7:hover{-webkit-text-decoration:underline;text-decoration:underline;}.css-ihytfv{margin:0;font-family:inherit;font-weight:inherit;font-size:inherit;line-height:inherit;letter-spacing:inherit;color:#e11e31;-webkit-text-decoration:none;text-decoration:none;}.css-ihytfv:hover{-webkit-text-decoration:underline;text-decoration:underline;}Trang chủ.css-3mf706{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;margin-left:8px;margin-right:8px;}.css-vubbuv{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}Blog.css-19upc50{margin:0;font-size:1rem;font-weight:400;letter-spacing:0.16px;font-family:Lexend,sans-serif,serif,-apple-system;line-height:1.5;}Check CIC là gì? Cách kiểm tra và biết mình có nợ xấu không.css-1jfjgg2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;aspect-ratio:3/1;max-width:1440px;}const t=\"undefined\"!=typeof HTMLImageElement&&\"loading\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\"img[data-main-image]\");for(let e of t){e.dataset.src&&(e.setAttribute(\"src\",e.dataset.src),e.removeAttribute(\"data-src\")),e.dataset.srcset&&(e.setAttribute(\"srcset\",e.dataset.srcset),e.removeAttribute(\"data-srcset\"));const t=e.parentNode.querySelectorAll(\"source[data-srcset]\");for(let e of t)e.setAttribute(\"srcset\",e.dataset.srcset),e.removeAttribute(\"data-srcset\");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector(\"[data-placeholder-image]\").style.opacity=0)}}.css-1l4w6pd{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;}.css-vlg77a{max-width:800px!important;margin:2.25rem auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;row-gap:16px;}.css-vlg77a svg{height:24px;width:auto;}@media (min-width:1032pxpx){.css-vlg77a{padding:0!important;}}@media (min-width:900px){.css-vlg77a{margin:5rem auto;row-gap:24px;}}.css-4ihw4u{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;padding-left:16px;padding-right:16px;max-width:800px!important;margin:2.25rem auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;row-gap:16px;}@media (min-width:600px){.css-4ihw4u{padding-left:24px;padding-right:24px;}}@media (min-width:1200px){.css-4ihw4u{max-width:1200px;}}@media (min-width: 1200px){.css-4ihw4u{max-width:1440px;}}.css-4ihw4u svg{height:24px;width:auto;}@media (min-width:1032pxpx){.css-4ihw4u{padding:0!important;}}@media (min-width:900px){.css-4ihw4u{margin:5rem auto;row-gap:24px;}}.css-1xzjlix{margin:0;font-size:3rem;font-weight:700;color:#383838;letter-spacing:0.96px;font-family:Lexend,sans-serif,serif,-apple-system;line-height:1.167;color:#e11e31;}@media (min-width:0px){.css-1xzjlix{font-size:26px;}}@media (min-width:900px){.css-1xzjlix{font-size:42px;}}Check CIC là gì? Cách kiểm tra và biết mình có nợ xấu không.css-1ilgc6n{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:10px;color:#666666;margin-top:-8px;}.css-5mfn8g{margin:0;font-size:1rem;font-weight:500;letter-spacing:0.16px;font-family:Lexend,sans-serif,serif,-apple-system;line-height:1.75;}@media (min-width: 900px){.css-5mfn8g{font-size:1.125rem;}}Ngày đăng 02/10/2026.css-1qoq2k3{margin:0;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;border-width:0;border-style:solid;border-color:rgba(0, 0, 0, 0.12);border-bottom-width:0;margin-top:8px;margin-bottom:8px;height:100%;border-right-width:thin;height:14px;border-right:none;border-left-width:1px;border-left-color:#666666;}.css-d9wcjq{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:0.625rem;}.css-d9wcjq svg{margin-top:-2px;}.css-16zs0q3{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:0.625rem;}.css-16zs0q3 svg{margin-top:-2px;} 34678 lượt xem.css-17g9zkp{margin:0;font-size:1.25rem;font-weight:700;letter-spacing:0.4px;font-family:Lexend,sans-serif,serif,-apple-system;line-height:1.235;}@media (min-width: 900px){.css-17g9zkp{font-size:1.5rem;}}@media (min-width:900px){.css-17g9zkp{font-size:1.5rem;}}Hiểu rõ CIC là gì và biết cách check CIC giúp bạn nắm rõ tình trạng nợ, tra cứu CIC chủ động trước khi vay. Xem ngay hướng dẫn chi tiết!.css-ma5sfl{overflow-x:auto;}.css-ma5sfl figure{margin:0px;}.css-ma5sfl table{width:auto;table-layout:fixed;border:2px double black;border-collapse:collapse;}@media (min-width:900px){.css-ma5sfl table{width:100%;}}@media (max-width:899.95px){.css-ma5sfl table{font-size:0.875rem;}}.css-ma5sfl table td,.css-ma5sfl table th{padding:8px;border:1px solid #838383;}.css-19upc50{margin:0;font-size:1rem;font-weight:400;letter-spacing:0.16px;font-family:Lexend,sans-serif,serif,-apple-system;line-height:1.5;}Tóm tắt nhanh nội dung bài viết: CIC (Trung tâm Thông tin Tín dụng Quốc gia Việt Nam) cung cấp thông tin tín dụng; CIC không phải đơn vị quyết định bạn có được vay hay khôngBạn có thể kiểm tra CIC qua ứng dụng CIC chính thức, ví điện tử có liên kết với CIC hoặc ngân hàng, công ty tài chính có hỗ trợ tra cứuBạn cần CCCD gắn chip và số điện thoại chính chủ để xác thực thông tinBạn được xem miễn phí báo cáo tín dụng của chính mình 1 lần/năm, từ lần thứ 2 trở đi sẽ mất phí từ 22.000 VND/lần trên app CICBáo cáo CIC giúp bạn kiểm tra các khoản vay đang có, lịch sử trả nợ, nhóm nợ và điểm tín dụngThông tin CIC được cập nhật theo kỳ báo cáo của từng tổ chức cho vay, nên thời gian phản ánh dữ liệu có thể kéo dài từ vài ngày đến khoảng một tháng.CIC (viết tắt của Credit Information Center) là Trung tâm Thông tin Tín dụng Quốc gia Việt Nam, đơn vị thuộc Ngân hàng Nhà nước, là nơi tổng hợp thông tin về các khoản vay và lịch sử trả nợ của cá nhân, doanh nghiệp tại Việt Nam. Mỗi lần bạn vay tiền, mở thẻ tín dụng hay mua trả góp, ngân hàng và công ty tài chính đều báo cáo dữ liệu về CIC. Và cũng chính các tổ chức cho vay này sẽ tra cứu CIC khi bạn nộp hồ sơ vay tiếp theo. Vì vậy, tự kiểm tra CIC trước khi vay là cách đơn giản nhất để biết mình đang đứng ở đâu: có khoản nợ nào bị ghi nhận quá hạn hay không, đang thuộc nhóm nợ nào, điểm tín dụng ra sao. Bài viết dưới đây của Home Credit sẽ hướng dẫn bạn check CIC cá nhân bằng CCCD, đọc đúng kết quả và biết nên làm gì tiếp theo. Tìm hiểu ngay!Check CIC là bước cần thiết khi đăng ký sử dụng dịch vụ tài chính1. Check CIC là gì? Khái niệm và phíCheck CIC là việc bạn tự tra cứu báo cáo tín dụng của chính mình trên hệ thống CIC. Báo cáo này cho biết bạn đang có những khoản vay nào, lịch sử trả nợ ra sao, khoản nợ hiện thuộc nhóm mấy và điểm tín dụng của bạn tại thời điểm tra cứu.Bạn tránh nhầm lẫn hai trường hợp thường được gọi chung là “check CIC”. Trường hợp thứ nhất là bạn tự kiểm tra thông tin tín dụng của mình để biết tình trạng hiện tại. Trường hợp thứ hai là ngân hàng hoặc công ty tài chính tra cứu CIC để phục vụ việc thẩm định hồ sơ vay, và việc này chỉ được thực hiện khi có sự đồng ý của bạn. Trong bài viết này, check CIC được hiểu theo trường hợp thứ nhất.Bạn có quyền tự kiểm tra thông tin tín dụng của mình. Theo Điều 18 Thông tư 15/2023/TT-NHNN của Ngân hàng Nhà nước, có hiệu lực từ ngày 01/01/2025, người vay được khai thác miễn phí thông tin tín dụng của chính mình 1 lần trong mỗi năm. Từ lần thứ 2 trở đi , bạn sẽ phải trả 22,000 VNĐ cho mỗi lần check (cập nhật theo bảng giá mới nhất của CIC). 2. 4 cách kiểm tra CIC cá nhân bằng CCCDTùy vào thời gian và mức độ quen thuộc với điện thoại, bạn có thể chọn một trong bốn cách dưới đây. Bảng so sánh giúp bạn chọn nhanh trước khi đi vào từng bước:Cách checkChi phíThời gian có kết quảCần chuẩn bịXem được gìMức độ an toàn & Riêng tưPhù hợp với aiỨng dụng chính thức của CICMiễn phí 1 lần/năm (các lần sau có tính phí - từ 22,000 VND/lần)Duyệt tài khoản 1-3 ngày; sau khi có tài khoản tra cứu tức thìCCCD gắn chip và SĐT chính chủBáo cáo tín dụng đầy đủ: Điểm tín dụng, nhóm nợ (1-5), danh sách khoản vay, TCTD đang vayRất cao (10/10) - Chính chủ Ngân hàng Nhà nước, an tâm tuyệt đối, chủ động kiểm tra âm thầmBạn muốn xem chi tiết, chính xác, chủ động theo dõi định kỳ trên điện thoạiVí điện tử MoMoMiễn phí 1 lần/năm, từ lần thứ 2 trở đi sẽ tốn 22.000 VND/lần cho bản báo cáo đầy đủNgay lập tức (Vài giây)Tài khoản MoMo, ShopeePay đã định danh (eKYC)Chủ yếu là Điểm tín dụng tổng quan, không đầy đủ chi tiết như báo cáo CIC gốcKhá cao (8/10) - Đã quen thuộc với thương hiệu, nhưng vẫn có chút e ngại vì qua bên thứ 3Bạn cần biết kết quả gấp, giải tỏa lo âu ngay lập tức, chỉ muốn xem điểm nhanhTại quầy Công ty Tài chính (CTTC) / Ngân hàngThường có phí (tùy chính sách của từng tổ chức tín dụng, sẽ dao động từ 18.000-100.000 VND/lần)Trong buổi giao dịch với nhân viên, thường mất khoảng 30–60 phútCCCD còn hiệu lực, thường đi kèm hồ sơ vay vốnKết quả tra cứu CIC chi tiết do nhân viên xuất raCao (9/10) - An toàn về dữ liệu, nhưng tạo áp lực tâm lý (ngại giao tiếp, sợ bị từ chối)Bạn không quen thao tác online, người đang làm hồ sơ chuẩn bị vay vốn trực tiếpWebsite CICMiễn phí 1 lần/nămĐăng ký 1-3 ngày (có nhân viên gọi xác minh)CCCD, Email và SĐTBáo cáo tín dụng đầy đủ: Điểm tín dụng, chi tiết lịch sử dư nợ, nhóm nợRất cao (10/10) -Nguồn dữ liệu gốc, minh bạch, bảo mật thông tinBạn quen thao tác trên máy tính, cần lưu/in file báo cáo chính thức2.1. Tra cứu CIC cá nhân online qua ứng dụng CICĐể check CIC online nhanh chóng và an toàn, bạn có thể dùng ứng dụng chính thức do Trung tâm Thông tin Tín dụng Quốc gia phát triển, tải miễn phí trên điện thoại. Đây là cùng một ứng dụng nhưng hiển thị tên khác nhau trên hai kho ứng dụng:Trên Android (CH Play): tìm \"CIC – Kết nối nhu cầu vay\"Trên iOS (App Store): tìm \"iCIC\" (tên đầy đủ: iCIC National Credit Information Centre of Vietnam)Lưu ý: Hãy kiểm tra kỹ nhà phát hành là Trung tâm Thông tin Tín dụng Quốc gia Việt Nam (CIC) trước khi tải, tránh tải nhầm ứng dụng giả mạo.Sau khi tải app thành công, bạn hãy thực hiện theo các bước sau:Bước 1: Tìm kiếm CIC Credit Connect trong CH Play hoặc App Store để tải ứng dụngBước 2: Đăng ký tài khoản CIC theo yêu cầu từ hệ thốngBước 3: Chờ tài khoản được CIC xét duyệt (mất khoảng 1 - 3 ngày), sau đó Đăng nhập vào ứng dụngBước 4: Nhận mã xác thực OTP gửi về số điện thoại đăng ký và cho phép truy cập vị trí trên thiết bịBước 5: Bấm chọn Đồng ý khai thác báo cáo, xác thực bằng mật khẩu, dấu vân tay hoặc Face ID đã đăng kýBước 6: Chọn Mua báo cáo tín dụng và nhập mã xác thực OTP. Cuối cùng, xem kết quả tra cứu tại lịch sử tín dụng.Lưu ý về chi phí: Bạn thường được miễn phí khai thác báo cáo lần đầu; từ các lần sau, ứng dụng có thể tính phí theo quy định của CIC.Các bước kiểm tra CIC online trên app chính thống chính phủ2.2. Check CIC trên MoMoHiện nay, MoMo là ví điện tử phổ biến tại Việt Nam có liên kết với CIC, cho phép bạn xem nhanh tình trạng tín dụng ngay trong ứng dụng đang dùng hằng ngày. Cách này tiện, nhưng thông tin hiển thị thường gọn hơn báo cáo đầy đủ trên ứng dụng CIC.Bạn có thể kiểm tra nhanh CIC cá nhân trên ví MoMo theo các bước sau:Bước 1: Trên trang màn hình chính của ứng dụng, chọn Xem thêm dịch vụ Bước 2: Nhấp vào mục Tài chính & Bảo hiểm, nhấn chọn Kiểm tra Điểm tín dụng CIC ở hàng cuối cùng của khối dịch vụBước 3: Kiểm tra kỹ thông tin cá nhân như Họ và tên, Số CMND/CCCD và Số điện thoại, sau đó chọn Kiểm tra điểm. Kiểm tra điểm tín dụng CIC trên MoMo2.3. Kiểm tra CIC bằng CCCD/CMND tại ngân hàng hoặc tổ chức tín dụngNếu bạn không quen thao tác online, có thể kiểm tra nợ xấu bằng CMND/CCCD trực tiếp tại các quầy giao dịch ngân hàng hoặc các công ty tài chính. Trường hợp bạn có ý định đăng ký khoản vay hoặc sử dụng dịch vụ tài chính, bạn cũng sẽ nhận được sự hỗ trợ và tư vấn tức thì từ nhân viên. Các bước thực hiện:Bước 1: Đến chi nhánh ngân hàng hoặc các tổ chức tín dụng gần nhất để thực hiện yêu cầuBước 2: Nộp hồ sơ đăng ký khoản vay và đề nghị kiểm tra lịch sử tín dụng cá nhânBước 3: Cung cấp thông tin cá nhân cần thiết, bao gồm CCCD còn hiệu lựcBước 4: Sau khi tổ chức xác minh và truy xuất dữ liệu, bạn sẽ nhận được kết quả tra cứu CIC trực tiếp tại quầy.Lưu ý: Mỗi cá nhân được miễn phí tra cứu điểm tín dụng CIC 1 lần/năm. Từ lần thứ 2 trong năm, bạn sẽ phải nộp phí (thường khoảng 28.000 – 100.000 VND/lần tùy ngân hàng hoặc tổ chức tín dụng).Đến quầy giao dịch ngân hàng để được nhân viên hỗ trợ check CIC2.4. Tra cứu CIC miễn phí qua website cic.gov.vnChú ý: Kể từ ngày 01/04/2026, CIC đã tạm dừng đăng ký và check CIC trên website đến khi có thông báo mới. Vì vậy, bạn nên ưu tiên cách 1 tra cứu CIC online trên ứng dụng của CIC nhé!Tương tự app, việc tra cứu CIC miễn phí trên website giúp bạn chủ động theo dõi thông tin ở bất cứ đâu.Các bước thực hiện:Bước 1: Truy cập vào website chính thức của CIC tại địa chỉ https://cic.gov.vn/ Bước 2: Chọn Đăng ký tài khoản, sau đó điền đầy đủ thông tin cá nhân theo hướng dẫnBước 3: Tiến hành xác thực tài khoản bằng cách thiết lập mật khẩu và nhập mã OTP được gửi về điện thoạiBước 4: Trả lời các câu hỏi xác minh thông tin theo yêu cầu của nhân viên CIC để hoàn tất quá trình xác thựcBước 5: Chờ kết quả đăng ký được gửi qua tin nhắn SMS hoặc email đã cung cấp. Đăng nhập lại website CIC để check CIC.3. Cách đọc kết quả CIC: 5 thông tin cần xemTra cứu CIC thành công mới chỉ là bước đầu. Quan trọng hơn là hiểu các thông tin trong báo cáo đang nói gì về tình trạng tín dụng của bạn.Theo quy định hiện hành, CIC có thể tạo lập các sản phẩm thông tin tín dụng như báo cáo tín dụng, báo cáo chấm điểm và xếp hạng tín dụng từ dữ liệu được các tổ chức tín dụng cung cấp. Những dữ liệu này có thể bao gồm thông tin về khoản vay, hoạt động cấp tín dụng, thẻ tín dụng, biện pháp bảo đảm và xử lý nợ.Tùy loại báo cáo và phiên bản ứng dụng, cách hiển thị có thể khác nhau. Tuy nhiên, khi đọc kết quả CIC, bạn nên chú ý đến 5 nhóm thông tin sau:Thông tin cần checkVì sao cần xem?Bạn nên kiểm tra gì?1. Điểm tín dụngPhản ánh kết quả đánh giá tín dụng được CIC tạo lập từ dữ liệu hiện cóĐiểm CIC của bạn, so sánh với kỳ trước nếu báo cáo có cung cấp2. Nhóm nợ Cho biết tình trạng phân loại khoản nợĐặc biệt kiểm tra có khoản vay nào đang được ghi nhận ở nhóm nợ cần chú ý hoặc nhóm nợ xấu hay không3. Các tổ chức tín dụng đang ghi nhận quan hệ tín dụngGiúp bạn biết những đơn vị nào đang báo cáo khoản cấp tín dụng liên quan đến mìnhĐối chiếu xem có ngân hàng/công ty tài chính nào mà bạn chưa từng sử dụng dịch vụ lại xuất hiện trong báo cáo4. Dư nợ và tình trạng các khoản tín dụng Cho biết nghĩa vụ tín dụng đang được ghi nhậnĐối chiếu với các khoản vay, thẻ tín dụng hoặc nghĩa vụ bạn đang thực tế sử dụng5. Lịch sử tín dụngGiúp nhìn lại cách các khoản tín dụng được ghi nhận qua thời gianChú ý những kỳ từng chậm thanh toán, thay đổi nhóm nợ hoặc dữ liệu bất thường cần kiểm tra lại lịch sử tín dụngTrong năm mục trên, nhóm nợ là thông tin quyết định bạn có bị coi là nợ xấu hay không. Theo Điều 10 Thông tư 31/2024/TT-NHNN có hiệu lực từ 01/07/2024, khoản vay được xếp nhóm dựa trên số ngày quá hạn: nhóm 1 quá hạn dưới 10 ngày, nhóm 2 từ 10 đến 90 ngày, nhóm 3 từ 91 đến 180 ngày, nhóm 4 từ 181 đến 360 ngày và nhóm 5 trên 360 ngày. Nợ xấu là các khoản thuộc nhóm 3, 4 và 5. Bạn có thể xem giải thích chi tiết từng nhóm trong bài các nhóm nợ là gì.Điểm tín dụng là một thang đo khác, không đồng nghĩa với nhóm nợ. Một người có thể ở nhóm 1 nhưng điểm chưa cao vì lịch sử vay còn ngắn. Ý nghĩa từng hạng điểm được giải thích trong bài điểm tín dụng CIC là gì.Một điều nhiều người lo lắng là thông tin cũ sẽ theo mình mãi. Thực tế, Thông tư 15/2023/TT-NHNN quy định CIC lưu giữ thông tin tín dụng tối thiểu 5 năm kể từ ngày phát sinh (Điều 11), còn thông tin tiêu cực chỉ được cung cấp tối đa 5 năm kể từ ngày thông tin đó kết thúc (Điều 13). Nói cách khác, sau khi bạn trả xong khoản nợ quá hạn, dấu vết tiêu cực sẽ không được cung cấp quá 5 năm.Điểm quan trọng là không nên chỉ nhìn vào một con số điểm CIC rồi kết luận hồ sơ của mình “tốt” hay “xấu”. Điểm tín dụng, nhóm nợ, dư nợ và lịch sử tín dụng phản ánh những khía cạnh khác nhau; CIC không phải đơn vị đưa ra quyết định cuối cùng về việc bạn có được vay hay không.Nếu phát hiện một khoản vay, dư nợ hoặc thông tin tín dụng mà bạn cho rằng không chính xác, bạn nên kiểm tra lại trước khi tiếp tục đăng ký khoản vay mới. Thông tư 15/2023/TT-NHNN cho phép bạn đề nghị CIC hoặc tổ chức liên quan kiểm tra, điều chỉnh thông tin tín dụng"
+    }
+  ]
+}

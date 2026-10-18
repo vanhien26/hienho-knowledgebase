@@ -2,3 +2,11 @@ openpyxl==3.1.5
 pandas>=2.0
 python-pptx>=0.6.23
 xlsxwriter>=3.1
+# SEO/GEO: Keyword & Entity Extraction (Content Gap / Information Gain)
+yake>=0.4.3
+rake-nltk>=1.0.6
+nltk>=3.8          # cần tải corpus: punkt, punkt_tab, stopwords
+pyvi>=0.1.1        # tách từ tiếng Việt (word segmentation)
+# Semantic rerank (tùy chọn - nặng ~2GB do torch; tự bỏ qua nếu không cài)
+keybert>=0.8
+sentence-transformers>=3.0

@@ -13,8 +13,8 @@ import os
 import glob
 import csv
 import re
-import math
 import json
+from datetime import datetime
 from collections import defaultdict, Counter
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -29,7 +29,11 @@ from scripts.lib.keyword_intelligence import (
     SERPCannibalizationShield,
     MoMoDomainSERPShield,
     InternalLinkingTopologyEngine,
-    GEODirectAnswerGenerator
+    GEODirectAnswerGenerator,
+    clean_val,
+    normalize_text,
+    calculate_opportunity_score,
+    classify_quadrant
 )
 
 MERGE_MAP = {
@@ -62,6 +66,13 @@ MERGE_MAP = {
     'cuu-ho-o-to': 'cuu-ho-xe',
     'trạm-sac': 'tram-sac',
     'cay-xang': 'tram-xang',
+    # Hospital
+    'tinh-bmi': 'bmi',
+    # Student
+    'truong-dai-hoc': 'dai-hoc',
+    # Other
+    'lich-van-nien': 'lich-am',
+    'voucher': 'ma-giam-gia',
 }
 
 VIETNAMESE_THEME_NAMES = {
@@ -186,11 +197,10 @@ VIETNAMESE_THEME_NAMES = {
     'rap': 'Rạp Chiếu Phim & Cụm Rạp',
     've-xem-phim': 'Giá Vé Xem Phim & Khuyến Mãi',
 
-    # === hospital (5) ===
+    # === hospital (4) ===
     'benh-vien': 'Bệnh Viện & Phòng Khám',
-    'bmi': 'Chỉ Số BMI Chuẩn',
+    'bmi': 'Chỉ Số & Tính Toán BMI Chuẩn',
     'dat-lich-kham-benh': 'Đặt Lịch Khám Bệnh',
-    'tinh-bmi': 'Tính Chỉ Số BMI',
     'tinh-calo': 'Tính Calo & Dinh Dưỡng',
 
     # === insurtech (8) ===
@@ -224,13 +234,11 @@ VIETNAMESE_THEME_NAMES = {
     'visa-du-lich': 'Thủ Tục Visa Du Lịch',
     'xe-khach': 'Đặt Vé Xe Khách',
 
-    # === other (6) ===
-    'lich-am': 'Lịch Âm Hôm Nay',
-    'lich-van-nien': 'Lịch Vạn Niên',
-    'ma-giam-gia': 'Mã Giảm Giá & Voucher',
+    # === other (3) ===
+    'lich-am': 'Lịch Âm & Lịch Vạn Niên',
+    'ma-giam-gia': 'Mã Giảm Giá & Voucher Khuyến Mãi',
     'ma-so-thue': 'Tra Cứu Mã Số Thuế',
     'tu-vi': 'Tử Vi Hàng Ngày & Trọn Đời',
-    'voucher': 'Voucher Ưu Đãi & Khuyến Mãi',
 
     # === telco (5) ===
     'Data-3g': 'Gói Cước Data 3G',
@@ -279,6 +287,17 @@ VIETNAMESE_THEME_NAMES = {
     'tram-xang': 'Trạm Xăng Gần Nhất',
     'tuyen-xe-buyt': 'Tra Cứu Tuyến Xe Buýt',
     'vetc': 'Thu Phí Tự Động VETC',
+
+    # === student (9) ===
+    'cao-dang': 'Cao Đẳng & Tuyển Sinh Cao Đẳng',
+    'dai-hoc': 'Đại Học & Trường Đại Học',
+    'diem-chuan': 'Điểm Chuẩn & Thi Tốt Nghiệp THPT',
+    'hoc-phi': 'Học Phí Đại Học & Học Bổng',
+    'nha-tro': 'Nhà Trọ & Phòng Trọ Sinh Viên',
+    'sinh-vien': 'Sinh Viên & Cổng Thông Tin Đào Tạo',
+    'truong-trung-cap': 'Trường Trung Cấp & Trung Cấp Nghề',
+    'tuyen-sinh': 'Tuyển Sinh & Xét Tuyển Đại Học',
+    'viec-lam-sinh-vien': 'Việc Làm Sinh Viên & Bán Thời Gian',
 }
 
 SECTOR_SPECIFIC_RULES = {
@@ -331,6 +350,14 @@ SECTOR_SPECIFIC_RULES = {
     'telco': [
         ('Gói cước & Data 4G/5G', ['data', '4g', '5g', '3g', 'gói cước', 'goi cuoc', 'nạp data', 'dung lượng']),
         ('SIM & Tài khoản', ['sim', 'sim số', 'chính chủ', 'esim', 'tài khoản điện thoại', 'nạp thẻ']),
+    ],
+    'student': [
+        ('Tuyển sinh & Xét tuyển', ['tuyển sinh', 'xét tuyển', 'điểm chuẩn', 'thi tốt nghiệp', 'thi thpt', 'nguyện vọng', 'học bạ', 'tổ hợp môn']),
+        ('Trường & Ngành học', ['trường', 'đại học', 'cao đẳng', 'trung cấp', 'học viện', 'ngành học', 'chuyên ngành', 'mã trường']),
+        ('Học phí & Học bổng', ['học phí', 'học bổng', 'miễn giảm', 'lệ phí', 'tín chỉ']),
+        ('Nhà trọ & Ký túc xá', ['nhà trọ', 'phòng trọ', 'ký túc xá', 'thuê trọ', 'tìm trọ', 'chỗ ở']),
+        ('Sinh viên & Cổng thông tin', ['sinh viên', 'cổng thông tin', 'đăng nhập', 'tài khoản', 'email', 'thẻ sinh viên']),
+        ('Việc làm & Kỹ năng', ['việc làm', 'part-time', 'bán thời gian', 'thực tập', 'tuyển dụng', 'kỹ năng']),
     ]
 }
 
@@ -342,78 +369,8 @@ LOCAL_MD_PATH = os.path.join(BASE_DIR, "07_REPORTS", "KEYWORD_INVENTORY_MASTER.m
 HUBS_DASHBOARD_DATA = os.path.join(HUBS_REPO, "lib", "dashboard", "seo-inventory-clusters.json")
 HUBS_PUBLIC_DATA = os.path.join(HUBS_REPO, "data", "seo-clusters-summary.json")
 
-STOPWORDS = {
-    'và', 'là', 'của', 'ở', 'tại', 'cho', 'với', 'trong', 'các', 'những',
-    'được', 'có', 'ra', 'khi', 'về', 'này', 'đó', 'từ', 'theo', 'như',
-    'để', 'lại', 'thì', 'người', 'cái', 'làm', 'hay', 'bao', 'nhiêu',
-    'gì', 'sao', 'nao', 'nào', 'mấy'
-}
-
-TELEX_FIXES = {
-    'ddaaus': 'đấu',
-    'ddieenj': 'điện',
-    'ddoof': 'đồ',
-    'ddoongf': 'đồng',
-    'ngan hang': 'ngân hàng',
-    'tiet kiem': 'tiết kiệm',
-    'lai suat': 'lãi suất',
-    'bien so': 'biển số',
-    'bao hiem': 'bảo hiểm',
-    'o to': 'ô tô',
-    'xe may': 'xe máy',
-}
-
-def clean_val(val):
-    if not val:
-        return ""
-    val = val.strip()
-    if val.startswith('="') and val.endswith('"'):
-        return val[2:-1]
-    return val
-
-def normalize_text(text):
-    text = text.lower().strip()
-    for err, fix in TELEX_FIXES.items():
-        text = text.replace(err, fix)
-    text = re.sub(r'\s+', ' ', text)
-    return text
-
-def calculate_opportunity_score(volume, cpc, competition, intent):
-    intent_weights = {
-        'Transactional': 2.0,
-        'Tool/Calculator': 1.8,
-        'Commercial': 1.5,
-        'Informational': 1.0,
-        'Navigational': 0.7
-    }
-    weight = intent_weights.get(intent, 1.0)
-    
-    comp_val = competition.lower()
-    comp_factor = 0.2
-    if 'high' in comp_val:
-        comp_factor = 0.8
-    elif 'medium' in comp_val:
-        comp_factor = 0.5
-    elif 'low' in comp_val:
-        comp_factor = 0.2
-        
-    vol_score = math.log10(volume + 1) if volume > 0 else 0
-    cpc_bonus = min(cpc * 0.2, 0.5)
-    
-    score = vol_score * (1.2 - comp_factor) * weight * (1.0 + cpc_bonus)
-    return round(score, 2)
-
-def classify_quadrant(volume, competition, intent):
-    comp_val = competition.lower()
-    is_high_comp = 'high' in comp_val or 'medium' in comp_val
-    if volume >= 1500 and not is_high_comp:
-        return 'Quick Win'
-    elif volume >= 5000 and is_high_comp:
-        return 'Strategic Pillar'
-    elif volume >= 200 and intent in ['Commercial', 'Tool/Calculator', 'Transactional']:
-        return 'Commercial Converter'
-    else:
-        return 'Long-tail / Supporting'
+# clean_val / normalize_text / calculate_opportunity_score / classify_quadrant
+# da duoc chuan hoa ve scripts/lib/keyword_intelligence.py (SSOT) - import o dau file.
 
 def build_adaptive_clusters(canonical_clusters, sector=None, top_n_clusters=5):
     """
@@ -538,6 +495,17 @@ def process_csv_paths(csv_paths, sector, canonical_slug):
 
     # 4. Domain SERP Cannibalization Shield
     shield_eval = MoMoDomainSERPShield.evaluate_cannibalization_risk(pillar_item['keyword'], sector=sector, check_live_serp=False)
+    if not shield_eval.get('top_live_url'):
+        for opp in top_opportunities:
+            sub_eval = MoMoDomainSERPShield.evaluate_cannibalization_risk(opp['keyword'], sector=sector, check_live_serp=False)
+            if sub_eval.get('top_live_url'):
+                shield_eval['top_live_url'] = sub_eval['top_live_url']
+                shield_eval['risk_level'] = sub_eval['risk_level']
+                shield_eval['verdict'] = sub_eval['verdict']
+                shield_eval['action'] = sub_eval['action']
+                shield_eval['rationale'] = f"Kế thừa live URL từ truy vấn nhánh: {opp['keyword']}"
+                break
+
     cannibalization_shield = {
         'risk_level': shield_eval['risk_level'],
         'verdict': shield_eval['verdict'],
@@ -663,7 +631,7 @@ def main():
     # 1. Đóng gói Snapshot Master & SSOT Local
     data_payload = {
         'version': '3.1-enterprise',
-        'generated_at': '2026-10-16',
+        'generated_at': datetime.now().strftime('%Y-%m-%d'),
         'stats': {
             'total_usecases': len(all_usecases),
             'total_keywords': total_kws_all,
@@ -703,7 +671,7 @@ def main():
     qw_md_path = os.path.join(BASE_DIR, "07_REPORTS", "QUICK_WINS_PORTFOLIO.md")
     qw_md = f"""# DANH MỤC TỪ KHÓA QUICK WINS TOÀN WEB PLATFORM (HIGH ROI OPPORTUNITIES)
 
-Tập hợp các từ khóa có **Search Volume cao ($\ge 1.500$) và Mức độ Cạnh tranh Thấp (Low PPC Competition)** trên toàn bộ 188 Use Cases của Web Platform. Đây là các chủ đề ưu tiên P0 mang lại lưu lượng truy cập nhanh nhất với chi phí nội dung tối thiểu.
+Tập hợp các từ khóa có **Search Volume cao ($\ge 1.500$) và Mức độ Cạnh tranh Thấp (Low PPC Competition)** trên toàn bộ {len(all_usecases)} Use Cases của Web Platform. Đây là các chủ đề ưu tiên P0 mang lại lưu lượng truy cập nhanh nhất với chi phí nội dung tối thiểu.
 
 - **Tổng số từ khóa Quick Wins phát hiện:** {len(all_quick_wins):,} từ khóa
 - **Tổng dung lượng tìm kiếm Quick Wins:** {sum(x['volume'] for x in all_quick_wins):,} lượt/tháng

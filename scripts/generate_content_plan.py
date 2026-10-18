@@ -11,7 +11,6 @@ import os
 import glob
 import csv
 import re
-import math
 import json
 import argparse
 from collections import defaultdict, Counter
@@ -29,58 +28,14 @@ from scripts.lib.keyword_intelligence import (
     ContentBriefGenerator,
     InternalLinkingTopologyEngine,
     GEODirectAnswerGenerator,
-    STOPWORDS,
-    TELEX_FIXES
+    clean_val,
+    normalize_text,
+    calculate_opportunity_score,
+    classify_priority
 )
 
-def clean_val(val):
-    if not val:
-        return ""
-    val = val.strip()
-    if val.startswith('="') and val.endswith('"'):
-        return val[2:-1]
-    return val
-
-def normalize_text(text):
-    text = text.lower().strip()
-    for err, fix in TELEX_FIXES.items():
-        text = text.replace(err, fix)
-    text = re.sub(r'\s+', ' ', text)
-    return text
-
-def calculate_opportunity_score(volume, cpc, competition, intent):
-    intent_weights = {
-        'Transactional': 2.0,
-        'Tool/Calculator': 1.8,
-        'Commercial': 1.5,
-        'Informational': 1.0,
-        'Navigational': 0.7
-    }
-    weight = intent_weights.get(intent, 1.0)
-    
-    comp_val = competition.lower()
-    comp_factor = 0.2
-    if 'high' in comp_val:
-        comp_factor = 0.8
-    elif 'medium' in comp_val:
-        comp_factor = 0.5
-    elif 'low' in comp_val:
-        comp_factor = 0.2
-        
-    vol_score = math.log10(volume + 1) if volume > 0 else 0
-    cpc_bonus = min(cpc * 0.2, 0.5)
-    score = vol_score * (1.2 - comp_factor) * weight * (1.0 + cpc_bonus)
-    return round(score, 2)
-
-def classify_priority(volume, competition, intent):
-    comp_val = competition.lower()
-    is_high_comp = 'high' in comp_val or 'medium' in comp_val
-    if (volume >= 2000 and not is_high_comp) or (intent in ['Tool/Calculator', 'Transactional'] and volume >= 500):
-        return 'P0'
-    elif volume >= 1000 or intent == 'Commercial':
-        return 'P1'
-    else:
-        return 'P2'
+# clean_val / normalize_text / calculate_opportunity_score / classify_priority
+# da duoc chuan hoa ve scripts/lib/keyword_intelligence.py (SSOT) - import o tren.
 
 def determine_funnel(intent):
     if intent in ['Tool/Calculator', 'Transactional']:

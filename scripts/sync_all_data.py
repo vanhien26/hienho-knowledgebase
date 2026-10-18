@@ -7,6 +7,7 @@ Tập hợp toàn bộ các luồng sync dữ liệu thành 1 lệnh điều ph�
 3. Google Trends Validation (Rolling top themes, Geo-intent, Rising queries)
 4. Bing AI Performance Ingest (Copilot citations)
 5. Inventory & Clusters Sync to Web Hubs (react-web-momo)
+6. SEO News (SEO/GEO/AI Search) -> data/seo-news.json (react-web-momo)
 """
 
 import os
@@ -53,6 +54,7 @@ def main():
     parser.add_argument("--skip-tracking", action="store_true", help="Bỏ qua sync Web Performance Tracking")
     parser.add_argument("--skip-trends", action="store_true", help="Bỏ qua Google Trends validation")
     parser.add_argument("--skip-hubs", action="store_true", help="Bỏ qua sync sang Web Hubs (react-web-momo)")
+    parser.add_argument("--skip-seo-news", action="store_true", help="Bỏ qua sync tin SEO/GEO News")
     args = parser.parse_args()
 
     overall_start = time.time()
@@ -121,6 +123,17 @@ def main():
             results["Web Hubs Distribution"] = ("SKIPPED (File not found)", 0)
     else:
         results["Web Hubs Distribution"] = ("SKIPPED (User flag)", 0)
+
+    # 6. Luồng SEO/GEO News -> data/seo-news.json
+    if not args.skip_seo_news:
+        seo_news_script = SCRIPTS_DIR / "sync_seo_news.py"
+        if seo_news_script.exists():
+            success, elapsed = run_step("SEO/GEO News Feed -> Web Hubs", [str(seo_news_script)])
+            results["SEO/GEO News Feed"] = ("SUCCESS" if success else "FAILED", elapsed)
+        else:
+            results["SEO/GEO News Feed"] = ("SKIPPED (File not found)", 0)
+    else:
+        results["SEO/GEO News Feed"] = ("SKIPPED (User flag)", 0)
 
     # Báo cáo tổng kết Master Sync
     total_elapsed = time.time() - overall_start

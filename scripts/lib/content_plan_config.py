@@ -101,6 +101,10 @@ FEATURE_MOMO_MAP = {
     # Hospital Hub
     'dat-lich-kham-benh': ('Đặt Lịch Khám Bệnh Tại Bệnh Viện Hàng Đầu', 'momo://hospital-booking', 'web_hospital_booking_btn_click'),
     'benh-vien': ('Thanh Toán Viện Phí & Đặt Lịch Khám Bệnh', 'momo://hospital-booking', 'web_hospital_booking_btn_click'),
+
+    # Other Hub
+    'ma-giam-gia': ('Săn Voucher Khuyến Mãi & Mã Giảm Giá MoMo', 'momo://voucher-hub', 'web_voucher_claim_btn_click'),
+    'tu-vi': ('Xem Tử Vi & Quẻ Đầu Năm Cùng MoMo', 'momo://horoscope', 'web_horoscope_btn_click'),
 }
 
 def get_concrete_cta_hook(theme_slug):
@@ -152,6 +156,24 @@ SUB_CLUSTER_RULES = {
         ('Xóa nợ xấu & Cải thiện điểm', ['xóa nợ', 'cải thiện', 'điểm tín dụng', 'bao lâu'], 'xoa-no-xau'),
         ('Thủ tục & Biểu phí CIC', ['thủ tục', 'phí tra cứu', 'hồ sơ', 'mẫu đơn'], 'thu-tuc-bieu-phi'),
         ('Vay vốn theo điểm tín dụng', ['vay', 'ngân hàng', 'hạn mức', 'duyet vay'], 'vay-theo-diem-tin-dung'),
+    ],
+    'bmi': [
+        ('Công cụ tính chỉ số BMI', ['tính bmi', 'tinh bmi', 'cách tính', 'máy tính', 'calculator', 'online', 'công thức', 'phần mềm'], 'cong-cu-tinh-bmi'),
+        ('Bảng BMI chuẩn Nam & Nữ', ['nam', 'nữ', 'người lớn', 'chuẩn', 'bảng', 'châu á', 'who', 'tiêu chuẩn'], 'bang-bmi-nam-nu'),
+        ('Chỉ số BMI trẻ em', ['trẻ em', 'tuổi', 'bé', 'học sinh', 'mầm non'], 'bmi-tre-em'),
+        ('Đánh giá thể trạng & Thừa cân', ['béo phì', 'gầy', 'thừa cân', 'suy dinh dưỡng', 'giảm cân', 'tăng cân'], 'the-trang-suc-khoe'),
+    ],
+    'lich-am': [
+        ('Lịch Vạn Niên & Ngày Hoàng Đạo', ['vạn niên', 'van nien', 'ngày tốt', 'ngày hoàng đạo', 'giờ hoàng đạo', 'ngày xấu', 'hắc đạo', 'xuất hành', 'vạn sự'], 'lich-van-nien'),
+        ('Đổi Ngày Âm Dương & Hôm Nay', ['đổi ngày', 'doi ngay', 'âm sang dương', 'dương sang âm', 'hôm nay', 'tra cứu', 'lịch âm dương', 'âm lịch hôm nay'], 'doi-ngay-am-duong'),
+        ('Lịch Tết & Ngày Lễ Âm Lịch', ['tết', 'tet', 'nguyên đán', 'rằm', 'mùng 1', 'tháng giêng', 'ông công ông táo', 'vu lan', 'trung thu'], 'lich-tet-ngay-le'),
+        ('Lịch Âm Các Năm', ['2025', '2026', '2027', 'năm nay', 'năm sau'], 'lich-am-cac-nam'),
+    ],
+    'ma-giam-gia': [
+        ('Mã Giảm Giá Sàn TMĐT & Freeship', ['shopee', 'lazada', 'tiktok', 'tiki', 'freeship', 'chợ', '0đ', 'mã freeship', 'voucher shopee'], 'ma-giam-gia-tmdt'),
+        ('Voucher Ăn Uống & Cafe', ['highland', 'highlands', 'phúc long', 'phuc long', 'cgv', 'haidilao', 'jollibee', 'kfc', 'lotteria', 'ăn uống', 'cafe', 'voucher highland'], 'voucher-an-uong-cafe'),
+        ('Voucher Du Lịch & Di Chuyển', ['klook', 'traveloka', 'grab', 'grabfood', 'be', 'agoda', 'booking', 'vé máy bay', 'voucher klook'], 'voucher-du-lich-dich-vu'),
+        ('Mã Giảm Giá & Voucher MoMo', ['momo', 'ví momo', 'thanh toán', 'chiết khấu', 'hoàn tiền', 'voucher momo', 'ưu đãi momo'], 'voucher-momo-uu-dai'),
     ]
 }
 
@@ -201,6 +223,14 @@ SECTOR_RULES = {
     'hospital': [
         ('Đặt khám & Bác sĩ', ['đặt khám', 'dat kham', 'bác sĩ', 'bac si', 'bệnh viện', 'benh vien', 'phòng khám', 'chuyên khoa'], 'dat-kham-bac-si'),
         ('Chỉ số & Sức khỏe', ['bmi', 'calo', 'cân nặng', 'chiều cao', 'dinh dưỡng', 'sức khỏe'], 'chi-so-suc-khoe'),
+    ],
+    'student': [
+        ('Tuyển sinh & Xét tuyển', ['tuyển sinh', 'xét tuyển', 'điểm chuẩn', 'thi tốt nghiệp', 'thi thpt', 'nguyện vọng', 'học bạ', 'tổ hợp môn'], 'tuyen-sinh'),
+        ('Trường & Ngành học', ['trường', 'đại học', 'cao đẳng', 'trung cấp', 'học viện', 'ngành học', 'chuyên ngành', 'mã trường'], 'truong-nganh-hoc'),
+        ('Học phí & Học bổng', ['học phí', 'học bổng', 'miễn giảm', 'lệ phí', 'tín chỉ'], 'hoc-phi-hoc-bong'),
+        ('Nhà trọ & Ký túc xá', ['nhà trọ', 'phòng trọ', 'ký túc xá', 'thuê trọ', 'tìm trọ', 'chỗ ở'], 'nha-tro-ktx'),
+        ('Sinh viên & Cổng thông tin', ['sinh viên', 'cổng thông tin', 'đăng nhập', 'tài khoản', 'email', 'thẻ sinh viên'], 'sinh-vien-cong-thong-tin'),
+        ('Việc làm & Kỹ năng', ['việc làm', 'part-time', 'bán thời gian', 'thực tập', 'tuyển dụng', 'kỹ năng'], 'viec-lam-ky-nang'),
     ]
 }
 
@@ -211,3 +241,46 @@ FALLBACK_INTENT_CLUSTERS = [
     ('Cẩm nang & Hỏi đáp', 'Informational', 'cam-nang'),
     ('Cổng dịch vụ & Liên hệ', 'Navigational', 'lien-he'),
 ]
+
+VIETLOTT_ENTITIES = [
+    'vietlott', 'viet lott', 'việt lott', 'mega 6 45', 'mega 6/45', 'mega645',
+    'power 6 55', 'power 6/55', 'power 655', 'power655', 'keno', 'max 3d', 'max3d',
+    'max 3d pro', 'bingo18', 'bingo 18', 'vietlott sms', 'mua vietlott', 'vé số vietlott'
+]
+
+BANK_THEMES = {
+    'Vietcombank': ['vietcombank', 'vcb', 'vietcom bank', 'việt com bank', 'ngoại thương'],
+    'Techcombank': ['techcombank', 'techcom bank', 'kỹ thương'],
+    'BIDV': ['bidv', 'đầu tư và phát triển'],
+    'VietinBank': ['vietinbank', 'vietin bank', 'việt tin', 'công thương'],
+    'agribank': ['agribank', 'agri bank', 'nông nghiệp'],
+    'mbbank': ['mbbank', 'mb bank', 'quân đội', 'ngân hàng mb'],
+    'ACB': ['acb bank', 'ngân hàng acb', 'ngan hang acb', 'acb'],
+    'sacombank': ['sacombank', 'stb'],
+    'vpbank': ['vpbank', 'vp bank'],
+    'tpbank': ['tpbank', 'tp bank', 'tien phong bank', 'tiên phong bank'],
+    'shb': ['shb bank', 'ngân hàng shb', 'ngan hang shb'],
+    'hd-bank': ['hdbank', 'hd bank'],
+    'vib': ['vib bank', 'ngân hàng vib', 'ngan hang vib'],
+    'MSB': ['msb bank', 'ngân hàng msb', 'hàng hải'],
+    'ocb': ['ocb bank', 'ngân hàng ocb', 'phương đông'],
+    'seabank': ['seabank', 'sea bank', 'đông nam á'],
+    'scb': ['scb bank', 'ngân hàng scb', 'sài gòn thương tín'],
+    'ab-bank': ['ab bank', 'abbank', 'an bình'],
+    'bac-a-bank': ['bac a bank', 'baca bank', 'bắc á bank'],
+    'ban-viet': ['bản việt', 'bvbank', 'ban viet bank'],
+    'bao-viet-bank': ['baoviet bank', 'bảo việt bank'],
+    'kien-long-bank': ['kienlong bank', 'kienlongbank'],
+    'LPBank': ['lpbank', 'lp bank', 'liên việt'],
+    'nam-a-bank': ['nam a bank', 'namabank'],
+    'ncb': ['ncb bank', 'quốc dân'],
+    'ocean-bank': ['oceanbank', 'ocean bank', 'đại dương'],
+    'pvcom bank': ['pvcombank', 'pvcom bank'],
+    'saigonbank': ['saigonbank', 'saigon bank'],
+    'Shinhan Bank': ['shinhan bank', 'shinhan'],
+    'vietbank': ['vietbank', 'viet bank'],
+    'vrb': ['vrb bank', 'việt nga'],
+    'Indovina Bank': ['indovina bank', 'ivb'],
+    'donga bank': ['đông á bank', 'donga bank', 'dong a bank'],
+    'Eximbank': ['eximbank', 'exim bank']
+}

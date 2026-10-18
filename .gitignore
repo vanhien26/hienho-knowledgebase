@@ -23,3 +23,6 @@ __pycache__/
 *.env
 *credentials*.json
 *secret*.json
+
+# Intermediate API cache
+07_REPORTS/data/cache/

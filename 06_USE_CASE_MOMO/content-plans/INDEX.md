@@ -2,8 +2,8 @@
 
 Trang mục lục tra cứu toàn bộ các bản kế hoạch nội dung (Content Plans) của MoMo Web Platform. Được tạo lập và đồng bộ tự động từ kho dữ liệu Semantic Keyword Inventory.
 
-- **Tổng số Content Plans đã xuất bản:** 11 bản kế hoạch
-- **Tổng dung lượng tìm kiếm phục vụ:** 1,458,936,950 lượt/tháng
+- **Tổng số Content Plans đã xuất bản:** 12 bản kế hoạch
+- **Tổng dung lượng tìm kiếm phục vụ:** 1,461,815,700 lượt/tháng
 
 ---
 
@@ -22,3 +22,4 @@ Trang mục lục tra cứu toàn bộ các bản kế hoạch nội dung (Conte
 | `insurtech` | **bao-hiem-vat-chat** | 5 topics | 12,130 | [bao-hiem-vat-chat.md](insurtech/bao-hiem-vat-chat-content-plan.md) |
 | `insurtech` | **bao-hiem-than-vo** | 5 topics | 11,200 | [bao-hiem-than-vo.md](insurtech/bao-hiem-than-vo-content-plan.md) |
 | `insurtech` | **bao-hiem-chay-no** | 3 topics | 4,750 | [bao-hiem-chay-no.md](insurtech/bao-hiem-chay-no-content-plan.md) |
+| `student` | **tuyen-sinh** | 7 topics | 2,878,750 | [tuyen-sinh.md](student/tuyen-sinh-content-plan.md) |

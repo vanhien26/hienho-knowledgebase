@@ -11,93 +11,18 @@ import sys
 import os
 import csv
 import re
-import math
 import json
 from collections import defaultdict
 
-def clean_val(val):
-    if not val:
-        return ""
-    val = val.strip()
-    if val.startswith('="') and val.endswith('"'):
-        return val[2:-1]
-    return val
-
-def normalize_text(text):
-    text = text.lower().strip()
-    # Chuẩn hóa lỗi gõ Telex cơ bản thường gặp trong keyword research tool
-    telex_fixes = {
-        'ddaaus': 'đấu',
-        'ddieenj': 'điện',
-        'ddoof': 'đồ',
-        'ddoongf': 'đồng',
-        'ngan hang': 'ngân hàng',
-        'tiet kiem': 'tiết kiệm',
-        'lai suat': 'lãi suất',
-        'bien so': 'biển số',
-    }
-    for err, fix in telex_fixes.items():
-        text = text.replace(err, fix)
-    # Xóa khoảng trắng thừa
-    text = re.sub(r'\s+', ' ', text)
-    return text
-
-def detect_intent(keyword):
-    kw = keyword.lower()
-    # Transactional / Conversion
-    if any(w in kw for w in ['mở sổ', 'đăng ký', 'mua', 'nạp', 'thanh toán', 'đặt', 'vay ngay', 'làm thẻ', 'đổi biển']):
-        return 'Transactional'
-    # Commercial / Comparison
-    if any(w in kw for w in ['nên', 'tốt nhất', 'so sánh', 'nào tốt', 'lãi suất', 'bảng giá', 'giá bao nhiêu', 'chi phí', 'ưu đãi', 'đánh giá', 'review']):
-        return 'Commercial'
-    # Tool / Calculator / Lookup
-    if any(w in kw for w in ['tính', 'công cụ tính', 'tra cứu', 'kiểm tra', 'check', 'bao nhiêu tiền', 'lãi bao nhiêu']):
-        return 'Tool/Calculator'
-    # Navigational
-    if any(w in kw for w in ['online vcb', 'app', 'login', 'đăng nhập', 'chi nhánh', 'tổng đài', 'hotline', 'website']):
-        return 'Navigational'
-    # Informational (Default)
-    return 'Informational'
-
-def calculate_opportunity_score(volume, cpc, competition, intent):
-    # Trọng số intent
-    intent_weights = {
-        'Transactional': 2.0,
-        'Tool/Calculator': 1.8,
-        'Commercial': 1.5,
-        'Informational': 1.0,
-        'Navigational': 0.7
-    }
-    weight = intent_weights.get(intent, 1.0)
-    
-    # Chuẩn hóa competition (High: 0.8, Medium: 0.5, Low: 0.2)
-    comp_val = competition.lower()
-    comp_factor = 0.2
-    if 'high' in comp_val:
-        comp_factor = 0.8
-    elif 'medium' in comp_val:
-        comp_factor = 0.5
-    elif 'low' in comp_val:
-        comp_factor = 0.2
-        
-    # Công thức: log10(Volume + 1) * (1.2 - comp_factor) * intent_weight * (1 + cpc_bonus)
-    vol_score = math.log10(volume + 1) if volume > 0 else 0
-    cpc_bonus = min(cpc * 0.2, 0.5) # bonus nếu CPC cao (thể hiện tính thương mại)
-    
-    score = vol_score * (1.2 - comp_factor) * weight * (1.0 + cpc_bonus)
-    return round(score, 2)
-
-def classify_quadrant(volume, competition, opportunity_score):
-    comp_val = competition.lower()
-    is_high_comp = 'high' in comp_val or 'medium' in comp_val
-    if volume >= 2000 and not is_high_comp:
-        return 'Quick Win'
-    elif volume >= 5000 and is_high_comp:
-        return 'Strategic Pillar'
-    elif volume >= 500 and not is_high_comp:
-        return 'Commercial Converter'
-    else:
-        return 'Long-tail / Supporting'
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.insert(0, BASE_DIR)
+from scripts.lib.keyword_intelligence import (
+    MultiSignalIntentClassifier,
+    clean_val,
+    normalize_text,
+    calculate_opportunity_score,
+    classify_quadrant
+)
 
 def load_inventory_csv(file_path):
     keywords = []
@@ -121,9 +46,9 @@ def load_inventory_csv(file_path):
                 cpc = 0.0
             comp = clean_val(row.get('PPC Competition', 'Low'))
             
-            intent = detect_intent(kw)
+            intent = MultiSignalIntentClassifier.classify(kw)['intent']
             opp_score = calculate_opportunity_score(vol, cpc, comp, intent)
-            quadrant = classify_quadrant(vol, comp, opp_score)
+            quadrant = classify_quadrant(vol, comp, intent)
             
             keywords.append({
                 'keyword': kw,

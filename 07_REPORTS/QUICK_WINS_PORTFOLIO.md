@@ -1,9 +1,9 @@
 # DANH MỤC TỪ KHÓA QUICK WINS TOÀN WEB PLATFORM (HIGH ROI OPPORTUNITIES)
 
-Tập hợp các từ khóa có **Search Volume cao ($\ge 1.500$) và Mức độ Cạnh tranh Thấp (Low PPC Competition)** trên toàn bộ 188 Use Cases của Web Platform. Đây là các chủ đề ưu tiên P0 mang lại lưu lượng truy cập nhanh nhất với chi phí nội dung tối thiểu.
+Tập hợp các từ khóa có **Search Volume cao ($\ge 1.500$) và Mức độ Cạnh tranh Thấp (Low PPC Competition)** trên toàn bộ 196 Use Cases của Web Platform. Đây là các chủ đề ưu tiên P0 mang lại lưu lượng truy cập nhanh nhất với chi phí nội dung tối thiểu.
 
-- **Tổng số từ khóa Quick Wins phát hiện:** 912 từ khóa
-- **Tổng dung lượng tìm kiếm Quick Wins:** 886,494,400 lượt/tháng
+- **Tổng số từ khóa Quick Wins phát hiện:** 942 từ khóa
+- **Tổng dung lượng tìm kiếm Quick Wins:** 803,779,500 lượt/tháng
 
 ---
 
@@ -27,21 +27,21 @@ Tập hợp các từ khóa có **Search Volume cao ($\ge 1.500$) và Mức đ�
 | 14 | `nạp thẻ fifa` | 60,500 | `Transactional` | 10.65 | Nạp Thẻ Game | PS | thẻ nạp fifa, fifa nạp thẻ |
 | 15 | `tra cứu phạt nguội` | 673,000 | `Tool/Calculator` | 10.51 | Tra Cứu Phạt Nguội Toàn Quốc | vehicle-hub | tra cứu phạt nguội ô tô, tra cứu phạt nguội ôtô |
 | 16 | `nạp gunny mobi` | 2,900 | `Transactional` | 10.39 | Nạp Thẻ Game | PS | nạp thẻ gunny mobi, nạp xu gunny mobi |
-| 17 | `tra cứu mã số thuế` | 550,000 | `Tool/Calculator` | 10.35 | Tra Cứu Mã Số Thuế | other | tra cứu mã số thuế cá nhan, mã số thuế cá nhân tra cứu |
+| 17 | `tra cứu mã số thuế` | 550,000 | `Tool/Calculator` | 10.35 | Tra Cứu Mã Số Thuế | Financial | tra cứu mã số thuế cá nhan, mã số thuế cá nhân tra cứu |
 | 18 | `nạp xu tiktok` | 135,000 | `Transactional` | 10.28 | Nạp Xu TikTok | PS | nạp xu tiktok com, nạp xu tiktok web |
 | 19 | `nạp xu tiktok bằng the ngân hàng` | 1,900 | `Transactional` | 9.84 | Nạp Xu TikTok | PS | nạp xu tiktok bằng thẻ ngân hàng, cách nạp xu tiktok bằng the ngân hàng |
-| 20 | `nạp tiền tiktok` | 1,900 | `Transactional` | 9.61 | Nạp Xu TikTok | PS | cách nạp tiền tiktok, nạp tiền vào tiktok |
-| 21 | `mua bảo hiểm y tế online` | 9,900 | `Transactional` | 9.4 | Bảo Hiểm Y Tế (BHYT) | insurtech | mua bhyt online, mua the bảo hiểm y tế online |
-| 22 | `mua bảo hiểm y tế online` | 9,900 | `Transactional` | 9.4 | Bảo Hiểm Xã Hội (BHXH) | insurtech | mua the bảo hiểm y tế online, mua bảo hiểm y tế online 2022 |
-| 23 | `kiểm tra phạt nguội` | 135,000 | `Tool/Calculator` | 9.25 | Tra Cứu Phạt Nguội Toàn Quốc | vehicle-hub | kiểm tra phạt nguội xe máy, kiểm tra phạt nguội xe ô tô |
-| 24 | `vcbs bảng giá` | 22,200 | `Commercial` | 9.24 | Chứng Khoán | Financial | bảng giá vcbs, bảng giá ck vcbs |
-| 25 | `mua đô` | 14,800 | `Transactional` | 9.04 | Tỷ Giá Ngoại Tệ | Financial | Độc lập |
+| 20 | `đăng ký nguyện vọng đại học` | 22,200 | `Transactional` | 9.65 | Đại Học & Trường Đại Học | student | Độc lập |
+| 21 | `nạp tiền tiktok` | 1,900 | `Transactional` | 9.61 | Nạp Xu TikTok | PS | cách nạp tiền tiktok, nạp tiền vào tiktok |
+| 22 | `mua bảo hiểm y tế online` | 9,900 | `Transactional` | 9.4 | Bảo Hiểm Y Tế (BHYT) | insurtech | mua bhyt online, mua the bảo hiểm y tế online |
+| 23 | `mua bảo hiểm y tế online` | 9,900 | `Transactional` | 9.4 | Bảo Hiểm Xã Hội (BHXH) | insurtech | mua the bảo hiểm y tế online, mua bảo hiểm y tế online 2022 |
+| 24 | `kiểm tra phạt nguội` | 135,000 | `Tool/Calculator` | 9.25 | Tra Cứu Phạt Nguội Toàn Quốc | vehicle-hub | kiểm tra phạt nguội xe máy, kiểm tra phạt nguội xe ô tô |
+| 25 | `vcbs bảng giá` | 22,200 | `Commercial` | 9.24 | Chứng Khoán | Financial | bảng giá vcbs, bảng giá ck vcbs |
 | 26 | `mua đô` | 14,800 | `Transactional` | 9.04 | Tỷ Giá Ngoại Tệ | Financial | Độc lập |
-| 27 | `đặt vé xe phương trang` | 27,100 | `Transactional` | 8.97 | Vé Xe Khách & Xe Bus | ota | phương trang đặt vé, đặt vé phương trang |
-| 28 | `minhngoc` | 1,830,000 | `Informational` | 8.77 | Xổ Số Kiến Thiết 3 Miền | Lottery | Độc lập |
-| 29 | `mua bảo hiểm y tế` | 5,400 | `Transactional` | 8.75 | Bảo Hiểm Y Tế (BHYT) | insurtech | mua bhyt, bhyt mua bao nhiêu |
-| 30 | `mua bảo hiểm y tế` | 5,400 | `Transactional` | 8.75 | Bảo Hiểm Xã Hội (BHXH) | insurtech | Độc lập |
-| 31 | `xsmb` | 83,100,000 | `Informational` | 8.73 | Vietlott Mega & Power | Lottery | Độc lập |
+| 27 | `mua đô` | 14,800 | `Transactional` | 9.04 | Tỷ Giá Ngoại Tệ | Financial | Độc lập |
+| 28 | `đặt vé xe phương trang` | 27,100 | `Transactional` | 8.97 | Vé Xe Khách & Xe Bus | ota | phương trang đặt vé, đặt vé phương trang |
+| 29 | `minhngoc` | 1,830,000 | `Informational` | 8.77 | Xổ Số Kiến Thiết 3 Miền | Lottery | Độc lập |
+| 30 | `mua bảo hiểm y tế` | 5,400 | `Transactional` | 8.75 | Bảo Hiểm Y Tế (BHYT) | insurtech | mua bhyt, bhyt mua bao nhiêu |
+| 31 | `mua bảo hiểm y tế` | 5,400 | `Transactional` | 8.75 | Bảo Hiểm Xã Hội (BHXH) | insurtech | Độc lập |
 | 32 | `xổ so miền bắc` | 83,100,000 | `Informational` | 8.73 | Xổ Số Kiến Thiết 3 Miền | Lottery | xổ miền bắc |
 | 33 | `xsmb` | 83,100,000 | `Informational` | 8.73 | Xổ Số Kiến Thiết 3 Miền | Lottery | xsmb 2, xsmb 4 |
 | 34 | `nạp tiền vào ví airpay` | 22,200 | `Transactional` | 8.69 | Ví Điện Tử | Financial | Độc lập |
@@ -52,12 +52,12 @@ Tập hợp các từ khóa có **Search Volume cao ($\ge 1.500$) và Mức đ�
 | 39 | `xo số mien bac` | 68,000,000 | `Informational` | 8.54 | Xổ Số Kiến Thiết 3 Miền | Lottery | số xo mien bac, xo mien bac |
 | 40 | `xo số mien nam` | 68,000,000 | `Informational` | 8.54 | Xổ Số Kiến Thiết 3 Miền | Lottery | số xo mien nam, xo mien nam |
 | 41 | `xo số miền nam` | 68,000,000 | `Informational` | 8.54 | Xổ Số Kiến Thiết 3 Miền | Lottery | Độc lập |
-| 42 | `tính bmi` | 40,500 | `Tool/Calculator` | 8.31 | Tính Chỉ Số BMI | hospital | bmi tính như nào, bmi tính sao |
+| 42 | `tính bmi` | 40,500 | `Tool/Calculator` | 8.31 | Chỉ Số & Tính Toán BMI Chuẩn | hospital | bmi tính, bmi tính như nào |
 | 43 | `soha` | 673,000 | `Informational` | 8.3 | Nhà Phát Hành Game | PS | Độc lập |
 | 44 | `zing` | 823,000 | `Informational` | 8.19 | Ứng Dụng Game | PS | Độc lập |
 | 45 | `tra cứu phạt nguội toàn quốc` | 33,100 | `Tool/Calculator` | 8.15 | Tra Cứu Phạt Nguội Toàn Quốc | vehicle-hub | kiểm tra phạt nguội toàn quốc, tra cứu phạt nguội ô tô toàn quốc |
 | 46 | `lãi suất ngân hàng` | 135,000 | `Commercial` | 8.1 | Lãi Suất Ngân Hàng | Financial | lãi suất ngân hàng agribank, lãi suất ngân hàng vietcombank |
 | 47 | `lãi suất ngân hàng` | 135,000 | `Commercial` | 8.1 | Hệ Thống Ngân Hàng | Financial | lãi suất ngân hàng agribank, lãi suất ngân hàng vietcombank |
-| 48 | `đăng ký mã số thuế cá nhân` | 9,900 | `Transactional` | 8.02 | Tra Cứu Mã Số Thuế | other | cách đăng ký mã số thuế cá nhân, đăng ký mã số thuế cá nhân online |
+| 48 | `đăng ký mã số thuế cá nhân` | 9,900 | `Transactional` | 8.02 | Tra Cứu Mã Số Thuế | Financial | cách đăng ký mã số thuế cá nhân, đăng ký mã số thuế cá nhân online |
 | 49 | `kiểm tra phạt nguôi oto` | 27,100 | `Tool/Calculator` | 8.0 | Tra Cứu Phạt Nguội Toàn Quốc | vehicle-hub | Độc lập |
-| 50 | `tra cứu thuế` | 27,100 | `Tool/Calculator` | 7.98 | Tra Cứu Mã Số Thuế | other | tra cứu tiền thuế |
+| 50 | `tra cứu thuế` | 27,100 | `Tool/Calculator` | 7.98 | Tra Cứu Mã Số Thuế | Financial | tra cứu tiền thuế |

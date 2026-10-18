@@ -85,7 +85,99 @@ TELEX_FIXES = {
     'bao hiem': 'bảo hiểm',
     'o to': 'ô tô',
     'xe may': 'xe máy',
+    # Student Hub: lỗi gõ & biến thể thiếu dấu
+    'cao đăng': 'cao đẳng',
+    'đai học': 'đại học',
+    'điêm chuẩn': 'điểm chuẩn',
+    'diem chuan': 'điểm chuẩn',
+    'thi tôt nghiệp': 'thi tốt nghiệp',
+    'phong trọ': 'phòng trọ',
+    'phong tro': 'phòng trọ',
+    'nha tro': 'nhà trọ',
+    'hoc phi': 'học phí',
+    'tuyen sinh': 'tuyển sinh',
+    'sinh vien': 'sinh viên',
 }
+
+# ============================================================
+# SHARED HELPERS & UNIFIED CLASSIFIER (SSOT cho toàn pipeline)
+# Mọi script (sync_inventory_to_hubs, generate_content_plan,
+# keyword_cluster_engine) BẮT BUỘC import từ đây để tránh drift.
+# ============================================================
+
+INTENT_WEIGHTS = {
+    'Transactional': 2.0,
+    'Tool/Calculator': 1.8,
+    'Commercial': 1.5,
+    'Informational': 1.0,
+    'Navigational': 0.7
+}
+
+# Ngưỡng phân loại quadrant - nguồn duy nhất toàn pipeline
+QUICK_WIN_MIN_VOLUME = 1500
+STRATEGIC_PILLAR_MIN_VOLUME = 5000
+COMMERCIAL_CONVERTER_MIN_VOLUME = 200
+
+def clean_val(val):
+    """Bóc tách công thức Excel '="val"' thành giá trị thực."""
+    if not val:
+        return ""
+    val = val.strip()
+    if val.startswith('="') and val.endswith('"'):
+        return val[2:-1]
+    return val
+
+def normalize_text(text):
+    """Chuẩn hóa keyword: lowercase, sửa lỗi gõ Telex/biến thể thiếu dấu, gộp khoảng trắng."""
+    text = text.lower().strip()
+    for err, fix in TELEX_FIXES.items():
+        text = text.replace(err, fix)
+    text = re.sub(r'\s+', ' ', text)
+    return text
+
+def calculate_opportunity_score(volume, cpc, competition, intent):
+    """Opportunity Score = log10(V+1) x (1.2 - CompFactor) x IntentWeight x (1 + CPC Bonus)."""
+    weight = INTENT_WEIGHTS.get(intent, 1.0)
+    comp_val = competition.lower()
+    comp_factor = 0.2
+    if 'high' in comp_val:
+        comp_factor = 0.8
+    elif 'medium' in comp_val:
+        comp_factor = 0.5
+    elif 'low' in comp_val:
+        comp_factor = 0.2
+
+    vol_score = math.log10(volume + 1) if volume > 0 else 0
+    cpc_bonus = min(cpc * 0.2, 0.5)
+
+    score = vol_score * (1.2 - comp_factor) * weight * (1.0 + cpc_bonus)
+    return round(score, 2)
+
+def classify_quadrant(volume, competition, intent):
+    """Phân loại 4 góc phần tư: Quick Win / Strategic Pillar / Commercial Converter / Long-tail."""
+    comp_val = competition.lower()
+    is_high_comp = 'high' in comp_val or 'medium' in comp_val
+    if volume >= QUICK_WIN_MIN_VOLUME and not is_high_comp:
+        return 'Quick Win'
+    elif volume >= STRATEGIC_PILLAR_MIN_VOLUME and is_high_comp:
+        return 'Strategic Pillar'
+    elif volume >= COMMERCIAL_CONVERTER_MIN_VOLUME and intent in ['Commercial', 'Tool/Calculator', 'Transactional']:
+        return 'Commercial Converter'
+    else:
+        return 'Long-tail / Supporting'
+
+def classify_priority(volume, competition, intent):
+    """Ưu tiên sản xuất P0/P1/P2 - suy trực tiếp từ quadrant để không lệch với SSOT."""
+    quadrant = classify_quadrant(volume, competition, intent)
+    if quadrant == 'Quick Win':
+        return 'P0'
+    if intent in ['Tool/Calculator', 'Transactional'] and volume >= 500:
+        return 'P0'
+    if quadrant in ['Strategic Pillar', 'Commercial Converter']:
+        return 'P1'
+    if volume >= 1000 or intent == 'Commercial':
+        return 'P1'
+    return 'P2'
 
 # Tập từ điển nhiễu chéo ngành (Cross-domain Alien Collisions)
 CROSS_DOMAIN_OUTLIERS = {
@@ -106,6 +198,9 @@ CROSS_DOMAIN_OUTLIERS = {
     ],
     'hospital': [
         'chữa bệnh bằng bùa', 'thầy lang lừa đảo'
+    ],
+    'student': [
+        'chợ tốt', 'vietnamworks', 'vietnamwork', 'topcv', 'vieclam24h', 'game', 'hack'
     ]
 }
 
@@ -464,6 +559,8 @@ class MoMoDomainSERPShield:
             forbidden_prefixes = ['/cinema/', '/xsmb', '/xsmn', '/xsmt', '/xo-so', '/ve-so', '/game-app', '/nap-the-game']
         elif sector == 'vehicle-hub':
             forbidden_prefixes = ['/cinema/', '/tai-chinh/', '/xsmb']
+        elif sector == 'other':
+            forbidden_prefixes = ['/cinema/', '/du-lich', 'du-lich-va-van-tai', '/bao-hiem', '/ve-may-bay']
         elif sector in ['Lottery', 'hospital', 'insurtech', 'telco', 'ota']:
             forbidden_prefixes = ['/cinema/']
 
@@ -483,6 +580,12 @@ class MoMoDomainSERPShield:
                 continue
 
             path_tokens = set(re.findall(r'[a-z0-9]+', path))
+            # Tránh nhầm lẫn từ đa nghĩa: nếu path là du-lich hoặc lich-su nhưng query không chứa du/su
+            if 'du-lich' in path and 'du' not in q_tokens and 'lich' in q_tokens:
+                path_tokens.discard('lich')
+            if 'lich-su' in path and 'su' not in q_tokens and 'lich' in q_tokens:
+                path_tokens.discard('lich')
+
             overlap = q_tokens.intersection(path_tokens)
             if not overlap:
                 continue

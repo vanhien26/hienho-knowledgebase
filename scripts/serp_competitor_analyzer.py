@@ -24,6 +24,7 @@ import lxml.html
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(os.path.join(BASE_DIR, "scripts", "lib"))
 from keyword_intelligence import MoMoDomainSERPShield
+from keyword_extractor import analyze_content_gap, HAS_KEYBERT, HAS_ST, HAS_PYVI
 
 # Bỏ qua kiểm tra chứng chỉ SSL cho các cổng thông tin Việt Nam
 ssl_ctx = ssl.create_default_context()
@@ -57,6 +58,29 @@ def slugify(text: str) -> str:
     text = re.sub(r'[^\w\s-]', '', text)
     text = re.sub(r'[\s_-]+', '-', text)
     return text.strip('-')
+
+def fetch_page_text(url: str, limit: int = 20000) -> str:
+    """Cào và làm sạch nội dung text của 1 URL (dùng cho trang MoMo hiện hữu)."""
+    if not url:
+        return None
+    print(f"Đang lấy nội dung trang MoMo hiện hữu: {url}...")
+    try:
+        req = urllib.request.Request(url, headers={'User-Agent': USER_AGENTS[0]})
+        with urllib.request.urlopen(req, timeout=15, context=ssl_ctx) as resp:
+            html_content = resp.read().decode('utf-8', errors='ignore')
+        tree = lxml.html.fromstring(html_content)
+        for bad in tree.xpath('//script | //style | //nav | //footer | //header | //noscript'):
+            parent = bad.getparent()
+            if parent is not None:
+                parent.remove(bad)
+        containers = tree.xpath('//article | //main')
+        if not containers:
+            body = tree.xpath('//body')
+            containers = body if body else [tree]
+        return clean_text(containers[0].text_content())[:limit]
+    except Exception as e:
+        print(f"   Cảnh báo: Không lấy được nội dung MoMo ({url}): {e}")
+        return None
 
 class SERPFetcher:
     """Thu thập kết quả tìm kiếm tự nhiên từ SERP và phát hiện vị thế momo.vn"""
@@ -185,6 +209,8 @@ class CompetitorPageParser:
                 text_content = target_container.text_content()
                 words = re.findall(r'\b\w+\b', text_content)
                 parsed_data['word_count'] = len(words)
+                # Lưu body text (giới hạn 20.000 ký tự) phục vụ trích xuất keyword/entity
+                parsed_data['body_text'] = clean_text(text_content)[:20000]
                 
                 # Kiểm tra yếu tố tương tác (Table, Form, Tool)
                 parsed_data['has_table'] = len(tree.xpath('//table')) > 0
@@ -224,7 +250,7 @@ class CompetitorPageParser:
 class ContentGapAnalyzer:
     """Phân tích khoảng trống nội dung và thiết kế chiến lược vượt mặt đối thủ"""
     @classmethod
-    def analyze_gap_and_strategy(cls, query: str, competitor_pages: list) -> dict:
+    def analyze_gap_and_strategy(cls, query: str, competitor_pages: list, use_keybert: bool = True, momo_text: str = None) -> dict:
         valid_pages = [p for p in competitor_pages if p.get('word_count', 0) > 0]
         if not valid_pages:
             return {'error': 'Không thu thập được trang đối thủ hợp lệ'}
@@ -239,14 +265,17 @@ class ContentGapAnalyzer:
         all_h2s = []
         for p in valid_pages:
             all_h2s.extend(p.get('h2', []))
-            
-        # Thống kê từ khóa/thực thể xuất hiện nhiều nhất trong H2 đối thủ
-        h2_token_counter = Counter()
-        for h2 in all_h2s:
-            tokens = [t.lower() for t in re.findall(r'\b\w{3,}\b', h2) if t.lower() not in STOPWORDS]
-            h2_token_counter.update(tokens)
-            
-        top_entities = [t for t, _ in h2_token_counter.most_common(10)]
+
+        # 2b. Trích xuất Keyphrase & Thực thể chuẩn hóa (YAKE + RAKE + Semantic Rerank)
+        kg = analyze_content_gap(valid_pages, momo_text=momo_text, top_n=20, use_keybert=use_keybert)
+        top_entities = [e['entity'] for e in kg.get('entities', {}).get('brand_org', [])]
+        if not top_entities:
+            # Fallback: thống kê token H2 nếu không phát hiện thực thể thương hiệu/tổ chức
+            h2_token_counter = Counter()
+            for h2 in all_h2s:
+                tokens = [t.lower() for t in re.findall(r'\b\w{3,}\b', h2) if t.lower() not in STOPWORDS]
+                h2_token_counter.update(tokens)
+            top_entities = [t for t, _ in h2_token_counter.most_common(10)]
         
         # 3. Phân loại định dạng dẫn đầu (Dominant SERP Format)
         format_counts = Counter(p['format_type'] for p in valid_pages)
@@ -285,7 +314,18 @@ class ContentGapAnalyzer:
             'dominant_format': dominant_format,
             'top_competitor_entities': top_entities,
             'gaps_detected': gaps_detected,
-            'beating_outline': beating_outline
+            'beating_outline': beating_outline,
+            'keyword_extraction': {
+                'engines': kg.get('engines', {}),
+                'excluded_low_quality_pages': kg.get('excluded_low_quality_pages', 0),
+                'table_stakes': kg.get('table_stakes', []),
+                'differentiators': kg.get('differentiators', []),
+                'top_keyphrases': kg.get('top_keyphrases', []),
+                'entities': kg.get('entities', {}),
+                'per_page': kg.get('per_page', []),
+            },
+            'information_gain': kg.get('information_gain', {}),
+            'content_gap': kg.get('content_gap', {}),
         }
 
 def export_analysis_markdown(query: str, competitor_pages: list, analysis: dict, domain_shield: dict = None) -> str:
@@ -365,7 +405,111 @@ Qua đối soát cấu trúc On-Page của các đối thủ dẫn đầu, hệ 
 
 ---
 
-## 5. CHIẾN LƯỢC VƯỢT MẶT ĐỐI THỦ CHO MOMO WEB PLATFORM (WINNING BLUEPRINT)
+## 5. TRÍCH XUẤT KEYWORD & THỰC THỂ ĐỐI THỦ (CONTENT GAP & INFORMATION GAIN)
+"""
+    ke = analysis.get('keyword_extraction', {})
+    engines = ke.get('engines', {})
+    md += f"""
+- **Engine trích xuất:** YAKE `{engines.get('yake')}` | RAKE `{engines.get('rake')}` | Semantic Rerank `{engines.get('semantic_rerank')}` (model: `{engines.get('embedding_model') or 'n/a'}`)
+- **Số trang đối thủ phân tích:** {analysis.get('competitors_crawled', 0)} (loại bỏ {ke.get('excluded_low_quality_pages', 0)} trang rác/thiếu nội dung)
+
+### 5.1. Bộ từ khóa bắt buộc (Table Stakes - xuất hiện ở >= 1/2 số trang đối thủ)
+
+| # | Cụm từ khóa (Concept) | Độ phủ (trang) | Tỷ lệ phủ | Loại câu hỏi | Biến thể khác |
+| :---: | :--- | :---: | :---: | :---: | :--- |
+"""
+    ts = ke.get('table_stakes', [])
+    if ts:
+        for i, item in enumerate(ts, 1):
+            q = 'Có' if item.get('is_question') else '-'
+            variants = ", ".join([f"`{v}`" for v in item.get('variants', [])[1:4]])
+            md += f"| {i} | `{item.get('phrase')}` | {item.get('coverage')} | {item.get('coverage_pct')}% | {q} | {variants or '-'} |\n"
+    else:
+        md += "| - | *(Không phát hiện cụm từ bắt buộc)* | - | - | - | - |\n"
+
+    md += """
+### 5.2. Điểm khác biệt của từng đối thủ (Differentiators - chỉ xuất hiện ở 1 trang)
+
+"""
+    dif = ke.get('differentiators', [])
+    if dif:
+        for item in dif:
+            md += f"- `{item.get('phrase')}`\n"
+    else:
+        md += "- *(Không phát hiện điểm khác biệt đáng kể)*\n"
+
+    ents = ke.get('entities', {})
+    md += """
+### 5.3. Thực thể trọng tâm (Entity Extraction)
+
+| Nhóm thực thể | Thực thể (tần suất) |
+| :--- | :--- |
+"""
+    brand = ", ".join([f"`{e['entity']}` ({e['count']})" for e in ents.get('brand_org', [])]) or "Trống"
+    numeric = ", ".join([f"`{e['entity']}` ({e['count']})" for e in ents.get('numeric', [])]) or "Trống"
+    md += f"| Tổ chức / Thương hiệu | {brand} |\n"
+    md += f"| Dữ liệu định lượng (số, %, kỳ hạn) | {numeric} |\n"
+
+    ig = analysis.get('information_gain', {})
+    md += """
+### 5.4. Khoảng trống Information Gain (Góc dữ liệu độc quyền MoMo - Anti-LLM Moat)
+
+**Câu hỏi/nhóm ý đối thủ bỏ trống (độ phủ thấp):**
+
+"""
+    qg = ig.get('question_gaps', [])
+    if qg:
+        for g in qg:
+            md += f"- `{g}`\n"
+    else:
+        md += "- *(Đối thủ đã bao phủ phần lớn nhóm câu hỏi)*\n"
+
+    md += """
+**Đề xuất điểm chạm nội dung vượt trội (Recommended Unique Angles):**
+
+"""
+    for a in ig.get('recommended_unique_angles', []):
+        md += f"- {a}\n"
+
+    cg = analysis.get('content_gap', {})
+    md += """
+### 5.5. Content Gap - Đối chiếu trang MoMo hiện hữu với đối thủ (Concept-level)
+
+"""
+    if cg.get('momo_analyzed'):
+        md += f"""- **URL MoMo đối chiếu:** `{shield_info.get('top_live_url', 'n/a')}`
+- **Tổng Concept đối thủ:** {cg.get('competitor_concepts')} | **MoMo đã phủ:** {cg.get('momo_covered')} | **Còn thiếu:** {cg.get('missing_in_momo')} ({cg.get('gap_pct')}%)
+
+**Concept đối thủ phủ nhưng MoMo còn thiếu (ưu tiên bổ sung):**
+
+| # | Concept thiếu | Độ phủ đối thủ | Tỷ lệ phủ | Câu hỏi |
+| :---: | :--- | :---: | :---: | :---: |
+"""
+        miss = cg.get('missing_concepts', [])
+        if miss:
+            for i, m in enumerate(miss, 1):
+                q = 'Có' if m.get('is_question') else '-'
+                md += f"| {i} | `{m.get('phrase')}` | {m.get('coverage')} | {m.get('coverage_pct')}% | {q} |\n"
+        else:
+            md += "| - | *(MoMo đã phủ toàn bộ Concept đối thủ)* | - | - | - |\n"
+
+        md += """
+**Concept MoMo đã phủ (giữ vững & tối ưu):**
+
+"""
+        cov = cg.get('momo_covered_concepts', [])
+        if cov:
+            for c in cov:
+                md += f"- `{c.get('phrase')}` (khớp: `{c.get('matched_momo_phrase')}`, sim: {c.get('similarity')})\n"
+        else:
+            md += "- *(Chưa phát hiện concept nào khớp giữa MoMo và đối thủ)*\n"
+    else:
+        md += "- *(Không lấy được nội dung trang MoMo hiện hữu để đối chiếu Content Gap)*\n"
+
+    md += f"""
+---
+
+## 6. CHIẾN LƯỢC VƯỢT MẶT ĐỐI THỦ CHO MOMO WEB PLATFORM (WINNING BLUEPRINT)
 
 Để đưa trang MoMo Web Platform chiếm lĩnh vị trí **Top 1 Google** và **Trích dẫn ưu tiên trên Google AI Overviews**, bài viết bắt buộc phải tuân thủ quy chuẩn sau:
 
@@ -389,7 +533,9 @@ def main():
     parser.add_argument("query", help="Từ khóa hoặc Intent tìm kiếm cần phân tích đối thủ")
     parser.add_argument("--limit", type=int, default=5, help="Số lượng đối thủ SERP cần cào sâu (Mặc định: 5)")
     parser.add_argument("--json", action="store_true", help="Xuất file JSON thô vào 07_REPORTS/data/competitors/")
+    parser.add_argument("--fast", action="store_true", help="Tắt Semantic Rerank (KeyBERT embedding), chỉ dùng YAKE + RAKE (nhanh hơn)")
     args = parser.parse_args()
+    use_keybert = not args.fast
 
     query = args.query.strip()
     print(f"\n=== KHỞI ĐỘNG PHÂN TÍCH ĐỐI THỦ SERP CHO TRUY VẤN: '{query}' ===\n")
@@ -441,7 +587,11 @@ def main():
                 f"## H2 4: Hướng dẫn quy trình & Thủ tục thực hiện từng bước đơn giản",
                 f"## H2 5: Giải đáp thắc mắc thường gặp (FAQs chuẩn Schema)",
                 f"## H2 6: Giải pháp liên kết và nhận quyền lợi tối đa qua Ứng dụng MoMo"
-            ]
+            ],
+            'keyword_extraction': {'engines': {}, 'table_stakes': [], 'differentiators': [],
+                                   'top_keyphrases': [], 'entities': {}, 'per_page': []},
+            'information_gain': {},
+            'content_gap': {},
         }
         competitor_pages = []
     else:
@@ -454,8 +604,13 @@ def main():
             competitor_pages.append(page_data)
             time.sleep(0.5) # Giãn cách an toàn
             
+        # Bước 2b: Cào nội dung trang MoMo hiện hữu (nếu có) để tính Content Gap
+        momo_text = fetch_page_text(domain_shield.get('top_live_url'))
+
         # Bước 3: Phân tích khoảng trống nội dung & Chiến lược MoMo
-        analysis = ContentGapAnalyzer.analyze_gap_and_strategy(query, competitor_pages)
+        analysis = ContentGapAnalyzer.analyze_gap_and_strategy(
+            query, competitor_pages, use_keybert=use_keybert, momo_text=momo_text
+        )
     
     # Bước 4: Xuất báo cáo Markdown
     out_md = export_analysis_markdown(query, competitor_pages, analysis, domain_shield=domain_shield)
