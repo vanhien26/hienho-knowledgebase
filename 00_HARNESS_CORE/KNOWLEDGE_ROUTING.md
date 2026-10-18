@@ -54,7 +54,7 @@ Phân tích vấn đề người dùng đặt ra theo 3 góc nhìn quản trị:
 ### Tầng 3: SSOT Knowledge Domain Layer (Tầng Tri Thức Chuẩn Thuần)
 Định tuyến trực tiếp đến đúng nguồn dữ liệu gốc (Single Source of Truth) trong repo:
 - **Tăng trưởng & OKRs:** Thư mục [`01_STRATEGIC_PLAN/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/01_STRATEGIC_PLAN).
-- **Hạ tầng MoSpark & Tracking Tools:** Thư mục [`04_MOSPARK_PLATFORM/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM) và file SSOT [`umami_utility_tracking.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/umami_utility_tracking.md) (Quy chuẩn bắt buộc cho Event Tracking mọi Utility Tools & Calculators).
+- **Hạ tầng MoSpark & Tracking Tools:** Thư mục [`04_MOSPARK_PLATFORM/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM) và file SSOT [`04_MOSPARK_PLATFORM/umami_utility_tracking.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM/umami_utility_tracking.md) (Quy chuẩn bắt buộc cho Event Tracking mọi Utility Tools & Calculators).
 - **Các cụm Hubs:** Thư mục [`05_HUBS/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS).
 - **Dataset Từ Khóa & SEO Inventory Gốc (Use Case Inventory):** Thư mục SSOT [`05_HUBS/inventory/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/inventory/) (kho dữ liệu CSV nguyên bản bóc tách từng từ khóa và search volume cho Financial, vehicle-hub, insurtech, ota, telco, hospital, Lottery, trust...).
 - **Các Use Case BRD:** Thư mục [`06_USE_CASE_MOMO/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO).

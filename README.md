@@ -113,13 +113,13 @@ Hệ thống thư mục được tổ chức theo cấu trúc phân cấp chặt
 ├── README.md                           # Bản đặc tả hệ điều hành tri thức & bộ công cụ (File này)
 ├── AGENTS.md                           # Bộ quy tắc vận hành và chuẩn mực phản hồi của AI Agent
 ├── MEETING_RECAPS.md                   # Nhật ký biên bản họp và chỉ đạo chiến lược của BOM
-├── umami_utility_tracking.md           # SSOT: Quy chuẩn Event Tracking cho toàn bộ tiện ích Web
 │
 ├── 00_HARNESS_CORE/                    # Lõi định tuyến tri thức (KNOWLEDGE_ROUTING.md) & Master Doc
 ├── 01_STRATEGIC_PLAN/                  # Chiến lược tăng trưởng, OKRs, Thesis SEO-to-GEO 2027
 ├── 02_FRAMEWORKS/                      # Khung tư duy (First Principles, JTBD, SEO/GEO Playbook)
 ├── 03_SKILLS/                          # Bộ kỹ năng quản trị sản phẩm và chuẩn mực viết BRD/PRD
 ├── 04_MOSPARK_PLATFORM/                # Kiến trúc CMS MoSpark, Microsites, Widget Store, Edge Identity
+│   ├── umami_utility_tracking.md       # SSOT: Quy chuẩn Event Tracking cho toàn bộ tiện ích Web
 ├── 05_HUBS/                            # Tài liệu đặc tả Strategic Hubs & Kho Keyword Inventory (3.7M+ Vol)
 │   ├── cinema/                         # Cinema Hub (Lịch chiếu, rạp phim, diễn viên)
 │   ├── financial/                      # Financial Hub (Tiết kiệm, Vay, CIC, Tỷ giá, Vàng)
@@ -151,7 +151,7 @@ Hệ thống thư mục được tổ chức theo cấu trúc phân cấp chặt
 Mọi kỹ sư, quản lý sản phẩm và chuyên viên dữ liệu khi đóng góp vào hệ thống bắt buộc tuân thủ 4 nguyên tắc sau:
 
 1. **Chuẩn Mực Đo Lường Tiện Ích (Utility Tracking Standard):**
-   * Tham chiếu duy nhất tại [`umami_utility_tracking.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/umami_utility_tracking.md).
+   * Tham chiếu duy nhất tại [`04_MOSPARK_PLATFORM/umami_utility_tracking.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM/umami_utility_tracking.md).
    * Cú pháp sự kiện bắt buộc: `web_[mospark_tool_id]_[object]_[action]`.
    * Tuân thủ nguyên tắc Zero-PII: Tuyệt đối không gửi thông tin định danh cá nhân vào payload tracking.
 

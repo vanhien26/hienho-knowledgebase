@@ -139,7 +139,7 @@ Toàn bộ các Hubs và phân hệ trên Web MoMo được quản trị theo **
 4. **PRODUCTIVITY ZONE (Hạ tầng Kỹ thuật Nền tảng Dùng chung):**
    * **MoSpark CMS Platform (`mospark.mservice.io`):** Động cơ backend CMS tăng trưởng tập trung, MoLanding V2, Widget Store, Ads Manager, GenAI Content Pipeline.
    * **Web User Login & Auth Platform (`m.momo.vn`):** **Hạ tầng quản lý đăng nhập và định danh người dùng ngoài Web:** Xử lý xác thực người dùng (Web Login via Phone OTP / App QR Scan), Single Sign-On (SSO), Quản lý phiên truy cập (Session Management) và ánh xạ định danh người dùng (Web Identity Mapping) giữa Web và App MoMo. Tách biệt hoàn toàn khỏi các Hubs nghiệp vụ.
-   * **Umami Analytics Tracking Engine:** Hệ thống đo lường sự kiện độc lập, theo dõi chính xác từng hành vi sử dụng công cụ (Click, Calculate, Input, Select) theo quy chuẩn SSOT `umami_utility_tracking.md`.
+   * **Umami Analytics Tracking Engine:** Hệ thống đo lường sự kiện độc lập, theo dõi chính xác từng hành vi sử dụng công cụ (Click, Calculate, Input, Select) theo quy chuẩn SSOT `04_MOSPARK_PLATFORM/umami_utility_tracking.md`.
    * **Hạ tầng Quản trị Sức khỏe Web (URL Governance & SEO/GEO):** Hệ thống rà soát thanh lọc URL 0-traffic, kiểm soát ngân sách crawl bot, tối ưu Core Web Vitals và bảo vệ vị thế trích dẫn trên AI Search (ChatGPT, Gemini, Perplexity).
 
 ---
