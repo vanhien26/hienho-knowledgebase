@@ -1,6 +1,21 @@
 {
-  "generated_at": "2026-10-18T04:03:03+00:00",
+  "generated_at": "2026-10-18T09:32:44+00:00",
   "items": [
+    {
+      "id": "593304",
+      "title": "OpenAI’s API Only Partly Matched ChatGPT’s Citations, Paper Finds",
+      "title_en": "OpenAI’s API Only Partly Matched ChatGPT’s Citations, Paper Finds",
+      "summary": "Search Engine Journal cập nhật ngày 2026-10-18. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/openais-api-only-partly-matched-chatgpts-citations-paper-finds/593304/",
+      "published_at": "2026-10-18",
+      "category": "ai_search",
+      "impact": "low",
+      "tags": [
+        "chatgpt"
+      ],
+      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+    },
     {
       "id": "google-begins-testing-ads-in-ai-mode-for-users-with-personal-intelligence-enable",
       "title": "Google Bắt Đầu Thử Nghiệm Quảng Cáo (Ads) Trong AI Mode Cho Tính Năng Personal...",
@@ -457,22 +472,6 @@
       "impact": "low",
       "tags": [],
       "action": ""
-    },
-    {
-      "id": "universal-cart-google-search-42312",
-      "title": "Universal Cart ra mắt trên Google Search tại Mỹ",
-      "title_en": "Universal Cart Launches In Google Search (U.S.)",
-      "summary": "Google ra mắt Universal Cart trong Search và Gemini tại thị trường Mỹ, vận hành trên Universal Commerce Protocol, thời điểm trước mùa mua sắm lễ. Tín hiệu mở rộng thương mại trực tiếp trong Search.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/universal-cart-google-search-42312.html",
-      "published_at": "2026-10-15",
-      "category": "serp_feature",
-      "impact": "low",
-      "tags": [
-        "serp feature",
-        "ecommerce"
-      ],
-      "action": "Theo dõi mô hình thương mại trong AI/Search để chuẩn bị cho các luồng mua sắm trên nền tảng Web."
     },
     {
       "id": "google-app-new-search-bar-42267",

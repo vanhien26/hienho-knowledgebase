@@ -1,11 +1,11 @@
 # TỔNG QUAN TÀI NGUYÊN TỪ KHÓA & TOPIC CLUSTERS WEB PLATFORM (SSOT INVENTORY V2)
 
 Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ chống ăn thịt từ khóa (Cannibalization Shield) từ kho `05_HUBS/inventory/`.
-- **Tổng số Themes:** 196
-- **Tổng số từ khóa theo dõi:** 299,619
-- **Tổng số từ khóa trùng Intent được gom cụm (Shielded):** 135,313
+- **Tổng số Themes:** 198
+- **Tổng số từ khóa theo dõi:** 304,774
+- **Tổng số từ khóa trùng Intent được gom cụm (Shielded):** 135,945
 - **Tổng số từ khóa nhiễu bị loại bỏ:** 2,821
-- **Tổng dung lượng tìm kiếm thị trường:** 1,674,240,880 lượt/tháng
+- **Tổng dung lượng tìm kiếm thị trường:** 1,674,395,430 lượt/tháng
 
 ---
 
@@ -16,7 +16,7 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
 | Lottery | 3 | 8,243 | 4,022 | 1,457,059,610 |
 | Financial | 101 | 137,295 | 53,831 | 126,488,630 |
 | vehicle-hub | 33 | 74,112 | 39,658 | 35,630,100 |
-| other | 3 | 13,815 | 8,181 | 15,750,700 |
+| other | 5 | 18,970 | 8,813 | 15,905,250 |
 | PS | 4 | 4,809 | 1,841 | 12,084,360 |
 | cinema | 5 | 5,883 | 2,707 | 7,278,550 |
 | ota | 19 | 19,155 | 9,016 | 6,824,070 |
@@ -47,7 +47,7 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
 | 13 | Ứng Dụng Game | PS | 467 | 4 | 3,244,820 | garena (1,000,000) | zing |
 | 14 | Vietlott Mega & Power | Lottery | 1,227 | 376 | 2,775,630 | vietlott (550,800) | power 6 55 |
 | 15 | Chứng Khoán | Financial | 2,094 | 876 | 2,656,060 | bảng giá chứng khoán (225,490) | vcbs bảng giá |
-| 16 | Tử Vi Hàng Ngày & Trọn Đời | other | 4,465 | 2,636 | 2,566,340 | lá số tử vi (364,700) | tử vi hàng ngày |
+| 16 | Tử Vi Hàng Ngày & Trọn Đời | other | 4,455 | 2,622 | 2,642,650 | lá số tử vi (443,300) | tử vi hàng ngày |
 | 17 | Đại Học & Trường Đại Học | student | 907 | 311 | 2,288,060 | mydtu (301,000) | đăng ký nguyện vọng đại học |
 | 18 | Tra Cứu Phạt Nguội Toàn Quốc | vehicle-hub | 359 | 218 | 1,905,960 | tra cứu phạt nguội (863,160) | tra cứu phạt nguội |
 | 19 | Trạm Xăng Gần Nhất | vehicle-hub | 505 | 165 | 1,854,410 | trạm xăng (1,002,900) | trạm xăng |

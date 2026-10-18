@@ -2,10 +2,10 @@
   "version": "3.1-enterprise",
   "generated_at": "2026-10-18",
   "stats": {
-    "total_usecases": 196,
-    "total_keywords": 299619,
-    "total_volume": 1674240880,
-    "total_cannibalized_shielded": 135313,
+    "total_usecases": 198,
+    "total_keywords": 304774,
+    "total_volume": 1674395430,
+    "total_cannibalized_shielded": 135945,
     "total_outliers_pruned": 2821,
     "total_sectors": 12
   },
@@ -60,10 +60,10 @@
       "outliers_filtered": 2
     },
     "other": {
-      "usecase_count": 3,
-      "total_keywords": 13815,
-      "total_volume": 15750700,
-      "cannibalized_merged": 8181,
+      "usecase_count": 5,
+      "total_keywords": 18970,
+      "total_volume": 15905250,
+      "cannibalized_merged": 8813,
       "outliers_filtered": 5
     },
     "student": {
@@ -4395,7 +4395,7 @@
         {
           "keyword": "làm thẻ vietinbank online",
           "volume": 260,
-          "cluster_volume": 450,
+          "cluster_volume": 440,
           "cpc": 0.48,
           "competition": "Low",
           "intent": "Transactional",
@@ -4626,7 +4626,7 @@
             {
               "keyword": "làm thẻ vietinbank online",
               "volume": 260,
-              "cluster_volume": 450,
+              "cluster_volume": 440,
               "intent": "Transactional",
               "score": 5.3,
               "secondary_synonyms": [
@@ -4648,11 +4648,12 @@
             {
               "keyword": "làm thẻ visa vietinbank",
               "volume": 90,
-              "cluster_volume": 140,
+              "cluster_volume": 150,
               "intent": "Transactional",
               "score": 4.29,
               "secondary_synonyms": [
-                "cách làm thẻ visa vietinbank"
+                "cách làm thẻ visa vietinbank",
+                "làm thẻ visa vietinbank online"
               ]
             },
             {
@@ -9822,7 +9823,7 @@
         {
           "keyword": "nạp tiền vào tài khoản ngân hàng",
           "volume": 1000,
-          "cluster_volume": 1290,
+          "cluster_volume": 1340,
           "cpc": 0.28,
           "competition": "Low",
           "intent": "Transactional",
@@ -9830,8 +9831,8 @@
           "quadrant": "Commercial Converter",
           "secondary_synonyms": [
             "nạp tiền vào tài khoản ngân hàng vietcombank",
-            "nạp tiền vào tài khoản ngân hàng techcombank",
-            "nạp tiền vào tài khoản ngân hàng vietinbank"
+            "nạp tiền vào ngân hàng",
+            "nạp tiền vào tài khoản ngân hàng techcombank"
           ]
         },
         {
@@ -9994,18 +9995,18 @@
         {
           "cluster_name": "Thẻ & Tài khoản",
           "count": 126,
-          "total_volume": 11230,
+          "total_volume": 11280,
           "top_keywords": [
             {
               "keyword": "nạp tiền vào tài khoản ngân hàng",
               "volume": 1000,
-              "cluster_volume": 1290,
+              "cluster_volume": 1340,
               "intent": "Transactional",
               "score": 6.34,
               "secondary_synonyms": [
                 "nạp tiền vào tài khoản ngân hàng vietcombank",
-                "nạp tiền vào tài khoản ngân hàng techcombank",
-                "nạp tiền vào tài khoản ngân hàng vietinbank"
+                "nạp tiền vào ngân hàng",
+                "nạp tiền vào tài khoản ngân hàng techcombank"
               ]
             },
             {
@@ -10118,7 +10119,7 @@
         {
           "cluster_name": "Đăng ký & Giao dịch trực tuyến",
           "count": 38,
-          "total_volume": 3040,
+          "total_volume": 2990,
           "top_keywords": [
             {
               "keyword": "đăng ký mb banking",
@@ -14960,7 +14961,7 @@
         {
           "cluster_name": "Giá vàng & Kim loại quý",
           "count": 544,
-          "total_volume": 44038420,
+          "total_volume": 44038350,
           "top_keywords": [
             {
               "keyword": "bảng giá vàng thế giới",
@@ -15168,15 +15169,16 @@
         {
           "cluster_name": "Đăng ký & Giao dịch trực tuyến",
           "count": 5,
-          "total_volume": 2200,
+          "total_volume": 2270,
           "top_keywords": [
             {
               "keyword": "mua vàng pnj",
               "volume": 590,
-              "cluster_volume": 640,
+              "cluster_volume": 710,
               "intent": "Transactional",
               "score": 5.78,
               "secondary_synonyms": [
+                "có nên mua vàng pnj",
                 "pnj có mua lại vàng không"
               ]
             },
@@ -19898,7 +19900,7 @@
         {
           "cluster_name": "Lãi suất & Tiền gửi",
           "count": 401,
-          "total_volume": 1059600,
+          "total_volume": 1059740,
           "top_keywords": [
             {
               "keyword": "lãi suất ngân hàng",
@@ -20019,7 +20021,7 @@
         {
           "cluster_name": "Công cụ & Tra cứu trực tuyến",
           "count": 26,
-          "total_volume": 22610,
+          "total_volume": 22470,
           "top_keywords": [
             {
               "keyword": "công thức tính lãi kép ngân hàng",
@@ -23876,7 +23878,7 @@
         {
           "cluster_name": "Cẩm nang & Hướng dẫn chi tiết",
           "count": 348,
-          "total_volume": 1354060,
+          "total_volume": 1354050,
           "top_keywords": [
             {
               "keyword": "viet com bank",
@@ -23982,7 +23984,7 @@
         {
           "cluster_name": "Thẻ & Tài khoản",
           "count": 53,
-          "total_volume": 2970,
+          "total_volume": 2980,
           "top_keywords": [
             {
               "keyword": "mở thẻ nam a bank online",
@@ -34395,22 +34397,21 @@
             {
               "keyword": "lãi suất the ghi nợ vietcombank",
               "volume": 10,
-              "cluster_volume": 20,
+              "cluster_volume": 10,
               "intent": "Commercial",
               "score": 1.56,
-              "secondary_synonyms": [
-                "lãi suất thẻ ghi nợ vietcombank"
-              ]
+              "secondary_synonyms": []
             },
             {
               "keyword": "lãi suất thẻ ghi nợ",
               "volume": 10,
-              "cluster_volume": 30,
+              "cluster_volume": 40,
               "intent": "Commercial",
               "score": 1.56,
               "secondary_synonyms": [
                 "lãi suất thẻ ghi nợ agribank",
-                "lãi suất thẻ ghi nợ techcombank"
+                "lãi suất thẻ ghi nợ techcombank",
+                "lãi suất thẻ ghi nợ vietcombank"
               ]
             },
             {
@@ -39648,7 +39649,7 @@
             {
               "keyword": "mua xe trả góp qua thẻ tín dụng",
               "volume": 70,
-              "cluster_volume": 200,
+              "cluster_volume": 180,
               "intent": "Transactional",
               "score": 3.7,
               "secondary_synonyms": [
@@ -42397,7 +42398,7 @@
         {
           "cluster_name": "Tỷ giá & Ngoại tệ",
           "count": 1635,
-          "total_volume": 5208000,
+          "total_volume": 5207420,
           "top_keywords": [
             {
               "keyword": "giá đô la mỹ mua vào hôm nay",
@@ -42459,7 +42460,7 @@
         {
           "cluster_name": "Cẩm nang & Hướng dẫn chi tiết",
           "count": 332,
-          "total_volume": 2687500,
+          "total_volume": 2688080,
           "top_keywords": [
             {
               "keyword": "giá đô",
@@ -47551,7 +47552,7 @@
         {
           "cluster_name": "Vay vốn & Tín chấp",
           "count": 66,
-          "total_volume": 15770,
+          "total_volume": 15790,
           "top_keywords": [
             {
               "keyword": "vay mua nhà vpbank",
@@ -47566,13 +47567,13 @@
             {
               "keyword": "đăng ký vay vpbank",
               "volume": 110,
-              "cluster_volume": 240,
+              "cluster_volume": 260,
               "intent": "Transactional",
               "score": 3.29,
               "secondary_synonyms": [
                 "đăng ký vpbank",
                 "vpbank đăng ký",
-                "đăng ký vay tiền vpbank"
+                "đăng ký vay online vpbank"
               ]
             },
             {
@@ -49267,7 +49268,7 @@
         {
           "cluster_name": "Kết quả xổ số",
           "count": 1971,
-          "total_volume": 1398484990,
+          "total_volume": 1398485400,
           "top_keywords": [
             {
               "keyword": "minhngoc",
@@ -49373,7 +49374,7 @@
         {
           "cluster_name": "Thống kê & Soi cầu",
           "count": 83,
-          "total_volume": 5270110,
+          "total_volume": 5269700,
           "top_keywords": [
             {
               "keyword": "lô gan",
@@ -53772,26 +53773,7 @@
             "volume": 39950
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "phi-bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Biểu Phí Bảo Hiểm",
-            "target_url": "/phi-bao-hiem/",
-            "suggested_anchor": "đóng phí manulife",
-            "overlap_tokens": 2,
-            "volume": 33830
-          },
-          {
-            "target_id": "bao-hiem-tai-nan",
-            "target_sector": "insurtech",
-            "target_name": "Bảo Hiểm Tai Nạn & Sức Khỏe",
-            "target_url": "/bao-hiem-tai-nan/",
-            "suggested_anchor": "bảo hiểm tai nạn",
-            "overlap_tokens": 2,
-            "volume": 19290
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bệnh viện bạch mai là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến bệnh viện & phòng khám một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -54195,26 +54177,7 @@
             "volume": 3596670
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "phi-bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Biểu Phí Bảo Hiểm",
-            "target_url": "/phi-bao-hiem/",
-            "suggested_anchor": "đóng phí manulife",
-            "overlap_tokens": 2,
-            "volume": 33830
-          },
-          {
-            "target_id": "bao-hiem-tai-nan",
-            "target_sector": "insurtech",
-            "target_name": "Bảo Hiểm Tai Nạn & Sức Khỏe",
-            "target_url": "/bao-hiem-tai-nan/",
-            "suggested_anchor": "bảo hiểm tai nạn",
-            "overlap_tokens": 2,
-            "volume": 19290
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bmi calculator 2 là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến chỉ số & tính toán bmi chuẩn một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -54631,26 +54594,7 @@
             "volume": 39950
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bao-hiem-tai-nan",
-            "target_sector": "insurtech",
-            "target_name": "Bảo Hiểm Tai Nạn & Sức Khỏe",
-            "target_url": "/bao-hiem-tai-nan/",
-            "suggested_anchor": "bảo hiểm tai nạn",
-            "overlap_tokens": 3,
-            "volume": 19290
-          },
-          {
-            "target_id": "phi-bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Biểu Phí Bảo Hiểm",
-            "target_url": "/phi-bao-hiem/",
-            "suggested_anchor": "đóng phí manulife",
-            "overlap_tokens": 1,
-            "volume": 33830
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Đặt lịch khám bệnh viện đại học y hà nội là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến đặt lịch khám bệnh một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -55080,26 +55024,7 @@
             "volume": 3596670
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "phi-bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Biểu Phí Bảo Hiểm",
-            "target_url": "/phi-bao-hiem/",
-            "suggested_anchor": "đóng phí manulife",
-            "overlap_tokens": 2,
-            "volume": 33830
-          },
-          {
-            "target_id": "bao-hiem-tai-nan",
-            "target_sector": "insurtech",
-            "target_name": "Bảo Hiểm Tai Nạn & Sức Khỏe",
-            "target_url": "/bao-hiem-tai-nan/",
-            "suggested_anchor": "bảo hiểm tai nạn",
-            "overlap_tokens": 1,
-            "volume": 19290
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Tính tdee là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng tra cứu và tính toán tính calo & dinh dưỡng một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -55445,7 +55370,7 @@
         {
           "cluster_name": "Biểu phí & Mua bảo hiểm",
           "count": 43,
-          "total_volume": 930,
+          "total_volume": 910,
           "top_keywords": [
             {
               "keyword": "bảo hiểm tai nạn học sinh bao nhiêu tiền",
@@ -55482,11 +55407,10 @@
             {
               "keyword": "tra cứu bảo hiểm tai nạn online",
               "volume": 30,
-              "cluster_volume": 60,
+              "cluster_volume": 40,
               "intent": "Tool/Calculator",
               "score": 2.68,
               "secondary_synonyms": [
-                "bảo hiểm tai nạn tra cứu",
                 "tra cứu bảo hiểm tai nạn ctu",
                 "tra cứu bảo hiểm tai nạn pvi"
               ]
@@ -55568,22 +55492,33 @@
           ]
         },
         {
-          "cluster_name": "Công cụ & Tra cứu trực tuyến",
-          "count": 3,
-          "total_volume": 70,
+          "cluster_name": "Tra cứu & Hạn sử dụng",
+          "count": 4,
+          "total_volume": 90,
           "top_keywords": [
             {
-              "keyword": "bảo hiểm tai nạn học sinh được tính như thế nào",
-              "volume": 70,
-              "cluster_volume": 70,
+              "keyword": "tra cứu bảo hiểm tai nạn bằng cccd",
+              "volume": 30,
+              "cluster_volume": 50,
               "intent": "Tool/Calculator",
-              "score": 3.39,
+              "score": 2.68,
               "secondary_synonyms": [
-                "bảo hiểm tai nạn tính như thế nào"
+                "bảo hiểm tai nạn tra cứu"
               ]
             },
             {
-              "keyword": "bảo hiểm tai nạn có tính thuế tncn",
+              "keyword": "kiểm tra bảo hiểm tai nạn",
+              "volume": 20,
+              "cluster_volume": 40,
+              "intent": "Tool/Calculator",
+              "score": 2.38,
+              "secondary_synonyms": [
+                "cách kiểm tra bảo hiểm tai nạn",
+                "kiểm tra thời hạn bảo hiểm tai nạn"
+              ]
+            },
+            {
+              "keyword": "bảo hiểm kiểm tra bệnh viện",
               "volume": 0,
               "cluster_volume": 0,
               "intent": "Tool/Calculator",
@@ -55591,7 +55526,7 @@
               "secondary_synonyms": []
             },
             {
-              "keyword": "bảo hiểm tai nạn lao động tính như thế nào",
+              "keyword": "cách kiểm tra bảo hiểm tai nạn học sinh",
               "volume": 0,
               "cluster_volume": 0,
               "intent": "Tool/Calculator",
@@ -55641,26 +55576,7 @@
             "volume": 135180
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "dat-lich-kham-benh",
-            "target_sector": "hospital",
-            "target_name": "Đặt Lịch Khám Bệnh",
-            "target_url": "/dat-lich-kham-benh/",
-            "suggested_anchor": "đặt lịch khám bệnh viện đại học y hà nội",
-            "overlap_tokens": 3,
-            "volume": 15980
-          },
-          {
-            "target_id": "benh-vien",
-            "target_sector": "hospital",
-            "target_name": "Bệnh Viện & Phòng Khám",
-            "target_url": "/benh-vien/",
-            "suggested_anchor": "bệnh viện bạch mai",
-            "overlap_tokens": 2,
-            "volume": 3596670
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bảo hiểm tai nạn là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến bảo hiểm tai nạn & sức khỏe một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -56111,26 +56027,7 @@
             "volume": 19290
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "du-lich-an-do",
-            "target_sector": "ota",
-            "target_name": "Du Lịch Ấn Độ",
-            "target_url": "/du-lich-an-do/",
-            "suggested_anchor": "du lịch ấn độ",
-            "overlap_tokens": 3,
-            "volume": 1990
-          },
-          {
-            "target_id": "du-lich-nhat",
-            "target_sector": "ota",
-            "target_name": "Du Lịch Nhật Bản",
-            "target_url": "/du-lich-nhat/",
-            "suggested_anchor": "du lịch nhật",
-            "overlap_tokens": 2,
-            "volume": 35560
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bảo hiểm cháy nổ bắt buộc là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến bảo hiểm cháy nổ một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -56681,26 +56578,7 @@
             "volume": 307360
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "du-lich-an-do",
-            "target_sector": "ota",
-            "target_name": "Du Lịch Ấn Độ",
-            "target_url": "/du-lich-an-do/",
-            "suggested_anchor": "du lịch ấn độ",
-            "overlap_tokens": 1,
-            "volume": 1990
-          },
-          {
-            "target_id": "du-lich-nhat",
-            "target_sector": "ota",
-            "target_name": "Du Lịch Nhật Bản",
-            "target_url": "/du-lich-nhat/",
-            "suggested_anchor": "du lịch nhật",
-            "overlap_tokens": 0,
-            "volume": 35560
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bảo hiểm nhân thọ là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến bảo hiểm nhân thọ một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -57814,26 +57692,7 @@
             "volume": 19290
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "du-lich-an-do",
-            "target_sector": "ota",
-            "target_name": "Du Lịch Ấn Độ",
-            "target_url": "/du-lich-an-do/",
-            "suggested_anchor": "du lịch ấn độ",
-            "overlap_tokens": 2,
-            "volume": 1990
-          },
-          {
-            "target_id": "du-lich-nhat",
-            "target_sector": "ota",
-            "target_name": "Du Lịch Nhật Bản",
-            "target_url": "/du-lich-nhat/",
-            "suggested_anchor": "du lịch nhật",
-            "overlap_tokens": 1,
-            "volume": 35560
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bảo hiểm xe máy là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến bảo hiểm xe máy bắt buộc một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -58383,26 +58242,7 @@
             "volume": 33830
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "du-lich-nhat",
-            "target_sector": "ota",
-            "target_name": "Du Lịch Nhật Bản",
-            "target_url": "/du-lich-nhat/",
-            "suggested_anchor": "du lịch nhật",
-            "overlap_tokens": 0,
-            "volume": 35560
-          },
-          {
-            "target_id": "du-lich-an-do",
-            "target_sector": "ota",
-            "target_name": "Du Lịch Ấn Độ",
-            "target_url": "/du-lich-an-do/",
-            "suggested_anchor": "du lịch ấn độ",
-            "overlap_tokens": 0,
-            "volume": 1990
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bảo hiểm y tế là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến bảo hiểm y tế (bhyt) một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -58938,26 +58778,7 @@
             "volume": 105910
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "du-lich-nhat",
-            "target_sector": "ota",
-            "target_name": "Du Lịch Nhật Bản",
-            "target_url": "/du-lich-nhat/",
-            "suggested_anchor": "du lịch nhật",
-            "overlap_tokens": 0,
-            "volume": 35560
-          },
-          {
-            "target_id": "du-lich-an-do",
-            "target_sector": "ota",
-            "target_name": "Du Lịch Ấn Độ",
-            "target_url": "/du-lich-an-do/",
-            "suggested_anchor": "du lịch ấn độ",
-            "overlap_tokens": 0,
-            "volume": 1990
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bảo hiểm xã hội là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến bảo hiểm xã hội (bhxh) một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -59402,26 +59223,7 @@
             "volume": 307360
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "benh-vien",
-            "target_sector": "hospital",
-            "target_name": "Bệnh Viện & Phòng Khám",
-            "target_url": "/benh-vien/",
-            "suggested_anchor": "bệnh viện bạch mai",
-            "overlap_tokens": 2,
-            "volume": 3596670
-          },
-          {
-            "target_id": "bmi",
-            "target_sector": "hospital",
-            "target_name": "Chỉ Số & Tính Toán BMI Chuẩn",
-            "target_url": "/bmi/",
-            "suggested_anchor": "bmi calculator 2",
-            "overlap_tokens": 2,
-            "volume": 861630
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Đóng phí manulife là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến biểu phí bảo hiểm một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -60085,26 +59887,7 @@
             "volume": 12090
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "bao-hiem-chay-no",
-            "target_sector": "insurtech",
-            "target_name": "Bảo Hiểm Cháy Nổ",
-            "target_url": "/bao-hiem-chay-no/",
-            "suggested_anchor": "bảo hiểm cháy nổ bắt buộc",
-            "overlap_tokens": 3,
-            "volume": 6720
-          },
-          {
-            "target_id": "bao-hiem-xe-may",
-            "target_sector": "insurtech",
-            "target_name": "Bảo Hiểm Xe Máy Bắt Buộc",
-            "target_url": "/bao-hiem-xe-may/",
-            "suggested_anchor": "bảo hiểm xe máy",
-            "overlap_tokens": 2,
-            "volume": 105910
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Du lịch ấn độ là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến du lịch ấn độ một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -61662,26 +61445,7 @@
             "volume": 1990
           }
         ],
-        "cross_silo_bridges": [
-          {
-            "target_id": "phi-bao-hiem",
-            "target_sector": "insurtech",
-            "target_name": "Biểu Phí Bảo Hiểm",
-            "target_url": "/phi-bao-hiem/",
-            "suggested_anchor": "đóng phí manulife",
-            "overlap_tokens": 2,
-            "volume": 33830
-          },
-          {
-            "target_id": "bao-hiem-chay-no",
-            "target_sector": "insurtech",
-            "target_name": "Bảo Hiểm Cháy Nổ",
-            "target_url": "/bao-hiem-chay-no/",
-            "suggested_anchor": "bảo hiểm cháy nổ bắt buộc",
-            "overlap_tokens": 2,
-            "volume": 6720
-          }
-        ]
+        "cross_silo_bridges": []
       },
       "geo_optimization": {
         "direct_answer_snippet": "Du lịch nhật là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến du lịch nhật bản một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
@@ -67364,6 +67128,298 @@
       }
     },
     {
+      "id": "kinh-dich",
+      "name": "Kinh Dich",
+      "display_name": "Kinh Dich",
+      "sector": "other",
+      "file_name": "kinh-dich.csv",
+      "total_raw_keywords": 183,
+      "clean_keywords_count": 183,
+      "outliers_filtered_count": 0,
+      "canonical_topics_count": 97,
+      "cannibalization_merged_count": 86,
+      "total_volume": 71710,
+      "cannibalization_shield": {
+        "risk_level": "LOW",
+        "verdict": "CONSOLIDATE",
+        "action": "UPDATE_OR_REDIRECT",
+        "serp_rank": null,
+        "top_live_url": "https://www.momo.vn/hoi-dap/dich-vu-cong-dong-ctgr137",
+        "rationale": "Kế thừa live URL từ truy vấn nhánh: kinh dich hoi"
+      },
+      "pillar_keyword": {
+        "keyword": "kinh dịch",
+        "volume": 27100,
+        "cluster_volume": 27180,
+        "intent": "Informational",
+        "secondary_synonyms": [
+          "dịch kinh",
+          "kinh dịch là"
+        ]
+      },
+      "intent_breakdown": {
+        "Informational": 97
+      },
+      "quadrant_breakdown": {
+        "Quick Win": 7,
+        "Long-tail / Supporting": 90
+      },
+      "top_opportunities": [
+        {
+          "keyword": "kinh dịch",
+          "volume": 27100,
+          "cluster_volume": 27180,
+          "cpc": 0.19,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 4.6,
+          "quadrant": "Quick Win",
+          "secondary_synonyms": [
+            "dịch kinh",
+            "kinh dịch là"
+          ]
+        },
+        {
+          "keyword": "simkinhdich",
+          "volume": 8100,
+          "cluster_volume": 8100,
+          "cpc": 0.41,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 4.23,
+          "quadrant": "Quick Win",
+          "secondary_synonyms": []
+        },
+        {
+          "keyword": "quẻ kinh dịch",
+          "volume": 9900,
+          "cluster_volume": 16980,
+          "cpc": 0.25,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 4.2,
+          "quadrant": "Quick Win",
+          "secondary_synonyms": [
+            "64 quẻ kinh dịch",
+            "kinh dịch quẻ",
+            "luận quẻ kinh dịch"
+          ]
+        },
+        {
+          "keyword": "kinh dich hoi",
+          "volume": 2400,
+          "cluster_volume": 2400,
+          "cpc": 0.05,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 3.41,
+          "quadrant": "Quick Win",
+          "secondary_synonyms": []
+        },
+        {
+          "keyword": "kinh dich",
+          "volume": 2400,
+          "cluster_volume": 2400,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 3.38,
+          "quadrant": "Quick Win",
+          "secondary_synonyms": []
+        },
+        {
+          "keyword": "kinh dich online",
+          "volume": 1900,
+          "cluster_volume": 1900,
+          "cpc": 0.09,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 3.34,
+          "quadrant": "Quick Win",
+          "secondary_synonyms": []
+        },
+        {
+          "keyword": "kinh dịch online",
+          "volume": 1900,
+          "cluster_volume": 1920,
+          "cpc": 0.09,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 3.34,
+          "quadrant": "Quick Win",
+          "secondary_synonyms": [
+            "học kinh dịch online"
+          ]
+        },
+        {
+          "keyword": "64 quẻ dịch",
+          "volume": 1300,
+          "cluster_volume": 1360,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 3.11,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": [
+            "64 quẻ dịch lý",
+            "tên 64 quẻ dịch",
+            "64 quẻ chu dịch"
+          ]
+        },
+        {
+          "keyword": "quẻ dịch",
+          "volume": 880,
+          "cluster_volume": 1360,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 2.94,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": [
+            "dịch quẻ"
+          ]
+        },
+        {
+          "keyword": "quẻ địa thiên thái",
+          "volume": 720,
+          "cluster_volume": 720,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 2.86,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": []
+        }
+      ],
+      "sub_clusters": [
+        {
+          "cluster_name": "Cẩm nang & Hướng dẫn chi tiết",
+          "count": 97,
+          "total_volume": 71710,
+          "top_keywords": [
+            {
+              "keyword": "kinh dịch",
+              "volume": 27100,
+              "cluster_volume": 27180,
+              "intent": "Informational",
+              "score": 4.6,
+              "secondary_synonyms": [
+                "dịch kinh",
+                "kinh dịch là"
+              ]
+            },
+            {
+              "keyword": "simkinhdich",
+              "volume": 8100,
+              "cluster_volume": 8100,
+              "intent": "Informational",
+              "score": 4.23,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "quẻ kinh dịch",
+              "volume": 9900,
+              "cluster_volume": 16980,
+              "intent": "Informational",
+              "score": 4.2,
+              "secondary_synonyms": [
+                "64 quẻ kinh dịch",
+                "kinh dịch quẻ",
+                "luận quẻ kinh dịch"
+              ]
+            },
+            {
+              "keyword": "kinh dich hoi",
+              "volume": 2400,
+              "cluster_volume": 2400,
+              "intent": "Informational",
+              "score": 3.41,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "kinh dich",
+              "volume": 2400,
+              "cluster_volume": 2400,
+              "intent": "Informational",
+              "score": 3.38,
+              "secondary_synonyms": []
+            }
+          ]
+        }
+      ],
+      "internal_links": {
+        "parent_hub": {
+          "title": "Tiện Ích Nền Tảng",
+          "url": "/tien-ich",
+          "anchor": "Hệ sinh thái tiện ích Web MoMo"
+        },
+        "peer_in_silo": [
+          {
+            "target_id": "lich-am",
+            "target_name": "Lịch Âm & Lịch Vạn Niên",
+            "target_url": "/lich-am/",
+            "suggested_anchor": "lịch âm",
+            "similarity_score": 0.0,
+            "volume": 12875550
+          },
+          {
+            "target_id": "tu-vi",
+            "target_name": "Tử Vi Hàng Ngày & Trọn Đời",
+            "target_url": "/tu-vi/",
+            "suggested_anchor": "lá số tử vi",
+            "similarity_score": 0.0,
+            "volume": 2642650
+          },
+          {
+            "target_id": "ma-giam-gia",
+            "target_name": "Mã Giảm Giá & Voucher Khuyến Mãi",
+            "target_url": "/ma-giam-gia/",
+            "suggested_anchor": "mã giảm giá riokupon",
+            "similarity_score": 0.0,
+            "volume": 308810
+          },
+          {
+            "target_id": "tarot",
+            "target_name": "Tarot",
+            "target_url": "/tarot/",
+            "suggested_anchor": "taron egerton",
+            "similarity_score": 0.0,
+            "volume": 6530
+          }
+        ],
+        "cross_silo_bridges": []
+      },
+      "geo_optimization": {
+        "direct_answer_snippet": "Kinh dịch là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến kinh dich một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
+        "entity_facts": [
+          {
+            "entity_field": "Phân loại giải pháp",
+            "value": "Tiện ích Web Other - MoMo Web Platform"
+          },
+          {
+            "entity_field": "Đối tượng áp dụng",
+            "value": "Toàn bộ người dùng cá nhân có nhu cầu tra cứu và giao dịch trực tuyến"
+          },
+          {
+            "entity_field": "Thời gian xử lý",
+            "value": "Xử lý tức thì (Real-time), hỗ trợ 24/7 không phụ thuộc giờ hành chính"
+          },
+          {
+            "entity_field": "Hạ tầng kỹ thuật",
+            "value": "Kết nối API trực tiếp từ hệ thống đối tác liên kết chính thức"
+          },
+          {
+            "entity_field": "Tiêu chuẩn bảo mật",
+            "value": "Bảo mật đa tầng, đạt chứng chỉ bảo mật quốc tế PCI DSS Level 1"
+          },
+          {
+            "entity_field": "Kênh thao tác liền mạch",
+            "value": "Trình duyệt Web (Desktop/Mobile) kết hợp chuyển tiếp Web-to-App MoMo"
+          }
+        ]
+      }
+    },
+    {
       "id": "lich-am",
       "name": "Lịch Âm & Lịch Vạn Niên",
       "display_name": "Lịch Âm & Lịch Vạn Niên",
@@ -67799,7 +67855,7 @@
             "target_url": "/tu-vi/",
             "suggested_anchor": "lá số tử vi",
             "similarity_score": 0.08,
-            "volume": 2566340
+            "volume": 2642650
           },
           {
             "target_id": "ma-giam-gia",
@@ -67808,6 +67864,22 @@
             "suggested_anchor": "mã giảm giá riokupon",
             "similarity_score": 0.0,
             "volume": 308810
+          },
+          {
+            "target_id": "kinh-dich",
+            "target_name": "Kinh Dich",
+            "target_url": "/kinh-dich/",
+            "suggested_anchor": "kinh dịch",
+            "similarity_score": 0.0,
+            "volume": 71710
+          },
+          {
+            "target_id": "tarot",
+            "target_name": "Tarot",
+            "target_url": "/tarot/",
+            "suggested_anchor": "taron egerton",
+            "similarity_score": 0.0,
+            "volume": 6530
           }
         ],
         "cross_silo_bridges": []
@@ -68304,7 +68376,23 @@
             "target_url": "/tu-vi/",
             "suggested_anchor": "lá số tử vi",
             "similarity_score": 0.0,
-            "volume": 2566340
+            "volume": 2642650
+          },
+          {
+            "target_id": "kinh-dich",
+            "target_name": "Kinh Dich",
+            "target_url": "/kinh-dich/",
+            "suggested_anchor": "kinh dịch",
+            "similarity_score": 0.0,
+            "volume": 71710
+          },
+          {
+            "target_id": "tarot",
+            "target_name": "Tarot",
+            "target_url": "/tarot/",
+            "suggested_anchor": "taron egerton",
+            "similarity_score": 0.0,
+            "volume": 6530
           }
         ],
         "cross_silo_bridges": []
@@ -68340,17 +68428,447 @@
       }
     },
     {
+      "id": "tarot",
+      "name": "Tarot",
+      "display_name": "Tarot",
+      "sector": "other",
+      "file_name": "tarot.csv",
+      "total_raw_keywords": 4982,
+      "clean_keywords_count": 4982,
+      "outliers_filtered_count": 0,
+      "canonical_topics_count": 4422,
+      "cannibalization_merged_count": 560,
+      "total_volume": 6530,
+      "cannibalization_shield": {
+        "risk_level": "ZERO",
+        "verdict": "SAFE_TO_ALLOCATE",
+        "action": "ALLOCATE_NEW",
+        "serp_rank": null,
+        "top_live_url": null,
+        "rationale": "Tên miền momo.vn chưa có bài viết nào trên SERP hoặc trong hệ thống cho chủ đề này. Đèn xanh (Green Light): Cho phép phân bổ từ khóa và tạo mới trang trên Web Platform."
+      },
+      "pillar_keyword": {
+        "keyword": "taron egerton",
+        "volume": 2400,
+        "cluster_volume": 2400,
+        "intent": "Informational",
+        "secondary_synonyms": []
+      },
+      "intent_breakdown": {
+        "Informational": 4389,
+        "Commercial": 14,
+        "Navigational": 15,
+        "Tool/Calculator": 2,
+        "Transactional": 2
+      },
+      "quadrant_breakdown": {
+        "Quick Win": 1,
+        "Long-tail / Supporting": 4421
+      },
+      "top_opportunities": [
+        {
+          "keyword": "taron egerton",
+          "volume": 2400,
+          "cluster_volume": 2400,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 3.38,
+          "quadrant": "Quick Win",
+          "secondary_synonyms": []
+        },
+        {
+          "keyword": "tarot chatgpt",
+          "volume": 390,
+          "cluster_volume": 390,
+          "cpc": 0.57,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 2.89,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": []
+        },
+        {
+          "keyword": "tarot death",
+          "volume": 590,
+          "cluster_volume": 590,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 2.77,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": []
+        },
+        {
+          "keyword": "tarot death card",
+          "volume": 590,
+          "cluster_volume": 590,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 2.77,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": []
+        },
+        {
+          "keyword": "tarot com vn",
+          "volume": 390,
+          "cluster_volume": 390,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 2.59,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": [
+            "https tarot com vn"
+          ]
+        },
+        {
+          "keyword": "taro root",
+          "volume": 260,
+          "cluster_volume": 260,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 2.42,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": []
+        },
+        {
+          "keyword": "taro ice cream",
+          "volume": 140,
+          "cluster_volume": 140,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 2.15,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": []
+        },
+        {
+          "keyword": "tarot random 3 card",
+          "volume": 70,
+          "cluster_volume": 70,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 1.85,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": [
+            "tarot card random",
+            "tarot random card"
+          ]
+        },
+        {
+          "keyword": "tarot có mấy lá",
+          "volume": 70,
+          "cluster_volume": 70,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 1.85,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": [
+            "tarot bao nhiêu lá",
+            "tarot nhiêu lá",
+            "tarot có bao nhiêu lá"
+          ]
+        },
+        {
+          "keyword": "tarot gpt",
+          "volume": 50,
+          "cluster_volume": 50,
+          "cpc": 0.0,
+          "competition": "Low",
+          "intent": "Informational",
+          "score": 1.71,
+          "quadrant": "Long-tail / Supporting",
+          "secondary_synonyms": []
+        }
+      ],
+      "sub_clusters": [
+        {
+          "cluster_name": "Cẩm nang & Hướng dẫn chi tiết",
+          "count": 4389,
+          "total_volume": 6520,
+          "top_keywords": [
+            {
+              "keyword": "taron egerton",
+              "volume": 2400,
+              "cluster_volume": 2400,
+              "intent": "Informational",
+              "score": 3.38,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "tarot chatgpt",
+              "volume": 390,
+              "cluster_volume": 390,
+              "intent": "Informational",
+              "score": 2.89,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "tarot death",
+              "volume": 590,
+              "cluster_volume": 590,
+              "intent": "Informational",
+              "score": 2.77,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "tarot death card",
+              "volume": 590,
+              "cluster_volume": 590,
+              "intent": "Informational",
+              "score": 2.77,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "tarot com vn",
+              "volume": 390,
+              "cluster_volume": 390,
+              "intent": "Informational",
+              "score": 2.59,
+              "secondary_synonyms": [
+                "https tarot com vn"
+              ]
+            }
+          ]
+        },
+        {
+          "cluster_name": "So sánh & Đánh giá giải pháp",
+          "count": 14,
+          "total_volume": 10,
+          "top_keywords": [
+            {
+              "keyword": "tarot bạn nên làm gì lúc này",
+              "volume": 10,
+              "cluster_volume": 10,
+              "intent": "Commercial",
+              "score": 1.56,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "tarot nl review",
+              "volume": 0,
+              "cluster_volume": 0,
+              "intent": "Commercial",
+              "score": 0.0,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "tarot nên hỏi gì",
+              "volume": 0,
+              "cluster_volume": 0,
+              "intent": "Commercial",
+              "score": 0.0,
+              "secondary_synonyms": [
+                "coi tarot nên hỏi gì"
+              ]
+            },
+            {
+              "keyword": "tarot có nên hay không",
+              "volume": 0,
+              "cluster_volume": 0,
+              "intent": "Commercial",
+              "score": 0.0,
+              "secondary_synonyms": [
+                "tarot có nên tin không",
+                "tarot nên hay không",
+                "tarot nên hay không nên"
+              ]
+            },
+            {
+              "keyword": "tarot có nên nghỉ việc không",
+              "volume": 0,
+              "cluster_volume": 0,
+              "intent": "Commercial",
+              "score": 0.0,
+              "secondary_synonyms": []
+            }
+          ]
+        },
+        {
+          "cluster_name": "Cổng dịch vụ & Liên hệ",
+          "count": 15,
+          "total_volume": 0,
+          "top_keywords": [
+            {
+              "keyword": "tarot app",
+              "volume": 0,
+              "cluster_volume": 0,
+              "intent": "Navigational",
+              "score": 0.0,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "tarot app free",
+              "volume": 0,
+              "cluster_volume": 0,
+              "intent": "Navigational",
+              "score": 0.0,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "tarot app reddit",
+              "volume": 0,
+              "cluster_volume": 0,
+              "intent": "Navigational",
+              "score": 0.0,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "tarot insights app",
+              "volume": 0,
+              "cluster_volume": 0,
+              "intent": "Navigational",
+              "score": 0.0,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "tarot ios app",
+              "volume": 0,
+              "cluster_volume": 0,
+              "intent": "Navigational",
+              "score": 0.0,
+              "secondary_synonyms": []
+            }
+          ]
+        },
+        {
+          "cluster_name": "Công cụ & Tra cứu trực tuyến",
+          "count": 2,
+          "total_volume": 0,
+          "top_keywords": [
+            {
+              "keyword": "tarot bao nhiêu tiền",
+              "volume": 0,
+              "cluster_volume": 0,
+              "intent": "Tool/Calculator",
+              "score": 0.0,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "xem tarot bao nhiêu tiền",
+              "volume": 0,
+              "cluster_volume": 0,
+              "intent": "Tool/Calculator",
+              "score": 0.0,
+              "secondary_synonyms": []
+            }
+          ]
+        },
+        {
+          "cluster_name": "Đăng ký & Giao dịch trực tuyến",
+          "count": 2,
+          "total_volume": 0,
+          "top_keywords": [
+            {
+              "keyword": "tarot mua",
+              "volume": 0,
+              "cluster_volume": 0,
+              "intent": "Transactional",
+              "score": 0.0,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "tarot mua bài",
+              "volume": 0,
+              "cluster_volume": 0,
+              "intent": "Transactional",
+              "score": 0.0,
+              "secondary_synonyms": [
+                "mua bài tarot tphcm"
+              ]
+            }
+          ]
+        }
+      ],
+      "internal_links": {
+        "parent_hub": {
+          "title": "Tiện Ích Nền Tảng",
+          "url": "/tien-ich",
+          "anchor": "Hệ sinh thái tiện ích Web MoMo"
+        },
+        "peer_in_silo": [
+          {
+            "target_id": "lich-am",
+            "target_name": "Lịch Âm & Lịch Vạn Niên",
+            "target_url": "/lich-am/",
+            "suggested_anchor": "lịch âm",
+            "similarity_score": 0.0,
+            "volume": 12875550
+          },
+          {
+            "target_id": "tu-vi",
+            "target_name": "Tử Vi Hàng Ngày & Trọn Đời",
+            "target_url": "/tu-vi/",
+            "suggested_anchor": "lá số tử vi",
+            "similarity_score": 0.0,
+            "volume": 2642650
+          },
+          {
+            "target_id": "ma-giam-gia",
+            "target_name": "Mã Giảm Giá & Voucher Khuyến Mãi",
+            "target_url": "/ma-giam-gia/",
+            "suggested_anchor": "mã giảm giá riokupon",
+            "similarity_score": 0.0,
+            "volume": 308810
+          },
+          {
+            "target_id": "kinh-dich",
+            "target_name": "Kinh Dich",
+            "target_url": "/kinh-dich/",
+            "suggested_anchor": "kinh dịch",
+            "similarity_score": 0.0,
+            "volume": 71710
+          }
+        ],
+        "cross_silo_bridges": []
+      },
+      "geo_optimization": {
+        "direct_answer_snippet": "Taron egerton là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng thực hiện giao dịch trực tuyến tarot một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút.",
+        "entity_facts": [
+          {
+            "entity_field": "Phân loại giải pháp",
+            "value": "Tiện ích Web Other - MoMo Web Platform"
+          },
+          {
+            "entity_field": "Đối tượng áp dụng",
+            "value": "Toàn bộ người dùng cá nhân có nhu cầu tra cứu và giao dịch trực tuyến"
+          },
+          {
+            "entity_field": "Thời gian xử lý",
+            "value": "Xử lý tức thì (Real-time), hỗ trợ 24/7 không phụ thuộc giờ hành chính"
+          },
+          {
+            "entity_field": "Hạ tầng kỹ thuật",
+            "value": "Kết nối API trực tiếp từ hệ thống đối tác liên kết chính thức"
+          },
+          {
+            "entity_field": "Tiêu chuẩn bảo mật",
+            "value": "Bảo mật đa tầng, đạt chứng chỉ bảo mật quốc tế PCI DSS Level 1"
+          },
+          {
+            "entity_field": "Kênh thao tác liền mạch",
+            "value": "Trình duyệt Web (Desktop/Mobile) kết hợp chuyển tiếp Web-to-App MoMo"
+          }
+        ]
+      }
+    },
+    {
       "id": "tu-vi",
       "name": "Tử Vi Hàng Ngày & Trọn Đời",
       "display_name": "Tử Vi Hàng Ngày & Trọn Đời",
       "sector": "other",
       "file_name": "tu-vi.csv",
-      "total_raw_keywords": 4465,
-      "clean_keywords_count": 4465,
+      "total_raw_keywords": 4455,
+      "clean_keywords_count": 4455,
       "outliers_filtered_count": 0,
-      "canonical_topics_count": 1829,
-      "cannibalization_merged_count": 2636,
-      "total_volume": 2566340,
+      "canonical_topics_count": 1833,
+      "cannibalization_merged_count": 2622,
+      "total_volume": 2642650,
       "cannibalization_shield": {
         "risk_level": "LOW",
         "verdict": "CONSOLIDATE",
@@ -68361,35 +68879,34 @@
       },
       "pillar_keyword": {
         "keyword": "lá số tử vi",
-        "volume": 301000,
-        "cluster_volume": 364700,
+        "volume": 368000,
+        "cluster_volume": 443300,
         "intent": "Informational",
         "secondary_synonyms": [
           "tử vi lá số",
           "lá số tử vi online",
-          "lá số tử vi vn",
           "số tử vi",
+          "lá số tử vi vn",
           "lá tử vi"
         ]
       },
       "intent_breakdown": {
-        "Informational": 1793,
+        "Informational": 1797,
         "Commercial": 25,
-        "Tool/Calculator": 1,
-        "Navigational": 7,
-        "Transactional": 3
+        "Tool/Calculator": 3,
+        "Transactional": 3,
+        "Navigational": 5
       },
       "quadrant_breakdown": {
-        "Quick Win": 93,
-        "Strategic Pillar": 1,
-        "Long-tail / Supporting": 1735
+        "Quick Win": 91,
+        "Long-tail / Supporting": 1742
       },
       "top_opportunities": [
         {
           "keyword": "tử vi hàng ngày",
           "volume": 74000,
-          "cluster_volume": 113000,
-          "cpc": 4.91,
+          "cluster_volume": 108130,
+          "cpc": 2.91,
           "competition": "Low",
           "intent": "Informational",
           "score": 7.3,
@@ -68404,7 +68921,7 @@
           "keyword": "tử vi hang ngày",
           "volume": 74000,
           "cluster_volume": 74000,
-          "cpc": 4.91,
+          "cpc": 2.91,
           "competition": "Low",
           "intent": "Informational",
           "score": 7.3,
@@ -68414,21 +68931,19 @@
         {
           "keyword": "tử vi hằng ngày",
           "volume": 74000,
-          "cluster_volume": 74040,
-          "cpc": 4.91,
+          "cluster_volume": 74000,
+          "cpc": 2.91,
           "competition": "Low",
           "intent": "Informational",
           "score": 7.3,
           "quadrant": "Quick Win",
-          "secondary_synonyms": [
-            "tử vi vui hằng ngày"
-          ]
+          "secondary_synonyms": []
         },
         {
           "keyword": "tử vi 12 con giáp",
           "volume": 33100,
-          "cluster_volume": 91690,
-          "cpc": 2.92,
+          "cluster_volume": 89890,
+          "cpc": 3.28,
           "competition": "Low",
           "intent": "Informational",
           "score": 6.78,
@@ -68442,11 +68957,11 @@
         {
           "keyword": "tử vi hôm nay",
           "volume": 49500,
-          "cluster_volume": 56980,
-          "cpc": 2.03,
+          "cluster_volume": 57000,
+          "cpc": 2.05,
           "competition": "Low",
           "intent": "Informational",
-          "score": 6.6,
+          "score": 6.62,
           "quadrant": "Quick Win",
           "secondary_synonyms": [
             "tử vi ngày hôm nay",
@@ -68458,47 +68973,47 @@
           "keyword": "tư vi hôm nay",
           "volume": 49500,
           "cluster_volume": 49500,
-          "cpc": 2.03,
+          "cpc": 2.05,
           "competition": "Low",
           "intent": "Informational",
-          "score": 6.6,
+          "score": 6.62,
           "quadrant": "Quick Win",
           "secondary_synonyms": []
         },
         {
           "keyword": "lá số tử vi",
-          "volume": 301000,
-          "cluster_volume": 364700,
-          "cpc": 0.02,
+          "volume": 368000,
+          "cluster_volume": 443300,
+          "cpc": 0.01,
           "competition": "Low",
           "intent": "Informational",
-          "score": 5.5,
+          "score": 5.58,
           "quadrant": "Quick Win",
           "secondary_synonyms": [
             "tử vi lá số",
             "lá số tử vi online",
-            "lá số tử vi vn"
+            "số tử vi"
           ]
         },
         {
           "keyword": "lá sổ tử vi",
-          "volume": 301000,
-          "cluster_volume": 301000,
-          "cpc": 0.02,
+          "volume": 368000,
+          "cluster_volume": 368000,
+          "cpc": 0.01,
           "competition": "Low",
           "intent": "Informational",
-          "score": 5.5,
+          "score": 5.58,
           "quadrant": "Quick Win",
           "secondary_synonyms": []
         },
         {
           "keyword": "tử vi",
           "volume": 201000,
-          "cluster_volume": 203150,
-          "cpc": 0.02,
+          "cluster_volume": 203140,
+          "cpc": 0.01,
           "competition": "Low",
           "intent": "Informational",
-          "score": 5.32,
+          "score": 5.31,
           "quadrant": "Quick Win",
           "secondary_synonyms": [
             "tử vi là gì",
@@ -68510,10 +69025,10 @@
           "keyword": "lasotuvi",
           "volume": 49500,
           "cluster_volume": 49500,
-          "cpc": 0.02,
+          "cpc": 0.01,
           "competition": "Low",
           "intent": "Informational",
-          "score": 4.71,
+          "score": 4.7,
           "quadrant": "Quick Win",
           "secondary_synonyms": []
         }
@@ -68521,13 +69036,13 @@
       "sub_clusters": [
         {
           "cluster_name": "Cẩm nang & Hướng dẫn chi tiết",
-          "count": 1793,
-          "total_volume": 2566050,
+          "count": 1797,
+          "total_volume": 2642410,
           "top_keywords": [
             {
               "keyword": "tử vi hàng ngày",
               "volume": 74000,
-              "cluster_volume": 113000,
+              "cluster_volume": 108130,
               "intent": "Informational",
               "score": 7.3,
               "secondary_synonyms": [
@@ -68547,17 +69062,15 @@
             {
               "keyword": "tử vi hằng ngày",
               "volume": 74000,
-              "cluster_volume": 74040,
+              "cluster_volume": 74000,
               "intent": "Informational",
               "score": 7.3,
-              "secondary_synonyms": [
-                "tử vi vui hằng ngày"
-              ]
+              "secondary_synonyms": []
             },
             {
               "keyword": "tử vi 12 con giáp",
               "volume": 33100,
-              "cluster_volume": 91690,
+              "cluster_volume": 89890,
               "intent": "Informational",
               "score": 6.78,
               "secondary_synonyms": [
@@ -68569,9 +69082,9 @@
             {
               "keyword": "tử vi hôm nay",
               "volume": 49500,
-              "cluster_volume": 56980,
+              "cluster_volume": 57000,
               "intent": "Informational",
-              "score": 6.6,
+              "score": 6.62,
               "secondary_synonyms": [
                 "tử vi ngày hôm nay",
                 "tử vi hôm nay 365",
@@ -68583,7 +69096,7 @@
         {
           "cluster_name": "So sánh & Đánh giá giải pháp",
           "count": 25,
-          "total_volume": 180,
+          "total_volume": 160,
           "top_keywords": [
             {
               "keyword": "tuổi mậu tuất 2018 sinh giờ nào tốt",
@@ -68594,24 +69107,12 @@
               "secondary_synonyms": []
             },
             {
-              "keyword": "sách tử vi nên đọc",
-              "volume": 30,
-              "cluster_volume": 40,
-              "intent": "Commercial",
-              "score": 1.57,
-              "secondary_synonyms": [
-                "học tử vi nên đọc sách gì"
-              ]
-            },
-            {
               "keyword": "so sánh 2 lá số tử vi",
               "volume": 10,
               "cluster_volume": 10,
               "intent": "Commercial",
               "score": 1.56,
-              "secondary_synonyms": [
-                "so sánh hai lá số tử vi"
-              ]
+              "secondary_synonyms": []
             },
             {
               "keyword": "năm 2024 sinh con tháng nào tốt",
@@ -68628,68 +69129,43 @@
               "intent": "Commercial",
               "score": 1.56,
               "secondary_synonyms": []
+            },
+            {
+              "keyword": "sách tử vi nên đọc",
+              "volume": 20,
+              "cluster_volume": 20,
+              "intent": "Commercial",
+              "score": 0.79,
+              "secondary_synonyms": []
             }
           ]
         },
         {
           "cluster_name": "Công cụ & Tra cứu trực tuyến",
-          "count": 1,
-          "total_volume": 50,
+          "count": 3,
+          "total_volume": 40,
           "top_keywords": [
             {
               "keyword": "tra cứu tử vi free",
-              "volume": 50,
-              "cluster_volume": 50,
+              "volume": 40,
+              "cluster_volume": 40,
               "intent": "Tool/Calculator",
-              "score": 2.16,
-              "secondary_synonyms": []
-            }
-          ]
-        },
-        {
-          "cluster_name": "Cổng dịch vụ & Liên hệ",
-          "count": 7,
-          "total_volume": 30,
-          "top_keywords": [
-            {
-              "keyword": "tử vi global đăng nhập",
-              "volume": 20,
-              "cluster_volume": 20,
-              "intent": "Navigational",
-              "score": 0.93,
+              "score": 2.04,
               "secondary_synonyms": []
             },
             {
-              "keyword": "tử vi vercel app",
-              "volume": 10,
-              "cluster_volume": 10,
-              "intent": "Navigational",
-              "score": 0.73,
-              "secondary_synonyms": [
-                "tử vi app"
-              ]
-            },
-            {
-              "keyword": "xem tử vi app",
+              "keyword": "tử vi bao nhiêu tiền",
               "volume": 0,
               "cluster_volume": 0,
-              "intent": "Navigational",
+              "intent": "Tool/Calculator",
               "score": 0.0,
               "secondary_synonyms": []
             },
             {
-              "keyword": "ai tử vi app",
+              "keyword": "tra cứu tử vi vn com",
               "volume": 0,
               "cluster_volume": 0,
-              "intent": "Navigational",
-              "score": 0.0,
-              "secondary_synonyms": []
-            },
-            {
-              "keyword": "lá số tử vi app",
-              "volume": 0,
-              "cluster_volume": 0,
-              "intent": "Navigational",
+              "intent": "Tool/Calculator",
               "score": 0.0,
               "secondary_synonyms": []
             }
@@ -68727,6 +69203,58 @@
               "secondary_synonyms": []
             }
           ]
+        },
+        {
+          "cluster_name": "Cổng dịch vụ & Liên hệ",
+          "count": 5,
+          "total_volume": 10,
+          "top_keywords": [
+            {
+              "keyword": "tử vi vercel app",
+              "volume": 10,
+              "cluster_volume": 10,
+              "intent": "Navigational",
+              "score": 0.73,
+              "secondary_synonyms": [
+                "tử vi app"
+              ]
+            },
+            {
+              "keyword": "xem tử vi app",
+              "volume": 0,
+              "cluster_volume": 0,
+              "intent": "Navigational",
+              "score": 0.0,
+              "secondary_synonyms": [
+                "xem tử vi app nào",
+                "app xem tử vi free"
+              ]
+            },
+            {
+              "keyword": "thầy tử vi app",
+              "volume": 0,
+              "cluster_volume": 0,
+              "intent": "Navigational",
+              "score": 0.0,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "ai tử vi app",
+              "volume": 0,
+              "cluster_volume": 0,
+              "intent": "Navigational",
+              "score": 0.0,
+              "secondary_synonyms": []
+            },
+            {
+              "keyword": "website tử vi",
+              "volume": 0,
+              "cluster_volume": 0,
+              "intent": "Navigational",
+              "score": 0.0,
+              "secondary_synonyms": []
+            }
+          ]
         }
       ],
       "internal_links": {
@@ -68751,6 +69279,22 @@
             "suggested_anchor": "mã giảm giá riokupon",
             "similarity_score": 0.0,
             "volume": 308810
+          },
+          {
+            "target_id": "kinh-dich",
+            "target_name": "Kinh Dich",
+            "target_url": "/kinh-dich/",
+            "suggested_anchor": "kinh dịch",
+            "similarity_score": 0.0,
+            "volume": 71710
+          },
+          {
+            "target_id": "tarot",
+            "target_name": "Tarot",
+            "target_url": "/tarot/",
+            "suggested_anchor": "taron egerton",
+            "similarity_score": 0.0,
+            "volume": 6530
           }
         ],
         "cross_silo_bridges": []
@@ -82731,7 +83275,7 @@
         {
           "cluster_name": "Cẩm nang & Hướng dẫn chi tiết",
           "count": 1324,
-          "total_volume": 2690800,
+          "total_volume": 2690820,
           "top_keywords": [
             {
               "keyword": "thuê xe máy",
@@ -82786,7 +83330,7 @@
         {
           "cluster_name": "Định giá & Mua bán xe",
           "count": 319,
-          "total_volume": 583330,
+          "total_volume": 583310,
           "top_keywords": [
             {
               "keyword": "mua xe máy cu gia re 3 4tr",
@@ -86998,7 +87542,7 @@
         {
           "keyword": "thủ tục mua bán xe ô tô cũ khác tỉnh",
           "volume": 260,
-          "cluster_volume": 320,
+          "cluster_volume": 310,
           "cpc": 0.32,
           "competition": "Low",
           "intent": "Transactional",
@@ -87258,7 +87802,7 @@
             {
               "keyword": "thủ tục mua bán xe ô tô cũ khác tỉnh",
               "volume": 260,
-              "cluster_volume": 320,
+              "cluster_volume": 310,
               "intent": "Transactional",
               "score": 5.14,
               "secondary_synonyms": [
@@ -89668,20 +90212,20 @@
             {
               "keyword": "tổng đài xe buýt",
               "volume": 260,
-              "cluster_volume": 330,
+              "cluster_volume": 260,
               "intent": "Navigational",
               "score": 1.71,
-              "secondary_synonyms": [
-                "số tổng đài xe buýt"
-              ]
+              "secondary_synonyms": []
             },
             {
               "keyword": "số điện thoại tổng đài xe buýt",
               "volume": 170,
-              "cluster_volume": 170,
+              "cluster_volume": 240,
               "intent": "Navigational",
               "score": 1.58,
-              "secondary_synonyms": []
+              "secondary_synonyms": [
+                "số tổng đài xe buýt"
+              ]
             },
             {
               "keyword": "app tìm tuyến xe buýt tphcm",
@@ -89906,7 +90450,7 @@
         {
           "keyword": "đăng ký vetc",
           "volume": 590,
-          "cluster_volume": 1120,
+          "cluster_volume": 1100,
           "cpc": 0.01,
           "competition": "Low",
           "intent": "Transactional",
@@ -89921,7 +90465,7 @@
         {
           "keyword": "đăng ký epass",
           "volume": 260,
-          "cluster_volume": 430,
+          "cluster_volume": 440,
           "cpc": 0.01,
           "competition": "Low",
           "intent": "Transactional",
@@ -90147,7 +90691,7 @@
             {
               "keyword": "đăng ký vetc",
               "volume": 590,
-              "cluster_volume": 1120,
+              "cluster_volume": 1100,
               "intent": "Transactional",
               "score": 5.55,
               "secondary_synonyms": [
@@ -90159,7 +90703,7 @@
             {
               "keyword": "đăng ký epass",
               "volume": 260,
-              "cluster_volume": 430,
+              "cluster_volume": 440,
               "intent": "Transactional",
               "score": 4.84,
               "secondary_synonyms": [
