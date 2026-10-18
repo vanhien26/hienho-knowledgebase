@@ -14,6 +14,8 @@ import glob
 import csv
 import re
 import json
+import math
+import unicodedata
 from datetime import datetime
 from collections import defaultdict, Counter
 
@@ -73,6 +75,15 @@ MERGE_MAP = {
     # Other
     'lich-van-nien': 'lich-am',
     'voucher': 'ma-giam-gia',
+    # Telco
+    'Data-3g': 'data-4g',
+    'data-3g': 'data-4g',
+    'data-5g': 'data-4g',
+    'nap-data': 'data-4g',
+    'mang-4g': 'data-4g',
+    'mang-5g': 'data-4g',
+    'nap-card': 'nap-tien-dien-thoai',
+    'sim-so-dep': 'sim',
 }
 
 VIETNAMESE_THEME_NAMES = {
@@ -240,12 +251,15 @@ VIETNAMESE_THEME_NAMES = {
     'ma-so-thue': 'Tra Cứu Mã Số Thuế',
     'tu-vi': 'Tử Vi Hàng Ngày & Trọn Đời',
 
-    # === telco (5) ===
-    'Data-3g': 'Gói Cước Data 3G',
-    'data-4g': 'Gói Cước Data 4G Tốc Độ Cao',
-    'data-5g': 'Gói Cước Data 5G Siêu Tốc',
-    'nap-data': 'Nạp Data 3G/4G/5G Trực Tuyến',
+    # === telco (8) ===
+    'data-4g': 'Gói Cước & Nạp Data 4G/5G',
+    'nap-tien-dien-thoai': 'Nạp Tiền Điện Thoại & Thẻ Cào',
     'sim': 'SIM Số Đẹp & eSIM',
+    'sim-trung-quoc': 'SIM Trung Quốc',
+    'sim-thai-lan': 'SIM Thái Lan',
+    'sim-du-lich': 'SIM Du Lịch Quốc Tế',
+    'esim-du-lich': 'eSIM Du Lịch',
+    'sim-nhat-ban': 'SIM Nhật Bản',
 
     # === trust (2) ===
     'bao-cao-lua-dao': 'Báo Cáo Gian Lận & Lừa Đảo',
@@ -333,7 +347,7 @@ SECTOR_SPECIFIC_RULES = {
         ('Cụm rạp & Đặt vé', ['rạp', 'cgv', 'lotte', 'bhd', 'galaxy', 'cinestar', 'đặt vé', 'dat ve', 'đặt phim', 'mua vé']),
         ('Review & Đánh giá phim', ['review', 'đánh giá', 'danh gia', 'nội dung', 'diễn viên', 'trailer', 'phim hay', 'top phim']),
     ],
-    'PS': [
+    'Entertainment': [
         ('Nạp thẻ & Nạp game', ['nạp', 'nap', 'thẻ', 'the', 'chiết khấu', 'chiet khau', 'garena', 'zing', 'vcoin', 'xu', 'tiktok', 'mua thẻ']),
         ('Tựa game & Sự kiện', ['game', 'liên quân', 'free fire', 'pubg', 'tốc chiến', 'sự kiện', 'giftcode', 'code']),
         ('Tài khoản & Nhà phát hành', ['tài khoản', 'tai khoan', 'đăng ký', 'nhà phát hành', 'nph', 'vng', 'garena', 'vtc']),
@@ -371,6 +385,250 @@ HUBS_PUBLIC_DATA = os.path.join(HUBS_REPO, "data", "seo-clusters-summary.json")
 
 # clean_val / normalize_text / calculate_opportunity_score / classify_quadrant
 # da duoc chuan hoa ve scripts/lib/keyword_intelligence.py (SSOT) - import o dau file.
+
+# ---------------------------------------------------------------------------
+# PILLAR SELECTION - Chọn từ khóa Pillar ĐẠI DIỆN CHO USE CASE
+# Nguyên tắc: Pillar phải là chính Use Case (Theme), không phải sub-query có volume
+# lớn nhất (các truy vấn điều hướng/tra cứu như "tổng đài mobiphone" không đại diện
+# cho Theme). Cơ chế: neo ngữ nghĩa với Slug + Tên Theme, ưu tiên head-term ngắn,
+# ưu tiên Intent thương mại/giao dịch, phạt Intent điều hướng và lỗi chính tả.
+# ---------------------------------------------------------------------------
+GENERIC_PILLAR_TOKENS = {
+    'goi', 'cach', 'cua', 'va', 'cho', 'cac', 'nhat', 'moi', 'cai', 'co', 'khong',
+    'la', 'gi', 'nhu', 'nao', 'hay', 'nen', 'khi', 'den', 'lam', 'sao', 'xem',
+    'chi', 'tiet', 'thong', 'tong', 'hop', 'danh', 'sach', 'huong', 'dan',
+}
+
+PILLAR_INTENT_WEIGHT = {
+    'Transactional': 1.0,
+    'Commercial': 1.0,
+    'Tool/Calculator': 1.0,
+    'Informational': 0.9,
+    'Navigational': 0.25,
+}
+
+
+def _raw_tokens(text):
+    """Tách token giữ nguyên dấu tiếng Việt (chuẩn hóa NFC trước để tránh lỗi combining marks)."""
+    text = unicodedata.normalize('NFC', (text or '').lower())
+    out = []
+    for w in text.split():
+        w = w.strip('.,;:!?()[]{}"\'/\\-–—“”‘’…&+*')
+        if w:
+            out.append(w)
+    return out
+
+
+def _strip_diacritics(text):
+    t = unicodedata.normalize('NFD', text)
+    t = ''.join(c for c in t if unicodedata.category(c) != 'Mn')
+    return unicodedata.normalize('NFC', t).replace('đ', 'd')
+
+
+def _pillar_tokens(text):
+    """Token đã bỏ dấu, dùng để so khớp ngữ nghĩa accent-insensitive."""
+    return set(_strip_diacritics(w) for w in _raw_tokens(text) if _strip_diacritics(w))
+
+
+def _slug_tokens(slug):
+    """Token hóa slug (phân tách theo gạch ngang/gạch dưới) - tránh sinh token rác kiểu 'gia-ve-xem-phim'."""
+    return set(_strip_diacritics(t) for t in re.split(r'[-_\s]+', (slug or '').lower()) if t.strip())
+
+
+_ALL_THEME_TOKENS = None
+
+
+def _get_all_theme_tokens():
+    """
+    Token set của toàn bộ Theme trong kho Inventory (Slug + Tên hiển thị).
+    Dùng để phát hiện ứng viên Pillar đang "mượn" ngữ nghĩa của Theme khác
+    (VD: "vay nhanh" trùng token với Theme "Vay Tiền Nhanh" nên không được làm
+    Pillar cho Theme "Vay Tín Chấp").
+    """
+    global _ALL_THEME_TOKENS
+    if _ALL_THEME_TOKENS is not None:
+        return _ALL_THEME_TOKENS
+    result = {}
+    if os.path.isdir(INVENTORY_DIR):
+        for sector in os.listdir(INVENTORY_DIR):
+            sdir = os.path.join(INVENTORY_DIR, sector)
+            if not os.path.isdir(sdir):
+                continue
+            for f in glob.glob(os.path.join(sdir, '*.csv')):
+                slug = os.path.splitext(os.path.basename(f))[0]
+                name = VIETNAMESE_THEME_NAMES.get(slug, slug.replace('-', ' '))
+                result[slug] = (_slug_tokens(slug) | _pillar_tokens(name)) - GENERIC_PILLAR_TOKENS
+    _ALL_THEME_TOKENS = result
+    return result
+
+
+def _cross_theme_penalty(kw_tokens, own_slug, own_tokens):
+    """Phạt ứng viên khớp trọn token với Theme khác nhưng không khớp trọn Theme hiện tại."""
+    if not kw_tokens or kw_tokens <= own_tokens:
+        return 1.0
+    for slug, toks in _get_all_theme_tokens().items():
+        if slug == own_slug or not toks:
+            continue
+        if MERGE_MAP.get(slug, slug) == own_slug:
+            continue
+        if kw_tokens <= toks:
+            return 0.55
+    return 1.0
+
+
+_THEME_TOKEN_IDF = None
+
+
+def _get_theme_token_idf():
+    """
+    Trọng số IDF cho từng token của Theme, tính trên toàn bộ kho Inventory.
+    - Token từ Slug ('s', token): so khớp accent-insensitive (slug viết không dấu).
+    - Token từ Tên hiển thị ('n', token): so khớp giữ nguyên dấu, tránh bắt nhầm
+      từ khác nghĩa khi bỏ dấu (VD: "Cẩm Nang" -> 'nang' không được khớp "thung nắng").
+    Token xuất hiện ở nhiều Theme (vay, ngân, hàng...) bị giảm trọng số để tránh
+    việc Theme này mượn Pillar của Theme khác.
+    """
+    global _THEME_TOKEN_IDF
+    if _THEME_TOKEN_IDF is not None:
+        return _THEME_TOKEN_IDF
+    df = Counter()
+    if os.path.isdir(INVENTORY_DIR):
+        for sector in os.listdir(INVENTORY_DIR):
+            sdir = os.path.join(INVENTORY_DIR, sector)
+            if not os.path.isdir(sdir):
+                continue
+            for f in glob.glob(os.path.join(sdir, '*.csv')):
+                slug = os.path.splitext(os.path.basename(f))[0]
+                for t in _slug_tokens(slug):
+                    df[('s', t)] += 1
+                name = VIETNAMESE_THEME_NAMES.get(slug)
+                if name:
+                    for t in set(_raw_tokens(name)):
+                        df[('n', t)] += 1
+    _THEME_TOKEN_IDF = {k: 1.0 / math.sqrt(c) for k, c in df.items()}
+    return _THEME_TOKEN_IDF
+
+
+def _theme_token_entries(usecase_slug, usecase_name):
+    """Tập token neo của Theme, kèm nguồn gốc ('s' = Slug, 'n' = Tên hiển thị)."""
+    entries = set()
+    for t in _slug_tokens(usecase_slug):
+        if t and t not in GENERIC_PILLAR_TOKENS:
+            entries.add(('s', t))
+    for t in set(_raw_tokens(usecase_name)):
+        if _strip_diacritics(t) not in GENERIC_PILLAR_TOKENS:
+            entries.add(('n', t))
+    return entries
+
+
+def _kw_token_index(keyword):
+    """(token giữ dấu, token bỏ dấu) của từ khóa để so khớp với token neo."""
+    full = set(_raw_tokens(keyword))
+    return full, {_strip_diacritics(w) for w in full}
+
+
+def _entry_match(entry, kw_full, kw_stripped):
+    kind, tok = entry
+    return tok in (kw_stripped if kind == 's' else kw_full)
+
+
+def _build_spelling_dominance(raw_keywords):
+    """
+    Bảng thống kê biến thể chính tả theo tần suất xuất hiện (số từ khóa khác nhau
+    dùng biến thể đó). Biến thể chuẩn (đúng dấu) thường xuất hiện trong nhiều từ khóa
+    hơn biến thể lỗi gõ, dù volume từng biến thể có thể cao hơn.
+    """
+    dominance = defaultdict(Counter)
+    for item in raw_keywords:
+        for w in _raw_tokens(item['keyword']):
+            dominance[_strip_diacritics(w)][w] += 1
+    return dominance
+
+
+def _spelling_quality(keyword, dominance):
+    """Hệ số chất lượng chính tả trong [0,1] - càng gần 1 càng đúng chính tả."""
+    if not dominance:
+        return 1.0
+    ws = _raw_tokens(keyword)
+    if not ws:
+        return 1.0
+    total = 0.0
+    for w in ws:
+        variants = dominance.get(_strip_diacritics(w))
+        if not variants:
+            continue
+        total += variants.get(w, 0) / max(1, sum(variants.values()))
+    return total / len(ws)
+
+
+def select_pillar_keyword(canonical_clusters, usecase_slug, usecase_name, raw_keywords=None):
+    """
+    Chọn từ khóa Pillar đại diện cho Use Case.
+
+    Cơ chế: xếp hạng toàn bộ cụm theo
+        Volume (log) x [w_coverage x Độ phủ token Use Case + w_brevity x Độ ngắn gọn
+                        + w_intent x Trọng số Intent] x Chất lượng chính tả
+    trong đó:
+    - Độ phủ token (đã bão hòa): tỷ lệ token của Slug + Tên Theme xuất hiện trong từ khóa.
+      Đây là yếu tố neo vào chính Use Case, giúp các truy vấn điều hướng/tra cứu (không
+      chứa token của Use Case) không chiếm vị trí Pillar. Hàm bão hòa giữ cho Volume vẫn
+      là tín hiệu quyết định giữa các ứng viên cùng on-topic (VD: "agribank" 368k phải
+      thắng "ngân hàng agribank" 63k).
+    - Độ ngắn gọn: ưu tiên head-term thay vì long-tail.
+    - Intent: ưu tiên Commercial/Transactional/Tool, phạt nặng Navigational.
+    - Chất lượng chính tả: phạt biến thể lỗi gõ (tần suất xuất hiện thấp hơn biến thể chuẩn).
+    Volume vẫn giữ vai trò quyết định để không đánh mất các từ khóa lớn hợp lệ.
+    """
+    if not canonical_clusters:
+        return None
+
+    theme_entries = _theme_token_entries(usecase_slug, usecase_name)
+    theme_tokens = {_strip_diacritics(t) for _, t in theme_entries}
+    dominance = _build_spelling_dominance(raw_keywords) if raw_keywords else {}
+    idf = _get_theme_token_idf()
+
+    # Điều kiện bắt buộc: Pillar phải chứa ít nhất 1 token ĐẶC TRƯNG của Theme
+    # (token ít xuất hiện ở các Theme khác). Ngăn Theme mượn Pillar của Theme khác
+    # hoặc các truy vấn ngoài Use Case (VD: "tổng đài mobiphone" cho theme data-4g).
+    # Token từ Tên hiển thị so khớp giữ nguyên dấu để tránh bắt nhầm từ khác nghĩa
+    # (VD: "Cẩm Nang" -> 'nang' không khớp "thung nắng").
+    distinctive = {e for e in theme_entries if idf.get(e, 1.0) >= 0.35} or theme_entries
+    eligible = []
+    if distinctive:
+        for c in canonical_clusters:
+            kw_full, kw_stripped = _kw_token_index(c['keyword'])
+            if any(_entry_match(e, kw_full, kw_stripped) for e in distinctive):
+                eligible.append(c)
+    if not eligible:
+        eligible = list(canonical_clusters)
+
+    best_item, best_score = None, -1.0
+
+    for c in eligible:
+        kw_full, kw_stripped = _kw_token_index(c['keyword'])
+        if theme_entries:
+            total_w = sum(idf.get(e, 1.0) for e in theme_entries)
+            overlap_w = sum(idf.get(e, 1.0) for e in theme_entries if _entry_match(e, kw_full, kw_stripped))
+            raw_coverage = overlap_w / total_w if total_w else 0.0
+        else:
+            raw_coverage = 0.0
+        # Bão hòa coverage: 2x/(1+2x) - neo mạnh nhưng không lấn át hoàn toàn Volume
+        coverage = 2 * raw_coverage / (1 + 2 * raw_coverage) if raw_coverage else 0.0
+
+        n = max(1, len(kw_full))
+        brevity = 1.0 if n <= 3 else 0.85 if n == 4 else 0.7 if n == 5 else 0.55
+        intent_w = PILLAR_INTENT_WEIGHT.get(c['intent'], 0.8)
+        spelling = 0.85 + 0.3 * _spelling_quality(c['keyword'], dominance)
+        volume_signal = math.log10(c['total_cluster_volume'] + 10)
+        cross_penalty = _cross_theme_penalty(kw_stripped, usecase_slug, theme_tokens)
+
+        score = volume_signal * (0.45 * coverage + 0.25 * brevity + 0.35 * intent_w) * spelling * cross_penalty
+
+        if score > best_score:
+            best_score, best_item = score, c
+
+    return best_item
+
 
 def build_adaptive_clusters(canonical_clusters, sector=None, top_n_clusters=5):
     """
@@ -489,7 +747,8 @@ def process_csv_paths(csv_paths, sector, canonical_slug):
     quadrant_counts = Counter(k['quadrant'] for k in canonical_clusters)
 
     top_opportunities = sorted(canonical_clusters, key=lambda x: (x['opportunity_score'], x['volume']), reverse=True)[:10]
-    pillar_item = sorted(canonical_clusters, key=lambda x: x['total_cluster_volume'], reverse=True)[0]
+    # Pillar = từ khóa đại diện chính Use Case (không phải sub-query volume lớn nhất)
+    pillar_item = select_pillar_keyword(canonical_clusters, usecase_slug, usecase_name, raw_keywords)
 
     sub_clusters = build_adaptive_clusters(canonical_clusters, sector=sector)
 
@@ -554,12 +813,42 @@ def process_csv_paths(csv_paths, sector, canonical_slug):
     }
 
 def main():
+    target_sector = None
+    args = sys.argv[1:]
+    i = 0
+    while i < len(args):
+        arg = args[i]
+        if arg in ['--hub', '--sector'] and i + 1 < len(args):
+            target_sector = args[i+1].strip()
+            i += 2
+        elif arg.startswith('--hub='):
+            target_sector = arg.split('=', 1)[1].strip()
+            i += 1
+        elif arg.startswith('--sector='):
+            target_sector = arg.split('=', 1)[1].strip()
+            i += 1
+        elif not arg.startswith('-'):
+            target_sector = arg.strip()
+            i += 1
+        else:
+            i += 1
+
     print(f"Bắt đầu quét và đồng bộ kho Inventory từ: {INVENTORY_DIR}")
     if not os.path.exists(INVENTORY_DIR):
         print(f"Lỗi: Không tìm thấy thư mục {INVENTORY_DIR}")
         sys.exit(1)
         
-    sectors = sorted([d for d in os.listdir(INVENTORY_DIR) if os.path.isdir(os.path.join(INVENTORY_DIR, d)) and not d.startswith('.')])
+    all_sectors = sorted([d for d in os.listdir(INVENTORY_DIR) if os.path.isdir(os.path.join(INVENTORY_DIR, d)) and not d.startswith('.')])
+    
+    if target_sector:
+        matched = [s for s in all_sectors if s.lower() == target_sector.lower()]
+        if not matched:
+            print(f"Lỗi: Không tìm thấy Hub/Sector '{target_sector}'. Các Hub hiện có: {', '.join(all_sectors)}")
+            sys.exit(1)
+        sectors = matched
+        print(f"-> Chế độ chạy mục tiêu Hub: {matched[0]}")
+    else:
+        sectors = all_sectors
     
     all_usecases = []
     sector_summary = {}
@@ -610,6 +899,23 @@ def main():
         total_cannibalized_all += s_cannibalized
         total_outliers_all += s_outliers
         print(f"- Hub {s:15s}: {len(s_usecases):3d} themes | {s_kws:7,d} kws | {s_cannibalized:5,d} cannibalized merged | {s_vol:12,d} vol")
+
+    if target_sector and os.path.exists(LOCAL_OUTPUT_PATH):
+        try:
+            with open(LOCAL_OUTPUT_PATH, 'r', encoding='utf-8') as f:
+                cached_data = json.load(f)
+            cached_usecases = [uc for uc in cached_data.get('usecases', []) if uc.get('sector', '').lower() != target_sector.lower()]
+            cached_summary = cached_data.get('sector_summary', {})
+            cached_summary.update(sector_summary)
+            sector_summary = cached_summary
+            all_usecases = cached_usecases + all_usecases
+            total_kws_all = sum(s['total_keywords'] for s in sector_summary.values())
+            total_vol_all = sum(s['total_volume'] for s in sector_summary.values())
+            total_cannibalized_all = sum(s['cannibalized_merged'] for s in sector_summary.values())
+            total_outliers_all = sum(s['outliers_filtered'] for s in sector_summary.values())
+            sectors = sorted(list(sector_summary.keys()))
+        except Exception as e:
+            print(f"Cảnh báo khi nạp snapshot cũ: {e}")
         
     print(f"\nTổng kết: {len(all_usecases)} themes | {total_kws_all:,} từ khóa sạch | {total_cannibalized_all:,} từ khóa được gom chống ăn thịt | {total_outliers_all:,} từ khóa nhiễu bị chặn.")
     
@@ -783,14 +1089,26 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
         print(f"Đã tạo Quick Wins JSON tại: {qw_file}")
 
         # Xuất từng Chunk Use Case độc lập
+        chunks_to_write = [uc for uc in all_usecases if uc['sector'].lower() == target_sector.lower()] if target_sector else all_usecases
         chunk_count = 0
-        for uc in all_usecases:
+        for uc in chunks_to_write:
             sec_dir = os.path.join(modular_dir, uc['sector'])
             os.makedirs(sec_dir, exist_ok=True)
             uc_file = os.path.join(sec_dir, f"{uc['id']}.json")
             with open(uc_file, 'w', encoding='utf-8') as f:
                 json.dump(uc, f, ensure_ascii=False, indent=2)
             chunk_count += 1
+        
+        # Xóa các chunk cũ đã bị merge trong sector này
+        if target_sector:
+            sec_dir = os.path.join(modular_dir, target_sector)
+            if os.path.exists(sec_dir):
+                active_files = {f"{uc['id']}.json" for uc in chunks_to_write}
+                for existing_f in glob.glob(os.path.join(sec_dir, '*.json')):
+                    if os.path.basename(existing_f) not in active_files:
+                        os.remove(existing_f)
+                        print(f"Đã xóa chunk thừa: {existing_f}")
+
         print(f"Đã phân rã và xuất bản thành công {chunk_count} Modular Chunks tại {modular_dir}/<sector>/<id>.json!")
     else:
         print(f"Cảnh báo: Không tìm thấy hubs-momo tại {HUBS_REPO}")

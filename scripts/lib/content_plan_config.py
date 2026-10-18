@@ -92,10 +92,8 @@ FEATURE_MOMO_MAP = {
     'nap-tiktok': ('Nạp Xu TikTok Trực Tuyến', 'momo://tiktok-topup', 'web_tiktok_topup_btn_click'),
 
     # Telco Hub
-    'data-3g': ('Nạp Gói Data 3G Tốc Độ Cao MoMo', 'momo://data-topup', 'web_data_topup_btn_click'),
-    'data-4g': ('Nạp Gói Cước Data 4G Viettel, Vina, Mobi', 'momo://data-topup', 'web_data_topup_btn_click'),
-    'data-5g': ('Nạp Gói Cước 5G Siêu Tốc Độ', 'momo://data-topup', 'web_data_topup_btn_click'),
-    'nap-data': ('Nạp Dung Lượng Data 3G/4G/5G Trực Tuyến', 'momo://data-topup', 'web_data_topup_btn_click'),
+    'data-4g': ('Nạp Gói Cước Data 4G/5G Tốc Độ Cao MoMo', 'momo://data-topup', 'web_data_topup_btn_click'),
+    'nap-tien-dien-thoai': ('Nạp Tiền Điện Thoại Chiết Khấu Đến 5% MoMo', 'momo://topup', 'web_mobile_topup_btn_click'),
     'sim': ('Mua SIM Chính Chủ & Chọn Gói Cước Data', 'momo://sim-store', 'web_sim_store_btn_click'),
 
     # Hospital Hub
@@ -174,6 +172,20 @@ SUB_CLUSTER_RULES = {
         ('Voucher Ăn Uống & Cafe', ['highland', 'highlands', 'phúc long', 'phuc long', 'cgv', 'haidilao', 'jollibee', 'kfc', 'lotteria', 'ăn uống', 'cafe', 'voucher highland'], 'voucher-an-uong-cafe'),
         ('Voucher Du Lịch & Di Chuyển', ['klook', 'traveloka', 'grab', 'grabfood', 'be', 'agoda', 'booking', 'vé máy bay', 'voucher klook'], 'voucher-du-lich-dich-vu'),
         ('Mã Giảm Giá & Voucher MoMo', ['momo', 'ví momo', 'thanh toán', 'chiết khấu', 'hoàn tiền', 'voucher momo', 'ưu đãi momo'], 'voucher-momo-uu-dai'),
+    ],
+    'data-4g': [
+        ('Gói Cước Data Viettel', ['viettel', 'viettel 4g', 'viettel 5g', 'viettel 3g', 'gói viettel', 'st90', 'v90', 'sd135', 'đăng ký viettel', 'nạp 3g viettel'], 'goi-cuoc-viettel'),
+        ('Gói Cước Data MobiFone', ['mobi', 'mobifone', 'mobi 4g', 'mobi 5g', 'mobi 3g', 'gói mobi', 'c90', 'kc90', 'đăng ký mobi', 'đăng ky 3g mobi', 'nạp data mobifone'], 'goi-cuoc-mobifone'),
+        ('Gói Cước Data VinaPhone', ['vina', 'vinaphone', 'vina 4g', 'vina 5g', 'vina 3g', 'gói vina', 'vd149', 'd89y', 'đăng ký vina', 'nạp data vinaphone'], 'goi-cuoc-vinaphone'),
+        ('Nạp Data & Cú Pháp Đăng Ký', ['nạp data', 'nap data', 'cách nạp', 'cú pháp', 'hủy gói', 'kiểm tra dung lượng', 'gia hạn', 'mua thêm', 'gói cước'], 'nap-data-cu-phap'),
+        ('SIM Data & 5G Tốc Độ Cao', ['sim data', '5g', 'sim 5g', 'không giới hạn', 'tốc độ cao', 'phát wifi', 'sim 4g'], 'sim-data-5g'),
+    ],
+    'nap-tien-dien-thoai': [
+        ('Nạp Tiền Viettel & Thẻ Cào Viettel', ['viettel', 'thẻ viettel', 'cào viettel', 'nạp thẻ viettel', 'cạc viettel', 'card viettel'], 'nap-the-viettel'),
+        ('Nạp Tiền MobiFone & Thẻ Mobi', ['mobi', 'mobifone', 'thẻ mobi', 'nạp thẻ mobi', 'cào mobi', 'card mobi'], 'nap-the-mobifone'),
+        ('Nạp Tiền VinaPhone & Thẻ Vina', ['vina', 'vinaphone', 'thẻ vina', 'nạp thẻ vina', 'cào vina', 'card vina'], 'nap-the-vinaphone'),
+        ('Cú Pháp Nạp Tiền & Hướng Dẫn', ['cú pháp', 'cách nạp', 'hướng dẫn', 'nạp cho người khác', 'bắn tiền', 'chuyển tiền điện thoại'], 'cu-phap-huong-dan-nap'),
+        ('Chiết Khấu & Khuyến Mãi Nạp Tiền', ['chiết khấu', 'khuyến mãi', '20%', '50%', 'ngày vàng', 'hoàn tiền'], 'chiet-khau-khuyen-mai'),
     ]
 }
 
