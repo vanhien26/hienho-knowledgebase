@@ -2,8 +2,8 @@
 
 Trang mục lục tra cứu toàn bộ các bản kế hoạch nội dung (Content Plans) của MoMo Web Platform. Được tạo lập và đồng bộ tự động từ kho dữ liệu Semantic Keyword Inventory.
 
-- **Tổng số Content Plans đã xuất bản:** 10 bản kế hoạch
-- **Tổng dung lượng tìm kiếm phục vụ:** 3,590,600 lượt/tháng
+- **Tổng số Content Plans đã xuất bản:** 11 bản kế hoạch
+- **Tổng dung lượng tìm kiếm phục vụ:** 1,458,936,950 lượt/tháng
 
 ---
 
@@ -12,6 +12,7 @@ Trang mục lục tra cứu toàn bộ các bản kế hoạch nội dung (Conte
 | Phân Khối | Use Case / Dịch Vụ | Số Lượng Topic Clusters | Dung Lượng Tìm Kiếm | Liên Kết Chi Tiết |
 | :--- | :--- | :---: | :---: | :--- |
 | `Financial` | **gui-tiet-kiem** | 6 topics | 1,895,060 | [gui-tiet-kiem.md](Financial/gui-tiet-kiem-content-plan.md) |
+| `Lottery` | **vietlott** | 9 topics | 1,455,346,350 | [vietlott.md](Lottery/vietlott-content-plan.md) |
 | `Root` | **bien-so-xe (1)** | 6 topics | 619,140 | [bien-so-xe (1).md](bien-so-xe (1)-content-plan.md) |
 | `insurtech` | **bao-hiem** | 6 topics | 452,630 | [bao-hiem.md](insurtech/bao-hiem-content-plan.md) |
 | `insurtech` | **bhxh** | 4 topics | 340,220 | [bhxh.md](insurtech/bhxh-content-plan.md) |

@@ -3,7 +3,7 @@
     "total_usecases": 190,
     "reallocated_moves_count": 1353,
     "merged_variant_groups_count": 15235,
-    "pruned_clusters_count": 602,
+    "pruned_clusters_count": 605,
     "concrete_cta_mapped_usecases": 58,
     "concrete_cta_percentage": 30.5
   },
@@ -142033,6 +142033,33 @@
       "reason": "Dưới ngưỡng 500/tháng (Total: 160, Primary: 50)"
     },
     {
+      "theme": "gui-tiet-kiem",
+      "sector": "Financial",
+      "cluster_name": "Đăng ký & Hướng dẫn thủ tục",
+      "total_volume": 460,
+      "primary_keyword": "mở tiết kiệm vietcombank",
+      "primary_vol": 140,
+      "reason": "Dưới ngưỡng 500/tháng (Total: 460, Primary: 140)"
+    },
+    {
+      "theme": "gui-tiet-kiem",
+      "sector": "Financial",
+      "cluster_name": "Cổng dịch vụ & Liên hệ",
+      "total_volume": 430,
+      "primary_keyword": "gửi tiết kiệm chi nhánh này rút chi nhánh khác được không",
+      "primary_vol": 50,
+      "reason": "Dưới ngưỡng 500/tháng (Total: 430, Primary: 50)"
+    },
+    {
+      "theme": "gui-tiet-kiem",
+      "sector": "Financial",
+      "cluster_name": "So sánh & Đánh giá",
+      "total_volume": 270,
+      "primary_keyword": "gửi tiết kiệm ngân hàng nào tốt",
+      "primary_vol": 140,
+      "reason": "Dưới ngưỡng 500/tháng (Total: 270, Primary: 140)"
+    },
+    {
       "theme": "hd-bank",
       "sector": "Financial",
       "cluster_name": "Đăng ký & Hướng dẫn thủ tục",
@@ -148648,30 +148675,12 @@
     "gui-tiet-kiem": {
       "theme": "gui-tiet-kiem",
       "sector": "Financial",
-      "total_keywords": 3520,
-      "total_volume": 280240,
+      "total_keywords": 3519,
+      "total_volume": 247140,
       "pages": [
         {
           "slug": "/gui-tiet-kiem/",
           "title": "Cẩm Nang & Bảng Tra Cứu Gửi Tiết Kiệm Toàn Diện",
-          "primary_kw": "kiệm",
-          "secondary_kws": [
-            "tiết kiệm",
-            "lãi suất gửi tiết kiệm ngân hàng",
-            "lãi suất tiền gửi tiết kiệm ngân hàng",
-            "lãi suất tiết kiệm"
-          ],
-          "volume": 33100,
-          "intent": "Informational",
-          "format": "Pillar Hub Page + Interactive Widget",
-          "funnel": "TOFU",
-          "priority": "P0",
-          "cta_hook": "Mở Sổ Tiết Kiệm Online / Túi Thần Tài -> Deeplink: momo://saving-partner -> Event: web_saving_interest_calculator_btn_click",
-          "variants_count": 0
-        },
-        {
-          "slug": "/gui-tiet-kiem/lai-suat/",
-          "title": "Lãi suất & Tiền gửi Gửi Tiết Kiệm: Hướng Dẫn & Tra Cứu Chi Tiết",
           "primary_kw": "tiết kiệm",
           "secondary_kws": [
             "lãi suất gửi tiết kiệm ngân hàng",
@@ -148679,7 +148688,43 @@
             "lãi suất tiết kiệm",
             "sổ tiết kiệm"
           ],
-          "volume": 241350,
+          "volume": 27100,
+          "intent": "Informational",
+          "format": "Pillar Hub Page + Interactive Widget",
+          "funnel": "TOFU",
+          "priority": "P0",
+          "cta_hook": "Mở Sổ Tiết Kiệm Online / Túi Thần Tài -> Deeplink: momo://saving-partner -> Event: web_saving_interest_calculator_btn_click",
+          "variants_count": 1
+        },
+        {
+          "slug": "/gui-tiet-kiem/lai-suat-ngan-hang/",
+          "title": "Lãi suất ngân hàng Gửi Tiết Kiệm: Hướng Dẫn & Tra Cứu Chi Tiết",
+          "primary_kw": "lãi suất gửi tiết kiệm ngân hàng",
+          "secondary_kws": [
+            "lãi suất tiền gửi tiết kiệm ngân hàng",
+            "lãi suất tiết kiệm",
+            "lãi suất gửi tiết kiệm",
+            "lãi suất gửi tiết kiệm ngân hàng agribank"
+          ],
+          "volume": 120470,
+          "intent": "Informational",
+          "format": "Educational Guide & FAQ",
+          "funnel": "TOFU",
+          "priority": "P0",
+          "cta_hook": "Mở Sổ Tiết Kiệm Online / Túi Thần Tài -> Deeplink: momo://saving-partner -> Event: web_saving_interest_calculator_btn_click",
+          "variants_count": 2
+        },
+        {
+          "slug": "/gui-tiet-kiem/ky-han-hinh-thuc/",
+          "title": "Kỳ hạn & Hình thức gửi Gửi Tiết Kiệm: Hướng Dẫn & Tra Cứu Chi Tiết",
+          "primary_kw": "gửi tiết kiệm online có an toàn ko",
+          "secondary_kws": [
+            "gửi tiết kiệm online có an toàn không",
+            "gửi tiết kiệm online",
+            "gửi tiết kiệm online techcombank",
+            "rủi ro khi gửi tiết kiệm online vietcombank"
+          ],
+          "volume": 18520,
           "intent": "Informational",
           "format": "Educational Guide & FAQ",
           "funnel": "TOFU",
@@ -148688,22 +148733,76 @@
           "variants_count": 1
         },
         {
-          "slug": "/gui-tiet-kiem/ty-gia/",
-          "title": "Tỷ giá & Ngoại tệ Gửi Tiết Kiệm: Hướng Dẫn & Tra Cứu Chi Tiết",
-          "primary_kw": "gửi tiết kiệm usd",
+          "slug": "/gui-tiet-kiem/thu-tuc-mo-so/",
+          "title": "Thủ tục mở sổ & Rút tiền Gửi Tiết Kiệm: Hướng Dẫn & Tra Cứu Chi Tiết",
+          "primary_kw": "sổ tiết kiệm",
           "secondary_kws": [
-            "gửi tiết kiệm ngoại tệ",
-            "gửi tiết kiệm usd vietcombank",
-            "gửi tiết kiệm bằng usd",
-            "gửi tiết kiệm usd có lãi không"
+            "sổ tiết kiệm vcb",
+            "sổ tiết kiệm agribank",
+            "sổ tiết kiệm vietinbank",
+            "mở sổ tiết kiệm vietcombank"
           ],
-          "volume": 640,
+          "volume": 17370,
           "intent": "Informational",
           "format": "Educational Guide & FAQ",
           "funnel": "TOFU",
-          "priority": "P2",
+          "priority": "P0",
           "cta_hook": "Mở Sổ Tiết Kiệm Online / Túi Thần Tài -> Deeplink: momo://saving-partner -> Event: web_saving_interest_calculator_btn_click",
           "variants_count": 1
+        },
+        {
+          "slug": "/gui-tiet-kiem/so-sanh-tiet-kiem/",
+          "title": "So sánh giải pháp tiết kiệm Gửi Tiết Kiệm: Hướng Dẫn & Tra Cứu Chi Tiết",
+          "primary_kw": "nên gửi tiết kiệm ngân hàng nào",
+          "secondary_kws": [
+            "có nên gửi tiết kiệm ngân hàng hdbank",
+            "nên gửi tiết kiệm hay mua vàng",
+            "có nên gửi tiền vào ngân hàng việt a",
+            "có nên gửi tiết kiệm ngân hàng gpbank"
+          ],
+          "volume": 3430,
+          "intent": "Informational",
+          "format": "Educational Guide & FAQ",
+          "funnel": "TOFU",
+          "priority": "P0",
+          "cta_hook": "Mở Sổ Tiết Kiệm Online / Túi Thần Tài -> Deeplink: momo://saving-partner -> Event: web_saving_interest_calculator_btn_click",
+          "variants_count": 1
+        },
+        {
+          "slug": "/gui-tiet-kiem/tra-cuu/",
+          "title": "Công cụ & Tra cứu Gửi Tiết Kiệm: Hướng Dẫn & Tra Cứu Chi Tiết",
+          "primary_kw": "gửi tiết kiệm 1 triệu 1 tháng lãi bao nhiêu vietcombank",
+          "secondary_kws": [
+            "gửi tiết kiệm 1 triệu 1 tháng lãi bao nhiêu",
+            "gửi tiết kiệm 200 triệu 1 tháng lãi bao nhiêu",
+            "gửi tiết kiệm 500 triệu 1 tháng lãi bao nhiêu",
+            "gửi tiết kiệm 10 triệu 1 tháng lãi bao nhiêu"
+          ],
+          "volume": 2650,
+          "intent": "Tool/Calculator",
+          "format": "Interactive Calculator / Lookup Tool",
+          "funnel": "BOFU",
+          "priority": "P0",
+          "cta_hook": "Mở Sổ Tiết Kiệm Online / Túi Thần Tài -> Deeplink: momo://saving-partner -> Event: web_saving_interest_calculator_btn_click",
+          "variants_count": 0
+        },
+        {
+          "slug": "/gui-tiet-kiem/tinh-lai/",
+          "title": "Công cụ tính lãi Gửi Tiết Kiệm: Hướng Dẫn & Tra Cứu Chi Tiết",
+          "primary_kw": "gửi tiết kiệm 100 triệu 1 năm lãi bao nhiêu",
+          "secondary_kws": [
+            "gửi tiết kiệm 1 tỷ 1 tháng lãi bao nhiêu",
+            "gửi tiết kiệm 100 triệu 1 tháng lãi bao nhiêu",
+            "gửi tiết kiệm 100 triệu 6 tháng lãi bao nhiêu",
+            "sổ tiết kiệm 1 tỷ"
+          ],
+          "volume": 1510,
+          "intent": "Informational",
+          "format": "Educational Guide & FAQ",
+          "funnel": "TOFU",
+          "priority": "P1",
+          "cta_hook": "Mở Sổ Tiết Kiệm Online / Túi Thần Tài -> Deeplink: momo://saving-partner -> Event: web_saving_interest_calculator_btn_click",
+          "variants_count": 0
         }
       ]
     },

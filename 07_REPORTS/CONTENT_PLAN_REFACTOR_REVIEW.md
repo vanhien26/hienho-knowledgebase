@@ -17,7 +17,7 @@ Dữ liệu kiểm toán và rà soát từ kho SSOT `05_HUBS/inventory/` chuẩ
 | **Tổng số Use Cases (Themes)** | **190** | Sau khi merge cic -> diem-tin-dung |
 | **Từ khóa chuyển sai theme** | **1,353** | Lottery: Vietlott <-> XSKT; Bank đối thủ; BHYT <-> BHXH; VETC <-> ePass |
 | **Nhóm biến thể chính tả đã gộp** | **15,235** | Lấy Max Volume, loại trừ trùng lặp chính tả/khoảng trắng |
-| **Cụm Sub-cluster bị loại (< 500)** | **602** | Dưới ngưỡng $\ge 500$/tháng, gộp vào section Pillar, không tách URL |
+| **Cụm Sub-cluster bị loại (< 500)** | **605** | Dưới ngưỡng $\ge 500$/tháng, gộp vào section Pillar, không tách URL |
 | **Use Case có CTA Hook cụ thể** | **58 / 190 (30.5%)** | Ánh xạ tính năng thực tế MoMo; 100% theme còn lại trả về `null` |
 
 ---
@@ -220,13 +220,17 @@ Số trang mỗi Use Case thay đổi linh hoạt theo Search Demand thực tế
 | 2 | `/phat-nguoi/cam-nang/` | Cẩm nang & Hỏi đáp Tra Cứu Phạt Nguội Toàn Quốc: Hướng Dẫn & Tra Cứu Chi Tiết | `kiểm tra phạt nguôi oto` | 29,200 | `P0` | `TOFU` | Educational Guide & FAQ | `Nộp Phạt Nguội Giao Thông Toàn Quốc -> Deeplink: momo://traffic-fine -> Event: web_traffic_fine_lookup_btn_click` |
 | 3 | `/phat-nguoi/tra-cuu/` | Công cụ & Tra cứu Tra Cứu Phạt Nguội Toàn Quốc: Hướng Dẫn & Tra Cứu Chi Tiết | `tra cứu phạt` | 1,680 | `P0` | `BOFU` | Interactive Calculator / Lookup Tool | `Nộp Phạt Nguội Giao Thông Toàn Quốc -> Deeplink: momo://traffic-fine -> Event: web_traffic_fine_lookup_btn_click` |
 
-### Theme: `gui-tiet-kiem` (280,240 volume/tháng, 3 trang được quy hoạch)
+### Theme: `gui-tiet-kiem` (247,140 volume/tháng, 7 trang được quy hoạch)
 
 | STT | URL Slug | Tiêu Đề Trang Đích | Primary Keyword | Volume | Priority | Funnel | Format | Điểm Chạm Web-to-App (CTA Hook) |
 | :---: | :--- | :--- | :--- | :---: | :---: | :---: | :--- | :--- |
-| 1 | `/gui-tiet-kiem/` | Cẩm Nang & Bảng Tra Cứu Gửi Tiết Kiệm Toàn Diện | `kiệm` | 33,100 | `P0` | `TOFU` | Pillar Hub Page + Interactive Widget | `Mở Sổ Tiết Kiệm Online / Túi Thần Tài -> Deeplink: momo://saving-partner -> Event: web_saving_interest_calculator_btn_click` |
-| 2 | `/gui-tiet-kiem/lai-suat/` | Lãi suất & Tiền gửi Gửi Tiết Kiệm: Hướng Dẫn & Tra Cứu Chi Tiết | `tiết kiệm` | 241,350 | `P0` | `TOFU` | Educational Guide & FAQ | `Mở Sổ Tiết Kiệm Online / Túi Thần Tài -> Deeplink: momo://saving-partner -> Event: web_saving_interest_calculator_btn_click` |
-| 3 | `/gui-tiet-kiem/ty-gia/` | Tỷ giá & Ngoại tệ Gửi Tiết Kiệm: Hướng Dẫn & Tra Cứu Chi Tiết | `gửi tiết kiệm usd` | 640 | `P2` | `TOFU` | Educational Guide & FAQ | `Mở Sổ Tiết Kiệm Online / Túi Thần Tài -> Deeplink: momo://saving-partner -> Event: web_saving_interest_calculator_btn_click` |
+| 1 | `/gui-tiet-kiem/` | Cẩm Nang & Bảng Tra Cứu Gửi Tiết Kiệm Toàn Diện | `tiết kiệm` | 27,100 | `P0` | `TOFU` | Pillar Hub Page + Interactive Widget | `Mở Sổ Tiết Kiệm Online / Túi Thần Tài -> Deeplink: momo://saving-partner -> Event: web_saving_interest_calculator_btn_click` |
+| 2 | `/gui-tiet-kiem/lai-suat-ngan-hang/` | Lãi suất ngân hàng Gửi Tiết Kiệm: Hướng Dẫn & Tra Cứu Chi Tiết | `lãi suất gửi tiết kiệm ngân hàng` | 120,470 | `P0` | `TOFU` | Educational Guide & FAQ | `Mở Sổ Tiết Kiệm Online / Túi Thần Tài -> Deeplink: momo://saving-partner -> Event: web_saving_interest_calculator_btn_click` |
+| 3 | `/gui-tiet-kiem/ky-han-hinh-thuc/` | Kỳ hạn & Hình thức gửi Gửi Tiết Kiệm: Hướng Dẫn & Tra Cứu Chi Tiết | `gửi tiết kiệm online có an toàn ko` | 18,520 | `P0` | `TOFU` | Educational Guide & FAQ | `Mở Sổ Tiết Kiệm Online / Túi Thần Tài -> Deeplink: momo://saving-partner -> Event: web_saving_interest_calculator_btn_click` |
+| 4 | `/gui-tiet-kiem/thu-tuc-mo-so/` | Thủ tục mở sổ & Rút tiền Gửi Tiết Kiệm: Hướng Dẫn & Tra Cứu Chi Tiết | `sổ tiết kiệm` | 17,370 | `P0` | `TOFU` | Educational Guide & FAQ | `Mở Sổ Tiết Kiệm Online / Túi Thần Tài -> Deeplink: momo://saving-partner -> Event: web_saving_interest_calculator_btn_click` |
+| 5 | `/gui-tiet-kiem/so-sanh-tiet-kiem/` | So sánh giải pháp tiết kiệm Gửi Tiết Kiệm: Hướng Dẫn & Tra Cứu Chi Tiết | `nên gửi tiết kiệm ngân hàng nào` | 3,430 | `P0` | `TOFU` | Educational Guide & FAQ | `Mở Sổ Tiết Kiệm Online / Túi Thần Tài -> Deeplink: momo://saving-partner -> Event: web_saving_interest_calculator_btn_click` |
+| 6 | `/gui-tiet-kiem/tra-cuu/` | Công cụ & Tra cứu Gửi Tiết Kiệm: Hướng Dẫn & Tra Cứu Chi Tiết | `gửi tiết kiệm 1 triệu 1 tháng lãi bao nhiêu vietcombank` | 2,650 | `P0` | `BOFU` | Interactive Calculator / Lookup Tool | `Mở Sổ Tiết Kiệm Online / Túi Thần Tài -> Deeplink: momo://saving-partner -> Event: web_saving_interest_calculator_btn_click` |
+| 7 | `/gui-tiet-kiem/tinh-lai/` | Công cụ tính lãi Gửi Tiết Kiệm: Hướng Dẫn & Tra Cứu Chi Tiết | `gửi tiết kiệm 100 triệu 1 năm lãi bao nhiêu` | 1,510 | `P1` | `TOFU` | Educational Guide & FAQ | `Mở Sổ Tiết Kiệm Online / Túi Thần Tài -> Deeplink: momo://saving-partner -> Event: web_saving_interest_calculator_btn_click` |
 
 ### Theme: `tinh-luong` (145,060 volume/tháng, 4 trang được quy hoạch)
 
@@ -283,7 +287,7 @@ Số trang mỗi Use Case thay đổi linh hoạt theo Search Demand thực tế
 
 ## 5. D. DANH SÁCH CỤM BỊ LOẠI DO DƯỚI NGƯỠNG VOLUME (< 500/THÁNG)
 
-Tổng cộng **602 cụm** có volume dưới ngưỡng 500/tháng bị loại bỏ khỏi danh mục trang độc lập và được tích hợp thành Section trong Pillar Page:
+Tổng cộng **605 cụm** có volume dưới ngưỡng 500/tháng bị loại bỏ khỏi danh mục trang độc lập và được tích hợp thành Section trong Pillar Page:
 
 | STT | Theme | Phân Khối Ngành | Tên Cụm Bị Loại | Primary Keyword | Volume Cụm | Xử Lý Kiến Trúc |
 | :---: | :--- | :--- | :--- | :--- | :---: | :--- |
@@ -293,50 +297,50 @@ Tổng cộng **602 cụm** có volume dưới ngưỡng 500/tháng bị loại 
 | 4 | `tram-sac` | `vehicle-hub` | Đăng ký & Hướng dẫn thủ tục | `đăng ký trạm sạc vinfast` | 490 | Tích hợp thành Section trong Pillar Hub |
 | 5 | `agribank` | `Financial` | Công cụ & Tra cứu | `agribank 1 ngày chuyển được bao nhiêu tiền` | 470 | Tích hợp thành Section trong Pillar Hub |
 | 6 | `chuyen-khoan` | `Financial` | Lãi suất & Tiền gửi | `gửi tiền qua viettel` | 460 | Tích hợp thành Section trong Pillar Hub |
-| 7 | `tinh-luong` | `Financial` | So sánh & Đánh giá | `gross to net topcv` | 460 | Tích hợp thành Section trong Pillar Hub |
-| 8 | `tra-gop` | `Financial` | Tra cứu & Chi nhánh | `hd saison tổng đài` | 460 | Tích hợp thành Section trong Pillar Hub |
-| 9 | `Shinhan Bank` | `Financial` | Vay vốn & Tín chấp | `shinhan bank vay tín chấp` | 450 | Tích hợp thành Section trong Pillar Hub |
-| 10 | `co-phieu` | `Financial` | Thẻ & Tài khoản | `tài khoản chứng khoán` | 450 | Tích hợp thành Section trong Pillar Hub |
-| 11 | `lai-suat` | `Financial` | Tỷ giá & Ngoại tệ | `lãi suất usd` | 450 | Tích hợp thành Section trong Pillar Hub |
-| 12 | `phi-bao-hiem` | `insurtech` | Tra cứu & Hạn sử dụng | `phí bảo hiểm thẻ tín dụng vpbank` | 450 | Tích hợp thành Section trong Pillar Hub |
-| 13 | `Techcombank` | `Financial` | So sánh & Đánh giá | `ưu đãi techcombank` | 440 | Tích hợp thành Section trong Pillar Hub |
-| 14 | `nam-a-bank` | `Financial` | Tra cứu & Chi nhánh | `nam á bank hotline` | 440 | Tích hợp thành Section trong Pillar Hub |
-| 15 | `thau-chi` | `Financial` | Biểu phí & Thủ tục | `cách tính lãi thấu chi` | 440 | Tích hợp thành Section trong Pillar Hub |
-| 16 | `ACB` | `Financial` | Tra cứu & Chi nhánh | `địa chỉ ngân hàng acb` | 430 | Tích hợp thành Section trong Pillar Hub |
-| 17 | `Shinhan Bank` | `Financial` | Biểu phí & Thủ tục | `tổng đài shinhan bank miễn phí` | 430 | Tích hợp thành Section trong Pillar Hub |
-| 18 | `bac-a-bank` | `Financial` | Lãi suất & Tiền gửi | `bắc a bank lãi suất` | 430 | Tích hợp thành Section trong Pillar Hub |
-| 19 | `mua-truoc-tra-sau` | `Financial` | Vay vốn & Tín chấp | `vay kredivo có an toàn không` | 430 | Tích hợp thành Section trong Pillar Hub |
-| 20 | `phi-bao-hiem` | `insurtech` | Quy định & Bồi thường | `bảo hiểm bắt buộc ô to 5 chỗ` | 430 | Tích hợp thành Section trong Pillar Hub |
-| 21 | `ACB` | `Financial` | Cổng dịch vụ & Liên hệ | `acb login` | 420 | Tích hợp thành Section trong Pillar Hub |
-| 22 | `mbbank` | `Financial` | Biểu phí & Thủ tục | `mbbank thu phí thường niên` | 420 | Tích hợp thành Section trong Pillar Hub |
-| 23 | `tpbank` | `Financial` | Lãi suất & Tiền gửi | `tpbank lãi suất` | 420 | Tích hợp thành Section trong Pillar Hub |
-| 24 | `tra-gop` | `Financial` | Đăng ký & Hướng dẫn thủ tục | `mua góp điện thoại` | 420 | Tích hợp thành Section trong Pillar Hub |
-| 25 | `phan-mem-mo-phong` | `vehicle-hub` | Phạt nguội & Luật giao thông | `mô phỏng bằng lái xe` | 420 | Tích hợp thành Section trong Pillar Hub |
-| 26 | `sacombank` | `Financial` | Cổng dịch vụ & Liên hệ | `website sacombank` | 410 | Tích hợp thành Section trong Pillar Hub |
-| 27 | `nap-data` | `telco` | Cẩm nang & Hỏi đáp | `12mdt50` | 410 | Tích hợp thành Section trong Pillar Hub |
-| 28 | `bhxh` | `insurtech` | Đăng ký & Hướng dẫn thủ tục | `thủ tục làm bảo hiểm xã hội` | 400 | Tích hợp thành Section trong Pillar Hub |
-| 29 | `vpbank` | `Financial` | Biểu phí & Thủ tục | `điều kiện mở the tín dụng vpbank online` | 390 | Tích hợp thành Section trong Pillar Hub |
-| 30 | `phim` | `cinema` | So sánh & Đánh giá | `heartstopper vietsub` | 390 | Tích hợp thành Section trong Pillar Hub |
-| 31 | `bien-so-xe` | `vehicle-hub` | Bảo dưỡng & Nuôi xe | `thông tin đăng kiểm` | 390 | Tích hợp thành Section trong Pillar Hub |
-| 32 | `ma-chung-khoan` | `Financial` | Đăng ký & Hướng dẫn thủ tục | `nên mua mã chứng khoán nào hôm nay` | 380 | Tích hợp thành Section trong Pillar Hub |
-| 33 | `tien-so` | `Financial` | Thẻ & Tài khoản | `số tiền phong tỏa trong thẻ tín dụng là gì` | 380 | Tích hợp thành Section trong Pillar Hub |
-| 34 | `vi-tra-sau` | `Financial` | Lãi suất & Tiền gửi | `lãi suất ví trả sau momo` | 380 | Tích hợp thành Section trong Pillar Hub |
-| 35 | `ma-so-thue` | `other` | Cổng dịch vụ & Liên hệ | `đăng nhập thuế cá nhân` | 380 | Tích hợp thành Section trong Pillar Hub |
-| 36 | `voucher` | `other` | So sánh & Đánh giá | `voucher khuyến mãi` | 380 | Tích hợp thành Section trong Pillar Hub |
-| 37 | `Eximbank` | `Financial` | Thẻ & Tài khoản | `eximbank thẻ tín dụng` | 370 | Tích hợp thành Section trong Pillar Hub |
-| 38 | `vib` | `Financial` | So sánh & Đánh giá | `ưu đãi vib` | 370 | Tích hợp thành Section trong Pillar Hub |
-| 39 | `crypto` | `Financial` | So sánh & Đánh giá | `cryptopanic` | 360 | Tích hợp thành Section trong Pillar Hub |
-| 40 | `kien-long-bank` | `Financial` | Tra cứu & Chi nhánh | `tổng đài kienlongbank` | 360 | Tích hợp thành Section trong Pillar Hub |
-| 41 | `tai-san` | `Financial` | Biểu phí & Thủ tục | `thủ tục từ chối tài sản` | 360 | Tích hợp thành Section trong Pillar Hub |
-| 42 | `vietlott` | `Lottery` | Công cụ & Tra cứu | `vietlott bao nhiêu tiền` | 360 | Tích hợp thành Section trong Pillar Hub |
-| 43 | `lam-phat` | `Financial` | Lãi suất & Tiền gửi | `lạm phát tăng thì lãi suất tăng hay giảm` | 350 | Tích hợp thành Section trong Pillar Hub |
-| 44 | `rap` | `cinema` | Review & Đánh giá phim | `phim hay rap` | 350 | Tích hợp thành Section trong Pillar Hub |
-| 45 | `du-lich-singapore` | `ota` | Cẩm nang & Hỏi đáp | `chi phí đi singapore` | 350 | Tích hợp thành Section trong Pillar Hub |
-| 46 | `co-tuc` | `Financial` | Đăng ký & Hướng dẫn thủ tục | `mua cổ phiếu có được trả cổ tức không` | 340 | Tích hợp thành Section trong Pillar Hub |
-| 47 | `tien-so` | `Financial` | Lãi suất & Tiền gửi | `rút tiền từ số dư tk shopee` | 330 | Tích hợp thành Section trong Pillar Hub |
-| 48 | `tien-so` | `Financial` | Đăng ký & Hướng dẫn thủ tục | `số tiền đã nạp valorant` | 320 | Tích hợp thành Section trong Pillar Hub |
-| 49 | `tinh-bmi` | `hospital` | Cẩm nang & Hỏi đáp | `chỉ số khối cơ thể` | 320 | Tích hợp thành Section trong Pillar Hub |
-| 50 | `gia-xe` | `vehicle-hub` | So sánh & Đánh giá | `toyota veloz cross top` | 320 | Tích hợp thành Section trong Pillar Hub |
+| 7 | `gui-tiet-kiem` | `Financial` | Đăng ký & Hướng dẫn thủ tục | `mở tiết kiệm vietcombank` | 460 | Tích hợp thành Section trong Pillar Hub |
+| 8 | `tinh-luong` | `Financial` | So sánh & Đánh giá | `gross to net topcv` | 460 | Tích hợp thành Section trong Pillar Hub |
+| 9 | `tra-gop` | `Financial` | Tra cứu & Chi nhánh | `hd saison tổng đài` | 460 | Tích hợp thành Section trong Pillar Hub |
+| 10 | `Shinhan Bank` | `Financial` | Vay vốn & Tín chấp | `shinhan bank vay tín chấp` | 450 | Tích hợp thành Section trong Pillar Hub |
+| 11 | `co-phieu` | `Financial` | Thẻ & Tài khoản | `tài khoản chứng khoán` | 450 | Tích hợp thành Section trong Pillar Hub |
+| 12 | `lai-suat` | `Financial` | Tỷ giá & Ngoại tệ | `lãi suất usd` | 450 | Tích hợp thành Section trong Pillar Hub |
+| 13 | `phi-bao-hiem` | `insurtech` | Tra cứu & Hạn sử dụng | `phí bảo hiểm thẻ tín dụng vpbank` | 450 | Tích hợp thành Section trong Pillar Hub |
+| 14 | `Techcombank` | `Financial` | So sánh & Đánh giá | `ưu đãi techcombank` | 440 | Tích hợp thành Section trong Pillar Hub |
+| 15 | `nam-a-bank` | `Financial` | Tra cứu & Chi nhánh | `nam á bank hotline` | 440 | Tích hợp thành Section trong Pillar Hub |
+| 16 | `thau-chi` | `Financial` | Biểu phí & Thủ tục | `cách tính lãi thấu chi` | 440 | Tích hợp thành Section trong Pillar Hub |
+| 17 | `ACB` | `Financial` | Tra cứu & Chi nhánh | `địa chỉ ngân hàng acb` | 430 | Tích hợp thành Section trong Pillar Hub |
+| 18 | `Shinhan Bank` | `Financial` | Biểu phí & Thủ tục | `tổng đài shinhan bank miễn phí` | 430 | Tích hợp thành Section trong Pillar Hub |
+| 19 | `bac-a-bank` | `Financial` | Lãi suất & Tiền gửi | `bắc a bank lãi suất` | 430 | Tích hợp thành Section trong Pillar Hub |
+| 20 | `gui-tiet-kiem` | `Financial` | Cổng dịch vụ & Liên hệ | `gửi tiết kiệm chi nhánh này rút chi nhánh khác được không` | 430 | Tích hợp thành Section trong Pillar Hub |
+| 21 | `mua-truoc-tra-sau` | `Financial` | Vay vốn & Tín chấp | `vay kredivo có an toàn không` | 430 | Tích hợp thành Section trong Pillar Hub |
+| 22 | `phi-bao-hiem` | `insurtech` | Quy định & Bồi thường | `bảo hiểm bắt buộc ô to 5 chỗ` | 430 | Tích hợp thành Section trong Pillar Hub |
+| 23 | `ACB` | `Financial` | Cổng dịch vụ & Liên hệ | `acb login` | 420 | Tích hợp thành Section trong Pillar Hub |
+| 24 | `mbbank` | `Financial` | Biểu phí & Thủ tục | `mbbank thu phí thường niên` | 420 | Tích hợp thành Section trong Pillar Hub |
+| 25 | `tpbank` | `Financial` | Lãi suất & Tiền gửi | `tpbank lãi suất` | 420 | Tích hợp thành Section trong Pillar Hub |
+| 26 | `tra-gop` | `Financial` | Đăng ký & Hướng dẫn thủ tục | `mua góp điện thoại` | 420 | Tích hợp thành Section trong Pillar Hub |
+| 27 | `phan-mem-mo-phong` | `vehicle-hub` | Phạt nguội & Luật giao thông | `mô phỏng bằng lái xe` | 420 | Tích hợp thành Section trong Pillar Hub |
+| 28 | `sacombank` | `Financial` | Cổng dịch vụ & Liên hệ | `website sacombank` | 410 | Tích hợp thành Section trong Pillar Hub |
+| 29 | `nap-data` | `telco` | Cẩm nang & Hỏi đáp | `12mdt50` | 410 | Tích hợp thành Section trong Pillar Hub |
+| 30 | `bhxh` | `insurtech` | Đăng ký & Hướng dẫn thủ tục | `thủ tục làm bảo hiểm xã hội` | 400 | Tích hợp thành Section trong Pillar Hub |
+| 31 | `vpbank` | `Financial` | Biểu phí & Thủ tục | `điều kiện mở the tín dụng vpbank online` | 390 | Tích hợp thành Section trong Pillar Hub |
+| 32 | `phim` | `cinema` | So sánh & Đánh giá | `heartstopper vietsub` | 390 | Tích hợp thành Section trong Pillar Hub |
+| 33 | `bien-so-xe` | `vehicle-hub` | Bảo dưỡng & Nuôi xe | `thông tin đăng kiểm` | 390 | Tích hợp thành Section trong Pillar Hub |
+| 34 | `ma-chung-khoan` | `Financial` | Đăng ký & Hướng dẫn thủ tục | `nên mua mã chứng khoán nào hôm nay` | 380 | Tích hợp thành Section trong Pillar Hub |
+| 35 | `tien-so` | `Financial` | Thẻ & Tài khoản | `số tiền phong tỏa trong thẻ tín dụng là gì` | 380 | Tích hợp thành Section trong Pillar Hub |
+| 36 | `vi-tra-sau` | `Financial` | Lãi suất & Tiền gửi | `lãi suất ví trả sau momo` | 380 | Tích hợp thành Section trong Pillar Hub |
+| 37 | `ma-so-thue` | `other` | Cổng dịch vụ & Liên hệ | `đăng nhập thuế cá nhân` | 380 | Tích hợp thành Section trong Pillar Hub |
+| 38 | `voucher` | `other` | So sánh & Đánh giá | `voucher khuyến mãi` | 380 | Tích hợp thành Section trong Pillar Hub |
+| 39 | `Eximbank` | `Financial` | Thẻ & Tài khoản | `eximbank thẻ tín dụng` | 370 | Tích hợp thành Section trong Pillar Hub |
+| 40 | `vib` | `Financial` | So sánh & Đánh giá | `ưu đãi vib` | 370 | Tích hợp thành Section trong Pillar Hub |
+| 41 | `crypto` | `Financial` | So sánh & Đánh giá | `cryptopanic` | 360 | Tích hợp thành Section trong Pillar Hub |
+| 42 | `kien-long-bank` | `Financial` | Tra cứu & Chi nhánh | `tổng đài kienlongbank` | 360 | Tích hợp thành Section trong Pillar Hub |
+| 43 | `tai-san` | `Financial` | Biểu phí & Thủ tục | `thủ tục từ chối tài sản` | 360 | Tích hợp thành Section trong Pillar Hub |
+| 44 | `vietlott` | `Lottery` | Công cụ & Tra cứu | `vietlott bao nhiêu tiền` | 360 | Tích hợp thành Section trong Pillar Hub |
+| 45 | `lam-phat` | `Financial` | Lãi suất & Tiền gửi | `lạm phát tăng thì lãi suất tăng hay giảm` | 350 | Tích hợp thành Section trong Pillar Hub |
+| 46 | `rap` | `cinema` | Review & Đánh giá phim | `phim hay rap` | 350 | Tích hợp thành Section trong Pillar Hub |
+| 47 | `du-lich-singapore` | `ota` | Cẩm nang & Hỏi đáp | `chi phí đi singapore` | 350 | Tích hợp thành Section trong Pillar Hub |
+| 48 | `co-tuc` | `Financial` | Đăng ký & Hướng dẫn thủ tục | `mua cổ phiếu có được trả cổ tức không` | 340 | Tích hợp thành Section trong Pillar Hub |
+| 49 | `tien-so` | `Financial` | Lãi suất & Tiền gửi | `rút tiền từ số dư tk shopee` | 330 | Tích hợp thành Section trong Pillar Hub |
+| 50 | `tien-so` | `Financial` | Đăng ký & Hướng dẫn thủ tục | `số tiền đã nạp valorant` | 320 | Tích hợp thành Section trong Pillar Hub |
 
 ---
 

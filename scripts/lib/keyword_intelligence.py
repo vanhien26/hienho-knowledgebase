@@ -241,7 +241,16 @@ class SemanticDomainFilter:
         if len(kw) < 2 or len(kw) > 120:
             return True, "Invalid keyword length (<2 or >120 chars)"
 
-        # 4. Kiểm tra ngoại lệ đặc thù từng Theme
+        # 4. Lọc single-word noise tokens
+        if kw in ['kiệm', 'nhiêu', 'thoại', 'khoản', 'toán', 'phẩm', 'vụ']:
+            return True, "Single word noise fragment"
+
+        # 5. Kiểm tra ngoại lệ đặc thù từng Theme
+        if usecase_slug == 'vietlott':
+            vietlott_tokens = ['vietlott', 'viet lott', 'mega 6 45', 'mega 6/45', 'mega645', 'power 6 55', 'power 6/55', 'power 655', 'keno', 'max 3d', 'max3d', 'max 3d+', 'bingo18', 'bingo 18', 'omg']
+            if not any(token in kw for token in vietlott_tokens):
+                return True, "Outlier: Vietlott theme only accepts Vietlott brand/product keywords"
+
         if usecase_slug == 'bao-hiem-nhan-tho' and any(term in kw for term in ['bảo hiểm y tế', 'bảo hiểm y tê', 'bhyt']):
             return True, "Outlier: BHYT keyword in life insurance theme"
 

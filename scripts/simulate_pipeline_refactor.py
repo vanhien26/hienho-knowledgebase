@@ -83,6 +83,7 @@ def clean_csv(path):
     
     kws = df[kw_col].astype(str).str.replace('="', '', regex=False).str.replace('"', '', regex=False)
     df['clean_kw'] = kws.str.strip().str.lower()
+    df = df[~df['clean_kw'].isin(['kiệm', 'nhiêu', 'thoại', 'khoản', 'toán', 'phẩm', 'vụ'])]
     df['raw_file'] = os.path.basename(path)
     return df
 
@@ -265,6 +266,13 @@ SUB_CLUSTER_RULES = {
         ('Giá vàng DOJI & PNJ', ['doji', 'pnj', 'mi hồng', 'bảo tín'], 'vang-doji-pnj'),
         ('Biểu đồ & Dự báo giá vàng', ['biểu đồ', 'dự báo', 'xu hướng', 'thế giới', 'kitco'], 'bieu-do-du-bao'),
     ],
+    'gui-tiet-kiem': [
+        ('Lãi suất ngân hàng', ['lãi suất', 'lai suat', 'ngân hàng nào cao nhất', 'cao nhất'], 'lai-suat-ngan-hang'),
+        ('Công cụ tính lãi', ['cách tính', 'tính lãi', 'công thức', '100 triệu', '50 triệu', '1 tỷ', 'bao nhiêu tiền'], 'tinh-lai'),
+        ('Kỳ hạn & Hình thức gửi', ['kỳ hạn', 'không kỳ hạn', 'có kỳ hạn', 'bậc thang', 'online'], 'ky-han-hinh-thuc'),
+        ('Thủ tục mở sổ & Rút tiền', ['thủ tục', 'rút tiền', 'trước hạn', 'sổ tiết kiệm', 'tất toán', 'mở sổ', 'đáo hạn'], 'thu-tuc-mo-so'),
+        ('So sánh giải pháp tiết kiệm', ['so sánh', 'nên gửi', 'túi thần tài', 'vàng hay tiết kiệm', 'chứng chỉ tiền gửi'], 'so-sanh-tiet-kiem'),
+    ],
     'diem-tin-dung': [
         ('Tra cứu CIC & Kiểm tra nợ xấu', ['tra cứu cic', 'kiểm tra cic', 'nợ xấu', 'nhóm nợ', 'check cic'], 'tra-cuu-cic'),
         ('Xóa nợ xấu & Cải thiện điểm', ['xóa nợ', 'cải thiện', 'điểm tín dụng', 'bao lâu'], 'xoa-no-xau'),
@@ -381,6 +389,7 @@ BANK_THEMES = {
 
 from scripts.sync_inventory_to_hubs import MERGE_MAP, VIETNAMESE_THEME_NAMES
 
+print("Bắt đầu xử lý Pipeline Content Plan...")
 # Đọc toàn bộ các CSV vào raw database
 all_csv_paths = glob.glob(os.path.join(INVENTORY_DIR, "*", "*.csv"))
 theme_raw_dfs = defaultdict(list)

@@ -100,25 +100,24 @@ def recommend_format(intent, is_pillar=False):
         return 'Step-by-step How-to & Action Form'
     return 'Educational Guide & FAQ'
 
-def recommend_cta_hook(usecase_slug, intent):
-    slug = usecase_slug.lower()
-    if 'tiet-kiem' in slug:
-        if intent in ['Tool/Calculator', 'Transactional']:
-            return "Widget tính lãi nhận được thực tế -> Deeplink mở Túi Thần Tài / Tiết kiệm đối tác MoMo nhận lãi mỗi ngày"
-        return "Bảng so sánh lợi suất cố định vs lợi suất linh hoạt Túi Thần Tài MoMo"
-    elif 'bien-so' in slug or 'phat-nguoi' in slug:
-        if intent in ['Tool/Calculator', 'Transactional']:
-            return "Form tra cứu trực tiếp trên Web -> Nút nộp phạt / Nạp tài khoản giao thông MoMo"
-        return "Banner tiện ích giao thông toàn diện trên MoMo App"
-    elif 'vay' in slug:
-        return "Mô phỏng khoản vay hàng tháng -> Deeplink xét duyệt hồ sơ online trong 3 phút"
-    elif 'bao-hiem' in slug:
-        return "Form tính phí bảo hiểm tức thì -> Xuất chứng nhận điện tử qua MoMo"
-    return "Tích hợp Widget tương tác trên Web -> Deeplink mở MoMo App kích hoạt dịch vụ"
+from scripts.lib.content_plan_config import (
+    get_concrete_cta_hook,
+    SUB_CLUSTER_RULES,
+    SECTOR_RULES,
+    FALLBACK_INTENT_CLUSTERS,
+    make_norm_key,
+    THRESHOLD
+)
+from scripts.sync_inventory_to_hubs import VIETNAMESE_THEME_NAMES, MERGE_MAP
+
+def recommend_cta_hook(usecase_slug, intent=None):
+    return get_concrete_cta_hook(usecase_slug)
 
 def build_content_plan(csv_path):
-    usecase_slug = os.path.splitext(os.path.basename(csv_path))[0]
-    usecase_name = usecase_slug.replace('-', ' ').replace('_', ' ').title()
+    raw_slug = os.path.splitext(os.path.basename(csv_path))[0]
+    clean_s = re.sub(r'[\s_]*\(\d+\)$', '', raw_slug).strip()
+    usecase_slug = MERGE_MAP.get(clean_s, clean_s)
+    usecase_name = VIETNAMESE_THEME_NAMES.get(usecase_slug, usecase_slug.replace('-', ' ').replace('_', ' ').title())
     sector = os.path.basename(os.path.dirname(csv_path))
     
     raw_keywords = []
@@ -132,6 +131,11 @@ def build_content_plan(csv_path):
                 continue
             kw = normalize_text(clean_val(kw_raw))
             
+            # Lọc từ khóa ngoài ngành và từ khóa rác cụt
+            if kw in ['kiệm', 'nhiêu', 'thoại', 'khoản', 'toán', 'phẩm', 'vụ']:
+                outliers_filtered += 1
+                continue
+                
             is_out, _ = SemanticDomainFilter.is_outlier(kw, sector, usecase_slug)
             if is_out:
                 outliers_filtered += 1
@@ -166,143 +170,126 @@ def build_content_plan(csv_path):
     if not raw_keywords:
         return None, "Không tìm thấy từ khóa hợp lệ sau khi lọc.", []
         
-    canonical_topics, merge_log = SERPCannibalizationShield.cluster_and_shield(raw_keywords)
-    canonical_topics.sort(key=lambda x: (x['total_cluster_volume'], x['opportunity_score']), reverse=True)
+    # Gộp biến thể chính tả: lấy max volume, lưu variants[]
+    variant_groups = defaultdict(list)
+    for k in raw_keywords:
+        n_key = make_norm_key(k['keyword'])
+        variant_groups[n_key].append(k)
+        
+    deduped_keywords = []
+    variants_merged_count = 0
+    for n_key, items in variant_groups.items():
+        if len(items) > 1:
+            variants_merged_count += (len(items) - 1)
+            max_v = max(it['volume'] for it in items)
+            max_cpc = max(it['cpc'] for it in items)
+            def sort_key(x):
+                kw_str = x['keyword']
+                is_brand = 1 if kw_str in ['vietlott', 'epass', 'vetc', 'mbbank', 'vietcombank', 'techcombank'] else 0
+                has_acc = 1 if (kw_str != make_norm_key(kw_str)) else 0
+                return (is_brand, has_acc, x['volume'], len(kw_str.split()))
+            sorted_it = sorted(items, key=sort_key, reverse=True)
+            leader = sorted_it[0]
+            leader['volume'] = max_v
+            leader['cpc'] = max_cpc
+            leader['variants'] = [it['keyword'] for it in items if it['keyword'] != leader['keyword']]
+            deduped_keywords.append(leader)
+        else:
+            it = items[0]
+            it['variants'] = []
+            deduped_keywords.append(it)
+            
+    deduped_keywords.sort(key=lambda x: x['volume'], reverse=True)
+    top_overall_kw = deduped_keywords[0]
     
-    pillar_item = canonical_topics[0]
-    pillar_slug = f"/{usecase_slug}/"
-    pillar_title = f"Cẩm Nang & Bảng Tra Cứu {usecase_name} Toàn Diện"
+    # Phân cụm ngữ nghĩa động
+    assigned_clusters = defaultdict(list)
+    theme_rules = SUB_CLUSTER_RULES.get(usecase_slug) or SECTOR_RULES.get(sector) or []
+    unassigned = []
+    
+    for k in deduped_keywords:
+        kw_l = k['keyword'].lower()
+        matched = False
+        for rule in theme_rules:
+            c_name, triggers, c_slug = rule
+            if any(tr in kw_l for tr in triggers):
+                assigned_clusters[(c_name, c_slug)].append(k)
+                matched = True
+                break
+        if not matched:
+            unassigned.append(k)
+            
+    for k in unassigned:
+        intent = k['intent']
+        fb = next((f for f in FALLBACK_INTENT_CLUSTERS if f[1] == intent), FALLBACK_INTENT_CLUSTERS[3])
+        assigned_clusters[(fb[0], fb[2])].append(k)
+        
+    # Xây dựng trang Pillar Hub
+    pillar_cta = get_concrete_cta_hook(usecase_slug)
     pillar_plan = {
-        'slug': pillar_slug,
-        'title': pillar_title,
-        'primary_kw': pillar_item['keyword'],
-        'secondary_kws': pillar_item.get('secondary_keywords', [])[:5],
-        'volume': pillar_item['total_cluster_volume'],
-        'intent': pillar_item['intent'],
-        'format': recommend_format(pillar_item['intent'], is_pillar=True),
+        'slug': f"/{usecase_slug}/",
+        'title': f"Cẩm Nang & Bảng Tra Cứu {usecase_name} Toàn Diện",
+        'primary_kw': top_overall_kw['keyword'],
+        'secondary_kws': [k['keyword'] for k in deduped_keywords[1:5]],
+        'volume': top_overall_kw['volume'],
+        'intent': top_overall_kw['intent'],
+        'format': 'Pillar Hub Page + Interactive Widget',
         'funnel': 'TOFU',
         'priority': 'P0',
-        'cta_hook': recommend_cta_hook(usecase_slug, pillar_item['intent']),
-        'shielded_count': len(pillar_item.get('secondary_keywords', []))
+        'cta_hook': pillar_cta,
+        'shielded_count': len(top_overall_kw.get('variants', []))
     }
     
-    cluster_buckets = defaultdict(list)
-    for topic in canonical_topics[1:]:
-        kw = topic['keyword']
-        intent = topic['intent']
-        if intent == 'Tool/Calculator' or any(w in kw for w in ['tính', 'bao nhiêu tiền', 'lãi bao nhiêu', 'cách tính']):
-            cluster_buckets['calculator'].append(topic)
-        elif any(w in kw for w in ['online', 'trực tuyến', 'an toàn', 'lừa đảo', 'bảo mật']):
-            cluster_buckets['trust_online'].append(topic)
-        elif intent == 'Commercial' or any(w in kw for w in ['so sánh', 'nào tốt', 'nên', 'cao nhất', 'ưu đãi']):
-            cluster_buckets['comparison'].append(topic)
-        elif intent == 'Transactional' or any(w in kw for w in ['thủ tục', 'quy trình', 'hướng dẫn', 'điều kiện', 'giấy tờ', 'rút tiền']):
-            cluster_buckets['how_to'].append(topic)
-        else:
-            cluster_buckets['general'].append(topic)
-            
-    cluster_pages = []
+    # Xây dựng các trang Con từ Sub-clusters thực tế (Ngưỡng >= 500)
+    child_pages = []
+    pruned_clusters = []
+    sorted_clusters = sorted(assigned_clusters.items(), key=lambda x: sum(k['volume'] for k in x[1]), reverse=True)
     
-    if cluster_buckets['calculator']:
-        c_kws = cluster_buckets['calculator']
-        c_leader = c_kws[0]
-        sec_list = c_leader.get('secondary_keywords', []) + [x['keyword'] for x in c_kws[1:4]]
-        cluster_pages.append({
-            'slug': f"/{usecase_slug}/cong-cu-tinh-toan/",
-            'title': f"Công Cụ Tính {usecase_name} Trực Tuyến & Bảng Tính Chi Tiết",
-            'primary_kw': c_leader['keyword'],
-            'secondary_kws': sec_list[:5],
-            'volume': sum(x['total_cluster_volume'] for x in c_kws[:5]),
-            'intent': 'Tool/Calculator',
-            'format': 'Interactive Calculator / Lookup Tool',
-            'funnel': 'BOFU',
-            'priority': 'P0',
-            'cta_hook': recommend_cta_hook(usecase_slug, 'Tool/Calculator'),
-            'shielded_count': len(sec_list)
+    for (c_name, c_slug), cluster_kws in sorted_clusters:
+        cluster_kws.sort(key=lambda x: x['volume'], reverse=True)
+        tot_vol = sum(k['volume'] for k in cluster_kws)
+        primary_k = cluster_kws[0]
+        p_vol = primary_k['volume']
+        
+        # Bỏ qua nếu primary_kw trùng với pillar hoặc nếu chỉ có 1 cluster duy nhất
+        if primary_k['keyword'] == top_overall_kw['keyword'] or len(sorted_clusters) == 1:
+            continue
+            
+        if tot_vol < THRESHOLD and p_vol < THRESHOLD:
+            pruned_clusters.append((c_name, tot_vol))
+            continue
+            
+        majority_intent = Counter(k['intent'] for k in cluster_kws).most_common(1)[0][0]
+        prio = classify_priority(tot_vol, primary_k['competition'], majority_intent)
+        funnel = determine_funnel(majority_intent)
+        fmt = recommend_format(majority_intent)
+        
+        child_pages.append({
+            'slug': f"/{usecase_slug}/{c_slug}/",
+            'title': f"{c_name} {usecase_name}: Hướng Dẫn & Tra Cứu Chi Tiết",
+            'primary_kw': primary_k['keyword'],
+            'secondary_kws': [k['keyword'] for k in cluster_kws[1:5]],
+            'volume': tot_vol,
+            'intent': majority_intent,
+            'format': fmt,
+            'funnel': funnel,
+            'priority': prio,
+            'cta_hook': pillar_cta,
+            'shielded_count': len(primary_k.get('variants', []))
         })
         
-    if cluster_buckets['comparison']:
-        c_kws = cluster_buckets['comparison']
-        c_leader = c_kws[0]
-        sec_list = c_leader.get('secondary_keywords', []) + [x['keyword'] for x in c_kws[1:4]]
-        cluster_pages.append({
-            'slug': f"/{usecase_slug}/so-sanh-danh-gia/",
-            'title': f"So Sánh & Đánh Giá {usecase_name}: Lựa Chọn Nào Tốt Nhất?",
-            'primary_kw': c_leader['keyword'],
-            'secondary_kws': sec_list[:5],
-            'volume': sum(x['total_cluster_volume'] for x in c_kws[:5]),
-            'intent': 'Commercial',
-            'format': 'Comparison Table & Evaluation',
-            'funnel': 'MOFU',
-            'priority': 'P0',
-            'cta_hook': recommend_cta_hook(usecase_slug, 'Commercial'),
-            'shielded_count': len(sec_list)
-        })
-        
-    if cluster_buckets['trust_online']:
-        c_kws = cluster_buckets['trust_online']
-        c_leader = c_kws[0]
-        sec_list = c_leader.get('secondary_keywords', []) + [x['keyword'] for x in c_kws[1:4]]
-        cluster_pages.append({
-            'slug': f"/{usecase_slug}/an-toan-bao-mat/",
-            'title': f"{usecase_name} Online Có An Toàn Không? Rủi Ro & Biện Pháp Bảo Vệ",
-            'primary_kw': c_leader['keyword'],
-            'secondary_kws': sec_list[:5],
-            'volume': sum(x['total_cluster_volume'] for x in c_kws[:5]),
-            'intent': 'Informational',
-            'format': 'Trust & Security Guide',
-            'funnel': 'MOFU',
-            'priority': 'P1',
-            'cta_hook': recommend_cta_hook(usecase_slug, 'Informational'),
-            'shielded_count': len(sec_list)
-        })
-        
-    if cluster_buckets['how_to']:
-        c_kws = cluster_buckets['how_to']
-        c_leader = c_kws[0]
-        sec_list = c_leader.get('secondary_keywords', []) + [x['keyword'] for x in c_kws[1:4]]
-        cluster_pages.append({
-            'slug': f"/{usecase_slug}/thu-tuc-huong-dan/",
-            'title': f"Hướng Dẫn Thủ Tục {usecase_name}: Hồ Sơ, Quy Trình & Lưu Ý",
-            'primary_kw': c_leader['keyword'],
-            'secondary_kws': sec_list[:5],
-            'volume': sum(x['total_cluster_volume'] for x in c_kws[:5]),
-            'intent': 'Transactional',
-            'format': 'Step-by-step How-to & Action Form',
-            'funnel': 'MOFU',
-            'priority': 'P1',
-            'cta_hook': recommend_cta_hook(usecase_slug, 'Transactional'),
-            'shielded_count': len(sec_list)
-        })
-        
-    if cluster_buckets['general']:
-        c_kws = cluster_buckets['general']
-        c_leader = c_kws[0]
-        sec_list = c_leader.get('secondary_keywords', []) + [x['keyword'] for x in c_kws[1:4]]
-        cluster_pages.append({
-            'slug': f"/{usecase_slug}/kien-thuc-chuyen-sau/",
-            'title': f"Tổng Hợp Kinh Nghiệm & Giải Đáp Thắc Mắc Về {usecase_name}",
-            'primary_kw': c_leader['keyword'],
-            'secondary_kws': sec_list[:5],
-            'volume': sum(x['total_cluster_volume'] for x in c_kws[:5]),
-            'intent': 'Informational',
-            'format': 'Comprehensive Guide & FAQ',
-            'funnel': 'TOFU',
-            'priority': 'P2',
-            'cta_hook': recommend_cta_hook(usecase_slug, 'Informational'),
-            'shielded_count': len(sec_list)
-        })
-        
-    full_plan = [pillar_plan] + cluster_pages
+    full_plan = [pillar_plan] + child_pages
     stats = {
         'total_raw_keywords': len(raw_keywords) + outliers_filtered,
         'outliers_pruned': outliers_filtered,
-        'canonical_topics_count': len(canonical_topics),
-        'cannibalized_merged': len(merge_log),
+        'canonical_topics_count': len(deduped_keywords),
+        'cannibalized_merged': variants_merged_count,
+        'pruned_sub_clusters_count': len(pruned_clusters),
         'total_cluster_volume': sum(p['volume'] for p in full_plan),
         'sector': sector
     }
-    return full_plan, stats, merge_log
+    return full_plan, stats, []
+
 
 def export_content_plan_markdown(plan, stats, merge_log, usecase_slug, sector=None):
     usecase_name = usecase_slug.replace('-', ' ').replace('_', ' ').title()
