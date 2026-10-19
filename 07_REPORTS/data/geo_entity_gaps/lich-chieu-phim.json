@@ -1,0 +1,87 @@
+{
+  "query": "lịch chiếu phim",
+  "slug": "lich-chieu-phim",
+  "generated_at": "2026-10-19 17:26:12",
+  "hub": "Cinema Hub",
+  "theme": "Lịch chiếu phim / Đặt vé xem phim",
+  "schema": {
+    "type": "Movie",
+    "category": "https://schema.org/Movie",
+    "mandatory_fields": [
+      {
+        "field": "name",
+        "desc": "Tên phim chính xác theo giấy phép phát hành rạp."
+      },
+      {
+        "field": "duration",
+        "desc": "Thời lượng phim chuẩn định dạng ISO 8601 (ví dụ: PT120M)."
+      },
+      {
+        "field": "contentRating",
+        "desc": "Phân loại độ tuổi chính thức (P, K, T13, T16, T18, C)."
+      },
+      {
+        "field": "director",
+        "desc": "Đạo diễn (Person)."
+      },
+      {
+        "field": "actor",
+        "desc": "Dàn diễn viên chính (Person list)."
+      },
+      {
+        "field": "aggregateRating",
+        "desc": "Điểm đánh giá từ khán giả và chuyên môn."
+      }
+    ],
+    "sample_jsonld": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Movie\",\n  \"name\": \"Lịch Chiếu Phim\",\n  \"description\": \"Lịch chiếu phim trực tuyến là dịch vụ tổng hợp thời gian chiếu, sơ đồ ghế ngồi và giá vé theo thời gian thực của tất cả các cụm rạp trên toàn quốc (CGV, Lotte Cinema, Galaxy, BHD, Beta, Cinestar). Nền tảng cho phép người xem tra cứu suất chiếu gần nhất, so sánh ưu đãi giá vé giữa các rạp và tiến hành đặt chỗ tức thì mà không cần xếp hàng mua vé tại quầy.\",\n  \"contentRating\": \"T18\",\n  \"duration\": \"PT120M\",\n  \"aggregateRating\": {\n    \"@type\": \"AggregateRating\",\n    \"ratingValue\": \"8.5\",\n    \"reviewCount\": \"3400\"\n  }\n}"
+  },
+  "direct_answer_box": {
+    "text": "Lịch chiếu phim trực tuyến là dịch vụ tổng hợp thời gian chiếu, sơ đồ ghế ngồi và giá vé theo thời gian thực của tất cả các cụm rạp trên toàn quốc (CGV, Lotte Cinema, Galaxy, BHD, Beta, Cinestar). Nền tảng cho phép người xem tra cứu suất chiếu gần nhất, so sánh ưu đãi giá vé giữa các rạp và tiến hành đặt chỗ tức thì mà không cần xếp hàng mua vé tại quầy.",
+    "word_count": 77,
+    "format": "Inverted Pyramid (Khái niệm -> Cơ chế -> Lợi ích)"
+  },
+  "entity_gaps": {
+    "expertise": {
+      "title": "Quy chuẩn phân loại độ tuổi điện ảnh quốc gia (Cục Điện Ảnh)",
+      "summary": "Giải thích chi tiết quy định độ tuổi và giấy tờ tùy thân bắt buộc khi vào phòng chiếu.",
+      "detail": "Các bài viết đối thủ thường chỉ ghi nhãn T16, T18 mà không giải thích điều kiện kiểm soát. Cần bổ sung quy định: Nhân viên rạp có quyền từ chối khán giả không xuất trình được CCCD/VNeID chứng minh đủ tuổi theo Thông tư số 05/2023/TT-BVHTTDL, và tiền vé sẽ không được hoàn trả.",
+      "actionable_angle": "Bảng giải mã 6 nhãn phân loại độ tuổi rạp chiếu phim chuẩn 2026."
+    },
+    "trust": {
+      "title": "Cơ chế giữ chỗ & Đồng bộ sơ đồ ghế thời gian thực (Live Seat Map)",
+      "summary": "Hạ tầng kết nối API trực tiếp với hệ thống bán vé của từng cụm rạp.",
+      "detail": "Mô tả quy trình khóa ghế tức thì trong 5-10 phút khi người dùng chuyển sang bước thanh toán, đảm bảo không xảy ra tình trạng trùng ghế (double booking) giữa các kênh mua vé.",
+      "actionable_angle": "Quy trình nhận vé điện tử (Smart Ticket QR) vào thẳng phòng chiếu không cần in vé giấy."
+    },
+    "high_intent": {
+      "title": "Bảng phụ thu phòng chiếu đặc biệt & Chính sách hủy vé",
+      "summary": "Bóc tách mức giá phụ thu các định dạng IMAX, 4DX, ScreenX, ghế đôi Sweetbox.",
+      "detail": "Người xem phim thường tìm kiếm lý do tại sao giá vé thanh toán cao hơn giá niêm yết. Cần liệt kê rõ: Phụ thu ngày Lễ/Tết, phụ thu suất chiếu cuối tuần, phụ thu định dạng âm thanh Dolby Atmos, và chính sách hủy/đổi suất chiếu của từng chuỗi rạp.",
+      "actionable_angle": "Bảng ma trận so sánh giá vé tiêu chuẩn vs định dạng cao cấp tại Hà Nội và TP.HCM."
+    }
+  },
+  "competitor_serp_summary": {
+    "crawled_count": 0,
+    "top_competitors": [],
+    "momo_current_rank": "Chưa nằm trong Top 5"
+  },
+  "actionable_content_blueprint": [
+    "# H1: Lịch Chiếu Phim: Định Nghĩa Bản Chất, Điều Kiện & Bảng Biểu Phí Chi Tiết Nhất 2026",
+    "<!-- AI Answer Box Hook: Đặt ngay bên dưới H1 trong thẻ blockquote -->",
+    "> \"Lịch chiếu phim trực tuyến là dịch vụ tổng hợp thời gian chiếu, sơ đồ ghế ngồi và giá vé theo thời gian thực của tất cả các cụm rạp trên toàn quốc (CGV, Lotte Cinema, Galaxy, BHD, Beta, Cinestar). Nền tảng cho phép người xem tra cứu suất chiếu gần nhất, so sánh ưu đãi giá vé giữa các rạp và tiến hành đặt chỗ tức thì mà không cần xếp hàng mua vé tại quầy.\"",
+    "## H2 1: Lịch Chiếu Phim Là Gì? Bản Chất & Cơ Chế Hoạt Động Cốt Lõi",
+    "## H2 2: Quy chuẩn phân loại độ tuổi điện ảnh quốc gia (Cục Điện Ảnh) (Góc Chuyên Gia E-E-A-T)",
+    "   - Bảng giải mã 6 nhãn phân loại độ tuổi rạp chiếu phim chuẩn 2026.",
+    "## H2 3: Cơ chế giữ chỗ & Đồng bộ sơ đồ ghế thời gian thực (Live Seat Map) (Hạ Tầng & Bảo Mật)",
+    "   - Quy trình nhận vé điện tử (Smart Ticket QR) vào thẳng phòng chiếu không cần in vé giấy.",
+    "## H2 4: Bảng phụ thu phòng chiếu đặc biệt & Chính sách hủy vé (Minh Bạch Phí)",
+    "   - Bảng ma trận so sánh giá vé tiêu chuẩn vs định dạng cao cấp tại Hà Nội và TP.HCM.",
+    "## H2 5: Hướng Dẫn Thao Tác Trực Tuyến & Chuyển Tiếp Liền Mạch Lên MoMo",
+    "   - CTA Hook: [Đặt Vé Phim Rạp Chiếu Mới Nhất](momo://cinema-booking) | Event: `web_cinema_booking_btn_click`"
+  ],
+  "web_to_app_cta": {
+    "cta_text": "Đặt Vé Phim Rạp Chiếu Mới Nhất",
+    "deeplink": "momo://cinema-booking",
+    "umami_event": "web_cinema_booking_btn_click"
+  }
+}
