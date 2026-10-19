@@ -202,6 +202,9 @@ CROSS_DOMAIN_OUTLIERS = {
     ],
     'student': [
         'chợ tốt', 'vietnamworks', 'vietnamwork', 'topcv', 'vieclam24h', 'game', 'hack'
+    ],
+    'ota': [
+        'phào chỉ', 'phào nhôm', 'gia phả dòng họ', 'cây gia phả', 'game', 'hack'
     ]
 }
 

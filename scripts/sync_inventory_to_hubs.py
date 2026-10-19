@@ -114,6 +114,7 @@ MERGE_MAP = {
     'mua-ve-phim': 'dat-phim',
     # OTA
     'du-lich-my': 'visa-du-lich',
+    'xe-khach': 've-xe',
     # Vehicle Hub
     'bien-so': 'bien-so-xe',
     'garage-o-to': 'gara-o-to',
@@ -288,12 +289,12 @@ VIETNAMESE_THEME_NAMES = {
     'du-lich-thai-lan': 'Du Lịch Thái Lan',
     'du-lich-trung-quoc': 'Du Lịch Trung Quốc',
     'du-lich-viet-nam': 'Du Lịch Việt Nam',
-    'gia-pha': 'Cây Gia Phả Dòng Họ',
+    'gia-pha': 'Giá Vé Phà & Tuyến Phà',
     'tour-du-lich': 'Tour Du Lịch Trọn Gói',
     've-cap-treo': 'Vé Cáp Treo',
     've-may-bay': 'Vé Máy Bay Giá Rẻ',
     've-tau': 'Vé Tàu Hỏa Bắc Nam',
-    've-xe': 'Vé Xe Khách & Xe Bus',
+    've-xe': 'Vé Xe Khách',
     'visa-du-lich': 'Thủ Tục Visa Du Lịch',
     'xe-khach': 'Đặt Vé Xe Khách',
 

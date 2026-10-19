@@ -1,11 +1,11 @@
 # TỔNG QUAN TÀI NGUYÊN TỪ KHÓA & TOPIC CLUSTERS WEB PLATFORM (SSOT INVENTORY V2)
 
 Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ chống ăn thịt từ khóa (Cannibalization Shield) từ kho `05_HUBS/inventory/`.
-- **Tổng số Themes:** 162
-- **Tổng số từ khóa theo dõi:** 293,115
-- **Tổng số từ khóa trùng Intent được gom cụm (Shielded):** 138,634
-- **Tổng số từ khóa nhiễu bị loại bỏ:** 2,814
-- **Tổng dung lượng tìm kiếm thị trường:** 1,672,235,040 lượt/tháng
+- **Tổng số Themes:** 161
+- **Tổng số từ khóa theo dõi:** 292,880
+- **Tổng số từ khóa trùng Intent được gom cụm (Shielded):** 138,637
+- **Tổng số từ khóa nhiễu bị loại bỏ:** 2,830
+- **Tổng dung lượng tìm kiếm thị trường:** 1,671,908,690 lượt/tháng
 
 ---
 
@@ -19,7 +19,7 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
 | other | 5 | 18,970 | 8,813 | 15,905,250 |
 | Entertainment | 4 | 4,809 | 1,841 | 12,084,360 |
 | cinema | 5 | 5,883 | 2,707 | 7,278,550 |
-| ota | 19 | 19,155 | 9,016 | 6,824,070 |
+| ota | 18 | 18,920 | 9,019 | 6,497,720 |
 | student | 9 | 8,950 | 4,033 | 4,659,000 |
 | hospital | 4 | 9,895 | 2,514 | 4,514,230 |
 | telco | 8 | 13,872 | 7,666 | 3,680,410 |
@@ -49,11 +49,11 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
 | 15 | Chứng Khoán | Financial | 2,094 | 876 | 2,656,060 | bảng giá chứng khoán (225,490) | vcbs bảng giá |
 | 16 | Tử Vi Hàng Ngày & Trọn Đời | other | 4,455 | 2,622 | 2,642,650 | tử vi (203,140) | tử vi hàng ngày |
 | 17 | Đại Học & Trường Đại Học | student | 907 | 311 | 2,288,060 | trường đại học (67,850) | đăng ký nguyện vọng đại học |
-| 18 | Tra Cứu Phạt Nguội Toàn Quốc | vehicle-hub | 359 | 218 | 1,905,960 | tra cứu phạt nguội (863,160) | tra cứu phạt nguội |
-| 19 | SIM Số Đẹp & eSIM | telco | 3,775 | 1,840 | 1,865,710 | sim số đẹp (133,960) | định giá sim24h |
-| 20 | Trạm Xăng Gần Nhất | vehicle-hub | 505 | 165 | 1,854,410 | trạm xăng (1,002,900) | trạm xăng |
-| 21 | Vé Máy Bay Giá Rẻ | ota | 3,467 | 1,861 | 1,743,960 | vé máy bay (491,960) | tra cứu chuyến bay |
-| 22 | Trạm Sạc Xe Điện Toàn Quốc | vehicle-hub | 144 | 75 | 1,689,680 | trạm sạc vinfast (1,275,360) | trạm sạc vinfast |
-| 23 | Tra Cứu & Nộp Thuế | Financial | 3,769 | 1,145 | 1,577,270 | thuế (249,650) | cục thuế |
-| 24 | Gói Cước & Nạp Data 4G/5G | telco | 6,123 | 3,445 | 1,531,590 | gói cước 4g mobifone (51,390) | đăng ký mạng mobiphone ngày |
-| 25 | Cẩm Nang Du Lịch | ota | 451 | 82 | 1,508,210 | cẩm nang du lịch (590) | hoa lư |
+| 18 | Vé Xe Khách | ota | 4,381 | 1,425 | 2,122,420 | vé xe rẻ (42,840) | đặt vé xe phương trang |
+| 19 | Tra Cứu Phạt Nguội Toàn Quốc | vehicle-hub | 359 | 218 | 1,905,960 | tra cứu phạt nguội (863,160) | tra cứu phạt nguội |
+| 20 | SIM Số Đẹp & eSIM | telco | 3,775 | 1,840 | 1,865,710 | sim số đẹp (133,960) | định giá sim24h |
+| 21 | Trạm Xăng Gần Nhất | vehicle-hub | 505 | 165 | 1,854,410 | trạm xăng (1,002,900) | trạm xăng |
+| 22 | Vé Máy Bay Giá Rẻ | ota | 3,466 | 1,860 | 1,743,960 | vé máy bay (491,960) | tra cứu chuyến bay |
+| 23 | Trạm Sạc Xe Điện Toàn Quốc | vehicle-hub | 144 | 75 | 1,689,680 | trạm sạc vinfast (1,275,360) | trạm sạc vinfast |
+| 24 | Tra Cứu & Nộp Thuế | Financial | 3,769 | 1,145 | 1,577,270 | thuế (249,650) | cục thuế |
+| 25 | Gói Cước & Nạp Data 4G/5G | telco | 6,123 | 3,445 | 1,531,590 | gói cước 4g mobifone (51,390) | đăng ký mạng mobiphone ngày |

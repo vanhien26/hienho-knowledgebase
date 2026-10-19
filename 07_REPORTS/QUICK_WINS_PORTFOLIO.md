@@ -1,9 +1,9 @@
 # DANH MỤC TỪ KHÓA QUICK WINS TOÀN WEB PLATFORM (HIGH ROI OPPORTUNITIES)
 
-Tập hợp các từ khóa có **Search Volume cao ($\\ge 1.500$) và Mức độ Cạnh tranh Thấp (Low PPC Competition)** trên toàn bộ 162 Use Cases của Web Platform. Đây là các chủ đề ưu tiên P0 mang lại lưu lượng truy cập nhanh nhất với chi phí nội dung tối thiểu.
+Tập hợp các từ khóa có **Search Volume cao ($\\ge 1.500$) và Mức độ Cạnh tranh Thấp (Low PPC Competition)** trên toàn bộ 161 Use Cases của Web Platform. Đây là các chủ đề ưu tiên P0 mang lại lưu lượng truy cập nhanh nhất với chi phí nội dung tối thiểu.
 
-- **Tổng số từ khóa Quick Wins phát hiện:** 721 từ khóa
-- **Tổng dung lượng tìm kiếm Quick Wins:** 791,284,900 lượt/tháng
+- **Tổng số từ khóa Quick Wins phát hiện:** 717 từ khóa
+- **Tổng dung lượng tìm kiếm Quick Wins:** 791,094,200 lượt/tháng
 
 ---
 
@@ -38,7 +38,7 @@ Tập hợp các từ khóa có **Search Volume cao ($\\ge 1.500$) và Mức đ�
 | 25 | `vcbs bảng giá` | 22,200 | `Commercial` | 9.24 | Chứng Khoán | Financial | bảng giá vcbs, bảng giá ck vcbs |
 | 26 | `mua đô` | 14,800 | `Transactional` | 9.04 | Tỷ Giá Ngoại Tệ | Financial | Độc lập |
 | 27 | `mua đô` | 14,800 | `Transactional` | 9.04 | Tỷ Giá Ngoại Tệ | Financial | Độc lập |
-| 28 | `đặt vé xe phương trang` | 27,100 | `Transactional` | 8.97 | Vé Xe Khách & Xe Bus | ota | phương trang đặt vé, đặt vé phương trang |
+| 28 | `đặt vé xe phương trang` | 27,100 | `Transactional` | 8.97 | Vé Xe Khách | ota | phương trang đặt vé, đặt vé phương trang |
 | 29 | `minhngoc` | 1,830,000 | `Informational` | 8.77 | Xổ Số Kiến Thiết 3 Miền | Lottery | Độc lập |
 | 30 | `định giá sim24h` | 49,500 | `Tool/Calculator` | 8.75 | SIM Số Đẹp & eSIM | telco | sim24h định giá, định giá sim sim24h |
 | 31 | `mua bảo hiểm y tế` | 5,400 | `Transactional` | 8.75 | Bảo Hiểm Y Tế (BHYT) | insurtech | mua bhyt, bhyt mua bao nhiêu |
