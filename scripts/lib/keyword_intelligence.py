@@ -154,13 +154,19 @@ def calculate_opportunity_score(volume, cpc, competition, intent):
     return round(score, 2)
 
 def classify_quadrant(volume, competition, intent):
-    """Phân loại 4 góc phần tư: Quick Win / Strategic Pillar / Commercial Converter / Long-tail."""
+    """Phân loại 4 góc phần tư: Quick Win / Strategic Pillar / Commercial Converter / Long-tail.
+    Head terms khổng lồ (>= 300k search) hoặc Informational Head (>= 50k search) là Strategic Pillar,
+    không thể là Quick Win do độ khó SEO Organic thực tế rất cao.
+    """
     comp_val = competition.lower()
     is_high_comp = 'high' in comp_val or 'medium' in comp_val
-    if volume >= QUICK_WIN_MIN_VOLUME and not is_high_comp:
-        return 'Quick Win'
-    elif volume >= STRATEGIC_PILLAR_MIN_VOLUME and is_high_comp:
+    is_head_volume = volume >= 300000
+    is_info_head = (intent == 'Informational' and volume >= 50000)
+
+    if volume >= STRATEGIC_PILLAR_MIN_VOLUME and (is_high_comp or is_head_volume or is_info_head):
         return 'Strategic Pillar'
+    elif volume >= QUICK_WIN_MIN_VOLUME and not is_high_comp and not is_head_volume and not is_info_head:
+        return 'Quick Win'
     elif volume >= COMMERCIAL_CONVERTER_MIN_VOLUME and intent in ['Commercial', 'Tool/Calculator', 'Transactional']:
         return 'Commercial Converter'
     else:

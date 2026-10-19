@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T09:32:44+00:00",
+  "generated_at": "2026-10-19T05:22:37+00:00",
   "items": [
     {
       "id": "593304",
@@ -391,7 +391,36 @@
         "serp feature",
         "ecommerce"
       ],
-      "action": "Theo dõi tác động đến phễu thương mại; chuẩn bị dữ liệu sản phẩm/đối tác nếu MoMo mở bán hàng qua kênh AI."
+      "action": "Theo dõi tác động đến phễu thương mại; chuẩn bị dữ liệu sản phẩm/đối tác nếu MoMo mở bán hàng qua kênh AI.",
+      "insight": {
+        "status": "watch",
+        "finding": "Dữ liệu sau mốc 15/10 mới có 1/7 ngày: clicks organic toàn site tăng 6,8% tạm tính so với 1 ngày liền trước.",
+        "evidence": [
+          {
+            "label": "Clicks organic toàn site",
+            "value": "33K",
+            "delta_pct": 6.8,
+            "source": "GSC",
+            "period": "1 ngày sau vs 1 ngày trước 15/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          },
+          {
+            "label": "Impressions toàn site",
+            "value": "997.7K",
+            "delta_pct": 5.9,
+            "source": "GSC",
+            "period": "1 ngày sau vs 1 ngày trước 15/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          },
+          {
+            "label": "Vị trí trung bình (impression-weighted)",
+            "value": "6.0",
+            "delta_pct": 0.4,
+            "source": "GSC",
+            "period": "1 ngày sau vs 1 ngày trước 15/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          }
+        ],
+        "next_step": "Chạy lại kiểm tra GSC sau 22/10 khi đủ 7 ngày dữ liệu sau mốc; nếu clicks giảm ≥10% thì rà top URL theo cùng khung so sánh.",
+        "data_as_of": "2026-10-16"
+      }
     },
     {
       "id": "591521",
@@ -505,32 +534,32 @@
       "action": "",
       "insight": {
         "status": "watch",
-        "finding": "Dữ liệu sau mốc 12/10 mới có 3/7 ngày: clicks organic toàn site giảm 17,4% tạm tính so với 3 ngày liền trước.",
+        "finding": "Dữ liệu sau mốc 12/10 mới có 4/7 ngày: clicks organic toàn site giảm 13,9% tạm tính so với 4 ngày liền trước.",
         "evidence": [
           {
             "label": "Clicks organic toàn site",
-            "value": "30.8K",
-            "delta_pct": -17.4,
+            "value": "31.4K",
+            "delta_pct": -13.9,
             "source": "GSC",
-            "period": "3 ngày sau vs 3 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+            "period": "4 ngày sau vs 4 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
           },
           {
             "label": "Impressions toàn site",
-            "value": "945.6K",
-            "delta_pct": -9.0,
+            "value": "958.6K",
+            "delta_pct": -6.5,
             "source": "GSC",
-            "period": "3 ngày sau vs 3 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+            "period": "4 ngày sau vs 4 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
           },
           {
             "label": "Vị trí trung bình (impression-weighted)",
             "value": "6.0",
-            "delta_pct": 3.1,
+            "delta_pct": 2.6,
             "source": "GSC",
-            "period": "3 ngày sau vs 3 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+            "period": "4 ngày sau vs 4 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
           }
         ],
         "next_step": "Chạy lại kiểm tra GSC sau 19/10 khi đủ 7 ngày dữ liệu sau mốc; nếu clicks giảm ≥10% thì rà top URL theo cùng khung so sánh.",
-        "data_as_of": "2026-10-15"
+        "data_as_of": "2026-10-16"
       }
     },
     {
@@ -569,10 +598,10 @@
           },
           {
             "label": "Referral từ AI engines (Clarity)",
-            "value": "353",
+            "value": "676",
             "delta_pct": null,
             "source": "Clarity",
-            "period": "snapshot 2026-10-17"
+            "period": "snapshot 2026-10-18"
           }
         ],
         "next_step": "Theo dõi citations đến 19/10 khi đủ 7 ngày dữ liệu sau mốc.",
@@ -616,10 +645,10 @@
           },
           {
             "label": "Referral từ AI engines (Clarity)",
-            "value": "353",
+            "value": "676",
             "delta_pct": null,
             "source": "Clarity",
-            "period": "snapshot 2026-10-17"
+            "period": "snapshot 2026-10-18"
           }
         ],
         "next_step": "Theo dõi citations đến 18/10 khi đủ 7 ngày dữ liệu sau mốc.",
@@ -663,10 +692,10 @@
           },
           {
             "label": "Referral từ AI engines (Clarity)",
-            "value": "353",
+            "value": "676",
             "delta_pct": null,
             "source": "Clarity",
-            "period": "snapshot 2026-10-17"
+            "period": "snapshot 2026-10-18"
           }
         ],
         "next_step": "Theo dõi citations đến 18/10 khi đủ 7 ngày dữ liệu sau mốc.",
@@ -708,7 +737,7 @@
           }
         ],
         "next_step": "Không cần hành động; duy trì theo dõi index coverage định kỳ.",
-        "data_as_of": "2026-10-15"
+        "data_as_of": "2026-10-16"
       }
     },
     {
@@ -753,7 +782,7 @@
           }
         ],
         "next_step": "Không cần hành động ngay; duy trì theo dõi GSC định kỳ.",
-        "data_as_of": "2026-10-15"
+        "data_as_of": "2026-10-16"
       }
     },
     {
@@ -791,7 +820,7 @@
           }
         ],
         "next_step": "Không cần hành động; duy trì theo dõi index coverage định kỳ.",
-        "data_as_of": "2026-10-15"
+        "data_as_of": "2026-10-16"
       }
     },
     {
@@ -881,7 +910,7 @@
           }
         ],
         "next_step": "Không cần hành động ngay; duy trì theo dõi GSC định kỳ.",
-        "data_as_of": "2026-10-15"
+        "data_as_of": "2026-10-16"
       }
     }
   ]

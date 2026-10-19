@@ -2779,23 +2779,23 @@
       "theme_id": "doi-pin",
       "name": "Trạm Đổi Pin Xe Điện",
       "sector": "vehicle-hub",
-      "pillar": "trạm đổi pin xmđ vinfast",
+      "pillar": "trạm đổi pin vinfast",
       "volume": 36310,
       "monthly": [
+        22,
         0,
+        100,
+        54,
+        61,
+        27,
+        43,
+        55,
+        30,
+        31,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        7
       ],
-      "insufficient_data": true
+      "insufficient_data": false
     },
     {
       "theme_id": "Data-3g",
@@ -3615,23 +3615,23 @@
       "theme_id": "von-luu-dong",
       "name": "Vốn Lưu Động",
       "sector": "Financial",
-      "pillar": "vốn lưu động là gi",
+      "pillar": "vốn lưu động",
       "volume": 10640,
       "monthly": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        51,
+        52,
+        100,
+        95,
+        91,
+        74,
+        59,
+        55,
+        73,
+        91,
+        90,
+        85
       ],
-      "insufficient_data": true
+      "insufficient_data": false
     },
     {
       "theme_id": "mua-ve-phim",
