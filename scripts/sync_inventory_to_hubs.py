@@ -1166,8 +1166,23 @@ def main():
         
     print(f"\nTổng kết: {len(all_usecases)} themes | {total_kws_all:,} từ khóa sạch | {total_cannibalized_all:,} từ khóa được gom chống ăn thịt | {total_outliers_all:,} từ khóa nhiễu bị chặn.")
     
-    # 0. Làm giàu dữ liệu: Tính toán Mạng lưới Liên kết nội bộ (Silo Topology) & GEO Direct Answers
-    print("Đang tính toán mạng lưới liên kết nội bộ (Internal Linking Topology) & GEO Direct Answers...")
+    # 0. Làm giàu dữ liệu: Tính toán Mạng lưới Liên kết nội bộ (Silo Topology), GEO Direct Answers & Mùa vụ SSOT
+    print("Đang tính toán mạng lưới liên kết nội bộ (Internal Linking Topology), GEO Direct Answers & Mùa vụ SSOT...")
+    
+    # Nạp dữ liệu Mùa vụ SSOT (5-year Google Trends)
+    seasonality_path = os.path.join(BASE_DIR, "07_REPORTS", "data", "theme_seasonality.json")
+    seasonality_lookup = {}
+    if os.path.exists(seasonality_path):
+        try:
+            with open(seasonality_path, 'r', encoding='utf-8') as sf:
+                sdata = json.load(sf)
+                for st in sdata.get('themes', []):
+                    if 'theme_id' in st and 'monthly' in st:
+                        seasonality_lookup[st['theme_id']] = st['monthly']
+            print(f"Đã nạp {len(seasonality_lookup)} theme seasonality curves từ SSOT.")
+        except Exception as se:
+            print(f"Cảnh báo nạp seasonality: {se}")
+
     for uc in all_usecases:
         # A. Internal Linking Matrix
         silo = InternalLinkingTopologyEngine.build_silo_matrix(uc, all_usecases)
@@ -1177,9 +1192,12 @@ def main():
         p_kw = uc['pillar_keyword']['keyword']
         p_intent = uc['pillar_keyword']['intent']
         uc['geo_optimization'] = {
-            'direct_answer_snippet': GEODirectAnswerGenerator.generate_direct_answer_snippet(uc['name'], p_kw, p_intent, uc['sector']),
-            'entity_facts': GEODirectAnswerGenerator.generate_entity_factsheet(uc['name'], uc['sector'], p_intent)
+            'direct_answer_snippet': GEODirectAnswerGenerator.generate_direct_answer_snippet(uc['name'], p_kw, p_intent, uc['sector'], usecase_slug=uc['id']),
+            'entity_facts': GEODirectAnswerGenerator.generate_entity_factsheet(uc['name'], uc['sector'], p_intent, usecase_slug=uc['id'])
         }
+        
+        # C. 5-Year Google Trends Seasonality Curve
+        uc['seasonality'] = seasonality_lookup.get(uc['id'])
 
     # 1. Đóng gói Snapshot Master & SSOT Local
     data_payload = {
