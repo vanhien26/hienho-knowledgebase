@@ -400,33 +400,56 @@ SECTOR_SPECIFIC_RULES = {
         ('Cụm rạp & Đặt vé', ['rạp', 'cgv', 'lotte', 'bhd', 'galaxy', 'cinestar', 'đặt vé', 'dat ve', 'đặt phim', 'mua vé']),
         ('Review & Đánh giá phim', ['review', 'đánh giá', 'danh gia', 'nội dung', 'diễn viên', 'trailer', 'phim hay', 'top phim']),
     ],
-    'Entertainment': [
-        ('Nạp thẻ & Nạp game', ['nạp', 'nap', 'thẻ', 'the', 'chiết khấu', 'chiet khau', 'garena', 'zing', 'vcoin', 'xu', 'tiktok', 'mua thẻ']),
-        ('Tựa game & Sự kiện', ['game', 'liên quân', 'free fire', 'pubg', 'tốc chiến', 'sự kiện', 'giftcode', 'code']),
-        ('Tài khoản & Nhà phát hành', ['tài khoản', 'tai khoan', 'đăng ký', 'nhà phát hành', 'nph', 'vng', 'garena', 'vtc']),
-    ],
-    'hospital': [
-        ('Đặt khám & Bác sĩ', ['đặt khám', 'dat kham', 'bác sĩ', 'bac si', 'bệnh viện', 'benh vien', 'phòng khám', 'chuyên khoa']),
-        ('Chỉ số & Sức khỏe', ['bmi', 'calo', 'cân nặng', 'chiều cao', 'dinh dưỡng', 'sức khỏe']),
-    ],
-    'ota': [
-        ('Đặt phòng & Resort', ['khách sạn', 'khach san', 'resort', 'homestay', 'đặt phòng', 'dat phong', 'villa']),
-        ('Vé máy bay & Di chuyển', ['vé máy bay', 've may bay', 'chuyến bay', 'vé tàu', 'vé xe', 'xe khách', 'cáp treo']),
-        ('Tour & Điểm đến', ['tour', 'du lịch', 'du lich', 'hành trình', 'lịch trình', 'visa', 'điểm đến']),
-    ],
-    'telco': [
-        ('Gói cước & Data 4G/5G', ['data', '4g', '5g', '3g', 'gói cước', 'goi cuoc', 'nạp data', 'dung lượng']),
-        ('SIM & Tài khoản', ['sim', 'sim số', 'chính chủ', 'esim', 'tài khoản điện thoại', 'nạp thẻ']),
-    ],
-    'student': [
-        ('Tuyển sinh & Xét tuyển', ['tuyển sinh', 'xét tuyển', 'điểm chuẩn', 'thi tốt nghiệp', 'thi thpt', 'nguyện vọng', 'học bạ', 'tổ hợp môn']),
-        ('Trường & Ngành học', ['trường', 'đại học', 'cao đẳng', 'trung cấp', 'học viện', 'ngành học', 'chuyên ngành', 'mã trường']),
-        ('Học phí & Học bổng', ['học phí', 'học bổng', 'miễn giảm', 'lệ phí', 'tín chỉ']),
-        ('Nhà trọ & Ký túc xá', ['nhà trọ', 'phòng trọ', 'ký túc xá', 'thuê trọ', 'tìm trọ', 'chỗ ở']),
-        ('Sinh viên & Cổng thông tin', ['sinh viên', 'cổng thông tin', 'đăng nhập', 'tài khoản', 'email', 'thẻ sinh viên']),
-        ('Việc làm & Kỹ năng', ['việc làm', 'part-time', 'bán thời gian', 'thực tập', 'tuyển dụng', 'kỹ năng']),
-    ]
 }
+
+# Per-use-case rules (overrides SECTOR_SPECIFIC_RULES when slug matches)
+USECASE_SPECIFIC_RULES = {
+    've-xem-phim': [
+        ('Giá Vé & Khuyến Mãi Đặt Vé', ['giá vé', 'gia ve', 'vé rẻ', 've re', 'khuyến mãi', 'khuyen mai', 'ưu đãi', 'voucher', 'combo', 'giảm giá', 'momo']),
+        ('Mua Vé Tại Rạp & App', ['mua vé', 'mua ve', 'đặt vé', 'dat ve', 'đặt phim', 'cgv', 'lotte', 'bhd', 'galaxy', 'cinestar', 'rạp']),
+        ('Cẩm Nang Mua Vé Phim', ['cách mua', 'hướng dẫn', 'kinh nghiệm', 'lưu ý', 'chọn ghế', 'đổi vé', 'hoàn vé']),
+        ('Review Phim & Bom Tấn', ['review', 'đánh giá', 'trailer', 'phim hay', 'top phim', 'bom tấn', 'phim chiếu rạp']),
+    ],
+    'lich-phim': [
+        ('Lịch Chiếu Hôm Nay & Tuần Này', ['lịch chiếu', 'lich chieu', 'hôm nay', 'tuần này', 'cuối tuần', 'suất chiếu', 'giờ chiếu', 'phim đang chiếu']),
+        ('Lịch Phim Theo Rạp CGV / Lotte / BHD', ['cgv', 'lotte', 'bhd', 'galaxy', 'cinestar', 'rạp', 'rạp chiếu phim']),
+        ('Tra Cứu Phim & Tìm Suất Phù Hợp', ['tìm phim', 'tra cứu', 'thể loại', 'phim mới', 'phim sắp chiếu', 'lịch phim tuần tới']),
+        ('Đặt Vé Sau Khi Tra Lịch', ['đặt vé', 'mua vé', 'giá vé', 'chọn ghế', 'combo', 'khuyến mãi']),
+    ],
+    'rap': [
+        ('Hệ Thống Rạp CGV Việt Nam', ['cgv', 'cgv hà nội', 'cgv tp hcm', 'cgv vincom', 'cgv aeon', 'cgv quận']),
+        ('Rạp Lotte Cinema & BHD Galaxy', ['lotte', 'lotte cinema', 'bhd', 'bhd star', 'galaxy cinema']),
+        ('Giá Vé & Dịch Vụ Tại Rạp', ['giá vé', 'gia ve', 'vé rẻ', 'bắp rang', 'nước', 'combo', 'dịch vụ', 'ghế vip', 'phòng chiếu']),
+        ('Đặt Vé Cụm Rạp Online', ['đặt vé', 'mua vé online', 'momo', 'app', 'website', 'đặt qua app', 'đặt trực tuyến']),
+    ],
+}
+
+SECTOR_SPECIFIC_RULES['Entertainment'] = [
+    ('Nạp thẻ & Nạp game', ['nạp', 'nap', 'thẻ', 'the', 'chiết khấu', 'chiet khau', 'garena', 'zing', 'vcoin', 'xu', 'tiktok', 'mua thẻ']),
+    ('Tựa game & Sự kiện', ['game', 'liên quân', 'free fire', 'pubg', 'tốc chiến', 'sự kiện', 'giftcode', 'code']),
+    ('Tài khoản & Nhà phát hành', ['tài khoản', 'tai khoan', 'đăng ký', 'nhà phát hành', 'nph', 'vng', 'garena', 'vtc']),
+]
+SECTOR_SPECIFIC_RULES['hospital'] = [
+    ('Đặt khám & Bác sĩ', ['đặt khám', 'dat kham', 'bác sĩ', 'bac si', 'bệnh viện', 'benh vien', 'phòng khám', 'chuyên khoa']),
+    ('Chỉ số & Sức khỏe', ['bmi', 'calo', 'cân nặng', 'chiều cao', 'dinh dưỡng', 'sức khỏe']),
+]
+SECTOR_SPECIFIC_RULES['ota'] = [
+    ('Đặt phòng & Resort', ['khách sạn', 'khach san', 'resort', 'homestay', 'đặt phòng', 'dat phong', 'villa']),
+    ('Vé máy bay & Di chuyển', ['vé máy bay', 've may bay', 'chuyến bay', 'vé tàu', 'vé xe', 'xe khách', 'cáp treo']),
+    ('Tour & Điểm đến', ['tour', 'du lịch', 'du lich', 'hành trình', 'lịch trình', 'visa', 'điểm đến']),
+]
+SECTOR_SPECIFIC_RULES['telco'] = [
+    ('Gói cước & Data 4G/5G', ['data', '4g', '5g', '3g', 'gói cước', 'goi cuoc', 'nạp data', 'dung lượng']),
+    ('SIM & Tài khoản', ['sim', 'sim số', 'chính chủ', 'esim', 'tài khoản điện thoại', 'nạp thẻ']),
+]
+SECTOR_SPECIFIC_RULES['student'] = [
+    ('Tuyển sinh & Xét tuyển', ['tuyển sinh', 'xét tuyển', 'điểm chuẩn', 'thi tốt nghiệp', 'thi thpt', 'nguyện vọng', 'học bạ', 'tổ hợp môn']),
+    ('Trường & Ngành học', ['trường', 'đại học', 'cao đẳng', 'trung cấp', 'học viện', 'ngành học', 'chuyên ngành', 'mã trường']),
+    ('Học phí & Học bổng', ['học phí', 'học bổng', 'miễn giảm', 'lệ phí', 'tín chỉ']),
+    ('Nhà trọ & Ký túc xá', ['nhà trọ', 'phòng trọ', 'ký túc xá', 'thuê trọ', 'tìm trọ', 'chỗ ở']),
+    ('Sinh viên & Cổng thông tin', ['sinh viên', 'cổng thông tin', 'đăng nhập', 'tài khoản', 'email', 'thẻ sinh viên']),
+    ('Việc làm & Kỹ năng', ['việc làm', 'part-time', 'bán thời gian', 'thực tập', 'tuyển dụng', 'kỹ năng']),
+]
 
 # Đầu ra dữ liệu
 LOCAL_DATA_DIR = os.path.join(BASE_DIR, "07_REPORTS", "data")
@@ -683,12 +706,12 @@ def select_pillar_keyword(canonical_clusters, usecase_slug, usecase_name, raw_ke
     return best_item
 
 
-def build_adaptive_clusters(canonical_clusters, sector=None, top_n_clusters=5):
+def build_adaptive_clusters(canonical_clusters, sector=None, usecase_slug=None, top_n_clusters=5):
     """
-    Gom cụm các Canonical Leaders theo các nhóm thực thể chủ đạo chuẩn ngữ nghĩa phân tách theo Sector
+    Gom cụm các Canonical Leaders theo các nhóm thực thể chủ đạo chuẩn ngữ nghĩa phân tách theo Use Case hoặc Sector
     """
     clusters = defaultdict(list)
-    rules = SECTOR_SPECIFIC_RULES.get(sector, [])
+    rules = USECASE_SPECIFIC_RULES.get(usecase_slug) or SECTOR_SPECIFIC_RULES.get(sector, [])
 
     for item in canonical_clusters:
         kw = item['keyword'].lower()
@@ -803,7 +826,7 @@ def process_csv_paths(csv_paths, sector, canonical_slug):
     # Pillar = từ khóa đại diện chính Use Case (không phải sub-query volume lớn nhất)
     pillar_item = select_pillar_keyword(canonical_clusters, usecase_slug, usecase_name, raw_keywords)
 
-    sub_clusters = build_adaptive_clusters(canonical_clusters, sector=sector)
+    sub_clusters = build_adaptive_clusters(canonical_clusters, sector=sector, usecase_slug=usecase_slug)
 
     # 4. Domain SERP Cannibalization Shield
     shield_eval = MoMoDomainSERPShield.evaluate_cannibalization_risk(pillar_item['keyword'], sector=sector, check_live_serp=False)

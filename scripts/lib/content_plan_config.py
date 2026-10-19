@@ -186,7 +186,26 @@ SUB_CLUSTER_RULES = {
         ('Nạp Tiền VinaPhone & Thẻ Vina', ['vina', 'vinaphone', 'thẻ vina', 'nạp thẻ vina', 'cào vina', 'card vina'], 'nap-the-vinaphone'),
         ('Cú Pháp Nạp Tiền & Hướng Dẫn', ['cú pháp', 'cách nạp', 'hướng dẫn', 'nạp cho người khác', 'bắn tiền', 'chuyển tiền điện thoại'], 'cu-phap-huong-dan-nap'),
         ('Chiết Khấu & Khuyến Mãi Nạp Tiền', ['chiết khấu', 'khuyến mãi', '20%', '50%', 'ngày vàng', 'hoàn tiền'], 'chiet-khau-khuyen-mai'),
-    ]
+    ],
+    # Cinema: per-use-case rules để tránh overlap tên sub-cluster
+    've-xem-phim': [
+        ('Giá Vé & Khuyến Mãi Đặt Vé', ['giá vé', 'gia ve', 'vé rẻ', 've re', 'khuyến mãi', 'khuyen mai', 'ưu đãi', 'voucher', 'combo', 'giảm giá', 'momo'], 'gia-ve-uu-dai'),
+        ('Mua Vé Tại Rạp & App', ['mua vé', 'mua ve', 'đặt vé', 'dat ve', 'đặt phim', 'cgv', 'lotte', 'bhd', 'galaxy', 'cinestar', 'rạp'], 'mua-ve-tai-rap'),
+        ('Cẩm Nang Mua Vé Phim', ['cách mua', 'hướng dẫn', 'kinh nghiệm', 'lưu ý', 'chọn ghế', 'đổi vé', 'hoàn vé'], 'cam-nang-mua-ve'),
+        ('Review Phim & Bom Tấn', ['review', 'đánh giá', 'trailer', 'phim hay', 'top phim', 'bom tấn', 'phim chiếu rạp'], 'review-phim'),
+    ],
+    'lich-phim': [
+        ('Lịch Chiếu Hôm Nay & Tuần Này', ['lịch chiếu', 'lich chieu', 'hôm nay', 'tuần này', 'cuối tuần', 'suất chiếu', 'giờ chiếu', 'phim đang chiếu'], 'lich-chieu-hom-nay'),
+        ('Lịch Phim Theo Rạp CGV / Lotte / BHD', ['cgv', 'lotte', 'bhd', 'galaxy', 'cinestar', 'rạp', 'rap', 'rạp chiếu phim'], 'lich-phim-theo-rap'),
+        ('Tra Cứu Phim & Tìm Suất Phù Hợp', ['tìm phim', 'tra cứu', 'thể loại', 'phim mới', 'phim sắp chiếu', 'lịch phim tuần tới'], 'tra-cuu-phim'),
+        ('Đặt Vé Sau Khi Tra Lịch', ['đặt vé', 'mua vé', 'giá vé', 'chọn ghế', 'combo', 'khuyến mãi'], 'dat-ve-tu-lich'),
+    ],
+    'rap': [
+        ('Hệ Thống Rạp CGV Việt Nam', ['cgv', 'cgv hà nội', 'cgv tp hcm', 'cgv vincom', 'cgv aeon', 'cgv quận'], 'he-thong-cgv'),
+        ('Rạp Lotte Cinema & BHD', ['lotte', 'lotte cinema', 'bhd', 'bhd star', 'galaxy cinema'], 'rap-lotte-bhd-galaxy'),
+        ('Giá Vé & Dịch Vụ Tại Rạp', ['giá vé', 'gia ve', 'vé rẻ', 'bắp rang', 'nước', 'combo', 'dịch vụ', 'ghế vip', 'phòng chiếu'], 'gia-ve-dich-vu-rap'),
+        ('Đặt Vé Cụm Rạp Online', ['đặt vé', 'mua vé online', 'momo', 'app', 'website', 'đặt qua app', 'đặt trực tuyến'], 'dat-ve-cum-rap-online'),
+    ],
 }
 
 SECTOR_RULES = {
