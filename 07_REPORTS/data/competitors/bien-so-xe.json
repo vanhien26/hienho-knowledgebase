@@ -1,0 +1,42 @@
+{
+  "query": "biển đăng ký xe",
+  "usecase_id": "bien-so-xe",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "thuvienphapluat.vn",
+      "name": "Thư Viện Pháp Luật",
+      "real_url": "https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/thoi-su-phap-luat/chinh-sach-moi/34298/tra-cuu-bien-so-xe-cac-tinh-thanh-pho",
+      "current_rank": 1,
+      "page_title": "Bảng Tra Cứu Biển Số Xe 63 Tỉnh Thành Mới Nhất - Thư Viện Pháp Luật",
+      "actual_word_count": 1950,
+      "format_detected": "Bảng tra cứu biển số xe"
+    },
+    "other_competitors": [
+      {
+        "domain": "csgt.vn",
+        "rank": 2
+      },
+      {
+        "domain": "luatvietnam.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Bảng tra cứu biển số xe",
+    "recommended_target_words": 1700,
+    "gaps_detected": [
+      "Nhiều bài viết chưa cập nhật quy định cấp biển số định danh theo Thông tư 24 của Bộ Công an.",
+      "Thiếu công cụ tra cứu biển số xe phong thủy hợp tuổi hợp mệnh."
+    ],
+    "beating_outline": [
+      "## 1. Bảng tra cứu ký hiệu biển số xe các tỉnh thành phố trên cả nước mới nhất",
+      "## 2. Quy định về biển số xe định danh: Người dân cần nắm rõ những gì?",
+      "## 3. Thủ tục đăng ký, bấm biển số xe máy và ô tô mới tại công an cấp xã",
+      "## 4. Quy định thu hồi biển số và chuyển nhượng xe khi bán phương tiện",
+      "## 5. FAQs - Biển số xe định danh có được giữ lại khi bán xe không?",
+      "## 6. Quản lý giấy tờ xe điện tử & Nhắc hạn đăng kiểm tự động trên MoMo"
+    ]
+  }
+}

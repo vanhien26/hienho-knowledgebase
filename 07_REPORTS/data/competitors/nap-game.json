@@ -1,0 +1,42 @@
+{
+  "query": "nạp thẻ garena",
+  "usecase_id": "nap-game",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "napthe.vn",
+      "name": "Cổng Nạp Thẻ Garena Napthe.vn",
+      "real_url": "https://napthe.vn/",
+      "current_rank": 1,
+      "page_title": "Trung Tâm Nạp Thẻ Chính Thức Của Garena Việt Nam - Napthe.vn",
+      "actual_word_count": 650,
+      "format_detected": "Interactive Payment Portal"
+    },
+    "other_competitors": [
+      {
+        "domain": "garena.vn",
+        "rank": 2
+      },
+      {
+        "domain": "thegioididong.com",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Interactive Payment Portal",
+    "recommended_target_words": 1400,
+    "gaps_detected": [
+      "Khách hàng mua thẻ cào vật lý dễ bị lừa đảo mua phải mã thẻ đã qua sử dụng.",
+      "Tỷ lệ chiết khấu trực tiếp trên web chính thức thấp, ít sự kiện tặng thêm sò."
+    ],
+    "beating_outline": [
+      "## 1. Bảng quy đổi sò và kim cương khi nạp thẻ Garena mới nhất",
+      "## 2. Hướng dẫn nạp Quân Huy Liên Quân Mobile & Kim Cương Free Fire an toàn",
+      "## 3. Cách nạp FC FIFA Online 4 nhận khuyến mãi nạp đầu hấp dẫn",
+      "## 4. Cảnh báo các chiêu trò lừa đảo nạp thẻ game giá rẻ trên mạng",
+      "## 5. FAQs - Làm thế nào khi nạp thẻ Garena bị lỗi hoặc chưa nhận được sò?",
+      "## 6. Nạp thẻ Garena & Thẻ game chiết khấu cao tức thì trên MoMo"
+    ]
+  }
+}

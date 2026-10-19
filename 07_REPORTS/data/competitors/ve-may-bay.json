@@ -1,0 +1,47 @@
+{
+  "query": "vé máy bay",
+  "usecase_id": "ve-may-bay",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "traveloka.com",
+      "name": "Traveloka",
+      "real_url": "https://www.traveloka.com/vi-vn/flight",
+      "current_rank": 1,
+      "page_title": "Vé máy bay giá rẻ 2026 - Săn & mua vé ưu đãi Traveloka",
+      "actual_word_count": 3100,
+      "format_detected": "Interactive Booking Engine / Search Aggregator"
+    },
+    "other_competitors": [
+      {
+        "domain": "abay.vn",
+        "rank": 2
+      },
+      {
+        "domain": "vietnamairlines.com",
+        "rank": 3
+      },
+      {
+        "domain": "vietjetair.com",
+        "rank": 4
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Interactive Booking Engine / Search Aggregator",
+    "recommended_target_words": 2000,
+    "gaps_detected": [
+      "Giá hiển thị ban đầu thường chưa bao gồm đủ thuế phí sân bay và phụ phí hành lý.",
+      "Thiếu tính năng theo dõi biến động giá vé theo tháng để bắt đáy vé rẻ.",
+      "Chính sách đổi trả vé máy bay phức tạp và thời gian hoàn tiền kéo dài."
+    ],
+    "beating_outline": [
+      "## 1. Bảng giá vé máy bay nội địa & quốc tế giá rẻ hôm nay",
+      "## 2. So sánh giá vé máy bay các hãng: Vietnam Airlines, Vietjet Air, Bamboo",
+      "## 3. Mẹo săn vé máy bay 0 đồng và khung giờ vàng đặt vé giá tốt",
+      "## 4. Quy định hành lý xách tay, hành lý ký gửi và thủ tục check-in sân bay",
+      "## 5. FAQs - Hướng dẫn đổi ngày bay, hoàn vé và xử lý delay chuyến bay",
+      "## 6. Đặt vé máy bay MoMo Travel - Giữ chỗ tức thì, trả sau linh hoạt"
+    ]
+  }
+}

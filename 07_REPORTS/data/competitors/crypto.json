@@ -1,0 +1,42 @@
+{
+  "query": "crypto",
+  "usecase_id": "crypto",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "coin98.net",
+      "name": "Coin98 Insights",
+      "real_url": "https://coin98.net/",
+      "current_rank": 1,
+      "page_title": "Cổng Thông Tin Kiến Thức Crypto, DeFi & Web3 Hàng Đầu VN",
+      "actual_word_count": 2700,
+      "format_detected": "Cẩm nang kiến thức Crypto"
+    },
+    "other_competitors": [
+      {
+        "domain": "binance.com",
+        "rank": 2
+      },
+      {
+        "domain": "remitano.com",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Cẩm nang kiến thức Crypto",
+    "recommended_target_words": 2200,
+    "gaps_detected": [
+      "Kiến thức kỹ thuật Blockchain phức tạp, thiếu giải thích dễ hiểu cho người mới bắt đầu.",
+      "Rủi ro lừa đảo từ các dự án đa cấp trá hình tiền ảo chưa được cảnh báo rõ ràng."
+    ],
+    "beating_outline": [
+      "## 1. Tiền điện tử (Crypto) là gì? Khái niệm cơ bản về công nghệ Blockchain",
+      "## 2. Phân biệt Bitcoin, Ethereum và các loại Altcoin phổ biến",
+      "## 3. Hướng dẫn cách tạo và bảo mật ví lưu trữ tiền mã hóa cá nhân",
+      "## 4. Các rủi ro biến động giá và cách phòng tránh lừa đảo trong thị trường Crypto",
+      "## 5. FAQs - Tiền điện tử đã được pháp luật Việt Nam công nhận và bảo hộ chưa?",
+      "## 6. Quản lý tài chính cá nhân & Đầu tư tích lũy an toàn cùng MoMo"
+    ]
+  }
+}

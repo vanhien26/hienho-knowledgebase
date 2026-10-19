@@ -1,0 +1,42 @@
+{
+  "query": "ace game",
+  "usecase_id": "nph-game",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "vnggames.com",
+      "name": "VNG Games",
+      "real_url": "https://vnggames.com/",
+      "current_rank": 1,
+      "page_title": "Nhà Phát Hành Game Hàng Đầu Việt Nam - VNGGames",
+      "actual_word_count": 900,
+      "format_detected": "Cổng phát hành game"
+    },
+    "other_competitors": [
+      {
+        "domain": "garena.vn",
+        "rank": 2
+      },
+      {
+        "domain": "vtcgame.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Cổng phát hành game",
+    "recommended_target_words": 1400,
+    "gaps_detected": [
+      "Cổng nạp game thường xuyên thay đổi kênh nạp khiến game thủ khó nắm bắt ưu đãi.",
+      "Thiếu tích hợp thanh toán một chạm trực tiếp từ ví điện tử."
+    ],
+    "beating_outline": [
+      "## 1. Danh sách các tựa game mobile hot nhất của các nhà phát hành tại VN",
+      "## 2. Hướng dẫn nạp game chính thức an toàn tránh bị khóa tài khoản",
+      "## 3. Tổng hợp giftcode tân thủ và sự kiện nhận quà game độc quyền",
+      "## 4. Cách bảo mật tài khoản game và liên kết email xác thực 2 bước",
+      "## 5. FAQs - Làm gì khi nạp game thành công nhưng không thấy vật phẩm?",
+      "## 6. Nạp game trên MoMo - Tự động liên kết tài khoản, ưu đãi hoàn tiền"
+    ]
+  }
+}

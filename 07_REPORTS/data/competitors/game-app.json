@@ -1,0 +1,42 @@
+{
+  "query": "game đế chế",
+  "usecase_id": "game-app",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "thegioididong.com",
+      "name": "Thế Giới Di Động",
+      "real_url": "https://www.thegioididong.com/game-app",
+      "current_rank": 1,
+      "page_title": "Kho Game & Ứng Dụng Di Động Miễn Phí Hay Nhất - TGDĐ",
+      "actual_word_count": 1800,
+      "format_detected": "Game Review & Tải game"
+    },
+    "other_competitors": [
+      {
+        "domain": "cellphones.com.vn",
+        "rank": 2
+      },
+      {
+        "domain": "fptshop.com.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Game Review & Hướng dẫn tải",
+    "recommended_target_words": 1600,
+    "gaps_detected": [
+      "Nhiều link tải game trên các diễn đàn chứa mã độc hoặc quảng cáo độc hại.",
+      "Thiếu hướng dẫn cài đặt trên các phiên bản Windows và điện thoại đời mới."
+    ],
+    "beating_outline": [
+      "## 1. Tổng quan tựa game Đế Chế (Age of Empires) huyền thoại",
+      "## 2. Hướng dẫn tải và cài đặt game Đế Chế chuẩn an toàn không virus",
+      "## 3. Tổng hợp các lệnh Đế Chế cơ bản và mẹo xin tài nguyên nhanh",
+      "## 4. Chiến thuật đánh đời 3, ép đời sớm và điều quân đỉnh cao cho game thủ",
+      "## 5. FAQs - Cách khắc phục lỗi không chơi được Đế Chế trên Windows 11",
+      "## 6. Thanh toán gói game & Nhận voucher nạp thẻ game siêu rẻ cùng MoMo"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "query": "trạm sạc vinfast",
+  "usecase_id": "tram-sac",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "vinfastauto.com",
+      "name": "VinFast Auto",
+      "real_url": "https://vinfastauto.com/vn_vi/tram-sac",
+      "current_rank": 1,
+      "page_title": "Bản Đồ Hệ Thống Trạm Sạc Xe Điện VinFast Toàn Quốc",
+      "actual_word_count": 1300,
+      "format_detected": "Interactive Map / Tool"
+    },
+    "other_competitors": [
+      {
+        "domain": "oto.com.vn",
+        "rank": 2
+      },
+      {
+        "domain": "tinxe.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Interactive Map / Tool",
+    "recommended_target_words": 1600,
+    "gaps_detected": [
+      "Người dùng không thể xem trước số lượng trụ sạc đang trống theo thời gian thực trên web.",
+      "Chưa có tính năng đặt trước chỗ sạc xe vào giờ cao điểm."
+    ],
+    "beating_outline": [
+      "## 1. Bản đồ tra cứu trạm sạc xe điện VinFast trên toàn quốc mới nhất",
+      "## 2. Biểu phí sạc pin ô tô điện, xe máy điện và phí đỗ xe quá giờ",
+      "## 3. Các loại trụ sạc VinFast: Sạc thường, Sạc nhanh và Trụ siêu nhanh",
+      "## 4. Hướng dẫn các bước cắm sạc pin và thanh toán tiền sạc xe điện",
+      "## 5. FAQs - Xe máy điện hãng khác có sạc được ở trạm VinFast không?",
+      "## 6. Thanh toán phí sạc pin xe điện tiện lợi trực tiếp trên Ví MoMo"
+    ]
+  }
+}

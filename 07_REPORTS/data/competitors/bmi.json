@@ -1,0 +1,42 @@
+{
+  "query": "tính bmi",
+  "usecase_id": "bmi",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "vinmec.com",
+      "name": "Bệnh viện Đa khoa Quốc tế Vinmec",
+      "real_url": "https://www.vinmec.com/vi/tin-tuc/thong-tin-suc-khoe/cach-tinh-chi-so-bmi-cho-nguoi-chau/",
+      "current_rank": 1,
+      "page_title": "Cách Tính Chỉ Số Khối Cơ Thể BMI Chuẩn Cho Người Châu Á - Vinmec",
+      "actual_word_count": 1450,
+      "format_detected": "Interactive Tool / Calculator"
+    },
+    "other_competitors": [
+      {
+        "domain": "medlatec.vn",
+        "rank": 2
+      },
+      {
+        "domain": "suckhoedoisong.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Interactive Tool / Calculator",
+    "recommended_target_words": 1500,
+    "gaps_detected": [
+      "Nhiều website chỉ có công thức toán học thô, thiếu widget nhập chiều cao cân nặng tính ngay.",
+      "Thiếu thực đơn ăn uống và lộ trình tập luyện cá nhân hóa sau khi trả kết quả BMI."
+    ],
+    "beating_outline": [
+      "## 1. Công cụ tính chỉ số BMI online chuẩn Tổ chức Y tế Thế giới (WHO)",
+      "## 2. Bảng phân loại chỉ số BMI cho người trưởng thành Châu Á (IDI & WPRO)",
+      "## 3. Chỉ số BMI bao nhiêu là chuẩn đẹp và khỏe mạnh?",
+      "## 4. Các nguy cơ sức khỏe khi chỉ số BMI vượt ngưỡng béo phì hoặc gầy",
+      "## 5. FAQs - Cách tính cân nặng lý tưởng dựa trên chiều cao thực tế",
+      "## 6. Mua gói bảo hiểm sức khỏe & Chăm sóc y tế chủ động cùng MoMo"
+    ]
+  }
+}

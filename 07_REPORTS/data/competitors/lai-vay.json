@@ -1,0 +1,42 @@
+{
+  "query": "lãi suất ngân hàng agribank",
+  "usecase_id": "lai-vay",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "agribank.com.vn",
+      "name": "Ngân hàng Nông nghiệp Agribank",
+      "real_url": "https://www.agribank.com.vn/vn/lai-suat",
+      "current_rank": 1,
+      "page_title": "Bảng Lãi Suất Cho Vay Vốn & Tiền Gửi Mới Nhất - Agribank",
+      "actual_word_count": 1300,
+      "format_detected": "Bảng lãi suất vay vốn"
+    },
+    "other_competitors": [
+      {
+        "domain": "vietcombank.com.vn",
+        "rank": 2
+      },
+      {
+        "domain": "bidv.com.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Bảng lãi suất vay vốn",
+    "recommended_target_words": 1600,
+    "gaps_detected": [
+      "Bảng lãi suất vay chỉ nêu lãi ưu đãi năm đầu, không nêu rõ biên độ thả nổi các năm sau.",
+      "Thiếu bảng tính lịch trả nợ chi tiết từng kỳ để khách hàng cân đối tài chính."
+    ],
+    "beating_outline": [
+      "## 1. Bảng lãi suất vay mua nhà, mua xe và vay sản xuất kinh doanh Agribank",
+      "## 2. Công thức tính lãi suất vay Agribank theo dư nợ gốc giảm dần",
+      "## 3. Điều kiện, hồ sơ thủ tục và quy trình thế chấp tài sản vay Agribank",
+      "## 4. So sánh lãi suất vay Agribank với các ngân hàng nhóm Big 4 (VCB, BIDV, CTG)",
+      "## 5. FAQs - Phí phạt trả nợ trước hạn tại ngân hàng Agribank là bao nhiêu?",
+      "## 6. Thanh toán khoản vay tiêu dùng nhanh gọn, đúng hạn trên Ví MoMo"
+    ]
+  }
+}

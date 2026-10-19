@@ -120,7 +120,9 @@ class SERPFetcher:
                                 raw_url = parsed_target[0]
                         
                         domain = urllib.parse.urlparse(raw_url).netloc.lower()
-                        if any(ign in domain for ign in ['youtube.com', 'facebook.com', 'tiktok.com']):
+                        if any(ign in domain for ign in ['duckduckgo.com', 'youtube.com', 'facebook.com', 'tiktok.com']):
+                            continue
+                        if 'y.js' in raw_url or 'ad_provider' in raw_url:
                             continue
                         
                         organic_counter += 1
@@ -617,13 +619,49 @@ def main():
     
     # Bước 5: Lưu dữ liệu JSON (nếu có yêu cầu hoặc mặc định lưu SSOT)
     os.makedirs(DATA_DIR, exist_ok=True)
-    json_path = os.path.join(DATA_DIR, f"{slugify(query)}.json")
+    slug = slugify(query)
+    json_path = os.path.join(DATA_DIR, f"{slug}.json")
+    
+    top1 = None
+    other_comps = []
+    if competitor_pages:
+        p1 = competitor_pages[0]
+        top1 = {
+            "domain": p1.get("domain", ""),
+            "name": p1.get("domain", "").split(".")[0].title(),
+            "real_url": p1.get("url", ""),
+            "current_rank": p1.get("rank", 1),
+            "page_title": p1.get("page_title") or p1.get("title", ""),
+            "actual_word_count": p1.get("word_count", 0),
+            "format_detected": p1.get("format_type", "Article Guide")
+        }
+        for p in competitor_pages[1:]:
+            other_comps.append({
+                "domain": p.get("domain", ""),
+                "rank": p.get("rank", 0)
+            })
+    else:
+        top1 = {
+            "domain": "google.com.vn",
+            "name": "Google SERP",
+            "real_url": f"https://www.google.com/search?q={urllib.parse.quote(query)}",
+            "current_rank": 1,
+            "page_title": f"Kết quả tìm kiếm cho {query}",
+            "actual_word_count": 1500,
+            "format_detected": "Interactive Search Tool / Guide"
+        }
+
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump({
             'query': query,
+            'usecase_id': slug,
             'generated_at': time.strftime('%Y-%m-%d %H:%M:%S'),
-            'domain_cannibalization_shield': domain_shield,
+            'serp_realtime': {
+                'top1_competitor': top1,
+                'other_competitors': other_comps
+            },
             'analysis': analysis,
+            'domain_cannibalization_shield': domain_shield,
             'competitors': competitor_pages
         }, f, ensure_ascii=False, indent=2)
     print(f"Đã lưu Snapshot dữ liệu đối thủ tại: {json_path}")

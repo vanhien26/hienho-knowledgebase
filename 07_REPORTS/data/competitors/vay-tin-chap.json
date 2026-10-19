@@ -1,0 +1,42 @@
+{
+  "query": "vay tín chấp",
+  "usecase_id": "vay-tin-chap",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "timo.vn",
+      "name": "Ngân hàng số Timo",
+      "real_url": "https://timo.vn/blogs/vay-tin-chap/",
+      "current_rank": 1,
+      "page_title": "Vay Tín Chấp Là Gì? Thủ Tục Vay Tiền Nhanh Không Cần Thế Chấp - Timo",
+      "actual_word_count": 2150,
+      "format_detected": "Cẩm nang vay & Tính lãi suất"
+    },
+    "other_competitors": [
+      {
+        "domain": "techcombank.com",
+        "rank": 2
+      },
+      {
+        "domain": "fecredit.com.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Cẩm nang vay & Tính lãi suất",
+    "recommended_target_words": 2000,
+    "gaps_detected": [
+      "Nhiều ngân hàng yêu cầu bảng lương sao kê 3-6 tháng gần nhất khiến lao động tự do khó tiếp cận.",
+      "Thiếu công cụ tính số tiền trả góp hàng tháng theo dư nợ giảm dần minh bạch."
+    ],
+    "beating_outline": [
+      "## 1. Vay tín chấp là gì? So sánh vay tín chấp và vay thế chấp ngân hàng",
+      "## 2. Ngân hàng nào cho vay tín chấp lãi suất thấp nhất hiện nay?",
+      "## 3. Điều kiện, thủ tục và hồ sơ cần chuẩn bị để được duyệt vay tín chấp",
+      "## 4. Công cụ tính tiền gốc và lãi trả góp hàng tháng chuẩn xác",
+      "## 5. FAQs - Nợ xấu nhóm 2 có vay tín chấp ngân hàng được không?",
+      "## 6. Vay Tiêu Dùng MoMo - Hạn mức linh hoạt, duyệt hồ sơ online trong 3 phút"
+    ]
+  }
+}

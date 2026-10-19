@@ -136,23 +136,28 @@ except Exception:
     HAS_ST = False
 
 try:
-    from pyvi import ViTokenizer
-    HAS_PYVI = True
-except Exception:
-    HAS_PYVI = False
+    from .vi_nlp import (
+        backend as vi_backend,
+        has_segmenter as _has_vi_segmenter,
+        segment_text as _vi_segment_text,
+    )
+except ImportError:
+    from vi_nlp import (
+        backend as vi_backend,
+        has_segmenter as _has_vi_segmenter,
+        segment_text as _vi_segment_text,
+    )
+
+VI_SEGMENT_BACKEND = vi_backend()
+HAS_VI_SEGMENT = _has_vi_segmenter()
+HAS_PYVI = HAS_VI_SEGMENT  # alias tương thích ngược (tên cũ trước khi tích hợp underthesea)
 
 
 def segment_text(text: str) -> str:
     """Tách từ tiếng Việt (ghép từ ghép bằng '_') để tránh cắt ngang ranh giới từ."""
     if not text:
         return text
-    text = _nfc(text)
-    if not HAS_PYVI:
-        return text
-    try:
-        return ViTokenizer.tokenize(text)
-    except Exception:
-        return text
+    return _vi_segment_text(_nfc(text))
 
 
 def _restore(phrase: str) -> str:
@@ -202,7 +207,7 @@ def extract_yake(text: str, top_n: int = 25, ngram: int = 3) -> list:
     text = _nfc(text)
     try:
         # YAKE chạy trên text gốc, sau đó lọc theo tập n-gram hợp lệ (ranh giới từ tiếng Việt)
-        valid_grams = _valid_ngram_set(segment_text(text), max_n=ngram) if HAS_PYVI else None
+        valid_grams = _valid_ngram_set(segment_text(text), max_n=ngram) if HAS_VI_SEGMENT else None
         kw = yake.KeywordExtractor(
             lan="vi", n=ngram, dedupLim=0.7, windowsSize=2,
             top=max(top_n * 2, top_n), stopwords=STOPWORDS,

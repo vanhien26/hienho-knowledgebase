@@ -1,0 +1,42 @@
+{
+  "query": "vietlott",
+  "usecase_id": "vietlott",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "vietlott.vn",
+      "name": "Công ty Xổ số Điện toán Việt Nam Vietlott",
+      "real_url": "https://vietlott.vn/",
+      "current_rank": 1,
+      "page_title": "Trang chủ Xổ Số Điện Toán Vietlott - Cơ hội để tốt hơn",
+      "actual_word_count": 1100,
+      "format_detected": "Cổng kết quả & Giới thiệu sản phẩm Vietlott"
+    },
+    "other_competitors": [
+      {
+        "domain": "xoso.me",
+        "rank": 2
+      },
+      {
+        "domain": "minhngoc.net.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Cổng kết quả & Giới thiệu sản phẩm Vietlott",
+    "recommended_target_words": 1500,
+    "gaps_detected": [
+      "Người dùng không thể mua vé số trực tiếp trên web chính thức mà phải qua ứng dụng đối tác.",
+      "Thiếu công cụ phân tích tần suất xuất hiện của các cặp số Mega 6/45 và Power 6/55."
+    ],
+    "beating_outline": [
+      "## 1. Kết quả Vietlott hôm nay mới nhất (Power 6/55, Mega 6/45, Keno)",
+      "## 2. Giá trị Jackpot hiện tại và lịch quay số mở thưởng các ngày trong tuần",
+      "## 3. Hướng dẫn cách chơi Vietlott: Chơi đơn, Chơi bao và Cách chọn số",
+      "## 4. Thống kê các con số may mắn xuất hiện nhiều nhất trong lịch sử Vietlott",
+      "## 5. FAQs - Thủ tục nhận thưởng Vietlott khi trúng Jackpot trên 10 tỷ",
+      "## 6. Mua vé Vietlott online trên MoMo - Tự động dò kết quả & Trả thưởng vào Ví"
+    ]
+  }
+}

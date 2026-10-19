@@ -1029,7 +1029,7 @@ def main():
     qw_md_path = os.path.join(BASE_DIR, "07_REPORTS", "QUICK_WINS_PORTFOLIO.md")
     qw_md = f"""# DANH MỤC TỪ KHÓA QUICK WINS TOÀN WEB PLATFORM (HIGH ROI OPPORTUNITIES)
 
-Tập hợp các từ khóa có **Search Volume cao ($\ge 1.500$) và Mức độ Cạnh tranh Thấp (Low PPC Competition)** trên toàn bộ {len(all_usecases)} Use Cases của Web Platform. Đây là các chủ đề ưu tiên P0 mang lại lưu lượng truy cập nhanh nhất với chi phí nội dung tối thiểu.
+Tập hợp các từ khóa có **Search Volume cao ($\\\\ge 1.500$) và Mức độ Cạnh tranh Thấp (Low PPC Competition)** trên toàn bộ {len(all_usecases)} Use Cases của Web Platform. Đây là các chủ đề ưu tiên P0 mang lại lưu lượng truy cập nhanh nhất với chi phí nội dung tối thiểu.
 
 - **Tổng số từ khóa Quick Wins phát hiện:** {len(all_quick_wins):,} từ khóa
 - **Tổng dung lượng tìm kiếm Quick Wins:** {sum(x['volume'] for x in all_quick_wins):,} lượt/tháng
@@ -1107,6 +1107,11 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
         os.makedirs(modular_dir, exist_ok=True)
 
         # Index siêu nhẹ (~45 KB)
+        sector_filter = target_sector.lower() if target_sector else None
+        target_usecases = [
+            uc for uc in all_usecases
+            if not sector_filter or uc.get('sector', '').lower() == sector_filter
+        ]
         current_sector_usecases = [
             {
                 'id': uc['id'],
@@ -1120,7 +1125,7 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
                 'pillar_intent': uc['pillar_keyword']['intent'],
                 'quick_wins_count': len([k for k in uc['top_opportunities'] if k['quadrant'] == 'Quick Win']),
                 'chunk_url': f"/data/seo-clusters/{uc['sector']}/{uc['id']}.json"
-            } for uc in all_usecases
+            } for uc in target_usecases
         ]
 
         index_file = os.path.join(modular_dir, "index.json")
@@ -1132,11 +1137,20 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
                 with open(index_file, 'r', encoding='utf-8') as f:
                     old_index = json.load(f)
                 other_usecases = [u for u in old_index.get('usecases', []) if u.get('sector', '').lower() != target_sector.lower()]
-                final_usecases = sorted(other_usecases + current_sector_usecases, key=lambda x: x['total_volume'], reverse=True)
+                final_usecases = other_usecases + current_sector_usecases
                 final_sector_summary = old_index.get('sector_summary', {})
                 final_sector_summary.update(sector_summary)
             except Exception as e:
                 print(f"Không thể kế thừa index cũ: {e}")
+
+        # Cơ chế phòng thủ kép: Dedupe tuyệt đối theo 'id' và sắp xếp theo total_volume giảm dần
+        seen_ids = set()
+        deduped_usecases = []
+        for u in final_usecases:
+            if u['id'] not in seen_ids:
+                seen_ids.add(u['id'])
+                deduped_usecases.append(u)
+        final_usecases = sorted(deduped_usecases, key=lambda x: x['total_volume'], reverse=True)
 
         index_payload = {
             'version': '3.0-modular',
@@ -1182,6 +1196,16 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
                     if os.path.basename(existing_f) not in active_files:
                         os.remove(existing_f)
                         print(f"Đã xóa chunk thừa: {existing_f}")
+
+        # Tự động dọn dẹp các thư mục ngành mồ côi (không còn trong danh sách sectors) khi Full Sync
+        if not target_sector:
+            import shutil
+            valid_sector_names = {s.lower() for s in sectors}
+            for item in os.listdir(modular_dir):
+                item_path = os.path.join(modular_dir, item)
+                if os.path.isdir(item_path) and item.lower() not in valid_sector_names:
+                    shutil.rmtree(item_path)
+                    print(f"Đã tự động xóa thư mục ngành mồ côi không còn trong inventory: {item_path}")
 
         print(f"Đã phân rã và xuất bản thành công {chunk_count} Modular Chunks tại {modular_dir}/<sector>/<id>.json!")
     else:

@@ -1,0 +1,42 @@
+{
+  "query": "sim số đẹp",
+  "usecase_id": "sim",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "thegioididong.com",
+      "name": "Thế Giới Di Động",
+      "real_url": "https://www.thegioididong.com/sim-so-dep",
+      "current_rank": 1,
+      "page_title": "Kho Sim Số Đẹp Viettel, Mobifone, VinaPhone Giá Rẻ - TGDĐ",
+      "actual_word_count": 1900,
+      "format_detected": "Interactive Catalog & Filter Tool"
+    },
+    "other_competitors": [
+      {
+        "domain": "fptshop.com.vn",
+        "rank": 2
+      },
+      {
+        "domain": "simthanglong.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Interactive Catalog & Filter Tool",
+    "recommended_target_words": 1700,
+    "gaps_detected": [
+      "Nhiều website bán sim không niêm yết giá công khai hoặc phát sinh phí giữ số.",
+      "Quy trình đăng ký chính chủ sim số đẹp còn phức tạp, phải ra cửa hàng viễn thông."
+    ],
+    "beating_outline": [
+      "## 1. Kho sim số đẹp giá rẻ Viettel, Mobifone, Vinaphone mới nhất",
+      "## 2. Các dòng sim phong thủy hot: Tứ quý, Thần tài, Lộc phát, Tam hoa",
+      "## 3. Công cụ tra cứu sim hợp mệnh, hợp tuổi theo phong thủy số học",
+      "## 4. Hướng dẫn đăng ký thông tin chính chủ cho sim số đẹp online",
+      "## 5. FAQs - Kinh nghiệm mua sim số đẹp tránh bị lừa đảo đặt cọc",
+      "## 6. Mua sim chính chủ & Nạp tiền điện thoại chiết khấu cao cùng MoMo"
+    ]
+  }
+}

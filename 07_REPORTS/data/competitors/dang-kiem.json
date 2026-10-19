@@ -1,0 +1,43 @@
+{
+  "query": "đăng kiểm",
+  "usecase_id": "dang-kiem",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "gcndangkiem.vr.org.vn",
+      "name": "Cục Đăng Kiểm Việt Nam",
+      "real_url": "https://gcndangkiem.vr.org.vn/",
+      "current_rank": 1,
+      "page_title": "Tra cứu thông tin Giấy chứng nhận kiểm định xe cơ giới - Cục Đăng kiểm",
+      "actual_word_count": 620,
+      "format_detected": "Interactive Tool / Tra cứu dữ liệu cơ quan quản lý"
+    },
+    "other_competitors": [
+      {
+        "domain": "vr.org.vn",
+        "rank": 2
+      },
+      {
+        "domain": "thuvienphapluat.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Interactive Tool / Tra cứu dữ liệu cơ quan quản lý",
+    "recommended_target_words": 1800,
+    "gaps_detected": [
+      "Hệ thống tra cứu của cơ quan nhà nước thường quá tải vào giờ cao điểm.",
+      "Thiếu hướng dẫn xử lý vi phạm phạt nguội trước khi đi đăng kiểm để tránh bị từ chối.",
+      "Thiếu tính năng đặt lịch đăng kiểm online và nhắc hạn đăng kiểm tự động."
+    ],
+    "beating_outline": [
+      "## 1. Hướng dẫn tra cứu hạn đăng kiểm ô tô trực tuyến",
+      "## 2. Quy trình & Thủ tục đăng kiểm xe cơ giới mới nhất",
+      "## 3. Biểu phí đăng kiểm xe và lệ phí cấp giấy chứng nhận",
+      "## 4. Kiểm tra và xử lý phạt nguội trước khi đi đăng kiểm",
+      "## 5. FAQs - Những lỗi khiến ô tô bị trượt đăng kiểm",
+      "## 6. Tiện ích quản lý xe và nhắc lịch đăng kiểm trên MoMo"
+    ]
+  }
+}

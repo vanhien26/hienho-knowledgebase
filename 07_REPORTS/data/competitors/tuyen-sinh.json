@@ -1,0 +1,42 @@
+{
+  "query": "tuyển sinh 247",
+  "usecase_id": "tuyen-sinh",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "tuyensinh247.com",
+      "name": "Tuyển Sinh 247",
+      "real_url": "https://tuyensinh247.com/",
+      "current_rank": 1,
+      "page_title": "Cổng Thông Tin Điểm Thi, Điểm Chuẩn Tuyển Sinh Toàn Quốc",
+      "actual_word_count": 2400,
+      "format_detected": "Cổng tin tức điểm chuẩn"
+    },
+    "other_competitors": [
+      {
+        "domain": "diendantuyensinh24h.com",
+        "rank": 2
+      },
+      {
+        "domain": "kenh14.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Cổng tin tức điểm chuẩn",
+    "recommended_target_words": 1900,
+    "gaps_detected": [
+      "Nhiều trường có phương thức xét tuyển sớm riêng lẻ khiến thí sinh dễ bị nhầm lẫn.",
+      "Thiếu công cụ ước tính khả năng đỗ đại học dựa trên điểm thi thử và học bạ."
+    ],
+    "beating_outline": [
+      "## 1. Cập nhật thông tin tuyển sinh và điểm chuẩn đại học mới nhất 2026",
+      "## 2. Hướng dẫn tính điểm xét tuyển theo các tổ hợp môn thi tốt nghiệp THPT",
+      "## 3. Các mốc thời gian quan trọng trong kỳ thi tuyển sinh đại học quốc gia",
+      "## 4. Chiến lược đặt nguyện vọng thông minh để tăng tối đa cơ hội trúng tuyển",
+      "## 5. FAQs - Có được đổi nguyện vọng sau khi biết điểm thi tốt nghiệp không?",
+      "## 6. Nộp lệ phí xét tuyển đại học & Thanh toán học phí trực tuyến qua MoMo"
+    ]
+  }
+}

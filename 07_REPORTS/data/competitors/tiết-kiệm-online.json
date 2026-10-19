@@ -1,44 +1,42 @@
 {
   "query": "tiết kiệm online",
-  "generated_at": "2026-10-16 17:01:50",
-  "domain_cannibalization_shield": {
-    "query": "tiết kiệm online",
-    "risk_level": "LOW",
-    "verdict": "CONSOLIDATE",
-    "action": "UPDATE_OR_REDIRECT",
-    "serp_rank": null,
-    "ranking_url": null,
-    "ranking_title": null,
-    "sitemap_matches": [
-      "https://www.momo.vn/tiet-kiem-online"
-    ],
-    "top_live_url": "https://www.momo.vn/tiet-kiem-online",
-    "rationale": "momo.vn đã có URL chính thức xuất bản trên hệ thống: https://www.momo.vn/tiet-kiem-online. Hành động tối ưu: Cập nhật nội dung hoặc bổ sung Sub-intent vào URL này, tránh tạo URL mới trùng lặp.",
-    "live_rankings": []
-  },
-  "analysis": {
-    "query": "tiết kiệm online",
-    "competitors_crawled": 0,
-    "avg_word_count": 1800,
-    "max_word_count": 2200,
-    "recommended_target_words": 2200,
-    "dominant_format": "Interactive Utility Guide",
-    "top_competitor_entities": [
-      "tiết kiệm online"
-    ],
-    "gaps_detected": [
-      "Cần tích hợp công cụ tính toán / tra cứu tương tác trực tiếp trên MoMo Web Platform.",
-      "Cần nhúng Schema FAQPage và BreadcrumbList chuẩn Google Search Central.",
-      "Cần xây dựng điểm chạm chuyển đổi Web-to-App MoMo liền mạch."
-    ],
-    "beating_outline": [
-      "## H2 1: Tổng quan & Định nghĩa chuẩn xác về tiết kiệm online",
-      "## H2 2: Bảng so sánh chi tiết & Tiêu chí lựa chọn tối ưu nhất",
-      "## H2 3: Công cụ tính toán / Tra cứu trực tuyến trên Nền tảng Web MoMo",
-      "## H2 4: Hướng dẫn quy trình & Thủ tục thực hiện từng bước đơn giản",
-      "## H2 5: Giải đáp thắc mắc thường gặp (FAQs chuẩn Schema)",
-      "## H2 6: Giải pháp liên kết và nhận quyền lợi tối đa qua Ứng dụng MoMo"
+  "usecase_id": "tiet-kiem-online",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "timo.vn",
+      "name": "Ngân hàng số Timo",
+      "real_url": "https://timo.vn/blogs/tiet-kiem-online/",
+      "current_rank": 1,
+      "page_title": "Gửi Tiết Kiệm Online Có An Toàn Không? Lợi Ích & Mẹo Sinh Lời - Timo",
+      "actual_word_count": 2100,
+      "format_detected": "Bảng so sánh & Công cụ tính lãi suất"
+    },
+    "other_competitors": [
+      {
+        "domain": "topi.vn",
+        "rank": 2
+      },
+      {
+        "domain": "techcombank.com",
+        "rank": 3
+      }
     ]
   },
-  "competitors": []
+  "analysis": {
+    "dominant_format": "Interactive Utility Guide",
+    "recommended_target_words": 2000,
+    "gaps_detected": [
+      "Chưa có công cụ ước tính tiền lời nhận hàng tháng theo số vốn thực tế.",
+      "Thiếu bảng đối chiếu tính bảo mật và tính thanh khoản so với gửi tại quầy."
+    ],
+    "beating_outline": [
+      "## 1. Tiết kiệm online là gì? Vì sao lãi suất tiết kiệm online cao hơn tại quầy?",
+      "## 2. So sánh lãi suất gửi tiết kiệm online các ngân hàng uy tín nhất",
+      "## 3. Công cụ tính lãi suất tiết kiệm theo số tiền và kỳ hạn linh hoạt",
+      "## 4. Hướng dẫn mở sổ tiết kiệm online an toàn trong 2 phút",
+      "## 5. FAQs - Rút tiền tiết kiệm online trước hạn có bị mất lãi không?",
+      "## 6. Tích lũy & Tiết kiệm sinh lời mỗi ngày cùng MoMo"
+    ]
+  }
 }

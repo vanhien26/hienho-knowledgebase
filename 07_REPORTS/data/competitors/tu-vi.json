@@ -1,0 +1,42 @@
+{
+  "query": "tử vi",
+  "usecase_id": "tu-vi",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "lichngaytot.com",
+      "name": "Lịch Ngày Tốt",
+      "real_url": "https://lichngaytot.com/tu-vi",
+      "current_rank": 1,
+      "page_title": "Tử Vi Hàng Ngày, Tử Vi 12 Con Giáp & 12 Cung Hoàng Đạo",
+      "actual_word_count": 2100,
+      "format_detected": "Cẩm nang tử vi & Phong thủy"
+    },
+    "other_competitors": [
+      {
+        "domain": "xem-boi.com",
+        "rank": 2
+      },
+      {
+        "domain": "vansu.net",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Cẩm nang tử vi & Phong thủy",
+    "recommended_target_words": 1800,
+    "gaps_detected": [
+      "Nội dung mang tính chất giải trí chung chung, thiếu luận giải chi tiết theo lá số cá nhân.",
+      "Chưa có tính năng tra cứu phong thủy tài lộc kết hợp giải pháp tài chính thực tế."
+    ],
+    "beating_outline": [
+      "## 1. Luận giải tử vi 12 con giáp hôm nay: Sự nghiệp, tài chính và tình duyên",
+      "## 2. Tử vi trọn đời theo năm sinh và hướng dẫn kích hoạt cung tài lộc",
+      "## 3. Xem màu sắc phong thủy và con số may mắn mang lại tài vận",
+      "## 4. Mẹo hóa giải vận hạn và sao chiếu mệnh trong năm",
+      "## 5. FAQs - Xem bói tử vi trực tuyến có chính xác không?",
+      "## 6. Mua sắm vật phẩm phong thủy & Quản lý tài chính hanh thông cùng MoMo"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "query": "tỷ giá ngoại tệ",
+  "usecase_id": "ngoai-te",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "vietcombank.com.vn",
+      "name": "Ngân hàng Ngoại thương Vietcombank",
+      "real_url": "https://www.vietcombank.com.vn/KHCN/Cong-cu-Tien-ich/Ty-gia",
+      "current_rank": 1,
+      "page_title": "Bảng Tỷ Giá Ngoại Tệ Mua Bán Chuyển Khoản Mới Nhất - Vietcombank",
+      "actual_word_count": 1050,
+      "format_detected": "Bảng tỷ giá ngoại tệ"
+    },
+    "other_competitors": [
+      {
+        "domain": "tygia.vn",
+        "rank": 2
+      },
+      {
+        "domain": "bidv.com.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Bảng tỷ giá ngoại tệ",
+    "recommended_target_words": 1600,
+    "gaps_detected": [
+      "Thiếu bảng so sánh chênh lệch giá mua bán (spread) giữa các ngân hàng để chọn nơi đổi tốt nhất.",
+      "Chưa có tính năng đặt lệnh cảnh báo khi tỷ giá chạm ngưỡng mong muốn."
+    ],
+    "beating_outline": [
+      "## 1. Bảng tỷ giá ngoại tệ hôm nay: USD, EUR, JPY, GBP, AUD, SGD...",
+      "## 2. So sánh tỷ giá ngoại tệ giữa các ngân hàng lớn (Vietcombank, BIDV, Techcombank)",
+      "## 3. Công cụ quy đổi ngoại tệ hai chiều trực tuyến tính phí chuyển đổi",
+      "## 4. Quy định của Nhà nước về hạn mức mua ngoại tệ khi đi du lịch, du học",
+      "## 5. FAQs - Đổi ngoại tệ ở đâu hợp pháp và được giá tốt nhất?",
+      "## 6. Thanh toán chi tiêu quốc tế qua thẻ MoMo Visa / Mastercard tiện lợi"
+    ]
+  }
+}

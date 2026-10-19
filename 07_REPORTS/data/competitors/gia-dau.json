@@ -1,0 +1,42 @@
+{
+  "query": "giá dầu hôm nay",
+  "usecase_id": "gia-dau",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "giaxanghomnay.com",
+      "name": "Giá Xăng Hôm Nay",
+      "real_url": "https://giaxanghomnay.com/gia-dau-hom-nay",
+      "current_rank": 1,
+      "page_title": "Giá Dầu Hôm Nay - Cập nhật giá dầu Diesel 0.05S, Dầu Hỏa",
+      "actual_word_count": 1450,
+      "format_detected": "Bảng biểu cập nhật giá thời gian thực"
+    },
+    "other_competitors": [
+      {
+        "domain": "petrolimex.com.vn",
+        "rank": 2
+      },
+      {
+        "domain": "luatvietnam.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Interactive Tool / Live Price Table",
+    "recommended_target_words": 1500,
+    "gaps_detected": [
+      "Chỉ có bảng giá thô, thiếu đồ thị biến động giá dầu thế giới (Brent/WTI).",
+      "Thiếu công cụ tính chi phí nhiên liệu cho xe tải và phương tiện vận tải đường dài."
+    ],
+    "beating_outline": [
+      "## 1. Bảng giá dầu Diesel, dầu hỏa, dầu mazut hôm nay",
+      "## 2. Biến động giá dầu thế giới và tác động đến giá bán lẻ trong nước",
+      "## 3. Dự báo điều chỉnh giá dầu kỳ điều hành tiếp theo",
+      "## 4. Công cụ tính chi phí dầu và tìm trạm cấp dầu uy tín",
+      "## 5. FAQs - Câu hỏi thường gặp về giá dầu nhiên liệu",
+      "## 6. Giải pháp quản lý chi phí vận tải qua Ví MoMo"
+    ]
+  }
+}

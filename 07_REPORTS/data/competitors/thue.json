@@ -1,0 +1,42 @@
+{
+  "query": "thuế",
+  "usecase_id": "thue",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "thuedientu.gdt.gov.vn",
+      "name": "Tổng cục Thuế Việt Nam",
+      "real_url": "https://thuedientu.gdt.gov.vn/",
+      "current_rank": 1,
+      "page_title": "Hệ thống Dịch vụ Thuế điện tử - Tổng cục Thuế",
+      "actual_word_count": 950,
+      "format_detected": "Cổng Dịch vụ công điện tử"
+    },
+    "other_competitors": [
+      {
+        "domain": "gdt.gov.vn",
+        "rank": 2
+      },
+      {
+        "domain": "luatvietnam.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Cổng Dịch vụ công điện tử",
+    "recommended_target_words": 1800,
+    "gaps_detected": [
+      "Hệ thống thuế nhà nước yêu cầu cài đặt Java plugin hoặc trình duyệt máy tính phức tạp.",
+      "Thiếu công cụ tính thuế thu nhập cá nhân tự động theo các bậc lũy tiến."
+    ],
+    "beating_outline": [
+      "## 1. Tổng quan các loại thuế bắt buộc tại Việt Nam (TNCN, TNDN, GTGT)",
+      "## 2. Bảng biểu thuế lũy tiến từng phần tính thuế thu nhập cá nhân",
+      "## 3. Công cụ tính số tiền thuế TNCN phải nộp hàng tháng trực tuyến",
+      "## 4. Hướng dẫn tự quyết toán thuế thu nhập cá nhân online",
+      "## 5. FAQs - Mức giảm trừ gia cảnh và các khoản miễn thuế hợp lệ",
+      "## 6. Nộp thuế cá nhân & Lệ phí trước bạ xe qua Cổng Dịch vụ công trên MoMo"
+    ]
+  }
+}

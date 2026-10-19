@@ -1,0 +1,42 @@
+{
+  "query": "lịch chiếu phim",
+  "usecase_id": "lich-phim",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "moveek.com",
+      "name": "Moveek Cinema Aggregator",
+      "real_url": "https://moveek.com/lich-chieu/",
+      "current_rank": 1,
+      "page_title": "Lịch Chiếu Phim Rạp Hôm Nay Tại Tất Cả Cụm Rạp Toàn Quốc",
+      "actual_word_count": 1600,
+      "format_detected": "Lịch chiếu tổng hợp thời gian thực"
+    },
+    "other_competitors": [
+      {
+        "domain": "cgv.vn",
+        "rank": 2
+      },
+      {
+        "domain": "cinestar.com.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Lịch chiếu tổng hợp thời gian thực",
+    "recommended_target_words": 1400,
+    "gaps_detected": [
+      "Giao diện tải chậm khi người dùng chọn lọc theo nhiều quận huyện cùng lúc.",
+      "Thiếu tính năng cảnh báo sắp hết vé đối với các suất chiếu bom tấn."
+    ],
+    "beating_outline": [
+      "## 1. Lịch chiếu phim hôm nay theo từng rạp và khung giờ chiếu",
+      "## 2. Tra cứu rạp chiếu phim gần bạn nhất và thời gian mở bán vé",
+      "## 3. Bảng giá vé xem phim theo từng suất chiếu (Sáng, Tối, Cuối tuần)",
+      "## 4. Top phim ăn khách phòng vé Việt Nam tuần này",
+      "## 5. FAQs - Cách đặt vé phim trước cho ngày khởi chiếu chính thức",
+      "## 6. Xem lịch chiếu & Đặt vé xem phim liền tay trên MoMo"
+    ]
+  }
+}

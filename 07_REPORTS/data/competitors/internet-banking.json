@@ -1,0 +1,42 @@
+{
+  "query": "acb online banking",
+  "usecase_id": "internet-banking",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "acb.com.vn",
+      "name": "Ngân hàng TMCP Á Châu ACB",
+      "real_url": "https://online.acb.com.vn/",
+      "current_rank": 1,
+      "page_title": "ACB Online - Ngân hàng điện tử ACB Banking",
+      "actual_word_count": 1100,
+      "format_detected": "Cổng Dịch vụ Ngân hàng số"
+    },
+    "other_competitors": [
+      {
+        "domain": "vietcombank.com.vn",
+        "rank": 2
+      },
+      {
+        "domain": "techcombank.com",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Cổng Dịch vụ Ngân hàng số",
+    "recommended_target_words": 1600,
+    "gaps_detected": [
+      "Giao diện đăng nhập web ngân hàng dễ bị kẻ gian tạo trang giả mạo lừa đảo mã OTP.",
+      "Thiếu tính năng chuyển tiền và quản lý tài chính đa ngân hàng trên một màn hình duy nhất."
+    ],
+    "beating_outline": [
+      "## 1. Hướng dẫn đăng ký và đăng nhập dịch vụ ACB Online Banking an toàn",
+      "## 2. Cách chuyển tiền nhanh 24/7 và hạn mức giao dịch qua Internet Banking",
+      "## 3. Cảnh báo các thủ đoạn lừa đảo giả mạo website ngân hàng chiếm đoạt tiền",
+      "## 4. Cách khóa thẻ tạm thời và đổi mật khẩu ngân hàng điện tử khi bị nghi lộ",
+      "## 5. FAQs - Xử lý khi tài khoản ACB Online bị khóa do nhập sai mật khẩu",
+      "## 6. Liên kết ACB với MoMo - Chuyển tiền miễn phí, nạp rút tức thì"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "query": "xe khách",
+  "usecase_id": "xe-khach",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "vexere.com",
+      "name": "Vexere",
+      "real_url": "https://vexere.com/",
+      "current_rank": 1,
+      "page_title": "Đặt vé xe khách trực tuyến, chọn chỗ và đón tận nơi - Vexere",
+      "actual_word_count": 2200,
+      "format_detected": "Interactive Booking Engine / Search Aggregator"
+    },
+    "other_competitors": [
+      {
+        "domain": "futabus.vn",
+        "rank": 2
+      },
+      {
+        "domain": "dichung.com",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Interactive Booking Engine / Search Aggregator",
+    "recommended_target_words": 1600,
+    "gaps_detected": [
+      "Thiếu tiện ích chọn vị trí giường nằm theo thời gian thực trên một số nhà xe địa phương.",
+      "Chưa có hình thức thanh toán trả sau (Buy Now Pay Later) cho các chuyến xe gấp."
+    ],
+    "beating_outline": [
+      "## 1. Tra cứu lịch trình & Giá vé xe khách liên tỉnh hôm nay",
+      "## 2. Top nhà xe uy tín chất lượng cao: Limousine, Giường nằm, Ghế ngồi",
+      "## 3. Bảng giá vé các tuyến xe khách hot nhất: Hà Nội, Sài Gòn, Đà Lạt, Đà Nẵng",
+      "## 4. Hướng dẫn đặt vé xe khách online, chọn chỗ ngồi và đón trả tận nơi",
+      "## 5. FAQs - Quy định hủy vé xe, mang theo thú cưng và gửi hàng hóa",
+      "## 6. Đặt vé xe khách MoMo - Cam kết giữ chỗ 100%, thanh toán tiện lợi"
+    ]
+  }
+}

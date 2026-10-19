@@ -1,0 +1,42 @@
+{
+  "query": "phim",
+  "usecase_id": "phim",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "moveek.com",
+      "name": "Moveek Cinema Aggregator",
+      "real_url": "https://moveek.com/",
+      "current_rank": 1,
+      "page_title": "Lịch chiếu phim, đánh giá phim và mua vé rạp toàn quốc - Moveek",
+      "actual_word_count": 1850,
+      "format_detected": "Cinema Aggregator / Review & Lịch chiếu"
+    },
+    "other_competitors": [
+      {
+        "domain": "cgv.vn",
+        "rank": 2
+      },
+      {
+        "domain": "galaxycine.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Cinema Aggregator / Review & Lịch chiếu",
+    "recommended_target_words": 1500,
+    "gaps_detected": [
+      "Người dùng xem lịch chiếu trên Moveek nhưng khi đặt vé phải chuyển trang bên thứ ba.",
+      "Thiếu tính năng combo vé kèm bắp nước giá ưu đãi đồng nhất toàn quốc."
+    ],
+    "beating_outline": [
+      "## 1. Top phim đang chiếu rạp hot nhất hôm nay (Đánh giá & Trailer)",
+      "## 2. Bảng tổng hợp lịch chiếu phim toàn quốc tại tất cả các cụm rạp",
+      "## 3. Danh sách phim sắp chiếu rạp đáng mong chờ nhất trong tháng",
+      "## 4. Hướng dẫn chọn chỗ ngồi xem phim đẹp nhất tại rạp chiếu phim",
+      "## 5. FAQs - Quy định độ tuổi xem phim (T13, T16, T18) và đổi trả vé",
+      "## 6. Đặt vé xem phim trên MoMo - Chọn rạp gần bạn, nhận voucher bắp nước"
+    ]
+  }
+}

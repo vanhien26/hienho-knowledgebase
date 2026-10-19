@@ -1,0 +1,42 @@
+{
+  "query": "trường đại học",
+  "usecase_id": "dai-hoc",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "tuyensinh247.com",
+      "name": "Tuyển Sinh 247",
+      "real_url": "https://tuyensinh247.com/",
+      "current_rank": 1,
+      "page_title": "Thông Tin Tuyển Sinh Đại Học, Điểm Chuẩn & Đề Thi Mới Nhất",
+      "actual_word_count": 2500,
+      "format_detected": "Cổng thông tin tuyển sinh"
+    },
+    "other_competitors": [
+      {
+        "domain": "diendantuyensinh24h.com",
+        "rank": 2
+      },
+      {
+        "domain": "kenh14.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Cổng thông tin tuyển sinh",
+    "recommended_target_words": 2000,
+    "gaps_detected": [
+      "Nhiều trường đại học chưa cập nhật mức học phí dự kiến các năm tiếp theo.",
+      "Thiếu tính năng nộp học phí đại học trực tuyến nhanh chóng và thanh toán trả góp học phí."
+    ],
+    "beating_outline": [
+      "## 1. Top trường đại học hàng đầu Việt Nam có chất lượng đào tạo tốt nhất",
+      "## 2. Bảng tổng hợp điểm chuẩn đại học các năm gần nhất của các khối A, B, C, D",
+      "## 3. Mức học phí các trường đại học công lập tự chủ và trường quốc tế",
+      "## 4. Hướng dẫn đăng ký nguyện vọng xét tuyển đại học trực tuyến",
+      "## 5. FAQs - Sinh viên có thể vay vốn học tập lãi suất ưu đãi ở đâu?",
+      "## 6. Thanh toán học phí đại học an toàn & Nhận gói học bổng cùng MoMo"
+    ]
+  }
+}

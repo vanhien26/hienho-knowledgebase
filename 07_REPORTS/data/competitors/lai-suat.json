@@ -1,0 +1,42 @@
+{
+  "query": "lãi suất ngân hàng",
+  "usecase_id": "lai-suat",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "topi.vn",
+      "name": "Topi FinTech",
+      "real_url": "https://topi.vn/bang-lai-suat-ngan-hang.html",
+      "current_rank": 1,
+      "page_title": "Bảng Tra Cứu Lãi Suất Tiền Gửi & Cho Vay Các Ngân Hàng - Topi",
+      "actual_word_count": 2100,
+      "format_detected": "Bảng so sánh lãi suất trực quan"
+    },
+    "other_competitors": [
+      {
+        "domain": "techcombank.com",
+        "rank": 2
+      },
+      {
+        "domain": "vietcombank.com.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Bảng so sánh lãi suất trực quan",
+    "recommended_target_words": 1800,
+    "gaps_detected": [
+      "Bảng lãi suất thường chậm cập nhật khi Ngân hàng Nhà nước có quyết định điều hành mới.",
+      "Thiếu công cụ so sánh lãi suất tiền gửi bậc thang theo giá trị khoản tiền."
+    ],
+    "beating_outline": [
+      "## 1. Bảng so sánh lãi suất tiền gửi tiết kiệm các ngân hàng hôm nay",
+      "## 2. Ngân hàng nhóm Big 4 hay ngân hàng TMCP tư nhân có lãi suất cao hơn?",
+      "## 3. Xu hướng điều hành lãi suất của Ngân hàng Nhà nước thời gian tới",
+      "## 4. Các yếu tố ảnh hưởng trực tiếp đến lãi suất cho vay và gửi tiền",
+      "## 5. FAQs - Nên chọn gửi tiết kiệm kỳ hạn ngắn hay kỳ hạn dài để tối ưu lãi?",
+      "## 6. Sinh lời mỗi ngày cùng Túi Thần Tài MoMo - Rút tiền bất kỳ lúc nào"
+    ]
+  }
+}

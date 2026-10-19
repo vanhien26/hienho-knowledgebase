@@ -1,0 +1,42 @@
+{
+  "query": "thi bằng lái xe máy a1",
+  "usecase_id": "thi-bang-lai-xe",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "thuvienphapluat.vn",
+      "name": "Thư Viện Pháp Luật",
+      "real_url": "https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/tu-van-phap-luat/46944/thi-bang-lai-xe-may-a1",
+      "current_rank": 1,
+      "page_title": "Hướng Dẫn Thủ Tục & Bộ Đề Thi Sát Hạch Bằng Lái Xe Máy A1",
+      "actual_word_count": 2300,
+      "format_detected": "Bộ đề thi & Hướng dẫn thi sát hạch"
+    },
+    "other_competitors": [
+      {
+        "domain": "luatvietnam.vn",
+        "rank": 2
+      },
+      {
+        "domain": "dantri.com.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Bộ đề thi & Hướng dẫn thi sát hạch",
+    "recommended_target_words": 1800,
+    "gaps_detected": [
+      "Nhiều trung tâm đào tạo không công khai chi phí hồ sơ và lệ phí thi sát hạch trọn gói.",
+      "Thiếu bộ đề thi thử lý thuyết online có chấm điểm tự động và mẹo nhớ câu điểm liệt."
+    ],
+    "beating_outline": [
+      "## 1. Điều kiện và hồ sơ đăng ký thi bằng lái xe máy hạng A1 mới nhất",
+      "## 2. Trọn bộ 200 câu hỏi thi lý thuyết bằng lái xe A1 và mẹo nhớ câu điểm liệt",
+      "## 3. Hướng dẫn mẹo thi thực hành sa hình xe máy số 8 không bị chạm vạch",
+      "## 4. Biểu phí trọn gói thi bằng lái xe máy A1 theo quy định mới",
+      "## 5. FAQs - Thi trượt lý thuyết hoặc thực hành bằng lái xe có được thi lại ngay không?",
+      "## 6. Mua bảo hiểm xe máy bắt buộc & Lưu trữ bằng lái xe điện tử trên MoMo"
+    ]
+  }
+}

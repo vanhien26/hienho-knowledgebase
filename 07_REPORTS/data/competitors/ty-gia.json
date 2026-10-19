@@ -1,0 +1,43 @@
+{
+  "query": "tỷ giá vcb",
+  "usecase_id": "ty-gia",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "vietcombank.com.vn",
+      "name": "Ngân hàng Ngoại thương Vietcombank",
+      "real_url": "https://www.vietcombank.com.vn/KHCN/Cong-cu-Tien-ich/Ty-gia",
+      "current_rank": 1,
+      "page_title": "Tỷ giá hối đoái và chuyển đổi ngoại tệ - Vietcombank",
+      "actual_word_count": 980,
+      "format_detected": "Bảng biểu tỷ giá ngân hàng thời gian thực"
+    },
+    "other_competitors": [
+      {
+        "domain": "tygia.vn",
+        "rank": 2
+      },
+      {
+        "domain": "webgia.com",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Bảng biểu tỷ giá ngân hàng thời gian thực",
+    "recommended_target_words": 1500,
+    "gaps_detected": [
+      "Chỉ có tỷ giá của riêng một ngân hàng, không có bảng so sánh tỷ giá đa ngân hàng.",
+      "Thiếu công cụ quy đổi ngoại tệ hai chiều tương tác nhanh.",
+      "Thiếu biểu đồ lịch sử biến động tỷ giá theo 30-90 ngày."
+    ],
+    "beating_outline": [
+      "## 1. Bảng tỷ giá Vietcombank hôm nay (USD, EUR, JPY, GBP, CNY...)",
+      "## 2. So sánh tỷ giá mua/bán tiền mặt và chuyển khoản Vietcombank",
+      "## 3. Công cụ quy đổi ngoại tệ sang VNĐ trực tuyến theo thời gian thực",
+      "## 4. Biến động tỷ giá USD/VND và các yếu tố kinh tế tác động",
+      "## 5. FAQs - Kinh nghiệm đổi ngoại tệ tại ngân hàng không mất phí",
+      "## 6. Chuyển tiền quốc tế và thanh toán thẻ tiện lợi cùng MoMo"
+    ]
+  }
+}

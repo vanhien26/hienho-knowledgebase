@@ -1,0 +1,42 @@
+{
+  "query": "xe buýt",
+  "usecase_id": "tuyen-xe-buyt",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "busmap.vn",
+      "name": "BusMap Xe Buýt",
+      "real_url": "https://busmap.vn/",
+      "current_rank": 1,
+      "page_title": "Tra Cứu Lộ Trình & Tuyến Xe Buýt Trực Tuyến Toàn Quốc - BusMap",
+      "actual_word_count": 1350,
+      "format_detected": "Interactive Bus Routing Tool"
+    },
+    "other_competitors": [
+      {
+        "domain": "thuvienphapluat.vn",
+        "rank": 2
+      },
+      {
+        "domain": "danangbus.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Interactive Bus Routing Tool",
+    "recommended_target_words": 1600,
+    "gaps_detected": [
+      "Chưa tích hợp thanh toán vé xe buýt điện tử hoặc vé tháng không tiền mặt.",
+      "Thời gian xe đến trạm thực tế đôi khi chênh lệch do tắc đường chưa được cập nhật theo phút."
+    ],
+    "beating_outline": [
+      "## 1. Bản đồ tra cứu lộ trình các tuyến xe buýt tại Hà Nội và TP.HCM",
+      "## 2. Bảng giá vé xe buýt lượt, vé tháng học sinh sinh viên và đối tượng miễn phí",
+      "## 3. Hướng dẫn làm thẻ vé tháng xe buýt online nhận thẻ tận nhà",
+      "## 4. Các tuyến xe buýt điện VinBus: Lộ trình, giá vé và chất lượng dịch vụ",
+      "## 5. FAQs - Làm thế nào để biết xe buýt sắp đến điểm dừng tiếp theo?",
+      "## 6. Quẹt mã MoMo mua vé xe buýt & Nạp tiền thẻ vé tháng phương tiện công cộng"
+    ]
+  }
+}

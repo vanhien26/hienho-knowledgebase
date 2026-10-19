@@ -1,0 +1,42 @@
+{
+  "query": "phim chiếu rạp",
+  "usecase_id": "rap",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "cgv.vn",
+      "name": "CGV Cinemas Việt Nam",
+      "real_url": "https://www.cgv.vn/default/movies/now-showing.html",
+      "current_rank": 1,
+      "page_title": "Phim Đang Chiếu Tại Rạp CGV Toàn Quốc Mới Nhất",
+      "actual_word_count": 1200,
+      "format_detected": "Cinema Portal & Booking"
+    },
+    "other_competitors": [
+      {
+        "domain": "lottecinemavn.com",
+        "rank": 2
+      },
+      {
+        "domain": "galaxycine.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Cinema Portal & Booking",
+    "recommended_target_words": 1500,
+    "gaps_detected": [
+      "Chỉ hiển thị rạp CGV, không thể so sánh suất chiếu với rạp Lotte, Galaxy, Beta lân cận.",
+      "Giá vé giờ cao điểm cao, ít chương trình đồng giá cho học sinh sinh viên trên web."
+    ],
+    "beating_outline": [
+      "## 1. Lịch phim chiếu rạp mới nhất tại Hà Nội, TP.HCM và các tỉnh",
+      "## 2. So sánh giá vé các chuỗi rạp: CGV, Lotte Cinema, Galaxy, BHD, Beta",
+      "## 3. Các định dạng rạp chiếu đỉnh cao: IMAX, 4DX, ScreenX, Gold Class",
+      "## 4. Mẹo săn vé xem phim giá rẻ ngày thứ Tư vui vẻ và ưu đãi HSSV",
+      "## 5. FAQs - Giải đáp quy định mang đồ ăn ngoài vào rạp chiếu phim",
+      "## 6. Đặt vé xem phim tất cả các rạp giá rẻ nhất trên Ví MoMo"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "query": "trạm xăng",
+  "usecase_id": "tram-xang",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "petrolimex.com.vn",
+      "name": "Tập đoàn Xăng dầu Việt Nam Petrolimex",
+      "real_url": "https://www.petrolimex.com.vn/nd/danh-sach-cua-hang-xang-dau.html",
+      "current_rank": 1,
+      "page_title": "Tìm Kiếm Cửa Hàng Xăng Dầu Petrolimex Gần Nhất Toàn Quốc",
+      "actual_word_count": 850,
+      "format_detected": "Interactive Store Locator Map"
+    },
+    "other_competitors": [
+      {
+        "domain": "pvoil.com.vn",
+        "rank": 2
+      },
+      {
+        "domain": "giaxanghomnay.com",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Interactive Store Locator Map",
+    "recommended_target_words": 1400,
+    "gaps_detected": [
+      "Bản đồ tra cứu của đối thủ chậm cập nhật tình trạng mở cửa 24/7.",
+      "Thiếu tính năng chỉ đường kết hợp thanh toán quét mã QR ngay tại trụ bơm."
+    ],
+    "beating_outline": [
+      "## 1. Bản đồ tìm kiếm trạm xăng gần bạn nhất mở cửa 24/24",
+      "## 2. Danh sách cây xăng uy tín: Petrolimex, PVOIL, Saigon Petro",
+      "## 3. Cách phân biệt xăng chuẩn và nhận biết cây xăng pha tạp chất",
+      "## 4. Hướng dẫn quy trình đổ xăng thanh toán quét mã QR không tiền mặt",
+      "## 5. FAQs - Có được sử dụng điện thoại khi đứng tại cây xăng không?",
+      "## 6. Đổ xăng không tiền mặt & Tích điểm hoàn tiền cùng MoMo"
+    ]
+  }
+}
