@@ -1,0 +1,42 @@
+{
+  "query": "đổi tiền tệ",
+  "usecase_id": "doi-tien",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "tygia.vn",
+      "name": "Tỷ Giá Ngoại Tệ Tygia.vn",
+      "real_url": "https://tygia.vn/",
+      "current_rank": 1,
+      "page_title": "Công Cụ Chuyển Đổi Ngoại Tệ Trực Tuyến Tygia.vn",
+      "actual_word_count": 1200,
+      "format_detected": "Interactive Currency Converter"
+    },
+    "other_competitors": [
+      {
+        "domain": "vietcombank.com.vn",
+        "rank": 2
+      },
+      {
+        "domain": "webgia.com",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Interactive Currency Converter",
+    "recommended_target_words": 1500,
+    "gaps_detected": [
+      "Công cụ quy đổi thường không tính đến phí chuyển đổi ngoại tệ của ngân hàng phát hành thẻ.",
+      "Thiếu danh sách các điểm thu đổi ngoại tệ được Ngân hàng Nhà nước cấp phép."
+    ],
+    "beating_outline": [
+      "## 1. Công cụ quy đổi tỷ giá tiền tệ trực tuyến hôm nay chuẩn quốc tế",
+      "## 2. Địa chỉ đổi tiền ngoại tệ uy tín, hợp pháp tại Hà Nội và TP.HCM",
+      "## 3. Phí chuyển đổi ngoại tệ khi thanh toán thẻ quốc tế tại nước ngoài",
+      "## 4. Những lưu ý cần biết khi đổi tiền lẻ, tiền mới dịp Tết",
+      "## 5. FAQs - Đổi tiền ngoại tệ tại tiệm vàng không phép bị phạt bao nhiêu?",
+      "## 6. Thanh toán không cần đổi tiền mặt khi đi du lịch nước ngoài với MoMo"
+    ]
+  }
+}

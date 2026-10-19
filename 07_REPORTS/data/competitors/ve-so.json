@@ -1,0 +1,42 @@
+{
+  "query": "dò vé số",
+  "usecase_id": "ve-so",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "xoso.me",
+      "name": "Xổ Số Me",
+      "real_url": "https://xoso.me/do-ve-so.html",
+      "current_rank": 1,
+      "page_title": "Công Cụ Dò Vé Số Trực Tuyến Nhanh Và Chính Xác - Xoso.me",
+      "actual_word_count": 1100,
+      "format_detected": "Interactive Tool / Dò vé số"
+    },
+    "other_competitors": [
+      {
+        "domain": "minhngoc.net.vn",
+        "rank": 2
+      },
+      {
+        "domain": "xosodaiphat.com",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Interactive Tool / Dò vé số",
+    "recommended_target_words": 1400,
+    "gaps_detected": [
+      "Giao diện đối thủ chứa nhiều quảng cáo popup gây nhầm lẫn khi người dùng bấm tra cứu.",
+      "Chưa có tính năng quét mã QR trên tờ vé số để báo kết quả ngay tức thì."
+    ],
+    "beating_outline": [
+      "## 1. Công cụ dò vé số kiến thiết 3 miền (Bắc, Trung, Nam) trực tuyến",
+      "## 2. Hướng dẫn cách kiểm tra vé số trúng thưởng các giải từ Tám đến Đặc biệt",
+      "## 3. Thời hạn lĩnh thưởng và điều kiện tờ vé số hợp lệ để nhận giải",
+      "## 4. Các điểm đổi vé số trúng thưởng uy tín và mức phí hoa hồng đại lý",
+      "## 5. FAQs - Trúng số bao nhiêu tiền thì phải đóng thuế thu nhập cá nhân?",
+      "## 6. Dò vé số & Mua vé Vietlott trả thưởng trực tiếp vào Ví MoMo"
+    ]
+  }
+}

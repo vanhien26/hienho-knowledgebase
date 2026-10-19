@@ -1,0 +1,43 @@
+{
+  "query": "xổ số miền nam",
+  "usecase_id": "xo-so",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "xoso.me",
+      "name": "Xổ Số Me",
+      "real_url": "https://xoso.me/xsmn-sxmn-xo-so-mien-nam.html",
+      "current_rank": 1,
+      "page_title": "XSMN - Kết Quả Xổ Số Miền Nam Hôm Nay Trực Tiếp Nhanh Nhất",
+      "actual_word_count": 1400,
+      "format_detected": "Bảng kết quả xổ số cập nhật trực tiếp"
+    },
+    "other_competitors": [
+      {
+        "domain": "minhngoc.net.vn",
+        "rank": 2
+      },
+      {
+        "domain": "xosodaiphat.com",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Bảng kết quả xổ số cập nhật trực tiếp",
+    "recommended_target_words": 1400,
+    "gaps_detected": [
+      "Website nhiều quảng cáo cá cược phản cảm gây giảm trải nghiệm người dùng.",
+      "Thiếu công cụ dò vé số bằng camera hoặc nhập số tự động báo trúng thưởng.",
+      "Không có tính năng lưu trữ vé đã mua để tự động thông báo khi có kết quả."
+    ],
+    "beating_outline": [
+      "## 1. Kết quả xổ số miền Nam (XSMN) hôm nay trực tiếp lúc 16h15",
+      "## 2. Bảng kết quả XSMN theo từng đài: TP.HCM, Đồng Nai, Cần Thơ...",
+      "## 3. Công cụ dò vé số trực tuyến tự động kiểm tra giải thưởng",
+      "## 4. Thống kê lô tô, đầu đuôi xổ số miền Nam trong 30 ngày gần nhất",
+      "## 5. FAQs - Quy định đổi thưởng và địa chỉ nhận giải xổ số kiến thiết",
+      "## 6. Dò vé số kiến thiết & Mua hộ vé số an toàn qua MoMo"
+    ]
+  }
+}

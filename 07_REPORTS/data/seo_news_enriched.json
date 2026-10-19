@@ -1,0 +1,380 @@
+[
+  {
+    "url": "https://www.seroundtable.com/google-search-ranking-volatility-chatter-42317.html",
+    "title": "Biến động xếp hạng Google, thảo luận cộng đồng tăng vọt",
+    "category": "google_update",
+    "impact": "high",
+    "summary": "Cộng đồng SEO ghi nhận biến động xếp hạng và mức độ thảo luận tăng vọt trong 24 giờ qua trên kết quả tìm kiếm Google, kèm thay đổi lưu lượng giới thiệu. Đây là dấu hiệu của một đợt cập nhật thuật toán chưa được Google xác nhận chính thức.",
+    "tags": ["ranking volatility", "core update", "ranking"],
+    "action": "Theo dõi biến động thứ hạng và traffic organic của cụm URL tài chính trên GSC trong 48-72h tới; khoanh vùng URL sụt giảm để xử lý sớm."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/a-panda-style-update-within-a-month-according-to-prediction-model-signals/591955/",
+    "title": "Dự báo 96,8% có bản cập nhật kiểu Panda trong 1 tháng",
+    "category": "google_update",
+    "impact": "high",
+    "summary": "Mô hình dự báo tín hiệu cảnh báo xác suất 96,8% xuất hiện một đợt cập nhật kiểu Panda trong vòng một tháng, nhắm vào nội dung AI quy mô lớn và tác giả giả (fake authors). Nội dung tài chính YMYL là nhóm rủi ro cao nhất nếu thiếu tín hiệu tin cậy.",
+    "tags": ["panda update", "ymyl", "e-e-a-t", "ai content"],
+    "action": "Rà soát toàn bộ nội dung tài chính tạo tự động: bổ sung tác giả có thật, chuyên môn và nguồn tham chiếu để phòng rủi ro YMYL."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/google-explains-how-they-rank-pdfs-and-what-it-means-for-seo-geo/592902/",
+    "title": "Google giải thích cách xếp hạng PDF cho SEO/GEO",
+    "category": "geo",
+    "impact": "medium",
+    "summary": "Google giải thích cách xếp hạng PDF trong Search và AI Mode, kèm cách kiểm tra một PDF có thân thiện SEO hay không. Nhiều tài liệu biểu phí, quy chế, hướng dẫn tài chính của doanh nghiệp thường phát hành dưới dạng PDF nhưng bị bỏ quên tối ưu.",
+    "tags": ["pdf", "seo", "geo", "technical"],
+    "action": "Tối ưu lại các tài liệu PDF tài chính (biểu phí, điều khoản): tiêu đề mô tả, nội dung dạng text tìm kiếm được, và cân nhắc chuyển sang trang HTML tối ưu GEO."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/why-seo-isnt-enough-anymore-and-why-thats-a-good-thing/592601/",
+    "title": "Vì sao chỉ SEO là không đủ và đó lại là điều tốt",
+    "category": "geo",
+    "impact": "medium",
+    "summary": "Phân tích cho thấy Google đã thanh lọc các site chỉ tối ưu SEO thuần từ đợt Helpful Content; chiến lược bền vững đòi hỏi hiện diện đa kênh (off-web, entity, GEO) thay vì phụ thuộc một mình Search.",
+    "tags": ["geo", "off-web", "e-e-a-t"],
+    "action": "Đẩy mạnh GEO/AEO và off-web citation song song SEO; không đặt toàn bộ tăng trưởng organic vào một kênh Search duy nhất."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/serps-stop-being-the-default-between-2028-2030/592619/",
+    "title": "SERP có thể hết là mặc định trong giai đoạn 2028-2030",
+    "category": "geo",
+    "impact": "high",
+    "summary": "Dự báo Google sẽ chuyển mặc định từ kết quả xếp hạng sang câu trả lời AI khi doanh thu quảng cáo lớp câu trả lời ngang SERP, dự kiến rơi vào giai đoạn 2028-2030. Đây là mốc chiến lược cho định hướng GEO dài hạn.",
+    "tags": ["geo", "ai search", "ai mode"],
+    "action": "Đặt lộ trình GEO/AEO 3-5 năm: tối ưu cấu trúc trả lời trực tiếp và entity để giữ vị thế khi AI Answer trở thành mặc định."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/chatgpt-traffic-drop-appears-to-be-a-tracking-problem/593157/",
+    "title": "Lưu lượng ChatGPT giảm do lỗi tracking, không phải nhu cầu",
+    "category": "ai_search",
+    "impact": "high",
+    "summary": "Lưu lượng gán cho ChatGPT giảm mạnh trong nhiều bộ dữ liệu analytics tháng này, nguyên nhân được cho là các link ChatGPT mở ra mà không mang tracking tag. Đây là vấn đề đo lường, không phải sụt giảm nhu cầu thật.",
+    "tags": ["chatgpt", "ai search", "tracking"],
+    "action": "Kiểm tra lại gắn tham số tracking cho traffic từ AI engine; rà soát referral từ chatgpt.com/perplexity.ai để không đánh giá sai kênh AI."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/google-inline-links-higher-ai-search-responses/593089/",
+    "title": "Google đẩy inline link lên cao hơn trong AI Search",
+    "category": "ai_search",
+    "impact": "medium",
+    "summary": "Google thay đổi cách hiển thị link trong AI Mode và AI Overviews: đưa inline link lên vị trí cao hơn và mở rộng carousel cho Nguồn ưu tiên (Preferred Sources). Cơ hội để thương hiệu chiếm slot trích dẫn trong câu trả lời AI.",
+    "tags": ["ai overview", "ai mode", "citation"],
+    "action": "Tập trung tối ưu trích dẫn AI cho nhóm câu hỏi tài chính; tăng tín hiệu để được đưa vào carousel Preferred Sources."
+  },
+  {
+    "url": "https://www.seroundtable.com/google-updates-links-in-ai-mode-and-ai-overviews-again-42308.html",
+    "title": "Google lại đổi link trong AI Mode, AI Overviews, ẩn dữ liệu click",
+    "category": "ai_search",
+    "impact": "medium",
+    "summary": "Google tiếp tục điều chỉnh cách hiển thị link và carousel trong AI Mode và AI Overviews nhưng xác nhận không cung cấp dữ liệu click. Việc thiếu dữ liệu click khiến đo lường hiệu quả trích dẫn AI gặp khó.",
+    "tags": ["ai overview", "ai mode", "citation"],
+    "action": "Chủ động đo lường hiệu quả AI bằng tín hiệu gián tiếp (brand search, direct traffic, citation tracking) do không có dữ liệu click từ Google."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/analysis-google-is-poisoning-search-results-for-rank-trackers/592873/",
+    "title": "Phân tích: Google 'đầu độc' kết quả cho rank tracker",
+    "category": "google_update",
+    "impact": "medium",
+    "summary": "Phân tích cho rằng Google đang 'đầu độc' kết quả tìm kiếm đối với các công cụ theo dõi thứ hạng, làm giảm độ tin cậy của dữ liệu SEO dùng để ra quyết định. Hệ quả là mọi kết luận từ rank tracker cần được kiểm chứng chéo.",
+    "tags": ["rank tracker", "seo data"],
+    "action": "Không ra quyết định chỉ dựa vào rank tracker; đối chiếu với GSC (impression/click thật) trước khi thay đổi chiến lược."
+  },
+  {
+    "url": "https://www.seroundtable.com/google-dataset-search-broken-42315.html",
+    "title": "Google Dataset Search tạm thời không trả kết quả",
+    "category": "technical",
+    "impact": "low",
+    "summary": "Google Dataset Search gặp lỗi không trả về kết quả trong nhiều giờ. Sự cố ảnh hưởng đến khả năng khám phá dữ liệu mở/dataset công khai.",
+    "tags": ["dataset search"],
+    "action": "Nếu có phát hành dataset tài chính công khai (tỷ giá, lãi suất), theo dõi lại sau khi sự cố được khắc phục để đảm bảo khả năng khám phá."
+  },
+  {
+    "url": "https://www.seroundtable.com/google-updates-indexing-api-quota-information-42316.html",
+    "title": "Google cập nhật chi tiết hạn mức Indexing API",
+    "category": "technical",
+    "impact": "medium",
+    "summary": "Google cập nhật tài liệu Indexing API: gỡ quy trình xin cấp quyền cũ, bỏ khuyến nghị sitemap và công bố chi tiết hạn mức mặc định. Ảnh hưởng đến các site dùng Indexing API để đẩy URL index nhanh.",
+    "tags": ["indexing api", "sitemap"],
+    "action": "Rà soát nếu hệ thống Web dùng Indexing API: xác nhận hạn mức và luồng submit thay thế, tránh phụ thuộc vào cơ chế đã bị gỡ."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/google-indexing-api-docs-approval-form-removed/593292/",
+    "title": "Google gỡ hướng dẫn xin quyền Indexing API khỏi tài liệu",
+    "category": "technical",
+    "impact": "medium",
+    "summary": "Google gỡ form và các bước xin phê duyệt Indexing API khỏi tài liệu, chỉ còn liệt kê hạn mức mặc định mà không nêu cách xin thêm. Cộng đồng đặt dấu hỏi về cách mở rộng quota trong tương lai.",
+    "tags": ["indexing api"],
+    "action": "Theo dõi chính sách Indexing API; nếu cần index nhanh URL mới, ưu tiên sitemap chuẩn thay vì API."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/google-ugc-fresh-data-program-applications/593113/",
+    "title": "Google nhận đơn tham gia pipeline UGC tách khỏi crawl",
+    "category": "technical",
+    "impact": "medium",
+    "summary": "Google mở đơn cho các diễn đàn và nền tảng xã hội tham gia một pipeline UGC tách biệt với crawl thông thường. Cơ chế này có thể cho phép dữ liệu người dùng cập nhật nhanh hơn vào Search.",
+    "tags": ["ugc", "crawling"],
+    "action": "Không áp dụng trực tiếp cho momo.vn; ghi nhận xu hướng UGC được ưu tiên dữ liệu mới để định hướng nội dung cộng đồng."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/its-possible-your-migration-issues-may-be-due-to-site-quality/592899/",
+    "title": "Sự cố migration có thể do chất lượng site, không chỉ kỹ thuật",
+    "category": "technical",
+    "impact": "medium",
+    "summary": "Marie Haynes đưa giả thuyết: khi domain mới không được index và không có lỗi kỹ thuật, vấn đề có thể nằm ở chất lượng/tính nguyên bản của nội dung. Cảnh báo cho các dự án di chuyển nền tảng.",
+    "tags": ["migration", "indexing"],
+    "action": "Với các đợt migration (MoSpark), kiểm tra chất lượng và tính nguyên bản nội dung trước khi kỳ vọng index ổn định."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/metas-new-terms-expand-crawling-rights-beyond-advertisers/593217/",
+    "title": "Meta mở rộng quyền crawl nội dung ngoài phạm vi nhà quảng cáo",
+    "category": "technical",
+    "impact": "medium",
+    "summary": "Điều khoản mới của Meta cho phép crawl các site gắn với người dùng doanh nghiệp và dùng nội dung để huấn luyện sản phẩm, mở rộng quyền vốn chỉ áp dụng cho nhà quảng cáo. Liên quan đến quyền sử dụng dữ liệu nội dung.",
+    "tags": ["crawling", "robots.txt"],
+    "action": "Rà soát điều khoản crawl/AI đối với nội dung momo.vn; cân nhắc kiểm soát robots.txt cho các AI crawler không mong muốn."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/your-store-is-agent-ready-by-default-we-tested-122-shopify-stores/591767/",
+    "title": "Khảo sát 122 store Shopify về mức 'agent-ready'",
+    "category": "ai_search",
+    "impact": "medium",
+    "summary": "Khảo sát 122 cửa hàng Shopify cho thấy nhiều site trông 'sẵn sàng cho agent' nhưng thất bại khi người mua hỏi về vận chuyển, nhận hàng, hủy đơn. Tín hiệu agent-readiness là yếu tố mới cho thương mại điện tử.",
+    "tags": ["ai search", "structured data", "ecommerce"],
+    "action": "Chuẩn bị dữ liệu có cấu trúc cho các luồng thương mại (sản phẩm, phí, điều kiện) để tăng khả năng phục vụ AI/agent commerce."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/ask-a-ppc-how-do-i-measure-and-attribute-when-clicks-are-no-longer-the-whole-story/591521/",
+    "title": "Đo lường và attribution khi click không còn là toàn bộ câu chuyện",
+    "category": "industry",
+    "impact": "low",
+    "summary": "Khi hành trình mua chuyển sang AI, click không còn là chỉ số đầy đủ; cần đo lường giá trị qua conversion tracking, tín hiệu impression và dữ liệu kinh doanh. Thách thức chung cho đo lường kênh Web.",
+    "tags": ["attribution", "measurement"],
+    "action": "Bổ sung lớp đo lường ngoài click: impression, brand lift và dữ liệu chuyển đổi thực để đánh giá đúng kênh tìm kiếm."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/google-universal-cart-store-handoff/593145/",
+    "title": "Google Universal Cart ra mắt: giỏ hàng về site như thế nào",
+    "category": "serp_feature",
+    "impact": "low",
+    "summary": "Universal Cart triển khai trên Search và ứng dụng Gemini, cho phép thanh toán trong giỏ hoặc chuyển một chiều về site của cửa hàng. Thay đổi cách người dùng hoàn tất mua hàng từ Search.",
+    "tags": ["serp feature", "ecommerce"],
+    "action": "Theo dõi tác động đến phễu thương mại; chuẩn bị dữ liệu sản phẩm/đối tác nếu MoMo mở bán hàng qua kênh AI."
+  },
+  {
+    "url": "https://www.seroundtable.com/universal-cart-google-search-42312.html",
+    "title": "Universal Cart ra mắt trên Google Search tại Mỹ",
+    "category": "serp_feature",
+    "impact": "low",
+    "summary": "Google ra mắt Universal Cart trong Search và Gemini tại thị trường Mỹ, vận hành trên Universal Commerce Protocol, thời điểm trước mùa mua sắm lễ. Tín hiệu mở rộng thương mại trực tiếp trong Search.",
+    "tags": ["serp feature", "ecommerce"],
+    "action": "Theo dõi mô hình thương mại trong AI/Search để chuẩn bị cho các luồng mua sắm trên nền tảng Web."
+  },
+  {
+    "url": "https://www.seroundtable.com/google-vehicle-top-ads-42301.html",
+    "title": "Google thử định dạng Vehicle Top Ads cho ngành xe",
+    "category": "serp_feature",
+    "impact": "medium",
+    "summary": "Google ra mắt định dạng quảng cáo beta 'Automotive Model Feeds' (Vehicle Top Ads) cho nhà sản xuất xe, hiển thị hình ảnh và thông tin xe nổi bật trong kết quả tìm kiếm. Liên quan trực tiếp đến Vehicle Hub.",
+    "tags": ["serp feature", "vehicle"],
+    "action": "Theo dõi định dạng Vehicle Top Ads cho các trang hãng xe/model trên Vehicle Hub; đánh giá cơ hội quảng cáo ngành xe."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/google-launches-a-video-series-for-odd-technical-seo-questions/592952/",
+    "title": "Google ra mắt chuỗi video giải đáp Technical SEO",
+    "category": "technical",
+    "impact": "low",
+    "summary": "Google ra mắt chuỗi video Search Central giải đáp các câu hỏi technical SEO ít gặp, bắt đầu với emoji, ký tự phi Latin và từ khóa trong URL.",
+    "tags": ["technical"],
+    "action": "Tham khảo cho đội ngũ technical SEO; ghi nhận các case biên về ký tự trong URL."
+  },
+  {
+    "url": "https://developers.google.com/search/blog/2026/09/web-multimodal-in-sc",
+    "title": "Search Console bổ sung báo cáo Search đa phương thức",
+    "category": "technical",
+    "impact": "medium",
+    "summary": "Google Search Console bổ sung báo cáo hiệu suất Search đa phương thức (web multimodal), giúp chủ site hiểu người dùng tìm thấy nội dung qua cả trải nghiệm hình ảnh/đa phương thức.",
+    "tags": ["search console", "multimodal"],
+    "action": "Khai thác báo cáo mới trong GSC để đánh giá hiệu suất nội dung đa phương thức của momo.vn."
+  },
+  {
+    "url": "https://status.search.google.com/incidents/XhUDXP7A67iHCD2kmbVu",
+    "title": "Bản cập nhật spam tháng 9/2026",
+    "category": "google_update",
+    "impact": "high",
+    "summary": "Google Search Status Dashboard xác nhận đợt 'September 2026 spam update' kéo dài gần 14 ngày và kết thúc ngày 08/10/2026. Đây là nguồn chính thống để đối chiếu biến động spam/ranking.",
+    "tags": ["spam update", "core update"],
+    "action": "Đối chiếu biến động thứ hạng tài chính YMYL quanh mốc 24/09-08/10 trên GSC; xác nhận không có manual action."
+  },
+  {
+    "url": "https://developers.google.com/search/blog/2026/08/update-site-reputation-policy",
+    "title": "Google cập nhật chính sách Site Reputation",
+    "category": "google_update",
+    "impact": "high",
+    "summary": "Google cập nhật chính sách Site Reputation Abuse nhằm chặn việc đăng nội dung bên thứ ba lên site uy tín để trục lợi xếp hạng. Chính sách ảnh hưởng đến các mô hình nội dung hợp tác/đối tác.",
+    "tags": ["site reputation", "policy"],
+    "action": "Rà soát các trang nội dung đối tác/co-marketing trên momo.vn để đảm bảo không vi phạm chính sách site reputation."
+  },
+  {
+    "url": "https://www.seroundtable.com/google-ads-lead-form-scoring-42310.html",
+    "title": "Google Ads Lead Form bổ sung chấm điểm lead",
+    "category": "industry",
+    "impact": "low",
+    "summary": "Google bổ sung tính năng chấm điểm lead (lead scoring) trong Lead Form của Google Ads, cho phép gắn điểm theo câu trả lời để lọc lead chất lượng cao.",
+    "tags": ["google ads"],
+    "action": "Xem xét áp dụng lead scoring cho các form thu thập lead tài chính nếu chạy Google Ads."
+  },
+  {
+    "url": "https://www.seroundtable.com/google-ads-api-twice-a-month-42303.html",
+    "title": "Google Ads API phát hành 2 lần mỗi tháng",
+    "category": "industry",
+    "impact": "low",
+    "summary": "Google Ads API sẽ phát hành hai lần mỗi tháng thay vì một lần, tăng gấp đôi tần suất cập nhật từ nay đến 2027.",
+    "tags": ["google ads"],
+    "action": "Nếu có hệ thống tích hợp Google Ads API, tăng tần suất kiểm thử tương thích do thay đổi API dày hơn."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/seo-pulse-rank-tracker-data-chatgpt-tags-ai-search-links/593171/",
+    "title": "Dữ liệu rank tracker, tag ChatGPT và link AI Search - SEO Pulse",
+    "category": "ai_search",
+    "impact": "low",
+    "summary": "Bản tin SEO Pulse tổng hợp: rank tracker ghi nhận trang Google mất sitelink thường thấy, một số link ChatGPT mất tracking tag, và Google/Bing thay đổi link trong AI search.",
+    "tags": ["chatgpt", "ai search", "rank tracker"],
+    "action": "Theo dõi ổn định hiển thị sitelink và tracking AI; đối chiếu định kỳ để phát hiện bất thường sớm."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/why-the-new-york-times-puts-free-content-first/593021/",
+    "title": "Vì sao New York Times ưu tiên nội dung miễn phí lên trang chủ",
+    "category": "industry",
+    "impact": "low",
+    "summary": "The New York Times dành vị trí trang chủ nổi bật cho các bài miễn phí và ghi rõ cho độc giả biết. Chiến lược này giúp tăng tương tác và phễu chuyển đổi sang nội dung trả phí.",
+    "tags": ["content strategy"],
+    "action": "Tham khảo mô hình phân tầng nội dung miễn phí/trả phí; áp dụng cho phễu nội dung tài chính dẫn về sản phẩm."
+  },
+  {
+    "url": "https://www.seroundtable.com/recap-10-16-2026-42318.html",
+    "title": "Điểm tin diễn đàn Search ngày 16/10/2026",
+    "category": "industry",
+    "impact": "low",
+    "summary": "Tổng hợp thảo luận diễn đàn search trong ngày 16/10/2026. Bản tin tổng hợp, không có sự kiện trọng yếu riêng.",
+    "tags": [],
+    "action": ""
+  },
+  {
+    "url": "https://www.seroundtable.com/video-09-16-2026-42313.html",
+    "title": "Video điểm tin Search: Google, AI Mode, ChatGPT và SEO",
+    "category": "ai_search",
+    "impact": "low",
+    "summary": "Video recap tuần: Google bị cho là 'đầu độc' công cụ tracking bên thứ ba, ra mắt Gemini 4 Argon trong AI Mode, cùng nhiều thay đổi kết quả AI. Tổng hợp diễn biến AI Search trong kỳ.",
+    "tags": ["ai search", "ai mode", "gemini"],
+    "action": "Theo dõi cập nhật AI Mode và tác động đến trích dẫn thương hiệu; đánh giá lại độ tin cậy công cụ tracking."
+  },
+  {
+    "url": "https://www.seroundtable.com/google-ads-online-gambling-certification-42314.html",
+    "title": "Google Ads mở chứng nhận cho nhà quảng cáo cờ bạc trực tuyến",
+    "category": "industry",
+    "impact": "low",
+    "summary": "Google Ads mở chứng nhận cho một số nhà quảng cáo thuộc nhóm cờ bạc trực tuyến từ tháng 10/2026, triển khai dần theo khu vực.",
+    "tags": ["google ads"],
+    "action": "Không liên quan trực tiếp đến momo.vn; ghi nhận để theo dõi thay đổi chính sách quảng cáo ngành."
+  },
+  {
+    "url": "https://www.seroundtable.com/bing-read-more-links-42311.html",
+    "title": "Bing thử nghiệm link Read more trong snippet kết quả",
+    "category": "serp_feature",
+    "impact": "low",
+    "summary": "Bing đang thử thêm link 'Read more' trong snippet kết quả tìm kiếm, tương tự cách Google đã làm trước đó.",
+    "tags": ["serp feature", "bing"],
+    "action": "Theo dõi tác động lên CTR Bing nếu MoMo có phủ kênh Bing; không cần hành động ngay."
+  },
+  {
+    "url": "https://www.seroundtable.com/bing-testing-popular-links-42304.html",
+    "title": "Bing thử nghiệm nhãn Popular Links cho sitelinks",
+    "category": "serp_feature",
+    "impact": "low",
+    "summary": "Microsoft thử nghiệm gắn nhãn 'Popular Links' cho sitelinks trên Bing, tương tự thử nghiệm top pages trước đây của Google.",
+    "tags": ["serp feature", "bing"],
+    "action": "Ghi nhận xu hướng; đảm bảo cấu trúc sitelink momo.vn rõ ràng để tận dụng nếu Bing triển khai rộng."
+  },
+  {
+    "url": "https://www.seroundtable.com/recap-10-15-2026-42309.html",
+    "title": "Điểm tin diễn đàn Search ngày 15/10/2026",
+    "category": "industry",
+    "impact": "low",
+    "summary": "Tổng hợp thảo luận diễn đàn search trong ngày 15/10/2026. Bản tin tổng hợp, không có sự kiện trọng yếu riêng.",
+    "tags": [],
+    "action": ""
+  },
+  {
+    "url": "https://www.seroundtable.com/google-app-new-search-bar-42267.html",
+    "title": "Google thử thanh tìm kiếm mới trong ứng dụng",
+    "category": "serp_feature",
+    "impact": "low",
+    "summary": "Google thử nghiệm thanh tìm kiếm mới trong ứng dụng di động với nút dấu cộng và nhãn 'Ask Google' thay cho 'Search'. Thay đổi giao diện tìm kiếm theo hướng hội thoại.",
+    "tags": ["serp feature", "ai search"],
+    "action": "Ghi nhận xu hướng tìm kiếm hội thoại; củng cố nội dung dạng hỏi đáp cho các truy vấn tài chính."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/coywolf-pack-emdash-seo-plugin-makes-sites-absurdly-fast/593026/",
+    "title": "Plugin SEO Coywolf Pack tăng tốc website EmDash",
+    "category": "technical",
+    "impact": "low",
+    "summary": "Plugin Coywolf Pack tăng tốc website trên nền EmDash, bổ sung tính năng SEO và cải thiện migration từ WordPress. Đáng chú ý với các nền tảng web cần tối ưu hiệu năng.",
+    "tags": ["core web vitals", "technical"],
+    "action": "Tham khảo kỹ thuật tối ưu hiệu năng; đối chiếu với chuẩn CWV hiện hành của Web Platform."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/google-ads-introduces-channel-prioritization-and-budget-allocation/592833/",
+    "title": "Google Ads bổ sung ưu tiên kênh và phân bổ ngân sách",
+    "category": "industry",
+    "impact": "low",
+    "summary": "Google Ads giới thiệu tính năng ưu tiên kênh và phân bổ ngân sách, cho phép nhà quảng cáo kiểm soát chi tiêu linh hoạt hơn giữa Search, Performance Max và các chiến dịch khác.",
+    "tags": ["google ads"],
+    "action": "Cân nhắc áp dụng cho các chiến dịch Paid phục vụ phễu Web-to-App nếu cần kiểm soát phân bổ ngân sách."
+  },
+  {
+    "url": "https://www.searchenginejournal.com/negative-search-result-removal-erase-spa/590856/",
+    "title": "Cách xử lý kết quả tìm kiếm tiêu cực qua 22.620 link",
+    "category": "industry",
+    "impact": "low",
+    "summary": "Nghiên cứu trên 22.620 link về cách xử lý kết quả tìm kiếm tiêu cực, cách xác định link có thể gỡ hoặc ẩn hiệu quả. Liên quan đến quản trị danh tiếng thương hiệu trên Search.",
+    "tags": ["backlink", "brand"],
+    "action": "Áp dụng cho quản trị thương hiệu MoMo: ưu tiên chiếm slot kết quả tích cực thay vì chỉ xử lý nội dung tiêu cực."
+  },
+  {
+    "url": "https://developers.google.com/search/blog/2026/10/seo-learning-paths",
+    "title": "Google Search Central ra mắt lộ trình học Search, Technical SEO",
+    "category": "technical",
+    "impact": "low",
+    "summary": "Google Search Central công bố các lộ trình học (learning paths) từ playlist YouTube chọn lọc về kiến thức Search cơ bản và Technical SEO, giúp tiếp cận có hệ thống thay vì rời rạc.",
+    "tags": ["technical", "learning"],
+    "action": "Đề xuất dùng làm tài liệu đào tạo nội bộ cho đội content/SEO."
+  },
+  {
+    "url": "https://developers.google.com/search/blog/2026/09/scl-dd-europe-2026-community-speakers",
+    "title": "Search Central Live Europe 2026: danh sách diễn giả",
+    "category": "industry",
+    "impact": "low",
+    "summary": "Google công bố danh sách diễn giả cộng đồng cho Search Central Live Deep Dive Europe 2026 diễn ra tại Barcelona từ 30/09 đến 02/10/2026.",
+    "tags": ["event"],
+    "action": ""
+  },
+  {
+    "url": "https://developers.google.com/search/blog/2026/09/search-central-live-india-2026",
+    "title": "Search Central Live Ấn Độ 2026 tại Bengaluru",
+    "category": "industry",
+    "impact": "low",
+    "summary": "Search Central Live trở lại Ấn Độ năm 2026 tại Bengaluru. Sự kiện cộng đồng của Google dành cho cộng đồng SEO khu vực APAC.",
+    "tags": ["event"],
+    "action": ""
+  },
+  {
+    "url": "https://developers.google.com/search/blog/2026/09/search-central-live-mexico-and-colombia",
+    "title": "Search Central Live đến Bogota và Mexico City",
+    "category": "industry",
+    "impact": "low",
+    "summary": "Search Central Live sẽ đến Bogota và Ciudad de México. Sự kiện cộng đồng SEO khu vực Mỹ Latin của Google.",
+    "tags": ["event"],
+    "action": ""
+  }
+]

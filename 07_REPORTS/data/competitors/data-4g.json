@@ -1,0 +1,42 @@
+{
+  "query": "gói cước 4g mobifone",
+  "usecase_id": "data-4g",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "mobifone.vn",
+      "name": "MobiFone",
+      "real_url": "https://www.mobifone.vn/dich-vu-di-dong/goi-cuoc-data",
+      "current_rank": 1,
+      "page_title": "Danh sách các gói cước 4G/5G MobiFone ưu đãi Data khủng",
+      "actual_word_count": 1550,
+      "format_detected": "Bảng gói cước & Đăng ký dịch vụ"
+    },
+    "other_competitors": [
+      {
+        "domain": "viettel.vn",
+        "rank": 2
+      },
+      {
+        "domain": "thegioididong.com",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Bảng gói cước & Đăng ký dịch vụ",
+    "recommended_target_words": 1500,
+    "gaps_detected": [
+      "Người dùng khó so sánh ưu đãi dung lượng giữa các gói ngày, gói tháng và gói năm.",
+      "Thiếu tính năng tự động gia hạn kèm hoàn tiền trực tiếp vào tài khoản ví."
+    ],
+    "beating_outline": [
+      "## 1. Bảng tổng hợp các gói cước 4G MobiFone hot nhất hiện nay",
+      "## 2. Gói cước 4G MobiFone 1 ngày, 3 ngày, 7 ngày dung lượng khủng giá rẻ",
+      "## 3. Các gói 4G MobiFone tháng ưu đãi data + gọi thoại miễn phí",
+      "## 4. Cú pháp đăng ký, kiểm tra dung lượng còn lại và hủy gói cước 4G",
+      "## 5. FAQs - Xử lý khi hết dung lượng tốc độ cao hoặc gói không tự gia hạn",
+      "## 6. Nạp Data 4G/5G MobiFone nhận ưu đãi hoàn tiền mỗi ngày trên MoMo"
+    ]
+  }
+}

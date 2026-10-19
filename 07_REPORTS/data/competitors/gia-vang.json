@@ -1,0 +1,47 @@
+{
+  "query": "giá vàng hôm nay",
+  "usecase_id": "gia-vang",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "giavang.net",
+      "name": "Giá Vàng Net",
+      "real_url": "https://giavang.net/",
+      "current_rank": 1,
+      "page_title": "Bảng Giá Vàng Hôm Nay - Trực Tuyến SJC, 9999, DOJI, PNJ",
+      "actual_word_count": 1680,
+      "format_detected": "Bảng biểu cập nhật giá thời gian thực"
+    },
+    "other_competitors": [
+      {
+        "domain": "sjc.com.vn",
+        "rank": 2
+      },
+      {
+        "domain": "doji.vn",
+        "rank": 3
+      },
+      {
+        "domain": "pnj.com.vn",
+        "rank": 4
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Bảng biểu cập nhật giá thời gian thực",
+    "recommended_target_words": 1600,
+    "gaps_detected": [
+      "Nhiều website chỉ hiển thị giá SJC, thiếu giá vàng nhẫn 9999 của DOJI, PNJ, Bảo Tín Minh Châu.",
+      "Thiếu biểu đồ phân tích kỹ thuật và dự báo xu hướng vàng theo thị trường quốc tế.",
+      "Chưa có tính năng đặt lệnh mua vàng online hoặc tích lũy vàng số lượng nhỏ."
+    ],
+    "beating_outline": [
+      "## 1. Bảng giá vàng hôm nay trực tuyến (SJC, DOJI, PNJ, 9999)",
+      "## 2. Biến động giá vàng thế giới và tỷ giá USD ảnh hưởng giá vàng",
+      "## 3. Phân tích & Dự báo xu hướng giá vàng trong tuần tới",
+      "## 4. So sánh giá vàng miếng SJC và vàng nhẫn trơn 9999",
+      "## 5. FAQs - Những lưu ý cần biết khi mua bán và đầu tư vàng",
+      "## 6. Giải pháp tích lũy vàng số an toàn, sinh lời cùng MoMo"
+    ]
+  }
+}

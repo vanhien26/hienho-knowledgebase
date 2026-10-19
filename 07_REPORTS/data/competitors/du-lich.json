@@ -1,0 +1,42 @@
+{
+  "query": "cẩm nang du lịch",
+  "usecase_id": "du-lich",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "traveloka.com",
+      "name": "Traveloka",
+      "real_url": "https://www.traveloka.com/vi-vn/explore",
+      "current_rank": 1,
+      "page_title": "Cẩm Nang Du Lịch Khám Phá Điểm Đến Hấp Dẫn - Traveloka",
+      "actual_word_count": 2600,
+      "format_detected": "Cẩm nang du lịch & Hướng dẫn"
+    },
+    "other_competitors": [
+      {
+        "domain": "klook.com",
+        "rank": 2
+      },
+      {
+        "domain": "ivivu.com",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Cẩm nang du lịch & Hướng dẫn",
+    "recommended_target_words": 2200,
+    "gaps_detected": [
+      "Bài viết cẩm nang thiếu lịch trình mẫu chi tiết theo ngân sách từng người.",
+      "Thiếu combo đặt trọn gói vé máy bay, khách sạn và vé tham quan giá ưu đãi."
+    ],
+    "beating_outline": [
+      "## 1. Top điểm đến du lịch hot nhất Việt Nam theo từng mùa trong năm",
+      "## 2. Gợi ý lịch trình du lịch tự túc 3 ngày 2 đêm chi phí tiết kiệm",
+      "## 3. Danh sách khách sạn, resort nghỉ dưỡng view đẹp đáng trải nghiệm",
+      "## 4. Những món ăn đặc sản không thể bỏ qua tại các vùng miền",
+      "## 5. FAQs - Kinh nghiệm đặt phòng khách sạn và vé máy bay giá rẻ mùa cao điểm",
+      "## 6. Đặt combo du lịch MoMo Travel - Trọn gói vé xe, khách sạn giá hời"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "query": "bảo hiểm xã hội",
+  "usecase_id": "bhxh",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "baohiemxahoi.gov.vn",
+      "name": "Bảo Hiểm Xã Hội Việt Nam",
+      "real_url": "https://baohiemxahoi.gov.vn/",
+      "current_rank": 1,
+      "page_title": "Cổng Thông tin điện tử Bảo hiểm Xã hội Việt Nam",
+      "actual_word_count": 1400,
+      "format_detected": "Cổng thông tin & Dịch vụ công trực tuyến"
+    },
+    "other_competitors": [
+      {
+        "domain": "thuvienphapluat.vn",
+        "rank": 2
+      },
+      {
+        "domain": "luatvietnam.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Cổng thông tin & Dịch vụ công trực tuyến",
+    "recommended_target_words": 1900,
+    "gaps_detected": [
+      "Cổng dịch vụ công khó tra cứu bằng điện thoại nếu không có mã số BHXH hoặc VssID.",
+      "Thiếu công cụ tính tiền BHXH một lần tự động theo mức đóng thực tế qua các năm.",
+      "Quy trình thủ tục hưởng chế độ thai sản, ốm đau còn nhiều văn bản hành chính."
+    ],
+    "beating_outline": [
+      "## 1. Bảo hiểm xã hội là gì? Các chế độ BHXH bắt buộc và tự nguyện",
+      "## 2. Hướng dẫn tra cứu quá trình đóng BHXH bằng CCCD hoặc ứng dụng VssID",
+      "## 3. Công cụ tính tiền rút bảo hiểm xã hội 1 lần mới nhất",
+      "## 4. Mức đóng BHXH năm 2026 và điều kiện hưởng lương hưu tối đa",
+      "## 5. FAQs - Thủ tục nhận BHXH một lần và giải quyết chế độ thai sản",
+      "## 6. Đóng bảo hiểm xã hội tự nguyện và nộp bảo hiểm y tế qua MoMo"
+    ]
+  }
+}

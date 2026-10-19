@@ -1,0 +1,38 @@
+{
+  "query": "vé xe rẻ",
+  "usecase_id": "ve-xe",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "vexere.com",
+      "name": "Vexere",
+      "real_url": "https://vexere.com/",
+      "current_rank": 1,
+      "page_title": "Vé Xe Rẻ - Đặt Vé Xe Khách Trực Tuyến Nhanh Chóng",
+      "actual_word_count": 1950,
+      "format_detected": "Interactive Booking Engine / Search Aggregator"
+    },
+    "other_competitors": [
+      {
+        "domain": "futabus.vn",
+        "rank": 2
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Interactive Booking Engine / Search Aggregator",
+    "recommended_target_words": 1500,
+    "gaps_detected": [
+      "Thiếu mã giảm giá độc quyền cho khách hàng thân thiết đặt vé thường xuyên.",
+      "Chưa hỗ trợ tích điểm đổi quà hoặc hoàn tiền trực tiếp."
+    ],
+    "beating_outline": [
+      "## 1. Săn vé xe rẻ đi các tỉnh thành giá ưu đãi nhất hôm nay",
+      "## 2. So sánh giá vé các hãng xe giường nằm và limousine chất lượng cao",
+      "## 3. Hướng dẫn áp mã voucher giảm giá vé xe khách trực tuyến",
+      "## 4. Lịch trình và điểm đón trả các tuyến xe buýt liên tỉnh giá rẻ",
+      "## 5. FAQs - Cách đổi vé hoặc dời ngày khởi hành không mất phí",
+      "## 6. Đặt vé xe khách giá rẻ mỗi ngày trên MoMo Travel"
+    ]
+  }
+}

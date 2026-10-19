@@ -1,58 +1,59 @@
 # TỔNG QUAN TÀI NGUYÊN TỪ KHÓA & TOPIC CLUSTERS WEB PLATFORM (SSOT INVENTORY V2)
 
 Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ chống ăn thịt từ khóa (Cannibalization Shield) từ kho `05_HUBS/inventory/`.
-- **Tổng số Use Cases:** 190
-- **Tổng số từ khóa theo dõi:** 277,418
-- **Tổng số từ khóa trùng Intent được gom cụm (Shielded):** 128,143
-- **Tổng số từ khóa nhiễu bị loại bỏ:** 2,690
-- **Tổng dung lượng tìm kiếm thị trường:** 1,764,814,670 lượt/tháng
+- **Tổng số Themes:** 162
+- **Tổng số từ khóa theo dõi:** 293,115
+- **Tổng số từ khóa trùng Intent được gom cụm (Shielded):** 138,634
+- **Tổng số từ khóa nhiễu bị loại bỏ:** 2,814
+- **Tổng dung lượng tìm kiếm thị trường:** 1,672,235,040 lượt/tháng
 
 ---
 
-## 1. TỔNG HỢP THEO PHÂN KHỐI NGÀNH (SECTORS)
+## 1. TỔNG HỢP THEO HUBS
 
-| Phân Khối Ngành | Số Lượng Use Cases | Từ Khóa Sạch | Từ Khóa Gom Chống Cannibalization | Dung Lượng Tìm Kiếm (Volume/Tháng) |
+| Hub | Số Lượng Themes | Từ Khóa Sạch | Từ Khóa Gom Chống Cannibalization | Dung Lượng Tìm Kiếm (Volume/Tháng) |
 | :--- | :---: | :---: | :---: | :---: |
-| Lottery | 4 | 8,380 | 4,034 | 1,544,755,370 |
-| Financial | 105 | 134,303 | 51,932 | 150,879,180 |
-| vehicle-hub | 29 | 67,930 | 40,485 | 21,206,840 |
-| other | 6 | 18,340 | 10,956 | 19,968,380 |
-| PS | 6 | 5,350 | 1,953 | 12,608,240 |
-| MDS | 4 | 9,892 | 4,042 | 4,567,660 |
-| hospital | 5 | 9,947 | 2,523 | 4,532,780 |
-| telco | 5 | 4,585 | 2,070 | 2,321,450 |
-| ota | 16 | 10,251 | 5,543 | 2,286,790 |
-| insurtech | 8 | 8,097 | 4,399 | 1,657,790 |
+| Lottery | 3 | 8,243 | 4,022 | 1,457,059,610 |
+| Financial | 62 | 116,349 | 50,924 | 122,969,280 |
+| vehicle-hub | 33 | 74,112 | 39,658 | 35,630,100 |
+| other | 5 | 18,970 | 8,813 | 15,905,250 |
+| Entertainment | 4 | 4,809 | 1,841 | 12,084,360 |
+| cinema | 5 | 5,883 | 2,707 | 7,278,550 |
+| ota | 19 | 19,155 | 9,016 | 6,824,070 |
+| student | 9 | 8,950 | 4,033 | 4,659,000 |
+| hospital | 4 | 9,895 | 2,514 | 4,514,230 |
+| telco | 8 | 13,872 | 7,666 | 3,680,410 |
+| insurtech | 8 | 12,534 | 7,234 | 1,599,990 |
 | trust | 2 | 343 | 206 | 30,190 |
 
 ---
 
-## 2. TOP USE CASES CÓ QUY MÔ LỚN NHẤT
+## 2. TOP THEMES CÓ QUY MÔ LỚN NHẤT
 
-| STT | Use Case | Phân Khối | Số Từ Khóa | Gom Cannibalized | Search Volume | Từ Khóa Cột Trụ (Pillar KW) | Top Quick Win |
+| STT | Theme | Hub | Số Từ Khóa | Gom Cannibalized | Search Volume | Từ Khóa Cột Trụ (Pillar KW) | Top Quick Win |
 | :---: | :--- | :--- | :---: | :---: | :---: | :--- | :--- |
-| 1 | Xo So | Lottery | 5,114 | 2,692 | 1,445,235,780 | xsmn (101,211,500) | minhngoc |
-| 2 | Vietlott | Lottery | 1,312 | 395 | 86,243,590 | xsmb (83,100,000) | xsmb |
-| 3 | Gia Vang | Financial | 2,295 | 1,384 | 67,903,310 | giá vàng hôm nay (12,014,960) | bảng giá vàng thế giới |
-| 4 | Vang | Financial | 812 | 435 | 33,546,430 | giá vàng hôm nay (11,620,690) | bảng giá vàng thế giới |
-| 5 | Xskt | Lottery | 281 | 67 | 12,743,240 | xskt (2,139,660) | xskt mièn bắc |
-| 6 | Lich Am | other | 2,029 | 1,351 | 11,431,370 | lịch âm (2,770,610) | lịch âm |
-| 7 | Gia Xang | vehicle-hub | 2,790 | 1,618 | 10,517,130 | gia xăng hôm nay (2,133,100) | xăng |
-| 8 | Ty Gia | Financial | 3,634 | 1,651 | 7,915,560 | tỷ giá vcb (454,790) | mua đô |
-| 9 | Nap Game | PS | 2,604 | 984 | 7,433,930 | napthex5 (2,740,000) | nạp thẻ garena |
-| 10 | Ngan Hang | Financial | 1,311 | 520 | 6,722,150 | vietcom (823,000) | lãi suất ngân hàng |
-| 11 | Ma So Thue | other | 3,954 | 2,573 | 3,879,880 | tra cuu ma số thuế (624,000) | tra cứu mã số thuế |
-| 12 | Benh Vien | hospital | 3,316 | 969 | 3,596,670 | bệnh viện bạch mai (302,600) | bệnh viện mắt trung ương |
-| 13 | Gia Xe | vehicle-hub | 2,452 | 805 | 3,280,480 | xe máy điện (201,000) | thuê xe máy |
-| 14 | Game App | PS | 467 | 4 | 3,244,820 | garena (1,000,000) | zing |
-| 15 | Chung Khoan | Financial | 2,094 | 876 | 2,656,060 | bảng giá chứng khoán (225,490) | vcbs bảng giá |
-| 16 | Tu Vi | other | 4,465 | 2,636 | 2,566,340 | lá số tử vi (364,700) | tử vi hàng ngày |
-| 17 | Vietinbank | Financial | 2,656 | 699 | 1,775,500 | vietinbank (450,480) | vietinbank |
-| 18 | Vietcombank | Financial | 539 | 191 | 1,770,840 | vietcombank (988,780) | vietcombank |
-| 19 | Techcombank | Financial | 2,958 | 746 | 1,754,410 | techcombank (450,990) | techcombank |
-| 20 | Lich Van Nien | other | 2,614 | 1,925 | 1,750,240 | lịch vạn niên (760,510) | lịch vạn niên |
-| 21 | Ve May Bay | MDS | 3,467 | 1,861 | 1,743,960 | vé máy bay (491,960) | tra cứu chuyến bay |
-| 22 | Thue | Financial | 3,769 | 1,145 | 1,577,270 | thuế (249,650) | cục thuế |
-| 23 | Du Lich | ota | 451 | 82 | 1,508,210 | khu du lịch đại nam (110,000) | hoa lư |
-| 24 | Internet Banking | Financial | 934 | 327 | 1,503,600 | vietcombanking (823,000) | vietcombanking |
-| 25 | Xe Khach | MDS | 2,632 | 719 | 1,410,130 | nhà xe phương trang (90,500) | phương trang đặt vé |
+| 1 | Xổ Số Kiến Thiết 3 Miền | Lottery | 5,343 | 2,766 | 1,453,751,220 | xổ số miền nam (74,197,510) | minhngoc |
+| 2 | Giá Vàng | Financial | 2,503 | 1,467 | 73,587,100 | giá vàng hôm nay (12,014,960) | bảng giá vàng thế giới |
+| 3 | Hệ Thống Ngân Hàng | Financial | 37,181 | 10,090 | 20,444,520 | ngân hàng (247,070) | lãi suất ngân hàng |
+| 4 | Lịch Âm & Lịch Vạn Niên | other | 4,397 | 3,229 | 12,875,550 | lịch âm (2,770,720) | lịch âm |
+| 5 | Giá Xăng Hôm Nay | vehicle-hub | 2,849 | 1,637 | 11,648,510 | giá xăng hôm nay (1,816,650) | giá xăng 95 hôm nay bao nhiêu tiền 1 lít |
+| 6 | Giá Dầu Hôm Nay | vehicle-hub | 2,499 | 1,280 | 10,557,370 | giá dầu hôm nay (404,420) | giá dầu |
+| 7 | Tỷ Giá Ngoại Tệ | Financial | 3,633 | 1,650 | 7,915,560 | tỷ giá vcb (454,790) | mua đô |
+| 8 | Nạp Thẻ Game | Entertainment | 3,846 | 1,598 | 7,507,250 | nạp thẻ garena (672,120) | nạp thẻ garena |
+| 9 | Phim Chiếu Rạp Mới Nhất | cinema | 505 | 56 | 5,409,760 | phim (1,246,020) | anime hay |
+| 10 | Tra Cứu Mã Số Thuế | Financial | 3,946 | 2,571 | 3,879,740 | tra cứu mã số thuế (607,550) | tra cứu mã số thuế |
+| 11 | Bệnh Viện & Phòng Khám | hospital | 3,316 | 969 | 3,596,670 | bệnh viện (251,560) | bệnh viện mắt trung ương |
+| 12 | Bảng Giá Xe Ô Tô & Xe Máy | vehicle-hub | 2,450 | 803 | 3,278,100 | xe máy điện (201,000) | thuê xe máy |
+| 13 | Ứng Dụng Game | Entertainment | 467 | 4 | 3,244,820 | game đế chế (1,600) | zing |
+| 14 | Vietlott Mega & Power | Lottery | 1,227 | 376 | 2,775,630 | vietlott (550,800) | power 6 55 |
+| 15 | Chứng Khoán | Financial | 2,094 | 876 | 2,656,060 | bảng giá chứng khoán (225,490) | vcbs bảng giá |
+| 16 | Tử Vi Hàng Ngày & Trọn Đời | other | 4,455 | 2,622 | 2,642,650 | tử vi (203,140) | tử vi hàng ngày |
+| 17 | Đại Học & Trường Đại Học | student | 907 | 311 | 2,288,060 | trường đại học (67,850) | đăng ký nguyện vọng đại học |
+| 18 | Tra Cứu Phạt Nguội Toàn Quốc | vehicle-hub | 359 | 218 | 1,905,960 | tra cứu phạt nguội (863,160) | tra cứu phạt nguội |
+| 19 | SIM Số Đẹp & eSIM | telco | 3,775 | 1,840 | 1,865,710 | sim số đẹp (133,960) | định giá sim24h |
+| 20 | Trạm Xăng Gần Nhất | vehicle-hub | 505 | 165 | 1,854,410 | trạm xăng (1,002,900) | trạm xăng |
+| 21 | Vé Máy Bay Giá Rẻ | ota | 3,467 | 1,861 | 1,743,960 | vé máy bay (491,960) | tra cứu chuyến bay |
+| 22 | Trạm Sạc Xe Điện Toàn Quốc | vehicle-hub | 144 | 75 | 1,689,680 | trạm sạc vinfast (1,275,360) | trạm sạc vinfast |
+| 23 | Tra Cứu & Nộp Thuế | Financial | 3,769 | 1,145 | 1,577,270 | thuế (249,650) | cục thuế |
+| 24 | Gói Cước & Nạp Data 4G/5G | telco | 6,123 | 3,445 | 1,531,590 | gói cước 4g mobifone (51,390) | đăng ký mạng mobiphone ngày |
+| 25 | Cẩm Nang Du Lịch | ota | 451 | 82 | 1,508,210 | cẩm nang du lịch (590) | hoa lư |

@@ -1,0 +1,42 @@
+{
+  "query": "chuyển khoản",
+  "usecase_id": "chuyen-khoan",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "techcombank.com",
+      "name": "Ngân hàng Kỹ thương Techcombank",
+      "real_url": "https://techcombank.com/thong-tin/chuyen-tien-nhanh-247",
+      "current_rank": 1,
+      "page_title": "Dịch Vụ Chuyển Tiền Nhanh 24/7 Miễn Phí Trọn Đời - Techcombank",
+      "actual_word_count": 1400,
+      "format_detected": "Hướng dẫn & Dịch vụ thanh toán"
+    },
+    "other_competitors": [
+      {
+        "domain": "vietcombank.com.vn",
+        "rank": 2
+      },
+      {
+        "domain": "mbbank.com.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Hướng dẫn & Dịch vụ thanh toán",
+    "recommended_target_words": 1500,
+    "gaps_detected": [
+      "Chuyển khoản liên ngân hàng thỉnh thoảng bị nghẽn lệnh vào giờ cao điểm cuối tuần.",
+      "Thiếu tính năng nhắc nợ tự động và chia hóa đơn ăn uống nhóm thông minh."
+    ],
+    "beating_outline": [
+      "## 1. Hướng dẫn chuyển khoản nhanh 24/7 qua số tài khoản và quét mã QR VietQR",
+      "## 2. Biểu phí chuyển tiền và hạn mức chuyển khoản liên ngân hàng",
+      "## 3. Xử lý như thế nào khi chuyển khoản bị trừ tiền nhưng bên nhận chưa có?",
+      "## 4. Các bước tra soát khi lỡ tay chuyển khoản nhầm người lạ",
+      "## 5. FAQs - Chuyển khoản ngoài giờ hành chính bao lâu thì nhận được tiền?",
+      "## 6. Chuyển tiền MoMo miễn phí chỉ cần số điện thoại - Nhận tiền tích tắc"
+    ]
+  }
+}

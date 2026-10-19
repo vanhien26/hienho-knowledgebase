@@ -1,0 +1,42 @@
+{
+  "query": "sinh viên hvtc",
+  "usecase_id": "sinh-vien",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "tuyensinh247.com",
+      "name": "Tuyển Sinh 247",
+      "real_url": "https://tuyensinh247.com/thong-tin-sinh-vien",
+      "current_rank": 1,
+      "page_title": "Cổng Thông Tin Học Phí, Điểm Chuẩn & Đời Sống Sinh Viên",
+      "actual_word_count": 1800,
+      "format_detected": "Cổng thông tin sinh viên"
+    },
+    "other_competitors": [
+      {
+        "domain": "kenh14.vn",
+        "rank": 2
+      },
+      {
+        "domain": "hvtc.edu.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Cổng thông tin sinh viên",
+    "recommended_target_words": 1600,
+    "gaps_detected": [
+      "Nhiều thông tin tuyển dụng thực tập và học bổng sinh viên bị phân tán.",
+      "Thiếu gói ưu đãi tiêu dùng và giải pháp hỗ trợ tài chính học tập riêng cho sinh viên."
+    ],
+    "beating_outline": [
+      "## 1. Thông tin học phí và chương trình đào tạo Học viện Tài chính (HVTC)",
+      "## 2. Kinh nghiệm học tín chỉ, săn học bổng khuyến khích học tập cho tân sinh viên",
+      "## 3. Cơ hội việc làm và mức lương khởi điểm của sinh viên ngành tài chính kế toán",
+      "## 4. Mẹo quản lý chi tiêu sinh viên tự lập khi đi học xa nhà",
+      "## 5. FAQs - Thủ tục làm thẻ sinh viên và hồ sơ xin miễn giảm học phí",
+      "## 6. Kích hoạt Gói Sinh Viên MoMo - Nhận voucher học phí & Ưu đãi ăn uống mỗi ngày"
+    ]
+  }
+}

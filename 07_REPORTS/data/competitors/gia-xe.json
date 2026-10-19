@@ -1,0 +1,42 @@
+{
+  "query": "xe máy điện",
+  "usecase_id": "gia-xe",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "vinfastauto.com",
+      "name": "VinFast Auto",
+      "real_url": "https://vinfastauto.com/vn_vi/xe-may-dien",
+      "current_rank": 1,
+      "page_title": "Bảng Giá Xe Máy Điện VinFast Mới Nhất 2026 - Đổi Mới Xanh",
+      "actual_word_count": 2400,
+      "format_detected": "Catalog & Bảng giá xe"
+    },
+    "other_competitors": [
+      {
+        "domain": "chotot.com",
+        "rank": 2
+      },
+      {
+        "domain": "tinxe.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Catalog & Bảng giá xe",
+    "recommended_target_words": 1900,
+    "gaps_detected": [
+      "Thiếu bảng so sánh chi phí vận hành giữa xe máy điện và xe máy xăng theo từng năm.",
+      "Chưa có công cụ tính tiền trả góp xe máy điện linh hoạt theo số tháng vay."
+    ],
+    "beating_outline": [
+      "## 1. Bảng giá các dòng xe máy điện VinFast, Yadea, Honda hot nhất",
+      "## 2. So sánh chi phí sạc pin xe điện với chi phí đổ xăng thực tế mỗi tháng",
+      "## 3. Chính sách thuê pin và mua đứt pin xe máy điện: Phương án nào tối ưu hơn?",
+      "## 4. Quãng đường di chuyển tối đa và tuổi thọ pin xe máy điện",
+      "## 5. FAQs - Xe máy điện có phải đăng ký biển số và mua bảo hiểm không?",
+      "## 6. Mua xe máy điện trả góp 0% lãi suất & Thanh toán tiền sạc pin qua MoMo"
+    ]
+  }
+}

@@ -114,7 +114,7 @@ Bảng đặc tả cấu trúc nội dung chi tiết từng khối thành phần
 
 ### 3.3 Umami Event Tracking theo Touchpoint
 
-*(Quy tắc SSOT: Khai báo chính xác Event Name và Parameters theo đúng quy chuẩn từ file `umami_utility_tracking.md`)*
+*(Quy tắc SSOT: Khai báo chính xác Event Name và Parameters theo đúng quy chuẩn từ file `04_MOSPARK_PLATFORM/umami_utility_tracking.md`)*
 
 | Touchpoint / Vị Trí Tương Tác | Hành Động Người Dùng (User Action) | Umami Event Name | Event Parameters Schema |
 | :--- | :--- | :--- | :--- |

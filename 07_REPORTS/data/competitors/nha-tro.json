@@ -1,0 +1,42 @@
+{
+  "query": "nhà trọ",
+  "usecase_id": "nha-tro",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "phongtro123.com",
+      "name": "Kênh Phòng Trọ 123",
+      "real_url": "https://phongtro123.com/",
+      "current_rank": 1,
+      "page_title": "Kênh Thông Tin Tìm Kiếm Thuê Phòng Trọ, Nhà Trọ Giá Rẻ",
+      "actual_word_count": 1650,
+      "format_detected": "Interactive Rental Portal"
+    },
+    "other_competitors": [
+      {
+        "domain": "batdongsan.com.vn",
+        "rank": 2
+      },
+      {
+        "domain": "chotot.com",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Interactive Rental Portal",
+    "recommended_target_words": 1700,
+    "gaps_detected": [
+      "Nhiều tin đăng nhà trọ ảo trên các hội nhóm nhằm mục đích lừa tiền đặt cọc giữ chỗ.",
+      "Thiếu tiện ích thanh toán tiền trọ và tiền điện nước trực tiếp qua ứng dụng."
+    ],
+    "beating_outline": [
+      "## 1. Kinh nghiệm tìm phòng trọ giá rẻ cho sinh viên và người đi làm",
+      "## 2. Bảng giá thuê phòng trọ theo từng quận tại Hà Nội và TP.HCM",
+      "## 3. Những điều khoản quan trọng bắt buộc phải có trong hợp đồng thuê nhà",
+      "## 4. Cách phòng tránh các chiêu trò lừa đảo đặt cọc tiền phòng trọ",
+      "## 5. FAQs - Giá điện nước nhà trọ tính theo quy định nhà nước như thế nào?",
+      "## 6. Thanh toán tiền điện, nước, internet nhà trọ tiện lợi qua MoMo"
+    ]
+  }
+}

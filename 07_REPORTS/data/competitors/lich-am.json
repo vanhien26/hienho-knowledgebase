@@ -1,0 +1,42 @@
+{
+  "query": "lịch âm",
+  "usecase_id": "lich-am",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "lichngaytot.com",
+      "name": "Lịch Ngày Tốt",
+      "real_url": "https://lichngaytot.com/lich-am.html",
+      "current_rank": 1,
+      "page_title": "Lịch Âm Hôm Nay - Xem Lịch Vạn Niên, Ngày Giờ Hoàng Đạo",
+      "actual_word_count": 1750,
+      "format_detected": "Interactive Calendar / Tool"
+    },
+    "other_competitors": [
+      {
+        "domain": "vansu.net",
+        "rank": 2
+      },
+      {
+        "domain": "xem-boi.com",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Interactive Calendar / Tool",
+    "recommended_target_words": 1600,
+    "gaps_detected": [
+      "Giao diện nhiều website lịch âm chứa quá nhiều quảng cáo gây gián đoạn trải nghiệm.",
+      "Thiếu tiện ích nhắc lịch ngày rằm, mùng 1 hoặc sự kiện âm lịch định kỳ trên điện thoại."
+    ],
+    "beating_outline": [
+      "## 1. Tra cứu Lịch Âm hôm nay: Ngày tốt, giờ hoàng đạo và việc nên làm",
+      "## 2. Bảng đổi ngày Dương lịch sang Âm lịch chuẩn xác nhất",
+      "## 3. Xem ngày tốt xấu xuất hành, khai trương, cưới hỏi và động thổ",
+      "## 4. Ý nghĩa các tiết khí và ngày lễ âm lịch truyền thống trong năm",
+      "## 5. FAQs - Cách tính giờ hoàng đạo theo 12 con giáp",
+      "## 6. Nhận thông báo ngày rằm, mùng 1 & Mua sắm lễ vật tiện lợi trên MoMo"
+    ]
+  }
+}

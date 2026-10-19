@@ -1,0 +1,42 @@
+{
+  "query": "cổ phiếu",
+  "usecase_id": "co-phieu",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "cafef.vn",
+      "name": "CafeF Tài Chính & Đầu Tư",
+      "real_url": "https://cafef.vn/thi-truong-chung-khoan.chn",
+      "current_rank": 1,
+      "page_title": "Thị Trường Chứng Khoán, Tin Tức Doanh Nghiệp & Cổ Phiếu - CafeF",
+      "actual_word_count": 2800,
+      "format_detected": "Portal Thông Tin Tài Chính"
+    },
+    "other_competitors": [
+      {
+        "domain": "vietstock.vn",
+        "rank": 2
+      },
+      {
+        "domain": "fireant.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Portal Thông Tin Tài Chính",
+    "recommended_target_words": 2200,
+    "gaps_detected": [
+      "Nội dung mang nặng tính phân tích vĩ mô, thiếu khuyến nghị điểm mua bán cụ thể.",
+      "Chưa có tính năng liên kết tài khoản đầu tư cổ phiếu phân đoạn với số vốn nhỏ từ 10.000đ."
+    ],
+    "beating_outline": [
+      "## 1. Cổ phiếu là gì? Sự khác biệt giữa cổ phiếu thường và cổ phiếu ưu đãi",
+      "## 2. Top 10 mã cổ phiếu Bluechip VN30 vốn hóa lớn đáng đầu tư dài hạn",
+      "## 3. Chiến lược đầu tư cổ phiếu nhận cổ tức đều đặn hàng năm",
+      "## 4. Cách quản trị rủi ro và cắt lỗ chuẩn kỹ thuật trong đầu tư chứng khoán",
+      "## 5. FAQs - Đầu tư cổ phiếu cần tối thiểu bao nhiêu tiền?",
+      "## 6. Đầu tư chứng chỉ quỹ & Cổ phiếu an toàn sinh lời trên Ví MoMo"
+    ]
+  }
+}

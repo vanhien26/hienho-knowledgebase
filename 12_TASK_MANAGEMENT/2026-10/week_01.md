@@ -33,7 +33,7 @@
 
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
-| Đánh giá Cổng API CSGT Phạt Nguội | Kiểm tra cơ chế vượt captcha và tỷ lệ phản hồi của API phạt nguội hiện tại | Thuận | Hoài Anh | `Done` |
+| Đánh giá Cổng API CSGT Phạt Nguội | Kiểm tra cơ chế vượt captcha và tỷ lệ phản hồi của API phạt nguội hiện tại | Hoài Anh | Thuận | `Done` |
 | Thu thập Thông số Xe Vinfast | Tổng hợp dữ liệu mẫu xe và thông số kỹ thuật phục vụ trang model Vinfast | Hoan | Thuận | `Done` |
 
 ---

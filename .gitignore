@@ -16,3 +16,14 @@ Thumbs.db
 scratch/
 __pycache__/
 *.pyc
+.venv/
+
+# Secrets & Credentials
+.env
+.env.*
+*.env
+*credentials*.json
+*secret*.json
+
+# Intermediate API cache
+07_REPORTS/data/cache/

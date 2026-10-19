@@ -1,0 +1,42 @@
+{
+  "query": "sửa xe",
+  "usecase_id": "sua-xe",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "oto.com.vn",
+      "name": "Oto.com.vn",
+      "real_url": "https://oto.com.vn/kinh-nghiem-bao-duong-xe",
+      "current_rank": 1,
+      "page_title": "Kinh Nghiệm Sửa Chữa & Bảo Dưỡng Ô Tô Đúng Cách - Oto.com.vn",
+      "actual_word_count": 2200,
+      "format_detected": "Cẩm nang sửa chữa bảo dưỡng"
+    },
+    "other_competitors": [
+      {
+        "domain": "tinxe.vn",
+        "rank": 2
+      },
+      {
+        "domain": "chotot.com",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Cẩm nang sửa chữa bảo dưỡng",
+    "recommended_target_words": 1800,
+    "gaps_detected": [
+      "Nhiều bài viết thiếu bảng giá phụ tùng thay thế định kỳ minh bạch.",
+      "Chưa có mạng lưới cứu hộ xe khẩn cấp và đặt lịch bảo dưỡng trực tuyến."
+    ],
+    "beating_outline": [
+      "## 1. Lịch bảo dưỡng và các mốc thay dầu nhớt xe máy, ô tô định kỳ",
+      "## 2. Bảng giá sửa chữa các lỗi hư hỏng phổ biến: Bình ắc quy, lốp, phanh",
+      "## 3. Cách nhận biết gara sửa xe uy tín tránh bị chặt chém hoặc luộc đồ",
+      "## 4. Hướng dẫn xử lý sự cố xe chết máy giữa đường khi gặp trời mưa ngập",
+      "## 5. FAQs - Khi nào nên mang xe vào hãng và khi nào nên sửa gara ngoài?",
+      "## 6. Gọi cứu hộ xe 24/7 & Mua bảo hiểm xe máy ô tô giá tốt trên MoMo"
+    ]
+  }
+}

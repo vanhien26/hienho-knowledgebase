@@ -1,151 +1,43 @@
 {
   "query": "tra cứu phạt nguội",
-  "generated_at": "2026-10-16 12:42:04",
-  "analysis": {
-    "query": "tra cứu phạt nguội",
-    "competitors_crawled": 4,
-    "avg_word_count": 1082,
-    "max_word_count": 1970,
-    "recommended_target_words": 2266,
-    "dominant_format": "Interactive Tool / Calculator",
-    "top_competitor_entities": [
-      "tra",
-      "cứu",
-      "phạt",
-      "nguội",
-      "cách",
-      "kết",
-      "quả",
-      "nhanh",
-      "hiểu",
-      "lưu"
-    ],
-    "gaps_detected": [
-      "Thiếu cơ chế chuyển tiếp liền mạch sang ứng dụng tài chính / giao dịch tức thì (Web-to-App).",
-      "Thiếu bảng đối soát so sánh trực quan đa chiều giữa các phương án."
-    ],
-    "beating_outline": [
-      "## H2 1: Tổng quan & Định nghĩa chuẩn xác về tra cứu phạt nguội",
-      "## H2 2: Bảng so sánh chi tiết & Tiêu chí lựa chọn tối ưu nhất",
-      "## H2 3: Công cụ tính toán / Tra cứu trực tuyến trên Nền tảng Web MoMo (Vượt trội đối thủ)",
-      "### H3 3.1: Hướng dẫn các bước thao tác và tính toán kết quả theo thời gian thực",
-      "## H2 4: Hướng dẫn quy trình & Thủ tục thực hiện từng bước đơn giản",
-      "## H2 5: 5 Lưu ý quan trọng & Rủi ro thường gặp cần phòng tránh",
-      "## H2 6: Giải đáp thắc mắc thường gặp (FAQs chuẩn Schema)",
-      "## H2 7: Giải pháp liên kết và nhận quyền lợi tối đa qua Ứng dụng MoMo"
+  "usecase_id": "phat-nguoi",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "phatnguoi.com.vn",
+      "name": "Phạt Nguội Toàn Quốc",
+      "real_url": "https://phatnguoi.com.vn/",
+      "current_rank": 1,
+      "page_title": "Tra Cứu Phạt Nguội Ô Tô, Xe Máy Toàn Quốc - Cục CSGT",
+      "actual_word_count": 1950,
+      "format_detected": "Interactive Tool / Calculator"
+    },
+    "other_competitors": [
+      {
+        "domain": "csgt.vn",
+        "rank": 2
+      },
+      {
+        "domain": "thuvienphapluat.vn",
+        "rank": 3
+      }
     ]
   },
-  "competitors": [
-    {
-      "rank": 1,
-      "title": "Tra Cứu Phạt Nguội Ô Tô, Xe Máy Toàn Quốc - Nhanh Chóng, Dễ Dàng",
-      "url": "https://phatnguoi.com.vn/",
-      "domain": "phatnguoi.com.vn",
-      "snippet": "Tra cứu phạt nguội ô tô, xe máy toàn quốc nhanh chóng, chính xác. Cập nhật vi phạm mới nhất, giúp chủ động xử lý và tuân thủ đúng quy định giao thông.",
-      "h1": [
-        "Tra cứu phạt nguội ô tô, xe máy miễn phí, nhanh chóng"
-      ],
-      "h2": [
-        "Kết quả tra cứu",
-        "Cách tra cứu phạt nguội nhanh và dễ hiểu.",
-        "Lưu ý quan trọng sau khi tra cứu phạt nguội"
-      ],
-      "h3": [
-        "Câu hỏi thường gặp"
-      ],
-      "word_count": 1948,
-      "schemas": [
-        "FAQPage"
-      ],
-      "has_table": false,
-      "has_form_or_tool": true,
-      "format_type": "Interactive Tool / Calculator",
-      "page_title": "Tra Cứu Phạt Nguội Ô Tô, Xe Máy Toàn Quốc – Nhanh Chóng, Dễ Dàng"
-    },
-    {
-      "rank": 2,
-      "title": "Tra Cứu Phạt Nguội Ô Tô, Xe Máy - Miễn Phí, Không Đăng Nhập",
-      "url": "https://vnetraffic.org/tra-cuu-phat-nguoi-vnetraffic/",
-      "domain": "vnetraffic.org",
-      "snippet": "Tra cứu phạt nguội ô tô, xe máy toàn quốc theo biển số, miễn phí, không cần đăng nhập. Ghi rõ nguồn dữ liệu, kèm cách tra chính thức trên VNeTraffic.",
-      "h1": [],
-      "h2": [],
-      "h3": [],
-      "word_count": 0,
-      "schemas": [],
-      "has_table": false,
-      "has_form_or_tool": false,
-      "format_type": "Article Guide",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "rank": 3,
-      "title": "Tra cứu phạt nguội - Cục cảnh sát giao thông",
-      "url": "https://canhsatgiaothong.bocongan.gov.vn/tra-cuu-phat-nguoi",
-      "domain": "canhsatgiaothong.bocongan.gov.vn",
-      "snippet": "Tra cứu vi phạm yêu cầu xác thực danh tính qua VNeTraffic với tài khoản đã định danh mức 2. Hệ thống sẽ chuyển hướng bạn đến VNeTraffic khi bạn nhấn Tra cứu để thực hiện xác thực tài khoản.",
-      "h1": [
-        "Tra cứu phạt nguội"
-      ],
-      "h2": [],
-      "h3": [],
-      "word_count": 293,
-      "schemas": [],
-      "has_table": false,
-      "has_form_or_tool": true,
-      "format_type": "Interactive Tool / Calculator",
-      "page_title": "Tra cứu phạt nguội – Cục cảnh sát giao thông"
-    },
-    {
-      "rank": 4,
-      "title": "Tra cứu phạt nguội toàn quốc (Dữ liệu chuẩn từ Cục CSGT)",
-      "url": "https://phatnguoigt.com/",
-      "domain": "phatnguoigt.com",
-      "snippet": "Tra cứu phạt nguội toàn quốc chính xác nhất Nhập biển số ô tô, xe máy, xe đạp điện, kiểm tra chỉ trong 3 giây. Dữ liệu từ Cục CSGT.",
-      "h1": [
-        "Tra cứu phạt nguội toàn quốc chính xác nhất"
-      ],
-      "h2": [
-        "Tải App Tra Cứu Phạt Nguội GT 2026",
-        "Câu hỏi phổ biến",
-        "Cách tra cứu phạt nguội online đơn giản và chính xác nhất",
-        "Có 15% xe tra cứu phát hiện vi phạm!"
-      ],
-      "h3": [
-        "Tính năng nổi bật",
-        "Nộp phạt nguội vi phạm giao thông: Đóng tiền online, vì sao vẫn phải đến trụ sở?",
-        "Hết thời lái xe tùy tiện khi camera AI giăng khắp phố",
-        "Chiêu lừa 'giảm 50% nếu nộp sớm phạt nguội' nhằm chiếm tài khoản ngân hàng",
-        "Tra cứu phạt nguội trên website của Cục Đăng kiểm Việt Nam",
-        "Tra cứu phạt nguội ô tô xe máy tại website của Cục CSGT",
-        "Check phạt nguội bằng ứng dụng trên điện thoại di động",
-        "Tra cứu phạt nguội trực tuyến tại hệ thống PhatNguoiGT.com",
-        "TRA CỨU NHANH"
-      ],
-      "word_count": 1970,
-      "schemas": [
-        "FAQPage"
-      ],
-      "has_table": false,
-      "has_form_or_tool": true,
-      "format_type": "Interactive Tool / Calculator",
-      "page_title": "Tra cứu phạt nguội toàn quốc (Dữ liệu chuẩn từ Cục CSGT)"
-    },
-    {
-      "rank": 5,
-      "title": "Trang thông tin điện tử Phòng cảnh sát giao thông TPHCM",
-      "url": "https://csgt-congan.hochiminhcity.gov.vn/wps/portal/Home/tra-cuu-vi-pham",
-      "domain": "csgt-congan.hochiminhcity.gov.vn",
-      "snippet": "Chức năng tra cứu phương tiện giao thông vi phạm an toàn giao thông trích xuất từ hình ảnh do phòng CSGT Đường bộ - Đường sắt xử lý. Điền biển số xe cần tìm vào ô bên dưới. Khi nhập thông tin tìm kiếm người dùng phải đánh chính xác chữ, số và ký tự đặc biệt kể cả dấu (,), (-)",
-      "h1": [],
-      "h2": [],
-      "h3": [],
-      "word_count": 118,
-      "schemas": [],
-      "has_table": false,
-      "has_form_or_tool": true,
-      "format_type": "Interactive Tool / Calculator",
-      "page_title": "Trang thông tin điện tử Phòng cảnh sát giao thông TPHCM"
-    }
-  ]
+  "analysis": {
+    "dominant_format": "Interactive Tool / Calculator",
+    "recommended_target_words": 2000,
+    "gaps_detected": [
+      "Chỉ hỗ trợ tra cứu, không thể nộp phạt trực tiếp trên website.",
+      "Giao diện nhiều banner quảng cáo che khuất kết quả tra cứu.",
+      "Thiếu cơ chế cảnh báo tự động khi phát sinh lỗi vi phạm mới."
+    ],
+    "beating_outline": [
+      "## 1. Công cụ tra cứu phạt nguội ô tô, xe máy toàn quốc trực tuyến",
+      "## 2. Cách kiểm tra lỗi phạt nguội chính xác từ dữ liệu Cục CSGT",
+      "## 3. Mức phạt tiền và thời hạn nộp phạt các lỗi vi phạm phổ biến",
+      "## 4. Hướng dẫn quy trình nộp phạt nguội trực tuyến nhanh nhất",
+      "## 5. FAQs - Giải đáp thắc mắc về phạt nguội và đăng kiểm xe",
+      "## 6. Nộp phạt giao thông và nhận cảnh báo phạt nguội tự động trên MoMo"
+    ]
+  }
 }

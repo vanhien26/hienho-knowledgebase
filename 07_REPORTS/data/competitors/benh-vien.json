@@ -1,0 +1,42 @@
+{
+  "query": "bệnh viện",
+  "usecase_id": "benh-vien",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "vinmec.com",
+      "name": "Bệnh viện Đa khoa Quốc tế Vinmec",
+      "real_url": "https://www.vinmec.com/",
+      "current_rank": 1,
+      "page_title": "Hệ thống Y tế Vinmec - Tiêu chuẩn quốc tế JCI tại Việt Nam",
+      "actual_word_count": 2100,
+      "format_detected": "Cổng Y tế & Đặt lịch khám"
+    },
+    "other_competitors": [
+      {
+        "domain": "medlatec.vn",
+        "rank": 2
+      },
+      {
+        "domain": "tamanhhospital.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Cổng Y tế & Đặt lịch khám",
+    "recommended_target_words": 1800,
+    "gaps_detected": [
+      "Website chủ yếu giới thiệu bệnh viện tư, thiếu bảng so sánh viện phí công - tư.",
+      "Thiếu tính năng đặt lịch khám và thanh toán viện phí không tiền mặt đồng bộ."
+    ],
+    "beating_outline": [
+      "## 1. Danh sách bệnh viện tuyến Trung ương & Bệnh viện đa khoa uy tín nhất",
+      "## 2. Quy trình đặt lịch hẹn khám bệnh trực tuyến tiết kiệm thời gian chờ",
+      "## 3. Bảng giá khám chữa bệnh dịch vụ và khám BHYT tại các bệnh viện lớn",
+      "## 4. Những giấy tờ cần chuẩn bị khi làm thủ tục nhập viện và chuyển tuyến",
+      "## 5. FAQs - Hướng dẫn thanh toán viện phí bằng bảo lãnh bảo hiểm tư nhân",
+      "## 6. Thanh toán viện phí & Đặt lịch khám bệnh nhanh chóng qua MoMo"
+    ]
+  }
+}

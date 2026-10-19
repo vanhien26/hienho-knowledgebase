@@ -1,0 +1,46 @@
+{
+  "query": "bảng giá chứng khoán",
+  "usecase_id": "chung-khoan",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "ssi.com.vn",
+      "name": "Chứng khoán SSI",
+      "real_url": "https://iboard.ssi.com.vn/",
+      "current_rank": 1,
+      "page_title": "Bảng Giá Chứng Khoán Trực Tuyến iBoard - SSI",
+      "actual_word_count": 2200,
+      "format_detected": "Interactive Live Trading Board"
+    },
+    "other_competitors": [
+      {
+        "domain": "vndirect.com.vn",
+        "rank": 2
+      },
+      {
+        "domain": "cafef.vn",
+        "rank": 3
+      },
+      {
+        "domain": "vietstock.vn",
+        "rank": 4
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Interactive Live Trading Board",
+    "recommended_target_words": 2000,
+    "gaps_detected": [
+      "Bảng giá chứng khoán thường phức tạp, thiếu giải thích trực quan cho nhà đầu tư F0.",
+      "Thiếu bộ lọc tín hiệu kỹ thuật tự động để nhận diện cổ phiếu bứt phá."
+    ],
+    "beating_outline": [
+      "## 1. Bảng giá chứng khoán trực tuyến hôm nay (VN-Index, HNX, UPCoM)",
+      "## 2. Top cổ phiếu tăng trưởng mạnh và dòng tiền khối ngoại mua ròng",
+      "## 3. Hướng dẫn đọc bảng giá chứng khoán và cách đặt lệnh cho người mới",
+      "## 4. Các chỉ số phân tích cơ bản (P/E, P/B, ROE) cần kiểm tra trước khi mua",
+      "## 5. FAQs - Thủ tục mở tài khoản chứng khoán online không cần ra quầy",
+      "## 6. Mở tài khoản chứng khoán & Quản lý danh mục đầu tư cùng MoMo"
+    ]
+  }
+}

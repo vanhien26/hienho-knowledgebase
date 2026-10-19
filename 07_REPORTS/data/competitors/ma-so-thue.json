@@ -1,0 +1,42 @@
+{
+  "query": "tra cứu mã số thuế",
+  "usecase_id": "ma-so-thue",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "masothue.com",
+      "name": "Tra Cứu Mã Số Thuế Masothue.com",
+      "real_url": "https://masothue.com/",
+      "current_rank": 1,
+      "page_title": "Tra Cứu Mã Số Thuế Doanh Nghiệp, Cá Nhân Toàn Quốc - Masothue",
+      "actual_word_count": 1300,
+      "format_detected": "Interactive Search Tool"
+    },
+    "other_competitors": [
+      {
+        "domain": "thuedientu.gdt.gov.vn",
+        "rank": 2
+      },
+      {
+        "domain": "thuvienphapluat.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Interactive Search Tool",
+    "recommended_target_words": 1600,
+    "gaps_detected": [
+      "Nhiều dữ liệu người nộp thuế cá nhân không được đồng bộ thời gian thực từ Tổng cục Thuế.",
+      "Thiếu hướng dẫn các bước đăng ký mã số thuế cá nhân lần đầu online."
+    ],
+    "beating_outline": [
+      "## 1. Hướng dẫn tra cứu mã số thuế cá nhân & doanh nghiệp bằng CCCD",
+      "## 2. Cách kiểm tra tình trạng hoạt động và cơ quan thuế quản lý",
+      "## 3. Thủ tục đăng ký mã số thuế cá nhân online trên cổng Thuế điện tử",
+      "## 4. Các lỗi thường gặp khi tra cứu mã số thuế và cách xử lý",
+      "## 5. FAQs - Mã số thuế cá nhân có trùng với số CCCD gắn chip không?",
+      "## 6. Quyết toán thuế TNCN & Nộp thuế điện tử tiện lợi qua MoMo"
+    ]
+  }
+}

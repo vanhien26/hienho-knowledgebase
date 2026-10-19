@@ -1,0 +1,42 @@
+{
+  "query": "ngân hàng",
+  "usecase_id": "ngan-hang",
+  "generated_at": "2026-10-19T09:01:07.731771",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "techcombank.com",
+      "name": "Ngân hàng Kỹ thương Techcombank",
+      "real_url": "https://techcombank.com/",
+      "current_rank": 1,
+      "page_title": "Ngân hàng TMCP Kỹ Thương Việt Nam Techcombank - Vượt trội hơn mỗi ngày",
+      "actual_word_count": 1600,
+      "format_detected": "Cổng Thông tin Ngân hàng"
+    },
+    "other_competitors": [
+      {
+        "domain": "vietcombank.com.vn",
+        "rank": 2
+      },
+      {
+        "domain": "bidv.com.vn",
+        "rank": 3
+      }
+    ]
+  },
+  "analysis": {
+    "dominant_format": "Cổng Thông tin Ngân hàng",
+    "recommended_target_words": 2000,
+    "gaps_detected": [
+      "Website ngân hàng chỉ tập trung quảng bá sản phẩm riêng, thiếu bảng so sánh khách quan.",
+      "Quy trình mở tài khoản và cấp hạn mức thẻ tín dụng vẫn yêu cầu chứng minh thu nhập phức tạp."
+    ],
+    "beating_outline": [
+      "## 1. Danh sách hệ thống các ngân hàng thương mại uy tín nhất tại Việt Nam",
+      "## 2. So sánh biểu phí chuyển tiền, phí duy trì tài khoản và hạn mức rút tiền",
+      "## 3. Ngân hàng nào mở thẻ tín dụng online duyệt nhanh nhất không cần chứng minh thu nhập?",
+      "## 4. Hướng dẫn liên kết tài khoản ngân hàng với ví điện tử thanh toán an toàn",
+      "## 5. FAQs - Làm gì khi chuyển khoản nhầm tài khoản ngân hàng khác?",
+      "## 6. Liên kết ngân hàng nhận quà liền tay & Miễn phí chuyển tiền trên MoMo"
+    ]
+  }
+}

@@ -210,7 +210,7 @@ Tích hợp 3 câu hỏi kỹ thuật chuẩn cấu trúc dữ liệu JSON-LD Sc
   ```
 
 ### 5.3 Bảng Mã Đo Lường Sự Kiện (Umami & Analytics Tracking)
-Tuân thủ chuẩn SSOT `umami_utility_tracking.md`:
+Tuân thủ chuẩn SSOT `04_MOSPARK_PLATFORM/umami_utility_tracking.md`:
 
 | Tên sự kiện (Event Name) | Loại sự kiện | Tham số ghi nhận (Custom Parameters) | Mục đích đo lường |
 | :--- | :--- | :--- | :--- |

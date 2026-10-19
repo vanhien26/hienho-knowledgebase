@@ -1,169 +1,373 @@
-# BÁO CÁO HIỆU SUẤT & TIẾN ĐỘ THỰC THI WEB PLATFORM - THÁNG 08/2026 (UNTIL NOW)
+# BÁO CÁO HIỆU SUẤT KÊNH WEB PLATFORM & CHUYỂN ĐỔI NGƯỜI DÙNG MỚI (THÁNG 08/2026)
 
-> **Đơn vị thực hiện:** Web Platform Team (Growth Platform Division)  
-> **Thời gian báo cáo:** Monthly Report & Bi-Weekly Executive Overview (Tháng 08/2026 - Until now)  
-> **Trạng thái tổng thể:** ALL STRATEGIC PROJECTS ON TRACK (Tất cả 5 Strategic Hubs đang triển khai đúng tiến độ)
-
----
-
-## I. WEB OVERVIEW PERFORMANCE (HIỆU SUẤT TỔNG THỂ THÁNG 08/2026)
-
-### 1. Bảng Chỉ Số Web Performance Dashboard (Aug 2026 - Until now)
-
-<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.95em;">
-  <thead>
-    <tr style="background-color:#f1f5f9;">
-      <th style="border:1.5px solid #64748b; padding:10px 14px; text-align:left; font-weight:700;">Metrics (GA4 Data Studio)</th>
-      <th style="border:1.5px solid #64748b; padding:10px 14px; text-align:right; font-weight:700;">T6/2026</th>
-      <th style="border:1.5px solid #64748b; padding:10px 14px; text-align:right; font-weight:700;">T7/2026</th>
-      <th style="border:1.5px solid #64748b; padding:10px 14px; text-align:right; font-weight:700;">Aug 2026 (MTD)</th>
-      <th style="border:1.5px solid #64748b; padding:10px 14px; text-align:right; font-weight:700;">MoM (%)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:10px 14px; text-align:left; font-weight:700;">Impressions (Page views)</td>
-      <td style="border:1px solid #94a3b8; padding:10px 14px; text-align:right;">1,606,675</td>
-      <td style="border:1px solid #94a3b8; padding:10px 14px; text-align:right;">1,438,931</td>
-      <td style="border:1px solid #94a3b8; padding:10px 14px; text-align:right; font-weight:700;">1,134,336</td>
-      <td style="border:1px solid #94a3b8; padding:10px 14px; text-align:right; color:#64748b;">MTD Run-rate</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:10px 14px; text-align:left; font-weight:700;">Click CTA (Click-to-App)</td>
-      <td style="border:1px solid #94a3b8; padding:10px 14px; text-align:right;">856,939</td>
-      <td style="border:1px solid #94a3b8; padding:10px 14px; text-align:right;">748,415</td>
-      <td style="border:1px solid #94a3b8; padding:10px 14px; text-align:right; font-weight:700; color:#16a34a;">795,470</td>
-      <td style="border:1px solid #94a3b8; padding:10px 14px; text-align:right; font-weight:700; color:#16a34a;">+6.3% vs T7 Full</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:10px 14px; text-align:left; font-weight:700;">%CTR</td>
-      <td style="border:1px solid #94a3b8; padding:10px 14px; text-align:right;">53.3%</td>
-      <td style="border:1px solid #94a3b8; padding:10px 14px; text-align:right;">52.0%</td>
-      <td style="border:1px solid #94a3b8; padding:10px 14px; text-align:right; font-weight:700; color:#16a34a;">70.1%</td>
-      <td style="border:1px solid #94a3b8; padding:10px 14px; text-align:right; font-weight:700; color:#16a34a;">+18.1pp</td>
-    </tr>
-  </tbody>
-</table>
+> **Đơn vị báo cáo:** Web Platform Team (Growth Platform Division)  
+> **Thời gian số liệu:** Tháng 08/2026 (Cập nhật MTD 28 ngày, từ 01/08/2026 đến 28/08/2026)  
+> **Nguồn dữ liệu:** `WEB_L4_EVENT_PAGE_MASTER` & `Web Performance Tracking (1).xlsx`
 
 ---
 
-### 2. Đúc Kết Hiệu Suất Kênh Web (Observations & Problem Statements)
+## I. TỔNG QUAN HIỆU SUẤT TRUY CẬP (OVERALL PERFORMANCE DASHBOARD)
 
-> **Observation:**  
-> (1) **Tỷ lệ %CTR nhấp CTA ấn tượng (60.2%):** Mức tăng bứt phá **+25.7% MoM** trực tiếp đến từ việc cải tiến giao diện (**Improve UI**) luồng **Balloon Ads trên Mobile UI**: Đối với các trang cấu hình Footer CTA, màn hình đầu tiên (**First-Screen**) ưu tiên hiển thị Balloon Ads thu hút sự chú ý; khi người dùng cuộn trang (**scroll**), hệ thống sẽ tự động chuyển đổi hiển thị Footer CTA dịch vụ, tối ưu hóa tối đa điểm chạm và kích thích hành động nhấp App ngay khi tiếp cận.  
-> (2) **Chất lượng giữ chân từ Login sang MAU (53.6%):** Cứ 100 người dùng đăng nhập thành công từ Web thì có hơn 53 người dùng duy trì hoạt động hàng tháng (60.887 Active MAU / 113.538 Logins), khẳng định chất lượng người dùng dẫn dắt từ Web có nhu cầu thực tế.  
-> 
-> **Problem Statement:**  
-> (1) Cải thiện tỷ lệ chuyển đổi chặng giữa từ Click to App sang Login App (hiện đạt 20.6%, rơi rớt ~79.4% ở luồng tải/mở App) bằng việc triển khai Onelink đệm mượt mà hơn.  
-> (2) Duy trì và nhân rộng cơ chế UI Balloon Ads & Footer CTA trên các trang Master Hub mới trong Quý 3.
-
----
-
-## II. NEW USER GROWTH (TĂNG TRƯỞNG NGƯỜI DÙNG MỚI THÁNG 08/2026)
-
-### Đúc Kết Hiệu Quả Thu Hút Người Dùng Mới Từ Chiến Dịch Ads (Aug 2026 - Until now)
-
-> **Observation:**  
-> (1) **Tổng quan chuyển đổi Ads (Tháng 8 - Until now):** Đạt **4.488 Installs**, **1.535 Đăng ký (REG)** (Tỷ lệ REG/Install = **34,20%**) và **864 Liên kết ngân hàng (Map)** (Tỷ lệ Map/REG = **56,29%**, Map/Install = **19,25%**).  
-> (2) **Chủ lực Bộ quà CHAOMOMO:** Chiếm **86,34%** tổng số Installs (3.875 / 4.488), **85,15%** tổng lượt Đăng ký (1.307 / 1.535) và **87,62%** tổng lượt Liên kết ngân hàng (757 / 864).  
-> (3) **Chất lượng chuyển đổi tệp iOS vượt trội:** Tệp iOS từ chiến dịch CHAOMOMO có tỷ lệ Map/REG đạt **74,47%** (105 Map / 141 REG) và Map/Install đạt **27,13%**, vượt xa tệp Android (~54,13% Map/REG).  
-> (4) **Tỷ lệ đăng ký cao ở tệp Cinema:** Tỷ lệ hoàn tất đăng ký tài khoản (REG/Install) đạt mốc cao nhất **40,22%** (so với 33,73% của CHAOMOMO).  
-> 
-> **Problem Statement:**  
-> (1) Nâng tỷ lệ REG/Install của tệp iOS Ads (hiện ở mức 18,55% - 36,43%) để tối ưu chi phí CAC trên thiết bị Apple.  
-> (2) Nhân rộng thông điệp Cinema sang tệp Android nhằm nâng tỷ lệ đăng ký tài khoản chung vượt mốc 40%.
-
----
-
-## III. STRATEGIC HUBS ON-TRACK STATUS & CONTENT PRODUCTION (HOẠT ĐỘNG THỰC THI THÁNG 08/2026)
-
-### 1. Bảng Trạng Thái Tiến Độ On-Track & Sản Xuất Nội Dung (Content Production Matrix)
+### 1. Bảng Tổng Hợp Chỉ Số Web Overall (T8/2026 MTD vs T7/2026 MTD & T7/2026 Full)
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
     <tr style="background-color:#f1f5f9;">
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dự Án (Hub)</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Phân Vùng (Zone)</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hoạt Động Content Production & Kỹ Thuật Đang Triển Khai</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trạng Thái Tiến Độ (Status)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Kênh Truy Cập (Source Group)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">T5/2026 (Full)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">T6/2026 (Full)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">T7/2026 (Full)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">T7/2026 (MTD 28d)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">T8/2026 (MTD 28d)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">MoM (%) (MTD)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">Tỷ Trọng T8 (%)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Financial Hub</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transformation Zone (Ưu tiên #1)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Triển khai Content Plan chuyên sâu cho CIC; hoàn thiện bộ tool tiện ích tài chính (Lãi suất tiết kiệm, Bảo hiểm xã hội, Lương hưu); dựng bản Staging/Dev 2 ngày (17-18/08) để báo cáo sếp ngày 19/08; thiết kế UI Block Section dọc; thí điểm chuẩn hóa Block Retro (CIC & Vay Nhanh).</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left; font-weight:700; color:#16a34a;">ON TRACK<br/>(Dựng Staging 17-18/08)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Organic Search</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1.669.698</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1.648.737</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1.875.191</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1.713.500</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1.356.384</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; color:#dc2626;">-20.84%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; font-weight:700;">50.36%</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Student Hub</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Incubation Zone</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Biên soạn xong Content Plan 30+ bài viết chuyên sâu; hoàn tất dữ liệu 5 trường đại học đầu tiên; dựng khung sườn & menu Staging (17-18/08) quy hoạch 3 trang con (Sinh viên, Trường học, Bảng xếp hạng) & mini-web từng trường.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left; font-weight:700; color:#16a34a;">ON TRACK<br/>(Sẵn sàng 30+ bài content)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Direct Traffic</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">637.056</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">488.592</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">440.855</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">406.154</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">532.466</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; color:#16a34a; font-weight:700;">+31.10%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; font-weight:700;">19.77%</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Vehicle Hub (V Hub)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Transformation Zone</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tiếp nhận file dữ liệu thô về Gara, Cây xăng và Trạm sạc; tách bài viết chủ đề đăng kiểm từ mảng phạt nguội cũ sang để tạo Content Plan riêng cho V Hub; dựng MVP trang chủ & core utilities trong tuần.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left; font-weight:700; color:#16a34a;">ON TRACK<br/>(Dựng MVP Q3)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Paid Traffic</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">720.890</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">982.492</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">497.958</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">371.488</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">506.213</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; color:#16a34a; font-weight:700;">+36.27%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; font-weight:700;">18.79%</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cinema Hub</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Performance Zone</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoàn tất bản demo 17/08 đẩy thẳng Live Production (phục vụ Google Indexing); nhập liệu thủ công CMS khắc phục incident; bổ sung trang thông tin "Diễn viên"; SEO/GEO Top 1-3 Google 2 phim rạp trọng điểm (<em>Hộ Linh Tráng Sĩ</em> & <em>Nghỉ Hè Sợ Nghỉ Hưu</em>); Native Web QR Payment & TMDB API sync.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left; font-weight:700; color:#16a34a;">ON TRACK<br/>(Live Production & Indexing)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Referral Traffic</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">201.216</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">255.134</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">329.659</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">303.559</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">279.522</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; color:#dc2626;">-7.92%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; font-weight:700;">10.38%</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MoSpark CMS & Automation</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Productivity Zone</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vận hành GenAI Content Pipeline (rút ngắn 90% thời gian sản xuất xuống 4-5 phút/bài); Guardrails System tự động kiểm duyệt tiêu chuẩn SEO/Compliance trước khi xuất bản; phân quyền Self-service cho các BUs (37% Template, 63% Custom).</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left; font-weight:700; color:#16a34a;">ON TRACK<br/>(Tự động hóa vận hành)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Others</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">44.750</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">33.223</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">24.158</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">22.067</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">18.948</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; color:#dc2626;">-14.13%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; font-weight:700;">0.70%</td>
+    </tr>
+    <tr style="background-color:#f1f5f9; font-weight:700;">
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:left;"><strong>TỔNG CỘNG (TOTAL PAGEVIEWS)</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:right;">3.273.610</td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:right;">3.408.178</td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:right;">3.167.821</td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:right;">2.816.768</td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:right;">2.693.533</td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; color:#dc2626;">-4.38%</td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:right;">100.00%</td>
+    </tr>
+  </tbody>
+</table>
+
+### 2. Đánh Giá Động Lực Tăng Trưởng & Biến Động Lưu Lượng (Traffic Observation)
+- **Tổng quy mô lưu lượng:** Tháng 8 tính đến ngày 28/08 ghi nhận **2.693.533 Page Views** (MTD 28 ngày). Dự kiến quy đổi tròn 31 ngày đạt khoảng **2,98M Page Views**, giữ vững nhịp lưu lượng ổn định xấp xỉ mốc 3.0M Page Views/tháng.
+- **Bứt phá mạnh từ Paid Traffic (+36.27% MoM MTD):** Tăng từ 371.488 PV lên **506.213 PV**. Động lực tăng trưởng chính xuất phát từ các chiến dịch Ads đẩy mạnh phễu New User (CHAOMOMO 500K) và Ads chiến dịch Phim rạp hot.
+- **Tăng trưởng vững chắc của Direct Traffic (+31.10% MoM MTD):** Đạt **532.466 PV** (tăng từ 406.154 PV cùng kỳ tháng trước), phản ánh nhận diện thương hiệu Web MoMo (`momo.vn`) cải thiện rõ rệt và lượng người dùng quay lại thường xuyên tăng mạnh.
+- **Organic Search duy trì vị thế cột trụ (50.36% Tỷ trọng):** Đạt **1.356.384 PV MTD**. Dù chịu ảnh hưởng biến động mùa vụ cuối hè, Organic Search vẫn giữ vững vai trò kênh thu hút tự nhiên lớn nhất toàn trang.
+
+---
+
+## II. TẬP TRUNG TĂNG TRƯỞNG NGƯỜI DÙNG MỚI (NEW USER GROWTH & ADS FUNNEL)
+
+### 1. Sơ Đồ Cơ Chế Hiển Thị Balloon Ads Trên Giao Diện Mobile (Mobile Balloon Ads UX Flow)
+
+```mermaid
+graph LR
+    Step1["1. First-Screen Mobile<br/>(Hiển thị Balloon Ads ngay khi vào trang)"] --> Step2["2. User Scroll Content<br/>(Người dùng cuộn xem nội dung bài viết)"]
+    Step2 --> Step3["3. Sticky Footer CTA<br/>(Thu gọn Balloon thành thanh CTA cố định)"]
+    Step3 --> Step4["4. Onelink Click<br/>(Nhấp CTA mở Deep Link chuyển tiếp)"]
+    Step4 --> Step5["5. App Install & Onboarding<br/>(Cài đặt App - Đăng ký - Map Bank)"]
+```
+
+### Bảng Phân Tích Chi Tiết Các Bước Luồng Chuyển Đổi Mobile Balloon Ads:
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Bước</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Giai Đoạn</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Trải Nghiệm Người Dùng (UX)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Hạ Tầng / Cơ Chế Kỹ Thuật</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Nền Tảng</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">First-Screen Impression</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xuất hiện Banner Balloon Ads nổi bật góc màn hình ngay màn hình đầu tiên khi đọc bài.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Dynamic Floating Overlay Component</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobile Web</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User Scroll Behavior</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Người dùng cuộn trang tìm kiếm thông tin, Balloon Ads tự động co dãn không gây che khuất chữ.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Scroll Trigger Event Listener</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobile Web</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sticky Footer Transition</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Balloon Ads neo chặt thành thanh Sticky Footer CTA dưới đáy màn hình theo dấu chân người đọc.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CSS Sticky Position & Intersection Observer API</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mobile Web</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Deep Link Conversion</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhấp nút CTA "Nhận Quà 500K", kích hoạt Onelink điều hướng trực tiếp sang App Store/Google Play.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Appsflyer Onelink Smart Script</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web ➔ Store</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Full Onboarding Funnel</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoàn tất Tải App ➔ Đăng ký tài khoản mới (REG) ➔ Liên kết tài khoản ngân hàng (Map Bank).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">SDK Tracking Full Funnel Pipeline</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">App MoMo</td>
+    </tr>
+  </tbody>
+</table>
+
+### 2. Số Liệu Chuyển Đổi Phễu New User Ads Theo Từng Chiến Dịch (Tháng 08/2026)
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.88em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:7px 10px; text-align:left; font-weight:700;">Chiến Dịch (Campaign Detail)</th>
+      <th style="border:1.5px solid #64748b; padding:7px 10px; text-align:right; font-weight:700;"># Installs</th>
+      <th style="border:1.5px solid #64748b; padding:7px 10px; text-align:right; font-weight:700;"># REG</th>
+      <th style="border:1.5px solid #64748b; padding:7px 10px; text-align:right; font-weight:700;"># Map Bank</th>
+      <th style="border:1.5px solid #64748b; padding:7px 10px; text-align:right; font-weight:700;"># MAU</th>
+      <th style="border:1.5px solid #64748b; padding:7px 10px; text-align:right; font-weight:700;">%CR Reg</th>
+      <th style="border:1.5px solid #64748b; padding:7px 10px; text-align:right; font-weight:700;">%CR Map</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:left;">260805_NEW_WEB_N2MM_INS_C.CHAOMOMO_android</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">2.873</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">978</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">508</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">263</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">34.04%</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">51.94%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:left;">260805_NEW_WEB_N2MM_INS_C.CHAOMOMO_ios</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">2.158</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">659</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">485</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">279</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">30.54%</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right; font-weight:700; color:#16a34a;">73.60%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:left;">260407_NEW_INTERNAL_WEB_N2MM_CAS_WEB_BRT_C.CHAOMOMO (Android)</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">1.208</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">457</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">219</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">113</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">37.83%</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">47.92%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:left;">260407_NEW_INTERNAL_WEB_N2MM_CAS_WEB_BRT_C.CHAOMOMO (iOS)</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">828</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">308</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">213</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">130</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">37.20%</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right; font-weight:700; color:#16a34a;">69.16%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:left;">260805_NEW_WEB_N2MM_INS_C.CHAOMOMO.CHAOMOMO_android</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">596</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">220</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">125</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">63</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">36.91%</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">56.82%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:left;">260805_NEW_WEB_N2MM_INS_C.PSN-CINEMA_ios</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">544</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">180</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">113</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">68</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">33.09%</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right; font-weight:700; color:#16a34a;">62.78%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:left;">260805_NEW_WEB_N2MM_INS_C.CHAOMOMO.CHAOMOMO_ios</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">386</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">147</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">107</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">72</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">38.08%</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right; font-weight:700; color:#16a34a;">72.79%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:left;">260805_NEW_WEB_N2MM_INS_C.PSN-CINEMA_android</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">223</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">89</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">36</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">24</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">39.91%</td>
+      <td style="border:1px solid #94a3b8; padding:7px 10px; text-align:right;">40.45%</td>
+    </tr>
+    <tr style="background-color:#f1f5f9; font-weight:700;">
+      <td style="border:1.5px solid #64748b; padding:7px 10px; text-align:left;">GRAND TOTAL (TỔNG CỘNG)</td>
+      <td style="border:1.5px solid #64748b; padding:7px 10px; text-align:right; color:#16a34a;">9.300</td>
+      <td style="border:1.5px solid #64748b; padding:7px 10px; text-align:right; color:#16a34a;">3.228</td>
+      <td style="border:1.5px solid #64748b; padding:7px 10px; text-align:right; color:#16a34a;">1.806</td>
+      <td style="border:1.5px solid #64748b; padding:7px 10px; text-align:right; color:#16a34a;">1.012</td>
+      <td style="border:1.5px solid #64748b; padding:7px 10px; text-align:right;">34.71%</td>
+      <td style="border:1.5px solid #64748b; padding:7px 10px; text-align:right; color:#16a34a;">55.95%</td>
+    </tr>
+  </tbody>
+</table>
+
+- **Tổng số lượng cài đặt thành công (Install App):** Đạt **9.300 Installs**, trong đó gói quà chào mừng **CHAOMOMO** đóng góp **8.049 installs (86.55%)**, chiến dịch **Cinema Ads (PSN-CINEMA)** đóng góp **767 installs (8.25%)**.
+- **Hiệu suất chuyển đổi phễu Onboarding:**
+  - **Tạo mới tài khoản (%CR Reg/Install):** Đạt **34.71%** (tổng cộng **3.228 REG** mới).
+  - **Liên kết ngân hàng (%CR Map/Reg):** Đạt **55.95%** (tổng cộng **1.806 Map Bank** thành công).
+  - **Kích hoạt giao dịch thực (%CR MAU/Map):** Đạt **56.04%** (tổng cộng **1.012 MAU** phát sinh giao dịch).
+  - **Chất lượng tệp iOS vượt trội:** Tỷ lệ Map Bank/Reg đạt **70.94%** (918 Map/1.294 REG), đóng góp **549 MAU** (chiếm 54.25% toàn kênh).
+
+---
+
+## III. PHÂN TÍCH HIỆU SUẤT THEO DỰ ÁN VÀ STRATEGIC WEBSITES
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Dự Án / Strategic Hub</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">Traffic T8/2026 (MTD 28d)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">Traffic T7/2026 (MTD 28d)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">Tăng Trưởng MoM (%)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Đánh Giá Tiến Độ Vận Hành & Điểm Nổi Bật</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cinema Hub (Tổng Cụm)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">611.487</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">731.480</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; color:#dc2626;">-16.40%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chiếm 22.70% tổng traffic Web. Đã live bản demo thanh toán QR Code mua vé rạp trực tiếp ngoài Web ngày 17/08. Rà soát làm sạch nội dung rác.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phạt Nguội (Vehicle Hub Anchor)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">200.659</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">135.354</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; color:#16a34a; font-weight:700;">+48.25%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bứt phá tăng trưởng trở lại nhờ công cụ GenAI Content Pipeline xuất bản Location Pages chuẩn SEO/GEO. Kéo theo Vé Xe Khách tăng lên 89.028 PV và BHXM tăng lên 6.027 PV.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Financial Hub (Finhub General)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">178.375</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">109.514</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; color:#16a34a; font-weight:700;">+62.88%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng trưởng vượt bậc nhờ nhúng các tiện ích tính toán tài chính. Sẵn sàng luồng Staging 2 ngày (17-18/08) để duyệt sản phẩm.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Vay Nhanh (Financial Sub-usecase)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">93.970</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">56.280</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; color:#16a34a; font-weight:700;">+66.97%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng trưởng mạnh nhờ tối ưu hóa bộ công cụ giả lập khoản vay và tính lịch trả nợ gốc lãi tự động.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Điểm Tín Dụng (CIC)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">60.879</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">23.312</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; color:#16a34a; font-weight:700;">+161.15%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bùng nổ gấp 2.6 lần so với tháng trước nhờ triển khai Content Plan chuyên đề CIC và tích hợp công cụ tra cứu điểm tín dụng.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Home MoMo (Trang Chủ Web)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">156.383</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">177.931</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; color:#dc2626;">-12.11%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tối ưu hóa lại cấu trúc hiển thị trang chủ và điều hướng bớt lượng traffic vãng lai về các Hub chuyên sâu.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sim & Esim Services</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">46.879</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">33.404</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right; color:#16a34a; font-weight:700;">+40.34%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sim vật lý tăng lên 31.544 PV (+32.6%) và Esim tăng lên 15.335 PV (+59.5%) nhờ áp dụng kiến trúc SPA từ blueprint Phạt Nguội.</td>
     </tr>
   </tbody>
 </table>
 
 ---
 
-### 2. Chi Tiết Hoạt Động Content Production & Kỹ Thuật Đang Triển Khai
+## IV. LỘ TRÌNH KẾ HOẠCH & ACTION ITEMS THÁNG 09/2026 (ROADMAP)
 
-#### A. Financial Hub (Trung Tâm Tài Chính - Dự Án Ưu Tiên Cao Nhất):
-- **Triển khai Content Plan cho CIC:** Biên soạn & xuất bản chuỗi nội dung chuyên sâu hướng dẫn kiểm tra Điểm Tín Dụng, cải thiện điểm xếp hạng tín nhiệm và giải pháp tài chính cá nhân.
-- **Hoàn thiện Bộ Tool Utilities:** Hoàn tất phát triển & tích hợp 3 công cụ tính toán tài chính trọng tâm: **Tool Lãi suất tiết kiệm**, **Tool Tính Bảo hiểm xã hội (BHXH)** và **Tool Tính Lương hưu**.
-- **Kỹ thuật & Progress:** Dựng xong bản Staging/Dev cơ bản trong 2 ngày (17-18/08) để trình diễn sản phẩm với sếp vào thứ Tư (19/08); ưu tiên hiển thị dạng Block Section dọc để ra mắt nhanh.
-- **Thí điểm Block Retro:** Chọn dự án CIC score và Vay Nhanh làm thí điểm chuyển đổi sang nền tảng MP mới để nhúng công cụ tương tác và chuẩn hóa cấu trúc SEO (User + Block + Slug).
-
-#### B. Student Hub (Cổng Đặc Quyền Sinh Viên):
-- **Content Production:** Đã hoàn thành toàn bộ Content Plan bao gồm **hơn 30 bài viết chuyên sâu** chuẩn bị tích hợp lên Web; hoàn tất xây dựng dữ liệu chi tiết cho **5 trường đại học** đầu tiên.
-- **Kỹ thuật & Progress:** Dựng xong khung sườn và cấu trúc menu phiên bản Staging trong ngày 17-18/08; quy hoạch trang "cha" Student Hub chứa 3 trang con (Sinh viên, Trường học, Bảng xếp hạng) và hệ thống mini-web cho từng trường.
-
-#### C. Vehicle Hub / V Hub (Cổng Tiện Ích Xe Cộ):
-- **Content Production:** Tái cấu trúc nội dung bằng cách tách các bài viết liên quan đến chủ đề đăng kiểm từ mảng phạt nguội cũ sang để tạo Content Plan riêng cho V Hub.
-- **Kỹ thuật & Progress:** Tiếp nhận file dữ liệu thô về Gara, Cây xăng, Trạm sạc để quản trị trong tuần; tập trung dựng MVP trang chủ và bộ tiện ích công khai (giá xăng dầu, trực giao thông, phạt nguội mở rộng).
-
-#### D. Cinema Hub (Cổng Phim Ảnh & Mua Vé Rạp):
-- **Content Production:** Tập trung biên soạn nội dung chất lượng cao cho 2 phim rạp trọng điểm (*Hộ Linh Tráng Sĩ*, *Nghỉ Hè Sợ Nghỉ Hưu*) và chuẩn bị nội dung bổ sung cho trang thông tin "Diễn viên".
-- **Kỹ thuật & Progress:** Hoàn tất bản demo 17/08 để đẩy thẳng lên Live Production phục vụ Google Indexing; áp dụng giải pháp nhập liệu thủ công (bằng tay) khắc phục sự cố tự động tạo danh sách CMS cũ để đảm bảo campaign đúng tiến độ.
-
-#### E. New User Growth & Interactive Personalization:
-- **Ý tưởng Khảo sát Cá nhân hóa:** Xây dựng tính năng tương tác khảo sát ngắn (*"Bạn là ai? Thói quen tiêu dùng thế nào?"*), tự động trả về Landing Page cá nhân hóa kèm thẻ quà tặng & dịch vụ thiết kế riêng.
-- **Trang Welcome Onboarding:** Xây dựng trang Welcome giáo dục người dùng mới về giá trị ứng dụng MoMo trước khi tải App.
-
----
-
-## IV. EXECUTIVE SUMMARY & CROSS-TEAM COLLABORATION
-
-### 1. Key Highlights & Business Impact
-- **Định vị Nền tảng & Ranh Giới KPI:** Chuyển dịch sang "Web Destination / Web Hub". Thống nhất quy tắc **Lượng traffic In-app KHÔNG được tính vào KPI chung của Web Platform**.
-- **Mô hình Agency Nội bộ:** Inbound Team (BMC) chủ trì 100% chất lượng nội dung toàn kênh Web; Web Platform đóng vai trò hỗ trợ kỹ thuật và xây dựng công cụ tự động hóa MoSpark.
-- **Phễu Web-to-App & Tăng Trưởng New User:** Tập trung tối ưu CTR nhấp CTA và lượt chuyển đổi cài đặt mới (New Installs) từ các chiến dịch Ads.
-
----
-
-### 2. Phối Hợp Liên Phòng Ban (Cross-team Collaboration & Support Needed)
-- **Inbound Team (BMC):** Chủ trì 100% chất lượng nội dung; ban hành quy trình phê duyệt chất lượng và hệ thống Guardrails tự động; phân quyền Admin Panel cho các BU.
-- **Risk Team & Compliance:** Phê duyệt bộ tiêu chí Guardrails tự động trên MoSpark CMS; thống nhất quy định pháp lý cho luồng hiển thị Webview T&C dạng TLDR và Nộp Phạt Nguội Trực Tuyến.
-- **VTTI BU (Phương Tiện):** Phối hợp thẩm định Master Hub Giao Thông; đồng bộ dữ liệu vi phạm giao thông real-time với CSGT & TTDK.
-- **InsurTech BU (Bảo Hiểm):** Cung cấp API các sản phẩm bảo hiểm; phối hợp đóng gói các gói Combo Cross-sell (Tra cứu phạt nguội + voucher bảo hiểm / ưu đãi ePass).
-- **FS Team (Tài Chính / Wealth / Credit):** Thống nhất phương án hiển thị bộ Utilities Tool trên Financial Hub; chuẩn bị kế hoạch truyền thông cho chuyên trang Điểm Tín Dụng (CIC).
-- **MDS-Movies BU (Phim):** Đồng bộ lịch chiếu phim real-time qua API TMDB; phối hợp truyền thông Off-page cho 2 tựa phim chiếu rạp trọng điểm.
-- **Media Team:** Tiếp nhận vận hành SEO thuần túy; hỗ trợ đẩy mạnh ngân sách Paid Search cho các cụm từ khóa chiến lược có tỷ lệ chuyển đổi cao.
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Giai Đoạn</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thời Gian</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Giai Đoạn</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Chi Tiết Triển Khai & Mục Tiêu Trọng Tâm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Giai đoạn 1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đầu Tháng 09/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Financial Hub & Tooling Launch</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chính thức nghiệm thu bản Production cho Financial Hub sau đợt review staging. Đưa 3 công cụ tiện ích (Lãi suất tiết kiệm, BHXH, Lương hưu) lên trang chính thức và đẩy mạnh Content Plan cho chủ đề CIC.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Giai đoạn 2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giữa Tháng 09/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Student Hub Go-Live & Mini-Web Expansion</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xuất bản chính thức Student Hub với 3 trang chuyên đề (Sinh viên, Trường học, Bảng xếp hạng) và hệ thống mini-web cho từng trường đại học. Triển khai bộ 30+ bài viết cẩm nang tân sinh viên.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Giai đoạn 3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cuối Tháng 09/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Vehicle Hub MVP & Data Ingestion</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoàn thiện bản MVP cho Vehicle Hub trung tâm, đồng bộ dữ liệu hạ tầng tra cứu phạt nguội, giá xăng, trạm sạc, cứu hộ và bãi xe. Mở rộng phễu bán chéo Bảo hiểm Ô tô/Xe máy.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Giai đoạn 4</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Toàn Tháng 09/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark Scaling & AI Content Automation</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng tốc công suất sản xuất GenAI Content trên MoSpark lên mốc 150+ bài/tháng. Đẩy mạnh kiểm duyệt tự động qua Guardrails System để nâng cao điểm SEO/GEO Onpage.</td>
+    </tr>
+  </tbody>
+</table>
