@@ -39,9 +39,61 @@ from scripts.lib.keyword_intelligence import (
 )
 
 MERGE_MAP = {
-    # Financial
+    # Financial - Bank Consolidation -> ngan-hang
+    'ACB': 'ngan-hang',
+    'acb': 'ngan-hang',
+    'BIDV': 'ngan-hang',
+    'bidv': 'ngan-hang',
+    'Eximbank': 'ngan-hang',
+    'eximbank': 'ngan-hang',
+    'Indovina Bank': 'ngan-hang',
+    'Indovina-Bank': 'ngan-hang',
+    'LPBank': 'ngan-hang',
+    'LPBank ': 'ngan-hang',
+    'MSB': 'ngan-hang',
+    'Shinhan Bank': 'ngan-hang',
+    'Shinhan-Bank': 'ngan-hang',
+    'Techcombank': 'ngan-hang',
+    'Vietcombank': 'ngan-hang',
+    'vietcombank': 'ngan-hang',
+    'VietinBank': 'ngan-hang',
+    'viettinbank': 'ngan-hang',
+    'ab-bank': 'ngan-hang',
+    'agribank': 'ngan-hang',
+    'bac-a-bank': 'ngan-hang',
+    'ban-viet': 'ngan-hang',
+    'bao-viet-bank': 'ngan-hang',
+    'donga bank': 'ngan-hang',
+    'donga-bank': 'ngan-hang',
+    'hd-bank': 'ngan-hang',
+    'kien-long-bank': 'ngan-hang',
+    'mbbank': 'ngan-hang',
+    'nam-a-bank': 'ngan-hang',
+    'ncb': 'ngan-hang',
+    'ocb': 'ngan-hang',
+    'ocean-bank': 'ngan-hang',
+    'pvcom bank': 'ngan-hang',
+    'pvcom-bank': 'ngan-hang',
+    'sacombank': 'ngan-hang',
+    'saigonbank': 'ngan-hang',
+    'scb': 'ngan-hang',
+    'seabank': 'ngan-hang',
+    'shb': 'ngan-hang',
+    'tpbank': 'ngan-hang',
+    'uob': 'ngan-hang',
+    'vcb': 'ngan-hang',
+    'vib': 'ngan-hang',
+    'viet-bank': 'ngan-hang',
+    'vpbank': 'ngan-hang',
+    'vrb': 'ngan-hang',
+    # Financial - Cannibalization & Intent Merges
     'vang': 'gia-vang',
     'tiet-kiem': 'gui-tiet-kiem',
+    'chia-co-tuc': 'co-tuc',
+    'mua-truoc-tra-sau': 'vi-tra-sau',
+    'tien-ao': 'crypto',
+    'tien-dien-tu': 'crypto',
+    'tien-so': 'crypto',
     'no': 'no-xau',
     'thu-nhap': 'thue-tncn',
     'cic': 'diem-tin-dung',
@@ -866,7 +918,7 @@ def main():
             raw_slug = os.path.splitext(os.path.basename(fpath))[0]
             # Tự động loại bỏ hậu tố nhân bản như (1), (2), _copy...
             clean_slug = re.sub(r'[\s_]*\(\d+\)$', '', raw_slug).strip()
-            canonical_slug = MERGE_MAP.get(clean_slug, clean_slug)
+            canonical_slug = MERGE_MAP.get(clean_slug, MERGE_MAP.get(clean_slug.lower(), clean_slug))
             slug_groups[canonical_slug].append(fpath)
 
         s_usecases = []
@@ -1055,29 +1107,45 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
         os.makedirs(modular_dir, exist_ok=True)
 
         # Index siêu nhẹ (~45 KB)
+        current_sector_usecases = [
+            {
+                'id': uc['id'],
+                'name': uc['name'],
+                'display_name': uc.get('display_name', uc['name']),
+                'sector': uc['sector'],
+                'total_volume': uc['total_volume'],
+                'clean_keywords_count': uc['clean_keywords_count'],
+                'pillar_keyword': uc['pillar_keyword']['keyword'],
+                'pillar_volume': uc['pillar_keyword']['cluster_volume'],
+                'pillar_intent': uc['pillar_keyword']['intent'],
+                'quick_wins_count': len([k for k in uc['top_opportunities'] if k['quadrant'] == 'Quick Win']),
+                'chunk_url': f"/data/seo-clusters/{uc['sector']}/{uc['id']}.json"
+            } for uc in all_usecases
+        ]
+
+        index_file = os.path.join(modular_dir, "index.json")
+        final_usecases = current_sector_usecases
+        final_sector_summary = sector_summary
+
+        if target_sector and os.path.exists(index_file):
+            try:
+                with open(index_file, 'r', encoding='utf-8') as f:
+                    old_index = json.load(f)
+                other_usecases = [u for u in old_index.get('usecases', []) if u.get('sector', '').lower() != target_sector.lower()]
+                final_usecases = sorted(other_usecases + current_sector_usecases, key=lambda x: x['total_volume'], reverse=True)
+                final_sector_summary = old_index.get('sector_summary', {})
+                final_sector_summary.update(sector_summary)
+            except Exception as e:
+                print(f"Không thể kế thừa index cũ: {e}")
+
         index_payload = {
             'version': '3.0-modular',
             'generated_at': data_payload['generated_at'],
             'stats': data_payload['stats'],
-            'sector_summary': sector_summary,
+            'sector_summary': final_sector_summary,
             'quick_wins_count': len(all_quick_wins),
-            'usecases': [
-                {
-                    'id': uc['id'],
-                    'name': uc['name'],
-                    'display_name': uc.get('display_name', uc['name']),
-                    'sector': uc['sector'],
-                    'total_volume': uc['total_volume'],
-                    'clean_keywords_count': uc['clean_keywords_count'],
-                    'pillar_keyword': uc['pillar_keyword']['keyword'],
-                    'pillar_volume': uc['pillar_keyword']['cluster_volume'],
-                    'pillar_intent': uc['pillar_keyword']['intent'],
-                    'quick_wins_count': len([k for k in uc['top_opportunities'] if k['quadrant'] == 'Quick Win']),
-                    'chunk_url': f"/data/seo-clusters/{uc['sector']}/{uc['id']}.json"
-                } for uc in all_usecases
-            ]
+            'usecases': final_usecases
         }
-        index_file = os.path.join(modular_dir, "index.json")
         with open(index_file, 'w', encoding='utf-8') as f:
             json.dump(index_payload, f, ensure_ascii=False, indent=2)
         print(f"Đã tạo Modular Index siêu nhẹ tại: {index_file} ({round(os.path.getsize(index_file)/1024, 1)} KB)")
@@ -1099,11 +1167,17 @@ Dữ liệu được trích xuất, lọc nhiễu tự động và bảo vệ ch
                 json.dump(uc, f, ensure_ascii=False, indent=2)
             chunk_count += 1
         
-        # Xóa các chunk cũ đã bị merge trong sector này
-        if target_sector:
-            sec_dir = os.path.join(modular_dir, target_sector)
+        # Xóa các chunk cũ đã bị merge trong các sector được xử lý
+        clean_sectors = [target_sector] if target_sector else [s for s in sectors]
+        for sec in clean_sectors:
+            sec_dir = os.path.join(modular_dir, sec)
+            if not os.path.exists(sec_dir):
+                for actual_dir in glob.glob(os.path.join(modular_dir, '*')):
+                    if os.path.basename(actual_dir).lower() == sec.lower():
+                        sec_dir = actual_dir
+                        break
             if os.path.exists(sec_dir):
-                active_files = {f"{uc['id']}.json" for uc in chunks_to_write}
+                active_files = {f"{uc['id']}.json" for uc in all_usecases if uc['sector'].lower() == sec.lower()}
                 for existing_f in glob.glob(os.path.join(sec_dir, '*.json')):
                     if os.path.basename(existing_f) not in active_files:
                         os.remove(existing_f)

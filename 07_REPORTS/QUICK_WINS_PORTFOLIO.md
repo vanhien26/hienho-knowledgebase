@@ -1,9 +1,9 @@
 # DANH MỤC TỪ KHÓA QUICK WINS TOÀN WEB PLATFORM (HIGH ROI OPPORTUNITIES)
 
-Tập hợp các từ khóa có **Search Volume cao ($\ge 1.500$) và Mức độ Cạnh tranh Thấp (Low PPC Competition)** trên toàn bộ 203 Use Cases của Web Platform. Đây là các chủ đề ưu tiên P0 mang lại lưu lượng truy cập nhanh nhất với chi phí nội dung tối thiểu.
+Tập hợp các từ khóa có **Search Volume cao ($\ge 1.500$) và Mức độ Cạnh tranh Thấp (Low PPC Competition)** trên toàn bộ 162 Use Cases của Web Platform. Đây là các chủ đề ưu tiên P0 mang lại lưu lượng truy cập nhanh nhất với chi phí nội dung tối thiểu.
 
-- **Tổng số từ khóa Quick Wins phát hiện:** 950 từ khóa
-- **Tổng dung lượng tìm kiếm Quick Wins:** 808,753,200 lượt/tháng
+- **Tổng số từ khóa Quick Wins phát hiện:** 721 từ khóa
+- **Tổng dung lượng tìm kiếm Quick Wins:** 791,284,900 lượt/tháng
 
 ---
 
@@ -58,6 +58,6 @@ Tập hợp các từ khóa có **Search Volume cao ($\ge 1.500$) và Mức đ�
 | 45 | `soha` | 673,000 | `Informational` | 8.3 | Nhà Phát Hành Game | Entertainment | Độc lập |
 | 46 | `zing` | 823,000 | `Informational` | 8.19 | Ứng Dụng Game | Entertainment | Độc lập |
 | 47 | `tra cứu phạt nguội toàn quốc` | 33,100 | `Tool/Calculator` | 8.15 | Tra Cứu Phạt Nguội Toàn Quốc | vehicle-hub | kiểm tra phạt nguội toàn quốc, tra cứu phạt nguội ô tô toàn quốc |
-| 48 | `lãi suất ngân hàng` | 135,000 | `Commercial` | 8.1 | Lãi Suất Ngân Hàng | Financial | lãi suất ngân hàng agribank, lãi suất ngân hàng vietcombank |
-| 49 | `lãi suất ngân hàng` | 135,000 | `Commercial` | 8.1 | Hệ Thống Ngân Hàng | Financial | lãi suất ngân hàng agribank, lãi suất ngân hàng vietcombank |
+| 48 | `lãi suất ngân hàng` | 135,000 | `Commercial` | 8.1 | Hệ Thống Ngân Hàng | Financial | lãi suất ngân hàng agribank, lãi suất ngân hàng vietcombank |
+| 49 | `lãi suất ngân hàng` | 135,000 | `Commercial` | 8.1 | Lãi Suất Ngân Hàng | Financial | lãi suất ngân hàng agribank, lãi suất ngân hàng vietcombank |
 | 50 | `đăng ký mã số thuế cá nhân` | 9,900 | `Transactional` | 8.02 | Tra Cứu Mã Số Thuế | Financial | cách đăng ký mã số thuế cá nhân, đăng ký mã số thuế cá nhân online |

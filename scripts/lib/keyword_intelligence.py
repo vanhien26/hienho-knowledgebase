@@ -184,7 +184,8 @@ CROSS_DOMAIN_OUTLIERS = {
     'financial': [
         'giao hàng', 'gửi hàng', 'ghtk', 'ghn', 'shopee express', 'chuyển phát nhanh',
         'bưu điện', 'xe tải', 'game lậu', 'hack', 'mod', 'tín dụng đen', 'xã hội đen',
-        'bốc bát họ', 'lừa đảo chiếm đoạt'
+        'bốc bát họ', 'lừa đảo chiếm đoạt', 'cm88', 'cmanga', 'casino', 'nhà cái',
+        'cá cược', 'đánh bạc', 'tài xỉu', 'bắn cá'
     ],
     'vehicle': [
         'gta', 'mod skin', 'mô hình', 'đồ chơi', 'diogo jota', 'fifa', 'pes',
