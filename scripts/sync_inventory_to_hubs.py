@@ -404,6 +404,7 @@ SECTOR_SPECIFIC_RULES = {
 
 # Per-use-case rules (overrides SECTOR_SPECIFIC_RULES when slug matches)
 USECASE_SPECIFIC_RULES = {
+    # === CINEMA (5) ===
     've-xem-phim': [
         ('Giá Vé & Khuyến Mãi Đặt Vé', ['giá vé', 'gia ve', 'vé rẻ', 've re', 'khuyến mãi', 'khuyen mai', 'ưu đãi', 'voucher', 'combo', 'giảm giá', 'bao nhiêu tiền', 'momo', 'học sinh', 'sinh viên', 'thứ 3', 'thứ 4']),
         ('Mua Vé Rạp & Ứng Dụng Online', ['mua vé', 'mua ve', 'đặt vé', 'dat ve', 'đặt phim', 'cgv', 'lotte', 'bhd', 'galaxy', 'cinestar', 'beta', 'rạp', 'rap']),
@@ -421,6 +422,142 @@ USECASE_SPECIFIC_RULES = {
         ('Hệ Thống Rạp Lotte, Galaxy & BHD', ['lotte', 'galaxy', 'bhd', 'beta', 'cinestar', 'quốc gia', 'mega gs', 'dcine', 'starlight']),
         ('Rạp Chiếu Phim Gần Đây & Phòng Chiếu', ['gần đây', 'gan day', 'gần nhất', 'địa chỉ', 'chi nhánh', 'phòng chiếu', 'imax', '4dx', 'gold class', 'lamour', 'ghế đôi', 'sweetbox']),
         ('Bảng Giá & Dịch Vụ Bỏng Nước Tại Rạp', ['giá vé', 'gia ve', 'vé rẻ', 'bắp', 'bỏng', 'nước', 'combo', 'menu', 'dịch vụ', 'đặt vé', 'mua vé', 'rạp chiếu phim', 'rap chieu phim', 'phim chiếu rạp', 'rạp phim', 'cụm rạp', 'rạp', 'rap']),
+    ],
+    'dat-phim': [
+        ('Đặt Vé CGV & Lotte Cinema', ['cgv', 'lotte', 'lotte cinema']),
+        ('Đặt Vé Galaxy, Cinestar & Beta', ['galaxy', 'cinestar', 'beta', 'quốc gia', 'metiz', 'bhd', 'mega gs']),
+        ('Đặt Vé Phim Online Qua App', ['app', 'online', 'momo', 'trực tuyến', 'đặt trước', 'chọn ghế']),
+        ('Hướng Dẫn Đặt Vé & Thanh Toán', ['hướng dẫn', 'cách đặt', 'thanh toán', 'đổi vé', 'hoàn vé', 'đặt vé', 'dat ve', 'đặt phim', 'dat phim']),
+    ],
+    'phim': [
+        ('Phim Chiếu Rạp Mới Nhất', ['chiếu rạp', 'chieu rap', 'phim rạp', 'phim mới', 'phim moi', 'sắp chiếu', 'bom tấn']),
+        ('Top Phim Hay & Đánh Giá Phim', ['phim hay', 'top phim', 'review', 'đánh giá', 'trailer', 'thuyết minh', 'vietsub']),
+        ('Phim Hoạt Hình & Anime Hot', ['hoạt hình', 'anime', '3d', 'hoat hinh', 'manga']),
+        ('Thể Loại Phim & Tuyển Tập', ['hành động', 'kinh dị', 'tình cảm', 'hài', 'khoa học viễn tưởng', 'phim lẻ', 'phim bộ', 'phim']),
+    ],
+
+    # === FINANCIAL (4) ===
+    'gui-tiet-kiem': [
+        ('Lãi Suất Tiết Kiệm Vietcombank & Big 4', ['vietcombank', 'vcb', 'agribank', 'bidv', 'vietinbank']),
+        ('Lãi Suất Tiết Kiệm Techcombank, MB & TMCP', ['techcombank', 'tcb', 'mbbank', 'mb bank', 'mb', 'sacombank', 'vpbank', 'acb', 'tpbank', 'hdbank', 'shb', 'vib', 'ocb', 'msb']),
+        ('Công Cụ Tính Lãi Suất Tiết Kiệm', ['cách tính', 'tính lãi', 'công thức', '100 triệu', '50 triệu', '200 triệu', '500 triệu', '1 tỷ', 'bao nhiêu tiền', 'mỗi tháng']),
+        ('Gửi Tiết Kiệm Online & An Toàn', ['online', 'trực tuyến', 'an toàn', 'app', 'mở sổ', 'kỳ hạn', 'không kỳ hạn', 'rút trước hạn', 'đáo hạn', 'sổ tiết kiệm']),
+    ],
+    'vay': [
+        ('Vay Tiền Online Chuyển Khoản Nhanh', ['chuyển khoản', 'online', 'duyệt nhanh', 'cấp tốc', 'ngay', 'trong ngày', 'app vay', 'h5', 'cmnd', 'cccd', 'không thế chấp']),
+        ('Vay Tín Chấp & Vay Tiêu Dùng Ngân Hàng', ['tín chấp', 'tin chap', 'tiêu dùng', 'ngân hàng', 'shb finance', 'fe credit', 'home credit', 'mcredit', 'lotte finance', 'shinhan']),
+        ('Vay Theo Hạn Mức (Dưới 10tr - 50tr)', ['1 triệu', '2 triệu', '5 triệu', '10 triệu', '20 triệu', '30 triệu', '50 triệu', '100 triệu', 'hạn mức', 'khoản vay', 'sinh viên', 'nợ xấu']),
+        ('Lãi Suất Vay & Công Cụ Tính Trả Góp', ['lãi suất', 'lai suat', 'trả góp', 'tra gop', 'cách tính', 'bảng tính', 'điều kiện', 'thủ tục', 'hồ sơ', 'vay']),
+    ],
+    'vay-nhanh': [
+        ('Vay Tiền Online Chuyển Khoản Nhanh', ['chuyển khoản', 'online', 'duyệt nhanh', 'cấp tốc', 'ngay', 'trong ngày', 'app vay', 'h5', 'cmnd', 'cccd', 'không thế chấp']),
+        ('Vay Tín Chấp & Vay Tiêu Dùng Ngân Hàng', ['tín chấp', 'tin chap', 'tiêu dùng', 'ngân hàng', 'shb finance', 'fe credit', 'home credit', 'mcredit', 'lotte finance', 'shinhan']),
+        ('Vay Theo Hạn Mức (Dưới 10tr - 50tr)', ['1 triệu', '2 triệu', '5 triệu', '10 triệu', '20 triệu', '30 triệu', '50 triệu', '100 triệu', 'hạn mức', 'khoản vay', 'sinh viên', 'nợ xấu']),
+        ('Lãi Suất Vay & Công Cụ Tính Trả Góp', ['lãi suất', 'lai suat', 'trả góp', 'tra gop', 'cách tính', 'bảng tính', 'điều kiện', 'thủ tục', 'hồ sơ', 'vay']),
+    ],
+    'vay-tin-chap': [
+        ('Vay Tín Chấp Theo Lương & Hợp Đồng', ['theo lương', 'hợp đồng', 'sao kê', 'bảo hiểm nhân thọ', 'hóa đơn', 'tín chấp']),
+        ('Vay Tín Chấp Ngân Hàng Lãi Suất Thấp', ['vietcombank', 'bidv', 'agribank', 'mbbank', 'vpbank', 'tpbank', 'shinhan', 'ngân hàng']),
+        ('Điều Kiện & Thủ Tục Vay Tín Chấp', ['điều kiện', 'thủ tục', 'hồ sơ', 'duyệt vay', 'hạn mức', 'nợ xấu']),
+        ('Bảng Tính Trả Góp & Lãi Suất Tín Chấp', ['lãi suất', 'trả góp', 'cách tính', 'bảng tính', 'dư nợ giảm dần', 'vay']),
+    ],
+    'diem-tin-dung': [
+        ('Tra Cứu Điểm Tín Dụng & Check CIC', ['tra cứu', 'tra cuu', 'kiểm tra', 'kiem tra', 'check', 'xem điểm', 'cách kiểm tra', 'online', 'cá nhân', 'miễn phí']),
+        ('Xóa Nợ Xấu & Xếp Hạng CIC', ['nợ xấu', 'no xau', 'nhóm nợ', 'hạng 5', 'hạng 6', 'hạng 7', 'hạng 8', 'xóa nợ', 'bao lâu', 'lịch sử nợ']),
+        ('Điều Kiện Vay Theo Điểm Tín Dụng', ['có vay được không', 'vay được không', 'vay ngân hàng', 'duyệt vay', 'hạn mức', 'thẻ tín dụng', 'điều kiện']),
+        ('Thủ Tục, Biểu Phí & Báo Cáo CIC', ['thủ tục', 'biểu phí', 'chi phí', 'bao nhiêu tiền', 'báo cáo', 'trung tâm cic', 'ngân hàng nhà nước', 'điểm tín dụng', 'cic']),
+    ],
+    'gia-vang': [
+        ('Giá Vàng SJC & Vàng Miếng Hôm Nay', ['sjc', 'vàng miếng', 'vang mieng', 'hôm nay', 'hom nay', 'trong nước', 'hiện tại']),
+        ('Giá Vàng DOJI, PNJ & Mi Hồng', ['doji', 'pnj', 'mi hồng', 'mi hong', 'bảo tín', 'bao tin', 'phú quý', 'huy thanh']),
+        ('Giá Vàng Nhẫn 9999 & Vàng 24K, 18K', ['9999', 'nhẫn trơn', 'vàng nhẫn', '24k', '18k', 'vàng tây', 'vàng ta', 'vàng 10k']),
+        ('Biểu Đồ Giá Vàng & Thị Trường Thế Giới', ['thế giới', 'the gioi', 'kitco', 'biểu đồ', 'dự báo', 'xu hướng', 'trực tuyến', 'giá vàng', 'gia vang']),
+    ],
+
+    # === INSURTECH (4) ===
+    'bao-hiem-xe-may': [
+        ('Bảo Hiểm Xe Máy Bắt Buộc (TNDS)', ['tnds', 'bắt buộc', 'bat buoc', 'trách nhiệm dân sự', 'trach nhiem dan su', 'quy định', 'luật', 'mức phạt', 'công an', 'bị phạt']),
+        ('Bảo Hiểm Tự Nguyện & Cháy Nổ Xe Máy', ['tự nguyện', 'tu nguyen', 'cháy nổ', 'mất cắp', 'tai nạn', 'người ngồi trên xe', 'vật chất']),
+        ('Biểu Phí & Mua Bảo Hiểm Xe Máy Online', ['mua', 'đặt', 'online', 'trực tuyến', 'giá', 'biểu phí', 'bao nhiêu tiền', '66k', '86k', 'app', 'momo', 'giao tận nơi']),
+        ('Tra Cứu Hạn Dùng & Bồi Thường Xe Máy', ['tra cứu', 'kiểm tra', 'check', 'thời hạn', 'hạn dùng', 'điện tử', 'bồi thường', 'hồ sơ', 'thủ tục', 'bảo hiểm xe máy', 'bảo hiểm xe']),
+    ],
+    'bao-hiem-o-to': [
+        ('Bảo Hiểm TNDS Bắt Buộc Ô Tô', ['tnds', 'bắt buộc', 'bat buoc', 'trách nhiệm dân sự', 'dân sự', 'đăng kiểm', 'mức phạt', 'nghị định']),
+        ('Bảo Hiểm Thân Vỏ & Vật Chất Xe Ô Tô', ['thân vỏ', 'than vo', 'vật chất', 'vat chat', 'thủy kích', 'ngập nước', 'mất cắp', 'tai nạn', 'xước', 'sơn']),
+        ('Báo Giá & Mua Bảo Hiểm Ô Tô Online', ['báo giá', 'giá', 'biểu phí', 'bao nhiêu tiền', 'mua online', 'bảo việt', 'pvi', 'pti', 'mic', 'bảo minh', 'liberty']),
+        ('Quy Trình Giám Định & Bồi Thường Ô Tô', ['bồi thường', 'giám định', 'gara', 'sửa chữa', 'hồ sơ', 'thủ tục', 'miễn thường', 'bảo hiểm ô tô', 'bảo hiểm xe ô tô', 'bảo hiểm oto']),
+    ],
+    'bhyt': [
+        ('Quyền Lợi & Mức Hưởng Khám BHYT', ['quyền lợi', 'mức hưởng', 'khám chữa bệnh', 'bệnh viện', 'trái tuyến', 'đúng tuyến', '100%', '80%', 'chi trả', 'thuốc']),
+        ('Đóng Tiếp & Gia Hạn BHYT Hộ Gia Đình', ['hộ gia đình', 'đóng', 'gia hạn', 'tái tục', 'online', 'mua mới', 'mua ở đâu', 'bao nhiêu tiền', 'giá', 'dịch vụ công']),
+        ('Tra Cứu Thẻ & Mã Số BHYT Điện Tử', ['tra cứu', 'kiểm tra', 'check', 'mã số', 'số thẻ', 'hạn sử dụng', 'giá trị', 'điện tử', 'vssid', 'vneid']),
+        ('Thủ Tục Cấp Lại & Đổi Thẻ BHYT', ['cấp lại', 'đổi thẻ', 'mất thẻ', 'sai thông tin', 'thủ tục', 'hồ sơ', 'bảo hiểm y tế', 'bhyt']),
+    ],
+    'bhxh': [
+        ('Rút BHXH 1 Lần & Điều Kiện Chi Trả', ['1 lần', 'một lần', 'rút', 'lãnh', 'cách tính', 'hồ sơ', 'điều kiện', 'thủ tục', 'bao lâu']),
+        ('Chế Độ Thai Sản, Ốm Đau & Hưu Trí', ['thai sản', 'ốm đau', 'hưu trí', 'lương hưu', 'nghỉ việc', 'dưỡng sức', 'chế độ', 'tuổi nghỉ hưu', 'thất nghiệp']),
+        ('Tra Cứu Sổ BHXH & Quá Trình Đóng', ['tra cứu', 'sổ bhxh', 'quá trình đóng', 'kiểm tra', 'mã số', 'vssid', 'cổng dịch vụ công', 'dvc']),
+        ('Đóng BHXH Tự Nguyện & Doanh Nghiệp', ['tự nguyện', 'bắt buộc', 'mức đóng', 'phương thức đóng', 'doanh nghiệp', 'nộp tiền', 'bảo hiểm xã hội', 'bhxh']),
+    ],
+
+    # === VEHICLE (3) ===
+    'phat-nguoi': [
+        ('Tra Cứu Phạt Nguội Toàn Quốc & Cục CSGT', ['tra cứu', 'kiểm tra', 'check', 'cục csgt', 'cảnh sát giao thông', 'toàn quốc', 'app', 'website', 'chính xác', 'hôm nay']),
+        ('Phạt Nguội Xe Ô Tô & Thủ Tục Đăng Kiểm', ['ô tô', 'oto', 'xe ô tô', 'đăng kiểm', 'từ chối đăng kiểm', 'cảnh báo đăng kiểm']),
+        ('Phạt Nguội Xe Máy & Lỗi Vi Phạm', ['xe máy', 'xe may', 'mô tô', 'lỗi vi phạm', 'tốc độ', 'vượt đèn đỏ', 'sai làn', 'nguội xe máy']),
+        ('Nộp Phạt Nguội Online & Quy Trình Xử Lý', ['nộp phạt', 'nop phat', 'đóng phạt', 'dịch vụ công', 'kho bạc', 'thời hạn', 'quy trình', 'xử lý', 'ở đâu', 'phạt nguội']),
+    ],
+    'bien-so': [
+        ('Tra Cứu Biển Số Xe 63 Tỉnh Thành', ['tỉnh', 'tỉnh nào', 'tỉnh thành', 'toàn quốc', 'tra cứu', 'bảng tra', 'danh sách', 'ký hiệu', 'mã vùng']),
+        ('Đấu Giá Biển Số Xe Đẹp & Định Danh', ['đấu giá', 'dau gia', 'định danh', 'dinh danh', 'biển số định danh', 'quy chế', 'tiền đặt trước']),
+        ('Ý Nghĩa Biển Số Đẹp & Phong Thủy', ['phong thủy', 'ý nghĩa', 'ngũ quý', 'tứ quý', 'thần tài', 'lộc phát', 'số đẹp', 'hợp mệnh', 'dịch biển']),
+        ('Thủ Tục Cấp, Đổi Biển & Sang Tên Xe', ['sang tên', 'đổi biển', 'cấp lại', 'thủ tục', 'hồ sơ', 'thu hồi', 'đăng ký xe', 'làm biển', 'biển số']),
+    ],
+    'bien-so-xe': [
+        ('Tra Cứu Biển Số Xe 63 Tỉnh Thành', ['tỉnh', 'tỉnh nào', 'tỉnh thành', 'toàn quốc', 'tra cứu', 'bảng tra', 'danh sách', 'ký hiệu', 'mã vùng']),
+        ('Đấu Giá Biển Số Xe Đẹp & Định Danh', ['đấu giá', 'dau gia', 'định danh', 'dinh danh', 'biển số định danh', 'quy chế', 'tiền đặt trước']),
+        ('Ý Nghĩa Biển Số Đẹp & Phong Thủy', ['phong thủy', 'ý nghĩa', 'ngũ quý', 'tứ quý', 'thần tài', 'lộc phát', 'số đẹp', 'hợp mệnh', 'dịch biển']),
+        ('Thủ Tục Cấp, Đổi Biển & Sang Tên Xe', ['sang tên', 'đổi biển', 'cấp lại', 'thủ tục', 'hồ sơ', 'thu hồi', 'đăng ký xe', 'làm biển', 'biển số']),
+    ],
+    'bien-so-dep': [
+        ('Đấu Giá Biển Số Xe Đẹp Trực Tuyến', ['đấu giá', 'dau gia', 'trực tuyến', 'biển số đẹp', 'vpa', 'tiền cọc']),
+        ('Biển Số Ngũ Quý, Tứ Quý & Thần Tài', ['ngũ quý', 'tứ quý', 'thần tài', 'lộc phát', 'tam hoa', 'sảnh tiến', 'phát lộc']),
+        ('Định Danh Biển Số Đẹp Theo Luật', ['định danh', 'dinh danh', 'thu hồi', 'sang tên', 'chuyển nhượng', 'quy định']),
+        ('Ý Nghĩa Phong Thủy Biển Số Xe', ['phong thủy', 'ý nghĩa', 'dịch biển', 'hợp tuổi', 'hợp mệnh', 'biển số']),
+    ],
+
+    # === TELCO (2) ===
+    'data-4g': [
+        ('Gói Cước Data Viettel', ['viettel', 'viettel 4g', 'viettel 5g', 'viettel 3g', 'gói viettel', 'st90', 'v90', 'sd135', 'đăng ký viettel', 'nạp 3g viettel']),
+        ('Gói Cước Data MobiFone', ['mobi', 'mobifone', 'mobi 4g', 'mobi 5g', 'mobi 3g', 'gói mobi', 'c90', 'kc90', 'đăng ký mobi', 'đăng ky 3g mobi', 'nạp data mobifone']),
+        ('Gói Cước Data VinaPhone', ['vina', 'vinaphone', 'vina 4g', 'vina 5g', 'vina 3g', 'gói vina', 'vd149', 'd89y', 'đăng ký vina', 'nạp data vinaphone']),
+        ('Nạp Data & Cú Pháp Đăng Ký', ['nạp data', 'nap data', 'cách nạp', 'cú pháp', 'hủy gói', 'kiểm tra dung lượng', 'gia hạn', 'mua thêm', 'gói cước']),
+    ],
+    'nap-tien-dien-thoai': [
+        ('Nạp Tiền Viettel & Thẻ Cào Viettel', ['viettel', 'thẻ viettel', 'cào viettel', 'nạp thẻ viettel', 'cạc viettel', 'card viettel']),
+        ('Nạp Tiền MobiFone & Thẻ Mobi', ['mobi', 'mobifone', 'thẻ mobi', 'nạp thẻ mobi', 'cào mobi', 'card mobi']),
+        ('Nạp Tiền VinaPhone & Thẻ Vina', ['vina', 'vinaphone', 'thẻ vina', 'nạp thẻ vina', 'cào vina', 'card vina']),
+        ('Cú Pháp Nạp Tiền & Khuyến Mãi', ['cú pháp', 'cách nạp', 'hướng dẫn', 'nạp cho người khác', 'bắn tiền', 'chuyển tiền điện thoại', 'chiết khấu', 'khuyến mãi', '20%', '50%', 'ngày vàng', 'hoàn tiền']),
+    ],
+
+    # === LOTTERY (3) ===
+    'vietlott': [
+        ('Xổ Số Power 6/55 & Mega 6/45', ['power 6 55', 'power 6/55', 'power 655', 'power655', 'xspower', 'power', 'mega 6 45', 'mega 6/45', 'mega 645', 'mega645', 'xổ số mega', 'mega']),
+        ('Quay Số Keno & Bingo 18', ['keno', 'quay số nhanh', 'bingo', 'bingo18', 'bingo 18', 'max 3d', 'max3d', 'max 4d']),
+        ('Mua Vé Vietlott Online & Điểm Bán', ['mua vé', 'mua ve', 'đại lý', 'dai ly', 'điểm bán', 'sms', 'app', 'online', 'momo']),
+        ('Cơ Cấu Giải Thưởng & Dò Vé Vietlott', ['cơ cấu', 'co cau', 'giải thưởng', 'giai thuong', 'trúng thưởng', 'dò vé', 'do ve', 'kết quả']),
+    ],
+    'xo-so': [
+        ('Xổ Số Kiến Thiết Miền Bắc (XSMB)', ['miền bắc', 'mien bac', 'xsmb', 'sxmb', 'kqsxmb', 'bắc']),
+        ('Xổ Số Kiến Thiết Miền Nam (XSMN)', ['miền nam', 'mien nam', 'xsmn', 'sxmn', 'kqsxmn', 'nam']),
+        ('Xổ Số Kiến Thiết Miền Trung (XSMT)', ['miền trung', 'mien trung', 'xsmt', 'sxmt', 'kqsxmt', 'trung']),
+        ('Thống Kê, Soi Cầu & Quay Thử XS', ['thống kê', 'thong ke', 'soi cầu', 'soi cau', 'lô gan', 'tần suất', 'bạch thủ', 'quay thử', 'trực tiếp', 'live', 'sxtt', 'cơ cấu', 'đổi thưởng', 'kết quả']),
+    ],
+    've-so': [
+        ('Dò Kết Quả Vé Số Kiến Thiết', ['dò', 'tra cứu', 'kiểm tra', 'hôm nay', 'kết quả', 'trúng số']),
+        ('Đại Lý Vé Số & Điểm Đổi Thưởng', ['đại lý', 'đổi vé', 'hoa hồng', 'vé dạo', 'điểm đổi', 'lãnh thưởng']),
+        ('Cơ Cấu Giải Thưởng & Quy Định Vé Số', ['cơ cấu', 'giải đặc biệt', 'giải phụ', 'vé số cào', 'thời hạn', 'quy định', 'thuế trúng thưởng', 'vé số']),
+        ('Mua Vé Số Online & Ứng Dụng Tiện Ích', ['mua', 'online', 'app', 'tiện ích', 'đặt mua', 'trực tuyến']),
     ],
 }
 
@@ -706,7 +843,7 @@ def select_pillar_keyword(canonical_clusters, usecase_slug, usecase_name, raw_ke
     return best_item
 
 
-def build_adaptive_clusters(canonical_clusters, sector=None, usecase_slug=None, top_n_clusters=5):
+def build_adaptive_clusters(canonical_clusters, sector=None, usecase_slug=None, usecase_name=None, top_n_clusters=5):
     """
     Gom cụm các Canonical Leaders theo các nhóm thực thể chủ đạo chuẩn ngữ nghĩa phân tách theo Use Case hoặc Sector
     """
@@ -716,7 +853,8 @@ def build_adaptive_clusters(canonical_clusters, sector=None, usecase_slug=None, 
     for item in canonical_clusters:
         kw = item['keyword'].lower()
         matched = False
-        for topic_name, triggers in rules:
+        for rule in rules:
+            topic_name, triggers = rule[0], rule[1]
             if any(tr in kw for tr in triggers):
                 clusters[topic_name].append(item)
                 matched = True
@@ -728,14 +866,15 @@ def build_adaptive_clusters(canonical_clusters, sector=None, usecase_slug=None, 
                 clusters[rules[-1][0]].append(item)
             else:
                 intent = item['intent']
+                suffix = f" {usecase_name}" if usecase_name else ""
                 intent_fallback_names = {
-                    'Tool/Calculator': 'Công cụ & Tra cứu trực tuyến',
-                    'Commercial': 'So sánh & Đánh giá giải pháp',
-                    'Transactional': 'Đăng ký & Giao dịch trực tuyến',
-                    'Informational': 'Cẩm nang & Hướng dẫn chi tiết',
-                    'Navigational': 'Cổng dịch vụ & Liên hệ'
+                    'Tool/Calculator': f'Công cụ & Tra cứu{suffix}',
+                    'Commercial': f'So sánh & Đánh giá{suffix}',
+                    'Transactional': f'Đăng ký & Giao dịch{suffix}',
+                    'Informational': f'Cẩm nang & Hướng dẫn{suffix}',
+                    'Navigational': f'Cổng dịch vụ & Liên hệ{suffix}'
                 }
-                fb_name = intent_fallback_names.get(intent, 'Chủ đề liên quan')
+                fb_name = intent_fallback_names.get(intent, f'Chủ đề liên quan{suffix}')
                 clusters[fb_name].append(item)
 
     result_clusters = []
@@ -831,7 +970,7 @@ def process_csv_paths(csv_paths, sector, canonical_slug):
     # Pillar = từ khóa đại diện chính Use Case (không phải sub-query volume lớn nhất)
     pillar_item = select_pillar_keyword(canonical_clusters, usecase_slug, usecase_name, raw_keywords)
 
-    sub_clusters = build_adaptive_clusters(canonical_clusters, sector=sector, usecase_slug=usecase_slug)
+    sub_clusters = build_adaptive_clusters(canonical_clusters, sector=sector, usecase_slug=usecase_slug, usecase_name=usecase_name)
 
     # 4. Domain SERP Cannibalization Shield
     shield_eval = MoMoDomainSERPShield.evaluate_cannibalization_risk(pillar_item['keyword'], sector=sector, check_live_serp=False)
