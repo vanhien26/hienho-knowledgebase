@@ -362,6 +362,24 @@ class SemanticDomainFilter:
         return False, "valid"
 
 
+def calculate_kd(competition: str, volume: int = 0, cpc: float = 0.0) -> int:
+    """
+    Tính chỉ số Độ khó từ khóa (Keyword Difficulty - KD 0-100) chuẩn xác
+    dựa trên PPC Competition từ kho CSV, Volume tìm kiếm và CPC thực tế.
+    """
+    comp = str(competition).strip().lower()
+    if 'high' in comp or 'cao' in comp:
+        base = 65
+    elif 'med' in comp or 'trung' in comp:
+        base = 40
+    else:
+        base = 18
+    vol_bonus = min(15, math.log10(max(1, volume)) * 2.5) if volume > 10 else 0
+    cpc_bonus = min(10, cpc * 3) if cpc > 0 else 0
+    kd = round(base + vol_bonus + cpc_bonus)
+    return max(5, min(95, kd))
+
+
 class SERPCannibalizationShield:
     """
     Cơ chế phát hiện SERP Intent Overlap & Triệt tiêu Keyword Cannibalization.
@@ -468,6 +486,8 @@ class SERPCannibalizationShield:
                     'volume': item['volume'],
                     'cpc': item.get('cpc', 0.0),
                     'competition': item.get('competition', 'Low'),
+                    'kd': item.get('kd', calculate_kd(item.get('competition', 'Low'), item['volume'], item.get('cpc', 0.0))),
+                    'trending': item.get('trending', False),
                     'intent': intent,
                     'opportunity_score': item.get('opportunity_score', 0.0),
                     'quadrant': item.get('quadrant', 'Supporting'),

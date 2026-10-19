@@ -35,7 +35,8 @@ from scripts.lib.keyword_intelligence import (
     clean_val,
     normalize_text,
     calculate_opportunity_score,
-    classify_quadrant
+    classify_quadrant,
+    calculate_kd
 )
 
 MERGE_MAP = {
@@ -882,7 +883,7 @@ def build_adaptive_clusters(canonical_clusters, sector=None, usecase_slug=None, 
 
     for cluster_name, items in sorted_clusters[:top_n_clusters]:
         tot_vol = sum(k['total_cluster_volume'] for k in items)
-        top_kws = sorted(items, key=lambda x: (x['opportunity_score'], x['volume']), reverse=True)[:5]
+        top_kws = sorted(items, key=lambda x: (x['opportunity_score'], x['volume']), reverse=True)[:15]
         result_clusters.append({
             'cluster_name': cluster_name,
             'count': len(items),
@@ -892,8 +893,13 @@ def build_adaptive_clusters(canonical_clusters, sector=None, usecase_slug=None, 
                     'keyword': k['keyword'],
                     'volume': k['volume'],
                     'cluster_volume': k['total_cluster_volume'],
+                    'cpc': k.get('cpc', 0.0),
+                    'competition': k.get('competition', 'Low'),
+                    'kd': k.get('kd', calculate_kd(k.get('competition', 'Low'), k['volume'], k.get('cpc', 0.0))),
+                    'trending': k.get('trending', False),
                     'intent': k['intent'],
                     'score': k['opportunity_score'],
+                    'quadrant': k.get('quadrant', 'Supporting'),
                     'secondary_synonyms': k.get('secondary_keywords', [])[:3]
                 } for k in top_kws
             ]
@@ -936,6 +942,8 @@ def process_csv_paths(csv_paths, sector, canonical_slug):
                 except ValueError:
                     cpc = 0.0
                 comp = clean_val(row.get('PPC Competition', 'Low'))
+                trending = clean_val(row.get('Trending', 'false')).lower() == 'true'
+                kd = calculate_kd(comp, vol, cpc)
 
                 # 2. Multi-Signal Weighted Intent Classifier
                 intent_res = MultiSignalIntentClassifier.classify(kw)
@@ -948,6 +956,8 @@ def process_csv_paths(csv_paths, sector, canonical_slug):
                     'volume': vol,
                     'cpc': cpc,
                     'competition': comp,
+                    'kd': kd,
+                    'trending': trending,
                     'intent': intent,
                     'intent_confidence': intent_res['confidence'],
                     'opportunity_score': opp_score,
@@ -1021,13 +1031,30 @@ def process_csv_paths(csv_paths, sector, canonical_slug):
                 'keyword': k['keyword'],
                 'volume': k['volume'],
                 'cluster_volume': k['total_cluster_volume'],
-                'cpc': k['cpc'],
-                'competition': k['competition'],
+                'cpc': k.get('cpc', 0.0),
+                'competition': k.get('competition', 'Low'),
+                'kd': k.get('kd', calculate_kd(k.get('competition', 'Low'), k['volume'], k.get('cpc', 0.0))),
+                'trending': k.get('trending', False),
                 'intent': k['intent'],
                 'score': k['opportunity_score'],
                 'quadrant': k['quadrant'],
                 'secondary_synonyms': k.get('secondary_keywords', [])[:3]
             } for k in top_opportunities
+        ],
+        'keywords': [
+            {
+                'keyword': k['keyword'],
+                'volume': k['volume'],
+                'cluster_volume': k['total_cluster_volume'],
+                'cpc': k.get('cpc', 0.0),
+                'competition': k.get('competition', 'Low'),
+                'kd': k.get('kd', calculate_kd(k.get('competition', 'Low'), k['volume'], k.get('cpc', 0.0))),
+                'trending': k.get('trending', False),
+                'intent': k['intent'],
+                'score': k['opportunity_score'],
+                'quadrant': k.get('quadrant', 'Supporting'),
+                'secondary_synonyms': k.get('secondary_keywords', [])[:3]
+            } for k in sorted(canonical_clusters, key=lambda x: (x['opportunity_score'], x['volume']), reverse=True)[:150]
         ],
         'sub_clusters': sub_clusters
     }
