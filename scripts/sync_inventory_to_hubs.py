@@ -405,22 +405,22 @@ SECTOR_SPECIFIC_RULES = {
 # Per-use-case rules (overrides SECTOR_SPECIFIC_RULES when slug matches)
 USECASE_SPECIFIC_RULES = {
     've-xem-phim': [
-        ('Giá Vé & Khuyến Mãi Đặt Vé', ['giá vé', 'gia ve', 'vé rẻ', 've re', 'khuyến mãi', 'khuyen mai', 'ưu đãi', 'voucher', 'combo', 'giảm giá', 'momo']),
-        ('Mua Vé Tại Rạp & App', ['mua vé', 'mua ve', 'đặt vé', 'dat ve', 'đặt phim', 'cgv', 'lotte', 'bhd', 'galaxy', 'cinestar', 'rạp']),
-        ('Cẩm Nang Mua Vé Phim', ['cách mua', 'hướng dẫn', 'kinh nghiệm', 'lưu ý', 'chọn ghế', 'đổi vé', 'hoàn vé']),
-        ('Review Phim & Bom Tấn', ['review', 'đánh giá', 'trailer', 'phim hay', 'top phim', 'bom tấn', 'phim chiếu rạp']),
+        ('Giá Vé & Khuyến Mãi Đặt Vé', ['giá vé', 'gia ve', 'vé rẻ', 've re', 'khuyến mãi', 'khuyen mai', 'ưu đãi', 'voucher', 'combo', 'giảm giá', 'bao nhiêu tiền', 'momo', 'học sinh', 'sinh viên', 'thứ 3', 'thứ 4']),
+        ('Mua Vé Rạp & Ứng Dụng Online', ['mua vé', 'mua ve', 'đặt vé', 'dat ve', 'đặt phim', 'cgv', 'lotte', 'bhd', 'galaxy', 'cinestar', 'beta', 'rạp', 'rap']),
+        ('Cẩm Nang Hướng Dẫn Mua Vé', ['cách mua', 'hướng dẫn', 'kinh nghiệm', 'lưu ý', 'chọn ghế', 'đổi vé', 'hoàn vé', 'thanh toán']),
+        ('Vé Xem Phim Chiếu Rạp Mới', ['vé xem phim', 've xem phim', 'phim chiếu rạp', 'bom tấn', 'phim hay', 'review', 'trailer', 'chiếu rạp', 'phim']),
     ],
     'lich-phim': [
-        ('Lịch Chiếu Hôm Nay & Tuần Này', ['lịch chiếu', 'lich chieu', 'hôm nay', 'tuần này', 'cuối tuần', 'suất chiếu', 'giờ chiếu', 'phim đang chiếu']),
-        ('Lịch Phim Theo Rạp CGV / Lotte / BHD', ['cgv', 'lotte', 'bhd', 'galaxy', 'cinestar', 'rạp', 'rạp chiếu phim']),
-        ('Tra Cứu Phim & Tìm Suất Phù Hợp', ['tìm phim', 'tra cứu', 'thể loại', 'phim mới', 'phim sắp chiếu', 'lịch phim tuần tới']),
-        ('Đặt Vé Sau Khi Tra Lịch', ['đặt vé', 'mua vé', 'giá vé', 'chọn ghế', 'combo', 'khuyến mãi']),
+        ('Lịch Chiếu Phim Hôm Nay & Cuối Tuần', ['hôm nay', 'hom nay', 'ngày mai', 'cuối tuần', 'suất chiếu', 'suat chieu', 'giờ chiếu', 'gio chieu', 'chiếu sớm', 'sneak']),
+        ('Lịch Phim Theo Cụm Rạp Toàn Quốc', ['cgv', 'lotte', 'bhd', 'galaxy', 'cinestar', 'beta', 'quốc gia', 'chieuphimquocgia', 'vincom', 'aeon', 'starlight', 'mega gs', 'dcine', 'rạp', 'rap']),
+        ('Tra Cứu Lịch Phim Sắp & Đang Chiếu', ['đang chiếu', 'dang chieu', 'sắp chiếu', 'sap chieu', 'tuần này', 'tháng này', 'bom tấn', 'phim mới', 'phim chiếu']),
+        ('Thông Tin Suất Chiếu & Lịch Rạp', ['lịch chiếu', 'lich chieu', 'lịch phim', 'lich phim', 'tra cứu', 'tìm lịch', 'xem lịch', 'phim', 'chiếu', 'lịch']),
     ],
     'rap': [
-        ('Hệ Thống Rạp CGV Việt Nam', ['cgv', 'cgv hà nội', 'cgv tp hcm', 'cgv vincom', 'cgv aeon', 'cgv quận']),
-        ('Rạp Lotte Cinema & BHD Galaxy', ['lotte', 'lotte cinema', 'bhd', 'bhd star', 'galaxy cinema']),
-        ('Giá Vé & Dịch Vụ Tại Rạp', ['giá vé', 'gia ve', 'vé rẻ', 'bắp rang', 'nước', 'combo', 'dịch vụ', 'ghế vip', 'phòng chiếu']),
-        ('Đặt Vé Cụm Rạp Online', ['đặt vé', 'mua vé online', 'momo', 'app', 'website', 'đặt qua app', 'đặt trực tuyến']),
+        ('Hệ Thống Rạp CGV Cinemas', ['cgv', 'cgv hà nội', 'cgv tp hcm', 'cgv vincom', 'cgv aeon', 'cgv quận']),
+        ('Hệ Thống Rạp Lotte, Galaxy & BHD', ['lotte', 'galaxy', 'bhd', 'beta', 'cinestar', 'quốc gia', 'mega gs', 'dcine', 'starlight']),
+        ('Rạp Chiếu Phim Gần Đây & Phòng Chiếu', ['gần đây', 'gan day', 'gần nhất', 'địa chỉ', 'chi nhánh', 'phòng chiếu', 'imax', '4dx', 'gold class', 'lamour', 'ghế đôi', 'sweetbox']),
+        ('Bảng Giá & Dịch Vụ Bỏng Nước Tại Rạp', ['giá vé', 'gia ve', 'vé rẻ', 'bắp', 'bỏng', 'nước', 'combo', 'menu', 'dịch vụ', 'đặt vé', 'mua vé', 'rạp chiếu phim', 'rap chieu phim', 'phim chiếu rạp', 'rạp phim', 'cụm rạp', 'rạp', 'rap']),
     ],
 }
 
@@ -722,16 +722,21 @@ def build_adaptive_clusters(canonical_clusters, sector=None, usecase_slug=None, 
                 matched = True
                 break
         if not matched:
-            intent = item['intent']
-            intent_fallback_names = {
-                'Tool/Calculator': 'Công cụ & Tra cứu trực tuyến',
-                'Commercial': 'So sánh & Đánh giá giải pháp',
-                'Transactional': 'Đăng ký & Giao dịch trực tuyến',
-                'Informational': 'Cẩm nang & Hướng dẫn chi tiết',
-                'Navigational': 'Cổng dịch vụ & Liên hệ'
-            }
-            fb_name = intent_fallback_names.get(intent, 'Chủ đề liên quan')
-            clusters[fb_name].append(item)
+            if rules:
+                # Nếu có rules cụ thể (use case hoặc sector), gom vào rule cuối (chủ đề mở rộng)
+                # để tránh sinh các cụm fallback generic bị trùng tên giữa các use case
+                clusters[rules[-1][0]].append(item)
+            else:
+                intent = item['intent']
+                intent_fallback_names = {
+                    'Tool/Calculator': 'Công cụ & Tra cứu trực tuyến',
+                    'Commercial': 'So sánh & Đánh giá giải pháp',
+                    'Transactional': 'Đăng ký & Giao dịch trực tuyến',
+                    'Informational': 'Cẩm nang & Hướng dẫn chi tiết',
+                    'Navigational': 'Cổng dịch vụ & Liên hệ'
+                }
+                fb_name = intent_fallback_names.get(intent, 'Chủ đề liên quan')
+                clusters[fb_name].append(item)
 
     result_clusters = []
     sorted_clusters = sorted(clusters.items(), key=lambda x: sum(k['total_cluster_volume'] for k in x[1]), reverse=True)

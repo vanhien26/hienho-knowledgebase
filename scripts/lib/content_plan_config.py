@@ -189,22 +189,22 @@ SUB_CLUSTER_RULES = {
     ],
     # Cinema: per-use-case rules để tránh overlap tên sub-cluster
     've-xem-phim': [
-        ('Giá Vé & Khuyến Mãi Đặt Vé', ['giá vé', 'gia ve', 'vé rẻ', 've re', 'khuyến mãi', 'khuyen mai', 'ưu đãi', 'voucher', 'combo', 'giảm giá', 'momo'], 'gia-ve-uu-dai'),
-        ('Mua Vé Tại Rạp & App', ['mua vé', 'mua ve', 'đặt vé', 'dat ve', 'đặt phim', 'cgv', 'lotte', 'bhd', 'galaxy', 'cinestar', 'rạp'], 'mua-ve-tai-rap'),
-        ('Cẩm Nang Mua Vé Phim', ['cách mua', 'hướng dẫn', 'kinh nghiệm', 'lưu ý', 'chọn ghế', 'đổi vé', 'hoàn vé'], 'cam-nang-mua-ve'),
-        ('Review Phim & Bom Tấn', ['review', 'đánh giá', 'trailer', 'phim hay', 'top phim', 'bom tấn', 'phim chiếu rạp'], 'review-phim'),
+        ('Giá Vé & Khuyến Mãi Đặt Vé', ['giá vé', 'gia ve', 'vé rẻ', 've re', 'khuyến mãi', 'khuyen mai', 'ưu đãi', 'voucher', 'combo', 'giảm giá', 'bao nhiêu tiền', 'momo', 'học sinh', 'sinh viên', 'thứ 3', 'thứ 4'], 'gia-ve-khuyen-mai'),
+        ('Mua Vé Rạp & Ứng Dụng Online', ['mua vé', 'mua ve', 'đặt vé', 'dat ve', 'đặt phim', 'cgv', 'lotte', 'bhd', 'galaxy', 'cinestar', 'beta', 'rạp', 'rap'], 'mua-ve-rap-app'),
+        ('Cẩm Nang Hướng Dẫn Mua Vé', ['cách mua', 'hướng dẫn', 'kinh nghiệm', 'lưu ý', 'chọn ghế', 'đổi vé', 'hoàn vé', 'thanh toán'], 'cam-nang-mua-ve'),
+        ('Vé Xem Phim Chiếu Rạp Mới', ['vé xem phim', 've xem phim', 'phim chiếu rạp', 'bom tấn', 'phim hay', 'review', 'trailer', 'chiếu rạp', 'phim'], 've-phim-chieu-rap-moi'),
     ],
     'lich-phim': [
-        ('Lịch Chiếu Hôm Nay & Tuần Này', ['lịch chiếu', 'lich chieu', 'hôm nay', 'tuần này', 'cuối tuần', 'suất chiếu', 'giờ chiếu', 'phim đang chiếu'], 'lich-chieu-hom-nay'),
-        ('Lịch Phim Theo Rạp CGV / Lotte / BHD', ['cgv', 'lotte', 'bhd', 'galaxy', 'cinestar', 'rạp', 'rap', 'rạp chiếu phim'], 'lich-phim-theo-rap'),
-        ('Tra Cứu Phim & Tìm Suất Phù Hợp', ['tìm phim', 'tra cứu', 'thể loại', 'phim mới', 'phim sắp chiếu', 'lịch phim tuần tới'], 'tra-cuu-phim'),
-        ('Đặt Vé Sau Khi Tra Lịch', ['đặt vé', 'mua vé', 'giá vé', 'chọn ghế', 'combo', 'khuyến mãi'], 'dat-ve-tu-lich'),
+        ('Lịch Chiếu Phim Hôm Nay & Cuối Tuần', ['hôm nay', 'hom nay', 'ngày mai', 'cuối tuần', 'suất chiếu', 'suat chieu', 'giờ chiếu', 'gio chieu', 'chiếu sớm', 'sneak'], 'lich-chieu-hom-nay-cuoi-tuan'),
+        ('Lịch Phim Theo Cụm Rạp Toàn Quốc', ['cgv', 'lotte', 'bhd', 'galaxy', 'cinestar', 'beta', 'quốc gia', 'chieuphimquocgia', 'vincom', 'aeon', 'starlight', 'mega gs', 'dcine', 'rạp', 'rap'], 'lich-phim-theo-cum-rap'),
+        ('Tra Cứu Lịch Phim Sắp & Đang Chiếu', ['đang chiếu', 'dang chieu', 'sắp chiếu', 'sap chieu', 'tuần này', 'tháng này', 'bom tấn', 'phim mới', 'phim chiếu'], 'lich-phim-dang-chieu-sap-chieu'),
+        ('Thông Tin Suất Chiếu & Lịch Rạp', ['lịch chiếu', 'lich chieu', 'lịch phim', 'lich phim', 'tra cứu', 'tìm lịch', 'xem lịch', 'phim', 'chiếu', 'lịch'], 'thong-tin-suat-chieu-lich-rap'),
     ],
     'rap': [
-        ('Hệ Thống Rạp CGV Việt Nam', ['cgv', 'cgv hà nội', 'cgv tp hcm', 'cgv vincom', 'cgv aeon', 'cgv quận'], 'he-thong-cgv'),
-        ('Rạp Lotte Cinema & BHD', ['lotte', 'lotte cinema', 'bhd', 'bhd star', 'galaxy cinema'], 'rap-lotte-bhd-galaxy'),
-        ('Giá Vé & Dịch Vụ Tại Rạp', ['giá vé', 'gia ve', 'vé rẻ', 'bắp rang', 'nước', 'combo', 'dịch vụ', 'ghế vip', 'phòng chiếu'], 'gia-ve-dich-vu-rap'),
-        ('Đặt Vé Cụm Rạp Online', ['đặt vé', 'mua vé online', 'momo', 'app', 'website', 'đặt qua app', 'đặt trực tuyến'], 'dat-ve-cum-rap-online'),
+        ('Hệ Thống Rạp CGV Cinemas', ['cgv', 'cgv hà nội', 'cgv tp hcm', 'cgv vincom', 'cgv aeon', 'cgv quận'], 'he-thong-rap-cgv'),
+        ('Hệ Thống Rạp Lotte, Galaxy & BHD', ['lotte', 'galaxy', 'bhd', 'beta', 'cinestar', 'quốc gia', 'mega gs', 'dcine', 'starlight'], 'he-thong-rap-lotte-galaxy-bhd'),
+        ('Rạp Chiếu Phim Gần Đây & Phòng Chiếu', ['gần đây', 'gan day', 'gần nhất', 'địa chỉ', 'chi nhánh', 'phòng chiếu', 'imax', '4dx', 'gold class', 'lamour', 'ghế đôi', 'sweetbox'], 'rap-chieu-phim-gan-day'),
+        ('Bảng Giá & Dịch Vụ Bỏng Nước Tại Rạp', ['giá vé', 'gia ve', 'vé rẻ', 'bắp', 'bỏng', 'nước', 'combo', 'menu', 'dịch vụ', 'đặt vé', 'mua vé', 'rạp chiếu phim', 'rap chieu phim', 'phim chiếu rạp', 'rạp phim', 'cụm rạp', 'rạp', 'rap'], 'bang-gia-dich-vu-bong-nuoc'),
     ],
 }
 
