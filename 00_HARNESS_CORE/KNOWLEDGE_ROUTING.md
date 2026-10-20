@@ -69,7 +69,7 @@ Kích hoạt 3 Master Skills trong thư mục [`.agents/skills/`](file:///Users/
 - **Product Master (`product-master`):** Kích hoạt cho các bài toán định khung vấn đề, định vị sản phẩm, hoạch định chiến lược 4 Zone, đánh giá ưu tiên RICE/UIC, lập lộ trình và thiết kế luồng AI.
 - **Web Platform Reporting (`web-platform-reporting`):** Kích hoạt cho đóng gói báo cáo định kỳ Weekly gửi Executive Leadership và Monthly gửi Ban Giám Đốc.
 - **Frontend Slides (`frontend-slides`):** Kích hoạt khi cần khởi tạo slide thuyết trình Web hiện đại bằng HTML/CSS hoạt họa chuẩn Stage 16:9 (1920×1080) zero dependencies, phục vụ thuyết trình trực tiếp, pitch deck, reporting và export.
-- **Keyword Clustering & Content Strategy (`keyword-clustering-strategy`):** Kích hoạt khi xử lý kho dữ liệu từ khóa Use Case (`05_HUBS/inventory/`), lọc ngữ nghĩa (Semantic Filtering), gom cụm SERP Intent, kiến trúc Topic Cluster, xác định Potential Keywords và xây dựng Content Strategy / Content Plan gắn với Web-to-App.
+- **Keyword Clustering & Content Strategy (`keyword-clustering-strategy`):** Kích hoạt khi xử lý kho dữ liệu từ khóa Use Case (`05_HUBS/inventory/`), lọc ngữ nghĩa (Semantic Filtering), gom cụm SERP Intent, kiến trúc Topic Cluster, xác định Potential Keywords và xây dựng Content Strategy / Content Plan gắn với Web-to-App. Tài liệu đặc tả kỹ thuật và bàn giao tối ưu: [`00_HARNESS_CORE/KEYWORD_CLUSTERING_OPTIMIZATION_SPEC.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/KEYWORD_CLUSTERING_OPTIMIZATION_SPEC.md).
 
 ### Tầng 5: Optimal Output Packaging Layer (Tầng Đóng Gói Câu Trả Lời Tối Ưu)
 Kiểm soát chuẩn định dạng đầu ra theo đúng chỉ dẫn [`AGENTS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/AGENTS.md):

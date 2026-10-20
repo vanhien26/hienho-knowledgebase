@@ -4,11 +4,13 @@ File chỉ mục và sơ đồ đăng ký trung tâm (Registry Index) giúp AI A
 
 ---
 
-## 1. HỆ THỐNG 3 MASTER AGENT SKILLS (.agents/skills/)
+## 1. HỆ THỐNG MASTER AGENT SKILLS (.agents/skills/)
 
-Đây là 3 bộ kỹ năng thực thi cốt lõi của AI Agent:
+Hệ thống các bộ kỹ năng thực thi cốt lõi của AI Agent:
 
 - **[[.agents/skills/product-master/SKILL.md|product-master]]**: Hệ thống quản trị và phương pháp luận sản phẩm toàn diện cho Product Lead / Tech Lead. Hợp nhất 5 giai đoạn: Định khung bài toán (Problem Framing), Định vị sản phẩm (Positioning), Hoạch định chiến lược & 4 Zones (Strategy), Đánh giá ưu tiên (RICE/UIC Prioritization), Lập lộ trình (Outcome-Driven Roadmap), và Thiết kế tính năng AI / Agentic Workflows.
+- **[[.agents/skills/keyword-clustering-strategy/SKILL.md|keyword-clustering-strategy]]**: Hệ thống bóc tách dữ liệu từ khóa từ `05_HUBS/inventory/`, gom cụm ngữ nghĩa (Intent Clustering), tính toán Keyword Difficulty (KD), Opportunity Score, chống ăn thịt từ khóa (Cannibalization Shield), tích hợp Seasonality 5Y và xuất bản sang Web Hubs. Kèm tài liệu bàn giao kỹ thuật: `00_HARNESS_CORE/KEYWORD_CLUSTERING_OPTIMIZATION_SPEC.md`.
+- **[[.agents/skills/content-plan-architect/SKILL.md|content-plan-architect]]**: Quy chuẩn tự động lập Kế hoạch Nội dung (Content Plan 7 tầng), quy hoạch lịch xuất bản 30-60-90 ngày theo Quick Wins, dàn ý H2/H3 E-E-A-T, Schema JSON-LD, Silo Linking và GEO Direct Answers cho Web Platform.
 - **[[.agents/skills/web-platform-reporting/SKILL.md|web-platform-reporting]]**: Quy chuẩn và công cụ tạo báo cáo định kỳ (Weekly gửi Executive Leadership, Monthly gửi Ban Giám Đốc) cho Web Platform theo chuẩn 3 khối nội dung và 2 tầng chỉ số.
 - **[[.agents/skills/frontend-slides/SKILL.md|frontend-slides]]**: Tạo slide thuyết trình trực tiếp trên nền tảng Web bằng HTML/CSS/JS hoạt họa mượt mà, zero-dependency, chuẩn stage cố định 16:9 (1920×1080), hỗ trợ đầy đủ bộ preset phong cách (Bold Templates, Clean Modern, Editorial) không lỗi layout.
 

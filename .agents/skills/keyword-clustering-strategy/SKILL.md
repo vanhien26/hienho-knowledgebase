@@ -125,13 +125,34 @@ Phân loại từ khóa vào 4 góc phần tư:
 
 ---
 
-## 4. HƯỚNG DẪN THỰC THI BẰNG SCRIPT CÔNG CỤ (AUTOMATION SCRIPT)
+## 4. HƯỚNG DẪN THỰC THI BẰNG SCRIPT CÔNG CỤ (AUTOMATION SCRIPTS)
 
-Khi cần trích xuất và xử lý nhanh bất kỳ file từ khóa nào trong `05_HUBS/inventory/`, AI Agent thực thi lệnh:
+### 4.1. Phân tích Cục bộ một File Từ khóa (Single File Intake)
+Khi cần trích xuất và xử lý nhanh bất kỳ file từ khóa nào trong `05_HUBS/inventory/`, sử dụng Python Runtime SSOT:
 ```bash
-python3 scripts/keyword_cluster_engine.py "05_HUBS/inventory/<nhóm_ngành>/<file_từ_khóa>.csv"
+./.venv/bin/python scripts/keyword_cluster_engine.py "05_HUBS/inventory/<nhóm_ngành>/<file_từ_khóa>.csv"
 ```
 Kết quả trả về tự động bóc tách:
 - Tổng số lượng từ khóa và tổng Search Volume toàn bộ tệp.
 - Phân bổ các Cụm Topic Cluster chính.
-- Danh sách từ khóa tiềm năng xếp hạng theo Opportunity Score và phân nhóm Ma trận.
+- Danh sách từ khóa tiềm năng xếp hạng theo Opportunity Score, KD (0-100) và phân nhóm Ma trận 4 góc phần tư.
+
+### 4.2. Đồng bộ Toàn diện sang Web Hubs (`react-web-momo`)
+Khi cần đồng bộ toàn bộ kho Inventory sang nền tảng Web Hubs:
+```bash
+./.venv/bin/python scripts/sync_inventory_to_hubs.py
+```
+Script sẽ tự động:
+- Áp dụng `MERGE_MAP` chống phân mảnh (ví dụ: gộp 37 ngân hàng vào `ngan-hang`).
+- Lọc nhiễu ngữ nghĩa (Semantic Outlier Filter).
+- Chống ăn thịt từ khóa (MoMo Domain SERP Cannibalization Shield).
+- Nạp Seasonality 5-Year Google Trends SSOT từ `07_REPORTS/data/theme_seasonality.json`.
+- Xuất bản 161 file modular chunks sang `react-web-momo/data/seo-clusters/<sector>/<id>.json`.
+
+---
+
+## 5. TÀI LIỆU BÀN GIAO KỸ THUẬT & ĐẶC TẢ TỐI ƯU HÓA (OPTIMIZATION ROADMAP)
+
+Chi tiết toàn bộ kiến trúc, bài học thực tế, các lỗi đã giải quyết và danh mục 4 nhiệm vụ tối ưu hóa chuyên sâu được lưu trữ tại tài liệu SSOT:
+👉 **[`00_HARNESS_CORE/KEYWORD_CLUSTERING_OPTIMIZATION_SPEC.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/KEYWORD_CLUSTERING_OPTIMIZATION_SPEC.md)**.
+*(Bao gồm hướng dẫn bàn giao chi tiết dành cho kỹ sư phụ trách tối ưu hóa skill).*
