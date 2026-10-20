@@ -31,14 +31,18 @@ graph TD
     A["Người dùng tìm kiếm Google / Bấm OneLink Fallback từ Desktop / Bấm chuyển từ /download"] --> B["Website momo.vn/tai-app (Nhận diện thiết bị tự động)"]
     B --> C1{"Môi trường truy cập"}
     C1 -->|"Desktop / Laptop"| D1["Hiển thị Dynamic QR Code OneLink + 2 Store Badges + Link Direct APK"]
-    C1 -->|"Mobile iOS"| D2["Hiển thị Nút CTA chính 'Tải trên App Store' + Sticky Bottom Button"]
-    C1 -->|"Mobile Android"| D3["Hiển thị Nút CTA chính 'Tải trên Google Play' + Nút phụ 'Tải file APK'"]
+    C1 -->|"Mobile iOS"| D2["Detect iOS: Nút chính 'Tải trên App Store' + Dòng phụ 'Đã cài MoMo? Mở ứng dụng' + Apple Smart App Banner"]
+    C1 -->|"Mobile Android"| D3{"Kiểm tra trạng thái App trên Android (getInstalledRelatedApps)"}
+    D3 -->|"Đã cài MoMo"| D4["Hiển thị Nút CTA chính 'Mở Ứng Dụng MoMo'"]
+    D3 -->|"Chưa cài / Không hỗ trợ probe"| D5["Hiển thị Nút CTA chính 'Tải trên Google Play' + Dòng phụ 'Đã có app? Mở ứng dụng' + Link APK"]
     D1 --> E1["Quét mã QR bằng Camera điện thoại"]
-    D2 --> E2["1 Chạm mở Apple App Store"]
-    D3 --> E3["1 Chạm mở Google Play Store hoặc tải trực tiếp file APK"]
-    E1 --> F["Tải & Cài đặt App MoMo Chính Thức (M-Service)"]
+    D2 --> E2["1 Chạm mở Apple App Store hoặc kích hoạt Universal Link mở App"]
+    D4 --> E3["1 Chạm mở trực tiếp App MoMo qua Chrome Intent"]
+    D5 --> E4["1 Chạm mở CH Play tải app hoặc tải file APK trực tiếp"]
+    E1 --> F["Tải / Cài đặt / Khởi chạy App MoMo Chính Thức (M-Service)"]
     E2 --> F
     E3 --> F
+    E4 --> F
 ```
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
@@ -61,23 +65,23 @@ graph TD
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhận diện thiết bị (Device Detection)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Không cần thao tác chọn thủ công; hệ thống tự nhận diện iOS, Android hoặc Desktop để hiển thị đúng CTA.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User-Agent Parsing &amp; Client Viewport Detector</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhận diện thiết bị &amp; Trạng thái App</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự nhận diện iOS, Android hoặc Desktop. Phân tầng hành động: Tải mới (New User) hoặc Mở ứng dụng (Existing User).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">User-Agent &amp; maxTouchPoints Parsing; navigator.getInstalledRelatedApps (Android); Apple Smart App Banner (iOS)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">3</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kích hoạt luồng tải (Action Trigger)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Desktop: Quét mã QR to bản giữa màn hình.<br>Mobile: Bấm 1 chạm vào nút Store chính hoặc nút tải APK.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AppsFlyer OneLink Smart Script + Dynamic QR Generator</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Kích hoạt luồng tải / mở (Action Trigger)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Desktop: Quét mã QR.<br>Mobile iOS: 1 Chạm tải App Store hoặc bấm mở app.<br>Mobile Android: 1 Chạm mở app (nếu có) hoặc tải từ CH Play / file APK.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AppsFlyer OneLink + Android Chrome Intent Scheme + Dynamic QR Generator</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Platform x AppsFlyer</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cài đặt an toàn</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mở trực tiếp trang MoMo chính thức trên App Store / Google Play hoặc tải bộ cài APK có chữ ký số M-Service.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Official Stores / MoMo CDN Direct APK (Signed)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cài đặt / Khởi chạy an toàn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mở trực tiếp trang MoMo trên App Store / Google Play hoặc kích hoạt app native, hoặc tải bộ cài APK có chữ ký số M-Service.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Official Stores / Universal Links / MoMo CDN Direct APK (Signed)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">App Stores &amp; Infra</td>
     </tr>
   </tbody>
@@ -133,11 +137,22 @@ graph TD
 - **Tiêu đề chính (H1):** `Tải Ứng Dụng MoMo Cho Mọi Thiết Bị`
 - **Mô tả ngắn:** `Phiên bản chính thức mới nhất cho điện thoại iOS và Android. Cài đặt nhanh chóng, an toàn và bảo mật.`
 - **Trải nghiệm Desktop (Split Screen):**
-  - Cột trái: Tên phiên bản hiện hành, dung lượng ứng dụng, yêu cầu hệ điều hành và chứng nhận an toàn.
-  - Cột phải: Khung mã Dynamic QR Code kích thước lớn kèm chỉ dẫn *"Mở camera trên điện thoại để quét mã QR và tải ứng dụng ngay lập tức"*. Bên dưới là huy hiệu chính thức của App Store, Google Play và liên kết `Tải trực tiếp file APK cho Android`.
-- **Trải nghiệm Mobile (100% Above the Fold):**
-  - Tự động hiển thị 1 nút hành động chính (Primary CTA Button) tương ứng với hệ điều hành: `Tải ngay trên App Store` (với iOS) hoặc `Tải ngay trên Google Play` (với Android, kèm nút phụ tải file APK).
-  - Ghim nút bấm tải cố định ở đáy màn hình (Sticky Bottom CTA) khi cuộn trang.
+  - Cột trái: Tên phiên bản hiện hành (v4.2.x), dung lượng ứng dụng, yêu cầu hệ điều hành và chứng nhận an toàn M-Service PCI DSS.
+  - Cột phải: Khung mã Dynamic QR Code kích thước lớn kèm chỉ dẫn *"Mở camera trên điện thoại để quét mã QR và tải ứng dụng ngay lập tức"*. Bên dưới là 2 huy hiệu chính thức của App Store, Google Play và liên kết `Tải trực tiếp file APK cho Android`.
+- **Trải nghiệm Mobile iOS (100% Above the Fold):**
+  - Tự động nhận diện thiết bị iOS (iPhone, iPad).
+  - Nút hành động chính (Primary CTA): Nút màu hồng thương hiệu nổi bật `Tải trên App Store` (Apple Icon + Text).
+  - Dòng điều hướng bổ trợ (Secondary Action): Ngay dưới nút chính là dòng text link tinh gọn: `Đã cài MoMo trên điện thoại? [Mở ứng dụng ngay]` (gắn Universal Link).
+  - Apple Smart App Banner: Tích hợp thẻ meta native trên Safari để hệ điều hành tự động hiển thị chữ **"MỞ" (OPEN)** nếu máy có app hoặc **"NHẬN" (GET)** nếu máy chưa cài app.
+- **Trải nghiệm Mobile Android (Dynamic App Detection):**
+  - Tự động nhận diện thiết bị Android.
+  - Cơ chế kiểm tra động (`navigator.getInstalledRelatedApps`):
+    - *Trường hợp 1 (Đã có App):* Nút CTA chính tự động chuyển thành `Mở Ứng Dụng MoMo` (chạm mở app trực tiếp). Dòng chữ phụ: `Đã cài đặt bản chính thức v4.2.x`.
+    - *Trường hợp 2 (Chưa cài App hoặc trình duyệt không hỗ trợ API probe):* Nút CTA chính hiển thị `Tải trên Google Play` (Play Store Icon + Text). Dòng text link bổ trợ: `Đã có app? [Mở ứng dụng ngay]` kèm liên kết phụ `Tải trực tiếp file APK cho Android`.
+  - Cơ chế Routing 1 chạm: Toàn bộ nút Mở/Tải trên Android đều bọc Android Chrome Intent Scheme để fail-safe 100% (có app thì mở tức thì, chưa có app tự động chuyển sang CH Play).
+- **Thanh điều hướng ghim đáy (Sticky Bottom CTA Bar):**
+  - Khi người dùng cuộn trang vượt qua màn hình đầu tiên, thanh Sticky Bar cố định ở chân màn hình sẽ trượt lên.
+  - Hiển thị logo MoMo + Text ngắn gọn (`MoMo: Ứng dụng Tài chính & Thanh toán`) + Nút CTA thu gọn tương ứng với trạng thái của thiết bị (`Tải App` hoặc `Mở App`).
 
 ### 4.3 Bảng Thông Số Kỹ Thuật Phiên Bản (Technical Specs)
 
@@ -215,9 +230,44 @@ Tuân thủ chuẩn SSOT `04_MOSPARK_PLATFORM/umami_utility_tracking.md`:
 | Tên sự kiện (Event Name) | Loại sự kiện | Tham số ghi nhận (Custom Parameters) | Mục đích đo lường |
 | :--- | :--- | :--- | :--- |
 | `tai_app_page_view` | Pageview | `device: desktop \| ios \| android`, `referrer` | Đo lường lưu lượng truy cập phân rã theo thiết bị. |
-| `click_store_download` | Click | `store: appstore \| googleplay \| direct_apk` | Đo lường tỷ lệ nhấp nút tải về Store / APK. |
-| `desktop_qr_scan_intent` | Interaction | `trigger: impression \| view_duration` | Đo lường số lượt hiển thị mã Dynamic QR trên máy tính. |
+| `click_store_download` | Click | `store: appstore \| googleplay \| direct_apk` | Đo lường tỷ lệ nhấp nút tải về Store / APK (New User intent). |
+| `click_open_existing_app` | Click | `target: deeplink_open`, `device_os: ios \| android` | Đo lường tỷ lệ nhấp mở ứng dụng của người dùng đã có app (Existing User intent). |
+| `desktop_qr_scan_intent` | Interaction | `trigger: impression \| view_duration` | Đo lường số lượt hiển thị và tương tác mã Dynamic QR trên máy tính. |
 | `troubleshoot_toggle` | Click | `item: install_apk \| memory_error \| permissions` | Đo lường mức độ quan tâm đến hướng dẫn kỹ thuật. |
+
+### 5.4 Cơ Chế Kỹ Thuật Nhận Diện Trạng Thái Ứng Dụng (App Detection & Deep Link Routing Spec)
+
+#### 5.4.1 Môi trường iOS (Safari / WebKit)
+- **Cơ chế:** Do chính sách bảo mật Sandbox của Apple, JavaScript client-side không được phép probe trạng thái cài app native ngầm. Giải pháp chuẩn mực là tích hợp **Apple Smart App Banner**:
+  ```html
+  <meta name="apple-itunes-app" content="app-id=918786511, app-argument=momo://app">
+  ```
+- **Hành vi hệ điều hành:** Trình duyệt Safari tự động đọc trạng thái cài đặt từ iOS:
+  - Nếu máy đã có app: Banner hiển thị nút **MỞ (OPEN)**.
+  - Nếu máy chưa có app: Banner hiển thị nút **NHẬN (GET)**.
+- **UI Web:** Nút chính hiển thị `Tải trên App Store`, dòng phụ hiển thị `Đã cài MoMo trên điện thoại? [Mở ứng dụng ngay]` gắn Universal Link (`momoapp.onelink.vn`).
+
+#### 5.4.2 Môi trường Android (Chrome / Chromium)
+- **Cơ chế 1 - Dynamic Probe (`navigator.getInstalledRelatedApps`):**
+  - Khai báo file Web App Manifest (`manifest.json`):
+    ```json
+    {
+      "related_applications": [
+        {
+          "platform": "play",
+          "id": "com.mservice.momotransfer"
+        }
+      ]
+    }
+    ```
+  - Xác thực Digital Asset Links 2 chiều tại `https://momo.vn/.well-known/assetlinks.json` khớp mã SHA256 fingerprint của ứng dụng MoMo Android.
+  - Script frontend gọi kiểm tra bất đồng bộ khi tải trang: Nếu phát hiện app đã cài, tự động đổi nút CTA chính thành `Mở Ứng Dụng MoMo`.
+- **Cơ chế 2 - Fail-safe Routing (Android Chrome Intent Scheme):**
+  - Nhằm đảm bảo 100% người dùng trên mọi trình duyệt Android (kể cả khi không hỗ trợ API probe) không gặp lỗi, toàn bộ liên kết mở app được bọc định dạng Intent:
+    ```
+    intent://#Intent;scheme=momo;package=com.mservice.momotransfer;S.browser_fallback_url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.mservice.momotransfer;end
+    ```
+  - Hành vi: Máy có app sẽ tự động mở thẳng App MoMo; máy chưa có app sẽ tự động chuyển hướng mượt mà vào trang tải trên CH Play.
 
 ---
 
@@ -239,7 +289,7 @@ Tuân thủ chuẩn SSOT `04_MOSPARK_PLATFORM/umami_utility_tracking.md`:
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sprint 1</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">Tuần 3 Tháng 10/2026</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">UI/UX Design &amp; OneLink Setup</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoàn thiện thiết kế Wireframe (Split Screen Desktop + Sticky Bottom Mobile). Cấu hình Template OneLink Dynamic QR và thiết lập <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">af_web_dp</code> về <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tai-app</code>.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hoàn thiện Wireframe phân tầng UI (Split Screen Desktop + Mobile phân cấp Nút Tải vs Mở App). Cấu hình Template OneLink Dynamic QR, thẻ meta Apple Smart App Banner, logic probe <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">getInstalledRelatedApps</code> &amp; Chrome Intent trên Android; thiết lập <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">af_web_dp</code> về <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/tai-app</code>.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sprint 2</td>

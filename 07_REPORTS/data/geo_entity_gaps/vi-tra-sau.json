@@ -1,0 +1,91 @@
+{
+  "query": "ví trả sau",
+  "slug": "vi-tra-sau",
+  "generated_at": "2026-10-19 17:26:05",
+  "hub": "Financial Hub",
+  "theme": "Ví trả sau / Tín dụng tiêu dùng",
+  "schema": {
+    "type": "FinancialProduct",
+    "category": "https://schema.org/LoanOrCredit",
+    "mandatory_fields": [
+      {
+        "field": "name",
+        "desc": "Tên thương mại của sản phẩm ví trả sau."
+      },
+      {
+        "field": "provider",
+        "desc": "Tổ chức tài chính / Ngân hàng đối tác bảo lãnh phát hành (Organization)."
+      },
+      {
+        "field": "interestRate",
+        "desc": "Lãi suất công bố trong hạn (thường là 0% trong chu kỳ miễn lãi)."
+      },
+      {
+        "field": "feesAndCommissionsSpecification",
+        "desc": "Đặc tả các loại phí: phí dịch vụ, phí duy trì, phí chậm trả."
+      },
+      {
+        "field": "areaServed",
+        "desc": "Khu vực áp dụng (Mặc định: Việt Nam / VN)."
+      },
+      {
+        "field": "review",
+        "desc": "Đánh giá xếp hạng trung bình (AggregateRating) tăng độ tin cậy E-E-A-T."
+      }
+    ],
+    "sample_jsonld": "{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FinancialProduct\",\n  \"name\": \"Ví Trả Sau MoMo\",\n  \"description\": \"Ví trả sau là hình thức tín dụng tiêu dùng số cho phép người dùng thanh toán trước các giao dịch mua sắm và trả tiền vào cuối kỳ hoặc trả góp. Sản phẩm này hoạt động dựa trên lịch sử tín dụng cá nhân, tích hợp trực tiếp vào ví điện tử, giúp tối ưu hóa dòng tiền mà không cần thẻ tín dụng vật lý.\",\n  \"provider\": {\n    \"@type\": \"BankOrCreditUnion\",\n    \"name\": \"Ngân hàng Thương mại Cổ phần Bản Việt (BVBank) & TPBank\",\n    \"url\": \"https://www.momo.vn\"\n  },\n  \"category\": \"Ví trả sau / Tín dụng tiêu dùng\",\n  \"areaServed\": {\n    \"@type\": \"Country\",\n    \"name\": \"Vietnam\"\n  },\n  \"interestRate\": {\n    \"@type\": \"QuantitativeValue\",\n    \"value\": \"0.0\",\n    \"unitText\": \"% trong chu kỳ miễn lãi tối đa 45 ngày\"\n  },\n  \"feesAndCommissionsSpecification\": \"Miễn phí duy trì nếu không phát sinh dư nợ trong tháng. Phí dịch vụ cố định theo kỳ sử dụng.\",\n  \"aggregateRating\": {\n    \"@type\": \"AggregateRating\",\n    \"ratingValue\": \"4.8\",\n    \"reviewCount\": \"12500\",\n    \"bestRating\": \"5\"\n  }\n}"
+  },
+  "direct_answer_box": {
+    "text": "Ví trả sau là hình thức tín dụng tiêu dùng số cho phép người dùng thanh toán trước các giao dịch mua sắm và trả tiền vào cuối kỳ hoặc trả góp. Sản phẩm này hoạt động dựa trên lịch sử tín dụng cá nhân, tích hợp trực tiếp vào ví điện tử, giúp tối ưu hóa dòng tiền mà không cần thẻ tín dụng vật lý.",
+    "word_count": 67,
+    "format": "Inverted Pyramid (Khái niệm -> Cơ chế -> Lợi ích)"
+  },
+  "entity_gaps": {
+    "expertise": {
+      "title": "Tác động đến Điểm Tín Dụng Quốc Gia (CIC)",
+      "summary": "Phân tích cụ thể ảnh hưởng của các khoản chậm trả đến hồ sơ tín dụng tại Trung tâm Thông tin Tín dụng Quốc gia (CIC).",
+      "detail": "Hầu hết các bài viết đối thủ chỉ dừng lại ở bước 'cách đăng ký' và 'hạn mức'. Để đạt E-E-A-T cao nhất, nội dung cần làm rõ: Việc chậm thanh toán ví trả sau từ 10 ngày trở lên sẽ bị xếp vào nhóm nợ cần chú ý (Nhóm 2) hoặc nợ xấu (Nhóm 3–5) trên hệ thống CIC, trực tiếp ảnh hưởng đến khả năng vay mua nhà, mua xe hoặc mở thẻ tín dụng ngân hàng trong 3–5 năm tới.",
+      "actionable_angle": "Bảng phân loại 5 nhóm nợ CIC và mốc thời gian báo cáo vi phạm của ví trả sau."
+    },
+    "trust": {
+      "title": "Cơ chế định danh điện tử eKYC & Dữ liệu C06",
+      "summary": "Phân tích sâu cơ chế xác thực danh tính số kết hợp cơ sở dữ liệu quốc gia về dân cư.",
+      "detail": "Làm rõ quy trình bảo mật cấp độ ngân hàng: Ứng dụng tích hợp công nghệ AI Face Matching đối soát khuôn mặt với chip Căn cước công dân và xác thực trực tiếp qua Cơ sở dữ liệu Quốc gia về dân cư (Đề án 06). Cơ chế này ngăn chặn tuyệt đối tình trạng mở ví giả mạo hoặc chiếm quyền sử dụng hạn mức.",
+      "actionable_angle": "Sơ đồ 3 bước xác thực sinh trắc học và mã hóa bảo mật chuẩn PCI-DSS Level 1."
+    },
+    "high_intent": {
+      "title": "Minh bạch chi phí ẩn & Bảng phí phạt chậm trả (Hidden Cost Analysis)",
+      "summary": "Bóc tách chi tiết toàn bộ các loại phí phát sinh ngoài lãi suất công bố 0%.",
+      "detail": "Đây là điểm chạm có ý định tìm kiếm cao nhất (High-Intent). Nội dung cần công khai rõ: Phí dịch vụ kích hoạt/duy trì hàng tháng khi có phát sinh giao dịch, công thức tính phí chậm trả theo từng mốc ngày (ví dụ: ngày 1-5, ngày 6-10), và mức phí chuyển đổi sang hình thức trả góp 3-6-12 tháng.",
+      "actionable_angle": "Bảng biểu phí chi tiết so sánh giữa thanh toán đúng hạn vs chậm hạn."
+    }
+  },
+  "competitor_serp_summary": {
+    "crawled_count": 3,
+    "top_competitors": [
+      "www.goevo.vn",
+      "zalopay.vn",
+      "fpt.vn"
+    ],
+    "momo_current_rank": 2
+  },
+  "actionable_content_blueprint": [
+    "# H1: Ví Trả Sau: Định Nghĩa Bản Chất, Điều Kiện & Bảng Biểu Phí Chi Tiết Nhất 2026",
+    "<!-- AI Answer Box Hook: Đặt ngay bên dưới H1 trong thẻ blockquote -->",
+    "> \"Ví trả sau là hình thức tín dụng tiêu dùng số cho phép người dùng thanh toán trước các giao dịch mua sắm và trả tiền vào cuối kỳ hoặc trả góp. Sản phẩm này hoạt động dựa trên lịch sử tín dụng cá nhân, tích hợp trực tiếp vào ví điện tử, giúp tối ưu hóa dòng tiền mà không cần thẻ tín dụng vật lý.\"",
+    "## H2 1: Ví Trả Sau Là Gì? Bản Chất & Cơ Chế Hoạt Động Cốt Lõi",
+    "## H2 2: Tác động đến Điểm Tín Dụng Quốc Gia (CIC) (Góc Chuyên Gia E-E-A-T)",
+    "   - Bảng phân loại 5 nhóm nợ CIC và mốc thời gian báo cáo vi phạm của ví trả sau.",
+    "## H2 3: Cơ chế định danh điện tử eKYC & Dữ liệu C06 (Hạ Tầng & Bảo Mật)",
+    "   - Sơ đồ 3 bước xác thực sinh trắc học và mã hóa bảo mật chuẩn PCI-DSS Level 1.",
+    "## H2 4: Minh bạch chi phí ẩn & Bảng phí phạt chậm trả (Hidden Cost Analysis) (Minh Bạch Phí)",
+    "   - Bảng biểu phí chi tiết so sánh giữa thanh toán đúng hạn vs chậm hạn.",
+    "## H2 5: Hướng Dẫn Thao Tác Trực Tuyến & Chuyển Tiếp Liền Mạch Lên MoMo",
+    "   - CTA Hook: [Kích Hoạt Ví Trả Sau Hạn Mức Đến 20 Triệu](momo://postpaid-wallet) | Event: `web_postpaid_wallet_btn_click`"
+  ],
+  "web_to_app_cta": {
+    "cta_text": "Kích Hoạt Ví Trả Sau Hạn Mức Đến 20 Triệu",
+    "deeplink": "momo://postpaid-wallet",
+    "umami_event": "web_postpaid_wallet_btn_click"
+  }
+}

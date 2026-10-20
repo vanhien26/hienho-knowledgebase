@@ -1,0 +1,1138 @@
+{
+  "query": "ví trả sau",
+  "usecase_id": "ví-trả-sau",
+  "generated_at": "2026-10-19 17:22:59",
+  "serp_realtime": {
+    "top1_competitor": {
+      "domain": "www.goevo.vn",
+      "name": "Www",
+      "real_url": "https://www.goevo.vn/blog/cac-vi-tra-sau",
+      "current_rank": 1,
+      "page_title": "Các ví trả sau phổ biến nhất tại Việt Nam 2026",
+      "actual_word_count": 14,
+      "format_detected": "FAQ & In-depth Guide"
+    },
+    "other_competitors": [
+      {
+        "domain": "zalopay.vn",
+        "rank": 3
+      },
+      {
+        "domain": "fpt.vn",
+        "rank": 4
+      }
+    ]
+  },
+  "analysis": {
+    "query": "ví trả sau",
+    "competitors_crawled": 3,
+    "avg_word_count": 108,
+    "max_word_count": 238,
+    "recommended_target_words": 1800,
+    "dominant_format": "FAQ & In-depth Guide",
+    "top_competitor_entities": [
+      "trả",
+      "sau",
+      "momo",
+      "dụng",
+      "cách",
+      "tài",
+      "khoản",
+      "đăng",
+      "thanh",
+      "toán"
+    ],
+    "gaps_detected": [
+      "Chưa tối ưu Schema FAQPage để chiếm đoạt vị trí Rich Snippets trên kết quả tìm kiếm.",
+      "Thiếu cơ chế chuyển tiếp liền mạch sang ứng dụng tài chính / giao dịch tức thì (Web-to-App).",
+      "Thiếu bảng đối soát so sánh trực quan đa chiều giữa các phương án."
+    ],
+    "beating_outline": [
+      "## H2 1: Tổng quan & Định nghĩa chuẩn xác về ví trả sau",
+      "## H2 2: Bảng so sánh chi tiết & Tiêu chí lựa chọn tối ưu nhất",
+      "## H2 3: Công cụ tính toán / Tra cứu trực tuyến trên Nền tảng Web MoMo (Vượt trội đối thủ)",
+      "### H3 3.1: Hướng dẫn các bước thao tác và tính toán kết quả theo thời gian thực",
+      "## H2 4: Hướng dẫn quy trình & Thủ tục thực hiện từng bước đơn giản",
+      "## H2 5: 5 Lưu ý quan trọng & Rủi ro thường gặp cần phòng tránh",
+      "## H2 6: Giải đáp thắc mắc thường gặp (FAQs chuẩn Schema)",
+      "## H2 7: Giải pháp liên kết và nhận quyền lợi tối đa qua Ứng dụng MoMo"
+    ],
+    "keyword_extraction": {
+      "engines": {
+        "yake": true,
+        "rake": true,
+        "semantic_rerank": false,
+        "embedding_model": null
+      },
+      "excluded_low_quality_pages": 2,
+      "table_stakes": [],
+      "differentiators": [
+        {
+          "phrase": "combo internet truyền hình nâng cấp combo internet",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 2.5,
+          "is_question": false,
+          "variants": [
+            "combo internet truyền hình nâng cấp combo internet"
+          ]
+        },
+        {
+          "phrase": "mo mo phí bao nhiêu 1 tháng",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 2.267,
+          "is_question": true,
+          "variants": [
+            "mo mo phí bao nhiêu 1 tháng"
+          ]
+        },
+        {
+          "phrase": "giải trí thể thao giải trí game tin ngoại hạng",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 2.267,
+          "is_question": false,
+          "variants": [
+            "giải trí thể thao giải trí game tin ngoại hạng"
+          ]
+        },
+        {
+          "phrase": "thông tin tài khoản sản phẩm dịch vụ internet",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 2.15,
+          "is_question": false,
+          "variants": [
+            "thông tin tài khoản sản phẩm dịch vụ internet"
+          ]
+        },
+        {
+          "phrase": "đủ điều kiện đăng ký ví trả",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 1.305,
+          "is_question": true,
+          "variants": [
+            "đủ điều kiện đăng ký ví trả"
+          ]
+        },
+        {
+          "phrase": "thanh toán dư nợ ví trả",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 1.23,
+          "is_question": false,
+          "variants": [
+            "thanh toán dư nợ ví trả"
+          ]
+        },
+        {
+          "phrase": "giải trí xem ngoại hạng",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 1.133,
+          "is_question": false,
+          "variants": [
+            "giải trí xem ngoại hạng"
+          ]
+        },
+        {
+          "phrase": "xem ngoại hạng",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 1.0,
+          "is_question": false,
+          "variants": [
+            "xem ngoại hạng"
+          ]
+        },
+        {
+          "phrase": "internet truyền hình",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 1.0,
+          "is_question": false,
+          "variants": [
+            "internet truyền hình"
+          ]
+        },
+        {
+          "phrase": "smart home mua",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 1.0,
+          "is_question": false,
+          "variants": [
+            "smart home mua"
+          ]
+        },
+        {
+          "phrase": "camera tin fpt",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.999,
+          "is_question": false,
+          "variants": [
+            "camera tin fpt"
+          ]
+        },
+        {
+          "phrase": "camera chính sách",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.999,
+          "is_question": false,
+          "variants": [
+            "camera chính sách"
+          ]
+        },
+        {
+          "phrase": "mua thêm camera",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.999,
+          "is_question": false,
+          "variants": [
+            "mua thêm camera"
+          ]
+        },
+        {
+          "phrase": "internet game thủ",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.999,
+          "is_question": false,
+          "variants": [
+            "internet game thủ"
+          ]
+        },
+        {
+          "phrase": "game thủ internet",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.999,
+          "is_question": false,
+          "variants": [
+            "game thủ internet"
+          ]
+        },
+        {
+          "phrase": "combo internet",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.999,
+          "is_question": false,
+          "variants": [
+            "combo internet"
+          ]
+        },
+        {
+          "phrase": "tạo yêu cầu",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.999,
+          "is_question": false,
+          "variants": [
+            "tạo yêu cầu"
+          ]
+        },
+        {
+          "phrase": "bảng xếp hạng",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.999,
+          "is_question": false,
+          "variants": [
+            "bảng xếp hạng"
+          ]
+        },
+        {
+          "phrase": "điều kiện đăng ký ví trả",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.905,
+          "is_question": true,
+          "variants": [
+            "điều kiện đăng ký ví trả"
+          ]
+        },
+        {
+          "phrase": "y tế fpt medi care camera",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.9,
+          "is_question": false,
+          "variants": [
+            "y tế fpt medi care camera"
+          ]
+        }
+      ],
+      "top_keyphrases": [
+        {
+          "phrase": "combo internet truyền hình nâng cấp combo internet",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 2.5,
+          "is_question": false,
+          "variants": [
+            "combo internet truyền hình nâng cấp combo internet"
+          ]
+        },
+        {
+          "phrase": "mo mo phí bao nhiêu 1 tháng",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 2.267,
+          "is_question": true,
+          "variants": [
+            "mo mo phí bao nhiêu 1 tháng"
+          ]
+        },
+        {
+          "phrase": "giải trí thể thao giải trí game tin ngoại hạng",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 2.267,
+          "is_question": false,
+          "variants": [
+            "giải trí thể thao giải trí game tin ngoại hạng"
+          ]
+        },
+        {
+          "phrase": "thông tin tài khoản sản phẩm dịch vụ internet",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 2.15,
+          "is_question": false,
+          "variants": [
+            "thông tin tài khoản sản phẩm dịch vụ internet"
+          ]
+        },
+        {
+          "phrase": "đủ điều kiện đăng ký ví trả",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 1.305,
+          "is_question": true,
+          "variants": [
+            "đủ điều kiện đăng ký ví trả"
+          ]
+        },
+        {
+          "phrase": "thanh toán dư nợ ví trả",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 1.23,
+          "is_question": false,
+          "variants": [
+            "thanh toán dư nợ ví trả"
+          ]
+        },
+        {
+          "phrase": "giải trí xem ngoại hạng",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 1.133,
+          "is_question": false,
+          "variants": [
+            "giải trí xem ngoại hạng"
+          ]
+        },
+        {
+          "phrase": "xem ngoại hạng",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 1.0,
+          "is_question": false,
+          "variants": [
+            "xem ngoại hạng"
+          ]
+        },
+        {
+          "phrase": "internet truyền hình",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 1.0,
+          "is_question": false,
+          "variants": [
+            "internet truyền hình"
+          ]
+        },
+        {
+          "phrase": "smart home mua",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 1.0,
+          "is_question": false,
+          "variants": [
+            "smart home mua"
+          ]
+        },
+        {
+          "phrase": "camera tin fpt",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.999,
+          "is_question": false,
+          "variants": [
+            "camera tin fpt"
+          ]
+        },
+        {
+          "phrase": "camera chính sách",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.999,
+          "is_question": false,
+          "variants": [
+            "camera chính sách"
+          ]
+        },
+        {
+          "phrase": "mua thêm camera",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.999,
+          "is_question": false,
+          "variants": [
+            "mua thêm camera"
+          ]
+        },
+        {
+          "phrase": "internet game thủ",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.999,
+          "is_question": false,
+          "variants": [
+            "internet game thủ"
+          ]
+        },
+        {
+          "phrase": "game thủ internet",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.999,
+          "is_question": false,
+          "variants": [
+            "game thủ internet"
+          ]
+        },
+        {
+          "phrase": "combo internet",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.999,
+          "is_question": false,
+          "variants": [
+            "combo internet"
+          ]
+        },
+        {
+          "phrase": "tạo yêu cầu",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.999,
+          "is_question": false,
+          "variants": [
+            "tạo yêu cầu"
+          ]
+        },
+        {
+          "phrase": "bảng xếp hạng",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.999,
+          "is_question": false,
+          "variants": [
+            "bảng xếp hạng"
+          ]
+        },
+        {
+          "phrase": "điều kiện đăng ký ví trả",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.905,
+          "is_question": true,
+          "variants": [
+            "điều kiện đăng ký ví trả"
+          ]
+        },
+        {
+          "phrase": "y tế fpt medi care camera",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "score": 0.9,
+          "is_question": false,
+          "variants": [
+            "y tế fpt medi care camera"
+          ]
+        }
+      ],
+      "entities": {
+        "brand_org": [],
+        "numeric": [
+          {
+            "entity": "1 tháng",
+            "count": 1
+          }
+        ]
+      },
+      "per_page": [
+        {
+          "rank": 4,
+          "domain": "fpt.vn",
+          "phrases": [
+            {
+              "phrase": "combo internet truyền hình nâng cấp combo internet",
+              "score": 2.5
+            },
+            {
+              "phrase": "mo mo phí bao nhiêu 1 tháng",
+              "score": 2.267
+            },
+            {
+              "phrase": "giải trí thể thao giải trí game tin ngoại hạng",
+              "score": 2.267
+            },
+            {
+              "phrase": "thông tin tài khoản sản phẩm dịch vụ internet",
+              "score": 2.15
+            },
+            {
+              "phrase": "đủ điều kiện đăng ký ví trả",
+              "score": 1.305
+            },
+            {
+              "phrase": "thanh toán dư nợ ví trả",
+              "score": 1.23
+            },
+            {
+              "phrase": "giải trí xem ngoại hạng",
+              "score": 1.133
+            },
+            {
+              "phrase": "xem ngoại hạng",
+              "score": 1.0
+            },
+            {
+              "phrase": "internet truyền hình",
+              "score": 1.0
+            },
+            {
+              "phrase": "smart home mua",
+              "score": 1.0
+            },
+            {
+              "phrase": "camera tin fpt",
+              "score": 0.999
+            },
+            {
+              "phrase": "camera chính sách",
+              "score": 0.999
+            },
+            {
+              "phrase": "mua thêm camera",
+              "score": 0.999
+            },
+            {
+              "phrase": "internet game thủ",
+              "score": 0.999
+            },
+            {
+              "phrase": "game thủ internet",
+              "score": 0.999
+            },
+            {
+              "phrase": "combo internet",
+              "score": 0.999
+            },
+            {
+              "phrase": "tạo yêu cầu",
+              "score": 0.999
+            },
+            {
+              "phrase": "bảng xếp hạng",
+              "score": 0.999
+            },
+            {
+              "phrase": "điều kiện đăng ký ví trả",
+              "score": 0.905
+            },
+            {
+              "phrase": "y tế fpt medi care camera",
+              "score": 0.9
+            }
+          ]
+        }
+      ]
+    },
+    "information_gain": {
+      "question_gaps": [
+        "mo mo phí bao nhiêu 1 tháng",
+        "đủ điều kiện đăng ký ví trả",
+        "điều kiện đăng ký ví trả"
+      ],
+      "numeric_data_available": [
+        {
+          "entity": "1 tháng",
+          "count": 1
+        }
+      ],
+      "competitor_utility_signals": [
+        {
+          "signal": "tra cứu",
+          "pages": 1
+        }
+      ],
+      "momo_missing_keyphrases": [
+        "combo internet truyền hình nâng cấp combo internet",
+        "mo mo phí bao nhiêu 1 tháng",
+        "giải trí thể thao giải trí game tin ngoại hạng",
+        "thông tin tài khoản sản phẩm dịch vụ internet",
+        "đủ điều kiện đăng ký ví trả",
+        "thanh toán dư nợ ví trả",
+        "giải trí xem ngoại hạng",
+        "xem ngoại hạng",
+        "internet truyền hình",
+        "smart home mua",
+        "camera tin fpt",
+        "camera chính sách",
+        "mua thêm camera",
+        "internet game thủ",
+        "game thủ internet",
+        "combo internet",
+        "tạo yêu cầu",
+        "bảng xếp hạng",
+        "điều kiện đăng ký ví trả",
+        "y tế fpt medi care camera"
+      ],
+      "recommended_unique_angles": [
+        "Bổ sung mục Giải đáp trực tiếp (Direct Answer) cho các câu hỏi đối thủ bỏ trống: mo mo phí bao nhiêu 1 tháng; đủ điều kiện đăng ký ví trả; điều kiện đăng ký ví trả",
+        "Nhúng bảng số liệu động (lãi suất/phí/biểu phí theo thời gian thực) thay vì nội dung tĩnh sao chép được.",
+        "Gắn Schema FAQPage + BreadcrumbList + cơ chế Web-to-App để chiếm Rich Snippet và chuyển đổi."
+      ]
+    },
+    "content_gap": {
+      "momo_analyzed": true,
+      "competitor_concepts": 20,
+      "momo_covered": 0,
+      "missing_in_momo": 20,
+      "gap_pct": 100.0,
+      "momo_covered_concepts": [],
+      "missing_concepts": [
+        {
+          "phrase": "combo internet truyền hình nâng cấp combo internet",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": false
+        },
+        {
+          "phrase": "mo mo phí bao nhiêu 1 tháng",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": true
+        },
+        {
+          "phrase": "giải trí thể thao giải trí game tin ngoại hạng",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": false
+        },
+        {
+          "phrase": "thông tin tài khoản sản phẩm dịch vụ internet",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": false
+        },
+        {
+          "phrase": "đủ điều kiện đăng ký ví trả",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": true
+        },
+        {
+          "phrase": "thanh toán dư nợ ví trả",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": false
+        },
+        {
+          "phrase": "giải trí xem ngoại hạng",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": false
+        },
+        {
+          "phrase": "xem ngoại hạng",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": false
+        },
+        {
+          "phrase": "internet truyền hình",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": false
+        },
+        {
+          "phrase": "smart home mua",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": false
+        },
+        {
+          "phrase": "camera tin fpt",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": false
+        },
+        {
+          "phrase": "camera chính sách",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": false
+        },
+        {
+          "phrase": "mua thêm camera",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": false
+        },
+        {
+          "phrase": "internet game thủ",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": false
+        },
+        {
+          "phrase": "game thủ internet",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": false
+        },
+        {
+          "phrase": "combo internet",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": false
+        },
+        {
+          "phrase": "tạo yêu cầu",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": false
+        },
+        {
+          "phrase": "bảng xếp hạng",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": false
+        },
+        {
+          "phrase": "điều kiện đăng ký ví trả",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": true
+        },
+        {
+          "phrase": "y tế fpt medi care camera",
+          "coverage": 1,
+          "coverage_pct": 100.0,
+          "is_question": false
+        }
+      ],
+      "momo_phrases_sample": [
+        "trả",
+        "trả góp",
+        "hạn",
+        "duyệt",
+        "hạn mức",
+        "thanh toán",
+        "tín dụng",
+        "mua",
+        "hàng",
+        "trả góp trả",
+        "ngân hàng",
+        "mức",
+        "điểm",
+        "điện",
+        "dùng",
+        "liên kết",
+        "home credit",
+        "cake",
+        "bạn",
+        "tài khoản"
+      ]
+    }
+  },
+  "domain_cannibalization_shield": {
+    "query": "ví trả sau",
+    "risk_level": "CRITICAL",
+    "verdict": "BLOCK_NEW_URL",
+    "action": "PROTECT_AND_LINK",
+    "serp_rank": 2,
+    "ranking_url": "https://www.momo.vn/vi-tra-sau",
+    "ranking_title": "Ví Trả Sau MoMo: Chi tiêu trước, trả tiền sau - Lãi suất 0%",
+    "sitemap_matches": [
+      "https://www.momo.vn/blog/cac-vi-tra-sau-de-duyet-nhat-hien-nay-c116dt2286",
+      "https://www.momo.vn/vi-tra-sau",
+      "https://www.momo.vn/blog/vi-tra-sau-momo-thanh-toan-duoc-nhung-dich-vu-gi-c116dt981",
+      "https://www.momo.vn/vi-tra-sau/bieu-phi",
+      "https://www.momo.vn/blog/vi-tra-sau-momo-co-lai-suat-khong-c116dt1343",
+      "https://www.momo.vn/blog/cac-vi-tra-sau-de-duyet-nhat-hien-nay-c116dt2286#top-10-cac-vi-tra-sau-de-duyet-uy-tin-nhat-hien-nay",
+      "https://www.momo.vn/blog/huong-dan-cach-thanh-toan-du-no-vi-tra-sau-tren-momo-c116dt1961",
+      "https://www.momo.vn/blog/rut-tien-tu-vi-tra-sau-momo-co-duoc-khong-c116dt1843",
+      "https://www.momo.vn/blog/cham-thanh-toan-vi-tra-sau-khong-tra-tien-vi-tra-sau-co-bi-sao-khong-c116dt1136",
+      "https://www.momo.vn/hoi-dap/cach-dang-ky-kich-hoat-vi-tra-sau",
+      "https://www.momo.vn/hoi-dap/dieu-kien-de-dang-ki-mo-vi-tra-sau",
+      "https://www.momo.vn/hoi-dap/quan-ly-ung-dung-va-tai-khoan-ctgr2/khoa-huy-mo-lai-tai-khoan",
+      "https://www.momo.vn/hoi-dap/toi-co-bi-phat-khi-thanh-toan-qua-han-vi-tra-sau-khong",
+      "https://www.momo.vn/hoi-dap/toi-se-thanh-toan-du-no-vi-tra-sau-nhu-the-nao",
+      "https://www.momo.vn/hoi-dap/vi-sao-nguoi-khac-co-han-muc-vi-tra-sau-3000000d-ngay-den-han-la-ngay-10-hang-thang-nhung-toi-duoc-tang-len-3000000d-thi-ngay-den-han-cua-toi-van-la",
+      "https://www.momo.vn/merchant",
+      "https://www.momo.vn/blog/cac-vi-tra-sau-de-duyet-nhat-hien-nay-c116dt2286#so-sanh-nhanh-cac-vi-tra-sau-de-duyet",
+      "https://www.momo.vn/blog/cac-vi-tra-sau-de-duyet-nhat-hien-nay-c116dt2286#bi-quyet-duoc-duyet-vi-tra-sau-nhanh-chong",
+      "https://www.momo.vn/blog/cac-vi-tra-sau-de-duyet-nhat-hien-nay-c116dt2286#vi-tra-sau-la-gi-va-vi-sao-de-duyet-lai-quan-trong",
+      "https://www.momo.vn/blog/cac-vi-tra-sau-de-duyet-hien-nay-c116dt2286",
+      "https://www.momo.vn/blog/mua-truoc-tra-sau-c116dt1126",
+      "https://www.momo.vn/blog/dieu-kien-mo-vi-tra-sau-la-gi-c116dt2575",
+      "https://www.momo.vn/hoi-dap/mo-vi-tra-sau-nhung-khong-dung-thi-co-bi-tinh-phi-gi-khong",
+      "https://www.momo.vn/blog/giai-dap-su-dung-vi-tra-sau-tren-momo-co-mat-phi-khong-c116dt1867",
+      "https://www.momo.vn/vi-tra-sau/thanh-toan-sieu-thi",
+      "https://www.momo.vn/hoi-dap/huy-khoa-vi-tra-sau",
+      "https://www.momo.vn/mega-summer-2026",
+      "https://www.momo.vn/vi-tra-sau/promotion",
+      "https://www.momo.vn/blog/co-nen-huy-vi-tra-sau-momo-c116dt1036",
+      "https://www.momo.vn/",
+      "https://www.momo.vn/vay-nhanh/blog/no-xau-la-gi-huong-dan-kiem-tra-va-xoa-no-xau-1122",
+      "https://www.momo.vn/page/9818356"
+    ],
+    "top_live_url": "https://www.momo.vn/blog/cac-vi-tra-sau-de-duyet-nhat-hien-nay-c116dt2286",
+    "rationale": "MoMo đang xếp hạng Top 2 trên SERP (https://www.momo.vn/vi-tra-sau). Tuyệt đối KHÔNG tạo URL mới vì sẽ gây hiện tượng tự ăn thịt thứ hạng (Self-Cannibalization). Hành động: Giữ URL hiện tại, cắm widget tra cứu/chuyển đổi và tối ưu internal link.",
+    "competing_pages": [
+      {
+        "url": "https://www.momo.vn/blog/cac-vi-tra-sau-de-duyet-nhat-hien-nay-c116dt2286",
+        "clicks": 193,
+        "impressions": 2677,
+        "position": 2.7
+      },
+      {
+        "url": "https://www.momo.vn/vi-tra-sau",
+        "clicks": 129,
+        "impressions": 5323,
+        "position": 2.0
+      },
+      {
+        "url": "https://www.momo.vn/blog/vi-tra-sau-momo-thanh-toan-duoc-nhung-dich-vu-gi-c116dt981",
+        "clicks": 11,
+        "impressions": 2134,
+        "position": 9.2
+      },
+      {
+        "url": "https://www.momo.vn/vi-tra-sau/bieu-phi",
+        "clicks": 4,
+        "impressions": 91,
+        "position": 17.7
+      },
+      {
+        "url": "https://www.momo.vn/blog/vi-tra-sau-momo-co-lai-suat-khong-c116dt1343",
+        "clicks": 3,
+        "impressions": 13,
+        "position": 44.4
+      },
+      {
+        "url": "https://www.momo.vn/blog/cac-vi-tra-sau-de-duyet-nhat-hien-nay-c116dt2286#top-10-cac-vi-tra-sau-de-duyet-uy-tin-nhat-hien-nay",
+        "clicks": 2,
+        "impressions": 1887,
+        "position": 2.6
+      },
+      {
+        "url": "https://www.momo.vn/blog/huong-dan-cach-thanh-toan-du-no-vi-tra-sau-tren-momo-c116dt1961",
+        "clicks": 2,
+        "impressions": 8,
+        "position": 2.5
+      },
+      {
+        "url": "https://www.momo.vn/blog/rut-tien-tu-vi-tra-sau-momo-co-duoc-khong-c116dt1843",
+        "clicks": 2,
+        "impressions": 2,
+        "position": 2
+      },
+      {
+        "url": "https://www.momo.vn/blog/cham-thanh-toan-vi-tra-sau-khong-tra-tien-vi-tra-sau-co-bi-sao-khong-c116dt1136",
+        "clicks": 1,
+        "impressions": 34,
+        "position": 2.8
+      },
+      {
+        "url": "https://www.momo.vn/hoi-dap/cach-dang-ky-kich-hoat-vi-tra-sau",
+        "clicks": 1,
+        "impressions": 10,
+        "position": 7.2
+      },
+      {
+        "url": "https://www.momo.vn/hoi-dap/dieu-kien-de-dang-ki-mo-vi-tra-sau",
+        "clicks": 1,
+        "impressions": 1,
+        "position": 2
+      },
+      {
+        "url": "https://www.momo.vn/hoi-dap/quan-ly-ung-dung-va-tai-khoan-ctgr2/khoa-huy-mo-lai-tai-khoan",
+        "clicks": 1,
+        "impressions": 1,
+        "position": 3
+      },
+      {
+        "url": "https://www.momo.vn/hoi-dap/toi-co-bi-phat-khi-thanh-toan-qua-han-vi-tra-sau-khong",
+        "clicks": 1,
+        "impressions": 1,
+        "position": 7
+      },
+      {
+        "url": "https://www.momo.vn/hoi-dap/toi-se-thanh-toan-du-no-vi-tra-sau-nhu-the-nao",
+        "clicks": 1,
+        "impressions": 1,
+        "position": 1
+      },
+      {
+        "url": "https://www.momo.vn/hoi-dap/vi-sao-nguoi-khac-co-han-muc-vi-tra-sau-3000000d-ngay-den-han-la-ngay-10-hang-thang-nhung-toi-duoc-tang-len-3000000d-thi-ngay-den-han-cua-toi-van-la",
+        "clicks": 1,
+        "impressions": 1,
+        "position": 6
+      },
+      {
+        "url": "https://www.momo.vn/merchant",
+        "clicks": 1,
+        "impressions": 1,
+        "position": 5
+      },
+      {
+        "url": "https://www.momo.vn/blog/cac-vi-tra-sau-de-duyet-nhat-hien-nay-c116dt2286#so-sanh-nhanh-cac-vi-tra-sau-de-duyet",
+        "clicks": 0,
+        "impressions": 1887,
+        "position": 2.6
+      },
+      {
+        "url": "https://www.momo.vn/blog/cac-vi-tra-sau-de-duyet-nhat-hien-nay-c116dt2286#bi-quyet-duoc-duyet-vi-tra-sau-nhanh-chong",
+        "clicks": 0,
+        "impressions": 1781,
+        "position": 2.6
+      },
+      {
+        "url": "https://www.momo.vn/blog/cac-vi-tra-sau-de-duyet-nhat-hien-nay-c116dt2286#vi-tra-sau-la-gi-va-vi-sao-de-duyet-lai-quan-trong",
+        "clicks": 0,
+        "impressions": 1781,
+        "position": 2.6
+      },
+      {
+        "url": "https://www.momo.vn/blog/cac-vi-tra-sau-de-duyet-hien-nay-c116dt2286",
+        "clicks": 0,
+        "impressions": 29,
+        "position": 1
+      },
+      {
+        "url": "https://www.momo.vn/blog/mua-truoc-tra-sau-c116dt1126",
+        "clicks": 0,
+        "impressions": 25,
+        "position": 24.9
+      },
+      {
+        "url": "https://www.momo.vn/blog/dieu-kien-mo-vi-tra-sau-la-gi-c116dt2575",
+        "clicks": 0,
+        "impressions": 23,
+        "position": 14.3
+      },
+      {
+        "url": "https://www.momo.vn/hoi-dap/mo-vi-tra-sau-nhung-khong-dung-thi-co-bi-tinh-phi-gi-khong",
+        "clicks": 0,
+        "impressions": 22,
+        "position": 6.5
+      },
+      {
+        "url": "https://www.momo.vn/blog/giai-dap-su-dung-vi-tra-sau-tren-momo-co-mat-phi-khong-c116dt1867",
+        "clicks": 0,
+        "impressions": 14,
+        "position": 3
+      },
+      {
+        "url": "https://www.momo.vn/vi-tra-sau/thanh-toan-sieu-thi",
+        "clicks": 0,
+        "impressions": 6,
+        "position": 7
+      },
+      {
+        "url": "https://www.momo.vn/hoi-dap/huy-khoa-vi-tra-sau",
+        "clicks": 0,
+        "impressions": 5,
+        "position": 42.6
+      },
+      {
+        "url": "https://www.momo.vn/mega-summer-2026",
+        "clicks": 0,
+        "impressions": 5,
+        "position": 93.2
+      },
+      {
+        "url": "https://www.momo.vn/vi-tra-sau/promotion",
+        "clicks": 0,
+        "impressions": 5,
+        "position": 77
+      },
+      {
+        "url": "https://www.momo.vn/blog/co-nen-huy-vi-tra-sau-momo-c116dt1036",
+        "clicks": 0,
+        "impressions": 4,
+        "position": 17.5
+      },
+      {
+        "url": "https://www.momo.vn/",
+        "clicks": 0,
+        "impressions": 3,
+        "position": 2
+      },
+      {
+        "url": "https://www.momo.vn/vay-nhanh/blog/no-xau-la-gi-huong-dan-kiem-tra-va-xoa-no-xau-1122",
+        "clicks": 0,
+        "impressions": 3,
+        "position": 2
+      },
+      {
+        "url": "https://www.momo.vn/page/9818356",
+        "clicks": 0,
+        "impressions": 2,
+        "position": 1
+      }
+    ],
+    "live_rankings": []
+  },
+  "competitors": [
+    {
+      "rank": 1,
+      "title": "Các ví trả sau phổ biến nhất tại Việt Nam 2026 - goevo.vn",
+      "url": "https://www.goevo.vn/blog/cac-vi-tra-sau",
+      "domain": "www.goevo.vn",
+      "snippet": "Tìm hiểu các ví trả sau phổ biến nhất Việt Nam. Top 06 ví trả sau hiện nay, cách lựa chọn mở ví trả sau phù hợp nhất để chi tiêu.",
+      "h1": [
+        "Các ví trả sau phổ biến nhất tại Việt Nam 2026"
+      ],
+      "h2": [
+        "Top 06 các ví trả sau phổ biến nhất",
+        "Vậy ví trả sau là gì?",
+        "Nên chọn ví trả sau hay thẻ tín dụng?",
+        "Các câu hỏi thường gặp về ví trả sau"
+      ],
+      "h3": [
+        "1. Ví trả sau MoMo",
+        "2. Ví trả sau ZaloPay",
+        "3. Ví trả sau ShopeePay Later (SPayLater)",
+        "4. Ví trả sau VNPAY",
+        "5. Ví trả sau SmartPay",
+        "6. Ví trả sau PayNow",
+        "Làm thế nào để đăng ký ví trả sau?",
+        "‍Lợi ích của việc sở hữu thẻ tín dụng TPBank EVO",
+        "Ví trả sau có ảnh hưởng đến điểm tín dụng CIC không?",
+        "Có thể rút tiền mặt từ ví trả sau được không?",
+        "Làm gì nếu không thanh toán ví trả sau đúng hạn?",
+        "Ví trả sau có an toàn không?"
+      ],
+      "word_count": 14,
+      "schemas": [],
+      "has_table": false,
+      "has_form_or_tool": false,
+      "format_type": "FAQ & In-depth Guide",
+      "page_title": "Các ví trả sau phổ biến nhất tại Việt Nam 2026",
+      "body_text": "Trở vềHành trình sốCác ví trả sau phổ biến nhất tại Việt Nam 2026"
+    },
+    {
+      "rank": 3,
+      "title": "Top 10 dịch vụ mua trước trả sau dễ mở, uy tín nhất 2025",
+      "url": "https://zalopay.vn/cac-dich-vu-mua-truoc-tra-sau-de-mo-6935",
+      "domain": "zalopay.vn",
+      "snippet": "Top 10 ứng dụng ví trả sau dễ mở và phổ biến nhất hiện nay 2025: Zalopay, Kredivo, Fundiin, Fiin Credit, SPaylater, Home PayLater, Paynow, SmartPay, Litnow, KayPay,...",
+      "h1": [
+        "Top 10 dịch vụ mua trước trả sau dễ mở, uy tín nhất 2025"
+      ],
+      "h2": [
+        "Tài khoản trả sau là gì?",
+        "Lợi ích khi sử dụng ứng dụng mua trước trả sau",
+        "10 ứng dụng mua trước trả sau dễ mở, đáng tin cậy nhất",
+        "Một số lưu ý khi sử dụng ví trả sau/ tài khoản trả sau",
+        "Trả sau trên Zalopay - Thủ tục mở tài khoản đơn giản, an toàn"
+      ],
+      "h3": [
+        "1. Zalopay",
+        "2. Home PayLater",
+        "3. Kredivo",
+        "4. Fundiin",
+        "5. Fiin Credit",
+        "6. SPaylater",
+        "7. Paynow",
+        "8. SmartPay",
+        "9. Litnow",
+        "10. KayPay"
+      ],
+      "word_count": 72,
+      "schemas": [],
+      "has_table": false,
+      "has_form_or_tool": false,
+      "format_type": "Article Guide",
+      "page_title": "Top 10 ứng dụng mua trước trả sau dễ mở, uy tín nhất 2025 | Zalopay",
+      "body_text": "Trang chủTin tứcTin tứcCập nhập thông tin mới nhất về ZaloPayKhuyến mãi - Ưu đãiƯu đãi riêng cho người dùng ZaloPayBlogChuyên trang cung cấp thông tin hữu íchDịch vụChuyển tiền - Nhận tiềnMiễn phí, an toàn, chuyển tiền Zalo chatNạp tiền điện thoạiNạp ĐT - Mua thẻ ĐT - Data 3G/4GThanh toán hóa đơnĐiện - Nước - Internet - Chung Cư Mua sắm OnlineThương mại điện tử - Đi chợ OnlineGiải tríGame - Ứng dụng - Xem phim trực tuyếnTải Zalopay"
+    },
+    {
+      "rank": 4,
+      "title": "Ví trả sau MoMo là gì? Cách mở ví, thanh toán & sử dụng",
+      "url": "https://fpt.vn/tin-tuc/vi-tra-sau-momo-14247.html",
+      "domain": "fpt.vn",
+      "snippet": "Khám phá Ví trả sau MoMo: Cách đăng ký, kích hoạt và sử dụng hiệu quả. Cập nhật chi tiết hạn mức, phí, lãi suất và hướng dẫn thanh toán bằng Ví trả sau MoMo.",
+      "h1": [
+        "Ví trả sau MoMo là gì? Cách mở ví, thanh toán & sử dụng"
+      ],
+      "h2": [
+        "Vui lòng chọn mã hợp đồng để tiếp tục",
+        "Ví trả sau MoMo là gì?",
+        "Điều kiện đăng ký Ví trả sau MoMo",
+        "Hạn mức Ví trả sau MoMo là bao nhiêu?",
+        "Cách đăng ký, kích hoạt Ví trả sau MoMo",
+        "Cách thanh toán dịch vụ trên MoMo bằng ví trả sau",
+        "Cách sử dụng Ví trả sau MoMo",
+        "Phí và lãi suất Ví trả sau MoMo bao nhiêu?",
+        "Cách thanh toán dư nợ Ví trả sau MoMo",
+        "Đăng ký dịch vụ FPT - Thanh toán dễ dàng với Ví MoMo",
+        "Những lưu ý khi sử dụng ví trả sau",
+        "Giải đáp câu hỏi thường gặp"
+      ],
+      "h3": [
+        "Lãi suất",
+        "Phí dịch vụ",
+        "Phí chậm thanh toán",
+        "Phí thanh toán tối thiểu",
+        "Phí chuyển đổi trả góp",
+        "Những rủi ro khi thanh toán trễ hạn",
+        "Mẹo giúp bạn không quên hạn thanh toán",
+        "Ví trả sau MoMo có an toàn không?",
+        "Ví trả sau của MoMo thanh toán được ở đâu?",
+        "Không đủ điều kiện đăng ký Ví trả sau MoMo thì sao?",
+        "Ví trả sau MoMo phí bao nhiêu 1 tháng?",
+        "Ví trả sau MoMo có phí ẩn không?",
+        "Có thể hủy Ví trả sau MoMo không?",
+        "Về FPT Telecom",
+        "Khách hàng FPT Telecom"
+      ],
+      "word_count": 238,
+      "schemas": [
+        "Organization",
+        "WebSite",
+        "BreadcrumbList",
+        "NewsArticle"
+      ],
+      "has_table": true,
+      "has_form_or_tool": true,
+      "format_type": "Interactive Tool / Calculator",
+      "page_title": "Ví trả sau MoMo là gì? Cách mở ví, thanh toán & sử dụng",
+      "body_text": "Đăng nhập tài khoản của bạn Tận hưởng các đặc quyền và ưu đãi độc quyền Đăng nhập ngay Thông tin tài khoản Sản phẩm dịch vụ Internet - Wifi Internet gia đình Internet cá nhân Internet game thủ Internet Wi-Fi 7 Internet doanh nghiệp Wifi Mesh Truyền hình & Giải trí Xem Ngoại Hạng Anh Combo Internet truyền hình Nâng cấp Combo Internet + Truyền hình Smart Tivi Sức khỏe & Y tế FPT MediCare Camera & Nhà thông minh FPT Camera AI FPT Smart Home Mua thêm Camera Dịch vụ tiện ích & Bảo mật F-Safe UltraFast HyperFast Mới Tin tức Dịch vụ Viễn thông công nghệ Camera Tin FPT Thể thao & Giải trí Thể thao Giải trí Game Tin Ngoại Hạng Anh Lịch thi đấu Bảng xếp hạng Kết quả trận đấu Ưu đãi & Đời sống Đời sống Khách hàng thân thiết Đặc quyền hội viên Khách hàng thân thiết Giới thiệu bạn bè Thanh toán & hỗ trợ Hỗ trợ thông tin Hướng dẫn sử dụng Hướng dẫn sử dụng Camera Chính sách & quy trình Câu hỏi thường gặp Điều khoản Thanh toán và tra cứu Thanh toán hóa đơn Hỗ trợ kỹ thuật Hướng dẫn cài đặt Xử lý sự cố Yêu cầu hỗ trợ Tạo yêu cầu hỗ trợ Hỗ trợ trực tuyến 24/7 Liên hệ hỗ trợ Tổng đài 19006600 Ứng dụng Hi FPT Kênh Zalo OA Phòng giao dịch Về FPT Telecom Đăng xuất"
+    }
+  ]
+}

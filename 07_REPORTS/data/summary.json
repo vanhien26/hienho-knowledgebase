@@ -7,51 +7,51 @@
   },
   "running": {
     "month": "2026-10",
-    "daysElapsed": 15,
+    "daysElapsed": 18,
     "daysInMonth": 31,
-    "report": "monthly_10_2026_mtd_15d.json",
-    "pv": 1783063,
+    "report": "monthly_10_2026_mtd_18d.json",
+    "pv": 2145169,
     "target": 3665607,
-    "dailyPace": 118870.87,
-    "forecast31d": 3684996.87,
-    "forecastPct": 100.53
+    "dailyPace": 119176.06,
+    "forecast31d": 3694457.72,
+    "forecastPct": 100.79
   },
   "channels": {
-    "organic": 1028151,
-    "direct": 443843,
-    "referral": 140993,
-    "paid": 150364,
-    "others": 19712
+    "organic": 1186260,
+    "direct": 535648,
+    "referral": 179573,
+    "paid": 213940,
+    "others": 29748
   },
   "hubs": [
     {
       "id": "cinema",
       "name": "Cinema Hub",
-      "pv": 660430,
+      "pv": 766018,
       "target": 1117378
     },
     {
       "id": "financial",
       "name": "Financial Hub",
-      "pv": 111036,
+      "pv": 132705,
       "target": 450000
     },
     {
       "id": "new_user",
       "name": "New User Hub",
-      "pv": 61292,
+      "pv": 72619,
       "target": 300000
     },
     {
       "id": "vehicle",
       "name": "Vehicle Hub",
-      "pv": 14307,
+      "pv": 19184,
       "target": 100000
     },
     {
       "id": "student",
       "name": "Student Hub",
-      "pv": 1035,
+      "pv": 1141,
       "target": 100000
     }
   ]

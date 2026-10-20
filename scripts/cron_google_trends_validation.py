@@ -133,8 +133,8 @@ def main():
         print("[ERROR] Thiếu thư viện pytrends. Hãy chạy: pip3 install pytrends")
         sys.exit(1)
 
-    # Khởi tạo Pytrends với timeout và retry an toàn
-    pytrends = TrendReq(hl='vi-VN', tz=420, timeout=(15, 30), retries=2, backoff_factor=0.2)
+    # Khởi tạo Pytrends với timeout an toàn (retries=0 để tương thích urllib3 2.0+)
+    pytrends = TrendReq(hl='vi-VN', tz=420, timeout=(15, 30), retries=0)
 
     batch_size = 5
     new_results = []

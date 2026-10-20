@@ -2,8 +2,8 @@
 
 Trang mục lục tra cứu toàn bộ các bản kế hoạch nội dung (Content Plans) của MoMo Web Platform. Được tạo lập và đồng bộ tự động từ kho dữ liệu Semantic Keyword Inventory.
 
-- **Tổng số Content Plans đã xuất bản:** 12 bản kế hoạch
-- **Tổng dung lượng tìm kiếm phục vụ:** 1,461,815,700 lượt/tháng
+- **Tổng số Content Plans đã xuất bản:** 18 bản kế hoạch
+- **Tổng dung lượng tìm kiếm phục vụ:** 1,494,720,000 lượt/tháng
 
 ---
 
@@ -14,6 +14,12 @@ Trang mục lục tra cứu toàn bộ các bản kế hoạch nội dung (Conte
 | `Financial` | **gui-tiet-kiem** | 6 topics | 1,895,060 | [gui-tiet-kiem.md](Financial/gui-tiet-kiem-content-plan.md) |
 | `Lottery` | **vietlott** | 9 topics | 1,455,346,350 | [vietlott.md](Lottery/vietlott-content-plan.md) |
 | `Root` | **bien-so-xe (1)** | 6 topics | 619,140 | [bien-so-xe (1).md](bien-so-xe (1)-content-plan.md) |
+| `cinema` | **ve-xem-phim** | 1 topics | 7,278,550 | [ve-xem-phim.md](cinema/ve-xem-phim-content-plan.md) |
+| `cinema` | **dat-phim** | 1 topics | 7,266,100 | [dat-phim.md](cinema/dat-phim-content-plan.md) |
+| `cinema` | **lich-phim** | 3 topics | 6,871,500 | [lich-phim.md](cinema/lich-phim-content-plan.md) |
+| `cinema` | **rap** | 4 topics | 6,453,470 | [rap.md](cinema/rap-content-plan.md) |
+| `cinema` | **phim** | 2 topics | 3,162,590 | [phim.md](cinema/phim-content-plan.md) |
+| `cinema` | **mua-ve-phim** | 2 topics | 1,872,090 | [mua-ve-phim.md](cinema/mua-ve-phim-content-plan.md) |
 | `insurtech` | **bao-hiem** | 6 topics | 452,630 | [bao-hiem.md](insurtech/bao-hiem-content-plan.md) |
 | `insurtech` | **bhxh** | 4 topics | 340,220 | [bhxh.md](insurtech/bhxh-content-plan.md) |
 | `insurtech` | **bhyt** | 4 topics | 152,680 | [bhyt.md](insurtech/bhyt-content-plan.md) |

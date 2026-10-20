@@ -154,13 +154,19 @@ def calculate_opportunity_score(volume, cpc, competition, intent):
     return round(score, 2)
 
 def classify_quadrant(volume, competition, intent):
-    """Phân loại 4 góc phần tư: Quick Win / Strategic Pillar / Commercial Converter / Long-tail."""
+    """Phân loại 4 góc phần tư: Quick Win / Strategic Pillar / Commercial Converter / Long-tail.
+    Head terms khổng lồ (>= 300k search) hoặc Informational Head (>= 50k search) là Strategic Pillar,
+    không thể là Quick Win do độ khó SEO Organic thực tế rất cao.
+    """
     comp_val = competition.lower()
     is_high_comp = 'high' in comp_val or 'medium' in comp_val
-    if volume >= QUICK_WIN_MIN_VOLUME and not is_high_comp:
-        return 'Quick Win'
-    elif volume >= STRATEGIC_PILLAR_MIN_VOLUME and is_high_comp:
+    is_head_volume = volume >= 300000
+    is_info_head = (intent == 'Informational' and volume >= 50000)
+
+    if volume >= STRATEGIC_PILLAR_MIN_VOLUME and (is_high_comp or is_head_volume or is_info_head):
         return 'Strategic Pillar'
+    elif volume >= QUICK_WIN_MIN_VOLUME and not is_high_comp and not is_head_volume and not is_info_head:
+        return 'Quick Win'
     elif volume >= COMMERCIAL_CONVERTER_MIN_VOLUME and intent in ['Commercial', 'Tool/Calculator', 'Transactional']:
         return 'Commercial Converter'
     else:
@@ -202,6 +208,9 @@ CROSS_DOMAIN_OUTLIERS = {
     ],
     'student': [
         'chợ tốt', 'vietnamworks', 'vietnamwork', 'topcv', 'vieclam24h', 'game', 'hack'
+    ],
+    'ota': [
+        'phào chỉ', 'phào nhôm', 'gia phả dòng họ', 'cây gia phả', 'game', 'hack'
     ]
 }
 
@@ -353,6 +362,24 @@ class SemanticDomainFilter:
         return False, "valid"
 
 
+def calculate_kd(competition: str, volume: int = 0, cpc: float = 0.0) -> int:
+    """
+    Tính chỉ số Độ khó từ khóa (Keyword Difficulty - KD 0-100) chuẩn xác
+    dựa trên PPC Competition từ kho CSV, Volume tìm kiếm và CPC thực tế.
+    """
+    comp = str(competition).strip().lower()
+    if 'high' in comp or 'cao' in comp:
+        base = 65
+    elif 'med' in comp or 'trung' in comp:
+        base = 40
+    else:
+        base = 18
+    vol_bonus = min(15, math.log10(max(1, volume)) * 2.5) if volume > 10 else 0
+    cpc_bonus = min(10, cpc * 3) if cpc > 0 else 0
+    kd = round(base + vol_bonus + cpc_bonus)
+    return max(5, min(95, kd))
+
+
 class SERPCannibalizationShield:
     """
     Cơ chế phát hiện SERP Intent Overlap & Triệt tiêu Keyword Cannibalization.
@@ -459,6 +486,8 @@ class SERPCannibalizationShield:
                     'volume': item['volume'],
                     'cpc': item.get('cpc', 0.0),
                     'competition': item.get('competition', 'Low'),
+                    'kd': item.get('kd', calculate_kd(item.get('competition', 'Low'), item['volume'], item.get('cpc', 0.0))),
+                    'trending': item.get('trending', False),
                     'intent': intent,
                     'opportunity_score': item.get('opportunity_score', 0.0),
                     'quadrant': item.get('quadrant', 'Supporting'),
@@ -990,27 +1019,324 @@ class GEODirectAnswerGenerator:
     """
     Sinh nội dung tối ưu cho Tìm kiếm Tạo sinh (Generative Engine Optimization - GEO):
     Phục vụ trích dẫn trực tiếp cho Google AI Overviews, SearchGPT, Perplexity và Gemini.
+    Được thiết kế theo cấu trúc Ontology đa tầng: Nhận diện Archetype thực thể nghiệp vụ
+    đặc thù (Savings, Loan, Gold/FX, Securities, Fines, Motor Insurance, BHYT/BHXH, Cinema, Telco...)
+    để cung cấp số liệu định lượng, căn cứ pháp lý và giá trị Information Gain cao nhất.
     """
     @staticmethod
-    def generate_direct_answer_snippet(usecase_name: str, pillar_kw: str, intent: str, sector: str) -> str:
-        """Đoạn định nghĩa chuẩn xác 40-60 từ để công cụ tìm kiếm AI bốc làm Direct Answer"""
-        action_verb = "tra cứu và tính toán" if intent == 'Tool/Calculator' else ("so sánh và lựa chọn giải pháp" if intent == 'Commercial' else "thực hiện giao dịch trực tuyến")
-        return (
-            f"{pillar_kw.capitalize()} là giải pháp tiện ích số trên Nền tảng Web MoMo, cho phép người dùng "
-            f"{action_verb} {usecase_name.lower()} một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. "
-            f"Dịch vụ liên kết với các đối tác uy tín hàng đầu, đảm bảo chuẩn bảo mật PCI DSS quốc tế và hỗ trợ thao tác "
-            f"liền mạch từ trình duyệt Web đến Ứng dụng MoMo trong 1-3 phút."
-        )
+    def _resolve_archetype(usecase_name: str, sector: str, usecase_slug: str = None) -> str:
+        text = f"{usecase_slug or ''} {usecase_name} {sector}".lower()
+        if any(k in text for k in ['gui-tiet-kiem', 'tiet-kiem', 'lai-suat', 'tich-luy', 'chung-chi-tien-gui', 'lai-kep']):
+            return 'savings'
+        if any(k in text for k in ['diem-tin-dung', 'no-xau', 'cic']):
+            return 'credit_score_cic'
+        if any(k in text for k in ['vay', 'tin-chap', 'the-chap', 'lai-vay', 'the-tin-dung', 'vi-tra-sau', 'thau-chi', 'tra-gop', 'du-no']):
+            return 'loan_credit'
+        if any(k in text for k in ['gia-vang', 'vang', 'bac', 'ty-gia', 'ngoai-te', 'doi-tien', 'kieu-hoi']):
+            return 'gold_fx'
+        if any(k in text for k in ['chung-khoan', 'co-phieu', 'trai-phieu', 'chung-chi-quy', 'quy-etf', 'phai-sinh', 'ma-chung-khoan', 'dau-tu', 'crypto']):
+            return 'investment_securities'
+        if any(k in text for k in ['thue-tncn', 'ma-so-thue', 'tinh-luong', 'giam-tru-gia-canh', 'thue']):
+            return 'tax_salary'
+        if any(k in text for k in ['phat-nguoi', 'loi-giao-thong', 'dang-kiem', 'giay-phep-lai-xe', 'thi-bang-lai-xe']):
+            return 'traffic_fines'
+        if any(k in text for k in ['bien-so', 'sang-ten-xe', 'thue-truoc-ba']):
+            return 'vehicle_plate_reg'
+        if any(k in text for k in ['gara', 'sua-xe', 'rua-xe', 'cuu-ho', 'bao-duong', 'dinh-gia-xe', 'gia-xe', 'gia-xang', 'gia-dau', 'tram-sac', 'doi-pin', 'vetc', 'epass']):
+            return 'vehicle_maintenance'
+        if any(k in text for k in ['bao-hiem-xe-may', 'bao-hiem-o-to', 'phi-bao-hiem']):
+            return 'insurance_motor'
+        if any(k in text for k in ['bhyt', 'bhxh', 'bao-hiem-nhan-tho', 'bao-hiem-tai-nan', 'bao-hiem-chay-no']):
+            return 'insurance_health_social'
+        if any(k in text for k in ['rap', 've-xem-phim', 'lich-phim', 'dat-phim', 'phim']):
+            return 'cinema_tickets'
+        if any(k in text for k in ['ve-may-bay', 've-tau', 've-xe', 've-cap-treo', 'tour-du-lich', 'du-lich', 'dat-resort', 'visa-du-lich']):
+            return 'ota_travel'
+        if any(k in text for k in ['data-4g', 'nap-tien-dien-thoai', 'sim', 'esim']):
+            return 'telco_data'
+        if any(k in text for k in ['benh-vien', 'dat-lich-kham', 'kham-benh', 'calo', 'bmi']):
+            return 'hospital_health'
+        if any(k in text for k in ['dai-hoc', 'cao-dang', 'trung-cap', 'diem-chuan', 'hoc-phi', 'tuyen-sinh', 'sinh-vien', 'nha-tro']):
+            return 'student_education'
+        if any(k in text for k in ['xo-so', 'vietlott', 've-so']):
+            return 'lottery'
+        return sector.lower()
 
     @staticmethod
-    def generate_entity_factsheet(usecase_name: str, sector: str, intent: str) -> list:
-        """Bảng dữ liệu thực thể (Entity Facts) chuẩn hóa cho AI Knowledge Graph"""
-        return [
-            {"entity_field": "Phân loại giải pháp", "value": f"Tiện ích Web {sector.title()} - MoMo Web Platform"},
-            {"entity_field": "Đối tượng áp dụng", "value": "Toàn bộ người dùng cá nhân có nhu cầu tra cứu và giao dịch trực tuyến"},
-            {"entity_field": "Thời gian xử lý", "value": "Xử lý tức thì (Real-time), hỗ trợ 24/7 không phụ thuộc giờ hành chính"},
-            {"entity_field": "Hạ tầng kỹ thuật", "value": "Kết nối API trực tiếp từ hệ thống đối tác liên kết chính thức"},
-            {"entity_field": "Tiêu chuẩn bảo mật", "value": "Bảo mật đa tầng, đạt chứng chỉ bảo mật quốc tế PCI DSS Level 1"},
-            {"entity_field": "Kênh thao tác liền mạch", "value": "Trình duyệt Web (Desktop/Mobile) kết hợp chuyển tiếp Web-to-App MoMo"}
-        ]
+    def generate_direct_answer_snippet(usecase_name: str, pillar_kw: str, intent: str, sector: str, usecase_slug: str = None) -> str:
+        """Đoạn định nghĩa chuẩn xác 40-70 từ chứa Information Gain cao để công cụ tìm kiếm AI bốc làm Direct Answer"""
+        arch = GEODirectAnswerGenerator._resolve_archetype(usecase_name, sector, usecase_slug)
+        kw = pillar_kw.capitalize()
+
+        if arch == 'savings':
+            return (
+                f"{kw} là giải pháp tài chính số cho phép người dùng cá nhân gửi tiền nhàn rỗi vào các ngân hàng thương mại "
+                f"được Ngân hàng Nhà nước cấp phép nhằm sinh lời an toàn. Khoản tiền gửi được bảo hiểm theo quy định của BHTGVN "
+                f"(hạn mức 125 triệu đồng), áp dụng đa dạng kỳ hạn từ 1 đến 36 tháng với lãi suất niêm yết minh bạch và hỗ trợ quản lý trực tuyến 24/7."
+            )
+        elif arch == 'loan_credit':
+            return (
+                f"{kw} là hình thức cấp tín dụng tiêu dùng số cho phép cá nhân tiếp cận nguồn vốn hợp pháp từ các tổ chức tín dụng "
+                f"được Ngân hàng Nhà nước cấp phép mà không cần tài sản thế chấp. Hạn mức và lãi suất được duyệt tự động dựa trên điểm tín dụng cá nhân, "
+                f"giải ngân tức thì với lịch trả góp minh bạch và công thức tính lãi theo dư nợ giảm dần."
+            )
+        elif arch == 'gold_fx':
+            return (
+                f"{kw} là tiện ích theo dõi biến động giá vàng miếng SJC, vàng nhẫn 9999 và tỷ giá ngoại tệ ngân hàng theo thời gian thực "
+                f"từ các tổ chức kinh doanh vàng bạc và hệ thống ngân hàng được cấp phép. Dữ liệu đối chiếu trực tiếp với thị trường quốc tế, "
+                f"giúp người dùng nắm bắt chênh lệch mua vào - bán ra và đưa ra quyết định giao dịch chính xác."
+            )
+        elif arch == 'investment_securities':
+            return (
+                f"{kw} là công cụ tài chính số giúp nhà đầu tư cá nhân tiếp cận các sản phẩm tích lũy và đầu tư được cấp phép bởi Ủy ban Chứng khoán "
+                f"Nhà nước (UBCKNN). Nền tảng hỗ trợ tra cứu danh mục, theo dõi giá trị tài sản ròng (NAV), phân tích biểu đồ kỹ thuật và thực hiện "
+                f"giao dịch thuận tiện với tính thanh khoản cao."
+            )
+        elif arch == 'credit_score_cic':
+            return (
+                f"{kw} là chỉ số phản ánh mức độ uy tín tài chính và lịch sử quan hệ tín dụng của cá nhân, được quản lý và ghi nhận bởi "
+                f"Trung tâm Thông tin Tín dụng Quốc gia (CIC - NHNN). Việc theo dõi điểm tín dụng giúp người dùng chủ động kiểm soát hồ sơ nợ, "
+                f"phòng ngừa rủi ro nợ xấu và tối ưu hóa điều kiện xét duyệt khi mở thẻ hoặc vay vốn ngân hàng."
+            )
+        elif arch == 'tax_salary':
+            return (
+                f"{kw} là công cụ tính toán và tra cứu nghĩa vụ thuế số hóa, hỗ trợ người lao động xác định chính xác số thuế TNCN phải nộp "
+                f"theo biểu thuế lũy tiến từng phần, áp dụng đầy đủ mức giảm trừ gia cảnh (11 triệu đồng cho bản thân, 4.4 triệu đồng cho người phụ thuộc) "
+                f"và các khoản đóng bảo hiểm bắt buộc theo đúng quy định hiện hành của Bộ Tài chính."
+            )
+        elif arch == 'traffic_fines':
+            return (
+                f"{kw} là hình thức xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ được ghi nhận qua hệ thống camera giám sát của "
+                f"Cục Cảnh sát Giao thông. Chủ phương tiện có thể tra cứu thông tin lỗi, thời gian, địa điểm và hình ảnh vi phạm trực tuyến, "
+                f"từ đó chủ động nộp phạt trước khi phương tiện bị gửi cảnh báo sang hệ thống đăng kiểm sau 20 ngày."
+            )
+        elif arch == 'vehicle_plate_reg':
+            return (
+                f"{kw} là tiện ích hỗ trợ tra cứu mã vùng biển số xe 63 tỉnh thành, thông tin đấu giá biển số định danh theo Nghị quyết 73/2022/QH15 "
+                f"và hướng dẫn thủ tục đăng ký, sang tên phương tiện theo Thông tư 24/2023/TT-BCA, giúp chủ xe hoàn thiện hồ sơ pháp lý minh bạch và nhanh chóng."
+            )
+        elif arch == 'vehicle_maintenance':
+            return (
+                f"{kw} là tiện ích toàn diện cho chủ phương tiện cơ giới, hỗ trợ tra cứu định giá xe, chi phí bảo dưỡng định kỳ, bảng giá xăng dầu "
+                f"và mạng lưới trạm sạc, garage sửa chữa uy tín toàn quốc. Dữ liệu cập nhật liên tục giúp người dùng dự toán ngân sách vận hành và chăm sóc xe tối ưu."
+            )
+        elif arch == 'insurance_motor':
+            return (
+                f"{kw} là gói bảo hiểm bắt buộc theo Nghị định 67/2023/NĐ-CP nhằm bồi thường thiệt hại về người (tối đa 150 triệu đồng/vụ) và tài sản "
+                f"cho bên thứ ba khi xảy ra tai nạn giao thông. Chủ xe có thể mua và nhận giấy chứng nhận bảo hiểm điện tử tích hợp mã QR hợp lệ trong 1 phút, "
+                f"sử dụng thuận tiện khi xuất trình với lực lượng kiểm tra."
+            )
+        elif arch == 'insurance_health_social':
+            return (
+                f"{kw} là chính sách an sinh xã hội trụ cột do Bảo hiểm Xã hội Việt Nam quản lý, giúp người tham gia giảm thiểu gánh nặng tài chính "
+                f"khi khám chữa bệnh (mức hưởng đến 100% đúng tuyến) hoặc nhận trợ cấp thai sản, ốm đau, hưu trí. Dịch vụ hỗ trợ tra cứu mã thẻ, "
+                f"đóng tiếp hoặc gia hạn BHYT hộ gia đình trực tuyến nhanh chóng."
+            )
+        elif arch == 'cinema_tickets':
+            return (
+                f"{kw} là dịch vụ tổng hợp lịch chiếu, giá vé và sơ đồ ghế ngồi thời gian thực của toàn bộ các cụm rạp chiếu phim lớn trên cả nước "
+                f"(CGV, Lotte, Galaxy, BHD, Beta). Người xem có thể dễ dàng so sánh suất chiếu gần nhất, áp dụng mã giảm giá độc quyền và đặt vé trực tuyến "
+                f"nhận vé điện tử Smart Ticket vào thẳng phòng chiếu."
+            )
+        elif arch == 'ota_travel':
+            return (
+                f"{kw} là nền tảng so sánh giá vé máy bay, vé tàu xe, phòng nghỉ và tour du lịch từ các hãng vận chuyển và đối tác lữ hành uy tín. "
+                f"Hệ thống hỗ trợ tìm kiếm hành trình tối ưu, xác nhận mã đặt chỗ (PNR) tức thì và quản lý lịch trình linh hoạt với nhiều chương trình khuyến mãi du lịch."
+            )
+        elif arch == 'telco_data':
+            return (
+                f"{kw} là tiện ích nạp tiền điện thoại, đăng ký gói cước data 4G/5G tốc độ cao và mua eSIM du lịch quốc tế kết nối trực tiếp với "
+                f"các nhà mạng viễn thông hàng đầu (Viettel, VinaPhone, MobiFone). Dịch vụ xử lý kích hoạt tự động 24/7 với chiết khấu cạnh tranh và đa dạng gói cước."
+            )
+        elif arch == 'hospital_health':
+            return (
+                f"{kw} là giải pháp y tế số giúp người dân tra cứu thông tin chuyên khoa, lịch công tác của bác sĩ và chủ động đặt lịch khám bệnh trực tuyến "
+                f"tại các bệnh viện tuyến đầu, hạn chế tình trạng xếp hàng lấy số và hỗ trợ quản lý hồ sơ tiếp đón bệnh án điện tử an toàn, tiện lợi."
+            )
+        elif arch == 'student_education':
+            return (
+                f"{kw} là chuyên trang thông tin giáo dục tổng hợp điểm chuẩn xét tuyển, đề án tuyển sinh, biểu phí đào tạo và các chính sách học bổng, "
+                f"hỗ trợ vay vốn sinh viên cho các trường đại học, cao đẳng trên toàn quốc, giúp phụ huynh và học sinh lựa chọn ngành học phù hợp."
+            )
+        elif arch == 'lottery':
+            return (
+                f"{kw} là tiện ích theo dõi kết quả mở thưởng xổ số kiến thiết 3 miền và xổ số điện toán Vietlott theo thời gian thực từ các hội đồng "
+                f"quay thưởng chính thức, cung cấp bảng thống kê giải thưởng minh bạch và hướng dẫn quy trình lĩnh thưởng hợp pháp theo quy định của Bộ Tài chính."
+            )
+        else:
+            action_verb = "tra cứu và tính toán" if intent == 'Tool/Calculator' else ("so sánh và lựa chọn giải pháp" if intent == 'Commercial' else "thực hiện giao dịch trực tuyến")
+            return (
+                f"{kw} là tiện ích chuyên sâu thuộc lĩnh vực {sector.title()} trên Kênh Web MoMo, hỗ trợ người dùng {action_verb} "
+                f"{usecase_name.lower()} một cách nhanh chóng, minh bạch và chính xác theo thời gian thực. Dịch vụ kết nối trực tiếp với các đơn vị "
+                f"uy tín hàng đầu, đảm bảo tiêu chuẩn bảo mật dữ liệu và mang lại trải nghiệm liền mạch từ Web sang Ứng dụng."
+            )
+
+    @staticmethod
+    def generate_entity_factsheet(usecase_name: str, sector: str, intent: str, usecase_slug: str = None) -> list:
+        """Bảng dữ liệu thực thể nghiệp vụ (Entity Facts) đặc thù theo từng lĩnh vực phục vụ AI Knowledge Graph"""
+        arch = GEODirectAnswerGenerator._resolve_archetype(usecase_name, sector, usecase_slug)
+
+        if arch == 'savings':
+            return [
+                {"entity_field": "Cơ quan quản lý nhà nước", "value": "Ngân hàng Nhà nước Việt Nam (NHNN)"},
+                {"entity_field": "Chính sách bảo hiểm tiền gửi", "value": "Hạn mức tối đa 125.000.000 VNĐ/cá nhân tại một tổ chức (BHTGVN)"},
+                {"entity_field": "Kỳ hạn huy động áp dụng", "value": "Linh hoạt từ không kỳ hạn, 1, 3, 6, 9, 12 đến 36 tháng"},
+                {"entity_field": "Phương thức chi trả lãi", "value": "Lĩnh lãi cuối kỳ, định kỳ hàng tháng/quý hoặc nhận lãi trước"},
+                {"entity_field": "Hệ thống tổ chức huy động", "value": "Ngân hàng thương mại Nhà nước (Big 4) và NHTM Cổ phần được cấp phép"},
+                {"entity_field": "Căn cứ pháp lý áp dụng", "value": "Luật Các tổ chức tín dụng & Thông tư quy định về tiền gửi tiết kiệm"}
+            ]
+        elif arch == 'loan_credit':
+            return [
+                {"entity_field": "Cơ quan cấp phép & giám sát", "value": "Ngân hàng Nhà nước Việt Nam (Cơ chế cấp phép tổ chức tín dụng)"},
+                {"entity_field": "Phương thức tính lãi suất", "value": "Lãi suất danh nghĩa & lãi suất thực tế theo dư nợ giảm dần (APR)"},
+                {"entity_field": "Thời hạn thanh toán khoản vay", "value": "Kỳ hạn linh hoạt từ 1 đến 36 tháng hoặc theo chu kỳ sao kê hàng tháng"},
+                {"entity_field": "Tiêu chí thẩm định hạn mức", "value": "Thuật toán chấm điểm tín dụng tự động & dữ liệu lịch sử nợ từ CIC"},
+                {"entity_field": "Chi phí phát sinh cần lưu ý", "value": "Phí tất toán trước hạn (1% - 5% dư nợ gốc) và phí phạt chậm trả"},
+                {"entity_field": "Cơ chế bảo mật & ký kết", "value": "Định danh điện tử eKYC sinh trắc học và ký kết hợp đồng số theo luật"}
+            ]
+        elif arch == 'gold_fx':
+            return [
+                {"entity_field": "Thương hiệu niêm yết chính", "value": "SJC, DOJI, PNJ, Bảo Tín Minh Châu, Mi Hồng và hệ thống Ngân hàng"},
+                {"entity_field": "Đơn vị đo lường giao dịch", "value": "Lượng (Cây = 10 chỉ = 37.5g), Chỉ vàng hoặc đơn vị ngoại tệ (USD, EUR...)"},
+                {"entity_field": "Tần suất cập nhật dữ liệu", "value": "Thời gian thực (Real-time) theo diễn biến phiên giao dịch trong nước & quốc tế"},
+                {"entity_field": "Cơ sở tham chiếu quốc tế", "value": "Biểu giá giao ngay thế giới (Kitco/LBMA) quy đổi theo tỷ giá liên ngân hàng"},
+                {"entity_field": "Phân loại sản phẩm chính", "value": "Vàng miếng SJC 999.9, nhẫn tròn trơn 24K, vàng trang sức 18K/14K"},
+                {"entity_field": "Cơ quan điều hành thị trường", "value": "Ngân hàng Nhà nước Việt Nam (Quản lý độc quyền sản xuất vàng miếng)"}
+            ]
+        elif arch == 'investment_securities':
+            return [
+                {"entity_field": "Cơ quan quản lý thị trường", "value": "Ủy ban Chứng khoán Nhà nước (UBCKNN) & Sở Giao dịch (HOSE/HNX)"},
+                {"entity_field": "Phân loại tài sản tài chính", "value": "Cổ phiếu niêm yết, chứng chỉ quỹ mở/ETF, trái phiếu doanh nghiệp, phái sinh"},
+                {"entity_field": "Chu kỳ thanh toán bù trừ", "value": "T+2 đối với giao dịch cổ phiếu và chứng chỉ quỹ theo quy định hiện hành"},
+                {"entity_field": "Tổ chức phát hành & quản lý", "value": "Các công ty quản lý quỹ và công ty chứng khoán thành viên được cấp phép"},
+                {"entity_field": "Phân tầng khẩu vị rủi ro", "value": "Đa dạng từ bảo toàn vốn (trái phiếu/quỹ nợ) đến tăng trưởng (cổ phiếu)"},
+                {"entity_field": "Kênh công bố thông tin", "value": "Báo cáo tài chính kiểm toán, bản cáo bạch và hệ thống cổng thông tin UBCKNN"}
+            ]
+        elif arch == 'credit_score_cic':
+            return [
+                {"entity_field": "Đơn vị quản lý cơ sở dữ liệu", "value": "Trung tâm Thông tin Tín dụng Quốc gia Việt Nam (CIC - NHNN)"},
+                {"entity_field": "Hệ thống phân loại nhóm nợ", "value": "5 nhóm (Nhóm 1: Tiêu chuẩn; Nhóm 2: Chú ý; Nhóm 3-5: Nợ xấu)"},
+                {"entity_field": "Thời gian lưu vết nợ xấu", "value": "Lưu trữ lịch sử từ 3 đến 5 năm kể từ ngày tất toán xong toàn bộ dư nợ"},
+                {"entity_field": "Ý nghĩa điểm số tín dụng", "value": "Quyết định trực tiếp tỷ lệ duyệt hồ sơ vay, hạn mức và lãi suất cấp vốn"},
+                {"entity_field": "Chu kỳ cập nhật dữ liệu", "value": "Định kỳ hàng tháng từ báo cáo của 100% ngân hàng và công ty tài chính"},
+                {"entity_field": "Quyền của chủ thể dữ liệu", "value": "Được tra cứu báo cáo tín dụng cá nhân và yêu cầu đính chính khi có sai sót"}
+            ]
+        elif arch == 'tax_salary':
+            return [
+                {"entity_field": "Cơ quan quản lý thuế", "value": "Tổng cục Thuế (Bộ Tài chính) & hệ thống Thuế các tỉnh, thành phố"},
+                {"entity_field": "Mức giảm trừ gia cảnh", "value": "11.000.000 VNĐ/tháng (bản thân) và 4.400.000 VNĐ/tháng (mỗi người phụ thuộc)"},
+                {"entity_field": "Biểu thuế suất áp dụng", "value": "Biểu thuế lũy tiến từng phần gồm 7 bậc từ 5% đến 35% cho thu nhập tiền lương"},
+                {"entity_field": "Thời hạn quyết toán thuế năm", "value": "Chậm nhất ngày cuối cùng của tháng thứ 4 kể từ ngày kết thúc năm dương lịch"},
+                {"entity_field": "Nền tảng số hóa ngành thuế", "value": "Ứng dụng eTax Mobile và Cổng dịch vụ công của Tổng cục Thuế"},
+                {"entity_field": "Căn cứ pháp lý hiện hành", "value": "Luật Thuế thu nhập cá nhân & các Nghị quyết của Ủy ban Thường vụ Quốc hội"}
+            ]
+        elif arch == 'traffic_fines':
+            return [
+                {"entity_field": "Cơ quan phát hiện & xử phạt", "value": "Cục Cảnh sát Giao thông (Bộ Công an) & Phòng CSGT các địa phương"},
+                {"entity_field": "Công nghệ giám sát vi phạm", "value": "Hệ thống camera AI giám sát thông minh và thiết bị đo tốc độ chuẩn hóa"},
+                {"entity_field": "Thời hạn cảnh báo đăng kiểm", "value": "Tự động gửi thông tin cảnh báo sang Cục Đăng kiểm sau 20 ngày chưa nộp phạt"},
+                {"entity_field": "Quy định cấp tem kiểm định", "value": "Cấp tem kiểm định thời hạn 15 ngày đối với xe chưa hoàn thành xử phạt phạt nguội"},
+                {"entity_field": "Cổng tra cứu & nộp phạt", "value": "Cổng Dịch vụ công Quốc gia, cổng csgt.vn và nền tảng số MoMo"},
+                {"entity_field": "Căn cứ pháp lý xử phạt", "value": "Nghị định 100/2019/NĐ-CP & Nghị định 123/2021/NĐ-CP của Chính phủ"}
+            ]
+        elif arch == 'vehicle_plate_reg':
+            return [
+                {"entity_field": "Cơ quan thẩm quyền cấp biển", "value": "Phòng Cảnh sát Giao thông (Công an các tỉnh, thành phố trực thuộc)"},
+                {"entity_field": "Cơ chế quản lý biển số", "value": "Cấp và quản lý theo mã định danh cá nhân của chủ sở hữu phương tiện"},
+                {"entity_field": "Nền tảng đấu giá trực tuyến", "value": "Công ty Đấu giá Hợp danh Việt Nam (VPA) theo quy chế của Bộ Công an"},
+                {"entity_field": "Quy định giữ biển khi chuyển nhượng", "value": "Cơ quan công an giữ lại biển số định danh trong kho dữ liệu 05 năm"},
+                {"entity_field": "Thủ tục bắt buộc khi bán xe", "value": "Thu hồi chứng nhận đăng ký, biển số xe trước khi làm thủ tục sang tên"},
+                {"entity_field": "Căn cứ pháp lý áp dụng", "value": "Thông tư 24/2023/TT-BCA & Nghị quyết 73/2022/QH15 của Quốc hội"}
+            ]
+        elif arch == 'vehicle_maintenance':
+            return [
+                {"entity_field": "Phân loại tiện ích phương tiện", "value": "Dịch vụ vận hành, bảo dưỡng & hạ tầng giao thông đường bộ"},
+                {"entity_field": "Cơ chế cập nhật giá xăng dầu", "value": "Điều chỉnh theo kỳ điều hành của Liên Bộ Công Thương - Tài chính"},
+                {"entity_field": "Hạ tầng trạm thu phí không dừng", "value": "Hệ thống tài khoản giao thông VETC và ePass liên thông toàn quốc"},
+                {"entity_field": "Mạng lưới đối tác cung ứng", "value": "Hệ thống garage ô tô, xưởng dịch vụ ủy quyền và trạm xăng dầu chính hãng"},
+                {"entity_field": "Quy chuẩn an toàn kỹ thuật", "value": "Kiểm định định kỳ theo quy định của Cục Đăng kiểm Việt Nam"},
+                {"entity_field": "Phương thức quản lý chi phí", "value": "Lưu trữ lịch sử giao dịch và nhắc lịch bảo dưỡng, đăng kiểm tự động"}
+            ]
+        elif arch == 'insurance_motor':
+            return [
+                {"entity_field": "Phân loại sản phẩm bảo hiểm", "value": "Bảo hiểm trách nhiệm dân sự bắt buộc của chủ xe cơ giới & tự nguyện"},
+                {"entity_field": "Căn cứ pháp lý ban hành", "value": "Nghị định số 67/2023/NĐ-CP của Chính phủ về bảo hiểm bắt buộc"},
+                {"entity_field": "Mức bồi thường tối đa về người", "value": "150.000.000 VNĐ/người/vụ tai nạn đối với thiệt hại thân thể, tính mạng"},
+                {"entity_field": "Mức bồi thường tối đa về tài sản", "value": "50.000.000 VNĐ/vụ (xe máy) hoặc 100.000.000 VNĐ/vụ (xe ô tô)"},
+                {"entity_field": "Hình thức giấy chứng nhận", "value": "Giấy chứng nhận bảo hiểm điện tử có mã QR tra cứu tính pháp lý tức thì"},
+                {"entity_field": "Chế tài xử phạt khi vi phạm", "value": "Phạt 100.000 - 200.000 VNĐ (xe máy) hoặc 400.000 - 600.000 VNĐ (ô tô)"}
+            ]
+        elif arch == 'insurance_health_social':
+            return [
+                {"entity_field": "Cơ quan thực hiện chính sách", "value": "Bảo hiểm Xã hội Việt Nam (BHXH) trực thuộc Chính phủ"},
+                {"entity_field": "Mức hưởng khám chữa bệnh", "value": "Chi trả từ 80% đến 100% chi phí khám chữa bệnh đúng tuyến theo danh mục"},
+                {"entity_field": "Cơ chế đóng BHYT hộ gia đình", "value": "Giảm trừ lũy tiến mức đóng cho thành viên thứ 2 (70%), thứ 3 (60%), thứ 4 (50%)"},
+                {"entity_field": "Nền tảng số hóa thẻ BHYT", "value": "Sử dụng hình ảnh thẻ trên ứng dụng VssID hoặc tài khoản VNeID mức độ 2"},
+                {"entity_field": "Chính sách tham gia 5 năm liên tục", "value": "Hưởng 100% chi phí khi số tiền cùng chi trả vượt 6 tháng lương cơ sở"},
+                {"entity_field": "Căn cứ pháp lý trụ cột", "value": "Luật Bảo hiểm Y tế sửa đổi & Luật Bảo hiểm Xã hội hiện hành"}
+            ]
+        elif arch == 'cinema_tickets':
+            return [
+                {"entity_field": "Hệ thống chuỗi rạp liên kết", "value": "CGV Cinemas, Lotte Cinema, Galaxy, BHD Star, Beta Cinemas, Cinestar"},
+                {"entity_field": "Khung phân loại độ tuổi khán giả", "value": "Nhãn P (Phổ biến), K (Dưới 13 tuổi có bảo trợ), T13, T16, T18 và C (Cấm)"},
+                {"entity_field": "Cơ chế đồng bộ suất chiếu", "value": "Đồng bộ API thời gian thực với hệ thống bán vé của từng cụm rạp"},
+                {"entity_field": "Hình thức vé vào phòng chiếu", "value": "Vé điện tử (Smart Ticket QR) quét mã vào thẳng rạp không cần in vé giấy"},
+                {"entity_field": "Phụ thu định dạng trải nghiệm", "value": "Áp dụng định dạng 3D, IMAX, 4DX, ScreenX và các dòng ghế đôi Sweetbox/VIP"},
+                {"entity_field": "Quy định pháp lý chuyên ngành", "value": "Luật Điện ảnh & Thông tư 05/2023/TT-BVHTTDL của Bộ Văn hóa, Thể thao và Du lịch"}
+            ]
+        elif arch == 'ota_travel':
+            return [
+                {"entity_field": "Hệ thống đối tác vận chuyển", "value": "Vietnam Airlines, Vietjet Air, Bamboo Airways và Tổng công ty Đường sắt (VNR)"},
+                {"entity_field": "Cơ chế xác nhận mã đặt chỗ", "value": "Mã PNR đặt chỗ chính thức được gửi tức thì qua tin nhắn SMS và email"},
+                {"entity_field": "Tiêu chuẩn hành lý áp dụng", "value": "Hành lý xách tay tiêu chuẩn 7-12kg và tùy chọn mua thêm hành lý ký gửi"},
+                {"entity_field": "Chính sách thay đổi & hoàn hủy", "value": "Tuân thủ nghiêm ngặt điều kiện biểu giá vé của từng hãng vận chuyển"},
+                {"entity_field": "Bảo hiểm chuyến đi tích hợp", "value": "Tùy chọn bảo hiểm trễ hủy chuyến bay và bảo hiểm tai nạn du lịch toàn diện"},
+                {"entity_field": "Kênh làm thủ tục chuyến bay", "value": "Hỗ trợ check-in trực tuyến trước giờ khởi hành 24 giờ để chọn ghế ngồi"}
+            ]
+        elif arch == 'telco_data':
+            return [
+                {"entity_field": "Hạ tầng nhà mạng viễn thông", "value": "Viettel, VinaPhone, MobiFone, Vietnamobile, Wintel và iTel"},
+                {"entity_field": "Cơ cấu gói cước data cung cấp", "value": "Gói ngày (1-3GB/ngày), gói chu kỳ ngắn tuần và gói tháng (30-180GB/tháng)"},
+                {"entity_field": "Thời gian xử lý & kích hoạt", "value": "Kích hoạt nạp tiền và cộng dung lượng tự động trong 3 đến 10 giây"},
+                {"entity_field": "Công nghệ eSIM du lịch số", "value": "Quét mã QR kích hoạt profile mạng quốc tế tức thì không cần tháo lắp SIM"},
+                {"entity_field": "Chính sách ưu đãi chiết khấu", "value": "Chiết khấu trực tiếp trên mệnh giá nạp tiền điện thoại từ 3% đến 10%"},
+                {"entity_field": "Phương thức kiểm tra số dư", "value": "Cú pháp tra cứu tin nhắn trực tiếp với tổng đài hoặc qua ứng dụng nhà mạng"}
+            ]
+        elif arch == 'hospital_health':
+            return [
+                {"entity_field": "Mạng lưới cơ sở y tế đối tác", "value": "Các bệnh viện đa khoa, chuyên khoa tuyến Trung ương và phòng khám chuẩn hóa"},
+                {"entity_field": "Quy trình đăng ký khám bệnh", "value": "Đặt trước chuyên khoa, bác sĩ và khung giờ khám tối thiểu 24 giờ"},
+                {"entity_field": "Thủ tục tiếp đón tại viện", "value": "Quét mã tiếp đón điện tử tại quầy ưu tiên, giảm 50-70% thời gian chờ đợi"},
+                {"entity_field": "Chính sách thanh toán viện phí", "value": "Hỗ trợ đối soát quyền lợi BHYT nhà nước và bảo lãnh viện phí tư nhân"},
+                {"entity_field": "Bảo mật hồ sơ bệnh án", "value": "Dữ liệu kết quả khám và đơn thuốc số hóa lưu trữ bảo mật đa tầng"},
+                {"entity_field": "Căn cứ pháp lý y tế", "value": "Luật Khám bệnh, chữa bệnh & Đề án Chuyển đổi số Y tế của Bộ Y tế"}
+            ]
+        elif arch == 'student_education':
+            return [
+                {"entity_field": "Cơ quan chỉ đạo tuyển sinh", "value": "Bộ Giáo dục và Đào tạo (Bộ GD&ĐT) quản lý đề án tuyển sinh quốc gia"},
+                {"entity_field": "Phương thức xét tuyển áp dụng", "value": "Điểm thi tốt nghiệp THPT, học bạ THPT, bài thi đánh giá năng lực & tư duy"},
+                {"entity_field": "Khung học phí đào tạo", "value": "Quy định theo Nghị định 81/2021/NĐ-CP & Nghị định 97/2023/NĐ-CP của Chính phủ"},
+                {"entity_field": "Chính sách tín dụng sinh viên", "value": "Chương trình vay vốn học tập lãi suất ưu đãi qua Ngân hàng CSXH (NHCSXH)"},
+                {"entity_field": "Chính sách học bổng & hỗ trợ", "value": "Học bổng khuyến khích học tập, miễn giảm học phí diện chính sách xã hội"},
+                {"entity_field": "Kênh tra cứu thông tin", "value": "Cổng thông tin tuyển sinh quốc gia và đề án tuyển sinh chính thức từng trường"}
+            ]
+        elif arch == 'lottery':
+            return [
+                {"entity_field": "Đơn vị phát hành chính thức", "value": "Công ty TNHH MTV Xổ số Kiến thiết 3 miền & Xổ số Điện toán Việt Nam (Vietlott)"},
+                {"entity_field": "Cơ cấu giá trị giải thưởng", "value": "Giải Đặc biệt 2 tỷ đồng (XSKT truyền thống) hoặc Jackpot từ 12 đến 30 tỷ (Vietlott)"},
+                {"entity_field": "Khung giờ quay số mở thưởng", "value": "16h15 (Miền Nam), 17h15 (Miền Trung), 18h15 (Miền Bắc) & 18h00 (Vietlott)"},
+                {"entity_field": "Thời hạn lĩnh thưởng hợp lệ", "value": "Trong vòng 30 ngày kể từ ngày công bố kết quả mở thưởng chính thức"},
+                {"entity_field": "Nghĩa vụ thuế khi trúng thưởng", "value": "Khấu trừ thuế TNCN 10% đối với phần tiền thưởng vượt trên 10.000.000 VNĐ"},
+                {"entity_field": "Cơ chế giám sát quay số", "value": "Hội đồng Giám sát Xổ số theo quy định của Bộ Tài chính và cơ quan thanh tra"}
+            ]
+        else:
+            return [
+                {"entity_field": "Phân loại giải pháp", "value": f"Dịch vụ số hóa chuyên sâu ngành {sector.title()} - Kênh Web MoMo"},
+                {"entity_field": "Đối tượng phục vụ", "value": "Người dùng cá nhân có nhu cầu tra cứu và thao tác trực tuyến trên toàn quốc"},
+                {"entity_field": "Thời gian phản hồi nghiệp vụ", "value": "Xử lý tức thì (Real-time), dữ liệu đồng bộ liên tục 24/7"},
+                {"entity_field": "Hạ tầng kết nối dịch vụ", "value": "Tích hợp API trực tiếp từ hệ thống dữ liệu đối tác uy tín đầu ngành"},
+                {"entity_field": "Tiêu chuẩn an toàn thông tin", "value": "Mã hóa dữ liệu chuẩn quốc tế, bảo mật đa tầng PCI DSS Level 1"},
+                {"entity_field": "Kênh chuyển tiếp thao tác", "value": "Trình duyệt Web (Desktop/Mobile) kết hợp điều hướng Web-to-App MoMo"}
+            ]
+
 

@@ -1,6 +1,116 @@
 {
-  "generated_at": "2026-10-18T09:32:44+00:00",
+  "generated_at": "2026-10-19T13:53:07+00:00",
   "items": [
+    {
+      "id": "593472",
+      "title": "AI Search Tools Cited A Made-Up Concept Within A Week, Paper Finds",
+      "title_en": "AI Search Tools Cited A Made-Up Concept Within A Week, Paper Finds",
+      "summary": "Search Engine Journal cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/ai-search-tools-cited-a-made-up-concept-within-a-week-paper-finds/593472/",
+      "published_at": "2026-10-19",
+      "category": "ai_search",
+      "impact": "low",
+      "tags": [],
+      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+    },
+    {
+      "id": "592060",
+      "title": "The New Rules Of Journalist Outreach, Based On Millions Of Emails",
+      "title_en": "The New Rules Of Journalist Outreach, Based On Millions Of Emails",
+      "summary": "Search Engine Journal cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/the-new-rules-of-journalist-outreach-based-on-millions-of-emails/592060/",
+      "published_at": "2026-10-19",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "is-it-new-ai-scan-tool-42322",
+      "title": "Is It New? AI Scan Tool",
+      "title_en": "Is It New? AI Scan Tool",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/is-it-new-ai-scan-tool-42322.html",
+      "published_at": "2026-10-19",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "google-posts-higher-42319",
+      "title": "Google Moves Google Posts Higher Up On Local Panel",
+      "title_en": "Google Moves Google Posts Higher Up On Local Panel",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-posts-higher-42319.html",
+      "published_at": "2026-10-19",
+      "category": "serp_feature",
+      "impact": "low",
+      "tags": [],
+      "action": "Tối ưu định dạng nội dung để chiếm SERP Feature cho các truy vấn tài chính tiềm năng cao."
+    },
+    {
+      "id": "google-ads-ai-mode-personal-intelligence-42320",
+      "title": "Google Ads Now In AI Mode With Personal Intelligence",
+      "title_en": "Google Ads Now In AI Mode With Personal Intelligence",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-ads-ai-mode-personal-intelligence-42320.html",
+      "published_at": "2026-10-19",
+      "category": "google_update",
+      "impact": "low",
+      "tags": [
+        "ai mode"
+      ],
+      "action": "Rà soát tác động xếp hạng toàn bộ URL tài chính YMYL trên momo.vn trong Search Console ngay sau khi update kết thúc."
+    },
+    {
+      "id": "google-ai-mode-citations-preferred-sources-42323",
+      "title": "Google AI Mode Citations With Preferred Source Preferences",
+      "title_en": "Google AI Mode Citations With Preferred Source Preferences",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-ai-mode-citations-preferred-sources-42323.html",
+      "published_at": "2026-10-19",
+      "category": "ai_search",
+      "impact": "low",
+      "tags": [
+        "ai mode"
+      ],
+      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+    },
+    {
+      "id": "openai-chatgpt-ads-updates-42321",
+      "title": "ChatGPT Ads New Ad Formats, Updated Conversion Page, Performance Emails...",
+      "title_en": "ChatGPT Ads New Ad Formats, Updated Conversion Page, Performance Emails...",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/openai-chatgpt-ads-updates-42321.html",
+      "published_at": "2026-10-19",
+      "category": "ai_search",
+      "impact": "low",
+      "tags": [
+        "chatgpt"
+      ],
+      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+    },
+    {
+      "id": "google-ads-featured-professionals-headshots-42325",
+      "title": "Google Ads To No Longer Show Featured Professionals, Headshots Are Optional",
+      "title_en": "Google Ads To No Longer Show Featured Professionals, Headshots Are Optional",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-ads-featured-professionals-headshots-42325.html",
+      "published_at": "2026-10-19",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
     {
       "id": "593304",
       "title": "OpenAI’s API Only Partly Matched ChatGPT’s Citations, Paper Finds",
@@ -15,6 +125,38 @@
         "chatgpt"
       ],
       "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+    },
+    {
+      "id": "google-updates-links-in-ai-mode-and-ai-overviews-again-42308",
+      "title": "Google Tái Cấu Trúc Hiển Thị Liên Kết Trong AI Mode & AI Overviews, Tiếp Tục Ẩn Dữ...",
+      "title_en": "Google Tái Cấu Trúc Hiển Thị Liên Kết Trong AI Mode & AI Overviews, Tiếp Tục Ẩn Dữ...",
+      "summary": "Chi tiết bản tin: Google vừa tung ra bản cập nhật giao diện mới cho cách hiển thị nguồn trích dẫn trong AI Mode và AI Overviews: Tăng mật độ liên kết trích dẫn và đẩy vị trí link card lên phần đầu của khối câu trả lời AI (Above the Fold). Áp dụng cơ chế hiển thị 1-2 liên kết trực tiếp đến trang nguồn chính xác nhất (\"right web page\") đối với các truy vấn đòi hỏi độ xác thực cao.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-updates-links-in-ai-mode-and-ai-overviews-again-42308.html",
+      "published_at": "2026-10-18",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "ai overview",
+        "ai mode",
+        "search console"
+      ],
+      "action": ""
+    },
+    {
+      "id": "google-app-new-search-bar-42267",
+      "title": "Google App Thử Nghiệm Thanh Tìm Kiếm Đổi Nút \"Search\" Thành \"Ask Google\" Kèm AI Mode",
+      "title_en": "Google Testing New Search Bar In Google App",
+      "summary": "Chi tiết bản tin: Phiên bản Google App trên thiết bị di động đang thử nghiệm giao diện thanh tìm kiếm mới: Nút tìm kiếm cổ điển được thay bằng dòng chữ \"Ask Google\" kèm nút \"+\" cho phép tải trực tiếp tệp tin, hình ảnh đa phương thức (Multimodal Input). Tích hợp sâu tính năng AI Mode ngay trên màn hình chính, khuyến khích người dùng trò chuyện tương tác thay vì thực hiện truy vấn từ khóa đơn lẻ.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-app-new-search-bar-42267.html",
+      "published_at": "2026-10-18",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "ai mode"
+      ],
+      "action": ""
     },
     {
       "id": "google-begins-testing-ads-in-ai-mode-for-users-with-personal-intelligence-enable",
@@ -346,21 +488,6 @@
       "action": ""
     },
     {
-      "id": "google-dataset-search-broken-42315",
-      "title": "Google Dataset Search tạm thời không trả kết quả",
-      "title_en": "Google Dataset Search Currently Not Returning Search Results",
-      "summary": "Google Dataset Search gặp lỗi không trả về kết quả trong nhiều giờ. Sự cố ảnh hưởng đến khả năng khám phá dữ liệu mở/dataset công khai.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-dataset-search-broken-42315.html",
-      "published_at": "2026-10-16",
-      "category": "technical",
-      "impact": "low",
-      "tags": [
-        "dataset search"
-      ],
-      "action": "Nếu có phát hành dataset tài chính công khai (tỷ giá, lãi suất), theo dõi lại sau khi sự cố được khắc phục để đảm bảo khả năng khám phá."
-    },
-    {
       "id": "593157",
       "title": "Lưu lượng ChatGPT giảm do lỗi tracking, không phải nhu cầu",
       "title_en": "ChatGPT Traffic Drop Appears To Be A Tracking Problem",
@@ -376,117 +503,6 @@
         "tracking"
       ],
       "action": "Kiểm tra lại gắn tham số tracking cho traffic từ AI engine; rà soát referral từ chatgpt.com/perplexity.ai để không đánh giá sai kênh AI."
-    },
-    {
-      "id": "593145",
-      "title": "Google Universal Cart ra mắt: giỏ hàng về site như thế nào",
-      "title_en": "Google’s Universal Cart Is Live: How Carts Get To Your Store",
-      "summary": "Universal Cart triển khai trên Search và ứng dụng Gemini, cho phép thanh toán trong giỏ hoặc chuyển một chiều về site của cửa hàng. Thay đổi cách người dùng hoàn tất mua hàng từ Search.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/google-universal-cart-store-handoff/593145/",
-      "published_at": "2026-10-15",
-      "category": "serp_feature",
-      "impact": "low",
-      "tags": [
-        "serp feature",
-        "ecommerce"
-      ],
-      "action": "Theo dõi tác động đến phễu thương mại; chuẩn bị dữ liệu sản phẩm/đối tác nếu MoMo mở bán hàng qua kênh AI."
-    },
-    {
-      "id": "591521",
-      "title": "Đo lường và attribution khi click không còn là toàn bộ câu chuyện",
-      "title_en": "How Do I Measure And Attribute When Clicks Only Tell Part Of The Story? - Ask A PPC",
-      "summary": "Khi hành trình mua chuyển sang AI, click không còn là chỉ số đầy đủ; cần đo lường giá trị qua conversion tracking, tín hiệu impression và dữ liệu kinh doanh. Thách thức chung cho đo lường kênh Web.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/ask-a-ppc-how-do-i-measure-and-attribute-when-clicks-are-no-longer-the-whole-story/591521/",
-      "published_at": "2026-10-15",
-      "category": "industry",
-      "impact": "low",
-      "tags": [
-        "attribution",
-        "measurement"
-      ],
-      "action": "Bổ sung lớp đo lường ngoài click: impression, brand lift và dữ liệu chuyển đổi thực để đánh giá đúng kênh tìm kiếm."
-    },
-    {
-      "id": "google-updates-links-in-ai-mode-and-ai-overviews-again-42308",
-      "title": "Google Tái Cấu Trúc Hiển Thị Liên Kết Trong AI Mode & AI Overviews, Tiếp Tục Ẩn Dữ...",
-      "title_en": "Google Updates Links In AI Mode & AI Overviews Again, Won't Show Click Data",
-      "summary": "Chi tiết bản tin: Google vừa tung ra bản cập nhật giao diện mới cho cách hiển thị nguồn trích dẫn trong AI Mode và AI Overviews: Tăng mật độ liên kết trích dẫn và đẩy vị trí link card lên phần đầu của khối câu trả lời AI (Above the Fold). Áp dụng cơ chế hiển thị 1-2 liên kết trực tiếp đến trang nguồn chính xác nhất (\"right web page\") đối với các truy vấn đòi hỏi độ xác thực cao.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-updates-links-in-ai-mode-and-ai-overviews-again-42308.html",
-      "published_at": "2026-10-15",
-      "category": "ai_search",
-      "impact": "medium",
-      "tags": [
-        "ai overview",
-        "ai mode",
-        "search console"
-      ],
-      "action": ""
-    },
-    {
-      "id": "593089",
-      "title": "Google đẩy inline link lên cao hơn trong AI Search",
-      "title_en": "Google Puts Inline Links Higher In More AI Search Responses",
-      "summary": "Google thay đổi cách hiển thị link trong AI Mode và AI Overviews: đưa inline link lên vị trí cao hơn và mở rộng carousel cho Nguồn ưu tiên (Preferred Sources). Cơ hội để thương hiệu chiếm slot trích dẫn trong câu trả lời AI.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/google-inline-links-higher-ai-search-responses/593089/",
-      "published_at": "2026-10-15",
-      "category": "ai_search",
-      "impact": "medium",
-      "tags": [
-        "ai overview",
-        "ai mode",
-        "citation"
-      ],
-      "action": "Tập trung tối ưu trích dẫn AI cho nhóm câu hỏi tài chính; tăng tín hiệu để được đưa vào carousel Preferred Sources."
-    },
-    {
-      "id": "592619",
-      "title": "SERP có thể hết là mặc định trong giai đoạn 2028-2030",
-      "title_en": "SERPs Stop Being The Default Between 2028 & 2030",
-      "summary": "Dự báo Google sẽ chuyển mặc định từ kết quả xếp hạng sang câu trả lời AI khi doanh thu quảng cáo lớp câu trả lời ngang SERP, dự kiến rơi vào giai đoạn 2028-2030. Đây là mốc chiến lược cho định hướng GEO dài hạn.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/serps-stop-being-the-default-between-2028-2030/592619/",
-      "published_at": "2026-10-15",
-      "category": "geo",
-      "impact": "high",
-      "tags": [
-        "geo",
-        "ai search",
-        "ai mode"
-      ],
-      "action": "Đặt lộ trình GEO/AEO 3-5 năm: tối ưu cấu trúc trả lời trực tiếp và entity để giữ vị thế khi AI Answer trở thành mặc định."
-    },
-    {
-      "id": "recap-10-15-2026-42309",
-      "title": "Điểm tin diễn đàn Search ngày 15/10/2026",
-      "title_en": "Daily Search Forum Recap: October 15, 2026",
-      "summary": "Tổng hợp thảo luận diễn đàn search trong ngày 15/10/2026. Bản tin tổng hợp, không có sự kiện trọng yếu riêng.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/recap-10-15-2026-42309.html",
-      "published_at": "2026-10-15",
-      "category": "industry",
-      "impact": "low",
-      "tags": [],
-      "action": ""
-    },
-    {
-      "id": "google-app-new-search-bar-42267",
-      "title": "Google App Thử Nghiệm Thanh Tìm Kiếm Đổi Nút \"Search\" Thành \"Ask Google\" Kèm AI Mode",
-      "title_en": "Google Tests New Search Bar In Google App",
-      "summary": "Chi tiết bản tin: Phiên bản Google App trên thiết bị di động đang thử nghiệm giao diện thanh tìm kiếm mới: Nút tìm kiếm cổ điển được thay bằng dòng chữ \"Ask Google\" kèm nút \"+\" cho phép tải trực tiếp tệp tin, hình ảnh đa phương thức (Multimodal Input). Tích hợp sâu tính năng AI Mode ngay trên màn hình chính, khuyến khích người dùng trò chuyện tương tác thay vì thực hiện truy vấn từ khóa đơn lẻ.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-app-new-search-bar-42267.html",
-      "published_at": "2026-10-15",
-      "category": "ai_search",
-      "impact": "low",
-      "tags": [
-        "ai mode"
-      ],
-      "action": ""
     },
     {
       "id": "google-september-2026-spam-update-done-42235",
@@ -505,32 +521,32 @@
       "action": "",
       "insight": {
         "status": "watch",
-        "finding": "Dữ liệu sau mốc 12/10 mới có 3/7 ngày: clicks organic toàn site giảm 17,4% tạm tính so với 3 ngày liền trước.",
+        "finding": "Dữ liệu sau mốc 12/10 mới có 4/7 ngày: clicks organic toàn site giảm 13,9% tạm tính so với 4 ngày liền trước.",
         "evidence": [
           {
             "label": "Clicks organic toàn site",
-            "value": "30.8K",
-            "delta_pct": -17.4,
+            "value": "31.4K",
+            "delta_pct": -13.9,
             "source": "GSC",
-            "period": "3 ngày sau vs 3 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+            "period": "4 ngày sau vs 4 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
           },
           {
             "label": "Impressions toàn site",
-            "value": "945.6K",
-            "delta_pct": -9.0,
+            "value": "958.6K",
+            "delta_pct": -6.5,
             "source": "GSC",
-            "period": "3 ngày sau vs 3 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+            "period": "4 ngày sau vs 4 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
           },
           {
             "label": "Vị trí trung bình (impression-weighted)",
             "value": "6.0",
-            "delta_pct": 3.1,
+            "delta_pct": 2.6,
             "source": "GSC",
-            "period": "3 ngày sau vs 3 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+            "period": "4 ngày sau vs 4 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
           }
         ],
         "next_step": "Chạy lại kiểm tra GSC sau 19/10 khi đủ 7 ngày dữ liệu sau mốc; nếu clicks giảm ≥10% thì rà top URL theo cùng khung so sánh.",
-        "data_as_of": "2026-10-15"
+        "data_as_of": "2026-10-16"
       }
     },
     {
@@ -569,10 +585,10 @@
           },
           {
             "label": "Referral từ AI engines (Clarity)",
-            "value": "353",
+            "value": "982",
             "delta_pct": null,
             "source": "Clarity",
-            "period": "snapshot 2026-10-17"
+            "period": "snapshot 2026-10-19"
           }
         ],
         "next_step": "Theo dõi citations đến 19/10 khi đủ 7 ngày dữ liệu sau mốc.",
@@ -616,10 +632,10 @@
           },
           {
             "label": "Referral từ AI engines (Clarity)",
-            "value": "353",
+            "value": "982",
             "delta_pct": null,
             "source": "Clarity",
-            "period": "snapshot 2026-10-17"
+            "period": "snapshot 2026-10-19"
           }
         ],
         "next_step": "Theo dõi citations đến 18/10 khi đủ 7 ngày dữ liệu sau mốc.",
@@ -663,10 +679,10 @@
           },
           {
             "label": "Referral từ AI engines (Clarity)",
-            "value": "353",
+            "value": "982",
             "delta_pct": null,
             "source": "Clarity",
-            "period": "snapshot 2026-10-17"
+            "period": "snapshot 2026-10-19"
           }
         ],
         "next_step": "Theo dõi citations đến 18/10 khi đủ 7 ngày dữ liệu sau mốc.",
@@ -708,7 +724,7 @@
           }
         ],
         "next_step": "Không cần hành động; duy trì theo dõi index coverage định kỳ.",
-        "data_as_of": "2026-10-15"
+        "data_as_of": "2026-10-16"
       }
     },
     {
@@ -753,7 +769,7 @@
           }
         ],
         "next_step": "Không cần hành động ngay; duy trì theo dõi GSC định kỳ.",
-        "data_as_of": "2026-10-15"
+        "data_as_of": "2026-10-16"
       }
     },
     {
@@ -791,7 +807,7 @@
           }
         ],
         "next_step": "Không cần hành động; duy trì theo dõi index coverage định kỳ.",
-        "data_as_of": "2026-10-15"
+        "data_as_of": "2026-10-16"
       }
     },
     {
@@ -881,7 +897,7 @@
           }
         ],
         "next_step": "Không cần hành động ngay; duy trì theo dõi GSC định kỳ.",
-        "data_as_of": "2026-10-15"
+        "data_as_of": "2026-10-16"
       }
     }
   ]

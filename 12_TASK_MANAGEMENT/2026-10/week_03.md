@@ -68,7 +68,7 @@
 | :--- | :--- | :--- | :--- | :---: |
 | Triển Khai Giải Pháp Update Trang Download | Kế thừa W2: Triển khai giải pháp update layout và thông điệp trang Download hiện hữu | Hiếu | Growth | `In Progress` |
 | Cải Tiến Giao Diện Trang Bonbon | Kế thừa W2: Tối ưu hóa giao diện và trải nghiệm chuyển đổi người dùng mới trên trang Bonbon | Hiến | Web Dev | `In Progress` |
-| Xây Dựng Trang Tải App Mới | Task mới W3: Tạo trang Tải App (`/tai-app`, tách `/download`), cấu hình OneLink fallback desktop về trang kèm QR Code | Hiến | Hiếu, Thuận | `In Progress` |
+| Xây Dựng Trang Tải App Mới | Task mới W3: Tạo trang Tải App (`/tai-app`, tách `/download`), cấu hình OneLink fallback desktop về trang kèm QR Code; Mobile: Detect OS hiển thị đúng Store, nhận diện Mở app vs Tải app (Apple Smart App Banner iOS, getInstalledRelatedApps & Chrome Intent Android) | Hiến | Hiếu, Thuận | `In Progress` |
 | Đo Lường Tỷ Lệ Chuyển Đổi Quýt Game | Task mới W3: Đánh giá tỷ lệ người chơi hoàn thành Quýt Game 2D/3D (đã Go Live ở W2) và tải App | Thuận | Hải | `In Progress` |
 
 ---
