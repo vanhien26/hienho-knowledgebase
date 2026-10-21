@@ -241,24 +241,18 @@ def parse_and_sync():
     print(f"Đã tạo summary.json siêu nhẹ cho hubs-momo tại {summary_path}")
 
     # Auto push to hubs-momo if available locally (skip khi --no-push)
+    # Lưu ý: Đã ngưng luồng tự động đẩy tasks sang Hubs (/bang-tin); chỉ đẩy số liệu /dashboard
     if not _args.no_push:
         hubs_repo = "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo"
         if os.path.exists(hubs_repo):
-            sync_script = os.path.join(hubs_repo, "scripts/sync-kb.py")
-            if os.path.exists(sync_script):
+            build_script = os.path.join(hubs_repo, "scripts/build-dashboard-data.py")
+            if os.path.exists(build_script):
                 import subprocess
-                p_res = subprocess.run([sys.executable, sync_script, "--base", BASE_DIR], capture_output=True, text=True)
+                p_res = subprocess.run([sys.executable, build_script, "--base", BASE_DIR], capture_output=True, text=True)
                 if p_res.returncode == 0:
-                    print(f"Đã tự động đẩy dữ liệu sang hubs-momo thành công: Cả /dashboard (Số liệu) và /bang-tin (Tasklist)!")
+                    print(f"Đã tự động đẩy dữ liệu sang hubs-momo (/dashboard) thành công! (Luồng tasks đã ngưng)")
                 else:
-                    print(f"Cảnh báo khi sync sang hubs-momo: {p_res.stderr.strip()}")
-            else:
-                build_script = os.path.join(hubs_repo, "scripts/build-dashboard-data.py")
-                if os.path.exists(build_script):
-                    import subprocess
-                    p_res = subprocess.run([sys.executable, build_script, "--base", BASE_DIR], capture_output=True, text=True)
-                    if p_res.returncode == 0:
-                        print(f"Đã tự động đẩy dữ liệu sang hubs-momo (/dashboard) thành công!")
+                    print(f"Cảnh báo khi sync sang hubs-momo (/dashboard): {p_res.stderr.strip()}")
     else:
         print("[no-push] Bo qua push sang hubs-momo (dieu phoi boi intake.py).")
 

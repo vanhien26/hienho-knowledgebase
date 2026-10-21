@@ -57,6 +57,7 @@ def main():
     parser.add_argument("--skip-seo-news", action="store_true", help="Bỏ qua sync tin SEO/GEO News")
     parser.add_argument("--skip-ga4", action="store_true", help="Bỏ qua sync GA4 thực tế sang Web Hubs")
     parser.add_argument("--skip-funnel", action="store_true", help="Bỏ qua phân rã ma trận phễu GSC + GA4")
+    parser.add_argument("--push-hubs", action="store_true", help="Tự động đẩy commit lên GitHub Hubs qua REST API (vượt qua firewall)")
     args = parser.parse_args()
 
     overall_start = time.time()
@@ -173,6 +174,15 @@ def main():
             results["Full-Funnel Matrix"] = ("SKIPPED (File not found)", 0)
     else:
         results["Full-Funnel Matrix"] = ("SKIPPED (User flag)", 0)
+
+    # 9. Luồng Đẩy Commit sang GitHub (GitHub REST API Firewall Bypass)
+    if args.push_hubs:
+        push_script = SCRIPTS_DIR / "push_to_hubs_api.py"
+        if push_script.exists():
+            success, elapsed = run_step("Push to Hubs (GitHub REST API)", [str(push_script)])
+            results["Push to GitHub Hubs"] = ("SUCCESS" if success else "FAILED", elapsed)
+        else:
+            results["Push to GitHub Hubs"] = ("SKIPPED (File not found)", 0)
 
     # Báo cáo tổng kết Master Sync
     total_elapsed = time.time() - overall_start

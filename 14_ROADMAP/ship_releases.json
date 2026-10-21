@@ -1,0 +1,428 @@
+[
+  {
+    "id": "rel_20261001_cinema_migration",
+    "date": "2026-10-01",
+    "name": "Khảo Sát & Khung Migration Cụm Rạp",
+    "description": "Rà soát chỉ số CWV và tổng hợp danh mục dữ liệu cụm rạp đối tác để lập kế hoạch chuyển dịch sang MoSpark.",
+    "status": "launched",
+    "tag": "Cinema Hub",
+    "theme": "Cụm Rạp",
+    "scope": [
+      "Audit Core Web Vitals trên các trang rạp cũ",
+      "Khảo sát cấu trúc dữ liệu cụm rạp chuyển đổi sang MoSpark",
+      "Lập kế hoạch tối ưu LCP < 2.0s"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/05_HUBS/cinema.md",
+    "live_url": "https://momo.vn/cinema"
+  },
+  {
+    "id": "rel_20261002_ccq_tietkiem_spec",
+    "date": "2026-10-02",
+    "name": "Spec API Lãi Suất & Chứng Chỉ Quỹ",
+    "description": "Làm việc với Backend Team chốt spec kết nối dữ liệu lãi suất ngân hàng và dữ liệu NAV Chứng Chỉ Quỹ.",
+    "status": "launched",
+    "tag": "Financial Hub",
+    "theme": "Chứng Chỉ Quỹ",
+    "scope": [
+      "Thống nhất schema API tỷ giá và lãi suất tiết kiệm",
+      "Xác định nguồn dữ liệu NAV lịch sử Chứng Chỉ Quỹ",
+      "Chuẩn bị luồng mô phỏng tích sản SIP"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/09_PRD/financial-hub-prd.md",
+    "live_url": "https://momo.vn/tai-chinh"
+  },
+  {
+    "id": "rel_20261005_ty_gia_subpages",
+    "date": "2026-10-05",
+    "name": "Spec & Layout 5 Cặp Tỷ Giá Chủ Lực",
+    "description": "Chốt danh sách 5 cặp tỷ giá chủ lực (USD, EUR, JPY, GBP, AUD) và layout widget hiển thị biểu đồ quy đổi.",
+    "status": "launched",
+    "tag": "Financial Hub",
+    "theme": "Tỷ Giá",
+    "scope": [
+      "Thiết kế widget quy đổi ngoại tệ 2 chiều",
+      "Quy hoạch URL sub-page theo từng cặp tiền tệ",
+      "Gắn tracking Umami cho bộ chọn đồng tiền"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/09_PRD/financial-hub-prd.md",
+    "live_url": "https://momo.vn/tai-chinh/ty-gia"
+  },
+  {
+    "id": "rel_20261006_phat_nguoi_restore",
+    "date": "2026-10-06",
+    "name": "Khôi Phục & Ổn Định API Phạt Nguội",
+    "description": "Review toàn diện và khôi phục hoạt động của cổng API tra cứu phạt nguội CSGT trên Production.",
+    "status": "launched",
+    "tag": "Vehicle Hub",
+    "theme": "Phạt Nguội",
+    "scope": [
+      "Khắc phục lỗi gián đoạn kết nối cổng dữ liệu",
+      "Cải thiện tốc độ phản hồi kết quả tra cứu < 1.5s",
+      "Tối ưu giao diện hiển thị danh sách lỗi vi phạm"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/06_USE_CASE_MOMO/vehicle-hub-brd.md",
+    "live_url": "https://momo.vn/tien-ich-giao-thong/phat-nguoi"
+  },
+  {
+    "id": "rel_20261007_vinfast_model_pages",
+    "date": "2026-10-07",
+    "name": "Go Live Bảng Giá & Model Xe Vinfast",
+    "description": "Xuất bản cụm trang Hãng xe và Model xe Vinfast (VF3, VF5, VF8...) với đầy đủ thông số kỹ thuật và giá niêm yết.",
+    "status": "launched",
+    "tag": "Vehicle Hub",
+    "theme": "Bảng Giá Xe",
+    "scope": [
+      "Trang danh mục dòng xe và thông số chi tiết",
+      "Tích hợp công cụ ước tính giá lăn bánh theo tỉnh thành",
+      "Gắn liên kết tiện ích trạm sạc và bảo dưỡng"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/06_USE_CASE_MOMO/vehicle-hub-brd.md",
+    "live_url": "https://momo.vn/tien-ich-giao-thong/hang-xe/vinfast"
+  },
+  {
+    "id": "rel_20261008_cinema_puzzle_game",
+    "date": "2026-10-08",
+    "name": "Mini Game Hidden Puzzle Cinema",
+    "description": "Thiết kế và Go Live Mini Game Tìm mảnh ghép Hidden Puzzle kích hoạt voucher vé xem phim trên trang Cinema.",
+    "status": "launched",
+    "tag": "Cinema Hub",
+    "theme": "Gamification",
+    "scope": [
+      "Giao diện tương tác tìm mảnh ghép ẩn",
+      "Cơ chế nhận quà và lưu trữ voucher vào ví",
+      "Tracking tương tác và tỷ lệ hoàn thành minigame"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/05_HUBS/cinema.md",
+    "live_url": "https://momo.vn/cinema"
+  },
+  {
+    "id": "rel_20261009_ty_gia_v1",
+    "date": "2026-10-09",
+    "name": "Go Live Trang Tỷ Giá Cặp Tiền Tệ V1",
+    "description": "Hoàn thiện và Go Live trang Tỷ Giá chi tiết theo từng cặp tiền tệ, tích hợp biểu đồ giá trực tiếp.",
+    "status": "launched",
+    "tag": "Financial Hub",
+    "theme": "Tỷ Giá",
+    "scope": [
+      "Trang Tỷ Giá ngoại tệ USD/VND chuẩn responsive",
+      "Bảng quy đổi tỷ giá mua/bán từ các ngân hàng",
+      "Gắn tracking sự kiện quy đổi tỷ giá Umami"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/09_PRD/financial-hub-prd.md",
+    "live_url": "https://momo.vn/tai-chinh/ty-gia/usd-vnd"
+  },
+  {
+    "id": "rel_20261012_quyt_game",
+    "date": "2026-10-12",
+    "name": "Go Live Quýt Game 2D & 3D (New User)",
+    "description": "Go Live trang Quýt Game phiên bản 2D và 3D thúc đẩy chuyển đổi người dùng mới tải ứng dụng MoMo.",
+    "status": "launched",
+    "tag": "Platform",
+    "theme": "New User",
+    "scope": [
+      "Phát triển tương tác vật lý game Quýt 2D & 3D trên Web",
+      "Cơ chế nhận quà và popup kích hoạt cài đặt App",
+      "Tích hợp OneLink đo lường phễu Web-to-App"
+    ],
+    "owner_team": "Growth Team",
+    "doc_url": "/04_MOSPARK_PLATFORM/mospark_master.md",
+    "live_url": "https://momo.vn/game/quyt"
+  },
+  {
+    "id": "rel_20261013_game_card_providers",
+    "date": "2026-10-13",
+    "name": "Tích Hợp Nạp Thẻ Game 4 Provider",
+    "description": "Triển khai luồng nạp thẻ game trực tiếp trên Web hỗ trợ 4 nhà phát hành chủ lực: Zing, Garena, VTC, Soha.",
+    "status": "launched",
+    "tag": "Platform",
+    "theme": "Nạp Thẻ Game",
+    "scope": [
+      "Giao diện chọn nhà mạng và mệnh giá thẻ",
+      "Tích hợp luồng thanh toán deeplink MoMo an toàn",
+      "Tracking Umami doanh thu và giao dịch nạp thẻ"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/04_MOSPARK_PLATFORM/mospark_master.md",
+    "live_url": "https://momo.vn/nap-the-game"
+  },
+  {
+    "id": "rel_20261014_cinema_migration_p1",
+    "date": "2026-10-14",
+    "name": "Migration Cụm Rạp Đối Tác Sang MoSpark (P1)",
+    "description": "Chuyển đổi các trang cụm rạp đối tác (BHD, Galaxy, Lotte) sang nền tảng MoSpark, tối ưu Core Web Vitals.",
+    "status": "launched",
+    "tag": "Cinema Hub",
+    "theme": "Cụm Rạp",
+    "scope": [
+      "Di chuyển dữ liệu rạp chiếu sang cấu trúc CMS mới",
+      "Tối ưu thời gian tải trang LCP < 2.0s",
+      "Submit sitemap rạp chiếu mới lên Google Search Console"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/05_HUBS/cinema.md",
+    "live_url": "https://momo.vn/cinema/rap-chieu-phim"
+  },
+  {
+    "id": "rel_20261015_forex_4_currencies",
+    "date": "2026-10-15",
+    "name": "Go Live 4 Cặp Ngoại Tệ (AUD, EUR, USD, GBP)",
+    "description": "Hoàn thiện và Go Live 4 trang ngoại tệ sang VND tích hợp quy đổi 2 chiều và bảng giá so sánh giữa các ngân hàng.",
+    "status": "launched",
+    "tag": "Financial Hub",
+    "theme": "Tỷ Giá",
+    "scope": [
+      "Go Live 4 trang cặp tiền tệ: AUD/VND, EUR/VND, USD/VND, GBP/VND",
+      "Biểu đồ biến động giá 7 ngày / 30 ngày gần nhất",
+      "Tracking chuyển đổi CTA sang dịch vụ tài chính MoMo"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/09_PRD/financial-hub-prd.md",
+    "live_url": "https://momo.vn/tai-chinh/ty-gia"
+  },
+  {
+    "id": "rel_20261016_ccq_demo",
+    "date": "2026-10-16",
+    "name": "On Demo Trang Chứng Chỉ Quỹ & Tích Sản SIP",
+    "description": "Hoàn thiện giao diện bảng giá NAV các quỹ mở và simulator tính toán tích sản SIP, đưa lên môi trường Demo.",
+    "status": "launched",
+    "tag": "Financial Hub",
+    "theme": "Chứng Chỉ Quỹ",
+    "scope": [
+      "Giao diện danh mục quỹ mở và chỉ số tăng trưởng NAV",
+      "Simulator mô phỏng lợi nhuận đầu tư định kỳ SIP",
+      "Kiểm thử luồng mở tài khoản chứng chỉ quỹ"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/09_PRD/financial-hub-prd.md",
+    "live_url": "https://momo.vn/tai-chinh/chung-chi-quy"
+  },
+  {
+    "id": "rel_20261019_momo_ai_utility",
+    "date": "2026-10-19",
+    "name": "Tích Hợp MoMo AI Tài Chính (2 Chế Độ)",
+    "description": "Tích hợp trợ lý MoMo AI với 2 mode Hài Hước và Nghiêm Túc đưa ra lời khuyên tài chính cá nhân hóa trên từng Tool.",
+    "status": "launched",
+    "tag": "Financial Hub",
+    "theme": "AI Utility",
+    "scope": [
+      "Engine xử lý prompt AI tài chính dựa trên dữ liệu nhập của user",
+      "Chuyển đổi linh hoạt giữa 2 mode Hài Hước và Nghiêm Túc",
+      "Gợi ý sản phẩm tài chính phù hợp kèm CTA chuyển đổi"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/09_PRD/financial-hub-prd.md",
+    "live_url": "https://momo.vn/tai-chinh/cong-cu"
+  },
+  {
+    "id": "rel_20261020_umami_auto_tracking",
+    "date": "2026-10-20",
+    "name": "Tự Động Gắn Tracking Umami Toàn Bộ Tiện Ích",
+    "description": "Hoàn tất tự động hóa việc gắn tracking sự kiện Umami chi tiết cho từng Tool/Widget tài chính và giao thông theo SSOT.",
+    "status": "launched",
+    "tag": "Platform",
+    "theme": "Analytics Tracking",
+    "scope": [
+      "Chuẩn hóa 100% EventName theo đúng schema Knowledge Base",
+      "Track đầy đủ các tương tác nhập liệu, đổi tab, tính toán",
+      "Dashboard đối soát dữ liệu sự kiện real-time"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/04_MOSPARK_PLATFORM/umami_utility_tracking.md",
+    "live_url": ""
+  },
+  {
+    "id": "rel_20261021_universal_search",
+    "date": "2026-10-21",
+    "name": "Go Live Phase 1 Trang Tìm Kiếm Toàn Website",
+    "description": "Go Live Phase 1 trang Tìm Kiếm toàn Website (/tim-kiem) kết nối Knowledge Base phản hồi chính xác kết quả tra cứu dịch vụ, bài viết và công cụ MoMo.",
+    "status": "launched",
+    "tag": "Platform",
+    "theme": "Tìm Kiếm",
+    "scope": [
+      "Thanh tìm kiếm Global / Universal Search chuẩn UX",
+      "Tích hợp Knowledge Base indexing trả về kết quả tức thì",
+      "Tracking Umami từ khóa tìm kiếm và tỷ lệ click kết quả"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/00_HARNESS_CORE/hienho_master_doc.md",
+    "live_url": "https://momo.vn/tim-kiem"
+  },
+  {
+    "id": "rel_20261021_vehicle_mega_menu",
+    "date": "2026-10-21",
+    "name": "Go Live Mega Menu Vehicle Hub",
+    "description": "Hoàn thiện và Go Live Mega Menu điều hướng toàn diện cho Vehicle Hub (tiện ích giao thông, nộp phạt, đăng kiểm, model xe).",
+    "status": "launched",
+    "tag": "Vehicle Hub",
+    "theme": "Mega Menu",
+    "scope": [
+      "Layout Mega Menu trực quan phân nhóm dịch vụ giao thông",
+      "Shortcuts truy cập nhanh tra cứu phạt nguội và bảng giá xe",
+      "Tối ưu hiển thị responsive đa thiết bị"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/06_USE_CASE_MOMO/vehicle-hub-brd.md",
+    "live_url": "https://momo.vn/tien-ich-giao-thong"
+  },
+  {
+    "id": "rel_20261021_tai_app_demo",
+    "date": "2026-10-21",
+    "name": "Demo Trang Tải App OneLink Thông Minh",
+    "description": "Demo trang Tải App mới (/tai-app, tách độc lập khỏi /download) với OneLink thông minh: Desktop hiện QR, Mobile nhận diện OS phân biệt Mở App vs Tải App.",
+    "status": "in_progress",
+    "tag": "Platform",
+    "theme": "New User",
+    "scope": [
+      "Desktop view: QR Code OneLink chuẩn nhận diện quét là tải",
+      "Mobile iOS: Tích hợp Apple Smart App Banner và deeplink mở app",
+      "Mobile Android: Xử lý getInstalledRelatedApps & Chrome Intent",
+      "Tracking tỷ lệ rớt phễu Web-to-App theo từng kênh phân phối"
+    ],
+    "owner_team": "Growth Team",
+    "doc_url": "/12_TASK_MANAGEMENT/2026-10/week_03.md",
+    "live_url": "https://momo.vn/tai-app"
+  },
+  {
+    "id": "rel_20261022_nop_phat_online",
+    "date": "2026-10-22",
+    "name": "Xây Dựng Trang Nộp Phạt Giao Thông Online",
+    "description": "Thiết kế giao diện và luồng thanh toán nộp phạt vi phạm giao thông trực tuyến sau khi tra cứu phạt nguội trên Kênh Web.",
+    "status": "in_progress",
+    "tag": "Vehicle Hub",
+    "theme": "Nộp Phạt",
+    "scope": [
+      "Form nhập mã biên bản hoặc số quyết định xử phạt",
+      "Luồng thanh toán an toàn qua cổng MoMo",
+      "Hướng dẫn nhận lại giấy tờ và biên lai điện tử"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/06_USE_CASE_MOMO/vehicle-hub-brd.md",
+    "live_url": "https://momo.vn/tien-ich-giao-thong/nop-phat"
+  },
+  {
+    "id": "rel_20261023_financial_mega_menu",
+    "date": "2026-10-23",
+    "name": "Go Live Mega Menu Cho Financial Hub",
+    "description": "Triển khai và Go Live Mega Menu điều hướng cho toàn bộ cụm trang Tài Chính (Tỷ giá, Vay nhanh, Tiết kiệm, Quỹ, Ngân hàng).",
+    "status": "in_progress",
+    "tag": "Financial Hub",
+    "theme": "Mega Menu",
+    "scope": [
+      "Menu Header đa cấp phân loại 5 nhóm dịch vụ tài chính",
+      "Tích hợp widget mini tỷ giá cập nhật real-time trong menu",
+      "Tracking hành vi điều hướng của người dùng trên Umami"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/09_PRD/financial-hub-prd.md",
+    "live_url": "https://momo.vn/tai-chinh"
+  },
+  {
+    "id": "rel_20261026_tra_cuu_muc_phat",
+    "date": "2026-10-26",
+    "name": "Trang Tra Cứu Mức Phạt Giao Thông",
+    "description": "Xây dựng trang tra cứu mức phạt giao thông theo từ khóa, hành vi vi phạm và loại phương tiện theo Nghị định 100/123.",
+    "status": "planned",
+    "tag": "Vehicle Hub",
+    "theme": "Mức Phạt",
+    "scope": [
+      "Bộ lọc hành vi vi phạm theo Ô tô, Xe máy, Xe đạp",
+      "Chi tiết khung phạt tiền và hình thức tước bằng lái",
+      "Điều hướng trực tiếp sang công cụ nộp phạt online"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/06_USE_CASE_MOMO/vehicle-hub-brd.md",
+    "live_url": "https://momo.vn/tien-ich-giao-thong/muc-phat"
+  },
+  {
+    "id": "rel_20261027_blog_quiz",
+    "date": "2026-10-27",
+    "name": "Quiz Tương Tác Trong Bài Viết Blog",
+    "description": "Tích hợp component Quiz tương tác trong bài viết Blog đặt trên phần Author, tăng time-on-page và mức độ gắn kết.",
+    "status": "planned",
+    "tag": "Platform",
+    "theme": "MoSpark CMS",
+    "scope": [
+      "Khối Quiz trắc nghiệm 3-5 câu hỏi trong bài viết",
+      "Hiển thị điểm số và giải thích câu trả lời",
+      "CTA gợi ý dịch vụ liên quan sau khi hoàn thành quiz"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/04_MOSPARK_PLATFORM/mospark_plg_blog.md",
+    "live_url": ""
+  },
+  {
+    "id": "rel_20261028_chatgpt_web_store",
+    "date": "2026-10-28",
+    "name": "Xây Dựng Trang Mua Tài Khoản ChatGPT",
+    "description": "Triển khai giao diện và luồng thanh toán mua gói tài khoản ChatGPT trực tiếp trên nền tảng Web MoMo.",
+    "status": "planned",
+    "tag": "Platform",
+    "theme": "Game/App",
+    "scope": [
+      "Bảng giá các gói tài khoản ChatGPT Plus & Team",
+      "Thanh toán tức thì qua mã QR MoMo",
+      "Cơ chế bàn giao tài khoản tự động"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/04_MOSPARK_PLATFORM/mospark_master.md",
+    "live_url": "https://momo.vn/dich-vu/chatgpt"
+  },
+  {
+    "id": "rel_20261029_bank_partner_lp",
+    "date": "2026-10-29",
+    "name": "Landing Page Ngân Hàng Liên Kết",
+    "description": "Thiết kế và xuất bản Landing Page cho nhóm đối tác Ngân hàng liên kết mở tài khoản eKYC và nhận gói quà MoMo.",
+    "status": "planned",
+    "tag": "Financial Hub",
+    "theme": "Ngân Hàng",
+    "scope": [
+      "Giao diện giới thiệu ưu đãi theo từng ngân hàng đối tác",
+      "Form đăng ký mở tài khoản ngân hàng liên kết trực tuyến",
+      "Theo dõi tỷ lệ mở tài khoản thành công"
+    ],
+    "owner_team": "Growth Team",
+    "doc_url": "/09_PRD/financial-hub-prd.md",
+    "live_url": "https://momo.vn/tai-chinh/ngan-hang-lien-ket"
+  },
+  {
+    "id": "rel_20261030_luong_calculator_redesign",
+    "date": "2026-10-30",
+    "name": "Re-Design UI/UX Tool Phân Bổ Lương",
+    "description": "Tối ưu UI tool phân bổ lương cá nhân theo quy tắc 50/30/20, hướng user tập trung vào tích lũy và đầu tư.",
+    "status": "planned",
+    "tag": "Financial Hub",
+    "theme": "Công Cụ Tài Chính",
+    "scope": [
+      "Thiết kế lại biểu đồ phân bổ dòng tiền trực quan",
+      "Hook gợi ý chuyển tiền nhàn rỗi vào Túi Thần Tài",
+      "Nút CTA kết nối mở tài khoản tích lũy sinh lời"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/09_PRD/financial-hub-prd.md",
+    "live_url": "https://momo.vn/tai-chinh/cong-cu/phan-bo-luong"
+  },
+  {
+    "id": "rel_20261030_phat_nguoi_dia_diem",
+    "date": "2026-10-30",
+    "name": "Cụm Trang Phạt Nguội + Địa Điểm Camera",
+    "description": "Nghiên cứu và triển khai cụm trang Phạt Nguội kết hợp Địa Điểm (danh sách camera phạt nguội theo tỉnh thành và tuyến đường).",
+    "status": "planned",
+    "tag": "Vehicle Hub",
+    "theme": "Phạt Nguội",
+    "scope": [
+      "Bản đồ và danh sách điểm đặt camera giám sát Hà Nội & TP.HCM",
+      "Tổng hợp các lỗi vi phạm phổ biến theo từng tuyến đường",
+      "Nút CTA tra cứu biển số xe trực tiếp tại vị trí đó"
+    ],
+    "owner_team": "Web Dev",
+    "doc_url": "/06_USE_CASE_MOMO/vehicle-hub-brd.md",
+    "live_url": "https://momo.vn/tien-ich-giao-thong/phat-nguoi/dia-diem"
+  }
+]

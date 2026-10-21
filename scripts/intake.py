@@ -124,30 +124,21 @@ def push_to_hubs(targets):
         return False, f"Khong tim thay hubs-momo tai {HUBS_REPO}"
     msgs = []
     ok = True
-    if "bang-tin" in targets or "dashboard" in targets:
-        sync_script = os.path.join(HUBS_REPO, "scripts/sync-kb.py")
-        if os.path.exists(sync_script):
+    # Da ngung luong day task sang /bang-tin theo chi dao; chi day so lieu /dashboard
+    if "dashboard" in targets:
+        build_script = os.path.join(HUBS_REPO, "scripts/build-dashboard-data.py")
+        if os.path.exists(build_script):
             res = subprocess.run(
-                [sys.executable, sync_script, "--base", BASE_DIR],
+                [sys.executable, build_script, "--base", BASE_DIR],
                 capture_output=True, text=True,
             )
             if res.returncode == 0:
-                msgs.append("sync-kb OK (dashboard + bang-tin)")
+                msgs.append("build-dashboard OK")
             else:
                 ok = False
-                msgs.append(f"sync-kb FAIL: {res.stderr.strip()[:200]}")
-        else:
-            build_script = os.path.join(HUBS_REPO, "scripts/build-dashboard-data.py")
-            if os.path.exists(build_script) and "dashboard" in targets:
-                res = subprocess.run(
-                    [sys.executable, build_script, "--base", BASE_DIR],
-                    capture_output=True, text=True,
-                )
-                if res.returncode == 0:
-                    msgs.append("build-dashboard OK")
-                else:
-                    ok = False
-                    msgs.append(f"build-dashboard FAIL: {res.stderr.strip()[:200]}")
+                msgs.append(f"build-dashboard FAIL: {res.stderr.strip()[:200]}")
+    if "bang-tin" in targets:
+        msgs.append("bang-tin push SKIPPED (luong day task da ngung)")
     return ok, "; ".join(msgs) if msgs else "khong co gi de push"
 
 

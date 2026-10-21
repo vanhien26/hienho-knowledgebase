@@ -423,7 +423,9 @@ def clean_dim_project(p):
     if l in ['donation']: return 'Donation'
     if l in ['trust']: return 'Trust'
     if l in ['tnc', 'dieu khoan', 'điều khoản', 'terms']: return 'TnC'
-    if l in ['new user', 'download', 'application store']: return 'New User'
+    if l in ['new user']: return 'New User'
+    if l in ['download']: return 'Download'
+    if l in ['application store']: return 'Application Store'
     if l in ['home momo']: return 'Home MoMo'
     if l in ['campaign']: return 'Campaign'
     if l in ['khuyen mai', 'khuyến mãi', 'hoan tien mua sam', 'hoàn tiền mua sắm', 'xu']: return 'Khuyến Mãi'
@@ -475,7 +477,7 @@ def resolve_dim_project_name(dim_proj, tid, sec):
     if 'trai-tim' in t or 'donation' in t or 'thien-nguyen' in t: return 'Donation'
     if s == 'trust' or 'bao-mat' in t or 'an-toan' in t: return 'Trust'
     if 'homepage' in t: return 'Home MoMo'
-    if 'tai-app' in t or 'download' in t: return 'New User'
+    if 'tai-app' in t or 'download' in t: return 'Download'
     if 'khuyen-mai' in t or 'uu-dai' in t: return 'Khuyến Mãi'
     if 'lifestyle' in t or 'tin-tuc' in t: return 'Tin Tức'
     if 'blog' in t: return 'Blog'
@@ -938,7 +940,16 @@ def main():
 
         quadrant_summary[quadrant] += 1
 
-        top_queries = sorted(gsc["queries"], key=lambda x: x["clicks"], reverse=True)[:5]
+        top_queries = [
+            {
+                "query": q["query"],
+                "clicks": q["clicks"],
+                "impressions": q["impressions"],
+                "position": round(q.get("position", 0.0), 1),
+                "is_brand": q.get("is_brand", False)
+            }
+            for q in sorted(gsc["queries"], key=lambda x: x["clicks"], reverse=True)[:3]
+        ]
 
         page_record = {
             "path": p,
@@ -953,11 +964,11 @@ def main():
             "pre_click": {
                 "gsc_clicks": gsc_c,
                 "gsc_impressions": gsc_imp,
-                "avg_position": avg_pos,
-                "ctr": gsc_ctr,
+                "avg_position": round(avg_pos, 1),
+                "ctr": round(gsc_ctr, 4),
                 "top_queries": top_queries,
                 "strike_zone_count": len(strike_q),
-                "potential_additional_clicks": total_potential_gain,
+                "potential_additional_clicks": round(total_potential_gain, 1),
                 "cannibal_queries_count": c_cnt,
                 "cannibal_impressions": c_imp
             },
@@ -965,16 +976,20 @@ def main():
                 "organic_pageviews": org_pv,
                 "organic_sessions": org_sess,
                 "engaged_sessions": eng_sess,
-                "engagement_rate": eng_rate,
-                "ai_sessions": ga4["ai_sessions"]
+                "engagement_rate": round(eng_rate, 4),
+                "ai_sessions": ga4["ai_sessions"],
+                "total_w2a_clicks": w2a_clicks,
+                "w2a_conversion_rate": round(w2a_cr, 4),
+                "business_yield": round(business_yield, 4),
+                "capture_rate": round(capture_rate, 4)
             },
             "conversion": {
                 "ol_momo": ol_m,
                 "ol_appsflyer": ol_af,
                 "total_w2a_clicks": w2a_clicks,
-                "w2a_conversion_rate": w2a_cr,
-                "business_yield": business_yield,
-                "capture_rate": capture_rate
+                "w2a_conversion_rate": round(w2a_cr, 4),
+                "business_yield": round(business_yield, 4),
+                "capture_rate": round(capture_rate, 4)
             }
         }
         pages_output.append(page_record)
@@ -1396,6 +1411,21 @@ def main():
         json.dump(output_payload, f, ensure_ascii=False, indent=2)
     print(f"✓ Đã lưu SSOT Knowledge Base: {kb_file}")
 
+    # Tối ưu hóa dung lượng cho Web Hubs (react-web-momo):
+    # Lọc các trang có giá trị kinh doanh thực tế (có traffic, clicks, W2A, cannibalization hoặc impressions >= 20)
+    # Giữ nguyên 100% summary KPIs tổng thể, loại bỏ 4.700+ URL rác không có tín hiệu để giảm file từ 23MB xuống ~8MB
+    hubs_payload = dict(output_payload)
+    hubs_active_pages = [
+        p for p in pages_output
+        if p["post_click"]["organic_sessions"] > 0
+        or p["post_click"]["organic_pageviews"] > 0
+        or p["pre_click"]["gsc_clicks"] > 0
+        or p["conversion"]["total_w2a_clicks"] > 0
+        or p["pre_click"]["gsc_impressions"] >= 20
+        or p["pre_click"]["cannibal_queries_count"] >= 2
+    ]
+    hubs_payload["pages"] = hubs_active_pages
+
     # Target 2: Root data/analytics/ (theo đường dẫn yêu cầu của user)
     root_data_dir = BASE_DIR / "data" / "analytics"
     root_data_dir.mkdir(parents=True, exist_ok=True)
@@ -1409,8 +1439,8 @@ def main():
     hubs_dir.mkdir(parents=True, exist_ok=True)
     hubs_file = hubs_dir / "full-funnel-matrix.json"
     with open(hubs_file, "w", encoding="utf-8") as f:
-        json.dump(output_payload, f, ensure_ascii=False, indent=2)
-    print(f"✓ Đã lưu Web Hubs: {hubs_file}")
+        json.dump(hubs_payload, f, ensure_ascii=False, separators=(",", ":"))
+    print(f"✓ Đã lưu Web Hubs (Tối ưu hóa {len(hubs_active_pages):,} active pages, minified): {hubs_file}")
 
     # Đồng bộ file BigQuery DIM sang Web Hubs để Hubs trực tiếp đọc
     dim_src = BASE_DIR / "07_REPORTS" / "data" / "dim" / "web_dim_page_url.json"
