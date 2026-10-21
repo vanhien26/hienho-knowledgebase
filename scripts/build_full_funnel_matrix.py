@@ -127,7 +127,9 @@ def get_ga4_access_token():
 
 def fetch_gsc_30d_data():
     """Kéo dữ liệu GSC chuẩn kỳ 30 ngày (2026-09-20 -> 2026-10-19) qua Service Account API"""
-    cache_file = BASE_DIR / "07_REPORTS" / "data" / "gsc_30d_cache.json"
+    cache_file = BASE_DIR / "07_REPORTS" / "data" / "cache" / "gsc_30d_cache.json"
+    if not cache_file.exists():
+        cache_file = BASE_DIR / "07_REPORTS" / "data" / "gsc_30d_cache.json"
     if cache_file.exists():
         file_age_hours = (time.time() - os.path.getmtime(cache_file)) / 3600
         if file_age_hours < 24:

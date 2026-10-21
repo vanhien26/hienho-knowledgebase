@@ -175,7 +175,7 @@ def main():
     cannibalized_queries.sort(key=lambda x: x["total_impressions"], reverse=True)
 
     # 7. Xuất file kết quả
-    output_dir = os.path.join(os.path.dirname(__file__), "..", "07_REPORTS", "data")
+    output_dir = os.path.join(os.path.dirname(__file__), "..", "07_REPORTS", "data", "cache")
     os.makedirs(output_dir, exist_ok=True)
 
     # A. File Ma trận Cannibalization

@@ -1,0 +1,44 @@
+# MỤC LỤC BÁO CÁO HIỆU SUẤT & TÀI LIỆU QUẢN TRỊ (REPORTS DIRECTORY)
+
+> Hệ thống danh mục định tuyến tra cứu toàn bộ các báo cáo định kỳ (Monthly, Semi-annual, Hubs, Technical Audits) của Web Platform. Sử dụng tài liệu này để định tuyến chính xác đến báo cáo cần tra cứu.
+
+---
+
+## 1. BÁO CÁO KINH DOANH & HIỆU SUẤT HÀNG THÁNG (MONTHLY BUSINESS REVIEWS)
+
+| Kỳ báo cáo | Phạm vi dữ liệu | Tệp tin báo cáo SSOT | Trạng thái | Điểm nhấn chính |
+| :--- | :--- | :--- | :---: | :--- |
+| **Tháng 10/2026** | MTD Lũy kế đến ngày 20/10 | [`report-thang-10-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-10-2026.md) | `Active MTD` | Cinema Hub đạt 766k PV; Phễu W2A đạt 5.545 installs, 594 MAU |
+| **Tháng 09/2026** | Trọn tháng (01/09 - 30/09) | [`report-thang-09-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-09-2026.md) | `Full Month` | Hoàn thành mục tiêu quý 3; mở rộng cụm rạp và tiện ích tài chính |
+| **Tháng 08/2026** | MTD 28 ngày chính thức | [`report-thang-08-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-08-2026.md) | `Full Month` | Triển khai luồng Mobile Balloon Ads; đối soát phễu cài đặt Ads |
+| **Tháng 08/2026 (Giữa kỳ)** | Tiến độ thực thi đến 24/08 | [`report-thang-08-2026-midmonth.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-08-2026-midmonth.md) | `Archive` | Chi tiết tiến độ On-track của 5 Strategic Hubs và phối hợp phòng ban |
+| **Tháng 07/2026** | Trọn tháng (01/07 - 31/07) | [`report-thang-07-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-07-2026.md) | `Full Month` | Tăng trưởng Organic toàn Website; thí điểm chuyển đổi MoSpark CMS |
+| **Tháng 06/2026** | Trọn tháng (01/06 - 30/06) | [`report-thang-06-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-06-2026.md) | `Full Month` | Khởi động kế hoạch tái cấu trúc Web Hubs và phân vùng 3+1 Zones |
+| **Tháng 05/2026** | Trọn tháng (01/05 - 31/05) | [`report-thang-05-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-05-2026.md) | `Full Month` | Thẩm định lưu lượng truy cập ban đầu và phân tích hiệu quả chiến dịch |
+| **Giai đoạn T1 - T4/2026** | Lịch sử 4 tháng đầu năm | [`report-thang-01-den-04-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-01-den-04-2026.md) | `Historical SSOT` | Bóc tách chi tiết 55 dự án con; chuẩn hóa baseline từ GA4 và GSC |
+
+---
+
+## 2. BÁO CÁO CHUYÊN ĐỀ THEO STRATEGIC HUBS
+
+| Strategic Hub | Kỳ báo cáo | Tệp tin báo cáo | Trọng tâm phân tích |
+| :--- | :--- | :--- | :--- |
+| **Cinema Hub** | Tháng 09/2026 | [`report-cinema-hub-09-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-cinema-hub-09-2026.md) | Lưu lượng trang rạp phim, trang chi tiết phim, lịch chiếu và CTR đặt vé |
+| **Financial Hub** | Tháng 09/2026 | [`report-financial-hub-09-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-financial-hub-09-2026.md) | Hiệu suất công cụ tính lãi suất, tra cứu CIC, tỷ giá ngoại tệ và vàng |
+| **Vehicle Hub** | Tháng 09/2026 | [`report-vehicle-hub-09-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-vehicle-hub-09-2026.md) | Lưu lượng tra cứu phạt nguội 0-CAPTCHA, đăng kiểm và showroom xe |
+| **Toàn bộ 10 Hubs** | Tổng kết quý | [`hubs-report.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/hubs-report.md) | Đánh giá tổng quan năng lực tăng trưởng theo ma trận 3+1 Zones |
+| **Vehicle Alignment** | Chiến lược ngành | [`vehicle-alignment.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/vehicle-alignment.md) | Biên bản thống nhất phạm vi hợp tác kỹ thuật và dữ liệu giao thông |
+
+---
+
+## 3. BÁO CÁO CHIẾN LƯỢC, NỬA ĐẦU/CUỐI NĂM & KIỂM TOÁN HẠ TẦNG
+
+| Loại tài liệu | Tệp tin báo cáo | Mô tả nội dung |
+| :--- | :--- | :--- |
+| **Tổng kết Nửa Đầu Năm (H1)** | [`h1-2026-report.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/h1-2026-report.md) | Đánh giá toàn diện kết quả thực hiện mục tiêu nửa đầu năm 2026 |
+| **Kế hoạch Nửa Cuối Năm (H2)** | [`h2-2026-report.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/h2-2026-report.md) | Kế hoạch tăng trưởng, lộ trình dự án trọng điểm và chỉ tiêu KPIs H2 |
+| **Báo cáo Nền tảng Web** | [`web-platform-report.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/web-platform-report.md) | Báo cáo kiến trúc kỹ thuật, hạ tầng phân phối nội dung và Core Web Vitals |
+| **Kiểm toán Dự án CMS** | [`cms-projects-audit-report.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/cms-projects-audit-report.md) | Rà soát danh mục dự án trên CMS cũ và lộ trình chuyển đổi sang MoSpark |
+| **Townhall Q2/2026** | [`townhall-06-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/townhall-06-2026.md) | Bản thuyết trình định hướng phát triển toàn kênh Web tại Townhall T6 |
+| **Townhall Q3/2026** | [`townhall-07-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/townhall-07-2026.md) | Bản cập nhật tiến độ chuyển đổi và kết quả tăng trưởng tại Townhall T7 |
+| **Leadership Mindset** | [`leadership-mindset-log.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/leadership-mindset-log.md) | Đúc kết triết lý quản trị sản phẩm và các nguyên lý định hướng từ Lãnh đạo |

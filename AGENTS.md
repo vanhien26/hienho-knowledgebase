@@ -21,6 +21,7 @@
 | **Tra cứu Keyword Inventory Use Case** | [`05_HUBS/inventory/<hub-name>/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/inventory/) | Chỉ đọc đúng file CSV của Hub tương ứng. |
 | **Lịch mùa vụ, Phân tích Google Trends** | [`07_REPORTS/data/theme_seasonality.json`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data/theme_seasonality.json) | Đọc file JSON đã xuất bản hoặc chạy script cron. |
 | **Báo cáo Tuần/Tháng, Hiệu suất MTD, Target** | [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md) | Chỉ đọc khi người dùng yêu cầu làm báo cáo/phân tích số liệu. |
+| **Tra cứu Báo cáo Lịch sử (T1 -> T10, Hubs)** | [`07_REPORTS/docs/INDEX.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/INDEX.md) | Đọc index để mở đúng file báo cáo tháng hoặc chuyên đề cần tìm. |
 | **Chỉ đạo Lãnh đạo, Quyết định chiến lược** | [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md) | Chỉ đọc section gần nhất khi lập kế hoạch chiến lược mới. |
 | **Quy chuẩn viết, Văn phong, Format** | Trực tiếp trong `AGENTS.md` | Có sẵn trong bộ nhớ hệ thống, không đọc thêm file. |
 

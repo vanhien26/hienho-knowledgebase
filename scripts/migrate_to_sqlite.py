@@ -31,9 +31,11 @@ def clean_query(val: str) -> str:
 
 
 def migrate_gsc_30d_cache(conn) -> int:
-    cache_file = DATA_DIR / "gsc_30d_cache.json"
+    cache_file = DATA_DIR / "cache" / "gsc_30d_cache.json"
     if not cache_file.exists():
-        print(f"[SKIP] Không tìm thấy {cache_file}")
+        cache_file = DATA_DIR / "gsc_30d_cache.json"
+    if not cache_file.exists():
+        print(f"[SKIP] Không tìm thấy gsc_30d_cache.json")
         return 0
 
     print(f"\n[1/3] Đang nạp {cache_file.name} ({cache_file.stat().st_size / (1024*1024):.1f} MB)...")
@@ -111,9 +113,11 @@ def migrate_ga4_landing_pages(conn) -> int:
 
 
 def migrate_gsc_keyword_ranking(conn) -> int:
-    ranking_file = DATA_DIR / "gsc_keyword_ranking.json"
+    ranking_file = DATA_DIR / "cache" / "gsc_keyword_ranking.json"
     if not ranking_file.exists():
-        print(f"[SKIP] Không tìm thấy {ranking_file}")
+        ranking_file = DATA_DIR / "gsc_keyword_ranking.json"
+    if not ranking_file.exists():
+        print(f"[SKIP] Không tìm thấy gsc_keyword_ranking.json")
         return 0
 
     print(f"\n[3/3] Đang nạp {ranking_file.name} ({ranking_file.stat().st_size / (1024*1024):.1f} MB)...")

@@ -15,7 +15,8 @@ from typing import Dict, List, Optional, Tuple, Any
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = BASE_DIR / "07_REPORTS" / "data"
-DEFAULT_DB_PATH = DATA_DIR / "performance.sqlite"
+CACHE_DIR = DATA_DIR / "cache"
+DEFAULT_DB_PATH = CACHE_DIR / "performance.sqlite" if (CACHE_DIR / "performance.sqlite").exists() else DATA_DIR / "performance.sqlite"
 
 
 def get_connection(db_path: Optional[Path] = None) -> sqlite3.Connection:

@@ -139,6 +139,20 @@ def main():
 
     # 7. Luồng GA4 Real Performance & W2A Sync -> data/ga4/landing-pages.json
     if not args.skip_ga4:
+        fetch_ga4_script = SCRIPTS_DIR / "fetch_ga4.js"
+        if fetch_ga4_script.exists():
+            print(f"\n{'='*70}")
+            print(f"▶ [SYNC STEP] GA4 DATA API DIRECT FETCH")
+            print(f"{'='*70}")
+            t_ga4 = time.time()
+            try:
+                res_ga4 = subprocess.run(["node", str(fetch_ga4_script), "--days", "30"], cwd=str(BASE_DIR), capture_output=False, text=True)
+                elap_ga4 = time.time() - t_ga4
+                results["GA4 API Direct Fetch"] = ("SUCCESS" if res_ga4.returncode == 0 else "FAILED", elap_ga4)
+            except Exception as e:
+                elap_ga4 = time.time() - t_ga4
+                results["GA4 API Direct Fetch"] = (f"FAILED ({e})", elap_ga4)
+
         ga4_script = SCRIPTS_DIR / "sync_ga4_to_hubs.py"
         if ga4_script.exists():
             success, elapsed = run_step("GA4 Real Data & W2A -> Web Hubs", [str(ga4_script)])
@@ -146,6 +160,7 @@ def main():
         else:
             results["GA4 Real Data (Hubs)"] = ("SKIPPED (File not found)", 0)
     else:
+        results["GA4 API Direct Fetch"] = ("SKIPPED (User flag)", 0)
         results["GA4 Real Data (Hubs)"] = ("SKIPPED (User flag)", 0)
 
     # 8. Luồng Phân rã Ma trận Phễu Hợp nhất (GSC + GA4 Full-Funnel)

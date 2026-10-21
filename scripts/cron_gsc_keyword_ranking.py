@@ -199,8 +199,8 @@ def main():
         pos = kw_data["rounded_position"]
         kw_data["position_bonus"] = calculate_position_bonus(pos)
 
-    # 9. Xuất file kết quả
-    output_dir = os.path.join(os.path.dirname(__file__), "..", "07_REPORTS", "data")
+    # 9. Xuất file kết quả vào thư mục cache
+    output_dir = os.path.join(os.path.dirname(__file__), "..", "07_REPORTS", "data", "cache")
     os.makedirs(output_dir, exist_ok=True)
 
     ranking_file = os.path.join(output_dir, "gsc_keyword_ranking.json")

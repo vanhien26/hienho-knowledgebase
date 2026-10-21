@@ -530,6 +530,8 @@ class MoMoDomainSERPShield:
         if cls._gsc_matrix_cache is not None:
             return cls._gsc_matrix_cache
         matrix_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "07_REPORTS", "data", "gsc_cannibalization_matrix.json"))
+        if not os.path.exists(matrix_path):
+            matrix_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "07_REPORTS", "data", "cache", "gsc_cannibalization_matrix.json"))
         if os.path.exists(matrix_path):
             try:
                 with open(matrix_path, 'r', encoding='utf-8') as f:
