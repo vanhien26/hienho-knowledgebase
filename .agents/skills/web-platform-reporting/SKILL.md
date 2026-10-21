@@ -28,6 +28,7 @@ Skill này cung cấp bộ khung chuẩn hóa, phương pháp luận bóc tách 
    - Tuyệt đối không đưa CX, không đưa CWV/P90, không đưa Ticket tồn đọng. Không tính New User vào nhóm Hubs. 
    - Tuyệt đối không liệt kê lại các con số đã có trên bảng.
    - **Định vị kênh:** Organic là kênh chủ lực của Web Platform. Tuyệt đối không tô điểm cho Paid. Paid tăng mà Organic giảm là cảnh báo rủi ro về chất lượng tăng trưởng.
+   - **Phân loại Traffic Source SSOT (Non-Paid vs Paid):** BẮT BUỘC phân rã thành 2 nhóm lớn rõ rệt: **Non-Paid Traffic** (tất cả trừ Paid Traffic: Organic, Direct, Referral, Others...) và **Paid Traffic** (Paid). Khi trình bày bảng hoặc danh sách, gom rõ 2 dòng lớn Non-Paid vs Paid, các kênh con đặt thụt dòng dưới Non-Paid, tuyệt đối không để Paid xen kẽ ngang hàng.
    - **Bullet Lead-ins:** Sử dụng thuật ngữ tiếng Anh ngắn gọn, chuẩn Product Lead (`Target Overachievement:`, `Direct Traffic & Brand Strength:`, `SEO to GEO Transition:`, `Key Highlights:`, `Next Actions:`...).
 7. **Mật độ thông điệp & bảng biểu:** Giới hạn 3-5 key takeaways/slide, tối đa 2-3 bảng/biểu đồ, không copy dashboard thô.
 8. **Trực quan hóa:**

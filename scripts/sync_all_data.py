@@ -55,6 +55,8 @@ def main():
     parser.add_argument("--skip-trends", action="store_true", help="Bỏ qua Google Trends validation")
     parser.add_argument("--skip-hubs", action="store_true", help="Bỏ qua sync sang Web Hubs (react-web-momo)")
     parser.add_argument("--skip-seo-news", action="store_true", help="Bỏ qua sync tin SEO/GEO News")
+    parser.add_argument("--skip-ga4", action="store_true", help="Bỏ qua sync GA4 thực tế sang Web Hubs")
+    parser.add_argument("--skip-funnel", action="store_true", help="Bỏ qua phân rã ma trận phễu GSC + GA4")
     args = parser.parse_args()
 
     overall_start = time.time()
@@ -134,6 +136,28 @@ def main():
             results["SEO/GEO News Feed"] = ("SKIPPED (File not found)", 0)
     else:
         results["SEO/GEO News Feed"] = ("SKIPPED (User flag)", 0)
+
+    # 7. Luồng GA4 Real Performance & W2A Sync -> data/ga4/landing-pages.json
+    if not args.skip_ga4:
+        ga4_script = SCRIPTS_DIR / "sync_ga4_to_hubs.py"
+        if ga4_script.exists():
+            success, elapsed = run_step("GA4 Real Data & W2A -> Web Hubs", [str(ga4_script)])
+            results["GA4 Real Data (Hubs)"] = ("SUCCESS" if success else "FAILED", elapsed)
+        else:
+            results["GA4 Real Data (Hubs)"] = ("SKIPPED (File not found)", 0)
+    else:
+        results["GA4 Real Data (Hubs)"] = ("SKIPPED (User flag)", 0)
+
+    # 8. Luồng Phân rã Ma trận Phễu Hợp nhất (GSC + GA4 Full-Funnel)
+    if not args.skip_funnel:
+        funnel_script = SCRIPTS_DIR / "build_full_funnel_matrix.py"
+        if funnel_script.exists():
+            success, elapsed = run_step("Full-Funnel Matrix (GSC + GA4)", [str(funnel_script)])
+            results["Full-Funnel Matrix"] = ("SUCCESS" if success else "FAILED", elapsed)
+        else:
+            results["Full-Funnel Matrix"] = ("SKIPPED (File not found)", 0)
+    else:
+        results["Full-Funnel Matrix"] = ("SKIPPED (User flag)", 0)
 
     # Báo cáo tổng kết Master Sync
     total_elapsed = time.time() - overall_start

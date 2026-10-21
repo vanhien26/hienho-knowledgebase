@@ -1,6 +1,6 @@
 {
   "version": "3.1-enterprise",
-  "generated_at": "2026-10-19",
+  "generated_at": "2026-10-21",
   "stats": {
     "total_usecases": 161,
     "total_keywords": 292880,
@@ -2697,18 +2697,18 @@
         ]
       },
       "seasonality": [
-        90,
         86,
-        65,
-        74,
-        73,
-        79,
-        100,
+        90,
         88,
-        72,
-        72,
-        66,
-        62
+        80,
+        74,
+        81,
+        86,
+        83,
+        100,
+        85,
+        78,
+        77
       ]
     },
     {
@@ -5888,18 +5888,18 @@
         ]
       },
       "seasonality": [
-        5,
-        48,
-        4,
-        0,
-        0,
-        0,
-        39,
+        97,
         100,
+        65,
+        82,
+        85,
+        86,
+        99,
+        97,
         74,
-        45,
-        5,
-        0
+        75,
+        67,
+        67
       ]
     },
     {
@@ -10051,18 +10051,18 @@
         ]
       },
       "seasonality": [
-        98,
-        99,
+        38,
+        51,
+        51,
+        73,
+        75,
         100,
-        100,
-        90,
-        90,
-        94,
-        94,
-        83,
-        92,
-        93,
-        92
+        79,
+        52,
+        46,
+        31,
+        42,
+        41
       ]
     },
     {
@@ -10984,7 +10984,7 @@
         {
           "keyword": "đăng ký bidv online",
           "volume": 390,
-          "cluster_volume": 930,
+          "cluster_volume": 900,
           "cpc": 0.65,
           "competition": "Low",
           "kd": 26,
@@ -11122,7 +11122,7 @@
         {
           "keyword": "mở thẻ mb bank",
           "volume": 390,
-          "cluster_volume": 390,
+          "cluster_volume": 600,
           "cpc": 0.56,
           "competition": "Low",
           "kd": 26,
@@ -11130,7 +11130,9 @@
           "intent": "Transactional",
           "score": 5.77,
           "quadrant": "Commercial Converter",
-          "secondary_synonyms": []
+          "secondary_synonyms": [
+            "mở thẻ mb bank online"
+          ]
         },
         {
           "keyword": "tiên phong bank",
@@ -11436,7 +11438,7 @@
         {
           "keyword": "làm thẻ mb bank online",
           "volume": 260,
-          "cluster_volume": 500,
+          "cluster_volume": 290,
           "cpc": 0.7,
           "competition": "Low",
           "kd": 26,
@@ -11445,7 +11447,6 @@
           "score": 5.51,
           "quadrant": "Commercial Converter",
           "secondary_synonyms": [
-            "mở thẻ mb bank online",
             "làm thẻ online mb bank",
             "mb bank làm thẻ online"
           ]
@@ -12546,7 +12547,7 @@
         {
           "cluster_name": "Tra cứu & Chi nhánh",
           "count": 25063,
-          "total_volume": 19325830,
+          "total_volume": 19325810,
           "top_keywords": [
             {
               "keyword": "bảo lãnh thanh toán",
@@ -13027,7 +13028,7 @@
         {
           "cluster_name": "Thẻ & Tài khoản",
           "count": 1002,
-          "total_volume": 224670,
+          "total_volume": 224680,
           "top_keywords": [
             {
               "keyword": "mở thẻ vietcombank online",
@@ -13143,7 +13144,7 @@
             {
               "keyword": "mở thẻ mb bank",
               "volume": 390,
-              "cluster_volume": 390,
+              "cluster_volume": 600,
               "cpc": 0.56,
               "competition": "Low",
               "kd": 26,
@@ -13151,12 +13152,14 @@
               "intent": "Transactional",
               "score": 5.77,
               "quadrant": "Commercial Converter",
-              "secondary_synonyms": []
+              "secondary_synonyms": [
+                "mở thẻ mb bank online"
+              ]
             },
             {
               "keyword": "làm thẻ mb bank online",
               "volume": 260,
-              "cluster_volume": 500,
+              "cluster_volume": 290,
               "cpc": 0.7,
               "competition": "Low",
               "kd": 26,
@@ -13165,7 +13168,6 @@
               "score": 5.51,
               "quadrant": "Commercial Converter",
               "secondary_synonyms": [
-                "mở thẻ mb bank online",
                 "làm thẻ online mb bank",
                 "mb bank làm thẻ online"
               ]
@@ -13824,18 +13826,18 @@
         ]
       },
       "seasonality": [
-        94,
-        96,
-        98,
         90,
-        85,
-        94,
-        89,
-        97,
-        99,
-        93,
+        90,
         95,
-        100
+        92,
+        98,
+        95,
+        99,
+        100,
+        96,
+        99,
+        92,
+        93
       ]
     },
     {
@@ -15865,18 +15867,18 @@
         ]
       },
       "seasonality": [
-        63,
-        66,
+        97,
         100,
-        49,
-        54,
-        51,
-        27,
-        47,
-        46,
-        69,
-        44,
-        30
+        89,
+        82,
+        81,
+        77,
+        76,
+        77,
+        77,
+        82,
+        75,
+        82
       ]
     },
     {
@@ -24910,7 +24912,7 @@
         {
           "keyword": "san chung khoan",
           "volume": 5400,
-          "cluster_volume": 5920,
+          "cluster_volume": 5690,
           "cpc": 0.64,
           "competition": "Low",
           "kd": 29,
@@ -24920,8 +24922,7 @@
           "quadrant": "Quick Win",
           "secondary_synonyms": [
             "san chung khoan ssi",
-            "san chung khoan hose",
-            "chung khoan san hose"
+            "san chung khoan fpt"
           ]
         },
         {
@@ -34232,7 +34233,7 @@
         {
           "keyword": "tien dien tu",
           "volume": 320,
-          "cluster_volume": 490,
+          "cluster_volume": 500,
           "cpc": 0.94,
           "competition": "Low",
           "kd": 27,
@@ -37027,18 +37028,18 @@
         ]
       },
       "seasonality": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        87,
+        95,
         100,
-        0,
-        0,
-        0,
-        0
+        81,
+        80,
+        76,
+        74,
+        95,
+        85,
+        61,
+        97,
+        81
       ]
     },
     {
@@ -40305,18 +40306,18 @@
         ]
       },
       "seasonality": [
-        54,
-        39,
-        100,
-        61,
-        88,
-        76,
-        83,
-        90,
+        67,
         74,
-        55,
-        41,
-        41
+        100,
+        88,
+        91,
+        80,
+        77,
+        75,
+        85,
+        95,
+        93,
+        89
       ]
     },
     {
@@ -45204,18 +45205,18 @@
         ]
       },
       "seasonality": [
-        46,
-        79,
-        100,
+        85,
         87,
-        73,
-        32,
-        71,
-        39,
-        67,
+        95,
         84,
+        85,
+        87,
         90,
-        70
+        88,
+        91,
+        100,
+        98,
+        92
       ]
     },
     {
@@ -49239,7 +49240,7 @@
         {
           "keyword": "mua vàng pnj",
           "volume": 590,
-          "cluster_volume": 640,
+          "cluster_volume": 710,
           "cpc": 0.21,
           "competition": "Low",
           "kd": 26,
@@ -49248,6 +49249,7 @@
           "score": 5.78,
           "quadrant": "Commercial Converter",
           "secondary_synonyms": [
+            "có nên mua vàng pnj",
             "pnj có mua lại vàng không"
           ]
         },
@@ -50871,7 +50873,7 @@
         {
           "cluster_name": "Giá Vàng SJC & Vàng Miếng Hôm Nay",
           "count": 268,
-          "total_volume": 44612670,
+          "total_volume": 44612600,
           "top_keywords": [
             {
               "keyword": "giá vang 18k hôm nay",
@@ -51341,7 +51343,7 @@
         {
           "cluster_name": "Giá Vàng DOJI, PNJ & Mi Hồng",
           "count": 128,
-          "total_volume": 5160420,
+          "total_volume": 5160490,
           "top_keywords": [
             {
               "keyword": "giá vàng pnj",
@@ -51393,7 +51395,7 @@
             {
               "keyword": "mua vàng pnj",
               "volume": 590,
-              "cluster_volume": 640,
+              "cluster_volume": 710,
               "cpc": 0.21,
               "competition": "Low",
               "kd": 26,
@@ -51402,6 +51404,7 @@
               "score": 5.78,
               "quadrant": "Commercial Converter",
               "secondary_synonyms": [
+                "có nên mua vàng pnj",
                 "pnj có mua lại vàng không"
               ]
             },
@@ -52217,18 +52220,18 @@
         ]
       },
       "seasonality": [
-        61,
-        61,
-        93,
-        96,
-        76,
-        54,
-        36,
-        42,
-        63,
-        95,
-        87,
-        100
+        52,
+        56,
+        100,
+        89,
+        69,
+        43,
+        22,
+        25,
+        39,
+        75,
+        74,
+        90
       ]
     },
     {
@@ -57541,16 +57544,16 @@
       "seasonality": [
         78,
         100,
-        93,
-        78,
-        74,
+        91,
+        75,
+        71,
         63,
-        68,
+        67,
         66,
-        69,
-        79,
-        70,
-        76
+        68,
+        78,
+        71,
+        85
       ]
     },
     {
@@ -60341,18 +60344,18 @@
         ]
       },
       "seasonality": [
-        0,
-        48,
-        0,
-        0,
+        97,
+        99,
         100,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        36
+        66,
+        78,
+        68,
+        67,
+        27,
+        60,
+        78,
+        81,
+        86
       ]
     },
     {
@@ -61810,17 +61813,17 @@
         ]
       },
       "seasonality": [
-        44,
-        9,
-        18,
-        8,
-        5,
-        1,
-        0,
-        0,
-        2,
-        8,
-        24,
+        53,
+        41,
+        60,
+        51,
+        48,
+        41,
+        36,
+        38,
+        42,
+        51,
+        60,
         100
       ]
     },
@@ -70901,7 +70904,7 @@
         {
           "keyword": "tính lãi suất",
           "volume": 3600,
-          "cluster_volume": 6320,
+          "cluster_volume": 6150,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 27,
@@ -70912,7 +70915,7 @@
           "secondary_synonyms": [
             "tính lãi suất vay",
             "bảng tính lãi suất",
-            "tính lãi suất agribank"
+            "tính lãi suất online"
           ]
         },
         {
@@ -71697,7 +71700,7 @@
         {
           "keyword": "tính lãi agribank",
           "volume": 210,
-          "cluster_volume": 210,
+          "cluster_volume": 380,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 24,
@@ -71705,7 +71708,9 @@
           "intent": "Tool/Calculator",
           "score": 4.18,
           "quadrant": "Commercial Converter",
-          "secondary_synonyms": []
+          "secondary_synonyms": [
+            "tính lãi suất agribank"
+          ]
         },
         {
           "keyword": "tính lãi bidv",
@@ -72965,7 +72970,7 @@
         {
           "cluster_name": "Lãi suất & Tiền gửi",
           "count": 401,
-          "total_volume": 1059910,
+          "total_volume": 1059740,
           "top_keywords": [
             {
               "keyword": "lãi suất ngân hàng",
@@ -73157,7 +73162,7 @@
             {
               "keyword": "tính lãi suất",
               "volume": 3600,
-              "cluster_volume": 6320,
+              "cluster_volume": 6150,
               "cpc": 0.0,
               "competition": "Low",
               "kd": 27,
@@ -73168,7 +73173,7 @@
               "secondary_synonyms": [
                 "tính lãi suất vay",
                 "bảng tính lãi suất",
-                "tính lãi suất agribank"
+                "tính lãi suất online"
               ]
             },
             {
@@ -73223,7 +73228,7 @@
         {
           "cluster_name": "Tra cứu & Chi nhánh",
           "count": 105,
-          "total_volume": 100130,
+          "total_volume": 100300,
           "top_keywords": [
             {
               "keyword": "công thức tính lãi kép ngân hàng",
@@ -73373,7 +73378,7 @@
             {
               "keyword": "tính lãi agribank",
               "volume": 210,
-              "cluster_volume": 210,
+              "cluster_volume": 380,
               "cpc": 0.0,
               "competition": "Low",
               "kd": 24,
@@ -73381,7 +73386,9 @@
               "intent": "Tool/Calculator",
               "score": 4.18,
               "quadrant": "Commercial Converter",
-              "secondary_synonyms": []
+              "secondary_synonyms": [
+                "tính lãi suất agribank"
+              ]
             },
             {
               "keyword": "tính lãi bidv",
@@ -77425,18 +77432,18 @@
         ]
       },
       "seasonality": [
-        61,
+        75,
         100,
-        71,
-        51,
-        43,
-        59,
-        58,
-        43,
-        46,
-        96,
-        79,
-        65
+        97,
+        81,
+        69,
+        66,
+        70,
+        67,
+        68,
+        81,
+        80,
+        77
       ]
     },
     {
@@ -82061,7 +82068,7 @@
         {
           "keyword": "đăng ký mã số thuế cá nhân",
           "volume": 9900,
-          "cluster_volume": 30540,
+          "cluster_volume": 30520,
           "cpc": 0.02,
           "competition": "Low",
           "kd": 28,
@@ -82221,7 +82228,7 @@
         {
           "keyword": "đăng ký mã số thuế cá nhân",
           "volume": 9900,
-          "cluster_volume": 30540,
+          "cluster_volume": 30520,
           "cpc": 0.02,
           "competition": "Low",
           "kd": 28,
@@ -82931,7 +82938,7 @@
         {
           "keyword": "hướng dẫn đăng ký mã số thuế",
           "volume": 140,
-          "cluster_volume": 330,
+          "cluster_volume": 350,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 23,
@@ -82991,7 +82998,7 @@
         {
           "keyword": "ma so thue ca nhan",
           "volume": 18100,
-          "cluster_volume": 28700,
+          "cluster_volume": 28840,
           "cpc": 0.02,
           "competition": "Low",
           "kd": 29,
@@ -84075,7 +84082,7 @@
         {
           "keyword": "dang ky ma so thue",
           "volume": 720,
-          "cluster_volume": 940,
+          "cluster_volume": 800,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 25,
@@ -84084,7 +84091,6 @@
           "score": 2.86,
           "quadrant": "Long-tail / Supporting",
           "secondary_synonyms": [
-            "dang ky ma so thue ca nhan",
             "dang ky ma so thue online",
             "thu tuc dang ky ma so thue"
           ]
@@ -84457,7 +84463,7 @@
         {
           "cluster_name": "Tra cứu & Chi nhánh",
           "count": 1303,
-          "total_volume": 3859980,
+          "total_volume": 3859970,
           "top_keywords": [
             {
               "keyword": "tra cứu mã số thuế",
@@ -84479,7 +84485,7 @@
             {
               "keyword": "đăng ký mã số thuế cá nhân",
               "volume": 9900,
-              "cluster_volume": 30540,
+              "cluster_volume": 30520,
               "cpc": 0.02,
               "competition": "Low",
               "kd": 28,
@@ -84702,7 +84708,7 @@
         {
           "cluster_name": "Biểu phí & Thủ tục",
           "count": 70,
-          "total_volume": 19760,
+          "total_volume": 19770,
           "top_keywords": [
             {
               "keyword": "cách đăng ký mã sô thuê cá nhân",
@@ -84795,7 +84801,7 @@
             {
               "keyword": "hướng dẫn đăng ký mã số thuế",
               "volume": 140,
-              "cluster_volume": 330,
+              "cluster_volume": 350,
               "cpc": 0.0,
               "competition": "Low",
               "kd": 23,
@@ -85031,18 +85037,18 @@
         ]
       },
       "seasonality": [
-        41,
+        59,
         63,
         100,
+        72,
+        68,
+        74,
+        70,
+        64,
         59,
-        47,
-        39,
-        38,
-        44,
-        32,
-        21,
-        21,
-        44
+        58,
+        57,
+        67
       ]
     },
     {
@@ -92834,7 +92840,7 @@
         {
           "keyword": "ty gia ngoai te",
           "volume": 2400,
-          "cluster_volume": 3400,
+          "cluster_volume": 3390,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 26,
@@ -93907,7 +93913,7 @@
         {
           "cluster_name": "Tỷ giá & Ngoại tệ",
           "count": 419,
-          "total_volume": 591400,
+          "total_volume": 591410,
           "top_keywords": [
             {
               "keyword": "giá đô la mỹ mua vào hôm nay",
@@ -94131,7 +94137,7 @@
         {
           "cluster_name": "Tra cứu & Chi nhánh",
           "count": 241,
-          "total_volume": 341580,
+          "total_volume": 341570,
           "top_keywords": [
             {
               "keyword": "mua đô",
@@ -94483,18 +94489,18 @@
         ]
       },
       "seasonality": [
-        16,
-        0,
-        9,
-        51,
-        0,
-        0,
-        0,
-        18,
-        46,
-        58,
+        86,
+        88,
         100,
-        30
+        83,
+        81,
+        76,
+        88,
+        83,
+        89,
+        89,
+        93,
+        87
       ]
     },
     {
@@ -97484,18 +97490,18 @@
         ]
       },
       "seasonality": [
-        83,
-        83,
-        100,
-        88,
-        95,
+        81,
+        79,
         97,
-        96,
-        92,
-        94,
+        85,
+        90,
+        88,
+        99,
         95,
-        93,
-        90
+        100,
+        96,
+        94,
+        92
       ]
     },
     {
@@ -101960,18 +101966,18 @@
         ]
       },
       "seasonality": [
-        0,
-        0,
-        49,
-        68,
-        22,
-        0,
-        0,
-        19,
-        53,
+        52,
+        48,
         100,
+        78,
+        66,
         47,
-        50
+        44,
+        40,
+        54,
+        71,
+        71,
+        75
       ]
     },
     {
@@ -106357,14 +106363,14 @@
       "seasonality": [
         0,
         0,
+        96,
+        91,
         0,
         0,
-        0,
+        41,
         100,
         0,
-        0,
-        0,
-        0,
+        59,
         0,
         0
       ]
@@ -114507,18 +114513,18 @@
         ]
       },
       "seasonality": [
-        0,
+        70,
+        69,
+        90,
+        85,
+        84,
+        86,
+        92,
+        94,
         100,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        96,
+        82,
+        78
       ]
     },
     {
@@ -117759,18 +117765,18 @@
         ]
       },
       "seasonality": [
+        92,
+        85,
         100,
-        0,
-        88,
-        0,
-        0,
-        0,
-        0,
-        0,
-        80,
-        72,
-        0,
-        0
+        85,
+        92,
+        94,
+        96,
+        99,
+        95,
+        95,
+        99,
+        99
       ]
     },
     {
@@ -123052,7 +123058,7 @@
         {
           "keyword": "mở thẻ visa",
           "volume": 480,
-          "cluster_volume": 2770,
+          "cluster_volume": 2780,
           "cpc": 0.75,
           "competition": "Medium",
           "kd": 49,
@@ -126043,17 +126049,17 @@
         ]
       },
       "seasonality": [
-        78,
-        75,
-        87,
-        79,
+        76,
         82,
-        86,
-        92,
-        98,
-        100,
-        93,
         89,
+        85,
+        85,
+        94,
+        91,
+        100,
+        92,
+        85,
+        86,
         87
       ]
     },
@@ -141230,18 +141236,18 @@
         ]
       },
       "seasonality": [
-        78,
-        75,
-        87,
+        79,
+        72,
+        86,
         79,
         82,
-        86,
+        83,
         92,
-        98,
+        94,
         100,
-        93,
-        89,
-        87
+        96,
+        94,
+        90
       ]
     },
     {
@@ -145378,7 +145384,7 @@
         {
           "keyword": "mua iphone trả góp",
           "volume": 720,
-          "cluster_volume": 1930,
+          "cluster_volume": 1900,
           "cpc": 0.21,
           "competition": "High",
           "kd": 73,
@@ -160212,18 +160218,18 @@
         ]
       },
       "seasonality": [
-        63,
-        65,
-        89,
-        91,
-        87,
-        66,
-        68,
-        85,
-        92,
+        73,
+        88,
         100,
-        78,
-        84
+        88,
+        90,
+        83,
+        89,
+        86,
+        96,
+        96,
+        89,
+        93
       ]
     },
     {
@@ -160867,7 +160873,7 @@
         {
           "keyword": "lãi suất vay tín chấp vpbank",
           "volume": 170,
-          "cluster_volume": 1830,
+          "cluster_volume": 1800,
           "cpc": 0.2,
           "competition": "Low",
           "kd": 24,
@@ -161088,7 +161094,7 @@
         {
           "keyword": "bảng tính lãi suất vay tín chấp shinhan bank",
           "volume": 50,
-          "cluster_volume": 70,
+          "cluster_volume": 60,
           "cpc": 0.13,
           "competition": "Low",
           "kd": 23,
@@ -161097,8 +161103,7 @@
           "score": 3.15,
           "quadrant": "Long-tail / Supporting",
           "secondary_synonyms": [
-            "bảng tính lãi suất vay tín chấp",
-            "bảng tính lãi suất vay tín chấp vpbank"
+            "bảng tính lãi suất vay tín chấp"
           ]
         },
         {
@@ -162219,7 +162224,7 @@
         {
           "keyword": "lãi suất cho vay thế chấp",
           "volume": 40,
-          "cluster_volume": 90,
+          "cluster_volume": 120,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 22,
@@ -162228,9 +162233,9 @@
           "score": 2.42,
           "quadrant": "Long-tail / Supporting",
           "secondary_synonyms": [
+            "vay tín chấp lãi suất như thế nào",
             "lãi suất vay thế chấp mb bank",
-            "lãi suất vay thế chấp nhà",
-            "lãi suất vay không thế chấp"
+            "lãi suất vay thế chấp nhà"
           ]
         },
         {
@@ -162634,7 +162639,7 @@
         {
           "cluster_name": "Bảng Tính Trả Góp & Lãi Suất Tín Chấp",
           "count": 671,
-          "total_volume": 274700,
+          "total_volume": 274730,
           "top_keywords": [
             {
               "keyword": "vay nhanh",
@@ -162862,7 +162867,7 @@
         {
           "cluster_name": "Vay Tín Chấp Theo Lương & Hợp Đồng",
           "count": 569,
-          "total_volume": 74460,
+          "total_volume": 74430,
           "top_keywords": [
             {
               "keyword": "vay tín chấp",
@@ -162901,7 +162906,7 @@
             {
               "keyword": "lãi suất vay tín chấp vpbank",
               "volume": 170,
-              "cluster_volume": 1830,
+              "cluster_volume": 1800,
               "cpc": 0.2,
               "competition": "Low",
               "kd": 24,
@@ -162935,7 +162940,7 @@
             {
               "keyword": "bảng tính lãi suất vay tín chấp shinhan bank",
               "volume": 50,
-              "cluster_volume": 70,
+              "cluster_volume": 60,
               "cpc": 0.13,
               "competition": "Low",
               "kd": 23,
@@ -162944,8 +162949,7 @@
               "score": 3.15,
               "quadrant": "Long-tail / Supporting",
               "secondary_synonyms": [
-                "bảng tính lãi suất vay tín chấp",
-                "bảng tính lãi suất vay tín chấp vpbank"
+                "bảng tính lãi suất vay tín chấp"
               ]
             },
             {
@@ -163640,18 +163644,18 @@
         ]
       },
       "seasonality": [
+        76,
+        74,
+        83,
+        80,
+        82,
+        83,
+        91,
+        87,
         92,
-        78,
-        89,
-        90,
-        93,
-        93,
-        98,
-        100,
-        100,
-        97,
-        93,
-        97
+        91,
+        92,
+        100
       ]
     },
     {
@@ -169917,17 +169921,17 @@
         ]
       },
       "seasonality": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        62,
+        58,
+        74,
+        65,
+        63,
+        56,
+        55,
+        56,
+        77,
+        95,
+        89,
         100
       ]
     },
@@ -171739,18 +171743,18 @@
         ]
       },
       "seasonality": [
-        51,
-        52,
+        0,
         100,
-        95,
-        91,
-        74,
-        59,
-        55,
-        73,
-        91,
-        90,
-        85
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     {
@@ -178477,18 +178481,18 @@
         ]
       },
       "seasonality": [
-        93,
-        84,
-        85,
-        91,
-        90,
+        88,
         87,
-        95,
-        89,
         87,
+        83,
+        76,
+        86,
         100,
-        99,
-        100
+        85,
+        84,
+        94,
+        92,
+        93
       ]
     },
     {
@@ -181932,17 +181936,17 @@
       },
       "seasonality": [
         100,
+        93,
         89,
-        82,
-        90,
-        88,
-        87,
-        95,
+        93,
+        96,
+        94,
+        100,
+        98,
+        97,
+        92,
         89,
-        87,
-        92,
-        92,
-        97
+        89
       ]
     },
     {
@@ -200774,18 +200778,18 @@
         ]
       },
       "seasonality": [
-        55,
-        63,
-        80,
-        76,
-        80,
-        92,
-        100,
-        96,
-        95,
+        66,
+        78,
         86,
-        72,
-        64
+        82,
+        87,
+        89,
+        96,
+        100,
+        97,
+        88,
+        82,
+        75
       ]
     },
     {
@@ -212515,7 +212519,17 @@
             "volume": 135180
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "ve-may-bay",
+            "target_sector": "ota",
+            "target_name": "Vé Máy Bay Giá Rẻ",
+            "target_url": "/ve-may-bay/",
+            "suggested_anchor": "vé máy bay",
+            "overlap_tokens": 1,
+            "volume": 1743960
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bảo hiểm tai nạn là chính sách an sinh xã hội trụ cột do Bảo hiểm Xã hội Việt Nam quản lý, giúp người tham gia giảm thiểu gánh nặng tài chính khi khám chữa bệnh (mức hưởng đến 100% đúng tuyến) hoặc nhận trợ cấp thai sản, ốm đau, hưu trí. Dịch vụ hỗ trợ tra cứu mã thẻ, đóng tiếp hoặc gia hạn BHYT hộ gia đình trực tuyến nhanh chóng.",
@@ -215104,7 +215118,17 @@
             "volume": 19290
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "ve-may-bay",
+            "target_sector": "ota",
+            "target_name": "Vé Máy Bay Giá Rẻ",
+            "target_url": "/ve-may-bay/",
+            "suggested_anchor": "vé máy bay",
+            "overlap_tokens": 1,
+            "volume": 1743960
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bảo hiểm cháy nổ là chính sách an sinh xã hội trụ cột do Bảo hiểm Xã hội Việt Nam quản lý, giúp người tham gia giảm thiểu gánh nặng tài chính khi khám chữa bệnh (mức hưởng đến 100% đúng tuyến) hoặc nhận trợ cấp thai sản, ốm đau, hưu trí. Dịch vụ hỗ trợ tra cứu mã thẻ, đóng tiếp hoặc gia hạn BHYT hộ gia đình trực tuyến nhanh chóng.",
@@ -215136,18 +215160,18 @@
         ]
       },
       "seasonality": [
-        51,
-        13,
-        66,
-        70,
-        98,
+        49,
+        42,
+        76,
+        77,
         87,
-        41,
-        67,
+        87,
+        73,
+        70,
         100,
-        78,
-        96,
-        49
+        95,
+        91,
+        73
       ]
     },
     {
@@ -218154,7 +218178,17 @@
             "volume": 307360
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "ve-may-bay",
+            "target_sector": "ota",
+            "target_name": "Vé Máy Bay Giá Rẻ",
+            "target_url": "/ve-may-bay/",
+            "suggested_anchor": "vé máy bay",
+            "overlap_tokens": 1,
+            "volume": 1743960
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bảo hiểm nhân thọ là chính sách an sinh xã hội trụ cột do Bảo hiểm Xã hội Việt Nam quản lý, giúp người tham gia giảm thiểu gánh nặng tài chính khi khám chữa bệnh (mức hưởng đến 100% đúng tuyến) hoặc nhận trợ cấp thai sản, ốm đau, hưu trí. Dịch vụ hỗ trợ tra cứu mã thẻ, đóng tiếp hoặc gia hạn BHYT hộ gia đình trực tuyến nhanh chóng.",
@@ -225186,7 +225220,17 @@
             "volume": 19290
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "ve-may-bay",
+            "target_sector": "ota",
+            "target_name": "Vé Máy Bay Giá Rẻ",
+            "target_url": "/ve-may-bay/",
+            "suggested_anchor": "vé máy bay",
+            "overlap_tokens": 4,
+            "volume": 1743960
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bảo hiểm xe máy là gói bảo hiểm bắt buộc theo Nghị định 67/2023/NĐ-CP nhằm bồi thường thiệt hại về người (tối đa 150 triệu đồng/vụ) và tài sản cho bên thứ ba khi xảy ra tai nạn giao thông. Chủ xe có thể mua và nhận giấy chứng nhận bảo hiểm điện tử tích hợp mã QR hợp lệ trong 1 phút, sử dụng thuận tiện khi xuất trình với lực lượng kiểm tra.",
@@ -228622,7 +228666,17 @@
             "volume": 33830
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "ve-may-bay",
+            "target_sector": "ota",
+            "target_name": "Vé Máy Bay Giá Rẻ",
+            "target_url": "/ve-may-bay/",
+            "suggested_anchor": "vé máy bay",
+            "overlap_tokens": 4,
+            "volume": 1743960
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bảo hiểm y tế là chính sách an sinh xã hội trụ cột do Bảo hiểm Xã hội Việt Nam quản lý, giúp người tham gia giảm thiểu gánh nặng tài chính khi khám chữa bệnh (mức hưởng đến 100% đúng tuyến) hoặc nhận trợ cấp thai sản, ốm đau, hưu trí. Dịch vụ hỗ trợ tra cứu mã thẻ, đóng tiếp hoặc gia hạn BHYT hộ gia đình trực tuyến nhanh chóng.",
@@ -230823,7 +230877,7 @@
         {
           "keyword": "số sổ bhxh",
           "volume": 720,
-          "cluster_volume": 760,
+          "cluster_volume": 730,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 25,
@@ -230832,7 +230886,6 @@
           "score": 2.86,
           "quadrant": "Long-tail / Supporting",
           "secondary_synonyms": [
-            "tìm số sổ bhxh",
             "trùng số sổ bhxh"
           ]
         },
@@ -231068,7 +231121,7 @@
         {
           "cluster_name": "Đóng BHXH Tự Nguyện & Doanh Nghiệp",
           "count": 1067,
-          "total_volume": 912940,
+          "total_volume": 912970,
           "top_keywords": [
             {
               "keyword": "mua bảo hiểm y tế online",
@@ -231544,7 +231597,7 @@
         {
           "cluster_name": "Tra Cứu Sổ BHXH & Quá Trình Đóng",
           "count": 29,
-          "total_volume": 10830,
+          "total_volume": 10800,
           "top_keywords": [
             {
               "keyword": "vssid web",
@@ -231590,7 +231643,7 @@
             {
               "keyword": "số sổ bhxh",
               "volume": 720,
-              "cluster_volume": 760,
+              "cluster_volume": 730,
               "cpc": 0.0,
               "competition": "Low",
               "kd": 25,
@@ -231599,7 +231652,6 @@
               "score": 2.86,
               "quadrant": "Long-tail / Supporting",
               "secondary_synonyms": [
-                "tìm số sổ bhxh",
                 "trùng số sổ bhxh"
               ]
             },
@@ -232039,7 +232091,17 @@
             "volume": 105910
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "ve-may-bay",
+            "target_sector": "ota",
+            "target_name": "Vé Máy Bay Giá Rẻ",
+            "target_url": "/ve-may-bay/",
+            "suggested_anchor": "vé máy bay",
+            "overlap_tokens": 1,
+            "volume": 1743960
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Bảo hiểm xã hội là chính sách an sinh xã hội trụ cột do Bảo hiểm Xã hội Việt Nam quản lý, giúp người tham gia giảm thiểu gánh nặng tài chính khi khám chữa bệnh (mức hưởng đến 100% đúng tuyến) hoặc nhận trợ cấp thai sản, ốm đau, hưu trí. Dịch vụ hỗ trợ tra cứu mã thẻ, đóng tiếp hoặc gia hạn BHYT hộ gia đình trực tuyến nhanh chóng.",
@@ -235320,7 +235382,17 @@
             "volume": 307360
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "ve-may-bay",
+            "target_sector": "ota",
+            "target_name": "Vé Máy Bay Giá Rẻ",
+            "target_url": "/ve-may-bay/",
+            "suggested_anchor": "vé máy bay",
+            "overlap_tokens": 1,
+            "volume": 1743960
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Đóng phí bảo hiểm manulife là gói bảo hiểm bắt buộc theo Nghị định 67/2023/NĐ-CP nhằm bồi thường thiệt hại về người (tối đa 150 triệu đồng/vụ) và tài sản cho bên thứ ba khi xảy ra tai nạn giao thông. Chủ xe có thể mua và nhận giấy chứng nhận bảo hiểm điện tử tích hợp mã QR hợp lệ trong 1 phút, sử dụng thuận tiện khi xuất trình với lực lượng kiểm tra.",
@@ -235352,18 +235424,18 @@
         ]
       },
       "seasonality": [
-        76,
-        87,
-        91,
-        100,
-        96,
-        98,
-        87,
+        47,
         74,
-        90,
-        96,
-        88,
-        81
+        9,
+        100,
+        34,
+        55,
+        60,
+        39,
+        58,
+        61,
+        61,
+        57
       ]
     },
     {
@@ -237935,18 +238007,18 @@
         ]
       },
       "seasonality": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        31,
+        10,
+        31,
         100,
+        64,
+        98,
+        80,
+        80,
+        14,
+        10,
         0,
-        0
+        8
       ]
     },
     {
@@ -241654,18 +241726,18 @@
         ]
       },
       "seasonality": [
-        0,
+        64,
         100,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        99,
+        85,
+        81,
+        84,
+        88,
+        81,
+        83,
+        75,
+        72,
+        73
       ]
     },
     {
@@ -245285,18 +245357,18 @@
         ]
       },
       "seasonality": [
-        22,
-        68,
+        15,
+        39,
+        47,
+        47,
+        20,
+        21,
         100,
-        73,
-        79,
-        96,
-        78,
-        59,
-        33,
-        67,
-        37,
-        27
+        0,
+        47,
+        46,
+        21,
+        33
       ]
     },
     {
@@ -247998,18 +248070,18 @@
         ]
       },
       "seasonality": [
-        65,
-        81,
-        98,
+        62,
         100,
-        92,
-        81,
-        78,
-        74,
+        96,
+        90,
+        89,
+        82,
+        84,
+        88,
+        88,
         79,
-        76,
-        74,
-        72
+        75,
+        68
       ]
     },
     {
@@ -261803,18 +261875,18 @@
         ]
       },
       "seasonality": [
-        58,
-        67,
-        65,
-        93,
-        81,
-        79,
-        66,
-        79,
+        23,
+        39,
+        62,
         100,
-        76,
-        51,
-        55
+        73,
+        86,
+        67,
+        48,
+        44,
+        43,
+        28,
+        33
       ]
     },
     {
@@ -266882,18 +266954,18 @@
         ]
       },
       "seasonality": [
-        52,
+        59,
         82,
-        74,
+        88,
+        95,
+        96,
         100,
-        62,
-        54,
-        57,
-        64,
-        79,
-        91,
-        67,
-        61
+        88,
+        71,
+        61,
+        58,
+        58,
+        59
       ]
     },
     {
@@ -272791,7 +272863,26 @@
             "volume": 8100
           }
         ],
-        "cross_silo_bridges": []
+        "cross_silo_bridges": [
+          {
+            "target_id": "bhyt",
+            "target_sector": "insurtech",
+            "target_name": "Bảo Hiểm Y Tế (BHYT)",
+            "target_url": "/bhyt/",
+            "suggested_anchor": "bảo hiểm y tế",
+            "overlap_tokens": 4,
+            "volume": 307360
+          },
+          {
+            "target_id": "bao-hiem-xe-may",
+            "target_sector": "insurtech",
+            "target_name": "Bảo Hiểm Xe Máy Bắt Buộc",
+            "target_url": "/bao-hiem-xe-may/",
+            "suggested_anchor": "bảo hiểm xe máy",
+            "overlap_tokens": 4,
+            "volume": 105910
+          }
+        ]
       },
       "geo_optimization": {
         "direct_answer_snippet": "Vé máy bay là nền tảng so sánh giá vé máy bay, vé tàu xe, phòng nghỉ và tour du lịch từ các hãng vận chuyển và đối tác lữ hành uy tín. Hệ thống hỗ trợ tìm kiếm hành trình tối ưu, xác nhận mã đặt chỗ (PNR) tức thì và quản lý lịch trình linh hoạt với nhiều chương trình khuyến mãi du lịch.",
@@ -275797,7 +275888,7 @@
         {
           "keyword": "đặt vé xe",
           "volume": 8100,
-          "cluster_volume": 10800,
+          "cluster_volume": 10210,
           "cpc": 0.62,
           "competition": "Medium",
           "kd": 52,
@@ -275807,8 +275898,8 @@
           "quadrant": "Strategic Pillar",
           "secondary_synonyms": [
             "đặt vé xe khách",
-            "đặt vé xe online",
-            "đặt vé xe lửa"
+            "đặt vé xe lửa",
+            "đặt vé xe kumho"
           ]
         },
         {
@@ -275948,7 +276039,7 @@
         {
           "keyword": "đặt vé xe",
           "volume": 8100,
-          "cluster_volume": 10800,
+          "cluster_volume": 10210,
           "cpc": 0.62,
           "competition": "Medium",
           "kd": 52,
@@ -275958,8 +276049,8 @@
           "quadrant": "Strategic Pillar",
           "secondary_synonyms": [
             "đặt vé xe khách",
-            "đặt vé xe online",
-            "đặt vé xe lửa"
+            "đặt vé xe lửa",
+            "đặt vé xe kumho"
           ]
         },
         {
@@ -276509,7 +276600,7 @@
         {
           "keyword": "vexere đặt vé xe online",
           "volume": 880,
-          "cluster_volume": 880,
+          "cluster_volume": 1470,
           "cpc": 0.08,
           "competition": "Medium",
           "kd": 48,
@@ -276517,7 +276608,9 @@
           "intent": "Transactional",
           "score": 4.19,
           "quadrant": "Commercial Converter",
-          "secondary_synonyms": []
+          "secondary_synonyms": [
+            "đặt vé xe online"
+          ]
         },
         {
           "keyword": "mua vé xe",
@@ -278276,7 +278369,7 @@
             {
               "keyword": "đặt vé xe",
               "volume": 8100,
-              "cluster_volume": 10800,
+              "cluster_volume": 10210,
               "cpc": 0.62,
               "competition": "Medium",
               "kd": 52,
@@ -278286,8 +278379,8 @@
               "quadrant": "Strategic Pillar",
               "secondary_synonyms": [
                 "đặt vé xe khách",
-                "đặt vé xe online",
-                "đặt vé xe lửa"
+                "đặt vé xe lửa",
+                "đặt vé xe kumho"
               ]
             },
             {
@@ -278587,18 +278680,18 @@
         ]
       },
       "seasonality": [
-        89,
-        87,
-        69,
         100,
-        68,
-        79,
-        81,
-        99,
-        59,
-        53,
-        54,
-        73
+        92,
+        67,
+        96,
+        69,
+        80,
+        82,
+        90,
+        52,
+        51,
+        52,
+        70
       ]
     },
     {
@@ -294011,7 +294104,7 @@
         {
           "keyword": "bói tình yêu theo năm sinh",
           "volume": 2900,
-          "cluster_volume": 2900,
+          "cluster_volume": 2950,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 27,
@@ -294019,7 +294112,9 @@
           "intent": "Informational",
           "score": 3.46,
           "quadrant": "Quick Win",
-          "secondary_synonyms": []
+          "secondary_synonyms": [
+            "bói về tình yêu"
+          ]
         },
         {
           "keyword": "lichvannien365",
@@ -294343,7 +294438,7 @@
         {
           "keyword": "12 cung hoàng đạo ngày mai",
           "volume": 1600,
-          "cluster_volume": 2200,
+          "cluster_volume": 2130,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 26,
@@ -294353,8 +294448,7 @@
           "quadrant": "Quick Win",
           "secondary_synonyms": [
             "cung hoàng đạo ngày mai",
-            "12 cung hoàng đạo hàng ngày",
-            "ngày 12 cung hoàng đạo"
+            "12 cung hoàng đạo hàng ngày"
           ]
         },
         {
@@ -294670,7 +294764,7 @@
         {
           "keyword": "tuổi bính ngọ",
           "volume": 1000,
-          "cluster_volume": 1000,
+          "cluster_volume": 1260,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 26,
@@ -294678,7 +294772,9 @@
           "intent": "Informational",
           "score": 3.0,
           "quadrant": "Long-tail / Supporting",
-          "secondary_synonyms": []
+          "secondary_synonyms": [
+            "tuổi bính ngọ 1966"
+          ]
         },
         {
           "keyword": "tuổi tý hôm nay",
@@ -294930,7 +295026,7 @@
         {
           "keyword": "ngày tốt theo tuổi",
           "volume": 880,
-          "cluster_volume": 1290,
+          "cluster_volume": 1200,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 25,
@@ -294939,8 +295035,7 @@
           "score": 2.94,
           "quadrant": "Long-tail / Supporting",
           "secondary_synonyms": [
-            "ngày tốt xấu theo tuổi",
-            "ngày tốt hợp tuổi"
+            "ngày tốt xấu theo tuổi"
           ]
         },
         {
@@ -295990,18 +296085,18 @@
         ]
       },
       "seasonality": [
-        77,
         100,
-        84,
-        80,
-        69,
-        79,
-        82,
-        79,
-        74,
+        97,
+        66,
         62,
+        58,
+        57,
+        60,
+        57,
+        58,
+        61,
         63,
-        64
+        71
       ]
     },
     {
@@ -299090,7 +299185,7 @@
         {
           "keyword": "các khối thi đại học",
           "volume": 6600,
-          "cluster_volume": 10330,
+          "cluster_volume": 8290,
           "cpc": 0.1,
           "competition": "Low",
           "kd": 28,
@@ -299099,9 +299194,9 @@
           "score": 3.9,
           "quadrant": "Quick Win",
           "secondary_synonyms": [
-            "thi đại học",
             "khối thi đại học",
-            "các khối đại học"
+            "các khối đại học",
+            "các khối thi đại học và các ngành"
           ]
         },
         {
@@ -317148,7 +317243,7 @@
         {
           "keyword": "xét học bạ",
           "volume": 6600,
-          "cluster_volume": 15820,
+          "cluster_volume": 15840,
           "cpc": 0.4,
           "competition": "Low",
           "kd": 29,
@@ -319312,7 +319407,7 @@
             {
               "keyword": "xét học bạ",
               "volume": 6600,
-              "cluster_volume": 15820,
+              "cluster_volume": 15840,
               "cpc": 0.4,
               "competition": "Low",
               "kd": 29,
@@ -321479,7 +321574,7 @@
         {
           "keyword": "fpt software tuyển dụng thực tập sinh",
           "volume": 30,
-          "cluster_volume": 100,
+          "cluster_volume": 80,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 22,
@@ -321489,8 +321584,8 @@
           "quadrant": "Long-tail / Supporting",
           "secondary_synonyms": [
             "fpt telecom tuyển dụng thực tập sinh",
-            "thực tập sinh fpt software",
-            "fpt software tuyển thực tập sinh"
+            "fpt software tuyển thực tập sinh",
+            "tuyển thực tập sinh fpt"
           ]
         },
         {
@@ -321862,7 +321957,7 @@
         {
           "keyword": "thực tập fpt software",
           "volume": 20,
-          "cluster_volume": 40,
+          "cluster_volume": 60,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 21,
@@ -321871,6 +321966,7 @@
           "score": 1.32,
           "quadrant": "Long-tail / Supporting",
           "secondary_synonyms": [
+            "thực tập sinh fpt software",
             "fpt software thực tập",
             "thực tập ở fpt"
           ]
@@ -324170,7 +324266,7 @@
         {
           "keyword": "đăng ký gói c90 mobifone",
           "volume": 140,
-          "cluster_volume": 250,
+          "cluster_volume": 260,
           "cpc": 0.02,
           "competition": "Low",
           "kd": 23,
@@ -324180,7 +324276,8 @@
           "quadrant": "Long-tail / Supporting",
           "secondary_synonyms": [
             "đăng ký gói c90",
-            "đăng ký c90 mobifone"
+            "đăng ký c90 mobifone",
+            "cách đăng ký gói c90 mobifone 4g"
           ]
         },
         {
@@ -324421,7 +324518,7 @@
         {
           "keyword": "gói đăng ký mạng viettel theo tháng",
           "volume": 720,
-          "cluster_volume": 5470,
+          "cluster_volume": 5260,
           "cpc": 0.11,
           "competition": "Medium",
           "kd": 47,
@@ -324472,7 +324569,7 @@
         {
           "keyword": "cách đăng ký v90 viettel",
           "volume": 90,
-          "cluster_volume": 100,
+          "cluster_volume": 90,
           "cpc": 0.09,
           "competition": "Low",
           "kd": 23,
@@ -324480,9 +324577,7 @@
           "intent": "Transactional",
           "score": 3.99,
           "quadrant": "Long-tail / Supporting",
-          "secondary_synonyms": [
-            "cách đăng ký gói v90 viettel 2021"
-          ]
+          "secondary_synonyms": []
         },
         {
           "keyword": "đăng ký gói mạng vietnamobile",
@@ -324894,7 +324989,7 @@
         {
           "keyword": "cách đăng ký mạng viettel 10k",
           "volume": 320,
-          "cluster_volume": 970,
+          "cluster_volume": 1180,
           "cpc": 0.07,
           "competition": "Medium",
           "kd": 46,
@@ -324904,8 +324999,8 @@
           "quadrant": "Commercial Converter",
           "secondary_synonyms": [
             "đăng ký mạng viettel 10k 1 ngày",
-            "đăng ký mạng viettel ngày 10k",
-            "cách đăng ký 10k viettel"
+            "cách đăng ký gói mạng viettel",
+            "đăng ký mạng viettel ngày 10k"
           ]
         },
         {
@@ -325157,7 +325252,7 @@
         {
           "keyword": "cách đăng ký gói 70k viettel",
           "volume": 210,
-          "cluster_volume": 1290,
+          "cluster_volume": 1240,
           "cpc": 0.11,
           "competition": "Medium",
           "kd": 46,
@@ -325920,7 +326015,7 @@
         {
           "cluster_name": "Gói Cước Data Viettel",
           "count": 763,
-          "total_volume": 480700,
+          "total_volume": 480650,
           "top_keywords": [
             {
               "keyword": "đăng ký mạng viettel",
@@ -326426,7 +326521,7 @@
         {
           "cluster_name": "Nạp Data & Cú Pháp Đăng Ký",
           "count": 744,
-          "total_volume": 126900,
+          "total_volume": 126950,
           "top_keywords": [
             {
               "keyword": "cách đăng ký mạng",
@@ -326734,18 +326829,18 @@
         ]
       },
       "seasonality": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
         100,
-        0,
-        0,
-        0,
-        0
+        98,
+        86,
+        81,
+        74,
+        86,
+        91,
+        95,
+        100,
+        87,
+        90,
+        90
       ]
     },
     {
@@ -329506,7 +329601,7 @@
         {
           "cluster_name": "Nạp Tiền Viettel & Thẻ Cào Viettel",
           "count": 426,
-          "total_volume": 125120,
+          "total_volume": 125130,
           "top_keywords": [
             {
               "keyword": "nạp game bằng sms viettel",
@@ -329758,7 +329853,7 @@
         {
           "cluster_name": "Cú Pháp Nạp Tiền & Khuyến Mãi",
           "count": 777,
-          "total_volume": 109930,
+          "total_volume": 109920,
           "top_keywords": [
             {
               "keyword": "cách nạp tiền điện thoại",
@@ -332959,7 +333054,7 @@
         {
           "keyword": "tra cứu sim",
           "volume": 590,
-          "cluster_volume": 1320,
+          "cluster_volume": 1280,
           "cpc": 0.12,
           "competition": "Low",
           "kd": 25,
@@ -332969,8 +333064,7 @@
           "quadrant": "Commercial Converter",
           "secondary_synonyms": [
             "tra cứu sim viettel",
-            "tra cứu giá sim",
-            "tra cứu sim đẹp"
+            "tra cứu giá sim"
           ]
         },
         {
@@ -333073,7 +333167,7 @@
         {
           "keyword": "tra cứu sim số đẹp",
           "volume": 320,
-          "cluster_volume": 360,
+          "cluster_volume": 400,
           "cpc": 0.11,
           "competition": "Low",
           "kd": 25,
@@ -333082,6 +333176,7 @@
           "score": 4.61,
           "quadrant": "Commercial Converter",
           "secondary_synonyms": [
+            "tra cứu sim đẹp",
             "tra cứu giá sim số đẹp",
             "tra cứu sim số đẹp viettel"
           ]
@@ -335327,18 +335422,18 @@
         ]
       },
       "seasonality": [
-        9,
-        17,
-        8,
-        0,
-        0,
-        9,
+        85,
+        94,
+        88,
+        90,
+        89,
+        80,
+        87,
+        84,
+        86,
         100,
-        16,
-        13,
-        4,
-        0,
-        0
+        85,
+        81
       ]
     },
     {
@@ -363956,23 +364051,23 @@
           },
           {
             "entity_field": "Căn cứ pháp lý xử phạt",
-            "value": "Nghị định 100/2019/NĐ-CP & Nghị định 123/2021/NĐ-CP của Chính phủ"
+            "value": "Nghị định 168/2024/NĐ-CP của Chính phủ về xử phạt vi phạm trật tự ATGT đường bộ"
           }
         ]
       },
       "seasonality": [
-        77,
-        66,
+        81,
+        72,
         100,
-        90,
-        92,
-        86,
-        70,
-        65,
-        68,
-        65,
-        62,
-        84
+        94,
+        93,
+        87,
+        77,
+        73,
+        77,
+        72,
+        64,
+        82
       ]
     },
     {
@@ -369306,18 +369401,18 @@
         ]
       },
       "seasonality": [
-        22,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         100,
-        54,
-        61,
-        27,
-        43,
-        55,
-        30,
-        31,
         0,
-        7
+        0,
+        0,
+        0
       ]
     },
     {
@@ -372272,18 +372367,18 @@
         ]
       },
       "seasonality": [
-        64,
-        17,
-        38,
-        46,
-        51,
+        91,
         100,
-        92,
-        33,
-        65,
-        38,
-        38,
-        23
+        94,
+        88,
+        90,
+        97,
+        99,
+        93,
+        97,
+        87,
+        85,
+        85
       ]
     },
     {
@@ -378533,18 +378628,18 @@
         ]
       },
       "seasonality": [
-        4,
-        12,
-        100,
-        35,
         16,
-        13,
-        26,
-        12,
-        17,
+        19,
+        100,
+        75,
+        33,
+        29,
+        32,
+        28,
+        33,
+        30,
         20,
-        11,
-        6
+        18
       ]
     },
     {
@@ -381556,18 +381651,18 @@
         ]
       },
       "seasonality": [
-        5,
-        11,
+        8,
+        13,
         100,
-        36,
-        16,
-        12,
-        26,
-        12,
-        17,
+        43,
         21,
-        10,
-        8
+        17,
+        26,
+        16,
+        20,
+        24,
+        12,
+        10
       ]
     },
     {
@@ -387279,7 +387374,7 @@
           },
           {
             "entity_field": "Căn cứ pháp lý xử phạt",
-            "value": "Nghị định 100/2019/NĐ-CP & Nghị định 123/2021/NĐ-CP của Chính phủ"
+            "value": "Nghị định 168/2024/NĐ-CP của Chính phủ về xử phạt vi phạm trật tự ATGT đường bộ"
           }
         ]
       },
@@ -390200,7 +390295,7 @@
           },
           {
             "entity_field": "Căn cứ pháp lý xử phạt",
-            "value": "Nghị định 100/2019/NĐ-CP & Nghị định 123/2021/NĐ-CP của Chính phủ"
+            "value": "Nghị định 168/2024/NĐ-CP của Chính phủ về xử phạt vi phạm trật tự ATGT đường bộ"
           }
         ]
       },
@@ -402025,7 +402120,7 @@
           },
           {
             "entity_field": "Căn cứ pháp lý xử phạt",
-            "value": "Nghị định 100/2019/NĐ-CP & Nghị định 123/2021/NĐ-CP của Chính phủ"
+            "value": "Nghị định 168/2024/NĐ-CP của Chính phủ về xử phạt vi phạm trật tự ATGT đường bộ"
           }
         ]
       },
@@ -403144,17 +403239,17 @@
         ]
       },
       "seasonality": [
-        80,
-        69,
-        90,
-        98,
+        86,
+        78,
         100,
-        84,
+        92,
+        86,
+        80,
         72,
-        46,
         70,
-        66,
-        67,
+        79,
+        79,
+        78,
         96
       ]
     },
@@ -405535,18 +405630,18 @@
         ]
       },
       "seasonality": [
-        67,
-        62,
-        53,
-        59,
-        56,
-        63,
-        94,
+        45,
+        31,
+        23,
+        37,
+        43,
+        40,
         100,
-        89,
-        59,
         54,
-        58
+        29,
+        31,
+        24,
+        36
       ]
     },
     {
@@ -408560,7 +408655,7 @@
         {
           "keyword": "đăng ký sang tên xe máy",
           "volume": 170,
-          "cluster_volume": 390,
+          "cluster_volume": 380,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 24,
@@ -408577,7 +408672,7 @@
         {
           "keyword": "mua xe cũ có cần sang tên không",
           "volume": 140,
-          "cluster_volume": 600,
+          "cluster_volume": 650,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 23,
@@ -408726,7 +408821,7 @@
         {
           "keyword": "đăng ký sang tên xe máy",
           "volume": 170,
-          "cluster_volume": 390,
+          "cluster_volume": 380,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 24,
@@ -408743,7 +408838,7 @@
         {
           "keyword": "mua xe cũ có cần sang tên không",
           "volume": 140,
-          "cluster_volume": 600,
+          "cluster_volume": 650,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 23,
@@ -409056,7 +409151,7 @@
         {
           "keyword": "cách sang tên xe máy khi mua xe cũ",
           "volume": 40,
-          "cluster_volume": 110,
+          "cluster_volume": 60,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 22,
@@ -409065,7 +409160,6 @@
           "score": 3.23,
           "quadrant": "Long-tail / Supporting",
           "secondary_synonyms": [
-            "mua xe cũ sang tên",
             "cách mua xe cũ sang tên",
             "cách sang tên khi mua xe cũ"
           ]
@@ -409499,7 +409593,7 @@
         {
           "keyword": "hồ sơ đăng ký sang tên xe ô tô",
           "volume": 20,
-          "cluster_volume": 20,
+          "cluster_volume": 30,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 21,
@@ -409507,7 +409601,9 @@
           "intent": "Transactional",
           "score": 2.64,
           "quadrant": "Long-tail / Supporting",
-          "secondary_synonyms": []
+          "secondary_synonyms": [
+            "hồ sơ đăng ký sang tên xe máy"
+          ]
         },
         {
           "keyword": "thủ tục đăng ký sang tên xe ô tô",
@@ -410970,7 +411066,7 @@
             {
               "keyword": "đăng ký sang tên xe máy",
               "volume": 170,
-              "cluster_volume": 390,
+              "cluster_volume": 380,
               "cpc": 0.0,
               "competition": "Low",
               "kd": 24,
@@ -410987,7 +411083,7 @@
             {
               "keyword": "mua xe cũ có cần sang tên không",
               "volume": 140,
-              "cluster_volume": 600,
+              "cluster_volume": 650,
               "cpc": 0.0,
               "competition": "Low",
               "kd": 23,
@@ -416037,7 +416133,7 @@
         {
           "keyword": "chi phí học bằng lái xe b2",
           "volume": 50,
-          "cluster_volume": 110,
+          "cluster_volume": 100,
           "cpc": 1.13,
           "competition": "Low",
           "kd": 26,
@@ -416047,8 +416143,8 @@
           "quadrant": "Long-tail / Supporting",
           "secondary_synonyms": [
             "chi phí học b2",
-            "chi phí học và thi bằng lái xe b2",
-            "chi phí học bằng lái xe b2 năm 2022"
+            "chi phí học bằng lái xe b2 năm 2022",
+            "chi phí học bằng lái xe b2 năm 2021"
           ]
         },
         {
@@ -416116,7 +416212,7 @@
         {
           "keyword": "chi phí thi bằng a2",
           "volume": 90,
-          "cluster_volume": 90,
+          "cluster_volume": 140,
           "cpc": 0.3,
           "competition": "Low",
           "kd": 24,
@@ -416124,7 +416220,9 @@
           "intent": "Commercial",
           "score": 3.11,
           "quadrant": "Long-tail / Supporting",
-          "secondary_synonyms": []
+          "secondary_synonyms": [
+            "chi phí thi bằng c"
+          ]
         },
         {
           "keyword": "giấy phép lái xe b1",
@@ -417090,7 +417188,7 @@
         {
           "keyword": "chi phí thi bằng b2",
           "volume": 70,
-          "cluster_volume": 170,
+          "cluster_volume": 120,
           "cpc": 1.67,
           "competition": "Medium",
           "kd": 50,
@@ -417099,9 +417197,9 @@
           "score": 2.59,
           "quadrant": "Long-tail / Supporting",
           "secondary_synonyms": [
-            "chi phí thi bằng c",
             "chi phí bằng b2",
-            "chi phí thi b2"
+            "chi phí thi b2",
+            "chi phí thi lại bằng b2"
           ]
         },
         {
@@ -417843,7 +417941,7 @@
             {
               "keyword": "chi phí thi bằng a2",
               "volume": 90,
-              "cluster_volume": 90,
+              "cluster_volume": 140,
               "cpc": 0.3,
               "competition": "Low",
               "kd": 24,
@@ -417851,12 +417949,14 @@
               "intent": "Commercial",
               "score": 3.11,
               "quadrant": "Long-tail / Supporting",
-              "secondary_synonyms": []
+              "secondary_synonyms": [
+                "chi phí thi bằng c"
+              ]
             },
             {
               "keyword": "chi phí thi bằng b2",
               "volume": 70,
-              "cluster_volume": 170,
+              "cluster_volume": 120,
               "cpc": 1.67,
               "competition": "Medium",
               "kd": 50,
@@ -417865,9 +417965,9 @@
               "score": 2.59,
               "quadrant": "Long-tail / Supporting",
               "secondary_synonyms": [
-                "chi phí thi bằng c",
                 "chi phí bằng b2",
-                "chi phí thi b2"
+                "chi phí thi b2",
+                "chi phí thi lại bằng b2"
               ]
             },
             {
@@ -417972,7 +418072,7 @@
           },
           {
             "entity_field": "Căn cứ pháp lý xử phạt",
-            "value": "Nghị định 100/2019/NĐ-CP & Nghị định 123/2021/NĐ-CP của Chính phủ"
+            "value": "Nghị định 168/2024/NĐ-CP của Chính phủ về xử phạt vi phạm trật tự ATGT đường bộ"
           }
         ]
       },
@@ -424074,18 +424174,18 @@
         ]
       },
       "seasonality": [
-        67,
-        73,
-        70,
-        88,
         76,
-        84,
-        92,
+        82,
+        73,
+        79,
+        74,
+        81,
+        89,
         100,
-        94,
-        80,
-        67,
-        65
+        93,
+        76,
+        66,
+        68
       ]
     },
     {
@@ -424163,7 +424263,7 @@
         {
           "keyword": "đăng ký epass",
           "volume": 260,
-          "cluster_volume": 430,
+          "cluster_volume": 440,
           "cpc": 0.01,
           "competition": "Low",
           "kd": 24,
@@ -424321,7 +424421,7 @@
         {
           "keyword": "đăng ký epass",
           "volume": 260,
-          "cluster_volume": 430,
+          "cluster_volume": 440,
           "cpc": 0.01,
           "competition": "Low",
           "kd": 24,
@@ -425482,7 +425582,7 @@
         {
           "keyword": "đăng ký dán thẻ epass",
           "volume": 10,
-          "cluster_volume": 30,
+          "cluster_volume": 20,
           "cpc": 0.0,
           "competition": "Low",
           "kd": 18,
@@ -425491,8 +425591,7 @@
           "score": 2.08,
           "quadrant": "Long-tail / Supporting",
           "secondary_synonyms": [
-            "đăng ký dán thẻ epass tại nhà",
-            "đăng ký thẻ epass"
+            "đăng ký dán thẻ epass tại nhà"
           ]
         },
         {
@@ -426430,7 +426529,7 @@
             {
               "keyword": "đăng ký epass",
               "volume": 260,
-              "cluster_volume": 430,
+              "cluster_volume": 440,
               "cpc": 0.01,
               "competition": "Low",
               "kd": 24,

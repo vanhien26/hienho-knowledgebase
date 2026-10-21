@@ -1,0 +1,177 @@
+Kiểm tra trạng thái HTTP cho 47 URL nguồn duy nhất...
+
+| themeId | archetype | blueprint_match | schema.type | số entity_facts | số entity_gaps | số sources | last_verified | FLAG |
+|---|---|---|---|---|---|---|---|---|
+| game-app | entertainment_topup | shared | Product | 3 | 3 | 1 | 2026-10-20 | OK |
+| nap-game | entertainment_topup | exact | Product | 3 | 3 | 1 | 2026-10-20 | OK |
+| nap-tiktok | entertainment_topup | shared | Product | 3 | 3 | 1 | 2026-10-20 | OK |
+| nph-game | entertainment_topup | shared | Product | 3 | 3 | 1 | 2026-10-20 | OK |
+| bac | financial_gold_fx | shared | FinancialProduct | 3 | 3 | 2 | 2026-10-20 | OK |
+| chung-chi-quy | financial_investment | shared | FinancialProduct | 5 | 3 | 3 | 2026-10-20 | OK |
+| chung-chi-tien-gui | financial_savings | shared | DepositAccount | 4 | 3 | 3 | 2026-10-20 | OK |
+| chung-khoan | financial_investment | exact | FinancialProduct | 5 | 3 | 3 | 2026-10-20 | OK |
+| chuyen-khoan | financial_card_payment | shared | PaymentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| co-phieu | financial_investment | shared | FinancialProduct | 5 | 3 | 3 | 2026-10-20 | OK |
+| co-tuc | financial_investment | shared | Article | 5 | 3 | 3 | 2026-10-20 | OK |
+| crypto | null | null | null | 3 | 3 | 2 | 2026-10-20 | OK |
+| dau-tu | financial_investment | shared | FinancialProduct | 5 | 3 | 3 | 2026-10-20 | OK |
+| diem-tin-dung | financial_credit_score | exact | FinancialProduct | 3 | 3 | 2 | 2026-10-20 | OK |
+| doi-tien | financial_gold_fx | shared | FinancialProduct | 3 | 3 | 2 | 2026-10-20 | OK |
+| dong-tien | macro_knowledge | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| du-no | financial_credit_line | shared | FinancialProduct | 3 | 3 | 2 | 2026-10-20 | OK |
+| gdp | macro_knowledge | exact | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| gia-vang | financial_gold_fx | exact | FinancialProduct | 3 | 3 | 2 | 2026-10-20 | OK |
+| giam-phat | macro_knowledge | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| giam-tru-gia-canh | tax_payroll | shared | GovernmentService | 5 | 3 | 2 | 2026-10-20 | OK |
+| gui-tiet-kiem | financial_savings | exact | DepositAccount | 4 | 3 | 3 | 2026-10-20 | OK |
+| internet-banking | financial_card_payment | shared | PaymentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| ke-hoach-tai-chinh | macro_knowledge | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| kieu-hoi | financial_gold_fx | shared | FinancialProduct | 3 | 3 | 2 | 2026-10-20 | OK |
+| ky-quy | financial_investment | shared | FinancialProduct | 5 | 3 | 3 | 2026-10-20 | OK |
+| lai-kep | macro_knowledge | exact | WebApplication | 3 | 3 | 2 | 2026-10-20 | OK |
+| lai-suat | financial_savings | shared | DepositAccount | 4 | 3 | 3 | 2026-10-20 | OK |
+| lai-vay | financial_credit_line | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| lam-phat | macro_knowledge | exact | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| ma-chung-khoan | financial_investment | shared | FinancialProduct | 5 | 3 | 3 | 2026-10-20 | OK |
+| ma-so-thue | tax_payroll | shared | GovernmentService | 5 | 3 | 2 | 2026-10-20 | OK |
+| master-card | financial_card_payment | shared | PaymentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| napas | financial_card_payment | shared | PaymentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| ngan-hang | null | null | null | 3 | 3 | 2 | 2026-10-20 | OK |
+| ngoai-te | financial_gold_fx | shared | FinancialProduct | 3 | 3 | 2 | 2026-10-20 | OK |
+| no-xau | financial_credit_score | shared | FinancialProduct | 3 | 3 | 2 | 2026-10-20 | OK |
+| phai-sinh | financial_investment | shared | FinancialProduct | 5 | 3 | 3 | 2026-10-20 | OK |
+| quy-du-phong | macro_knowledge | shared | Article | 3 | 3 | 3 | 2026-10-20 | OK |
+| quy-etf | financial_investment | shared | FinancialProduct | 5 | 3 | 3 | 2026-10-20 | OK |
+| quy-huu-tri | financial_investment | shared | Article | 5 | 3 | 3 | 2026-10-20 | OK |
+| quy-mo | financial_investment | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| tai-san | macro_knowledge | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| thanh-toan-qr | financial_card_payment | shared | PaymentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| thau-chi | financial_credit_line | shared | FinancialProduct | 3 | 3 | 2 | 2026-10-20 | OK |
+| the-ghi-no | financial_card_payment | shared | PaymentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| the-tin-dung | financial_card_payment | exact | PaymentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| the-tra-truoc | financial_card_payment | shared | PaymentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| the-visa | financial_card_payment | shared | PaymentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| thue-tncn | tax_payroll | exact | GovernmentService | 5 | 3 | 2 | 2026-10-20 | OK |
+| thue | tax_payroll | shared | GovernmentService | 5 | 3 | 2 | 2026-10-20 | OK |
+| tich-luy | financial_savings | shared | DepositAccount | 4 | 3 | 3 | 2026-10-20 | OK |
+| tieu-san | macro_knowledge | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| tin-dung | financial_credit_line | exact | FinancialProduct | 3 | 3 | 2 | 2026-10-20 | OK |
+| tinh-luong | tax_payroll | exact | WebApplication | 5 | 3 | 2 | 2026-10-20 | OK |
+| tra-gop | financial_credit_paylater | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| trai-phieu | financial_investment | shared | FinancialProduct | 5 | 3 | 3 | 2026-10-20 | OK |
+| tu-do-tai-chinh | macro_knowledge | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| ty-gia | financial_gold_fx | exact | FinancialProduct | 3 | 3 | 2 | 2026-10-20 | OK |
+| uy-thac | financial_investment | shared | FinancialProduct | 5 | 3 | 3 | 2026-10-20 | OK |
+| vay-the-chap | financial_consumer_loan | shared | LoanOrCredit | 3 | 3 | 2 | 2026-10-20 | OK |
+| vay-tin-chap | financial_consumer_loan | shared | LoanOrCredit | 3 | 3 | 2 | 2026-10-20 | OK |
+| vay | financial_consumer_loan | exact | LoanOrCredit | 3 | 3 | 2 | 2026-10-20 | OK |
+| vi-dien-tu | financial_card_payment | shared | PaymentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| vi-tra-sau | financial_credit_paylater | exact | FinancialProduct | 3 | 3 | 2 | 2026-10-20 | OK |
+| von-luu-dong | macro_knowledge | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| ve-so | lottery_vietlott | shared | GovernmentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| vietlott | lottery_vietlott | exact | GovernmentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| xo-so | lottery_vietlott | exact | GovernmentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| dat-phim | cinema_movie | shared | MovieTheater | 3 | 3 | 1 | 2026-10-20 | OK |
+| lich-phim | cinema_movie | exact | MovieTheater | 3 | 3 | 1 | 2026-10-20 | OK |
+| phim | cinema_movie | shared | MovieTheater | 3 | 3 | 1 | 2026-10-20 | OK |
+| rap | cinema_movie | exact | MovieTheater | 3 | 3 | 1 | 2026-10-20 | OK |
+| ve-xem-phim | cinema_movie | exact | MovieTheater | 3 | 3 | 1 | 2026-10-20 | OK |
+| benh-vien | hospital_health | exact | MedicalOrganization | 3 | 3 | 2 | 2026-10-20 | OK |
+| bmi | health_calculator | exact | WebApplication | 3 | 3 | 1 | 2026-10-20 | OK |
+| dat-lich-kham-benh | hospital_health | shared | MedicalOrganization | 3 | 3 | 2 | 2026-10-20 | OK |
+| tinh-calo | health_calculator | exact | WebApplication | 3 | 3 | 1 | 2026-10-20 | OK |
+| bao-hiem-chay-no | commercial_insurance | exact | InsuranceProduct | 4 | 3 | 2 | 2026-10-20 | OK |
+| bao-hiem-nhan-tho | commercial_insurance | exact | InsuranceProduct | 4 | 3 | 1 | 2026-10-20 | OK |
+| bao-hiem-o-to | insurtech_motor | exact | InsuranceProduct | 3 | 3 | 2 | 2026-10-20 | OK |
+| bao-hiem-tai-nan | commercial_insurance | shared | InsuranceProduct | 4 | 3 | 2 | 2026-10-20 | OK |
+| bao-hiem-xe-may | insurtech_motor | exact | InsuranceProduct | 3 | 3 | 2 | 2026-10-20 | OK |
+| bhxh | insurtech_social_health | exact | GovernmentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| bhyt | insurtech_social_health | exact | GovernmentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| phi-bao-hiem | commercial_insurance | shared | InsuranceProduct | 4 | 3 | 2 | 2026-10-20 | OK |
+| dat-resort | ota_travel_transit | shared | TravelAgency | 3 | 3 | 1 | 2026-10-20 | OK |
+| du-lich-an-do | ota_travel_transit | shared | TravelAgency | 3 | 3 | 1 | 2026-10-20 | OK |
+| du-lich-dai-loan | ota_travel_transit | shared | TravelAgency | 3 | 3 | 1 | 2026-10-20 | OK |
+| du-lich-han-quoc | ota_travel_transit | shared | TravelAgency | 3 | 3 | 1 | 2026-10-20 | OK |
+| du-lich-hongkong | ota_travel_transit | shared | TravelAgency | 3 | 3 | 1 | 2026-10-20 | OK |
+| du-lich-nhat | ota_travel_transit | shared | TravelAgency | 3 | 3 | 1 | 2026-10-20 | OK |
+| du-lich-singapore | ota_travel_transit | shared | TravelAgency | 3 | 3 | 1 | 2026-10-20 | OK |
+| du-lich-thai-lan | ota_travel_transit | shared | TravelAgency | 3 | 3 | 1 | 2026-10-20 | OK |
+| du-lich-trung-quoc | ota_travel_transit | shared | TravelAgency | 3 | 3 | 1 | 2026-10-20 | OK |
+| du-lich-viet-nam | ota_travel_transit | shared | TravelAgency | 3 | 3 | 2 | 2026-10-20 | OK |
+| du-lich | ota_travel_transit | shared | TravelAgency | 3 | 3 | 2 | 2026-10-20 | OK |
+| gia-pha | ota_travel_transit | shared | TravelAgency | 3 | 3 | 1 | 2026-10-20 | OK |
+| tour-du-lich | ota_travel_transit | shared | TravelAgency | 3 | 3 | 2 | 2026-10-20 | OK |
+| ve-cap-treo | ota_travel_transit | shared | TravelAgency | 3 | 3 | 1 | 2026-10-20 | OK |
+| ve-may-bay | ota_travel_transit | exact | TravelAgency | 3 | 3 | 2 | 2026-10-20 | OK |
+| ve-tau | ota_travel_transit | exact | TravelAgency | 3 | 3 | 1 | 2026-10-20 | OK |
+| ve-xe | ota_travel_transit | exact | TravelAgency | 3 | 3 | 1 | 2026-10-20 | OK |
+| visa-du-lich | ota_travel_transit | shared | TravelAgency | 3 | 3 | 1 | 2026-10-20 | OK |
+| kinh-dich | lifestyle_info | shared | Article | 3 | 3 | 1 | 2026-10-20 | OK |
+| lich-am | lifestyle_info | exact | Article | 3 | 3 | 1 | 2026-10-20 | OK |
+| ma-giam-gia | null | null | null | 3 | 3 | 1 | 2026-10-20 | OK |
+| tarot | lifestyle_info | exact | Article | 3 | 3 | 1 | 2026-10-20 | OK |
+| tu-vi | lifestyle_info | exact | Article | 3 | 3 | 1 | 2026-10-20 | OK |
+| cao-dang | student_education | shared | EducationalOrganization | 3 | 3 | 1 | 2026-10-20 | OK |
+| dai-hoc | student_education | exact | EducationalOrganization | 3 | 3 | 1 | 2026-10-20 | OK |
+| diem-chuan | student_education | exact | EducationalOrganization | 3 | 3 | 1 | 2026-10-20 | OK |
+| hoc-phi | student_education | shared | EducationalOrganization | 3 | 3 | 1 | 2026-10-20 | OK |
+| nha-tro | student_education | shared | EducationalOrganization | 3 | 3 | 1 | 2026-10-20 | OK |
+| sinh-vien | student_education | shared | EducationalOrganization | 3 | 3 | 1 | 2026-10-20 | OK |
+| truong-trung-cap | student_education | shared | EducationalOrganization | 3 | 3 | 1 | 2026-10-20 | OK |
+| tuyen-sinh | student_education | shared | EducationalOrganization | 3 | 3 | 1 | 2026-10-20 | OK |
+| viec-lam-sinh-vien | student_jobs | exact | EmploymentAgency | 3 | 3 | 2 | 2026-10-20 | OK |
+| data-4g | telco_data_sim | exact | Product | 3 | 3 | 2 | 2026-10-20 | OK |
+| esim-du-lich | telco_data_sim | exact | Product | 4 | 3 | 2 | 2026-10-20 | OK |
+| nap-tien-dien-thoai | telco_data_sim | exact | Product | 3 | 3 | 2 | 2026-10-20 | OK |
+| sim-du-lich | telco_data_sim | shared | Product | 4 | 3 | 2 | 2026-10-20 | OK |
+| sim-nhat-ban | telco_data_sim | shared | Product | 4 | 3 | 2 | 2026-10-20 | OK |
+| sim-thai-lan | telco_data_sim | shared | Product | 4 | 3 | 2 | 2026-10-20 | OK |
+| sim-trung-quoc | telco_data_sim | shared | Product | 4 | 3 | 2 | 2026-10-20 | OK |
+| sim | telco_data_sim | shared | Product | 3 | 3 | 2 | 2026-10-20 | OK |
+| bao-cao-lua-dao | trust_fraud | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| lua-dao | trust_fraud | exact | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| bai-do-xe | vehicle_service | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| bai-giu-xe | vehicle_service | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| bao-duong-xe | vehicle_service | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| bien-so-dep | vehicle_registration_plate | shared | GovernmentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| bien-so-xe | vehicle_registration_plate | exact | GovernmentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| chi-duong | null | null | null | 3 | 3 | 2 | 2026-10-20 | OK |
+| cuu-ho-xe | vehicle_service | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| dang-kiem | vehicle_service | exact | GovernmentService | 4 | 3 | 2 | 2026-10-20 | OK |
+| dinh-gia-xe | vehicle_service | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| doi-pin | vehicle_service | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| epass | vehicle_toll | exact | PaymentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| gara-o-to | vehicle_service | exact | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| garage-keywords-list | vehicle_service | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| gia-dau | vehicle_fuel | exact | Dataset | 5 | 3 | 2 | 2026-10-20 | OK |
+| gia-xang | vehicle_fuel | exact | Dataset | 5 | 3 | 2 | 2026-10-20 | OK |
+| gia-xe | vehicle_service | shared | Dataset | 3 | 3 | 2 | 2026-10-20 | OK |
+| giay-phep-lai-xe | driver_license | exact | GovernmentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| loi-giao-thong | vehicle_traffic_fines | shared | GovernmentService | 4 | 3 | 3 | 2026-10-20 | OK |
+| ly-thuyet-lai-xe | driver_license | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| metro | null | null | null | 3 | 3 | 2 | 2026-10-20 | OK |
+| phan-mem-mo-phong | driver_license | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| phat-nguoi | vehicle_traffic_fines | exact | GovernmentService | 4 | 3 | 3 | 2026-10-20 | OK |
+| phi-duong-bo | vehicle_toll | shared | PaymentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| phi-khong-dung | vehicle_toll | shared | PaymentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| rua-xe | vehicle_service | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| sang-ten-xe | vehicle_registration_plate | shared | GovernmentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| sua-xe | vehicle_service | shared | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| thi-bang-lai-xe | driver_license | shared | GovernmentService | 3 | 3 | 2 | 2026-10-20 | OK |
+| thue-truoc-ba | tax_payroll | shared | WebApplication | 4 | 3 | 2 | 2026-10-20 | OK |
+| tram-sac | vehicle_service | exact | Article | 3 | 3 | 2 | 2026-10-20 | OK |
+| tram-xang | vehicle_fuel | shared | Dataset | 5 | 3 | 2 | 2026-10-20 | OK |
+| tuyen-xe-buyt | null | null | null | 3 | 3 | 2 | 2026-10-20 | OK |
+| vetc | vehicle_toll | exact | PaymentService | 3 | 3 | 2 | 2026-10-20 | OK |
+
+======================================================
+TỔNG HỢP KIỂM ĐỊNH GEO ENTITY DATA (161 THEMES):
+- Tổng số themes: 161
+- Số theme 'exact': 52
+- Số theme 'shared': 103
+- Số theme 'null': 6
+- Số theme bị FLAG: 0
+======================================================
+
+DANH SÁCH URL BỊ FLAG:
+Không có URL nào bị FLAG. Tất cả các URL nguồn đều trả về HTTP 200 và không bị vượt ngưỡng 30 themes.

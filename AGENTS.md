@@ -4,13 +4,25 @@
 
 - **Không tự ý triển khai, không chạy tác vụ dài hơi khi chưa được yêu cầu.** Đây không phải chế độ autonomous agent.
 - **Khi người dùng đặt vấn đề:** Trả lời trực tiếp, sắc sảo, đúng trọng tâm - là câu trả lời tối ưu nhất dựa trên toàn bộ knowledge base, không cần người dùng phải hỏi đi hỏi lại.
-- **Quy trình trả lời một vấn đề:**
-  1. Load bối cảnh: `MEETING_RECAPS.md` + `00_HARNESS_CORE/hienho_master_doc.md` + file SSOT liên quan (theo `00_HARNESS_CORE/KNOWLEDGE_ROUTING.md`).
-  2. Phân tích với Chain of Thought: reasoning trước, kết luận sau. Chỉ ra lỗi logic, điểm mâu thuẫn, giả định chưa validate nếu phát hiện.
-  3. Gắn vào business metric cụ thể (New User / MAU / Traffic / Revenue) và framework hiện có (JTBD, 4 Zones, PLG, Web-to-App).
-  4. Đề xuất tối ưu kèm Action Items cụ thể, có ưu tiên rõ ràng.
+- **Quy trình trả lời một vấn đề (Lazy & Intent-Based Routing):**
+  1. **Định tuyến nhanh (Fast Routing):** Phân loại ý định theo bảng Fast Routing Index bên dưới. Tuyệt đối KHÔNG tự ý đọc các file lớn (`MEETING_RECAPS.md`, `hienho_master_doc.md`, `WEB_PERFORMANCE_TRACKING_MASTER.md`) cho các câu hỏi kỹ thuật, code review, trao đổi logic hoặc tra cứu thông thường. Cần mảng nào chỉ đọc đúng 1 file SSOT của mảng đó.
+  2. **Phân tích với Chain of Thought:** reasoning trước, kết luận sau. Chỉ ra lỗi logic, điểm mâu thuẫn, giả định chưa validate nếu phát hiện.
+  3. **Gắn vào business metric (khi phù hợp):** New User / MAU / Traffic / Revenue và framework hiện có (JTBD, 4 Zones, PLG, Web-to-App).
+  4. **Đề xuất tối ưu kèm Action Items cụ thể**, có ưu tiên rõ ràng.
 - **Chỉ build/render file (HTML, script, PRD, report) khi người dùng yêu cầu rõ** - hoặc khi câu trả lời "tối ưu nhất" bắt buộc cần artifact để chứng minh, và phải nêu lý do.
 - Khi thấy phương án người dùng chọn có rủi ro hoặc có phương án tốt hơn đáng kể: nêu thẳng, không xuôi theo.
+
+### 🗺️ BẢNG ĐỊNH TUYẾN NHANH (FAST ROUTING INDEX SSOT)
+
+| Nghiệp vụ / Chủ đề người dùng hỏi | File SSOT đích duy nhất (Target File) | Hành vi nạp file (Loading Policy) |
+| :--- | :--- | :--- |
+| **Hỏi nhanh, Kỹ thuật, Code, Review, Debug** | File code hoặc file văn bản liên quan trực tiếp | **Zero context file load**. Trả lời ngay, không đọc file bối cảnh. |
+| **Tracking Umami, Event Name, Schema Params** | [`04_MOSPARK_PLATFORM/umami_utility_tracking.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM/umami_utility_tracking.md) | Chỉ đọc file này khi hỏi về tracking/sự kiện. |
+| **Tra cứu Keyword Inventory Use Case** | [`05_HUBS/inventory/<hub-name>/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/inventory/) | Chỉ đọc đúng file CSV của Hub tương ứng. |
+| **Lịch mùa vụ, Phân tích Google Trends** | [`07_REPORTS/data/theme_seasonality.json`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data/theme_seasonality.json) | Đọc file JSON đã xuất bản hoặc chạy script cron. |
+| **Báo cáo Tuần/Tháng, Hiệu suất MTD, Target** | [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md) | Chỉ đọc khi người dùng yêu cầu làm báo cáo/phân tích số liệu. |
+| **Chỉ đạo Lãnh đạo, Quyết định chiến lược** | [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md) | Chỉ đọc section gần nhất khi lập kế hoạch chiến lược mới. |
+| **Quy chuẩn viết, Văn phong, Format** | Trực tiếp trong `AGENTS.md` | Có sẵn trong bộ nhớ hệ thống, không đọc thêm file. |
 
 ---
 
@@ -24,7 +36,7 @@
   1. Quét tự động file `*Web Performance Tracking*.xlsx` mới nhất trong thư mục `/Users/hienhv/Downloads/`.
   2. Trích xuất chính xác số ngày lũy kế MTD (MTD Days), lưu bản ghi sạch vào SSOT [web_performance_tracking.xlsx](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/web_performance_tracking.xlsx) và tạo JSON snapshot.
   3. Đồng bộ báo cáo master và trình bày kết quả ngay lập tức theo phong cách Product Lead / Tech Lead.
-- **Rule:** Khi thực hiện bất kỳ yêu cầu nào liên quan đến Web Platform, các dự án Hubs (Cinema Hub, Financial Hub, Vehicle Hub, Student Hub...), lập kế hoạch, viết PRD, phân tích số liệu hoặc chuẩn bị báo cáo, AI Agent (Antigravity) **BẮT BUỘC phải chủ động đọc và tham chiếu số liệu hiệu suất thực tế từ file [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md) và file [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md) trước**.
+- **Strategic Context Trigger Rule:** Khi người dùng yêu cầu **lập kế hoạch chiến lược cấp cao, viết PRD mới, chuẩn bị báo cáo tuần/tháng (WBR/MBR) hoặc phân tích số liệu hiệu suất Web Platform**, AI Agent mới chủ động tham chiếu số liệu thực tế từ file [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md) và mục recaps gần nhất từ [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md). Với các câu hỏi nghiệp vụ thông thường, hỏi kỹ thuật, tra cứu tiện ích hay review trao đổi, **TUYỆT ĐỐI KHÔNG tự ý đọc các file này** để tối ưu tốc độ phản hồi.
 - **Utility Tracking SSOT Rule:** Khi Kỹ sư (Dev) hoặc người dùng hỏi về: gắn tracking, đo lường công cụ, sự kiện Umami, Event Name cho tool/widget/calculator, schema tham số (`provider`, `amount`) hoặc cách track cho bất kỳ tiện ích nào, AI Agent **BẮT BUỘC chỉ định và trích xuất trực tiếp từ file SSOT [`04_MOSPARK_PLATFORM/umami_utility_tracking.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/04_MOSPARK_PLATFORM/umami_utility_tracking.md)**.
 - **Use Case Keyword Inventory SSOT Rule:** Khi người dùng yêu cầu *"tra cứu Inventory của 1 use case"* (hoặc bất kỳ câu lệnh liên quan đến kiểm tra dataset từ khóa, keyword clusters, market volume thô của một ngành/use case), AI Agent **BẮT BUỘC chỉ định và đọc trực tiếp từ thư mục SSOT [`05_HUBS/inventory/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/inventory/)** (gồm các phân khối: `Financial/`, `vehicle-hub/`, `insurtech/`, `ota/`, `telco/`, `hospital/`, `Lottery/`, `trust/`, `cinema/`, `student/`, `Entertainment/`, `other/`). Tuyệt đối không tự suy diễn số liệu từ khóa khi chưa quét các file CSV tương ứng trong thư mục này.
 - **Seasonality & Google Trends Intelligence SSOT Rule:** Khi người dùng hoặc hệ thống yêu cầu tính toán, cập nhật lịch mùa vụ (Seasonality), phân tích xu hướng thị trường hoặc chuẩn bị dữ liệu xuất sang Web Hubs (`react-web-momo`):
@@ -36,6 +48,11 @@
      - Mỗi payload truy vấn chỉ chứa **duy nhất 1 keyword (pillar)**; không gộp nhiều keyword để tránh bị chuẩn hóa chéo làm méo dạng mùa vụ của keyword yếu hơn.
      - Cơ chế vận hành: Tích hợp Resume cache (không crawl lại các theme đã hoàn tất) và Exponential Backoff tự động khi gặp mã lỗi HTTP 429.
 - **Vietnamese NLP SSOT Rule:** Mọi tác vụ tách từ / word segmentation / trích xuất n-gram tiếng Việt trong pipeline **BẮT BUỘC gọi qua gateway [`scripts/lib/vi_nlp.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/lib/vi_nlp.py)** (`segment()`, `segment_text()`) - KHÔNG import trực tiếp `underthesea`/`pyvi` rải rác trong script khác. Backend: underthesea 9.5+ (đã tích hợp trong `./.venv`), tự fallback pyvi rồi naive split khi thiếu lib (không crash). Chuẩn hóa teencode / lỗi dấu dùng `TELEX_FIXES` + `normalize_text()` trong `scripts/lib/keyword_intelligence.py` - KHÔNG dùng `text_normalize()` của underthesea (yếu với teencode). Entity/brand dùng `ENTITY_LEXICON` + `flashtext` trong `scripts/lib/keyword_extractor.py` - KHÔNG dùng NER của underthesea cho keyword fragment. Khi đọc CSV inventory trực tiếp, LUÔN bóc artifact Excel `="..."` bằng `clean_val()` trước khi xử lý.
+- **Traffic Source Classification SSOT Rule (Non-Paid vs. Paid Dichotomy):** Khi phân tích, đo lường hoặc trình bày bất kỳ báo cáo nào (Weekly, Monthly, Ad-hoc) về nguồn lưu lượng (Traffic Source / Channels) của Web Platform:
+  1. **BẮT BUỘC phân chia thành 2 nhóm lớn rõ rệt:**
+     - **Non-Paid Traffic (Tất cả trừ Paid Traffic):** Bao gồm toàn bộ `Organic`, `Direct`, `Referral`, `Others`, `Cross`... Non-Paid là động cơ tăng trưởng tự nhiên bền vững, thể hiện chất lượng thực chất, giá trị SEO/GEO, sức mạnh thương hiệu và độ tin cậy của toàn Website.
+     - **Paid Traffic (Paid Traffic):** Bao gồm `Paid Search`, `Google Ads`, `Campaign Ads`...
+  2. **Quy tắc hiển thị bảng biểu:** Phân cấp rõ 2 dòng tổng **Non-Paid** vs. **Paid** (kèm tỷ trọng % tương ứng). Nếu cần chi tiết, các kênh con (`Organic`, `Direct`, `Referral`, `Others`) phải được đặt thụt dòng bên dưới nhóm **Non-Paid**. Tuyệt đối không liệt kê Paid nằm xen kẽ ngang hàng giữa các kênh tự nhiên.
 - **Mục đích:** Đảm bảo toàn bộ bối cảnh chiến lược của Ban Giám Đốc, định hướng của các Hubs và dữ liệu hiệu suất Single Source of Truth (SSOT) chuẩn xác luôn được đưa vào context xử lý tự động trước khi xuất bản bất kỳ báo cáo nào.
 
 ---

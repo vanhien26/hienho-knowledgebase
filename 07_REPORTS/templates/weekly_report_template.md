@@ -25,7 +25,7 @@
 
 - **Lũy kế MTD:** [actual_mtd] PVs / [target_month] PVs (Hoàn thành: **[%_progress]%** Target sau [days_elapsed]/[days_in_month] ngày).
 - **Nhịp độ thực tế:** [daily_pace] PVs/ngày.
-- **Tương quan Kênh:** Organic đạt [%_org]% (Tăng trưởng: [org_growth]%), Paid chiếm [%_paid]%.
+- **Tương quan Kênh (Non-Paid vs Paid):** Non-Paid Traffic đạt [%_non_paid]% ([non_paid_pv] PVs - gồm Organic [%_org]%, Direct [%_direct]%, Referral [%_ref]%, Others [%_oth]%), Paid Traffic chiếm [%_paid]% ([paid_pv] PVs).
 - **Chỉ số Sức khỏe Kỹ thuật:** GSC Crawl đạt [req_day] req/ngày, Lỗi 404 là [pct_404]%.
 
 ---

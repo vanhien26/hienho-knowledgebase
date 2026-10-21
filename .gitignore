@@ -27,3 +27,22 @@ __pycache__/
 
 # Intermediate API cache
 07_REPORTS/data/cache/
+*token*.json
+
+# Databases & Large Analytics Cache (> 10MB)
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.db
+07_REPORTS/data/performance.sqlite*
+07_REPORTS/data/gsc_30d_cache.json
+07_REPORTS/data/gsc_cannibalization_matrix.json
+07_REPORTS/data/gsc_keyword_ranking.json
+07_REPORTS/data/gsc_live_active_urls.json
+07_REPORTS/data/gsc_query_page_map.json
+07_REPORTS/data/ga4_multichannel_cache*.json
+07_REPORTS/data/poc_cluster_naming.json
+07_REPORTS/data/analytics/full_funnel_matrix.json
+*full_funnel_matrix.json
+*full-funnel-matrix.json
+data/

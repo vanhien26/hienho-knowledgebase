@@ -1,0 +1,3065 @@
+{
+  "title": "MoMo Web Platform GA4 Events Inventory & Intelligence (MTD 2026-10-01 -> 2026-10-20)",
+  "generated_at": "2026-10-21T10:06:51.611587",
+  "period": {
+    "start": "2026-10-01",
+    "end": "2026-10-20"
+  },
+  "summary": {
+    "total_event_count": 15589331,
+    "total_conversions": 1899460,
+    "unique_events_tracked": 202,
+    "conversion_events_count": 2,
+    "categories_count": 10
+  },
+  "categories_summary": [
+    {
+      "category": "Traffic & Lifecycle",
+      "total_volume": 9988925,
+      "unique_events": 10,
+      "share_pct": 0.6408
+    },
+    {
+      "category": "Web-to-App & CTA",
+      "total_volume": 2729614,
+      "unique_events": 8,
+      "share_pct": 0.1751
+    },
+    {
+      "category": "Media & Advertising",
+      "total_volume": 1768816,
+      "unique_events": 9,
+      "share_pct": 0.1135
+    },
+    {
+      "category": "Product Funnel",
+      "total_volume": 826015,
+      "unique_events": 7,
+      "share_pct": 0.053
+    },
+    {
+      "category": "Other Services",
+      "total_volume": 187146,
+      "unique_events": 60,
+      "share_pct": 0.012
+    },
+    {
+      "category": "Insurtech Hub",
+      "total_volume": 45906,
+      "unique_events": 37,
+      "share_pct": 0.0029
+    },
+    {
+      "category": "OTA Hub (Vé Xe)",
+      "total_volume": 31506,
+      "unique_events": 38,
+      "share_pct": 0.002
+    },
+    {
+      "category": "Telco Hub (eSIM)",
+      "total_volume": 11164,
+      "unique_events": 30,
+      "share_pct": 0.0007
+    },
+    {
+      "category": "Financial Hub",
+      "total_volume": 238,
+      "unique_events": 2,
+      "share_pct": 0.0
+    },
+    {
+      "category": "Entertainment Hub",
+      "total_volume": 1,
+      "unique_events": 1,
+      "share_pct": 0.0
+    }
+  ],
+  "cinema_funnel": [
+    {
+      "step": 1,
+      "step_name": "1. Show Time",
+      "action": "Xem suất chiếu rạp",
+      "event_count": 323672,
+      "users": 80086,
+      "step_cr": 1.0
+    },
+    {
+      "step": 2,
+      "step_name": "2. Seat",
+      "action": "Vào màn hình chọn ghế",
+      "event_count": 40841,
+      "users": 24933,
+      "step_cr": 0.3113
+    },
+    {
+      "step": 3,
+      "step_name": "3. Popcorn & Drink",
+      "action": "Chọn bắp nước",
+      "event_count": 30489,
+      "users": 20543,
+      "step_cr": 0.8239
+    },
+    {
+      "step": 4,
+      "step_name": "4. Book Ticket",
+      "action": "Xác nhận đặt vé & QRCode",
+      "event_count": 22426,
+      "users": 14371,
+      "step_cr": 0.6996
+    },
+    {
+      "step": 5,
+      "step_name": "Funnel Complete",
+      "action": "Hoàn tất giao dịch",
+      "event_count": 24814,
+      "users": 15855,
+      "step_cr": 1.1033
+    }
+  ],
+  "financial_simulations": [
+    {
+      "product": "Vay Nhanh",
+      "tool_name": "VayNhanh Simulation",
+      "views": 58399,
+      "cta_clicks": 45773,
+      "cta_users": 10971,
+      "cr": 0.7838,
+      "evaluation": "Công cụ chuyển đổi cao nhất nền tảng Web"
+    },
+    {
+      "product": "Ví Trả Sau",
+      "tool_name": "TraGop VTS Simulation",
+      "views": 15069,
+      "cta_clicks": 1745,
+      "cta_users": 476,
+      "cr": 0.1158,
+      "evaluation": "Mô phỏng hạn mức & trả góp linh hoạt"
+    },
+    {
+      "product": "Bảo Hiểm Ô Tô",
+      "tool_name": "Start Quotation",
+      "views": 2980,
+      "cta_clicks": 2263,
+      "cta_users": 1561,
+      "cr": 0.7594,
+      "evaluation": "Tính phí bảo hiểm vật chất xe"
+    }
+  ],
+  "vertical_micro_funnels": [
+    {
+      "hub": "OTA Hub (Vé Xe)",
+      "flow": "bus_operator_view -> bus_seatmap_select -> bus_transaction_result",
+      "completed_orders": 85,
+      "notes": "Phễu 12 bước hoàn tất giao dịch trực tiếp trên Web"
+    },
+    {
+      "hub": "Telco Hub (eSIM)",
+      "flow": "travelsim_home_view -> travelsim_add_to_cart -> travelsim_transaction_result",
+      "completed_orders": 53,
+      "notes": "Phễu 10 bước mua gói eSIM du lịch quốc tế"
+    },
+    {
+      "hub": "Insurtech Hub (BHYT)",
+      "flow": "bhyt_form_view -> bhyt_form_submit -> bhyt_transaction_save",
+      "completed_orders": 86,
+      "notes": "Form tra cứu & nộp hồ sơ tái tục thẻ BHYT"
+    },
+    {
+      "hub": "Insurtech Hub (BHXM)",
+      "flow": "bhxm_form_view -> bhxm_form_submit -> bhxm_payment_result_view",
+      "completed_orders": 37,
+      "notes": "Mua bảo hiểm trách nhiệm dân sự xe máy bắt buộc"
+    }
+  ],
+  "data_quality_audit": [
+    {
+      "severity": "HIGH",
+      "status": "RESOLVED_RETROSPECTIVELY",
+      "issue": "Điểm mù tham số click_to_app",
+      "affected_volume": "1,837,162 events (100% đã định nghĩa)",
+      "impact": "Thiếu click_url và component_name trên GTM",
+      "resolution": "Đã giải quyết 100% bằng cách ánh xạ pagePath sang Bảng DIM Dự Án. Toàn bộ 1,837,162 lượt click_to_app đã được phân bổ đích danh vào 51 dự án.",
+      "recommendation": "Cập nhật GTM dataLayer: truyền bắt buộc component_name, button_position và onelink_url"
+    },
+    {
+      "severity": "MEDIUM",
+      "issue": "Drop-off tại Bước 1 sang Bước 2 Cinema",
+      "affected_volume": "55,153 users rơi rụng trong kỳ",
+      "impact": "Từ màn hình xem suất chiếu đến màn hình chọn ghế rơi rụng hơn 68% khách hàng tiềm năng",
+      "recommendation": "Tối ưu UX chọn rạp: gợi ý 3 suất chiếu gần nhất theo định vị để khách bấm thẳng vào sơ đồ ghế"
+    },
+    {
+      "severity": "INFO",
+      "issue": "Click outbound link trỏ về đối tác ngoài",
+      "affected_volume": "Outbound traffic lớn",
+      "impact": "Các trang đối tác có lưu lượng outbound link lớn nhưng chưa tối ưu chuyển dịch về In-App MoMo",
+      "recommendation": "Tích hợp thẳng luồng thanh toán Native QR trên Web"
+    }
+  ],
+  "w2a_attribution": {
+    "total_attributed": 1837162,
+    "top_projects": [
+      {
+        "project_name": "Cinema",
+        "sector": "cinema",
+        "w2a_clicks": 763240,
+        "users": 410286,
+        "share_pct": 0.4154,
+        "top_landing_pages": [
+          {
+            "path": "/cinema/trai-buon-nguoi-24991",
+            "clicks": 63259
+          },
+          {
+            "path": "/cinema/rap/cgv/cgv-aeon-mall-hai-phong-149",
+            "clicks": 23058
+          },
+          {
+            "path": "/cinema/lich-chieu",
+            "clicks": 22864
+          },
+          {
+            "path": "/cinema/quy-an-tang-4-ho-tinh-25145",
+            "clicks": 20475
+          },
+          {
+            "path": "/cinema/rap/cgv",
+            "clicks": 19919
+          }
+        ]
+      },
+      {
+        "project_name": "Game",
+        "sector": "Entertainment",
+        "w2a_clicks": 188862,
+        "users": 74863,
+        "share_pct": 0.1028,
+        "top_landing_pages": [
+          {
+            "path": "/tin-tuc/tin-tuc-su-kien/nap-game-sieu-hoi-thang-nay-giam-den-10000d-khi-8081",
+            "clicks": 132531
+          },
+          {
+            "path": "/tin-tuc/khuyen-mai/giam-20k-nang-cap-app-nap-game-app-store-khi-lan-8402",
+            "clicks": 22504
+          },
+          {
+            "path": "/bonbon",
+            "clicks": 8313
+          },
+          {
+            "path": "/hoi-dap/cach-mua-ma-the-game-truc-tuyen",
+            "clicks": 6469
+          },
+          {
+            "path": "/nap-the-game",
+            "clicks": 5604
+          }
+        ]
+      },
+      {
+        "project_name": "Home MoMo",
+        "sector": "Brand",
+        "w2a_clicks": 179325,
+        "users": 99724,
+        "share_pct": 0.0976,
+        "top_landing_pages": [
+          {
+            "path": "/",
+            "clicks": 177903
+          },
+          {
+            "path": "/ve-chung-toi",
+            "clicks": 956
+          },
+          {
+            "path": "/auth",
+            "clicks": 269
+          },
+          {
+            "path": "/redirect-cta",
+            "clicks": 96
+          },
+          {
+            "path": "/auth/callback/google",
+            "clicks": 94
+          }
+        ]
+      },
+      {
+        "project_name": "Tiktok",
+        "sector": "Entertainment",
+        "w2a_clicks": 129734,
+        "users": 60984,
+        "share_pct": 0.0706,
+        "top_landing_pages": [
+          {
+            "path": "/nap-xu-tiktok",
+            "clicks": 128018
+          },
+          {
+            "path": "/blog/cach-nap-xu-tiktok-gia-re-c115dt1695",
+            "clicks": 659
+          },
+          {
+            "path": "/huong-dan/huong-dan-nap-xu-tiktok-qua-momo",
+            "clicks": 322
+          },
+          {
+            "path": "/blog/xu-tiktok-de-lam-gi-huong-dan-tu-a-den-z-ve-xu-tiktok-c115dt1696",
+            "clicks": 269
+          },
+          {
+            "path": "/blog/huong-dan-day-video-tiktok-len-xu-huong-nhanh-chong-c115dt1968",
+            "clicks": 206
+          }
+        ]
+      },
+      {
+        "project_name": "New User",
+        "sector": "Brand",
+        "w2a_clicks": 81280,
+        "users": 54672,
+        "share_pct": 0.0442,
+        "top_landing_pages": [
+          {
+            "path": "/tin-tuc/khuyen-mai/chuong-trinh-gioi-thieu-ban-be-chuyen-tien-nhan-8930",
+            "clicks": 26114
+          },
+          {
+            "path": "/gioi-thieu-momo",
+            "clicks": 14642
+          },
+          {
+            "path": "/uu-dai-icloud",
+            "clicks": 13563
+          },
+          {
+            "path": "/lienkettaikhoan",
+            "clicks": 11280
+          },
+          {
+            "path": "/tin-tuc/khuyen-mai/nhap-ma-chaomomo-ban-moi-nhan-ngay-qua-500000d-7834",
+            "clicks": 6411
+          }
+        ]
+      },
+      {
+        "project_name": "Hỏi Đáp",
+        "sector": "Support",
+        "w2a_clicks": 69044,
+        "users": 52661,
+        "share_pct": 0.0376,
+        "top_landing_pages": [
+          {
+            "path": "/hoi-dap/cach-lien-he-voi-momo",
+            "clicks": 11122
+          },
+          {
+            "path": "/tim-kiem",
+            "clicks": 7678
+          },
+          {
+            "path": "/hoi-dap/toi-co-the-doi-so-dien-thoai-dang-ky-tai-khoan-momo-cua-toi-duoc-khong",
+            "clicks": 4567
+          },
+          {
+            "path": "/hoi-dap",
+            "clicks": 3207
+          },
+          {
+            "path": "/hoi-dap/lam-sao-de-huy-tai-khoan-momo",
+            "clicks": 1868
+          }
+        ]
+      },
+      {
+        "project_name": "Điểm Tín Dụng",
+        "sector": "Financial",
+        "w2a_clicks": 48140,
+        "users": 32180,
+        "share_pct": 0.0262,
+        "top_landing_pages": [
+          {
+            "path": "/diem-tin-dung",
+            "clicks": 33652
+          },
+          {
+            "path": "/blog/huong-dan-kiem-tra-diem-tin-dung-ca-nhan-c116dt1413",
+            "clicks": 8484
+          },
+          {
+            "path": "/blog/no-xau-la-gi-khi-nao-bi-xep-no-xau-va-anh-huong-ra-sao-c116dt2622",
+            "clicks": 4002
+          },
+          {
+            "path": "/blog/diem-tin-dung-cic-duoc-cham-khi-nao-cach-theo-doi-va-phan-biet-bao-cao-k40-vs-k11-c116dt2619",
+            "clicks": 517
+          },
+          {
+            "path": "/blog/kiem-tra-no-xau-bang-so-dien-thoai-c116dt2689",
+            "clicks": 438
+          }
+        ]
+      },
+      {
+        "project_name": "Nước",
+        "sector": "Financial",
+        "w2a_clicks": 33392,
+        "users": 15430,
+        "share_pct": 0.0182,
+        "top_landing_pages": [
+          {
+            "path": "/nuoc",
+            "clicks": 32288
+          },
+          {
+            "path": "/blog/cach-lay-ma-khach-hang-dong-tien-nuoc-cuc-nhanh-c193dt1209",
+            "clicks": 556
+          },
+          {
+            "path": "/blog/lich-dong-tien-nuoc-hang-thang-va-cach-tra-cuu-hoa-don-c193dt1213",
+            "clicks": 261
+          },
+          {
+            "path": "/blog/dong-tien-nuoc-tre-co-bi-phat-khong-c193dt1228",
+            "clicks": 106
+          },
+          {
+            "path": "/blog/mach-ban-meo-lay-ma-giam-gia-thanh-toan-tien-nuoc-c193dt1214",
+            "clicks": 91
+          }
+        ]
+      },
+      {
+        "project_name": "Ví Trả Sau",
+        "sector": "Financial",
+        "w2a_clicks": 33375,
+        "users": 24586,
+        "share_pct": 0.0182,
+        "top_landing_pages": [
+          {
+            "path": "/vi-tra-sau",
+            "clicks": 6328
+          },
+          {
+            "path": "/blog/vi-tra-sau-momo-thanh-toan-duoc-nhung-dich-vu-gi-c116dt981",
+            "clicks": 3811
+          },
+          {
+            "path": "/blog/rut-tien-tu-vi-tra-sau-momo-co-duoc-khong-c116dt1843",
+            "clicks": 3093
+          },
+          {
+            "path": "/vi-tra-sau/samsung",
+            "clicks": 2078
+          },
+          {
+            "path": "/blog/cham-thanh-toan-vi-tra-sau-khong-tra-tien-vi-tra-sau-co-bi-sao-khong-c116dt1136",
+            "clicks": 1508
+          }
+        ]
+      },
+      {
+        "project_name": "Guide",
+        "sector": "Support",
+        "w2a_clicks": 31895,
+        "users": 23309,
+        "share_pct": 0.0174,
+        "top_landing_pages": [
+          {
+            "path": "/huong-dan/huong-dan-gui-yeu-cau-ho-tro-bang-tinh-nang-tro-giup",
+            "clicks": 5797
+          },
+          {
+            "path": "/huong-dan/chi-tiet/1151",
+            "clicks": 5571
+          },
+          {
+            "path": "/huong-dan/huong-dan-mua-vietlott-sms-tren-momo",
+            "clicks": 4110
+          },
+          {
+            "path": "/huong-dan",
+            "clicks": 2575
+          },
+          {
+            "path": "/huong-dan/huong-dan-chung-ctgr69",
+            "clicks": 2280
+          }
+        ]
+      },
+      {
+        "project_name": "Vay Nhanh",
+        "sector": "Financial",
+        "w2a_clicks": 31679,
+        "users": 20020,
+        "share_pct": 0.0172,
+        "top_landing_pages": [
+          {
+            "path": "/vay-nhanh",
+            "clicks": 11907
+          },
+          {
+            "path": "/vay-nhanh/5-trieu",
+            "clicks": 5809
+          },
+          {
+            "path": "/vay-nhanh/20-trieu",
+            "clicks": 1084
+          },
+          {
+            "path": "/blog/lay-cmnd-nguoi-khac-vay-tien-duoc-khong-bi-nguoi-khac-lay-cmnd-vay-tien-phai-lam-gi-c116dt1089",
+            "clicks": 983
+          },
+          {
+            "path": "/vay-nhanh/blog/vay-tien-tra-gop-theo-thang-chi-can-cmnd-2881",
+            "clicks": 824
+          }
+        ]
+      },
+      {
+        "project_name": "Blog",
+        "sector": "Lifestyle",
+        "w2a_clicks": 29962,
+        "users": 22710,
+        "share_pct": 0.0163,
+        "top_landing_pages": [
+          {
+            "path": "/tin-tuc/thong-cao-bao-chi/momo-co-cu-an-ba-tai-better-choice-awards-2026-9073",
+            "clicks": 7167
+          },
+          {
+            "path": "/tin-tuc/thong-bao/huong-dan-thanh-toan-xe-buyt-ha-noi-bang-momo-8985",
+            "clicks": 1972
+          },
+          {
+            "path": "/blog/5-cau-chuyen-truyen-cam-hung-hay-nhat-de-ta-song-tot-hon-moi-ngay-c117dt115",
+            "clicks": 1151
+          },
+          {
+            "path": "/tin-tuc/tin-tuc-su-kien/heo-dat-momo-vong-quay-boi-thu-tri-an-tich-luy-9058",
+            "clicks": 693
+          },
+          {
+            "path": "/blog/than-so-hoc-khoa-hoc-kham-pha-ban-than-thong-qua-nhung-con-so-c117dt180",
+            "clicks": 606
+          }
+        ]
+      },
+      {
+        "project_name": "OTA",
+        "sector": "ota",
+        "w2a_clicks": 21533,
+        "users": 16146,
+        "share_pct": 0.0117,
+        "top_landing_pages": [
+          {
+            "path": "/ve-may-bay",
+            "clicks": 1513
+          },
+          {
+            "path": "/blog/dia-diem-du-lich-vung-tau-c101dt867",
+            "clicks": 933
+          },
+          {
+            "path": "/khach-san-theo-gio",
+            "clicks": 679
+          },
+          {
+            "path": "/blog/du-lich-sapa-cho-cap-doi-bo-tui-10-dia-diem-cho-ky-nghi-lang-man-c101dt380",
+            "clicks": 664
+          },
+          {
+            "path": "/blog/danh-sach-10-bai-bien-dep-nhat-viet-nam-khong-the-bo-qua-c101dt145",
+            "clicks": 552
+          }
+        ]
+      },
+      {
+        "project_name": "Merchant",
+        "sector": "trust",
+        "w2a_clicks": 19208,
+        "users": 12784,
+        "share_pct": 0.0105,
+        "top_landing_pages": [
+          {
+            "path": "/doi-tac",
+            "clicks": 1443
+          },
+          {
+            "path": "/dtdn",
+            "clicks": 1229
+          },
+          {
+            "path": "/thanh-toan-momo-vietlott-sms",
+            "clicks": 832
+          },
+          {
+            "path": "/diem-thanh-toan",
+            "clicks": 706
+          },
+          {
+            "path": "/qr-da-nang",
+            "clicks": 659
+          }
+        ]
+      },
+      {
+        "project_name": "Other",
+        "sector": "Other",
+        "w2a_clicks": 18230,
+        "users": 12047,
+        "share_pct": 0.0099,
+        "top_landing_pages": [
+          {
+            "path": "/tin-tuc/khuyen-mai/momo-tang-ban-qua-den-50000d-9065",
+            "clicks": 1196
+          },
+          {
+            "path": "/tin-tuc/khuyen-mai/tang-ban-moi-deal-google-play-lan-dau-nap-game-9076",
+            "clicks": 1086
+          },
+          {
+            "path": "/tin-tuc/khuyen-mai/dinh-cao-lang-chay-ads-hoi-cang-them-hoi-momo-5912",
+            "clicks": 768
+          },
+          {
+            "path": "/tin-tuc/khuyen-mai/uu-dai-thang-10-momo-hoan-10k-nap-game-mua-app-9047",
+            "clicks": 662
+          },
+          {
+            "path": "/tin-tuc/khuyen-mai/tai-momo-nhap-fecredit-qua-300000d-ve-tay-9078",
+            "clicks": 653
+          }
+        ]
+      }
+    ]
+  },
+  "events": [
+    {
+      "event_name": "scroll",
+      "category": "Traffic & Lifecycle",
+      "description": "Hành vi cuộn trang của người dùng",
+      "audit_note": "Chỉ số tương tác (Engagement) chiều sâu nội dung",
+      "is_conversion": false,
+      "event_count": 3926668,
+      "total_users": 765719,
+      "sessions": 960808,
+      "events_per_user": 5.13,
+      "share_pct": 0.2519
+    },
+    {
+      "event_name": "page_view",
+      "category": "Traffic & Lifecycle",
+      "description": "Lượt xem trang (Pageviews) toàn Website",
+      "audit_note": "KPI cốt lõi của Ban Giám Đốc đối soát hiệu suất Web",
+      "is_conversion": false,
+      "event_count": 2261898,
+      "total_users": 1114222,
+      "sessions": 1492325,
+      "events_per_user": 2.03,
+      "share_pct": 0.1451
+    },
+    {
+      "event_name": "click_to_app",
+      "category": "Web-to-App & CTA",
+      "description": "Click mở App MoMo (Onelink/Deeplink)",
+      "audit_note": "Chuyển đổi Web-to-App cốt lõi (Official Conversion)",
+      "is_conversion": true,
+      "event_count": 1837029,
+      "total_users": 762288,
+      "sessions": 1014583,
+      "events_per_user": 2.41,
+      "share_pct": 0.1178
+    },
+    {
+      "event_name": "webads_balloon",
+      "category": "Media & Advertising",
+      "description": "Quảng cáo hiển thị / Video tương tác",
+      "audit_note": "Đo lường lượt xem và tương tác với banner/video quảng cáo",
+      "is_conversion": false,
+      "event_count": 1581422,
+      "total_users": 710630,
+      "sessions": 948254,
+      "events_per_user": 2.23,
+      "share_pct": 0.1014
+    },
+    {
+      "event_name": "session_start",
+      "category": "Traffic & Lifecycle",
+      "description": "Phiên truy cập mới bắt đầu",
+      "audit_note": "Khởi tạo session tính toán lưu lượng toàn sàn",
+      "is_conversion": false,
+      "event_count": 1510911,
+      "total_users": 1113372,
+      "sessions": 1513465,
+      "events_per_user": 1.36,
+      "share_pct": 0.0969
+    },
+    {
+      "event_name": "first_visit",
+      "category": "Traffic & Lifecycle",
+      "description": "Người dùng mới lần đầu truy cập Website",
+      "audit_note": "Chỉ số thu hút New User (User Acquisition)",
+      "is_conversion": false,
+      "event_count": 1000866,
+      "total_users": 984627,
+      "sessions": 996765,
+      "events_per_user": 1.02,
+      "share_pct": 0.0642
+    },
+    {
+      "event_name": "user_engagement",
+      "category": "Traffic & Lifecycle",
+      "description": "Phiên tương tác kéo dài > 10s hoặc > 2 trang",
+      "audit_note": "Tiêu chuẩn đánh giá phiên chất lượng (Engaged Sessions)",
+      "is_conversion": false,
+      "event_count": 749800,
+      "total_users": 414083,
+      "sessions": 475230,
+      "events_per_user": 1.81,
+      "share_pct": 0.0481
+    },
+    {
+      "event_name": "click_link_url",
+      "category": "Web-to-App & CTA",
+      "description": "Click liên kết điều hướng trang nội bộ",
+      "audit_note": "Đo lường luồng điều hướng (Internal Navigation)",
+      "is_conversion": false,
+      "event_count": 523186,
+      "total_users": 239649,
+      "sessions": 294894,
+      "events_per_user": 2.18,
+      "share_pct": 0.0336
+    },
+    {
+      "event_name": "engage_product_funnel",
+      "category": "Product Funnel",
+      "description": "Các bước trong phễu đặt hàng / mua vé",
+      "audit_note": "Đo lường rò rỉ luồng đặt vé và mua sắm",
+      "is_conversion": false,
+      "event_count": 458718,
+      "total_users": 107647,
+      "sessions": 143916,
+      "events_per_user": 4.26,
+      "share_pct": 0.0294
+    },
+    {
+      "event_name": "funnel_start",
+      "category": "Product Funnel",
+      "description": "Các bước trong phễu đặt hàng / mua vé",
+      "audit_note": "Đo lường rò rỉ luồng đặt vé và mua sắm",
+      "is_conversion": false,
+      "event_count": 315380,
+      "total_users": 79684,
+      "sessions": 109889,
+      "events_per_user": 3.96,
+      "share_pct": 0.0202
+    },
+    {
+      "event_name": "scroll",
+      "category": "Traffic & Lifecycle",
+      "description": "Hành vi cuộn trang của người dùng",
+      "audit_note": "Chỉ số tương tác (Engagement) chiều sâu nội dung",
+      "is_conversion": false,
+      "event_count": 220583,
+      "total_users": 47631,
+      "sessions": 50976,
+      "events_per_user": 4.63,
+      "share_pct": 0.0141
+    },
+    {
+      "event_name": "click_cta",
+      "category": "Web-to-App & CTA",
+      "description": "Click nút kêu gọi hành động (Call to Action)",
+      "audit_note": "Tương tác kích hoạt ý định mua sắm / sử dụng dịch vụ",
+      "is_conversion": false,
+      "event_count": 138284,
+      "total_users": 69545,
+      "sessions": 76463,
+      "events_per_user": 1.99,
+      "share_pct": 0.0089
+    },
+    {
+      "event_name": "page_view",
+      "category": "Traffic & Lifecycle",
+      "description": "Lượt xem trang (Pageviews) toàn Website",
+      "audit_note": "KPI cốt lõi của Ban Giám Đốc đối soát hiệu suất Web",
+      "is_conversion": false,
+      "event_count": 127744,
+      "total_users": 74158,
+      "sessions": 82285,
+      "events_per_user": 1.72,
+      "share_pct": 0.0082
+    },
+    {
+      "event_name": "click_outbound_link",
+      "category": "Web-to-App & CTA",
+      "description": "Click liên kết dẫn ra ngoài website MoMo",
+      "audit_note": "Phần lớn dẫn về đối tác TikTok Coin, App Store",
+      "is_conversion": false,
+      "event_count": 121104,
+      "total_users": 57922,
+      "sessions": 90202,
+      "events_per_user": 2.09,
+      "share_pct": 0.0078
+    },
+    {
+      "event_name": "component_view",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 97489,
+      "total_users": 52895,
+      "sessions": 60485,
+      "events_per_user": 1.84,
+      "share_pct": 0.0063
+    },
+    {
+      "event_name": "session_start",
+      "category": "Traffic & Lifecycle",
+      "description": "Phiên truy cập mới bắt đầu",
+      "audit_note": "Khởi tạo session tính toán lưu lượng toàn sàn",
+      "is_conversion": false,
+      "event_count": 84788,
+      "total_users": 74063,
+      "sessions": 82952,
+      "events_per_user": 1.14,
+      "share_pct": 0.0054
+    },
+    {
+      "event_name": "webads_balloon",
+      "category": "Media & Advertising",
+      "description": "Quảng cáo hiển thị / Video tương tác",
+      "audit_note": "Đo lường lượt xem và tương tác với banner/video quảng cáo",
+      "is_conversion": false,
+      "event_count": 82366,
+      "total_users": 44271,
+      "sessions": 49216,
+      "events_per_user": 1.86,
+      "share_pct": 0.0053
+    },
+    {
+      "event_name": "video_progress",
+      "category": "Media & Advertising",
+      "description": "Quảng cáo hiển thị / Video tương tác",
+      "audit_note": "Đo lường lượt xem và tương tác với banner/video quảng cáo",
+      "is_conversion": false,
+      "event_count": 66404,
+      "total_users": 15062,
+      "sessions": 16871,
+      "events_per_user": 4.41,
+      "share_pct": 0.0043
+    },
+    {
+      "event_name": "component_click_cta",
+      "category": "Web-to-App & CTA",
+      "description": "Click CTA trên từng component cụ thể",
+      "audit_note": "Đo lường độ hiệu quả của từng khối giao diện",
+      "is_conversion": true,
+      "event_count": 62431,
+      "total_users": 36312,
+      "sessions": 38019,
+      "events_per_user": 1.72,
+      "share_pct": 0.004
+    },
+    {
+      "event_name": "first_visit",
+      "category": "Traffic & Lifecycle",
+      "description": "Người dùng mới lần đầu truy cập Website",
+      "audit_note": "Chỉ số thu hút New User (User Acquisition)",
+      "is_conversion": false,
+      "event_count": 58063,
+      "total_users": 57506,
+      "sessions": 56935,
+      "events_per_user": 1.01,
+      "share_pct": 0.0037
+    },
+    {
+      "event_name": "user_engagement",
+      "category": "Traffic & Lifecycle",
+      "description": "Phiên tương tác kéo dài > 10s hoặc > 2 trang",
+      "audit_note": "Tiêu chuẩn đánh giá phiên chất lượng (Engaged Sessions)",
+      "is_conversion": false,
+      "event_count": 47604,
+      "total_users": 26335,
+      "sessions": 26588,
+      "events_per_user": 1.81,
+      "share_pct": 0.0031
+    },
+    {
+      "event_name": "bhyt_form_view",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 34006,
+      "total_users": 2749,
+      "sessions": 3201,
+      "events_per_user": 12.37,
+      "share_pct": 0.0022
+    },
+    {
+      "event_name": "click_link_url",
+      "category": "Web-to-App & CTA",
+      "description": "Click liên kết điều hướng trang nội bộ",
+      "audit_note": "Đo lường luồng điều hướng (Internal Navigation)",
+      "is_conversion": false,
+      "event_count": 29379,
+      "total_users": 14940,
+      "sessions": 16107,
+      "events_per_user": 1.97,
+      "share_pct": 0.0019
+    },
+    {
+      "event_name": "video_start",
+      "category": "Media & Advertising",
+      "description": "Quảng cáo hiển thị / Video tương tác",
+      "audit_note": "Đo lường lượt xem và tương tác với banner/video quảng cáo",
+      "is_conversion": false,
+      "event_count": 28956,
+      "total_users": 17541,
+      "sessions": 19728,
+      "events_per_user": 1.65,
+      "share_pct": 0.0019
+    },
+    {
+      "event_name": "funnel_complete",
+      "category": "Product Funnel",
+      "description": "Các bước trong phễu đặt hàng / mua vé",
+      "audit_note": "Đo lường rò rỉ luồng đặt vé và mua sắm",
+      "is_conversion": false,
+      "event_count": 24814,
+      "total_users": 15855,
+      "sessions": 16798,
+      "events_per_user": 1.57,
+      "share_pct": 0.0016
+    },
+    {
+      "event_name": "engage_product_funnel",
+      "category": "Product Funnel",
+      "description": "Các bước trong phễu đặt hàng / mua vé",
+      "audit_note": "Đo lường rò rỉ luồng đặt vé và mua sắm",
+      "is_conversion": false,
+      "event_count": 15687,
+      "total_users": 4439,
+      "sessions": 4834,
+      "events_per_user": 3.53,
+      "share_pct": 0.001
+    },
+    {
+      "event_name": "form_start",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 14559,
+      "total_users": 10593,
+      "sessions": 11681,
+      "events_per_user": 1.37,
+      "share_pct": 0.0009
+    },
+    {
+      "event_name": "quyt_screen_view",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 13871,
+      "total_users": 3783,
+      "sessions": 4082,
+      "events_per_user": 3.67,
+      "share_pct": 0.0009
+    },
+    {
+      "event_name": "funnel_start",
+      "category": "Product Funnel",
+      "description": "Các bước trong phễu đặt hàng / mua vé",
+      "audit_note": "Đo lường rò rỉ luồng đặt vé và mua sắm",
+      "is_conversion": false,
+      "event_count": 10710,
+      "total_users": 2970,
+      "sessions": 3263,
+      "events_per_user": 3.61,
+      "share_pct": 0.0007
+    },
+    {
+      "event_name": "bus_searchroute_submit",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 9600,
+      "total_users": 5375,
+      "sessions": 5631,
+      "events_per_user": 1.79,
+      "share_pct": 0.0006
+    },
+    {
+      "event_name": "click_cta",
+      "category": "Web-to-App & CTA",
+      "description": "Click nút kêu gọi hành động (Call to Action)",
+      "audit_note": "Tương tác kích hoạt ý định mua sắm / sử dụng dịch vụ",
+      "is_conversion": false,
+      "event_count": 9583,
+      "total_users": 4760,
+      "sessions": 5052,
+      "events_per_user": 2.01,
+      "share_pct": 0.0006
+    },
+    {
+      "event_name": "bus_operator_view",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 9225,
+      "total_users": 6082,
+      "sessions": 6469,
+      "events_per_user": 1.52,
+      "share_pct": 0.0006
+    },
+    {
+      "event_name": "banner_click",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 9054,
+      "total_users": 6140,
+      "sessions": 6476,
+      "events_per_user": 1.47,
+      "share_pct": 0.0006
+    },
+    {
+      "event_name": "click_outbound_link",
+      "category": "Web-to-App & CTA",
+      "description": "Click liên kết dẫn ra ngoài website MoMo",
+      "audit_note": "Phần lớn dẫn về đối tác TikTok Coin, App Store",
+      "is_conversion": false,
+      "event_count": 8618,
+      "total_users": 5348,
+      "sessions": 6033,
+      "events_per_user": 1.61,
+      "share_pct": 0.0006
+    },
+    {
+      "event_name": "popup_view",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 8421,
+      "total_users": 5287,
+      "sessions": 6178,
+      "events_per_user": 1.59,
+      "share_pct": 0.0005
+    },
+    {
+      "event_name": "component_view",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 7564,
+      "total_users": 3925,
+      "sessions": 4199,
+      "events_per_user": 1.93,
+      "share_pct": 0.0005
+    },
+    {
+      "event_name": "view_search_results",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 7007,
+      "total_users": 5054,
+      "sessions": 5600,
+      "events_per_user": 1.39,
+      "share_pct": 0.0004
+    },
+    {
+      "event_name": "quyt_screen_view",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 6869,
+      "total_users": 2098,
+      "sessions": 2235,
+      "events_per_user": 3.27,
+      "share_pct": 0.0004
+    },
+    {
+      "event_name": "travelsim_package_impression",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 5280,
+      "total_users": 454,
+      "sessions": 584,
+      "events_per_user": 11.63,
+      "share_pct": 0.0003
+    },
+    {
+      "event_name": "video_complete",
+      "category": "Media & Advertising",
+      "description": "Quảng cáo hiển thị / Video tương tác",
+      "audit_note": "Đo lường lượt xem và tương tác với banner/video quảng cáo",
+      "is_conversion": false,
+      "event_count": 4713,
+      "total_users": 3824,
+      "sessions": 4057,
+      "events_per_user": 1.23,
+      "share_pct": 0.0003
+    },
+    {
+      "event_name": "bus_operator_select",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 3475,
+      "total_users": 1805,
+      "sessions": 1953,
+      "events_per_user": 1.93,
+      "share_pct": 0.0002
+    },
+    {
+      "event_name": "bus_seatmap_view",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 3404,
+      "total_users": 1791,
+      "sessions": 1934,
+      "events_per_user": 1.9,
+      "share_pct": 0.0002
+    },
+    {
+      "event_name": "video_progress",
+      "category": "Media & Advertising",
+      "description": "Quảng cáo hiển thị / Video tương tác",
+      "audit_note": "Đo lường lượt xem và tương tác với banner/video quảng cáo",
+      "is_conversion": false,
+      "event_count": 3338,
+      "total_users": 788,
+      "sessions": 799,
+      "events_per_user": 4.24,
+      "share_pct": 0.0002
+    },
+    {
+      "event_name": "bhyt_form_view",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 3155,
+      "total_users": 103,
+      "sessions": 109,
+      "events_per_user": 30.63,
+      "share_pct": 0.0002
+    },
+    {
+      "event_name": "(other)",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 3028,
+      "total_users": 1169,
+      "sessions": 1191,
+      "events_per_user": 2.59,
+      "share_pct": 0.0002
+    },
+    {
+      "event_name": "vts_cta_h1",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 3008,
+      "total_users": 2540,
+      "sessions": 2598,
+      "events_per_user": 1.18,
+      "share_pct": 0.0002
+    },
+    {
+      "event_name": "vts_click_viewguide",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 2678,
+      "total_users": 999,
+      "sessions": 1010,
+      "events_per_user": 2.68,
+      "share_pct": 0.0002
+    },
+    {
+      "event_name": "vts_cta_topnavi",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 2235,
+      "total_users": 1874,
+      "sessions": 1941,
+      "events_per_user": 1.19,
+      "share_pct": 0.0001
+    },
+    {
+      "event_name": "bhyt_form_submit",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 2161,
+      "total_users": 1038,
+      "sessions": 1169,
+      "events_per_user": 2.08,
+      "share_pct": 0.0001
+    },
+    {
+      "event_name": "bhyt_popup_noti",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 2083,
+      "total_users": 1031,
+      "sessions": 1160,
+      "events_per_user": 2.02,
+      "share_pct": 0.0001
+    },
+    {
+      "event_name": "gmc_1vuquyt_clickplay",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 2083,
+      "total_users": 1630,
+      "sessions": 1739,
+      "events_per_user": 1.28,
+      "share_pct": 0.0001
+    },
+    {
+      "event_name": "bhxm_form_view",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 2069,
+      "total_users": 889,
+      "sessions": 1037,
+      "events_per_user": 2.33,
+      "share_pct": 0.0001
+    },
+    {
+      "event_name": "popup_click_cta",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 1706,
+      "total_users": 905,
+      "sessions": 957,
+      "events_per_user": 1.89,
+      "share_pct": 0.0001
+    },
+    {
+      "event_name": "travelsim_bestseller_sku_impression",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 1563,
+      "total_users": 284,
+      "sessions": 309,
+      "events_per_user": 5.5,
+      "share_pct": 0.0001
+    },
+    {
+      "event_name": "video_start",
+      "category": "Media & Advertising",
+      "description": "Quảng cáo hiển thị / Video tương tác",
+      "audit_note": "Đo lường lượt xem và tương tác với banner/video quảng cáo",
+      "is_conversion": false,
+      "event_count": 1412,
+      "total_users": 867,
+      "sessions": 881,
+      "events_per_user": 1.63,
+      "share_pct": 0.0001
+    },
+    {
+      "event_name": "bus_seatmap_select",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 1298,
+      "total_users": 845,
+      "sessions": 916,
+      "events_per_user": 1.54,
+      "share_pct": 0.0001
+    },
+    {
+      "event_name": "bus_pickdrops_view",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 1296,
+      "total_users": 844,
+      "sessions": 915,
+      "events_per_user": 1.54,
+      "share_pct": 0.0001
+    },
+    {
+      "event_name": "copy_promocode",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 949,
+      "total_users": 661,
+      "sessions": 723,
+      "events_per_user": 1.44,
+      "share_pct": 0.0001
+    },
+    {
+      "event_name": "gmc_1vuquyt_clickplay",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 915,
+      "total_users": 758,
+      "sessions": 786,
+      "events_per_user": 1.21,
+      "share_pct": 0.0001
+    },
+    {
+      "event_name": "form_start",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 879,
+      "total_users": 664,
+      "sessions": 725,
+      "events_per_user": 1.32,
+      "share_pct": 0.0001
+    },
+    {
+      "event_name": "gmc_1vuquyt_install",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 834,
+      "total_users": 397,
+      "sessions": 416,
+      "events_per_user": 2.1,
+      "share_pct": 0.0001
+    },
+    {
+      "event_name": "travelsim_home_view",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 697,
+      "total_users": 466,
+      "sessions": 533,
+      "events_per_user": 1.5,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "funnel_complete",
+      "category": "Product Funnel",
+      "description": "Các bước trong phễu đặt hàng / mua vé",
+      "audit_note": "Đo lường rò rỉ luồng đặt vé và mua sắm",
+      "is_conversion": false,
+      "event_count": 688,
+      "total_users": 485,
+      "sessions": 498,
+      "events_per_user": 1.42,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_bestseller_detail_view",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 665,
+      "total_users": 242,
+      "sessions": 273,
+      "events_per_user": 2.75,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_pickdrops_select",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 638,
+      "total_users": 474,
+      "sessions": 511,
+      "events_per_user": 1.35,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_detail_view",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 586,
+      "total_users": 209,
+      "sessions": 235,
+      "events_per_user": 2.8,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhyt_payment_progress",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 583,
+      "total_users": 216,
+      "sessions": 235,
+      "events_per_user": 2.7,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "vts_cta_footer",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 549,
+      "total_users": 479,
+      "sessions": 488,
+      "events_per_user": 1.15,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhyt_renew_click",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 541,
+      "total_users": 428,
+      "sessions": 461,
+      "events_per_user": 1.26,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_search_submit",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 531,
+      "total_users": 67,
+      "sessions": 70,
+      "events_per_user": 7.93,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_paxinfo_view",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 520,
+      "total_users": 351,
+      "sessions": 395,
+      "events_per_user": 1.48,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "sim_search_submit",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 474,
+      "total_users": 180,
+      "sessions": 184,
+      "events_per_user": 2.63,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "view_search_results",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 434,
+      "total_users": 330,
+      "sessions": 346,
+      "events_per_user": 1.32,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "gmc_1vuquyt_install",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 384,
+      "total_users": 140,
+      "sessions": 143,
+      "events_per_user": 2.74,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_searchroute_submit",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 372,
+      "total_users": 203,
+      "sessions": 205,
+      "events_per_user": 1.83,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_view_list_countries",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 364,
+      "total_users": 258,
+      "sessions": 285,
+      "events_per_user": 1.41,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "banner_click",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 357,
+      "total_users": 231,
+      "sessions": 235,
+      "events_per_user": 1.55,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_package_click",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 346,
+      "total_users": 145,
+      "sessions": 163,
+      "events_per_user": 2.39,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "popup_view",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 269,
+      "total_users": 171,
+      "sessions": 186,
+      "events_per_user": 1.57,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_operator_view",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 268,
+      "total_users": 159,
+      "sessions": 164,
+      "events_per_user": 1.69,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhyt_payment_click",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 260,
+      "total_users": 216,
+      "sessions": 223,
+      "events_per_user": 1.2,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_paxinfo_submit",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 247,
+      "total_users": 192,
+      "sessions": 219,
+      "events_per_user": 1.29,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "tragop_vts_click_thamkhao",
+      "category": "Financial Hub",
+      "description": "Mô phỏng khoản vay, trả góp và mở tài khoản",
+      "audit_note": "Công cụ tài chính tương tác cao",
+      "is_conversion": false,
+      "event_count": 226,
+      "total_users": 191,
+      "sessions": 201,
+      "events_per_user": 1.18,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_payment_progress",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 224,
+      "total_users": 159,
+      "sessions": 184,
+      "events_per_user": 1.41,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_click_to_buy",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 207,
+      "total_users": 159,
+      "sessions": 184,
+      "events_per_user": 1.3,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "vts_click_viewguide",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 207,
+      "total_users": 49,
+      "sessions": 50,
+      "events_per_user": 4.22,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhyt_payment_result_view",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 204,
+      "total_users": 146,
+      "sessions": 161,
+      "events_per_user": 1.4,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "video_complete",
+      "category": "Media & Advertising",
+      "description": "Quảng cáo hiển thị / Video tương tác",
+      "audit_note": "Đo lường lượt xem và tương tác với banner/video quảng cáo",
+      "is_conversion": false,
+      "event_count": 202,
+      "total_users": 165,
+      "sessions": 166,
+      "events_per_user": 1.22,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "popup_copy_promocode",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 193,
+      "total_users": 158,
+      "sessions": 170,
+      "events_per_user": 1.22,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_checkout_view",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 179,
+      "total_users": 119,
+      "sessions": 141,
+      "events_per_user": 1.5,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_package_impression",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 177,
+      "total_users": 21,
+      "sessions": 21,
+      "events_per_user": 8.43,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "sim_listing_view",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 162,
+      "total_users": 115,
+      "sessions": 124,
+      "events_per_user": 1.41,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_countries_suggest_click",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 152,
+      "total_users": 114,
+      "sessions": 130,
+      "events_per_user": 1.33,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_add_to_cart",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 145,
+      "total_users": 108,
+      "sessions": 120,
+      "events_per_user": 1.34,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "adsblog_click",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 134,
+      "total_users": 124,
+      "sessions": 125,
+      "events_per_user": 1.08,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_form_view",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 126,
+      "total_users": 44,
+      "sessions": 44,
+      "events_per_user": 2.86,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_operator_select",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 119,
+      "total_users": 56,
+      "sessions": 60,
+      "events_per_user": 2.12,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_seatmap_view",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 119,
+      "total_users": 56,
+      "sessions": 60,
+      "events_per_user": 2.12,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "vts_cta_h1",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 99,
+      "total_users": 91,
+      "sessions": 93,
+      "events_per_user": 1.09,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "redirect_cta",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 98,
+      "total_users": 74,
+      "sessions": 86,
+      "events_per_user": 1.32,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_information_view",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 90,
+      "total_users": 71,
+      "sessions": 77,
+      "events_per_user": 1.27,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhyt_transaction_save",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 86,
+      "total_users": 39,
+      "sessions": 39,
+      "events_per_user": 2.21,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_transaction_result",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 85,
+      "total_users": 64,
+      "sessions": 69,
+      "events_per_user": 1.33,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "sim_search_suggest_click",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 83,
+      "total_users": 56,
+      "sessions": 60,
+      "events_per_user": 1.48,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_form_submit",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 82,
+      "total_users": 70,
+      "sessions": 73,
+      "events_per_user": 1.17,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_bestseller_sku_click",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 81,
+      "total_users": 46,
+      "sessions": 48,
+      "events_per_user": 1.76,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "vts_cta_topnavi",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 75,
+      "total_users": 63,
+      "sessions": 64,
+      "events_per_user": 1.19,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_return_operator_view",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 73,
+      "total_users": 48,
+      "sessions": 51,
+      "events_per_user": 1.52,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_payment_processing",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 71,
+      "total_users": 43,
+      "sessions": 54,
+      "events_per_user": 1.65,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_checkout_submit",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 65,
+      "total_users": 41,
+      "sessions": 51,
+      "events_per_user": 1.59,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "tcbh_search_result_view",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 56,
+      "total_users": 39,
+      "sessions": 42,
+      "events_per_user": 1.44,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_bestseller_sku_impression",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 56,
+      "total_users": 11,
+      "sessions": 12,
+      "events_per_user": 5.09,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "tcbh_search_submit",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 53,
+      "total_users": 41,
+      "sessions": 44,
+      "events_per_user": 1.29,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_transaction_result",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 53,
+      "total_users": 36,
+      "sessions": 46,
+      "events_per_user": 1.47,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhyt_form_submit",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 52,
+      "total_users": 35,
+      "sessions": 35,
+      "events_per_user": 1.49,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhyt_popup_noti",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 52,
+      "total_users": 35,
+      "sessions": 35,
+      "events_per_user": 1.49,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_country_select",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 51,
+      "total_users": 47,
+      "sessions": 49,
+      "events_per_user": 1.09,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "tcbh_coi_click",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 50,
+      "total_users": 11,
+      "sessions": 13,
+      "events_per_user": 4.55,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "quyt_share_click",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 48,
+      "total_users": 25,
+      "sessions": 26,
+      "events_per_user": 1.92,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_image_upload",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 43,
+      "total_users": 27,
+      "sessions": 27,
+      "events_per_user": 1.59,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_return_operator_select",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 38,
+      "total_users": 25,
+      "sessions": 27,
+      "events_per_user": 1.52,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_return_seatmap_view",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 38,
+      "total_users": 25,
+      "sessions": 27,
+      "events_per_user": 1.52,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_payment_result_view",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 37,
+      "total_users": 26,
+      "sessions": 26,
+      "events_per_user": 1.42,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_pickdrops_view",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 37,
+      "total_users": 27,
+      "sessions": 29,
+      "events_per_user": 1.37,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_seatmap_select",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 37,
+      "total_users": 27,
+      "sessions": 29,
+      "events_per_user": 1.37,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_payment_progress",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 35,
+      "total_users": 32,
+      "sessions": 33,
+      "events_per_user": 1.09,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_return_pickdrops_view",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 35,
+      "total_users": 24,
+      "sessions": 26,
+      "events_per_user": 1.46,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_return_seatmap_select",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 35,
+      "total_users": 24,
+      "sessions": 26,
+      "events_per_user": 1.46,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_payment_click",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 33,
+      "total_users": 31,
+      "sessions": 32,
+      "events_per_user": 1.06,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "sim_number_select",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 33,
+      "total_users": 25,
+      "sessions": 26,
+      "events_per_user": 1.32,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_return_pickdrops_select",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 31,
+      "total_users": 24,
+      "sessions": 26,
+      "events_per_user": 1.29,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "vts_cta_newuser",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 31,
+      "total_users": 29,
+      "sessions": 30,
+      "events_per_user": 1.07,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "file_download",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 30,
+      "total_users": 20,
+      "sessions": 21,
+      "events_per_user": 1.5,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "quyt_share_click",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 28,
+      "total_users": 8,
+      "sessions": 8,
+      "events_per_user": 3.5,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "popup_click_cta",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 27,
+      "total_users": 14,
+      "sessions": 15,
+      "events_per_user": 1.93,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_image_scan",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 26,
+      "total_users": 20,
+      "sessions": 20,
+      "events_per_user": 1.3,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhyt_app_download",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 25,
+      "total_users": 25,
+      "sessions": 25,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "tcbh_policy_click",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 25,
+      "total_users": 17,
+      "sessions": 19,
+      "events_per_user": 1.47,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhyt_payment_progress",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 24,
+      "total_users": 9,
+      "sessions": 10,
+      "events_per_user": 2.67,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_contract_click",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 23,
+      "total_users": 22,
+      "sessions": 22,
+      "events_per_user": 1.05,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_manual_input",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 22,
+      "total_users": 20,
+      "sessions": 20,
+      "events_per_user": 1.1,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_image_error_view",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 20,
+      "total_users": 19,
+      "sessions": 19,
+      "events_per_user": 1.05,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_payment_timeout",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 19,
+      "total_users": 18,
+      "sessions": 19,
+      "events_per_user": 1.06,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "tcbh_product_click",
+      "category": "Product Funnel",
+      "description": "Các bước trong phễu đặt hàng / mua vé",
+      "audit_note": "Đo lường rò rỉ luồng đặt vé và mua sắm",
+      "is_conversion": false,
+      "event_count": 18,
+      "total_users": 15,
+      "sessions": 15,
+      "events_per_user": 1.2,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_home_view",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 18,
+      "total_users": 15,
+      "sessions": 17,
+      "events_per_user": 1.2,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "floatads_view",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 17,
+      "total_users": 17,
+      "sessions": 17,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "copy_promocode",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 16,
+      "total_users": 13,
+      "sessions": 13,
+      "events_per_user": 1.23,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_bestseller_detail_view",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 16,
+      "total_users": 7,
+      "sessions": 7,
+      "events_per_user": 2.29,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_pickdrops_select",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 15,
+      "total_users": 12,
+      "sessions": 12,
+      "events_per_user": 1.25,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "sim_plan_select",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 15,
+      "total_users": 11,
+      "sessions": 12,
+      "events_per_user": 1.36,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhyt_remind_contact_submit",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 14,
+      "total_users": 13,
+      "sessions": 13,
+      "events_per_user": 1.08,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_detail_view",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 14,
+      "total_users": 5,
+      "sessions": 5,
+      "events_per_user": 2.8,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhyt_renew_click",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 12,
+      "total_users": 11,
+      "sessions": 11,
+      "events_per_user": 1.09,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "tragop_vts_click_thamkhao",
+      "category": "Financial Hub",
+      "description": "Mô phỏng khoản vay, trả góp và mở tài khoản",
+      "audit_note": "Công cụ tài chính tương tác cao",
+      "is_conversion": false,
+      "event_count": 12,
+      "total_users": 9,
+      "sessions": 10,
+      "events_per_user": 1.33,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_bestseller_buy_now_click",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 12,
+      "total_users": 10,
+      "sessions": 10,
+      "events_per_user": 1.2,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_package_click",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 12,
+      "total_users": 4,
+      "sessions": 4,
+      "events_per_user": 3.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_paxinfo_view",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 9,
+      "total_users": 7,
+      "sessions": 7,
+      "events_per_user": 1.29,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "sim_search_submit",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 9,
+      "total_users": 7,
+      "sessions": 7,
+      "events_per_user": 1.29,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_view_list_countries",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 9,
+      "total_users": 8,
+      "sessions": 9,
+      "events_per_user": 1.12,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_upload_guideline_click",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 8,
+      "total_users": 3,
+      "sessions": 4,
+      "events_per_user": 2.67,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhyt_payment_result_view",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 7,
+      "total_users": 4,
+      "sessions": 4,
+      "events_per_user": 1.75,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "sim_nice_number_select",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 7,
+      "total_users": 6,
+      "sessions": 6,
+      "events_per_user": 1.17,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "undefined",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 7,
+      "total_users": 7,
+      "sessions": 7,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhyt_payment_click",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 6,
+      "total_users": 4,
+      "sessions": 4,
+      "events_per_user": 1.5,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_return_operator_view",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 6,
+      "total_users": 3,
+      "sessions": 3,
+      "events_per_user": 2.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_information_edit",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 5,
+      "total_users": 3,
+      "sessions": 3,
+      "events_per_user": 1.67,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_return_operator_select",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 5,
+      "total_users": 2,
+      "sessions": 2,
+      "events_per_user": 2.5,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_return_pickdrops_view",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 5,
+      "total_users": 2,
+      "sessions": 2,
+      "events_per_user": 2.5,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_return_seatmap_select",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 5,
+      "total_users": 2,
+      "sessions": 2,
+      "events_per_user": 2.5,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_return_seatmap_view",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 5,
+      "total_users": 2,
+      "sessions": 2,
+      "events_per_user": 2.5,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_add_to_cart",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 5,
+      "total_users": 5,
+      "sessions": 5,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_checkout_view",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 5,
+      "total_users": 5,
+      "sessions": 5,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_search_submit",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 5,
+      "total_users": 1,
+      "sessions": 1,
+      "events_per_user": 5.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "vts_cta_footer",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 5,
+      "total_users": 5,
+      "sessions": 5,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_engine_guideline_click",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 4,
+      "total_users": 4,
+      "sessions": 4,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_paxinfo_submit",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 4,
+      "total_users": 4,
+      "sessions": 4,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "click_qrcode",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 4,
+      "total_users": 4,
+      "sessions": 4,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_form_submit",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 3,
+      "total_users": 2,
+      "sessions": 2,
+      "events_per_user": 1.5,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_information_view",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 3,
+      "total_users": 2,
+      "sessions": 2,
+      "events_per_user": 1.5,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_click_to_buy",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 3,
+      "total_users": 3,
+      "sessions": 3,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_payment_progress",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 3,
+      "total_users": 3,
+      "sessions": 3,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_transaction_retry",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 3,
+      "total_users": 3,
+      "sessions": 3,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "popup_copy_promocode",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 3,
+      "total_users": 3,
+      "sessions": 3,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "sim_click_to_buy",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 3,
+      "total_users": 3,
+      "sessions": 3,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "tcbh_receipt_click",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 3,
+      "total_users": 1,
+      "sessions": 1,
+      "events_per_user": 3.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_countries_suggest_click",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 3,
+      "total_users": 3,
+      "sessions": 3,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "vts-samsung-cta-h1",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 3,
+      "total_users": 1,
+      "sessions": 2,
+      "events_per_user": 3.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "webads_balloon_view",
+      "category": "Media & Advertising",
+      "description": "Quảng cáo hiển thị / Video tương tác",
+      "audit_note": "Đo lường lượt xem và tương tác với banner/video quảng cáo",
+      "is_conversion": false,
+      "event_count": 3,
+      "total_users": 3,
+      "sessions": 3,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_coi_description_click",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 2,
+      "total_users": 2,
+      "sessions": 2,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_image_scan",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 2,
+      "total_users": 1,
+      "sessions": 1,
+      "events_per_user": 2.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_image_upload",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 2,
+      "total_users": 1,
+      "sessions": 1,
+      "events_per_user": 2.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_return_pickdrops_select",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 2,
+      "total_users": 1,
+      "sessions": 1,
+      "events_per_user": 2.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_bestseller_sku_click",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 2,
+      "total_users": 2,
+      "sessions": 2,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_transaction_result",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 1,
+      "total_users": 1,
+      "sessions": 1,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "floatads_cta_click",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 1,
+      "total_users": 1,
+      "sessions": 1,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "sim_listing_view",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 1,
+      "total_users": 1,
+      "sessions": 1,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "sim_nice_number_select",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 1,
+      "total_users": 1,
+      "sessions": 1,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "sim_number_reselect",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 1,
+      "total_users": 1,
+      "sessions": 1,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "sim_plan_select",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 1,
+      "total_users": 1,
+      "sessions": 1,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "sim_search_suggest_click",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 1,
+      "total_users": 1,
+      "sessions": 1,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_country_select",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 1,
+      "total_users": 1,
+      "sessions": 1,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "web_game_quyt_result_card_display",
+      "category": "Entertainment Hub",
+      "description": "Tương tác trò chơi, Minigame và Game Hub",
+      "audit_note": "Giữ chân và tăng thời gian onsite",
+      "is_conversion": false,
+      "event_count": 1,
+      "total_users": 1,
+      "sessions": 1,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    }
+  ]
+}

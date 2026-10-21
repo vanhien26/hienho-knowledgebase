@@ -1,0 +1,1404 @@
+{
+  "title": "MoMo Web-to-App Conversion Attribution (MTD 2026-10-01 -> 2026-10-20)",
+  "period": {
+    "start": "2026-10-01",
+    "end": "2026-10-20"
+  },
+  "generated_at": "2026-10-21T10:06:51.606922",
+  "summary": {
+    "total_w2a_events_attributed": 1837162,
+    "total_projects_count": 51,
+    "top_project": "Cinema",
+    "top_project_share": 0.4154,
+    "attribution_method": "Exact URL mapping via BigQuery WEB_DIM_PAGE_URL & Cluster taxonomy"
+  },
+  "projects_attribution": [
+    {
+      "project_name": "Cinema",
+      "sector": "cinema",
+      "w2a_clicks": 763240,
+      "users": 410286,
+      "share_pct": 0.4154,
+      "top_landing_pages": [
+        {
+          "path": "/cinema/trai-buon-nguoi-24991",
+          "clicks": 63259
+        },
+        {
+          "path": "/cinema/rap/cgv/cgv-aeon-mall-hai-phong-149",
+          "clicks": 23058
+        },
+        {
+          "path": "/cinema/lich-chieu",
+          "clicks": 22864
+        },
+        {
+          "path": "/cinema/quy-an-tang-4-ho-tinh-25145",
+          "clicks": 20475
+        },
+        {
+          "path": "/cinema/rap/cgv",
+          "clicks": 19919
+        }
+      ]
+    },
+    {
+      "project_name": "Game",
+      "sector": "Entertainment",
+      "w2a_clicks": 188862,
+      "users": 74863,
+      "share_pct": 0.1028,
+      "top_landing_pages": [
+        {
+          "path": "/tin-tuc/tin-tuc-su-kien/nap-game-sieu-hoi-thang-nay-giam-den-10000d-khi-8081",
+          "clicks": 132531
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/giam-20k-nang-cap-app-nap-game-app-store-khi-lan-8402",
+          "clicks": 22504
+        },
+        {
+          "path": "/bonbon",
+          "clicks": 8313
+        },
+        {
+          "path": "/hoi-dap/cach-mua-ma-the-game-truc-tuyen",
+          "clicks": 6469
+        },
+        {
+          "path": "/nap-the-game",
+          "clicks": 5604
+        }
+      ]
+    },
+    {
+      "project_name": "Home MoMo",
+      "sector": "Brand",
+      "w2a_clicks": 179325,
+      "users": 99724,
+      "share_pct": 0.0976,
+      "top_landing_pages": [
+        {
+          "path": "/",
+          "clicks": 177903
+        },
+        {
+          "path": "/ve-chung-toi",
+          "clicks": 956
+        },
+        {
+          "path": "/auth",
+          "clicks": 269
+        },
+        {
+          "path": "/redirect-cta",
+          "clicks": 96
+        },
+        {
+          "path": "/auth/callback/google",
+          "clicks": 94
+        }
+      ]
+    },
+    {
+      "project_name": "Tiktok",
+      "sector": "Entertainment",
+      "w2a_clicks": 129734,
+      "users": 60984,
+      "share_pct": 0.0706,
+      "top_landing_pages": [
+        {
+          "path": "/nap-xu-tiktok",
+          "clicks": 128018
+        },
+        {
+          "path": "/blog/cach-nap-xu-tiktok-gia-re-c115dt1695",
+          "clicks": 659
+        },
+        {
+          "path": "/huong-dan/huong-dan-nap-xu-tiktok-qua-momo",
+          "clicks": 322
+        },
+        {
+          "path": "/blog/xu-tiktok-de-lam-gi-huong-dan-tu-a-den-z-ve-xu-tiktok-c115dt1696",
+          "clicks": 269
+        },
+        {
+          "path": "/blog/huong-dan-day-video-tiktok-len-xu-huong-nhanh-chong-c115dt1968",
+          "clicks": 206
+        }
+      ]
+    },
+    {
+      "project_name": "New User",
+      "sector": "Brand",
+      "w2a_clicks": 81280,
+      "users": 54672,
+      "share_pct": 0.0442,
+      "top_landing_pages": [
+        {
+          "path": "/tin-tuc/khuyen-mai/chuong-trinh-gioi-thieu-ban-be-chuyen-tien-nhan-8930",
+          "clicks": 26114
+        },
+        {
+          "path": "/gioi-thieu-momo",
+          "clicks": 14642
+        },
+        {
+          "path": "/uu-dai-icloud",
+          "clicks": 13563
+        },
+        {
+          "path": "/lienkettaikhoan",
+          "clicks": 11280
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/nhap-ma-chaomomo-ban-moi-nhan-ngay-qua-500000d-7834",
+          "clicks": 6411
+        }
+      ]
+    },
+    {
+      "project_name": "Hỏi Đáp",
+      "sector": "Support",
+      "w2a_clicks": 69044,
+      "users": 52661,
+      "share_pct": 0.0376,
+      "top_landing_pages": [
+        {
+          "path": "/hoi-dap/cach-lien-he-voi-momo",
+          "clicks": 11122
+        },
+        {
+          "path": "/tim-kiem",
+          "clicks": 7678
+        },
+        {
+          "path": "/hoi-dap/toi-co-the-doi-so-dien-thoai-dang-ky-tai-khoan-momo-cua-toi-duoc-khong",
+          "clicks": 4567
+        },
+        {
+          "path": "/hoi-dap",
+          "clicks": 3207
+        },
+        {
+          "path": "/hoi-dap/lam-sao-de-huy-tai-khoan-momo",
+          "clicks": 1868
+        }
+      ]
+    },
+    {
+      "project_name": "Điểm Tín Dụng",
+      "sector": "Financial",
+      "w2a_clicks": 48140,
+      "users": 32180,
+      "share_pct": 0.0262,
+      "top_landing_pages": [
+        {
+          "path": "/diem-tin-dung",
+          "clicks": 33652
+        },
+        {
+          "path": "/blog/huong-dan-kiem-tra-diem-tin-dung-ca-nhan-c116dt1413",
+          "clicks": 8484
+        },
+        {
+          "path": "/blog/no-xau-la-gi-khi-nao-bi-xep-no-xau-va-anh-huong-ra-sao-c116dt2622",
+          "clicks": 4002
+        },
+        {
+          "path": "/blog/diem-tin-dung-cic-duoc-cham-khi-nao-cach-theo-doi-va-phan-biet-bao-cao-k40-vs-k11-c116dt2619",
+          "clicks": 517
+        },
+        {
+          "path": "/blog/kiem-tra-no-xau-bang-so-dien-thoai-c116dt2689",
+          "clicks": 438
+        }
+      ]
+    },
+    {
+      "project_name": "Nước",
+      "sector": "Financial",
+      "w2a_clicks": 33392,
+      "users": 15430,
+      "share_pct": 0.0182,
+      "top_landing_pages": [
+        {
+          "path": "/nuoc",
+          "clicks": 32288
+        },
+        {
+          "path": "/blog/cach-lay-ma-khach-hang-dong-tien-nuoc-cuc-nhanh-c193dt1209",
+          "clicks": 556
+        },
+        {
+          "path": "/blog/lich-dong-tien-nuoc-hang-thang-va-cach-tra-cuu-hoa-don-c193dt1213",
+          "clicks": 261
+        },
+        {
+          "path": "/blog/dong-tien-nuoc-tre-co-bi-phat-khong-c193dt1228",
+          "clicks": 106
+        },
+        {
+          "path": "/blog/mach-ban-meo-lay-ma-giam-gia-thanh-toan-tien-nuoc-c193dt1214",
+          "clicks": 91
+        }
+      ]
+    },
+    {
+      "project_name": "Ví Trả Sau",
+      "sector": "Financial",
+      "w2a_clicks": 33375,
+      "users": 24586,
+      "share_pct": 0.0182,
+      "top_landing_pages": [
+        {
+          "path": "/vi-tra-sau",
+          "clicks": 6328
+        },
+        {
+          "path": "/blog/vi-tra-sau-momo-thanh-toan-duoc-nhung-dich-vu-gi-c116dt981",
+          "clicks": 3811
+        },
+        {
+          "path": "/blog/rut-tien-tu-vi-tra-sau-momo-co-duoc-khong-c116dt1843",
+          "clicks": 3093
+        },
+        {
+          "path": "/vi-tra-sau/samsung",
+          "clicks": 2078
+        },
+        {
+          "path": "/blog/cham-thanh-toan-vi-tra-sau-khong-tra-tien-vi-tra-sau-co-bi-sao-khong-c116dt1136",
+          "clicks": 1508
+        }
+      ]
+    },
+    {
+      "project_name": "Guide",
+      "sector": "Support",
+      "w2a_clicks": 31895,
+      "users": 23309,
+      "share_pct": 0.0174,
+      "top_landing_pages": [
+        {
+          "path": "/huong-dan/huong-dan-gui-yeu-cau-ho-tro-bang-tinh-nang-tro-giup",
+          "clicks": 5797
+        },
+        {
+          "path": "/huong-dan/chi-tiet/1151",
+          "clicks": 5571
+        },
+        {
+          "path": "/huong-dan/huong-dan-mua-vietlott-sms-tren-momo",
+          "clicks": 4110
+        },
+        {
+          "path": "/huong-dan",
+          "clicks": 2575
+        },
+        {
+          "path": "/huong-dan/huong-dan-chung-ctgr69",
+          "clicks": 2280
+        }
+      ]
+    },
+    {
+      "project_name": "Vay Nhanh",
+      "sector": "Financial",
+      "w2a_clicks": 31679,
+      "users": 20020,
+      "share_pct": 0.0172,
+      "top_landing_pages": [
+        {
+          "path": "/vay-nhanh",
+          "clicks": 11907
+        },
+        {
+          "path": "/vay-nhanh/5-trieu",
+          "clicks": 5809
+        },
+        {
+          "path": "/vay-nhanh/20-trieu",
+          "clicks": 1084
+        },
+        {
+          "path": "/blog/lay-cmnd-nguoi-khac-vay-tien-duoc-khong-bi-nguoi-khac-lay-cmnd-vay-tien-phai-lam-gi-c116dt1089",
+          "clicks": 983
+        },
+        {
+          "path": "/vay-nhanh/blog/vay-tien-tra-gop-theo-thang-chi-can-cmnd-2881",
+          "clicks": 824
+        }
+      ]
+    },
+    {
+      "project_name": "Blog",
+      "sector": "Lifestyle",
+      "w2a_clicks": 29962,
+      "users": 22710,
+      "share_pct": 0.0163,
+      "top_landing_pages": [
+        {
+          "path": "/tin-tuc/thong-cao-bao-chi/momo-co-cu-an-ba-tai-better-choice-awards-2026-9073",
+          "clicks": 7167
+        },
+        {
+          "path": "/tin-tuc/thong-bao/huong-dan-thanh-toan-xe-buyt-ha-noi-bang-momo-8985",
+          "clicks": 1972
+        },
+        {
+          "path": "/blog/5-cau-chuyen-truyen-cam-hung-hay-nhat-de-ta-song-tot-hon-moi-ngay-c117dt115",
+          "clicks": 1151
+        },
+        {
+          "path": "/tin-tuc/tin-tuc-su-kien/heo-dat-momo-vong-quay-boi-thu-tri-an-tich-luy-9058",
+          "clicks": 693
+        },
+        {
+          "path": "/blog/than-so-hoc-khoa-hoc-kham-pha-ban-than-thong-qua-nhung-con-so-c117dt180",
+          "clicks": 606
+        }
+      ]
+    },
+    {
+      "project_name": "OTA",
+      "sector": "ota",
+      "w2a_clicks": 21533,
+      "users": 16146,
+      "share_pct": 0.0117,
+      "top_landing_pages": [
+        {
+          "path": "/ve-may-bay",
+          "clicks": 1513
+        },
+        {
+          "path": "/blog/dia-diem-du-lich-vung-tau-c101dt867",
+          "clicks": 933
+        },
+        {
+          "path": "/khach-san-theo-gio",
+          "clicks": 679
+        },
+        {
+          "path": "/blog/du-lich-sapa-cho-cap-doi-bo-tui-10-dia-diem-cho-ky-nghi-lang-man-c101dt380",
+          "clicks": 664
+        },
+        {
+          "path": "/blog/danh-sach-10-bai-bien-dep-nhat-viet-nam-khong-the-bo-qua-c101dt145",
+          "clicks": 552
+        }
+      ]
+    },
+    {
+      "project_name": "Merchant",
+      "sector": "trust",
+      "w2a_clicks": 19208,
+      "users": 12784,
+      "share_pct": 0.0105,
+      "top_landing_pages": [
+        {
+          "path": "/doi-tac",
+          "clicks": 1443
+        },
+        {
+          "path": "/dtdn",
+          "clicks": 1229
+        },
+        {
+          "path": "/thanh-toan-momo-vietlott-sms",
+          "clicks": 832
+        },
+        {
+          "path": "/diem-thanh-toan",
+          "clicks": 706
+        },
+        {
+          "path": "/qr-da-nang",
+          "clicks": 659
+        }
+      ]
+    },
+    {
+      "project_name": "Other",
+      "sector": "Other",
+      "w2a_clicks": 18230,
+      "users": 12047,
+      "share_pct": 0.0099,
+      "top_landing_pages": [
+        {
+          "path": "/tin-tuc/khuyen-mai/momo-tang-ban-qua-den-50000d-9065",
+          "clicks": 1196
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/tang-ban-moi-deal-google-play-lan-dau-nap-game-9076",
+          "clicks": 1086
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/dinh-cao-lang-chay-ads-hoi-cang-them-hoi-momo-5912",
+          "clicks": 768
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/uu-dai-thang-10-momo-hoan-10k-nap-game-mua-app-9047",
+          "clicks": 662
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/tai-momo-nhap-fecredit-qua-300000d-ve-tay-9078",
+          "clicks": 653
+        }
+      ]
+    },
+    {
+      "project_name": "Khuyến Mãi",
+      "sector": "Promotion",
+      "w2a_clicks": 18182,
+      "users": 10679,
+      "share_pct": 0.0099,
+      "top_landing_pages": [
+        {
+          "path": "/tin-tuc/khuyen-mai",
+          "clicks": 8947
+        },
+        {
+          "path": "/tin-tuc/tin-tuc-su-kien",
+          "clicks": 1832
+        },
+        {
+          "path": "/tin-tuc",
+          "clicks": 1756
+        },
+        {
+          "path": "/hoan-tien-mua-sam",
+          "clicks": 1204
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/gioi-thieu-ban-moi-nhan-10k-hoan-tien-mua-sam-8928",
+          "clicks": 1120
+        }
+      ]
+    },
+    {
+      "project_name": "Bảo Hiểm Y Tế",
+      "sector": "insurtech",
+      "w2a_clicks": 15722,
+      "users": 12315,
+      "share_pct": 0.0086,
+      "top_landing_pages": [
+        {
+          "path": "/blog/tra-cuu-bao-hiem-y-te-bang-cccd-c116dt2833",
+          "clicks": 8699
+        },
+        {
+          "path": "/bao-hiem-y-te",
+          "clicks": 4165
+        },
+        {
+          "path": "/blog/tra-cuu-gia-tri-su-dung-the-bhyt-c116dt2711",
+          "clicks": 343
+        },
+        {
+          "path": "/blog/xin-giay-chuyen-tuyen-bao-hiem-y-te-online-c116dt2679",
+          "clicks": 319
+        },
+        {
+          "path": "/bao-hiem-y-te/6-thang",
+          "clicks": 197
+        }
+      ]
+    },
+    {
+      "project_name": "Phạt Nguội",
+      "sector": "vehicle-hub",
+      "w2a_clicks": 13837,
+      "users": 8419,
+      "share_pct": 0.0075,
+      "top_landing_pages": [
+        {
+          "path": "/phat-nguoi",
+          "clicks": 7772
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/mien-phi-canh-bao-phat-nguoi-tu-dong-khi-chuyen-8022",
+          "clicks": 1215
+        },
+        {
+          "path": "/phat-nguoi/blog/muc-phat-loi-qua-toc-do-83",
+          "clicks": 902
+        },
+        {
+          "path": "/phat-nguoi/blog/muc-phat-loi-di-sai-lan-duong-o-to-xe-may-86",
+          "clicks": 772
+        },
+        {
+          "path": "/phat-nguoi/blog/loi-vuot-den-do-xe-may-o-to-bi-phat-bao-nhieu-tien-3",
+          "clicks": 759
+        }
+      ]
+    },
+    {
+      "project_name": "Bảo Hiểm Ô Tô",
+      "sector": "insurtech",
+      "w2a_clicks": 12600,
+      "users": 8737,
+      "share_pct": 0.0069,
+      "top_landing_pages": [
+        {
+          "path": "/bao-hiem-o-to/than-vo",
+          "clicks": 4542
+        },
+        {
+          "path": "/bao-hiem-o-to/than-vo/xem-bao-gia",
+          "clicks": 2477
+        },
+        {
+          "path": "/bao-hiem-o-to",
+          "clicks": 622
+        },
+        {
+          "path": "/bao-hiem-o-to/vat-chat-xe",
+          "clicks": 544
+        },
+        {
+          "path": "/bao-hiem-o-to/bat-buoc",
+          "clicks": 535
+        }
+      ]
+    },
+    {
+      "project_name": "Tiện Ích Giao Thông",
+      "sector": "vehicle-hub",
+      "w2a_clicks": 10878,
+      "users": 8161,
+      "share_pct": 0.0059,
+      "top_landing_pages": [
+        {
+          "path": "/tien-ich-giao-thong",
+          "clicks": 6256
+        },
+        {
+          "path": "/tien-ich-giao-thong/gia-xang",
+          "clicks": 3609
+        },
+        {
+          "path": "/tien-ich-giao-thong/cay-xang",
+          "clicks": 284
+        },
+        {
+          "path": "/tien-ich-giao-thong/blog/huong-dan-dan-the-vetc-chuan-nhat-5081",
+          "clicks": 190
+        },
+        {
+          "path": "/tin-tuc/tin-tuc-su-kien/tu-30-4-di-xe-buyt-tphcm-mien-phi-ve-huong-dan-8686",
+          "clicks": 112
+        }
+      ]
+    },
+    {
+      "project_name": "Vé Số",
+      "sector": "Lottery",
+      "w2a_clicks": 8715,
+      "users": 6123,
+      "share_pct": 0.0047,
+      "top_landing_pages": [
+        {
+          "path": "/blog/huong-dan-cach-choi-vietlott-6-45-don-gian-de-hieu-c115dt1865",
+          "clicks": 2016
+        },
+        {
+          "path": "/tin-tuc/thong-bao/huong-dan-mo-tai-khoan-va-mua-ve-vietlott-sms-5667",
+          "clicks": 1933
+        },
+        {
+          "path": "/blog/cach-choi-vietlott-chinh-thong-nhan-thuong-an-toan-c115dt1773",
+          "clicks": 1890
+        },
+        {
+          "path": "/blog/cach-mua-vietlott-power-6-55-an-toan-c115dt1774",
+          "clicks": 1643
+        },
+        {
+          "path": "/blog/huong-dan-cach-choi-max-3d-vietlott-c115dt1907",
+          "clicks": 824
+        }
+      ]
+    },
+    {
+      "project_name": "Campaign",
+      "sector": "Promotion",
+      "w2a_clicks": 6334,
+      "users": 3972,
+      "share_pct": 0.0034,
+      "top_landing_pages": [
+        {
+          "path": "/tro-thu-tai-chinh",
+          "clicks": 4345
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/giat-li-xi-quanh-nam-san-bao-li-xi-nhanh-muot-co-8766",
+          "clicks": 531
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/huong-dan-chi-tiet-cach-doi-xu-thanh-toan-truc-8381",
+          "clicks": 305
+        },
+        {
+          "path": "/blog/cach-tao-li-xi-momo-2025-don-gian-va-de-dang-c103dt1929",
+          "clicks": 261
+        },
+        {
+          "path": "/dau-truong-momo",
+          "clicks": 188
+        }
+      ]
+    },
+    {
+      "project_name": "TnC",
+      "sector": "trust",
+      "w2a_clicks": 5512,
+      "users": 3894,
+      "share_pct": 0.003,
+      "top_landing_pages": [
+        {
+          "path": "/lienhe",
+          "clicks": 5512
+        }
+      ]
+    },
+    {
+      "project_name": "P2P",
+      "sector": "Financial",
+      "w2a_clicks": 5468,
+      "users": 3403,
+      "share_pct": 0.003,
+      "top_landing_pages": [
+        {
+          "path": "/chuyen-tien",
+          "clicks": 1954
+        },
+        {
+          "path": "/chuyen-tien-ngan-hang",
+          "clicks": 673
+        },
+        {
+          "path": "/nhan-tien-quoc-te",
+          "clicks": 630
+        },
+        {
+          "path": "/chuyen-nhan-tien",
+          "clicks": 499
+        },
+        {
+          "path": "/blog/3-cach-chuyen-tien-tu-my-ve-viet-nam-c116dt1204",
+          "clicks": 206
+        }
+      ]
+    },
+    {
+      "project_name": "Dịch Vụ Liên Kết",
+      "sector": "Other",
+      "w2a_clicks": 5128,
+      "users": 3724,
+      "share_pct": 0.0028,
+      "top_landing_pages": [
+        {
+          "path": "/thanh-toan-quoc-te",
+          "clicks": 1332
+        },
+        {
+          "path": "/dich-vu-lien-ket",
+          "clicks": 833
+        },
+        {
+          "path": "/blog/cach-thanh-toan-spotify-premium-c115dt1272",
+          "clicks": 454
+        },
+        {
+          "path": "/vtvgo",
+          "clicks": 388
+        },
+        {
+          "path": "/giai-tri-online",
+          "clicks": 374
+        }
+      ]
+    },
+    {
+      "project_name": "Billpay",
+      "sector": "telco",
+      "w2a_clicks": 5095,
+      "users": 3007,
+      "share_pct": 0.0028,
+      "top_landing_pages": [
+        {
+          "path": "/thanh-toan-hoa-don",
+          "clicks": 4178
+        },
+        {
+          "path": "/blog/review-chi-tiet-mang-fpt-va-viettel-mang-nao-tot-hon-c193dt1227",
+          "clicks": 197
+        },
+        {
+          "path": "/blog/lap-mang-wifi-nao-tot-nhat-so-sanh-cac-nha-mang-viettel-fpt-vnpt-c193dt1223",
+          "clicks": 148
+        },
+        {
+          "path": "/blog/7-cach-tim-ma-khach-hang-internet-viettel-c193dt1218",
+          "clicks": 118
+        },
+        {
+          "path": "/blog/mang-vnpt-va-fpt-cai-nao-tot-hon-nen-lap-dat-wifi-nao-c193dt1226",
+          "clicks": 111
+        }
+      ]
+    },
+    {
+      "project_name": "Data",
+      "sector": "telco",
+      "w2a_clicks": 4920,
+      "users": 3419,
+      "share_pct": 0.0027,
+      "top_landing_pages": [
+        {
+          "path": "/nap-data",
+          "clicks": 728
+        },
+        {
+          "path": "/nap-tien-dien-thoai",
+          "clicks": 494
+        },
+        {
+          "path": "/blog/huong-dan-dang-ky-goi-mobifone-50k-thang-sieu-don-gian-c193dt1306",
+          "clicks": 335
+        },
+        {
+          "path": "/blog/tong-hop-cac-goi-cuoc-viettel-50k-thang-c193dt1312",
+          "clicks": 269
+        },
+        {
+          "path": "/nap-data/khuyen-mai",
+          "clicks": 240
+        }
+      ]
+    },
+    {
+      "project_name": "Trust",
+      "sector": "trust",
+      "w2a_clicks": 4669,
+      "users": 2053,
+      "share_pct": 0.0025,
+      "top_landing_pages": [
+        {
+          "path": "/tin-tuc/thong-bao/momo-nang-cap-bao-mat-theo-thong-tu-77-2025-tt-8510",
+          "clicks": 3699
+        },
+        {
+          "path": "/blog/mao-danh-nhan-vien-momo-qua-cuoc-goi-cach-nhan-c198dt2675",
+          "clicks": 280
+        },
+        {
+          "path": "/tin-tuc/thong-bao/lien-ket-thanh-toan-momo-quan-ly-moi-dich-vu-dang-8834",
+          "clicks": 210
+        },
+        {
+          "path": "/blog/momo-co-de-bi-hack-khong-va-su-that-c198dt2341",
+          "clicks": 119
+        },
+        {
+          "path": "/blog/gui-tiet-kiem-tren-momo-co-an-toan-khong-c116dt1024",
+          "clicks": 86
+        }
+      ]
+    },
+    {
+      "project_name": "Mở Thẻ Tín Dụng",
+      "sector": "Financial",
+      "w2a_clicks": 4647,
+      "users": 3482,
+      "share_pct": 0.0025,
+      "top_landing_pages": [
+        {
+          "path": "/mo-the-tin-dung",
+          "clicks": 1109
+        },
+        {
+          "path": "/blog/the-tin-dung-khong-phi-thuong-nien-c116dt2792",
+          "clicks": 592
+        },
+        {
+          "path": "/blog/the-tin-dung-hoan-tien-sieu-thi-c116dt2767",
+          "clicks": 508
+        },
+        {
+          "path": "/blog/the-tin-dung-phong-cho-san-bay-c116dt2785",
+          "clicks": 289
+        },
+        {
+          "path": "/blog/quet-the-tin-dung-la-gi-quet-the-tin-dung-lay-tien-mat-co-duoc-khong-c116dt1332",
+          "clicks": 229
+        }
+      ]
+    },
+    {
+      "project_name": "Tin Tức",
+      "sector": "Lifestyle",
+      "w2a_clicks": 4087,
+      "users": 2236,
+      "share_pct": 0.0022,
+      "top_landing_pages": [
+        {
+          "path": "/tin-tuc/thong-bao/huong-dan-huy-tai-khoan-momo-cua-chu-cu-8912",
+          "clicks": 950
+        },
+        {
+          "path": "/tin-tuc/thong-bao/nhung-dac-quyen-khi-doi-qua-tren-momo-xu-6804",
+          "clicks": 937
+        },
+        {
+          "path": "/tin-tuc/tin-tuc-su-kien/huong-dan-tich-diem-thanh-vien-nestle-tren-momo-7523",
+          "clicks": 591
+        },
+        {
+          "path": "/tin-tuc/thong-cao-bao-chi",
+          "clicks": 518
+        },
+        {
+          "path": "/tin-tuc/hinh-anh-video",
+          "clicks": 341
+        }
+      ]
+    },
+    {
+      "project_name": "Trung Tâm Tài Chính",
+      "sector": "Financial",
+      "w2a_clicks": 3885,
+      "users": 2894,
+      "share_pct": 0.0021,
+      "top_landing_pages": [
+        {
+          "path": "/blog/paypal-la-gi-huong-dan-su-dung-paypal-cuc-don-gian-c116dt1335",
+          "clicks": 1635
+        },
+        {
+          "path": "/blog/doi-tien-do-sang-tien-viet-o-dau-dia-diem-doi-ngoai-te-uy-tin-c116dt1203",
+          "clicks": 756
+        },
+        {
+          "path": "/blog/dau-tu-crypto-la-gi-cach-dau-tu-tien-ao-an-toan-cho-nguoi-moi-bat-dau-c181dt1637",
+          "clicks": 399
+        },
+        {
+          "path": "/blog/top-3-cach-chuyen-tien-ra-nuoc-ngoai-don-gian-nhat-c116dt1151",
+          "clicks": 327
+        },
+        {
+          "path": "/tai-chinh",
+          "clicks": 289
+        }
+      ]
+    },
+    {
+      "project_name": "Quản Lý Chi Tiêu",
+      "sector": "Financial",
+      "w2a_clicks": 3119,
+      "users": 2382,
+      "share_pct": 0.0017,
+      "top_landing_pages": [
+        {
+          "path": "/blog/app-kiem-tien-online-c116dt1125",
+          "clicks": 1509
+        },
+        {
+          "path": "/quan-ly-chi-tieu",
+          "clicks": 578
+        },
+        {
+          "path": "/blog/ung-dung-quan-ly-tai-chinh-ca-nhan-pho-bien-nhat-c103dt2282",
+          "clicks": 186
+        },
+        {
+          "path": "/blog/5-loi-khuyen-giup-ban-kiem-1-ty-dau-tien-truoc-nam-30-tuoi-c181dt1664",
+          "clicks": 105
+        },
+        {
+          "path": "/blog/sach-hay-ve-tai-chinh-dau-tu-ca-nhan-kinh-dien-khong-the-bo-qua-c116dt385",
+          "clicks": 80
+        }
+      ]
+    },
+    {
+      "project_name": "Soundbox",
+      "sector": "trust",
+      "w2a_clicks": 3020,
+      "users": 2302,
+      "share_pct": 0.0016,
+      "top_landing_pages": [
+        {
+          "path": "/loa-thong-bao-chuyen-khoan",
+          "clicks": 838
+        },
+        {
+          "path": "/tin-tuc/thong-bao/huong-dan-cai-dat-3-dong-loa-thong-bao-chuyen-8869",
+          "clicks": 634
+        },
+        {
+          "path": "/blog/top-5-loa-thong-bao-chuyen-khoan-tot-nhat-hien-nay-c103dt1752",
+          "clicks": 303
+        },
+        {
+          "path": "/blog/loa-chuyen-khoan-mua-o-dau-tot-nhat-c103dt1820",
+          "clicks": 254
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/loa-bao-momo-nhan-tien-dung-chuan-tai-khoan-ho-8565",
+          "clicks": 165
+        }
+      ]
+    },
+    {
+      "project_name": "Vé Xe",
+      "sector": "ota",
+      "w2a_clicks": 2720,
+      "users": 1827,
+      "share_pct": 0.0015,
+      "top_landing_pages": [
+        {
+          "path": "/ve-xe",
+          "clicks": 2503
+        },
+        {
+          "path": "/blog/dat-ve-xe-di-da-lat-c101dt1684",
+          "clicks": 134
+        },
+        {
+          "path": "/ve-xe/khuyen-mai",
+          "clicks": 41
+        },
+        {
+          "path": "/ve-xe/blog/kinh-nghiem-du-lich",
+          "clicks": 36
+        },
+        {
+          "path": "/ve-xe/ihanoi",
+          "clicks": 4
+        }
+      ]
+    },
+    {
+      "project_name": "Bảo Hiểm Xe Máy",
+      "sector": "insurtech",
+      "w2a_clicks": 2438,
+      "users": 1788,
+      "share_pct": 0.0013,
+      "top_landing_pages": [
+        {
+          "path": "/bao-hiem-xe-may",
+          "clicks": 1420
+        },
+        {
+          "path": "/blog/mat-ca-vet-xe-co-lam-lai-duoc-khong-c116dt2736",
+          "clicks": 176
+        },
+        {
+          "path": "/blog/thong-tin-moi-nhat-ve-quyet-dinh-bo-bao-hiem-xe-may-c116dt1778",
+          "clicks": 128
+        },
+        {
+          "path": "/blog/thu-tuc-sang-ten-xe-may-c116dt2685",
+          "clicks": 117
+        },
+        {
+          "path": "/blog/le-phi-cap-bien-so-xe-may-c116dt2687",
+          "clicks": 91
+        }
+      ]
+    },
+    {
+      "project_name": "Điện",
+      "sector": "Financial",
+      "w2a_clicks": 2432,
+      "users": 1898,
+      "share_pct": 0.0013,
+      "top_landing_pages": [
+        {
+          "path": "/blog/khong-dong-tien-dien-bao-lau-thi-bi-cat-cap-nhat-2023-c193dt1187",
+          "clicks": 1090
+        },
+        {
+          "path": "/blog/cach-lay-ma-khach-hang-dong-tien-dien-cuc-de-c193dt1183",
+          "clicks": 494
+        },
+        {
+          "path": "/dien",
+          "clicks": 381
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/giam-100k-khi-thanh-toan-dien-voi-momo-ap-dung-8705",
+          "clicks": 249
+        },
+        {
+          "path": "/blog/huong-dan-tra-cuu-tien-dien-online-cuc-nhanh-tren-momo-c193dt1186",
+          "clicks": 90
+        }
+      ]
+    },
+    {
+      "project_name": "Tiết Kiệm Online",
+      "sector": "Financial",
+      "w2a_clicks": 2388,
+      "users": 1837,
+      "share_pct": 0.0013,
+      "top_landing_pages": [
+        {
+          "path": "/tui-than-tai",
+          "clicks": 1242
+        },
+        {
+          "path": "/blog/lai-suat-gui-tiet-kiem-ngan-hang-nao-cao-nhat-hien-nay-c181dt1622",
+          "clicks": 160
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/bay-tiet-kiem-den-10-khi-dat-ve-vietnam-airlines-8826",
+          "clicks": 127
+        },
+        {
+          "path": "/tin-tuc/thong-bao/di-chuyen-bang-metro-tiet-kiem-hon-momo-tang-ve-8560",
+          "clicks": 106
+        },
+        {
+          "path": "/blog/gui-tiet-kiem-la-gi-gui-tiet-kiem-lai-suat-bao-nhieu-c181dt1629",
+          "clicks": 61
+        }
+      ]
+    },
+    {
+      "project_name": "Sim",
+      "sector": "telco",
+      "w2a_clicks": 1658,
+      "users": 935,
+      "share_pct": 0.0009,
+      "top_landing_pages": [
+        {
+          "path": "/sim-so-dep",
+          "clicks": 691
+        },
+        {
+          "path": "/blog/mua-sim-viettel-so-dep-gia-re-c193dt1417",
+          "clicks": 200
+        },
+        {
+          "path": "/blog/tra-cuu-y-nghia-so-dien-thoai-c193dt1419",
+          "clicks": 164
+        },
+        {
+          "path": "/blog/esim-la-gi-huong-dan-dang-ky-va-kich-hoat-esim-nhanh-chong-c193dt2188",
+          "clicks": 143
+        },
+        {
+          "path": "/blog/sim-4g-mobifone-1-nam-luot-mang-nghe-goi-khong-ton-tien-c193dt1747",
+          "clicks": 65
+        }
+      ]
+    },
+    {
+      "project_name": "Mở Tài Khoản Ngân Hàng",
+      "sector": "Financial",
+      "w2a_clicks": 1615,
+      "users": 1047,
+      "share_pct": 0.0009,
+      "top_landing_pages": [
+        {
+          "path": "/mo-tai-khoan-ngan-hang",
+          "clicks": 1198
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/nhap-ma-momombbank-nhan-sieu-qua-tha-ga-4107",
+          "clicks": 157
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/nhap-ma-momobidv-nhan-sieu-qua-tha-ga-4150",
+          "clicks": 118
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/danh-sach-ngan-hang-ap-dung-uu-dai-tu-chuong-5083",
+          "clicks": 90
+        },
+        {
+          "path": "/tpbank",
+          "clicks": 33
+        }
+      ]
+    },
+    {
+      "project_name": "Esim",
+      "sector": "ota",
+      "w2a_clicks": 1586,
+      "users": 1131,
+      "share_pct": 0.0009,
+      "top_landing_pages": [
+        {
+          "path": "/esim-du-lich",
+          "clicks": 735
+        },
+        {
+          "path": "/tin-tuc/thong-bao/cach-khac-phuc-loi-khong-vao-duoc-tiktok-khi-dung-8866",
+          "clicks": 669
+        },
+        {
+          "path": "/tin-tuc/thong-bao/huong-dan-kiem-tra-thiet-bi-va-cai-dat-esim-du-6588",
+          "clicks": 34
+        },
+        {
+          "path": "/blog/sim-du-lich-la-gi-huong-dan-mua-sim-du-lich-quoc-te-sieu-nhanh-c193dt1420",
+          "clicks": 31
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/mua-sim-du-lich-khap-5-chau-tren-momo-nhan-tan-7322",
+          "clicks": 24
+        }
+      ]
+    },
+    {
+      "project_name": "Chứng Chỉ Quỹ",
+      "sector": "Financial",
+      "w2a_clicks": 1470,
+      "users": 1073,
+      "share_pct": 0.0008,
+      "top_landing_pages": [
+        {
+          "path": "/quy-nhom",
+          "clicks": 1155
+        },
+        {
+          "path": "/chung-chi-quy",
+          "clicks": 111
+        },
+        {
+          "path": "/tin-tuc/khuyen-mai/thong-bao-momo-dung-ho-tro-dich-vu-chung-chi-quy-8695",
+          "clicks": 87
+        },
+        {
+          "path": "/blog/chung-chi-quy-la-gi-co-nen-dau-tu-vao-chung-chi-quy-c116dt1355",
+          "clicks": 54
+        },
+        {
+          "path": "/blog/huong-dan-cach-xay-dung-quy-du-phong-tai-chinh-don-gian-ma-hieu-qua-c181dt1674",
+          "clicks": 36
+        }
+      ]
+    },
+    {
+      "project_name": "Bảo Hiểm",
+      "sector": "insurtech",
+      "w2a_clicks": 1258,
+      "users": 919,
+      "share_pct": 0.0007,
+      "top_landing_pages": [
+        {
+          "path": "/bao-hiem-suc-khoe",
+          "clicks": 324
+        },
+        {
+          "path": "/bao-hiem-du-lich-quoc-te",
+          "clicks": 153
+        },
+        {
+          "path": "/bao-hiem-tre-chuyen-bay",
+          "clicks": 129
+        },
+        {
+          "path": "/blog/bao-hiem-tre-chuyen-bay-chi-phi-bao-nhieu-va-quyen-loi-nhu-the-nao-c116dt1138",
+          "clicks": 83
+        },
+        {
+          "path": "/bao-hiem-du-lich-toan-dien",
+          "clicks": 80
+        }
+      ]
+    },
+    {
+      "project_name": "Chứng Khoán",
+      "sector": "Financial",
+      "w2a_clicks": 1238,
+      "users": 867,
+      "share_pct": 0.0007,
+      "top_landing_pages": [
+        {
+          "path": "/chung-khoan",
+          "clicks": 340
+        },
+        {
+          "path": "/blog/goi-y-5-app-chung-khoan-tot-nhat-viet-nam-c116dt1366",
+          "clicks": 209
+        },
+        {
+          "path": "/blog/chung-chi-quy-etf-la-gi-cach-mua-chung-chi-quy-etf-de-dang-nhat-c116dt1167",
+          "clicks": 129
+        },
+        {
+          "path": "/blog/co-phieu-la-gi-huong-dan-dau-tu-co-phieu-cho-nguoi-moi-bat-dau-c116dt1330",
+          "clicks": 122
+        },
+        {
+          "path": "/blog/chi-so-p-e-trong-dau-tu-chung-khoan-la-gi-c116dt1839",
+          "clicks": 59
+        }
+      ]
+    },
+    {
+      "project_name": "Donation",
+      "sector": "trust",
+      "w2a_clicks": 1236,
+      "users": 700,
+      "share_pct": 0.0007,
+      "top_landing_pages": [
+        {
+          "path": "/vi-nhan-ai",
+          "clicks": 254
+        },
+        {
+          "path": "/trai-tim-momo",
+          "clicks": 246
+        },
+        {
+          "path": "/vi-nhan-ai/tu-thien",
+          "clicks": 144
+        },
+        {
+          "path": "/heo-dat-momo",
+          "clicks": 142
+        },
+        {
+          "path": "/tin-tuc/tin-tuc-su-kien/heo-dat-momo-san-qua-vui-chi-co-tai-vong-quay-tri-8881",
+          "clicks": 102
+        }
+      ]
+    },
+    {
+      "project_name": "Giá Vàng",
+      "sector": "Financial",
+      "w2a_clicks": 865,
+      "users": 438,
+      "share_pct": 0.0005,
+      "top_landing_pages": [
+        {
+          "path": "/tiem-vang-online",
+          "clicks": 865
+        }
+      ]
+    },
+    {
+      "project_name": "Phí Không Dừng",
+      "sector": "vehicle-hub",
+      "w2a_clicks": 544,
+      "users": 437,
+      "share_pct": 0.0003,
+      "top_landing_pages": [
+        {
+          "path": "/blog/vetc-la-gi-huong-dan-dang-ky-the-vetc-online-sieu-don-gian-c193dt1295",
+          "clicks": 161
+        },
+        {
+          "path": "/hoi-dap/cach-nap-tai-khoan-e-tag-vetc",
+          "clicks": 108
+        },
+        {
+          "path": "/blog/huong-dan-cach-di-qua-tram-thu-phi-khong-dung-c193dt1327",
+          "clicks": 64
+        },
+        {
+          "path": "/phi-khong-dung",
+          "clicks": 59
+        },
+        {
+          "path": "/blog/nen-chon-the-thu-phi-khong-dung-epass-hay-vetc-c193dt1328",
+          "clicks": 51
+        }
+      ]
+    },
+    {
+      "project_name": "Student Hub",
+      "sector": "student",
+      "w2a_clicks": 540,
+      "users": 335,
+      "share_pct": 0.0003,
+      "top_landing_pages": [
+        {
+          "path": "/student-pass/back-to-school",
+          "clicks": 315
+        },
+        {
+          "path": "/tin-tuc/tin-tuc-su-kien/student-pass-cung-cellphones-mang-uu-dai-cong-8841",
+          "clicks": 74
+        },
+        {
+          "path": "/tin-tuc/tin-tuc-su-kien/student-pass-cung-cellphones-mang-uu-dai-cong-8976",
+          "clicks": 68
+        },
+        {
+          "path": "/student-pass",
+          "clicks": 39
+        },
+        {
+          "path": "/tin-tuc/tin-tuc-su-kien/momo-student-pass-cung-hai-van-giam-ngay-15-gia-8854",
+          "clicks": 14
+        }
+      ]
+    },
+    {
+      "project_name": "Trả Góp Apple",
+      "sector": "Financial",
+      "w2a_clicks": 316,
+      "users": 166,
+      "share_pct": 0.0002,
+      "top_landing_pages": [
+        {
+          "path": "/tra-gop-san-pham-apple",
+          "clicks": 316
+        }
+      ]
+    },
+    {
+      "project_name": "Thanh Toán Khoản Vay",
+      "sector": "Financial",
+      "w2a_clicks": 108,
+      "users": 93,
+      "share_pct": 0.0001,
+      "top_landing_pages": [
+        {
+          "path": "/thanh-toan-khoan-vay",
+          "clicks": 108
+        }
+      ]
+    },
+    {
+      "project_name": "Bảo Hiểm Xã Hội",
+      "sector": "insurtech",
+      "w2a_clicks": 20,
+      "users": 15,
+      "share_pct": 0.0,
+      "top_landing_pages": [
+        {
+          "path": "/bao-hiem-xa-hoi",
+          "clicks": 20
+        }
+      ]
+    },
+    {
+      "project_name": "Tỷ Giá",
+      "sector": "Financial",
+      "w2a_clicks": 13,
+      "users": 9,
+      "share_pct": 0.0,
+      "top_landing_pages": [
+        {
+          "path": "/tai-chinh/ty-gia",
+          "clicks": 12
+        },
+        {
+          "path": "/tai-chinh/ty-gia/usd-sang-vnd",
+          "clicks": 1
+        }
+      ]
+    }
+  ]
+}

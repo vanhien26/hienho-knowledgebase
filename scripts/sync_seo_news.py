@@ -85,6 +85,8 @@ NEWS_DOMAINS = (
     "seroundtable.com", "searchengineland.com", "searchenginejournal.com",
     "developers.google.com", "status.search.google.com",
     "reddit.com", "x.com", "twitter.com",
+    "semrush.com", "ahrefs.com", "ziptie.ai", "botrank.ai",
+    "digitalapplied.com", "optimizegeo.ai", "arxiv.org",
 )
 SOURCE_BY_DOMAIN = {
     "seroundtable.com": "Search Engine Roundtable",
@@ -95,11 +97,19 @@ SOURCE_BY_DOMAIN = {
     "reddit.com": "Reddit r/TechSEO",
     "x.com": "X/Twitter",
     "twitter.com": "X/Twitter",
+    "semrush.com": "Semrush",
+    "ahrefs.com": "Ahrefs",
+    "ziptie.ai": "Ziptie.ai",
+    "botrank.ai": "BotRank.ai",
+    "digitalapplied.com": "DigitalApplied",
+    "optimizegeo.ai": "OptimizeGEO",
+    "arxiv.org": "arXiv",
 }
 SOURCE_PREFIX_RE = re.compile(
     r"^(Search Engine Roundtable|Search Engine Land|Search Engine Journal|Search Engine Status Dashboard"
     r"|Google Status Dashboard|Google Search Central|Google Search Status Dashboard"
-    r"|Reddit r/TechSEO|Reddit|X/Twitter)\s*:\s*", re.IGNORECASE)
+    r"|Reddit r/TechSEO|Reddit|X/Twitter|Semrush|Ahrefs|Ziptie\.ai|BotRank\.ai|DigitalApplied|OptimizeGEO|arXiv)\s*:\s*",
+    re.IGNORECASE)
 ACTION_LABEL_KEYWORDS = ["tactic", "chiến thuật", "hành động", "format", "đề xuất", "giải pháp",
                          "checklist", "triển khai", "next action"]
 BOLD_LABEL_RE = re.compile(r"^-\s+\*\*(.+?)\*\*")

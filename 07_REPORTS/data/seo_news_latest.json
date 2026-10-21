@@ -1,6 +1,394 @@
 {
-  "generated_at": "2026-10-19T13:53:07+00:00",
+  "generated_at": "2026-10-21T02:34:51+00:00",
   "items": [
+    {
+      "id": "openai-chatgpt-ads-enabling-creative-enhancements-42344",
+      "title": "OpenAI Auto Enabling Creative Enhancements In ChatGPT Ads",
+      "title_en": "OpenAI Auto Enabling Creative Enhancements In ChatGPT Ads",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-20. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/openai-chatgpt-ads-enabling-creative-enhancements-42344.html",
+      "published_at": "2026-10-20",
+      "category": "ai_search",
+      "impact": "low",
+      "tags": [
+        "chatgpt"
+      ],
+      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+    },
+    {
+      "id": "592818",
+      "title": "Your Audience Uses AI But Doesn’t Trust It - Build Content For The Gap",
+      "title_en": "Your Audience Uses AI But Doesn’t Trust It - Build Content For The Gap",
+      "summary": "Search Engine Journal cập nhật ngày 2026-10-20. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/your-audience-uses-ai-but-doesnt-trust-it-build-content-for-the-gap/592818/",
+      "published_at": "2026-10-20",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "google-ads-financial-services-verification-expand-42338",
+      "title": "Google Ads Expands Financial Services Verification To US & Canada",
+      "title_en": "Google Ads Expands Financial Services Verification To US & Canada",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-20. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-ads-financial-services-verification-expand-42338.html",
+      "published_at": "2026-10-20",
+      "category": "industry",
+      "impact": "high",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "593720",
+      "title": "ChatGPT Search Can Draw On More Pages After A Cloudflare Pilot",
+      "title_en": "ChatGPT Search Can Draw On More Pages After A Cloudflare Pilot",
+      "summary": "Search Engine Journal cập nhật ngày 2026-10-20. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/chatgpt-search-can-draw-on-more-pages-after-a-cloudflare-pilot/593720/",
+      "published_at": "2026-10-20",
+      "category": "ai_search",
+      "impact": "low",
+      "tags": [
+        "chatgpt"
+      ],
+      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+    },
+    {
+      "id": "regain-control-of-google-ads-better-tracking-clearer-proof-of-roi",
+      "title": "Regain Control Of Google Ads: Better Tracking, Clearer Proof Of ROI",
+      "title_en": "Regain Control Of Google Ads: Better Tracking, Clearer Proof Of ROI",
+      "summary": "Search Engine Journal cập nhật ngày 2026-10-20. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/rundowns/regain-control-of-google-ads-better-tracking-clearer-proof-of-roi/",
+      "published_at": "2026-10-20",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "593408",
+      "title": "I Tested DeepSeek’s New Search Api, Here’s How It Ranks And Scores Websites",
+      "title_en": "I Tested DeepSeek’s New Search Api, Here’s How It Ranks And Scores Websites",
+      "summary": "Search Engine Journal cập nhật ngày 2026-10-20. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/i-tested-deepseeks-new-search-api-heres-how-it-ranks-and-scores-websites/593408/",
+      "published_at": "2026-10-20",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "recap-10-20-2026-42334",
+      "title": "Daily Search Forum Recap: October 20, 2026",
+      "title_en": "Daily Search Forum Recap: October 20, 2026",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-20. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/recap-10-20-2026-42334.html",
+      "published_at": "2026-10-20",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "google-ai-overviews-label-missing-42337",
+      "title": "Google Removes AI Overviews Labels On Some AI Overviews",
+      "title_en": "Google Removes AI Overviews Labels On Some AI Overviews",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-20. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-ai-overviews-label-missing-42337.html",
+      "published_at": "2026-10-20",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "ai overview"
+      ],
+      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+    },
+    {
+      "id": "592530",
+      "title": "What Personal AI Agents Like Meta Muse And OpenAI Dots Mean For SEO",
+      "title_en": "What Personal AI Agents Like Meta Muse And OpenAI Dots Mean For SEO",
+      "summary": "Search Engine Journal cập nhật ngày 2026-10-20. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/personal-ai-agents-meta-muse-openai-dots-seo/592530/",
+      "published_at": "2026-10-20",
+      "category": "technical",
+      "impact": "low",
+      "tags": [
+        "robots.txt"
+      ],
+      "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic."
+    },
+    {
+      "id": "google-business-profiles-verification-government-id-42329",
+      "title": "Google Business Profiles Verification With Government ID",
+      "title_en": "Google Business Profiles Verification With Government ID",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-20. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-business-profiles-verification-government-id-42329.html",
+      "published_at": "2026-10-20",
+      "category": "industry",
+      "impact": "medium",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "google-hotel-ads-length-of-booking-bid-legacy-42330",
+      "title": "Google Hotel Ads Legacy Length Of Booking Bid Adjustment Doc",
+      "title_en": "Google Hotel Ads Legacy Length Of Booking Bid Adjustment Doc",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-20. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-hotel-ads-length-of-booking-bid-legacy-42330.html",
+      "published_at": "2026-10-20",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "google-square-brackets-urls-42332",
+      "title": "Google Search Internal Issues With Square Brackets [] Punctuations In URLs",
+      "title_en": "Google Search Internal Issues With Square Brackets [] Punctuations In URLs",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-20. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-square-brackets-urls-42332.html",
+      "published_at": "2026-10-20",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "bing-no-sitelinks-42327",
+      "title": "Bing Tests Not Showing Sitelinks",
+      "title_en": "Bing Tests Not Showing Sitelinks",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-20. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/bing-no-sitelinks-42327.html",
+      "published_at": "2026-10-20",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "google-business-profiles-review-appeals-delays-42331",
+      "title": "Google Business Profiles Review Appeals Are Delayed Again",
+      "title_en": "Google Business Profiles Review Appeals Are Delayed Again",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-20. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-business-profiles-review-appeals-delays-42331.html",
+      "published_at": "2026-10-20",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "google-search-horizontal-rule-line-removed-42333",
+      "title": "Google Search Tests Removing Horizontal Rule Line Under Tabs",
+      "title_en": "Google Search Tests Removing Horizontal Rule Line Under Tabs",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-20. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-search-horizontal-rule-line-removed-42333.html",
+      "published_at": "2026-10-20",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "593673",
+      "title": "Search Share Fell To 12% For North American Publishers: Chartbeat",
+      "title_en": "Search Share Fell To 12% For North American Publishers: Chartbeat",
+      "summary": "Search Engine Journal cập nhật ngày 2026-10-20. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/chartbeat-search-share-north-american-publishers-q3-2026/593673/",
+      "published_at": "2026-10-20",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "592892",
+      "title": "A New Place To Look: Where Your Next AI Citations & Clicks Come From",
+      "title_en": "A New Place To Look: Where Your Next AI Citations & Clicks Come From",
+      "summary": "Search Engine Journal cập nhật ngày 2026-10-20. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/where-your-next-ai-citations-clicks-come-from/592892/",
+      "published_at": "2026-10-20",
+      "category": "geo",
+      "impact": "low",
+      "tags": [],
+      "action": "Chuẩn hóa entity, schema và off-web citation để cải thiện tỉ lệ xuất hiện trong AI Overviews."
+    },
+    {
+      "id": "generative-engine-optimization",
+      "title": "Dịch Chuyển Từ Khái Niệm \"Xếp Hạng Top 1\" Sang \"Tỷ Lệ Chiếm Lĩnh Câu Trả Lời\" (Answer...",
+      "title_en": "Generative Engine Optimization",
+      "summary": "Bản chất biến động: Trên các công cụ tìm kiếm kết hợp AI (Google AI Overviews, Perplexity, ChatGPT Search), thứ hạng vị trí số 1 truyền thống đang dần mất đi ưu thế áp đảo do người dùng có xu hướng đọc câu trả lời tổng hợp sẵn ở đầu màn hình. Các thương hiệu xuất hiện trong phần trích dẫn nguồn (Source Cards) đạt tỷ lệ nhấp chuột chất lượng cao hơn (High-intent Clicks), dù tổng số lượt truy...",
+      "source": "Semrush",
+      "url": "https://www.semrush.com/blog/generative-engine-optimization/",
+      "published_at": "2026-10-20",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "ai overview",
+        "chatgpt",
+        "perplexity"
+      ],
+      "action": ""
+    },
+    {
+      "id": "geo-strategy",
+      "title": "Sự Trỗi Dậy Của Các Nền Tảng Phân Tích & Kiểm Toán GEO Chuyên Dụng (BotRank.ai)",
+      "title_en": "Sự Trỗi Dậy Của Các Nền Tảng Phân Tích & Kiểm Toán GEO Chuyên Dụng (BotRank.ai)",
+      "summary": "Chi tiết bản tin: Các công cụ theo dõi SEO truyền thống gặp khó khăn trong việc đo lường độ phủ của mô hình ngôn ngữ lớn. Do đó, làn sóng các nền tảng phân tích GEO chuyên dụng ra đời nhằm theo dõi tỷ lệ đề xuất (Recommendation Rate), phân tích cảm xúc (Sentiment Attribution) và tần suất xuất hiện của thương hiệu khi người dùng đặt câu hỏi so sánh trực tiếp trên LLMs.",
+      "source": "BotRank.ai",
+      "url": "https://www.botrank.ai/geo-strategy",
+      "published_at": "2026-10-20",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "geo"
+      ],
+      "action": ""
+    },
+    {
+      "id": "best-generative-engine-optimization-tools",
+      "title": "Sự Trỗi Dậy Của Các Nền Tảng Phân Tích & Kiểm Toán GEO Chuyên Dụng (Ziptie.ai)",
+      "title_en": "Sự Trỗi Dậy Của Các Nền Tảng Phân Tích & Kiểm Toán GEO Chuyên Dụng (Ziptie.ai)",
+      "summary": "Chi tiết bản tin: Các công cụ theo dõi SEO truyền thống gặp khó khăn trong việc đo lường độ phủ của mô hình ngôn ngữ lớn. Do đó, làn sóng các nền tảng phân tích GEO chuyên dụng ra đời nhằm theo dõi tỷ lệ đề xuất (Recommendation Rate), phân tích cảm xúc (Sentiment Attribution) và tần suất xuất hiện của thương hiệu khi người dùng đặt câu hỏi so sánh trực tiếp trên LLMs.",
+      "source": "Ziptie.ai",
+      "url": "https://ziptie.ai/blog/best-generative-engine-optimization-tools/",
+      "published_at": "2026-10-20",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "geo"
+      ],
+      "action": ""
+    },
+    {
+      "id": "google-updates",
+      "title": "Ổn Định Sau Đợt Biến Động Hậu Spam Update & Xu Hướng Tái Đánh Giá Chất Lượng",
+      "title_en": "Google Search Algorithm Updates",
+      "summary": "Hiện trạng SERP: Sau các ngày biến động mạnh (15-18/10), biên độ dao động SERP bắt đầu đi vào chu kỳ cân bằng mới. Những website duy trì lượng người dùng quay lại trực tiếp (Direct Traffic) và có thương hiệu thực thể rõ ràng ghi nhận sự phục hồi vị trí, trong khi các mạng lưới site vệ tinh chuyên cào dữ liệu không có dấu hiệu hồi phục.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/category/google-updates",
+      "published_at": "2026-10-20",
+      "category": "google_update",
+      "impact": "high",
+      "tags": [
+        "spam update"
+      ],
+      "action": ""
+    },
+    {
+      "id": "geo-guide-generative-engine-optimization-2026",
+      "title": "Framework Tối Ưu GEO Dựa Trên Nguyên Lý \"Verifiable Fact Layers\" (DigitalApplied)",
+      "title_en": "Framework Tối Ưu GEO Dựa Trên Nguyên Lý \"Verifiable Fact Layers\" (DigitalApplied)",
+      "summary": "Cơ chế vận hành: Các mô hình Generative AI ưu tiên trích dẫn các tài liệu có cấu trúc dữ liệu rõ ràng, dễ phân giải (Easy to Parse) và chứa các số liệu định lượng (Quantifiable Metrics). Tactics triển khai: Chuyển đổi các đoạn văn bản dài thành cấu trúc \"Fact Blocks\" dạng bảng hoặc gạch đầu dòng có định lượng: Thay vì viết \"phí dịch vụ rất thấp\", ghi cụ thể \"phí dịch vụ 0% cho 5 giao dịch đầu...",
+      "source": "DigitalApplied",
+      "url": "https://www.digitalapplied.com/blog/geo-guide-generative-engine-optimization-2026",
+      "published_at": "2026-10-20",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "geo"
+      ],
+      "action": ""
+    },
+    {
+      "id": "step-by-step-guide-to-geo-2026",
+      "title": "Framework Tối Ưu GEO Dựa Trên Nguyên Lý \"Verifiable Fact Layers\" (OptimizeGEO)",
+      "title_en": "Framework Tối Ưu GEO Dựa Trên Nguyên Lý \"Verifiable Fact Layers\" (OptimizeGEO)",
+      "summary": "Cơ chế vận hành: Các mô hình Generative AI ưu tiên trích dẫn các tài liệu có cấu trúc dữ liệu rõ ràng, dễ phân giải (Easy to Parse) và chứa các số liệu định lượng (Quantifiable Metrics). Tactics triển khai: Chuyển đổi các đoạn văn bản dài thành cấu trúc \"Fact Blocks\" dạng bảng hoặc gạch đầu dòng có định lượng: Thay vì viết \"phí dịch vụ rất thấp\", ghi cụ thể \"phí dịch vụ 0% cho 5 giao dịch đầu...",
+      "source": "OptimizeGEO",
+      "url": "https://www.optimizegeo.ai/blog/step-by-step-guide-to-geo-2026",
+      "published_at": "2026-10-20",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "geo"
+      ],
+      "action": ""
+    },
+    {
+      "id": "593584",
+      "title": "Meta Drops Training From Its Crawl Clause And Keeps The Crawl",
+      "title_en": "Meta Drops Training From Its Crawl Clause And Keeps The Crawl",
+      "summary": "Search Engine Journal cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/meta-removes-training-crawl-clause-commercial-terms/593584/",
+      "published_at": "2026-10-19",
+      "category": "technical",
+      "impact": "medium",
+      "tags": [],
+      "action": "Kiểm tra lại crawl/index/sitemap cho các Hub trọng điểm để đảm bảo không thất thoát lưu lượng organic."
+    },
+    {
+      "id": "593589",
+      "title": "B2B Lead Generation: How To Choose Your 2027 Marketing Channels [Webinar]",
+      "title_en": "B2B Lead Generation: How To Choose Your 2027 Marketing Channels [Webinar]",
+      "summary": "Search Engine Journal cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/b2b-lead-generation-how-to-choose-your-2027-marketing-channels-webinar/593589/",
+      "published_at": "2026-10-19",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "593526",
+      "title": "DeepSeek Opens Its In-House Search Engine To Developers",
+      "title_en": "DeepSeek Opens Its In-House Search Engine To Developers",
+      "summary": "Search Engine Journal cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/deepseek-opens-its-in-house-search-engine-to-developers/593526/",
+      "published_at": "2026-10-19",
+      "category": "geo",
+      "impact": "low",
+      "tags": [
+        "geo"
+      ],
+      "action": "Chuẩn hóa entity, schema và off-web citation để cải thiện tỉ lệ xuất hiện trong AI Overviews."
+    },
+    {
+      "id": "592680",
+      "title": "It Knew Every Word",
+      "title_en": "It Knew Every Word",
+      "summary": "Search Engine Journal cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Journal",
+      "url": "https://www.searchenginejournal.com/it-knew-every-word/592680/",
+      "published_at": "2026-10-19",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
+    {
+      "id": "recap-10-19-2026-42326",
+      "title": "Daily Search Forum Recap: October 19, 2026",
+      "title_en": "Daily Search Forum Recap: October 19, 2026",
+      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/recap-10-19-2026-42326.html",
+      "published_at": "2026-10-19",
+      "category": "industry",
+      "impact": "low",
+      "tags": [],
+      "action": ""
+    },
     {
       "id": "593472",
       "title": "AI Search Tools Cited A Made-Up Concept Within A Week, Paper Finds",
@@ -41,90 +429,130 @@
       "action": ""
     },
     {
-      "id": "google-posts-higher-42319",
-      "title": "Google Moves Google Posts Higher Up On Local Panel",
-      "title_en": "Google Moves Google Posts Higher Up On Local Panel",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
+      "id": "google-search-ranking-volatility-chatter-42317",
+      "title": "Khủng Hoảng Dữ Liệu Xếp Hạng: Hiện Tượng \"Google Poisoning... (Search Engine Roundtable)",
+      "title_en": "Khủng Hoảng Dữ Liệu Xếp Hạng: Hiện Tượng \"Google Poisoning... (Search Engine Roundtable)",
+      "summary": "Chi tiết kỹ thuật: Nhiều đơn vị theo dõi thứ hạng từ khóa lớn (Semrush, RankRanger, DataForSEO) báo cáo tình trạng dữ liệu SERP bị xáo trộn dị thường. Google bị nghi ngờ đã chủ động triển khai các cơ chế trả về dữ liệu ảo (synthetic/decoy SERPs) hoặc chuyển hướng bot cào dữ liệu vào các trang xác thực paywall giả. Mục đích của Google nhằm ngăn chặn tình trạng cào dữ liệu thứ hạng hàng loạt...",
       "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-posts-higher-42319.html",
-      "published_at": "2026-10-19",
-      "category": "serp_feature",
-      "impact": "low",
-      "tags": [],
-      "action": "Tối ưu định dạng nội dung để chiếm SERP Feature cho các truy vấn tài chính tiềm năng cao."
-    },
-    {
-      "id": "google-ads-ai-mode-personal-intelligence-42320",
-      "title": "Google Ads Now In AI Mode With Personal Intelligence",
-      "title_en": "Google Ads Now In AI Mode With Personal Intelligence",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-ads-ai-mode-personal-intelligence-42320.html",
-      "published_at": "2026-10-19",
-      "category": "google_update",
-      "impact": "low",
-      "tags": [
-        "ai mode"
-      ],
-      "action": "Rà soát tác động xếp hạng toàn bộ URL tài chính YMYL trên momo.vn trong Search Console ngay sau khi update kết thúc."
-    },
-    {
-      "id": "google-ai-mode-citations-preferred-sources-42323",
-      "title": "Google AI Mode Citations With Preferred Source Preferences",
-      "title_en": "Google AI Mode Citations With Preferred Source Preferences",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-ai-mode-citations-preferred-sources-42323.html",
+      "url": "https://www.seroundtable.com/google-search-ranking-volatility-chatter-42317.html",
       "published_at": "2026-10-19",
       "category": "ai_search",
-      "impact": "low",
+      "impact": "high",
       "tags": [
-        "ai mode"
+        "ai mode",
+        "search console"
       ],
-      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
-    },
-    {
-      "id": "openai-chatgpt-ads-updates-42321",
-      "title": "ChatGPT Ads New Ad Formats, Updated Conversion Page, Performance Emails...",
-      "title_en": "ChatGPT Ads New Ad Formats, Updated Conversion Page, Performance Emails...",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/openai-chatgpt-ads-updates-42321.html",
-      "published_at": "2026-10-19",
-      "category": "ai_search",
-      "impact": "low",
-      "tags": [
-        "chatgpt"
-      ],
-      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
-    },
-    {
-      "id": "google-ads-featured-professionals-headshots-42325",
-      "title": "Google Ads To No Longer Show Featured Professionals, Headshots Are Optional",
-      "title_en": "Google Ads To No Longer Show Featured Professionals, Headshots Are Optional",
-      "summary": "Search Engine Roundtable cập nhật ngày 2026-10-19. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-ads-featured-professionals-headshots-42325.html",
-      "published_at": "2026-10-19",
-      "category": "industry",
-      "impact": "low",
-      "tags": [],
       "action": ""
     },
     {
-      "id": "593304",
-      "title": "OpenAI’s API Only Partly Matched ChatGPT’s Citations, Paper Finds",
-      "title_en": "OpenAI’s API Only Partly Matched ChatGPT’s Citations, Paper Finds",
-      "summary": "Search Engine Journal cập nhật ngày 2026-10-18. Cần bổ sung tóm tắt tiếng Việt cho bản tin này.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/openais-api-only-partly-matched-chatgpts-citations-paper-finds/593304/",
-      "published_at": "2026-10-18",
-      "category": "ai_search",
-      "impact": "low",
+      "id": "google-ask-maps-make-your-business-easier-to-recommend-496672",
+      "title": "Tối Ưu Local GEO Cho Xu Hướng \"Ask Maps\"",
+      "title_en": "Google Ask Maps Playbook",
+      "summary": "Cách thức hoạt động: AI không chỉ tìm theo tên địa điểm mà phân tích mức độ \"dễ khuyên dùng\" (Recommendability). Tactics cụ thể: Chuẩn hóa thuộc tính trên Google Business Profile (GBP): giờ hoạt động thực tế, phương thức thanh toán (chấp nhận ví điện tử, thanh toán chạm NFC, chuyển khoản QR), bãi đỗ xe, tiện ích tiếp cận.",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/google-ask-maps-make-your-business-easier-to-recommend-496672",
+      "published_at": "2026-10-19",
+      "category": "geo",
+      "impact": "medium",
       "tags": [
+        "geo"
+      ],
+      "action": ""
+    },
+    {
+      "id": "google-merchant-center-adds-warranty-attribute-for-product-listings-496994",
+      "title": "Google Merchant Center Bổ Sung Thuộc Tính Bảo Hành (Warranty Attribute) Cho Dữ Liệu...",
+      "title_en": "Google Merchant Center adds warranty attribute",
+      "summary": "Chi tiết bản tin: Google chính thức cập nhật thông số kỹ thuật nguồn cấp dữ liệu sản phẩm (Product Feed Specification), bổ sung trường dữ liệu bảo hành chuẩn hóa. Các sản phẩm có thông tin bảo hành minh bạch sẽ được ưu tiên hiển thị nổi bật trong bảng so sánh sản phẩm của AI Overviews và Universal Cart trên Google Search.",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/google-merchant-center-adds-warranty-attribute-for-product-listings-496994",
+      "published_at": "2026-10-19",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "ai overview"
+      ],
+      "action": ""
+    },
+    {
+      "id": "chatgpt-ads-introduces-new-measurement-tools-and-visual-ad-formats-496998",
+      "title": "Cuộc Đua Quảng Cáo AI: ChatGPT Ads Ra Mắt Công Cụ Đo Lường & Định Dạng Trực Quan",
+      "title_en": "ChatGPT Ads introduces new measurement tools",
+      "summary": "Chi tiết bản tin: Cùng lúc với thử nghiệm hiển thị Ads trong Google AI Mode, OpenAI bắt đầu triển khai các định dạng quảng cáo trực quan kèm bộ công cụ đo lường chuyển đổi riêng biệt trong kết quả tìm kiếm của ChatGPT, đặt ra bài toán mới cho các nhãn hàng trong việc phân bổ ngân sách tiếp thị tìm kiếm tổng hợp giữa Google và OpenAI.",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/chatgpt-ads-introduces-new-measurement-tools-and-visual-ad-formats-496998",
+      "published_at": "2026-10-19",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "ai mode",
         "chatgpt"
       ],
-      "action": "Bổ sung cấu trúc trả lời trực tiếp (Direct Answer) để tăng khả năng được AI engine trích dẫn cho các câu hỏi tài chính."
+      "action": ""
+    },
+    {
+      "id": "video-09-16-2026-42313",
+      "title": "Khủng Hoảng Dữ Liệu Xếp Hạng: Hiện Tượng \"Google Poisoning... (Search Engine Roundtable)",
+      "title_en": "Search News Buzz Video Recap",
+      "summary": "Chi tiết kỹ thuật: Nhiều đơn vị theo dõi thứ hạng từ khóa lớn (Semrush, RankRanger, DataForSEO) báo cáo tình trạng dữ liệu SERP bị xáo trộn dị thường. Google bị nghi ngờ đã chủ động triển khai các cơ chế trả về dữ liệu ảo (synthetic/decoy SERPs) hoặc chuyển hướng bot cào dữ liệu vào các trang xác thực paywall giả. Mục đích của Google nhằm ngăn chặn tình trạng cào dữ liệu thứ hạng hàng loạt...",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/video-09-16-2026-42313.html",
+      "published_at": "2026-10-19",
+      "category": "ai_search",
+      "impact": "high",
+      "tags": [
+        "ai mode",
+        "search console"
+      ],
+      "action": ""
+    },
+    {
+      "id": "seo",
+      "title": "Dư Chấn Biến Động SERP Kéo Dài Qua Cuối Tuần (17-19/10/2026)",
+      "title_en": "Dư Chấn Biến Động SERP Kéo Dài Qua Cuối Tuần (17-19/10/2026)",
+      "summary": "Hiện trạng thực tế: Biến động xếp hạng vẫn duy trì ở mức cao sau khi September 2026 Spam Update hoàn tất. Các trang web tài chính và dịch vụ tiện ích ghi nhận sự thanh lọc mạnh mẽ đối với các nội dung ký sinh (Parasite SEO trên các trang báo điện tử). Các vị trí Top đầu đang được tái phân bổ cho các tên miền chính chủ có uy tín thực thể (Brand Authority) cao.",
+      "source": "Reddit r/TechSEO",
+      "url": "https://www.reddit.com/r/SEO/",
+      "published_at": "2026-10-19",
+      "category": "google_update",
+      "impact": "high",
+      "tags": [
+        "spam update"
+      ],
+      "action": ""
+    },
+    {
+      "id": "human-experience-content-differentiator-496574",
+      "title": "\"Human Experience\" (E-E-A-T Thực Tế) - Rào Cản Phòng Thủ Duy Nhất Trước AI Content",
+      "title_en": "Human experience is your content's biggest differentiator",
+      "summary": "Bản chất vấn đề: Các thuật toán AI Search (Gemini 4 Argon, ChatGPT Search) có thể tổng hợp kiến thức thông thường chỉ trong vài giây. Do đó, các bài viết tóm tắt lý thuyết suông sẽ bị AI hấp thụ và triệt tiêu lượt click (Zero-Click). Để được AI trích dẫn làm nguồn thẩm quyền, nội dung bắt buộc phải chứa \"bằng chứng con người\" (Proof of Experience). Tactics triển khai: Bổ sung hình ảnh/video tự...",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/human-experience-content-differentiator-496574",
+      "published_at": "2026-10-19",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "chatgpt",
+        "gemini",
+        "e-e-a-t"
+      ],
+      "action": ""
+    },
+    {
+      "id": "canonicalization-seo-448161",
+      "title": "Chiến Lược Canonicalization Chuẩn Hóa Thực Thể Cho Kỷ Nguyên AI Search (2026-2027)",
+      "title_en": "Canonicalization and SEO: A guide for 2027",
+      "summary": "Tác động đến AI Search: Khi một website có nhiều phiên bản URL tương tự nhau (do bộ lọc sản phẩm, tham số UTM, phân trang dynamic), AI Search Bot sẽ bị phân tán ngân sách thu thập và gặp khó khăn trong việc xác định trang gốc chứa thực thể chính xác. Actionable Checklist: Khai báo thẻ rel=\"canonical\" tự trỏ (Self-referential canonical) chuẩn xác cho 100% trang đích chính.",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/canonicalization-seo-448161",
+      "published_at": "2026-10-19",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "robots.txt",
+        "cannibalization"
+      ],
+      "action": ""
     },
     {
       "id": "google-updates-links-in-ai-mode-and-ai-overviews-again-42308",
@@ -185,6 +613,21 @@
       "impact": "medium",
       "tags": [
         "chatgpt"
+      ],
+      "action": ""
+    },
+    {
+      "id": "google-updates-indexing-api-quota-information-42316",
+      "title": "Google Cập Nhật Hạn Ngạch & Tài Liệu Kỹ Thuật Của Indexing API",
+      "title_en": "Google Updates Indexing API Quota Information",
+      "summary": "Chi tiết bản tin: Google cập nhật làm rõ chính sách hạn ngạch của Indexing API trên 3 trang tài liệu dành cho nhà phát triển, tái khẳng định API này chỉ dành riêng cho các trang có dữ liệu việc làm (JobPosting) và sự kiện phát sóng trực tiếp (BroadcastEvent), đồng thời siết chặt kiểm soát các trường hợp lạm dụng API để ép index nội dung thông thường.",
+      "source": "Search Engine Roundtable",
+      "url": "https://www.seroundtable.com/google-updates-indexing-api-quota-information-42316.html",
+      "published_at": "2026-10-18",
+      "category": "google_update",
+      "impact": "medium",
+      "tags": [
+        "indexing api"
       ],
       "action": ""
     },
@@ -256,255 +699,6 @@
       "action": ""
     },
     {
-      "id": "593292",
-      "title": "Google gỡ hướng dẫn xin quyền Indexing API khỏi tài liệu",
-      "title_en": "Google’s Indexing API Docs No Longer Explain How To Get Approval",
-      "summary": "Google gỡ form và các bước xin phê duyệt Indexing API khỏi tài liệu, chỉ còn liệt kê hạn mức mặc định mà không nêu cách xin thêm. Cộng đồng đặt dấu hỏi về cách mở rộng quota trong tương lai.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/google-indexing-api-docs-approval-form-removed/593292/",
-      "published_at": "2026-10-17",
-      "category": "technical",
-      "impact": "medium",
-      "tags": [
-        "indexing api"
-      ],
-      "action": "Theo dõi chính sách Indexing API; nếu cần index nhanh URL mới, ưu tiên sitemap chuẩn thay vì API."
-    },
-    {
-      "id": "593171",
-      "title": "Dữ liệu rank tracker, tag ChatGPT và link AI Search - SEO Pulse",
-      "title_en": "Rank Tracker Data, ChatGPT Tags & AI Search Links - SEO Pulse",
-      "summary": "Bản tin SEO Pulse tổng hợp: rank tracker ghi nhận trang Google mất sitelink thường thấy, một số link ChatGPT mất tracking tag, và Google/Bing thay đổi link trong AI search.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/seo-pulse-rank-tracker-data-chatgpt-tags-ai-search-links/593171/",
-      "published_at": "2026-10-17",
-      "category": "ai_search",
-      "impact": "low",
-      "tags": [
-        "chatgpt",
-        "ai search",
-        "rank tracker"
-      ],
-      "action": "Theo dõi ổn định hiển thị sitelink và tracking AI; đối chiếu định kỳ để phát hiện bất thường sớm."
-    },
-    {
-      "id": "593217",
-      "title": "Meta mở rộng quyền crawl nội dung ngoài phạm vi nhà quảng cáo",
-      "title_en": "Meta’s New Terms Expand Crawling Rights Beyond Advertisers",
-      "summary": "Điều khoản mới của Meta cho phép crawl các site gắn với người dùng doanh nghiệp và dùng nội dung để huấn luyện sản phẩm, mở rộng quyền vốn chỉ áp dụng cho nhà quảng cáo. Liên quan đến quyền sử dụng dữ liệu nội dung.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/metas-new-terms-expand-crawling-rights-beyond-advertisers/593217/",
-      "published_at": "2026-10-16",
-      "category": "technical",
-      "impact": "medium",
-      "tags": [
-        "crawling",
-        "robots.txt"
-      ],
-      "action": "Rà soát điều khoản crawl/AI đối với nội dung momo.vn; cân nhắc kiểm soát robots.txt cho các AI crawler không mong muốn."
-    },
-    {
-      "id": "593021",
-      "title": "Vì sao New York Times ưu tiên nội dung miễn phí lên trang chủ",
-      "title_en": "Why The New York Times Puts Free Content First",
-      "summary": "The New York Times dành vị trí trang chủ nổi bật cho các bài miễn phí và ghi rõ cho độc giả biết. Chiến lược này giúp tăng tương tác và phễu chuyển đổi sang nội dung trả phí.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/why-the-new-york-times-puts-free-content-first/593021/",
-      "published_at": "2026-10-16",
-      "category": "industry",
-      "impact": "low",
-      "tags": [
-        "content strategy"
-      ],
-      "action": "Tham khảo mô hình phân tầng nội dung miễn phí/trả phí; áp dụng cho phễu nội dung tài chính dẫn về sản phẩm."
-    },
-    {
-      "id": "592899",
-      "title": "Sự cố migration có thể do chất lượng site, không chỉ kỹ thuật",
-      "title_en": "It’s Possible Your Migration Issues May Be Due To Site Quality",
-      "summary": "Marie Haynes đưa giả thuyết: khi domain mới không được index và không có lỗi kỹ thuật, vấn đề có thể nằm ở chất lượng/tính nguyên bản của nội dung. Cảnh báo cho các dự án di chuyển nền tảng.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/its-possible-your-migration-issues-may-be-due-to-site-quality/592899/",
-      "published_at": "2026-10-16",
-      "category": "technical",
-      "impact": "medium",
-      "tags": [
-        "migration",
-        "indexing"
-      ],
-      "action": "Với các đợt migration (MoSpark), kiểm tra chất lượng và tính nguyên bản nội dung trước khi kỳ vọng index ổn định."
-    },
-    {
-      "id": "recap-10-16-2026-42318",
-      "title": "Điểm tin diễn đàn Search ngày 16/10/2026",
-      "title_en": "Daily Search Forum Recap: October 16, 2026",
-      "summary": "Tổng hợp thảo luận diễn đàn search trong ngày 16/10/2026. Bản tin tổng hợp, không có sự kiện trọng yếu riêng.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/recap-10-16-2026-42318.html",
-      "published_at": "2026-10-16",
-      "category": "industry",
-      "impact": "low",
-      "tags": [],
-      "action": ""
-    },
-    {
-      "id": "video-09-16-2026-42313",
-      "title": "Video điểm tin Search: Google, AI Mode, ChatGPT và SEO",
-      "title_en": "Search News Buzz Video Recap: Google Poisoning Tracking Tools, Google AI Results Updates, Discover To Change, Google Ads, ChatGPT & SEO",
-      "summary": "Video recap tuần: Google bị cho là 'đầu độc' công cụ tracking bên thứ ba, ra mắt Gemini 4 Argon trong AI Mode, cùng nhiều thay đổi kết quả AI. Tổng hợp diễn biến AI Search trong kỳ.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/video-09-16-2026-42313.html",
-      "published_at": "2026-10-16",
-      "category": "ai_search",
-      "impact": "low",
-      "tags": [
-        "ai search",
-        "ai mode",
-        "gemini"
-      ],
-      "action": "Theo dõi cập nhật AI Mode và tác động đến trích dẫn thương hiệu; đánh giá lại độ tin cậy công cụ tracking."
-    },
-    {
-      "id": "593113",
-      "title": "Google nhận đơn tham gia pipeline UGC tách khỏi crawl",
-      "title_en": "Google Takes Applications For A UGC Pipeline Separate From Crawling",
-      "summary": "Google mở đơn cho các diễn đàn và nền tảng xã hội tham gia một pipeline UGC tách biệt với crawl thông thường. Cơ chế này có thể cho phép dữ liệu người dùng cập nhật nhanh hơn vào Search.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/google-ugc-fresh-data-program-applications/593113/",
-      "published_at": "2026-10-16",
-      "category": "technical",
-      "impact": "medium",
-      "tags": [
-        "ugc",
-        "crawling"
-      ],
-      "action": "Không áp dụng trực tiếp cho momo.vn; ghi nhận xu hướng UGC được ưu tiên dữ liệu mới để định hướng nội dung cộng đồng."
-    },
-    {
-      "id": "google-search-ranking-volatility-chatter-42317",
-      "title": "Biến Động SERP Đột Biến (Volatility Spike) Sau Khi Hoàn Tất September 2026 Spam Update",
-      "title_en": "Google Search Ranking Volatility & Chatter Spike Today",
-      "summary": "Chi tiết bản tin: Đợt cập nhật September 2026 Spam Update kéo dài 14 ngày đã chính thức kết thúc vào ngày 08/10/2026. Tuy nhiên, trong các ngày 15-17/10/2026, các công cụ theo dõi SERP (Semrush Sensor, RankRanger) và cộng đồng Webmaster quốc tế ghi nhận làn sóng dao động thứ hạng dữ dội chưa từng có. Nhiều chuyên gia nhận định đây là đợt hiệu chỉnh thuật toán ngầm (Unconfirmed Core/Quality...",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-search-ranking-volatility-chatter-42317.html",
-      "published_at": "2026-10-16",
-      "category": "google_update",
-      "impact": "high",
-      "tags": [
-        "spam update"
-      ],
-      "action": ""
-    },
-    {
-      "id": "google-ads-online-gambling-certification-42314",
-      "title": "Google Ads mở chứng nhận cho nhà quảng cáo cờ bạc trực tuyến",
-      "title_en": "Google Ads To Allow Certification For Online Gambling Advertisers",
-      "summary": "Google Ads mở chứng nhận cho một số nhà quảng cáo thuộc nhóm cờ bạc trực tuyến từ tháng 10/2026, triển khai dần theo khu vực.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-ads-online-gambling-certification-42314.html",
-      "published_at": "2026-10-16",
-      "category": "industry",
-      "impact": "low",
-      "tags": [
-        "google ads"
-      ],
-      "action": "Không liên quan trực tiếp đến momo.vn; ghi nhận để theo dõi thay đổi chính sách quảng cáo ngành."
-    },
-    {
-      "id": "bing-read-more-links-42311",
-      "title": "Bing thử nghiệm link Read more trong snippet kết quả",
-      "title_en": "Bing Tests Read More Links In Search Result Snippets",
-      "summary": "Bing đang thử thêm link 'Read more' trong snippet kết quả tìm kiếm, tương tự cách Google đã làm trước đó.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/bing-read-more-links-42311.html",
-      "published_at": "2026-10-16",
-      "category": "serp_feature",
-      "impact": "low",
-      "tags": [
-        "serp feature",
-        "bing"
-      ],
-      "action": "Theo dõi tác động lên CTR Bing nếu MoMo có phủ kênh Bing; không cần hành động ngay."
-    },
-    {
-      "id": "google-ads-lead-form-scoring-42310",
-      "title": "Google Ads Lead Form bổ sung chấm điểm lead",
-      "title_en": "Google Ads Lead Form Adds Lead Scoring For Lead Qualification",
-      "summary": "Google bổ sung tính năng chấm điểm lead (lead scoring) trong Lead Form của Google Ads, cho phép gắn điểm theo câu trả lời để lọc lead chất lượng cao.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-ads-lead-form-scoring-42310.html",
-      "published_at": "2026-10-16",
-      "category": "industry",
-      "impact": "low",
-      "tags": [
-        "google ads"
-      ],
-      "action": "Xem xét áp dụng lead scoring cho các form thu thập lead tài chính nếu chạy Google Ads."
-    },
-    {
-      "id": "bing-testing-popular-links-42304",
-      "title": "Bing thử nghiệm nhãn Popular Links cho sitelinks",
-      "title_en": "Bing Search Testing Popular Links On Snippets",
-      "summary": "Microsoft thử nghiệm gắn nhãn 'Popular Links' cho sitelinks trên Bing, tương tự thử nghiệm top pages trước đây của Google.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/bing-testing-popular-links-42304.html",
-      "published_at": "2026-10-16",
-      "category": "serp_feature",
-      "impact": "low",
-      "tags": [
-        "serp feature",
-        "bing"
-      ],
-      "action": "Ghi nhận xu hướng; đảm bảo cấu trúc sitelink momo.vn rõ ràng để tận dụng nếu Bing triển khai rộng."
-    },
-    {
-      "id": "google-ads-api-twice-a-month-42303",
-      "title": "Google Ads API phát hành 2 lần mỗi tháng",
-      "title_en": "Google Ads API Releases Twice Per Month Going Forward",
-      "summary": "Google Ads API sẽ phát hành hai lần mỗi tháng thay vì một lần, tăng gấp đôi tần suất cập nhật từ nay đến 2027.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-ads-api-twice-a-month-42303.html",
-      "published_at": "2026-10-16",
-      "category": "industry",
-      "impact": "low",
-      "tags": [
-        "google ads"
-      ],
-      "action": "Nếu có hệ thống tích hợp Google Ads API, tăng tần suất kiểm thử tương thích do thay đổi API dày hơn."
-    },
-    {
-      "id": "google-updates-indexing-api-quota-information-42316",
-      "title": "Google Cập Nhật Hạn Ngạch & Tài Liệu Kỹ Thuật Của Indexing API",
-      "title_en": "Google Updated Indexing API Quota Details & More",
-      "summary": "Chi tiết bản tin: Google cập nhật làm rõ chính sách hạn ngạch của Indexing API trên 3 trang tài liệu dành cho nhà phát triển, tái khẳng định API này chỉ dành riêng cho các trang có dữ liệu việc làm (JobPosting) và sự kiện phát sóng trực tiếp (BroadcastEvent), đồng thời siết chặt kiểm soát các trường hợp lạm dụng API để ép index nội dung thông thường.",
-      "source": "Search Engine Roundtable",
-      "url": "https://www.seroundtable.com/google-updates-indexing-api-quota-information-42316.html",
-      "published_at": "2026-10-16",
-      "category": "google_update",
-      "impact": "medium",
-      "tags": [
-        "indexing api"
-      ],
-      "action": ""
-    },
-    {
-      "id": "593157",
-      "title": "Lưu lượng ChatGPT giảm do lỗi tracking, không phải nhu cầu",
-      "title_en": "ChatGPT Traffic Drop Appears To Be A Tracking Problem",
-      "summary": "Lưu lượng gán cho ChatGPT giảm mạnh trong nhiều bộ dữ liệu analytics tháng này, nguyên nhân được cho là các link ChatGPT mở ra mà không mang tracking tag. Đây là vấn đề đo lường, không phải sụt giảm nhu cầu thật.",
-      "source": "Search Engine Journal",
-      "url": "https://www.searchenginejournal.com/chatgpt-traffic-drop-appears-to-be-a-tracking-problem/593157/",
-      "published_at": "2026-10-15",
-      "category": "ai_search",
-      "impact": "high",
-      "tags": [
-        "chatgpt",
-        "ai search",
-        "tracking"
-      ],
-      "action": "Kiểm tra lại gắn tham số tracking cho traffic từ AI engine; rà soát referral từ chatgpt.com/perplexity.ai để không đánh giá sai kênh AI."
-    },
-    {
       "id": "google-september-2026-spam-update-done-42235",
       "title": "Google Xác Nhận Hoàn Tất Rollout \"September 2026 Spam Update\" & Động Thái Cảnh Báo...",
       "title_en": "Google Xác Nhận Hoàn Tất Rollout \"September 2026 Spam Update\" & Động Thái Cảnh Báo...",
@@ -521,32 +715,32 @@
       "action": "",
       "insight": {
         "status": "watch",
-        "finding": "Dữ liệu sau mốc 12/10 mới có 4/7 ngày: clicks organic toàn site giảm 13,9% tạm tính so với 4 ngày liền trước.",
+        "finding": "Dữ liệu sau mốc 12/10 mới có 6/7 ngày: clicks organic toàn site giảm 14,9% tạm tính so với 6 ngày liền trước.",
         "evidence": [
           {
             "label": "Clicks organic toàn site",
-            "value": "31.4K",
-            "delta_pct": -13.9,
+            "value": "31.3K",
+            "delta_pct": -14.9,
             "source": "GSC",
-            "period": "4 ngày sau vs 4 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+            "period": "6 ngày sau vs 6 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
           },
           {
             "label": "Impressions toàn site",
-            "value": "958.6K",
-            "delta_pct": -6.5,
+            "value": "950.3K",
+            "delta_pct": -8.2,
             "source": "GSC",
-            "period": "4 ngày sau vs 4 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+            "period": "6 ngày sau vs 6 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
           },
           {
             "label": "Vị trí trung bình (impression-weighted)",
             "value": "6.0",
-            "delta_pct": 2.6,
+            "delta_pct": 3.1,
             "source": "GSC",
-            "period": "4 ngày sau vs 4 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+            "period": "6 ngày sau vs 6 ngày trước 12/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
           }
         ],
         "next_step": "Chạy lại kiểm tra GSC sau 19/10 khi đủ 7 ngày dữ liệu sau mốc; nếu clicks giảm ≥10% thì rà top URL theo cùng khung so sánh.",
-        "data_as_of": "2026-10-16"
+        "data_as_of": "2026-10-18"
       }
     },
     {
@@ -690,6 +884,53 @@
       }
     },
     {
+      "id": "231109735v3",
+      "title": "Nghiên Cứu Mới Về Tối Ưu Hóa Nguồn Trích Dẫn Trên Perplexity & ChatGPT Search",
+      "title_en": "Nghiên Cứu Mới Về Tối Ưu Hóa Nguồn Trích Dẫn Trên Perplexity & ChatGPT Search",
+      "summary": "Tóm tắt cốt lõi: Các công cụ tìm kiếm AI (Perplexity, SearchGPT, Gemini Search) lựa chọn domain trích dẫn dựa trên độ tin cậy thực thể bên thứ ba (Third-party Citations & Brand Mentions) kết hợp cùng mật độ trích dẫn số liệu (Statistical Density). Nội dung có chứa số liệu thống kê được xác thực và trích dẫn nguồn uy tín có xác suất được đưa vào câu trả lời AI cao hơn 40%. Tác động đến Web...",
+      "source": "arXiv",
+      "url": "https://arxiv.org/html/2311.09735v3",
+      "published_at": "2026-10-11",
+      "category": "ai_search",
+      "impact": "medium",
+      "tags": [
+        "geo",
+        "chatgpt",
+        "perplexity",
+        "gemini"
+      ],
+      "action": "",
+      "insight": {
+        "status": "watch",
+        "finding": "Dữ liệu Bing AI sau mốc 11/10 mới có 4/7 ngày: lượt trích dẫn momo.vn tăng 36,2% tạm tính so với 4 ngày liền trước.",
+        "evidence": [
+          {
+            "label": "Lượt trích dẫn momo.vn trên Bing AI (TB/ngày)",
+            "value": "6.3K",
+            "delta_pct": 36.2,
+            "source": "Bing AI Performance",
+            "period": "4 ngày sau vs 4 ngày trước 11/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          },
+          {
+            "label": "Page được Bing AI trích dẫn (TB/ngày)",
+            "value": "341",
+            "delta_pct": 12.3,
+            "source": "Bing AI Performance",
+            "period": "4 ngày sau vs 4 ngày trước 11/10 (chưa đủ 7 ngày dữ liệu sau mốc)"
+          },
+          {
+            "label": "Referral từ AI engines (Clarity)",
+            "value": "982",
+            "delta_pct": null,
+            "source": "Clarity",
+            "period": "snapshot 2026-10-19"
+          }
+        ],
+        "next_step": "Theo dõi citations đến 18/10 khi đủ 7 ngày dữ liệu sau mốc.",
+        "data_as_of": "2026-10-15"
+      }
+    },
+    {
       "id": "seo-learning-paths",
       "title": "Google Search Central ra mắt lộ trình học Search, Technical SEO",
       "title_en": "New learning paths: curated YouTube playlists for Search fundamentals and Technical SEO",
@@ -724,7 +965,7 @@
           }
         ],
         "next_step": "Không cần hành động; duy trì theo dõi index coverage định kỳ.",
-        "data_as_of": "2026-10-16"
+        "data_as_of": "2026-10-18"
       }
     },
     {
@@ -769,7 +1010,7 @@
           }
         ],
         "next_step": "Không cần hành động ngay; duy trì theo dõi GSC định kỳ.",
-        "data_as_of": "2026-10-16"
+        "data_as_of": "2026-10-18"
       }
     },
     {
@@ -807,7 +1048,7 @@
           }
         ],
         "next_step": "Không cần hành động; duy trì theo dõi index coverage định kỳ.",
-        "data_as_of": "2026-10-16"
+        "data_as_of": "2026-10-18"
       }
     },
     {
@@ -897,7 +1138,7 @@
           }
         ],
         "next_step": "Không cần hành động ngay; duy trì theo dõi GSC định kỳ.",
-        "data_as_of": "2026-10-16"
+        "data_as_of": "2026-10-18"
       }
     }
   ]

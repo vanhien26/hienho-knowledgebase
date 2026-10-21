@@ -37,6 +37,26 @@ DEFAULT_OUTPUT = os.path.join(BASE_DIR, "07_REPORTS", "data", "theme_seasonality
 DEFAULT_HUBS_REPO = "/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo"
 DEFAULT_CLUSTER_DIR = os.path.join(DEFAULT_HUBS_REPO, "data", "seo-clusters")
 FALLBACK_INVENTORY_SUMMARY = os.path.join(BASE_DIR, "07_REPORTS", "data", "inventory_clusters_summary.json")
+DEFAULT_INVENTORY_DIR = os.path.join(BASE_DIR, "05_HUBS", "inventory")
+
+# Chuẩn hoá pillar & metadata cho các Theme trong inventory CSV
+PILLAR_OVERRIDES = {
+    "xskt": ("xskt", "Xổ Số Kiến Thiết", "Lottery"),
+    "sim-so-dep": ("sim số đẹp", "Sim Số Đẹp", "telco"),
+    "nap-the-game": ("nạp thẻ game", "Nạp Thẻ Game", "Entertainment"),
+    "nap-xu-tiktok": ("nạp xu tiktok", "Nạp Xu TikTok", "Entertainment"),
+    "cuu-ho-o-to": ("cứu hộ ô tô", "Cứu Hộ Ô Tô", "vehicle-hub"),
+    "uob": ("ngân hàng uob", "Ngân Hàng UOB", "Financial"),
+    "mang-5g": ("mạng 5g", "Mạng 5G", "telco"),
+    "nap-card": ("nạp thẻ cào", "Nạp Thẻ Cào", "telco"),
+    "mang-4g": ("mạng 4g", "Mạng 4G", "telco"),
+    "bao-hiem-benh": ("bảo hiểm bệnh hiểm nghèo", "Bảo Hiểm Bệnh Hiểm Nghèo", "insurtech"),
+    "bao-hiem-than-vo": ("bảo hiểm thân vỏ ô tô", "Bảo Hiểm Thân Vỏ Ô Tô", "insurtech"),
+    "bao-hiem-vat-chat": ("bảo hiểm vật chất xe ô tô", "Bảo Hiểm Vật Chất Ô Tô", "insurtech"),
+    "dong-bao-hiem": ("đóng bảo hiểm xã hội", "Đóng Bảo Hiểm Xã Hội", "insurtech"),
+    "thu-nhap": ("thuế thu nhập cá nhân", "Thu Nhập & Thuế TNCN", "Financial"),
+    "ncb": ("ngân hàng ncb", "Ngân Hàng NCB", "Financial"),
+}
 
 
 def parse_args():
@@ -53,12 +73,19 @@ def parse_args():
     return parser.parse_args()
 
 
-def load_theme_candidates(cluster_dir: str, sector_filter=None, theme_filter=None):
+def load_theme_candidates(cluster_dir: str, sector_filter=None, theme_filter=None, inventory_dir: str = DEFAULT_INVENTORY_DIR):
     """
-    Thu thập danh sách themes từ thư mục seo-clusters hoặc fallback inventory_clusters_summary.json
+    Thu thập danh sách themes từ thư mục seo-clusters, fallback inventory_clusters_summary.json,
+    và kho CSV inventory tại 05_HUBS/inventory.
     """
     themes = []
     seen_ids = set()
+
+    def normalize_sector(s: str) -> str:
+        s_clean = s.strip()
+        if s_clean.upper() == "PS":
+            return "Entertainment"
+        return s_clean
 
     # Cách 1: Quét file json modular tại cluster_dir/*/*.json
     pattern = os.path.join(cluster_dir, "*", "*.json")
@@ -73,7 +100,7 @@ def load_theme_candidates(cluster_dir: str, sector_filter=None, theme_filter=Non
                 if not theme_id or theme_id in seen_ids:
                     continue
 
-                sector = t.get("sector", "")
+                sector = normalize_sector(t.get("sector", ""))
                 if sector_filter and sector.lower() != sector_filter.lower():
                     continue
 
@@ -81,6 +108,10 @@ def load_theme_candidates(cluster_dir: str, sector_filter=None, theme_filter=Non
                     continue
 
                 pillar_kw = t.get("pillar_keyword", {}).get("keyword", "")
+                # Cho phép override pillar nếu có trong PILLAR_OVERRIDES (vd: sửa ncb)
+                if theme_id in PILLAR_OVERRIDES:
+                    pillar_kw = PILLAR_OVERRIDES[theme_id][0]
+
                 if not pillar_kw:
                     continue
 
@@ -95,9 +126,8 @@ def load_theme_candidates(cluster_dir: str, sector_filter=None, theme_filter=Non
             except Exception as e:
                 print(f"⚠️ Không thể đọc file cluster {p}: {e}")
 
-    # Cách 2: Fallback nếu không có modular dir
-    if not themes and os.path.exists(FALLBACK_INVENTORY_SUMMARY):
-        print(f"ℹ️ Dùng nguồn fallback: {FALLBACK_INVENTORY_SUMMARY}")
+    # Cách 2: Bổ sung từ fallback inventory summary nếu có
+    if os.path.exists(FALLBACK_INVENTORY_SUMMARY):
         try:
             with open(FALLBACK_INVENTORY_SUMMARY, "r", encoding="utf-8") as f:
                 data = json.load(f)
@@ -106,7 +136,7 @@ def load_theme_candidates(cluster_dir: str, sector_filter=None, theme_filter=Non
                 if not theme_id or theme_id in seen_ids:
                     continue
 
-                sector = t.get("sector", "")
+                sector = normalize_sector(t.get("sector", ""))
                 if sector_filter and sector.lower() != sector_filter.lower():
                     continue
 
@@ -114,6 +144,9 @@ def load_theme_candidates(cluster_dir: str, sector_filter=None, theme_filter=Non
                     continue
 
                 pillar_kw = t.get("pillar_keyword", {}).get("keyword", "")
+                if theme_id in PILLAR_OVERRIDES:
+                    pillar_kw = PILLAR_OVERRIDES[theme_id][0]
+
                 if not pillar_kw:
                     continue
 
@@ -127,6 +160,51 @@ def load_theme_candidates(cluster_dir: str, sector_filter=None, theme_filter=Non
                 seen_ids.add(theme_id)
         except Exception as e:
             print(f"⚠️ Lỗi đọc fallback inventory summary: {e}")
+
+    # Cách 3: Bổ sung các Theme từ kho CSV 05_HUBS/inventory/*/*.csv
+    if os.path.exists(inventory_dir):
+        csv_files = glob.glob(os.path.join(inventory_dir, "*", "*.csv"))
+        for cp in sorted(csv_files):
+            fname = os.path.basename(cp).replace(".csv", "").strip()
+            theme_id = fname
+            if theme_id in seen_ids:
+                continue
+
+            folder_sector = normalize_sector(cp.split(os.sep)[-2])
+            
+            # Kiểm tra nếu có trong PILLAR_OVERRIDES
+            if theme_id in PILLAR_OVERRIDES:
+                override_pillar, override_name, override_sec = PILLAR_OVERRIDES[theme_id]
+                sec = normalize_sector(override_sec or folder_sector)
+                if sector_filter and sec.lower() != sector_filter.lower():
+                    continue
+                if theme_filter and theme_id.lower() not in theme_filter:
+                    continue
+                
+                # Tính tổng volume từ CSV
+                vol = 0
+                try:
+                    import csv
+                    with open(cp, "r", encoding="utf-8-sig", errors="ignore") as f:
+                        r = csv.reader(f)
+                        next(r, None)
+                        for row in r:
+                            if len(row) > 1:
+                                try:
+                                    vol += int(float(row[1].replace(",", "").replace("=", "").replace("\"", "").strip()))
+                                except:
+                                    pass
+                except:
+                    pass
+
+                themes.append({
+                    "theme_id": theme_id,
+                    "name": override_name,
+                    "sector": sec,
+                    "pillar": override_pillar,
+                    "volume": vol,
+                })
+                seen_ids.add(theme_id)
 
     return themes
 
@@ -186,11 +264,19 @@ def save_dataset(output_path: str, themes_data: list):
     Lưu dataset chuẩn contract sang output_path
     """
     os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
+    clean_themes = []
+    for t in themes_data:
+        item = dict(t)
+        sec = item.get("sector", "")
+        if sec.upper() == "PS":
+            item["sector"] = "Entertainment"
+        clean_themes.append(item)
+
     payload = {
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "geo": "VN",
         "timeframe": "today 5-y",
-        "themes": themes_data,
+        "themes": clean_themes,
     }
     temp_path = output_path + ".tmp"
     with open(temp_path, "w", encoding="utf-8") as f:
@@ -255,10 +341,10 @@ def main():
         t_id = c["theme_id"]
         pillar = c["pillar"]
 
-        # Kiểm tra Resume
-        if not args.force and t_id in existing_map and not existing_map[t_id].get("insufficient_data", False):
+        # Kiểm tra Resume (chỉ bỏ qua nếu đã có cache hợp lệ và cùng pillar keyword)
+        cached = existing_map.get(t_id)
+        if not args.force and cached and not cached.get("insufficient_data", False) and cached.get("pillar") == pillar:
             skipped_count += 1
-            cached = existing_map[t_id]
             current_themes_map[t_id] = cached
             print(f"[{idx}/{len(candidates)}] ⏭️ Bỏ qua (đã có cache): {t_id} (Peak T{cached['monthly'].index(max(cached['monthly'])) + 1})")
             continue

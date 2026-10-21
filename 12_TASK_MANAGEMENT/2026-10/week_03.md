@@ -30,17 +30,17 @@
 
 | Hạng mục Công việc | Mô tả Chi tiết & Tiêu chí Hoàn thành (AC) | PIC Chính | Phối hợp | Trạng thái |
 | :--- | :--- | :--- | :--- | :---: |
+| Go Live 4 Cặp Tiền Tệ Ngoại Tệ | Hoàn thiện và Go-live 4 cặp tiền tệ sang VND: AUD, EUR, USD, GBP tích hợp quy đổi 2 chiều và bảng giá | Nhật | Web Dev | `Done` |
+| On Demo Trang Chứng Chỉ Quỹ | Hoàn thiện giao diện bảng giá NAV và simulator tích sản SIP, đưa lên môi trường Demo | Hiếu | Nhật | `Done (Demo)` |
+| Tích Hợp MoMo AI Cho Utility | Tích hợp MoMo AI với 2 mode Hài Hước và Nghiêm Túc đưa ra lời khuyên tài chính trên từng Tool | Nhật | Backend | `Done` |
+| Auto Gắn Tracking Umami Từng Tool | Tự động hóa và hoàn tất gắn tracking Umami chi tiết cho từng Tool/Widget tài chính theo SSOT | Thuận | Nhật | `Done` |
 | Phối Hợp BU Bank Lên Content Structure | Kế thừa W2: Tiếp tục phối hợp với BU Bank chốt Content Structure chi tiết cho trang Bank Detail | Hiến | BU Bank | `In Progress` |
 | Triển Khai UI Trang Bank | Kế thừa W2: Thiết kế và hoàn thiện giao diện người dùng cho trang Hub Ngân Hàng | Hiến | Nhật | `In Progress` |
 | Content Plan Cho Tỷ Giá Và Quỹ | Kế thừa W2: Xây dựng Content Plan chi tiết cho cụm trang Tỷ Giá và Chứng Chỉ Quỹ | Hoan | Hiến | `In Progress` |
 | Go Live Mega Menu Cho Trang Tài Chính | Kế thừa W2: Hoàn thiện và Go Live Mega Menu điều hướng cho toàn bộ cụm trang Tài Chính | Nhật | Hùng | `In Progress` |
 | Đồng Bộ API CCQ & Lãi Tiết Kiệm | Kế thừa W2: Làm việc với Backend Team kết nối và đồng bộ dữ liệu API CCQ và Lãi tiết kiệm | Hiếu | Backend | `In Progress` |
-| Define EventName Umami Trên Knowledgebase | Kế thừa W2: Hoàn thiện bảng định nghĩa EventName Umami cho toàn bộ Utilities trên Repo SSOT | Hiến | Nhật, Thuận | `In Progress` |
-| Auto Gắn Tracking Umami Từng Tool | Kế thừa W2: Tự động hóa việc gắn tracking Umami cho từng Tool/Widget tài chính | Thuận | Nhật | `In Progress` |
 | Sản Xuất Blog Financial (30 bài) | Kế thừa W2: Tiếp tục sản xuất và biên tập cho đủ số lượng 30 bài blog tài chính chuẩn SEO/GEO | Hoan | Hiến (định hướng) | `In Progress` |
 | Re-Design UI/UX Tool Phân Bổ Lương | Kế thừa W2 (task Supabase): Tối ưu UI tool phân bổ lương, hướng user focus vào đầu tư và CTA dịch vụ | Nhật | Design | `In Progress` |
-| Gắn Tracking Payload CTA Utility Tool | Kế thừa W2 (task Supabase): Gắn tracking payload CTA các Utility Tool theo Knowledge Base | Nhật | Thuận | `In Progress` |
-| Tích Hợp Quy Tắc MoMo AI Gợi Ý Cho Utility | Kế thừa W2 (task Supabase): Cấu hình rule engine gợi ý sản phẩm tài chính phù hợp trên từng tiện ích | Nhật | Backend | `In Progress` |
 | Tạo LP Ngân Hàng Liên Kết | Kế thừa W2 (task Supabase): Thiết kế và xuất bản Landing Page cho nhóm đối tác Ngân hàng liên kết | Nhật | Growth | `In Progress` |
 
 ---

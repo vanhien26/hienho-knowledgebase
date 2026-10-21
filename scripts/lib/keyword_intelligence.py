@@ -1237,7 +1237,7 @@ class GEODirectAnswerGenerator:
                 {"entity_field": "Thời hạn cảnh báo đăng kiểm", "value": "Tự động gửi thông tin cảnh báo sang Cục Đăng kiểm sau 20 ngày chưa nộp phạt"},
                 {"entity_field": "Quy định cấp tem kiểm định", "value": "Cấp tem kiểm định thời hạn 15 ngày đối với xe chưa hoàn thành xử phạt phạt nguội"},
                 {"entity_field": "Cổng tra cứu & nộp phạt", "value": "Cổng Dịch vụ công Quốc gia, cổng csgt.vn và nền tảng số MoMo"},
-                {"entity_field": "Căn cứ pháp lý xử phạt", "value": "Nghị định 100/2019/NĐ-CP & Nghị định 123/2021/NĐ-CP của Chính phủ"}
+                {"entity_field": "Căn cứ pháp lý xử phạt", "value": "Nghị định 168/2024/NĐ-CP của Chính phủ về xử phạt vi phạm trật tự ATGT đường bộ"}
             ]
         elif arch == 'vehicle_plate_reg':
             return [

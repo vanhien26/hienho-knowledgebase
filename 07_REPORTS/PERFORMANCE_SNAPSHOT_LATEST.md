@@ -18,15 +18,16 @@
 
 ---
 
-## 2. CƠ CẤU 5 KÊNH TRUY CẬP (CHANNELS SPLIT)
+## 2. CƠ CẤU NGUỒN LƯU LƯỢNG (NON-PAID VS. PAID DICHOTOMY)
 
-| Kênh (Channel) | Lũy kế MTD (PVs) | Tỷ trọng (%) | Xu hướng & Đánh giá |
+| Phân Loại Traffic Source | Lũy kế MTD 9d (PVs) | Tỷ trọng (%) | Xu hướng & Đánh giá Tín hiệu |
 | :--- | :---: | :---: | :--- |
-| **Organic** | 586.630 | **64.89%** | Tăng trưởng nhịp ngày +20.4% so với T9; kênh chủ lực |
-| **Direct** | 199.641 | **22.08%** | Ổn định, phản ánh tệp người dùng trung thành |
-| **Referral** | 76.577 | **8.47%** | Giảm nhẹ so với T9 (-26%) |
-| **Paid** | 36.333 | **4.02%** | Giảm 89.9% so với T9 do kết thúc tài trợ phim |
-| **Others** | 4.796 | **0.53%** | Không đáng kể |
+| **NON-PAID TRAFFIC** | **867.644** | **95.98%** | **Động cơ tăng trưởng tự nhiên cốt lõi, áp đảo toàn Website** |
+| -- Organic Traffic | 586.630 | 64.89% | Kênh chủ lực; nhịp ngày tăng +20.4% so với T9 |
+| -- Direct Traffic | 199.641 | 22.08% | Sức mạnh nhận diện thương hiệu và người dùng ghi nhớ URL |
+| -- Referral Traffic | 76.577 | 8.47% | Lưu lượng điều hướng từ đối tác và backlink |
+| -- Others | 4.796 | 0.53% | Lưu lượng chiến dịch thử nghiệm quy mô nhỏ |
+| **PAID TRAFFIC** | **36.333** | **4.02%** | **Kiểm soát chặt chẽ; giảm 89.9% so với T9 do co hẹp Ads** |
 
 ---
 

@@ -7,6 +7,25 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 
 ## DANH SÁCH BẢN GHI RECAPS
 
+### Bản ghi ngày 20/10/2026: Cập Nhật Shipment Financial Hub - Go-Live 4 Cặp Ngoại Tệ, On Demo CCQ, MoMo AI & Umami Tracking
+> **Thành phần:** Web Product Lead x Web Platform Team x FS Team  
+> **Mục tiêu:** Cập nhật các hạng mục đã hoàn thành và triển khai thực tế trên cụm sản phẩm Financial Hub.
+
+#### 1. Các Sản Phẩm Đã Go-Live Chính Thức
+- **Cụm Sub-page 4 Cặp Tiền Tệ Chủ Lực (AUD, EUR, USD, GBP sang VND):** Đã chính thức Go-live cụm trang chi tiết tỷ giá 4 cặp tiền tệ phổ biến nhất quy đổi sang VND, tích hợp công cụ quy đổi hai chiều, biểu đồ biến động và bảng so sánh tỷ giá đa ngân hàng theo thời gian thực.
+- **Bảng Lãi Suất 40 Ngân Hàng & Tool Tính Tiền Lãi (`/tai-chinh/lai-suat`):** Đã Go-live phục vụ so sánh và tính toán lãi gửi tiết kiệm/tiền vay tối ưu.
+- **Phân Bổ Lương 50/30/20 & Hũ Tài Chính (`/tai-chinh/phan-bo-luong`):** Đã Go-live, kết nối trực tiếp tính năng Hũ Chi Tiêu in-app.
+
+#### 2. Các Sản Phẩm Đang On Demo / On UAT
+- **Trang Chứng Chỉ Quỹ (`/tai-chinh/chung-chi-quy`):** Đã hoàn thiện và đưa lên môi trường Demo (On Demo), tích hợp bảng giá NAV các quỹ mở và simulator tích sản SIP.
+- **Mega Menu Header Financial Hub (`/tai-chinh`):** Đang hoàn tất giai đoạn kiểm thử UX co giãn thông minh sang Top Menu cố định khi điều hướng trang con.
+
+#### 3. Năng Lực Nền Tảng & Trải Nghiệm Mới
+- **Tích Hợp MoMo AI Gợi Ý Cho Utility Tools:** Đã tích hợp trợ lý MoMo AI với 2 chế độ (Mode): **Hài Hước** và **Nghiêm Túc**, đưa ra các lời khuyên tài chính cá nhân hóa và dí dỏm/chuyên nghiệp dựa trên kết quả tính toán của người dùng trên từng tiện ích.
+- **Chuẩn Hóa & Hoàn Tất Tích Hợp Umami Tracking:** Đã tự động hóa việc gắn tracking Umami chi tiết cho từng Tool/Widget tài chính theo đúng chuẩn schema SSOT, bắt trọn toàn bộ hành vi nhập liệu, tính toán và tỷ lệ nhấp CTA chuyển đổi sang app.
+
+---
+
 ### Bản ghi ngày 13/10/2026: Cập Nhật Tiến Độ Go-Live & On UAT Các Dự Án Financial Hub
 > **Thành phần:** Web Product Lead x Web Development Team x FS Team  
 > **Mục tiêu:** Cập nhật trạng thái Go-live, On UAT và thẩm định API kỹ thuật của hệ thống công cụ và tiện ích Financial Hub.
