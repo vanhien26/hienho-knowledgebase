@@ -128,19 +128,8 @@ def parse_and_sync():
     shutil.copy2(latest_file, SSOT_EXCEL)
     print(f"Đã lưu bản SSOT sạch vào {SSOT_EXCEL}")
 
-    # Cập nhật chuẩn hóa label dự án Cinema trong sheet 'Cinema' của SSOT Excel
-    try:
-        wb_ssot = openpyxl.load_workbook(SSOT_EXCEL)
-        if 'Cinema' in wb_ssot.sheetnames:
-            ws_c = wb_ssot['Cinema']
-            ws_c.cell(9, 1).value = 'Trang Rạp phim'
-            ws_c.cell(16, 1).value = 'Trang phim chi tiết'
-            ws_c.cell(30, 1).value = 'Cinema_Home Page (Trang chủ Cinema)'
-            ws_c.cell(37, 1).value = 'Tin tức'
-            wb_ssot.save(SSOT_EXCEL)
-            print(f"Đã cập nhật chuẩn hóa tên sub-pages Cinema trong sheet 'Cinema' ({SSOT_EXCEL})")
-    except Exception as e:
-        print(f"Lưu ý: Không thể cập nhật label sheet Cinema: {e}")
+    # Chuẩn hóa tên sub-pages Cinema được xử lý trong logic JSON và báo cáo (không ghi đè SSOT Excel để tránh openpyxl xóa mất pre-calculated formula cache của Excel)
+    print(f"Đã giữ nguyên vẹn 100% pre-calculated formula cache trong file SSOT ({SSOT_EXCEL})")
 
     summary = {
         "file_source": latest_file,

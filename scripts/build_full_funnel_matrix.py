@@ -38,7 +38,7 @@ HUBS_REPO = Path("/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo")
 
 # Cấu hình chu kỳ thời gian SSOT - có thể override qua CLI args --start-date / --end-date
 _DEFAULT_DATE_START = "2026-10-01"
-_DEFAULT_DATE_END = "2026-10-20"
+_DEFAULT_DATE_END = "2026-10-21"
 
 def _resolve_dates() -> tuple[str, str]:
     import argparse as _ap

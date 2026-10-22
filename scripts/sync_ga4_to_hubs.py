@@ -115,11 +115,26 @@ def main():
     access_token = get_access_token()
     print("✓ Lấy access token thành công.")
 
-    # Khung thời gian 30 ngày (ngày hôm qua lùi về 30 ngày)
-    yesterday = datetime.now() - timedelta(days=1)
-    days_30_ago = datetime.now() - timedelta(days=30)
-    start_date_str = days_30_ago.strftime("%Y-%m-%d")
-    end_date_str = yesterday.strftime("%Y-%m-%d")
+    # Khung thời gian phân tích (hỗ trợ --mtd hoặc --start-date / --end-date)
+    import argparse
+    parser = argparse.ArgumentParser(description="Sync GA4 real data to Web Hubs")
+    parser.add_argument("--start-date", default=None, help="Start date (YYYY-MM-DD)")
+    parser.add_argument("--end-date", default=None, help="End date (YYYY-MM-DD)")
+    parser.add_argument("--mtd", type=int, default=None, help="Số ngày lũy kế MTD (vd: 21)")
+    cli_args = parser.parse_args()
+
+    if cli_args.mtd:
+        start_date_str = "2026-10-01"
+        end_date_str = f"2026-10-{cli_args.mtd:02d}"
+    elif cli_args.start_date and cli_args.end_date:
+        start_date_str = cli_args.start_date
+        end_date_str = cli_args.end_date
+    else:
+        yesterday = datetime.now() - timedelta(days=1)
+        days_30_ago = datetime.now() - timedelta(days=30)
+        start_date_str = days_30_ago.strftime("%Y-%m-%d")
+        end_date_str = yesterday.strftime("%Y-%m-%d")
+
     date_ranges = [{"startDate": start_date_str, "endDate": end_date_str}]
     print(f"Khung thời gian phân tích: {start_date_str} -> {end_date_str}")
 

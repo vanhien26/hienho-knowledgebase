@@ -8,7 +8,7 @@
 
 | Kỳ báo cáo | Phạm vi dữ liệu | Tệp tin báo cáo SSOT | Trạng thái | Điểm nhấn chính |
 | :--- | :--- | :--- | :---: | :--- |
-| **Tháng 10/2026** | MTD Lũy kế đến ngày 20/10 | [`report-thang-10-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-10-2026.md) | `Active MTD` | Cinema Hub đạt 766k PV; Phễu W2A đạt 5.545 installs, 594 MAU |
+| **Tháng 10/2026** | MTD Lũy kế đến ngày 21/10 | [`report-thang-10-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-10-2026.md) | `Active MTD 21d` | Cinema Hub đạt 845k PV; Toàn Web đạt 2.507k PV (68.4% Target) |
 | **Tháng 09/2026** | Trọn tháng (01/09 - 30/09) | [`report-thang-09-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-09-2026.md) | `Full Month` | Hoàn thành mục tiêu quý 3; mở rộng cụm rạp và tiện ích tài chính |
 | **Tháng 08/2026** | MTD 28 ngày chính thức | [`report-thang-08-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-08-2026.md) | `Full Month` | Triển khai luồng Mobile Balloon Ads; đối soát phễu cài đặt Ads |
 | **Tháng 08/2026 (Giữa kỳ)** | Tiến độ thực thi đến 24/08 | [`report-thang-08-2026-midmonth.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-08-2026-midmonth.md) | `Archive` | Chi tiết tiến độ On-track của 5 Strategic Hubs và phối hợp phòng ban |
@@ -42,3 +42,16 @@
 | **Townhall Q2/2026** | [`townhall-06-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/townhall-06-2026.md) | Bản thuyết trình định hướng phát triển toàn kênh Web tại Townhall T6 |
 | **Townhall Q3/2026** | [`townhall-07-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/townhall-07-2026.md) | Bản cập nhật tiến độ chuyển đổi và kết quả tăng trưởng tại Townhall T7 |
 | **Leadership Mindset** | [`leadership-mindset-log.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/leadership-mindset-log.md) | Đúc kết triết lý quản trị sản phẩm và các nguyên lý định hướng từ Lãnh đạo |
+
+---
+
+## 4. TÀI LIỆU CHIẾN LƯỢC ĐẦU TƯ, THUYẾT TRÌNH & CẤU TRÚC HỆ THỐNG
+
+| Loại tài liệu | Tệp tin | Mô tả nội dung |
+| :--- | :--- | :--- |
+| **Kế hoạch Ngân sách 2027** | [`strategy/Budget 2027 - 2026 Reflection - Web Platform.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/strategy/Budget%202027%20-%202026%20Reflection%20-%20Web%20Platform.md) | Đánh giá hiệu quả đầu tư năm 2026 và kế hoạch ngân sách nền tảng Web năm 2027 |
+| **Chiến lược Gamification** | [`strategy/report-gamification-strategy-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/strategy/report-gamification-strategy-2026.md) | Chiến lược Gamification thúc đẩy tương tác và tỷ lệ quay lại của người dùng |
+| **Nghiên cứu Hành vi Tìm kiếm** | [`strategy/web-search-term.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/strategy/web-search-term.md) | Phân tích từ khóa tìm kiếm nội bộ và xu hướng nhu cầu người dùng trên Web |
+| **Bản thuyết trình Tháng 08/2026** | [`presentations/Growth_Platform_Division_Aug_2026_Monthly_Report.pptx`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/presentations/Growth_Platform_Division_Aug_2026_Monthly_Report.pptx) | Slide báo cáo hoạt động khối Growth Platform Division tại cuộc họp định kỳ |
+| **Kiến trúc Hệ thống Báo cáo** | [`REPORT_SYSTEM_STRUCTURE.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/REPORT_SYSTEM_STRUCTURE.md) | Quy chuẩn thiết kế và vận hành hệ thống báo cáo hiệu suất Web Platform |
+| **Hiệu suất Tức thời** | [`PERFORMANCE_SNAPSHOT_LATEST.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md) | Snapshot dữ liệu vận hành cập nhật nhanh |
