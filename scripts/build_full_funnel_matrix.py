@@ -861,21 +861,20 @@ def main():
     join_rate = round(len(pages_with_both) / len(pages_with_gsc_traffic), 4) if pages_with_gsc_traffic else 0.0
     print(f"✓ GSC Pages (Clicks > 0): {len(pages_with_gsc_traffic):,} | Pages joined GA4: {len(pages_with_both):,} | Join Rate: {join_rate * 100:.2f}% (Mục tiêu > 90%)")
 
-    total_organic_sessions = sum(v["organic_sessions"] for v in ga4_pages.values())
     total_organic_pageviews = sum(v.get("organic_pageviews", 0) for v in ga4_pages.values())
-    mapped_organic_sessions = 0
+    mapped_organic_pageviews = 0
     for p, g in ga4_pages.items():
         tid, _, _, _, _, _ = matcher(p)
         if tid is not None:
-            mapped_organic_sessions += g["organic_sessions"]
-    organic_mapped_pct = round(mapped_organic_sessions / total_organic_sessions, 4) if total_organic_sessions else 0.0
-    print(f"✓ Total Organic Sessions: {total_organic_sessions:,} | Mapped: {mapped_organic_sessions:,} | Mapped Rate: {organic_mapped_pct * 100:.2f}% (Mục tiêu > 70%)")
+            mapped_organic_pageviews += g.get("organic_pageviews", 0)
+    organic_mapped_pct = round(mapped_organic_pageviews / total_organic_pageviews, 4) if total_organic_pageviews else 0.0
+    print(f"✓ Total Organic Pageviews: {total_organic_pageviews:,} | Mapped: {mapped_organic_pageviews:,} | Mapped Rate: {organic_mapped_pct * 100:.2f}% (Mục tiêu > 70%)")
 
     # 4. Phân loại 4 Quadrant & Xây dựng Danh sách Pages Phân tích
     print("[4/5] Xây dựng Ma trận 4 Quadrant và Danh mục Quick Wins...")
     
-    # Chỉ giữ các trang có ý nghĩa phân tích (GSC clicks >= 5 hoặc GA4 organic sessions >= 10 hoặc đã map Theme)
-    candidate_paths = [p for p in pages_with_gsc if gsc_by_page[p]["clicks"] >= 5 or ga4_pages.get(p, {}).get("organic_sessions", 0) >= 10 or matcher(p)[0] is not None]
+    # Chỉ giữ các trang có ý nghĩa phân tích (GSC clicks >= 5 hoặc GA4 organic pageviews >= 10 hoặc đã map Theme)
+    candidate_paths = [p for p in pages_with_gsc if gsc_by_page[p]["clicks"] >= 5 or ga4_pages.get(p, {}).get("organic_pageviews", 0) >= 10 or matcher(p)[0] is not None]
     
     pages_output = []
     quick_wins_map = {}  # key: path -> best quick win query
@@ -908,7 +907,7 @@ def main():
         w2a_clicks = ol_m + ol_af
         w2a_cr = round(w2a_clicks / org_pv, 4) if org_pv else 0.0
 
-        capture_rate = round(org_sess / mvol, 4) if mvol else 0.0
+        capture_rate = round(org_pv / mvol, 4) if mvol else 0.0
         business_yield = round(w2a_clicks / gsc_c, 4) if gsc_c else 0.0
 
         # Áp trần market_volume cho potential_gain
@@ -975,10 +974,7 @@ def main():
             },
             "post_click": {
                 "organic_pageviews": org_pv,
-                "organic_sessions": org_sess,
-                "engaged_sessions": eng_sess,
                 "engagement_rate": round(eng_rate, 4),
-                "ai_sessions": ga4["ai_sessions"],
                 "total_w2a_clicks": w2a_clicks,
                 "w2a_conversion_rate": round(w2a_cr, 4),
                 "business_yield": round(business_yield, 4),
@@ -1043,9 +1039,7 @@ def main():
                 "primary_path": p_rec["path"],
                 "gsc_clicks": 0,
                 "gsc_impressions": 0,
-                "organic_sessions": 0,
                 "organic_pageviews": 0,
-                "ai_sessions": 0,
                 "ol_momo": 0,
                 "ol_appsflyer": 0,
                 "w2a_clicks": 0,
@@ -1055,9 +1049,7 @@ def main():
         t = themes_agg[tid]
         t["gsc_clicks"] += p_rec["pre_click"]["gsc_clicks"]
         t["gsc_impressions"] += p_rec["pre_click"]["gsc_impressions"]
-        t["organic_sessions"] += p_rec["post_click"]["organic_sessions"]
         t["organic_pageviews"] += p_rec["post_click"].get("organic_pageviews", 0)
-        t["ai_sessions"] += p_rec["post_click"]["ai_sessions"]
         t["ol_momo"] += p_rec["conversion"]["ol_momo"]
         t["ol_appsflyer"] += p_rec["conversion"]["ol_appsflyer"]
         t["w2a_clicks"] += p_rec["conversion"]["total_w2a_clicks"]
@@ -1067,7 +1059,7 @@ def main():
     for t in themes_list:
         if t["market_volume"] > 0:
             t["potential_gain"] = min(t["potential_gain"], t["market_volume"])
-        t["capture_rate"] = round(t["organic_sessions"] / t["market_volume"], 4) if t["market_volume"] else 0.0
+        t["capture_rate"] = round(t["organic_pageviews"] / t["market_volume"], 4) if t["market_volume"] else 0.0
         t["w2a_cr"] = round(t["w2a_clicks"] / t["organic_pageviews"], 4) if t["organic_pageviews"] else 0.0
 
     themes_list.sort(key=lambda x: (x["priority_sector"], x["w2a_clicks"], x["gsc_clicks"]), reverse=True)
@@ -1081,38 +1073,33 @@ def main():
                 "project_name": proj,
                 "pages_count": 0,
                 "organic_pageviews": 0,
-                "organic_sessions": 0,
                 "gsc_clicks": 0,
                 "gsc_impressions": 0,
                 "ol_momo": 0,
                 "ol_appsflyer": 0,
                 "total_w2a_clicks": 0,
-                "ai_sessions": 0,
                 "page_types": {},
                 "top_pages": []
             }
         pa = projects_agg[proj]
         pa["pages_count"] += 1
         pa["organic_pageviews"] += p_rec["post_click"].get("organic_pageviews", 0)
-        pa["organic_sessions"] += p_rec["post_click"].get("organic_sessions", 0)
         pa["gsc_clicks"] += p_rec["pre_click"].get("gsc_clicks", 0)
         pa["gsc_impressions"] += p_rec["pre_click"].get("gsc_impressions", 0)
         pa["ol_momo"] += p_rec["conversion"].get("ol_momo", 0)
         pa["ol_appsflyer"] += p_rec["conversion"].get("ol_appsflyer", 0)
         pa["total_w2a_clicks"] += p_rec["conversion"].get("total_w2a_clicks", 0)
-        pa["ai_sessions"] += p_rec["post_click"].get("ai_sessions", 0)
         pt = p_rec.get("page_type", "Other")
         pa["page_types"][pt] = pa["page_types"].get(pt, 0) + 1
         pa["top_pages"].append({
             "path": p_rec["path"],
             "page_type": pt,
             "organic_pageviews": p_rec["post_click"].get("organic_pageviews", 0),
-            "organic_sessions": p_rec["post_click"].get("organic_sessions", 0),
             "w2a_clicks": p_rec["conversion"].get("total_w2a_clicks", 0)
         })
 
-    # 5. Xử lý dữ liệu Đa Kênh GA4 & Gắn vào Projects Summary (Hỗ trợ cả Pageviews & Sessions)
-    print("[4.5/5] Xử lý phân rã Đa Kênh Pageviews & Sessions (Non-Paid vs Paid)...")
+    # 5. Xử lý dữ liệu Đa Kênh GA4 & Gắn vào Projects Summary (Tập trung Pageviews & W2A)
+    print("[4.5/5] Xử lý phân rã Đa Kênh Pageviews (Non-Paid vs Paid)...")
     channel_w2a_map = {}
     for r in multi_data.get("channels_w2a", []):
         cg = r["dimensionValues"][0]["value"]
@@ -1120,7 +1107,6 @@ def main():
         channel_w2a_map[cg] = cnt
 
     total_web_pageviews = 0
-    total_web_sessions = 0
     total_web_users = 0
     total_web_w2a = sum(channel_w2a_map.values())
     channels_summary = []
@@ -1128,34 +1114,26 @@ def main():
     for r in multi_data.get("channels_overview", []):
         cg = r["dimensionValues"][0]["value"]
         pv = int(r["metricValues"][0]["value"])
-        s = int(r["metricValues"][1]["value"])
-        eng = int(r["metricValues"][2]["value"])
         u = int(r["metricValues"][3]["value"])
         w2a = channel_w2a_map.get(cg, 0)
         total_web_pageviews += pv
-        total_web_sessions += s
         total_web_users += u
         channels_summary.append({
             "channel_name": cg,
             "category": "Paid" if is_paid_channel(cg) else "Non-Paid",
             "pageviews": pv,
-            "sessions": s,
-            "engaged_sessions": eng,
             "users": u,
             "w2a_clicks": w2a,
-            "w2a_cr": round(w2a / s, 4) if s > 0 else 0.0
+            "w2a_cr": round(w2a / pv, 4) if pv > 0 else 0.0
         })
 
     for c in channels_summary:
         c["pageviews_pct"] = round(c["pageviews"] / total_web_pageviews, 4) if total_web_pageviews > 0 else 0.0
-        c["sessions_pct"] = round(c["sessions"] / total_web_sessions, 4) if total_web_sessions > 0 else 0.0
 
     channels_summary.sort(key=lambda x: (0 if x["category"] == "Non-Paid" else 1, -x["pageviews"]))
 
     tot_non_paid_pv = sum(c["pageviews"] for c in channels_summary if c["category"] == "Non-Paid")
     tot_paid_pv = sum(c["pageviews"] for c in channels_summary if c["category"] == "Paid")
-    tot_non_paid_s = sum(c["sessions"] for c in channels_summary if c["category"] == "Non-Paid")
-    tot_paid_s = sum(c["sessions"] for c in channels_summary if c["category"] == "Paid")
     tot_non_paid_w = sum(c["w2a_clicks"] for c in channels_summary if c["category"] == "Non-Paid")
     tot_paid_w = sum(c["w2a_clicks"] for c in channels_summary if c["category"] == "Paid")
 
@@ -1168,10 +1146,9 @@ def main():
         lp_w2a_map[(p, cg)] += w
 
     project_multi_map = defaultdict(lambda: {
-        "pageviews": 0, "sessions": 0, "w2a": 0, "pages": set(),
-        "channels": defaultdict(lambda: {"pageviews": 0, "sessions": 0, "w2a": 0}),
+        "pageviews": 0, "w2a": 0, "pages": set(),
+        "channels": defaultdict(lambda: {"pageviews": 0, "w2a": 0}),
         "non_paid_pageviews": 0, "paid_pageviews": 0,
-        "non_paid_sessions": 0, "paid_sessions": 0,
         "non_paid_w2a": 0, "paid_w2a": 0
     })
 
@@ -1179,26 +1156,21 @@ def main():
         p = normalize_path(r["dimensionValues"][0]["value"])
         cg = r["dimensionValues"][1]["value"]
         pv = int(r["metricValues"][0]["value"])
-        s = int(r["metricValues"][1]["value"])
         w = lp_w2a_map.get((p, cg), 0)
 
         tid, tname, sec, mvol, proj, ptype = matcher(p)
         pm = project_multi_map[proj]
         pm["pageviews"] += pv
-        pm["sessions"] += s
         pm["w2a"] += w
         pm["pages"].add(p)
         pm["channels"][cg]["pageviews"] += pv
-        pm["channels"][cg]["sessions"] += s
         pm["channels"][cg]["w2a"] += w
 
         if is_paid_channel(cg):
             pm["paid_pageviews"] += pv
-            pm["paid_sessions"] += s
             pm["paid_w2a"] += w
         else:
             pm["non_paid_pageviews"] += pv
-            pm["non_paid_sessions"] += s
             pm["non_paid_w2a"] += w
 
     # Đảm bảo mọi project có trong project_multi_map đều có trong projects_agg
@@ -1208,13 +1180,11 @@ def main():
                 "project_name": proj,
                 "pages_count": len(p_info["pages"]),
                 "organic_pageviews": 0,
-                "organic_sessions": 0,
                 "gsc_clicks": 0,
                 "gsc_impressions": 0,
                 "ol_momo": 0,
                 "ol_appsflyer": 0,
                 "total_w2a_clicks": 0,
-                "ai_sessions": 0,
                 "page_types": {},
                 "top_pages": []
             }
@@ -1225,25 +1195,18 @@ def main():
     for pa in projects_list:
         proj = pa["project_name"]
         p_info = project_multi_map.get(proj, {
-            "pageviews": pa["organic_pageviews"], "sessions": pa["organic_sessions"], "w2a": pa["total_w2a_clicks"],
-            "pages": set(), "channels": {"Organic Search": {"pageviews": pa["organic_pageviews"], "sessions": pa["organic_sessions"], "w2a": pa["total_w2a_clicks"]}},
+            "pageviews": pa["organic_pageviews"], "w2a": pa["total_w2a_clicks"],
+            "pages": set(), "channels": {"Organic Search": {"pageviews": pa["organic_pageviews"], "w2a": pa["total_w2a_clicks"]}},
             "non_paid_pageviews": pa["organic_pageviews"], "paid_pageviews": 0,
-            "non_paid_sessions": pa["organic_sessions"], "paid_sessions": 0,
             "non_paid_w2a": pa["total_w2a_clicks"], "paid_w2a": 0
         })
 
         pv = p_info["pageviews"] if p_info["pageviews"] > 0 else pa["organic_pageviews"]
-        s = p_info["sessions"] if p_info["sessions"] > 0 else pa["organic_sessions"]
         w = p_info["w2a"] if p_info["w2a"] > 0 else pa["total_w2a_clicks"]
         non_paid_pv = p_info["non_paid_pageviews"]
         paid_pv = p_info["paid_pageviews"]
         non_paid_pv_pct = round(non_paid_pv / pv, 4) if pv > 0 else 1.0
         paid_pv_pct = round(paid_pv / pv, 4) if pv > 0 else 0.0
-
-        non_paid_s = p_info["non_paid_sessions"]
-        paid_s = p_info["paid_sessions"]
-        non_paid_pct = round(non_paid_s / s, 4) if s > 0 else 1.0
-        paid_pct = round(paid_s / s, 4) if s > 0 else 0.0
 
         if non_paid_pv_pct >= 0.8:
             health = "ORGANIC_LED"
@@ -1254,18 +1217,12 @@ def main():
 
         pa["total_pageviews"] = pv
         pa["pageviews_share_pct"] = round(pv / total_web_pageviews, 4) if total_web_pageviews > 0 else 0.0
-        pa["total_sessions"] = s
-        pa["sessions_share_pct"] = round(s / total_web_sessions, 4) if total_web_sessions > 0 else 0.0
         pa["total_w2a_clicks"] = w
-        pa["w2a_cr"] = round(w / s, 4) if s > 0 else 0.0
+        pa["w2a_cr"] = round(w / pv, 4) if pv > 0 else 0.0
         pa["non_paid_pageviews"] = non_paid_pv
         pa["non_paid_pv_pct"] = non_paid_pv_pct
         pa["paid_pageviews"] = paid_pv
         pa["paid_pv_pct"] = paid_pv_pct
-        pa["non_paid_sessions"] = non_paid_s
-        pa["non_paid_pct"] = non_paid_pct
-        pa["paid_sessions"] = paid_s
-        pa["paid_pct"] = paid_pct
         pa["health_status"] = health
 
         if len(p_info["pages"]) > pa["pages_count"]:
@@ -1275,19 +1232,16 @@ def main():
         ch_dict = {}
         for cname, cdata in sorted(p_info["channels"].items(), key=lambda x: -x[1]["pageviews"]):
             cpv = cdata["pageviews"]
-            cs = cdata["sessions"]
             cw = cdata["w2a"]
             ch_dict[cname] = {
                 "pageviews": cpv,
-                "sessions": cs,
                 "w2a_clicks": cw,
-                "w2a_cr": round(cw / cs, 4) if cs > 0 else 0.0,
-                "pv_pct": round(cpv / pv, 4) if pv > 0 else 0.0,
-                "session_pct": round(cs / s, 4) if s > 0 else 0.0
+                "w2a_cr": round(cw / cpv, 4) if cpv > 0 else 0.0,
+                "pv_pct": round(cpv / pv, 4) if pv > 0 else 0.0
             }
         pa["channels"] = ch_dict
 
-        pa["top_pages"].sort(key=lambda x: x.get("organic_pageviews", x["organic_sessions"]), reverse=True)
+        pa["top_pages"].sort(key=lambda x: x.get("organic_pageviews", 0), reverse=True)
         pa["top_pages"] = pa["top_pages"][:3]
 
         # Row for Project x Channel Matrix table (Ưu tiên Pageviews)
@@ -1295,24 +1249,14 @@ def main():
             "project_name": proj,
             "total_pageviews": pv,
             "pageviews_share_pct": pa["pageviews_share_pct"],
-            "total_sessions": s,
-            "sessions_share_pct": pa["sessions_share_pct"],
             "non_paid_pv_pct": non_paid_pv_pct,
             "paid_pv_pct": paid_pv_pct,
-            "non_paid_pct": non_paid_pct,
-            "paid_pct": paid_pct,
             "organic_pageviews": ch_dict.get("Organic Search", {}).get("pageviews", 0),
             "direct_pageviews": ch_dict.get("Direct", {}).get("pageviews", 0),
             "paid_search_pageviews": ch_dict.get("Paid Search", {}).get("pageviews", 0),
             "paid_social_pageviews": ch_dict.get("Paid Social", {}).get("pageviews", 0),
             "referral_pageviews": ch_dict.get("Referral", {}).get("pageviews", 0),
             "unassigned_pageviews": ch_dict.get("Unassigned", {}).get("pageviews", 0),
-            "organic_search": ch_dict.get("Organic Search", {}).get("sessions", 0),
-            "direct": ch_dict.get("Direct", {}).get("sessions", 0),
-            "paid_search": ch_dict.get("Paid Search", {}).get("sessions", 0),
-            "paid_social": ch_dict.get("Paid Social", {}).get("sessions", 0),
-            "referral": ch_dict.get("Referral", {}).get("sessions", 0),
-            "unassigned": ch_dict.get("Unassigned", {}).get("sessions", 0),
             "total_w2a": w,
             "w2a_cr": pa["w2a_cr"],
             "health_status": health,
@@ -1320,7 +1264,7 @@ def main():
         })
 
     # Sort projects list and matrix by total_pageviews descending
-    projects_list.sort(key=lambda x: -x.get("total_pageviews", x["organic_sessions"]))
+    projects_list.sort(key=lambda x: -x.get("total_pageviews", x.get("organic_pageviews", 0)))
     project_channel_matrix.sort(key=lambda x: -x["total_pageviews"])
 
     # Đảm bảo tổng quadrant khớp 100%
@@ -1348,37 +1292,33 @@ def main():
             "total_gsc_clicks": total_gsc_clicks,
             "total_gsc_impressions": total_gsc_imp,
             "total_organic_pageviews": sum(p["post_click"].get("organic_pageviews", 0) for p in pages_output),
-            "total_organic_sessions": total_organic_sessions,
-            "total_gsc_mapped_sessions": total_organic_sessions,
             "total_ol_momo": sum(p["conversion"]["ol_momo"] for p in pages_output),
             "total_ol_appsflyer": sum(p["conversion"]["ol_appsflyer"] for p in pages_output),
             "total_w2a_clicks": sum(p["conversion"]["total_w2a_clicks"] for p in pages_output),
             "overall_w2a_cr": round(sum(p["conversion"]["total_w2a_clicks"] for p in pages_output) / total_organic_pageviews, 4) if total_organic_pageviews else 0.0,
-            "total_ai_search_sessions": sum(p["post_click"]["ai_sessions"] for p in pages_output),
             "quadrant_distribution": quadrant_summary,
             "health_status_definitions": {
                 "ORGANIC_LED": {
                     "status": "ORGANIC_LED",
-                    "threshold": "non_paid_pct >= 0.8",
+                    "threshold": "non_paid_pv_pct >= 0.8",
                     "label": "Tự Nhiên (Organic-led)",
                     "desc": "Tối thiểu 80% lưu lượng đến từ nguồn tự nhiên (Organic, Direct, Referral). Mô hình tăng trưởng lành mạnh, bền vững."
                 },
                 "MIXED": {
                     "status": "MIXED",
-                    "threshold": "0.5 <= non_paid_pct < 0.8",
+                    "threshold": "0.5 <= non_paid_pv_pct < 0.8",
                     "label": "Cân Bằng Hỗn Hợp (Mixed)",
                     "desc": "Lưu lượng kết hợp giữa tự nhiên và chiến dịch có trả phí (50% - 80% Non-Paid)."
                 },
                 "PAID_LED": {
                     "status": "PAID_LED",
-                    "threshold": "paid_pct >= 0.5",
+                    "threshold": "paid_pv_pct >= 0.5",
                     "label": "Phụ Thuộc Ads (Paid-led)",
                     "desc": "Trên 50% lưu lượng đến từ các chiến dịch trả phí (Paid Search, Ads). Cần tối ưu SEO/GEO để duy trì hiệu quả chi phí."
                 }
             },
             "web_performance": {
                 "total_pageviews": total_web_pageviews,
-                "total_sessions": total_web_sessions,
                 "total_users": total_web_users,
                 "total_w2a_clicks": total_web_w2a,
                 "overall_w2a_cr": round(total_web_w2a / total_web_pageviews, 4) if total_web_pageviews > 0 else 0.0,
@@ -1387,14 +1327,10 @@ def main():
                 "non_paid_pv_pct": round(tot_non_paid_pv / total_web_pageviews, 4) if total_web_pageviews > 0 else 0.0,
                 "paid_pageviews": tot_paid_pv,
                 "paid_pv_pct": round(tot_paid_pv / total_web_pageviews, 4) if total_web_pageviews > 0 else 0.0,
-                "non_paid_sessions": tot_non_paid_s,
-                "non_paid_pct": round(tot_non_paid_s / total_web_sessions, 4) if total_web_sessions > 0 else 0.0,
-                "paid_sessions": tot_paid_s,
-                "paid_pct": round(tot_paid_s / total_web_sessions, 4) if total_web_sessions > 0 else 0.0,
                 "non_paid_w2a": tot_non_paid_w,
                 "paid_w2a": tot_paid_w,
-                "non_paid_cr": round(tot_non_paid_w / tot_non_paid_s, 4) if tot_non_paid_s > 0 else 0.0,
-                "paid_cr": round(tot_paid_w / tot_paid_s, 4) if tot_paid_s > 0 else 0.0
+                "non_paid_cr": round(tot_non_paid_w / tot_non_paid_pv, 4) if tot_non_paid_pv > 0 else 0.0,
+                "paid_cr": round(tot_paid_w / tot_paid_pv, 4) if tot_paid_pv > 0 else 0.0
             }
         },
         "channels_summary": channels_summary,
@@ -1423,8 +1359,7 @@ def main():
     hubs_payload = dict(output_payload)
     hubs_active_pages = [
         p for p in pages_output
-        if p["post_click"]["organic_sessions"] > 0
-        or p["post_click"]["organic_pageviews"] > 0
+        if p["post_click"]["organic_pageviews"] > 0
         or p["pre_click"]["gsc_clicks"] > 0
         or p["conversion"]["total_w2a_clicks"] > 0
         or p["pre_click"]["gsc_impressions"] >= 20
@@ -1432,13 +1367,6 @@ def main():
     ]
     hubs_payload["pages"] = hubs_active_pages
 
-    # Target 2: Root data/analytics/ (theo đường dẫn yêu cầu của user)
-    root_data_dir = BASE_DIR / "data" / "analytics"
-    root_data_dir.mkdir(parents=True, exist_ok=True)
-    root_data_file = root_data_dir / "full-funnel-matrix.json"
-    with open(root_data_file, "w", encoding="utf-8") as f:
-        json.dump(output_payload, f, ensure_ascii=False, indent=2)
-    print(f"✓ Đã lưu Root Data Analytics: {root_data_file}")
 
     # Target 3: Web Hubs (react-web-momo)
     hubs_dir = HUBS_REPO / "data" / "analytics"

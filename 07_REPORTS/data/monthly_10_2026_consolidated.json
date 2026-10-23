@@ -1,134 +1,134 @@
 {
-  "file_source": "/Users/hienhv/Downloads/Web Performance Tracking (1).xlsx",
-  "read_timestamp": "2026-10-22 14:29:15",
-  "report_type": "MTD 21 Ngày (01/10 - 21/10/2026 - Lũy Kế 21 Ngày Tháng 10)",
-  "days_elapsed": 21,
+  "file_source": "/Users/hienhv/Downloads/Web Performance Tracking.xlsx",
+  "read_timestamp": "2026-10-23 12:27:14",
+  "report_type": "MTD 22 Ngày (01/10 - 22/10/2026 - Lũy Kế 22 Ngày Tháng 10)",
+  "days_elapsed": 22,
   "days_in_month": 31,
   "target_oct_pv": 3665607,
-  "actual_mtd_pv": 2507314,
-  "progress_pct": 68.4,
-  "daily_pace": 119395.9,
-  "forecast_31d": 3701273.05,
-  "forecast_pct": 100.97,
+  "actual_mtd_pv": 2624335,
+  "progress_pct": 71.59,
+  "daily_pace": 119287.95,
+  "forecast_31d": 3697926.59,
+  "forecast_pct": 100.88,
   "channels": {
     "organic": {
-      "pv": 1327842,
-      "pct": 52.96
+      "pv": 1373400,
+      "pct": 52.33
     },
     "direct": {
-      "pv": 639279,
-      "pct": 25.5
+      "pv": 675381,
+      "pct": 25.74
     },
     "referral": {
-      "pv": 225831,
-      "pct": 9.01
+      "pv": 239502,
+      "pct": 9.13
     },
     "paid": {
-      "pv": 276241,
-      "pct": 11.02
+      "pv": 295950,
+      "pct": 11.28
     },
     "others": {
-      "pv": 38121,
-      "pct": 1.52
+      "pv": 40102,
+      "pct": 1.53
     }
   },
   "hubs": {
     "new_user": {
-      "pv": 84222,
+      "pv": 88363,
       "target": 300000,
-      "pct": 28.07,
-      "forecast": 124327.71
+      "pct": 29.45,
+      "forecast": 124511.5
     },
     "cinema": {
-      "pv": 847391,
+      "pv": 873427,
       "target": 1117378,
-      "pct": 75.84,
-      "forecast": 1250910.52
+      "pct": 78.17,
+      "forecast": 1230738.05
     },
     "financial": {
-      "pv": 151651,
+      "pv": 157058,
       "target": 450000,
-      "pct": 33.7,
-      "forecast": 223865.76
+      "pct": 34.9,
+      "forecast": 221309.0
     },
     "vehicle": {
-      "pv": 25771,
+      "pv": 28278,
       "target": 100000,
-      "pct": 25.77,
-      "forecast": 38042.9
+      "pct": 28.28,
+      "forecast": 39846.27
     },
     "student": {
-      "pv": 1322,
+      "pv": 1376,
       "target": 100000,
-      "pct": 1.32,
-      "forecast": 1951.52
+      "pct": 1.38,
+      "forecast": 1938.91
     }
   },
   "cinema_breakdown": {
     "Trang Rạp phim": {
-      "pv": 520247,
-      "pct_hub": 61.39,
+      "pv": 535642,
+      "pct_hub": 61.33,
       "channels": {
-        "Direct": 15964,
-        "Organic": 479959,
-        "Others": 11396,
-        "Paid": 8946,
-        "Referral": 3982
+        "Direct": 16834,
+        "Organic": 492646,
+        "Others": 12328,
+        "Paid": 9701,
+        "Referral": 4133
       }
     },
     "Trang phim chi tiết": {
-      "pv": 283332,
-      "pct_hub": 33.44,
+      "pv": 292198,
+      "pct_hub": 33.45,
       "channels": {
-        "Direct": 26508,
-        "Organic": 246089,
-        "Others": 977,
-        "Paid": 4659,
-        "Referral": 5099
+        "Direct": 27333,
+        "Organic": 253370,
+        "Others": 1022,
+        "Paid": 5150,
+        "Referral": 5323
       }
     },
     "Cinema_Home Page (Trang chủ Cinema)": {
-      "pv": 25431,
-      "pct_hub": 3.0,
+      "pv": 26498,
+      "pct_hub": 3.03,
       "channels": {
-        "Direct": 4033,
-        "Organic": 20242,
-        "Others": 131,
-        "Paid": 334,
-        "Referral": 691
+        "Direct": 4253,
+        "Organic": 21033,
+        "Others": 136,
+        "Paid": 350,
+        "Referral": 726
       }
     },
     "Cinema_Blog": {
-      "pv": 14093,
-      "pct_hub": 1.66,
+      "pv": 14658,
+      "pct_hub": 1.68,
       "channels": {
-        "Direct": 1028,
-        "Organic": 11477,
-        "Others": 59,
-        "Paid": 71,
-        "Referral": 1458
+        "Direct": 1066,
+        "Organic": 11945,
+        "Others": 63,
+        "Paid": 72,
+        "Referral": 1512
       }
     },
     "Cinema_Landing Page": {
-      "pv": 2433,
+      "pv": 2546,
       "pct_hub": 0.29,
       "channels": {
-        "Direct": 89,
-        "Organic": 2048,
+        "Direct": 94,
+        "Organic": 2134,
         "Others": 6,
-        "Paid": 234,
-        "Referral": 56
+        "Paid": 251,
+        "Referral": 61
       }
     },
     "Tin tức": {
-      "pv": 1855,
+      "pv": 1885,
       "pct_hub": 0.22,
       "channels": {
-        "Direct": 125,
-        "Organic": 1597,
+        "Direct": 127,
+        "Organic": 1620,
         "Others": 10,
-        "Paid": 25,
-        "Referral": 98
+        "Paid": 26,
+        "Referral": 102
       }
     }
   },

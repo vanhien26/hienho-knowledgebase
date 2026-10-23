@@ -1,0 +1,186 @@
+{
+  "report_date": "2026-10-22",
+  "days_elapsed": 22,
+  "days_in_month": 31,
+  "total": {
+    "installs": 7804,
+    "reg": 2807,
+    "map": 1719,
+    "mau": 902,
+    "cr_reg": 35.97,
+    "cr_map_reg": 61.24,
+    "cr_map_ins": 22.03,
+    "cr_mau_map": 52.47,
+    "end_to_end_cr": 11.56,
+    "daily_pace_installs": 354.73,
+    "daily_pace_map": 78.14,
+    "daily_pace_mau": 41.0,
+    "forecast_installs_31d": 10997,
+    "forecast_map_31d": 2422,
+    "forecast_mau_31d": 1271
+  },
+  "by_os": {
+    "android": {
+      "installs": 3615,
+      "reg": 1285,
+      "map": 692,
+      "mau": 360
+    },
+    "ios": {
+      "installs": 4189,
+      "reg": 1522,
+      "map": 1027,
+      "mau": 542
+    }
+  },
+  "by_grp": {
+    "C.CHAOMOMO (Banner đại trà)": {
+      "installs": 5719,
+      "reg": 1996,
+      "map": 1223,
+      "mau": 603
+    },
+    "Cinema Hub": {
+      "installs": 1665,
+      "reg": 681,
+      "map": 426,
+      "mau": 257
+    },
+    "WEB_BRT_C.CHAOMOMO (Đổi quà)": {
+      "installs": 170,
+      "reg": 54,
+      "map": 29,
+      "mau": 15
+    },
+    "Merchant Hub": {
+      "installs": 186,
+      "reg": 52,
+      "map": 27,
+      "mau": 20
+    },
+    "Bảo Hiểm (InsurTech)": {
+      "installs": 56,
+      "reg": 23,
+      "map": 13,
+      "mau": 7
+    },
+    "Financial Health": {
+      "installs": 7,
+      "reg": 0,
+      "map": 0,
+      "mau": 0
+    },
+    "Others / Organic": {
+      "installs": 1,
+      "reg": 1,
+      "map": 1,
+      "mau": 0
+    }
+  },
+  "campaigns": [
+    {
+      "campaign": "260805_NEW_WEB_N2MM_INS_C.CHAOMOMO_android",
+      "month": "Oct 2026",
+      "installs": 3002,
+      "reg": 1046,
+      "map": 577,
+      "mau": 294
+    },
+    {
+      "campaign": "260805_NEW_WEB_N2MM_INS_C.CHAOMOMO_ios",
+      "month": "Oct 2026",
+      "installs": 2717,
+      "reg": 950,
+      "map": 646,
+      "mau": 309
+    },
+    {
+      "campaign": "260805_NEW_WEB_N2MM_INS_C.PSN-CINEMA_ios",
+      "month": "Oct 2026",
+      "installs": 1288,
+      "reg": 512,
+      "map": 343,
+      "mau": 207
+    },
+    {
+      "campaign": "260805_NEW_WEB_N2MM_INS_C.PSN-CINEMA_android",
+      "month": "Oct 2026",
+      "installs": 377,
+      "reg": 169,
+      "map": 83,
+      "mau": 50
+    },
+    {
+      "campaign": "251007_NEW_INTERNAL_WEB_N2MM_INS_WEB_BRT_C.CHAOMOMO_android",
+      "month": "Oct 2026",
+      "installs": 105,
+      "reg": 34,
+      "map": 16,
+      "mau": 6
+    },
+    {
+      "campaign": "260805_NEW_WEB_N2MM_INS_C.PSN-MERCHANT_android",
+      "month": "Oct 2026",
+      "installs": 102,
+      "reg": 24,
+      "map": 10,
+      "mau": 8
+    },
+    {
+      "campaign": "260805_NEW_WEB_N2MM_INS_C.PSN-MERCHANT_ios",
+      "month": "Oct 2026",
+      "installs": 84,
+      "reg": 28,
+      "map": 17,
+      "mau": 12
+    },
+    {
+      "campaign": "251007_NEW_INTERNAL_WEB_N2MM_INS_WEB_BRT_C.CHAOMOMO_ios",
+      "month": "Oct 2026",
+      "installs": 65,
+      "reg": 20,
+      "map": 13,
+      "mau": 9
+    },
+    {
+      "campaign": "260805_NEW_WEB_N2MM_INS_C.PNS-BAOHIEM_ios",
+      "month": "Oct 2026",
+      "installs": 31,
+      "reg": 12,
+      "map": 8,
+      "mau": 5
+    },
+    {
+      "campaign": "260805_NEW_WEB_N2MM_INS_C.PNS-BAOHIEM_android",
+      "month": "Oct 2026",
+      "installs": 25,
+      "reg": 11,
+      "map": 5,
+      "mau": 2
+    },
+    {
+      "campaign": "261012_NEW_WEB_N2MM_INS_C.Financial-Health_ios",
+      "month": "Oct 2026",
+      "installs": 4,
+      "reg": 0,
+      "map": 0,
+      "mau": 0
+    },
+    {
+      "campaign": "261012_NEW_WEB_N2MM_INS_C.Financial-Health_android",
+      "month": "Oct 2026",
+      "installs": 3,
+      "reg": 0,
+      "map": 0,
+      "mau": 0
+    },
+    {
+      "campaign": "None_android",
+      "month": "Oct 2026",
+      "installs": 1,
+      "reg": 1,
+      "map": 1,
+      "mau": 0
+    }
+  ]
+}

@@ -2,11 +2,12 @@
 """Unified CLI runner for Web Platform codebase scripts and tools.
 
 Usage:
+    python3 scripts/cli.py ads [args...]
+    python3 scripts/cli.py sync [args...]
     python3 scripts/cli.py report-html [args...]
     python3 scripts/cli.py report-pptx [args...]
     python3 scripts/cli.py md-process [dir_path]
     python3 scripts/cli.py ga4 [args...]
-    python3 scripts/cli.py sync [args...]
     python3 scripts/cli.py info
 """
 import sys
@@ -43,6 +44,8 @@ def main():
         process_markdown_directory(target_dir, compress=True, remove_yaml=False)
     elif command in ("sync", "sync-all"):
         sys.exit(subprocess.call([sys.executable, str(ROOT_DIR / "scripts" / "sync_all_data.py")] + extra_args))
+    elif command in ("ads", "sync-ads", "paid"):
+        sys.exit(subprocess.call([sys.executable, str(ROOT_DIR / "scripts" / "sync_paid_ads.py")] + extra_args))
     elif command in ("ga4", "fetch-ga4"):
         ga4_script = ROOT_DIR / "scripts" / "fetch_ga4.js"
         if not ga4_script.exists():
@@ -55,11 +58,12 @@ def main():
         print(f"Active Tools:")
         for tool in TOOLS_DIR.glob("*.py"):
             print(f"  - {tool.name}")
+        print("  - ads / sync-ads / paid (Paid Ads & UTM Performance Sync from GA4)")
         print("  - ga4 / fetch-ga4 (Google Analytics 4 Data API Fetcher)")
         print("  - sync / sync-all (Master Data & API Sync Runner)")
     else:
         print(f"Unknown command: {command}", file=sys.stderr)
-        print("Available commands: report-html, report-pptx, md-process, info")
+        print("Available commands: ads, report-html, report-pptx, md-process, sync, info")
         sys.exit(1)
 
 if __name__ == "__main__":

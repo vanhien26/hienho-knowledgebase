@@ -151,22 +151,19 @@ def main():
             lp = r["dimensionValues"][0]["value"].strip()
             cg = r["dimensionValues"][1]["value"].strip()
             src = r["dimensionValues"][2]["value"].strip()
-            sess = int(r["metricValues"][0]["value"])
-            eng = int(r["metricValues"][1]["value"])
+            pv = int(r["metricValues"][2]["value"])
             key = (lp, cg, src)
             if key not in rows_map:
                 rows_map[key] = {
                     "landing_page": lp,
                     "channel_group": cg,
                     "source": src,
-                    "sessions": sess,
-                    "engaged_sessions": eng,
+                    "pageviews": pv,
                     "onelink_clicks_track1": 0,
                     "onelink_clicks_track2": 0
                 }
             else:
-                rows_map[key]["sessions"] = max(rows_map[key]["sessions"], sess)
-                rows_map[key]["engaged_sessions"] = max(rows_map[key]["engaged_sessions"], eng)
+                rows_map[key]["pageviews"] = max(rows_map[key]["pageviews"], pv)
 
     # 3.1. Kéo Traffic cho Theme Landing Pages
     if theme_paths:
@@ -183,7 +180,7 @@ def main():
                     "inListFilter": {"values": theme_paths}
                 }
             },
-            "metrics": [{"name": "sessions"}, {"name": "engagedSessions"}],
+            "metrics": [{"name": "sessions"}, {"name": "engagedSessions"}, {"name": "screenPageViews"}],
             "limit": 10000
         })
         add_traffic_rows(res_themes)
@@ -210,7 +207,7 @@ def main():
                 "inListFilter": {"values": ai_sources}
             }
         },
-        "metrics": [{"name": "sessions"}, {"name": "engagedSessions"}],
+        "metrics": [{"name": "sessions"}, {"name": "engagedSessions"}, {"name": "screenPageViews"}],
         "limit": 10000
     })
     add_traffic_rows(res_ai)
@@ -224,7 +221,7 @@ def main():
             {"name": "sessionDefaultChannelGroup"},
             {"name": "sessionSource"}
         ],
-        "metrics": [{"name": "sessions"}, {"name": "engagedSessions"}],
+        "metrics": [{"name": "sessions"}, {"name": "engagedSessions"}, {"name": "screenPageViews"}],
         "orderBys": [{"metric": {"metricName": "sessions"}, "desc": True}],
         "limit": 300
     })
@@ -276,6 +273,7 @@ def main():
                 "landing_page": lp,
                 "channel_group": cg,
                 "source": src,
+                "pageviews": 0,
                 "sessions": 0,
                 "engaged_sessions": 0,
                 "onelink_clicks_track1": cnt,
@@ -324,8 +322,7 @@ def main():
                 "landing_page": lp,
                 "channel_group": cg,
                 "source": src,
-                "sessions": 0,
-                "engaged_sessions": 0,
+                "pageviews": 0,
                 "onelink_clicks_track1": 0,
                 "onelink_clicks_track2": cnt
             }
@@ -334,8 +331,8 @@ def main():
     # 5. Đóng gói payload chuẩn Contract
     print("[5/5] Xuất bản dữ liệu sang Web Hubs...")
     final_rows = list(rows_map.values())
-    # Sắp xếp theo sessions giảm dần
-    final_rows.sort(key=lambda x: (x["sessions"], x["onelink_clicks_track1"] + x["onelink_clicks_track2"]), reverse=True)
+    # Sắp xếp theo pageviews giảm dần
+    final_rows.sort(key=lambda x: (x["pageviews"], x["onelink_clicks_track1"] + x["onelink_clicks_track2"]), reverse=True)
 
     dataset_payload = {
         "sample": False,

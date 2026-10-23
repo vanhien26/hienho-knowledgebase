@@ -8,7 +8,7 @@
 
 | Kỳ báo cáo | Phạm vi dữ liệu | Tệp tin báo cáo SSOT | Trạng thái | Điểm nhấn chính |
 | :--- | :--- | :--- | :---: | :--- |
-| **Tháng 10/2026** | MTD Lũy kế đến ngày 21/10 | [`report-thang-10-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-10-2026.md) | `Active MTD 21d` | Cinema Hub đạt 845k PV; Toàn Web đạt 2.507k PV (68.4% Target) |
+| **Tháng 10/2026** | MTD Lũy kế đến ngày 22/10 | [`report-thang-10-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-10-2026.md) | `Active MTD 22d` | Cinema Hub đạt 865k PV; Toàn Web đạt 2.624k PV (71.6% Target) |
 | **Tháng 09/2026** | Trọn tháng (01/09 - 30/09) | [`report-thang-09-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-09-2026.md) | `Full Month` | Hoàn thành mục tiêu quý 3; mở rộng cụm rạp và tiện ích tài chính |
 | **Tháng 08/2026** | MTD 28 ngày chính thức | [`report-thang-08-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-08-2026.md) | `Full Month` | Triển khai luồng Mobile Balloon Ads; đối soát phễu cài đặt Ads |
 | **Tháng 08/2026 (Giữa kỳ)** | Tiến độ thực thi đến 24/08 | [`report-thang-08-2026-midmonth.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-08-2026-midmonth.md) | `Archive` | Chi tiết tiến độ On-track của 5 Strategic Hubs và phối hợp phòng ban |

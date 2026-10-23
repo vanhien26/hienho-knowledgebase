@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-SYNC ROADMAP & SHIP RELEASES TO SUPABASE
-Đồng bộ danh mục sản phẩm/tính năng ship theo ngày từ file SSOT (14_ROADMAP/ship_releases.json)
-lên cơ sở dữ liệu Supabase phục vụ trang /roadmap trên Web Hubs (react-web-momo).
+[DEPRECATED / ARCHIVED] SYNC ROADMAP & SHIP RELEASES TO SUPABASE
+LƯU Ý: Luồng /roadmap và /board bên Web Hubs (react-web-momo) đã bị xóa hoàn toàn.
+Script này được giữ lại chỉ phục vụ tham khảo lịch sử, không đẩy sang Hubs nữa.
 """
 
 import os

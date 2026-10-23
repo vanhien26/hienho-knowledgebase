@@ -26,11 +26,14 @@ __pycache__/
 *credentials*.json
 *secret*.json
 
-# Intermediate API cache
+# Intermediate API cache & Raw Dumps
 07_REPORTS/data/cache/
+07_REPORTS/data/clarity/raw/
+07_REPORTS/data/clarity/history/
+07_REPORTS/data/bing_ai/history/
 *token*.json
 
-# Databases & Large Analytics Cache (> 10MB)
+# Databases & Large Analytics Cache / Bulky Snapshots (> 1MB)
 *.sqlite
 *.sqlite-wal
 *.sqlite-shm
@@ -43,7 +46,13 @@ __pycache__/
 07_REPORTS/data/gsc_query_page_map.json
 07_REPORTS/data/ga4_multichannel_cache*.json
 07_REPORTS/data/poc_cluster_naming.json
+07_REPORTS/data/inventory_clusters_summary.json
+07_REPORTS/data/content_plan_refactor_audit.json
+07_REPORTS/data/url_project_mapping.json
+07_REPORTS/data/momo_live_urls.json
 07_REPORTS/data/analytics/full_funnel_matrix.json
+07_REPORTS/data/analytics/page_retention_matrix.json
 *full_funnel_matrix.json
 *full-funnel-matrix.json
 /data/
+

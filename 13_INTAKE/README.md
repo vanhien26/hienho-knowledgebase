@@ -1,6 +1,6 @@
 # 13_INTAKE: INTAKE AGENT (Drop file -> hubs-momo)
 
-Diem tiep nhan trung tam cho intake agent. File drop vao `~/Downloads/intake/`, agent tu xu ly va push sang hubs-momo (`/dashboard` + `/bang-tin`).
+Diem tiep nhan trung tam cho intake agent. File drop vao `~/Downloads/intake/`, agent tu xu ly va push sang hubs-momo (`/dashboard`). (Lưu ý: Luồng `/board` và `/roadmap` bên Hub đã xóa, không còn đẩy sang).
 
 ---
 
@@ -16,7 +16,7 @@ python3 scripts/intake.py --scan --push
   3. PARSE     - parser tuong ung -> ghi SSOT local
   4. VALIDATE  - sanity bound (PV tracking, days_elapsed)
   5. ROUTE     - map format -> dich push
-  6. PUSH      - goi sync-kb.py / build-dashboard-data.py cua hubs-momo
+  6. PUSH      - goi build-dashboard-data.py cua hubs-momo
   7. LOG       - ghi 07_REPORTS/data/push_log.jsonl
 ```
 
@@ -26,10 +26,10 @@ python3 scripts/intake.py --scan --push
 
 | Format | Dinh dang file | Parser | Dich push |
 |---|---|---|---|
-| Tracking | xlsx co sheet "MTD Pivot" + "Full month Pivot" | parse_tracking | dashboard + bang-tin |
+| Tracking | xlsx co sheet "MTD Pivot" + "Full month Pivot" | parse_tracking | dashboard |
 | Crawl stats | zip/csv GSC Crawl Stats export | parse_crawl | dashboard |
 | Backlink | csv `Site,Linking pages,Target pages` | parse_backlink | dashboard |
-| Tasklist | md bang 5 cot chuan / xlsx | parse_tasks | bang-tin |
+| Tasklist | md bang 5 cot chuan / xlsx | parse_tasks | SSOT local (khong push Hub) |
 | Unknown | bat ky | - | quarantine (13_INTAKE/quarantine/) |
 
 ---
@@ -86,7 +86,6 @@ Lenh goc (neu can goi truc tiep):
 | Dich | File trong hubs-momo | Script |
 |---|---|---|
 | /dashboard | `lib/dashboard/web-data.json` | `scripts/build-dashboard-data.py` |
-| /bang-tin | `lib/board/board.json` | `scripts/sync-kb.py` |
 
 Hubs repo: `/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo`
 

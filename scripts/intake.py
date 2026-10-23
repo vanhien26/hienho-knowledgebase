@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""INTAKE AGENT - Drop file -> Xu ly -> Push sang hubs-momo (/dashboard + /bang-tin).
+"""INTAKE AGENT - Drop file -> Xu ly -> Push sang hubs-momo (/dashboard).
 
 Luong van hanh:
   1. SCAN     : quet thu muc intake, bo qua da xu ly (idempotency bang sha256)
   2. DETECT   : nhan dien format theo signature registry
   3. PARSE    : goi parser tuong ung -> ghi SSOT local
   4. VALIDATE : kiem tra sanity bound truoc khi push
-  5. ROUTE    : map file -> dich (dashboard / bang-tin / ca hai)
-  6. PUSH     : goi sync-kb.py / build-dashboard-data.py cua hubs-momo
+  5. ROUTE    : map file -> dich (dashboard)
+  6. PUSH     : goi build-dashboard-data.py cua hubs-momo
   7. LOG      : ghi push_log.jsonl (nguon, hash, result, thoi gian)
 
 Su dung:
@@ -87,12 +87,9 @@ def notify_mac(title, message):
 
 def route_for(fmt):
     """Map format -> push targets."""
-    if fmt == registry.TRACKING:
-        return ["dashboard", "bang-tin"]
-    if fmt == registry.TASKS:
-        return ["bang-tin"]
-    if fmt in (registry.CRAWL, registry.BACKLINK):
+    if fmt in (registry.TRACKING, registry.CRAWL, registry.BACKLINK):
         return ["dashboard"]
+    # Lưu ý: Luồng /board và /bang-tin bên Hub đã xóa hoàn toàn, task list chỉ lưu SSOT local
     return []
 
 
@@ -228,17 +225,15 @@ def verify_health():
     hubs_ok = os.path.exists(HUBS_REPO)
     checks.append(("hubs-momo repo", hubs_ok, HUBS_REPO))
 
-    board = os.path.join(HUBS_REPO, "lib/board/board.json")
     webdata = os.path.join(HUBS_REPO, "lib/dashboard/web-data.json")
-    for label, p in (("board.json (bang-tin)", board), ("web-data.json (dashboard)", webdata)):
-        exists = os.path.exists(p)
-        fresh = False
-        if exists:
-            age_h = (datetime.now().timestamp() - os.path.getmtime(p)) / 3600
-            fresh = age_h < 24 * 7
-            checks.append((label, exists, f"age {age_h:.1f}h, fresh={fresh}"))
-        else:
-            checks.append((label, exists, p))
+    exists = os.path.exists(webdata)
+    fresh = False
+    if exists:
+        age_h = (datetime.now().timestamp() - os.path.getmtime(webdata)) / 3600
+        fresh = age_h < 24 * 7
+        checks.append(("web-data.json (dashboard)", exists, f"age {age_h:.1f}h, fresh={fresh}"))
+    else:
+        checks.append(("web-data.json (dashboard)", exists, webdata))
 
     intake_exists = os.path.isdir(INTAKE_DIR)
     checks.append(("intake drop zone", intake_exists, INTAKE_DIR))

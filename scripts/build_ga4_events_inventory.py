@@ -334,7 +334,6 @@ def main():
     # Xuất bản file W2A attribution
     for target in [
         BASE_DIR / "07_REPORTS" / "data" / "analytics" / "ga4_w2a_attribution.json",
-        BASE_DIR / "data" / "analytics" / "ga4-w2a-attribution.json",
         HUBS_REPO / "data" / "analytics" / "ga4-w2a-attribution.json"
     ]:
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -390,11 +389,10 @@ def main():
         "events": events_list
     }
 
-    # 4. Xuất bản file đồng bộ sang 3 vị trí
+    # 4. Xuất bản file đồng bộ sang 2 vị trí (SSOT KB & Web Hubs)
     print("4. Đang xuất bản file dữ liệu sang Knowledge Base & Web Hubs...")
     for target in [
         BASE_DIR / "07_REPORTS" / "data" / "analytics" / "ga4_events_inventory.json",
-        BASE_DIR / "data" / "analytics" / "ga4-events-inventory.json",
         HUBS_REPO / "data" / "analytics" / "ga4-events-inventory.json"
     ]:
         target.parent.mkdir(parents=True, exist_ok=True)
