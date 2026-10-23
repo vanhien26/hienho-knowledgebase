@@ -22,6 +22,7 @@ __pycache__/
 .env
 .env.*
 *.env
+07_REPORTS/data/credentials/
 *credentials*.json
 *secret*.json
 
@@ -45,4 +46,4 @@ __pycache__/
 07_REPORTS/data/analytics/full_funnel_matrix.json
 *full_funnel_matrix.json
 *full-funnel-matrix.json
-data/
+/data/

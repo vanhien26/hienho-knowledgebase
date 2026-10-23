@@ -7,7 +7,7 @@ FULL-FUNNEL DATA DECOMPOSITION PIPELINE (GSC + GA4) - REFACTORED
 2. GA4 (Google Analytics 4): Post-Click & Chuyển đổi Web-to-App
    - Chỉ đếm click Onelink từ channel_group = 'Organic Search'
    - Phân rã 2 luồng: ol_momo (onelink.momo.vn) & ol_appsflyer (momoapp.onelink.vn)
-   - w2a_cr = (ol_momo + ol_appsflyer) / organic_sessions
+   - w2a_cr = (ol_momo + ol_appsflyer) / organic_pageviews
 
 Quy chuẩn nâng cao:
 - Normalize URL 2 phía về canonical path (lowercase, strip query/hash/trailing slash)
@@ -862,6 +862,7 @@ def main():
     print(f"✓ GSC Pages (Clicks > 0): {len(pages_with_gsc_traffic):,} | Pages joined GA4: {len(pages_with_both):,} | Join Rate: {join_rate * 100:.2f}% (Mục tiêu > 90%)")
 
     total_organic_sessions = sum(v["organic_sessions"] for v in ga4_pages.values())
+    total_organic_pageviews = sum(v.get("organic_pageviews", 0) for v in ga4_pages.values())
     mapped_organic_sessions = 0
     for p, g in ga4_pages.items():
         tid, _, _, _, _, _ = matcher(p)
@@ -905,7 +906,7 @@ def main():
         ol_m = ga4["ol_momo"]
         ol_af = ga4["ol_appsflyer"]
         w2a_clicks = ol_m + ol_af
-        w2a_cr = round(w2a_clicks / org_sess, 4) if org_sess else 0.0
+        w2a_cr = round(w2a_clicks / org_pv, 4) if org_pv else 0.0
 
         capture_rate = round(org_sess / mvol, 4) if mvol else 0.0
         business_yield = round(w2a_clicks / gsc_c, 4) if gsc_c else 0.0
@@ -997,6 +998,8 @@ def main():
         # Trích xuất Quick Win duy nhất cho mỗi Path
         if strike_q_sorted and (w2a_cr >= 0.01 or priority_sec or gsc_c >= 50):
             best_q = strike_q_sorted[0]
+            potential = best_q["potential_gain_clicks"]
+            predicted_w2a = round(potential * business_yield, 2)
             quick_wins_map[p] = {
                 "query": best_q["query"],
                 "path": p,
@@ -1009,8 +1012,9 @@ def main():
                 "current_position": best_q["position"],
                 "impressions": best_q["impressions"],
                 "current_clicks": best_q["clicks"],
-                "potential_gain_clicks": best_q["potential_gain_clicks"],
+                "potential_gain_clicks": potential,
                 "w2a_conversion_rate": w2a_cr,
+                "predicted_w2a_gain": predicted_w2a,
                 "ol_appsflyer": ol_af,
                 "ol_momo": ol_m
             }
@@ -1018,9 +1022,9 @@ def main():
     # Sắp xếp pages
     pages_output.sort(key=lambda x: (x["conversion"]["total_w2a_clicks"], x["pre_click"]["gsc_clicks"]), reverse=True)
 
-    # Sắp xếp Quick Wins: ưu tiên priority_sector (True lên trước), sau đó theo potential_gain_clicks
+    # Sắp xếp Quick Wins: ưu tiên priority_sector, sau đó predicted_w2a_gain (expected incremental W2A clicks)
     quick_wins_list = list(quick_wins_map.values())
-    quick_wins_list.sort(key=lambda x: (x["priority_sector"], x["potential_gain_clicks"], x["w2a_conversion_rate"]), reverse=True)
+    quick_wins_list.sort(key=lambda x: (x["priority_sector"], x["predicted_w2a_gain"], x["potential_gain_clicks"]), reverse=True)
     top_quick_wins = quick_wins_list[:100]
 
     # 5. Tổng hợp cấp Theme (129 Themes)
@@ -1040,6 +1044,7 @@ def main():
                 "gsc_clicks": 0,
                 "gsc_impressions": 0,
                 "organic_sessions": 0,
+                "organic_pageviews": 0,
                 "ai_sessions": 0,
                 "ol_momo": 0,
                 "ol_appsflyer": 0,
@@ -1051,6 +1056,7 @@ def main():
         t["gsc_clicks"] += p_rec["pre_click"]["gsc_clicks"]
         t["gsc_impressions"] += p_rec["pre_click"]["gsc_impressions"]
         t["organic_sessions"] += p_rec["post_click"]["organic_sessions"]
+        t["organic_pageviews"] += p_rec["post_click"].get("organic_pageviews", 0)
         t["ai_sessions"] += p_rec["post_click"]["ai_sessions"]
         t["ol_momo"] += p_rec["conversion"]["ol_momo"]
         t["ol_appsflyer"] += p_rec["conversion"]["ol_appsflyer"]
@@ -1062,7 +1068,7 @@ def main():
         if t["market_volume"] > 0:
             t["potential_gain"] = min(t["potential_gain"], t["market_volume"])
         t["capture_rate"] = round(t["organic_sessions"] / t["market_volume"], 4) if t["market_volume"] else 0.0
-        t["w2a_cr"] = round(t["w2a_clicks"] / t["organic_sessions"], 4) if t["organic_sessions"] else 0.0
+        t["w2a_cr"] = round(t["w2a_clicks"] / t["organic_pageviews"], 4) if t["organic_pageviews"] else 0.0
 
     themes_list.sort(key=lambda x: (x["priority_sector"], x["w2a_clicks"], x["gsc_clicks"]), reverse=True)
 
@@ -1347,7 +1353,7 @@ def main():
             "total_ol_momo": sum(p["conversion"]["ol_momo"] for p in pages_output),
             "total_ol_appsflyer": sum(p["conversion"]["ol_appsflyer"] for p in pages_output),
             "total_w2a_clicks": sum(p["conversion"]["total_w2a_clicks"] for p in pages_output),
-            "overall_w2a_cr": round(sum(p["conversion"]["total_w2a_clicks"] for p in pages_output) / total_organic_sessions, 4) if total_organic_sessions else 0.0,
+            "overall_w2a_cr": round(sum(p["conversion"]["total_w2a_clicks"] for p in pages_output) / total_organic_pageviews, 4) if total_organic_pageviews else 0.0,
             "total_ai_search_sessions": sum(p["post_click"]["ai_sessions"] for p in pages_output),
             "quadrant_distribution": quadrant_summary,
             "health_status_definitions": {
@@ -1375,7 +1381,7 @@ def main():
                 "total_sessions": total_web_sessions,
                 "total_users": total_web_users,
                 "total_w2a_clicks": total_web_w2a,
-                "overall_w2a_cr": round(total_web_w2a / total_web_sessions, 4) if total_web_sessions > 0 else 0.0,
+                "overall_w2a_cr": round(total_web_w2a / total_web_pageviews, 4) if total_web_pageviews > 0 else 0.0,
                 "total_projects": len(projects_list),
                 "non_paid_pageviews": tot_non_paid_pv,
                 "non_paid_pv_pct": round(tot_non_paid_pv / total_web_pageviews, 4) if total_web_pageviews > 0 else 0.0,

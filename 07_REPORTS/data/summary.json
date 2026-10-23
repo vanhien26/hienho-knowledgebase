@@ -17,23 +17,23 @@
     "forecastPct": 100.97
   },
   "channels": {
-    "organic": 1281703,
-    "direct": 639195,
-    "referral": 104752,
-    "paid": 276358,
-    "others": 205306
+    "organic": 1327842,
+    "direct": 639279,
+    "referral": 225831,
+    "paid": 276241,
+    "others": 38121
   },
   "hubs": [
     {
       "id": "cinema",
       "name": "Cinema Hub",
-      "pv": 845539,
+      "pv": 847391,
       "target": 1117378
     },
     {
       "id": "financial",
       "name": "Financial Hub",
-      "pv": 151654,
+      "pv": 151651,
       "target": 450000
     },
     {
@@ -45,7 +45,7 @@
     {
       "id": "vehicle",
       "name": "Vehicle Hub",
-      "pv": 40386,
+      "pv": 25771,
       "target": 100000
     },
     {

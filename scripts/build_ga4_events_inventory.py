@@ -141,7 +141,11 @@ def main():
     total_events = sum(int(r["metricValues"][0]["value"]) for r in rows)
     total_conversions = sum(int(r["metricValues"][0]["value"]) for r in rows if r["dimensionValues"][1]["value"] == "true")
 
-    events_list = []
+    # GA4 trả isConversionEvent dimension = "true" | "false" | "(not set)".
+    # Cả "false" và "(not set)" đều map thành is_conv=False, khiến cùng event_name xuất hiện
+    # 2 lần trong rows. Dùng dict để merge theo event_name: cộng dồn count/users/sessions,
+    # giữ is_conversion=True nếu bất kỳ row nào có flag conversion.
+    events_map = {}  # event_name -> merged dict
     category_summary = {}
 
     for r in rows:
@@ -150,27 +154,49 @@ def main():
         count = int(r["metricValues"][0]["value"])
         users = int(r["metricValues"][1]["value"])
         sess = int(r["metricValues"][2]["value"])
-        epu = round(count / users, 2) if users > 0 else 0.0
 
         cat, desc, audit = classify_event(name)
-        
+
+        if name in events_map:
+            # Merge: cộng dồn volume, OR is_conversion
+            events_map[name]["event_count"] += count
+            events_map[name]["total_users"] += users
+            events_map[name]["sessions"] += sess
+            if is_conv:
+                events_map[name]["is_conversion"] = True
+        else:
+            if cat not in category_summary:
+                category_summary[cat] = {"category": cat, "total_volume": 0, "unique_events": 0}
+            category_summary[cat]["unique_events"] += 1
+            events_map[name] = {
+                "event_name": name,
+                "category": cat,
+                "description": desc,
+                "audit_note": audit,
+                "is_conversion": is_conv,
+                "event_count": count,
+                "total_users": users,
+                "sessions": sess,
+            }
+
+    # Tính lại total_events sau merge (loại bỏ double-count từ (not set) rows)
+    total_events_merged = sum(e["event_count"] for e in events_map.values())
+
+    events_list = []
+    for e in events_map.values():
+        cat = e["category"]
         if cat not in category_summary:
             category_summary[cat] = {"category": cat, "total_volume": 0, "unique_events": 0}
-        category_summary[cat]["total_volume"] += count
-        category_summary[cat]["unique_events"] += 1
-
+        category_summary[cat]["total_volume"] += e["event_count"]
+        epu = round(e["event_count"] / e["total_users"], 2) if e["total_users"] > 0 else 0.0
         events_list.append({
-            "event_name": name,
-            "category": cat,
-            "description": desc,
-            "audit_note": audit,
-            "is_conversion": is_conv,
-            "event_count": count,
-            "total_users": users,
-            "sessions": sess,
+            **e,
             "events_per_user": epu,
-            "share_pct": round(count / total_events, 4) if total_events > 0 else 0.0
+            "share_pct": round(e["event_count"] / total_events_merged, 4) if total_events_merged > 0 else 0.0
         })
+
+    # Cập nhật total_events để summary và share_pct dùng con số sau merge
+    total_events = total_events_merged
 
     categories_list = sorted(category_summary.values(), key=lambda x: -x["total_volume"])
     for c in categories_list:
@@ -280,7 +306,7 @@ def main():
 
     w2a_attribution_list = []
     for proj, data in sorted_projects:
-        top_urls_sorted = sorted(data["top_urls"].items(), key=lambda x: -x[1])[:5]
+        top_urls_sorted = sorted(data["top_urls"].items(), key=lambda x: -x[1])[:20]
         top_urls_fmt = [{"path": u, "clicks": c} for u, c in top_urls_sorted]
         w2a_attribution_list.append({
             "project_name": proj,

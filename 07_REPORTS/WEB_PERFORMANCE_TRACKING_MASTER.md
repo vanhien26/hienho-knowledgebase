@@ -611,53 +611,50 @@ Tài liệu này lưu trữ **toàn bộ dữ liệu lịch sử chi tiết (His
 
 ### 3.2 CẬP NHẬT HIỆU SUẤT MTD THÁNG 10/2026 (LŨY KẾ 21 NGÀY: 01/10 - 21/10/2026)
 
-Dữ liệu trích xuất tự động và chuẩn hóa trực tiếp từ Google Analytics 4 (GA4 Data API) và Google Search Console (GSC API) cắt số đến hết ngày 21/10/2026:
+Dữ liệu trích xuất tự động từ tệp tracking mới nhất `Web Performance Tracking.xlsx` (cắt số T+1 đến hết ngày 21/10/2026):
 
 * **Target Tháng 10:** 3.665.607 PV.
-* **Lũy kế MTD 21 ngày (Actual):** 2.507.314 PV (Đạt **68,40%** Target sau 21/31 ngày = 67,74% thời gian).
+* **Lũy kế MTD 21 ngày (Actual GA4 SSOT):** 2.507.314 PV (Đạt **68.40%** Target sau 21/31 ngày = 67.74% thời gian).
 * **Nhịp chạy trung bình ngày (Daily Pace):** 119.395,90 PV/ngày.
-* **Dự phóng cả tháng (Forecast 31 ngày):** 3.701.273,05 PV (Đạt **100,97%** Target tháng - Duy trì nhịp vượt kế hoạch toàn diện).
+* **Dự phóng cả tháng (Forecast 31 ngày):** 3.701.273,05 PV (Đạt **100.97%** Target tháng - Dự kiến chính thức về bờ và vượt kế hoạch).
 
 #### Bảng Cơ Cấu Kênh Traffic MTD 21 Ngày Tháng 10 (Non-Paid vs. Paid Dichotomy):
 
 | Phân Loại Traffic Source | Lũy Kế MTD (PV) | Tỷ Trọng (%) | Đánh Giá Tín Hiệu & Độ Lành Mạnh |
 | :--- | :---: | :---: | :--- |
-| **NON-PAID TRAFFIC** | **2.230.956** | **88.98%** | **Động cơ tăng trưởng tự nhiên bền vững áp đảo gần 90% toàn Website.** |
-| -- Organic Traffic | 1.281.703 | 51.12% | Kênh cốt lõi chủ lực áp đảo, phản ánh nền tảng Web tăng trưởng tự nhiên vững chắc. |
-| -- Direct Traffic | 639.195 | 25.49% | Nhận diện thương hiệu và tỷ lệ người dùng ghi nhớ URL trực tiếp duy trì mức cao. |
-| -- Referral Traffic | 104.752 | 4.18% | Lưu lượng điều hướng đối tác và liên kết ngoài ổn định. |
-| -- Others (Social, AI Search...) | 205.306 | 8.19% | Lưu lượng từ mạng xã hội, trợ lý AI Search và các kênh tự nhiên khác. |
-| **PAID TRAFFIC** | **276.358** | **11.02%** | **Ngân sách quảng cáo duy trì mức hợp lý, kiểm soát chặt chẽ.** |
+| **NON-PAID TRAFFIC** | **2.231.073** | **88.98%** | **Động cơ tăng trưởng tự nhiên bền vững áp đảo 89% toàn Website.** |
+| -- Organic Traffic | 1.327.842 | 52.96% | Trục xương sống SEO/GEO giữ vững vị thế áp đảo trên 1.32 triệu PV. |
+| -- Direct Traffic | 639.279 | 25.50% | Nhận diện thương hiệu mạnh mẽ, duy trì trên 639k PV. |
+| -- Referral Traffic | 225.831 | 9.01% | Lưu lượng điều hướng đối tác và liên kết ngoài ổn định. |
+| -- Others | 38.121 | 1.52% | Dòng lưu lượng phụ trợ và thử nghiệm tính năng mới. |
+| **PAID TRAFFIC** | **276.241** | **11.02%** | **Ngân sách quảng cáo kiểm soát tốt, không phụ thuộc vào dòng tiền Paid.** |
 | **TỔNG TOÀN WEBSITE** | **2.507.314** | **100.00%** | **Non-Paid chiếm 88.98% tổng lưu lượng toàn Website.** |
 
 #### Bảng Theo Dõi Hiệu Suất Theo Web Hubs MTD 21 Ngày:
 
 | Web Hub | Zone | Lũy Kế MTD (PV) | Target Tháng 10 | % Đạt Target | Nhịp Chạy (PV/ngày) | Dự Phóng 31 Ngày (PV) | Trạng Thái & Dự Báo |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Cinema Hub** | Performance | 845.539 | 1.117.378 | 75.67% | 40.264 | 1.248.177 | Dự kiến vượt Target +11.7%, tiếp tục là đầu kéo tăng trưởng lớn nhất toàn Website. |
-| **Financial Hub** | Transformation | 151.654 | 450.000 | 33.70% | 7.222 | 223.870 | Đạt 49.8% Target; cần đẩy mạnh indexing công cụ và luồng Internal Link. |
+| **Cinema Hub** | Performance | 847.391 | 1.117.378 | 75.84% | 40.352 | 1.250.911 | Dự kiến vượt Target +11.9%, tiếp tục là đầu kéo tăng trưởng lớn nhất toàn Website. |
+| **Financial Hub** | Transformation | 151.651 | 450.000 | 33.70% | 7.221 | 223.866 | Đạt 49.7% Target; duy trì nhịp đều, chờ lực đẩy từ indexing các tiện ích mới. |
 | **New User Hub** | Incubation | 84.222 | 300.000 | 28.07% | 4.011 | 124.328 | Đạt 41.4% Target; phụ thuộc vào điểm rơi các chiến dịch cuối tháng. |
-| **Vehicle Hub** | Transformation | 40.386 | 100.000 | 40.39% | 1.923 | 59.617 | Đạt 59.6% Target; Phạt nguội ổn định, chờ đẩy trang Garage và Bảo hiểm. |
+| **Vehicle Hub** | Transformation | 25.771 | 100.000 | 25.77% | 1.227 | 38.043 | Đạt 38.0% Target; Phạt nguội ổn định, chờ đẩy trang Garage và Bảo hiểm. |
 | **Student Hub** | Incubation | 1.322 | 100.000 | 1.32% | 63 | 1.952 | Đạt 2.0% Target; quy mô còn nhỏ, cần kích hoạt chiến dịch mùa tựu trường/học kỳ. |
-| **Khối Dự Án Khác** | Others | 1.384.191 | - | - | 65.914 | 2.043.330 | Brand Homepage, Cổng thanh toán, Games, Tiện ích tích hợp. |
-| **TỔNG CỘNG TOÀN WEBSITE** | **All Zones** | **2.507.314** | **3.665.607** | **68.40%** | **119.396** | **3.701.273** | **Dự kiến vượt Target cả tháng (+1.0%)** |
 
 #### Bảng Phân Rã Lưu Lượng Cinema Hub Sub-pages (MTD 21 Ngày Tháng 10):
 
 | Phân Hệ Sub-page | Tên Quy Chuẩn Tracking | Lũy Kế MTD (PV) | Tỷ Trọng Hub (%) | Kênh Chủ Lực | Ghi Chú & Định Hướng |
 | :--- | :--- | :---: | :---: | :--- | :--- |
-| **Trang Rạp phim** | `Cinema_Cineplex` | **505.481** | **59.78%** | Organic (92.5%) | Cụm rạp CGV, Lotte, NCC; chính thức vượt mốc 500k PV. |
-| **Trang phim chi tiết** | `Cinema_Page` | **275.049** | **32.53%** | Organic (86.9%) | Lưu lượng tìm kiếm phim chiếu rạp và lịch chiếu chi tiết. |
-| **Cinema_Home Page (Trang chủ Cinema)** | `Cinema_Home Page` | **24.566** | **2.91%** | Organic (80.0%) | Cổng vào Cinema Hub, Direct chiếm 15.5%. |
-| **Cinema_Blog** | `Cinema_Blog` | **13.532** | **1.60%** | Organic (80.4%) | Bài viết review/điện ảnh do GenAI tự chủ sản xuất. |
-| **Cinema_Landing Page** | `Cinema_Landing Page` | **2.324** | **0.27%** | Organic (85.3%) | Landing page chiến dịch vé phim. |
-| **Tin tức** | `Cinema_News` | **1.824** | **0.22%** | Organic (86.0%) | Tin vắn điện ảnh, tin khuyến mãi. |
-| **Khác & Phân hệ mở rộng** | `Others` | **22.763** | **2.69%** | Direct/Organic | Trang cụm rạp địa phương, landing phụ. |
-| **TỔNG CỘNG CINEMA HUB** | `Cinema Hub` | **845.539** | **100.00%** | **Organic (89.6%)** | **Vượt nhịp Target (+11.7%)** |
+| **Trang Rạp phim** | `Cinema_Cineplex` | **520.247** | **61.39%** | Organic (92.3%) | Cụm rạp CGV, Lotte, NCC; đầu kéo chủ lực chiếm trên 61% Hub. |
+| **Trang phim chi tiết** | `Cinema_Page` | **283.332** | **33.44%** | Organic (86.7%) | Lưu lượng tìm kiếm phim chiếu rạp và lịch chiếu chi tiết. |
+| **Cinema_Home Page (Trang chủ Cinema)** | `Cinema_Home Page` | **25.431** | **3.00%** | Organic (79.6%) | Cổng vào Cinema Hub, Direct chiếm 15.9%. |
+| **Cinema_Blog** | `Cinema_Blog` | **14.093** | **1.66%** | Organic (81.4%) | Bài viết review/điện ảnh do GenAI tự chủ sản xuất. |
+| **Cinema_Landing Page** | `Cinema_Landing Page` | **2.433** | **0.29%** | Organic (84.2%) | Landing page chiến dịch vé phim. |
+| **Tin tức** | `Cinema_News` | **1.855** | **0.22%** | Organic (86.1%) | Tin vắn điện ảnh, tin khuyến mãi. |
+| **TỔNG CỘNG CINEMA HUB** | `Cinema Hub` | **847.391** | **100.00%** | **Organic (89.5%)** | **Vượt nhịp Target (+11.9%)** |
 
 #### Bảng Phễu Chuyển Đổi Web-to-App MTD Tháng 10/2026 (Dữ Liệu AppsFlyer Cập Nhật):
 
-* **Total Installs (Cài đặt):** **5.545 installs** (Daily Pace ~277/ngày).
+* **Total Installs (Cài đặt):** **5.545 installs** (Daily Pace ~264/ngày).
 * **Đăng Ký Tài Khoản (REG):** **1.890 users** (CVR Install -> REG: **34.08%**).
 * **Liên Kết Ngân Hàng (Map Bank / N2MM):** **1.140 users** (CVR REG -> Map: **60.32%**; CVR Install -> Map: **20.56%**).
 * **Active MAU (Kích hoạt giao dịch đầu):** **594 users** (CVR Map -> MAU: **52.11%**; End-to-End CVR Install -> MAU: **10.71%**).
