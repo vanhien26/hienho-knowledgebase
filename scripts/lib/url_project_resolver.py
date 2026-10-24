@@ -49,7 +49,11 @@ INFERRED_BLOG_CODE = {
     "c100": ("Merchant", "high"),
     "c102": ("Merchant", "high"),
     "c101": ("OTA", "high"),
+    "c116": ("Trung Tâm Tài Chính", "high"),
     "c117": ("Blog", "high"),
+    "c181": ("Quản Lý Chi Tiêu", "high"),
+    "c193": ("Data", "high"),
+    "c198": ("Trust", "high"),
     "c199": ("Chứng Khoán", "high"),
 }
 
@@ -57,6 +61,7 @@ INFERRED_PREFIX = [
     (r"^momo\.vn/hoi-dap(?:/.*)?$", "Hỏi đáp", "FAQ", "high"),
     (r"^momo\.vn/huong-dan(?:/.*)?$", "Guide", "Guide", "high"),
     (r"^momo\.vn/tin-tuc(?:/.*)?$", "Tin Tức", "News", "high"),
+    (r"^momo\.vn/chao-ban-moi(?:/.*)?$", "New User", "Landing Page", "high"),
 ]
 
 
@@ -88,16 +93,16 @@ def normalize_url(url: str) -> str:
     u = url.strip()
     if u.startswith("//"):
         u = "https:" + u
+    elif u.startswith("/"):
+        u = "https://momo.vn" + u
     elif not u.startswith("http"):
         u = "https://" + u
     p = urllib.parse.urlsplit(u)
     host = p.netloc.lower()
     if host.startswith("www."):
         host = host[4:]
-    path = p.path or ""
-    if len(path) > 1 and path.endswith("/"):
-        path = path.rstrip("/")
-    return f"{host}{path}"
+    path = (p.path or "").rstrip("/")
+    return f"{host}{path}".lower()
 
 
 def _rule_to_regex(rule: str):
@@ -106,8 +111,8 @@ def _rule_to_regex(rule: str):
     if "*" in norm:
         pattern = re.escape(norm).replace(r"\*", ".*")
         spec = len(norm.replace("*", ""))
-        return re.compile("^" + pattern + "$"), "glob", spec
-    return re.compile("^" + re.escape(norm) + "$"), "exact", len(norm)
+        return re.compile("^" + pattern + "$", re.IGNORECASE), "glob", spec
+    return re.compile("^" + re.escape(norm) + "$", re.IGNORECASE), "exact", len(norm)
 
 
 def load_rules(csv_path: str = DEFAULT_CSV) -> list:

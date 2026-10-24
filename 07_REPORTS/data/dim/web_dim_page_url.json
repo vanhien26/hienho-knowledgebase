@@ -1,5 +1,5 @@
 {
-  "total_rules": 3259,
+  "total_rules": 3327,
   "rules": [
     {
       "project_name": "Cinema",
@@ -19554,6 +19554,414 @@
       "page_type": "Mini Web",
       "rule_type": "Dynamic",
       "rule_url": "https://www.momo.vn/game/*"
+    },
+    {
+      "project_name": "Ví Trả Sau",
+      "page_type": "Home Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/vi-tra-sau"
+    },
+    {
+      "project_name": "Trung Tâm Tài Chính",
+      "page_type": "Service Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/tai-chinh/*"
+    },
+    {
+      "project_name": "Tỷ Giá",
+      "page_type": "Tool Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/tai-chinh/ty-gia"
+    },
+    {
+      "project_name": "Giá Vàng",
+      "page_type": "Tool Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/tai-chinh/gia-vang"
+    },
+    {
+      "project_name": "Trung Tâm Tài Chính",
+      "page_type": "Tool Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/tai-chinh/tinh-luong"
+    },
+    {
+      "project_name": "Tiết Kiệm Online",
+      "page_type": "Tool Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/tai-chinh/gui-tiet-kiem"
+    },
+    {
+      "project_name": "Trung Tâm Tài Chính",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/tai-chinh-du-ky"
+    },
+    {
+      "project_name": "Tiện Ích Giao Thông",
+      "page_type": "Landing Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/tien-ich-giao-thong/*"
+    },
+    {
+      "project_name": "Phạt Nguội",
+      "page_type": "Tool Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/tra-cuu-phat-nguoi"
+    },
+    {
+      "project_name": "Phạt Nguội",
+      "page_type": "Tool Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/tra-cuu-phat-nguoi/*"
+    },
+    {
+      "project_name": "Tiện Ích Giao Thông",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/di-cung-ha-noi"
+    },
+    {
+      "project_name": "Merchant",
+      "page_type": "Landing Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/merchant/*"
+    },
+    {
+      "project_name": "Merchant",
+      "page_type": "Landing Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/doi-tac/*"
+    },
+    {
+      "project_name": "Tin Tức",
+      "page_type": "Home Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/tin-tuc"
+    },
+    {
+      "project_name": "Tin Tức",
+      "page_type": "Article",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/tin-tuc/*"
+    },
+    {
+      "project_name": "Khuyến mãi",
+      "page_type": "Home Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/khuyen-mai"
+    },
+    {
+      "project_name": "Khuyến mãi",
+      "page_type": "Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/khuyen-mai/*"
+    },
+    {
+      "project_name": "Khuyến mãi",
+      "page_type": "Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/uu-dai/*"
+    },
+    {
+      "project_name": "Bảo Hiểm",
+      "page_type": "Home Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/bao-hiem"
+    },
+    {
+      "project_name": "Bảo Hiểm",
+      "page_type": "Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/bao-hiem/*"
+    },
+    {
+      "project_name": "Bảo Hiểm",
+      "page_type": "Product Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/bao-hiem-tai-nan"
+    },
+    {
+      "project_name": "Student Pass",
+      "page_type": "Landing Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/student-pass/*"
+    },
+    {
+      "project_name": "Donation",
+      "page_type": "Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/trai-tim-momo/*"
+    },
+    {
+      "project_name": "Donation",
+      "page_type": "Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/vi-nhan-ai/*"
+    },
+    {
+      "project_name": "Donation",
+      "page_type": "Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/cong-dong/*"
+    },
+    {
+      "project_name": "Download",
+      "page_type": "Landing Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/download/*"
+    },
+    {
+      "project_name": "New User",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/chao-ban-moi"
+    },
+    {
+      "project_name": "New User",
+      "page_type": "Landing Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/chao-ban-moi/*"
+    },
+    {
+      "project_name": "Hỏi đáp",
+      "page_type": "Article",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/hoi-dap/*"
+    },
+    {
+      "project_name": "Guide",
+      "page_type": "Article",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/huong-dan/*"
+    },
+    {
+      "project_name": "TnC",
+      "page_type": "Static Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/chinh-sach-quyen-rieng-tu*"
+    },
+    {
+      "project_name": "TnC",
+      "page_type": "Static Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/dieu-khoan-dieu-kien*"
+    },
+    {
+      "project_name": "Game",
+      "page_type": "Landing Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/thanh-toan-momo-*"
+    },
+    {
+      "project_name": "Game",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/mua-the-garena"
+    },
+    {
+      "project_name": "Campaign",
+      "page_type": "Campaign Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/lac-xi-*"
+    },
+    {
+      "project_name": "Donation",
+      "page_type": "Landing Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/song-tot/*"
+    },
+    {
+      "project_name": "Donation",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/song-tot"
+    },
+    {
+      "project_name": "Student Pass",
+      "page_type": "Landing Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/sinh-vien/*"
+    },
+    {
+      "project_name": "Student Pass",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/sinh-vien"
+    },
+    {
+      "project_name": "Trust",
+      "page_type": "Landing Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/an-toan-bao-mat/*"
+    },
+    {
+      "project_name": "Trust",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/an-toan-an-tam"
+    },
+    {
+      "project_name": "Trust",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/cung-hoc-an-toan-bao-mat"
+    },
+    {
+      "project_name": "Cinema",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/ve-xem-phim"
+    },
+    {
+      "project_name": "Vé Xe",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/ve-xe-khach"
+    },
+    {
+      "project_name": "Ví Trả Sau",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/uu-dai-vi-tra-sau"
+    },
+    {
+      "project_name": "Ví Trả Sau",
+      "page_type": "Campaign Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/vts-len5/*"
+    },
+    {
+      "project_name": "Bảo Hiểm",
+      "page_type": "Product Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/bao-hiem-du-lich"
+    },
+    {
+      "project_name": "Home MoMo",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/timdiemgiaodich"
+    },
+    {
+      "project_name": "Home MoMo",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/lien-he"
+    },
+    {
+      "project_name": "Home MoMo",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/viec-lam"
+    },
+    {
+      "project_name": "Home MoMo",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/chuyen-doi-so-quoc-gia"
+    },
+    {
+      "project_name": "Home MoMo",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/add-momo"
+    },
+    {
+      "project_name": "Home MoMo",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/top-dich-vu-yeu-thich"
+    },
+    {
+      "project_name": "Campaign",
+      "page_type": "Campaign Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/nhin-lai-2025"
+    },
+    {
+      "project_name": "Campaign",
+      "page_type": "Campaign Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/the-next-koc"
+    },
+    {
+      "project_name": "Campaign",
+      "page_type": "Campaign Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/ho-ca-bac-ty"
+    },
+    {
+      "project_name": "Campaign",
+      "page_type": "Campaign Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/deal-hap-dan"
+    },
+    {
+      "project_name": "Campaign",
+      "page_type": "Campaign Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/m-shock-trieu-deal"
+    },
+    {
+      "project_name": "Campaign",
+      "page_type": "Campaign Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/lp/*"
+    },
+    {
+      "project_name": "Campaign",
+      "page_type": "Campaign Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/nhatky/*"
+    },
+    {
+      "project_name": "Campaign",
+      "page_type": "Campaign Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/coke"
+    },
+    {
+      "project_name": "Merchant",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/thanh-toan-quang-cao"
+    },
+    {
+      "project_name": "Dịch vụ liên kết",
+      "page_type": "Landing Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/dich-vu-lien-ket/*"
+    },
+    {
+      "project_name": "Billpay",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/vien-thong-tien-ich"
+    },
+    {
+      "project_name": "P2P",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/vietcombankmomo"
+    },
+    {
+      "project_name": "Vé số",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/vietlott"
+    },
+    {
+      "project_name": "Application Store",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/truyen-hinh"
+    },
+    {
+      "project_name": "Trung Tâm Tài Chính",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/10-tu-duy-tai-chinh"
     }
   ]
 }

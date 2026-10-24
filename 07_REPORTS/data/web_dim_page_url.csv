@@ -3259,3 +3259,71 @@ Guide,Landing Page,Static,https://www.momo.vn/huong-dan/huong-dan-lien-ket-vi-vo
 Donation,Landing Page,Static,https://www.momo.vn/cong-dong/chung-tay-mang-den-co-hoi-song-cho-25-benh-nhi
 Guide,Landing Page,Static,https://www.momo.vn/huong-dan/lien-ket-vi-momo-vietinbank
 Game Hub,Mini Web,Dynamic,https://www.momo.vn/game/*
+Ví Trả Sau,Home Page,Static,https://www.momo.vn/vi-tra-sau
+Trung Tâm Tài Chính,Service Page,Dynamic,https://www.momo.vn/tai-chinh/*
+Tỷ Giá,Tool Page,Static,https://www.momo.vn/tai-chinh/ty-gia
+Giá Vàng,Tool Page,Static,https://www.momo.vn/tai-chinh/gia-vang
+Trung Tâm Tài Chính,Tool Page,Static,https://www.momo.vn/tai-chinh/tinh-luong
+Tiết Kiệm Online,Tool Page,Static,https://www.momo.vn/tai-chinh/gui-tiet-kiem
+Trung Tâm Tài Chính,Landing Page,Static,https://www.momo.vn/tai-chinh-du-ky
+Tiện Ích Giao Thông,Landing Page,Dynamic,https://www.momo.vn/tien-ich-giao-thong/*
+Phạt Nguội,Tool Page,Static,https://www.momo.vn/tra-cuu-phat-nguoi
+Phạt Nguội,Tool Page,Dynamic,https://www.momo.vn/tra-cuu-phat-nguoi/*
+Tiện Ích Giao Thông,Landing Page,Static,https://www.momo.vn/di-cung-ha-noi
+Merchant,Landing Page,Dynamic,https://www.momo.vn/merchant/*
+Merchant,Landing Page,Dynamic,https://www.momo.vn/doi-tac/*
+Tin Tức,Home Page,Static,https://www.momo.vn/tin-tuc
+Tin Tức,Article,Dynamic,https://www.momo.vn/tin-tuc/*
+Khuyến mãi,Home Page,Static,https://www.momo.vn/khuyen-mai
+Khuyến mãi,Page,Dynamic,https://www.momo.vn/khuyen-mai/*
+Khuyến mãi,Page,Dynamic,https://www.momo.vn/uu-dai/*
+Bảo Hiểm,Home Page,Static,https://www.momo.vn/bao-hiem
+Bảo Hiểm,Page,Dynamic,https://www.momo.vn/bao-hiem/*
+Bảo Hiểm,Product Page,Static,https://www.momo.vn/bao-hiem-tai-nan
+Student Pass,Landing Page,Dynamic,https://www.momo.vn/student-pass/*
+Donation,Page,Dynamic,https://www.momo.vn/trai-tim-momo/*
+Donation,Page,Dynamic,https://www.momo.vn/vi-nhan-ai/*
+Donation,Page,Dynamic,https://www.momo.vn/cong-dong/*
+Download,Landing Page,Dynamic,https://www.momo.vn/download/*
+New User,Landing Page,Static,https://www.momo.vn/chao-ban-moi
+New User,Landing Page,Dynamic,https://www.momo.vn/chao-ban-moi/*
+Hỏi đáp,Article,Dynamic,https://www.momo.vn/hoi-dap/*
+Guide,Article,Dynamic,https://www.momo.vn/huong-dan/*
+TnC,Static Page,Dynamic,https://www.momo.vn/chinh-sach-quyen-rieng-tu*
+TnC,Static Page,Dynamic,https://www.momo.vn/dieu-khoan-dieu-kien*
+Game,Landing Page,Dynamic,https://www.momo.vn/thanh-toan-momo-*
+Game,Landing Page,Static,https://www.momo.vn/mua-the-garena
+Campaign,Campaign Page,Dynamic,https://www.momo.vn/lac-xi-*
+Donation,Landing Page,Dynamic,https://www.momo.vn/song-tot/*
+Donation,Landing Page,Static,https://www.momo.vn/song-tot
+Student Pass,Landing Page,Dynamic,https://www.momo.vn/sinh-vien/*
+Student Pass,Landing Page,Static,https://www.momo.vn/sinh-vien
+Trust,Landing Page,Dynamic,https://www.momo.vn/an-toan-bao-mat/*
+Trust,Landing Page,Static,https://www.momo.vn/an-toan-an-tam
+Trust,Landing Page,Static,https://www.momo.vn/cung-hoc-an-toan-bao-mat
+Cinema,Landing Page,Static,https://www.momo.vn/ve-xem-phim
+Vé Xe,Landing Page,Static,https://www.momo.vn/ve-xe-khach
+Ví Trả Sau,Landing Page,Static,https://www.momo.vn/uu-dai-vi-tra-sau
+Ví Trả Sau,Campaign Page,Dynamic,https://www.momo.vn/vts-len5/*
+Bảo Hiểm,Product Page,Static,https://www.momo.vn/bao-hiem-du-lich
+Home MoMo,Landing Page,Static,https://www.momo.vn/timdiemgiaodich
+Home MoMo,Landing Page,Static,https://www.momo.vn/lien-he
+Home MoMo,Landing Page,Static,https://www.momo.vn/viec-lam
+Home MoMo,Landing Page,Static,https://www.momo.vn/chuyen-doi-so-quoc-gia
+Home MoMo,Landing Page,Static,https://www.momo.vn/add-momo
+Home MoMo,Landing Page,Static,https://www.momo.vn/top-dich-vu-yeu-thich
+Campaign,Campaign Page,Static,https://www.momo.vn/nhin-lai-2025
+Campaign,Campaign Page,Static,https://www.momo.vn/the-next-koc
+Campaign,Campaign Page,Static,https://www.momo.vn/ho-ca-bac-ty
+Campaign,Campaign Page,Static,https://www.momo.vn/deal-hap-dan
+Campaign,Campaign Page,Static,https://www.momo.vn/m-shock-trieu-deal
+Campaign,Campaign Page,Dynamic,https://www.momo.vn/lp/*
+Campaign,Campaign Page,Dynamic,https://www.momo.vn/nhatky/*
+Campaign,Campaign Page,Static,https://www.momo.vn/coke
+Merchant,Landing Page,Static,https://www.momo.vn/thanh-toan-quang-cao
+Dịch vụ liên kết,Landing Page,Dynamic,https://www.momo.vn/dich-vu-lien-ket/*
+Billpay,Landing Page,Static,https://www.momo.vn/vien-thong-tien-ich
+P2P,Landing Page,Static,https://www.momo.vn/vietcombankmomo
+Vé số,Landing Page,Static,https://www.momo.vn/vietlott
+Application Store,Landing Page,Static,https://www.momo.vn/truyen-hinh
+Trung Tâm Tài Chính,Landing Page,Static,https://www.momo.vn/10-tu-duy-tai-chinh

@@ -692,7 +692,9 @@ def build_workbook():
                     hub_label = "Vehicle Hub"
                 elif "/student" in path:
                     hub_label = "Student Hub"
-                elif "/download" in path or "/dang-ky" in path:
+                elif "/download" in path:
+                    hub_label = "Download"
+                elif any(k in path for k in ["/chao-ban-moi", "/welcome", "/dang-ky", "/lienkettaikhoan", "/xac-thuc"]):
                     hub_label = "New User Hub"
                 
                 ws5.cell(r_idx, 1, path).border = thin_border

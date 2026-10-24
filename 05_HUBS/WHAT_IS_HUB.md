@@ -102,6 +102,8 @@ Toàn bộ các Hubs và phân hệ trên Web MoMo được quản trị theo **
 │                          │                            │ • Merchant Hub                 │
 │                          │                            │   (momo.vn/merchant)           │
 │                          │                            │ • New User Hub                 │
+│                          │                            │   (momo.vn/welcome)            │
+│                          │                            │ • Download                     │
 │                          │                            │   (momo.vn/download)           │
 │                          │                            │ • Home Web                     │
 │                          │                            │   (momo.vn)                    │
