@@ -1,69 +1,69 @@
 {
   "title": "MoMo Web Platform GA4 Events Inventory & Intelligence (MTD 2026-10-01 -> 2026-10-23)",
-  "generated_at": "2026-10-23T07:49:25.745929",
+  "generated_at": "2026-10-24T07:17:10.774689",
   "period": {
     "start": "2026-10-01",
     "end": "2026-10-23"
   },
   "summary": {
-    "total_event_count": 17184156,
-    "total_conversions": 2083837,
-    "unique_events_tracked": 122,
+    "total_event_count": 17811609,
+    "total_conversions": 2155576,
+    "unique_events_tracked": 129,
     "conversion_events_count": 2,
     "categories_count": 10
   },
   "categories_summary": [
     {
       "category": "Traffic & Lifecycle",
-      "total_volume": 11032285,
+      "total_volume": 11437987,
       "unique_events": 5,
-      "share_pct": 0.642
+      "share_pct": 0.6422
     },
     {
       "category": "Web-to-App & CTA",
-      "total_volume": 3003991,
+      "total_volume": 3112647,
       "unique_events": 5,
       "share_pct": 0.1748
     },
     {
       "category": "Media & Advertising",
-      "total_volume": 1932179,
+      "total_volume": 1998505,
       "unique_events": 5,
-      "share_pct": 0.1124
+      "share_pct": 0.1122
     },
     {
       "category": "Product Funnel",
-      "total_volume": 878814,
+      "total_volume": 901041,
       "unique_events": 4,
-      "share_pct": 0.0511
+      "share_pct": 0.0506
     },
     {
       "category": "Other Services",
-      "total_volume": 227043,
-      "unique_events": 39,
-      "share_pct": 0.0132
+      "total_volume": 244908,
+      "unique_events": 45,
+      "share_pct": 0.0137
     },
     {
       "category": "Insurtech Hub",
-      "total_volume": 63220,
-      "unique_events": 25,
-      "share_pct": 0.0037
+      "total_volume": 67485,
+      "unique_events": 26,
+      "share_pct": 0.0038
     },
     {
       "category": "OTA Hub (Vé Xe)",
-      "total_volume": 34328,
+      "total_volume": 35709,
       "unique_events": 20,
       "share_pct": 0.002
     },
     {
       "category": "Telco Hub (eSIM)",
-      "total_volume": 12025,
+      "total_volume": 13047,
       "unique_events": 17,
       "share_pct": 0.0007
     },
     {
       "category": "Financial Hub",
-      "total_volume": 270,
+      "total_volume": 279,
       "unique_events": 1,
       "share_pct": 0.0
     },
@@ -79,69 +79,69 @@
       "step": 1,
       "step_name": "1. Show Time",
       "action": "Xem suất chiếu rạp",
-      "event_count": 344495,
-      "users": 83260,
+      "event_count": 353355,
+      "users": 84551,
       "step_cr": 1.0
     },
     {
       "step": 2,
       "step_name": "2. Seat",
       "action": "Vào màn hình chọn ghế",
-      "event_count": 42196,
-      "users": 25671,
-      "step_cr": 0.3083
+      "event_count": 42831,
+      "users": 26021,
+      "step_cr": 0.3078
     },
     {
       "step": 3,
       "step_name": "3. Popcorn & Drink",
       "action": "Chọn bắp nước",
-      "event_count": 31525,
-      "users": 21248,
-      "step_cr": 0.8277
+      "event_count": 31992,
+      "users": 21534,
+      "step_cr": 0.8276
     },
     {
       "step": 4,
       "step_name": "4. Book Ticket",
       "action": "Xác nhận đặt vé & QRCode",
-      "event_count": 23125,
-      "users": 14785,
-      "step_cr": 0.6958
+      "event_count": 23438,
+      "users": 14989,
+      "step_cr": 0.6961
     },
     {
       "step": 5,
       "step_name": "Funnel Complete",
       "action": "Hoàn tất giao dịch",
-      "event_count": 26361,
-      "users": 16815,
-      "step_cr": 1.1373
+      "event_count": 26741,
+      "users": 17043,
+      "step_cr": 1.137
     }
   ],
   "financial_simulations": [
     {
       "product": "Vay Nhanh",
       "tool_name": "VayNhanh Simulation",
-      "views": 63997,
-      "cta_clicks": 50537,
-      "cta_users": 12194,
-      "cr": 0.7897,
+      "views": 65955,
+      "cta_clicks": 52073,
+      "cta_users": 12507,
+      "cr": 0.7895,
       "evaluation": "Công cụ chuyển đổi cao nhất nền tảng Web"
     },
     {
       "product": "Ví Trả Sau",
       "tool_name": "TraGop VTS Simulation",
-      "views": 16888,
-      "cta_clicks": 2023,
-      "cta_users": 545,
-      "cr": 0.1198,
+      "views": 17605,
+      "cta_clicks": 2083,
+      "cta_users": 559,
+      "cr": 0.1183,
       "evaluation": "Mô phỏng hạn mức & trả góp linh hoạt"
     },
     {
       "product": "Bảo Hiểm Ô Tô",
       "tool_name": "Start Quotation",
-      "views": 3611,
-      "cta_clicks": 2767,
-      "cta_users": 1915,
-      "cr": 0.7663,
+      "views": 3880,
+      "cta_clicks": 2999,
+      "cta_users": 2071,
+      "cr": 0.7729,
       "evaluation": "Tính phí bảo hiểm vật chất xe"
     }
   ],
@@ -149,25 +149,25 @@
     {
       "hub": "OTA Hub (Vé Xe)",
       "flow": "bus_operator_view -> bus_seatmap_select -> bus_transaction_result",
-      "completed_orders": 96,
+      "completed_orders": 102,
       "notes": "Phễu 12 bước hoàn tất giao dịch trực tiếp trên Web"
     },
     {
       "hub": "Telco Hub (eSIM)",
       "flow": "travelsim_home_view -> travelsim_add_to_cart -> travelsim_transaction_result",
-      "completed_orders": 57,
+      "completed_orders": 61,
       "notes": "Phễu 10 bước mua gói eSIM du lịch quốc tế"
     },
     {
       "hub": "Insurtech Hub (BHYT)",
       "flow": "bhyt_form_view -> bhyt_form_submit -> bhyt_transaction_save",
-      "completed_orders": 91,
+      "completed_orders": 92,
       "notes": "Form tra cứu & nộp hồ sơ tái tục thẻ BHYT"
     },
     {
       "hub": "Insurtech Hub (BHXM)",
       "flow": "bhxm_form_view -> bhxm_form_submit -> bhxm_payment_result_view",
-      "completed_orders": 43,
+      "completed_orders": 44,
       "notes": "Mua bảo hiểm trách nhiệm dân sự xe máy bắt buộc"
     }
   ],
@@ -176,15 +176,15 @@
       "severity": "HIGH",
       "status": "RESOLVED_RETROSPECTIVELY",
       "issue": "Điểm mù tham số click_to_app",
-      "affected_volume": "2,012,541 events (100% đã định nghĩa)",
+      "affected_volume": "2,081,261 events (100% đã định nghĩa)",
       "impact": "Thiếu click_url và component_name trên GTM",
-      "resolution": "Đã giải quyết 100% bằng cách ánh xạ pagePath sang Bảng DIM Dự Án. Toàn bộ 2,012,541 lượt click_to_app đã được phân bổ đích danh vào 52 dự án.",
+      "resolution": "Đã giải quyết 100% bằng cách ánh xạ pagePath sang Bảng DIM Dự Án. Toàn bộ 2,081,261 lượt click_to_app đã được phân bổ đích danh vào 52 dự án.",
       "recommendation": "Cập nhật GTM dataLayer: truyền bắt buộc component_name, button_position và onelink_url"
     },
     {
       "severity": "MEDIUM",
       "issue": "Drop-off tại Bước 1 sang Bước 2 Cinema",
-      "affected_volume": "57,589 users rơi rụng trong kỳ",
+      "affected_volume": "58,530 users rơi rụng trong kỳ",
       "impact": "Từ màn hình xem suất chiếu đến màn hình chọn ghế rơi rụng hơn 68% khách hàng tiềm năng",
       "recommendation": "Tối ưu UX chọn rạp: gợi ý 3 suất chiếu gần nhất theo định vị để khách bấm thẳng vào sơ đồ ghế"
     },
@@ -197,131 +197,131 @@
     }
   ],
   "w2a_attribution": {
-    "total_attributed": 2012541,
+    "total_attributed": 2081261,
     "top_projects": [
       {
         "project_name": "Cinema",
         "sector": "cinema",
-        "w2a_clicks": 809989,
-        "users": 433796,
-        "share_pct": 0.4025,
+        "w2a_clicks": 831281,
+        "users": 444576,
+        "share_pct": 0.3994,
         "top_landing_pages": [
           {
             "path": "/cinema/trai-buon-nguoi-24991",
-            "clicks": 64844
-          },
-          {
-            "path": "/cinema/rap/cgv/cgv-aeon-mall-hai-phong-149",
-            "clicks": 24491
+            "clicks": 65529
           },
           {
             "path": "/cinema/lich-chieu",
-            "clicks": 24423
+            "clicks": 25125
+          },
+          {
+            "path": "/cinema/rap/cgv/cgv-aeon-mall-hai-phong-149",
+            "clicks": 24986
           },
           {
             "path": "/cinema/quy-an-tang-4-ho-tinh-25145",
-            "clicks": 22141
+            "clicks": 22779
           },
           {
             "path": "/cinema/rap/cgv",
-            "clicks": 21398
+            "clicks": 21757
           },
           {
             "path": "/cinema",
-            "clicks": 21098
+            "clicks": 21685
           },
           {
             "path": "/cinema/rap/bhd-star/bhd-star-long-khanh-216",
-            "clicks": 18363
+            "clicks": 18857
           },
           {
             "path": "/cinema/an-mang-xem-hoan-hao-25098",
-            "clicks": 12774
+            "clicks": 12900
           },
           {
             "path": "/cinema/rap/lotte-cinema",
-            "clicks": 12298
+            "clicks": 12444
           },
           {
             "path": "/cinema/rap/lotte-cinema/lotte-tay-ninh-176",
-            "clicks": 10529
-          },
-          {
-            "path": "/cinema/rap/lotte-cinema/lotte-bac-ninh-158",
-            "clicks": 10091
-          },
-          {
-            "path": "/cinema/rap/cgv/cgv-aeon-long-bien-115",
-            "clicks": 9598
+            "clicks": 10766
           },
           {
             "path": "/cinema/an-mang-karaoke-25089",
-            "clicks": 8981
+            "clicks": 10549
+          },
+          {
+            "path": "/cinema/rap/lotte-cinema/lotte-bac-ninh-158",
+            "clicks": 10263
+          },
+          {
+            "path": "/cinema/rap/cgv/cgv-aeon-long-bien-115",
+            "clicks": 9799
           },
           {
             "path": "/cinema/nguoi-me-khac-25149",
-            "clicks": 8454
+            "clicks": 8499
           },
           {
             "path": "/cinema/rap/lotte-cinema/lotte-west-lake-363",
-            "clicks": 7962
+            "clicks": 8082
           },
           {
             "path": "/cinema/rap/cgv/cgv-aeon-tan-phu-21",
-            "clicks": 7646
+            "clicks": 7810
           },
           {
             "path": "/cinema/rap/cgv/cgv-aeon-ha-dong-128",
-            "clicks": 7056
+            "clicks": 7184
           },
           {
             "path": "/cinema/avengers-endgame-encore-25134",
-            "clicks": 6977
+            "clicks": 7020
           },
           {
             "path": "/cinema/rap/cgv/cgv-vincom-vinh-long-28",
-            "clicks": 6826
+            "clicks": 6973
           },
           {
-            "path": "/cinema/rap/lotte-cinema/lotte-hai-phong-160",
-            "clicks": 6771
+            "path": "/cinema/shaun-the-sheep-quai-la-ghe-nha-25151",
+            "clicks": 6909
           }
         ]
       },
       {
         "project_name": "Game",
         "sector": "Entertainment",
-        "w2a_clicks": 219347,
-        "users": 84803,
-        "share_pct": 0.109,
+        "w2a_clicks": 228565,
+        "users": 87943,
+        "share_pct": 0.1098,
         "top_landing_pages": [
           {
             "path": "/tin-tuc/tin-tuc-su-kien/nap-game-sieu-hoi-thang-nay-giam-den-10000d-khi-8081",
-            "clicks": 157199
+            "clicks": 165311
           },
           {
             "path": "/tin-tuc/khuyen-mai/giam-20k-nang-cap-app-nap-game-app-store-khi-lan-8402",
-            "clicks": 25172
+            "clicks": 25296
           },
           {
             "path": "/bonbon",
-            "clicks": 9274
+            "clicks": 9416
           },
           {
             "path": "/hoi-dap/cach-mua-ma-the-game-truc-tuyen",
-            "clicks": 7008
+            "clicks": 7221
           },
           {
             "path": "/nap-the-game",
-            "clicks": 6135
+            "clicks": 6347
           },
           {
             "path": "/napthengayvn",
-            "clicks": 5773
+            "clicks": 5902
           },
           {
             "path": "/tin-tuc/khuyen-mai/uu-dai-he-giam-20k-cho-ban-nap-game-sieu-hoi-8927",
-            "clicks": 2720
+            "clicks": 2867
           },
           {
             "path": "/blog/game",
@@ -329,80 +329,80 @@
           },
           {
             "path": "/blog/cach-nap-the-lien-quan-cung-momo-c115dt942",
-            "clicks": 632
+            "clicks": 664
           },
           {
             "path": "/nhap-ma-momogame",
-            "clicks": 573
+            "clicks": 588
           },
           {
             "path": "/blog/huong-dan-mua-ma-the-google-play-tren-momo-c115dt1595",
-            "clicks": 436
+            "clicks": 438
           },
           {
             "path": "/tin-tuc/tin-tuc-su-kien/ma-giam-10k-nap-game-8960",
-            "clicks": 421
+            "clicks": 434
           },
           {
             "path": "/blog/huong-dan-nap-the-free-fire-nhanh-chong-qua-momo-c115dt830",
-            "clicks": 293
+            "clicks": 301
           },
           {
             "path": "/tin-tuc/tin-tuc-su-kien/cau-hoi-thuong-gap-khi-thanh-toan-google-play-qua-vi-momo-1124",
-            "clicks": 249
+            "clicks": 259
           },
           {
             "path": "/blog/top-5-game-mobile-dragon-ball-lam-mua-lam-gio-gioi-game-viet-c115dt436",
-            "clicks": 163
+            "clicks": 170
           },
           {
             "path": "/blog/cach-dat-ten-lien-quan-mobile-dep-c115dt941",
-            "clicks": 150
+            "clicks": 151
           },
           {
             "path": "/blog/top-5-skin-sung-free-fire-dat-do-nhat-ma-game-thu-can-biet-c115dt444",
             "clicks": 129
           },
           {
-            "path": "/blog/cac-loai-the-game-pho-bien-nhat-hien-nay-c115dt96",
-            "clicks": 78
+            "path": "/nhap-ma-bonbon",
+            "clicks": 85
           },
           {
-            "path": "/nhap-ma-bonbon",
-            "clicks": 78
+            "path": "/blog/cac-loai-the-game-pho-bien-nhat-hien-nay-c115dt96",
+            "clicks": 82
           },
           {
             "path": "/blog/fo4-cap-nhat-su-kien-cach-nap-the-fifa-online-nhanh-chong-qua-momo-c115dt844",
-            "clicks": 77
+            "clicks": 78
           }
         ]
       },
       {
         "project_name": "Home MoMo",
         "sector": "Brand",
-        "w2a_clicks": 200557,
-        "users": 111263,
-        "share_pct": 0.0997,
+        "w2a_clicks": 208736,
+        "users": 115554,
+        "share_pct": 0.1003,
         "top_landing_pages": [
           {
             "path": "/",
-            "clicks": 199021
+            "clicks": 207136
           },
           {
             "path": "/ve-chung-toi",
-            "clicks": 1029
+            "clicks": 1080
           },
           {
             "path": "/auth",
-            "clicks": 289
+            "clicks": 295
           },
           {
             "path": "/redirect-cta",
-            "clicks": 111
+            "clicks": 113
           },
           {
             "path": "/auth/callback/google",
-            "clicks": 100
+            "clicks": 105
           },
           {
             "path": "/sieu-ung-dung-momo",
@@ -413,29 +413,29 @@
       {
         "project_name": "Tiktok",
         "sector": "Entertainment",
-        "w2a_clicks": 144244,
-        "users": 67347,
-        "share_pct": 0.0717,
+        "w2a_clicks": 150273,
+        "users": 70184,
+        "share_pct": 0.0722,
         "top_landing_pages": [
           {
             "path": "/nap-xu-tiktok",
-            "clicks": 142393
+            "clicks": 148388
           },
           {
             "path": "/blog/cach-nap-xu-tiktok-gia-re-c115dt1695",
-            "clicks": 672
+            "clicks": 675
           },
           {
             "path": "/huong-dan/huong-dan-nap-xu-tiktok-qua-momo",
-            "clicks": 359
+            "clicks": 364
           },
           {
             "path": "/blog/xu-tiktok-de-lam-gi-huong-dan-tu-a-den-z-ve-xu-tiktok-c115dt1696",
-            "clicks": 297
+            "clicks": 304
           },
           {
             "path": "/blog/huong-dan-day-video-tiktok-len-xu-huong-nhanh-chong-c115dt1968",
-            "clicks": 239
+            "clicks": 251
           },
           {
             "path": "/tin-tuc/khuyen-mai/nap-xu-tiktok-cuc-hoi-mua-ma-the-google-play-hoan-8502",
@@ -443,7 +443,7 @@
           },
           {
             "path": "/tin-tuc/khuyen-mai/tang-ban-voucher-giam-10000d-nap-xu-tiktok-khi-6259",
-            "clicks": 54
+            "clicks": 60
           },
           {
             "path": "/tin-tuc/khuyen-mai/google-play-giam-20k-nap-game-nap-xu-tiktok-nang-8404",
@@ -455,7 +455,7 @@
           },
           {
             "path": "/tin-tuc/khuyen-mai/uu-dai-nap-xu-tiktok-hoan-tien-14000d-trong-ngay-7178",
-            "clicks": 12
+            "clicks": 13
           },
           {
             "path": "/tin-tuc/khuyen-mai/uu-dai-nap-xu-tiktok-hoan-tien-len-den-30000d-qua-7287",
@@ -466,142 +466,142 @@
       {
         "project_name": "Hỏi Đáp",
         "sector": "Support",
-        "w2a_clicks": 76055,
-        "users": 57839,
+        "w2a_clicks": 78646,
+        "users": 59806,
         "share_pct": 0.0378,
         "top_landing_pages": [
           {
             "path": "/hoi-dap/cach-lien-he-voi-momo",
-            "clicks": 12152
+            "clicks": 12556
           },
           {
             "path": "/tim-kiem",
-            "clicks": 8563
+            "clicks": 8891
           },
           {
             "path": "/hoi-dap/toi-co-the-doi-so-dien-thoai-dang-ky-tai-khoan-momo-cua-toi-duoc-khong",
-            "clicks": 4958
+            "clicks": 5115
           },
           {
             "path": "/hoi-dap",
-            "clicks": 3642
+            "clicks": 3772
           },
           {
             "path": "/hoi-dap/lam-sao-de-huy-tai-khoan-momo",
-            "clicks": 2023
+            "clicks": 2086
           },
           {
             "path": "/hoi-dap/han-muc-giao-dich-moi-ngay",
-            "clicks": 1463
-          },
-          {
-            "path": "/hoi-dap/lam-the-nao-de-huy-dang-ky-thanh-toan-tu-dong",
-            "clicks": 1159
+            "clicks": 1521
           },
           {
             "path": "/hoi-dap/cach-nap-tien-vao-momo",
-            "clicks": 1148
+            "clicks": 1205
+          },
+          {
+            "path": "/hoi-dap/lam-the-nao-de-huy-dang-ky-thanh-toan-tu-dong",
+            "clicks": 1199
           },
           {
             "path": "/hoi-dap/toi-co-the-dang-ky-vay-nhieu-khoan-vay-vay-nhanh-duoc-hay-khong",
-            "clicks": 1111
+            "clicks": 1172
           },
           {
             "path": "/hoi-dap/toi-thanh-toan-khoan-vay-fast-money-nhu-the-nao",
-            "clicks": 1042
+            "clicks": 1079
           },
           {
             "path": "/hoi-dap/cach-dang-nhap-vao-tai-khoan-momo-khac",
-            "clicks": 925
+            "clicks": 967
           },
           {
             "path": "/hoi-dap/cach-lien-ket-momo-voi-the-quoc-te-visa-master-card-jcb",
-            "clicks": 923
+            "clicks": 953
           },
           {
             "path": "/hoi-dap/toi-chua-du-18-tuoi-co-the-dang-ky-thanh-toan-qua-momo-bang-cach-nao",
-            "clicks": 725
+            "clicks": 746
           },
           {
             "path": "/hoi-dap/khach-hang-trung-thuong-se-nhan-thuong-bang-cach-nao",
-            "clicks": 673
+            "clicks": 707
           },
           {
             "path": "/hoi-dap/cach-rut-tien-tu-momo-ve-ngan-hang-da-lien-ket",
-            "clicks": 611
+            "clicks": 624
           },
           {
             "path": "/hoi-dap/ve-xem-phim-co-duoc-doi-tra-hoan-huy-khong",
-            "clicks": 595
+            "clicks": 611
           },
           {
             "path": "/hoi-dap/cach-lay-lai-mat-khau",
-            "clicks": 559
+            "clicks": 575
           },
           {
             "path": "/hoi-dap/toi-co-the-doi-so-dien-thoai-dung-dang-ky-tai-khoan-momo-duoc-khong",
-            "clicks": 517
+            "clicks": 530
           },
           {
             "path": "/hoi-dap/vi-sao-tai-khoan-da-bi-tru-tien-nhung-tai-khoan-ngan-hang-nguoi-nhan-chua-nhan-duoc",
-            "clicks": 483
+            "clicks": 491
           },
           {
             "path": "/hoi-dap/cach-mua-ve-xem-phim",
-            "clicks": 431
+            "clicks": 444
           }
         ]
       },
       {
         "project_name": "New User",
         "sector": "Brand",
-        "w2a_clicks": 71254,
-        "users": 44748,
-        "share_pct": 0.0354,
+        "w2a_clicks": 73439,
+        "users": 46206,
+        "share_pct": 0.0353,
         "top_landing_pages": [
           {
             "path": "/tin-tuc/khuyen-mai/chuong-trinh-gioi-thieu-ban-be-chuyen-tien-nhan-8930",
-            "clicks": 28094
+            "clicks": 28742
           },
           {
             "path": "/gioi-thieu-momo",
-            "clicks": 16793
+            "clicks": 17516
           },
           {
             "path": "/lienkettaikhoan",
-            "clicks": 13013
+            "clicks": 13588
           },
           {
             "path": "/tin-tuc/khuyen-mai/nhap-ma-chaomomo-ban-moi-nhan-ngay-qua-500000d-7834",
-            "clicks": 6465
+            "clicks": 6485
           },
           {
             "path": "/tin-tuc/khuyen-mai/ban-moi-nhap-ma-chonmomo-co-qua-500000d-giam-8225",
-            "clicks": 2241
+            "clicks": 2300
           },
           {
             "path": "/tin-tuc/thong-bao/momo-ra-mat-tinh-nang-cap-nhat-so-dien-thoai-8571",
-            "clicks": 1969
+            "clicks": 2030
           },
           {
             "path": "/xac-thuc-nfc",
-            "clicks": 835
+            "clicks": 885
           },
           {
             "path": "/sinh-trac-hoc",
-            "clicks": 543
+            "clicks": 557
           },
           {
             "path": "/tin-tuc/khuyen-mai/hai-buoc-nhan-goi-qua-500k-cuc-khung-thoa-thich-3110",
-            "clicks": 527
+            "clicks": 543
           },
           {
             "path": "/vi-momo-gia-dinh",
-            "clicks": 458
+            "clicks": 474
           },
           {
             "path": "/momo-nha-minh",
-            "clicks": 85
+            "clicks": 87
           },
           {
             "path": "/tin-tuc/khuyen-mai/so-luong-co-han-hoan-10k-khi-chuyen-9999d-8980",
@@ -617,7 +617,7 @@
           },
           {
             "path": "/xac-thuc-tai-khoan",
-            "clicks": 41
+            "clicks": 42
           },
           {
             "path": "/tin-tuc/thong-bao/quet-cccd-gan-chip-tren-momo-xac-thuc-tai-khoan-6872",
@@ -628,49 +628,49 @@
       {
         "project_name": "Điểm Tín Dụng",
         "sector": "Financial",
-        "w2a_clicks": 49453,
-        "users": 32895,
-        "share_pct": 0.0246,
+        "w2a_clicks": 49928,
+        "users": 33159,
+        "share_pct": 0.024,
         "top_landing_pages": [
           {
             "path": "/diem-tin-dung",
-            "clicks": 34007
+            "clicks": 34020
           },
           {
             "path": "/blog/huong-dan-kiem-tra-diem-tin-dung-ca-nhan-c116dt1413",
-            "clicks": 9154
+            "clicks": 9449
           },
           {
             "path": "/blog/no-xau-la-gi-khi-nao-bi-xep-no-xau-va-anh-huong-ra-sao-c116dt2622",
-            "clicks": 4005
+            "clicks": 4008
           },
           {
             "path": "/blog/diem-tin-dung-cic-duoc-cham-khi-nao-cach-theo-doi-va-phan-biet-bao-cao-k40-vs-k11-c116dt2619",
-            "clicks": 595
+            "clicks": 627
           },
           {
             "path": "/blog/kiem-tra-no-xau-bang-so-dien-thoai-c116dt2689",
-            "clicks": 480
-          },
-          {
-            "path": "/blog/no-qua-han-bao-lau-thi-bi-khoi-kien-c116dt2695",
-            "clicks": 367
+            "clicks": 526
           },
           {
             "path": "/blog/kiem-tra-no-xau-c116dt2688",
-            "clicks": 349
+            "clicks": 387
+          },
+          {
+            "path": "/blog/no-qua-han-bao-lau-thi-bi-khoi-kien-c116dt2695",
+            "clicks": 383
           },
           {
             "path": "/blog/no-chu-y-la-gi-c116dt2692",
-            "clicks": 227
+            "clicks": 253
           },
           {
             "path": "/blog/cic-la-gi-tat-ca-nhung-gi-ban-can-biet-ve-ho-so-tin-dung-cic-c116dt2617",
-            "clicks": 155
+            "clicks": 157
           },
           {
             "path": "/blog/diem-tin-dung-la-gi-cach-tinh-y-nghia-va-cach-cai-thien-diem-tin-dung-nam-2026-c116dt2618",
-            "clicks": 86
+            "clicks": 90
           },
           {
             "path": "/blog/the-tin-dung-anh-huong-den-diem-tin-dung-nhu-the-nao-cach-dung-dung-de-tang-diem-nhanh-c116dt2624",
@@ -693,25 +693,25 @@
       {
         "project_name": "Nước",
         "sector": "Financial",
-        "w2a_clicks": 37437,
-        "users": 17215,
-        "share_pct": 0.0186,
+        "w2a_clicks": 39280,
+        "users": 18005,
+        "share_pct": 0.0189,
         "top_landing_pages": [
           {
             "path": "/nuoc",
-            "clicks": 36227
+            "clicks": 38042
           },
           {
             "path": "/blog/cach-lay-ma-khach-hang-dong-tien-nuoc-cuc-nhanh-c193dt1209",
-            "clicks": 611
+            "clicks": 625
           },
           {
             "path": "/blog/lich-dong-tien-nuoc-hang-thang-va-cach-tra-cuu-hoa-don-c193dt1213",
-            "clicks": 286
+            "clicks": 292
           },
           {
             "path": "/blog/dong-tien-nuoc-tre-co-bi-phat-khong-c193dt1228",
-            "clicks": 110
+            "clicks": 118
           },
           {
             "path": "/blog/mach-ban-meo-lay-ma-giam-gia-thanh-toan-tien-nuoc-c193dt1214",
@@ -728,233 +728,233 @@
         ]
       },
       {
-        "project_name": "Ví Trả Sau",
-        "sector": "Financial",
-        "w2a_clicks": 36033,
-        "users": 26529,
-        "share_pct": 0.0179,
+        "project_name": "Guide",
+        "sector": "Support",
+        "w2a_clicks": 37479,
+        "users": 27388,
+        "share_pct": 0.018,
         "top_landing_pages": [
           {
-            "path": "/vi-tra-sau",
-            "clicks": 6682
+            "path": "/huong-dan/huong-dan-gui-yeu-cau-ho-tro-bang-tinh-nang-tro-giup",
+            "clicks": 6987
           },
           {
-            "path": "/blog/vi-tra-sau-momo-thanh-toan-duoc-nhung-dich-vu-gi-c116dt981",
-            "clicks": 4176
+            "path": "/huong-dan/chi-tiet/1151",
+            "clicks": 6304
           },
           {
-            "path": "/blog/rut-tien-tu-vi-tra-sau-momo-co-duoc-khong-c116dt1843",
-            "clicks": 3352
+            "path": "/huong-dan/huong-dan-mua-vietlott-sms-tren-momo",
+            "clicks": 4964
           },
           {
-            "path": "/vi-tra-sau/samsung",
-            "clicks": 2297
+            "path": "/huong-dan",
+            "clicks": 3124
           },
           {
-            "path": "/blog/cham-thanh-toan-vi-tra-sau-khong-tra-tien-vi-tra-sau-co-bi-sao-khong-c116dt1136",
-            "clicks": 1593
+            "path": "/huong-dan/huong-dan-chung-ctgr69",
+            "clicks": 2812
           },
           {
-            "path": "/blog/cach-nang-han-muc-vi-tra-sau-momo-c116dt1868",
-            "clicks": 1252
+            "path": "/huong-dan/huong-dan-tai-va-cai-dat-vi-momo",
+            "clicks": 2101
           },
           {
-            "path": "/blog/huong-dan-cach-thanh-toan-du-no-vi-tra-sau-tren-momo-c116dt1961",
-            "clicks": 1171
+            "path": "/huong-dan/huy-lien-ket-ngan-hang-ctgr93",
+            "clicks": 1758
           },
           {
-            "path": "/blog/mua-the-garena-bang-vi-tra-sau-momo-c116dt2731",
-            "clicks": 1037
+            "path": "/huong-dan/lien-ket-ngan-hang-ctgr67",
+            "clicks": 1505
           },
           {
-            "path": "/hoi-dap/huy-khoa-vi-tra-sau",
-            "clicks": 855
+            "path": "/huong-dan/huong-dan-su-dung-momoship",
+            "clicks": 915
           },
           {
-            "path": "/hoi-dap/cach-thanh-toan-bang-vi-tra-sau-tren-ung-dung-vi-momo",
-            "clicks": 672
+            "path": "/huong-dan/huong-dan-lien-ket-vi-momo-voi-tai-khoan-ngan-hang-techcombank",
+            "clicks": 511
           },
           {
-            "path": "/vi-tra-sau/bieu-phi",
-            "clicks": 670
+            "path": "/huong-dan/chi-tiet/1796",
+            "clicks": 496
           },
           {
-            "path": "/hoi-dap/phi-cham-tra-vi-tra-sau",
-            "clicks": 561
+            "path": "/huong-dan/huong-dan-tim-diem-nap-rut-tien-cua-vi-momo",
+            "clicks": 481
           },
           {
-            "path": "/blog/cach-kiem-tra-hop-dong-tra-gop-con-bao-nhieu-thang-c116dt2705",
-            "clicks": 533
+            "path": "/huong-dan/huong-dan-mua-voucher-tinder-tren-vi-momo",
+            "clicks": 403
           },
           {
-            "path": "/blog/mua-dien-thoai-tra-gop-online-no-xau-c116dt2690",
-            "clicks": 472
+            "path": "/huong-dan/huong-dan-lien-ket-tai-khoan-google-play-voi-vi-momo",
+            "clicks": 286
           },
           {
-            "path": "/blog/vi-tra-sau-momo-co-lai-suat-khong-c116dt1343",
-            "clicks": 459
+            "path": "/huong-dan/huong-dan-quet-nfc-tren-cccd",
+            "clicks": 286
           },
           {
-            "path": "/blog/mua-xe-tra-gop-bao-no-xau-c116dt2691",
-            "clicks": 406
+            "path": "/huong-dan/lien-ket-vi-momo-voi-tai-khoan-ngan-hang-mb-bank",
+            "clicks": 266
           },
           {
-            "path": "/blog/giai-dap-su-dung-vi-tra-sau-tren-momo-co-mat-phi-khong-c116dt1867",
-            "clicks": 400
+            "path": "/huong-dan/huong-dan-chuyen-tien-den-ngan-hang-noi-dia-bang-vi-momo",
+            "clicks": 243
           },
           {
-            "path": "/blog/ban-can-luu-y-gi-khi-tra-gop-vi-tra-sau-tren-momo-c116dt2387",
-            "clicks": 399
+            "path": "/huong-dan/huong-dan-huy-lien-ket-tai-khoan-mbbank",
+            "clicks": 233
           },
           {
-            "path": "/hoi-dap/chuyen-rut-tien-mat-cua-vi-tra-sau",
-            "clicks": 398
+            "path": "/huong-dan/huong-dan-nap-quan-huy-sieu-toc-tren-google-play-app-store-qua-vi-momo",
+            "clicks": 190
           },
           {
-            "path": "/vi-tra-sau/mua-the-game",
-            "clicks": 376
+            "path": "/huong-dan/huong-dan-nhan-tien-cho-nguoi-chua-co-vi-momo",
+            "clicks": 186
           }
         ]
       },
       {
-        "project_name": "Guide",
-        "sector": "Support",
-        "w2a_clicks": 35961,
-        "users": 26261,
-        "share_pct": 0.0179,
+        "project_name": "Ví Trả Sau",
+        "sector": "Financial",
+        "w2a_clicks": 37082,
+        "users": 27312,
+        "share_pct": 0.0178,
         "top_landing_pages": [
           {
-            "path": "/huong-dan/huong-dan-gui-yeu-cau-ho-tro-bang-tinh-nang-tro-giup",
-            "clicks": 6710
+            "path": "/vi-tra-sau",
+            "clicks": 6784
           },
           {
-            "path": "/huong-dan/chi-tiet/1151",
-            "clicks": 6109
+            "path": "/blog/vi-tra-sau-momo-thanh-toan-duoc-nhung-dich-vu-gi-c116dt981",
+            "clicks": 4341
           },
           {
-            "path": "/huong-dan/huong-dan-mua-vietlott-sms-tren-momo",
-            "clicks": 4671
+            "path": "/blog/rut-tien-tu-vi-tra-sau-momo-co-duoc-khong-c116dt1843",
+            "clicks": 3471
           },
           {
-            "path": "/huong-dan",
-            "clicks": 2985
+            "path": "/vi-tra-sau/samsung",
+            "clicks": 2364
           },
           {
-            "path": "/huong-dan/huong-dan-chung-ctgr69",
-            "clicks": 2674
+            "path": "/blog/cham-thanh-toan-vi-tra-sau-khong-tra-tien-vi-tra-sau-co-bi-sao-khong-c116dt1136",
+            "clicks": 1617
           },
           {
-            "path": "/huong-dan/huong-dan-tai-va-cai-dat-vi-momo",
-            "clicks": 2031
+            "path": "/blog/cach-nang-han-muc-vi-tra-sau-momo-c116dt1868",
+            "clicks": 1294
           },
           {
-            "path": "/huong-dan/huy-lien-ket-ngan-hang-ctgr93",
-            "clicks": 1708
+            "path": "/blog/huong-dan-cach-thanh-toan-du-no-vi-tra-sau-tren-momo-c116dt1961",
+            "clicks": 1203
           },
           {
-            "path": "/huong-dan/lien-ket-ngan-hang-ctgr67",
-            "clicks": 1453
+            "path": "/blog/mua-the-garena-bang-vi-tra-sau-momo-c116dt2731",
+            "clicks": 1072
           },
           {
-            "path": "/huong-dan/huong-dan-su-dung-momoship",
-            "clicks": 872
+            "path": "/hoi-dap/huy-khoa-vi-tra-sau",
+            "clicks": 887
           },
           {
-            "path": "/huong-dan/huong-dan-lien-ket-vi-momo-voi-tai-khoan-ngan-hang-techcombank",
-            "clicks": 489
+            "path": "/hoi-dap/cach-thanh-toan-bang-vi-tra-sau-tren-ung-dung-vi-momo",
+            "clicks": 693
           },
           {
-            "path": "/huong-dan/huong-dan-tim-diem-nap-rut-tien-cua-vi-momo",
-            "clicks": 473
+            "path": "/vi-tra-sau/bieu-phi",
+            "clicks": 679
           },
           {
-            "path": "/huong-dan/chi-tiet/1796",
-            "clicks": 453
+            "path": "/hoi-dap/phi-cham-tra-vi-tra-sau",
+            "clicks": 573
           },
           {
-            "path": "/huong-dan/huong-dan-mua-voucher-tinder-tren-vi-momo",
-            "clicks": 387
+            "path": "/blog/cach-kiem-tra-hop-dong-tra-gop-con-bao-nhieu-thang-c116dt2705",
+            "clicks": 545
           },
           {
-            "path": "/huong-dan/huong-dan-lien-ket-tai-khoan-google-play-voi-vi-momo",
-            "clicks": 277
+            "path": "/blog/mua-dien-thoai-tra-gop-online-no-xau-c116dt2690",
+            "clicks": 491
           },
           {
-            "path": "/huong-dan/huong-dan-quet-nfc-tren-cccd",
-            "clicks": 276
+            "path": "/blog/vi-tra-sau-momo-co-lai-suat-khong-c116dt1343",
+            "clicks": 469
           },
           {
-            "path": "/huong-dan/lien-ket-vi-momo-voi-tai-khoan-ngan-hang-mb-bank",
-            "clicks": 259
+            "path": "/blog/mua-xe-tra-gop-bao-no-xau-c116dt2691",
+            "clicks": 421
           },
           {
-            "path": "/huong-dan/huong-dan-chuyen-tien-den-ngan-hang-noi-dia-bang-vi-momo",
-            "clicks": 231
+            "path": "/blog/ban-can-luu-y-gi-khi-tra-gop-vi-tra-sau-tren-momo-c116dt2387",
+            "clicks": 418
           },
           {
-            "path": "/huong-dan/huong-dan-huy-lien-ket-tai-khoan-mbbank",
-            "clicks": 227
+            "path": "/blog/giai-dap-su-dung-vi-tra-sau-tren-momo-co-mat-phi-khong-c116dt1867",
+            "clicks": 416
           },
           {
-            "path": "/huong-dan/huong-dan-nap-quan-huy-sieu-toc-tren-google-play-app-store-qua-vi-momo",
-            "clicks": 185
+            "path": "/hoi-dap/chuyen-rut-tien-mat-cua-vi-tra-sau",
+            "clicks": 407
           },
           {
-            "path": "/huong-dan/huong-dan-thanh-toan-bang-hinh-thuc-ma-thanh-toan",
-            "clicks": 182
+            "path": "/vi-tra-sau/mua-the-game",
+            "clicks": 400
           }
         ]
       },
       {
         "project_name": "Vay Nhanh",
         "sector": "Financial",
-        "w2a_clicks": 34753,
-        "users": 22056,
-        "share_pct": 0.0173,
+        "w2a_clicks": 35836,
+        "users": 22727,
+        "share_pct": 0.0172,
         "top_landing_pages": [
           {
             "path": "/vay-nhanh",
-            "clicks": 13221
+            "clicks": 13630
           },
           {
             "path": "/vay-nhanh/5-trieu",
-            "clicks": 6159
+            "clicks": 6308
           },
           {
             "path": "/vay-nhanh/20-trieu",
-            "clicks": 1162
+            "clicks": 1198
           },
           {
             "path": "/blog/lay-cmnd-nguoi-khac-vay-tien-duoc-khong-bi-nguoi-khac-lay-cmnd-vay-tien-phai-lam-gi-c116dt1089",
-            "clicks": 1083
+            "clicks": 1108
           },
           {
             "path": "/vay-nhanh/blog/vay-tien-tra-gop-theo-thang-chi-can-cmnd-2881",
-            "clicks": 887
+            "clicks": 915
           },
           {
             "path": "/vay-nhanh/blog/no-xau-la-gi-huong-dan-kiem-tra-va-xoa-no-xau-1122",
-            "clicks": 713
+            "clicks": 748
           },
           {
             "path": "/blog/no-xau-co-vay-tien-online-duoc-khong-c116dt2623",
-            "clicks": 710
+            "clicks": 739
           },
           {
             "path": "/vay-nhanh/10-trieu",
-            "clicks": 652
+            "clicks": 669
+          },
+          {
+            "path": "/vay-nhanh/50-trieu",
+            "clicks": 615
+          },
+          {
+            "path": "/vay-nhanh/15-trieu",
+            "clicks": 609
           },
           {
             "path": "/hoi-dap/toi-co-the-dang-ky-vay-them-nhieu-khoan-vay-nhanh-fastmoney-duoc-khong",
             "clicks": 593
-          },
-          {
-            "path": "/vay-nhanh/15-trieu",
-            "clicks": 592
-          },
-          {
-            "path": "/vay-nhanh/50-trieu",
-            "clicks": 589
           },
           {
             "path": "/huong-dan/huong-dan-dang-ky-vay-nhanh-fastmoney-tren-vi-momo",
@@ -962,327 +962,331 @@
           },
           {
             "path": "/vay-nhanh/blog/vay-tien-cho-sinh-vien-1092",
-            "clicks": 531
+            "clicks": 539
           },
           {
             "path": "/vay-nhanh/tin-chap",
-            "clicks": 465
+            "clicks": 488
           },
           {
             "path": "/blog/vay-tieu-dung-la-gi-va-cach-tinh-lai-suat-vay-tieu-dung-c116dt1760",
-            "clicks": 453
+            "clicks": 475
           },
           {
             "path": "/qua-ban-moi-ttkhoanvay",
-            "clicks": 440
+            "clicks": 458
           },
           {
             "path": "/vay-nhanh/30-trieu",
-            "clicks": 401
+            "clicks": 412
           },
           {
             "path": "/vay-nhanh/100-trieu",
-            "clicks": 397
+            "clicks": 401
           },
           {
             "path": "/vay-nhanh/ho-kinh-doanh",
-            "clicks": 360
+            "clicks": 382
           },
           {
             "path": "/vay-nhanh/blog/bi-lua-dao-vay-tien-online-1090",
-            "clicks": 352
+            "clicks": 355
           }
         ]
       },
       {
         "project_name": "Blog",
         "sector": "Lifestyle",
-        "w2a_clicks": 33424,
-        "users": 25157,
+        "w2a_clicks": 34632,
+        "users": 26047,
         "share_pct": 0.0166,
         "top_landing_pages": [
           {
             "path": "/tin-tuc/thong-cao-bao-chi/momo-co-cu-an-ba-tai-better-choice-awards-2026-9073",
-            "clicks": 7514
+            "clicks": 7524
           },
           {
             "path": "/tin-tuc/thong-bao/huong-dan-thanh-toan-xe-buyt-ha-noi-bang-momo-8985",
-            "clicks": 2145
-          },
-          {
-            "path": "/blog/5-cau-chuyen-truyen-cam-hung-hay-nhat-de-ta-song-tot-hon-moi-ngay-c117dt115",
-            "clicks": 1234
+            "clicks": 2214
           },
           {
             "path": "/tin-tuc/thong-bao/co-hoi-trung-xe-may-vinfast-khi-nhan-tien-9079",
-            "clicks": 1008
+            "clicks": 1347
+          },
+          {
+            "path": "/blog/5-cau-chuyen-truyen-cam-hung-hay-nhat-de-ta-song-tot-hon-moi-ngay-c117dt115",
+            "clicks": 1275
           },
           {
             "path": "/tin-tuc/tin-tuc-su-kien/heo-dat-momo-vong-quay-boi-thu-tri-an-tich-luy-9058",
-            "clicks": 819
+            "clicks": 822
           },
           {
             "path": "/blog/than-so-hoc-khoa-hoc-kham-pha-ban-than-thong-qua-nhung-con-so-c117dt180",
-            "clicks": 666
+            "clicks": 682
           },
           {
             "path": "/blog/than-so-hoc-so-5-c117dt184",
-            "clicks": 626
+            "clicks": 654
           },
           {
             "path": "/blog/than-so-hoc-so-8-c117dt187",
-            "clicks": 569
+            "clicks": 589
           },
           {
             "path": "/blog/tai-chinh-bao-hiem",
-            "clicks": 558
+            "clicks": 576
           },
           {
             "path": "/blog/cach-gui-va-nhan-tien-tu-nuoc-ngoai-ve-viet-nam-de-hon-ban-nghi-c116dt1148",
-            "clicks": 541
+            "clicks": 564
           },
           {
             "path": "/blog/than-so-hoc-so-6-c117dt185",
-            "clicks": 540
+            "clicks": 551
           },
           {
             "path": "/blog/than-so-hoc-so-7-c117dt186",
-            "clicks": 530
+            "clicks": 544
           },
           {
             "path": "/blog/than-so-hoc-so-3-c117dt182",
-            "clicks": 505
+            "clicks": 521
           },
           {
             "path": "/blog/than-so-hoc-so-4-c117dt183",
-            "clicks": 498
+            "clicks": 521
           },
           {
             "path": "/tin-tuc/thong-bao/nhan-qua-mua-ve-nap-data-9054",
-            "clicks": 461
+            "clicks": 469
           },
           {
             "path": "/blog/than-so-hoc-so-9-c117dt188",
-            "clicks": 441
+            "clicks": 455
           },
           {
             "path": "/blog/tai-chinh-ca-nhan",
-            "clicks": 426
+            "clicks": 443
           },
           {
             "path": "/blog/khong-nhan-duoc-ma-otp-momo-c198dt2867",
-            "clicks": 407
+            "clicks": 425
           },
           {
             "path": "/blog/huong-dan-cach-mua-ve-metro-cuc-tien-loi-cho-moi-hanh-khach-c103dt2032",
-            "clicks": 400
+            "clicks": 417
           },
           {
             "path": "/blog/huong-dan-chuyen-tien-nhan-tien-tu-dai-loan-ve-viet-nam-c116dt1252",
-            "clicks": 384
+            "clicks": 398
           }
         ]
       },
       {
         "project_name": "OTA",
         "sector": "ota",
-        "w2a_clicks": 23682,
-        "users": 17751,
+        "w2a_clicks": 24600,
+        "users": 18443,
         "share_pct": 0.0118,
         "top_landing_pages": [
           {
             "path": "/ve-may-bay",
-            "clicks": 1668
+            "clicks": 1738
           },
           {
             "path": "/blog/dia-diem-du-lich-vung-tau-c101dt867",
-            "clicks": 1044
+            "clicks": 1094
           },
           {
             "path": "/khach-san-theo-gio",
-            "clicks": 722
+            "clicks": 758
           },
           {
             "path": "/blog/du-lich-sapa-cho-cap-doi-bo-tui-10-dia-diem-cho-ky-nghi-lang-man-c101dt380",
-            "clicks": 678
+            "clicks": 682
           },
           {
             "path": "/blog/danh-sach-10-bai-bien-dep-nhat-viet-nam-khong-the-bo-qua-c101dt145",
-            "clicks": 623
+            "clicks": 639
           },
           {
             "path": "/blog/dia-diem-du-lich-phu-quoc-c101dt863",
-            "clicks": 555
+            "clicks": 560
           },
           {
             "path": "/blog/san-bay-cam-ranh-c101dt890",
-            "clicks": 484
+            "clicks": 522
           },
           {
             "path": "/blog/dat-ve-xe-di-vung-tau-c101dt1691",
-            "clicks": 472
-          },
-          {
-            "path": "/blog/dat-ve-xe-di-nha-trang-c101dt1689",
-            "clicks": 450
+            "clicks": 498
           },
           {
             "path": "/blog/top-3-cach-chuyen-tien-nhan-tien-tu-trung-quoc-ve-viet-nam-c116dt1254",
-            "clicks": 447
+            "clicks": 468
+          },
+          {
+            "path": "/blog/dat-ve-xe-di-nha-trang-c101dt1689",
+            "clicks": 461
           },
           {
             "path": "/blog/top-mon-ngon-sa-pa-c101dt261",
-            "clicks": 433
+            "clicks": 449
           },
           {
             "path": "/blog/kinh-nghiem-du-lich-phu-quoc-tu-tuc-a-den-z-c101dt203",
-            "clicks": 394
+            "clicks": 403
           },
           {
             "path": "/blog/dia-diem-du-lich-binh-thuan-c101dt900",
-            "clicks": 388
+            "clicks": 401
           },
           {
             "path": "/ve-tau-hoa",
-            "clicks": 384
+            "clicks": 398
           },
           {
             "path": "/ve-may-bay/khuyen-mai",
-            "clicks": 356
+            "clicks": 367
           },
           {
             "path": "/blog/dia-diem-du-lich-nha-trang-c101dt870",
-            "clicks": 336
+            "clicks": 352
           },
           {
             "path": "/dat-khach-san",
-            "clicks": 331
+            "clicks": 348
           },
           {
             "path": "/blog/dia-diem-du-lich-da-nang-c101dt871",
-            "clicks": 311
+            "clicks": 321
           },
           {
             "path": "/blog/top-ngoi-chua-dep-nhat-viet-nam-c101dt333",
-            "clicks": 248
+            "clicks": 259
           },
           {
             "path": "/blog/chia-se-meo-san-ve-may-bay-gia-re-ai-cung-lam-duoc-c101dt151",
-            "clicks": 244
+            "clicks": 250
           }
         ]
       },
       {
         "project_name": "Merchant",
         "sector": "trust",
-        "w2a_clicks": 21095,
-        "users": 14085,
+        "w2a_clicks": 21931,
+        "users": 14661,
         "share_pct": 0.0105,
         "top_landing_pages": [
           {
             "path": "/doi-tac",
-            "clicks": 1596
+            "clicks": 1664
           },
           {
             "path": "/dtdn",
-            "clicks": 1357
+            "clicks": 1403
           },
           {
             "path": "/thanh-toan-momo-vietlott-sms",
-            "clicks": 1058
+            "clicks": 1149
           },
           {
             "path": "/diem-thanh-toan",
-            "clicks": 759
+            "clicks": 777
           },
           {
             "path": "/qr-da-nang",
-            "clicks": 722
+            "clicks": 745
           },
           {
             "path": "/thanh-toan-momo-bach-hoa-xanh",
-            "clicks": 615
+            "clicks": 640
           },
           {
             "path": "/cong-tac-vien",
-            "clicks": 493
+            "clicks": 512
           },
           {
             "path": "/doi-tac/nha-hang-quan-an",
-            "clicks": 374
-          },
-          {
-            "path": "/thanh-toan-momo-napthengayvn",
-            "clicks": 318
-          },
-          {
-            "path": "/thanh-toan-momo-grab",
-            "clicks": 316
+            "clicks": 383
           },
           {
             "path": "/trang-doanh-nghiep",
-            "clicks": 301
+            "clicks": 332
+          },
+          {
+            "path": "/thanh-toan-momo-grab",
+            "clicks": 326
+          },
+          {
+            "path": "/thanh-toan-momo-napthengayvn",
+            "clicks": 325
           },
           {
             "path": "/blog/so-sanh-cac-nha-hang-lau-trieu-chau-c100dt2451",
-            "clicks": 298
+            "clicks": 305
           },
           {
             "path": "/doi-tac/mua-sam",
-            "clicks": 234
+            "clicks": 241
           },
           {
             "path": "/blog/danh-sach-5-tiem-banh-ngon-nhat-sai-gon-c100dt35",
-            "clicks": 218
-          },
-          {
-            "path": "/blog/cac-chi-nhanh-starbucks-view-dep-nhat-ha-noi-c100dt2461",
-            "clicks": 199
+            "clicks": 226
           },
           {
             "path": "/thanh-toan-momo-agoda",
-            "clicks": 197
+            "clicks": 209
           },
           {
-            "path": "/thanh-toan-momo-haidilao",
-            "clicks": 196
+            "path": "/blog/cac-chi-nhanh-starbucks-view-dep-nhat-ha-noi-c100dt2461",
+            "clicks": 205
           },
           {
             "path": "/thanh-toan-momo-netflix",
-            "clicks": 195
+            "clicks": 204
+          },
+          {
+            "path": "/thanh-toan-momo-haidilao",
+            "clicks": 199
           },
           {
             "path": "/thanh-toan-google-play",
-            "clicks": 189
+            "clicks": 196
           },
           {
             "path": "/thanh-toan-momo-doctor-dong",
-            "clicks": 176
+            "clicks": 180
           }
         ]
       },
       {
         "project_name": "Other",
         "sector": "Other",
-        "w2a_clicks": 20553,
-        "users": 13517,
-        "share_pct": 0.0102,
+        "w2a_clicks": 21746,
+        "users": 14327,
+        "share_pct": 0.0104,
         "top_landing_pages": [
           {
             "path": "/tin-tuc/khuyen-mai/tang-ban-moi-deal-google-play-lan-dau-nap-game-9076",
-            "clicks": 1296
+            "clicks": 1403
           },
           {
             "path": "/tin-tuc/khuyen-mai/momo-tang-ban-qua-den-50000d-9065",
-            "clicks": 1205
+            "clicks": 1212
           },
           {
             "path": "/tin-tuc/khuyen-mai/dinh-cao-lang-chay-ads-hoi-cang-them-hoi-momo-5912",
-            "clicks": 786
+            "clicks": 802
+          },
+          {
+            "path": "/tin-tuc/khuyen-mai/giam-ngay-20k-khi-lan-dau-thanh-toan-qua-momo-nap-9075",
+            "clicks": 797
           },
           {
             "path": "/tin-tuc/khuyen-mai/uu-dai-thang-10-momo-hoan-10k-nap-game-mua-app-9047",
-            "clicks": 720
+            "clicks": 735
           },
           {
             "path": "/tin-tuc/khuyen-mai/tai-momo-nhap-fecredit-qua-300000d-ve-tay-9078",
@@ -1290,63 +1294,59 @@
           },
           {
             "path": "/tin-tuc/khuyen-mai/concert-tieu-de-combo-qua-50k-mo-ta-combo-2-the-9080",
-            "clicks": 619
+            "clicks": 650
           },
           {
             "path": "/tin-tuc/khuyen-mai/mo-momo-nhan-qua-bi-mat-giam-10000d-9056",
             "clicks": 595
           },
           {
-            "path": "/tin-tuc/khuyen-mai/giam-ngay-20k-khi-lan-dau-thanh-toan-qua-momo-nap-9075",
-            "clicks": 585
-          },
-          {
-            "path": "/tin-tuc/khuyen-mai/dac-quyen-hoi-vien-gia-dinh-nestle-9010",
-            "clicks": 455
-          },
-          {
             "path": "/tin-tuc/khuyen-mai/diem-danh-cho-ngay-sale-nhan-thuong-den-25000d-9094",
-            "clicks": 444
+            "clicks": 519
           },
           {
             "path": "/tin-tuc/khuyen-mai/tai-momo-nhap-homecredit-tro-luc-khoan-vay-9082",
-            "clicks": 435
+            "clicks": 488
+          },
+          {
+            "path": "/tin-tuc/khuyen-mai/dac-quyen-hoi-vien-gia-dinh-nestle-9010",
+            "clicks": 467
           },
           {
             "path": "/tin-tuc/khuyen-mai/chon-momo-thanh-toan-cac-tien-ich-tren-ung-dung-9081",
-            "clicks": 360
+            "clicks": 367
           },
           {
             "path": "/tin-tuc/khuyen-mai/uu-dai-danh-rieng-cho-sinh-vien-nhap-ma-ten-9043",
-            "clicks": 299
-          },
-          {
-            "path": "/tin-tuc/khuyen-mai/uu-dai-app-store-thang-10-giam-ngay-10-khi-mua-9074",
-            "clicks": 245
+            "clicks": 317
           },
           {
             "path": "/student-pass/dai-su-momo-student",
-            "clicks": 233
+            "clicks": 251
+          },
+          {
+            "path": "/tin-tuc/khuyen-mai/uu-dai-app-store-thang-10-giam-ngay-10-khi-mua-9074",
+            "clicks": 251
           },
           {
             "path": "/tin-tuc/khuyen-mai/mua-sam-o-thai-khong-lo-tien-mat-chi-can-co-momo-9066",
-            "clicks": 204
+            "clicks": 214
           },
           {
             "path": "/tin-tuc/khuyen-mai/su-kien-cuc-hot-hoan-ngay-10000d-cho-game-thu-lan-dau-mua-the-tren-napthengayvn-1360",
-            "clicks": 204
+            "clicks": 207
+          },
+          {
+            "path": "/cong-dong/cung-chung-tay-cai-tao-nha-ve-sinh-cho-cac-em-nho",
+            "clicks": 200
           },
           {
             "path": "/tin-tuc/khuyen-mai/nhap-ma-idol-ban-moi-momo-nhan-dam-bo-qua-9057",
-            "clicks": 196
+            "clicks": 200
           },
           {
             "path": "/tin-tuc/khuyen-mai/tai-momo-nhap-momotcb-lien-ket-techcombank-9050",
-            "clicks": 192
-          },
-          {
-            "path": "/tin-tuc/khuyen-mai/huong-dan-dung-momo-quet-ma-qr-thanh-toan-tai-9064",
-            "clicks": 185
+            "clicks": 196
           }
         ]
       }
@@ -1359,11 +1359,11 @@
       "description": "Hành vi cuộn trang của người dùng",
       "audit_note": "Chỉ số tương tác (Engagement) chiều sâu nội dung",
       "is_conversion": false,
-      "event_count": 4575556,
-      "total_users": 892760,
-      "sessions": 1116709,
-      "events_per_user": 5.13,
-      "share_pct": 0.2663
+      "event_count": 4729026,
+      "total_users": 916916,
+      "sessions": 1150135,
+      "events_per_user": 5.16,
+      "share_pct": 0.2655
     },
     {
       "event_name": "page_view",
@@ -1371,11 +1371,11 @@
       "description": "Lượt xem trang (Pageviews) toàn Website",
       "audit_note": "KPI cốt lõi của Ban Giám Đốc đối soát hiệu suất Web",
       "is_conversion": false,
-      "event_count": 2635490,
-      "total_users": 1314459,
-      "sessions": 1741011,
-      "events_per_user": 2.0,
-      "share_pct": 0.1534
+      "event_count": 2735154,
+      "total_users": 1362469,
+      "sessions": 1803454,
+      "events_per_user": 2.01,
+      "share_pct": 0.1536
     },
     {
       "event_name": "click_to_app",
@@ -1383,11 +1383,11 @@
       "description": "Click mở App MoMo (Onelink/Deeplink)",
       "audit_note": "Chuyển đổi Web-to-App cốt lõi (Official Conversion)",
       "is_conversion": true,
-      "event_count": 2012602,
-      "total_users": 826034,
-      "sessions": 1126407,
-      "events_per_user": 2.44,
-      "share_pct": 0.1171
+      "event_count": 2081331,
+      "total_users": 850724,
+      "sessions": 1151771,
+      "events_per_user": 2.45,
+      "share_pct": 0.1169
     },
     {
       "event_name": "webads_balloon",
@@ -1395,11 +1395,11 @@
       "description": "Quảng cáo hiển thị / Video tương tác",
       "audit_note": "Đo lường lượt xem và tương tác với banner/video quảng cáo",
       "is_conversion": false,
-      "event_count": 1817799,
-      "total_users": 818815,
-      "sessions": 1098829,
-      "events_per_user": 2.22,
-      "share_pct": 0.1058
+      "event_count": 1879294,
+      "total_users": 841141,
+      "sessions": 1132607,
+      "events_per_user": 2.23,
+      "share_pct": 0.1055
     },
     {
       "event_name": "session_start",
@@ -1407,11 +1407,11 @@
       "description": "Phiên truy cập mới bắt đầu",
       "audit_note": "Khởi tạo session tính toán lưu lượng toàn sàn",
       "is_conversion": false,
-      "event_count": 1758966,
-      "total_users": 1313199,
-      "sessions": 1766703,
+      "event_count": 1827452,
+      "total_users": 1361068,
+      "sessions": 1832445,
       "events_per_user": 1.34,
-      "share_pct": 0.1024
+      "share_pct": 0.1026
     },
     {
       "event_name": "first_visit",
@@ -1419,11 +1419,11 @@
       "description": "Người dùng mới lần đầu truy cập Website",
       "audit_note": "Chỉ số thu hút New User (User Acquisition)",
       "is_conversion": false,
-      "event_count": 1170311,
-      "total_users": 1157645,
-      "sessions": 1164917,
+      "event_count": 1217023,
+      "total_users": 1205423,
+      "sessions": 1209997,
       "events_per_user": 1.01,
-      "share_pct": 0.0681
+      "share_pct": 0.0683
     },
     {
       "event_name": "user_engagement",
@@ -1431,11 +1431,11 @@
       "description": "Phiên tương tác kéo dài > 10s hoặc > 2 trang",
       "audit_note": "Tiêu chuẩn đánh giá phiên chất lượng (Engaged Sessions)",
       "is_conversion": false,
-      "event_count": 891962,
-      "total_users": 484497,
-      "sessions": 556094,
-      "events_per_user": 1.84,
-      "share_pct": 0.0519
+      "event_count": 929332,
+      "total_users": 501053,
+      "sessions": 576342,
+      "events_per_user": 1.85,
+      "share_pct": 0.0522
     },
     {
       "event_name": "click_link_url",
@@ -1443,11 +1443,11 @@
       "description": "Click liên kết điều hướng trang nội bộ",
       "audit_note": "Đo lường luồng điều hướng (Internal Navigation)",
       "is_conversion": false,
-      "event_count": 607975,
-      "total_users": 276735,
-      "sessions": 342323,
-      "events_per_user": 2.2,
-      "share_pct": 0.0354
+      "event_count": 632026,
+      "total_users": 284639,
+      "sessions": 352760,
+      "events_per_user": 2.22,
+      "share_pct": 0.0355
     },
     {
       "event_name": "engage_product_funnel",
@@ -1455,11 +1455,11 @@
       "description": "Các bước trong phễu đặt hàng / mua vé",
       "audit_note": "Đo lường rò rỉ luồng đặt vé và mua sắm",
       "is_conversion": false,
-      "event_count": 504602,
-      "total_users": 118327,
-      "sessions": 157786,
-      "events_per_user": 4.26,
-      "share_pct": 0.0294
+      "event_count": 517195,
+      "total_users": 120906,
+      "sessions": 160577,
+      "events_per_user": 4.28,
+      "share_pct": 0.029
     },
     {
       "event_name": "funnel_start",
@@ -1467,11 +1467,11 @@
       "description": "Các bước trong phễu đặt hàng / mua vé",
       "audit_note": "Đo lường rò rỉ luồng đặt vé và mua sắm",
       "is_conversion": false,
-      "event_count": 347831,
-      "total_users": 86063,
-      "sessions": 118182,
-      "events_per_user": 4.04,
-      "share_pct": 0.0202
+      "event_count": 357085,
+      "total_users": 87574,
+      "sessions": 120341,
+      "events_per_user": 4.08,
+      "share_pct": 0.02
     },
     {
       "event_name": "click_cta",
@@ -1479,9 +1479,9 @@
       "description": "Click nút kêu gọi hành động (Call to Action)",
       "audit_note": "Tương tác kích hoạt ý định mua sắm / sử dụng dịch vụ",
       "is_conversion": false,
-      "event_count": 166028,
-      "total_users": 81893,
-      "sessions": 90605,
+      "event_count": 172192,
+      "total_users": 84725,
+      "sessions": 93638,
       "events_per_user": 2.03,
       "share_pct": 0.0097
     },
@@ -1491,11 +1491,11 @@
       "description": "Click liên kết dẫn ra ngoài website MoMo",
       "audit_note": "Phần lớn dẫn về đối tác TikTok Coin, App Store",
       "is_conversion": false,
-      "event_count": 146151,
-      "total_users": 71069,
-      "sessions": 108191,
+      "event_count": 152853,
+      "total_users": 74166,
+      "sessions": 113133,
       "events_per_user": 2.06,
-      "share_pct": 0.0085
+      "share_pct": 0.0086
     },
     {
       "event_name": "component_view",
@@ -1503,10 +1503,10 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 121201,
-      "total_users": 64267,
-      "sessions": 74279,
-      "events_per_user": 1.89,
+      "event_count": 126688,
+      "total_users": 66807,
+      "sessions": 77099,
+      "events_per_user": 1.9,
       "share_pct": 0.0071
     },
     {
@@ -1515,10 +1515,10 @@
       "description": "Quảng cáo hiển thị / Video tương tác",
       "audit_note": "Đo lường lượt xem và tương tác với banner/video quảng cáo",
       "is_conversion": false,
-      "event_count": 75962,
-      "total_users": 17099,
-      "sessions": 19211,
-      "events_per_user": 4.44,
+      "event_count": 79226,
+      "total_users": 17786,
+      "sessions": 20027,
+      "events_per_user": 4.45,
       "share_pct": 0.0044
     },
     {
@@ -1527,11 +1527,11 @@
       "description": "Click CTA trên từng component cụ thể",
       "audit_note": "Đo lường độ hiệu quả của từng khối giao diện",
       "is_conversion": true,
-      "event_count": 71235,
-      "total_users": 40912,
-      "sessions": 43228,
-      "events_per_user": 1.74,
-      "share_pct": 0.0041
+      "event_count": 74245,
+      "total_users": 42533,
+      "sessions": 44923,
+      "events_per_user": 1.75,
+      "share_pct": 0.0042
     },
     {
       "event_name": "bhyt_form_view",
@@ -1539,23 +1539,11 @@
       "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
       "audit_note": "Micro-funnel nghiệp vụ Insurtech",
       "is_conversion": false,
-      "event_count": 53122,
-      "total_users": 3143,
-      "sessions": 3675,
-      "events_per_user": 16.9,
-      "share_pct": 0.0031
-    },
-    {
-      "event_name": "video_start",
-      "category": "Media & Advertising",
-      "description": "Quảng cáo hiển thị / Video tương tác",
-      "audit_note": "Đo lường lượt xem và tương tác với banner/video quảng cáo",
-      "is_conversion": false,
-      "event_count": 32913,
-      "total_users": 19804,
-      "sessions": 22422,
-      "events_per_user": 1.66,
-      "share_pct": 0.0019
+      "event_count": 56861,
+      "total_users": 3257,
+      "sessions": 3809,
+      "events_per_user": 17.46,
+      "share_pct": 0.0032
     },
     {
       "event_name": "quyt_screen_view",
@@ -1563,11 +1551,23 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 37255,
-      "total_users": 11376,
-      "sessions": 12537,
-      "events_per_user": 3.27,
-      "share_pct": 0.0022
+      "event_count": 45784,
+      "total_users": 14428,
+      "sessions": 16268,
+      "events_per_user": 3.17,
+      "share_pct": 0.0026
+    },
+    {
+      "event_name": "video_start",
+      "category": "Media & Advertising",
+      "description": "Quảng cáo hiển thị / Video tương tác",
+      "audit_note": "Đo lường lượt xem và tương tác với banner/video quảng cáo",
+      "is_conversion": false,
+      "event_count": 34200,
+      "total_users": 20555,
+      "sessions": 23219,
+      "events_per_user": 1.66,
+      "share_pct": 0.0019
     },
     {
       "event_name": "funnel_complete",
@@ -1575,9 +1575,9 @@
       "description": "Các bước trong phễu đặt hàng / mua vé",
       "audit_note": "Đo lường rò rỉ luồng đặt vé và mua sắm",
       "is_conversion": false,
-      "event_count": 26361,
-      "total_users": 16815,
-      "sessions": 17976,
+      "event_count": 26741,
+      "total_users": 17043,
+      "sessions": 18299,
       "events_per_user": 1.57,
       "share_pct": 0.0015
     },
@@ -1587,9 +1587,9 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 17247,
-      "total_users": 12344,
-      "sessions": 14085,
+      "event_count": 17836,
+      "total_users": 12757,
+      "sessions": 14600,
       "events_per_user": 1.4,
       "share_pct": 0.001
     },
@@ -1599,22 +1599,10 @@
       "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
       "audit_note": "Micro-funnel nghiệp vụ OTA",
       "is_conversion": false,
-      "event_count": 11016,
-      "total_users": 6134,
-      "sessions": 6418,
-      "events_per_user": 1.8,
-      "share_pct": 0.0006
-    },
-    {
-      "event_name": "bus_operator_view",
-      "category": "OTA Hub (Vé Xe)",
-      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
-      "audit_note": "Micro-funnel nghiệp vụ OTA",
-      "is_conversion": false,
-      "event_count": 10174,
-      "total_users": 6667,
-      "sessions": 7089,
-      "events_per_user": 1.53,
+      "event_count": 11486,
+      "total_users": 6454,
+      "sessions": 6696,
+      "events_per_user": 1.78,
       "share_pct": 0.0006
     },
     {
@@ -1623,10 +1611,22 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 10299,
-      "total_users": 6930,
-      "sessions": 7273,
+      "event_count": 10592,
+      "total_users": 7125,
+      "sessions": 7489,
       "events_per_user": 1.49,
+      "share_pct": 0.0006
+    },
+    {
+      "event_name": "bus_operator_view",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 10527,
+      "total_users": 6871,
+      "sessions": 7294,
+      "events_per_user": 1.53,
       "share_pct": 0.0006
     },
     {
@@ -1635,10 +1635,10 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 9573,
-      "total_users": 5990,
-      "sessions": 7048,
-      "events_per_user": 1.6,
+      "event_count": 9969,
+      "total_users": 6203,
+      "sessions": 7304,
+      "events_per_user": 1.61,
       "share_pct": 0.0006
     },
     {
@@ -1647,9 +1647,9 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 8362,
-      "total_users": 6018,
-      "sessions": 6653,
+      "event_count": 8685,
+      "total_users": 6236,
+      "sessions": 6843,
       "events_per_user": 1.39,
       "share_pct": 0.0005
     },
@@ -1659,11 +1659,11 @@
       "description": "Luồng mua gói cước eSIM du lịch quốc tế",
       "audit_note": "Micro-funnel nghiệp vụ Telco",
       "is_conversion": false,
-      "event_count": 5820,
-      "total_users": 518,
-      "sessions": 661,
-      "events_per_user": 11.24,
-      "share_pct": 0.0003
+      "event_count": 6363,
+      "total_users": 561,
+      "sessions": 708,
+      "events_per_user": 11.34,
+      "share_pct": 0.0004
     },
     {
       "event_name": "video_complete",
@@ -1671,9 +1671,9 @@
       "description": "Quảng cáo hiển thị / Video tương tác",
       "audit_note": "Đo lường lượt xem và tương tác với banner/video quảng cáo",
       "is_conversion": false,
-      "event_count": 5502,
-      "total_users": 4464,
-      "sessions": 4717,
+      "event_count": 5782,
+      "total_users": 4684,
+      "sessions": 4954,
       "events_per_user": 1.23,
       "share_pct": 0.0003
     },
@@ -1683,11 +1683,11 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 5369,
-      "total_users": 4235,
-      "sessions": 4574,
+      "event_count": 6584,
+      "total_users": 5186,
+      "sessions": 5642,
       "events_per_user": 1.27,
-      "share_pct": 0.0003
+      "share_pct": 0.0004
     },
     {
       "event_name": "bus_operator_select",
@@ -1695,10 +1695,10 @@
       "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
       "audit_note": "Micro-funnel nghiệp vụ OTA",
       "is_conversion": false,
-      "event_count": 3920,
-      "total_users": 2011,
-      "sessions": 2187,
-      "events_per_user": 1.95,
+      "event_count": 4086,
+      "total_users": 2090,
+      "sessions": 2273,
+      "events_per_user": 1.96,
       "share_pct": 0.0002
     },
     {
@@ -1707,9 +1707,9 @@
       "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
       "audit_note": "Micro-funnel nghiệp vụ OTA",
       "is_conversion": false,
-      "event_count": 3835,
-      "total_users": 1992,
-      "sessions": 2162,
+      "event_count": 3997,
+      "total_users": 2070,
+      "sessions": 2249,
       "events_per_user": 1.93,
       "share_pct": 0.0002
     },
@@ -1719,9 +1719,9 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 3440,
-      "total_users": 2917,
-      "sessions": 2969,
+      "event_count": 3556,
+      "total_users": 3017,
+      "sessions": 3052,
       "events_per_user": 1.18,
       "share_pct": 0.0002
     },
@@ -1731,10 +1731,22 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 3262,
-      "total_users": 1172,
-      "sessions": 1187,
-      "events_per_user": 2.78,
+      "event_count": 3433,
+      "total_users": 1220,
+      "sessions": 1236,
+      "events_per_user": 2.81,
+      "share_pct": 0.0002
+    },
+    {
+      "event_name": "bhxm_form_view",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 2810,
+      "total_users": 1101,
+      "sessions": 1268,
+      "events_per_user": 2.55,
       "share_pct": 0.0002
     },
     {
@@ -1743,10 +1755,10 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 2555,
-      "total_users": 2144,
-      "sessions": 2218,
-      "events_per_user": 1.19,
+      "event_count": 2621,
+      "total_users": 2190,
+      "sessions": 2269,
+      "events_per_user": 1.2,
       "share_pct": 0.0001
     },
     {
@@ -1755,23 +1767,11 @@
       "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
       "audit_note": "Micro-funnel nghiệp vụ Insurtech",
       "is_conversion": false,
-      "event_count": 2546,
-      "total_users": 1198,
-      "sessions": 1346,
-      "events_per_user": 2.13,
+      "event_count": 2649,
+      "total_users": 1248,
+      "sessions": 1401,
+      "events_per_user": 2.12,
       "share_pct": 0.0001
-    },
-    {
-      "event_name": "bhxm_form_view",
-      "category": "Insurtech Hub",
-      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
-      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
-      "is_conversion": false,
-      "event_count": 2616,
-      "total_users": 1051,
-      "sessions": 1212,
-      "events_per_user": 2.49,
-      "share_pct": 0.0002
     },
     {
       "event_name": "bhyt_popup_noti",
@@ -1779,9 +1779,9 @@
       "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
       "audit_note": "Micro-funnel nghiệp vụ Insurtech",
       "is_conversion": false,
-      "event_count": 2464,
-      "total_users": 1191,
-      "sessions": 1336,
+      "event_count": 2565,
+      "total_users": 1241,
+      "sessions": 1391,
       "events_per_user": 2.07,
       "share_pct": 0.0001
     },
@@ -1791,10 +1791,10 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 2241,
-      "total_users": 871,
-      "sessions": 906,
-      "events_per_user": 2.57,
+      "event_count": 2649,
+      "total_users": 996,
+      "sessions": 1040,
+      "events_per_user": 2.66,
       "share_pct": 0.0001
     },
     {
@@ -1803,10 +1803,10 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 1905,
-      "total_users": 1007,
-      "sessions": 1068,
-      "events_per_user": 1.89,
+      "event_count": 1969,
+      "total_users": 1037,
+      "sessions": 1099,
+      "events_per_user": 1.9,
       "share_pct": 0.0001
     },
     {
@@ -1815,10 +1815,10 @@
       "description": "Luồng mua gói cước eSIM du lịch quốc tế",
       "audit_note": "Micro-funnel nghiệp vụ Telco",
       "is_conversion": false,
-      "event_count": 1822,
-      "total_users": 332,
-      "sessions": 360,
-      "events_per_user": 5.49,
+      "event_count": 1944,
+      "total_users": 347,
+      "sessions": 378,
+      "events_per_user": 5.6,
       "share_pct": 0.0001
     },
     {
@@ -1827,9 +1827,9 @@
       "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
       "audit_note": "Micro-funnel nghiệp vụ OTA",
       "is_conversion": false,
-      "event_count": 1450,
-      "total_users": 940,
-      "sessions": 1021,
+      "event_count": 1502,
+      "total_users": 974,
+      "sessions": 1060,
       "events_per_user": 1.54,
       "share_pct": 0.0001
     },
@@ -1839,9 +1839,9 @@
       "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
       "audit_note": "Micro-funnel nghiệp vụ OTA",
       "is_conversion": false,
-      "event_count": 1448,
-      "total_users": 939,
-      "sessions": 1020,
+      "event_count": 1500,
+      "total_users": 973,
+      "sessions": 1059,
       "events_per_user": 1.54,
       "share_pct": 0.0001
     },
@@ -1851,10 +1851,10 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 1018,
-      "total_users": 714,
-      "sessions": 778,
-      "events_per_user": 1.43,
+      "event_count": 1045,
+      "total_users": 736,
+      "sessions": 800,
+      "events_per_user": 1.42,
       "share_pct": 0.0001
     },
     {
@@ -1863,10 +1863,10 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 983,
-      "total_users": 406,
-      "sessions": 410,
-      "events_per_user": 2.42,
+      "event_count": 917,
+      "total_users": 348,
+      "sessions": 350,
+      "events_per_user": 2.64,
       "share_pct": 0.0001
     },
     {
@@ -1875,22 +1875,10 @@
       "description": "Luồng mua gói cước eSIM du lịch quốc tế",
       "audit_note": "Micro-funnel nghiệp vụ Telco",
       "is_conversion": false,
-      "event_count": 780,
-      "total_users": 532,
-      "sessions": 606,
-      "events_per_user": 1.47,
-      "share_pct": 0.0
-    },
-    {
-      "event_name": "travelsim_bestseller_detail_view",
-      "category": "Telco Hub (eSIM)",
-      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
-      "audit_note": "Micro-funnel nghiệp vụ Telco",
-      "is_conversion": false,
-      "event_count": 718,
-      "total_users": 269,
-      "sessions": 302,
-      "events_per_user": 2.67,
+      "event_count": 830,
+      "total_users": 557,
+      "sessions": 639,
+      "events_per_user": 1.49,
       "share_pct": 0.0
     },
     {
@@ -1899,10 +1887,22 @@
       "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
       "audit_note": "Micro-funnel nghiệp vụ OTA",
       "is_conversion": false,
-      "event_count": 720,
-      "total_users": 533,
-      "sessions": 574,
-      "events_per_user": 1.35,
+      "event_count": 757,
+      "total_users": 553,
+      "sessions": 598,
+      "events_per_user": 1.37,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_bestseller_detail_view",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 801,
+      "total_users": 287,
+      "sessions": 321,
+      "events_per_user": 2.79,
       "share_pct": 0.0
     },
     {
@@ -1911,10 +1911,10 @@
       "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
       "audit_note": "Micro-funnel nghiệp vụ Insurtech",
       "is_conversion": false,
-      "event_count": 649,
-      "total_users": 245,
-      "sessions": 265,
-      "events_per_user": 2.65,
+      "event_count": 677,
+      "total_users": 252,
+      "sessions": 273,
+      "events_per_user": 2.69,
       "share_pct": 0.0
     },
     {
@@ -1923,10 +1923,10 @@
       "description": "Luồng mua gói cước eSIM du lịch quốc tế",
       "audit_note": "Micro-funnel nghiệp vụ Telco",
       "is_conversion": false,
-      "event_count": 631,
-      "total_users": 233,
-      "sessions": 260,
-      "events_per_user": 2.71,
+      "event_count": 712,
+      "total_users": 252,
+      "sessions": 280,
+      "events_per_user": 2.83,
       "share_pct": 0.0
     },
     {
@@ -1935,9 +1935,9 @@
       "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
       "audit_note": "Micro-funnel nghiệp vụ Insurtech",
       "is_conversion": false,
-      "event_count": 617,
-      "total_users": 489,
-      "sessions": 527,
+      "event_count": 645,
+      "total_users": 510,
+      "sessions": 548,
       "events_per_user": 1.26,
       "share_pct": 0.0
     },
@@ -1947,22 +1947,10 @@
       "description": "Luồng mua gói cước eSIM du lịch quốc tế",
       "audit_note": "Micro-funnel nghiệp vụ Telco",
       "is_conversion": false,
-      "event_count": 601,
-      "total_users": 77,
-      "sessions": 80,
-      "events_per_user": 7.81,
-      "share_pct": 0.0
-    },
-    {
-      "event_name": "vts_cta_footer",
-      "category": "Other Services",
-      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
-      "audit_note": "Dịch vụ số bổ trợ",
-      "is_conversion": false,
-      "event_count": 584,
-      "total_users": 513,
-      "sessions": 522,
-      "events_per_user": 1.14,
+      "event_count": 625,
+      "total_users": 83,
+      "sessions": 86,
+      "events_per_user": 7.53,
       "share_pct": 0.0
     },
     {
@@ -1971,10 +1959,22 @@
       "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
       "audit_note": "Micro-funnel nghiệp vụ OTA",
       "is_conversion": false,
-      "event_count": 590,
-      "total_users": 397,
-      "sessions": 451,
-      "events_per_user": 1.49,
+      "event_count": 616,
+      "total_users": 412,
+      "sessions": 468,
+      "events_per_user": 1.5,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "vts_cta_footer",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 596,
+      "total_users": 524,
+      "sessions": 533,
+      "events_per_user": 1.14,
       "share_pct": 0.0
     },
     {
@@ -1983,10 +1983,10 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 509,
-      "total_users": 202,
-      "sessions": 207,
-      "events_per_user": 2.52,
+      "event_count": 524,
+      "total_users": 214,
+      "sessions": 219,
+      "events_per_user": 2.45,
       "share_pct": 0.0
     },
     {
@@ -1995,10 +1995,10 @@
       "description": "Luồng mua gói cước eSIM du lịch quốc tế",
       "audit_note": "Micro-funnel nghiệp vụ Telco",
       "is_conversion": false,
-      "event_count": 408,
-      "total_users": 296,
-      "sessions": 325,
-      "events_per_user": 1.38,
+      "event_count": 431,
+      "total_users": 308,
+      "sessions": 339,
+      "events_per_user": 1.4,
       "share_pct": 0.0
     },
     {
@@ -2007,10 +2007,10 @@
       "description": "Luồng mua gói cước eSIM du lịch quốc tế",
       "audit_note": "Micro-funnel nghiệp vụ Telco",
       "is_conversion": false,
-      "event_count": 374,
-      "total_users": 160,
-      "sessions": 179,
-      "events_per_user": 2.34,
+      "event_count": 400,
+      "total_users": 174,
+      "sessions": 194,
+      "events_per_user": 2.3,
       "share_pct": 0.0
     },
     {
@@ -2019,10 +2019,10 @@
       "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
       "audit_note": "Micro-funnel nghiệp vụ Insurtech",
       "is_conversion": false,
-      "event_count": 289,
-      "total_users": 242,
-      "sessions": 249,
-      "events_per_user": 1.19,
+      "event_count": 301,
+      "total_users": 251,
+      "sessions": 258,
+      "events_per_user": 1.2,
       "share_pct": 0.0
     },
     {
@@ -2031,10 +2031,10 @@
       "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
       "audit_note": "Micro-funnel nghiệp vụ OTA",
       "is_conversion": false,
-      "event_count": 279,
-      "total_users": 218,
-      "sessions": 248,
-      "events_per_user": 1.28,
+      "event_count": 288,
+      "total_users": 226,
+      "sessions": 257,
+      "events_per_user": 1.27,
       "share_pct": 0.0
     },
     {
@@ -2043,22 +2043,10 @@
       "description": "Mô phỏng khoản vay, trả góp và mở tài khoản",
       "audit_note": "Công cụ tài chính tương tác cao",
       "is_conversion": false,
-      "event_count": 270,
-      "total_users": 230,
-      "sessions": 241,
+      "event_count": 279,
+      "total_users": 238,
+      "sessions": 249,
       "events_per_user": 1.17,
-      "share_pct": 0.0
-    },
-    {
-      "event_name": "bhyt_payment_result_view",
-      "category": "Insurtech Hub",
-      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
-      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
-      "is_conversion": false,
-      "event_count": 239,
-      "total_users": 163,
-      "sessions": 182,
-      "events_per_user": 1.47,
       "share_pct": 0.0
     },
     {
@@ -2067,10 +2055,22 @@
       "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
       "audit_note": "Micro-funnel nghiệp vụ OTA",
       "is_conversion": false,
-      "event_count": 247,
-      "total_users": 176,
-      "sessions": 204,
+      "event_count": 258,
+      "total_users": 184,
+      "sessions": 213,
       "events_per_user": 1.4,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhyt_payment_result_view",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 250,
+      "total_users": 168,
+      "sessions": 190,
+      "events_per_user": 1.49,
       "share_pct": 0.0
     },
     {
@@ -2079,9 +2079,9 @@
       "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
       "audit_note": "Micro-funnel nghiệp vụ OTA",
       "is_conversion": false,
-      "event_count": 229,
-      "total_users": 176,
-      "sessions": 204,
+      "event_count": 239,
+      "total_users": 184,
+      "sessions": 213,
       "events_per_user": 1.3,
       "share_pct": 0.0
     },
@@ -2091,10 +2091,10 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 204,
-      "total_users": 167,
-      "sessions": 180,
-      "events_per_user": 1.22,
+      "event_count": 213,
+      "total_users": 169,
+      "sessions": 182,
+      "events_per_user": 1.26,
       "share_pct": 0.0
     },
     {
@@ -2103,10 +2103,10 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 197,
-      "total_users": 125,
-      "sessions": 134,
-      "events_per_user": 1.58,
+      "event_count": 204,
+      "total_users": 132,
+      "sessions": 141,
+      "events_per_user": 1.55,
       "share_pct": 0.0
     },
     {
@@ -2115,10 +2115,10 @@
       "description": "Luồng mua gói cước eSIM du lịch quốc tế",
       "audit_note": "Micro-funnel nghiệp vụ Telco",
       "is_conversion": false,
-      "event_count": 195,
-      "total_users": 132,
-      "sessions": 156,
-      "events_per_user": 1.48,
+      "event_count": 209,
+      "total_users": 143,
+      "sessions": 167,
+      "events_per_user": 1.46,
       "share_pct": 0.0
     },
     {
@@ -2127,10 +2127,10 @@
       "description": "Luồng mua gói cước eSIM du lịch quốc tế",
       "audit_note": "Micro-funnel nghiệp vụ Telco",
       "is_conversion": false,
-      "event_count": 164,
-      "total_users": 126,
-      "sessions": 142,
-      "events_per_user": 1.3,
+      "event_count": 180,
+      "total_users": 134,
+      "sessions": 153,
+      "events_per_user": 1.34,
       "share_pct": 0.0
     },
     {
@@ -2139,10 +2139,10 @@
       "description": "Luồng mua gói cước eSIM du lịch quốc tế",
       "audit_note": "Micro-funnel nghiệp vụ Telco",
       "is_conversion": false,
-      "event_count": 158,
-      "total_users": 120,
-      "sessions": 133,
-      "events_per_user": 1.32,
+      "event_count": 171,
+      "total_users": 131,
+      "sessions": 144,
+      "events_per_user": 1.31,
       "share_pct": 0.0
     },
     {
@@ -2163,22 +2163,10 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 121,
-      "total_users": 89,
-      "sessions": 104,
+      "event_count": 125,
+      "total_users": 92,
+      "sessions": 108,
       "events_per_user": 1.36,
-      "share_pct": 0.0
-    },
-    {
-      "event_name": "bhxm_information_view",
-      "category": "Insurtech Hub",
-      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
-      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
-      "is_conversion": false,
-      "event_count": 111,
-      "total_users": 86,
-      "sessions": 93,
-      "events_per_user": 1.29,
       "share_pct": 0.0
     },
     {
@@ -2187,10 +2175,34 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 119,
-      "total_users": 53,
-      "sessions": 54,
-      "events_per_user": 2.25,
+      "event_count": 139,
+      "total_users": 62,
+      "sessions": 63,
+      "events_per_user": 2.24,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "web_vehicle_hub_view",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 118,
+      "total_users": 107,
+      "sessions": 107,
+      "events_per_user": 1.1,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_information_view",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 120,
+      "total_users": 91,
+      "sessions": 98,
+      "events_per_user": 1.32,
       "share_pct": 0.0
     },
     {
@@ -2199,22 +2211,10 @@
       "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
       "audit_note": "Micro-funnel nghiệp vụ Insurtech",
       "is_conversion": false,
-      "event_count": 106,
-      "total_users": 86,
-      "sessions": 89,
-      "events_per_user": 1.23,
-      "share_pct": 0.0
-    },
-    {
-      "event_name": "bhyt_transaction_save",
-      "category": "Insurtech Hub",
-      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
-      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
-      "is_conversion": false,
-      "event_count": 91,
-      "total_users": 41,
-      "sessions": 41,
-      "events_per_user": 2.22,
+      "event_count": 115,
+      "total_users": 91,
+      "sessions": 94,
+      "events_per_user": 1.26,
       "share_pct": 0.0
     },
     {
@@ -2223,10 +2223,10 @@
       "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
       "audit_note": "Micro-funnel nghiệp vụ OTA",
       "is_conversion": false,
-      "event_count": 96,
-      "total_users": 72,
-      "sessions": 77,
-      "events_per_user": 1.33,
+      "event_count": 102,
+      "total_users": 78,
+      "sessions": 83,
+      "events_per_user": 1.31,
       "share_pct": 0.0
     },
     {
@@ -2235,22 +2235,22 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 94,
-      "total_users": 62,
-      "sessions": 66,
-      "events_per_user": 1.52,
+      "event_count": 99,
+      "total_users": 66,
+      "sessions": 70,
+      "events_per_user": 1.5,
       "share_pct": 0.0
     },
     {
-      "event_name": "travelsim_bestseller_sku_click",
-      "category": "Telco Hub (eSIM)",
-      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
-      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "event_name": "bhyt_transaction_save",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
       "is_conversion": false,
-      "event_count": 88,
-      "total_users": 52,
-      "sessions": 54,
-      "events_per_user": 1.69,
+      "event_count": 92,
+      "total_users": 41,
+      "sessions": 41,
+      "events_per_user": 2.24,
       "share_pct": 0.0
     },
     {
@@ -2259,10 +2259,22 @@
       "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
       "audit_note": "Micro-funnel nghiệp vụ OTA",
       "is_conversion": false,
-      "event_count": 89,
-      "total_users": 57,
-      "sessions": 61,
-      "events_per_user": 1.56,
+      "event_count": 95,
+      "total_users": 60,
+      "sessions": 65,
+      "events_per_user": 1.58,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_bestseller_sku_click",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 90,
+      "total_users": 53,
+      "sessions": 55,
+      "events_per_user": 1.7,
       "share_pct": 0.0
     },
     {
@@ -2271,10 +2283,10 @@
       "description": "Luồng mua gói cước eSIM du lịch quốc tế",
       "audit_note": "Micro-funnel nghiệp vụ Telco",
       "is_conversion": false,
-      "event_count": 73,
-      "total_users": 45,
-      "sessions": 56,
-      "events_per_user": 1.62,
+      "event_count": 79,
+      "total_users": 50,
+      "sessions": 61,
+      "events_per_user": 1.58,
       "share_pct": 0.0
     },
     {
@@ -2283,10 +2295,10 @@
       "description": "Luồng mua gói cước eSIM du lịch quốc tế",
       "audit_note": "Micro-funnel nghiệp vụ Telco",
       "is_conversion": false,
-      "event_count": 67,
-      "total_users": 43,
-      "sessions": 53,
-      "events_per_user": 1.56,
+      "event_count": 72,
+      "total_users": 48,
+      "sessions": 58,
+      "events_per_user": 1.5,
       "share_pct": 0.0
     },
     {
@@ -2295,58 +2307,10 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 62,
-      "total_users": 44,
-      "sessions": 47,
-      "events_per_user": 1.41,
-      "share_pct": 0.0
-    },
-    {
-      "event_name": "tcbh_search_submit",
-      "category": "Other Services",
-      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
-      "audit_note": "Dịch vụ số bổ trợ",
-      "is_conversion": false,
-      "event_count": 58,
+      "event_count": 64,
       "total_users": 46,
       "sessions": 49,
-      "events_per_user": 1.26,
-      "share_pct": 0.0
-    },
-    {
-      "event_name": "travelsim_transaction_result",
-      "category": "Telco Hub (eSIM)",
-      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
-      "audit_note": "Micro-funnel nghiệp vụ Telco",
-      "is_conversion": false,
-      "event_count": 57,
-      "total_users": 40,
-      "sessions": 50,
-      "events_per_user": 1.43,
-      "share_pct": 0.0
-    },
-    {
-      "event_name": "travelsim_country_select",
-      "category": "Telco Hub (eSIM)",
-      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
-      "audit_note": "Micro-funnel nghiệp vụ Telco",
-      "is_conversion": false,
-      "event_count": 57,
-      "total_users": 52,
-      "sessions": 54,
-      "events_per_user": 1.1,
-      "share_pct": 0.0
-    },
-    {
-      "event_name": "tcbh_coi_click",
-      "category": "Other Services",
-      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
-      "audit_note": "Dịch vụ số bổ trợ",
-      "is_conversion": false,
-      "event_count": 51,
-      "total_users": 12,
-      "sessions": 14,
-      "events_per_user": 4.25,
+      "events_per_user": 1.39,
       "share_pct": 0.0
     },
     {
@@ -2355,10 +2319,58 @@
       "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
       "audit_note": "Micro-funnel nghiệp vụ Insurtech",
       "is_conversion": false,
-      "event_count": 58,
-      "total_users": 34,
-      "sessions": 34,
-      "events_per_user": 1.71,
+      "event_count": 67,
+      "total_users": 38,
+      "sessions": 38,
+      "events_per_user": 1.76,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "tcbh_search_submit",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 60,
+      "total_users": 48,
+      "sessions": 51,
+      "events_per_user": 1.25,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_transaction_result",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 61,
+      "total_users": 44,
+      "sessions": 54,
+      "events_per_user": 1.39,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "travelsim_country_select",
+      "category": "Telco Hub (eSIM)",
+      "description": "Luồng mua gói cước eSIM du lịch quốc tế",
+      "audit_note": "Micro-funnel nghiệp vụ Telco",
+      "is_conversion": false,
+      "event_count": 66,
+      "total_users": 57,
+      "sessions": 59,
+      "events_per_user": 1.16,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "tcbh_coi_click",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 56,
+      "total_users": 13,
+      "sessions": 15,
+      "events_per_user": 4.31,
       "share_pct": 0.0
     },
     {
@@ -2367,10 +2379,10 @@
       "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
       "audit_note": "Micro-funnel nghiệp vụ OTA",
       "is_conversion": false,
-      "event_count": 46,
-      "total_users": 29,
-      "sessions": 31,
-      "events_per_user": 1.59,
+      "event_count": 50,
+      "total_users": 31,
+      "sessions": 34,
+      "events_per_user": 1.61,
       "share_pct": 0.0
     },
     {
@@ -2379,22 +2391,10 @@
       "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
       "audit_note": "Micro-funnel nghiệp vụ OTA",
       "is_conversion": false,
-      "event_count": 46,
-      "total_users": 29,
-      "sessions": 31,
-      "events_per_user": 1.59,
-      "share_pct": 0.0
-    },
-    {
-      "event_name": "bhxm_payment_result_view",
-      "category": "Insurtech Hub",
-      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
-      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
-      "is_conversion": false,
-      "event_count": 43,
-      "total_users": 32,
-      "sessions": 32,
-      "events_per_user": 1.34,
+      "event_count": 50,
+      "total_users": 31,
+      "sessions": 34,
+      "events_per_user": 1.61,
       "share_pct": 0.0
     },
     {
@@ -2403,10 +2403,22 @@
       "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
       "audit_note": "Micro-funnel nghiệp vụ Insurtech",
       "is_conversion": false,
-      "event_count": 43,
-      "total_users": 40,
-      "sessions": 41,
-      "events_per_user": 1.07,
+      "event_count": 46,
+      "total_users": 42,
+      "sessions": 43,
+      "events_per_user": 1.1,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_payment_result_view",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 44,
+      "total_users": 33,
+      "sessions": 33,
+      "events_per_user": 1.33,
       "share_pct": 0.0
     },
     {
@@ -2415,10 +2427,10 @@
       "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
       "audit_note": "Micro-funnel nghiệp vụ OTA",
       "is_conversion": false,
-      "event_count": 43,
-      "total_users": 28,
-      "sessions": 30,
-      "events_per_user": 1.54,
+      "event_count": 47,
+      "total_users": 30,
+      "sessions": 33,
+      "events_per_user": 1.57,
       "share_pct": 0.0
     },
     {
@@ -2427,10 +2439,10 @@
       "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
       "audit_note": "Micro-funnel nghiệp vụ OTA",
       "is_conversion": false,
-      "event_count": 43,
-      "total_users": 28,
-      "sessions": 30,
-      "events_per_user": 1.54,
+      "event_count": 47,
+      "total_users": 30,
+      "sessions": 33,
+      "events_per_user": 1.57,
       "share_pct": 0.0
     },
     {
@@ -2439,9 +2451,9 @@
       "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
       "audit_note": "Micro-funnel nghiệp vụ Insurtech",
       "is_conversion": false,
-      "event_count": 41,
-      "total_users": 39,
-      "sessions": 40,
+      "event_count": 43,
+      "total_users": 41,
+      "sessions": 42,
       "events_per_user": 1.05,
       "share_pct": 0.0
     },
@@ -2451,10 +2463,22 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 38,
-      "total_users": 36,
-      "sessions": 37,
-      "events_per_user": 1.06,
+      "event_count": 41,
+      "total_users": 39,
+      "sessions": 40,
+      "events_per_user": 1.05,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_image_scan",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 40,
+      "total_users": 27,
+      "sessions": 27,
+      "events_per_user": 1.48,
       "share_pct": 0.0
     },
     {
@@ -2475,22 +2499,10 @@
       "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
       "audit_note": "Micro-funnel nghiệp vụ OTA",
       "is_conversion": false,
-      "event_count": 34,
-      "total_users": 26,
-      "sessions": 28,
-      "events_per_user": 1.31,
-      "share_pct": 0.0
-    },
-    {
-      "event_name": "bhxm_image_scan",
-      "category": "Insurtech Hub",
-      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
-      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
-      "is_conversion": false,
-      "event_count": 36,
-      "total_users": 25,
-      "sessions": 25,
-      "events_per_user": 1.44,
+      "event_count": 38,
+      "total_users": 28,
+      "sessions": 31,
+      "events_per_user": 1.36,
       "share_pct": 0.0
     },
     {
@@ -2499,22 +2511,10 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 31,
-      "total_users": 21,
-      "sessions": 22,
-      "events_per_user": 1.48,
-      "share_pct": 0.0
-    },
-    {
-      "event_name": "tcbh_policy_click",
-      "category": "Other Services",
-      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
-      "audit_note": "Dịch vụ số bổ trợ",
-      "is_conversion": false,
-      "event_count": 28,
-      "total_users": 20,
-      "sessions": 22,
-      "events_per_user": 1.4,
+      "event_count": 32,
+      "total_users": 22,
+      "sessions": 23,
+      "events_per_user": 1.45,
       "share_pct": 0.0
     },
     {
@@ -2523,26 +2523,38 @@
       "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
       "audit_note": "Micro-funnel nghiệp vụ Insurtech",
       "is_conversion": false,
-      "event_count": 31,
-      "total_users": 31,
-      "sessions": 31,
+      "event_count": 32,
+      "total_users": 32,
+      "sessions": 32,
       "events_per_user": 1.0,
       "share_pct": 0.0
     },
     {
-      "event_name": "bhxm_contract_click",
+      "event_name": "bhxm_image_error_view",
       "category": "Insurtech Hub",
       "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
       "audit_note": "Micro-funnel nghiệp vụ Insurtech",
       "is_conversion": false,
-      "event_count": 26,
-      "total_users": 25,
-      "sessions": 25,
-      "events_per_user": 1.04,
+      "event_count": 32,
+      "total_users": 29,
+      "sessions": 29,
+      "events_per_user": 1.1,
       "share_pct": 0.0
     },
     {
-      "event_name": "bhxm_image_error_view",
+      "event_name": "tcbh_policy_click",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 29,
+      "total_users": 21,
+      "sessions": 23,
+      "events_per_user": 1.38,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_contract_click",
       "category": "Insurtech Hub",
       "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
       "audit_note": "Micro-funnel nghiệp vụ Insurtech",
@@ -2559,10 +2571,22 @@
       "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
       "audit_note": "Micro-funnel nghiệp vụ Insurtech",
       "is_conversion": false,
-      "event_count": 24,
-      "total_users": 22,
-      "sessions": 22,
+      "event_count": 25,
+      "total_users": 23,
+      "sessions": 23,
       "events_per_user": 1.09,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bus_payment_timeout",
+      "category": "OTA Hub (Vé Xe)",
+      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
+      "audit_note": "Micro-funnel nghiệp vụ OTA",
+      "is_conversion": false,
+      "event_count": 21,
+      "total_users": 20,
+      "sessions": 21,
+      "events_per_user": 1.05,
       "share_pct": 0.0
     },
     {
@@ -2578,27 +2602,27 @@
       "share_pct": 0.0
     },
     {
-      "event_name": "bus_payment_timeout",
-      "category": "OTA Hub (Vé Xe)",
-      "description": "Luồng tìm chuyến, chọn ghế và thanh toán vé xe",
-      "audit_note": "Micro-funnel nghiệp vụ OTA",
-      "is_conversion": false,
-      "event_count": 20,
-      "total_users": 19,
-      "sessions": 20,
-      "events_per_user": 1.05,
-      "share_pct": 0.0
-    },
-    {
       "event_name": "floatads_view",
       "category": "Other Services",
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
+      "event_count": 21,
+      "total_users": 20,
+      "sessions": 21,
+      "events_per_user": 1.05,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "vts-cellphones-muangay",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
       "event_count": 19,
-      "total_users": 18,
-      "sessions": 19,
-      "events_per_user": 1.06,
+      "total_users": 13,
+      "sessions": 13,
+      "events_per_user": 1.46,
       "share_pct": 0.0
     },
     {
@@ -2631,10 +2655,10 @@
       "description": "Luồng mua gói cước eSIM du lịch quốc tế",
       "audit_note": "Micro-funnel nghiệp vụ Telco",
       "is_conversion": false,
-      "event_count": 12,
-      "total_users": 10,
-      "sessions": 10,
-      "events_per_user": 1.2,
+      "event_count": 13,
+      "total_users": 11,
+      "sessions": 11,
+      "events_per_user": 1.18,
       "share_pct": 0.0
     },
     {
@@ -2643,10 +2667,10 @@
       "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
       "audit_note": "Micro-funnel nghiệp vụ Insurtech",
       "is_conversion": false,
-      "event_count": 11,
-      "total_users": 4,
-      "sessions": 5,
-      "events_per_user": 2.75,
+      "event_count": 12,
+      "total_users": 5,
+      "sessions": 6,
+      "events_per_user": 2.4,
       "share_pct": 0.0
     },
     {
@@ -2667,10 +2691,22 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 8,
-      "total_users": 8,
-      "sessions": 8,
+      "event_count": 10,
+      "total_users": 10,
+      "sessions": 10,
       "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "web_traffic_fine_lookup_form_submit",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 8,
+      "total_users": 3,
+      "sessions": 3,
+      "events_per_user": 2.67,
       "share_pct": 0.0
     },
     {
@@ -2679,10 +2715,10 @@
       "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
       "audit_note": "Micro-funnel nghiệp vụ Insurtech",
       "is_conversion": false,
-      "event_count": 7,
-      "total_users": 5,
-      "sessions": 5,
-      "events_per_user": 1.4,
+      "event_count": 8,
+      "total_users": 6,
+      "sessions": 6,
+      "events_per_user": 1.33,
       "share_pct": 0.0
     },
     {
@@ -2703,10 +2739,22 @@
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
-      "event_count": 4,
-      "total_users": 4,
-      "sessions": 4,
+      "event_count": 6,
+      "total_users": 6,
+      "sessions": 6,
       "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "vts-samsung-cta-h1",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 7,
+      "total_users": 5,
+      "sessions": 6,
+      "events_per_user": 1.4,
       "share_pct": 0.0
     },
     {
@@ -2746,15 +2794,15 @@
       "share_pct": 0.0
     },
     {
-      "event_name": "vts-samsung-cta-h1",
+      "event_name": "vts-ss-mua-ngay",
       "category": "Other Services",
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",
       "is_conversion": false,
       "event_count": 3,
-      "total_users": 1,
-      "sessions": 2,
-      "events_per_user": 3.0,
+      "total_users": 3,
+      "sessions": 3,
+      "events_per_user": 1.0,
       "share_pct": 0.0
     },
     {
@@ -2782,6 +2830,30 @@
       "share_pct": 0.0
     },
     {
+      "event_name": "tracking-vts-samsung-cta-h1",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 2,
+      "total_users": 2,
+      "sessions": 2,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "bhxm_app_open",
+      "category": "Insurtech Hub",
+      "description": "Tra cứu & mua bảo hiểm bắt buộc / tự nguyện",
+      "audit_note": "Micro-funnel nghiệp vụ Insurtech",
+      "is_conversion": false,
+      "event_count": 1,
+      "total_users": 1,
+      "sessions": 1,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
       "event_name": "floatads_cta_click",
       "category": "Other Services",
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
@@ -2795,6 +2867,18 @@
     },
     {
       "event_name": "sim_number_reselect",
+      "category": "Other Services",
+      "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
+      "audit_note": "Dịch vụ số bổ trợ",
+      "is_conversion": false,
+      "event_count": 1,
+      "total_users": 1,
+      "sessions": 1,
+      "events_per_user": 1.0,
+      "share_pct": 0.0
+    },
+    {
+      "event_name": "web_fuel_price_lookup_btn_click",
       "category": "Other Services",
       "description": "Sự kiện tiện ích hoặc chiến dịch cụ thể",
       "audit_note": "Dịch vụ số bổ trợ",

@@ -1,114 +1,114 @@
 {
   "title": "MoMo Web Platform GA4 30-Day Performance Snapshot",
   "property_id": "270743103",
-  "synced_at": "2026-10-22T00:14:17.827Z",
+  "synced_at": "2026-10-24T00:17:57.556Z",
   "timeframe": {
-    "start_date": "2026-10-01",
-    "end_date": "2026-10-21",
+    "start_date": "30daysAgo",
+    "end_date": "yesterday",
     "prefix_filter": "all"
   },
   "overview": {
-    "pageviews": 2507314,
-    "sessions": 1683420,
-    "active_users": 1223028,
-    "bounce_rate_pct": 26.35,
-    "avg_session_duration_seconds": 143.2
+    "pageviews": 3729072,
+    "sessions": 2484706,
+    "active_users": 1800041,
+    "bounce_rate_pct": 26.14,
+    "avg_session_duration_seconds": 144.4
   },
   "channels": [
     {
       "channel": "Organic Search",
-      "pageviews": 1281703,
-      "sessions": 819127,
-      "active_users": 549145,
-      "bounce_rate_pct": 11.02,
-      "share_pct": 51.12
+      "pageviews": 1842416,
+      "sessions": 1148566,
+      "active_users": 759698,
+      "bounce_rate_pct": 11.59,
+      "share_pct": 49.41
     },
     {
       "channel": "Direct",
-      "pageviews": 639195,
-      "sessions": 438410,
-      "active_users": 362728,
-      "bounce_rate_pct": 52.59,
-      "share_pct": 25.49
+      "pageviews": 956012,
+      "sessions": 695363,
+      "active_users": 574224,
+      "bounce_rate_pct": 56.07,
+      "share_pct": 25.64
     },
     {
       "channel": "Paid Search",
-      "pageviews": 250441,
-      "sessions": 195558,
-      "active_users": 149704,
-      "bounce_rate_pct": 18.61,
-      "share_pct": 9.99
+      "pageviews": 371602,
+      "sessions": 290300,
+      "active_users": 220657,
+      "bounce_rate_pct": 18.92,
+      "share_pct": 9.96
     },
     {
       "channel": "Unassigned",
-      "pageviews": 148873,
-      "sessions": 81355,
-      "active_users": 58317,
-      "bounce_rate_pct": 27.19,
-      "share_pct": 5.94
+      "pageviews": 176381,
+      "sessions": 98650,
+      "active_users": 68129,
+      "bounce_rate_pct": 29.32,
+      "share_pct": 4.73
     },
     {
       "channel": "Referral",
-      "pageviews": 104752,
-      "sessions": 77050,
-      "active_users": 63086,
-      "bounce_rate_pct": 39.84,
-      "share_pct": 4.18
-    },
-    {
-      "channel": "Organic Social",
-      "pageviews": 44822,
-      "sessions": 36351,
-      "active_users": 34428,
-      "bounce_rate_pct": 32.22,
-      "share_pct": 1.79
+      "pageviews": 164841,
+      "sessions": 122842,
+      "active_users": 97472,
+      "bounce_rate_pct": 37.84,
+      "share_pct": 4.42
     },
     {
       "channel": "Paid Social",
-      "pageviews": 12807,
-      "sessions": 12023,
-      "active_users": 10719,
-      "bounce_rate_pct": 59.14,
-      "share_pct": 0.51
+      "pageviews": 123327,
+      "sessions": 74928,
+      "active_users": 56279,
+      "bounce_rate_pct": 23.47,
+      "share_pct": 3.31
+    },
+    {
+      "channel": "Organic Social",
+      "pageviews": 52273,
+      "sessions": 41672,
+      "active_users": 39111,
+      "bounce_rate_pct": 31.64,
+      "share_pct": 1.4
     },
     {
       "channel": "AI Assistant",
-      "pageviews": 10535,
-      "sessions": 6782,
-      "active_users": 5624,
-      "bounce_rate_pct": 17,
+      "pageviews": 15756,
+      "sessions": 9897,
+      "active_users": 8163,
+      "bounce_rate_pct": 17.14,
       "share_pct": 0.42
     },
     {
       "channel": "Cross-network",
-      "pageviews": 8505,
-      "sessions": 3618,
-      "active_users": 3532,
-      "bounce_rate_pct": 7.57,
+      "pageviews": 12662,
+      "sessions": 5604,
+      "active_users": 5464,
+      "bounce_rate_pct": 10.35,
       "share_pct": 0.34
     },
     {
       "channel": "Paid Other",
-      "pageviews": 4605,
-      "sessions": 2930,
-      "active_users": 2374,
-      "bounce_rate_pct": 41.43,
-      "share_pct": 0.18
+      "pageviews": 12319,
+      "sessions": 7753,
+      "active_users": 6215,
+      "bounce_rate_pct": 38.57,
+      "share_pct": 0.33
     },
     {
       "channel": "Organic Video",
-      "pageviews": 1015,
-      "sessions": 677,
-      "active_users": 566,
-      "bounce_rate_pct": 30.43,
+      "pageviews": 1419,
+      "sessions": 1008,
+      "active_users": 843,
+      "bounce_rate_pct": 29.96,
       "share_pct": 0.04
     },
     {
       "channel": "Email",
-      "pageviews": 59,
-      "sessions": 24,
-      "active_users": 11,
-      "bounce_rate_pct": 20.83,
+      "pageviews": 61,
+      "sessions": 25,
+      "active_users": 12,
+      "bounce_rate_pct": 20,
       "share_pct": 0
     },
     {
@@ -118,148 +118,156 @@
       "active_users": 2,
       "bounce_rate_pct": 0,
       "share_pct": 0
+    },
+    {
+      "channel": "Display",
+      "pageviews": 1,
+      "sessions": 1,
+      "active_users": 1,
+      "bounce_rate_pct": 0,
+      "share_pct": 0
     }
   ],
   "top_pages": [
     {
       "url": "/download",
-      "pageviews": 289289,
-      "sessions": 254984,
-      "active_users": 208560,
-      "bounce_rate_pct": 79.28
+      "pageviews": 484764,
+      "sessions": 421123,
+      "active_users": 354597,
+      "bounce_rate_pct": 79.95
     },
     {
       "url": "/",
-      "pageviews": 205421,
-      "sessions": 149225,
-      "active_users": 119780,
-      "bounce_rate_pct": 12.9
+      "pageviews": 289846,
+      "sessions": 216690,
+      "active_users": 173885,
+      "bounce_rate_pct": 13.72
     },
     {
       "url": "/nap-xu-tiktok",
-      "pageviews": 144305,
-      "sessions": 114012,
-      "active_users": 66536,
-      "bounce_rate_pct": 7.84
+      "pageviews": 210415,
+      "sessions": 167625,
+      "active_users": 95713,
+      "bounce_rate_pct": 8.05
     },
     {
       "url": "/tin-tuc/tin-tuc-su-kien/nap-game-sieu-hoi-thang-nay-giam-den-10000d-khi-8081",
-      "pageviews": 101941,
-      "sessions": 61911,
-      "active_users": 43540,
-      "bounce_rate_pct": 18.3
+      "pageviews": 121664,
+      "sessions": 73957,
+      "active_users": 51797,
+      "bounce_rate_pct": 19.69
+    },
+    {
+      "url": "/vi-tra-sau/samsung",
+      "pageviews": 106582,
+      "sessions": 59853,
+      "active_users": 41144,
+      "bounce_rate_pct": 15.22
     },
     {
       "url": "/cinema/trai-buon-nguoi-24991",
-      "pageviews": 63373,
-      "sessions": 52600,
-      "active_users": 41449,
-      "bounce_rate_pct": 4.74
+      "pageviews": 97206,
+      "sessions": 80346,
+      "active_users": 61527,
+      "bounce_rate_pct": 4.72
     },
     {
       "url": "/diem-tin-dung",
-      "pageviews": 45134,
-      "sessions": 38355,
-      "active_users": 30681,
-      "bounce_rate_pct": 19.18
-    },
-    {
-      "url": "/cinema/trai-buon-nguoi-24991/tang-3000-ve",
-      "pageviews": 37771,
-      "sessions": 36050,
-      "active_users": 32687,
-      "bounce_rate_pct": 37.31
-    },
-    {
-      "url": "/tin-tuc/khuyen-mai/chuong-trinh-gioi-thieu-ban-be-chuyen-tien-nhan-8930",
-      "pageviews": 34977,
-      "sessions": 30315,
-      "active_users": 22018,
-      "bounce_rate_pct": 28.32
+      "pageviews": 58836,
+      "sessions": 50717,
+      "active_users": 40119,
+      "bounce_rate_pct": 19.21
     },
     {
       "url": "/tin-tuc/khuyen-mai/giam-20k-nang-cap-app-nap-game-app-store-khi-lan-8402",
-      "pageviews": 32874,
-      "sessions": 29981,
-      "active_users": 24242,
-      "bounce_rate_pct": 28.14
+      "pageviews": 47162,
+      "sessions": 42521,
+      "active_users": 34127,
+      "bounce_rate_pct": 26.42
     },
     {
-      "url": "/nuoc",
-      "pageviews": 29569,
-      "sessions": 19938,
-      "active_users": 15324,
-      "bounce_rate_pct": 8.43
-    },
-    {
-      "url": "/cinema",
-      "pageviews": 25430,
-      "sessions": 20882,
-      "active_users": 15854,
-      "bounce_rate_pct": 5.56
-    },
-    {
-      "url": "/cinema/rap/cgv/cgv-aeon-mall-hai-phong-149",
-      "pageviews": 23388,
-      "sessions": 18395,
-      "active_users": 10424,
-      "bounce_rate_pct": 6.75
-    },
-    {
-      "url": "/cinema/lich-chieu",
-      "pageviews": 23086,
-      "sessions": 19022,
-      "active_users": 11419,
-      "bounce_rate_pct": 7.49
-    },
-    {
-      "url": "/cinema/quy-an-tang-4-ho-tinh-25145",
-      "pageviews": 22561,
-      "sessions": 19124,
-      "active_users": 15114,
-      "bounce_rate_pct": 3.43
+      "url": "/tin-tuc/khuyen-mai/chuong-trinh-gioi-thieu-ban-be-chuyen-tien-nhan-8930",
+      "pageviews": 43389,
+      "sessions": 37840,
+      "active_users": 27085,
+      "bounce_rate_pct": 28.17
     },
     {
       "url": "/vay-nhanh",
-      "pageviews": 21286,
-      "sessions": 17645,
-      "active_users": 13425,
-      "bounce_rate_pct": 28.39
+      "pageviews": 42639,
+      "sessions": 33037,
+      "active_users": 26060,
+      "bounce_rate_pct": 21.51
     },
     {
-      "url": "/cinema/rap/cgv",
-      "pageviews": 20057,
-      "sessions": 17032,
-      "active_users": 12493,
-      "bounce_rate_pct": 5.7
+      "url": "/nuoc",
+      "pageviews": 38213,
+      "sessions": 25661,
+      "active_users": 19461,
+      "bounce_rate_pct": 9.34
     },
     {
-      "url": "/lienkettaikhoan",
-      "pageviews": 19773,
-      "sessions": 17969,
-      "active_users": 17062,
-      "bounce_rate_pct": 2.55
+      "url": "/cinema/trai-buon-nguoi-24991/tang-3000-ve",
+      "pageviews": 37803,
+      "sessions": 36112,
+      "active_users": 32710,
+      "bounce_rate_pct": 37.34
+    },
+    {
+      "url": "/cinema",
+      "pageviews": 36104,
+      "sessions": 29507,
+      "active_users": 21475,
+      "bounce_rate_pct": 6.14
+    },
+    {
+      "url": "/cinema/lich-chieu",
+      "pageviews": 34461,
+      "sessions": 27648,
+      "active_users": 16335,
+      "bounce_rate_pct": 7.6
+    },
+    {
+      "url": "/cinema/rap/cgv/cgv-aeon-mall-hai-phong-149",
+      "pageviews": 30810,
+      "sessions": 23812,
+      "active_users": 12652,
+      "bounce_rate_pct": 6.81
     },
     {
       "url": "/vi-tra-sau",
-      "pageviews": 19687,
-      "sessions": 16407,
-      "active_users": 14236,
-      "bounce_rate_pct": 33.23
+      "pageviews": 28498,
+      "sessions": 24042,
+      "active_users": 20843,
+      "bounce_rate_pct": 29.45
     },
     {
       "url": "/game/mot-mua-quyt",
-      "pageviews": 17979,
-      "sessions": 16244,
-      "active_users": 14160,
-      "bounce_rate_pct": 56.13
+      "pageviews": 27675,
+      "sessions": 25432,
+      "active_users": 21577,
+      "bounce_rate_pct": 54.57
     },
     {
       "url": "/cinema/rap/bhd-star/bhd-star-long-khanh-216",
-      "pageviews": 17725,
-      "sessions": 13728,
-      "active_users": 5926,
-      "bounce_rate_pct": 6.4
+      "pageviews": 26456,
+      "sessions": 19864,
+      "active_users": 8003,
+      "bounce_rate_pct": 7.02
+    },
+    {
+      "url": "/cinema/rap/cgv",
+      "pageviews": 25801,
+      "sessions": 21758,
+      "active_users": 15514,
+      "bounce_rate_pct": 5.44
+    },
+    {
+      "url": "/cinema/quy-an-tang-4-ho-tinh-25145",
+      "pageviews": 24293,
+      "sessions": 20817,
+      "active_users": 16206,
+      "bounce_rate_pct": 3.19
     }
   ]
 }

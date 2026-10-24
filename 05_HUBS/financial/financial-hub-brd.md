@@ -48,6 +48,7 @@ Nếu MoMo xây dựng **Financial Master Hub (`momo.vn/tai-chinh`)** làm cổn
    * **Đang Review Kỹ Thuật (API Review):**
      - **API Lãi Suất Gửi Tiết Kiệm MoMo (`/tai-chinh/gui-tiet-kiem`):** Thẩm định tích hợp API lãi suất tiền gửi ưu đãi đối tác (Bản Việt +0.2% lãi suất, VPBank).
      - **API Dữ Liệu Chứng Chỉ Quỹ (`/tai-chinh/chung-chi-quy`):** Thẩm định API giá NAV và tỷ suất sinh lời quỹ mở phục vụ bảng giá tra cứu và tool tích sản SIP.
+     - **Cổng Chứng Khoán & Dynamic Ticker Profiles (`/tai-chinh/chung-khoan` & `/tai-chinh/chung-khoan/[ticker]`):** Hoàn thiện kiến trúc Programmatic SEO 30 mã VN30, bộ máy tính Stock DCA Backtester và Thước đo Sức khỏe Doanh nghiệp (MoMo Stock Health Score 1-100) phục vụ chiến lược tích sản cổ phiếu lô lẻ từ 10.000đ kết nối đối tác CVS.
 4. **Hạ tầng Công cụ Tiện ích Dùng chung (Embeddable Widgets):** Chuẩn hóa các bộ công cụ tính toán để nhúng linh hoạt vào mọi điểm chạm trên toàn bộ Kênh Web MoMo.
 
 ---
@@ -76,8 +77,8 @@ Financial Hub quy hoạch toàn bộ giải pháp tài chính MoMo thành 4 tr�
    * *Dịch vụ:* Gửi Tiết Kiệm Online MoMo (Đối tác Bản Việt, VPBank với ưu đãi +0.2% lãi suất), Túi Thần Tài, Bảng So Sánh Lãi Suất 40 Ngân Hàng Toàn Cảnh (`momo.vn/tai-chinh/lai-suat`).
    * *Công cụ cốt lõi:* Bảng tra cứu lãi suất 40 bank và Tool tính tiền lãi gửi tiết kiệm theo số tiền người dùng tự nhập (hiển thị ngân hàng tối ưu nhất), Bộ tính quỹ dự phòng khẩn cấp.
 3. **Trụ Cột Đầu Tư (Investment & Wealth Building):**
-   * *Dịch vụ:* Giá Vàng SJC/9999 Realtime (`momo.vn/tai-chinh/gia-vang`), Tỷ Giá Ngoại Tệ & Đổi Tiền (`momo.vn/tai-chinh/ty-gia`), Chứng Khoán (`momo.vn/chung-khoan`), Chứng Chỉ Quỹ SIP (`momo.vn/tai-chinh/chung-chi-quy`), Tự Do Tài Chính FIRE.
-   * *Công cụ cốt lõi:* Bảng giá vàng realtime & công cụ quy đổi, Cổng tra cứu tỷ giá 30+ ngoại tệ và 5 sub-page cặp tiền, Bảng giá NAV và Máy tính tích sản SIP từ 10.000đ/ngày, Bộ giả lập FIRE.
+   * *Dịch vụ:* Giá Vàng SJC/9999 Realtime (`momo.vn/tai-chinh/gia-vang`), Tỷ Giá Ngoại Tệ & Đổi Tiền (`momo.vn/tai-chinh/ty-gia`), Cổng Chứng Khoán Master & 30 Dynamic Ticker Profiles VN30 (`momo.vn/tai-chinh/chung-khoan` & `momo.vn/tai-chinh/chung-khoan/[ticker]`), Chứng Chỉ Quỹ SIP (`momo.vn/tai-chinh/chung-chi-quy`), Tự Do Tài Chính FIRE (`momo.vn/tai-chinh/tu-do-tai-chinh`).
+   * *Công cụ cốt lõi:* Bảng giá vàng realtime & công cụ quy đổi, Cổng tra cứu tỷ giá 30+ ngoại tệ và 5 sub-page cặp tiền, Máy tính Giả lập Tích sản Cổ phiếu Lịch sử (Stock DCA Backtester), Thước đo Sức khỏe Doanh nghiệp (MoMo Stock Health Score 1-100), Bảng giá NAV và Máy tính tích sản SIP từ 10.000đ/ngày, Bộ giả lập FIRE.
 4. **Trụ Cột Chi Tiêu (Spending & Cash Flow):**
    * *Dịch vụ:* Tính Lương Gross - Net luật mới 2026 (`momo.vn/tai-chinh/tinh-luong`), Phân Bổ Lương 50/30/20 & Hũ Tài Chính (`momo.vn/tai-chinh/phan-bo-luong`), Lương Hưu & BHXH Một Lần (`momo.vn/tai-chinh/luong-huu`), Cổng Danh Bạ 34 Ngân Hàng (`momo.vn/tai-chinh/ngan-hang`).
    * *Công cụ cốt lõi:* Máy tính Gross-Net 2026 tích hợp khấu trừ bảo hiểm 10.5% và thuế TNCN 7 bậc, Tool chia ngân sách 50/30/20 và 6 hũ tài chính kết nối Hũ Chi Tiêu in-app, Tool tính lương hưu luật mới.
@@ -106,7 +107,7 @@ Khối **MoMo Gợi Ý** tuyệt đối không sử dụng câu chữ tĩnh (Sta
 
 > [!NOTE] **Tài Liệu Đặc Tả Kỹ Thuật & Bộ Ma Trận Copy Catchy Đầy Đủ:**
 > Toàn bộ logic công thức, cơ chế Toggle Cà Khịa (Roast Mode), nút Lắc Quẻ Re-roll, mã nguồn TypeScript (`src/utils/aiProposalEngine.ts`) và mã Umami Tracking chuẩn hóa được tổng hợp độc lập tại:
-> 👉 **[momo-ai-proposal-engine-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD/momo-ai-proposal-engine-prd.md)**.
+> [momo-ai-proposal-engine-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD/momo-ai-proposal-engine-prd.md).
 
 
 #### Quy Chuẩn Đề Xuất Trợ Lý MoMo AI Cho Utility Tính Lãi Tiết Kiệm (Công Thức Bù Đắp Chênh Lệch Lãi Ròng - Net Yield Gap):
@@ -153,18 +154,188 @@ Toàn bộ các công cụ tính toán (Tools) và trang đích trên Kênh Web 
    - *Điểm chạm kích hoạt:* Bảng So Sánh Lãi Suất 30 Bank, Công Cụ Tính Lương Gross-Net, Quản Lý Dòng Tiền & Tiêu Dùng, Giá Vàng, Tỷ Giá Ngoại Tệ.
    - *Cơ chế điều hướng:* Khi công cụ tính toán ra Dòng Tiền Tự Do (Free Cash Flow), lương Net hoặc số tiền thặng dư ➔ Tự động tính tiền lãi sinh lời và đề xuất *"Gửi Tiết Kiệm Bản Việt / VPBank Trên MoMo (Nhận Thêm +0.2% Lãi Suất)"*.
 
-3. **Tăng Trưởng Tài Sản (Chương Trình Thực Tập Sinh Đầu Tư - Chứng Khoán & Chứng Chỉ Quỹ (SIP)):**
-   - *Điểm chạm kích hoạt:* Cổng Chứng Khoán, Tích Sản FIRE, Quy Đổi Vàng, Phân Bổ Lương 50/30/20.
-   - *Cơ chế điều hướng:* Tab so sánh đối chiếu giữa *"Gửi Tiết Kiệm (5%/năm) vs Thực Tập Sinh Đầu Tư Quỹ Mở (10-15%/năm)"* ➔ Kích hoạt CTA *"Tham Gia Thực Tập Sinh Đầu Tư Chỉ Từ 10.000đ/Ngày"* giúp người dùng trẻ (F0) tích sản dài hạn.
+3. **Tăng Trưởng Tài Sản (Chương Trình Thực Tập Sinh Đầu Tư - Chứng Khoán Lô Lẻ & Chứng Chỉ Quỹ (SIP)):**
+   - *Điểm chạm kích hoạt:* Cổng Chứng Khoán Master (`/tai-chinh/chung-khoan`), Dynamic Ticker Profiles (`/tai-chinh/chung-khoan/[ticker]`), Tích Sản FIRE (`/tai-chinh/tu-do-tai-chinh`), Quy Đổi Vàng, Phân Bổ Lương 50/30/20.
+   - *Cơ chế điều hướng:* Cơ chế chuyển đổi kép (Dual-Conversion Hook): Sau khi người dùng chạy giả lập tích sản cổ phiếu DCA ➔ Nếu sẵn sàng tự đầu tư cổ phiếu: Kích hoạt CTA *"Tích Sản Cổ Phiếu [Mã] Từ 10.000đ Trên MoMo"* (mở App kết nối đối tác Chứng khoán CVS); Nếu lo ngại biến động thị trường: Kích hoạt CTA *"Ủy Thác Danh Mục VN30 Cho Quỹ Mở Top Đầu Chỉ Từ 10.000đ/Ngày"* (điều hướng sang `/tai-chinh/chung-chi-quy`).
 
-### 5.2 Cơ Chế Hợp Nhất Hệ Sinh Thái & Bảo Toàn Thẩm Quyền SEO
+### 5.3 Cơ Chế Hợp Nhất Hệ Sinh Thái & Bảo Toàn Thẩm Quyền SEO
 
 Để bảo vệ 100% thứ hạng SEO và lượng truy cập hiện có của các trang sản phẩm độc lập (`/tiet-kiem-online`, `/vay-nhanh`, `/vi-tra-sau`, `/the-tin-dung`...), hệ thống giữ nguyên cấu trúc URL gốc và thực hiện hợp nhất trải nghiệm qua **3 Cơ Chế**:
 * **Trang Cổng Trung Tâm (`momo.vn/tai-chinh`):** Đóng vai trò là mặt tiền tổng hợp Dashboard thị trường và điều hướng phân luồng theo đúng JTBD.
 * **Thanh Điều Hướng Thống Nhất (Global Financial Navigation Bar):** Xuất hiện đồng bộ trên tất cả các trang sản phẩm, kết nối liền mạch 5 trụ cột dịch vụ.
 * **Cơ Chế Bán Chéo Theo Ngữ Cảnh (Contextual Cross-Sell Engine):** Nhúng đề xuất giải pháp liên quan ngay sau khi người dùng nhận kết quả tính toán trên công cụ.
 
-### 5.3 Sơ Đồ Luồng Trải Nghiệm Người Dùng (Visual User Flow)
+### 5.4 Chiến Lược Cổng Chứng Khoán & Dynamic Ticker Profiles (/tai-chinh/chung-khoan)
+
+> [!NOTE] **Tài Liệu Đặc Tả Kỹ Thuật Chi Tiết (PRD Reference):**
+> Toàn bộ logic thuật toán chấm điểm sức khỏe doanh nghiệp, mô hình giả lập DCA, hợp đồng API dữ liệu giá và schema sự kiện Umami được quy định chi tiết tại:
+> [chung-khoan-profile-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD/chung-khoan-profile-prd.md) (và liên kết nội bộ tại [05_HUBS/financial/chung-khoan-profile-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/financial/chung-khoan-profile-prd.md)).
+
+#### 5.4.1 Định Vị Độc Đạo: Tích Sản Lô Lẻ Dành Cho 95% Dân Số Đại Chúng (F0 Wealth Accumulation)
+
+- **Strategic Positioning:** MoMo không cạnh tranh trực diện với các công ty chứng khoán truyền thống (VPS, SSI, VNDirect, TCBS) trong việc xây dựng bảng giá giao dịch realtime phức tạp, công cụ phân tích kỹ thuật đa khung thời gian hay đòn bẩy Margin cao cho nhóm nhà đầu tư lướt sóng ngắn hạn (Day-traders / T+2.5).
+- **Core Path (Con đường độc đạo):** Định vị Chứng Khoán trên Web Platform MoMo là **"Cổng Tích Sản Doanh Nghiệp Tốt Dành Cho Người Đại Chúng"**. Biến việc đầu tư cổ phần doanh nghiệp thành hành động tích lũy tài sản định kỳ, an toàn và dễ hiểu như bỏ ống heo hàng tháng.
+- **Bốn Trụ Cột Đột Phá:**
+  1. *Lô lẻ từ 10.000đ:* Xóa bỏ rào cản lô chẵn 100 cổ phiếu (vốn cần 10-14 triệu đồng đối với FPT, VCB). Người dùng có thể sở hữu cổ phần của các tập đoàn đầu ngành Việt Nam chỉ từ 10.000đ thông qua đối tác Chứng khoán CVS tích hợp in-app.
+  2. *Zero-Jargon (Bình dân hóa ngôn ngữ tài chính):* Loại bỏ các thuật ngữ chuyên môn gây quá tải nhận thức. Toàn bộ chỉ số tài chính (P/E, P/B, ROE, D/E) được diễn giải thành câu trả lời trực tiếp ("Cổ phiếu đang Đắt hay Rẻ", "Công ty nợ nhiều hay ít", "Khả năng sinh lời so với lãi ngân hàng").
+  3. *Tập trung vào Dòng tiền Cổ tức & Tăng trưởng dài hạn:* Giáo dục người dùng tập trung vào giá trị nội tại doanh nghiệp và dòng tiền cổ tức tiền mặt đều đặn thay vì tâm lý hoảng loạn theo biến động xanh đỏ từng phiên.
+  4. *Cơ chế Chuyển đổi Kép (Dual-Conversion Hook):* Tạo lối thoát an toàn cho người dùng quan tâm đến ngành nhưng lo ngại biến động mã đơn lẻ bằng cách dẫn dắt sang ủy thác qua Quỹ Mở (`/tai-chinh/chung-chi-quy`).
+
+#### 5.4.2 Kiến Trúc URL & Hệ Thống Programmatic SEO VN30
+
+- **Cổng Tổng Quan Master Hub:** `momo.vn/tai-chinh/chung-khoan`
+  - Đóng vai trò trang tổng quan thị trường, bảng phân loại cổ phiếu VN30 theo khẩu vị đầu tư (Tích sản an toàn, Cổ tức tiền mặt cao, Tăng trưởng công nghệ), và cẩm nang giáo dục F0.
+- **Dynamic Ticker Profile (Programmatic SEO 30 Mã VN30):** `momo.vn/tai-chinh/chung-khoan/[ticker]`
+  - URL chuẩn hóa viết thường (ví dụ: `/tai-chinh/chung-khoan/fpt`, `/tai-chinh/chung-khoan/vnm`, `/tai-chinh/chung-khoan/hpg`, `/tai-chinh/chung-khoan/vcb`, `/tai-chinh/chung-khoan/mwg`...).
+  - Triển khai toàn diện 30 mã thuộc rổ chỉ số VN30 nhằm thâu tóm toàn bộ lượng tìm kiếm thương hiệu và mã chứng khoán (quy mô hơn 4.1 triệu lượt tìm kiếm/tháng).
+
+#### 5.4.3 Wireframe Nội Dung 7 Tầng Chuẩn Hóa Cho Dynamic Ticker Profile
+
+Mỗi trang `/tai-chinh/chung-khoan/[ticker]` được chuẩn hóa thành 7 tầng nội dung logic phục vụ hành trình khám phá và ra quyết định chuyển đổi:
+
+- **Tầng 1: Hero & Price Action No-Jargon:**
+  - Ticker, Logo doanh nghiệp, Tên công ty đầy đủ, Ngành nghề chính, Sàn niêm yết (HOSE).
+  - Giá đóng cửa gần nhất, Biến động phiên (% và VND), Vốn hóa thị trường.
+  - Hộp Định Giá Bình Dân: Tự động đánh giá cổ phiếu đang ở vùng giá Hợp lý / Hơi cao / Hấp dẫn dựa trên P/E lịch sử 5 năm.
+  - Primary CTA: Nút nhấp mở App *"Mua Cổ Phiếu [Mã] Từ 10.000đ Trên MoMo"* kèm mã QR trên Desktop.
+- **Tầng 2: Thước Đo Sức Khỏe Doanh Nghiệp (MoMo Stock Health Score 1-100):**
+  - Thang điểm 1-100 trực quan phân tầng 4 mức (Xuất Sắc, Tốt, Trung Bình, Cần Thận Trọng).
+  - Tách bạch 4 trụ cột đánh giá: Sức mạnh tài chính (25%), Tăng trưởng kinh doanh (25%), Lịch sử cổ tức (25%), Hiệu quả & Vị thế ngành (25%).
+- **Tầng 3: Mô Hình Kinh Doanh Dễ Hiểu Cho F0 (Business Model Breakdown):**
+  - Giải thích cụ thể doanh nghiệp kiếm tiền từ đâu, lợi thế cạnh tranh bền vững (Moat), và rủi ro lớn nhất cần lưu ý bằng 3-4 gạch đầu dòng súc tích.
+- **Tầng 4: Máy Tính Giả Lập Tích Sản Lịch Sử (Stock DCA Backtester Tool):**
+  - Tiện ích tương tác không cần đăng nhập cho phép kiểm chứng kết quả đầu tư định kỳ hàng tháng (1 năm, 3 năm, 5 năm) so sánh trực tiếp với gửi tiết kiệm ngân hàng 6%/năm.
+- **Tầng 5: Lịch Trả Cổ Tức Tiền Mặt & Dòng Tiền Thụ Động (Dividend Tracker):**
+  - Bảng lịch sử trả cổ tức tiền mặt 3-5 năm gần nhất, tỷ suất cổ tức bình quân (Dividend Yield) so với lãi suất tiền gửi 12 tháng.
+- **Tầng 6: Cơ Chế Chuyển Đổi Kép Độc Quyền (Dual-Conversion Hook):**
+  - Cánh cửa 1: Tự mua cổ phiếu lô lẻ mã này từ 10.000đ qua CVS in-app.
+  - Cánh cửa 2: Ủy thác qua Quỹ Mở (`/tai-chinh/chung-chi-quy`) sở hữu trọn rổ cổ phiếu đầu ngành cho người dùng ngại rủi ro chọn mã.
+- **Tầng 7: Câu Hỏi Thường Gặp (FAQ Schema JSON-LD) Chuẩn SEO/GEO:**
+  - 5-6 câu hỏi giải tỏa rào cản pháp lý, cơ chế lô lẻ, cách nhận cổ tức, tính thanh khoản và biểu phí giao dịch.
+
+#### 5.4.4 Chi Tiết Kỹ Thuật Hai Công Cụ Tương Tác Cốt Lõi
+
+1. **Máy Tính Giả Lập Tích Sản Lịch Sử (Stock DCA Backtester):**
+   - *Tham số đầu vào:* Mã cổ phiếu (`ticker`), Số tiền tích lũy mỗi tháng (`monthlyAmount`, mặc định: 1.000.000 VND, min: 10.000 VND), Thời gian tích sản (`durationYears`: 1, 3, 5 năm), Ngày tích sản cố định hàng tháng (Ngày 5).
+   - *Công thức giá trị tích lũy thực tế:*
+     Tại mỗi tháng $t$, số cổ phiếu mua được theo giá đóng cửa điều chỉnh $P_{\text{adj}, t}$:
+     $$\text{Shares}_t = \frac{\text{monthlyAmount}}{P_{\text{adj}, t}}, \quad \text{Total Shares} = \sum_{t=1}^{N} \text{Shares}_t$$
+     $$\text{Current Portfolio Value} = \text{Total Shares} \times P_{\text{current}}$$
+   - *Công thức đối chuẩn gửi tiết kiệm (Benchmark Savings 6.0%/năm):*
+     $$\text{Savings Value} = \text{monthlyAmount} \times \left[ \frac{(1 + r_{\text{month}})^N - 1}{r_{\text{month}}} \right] \times (1 + r_{\text{month}}) \quad \text{với } r_{\text{month}} = \frac{0.06}{12}$$
+   - *Output hiển thị:* Tổng vốn đầu tư, Giá trị danh mục cổ phiếu đạt được, Giá trị nếu gửi tiết kiệm, Số tiền chênh lệch dôi dư và Tỷ suất sinh lời kép (CAGR).
+
+2. **Thước Đo Sức Khỏe Doanh Nghiệp (MoMo Stock Health Score 1-100):**
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.85em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Trụ Cột Đánh Giá</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:center; font-weight:700;">Trọng Số</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Chỉ Số Cốt Lõi</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Ngưỡng Tối Ưu (Max Điểm)</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Diễn Giải Ngôn Ngữ F0 (No-Jargon)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>1. Sức Mạnh Tài Chính</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">25%</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Debt-to-Equity, Current Ratio, Dự trữ tiền mặt</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">D/E &lt; 1.0, Current Ratio &gt; 1.5</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Công ty nợ rất ít, lượng tiền mặt dồi dào, an tâm không lo phá sản hoặc áp lực trả lãi vay.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>2. Tăng Trưởng Kinh Doanh</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">25%</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Tăng trưởng doanh thu &amp; LNST 3 năm</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Doanh thu &gt; 15%/năm, Lợi nhuận &gt; 15%/năm</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Doanh nghiệp liên tục bán được nhiều hàng hơn và thu về lợi nhuận thật tăng trưởng đều đặn.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>3. Lịch Sử Cổ Tức</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">25%</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Tính liên tục tiền mặt, Dividend Yield</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Trả tiền mặt liên tục 3-5 năm, Yield &gt; 4.5%</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Làm ăn có lãi thật và chia tiền sòng phẳng cho cổ đông đều đặn như nhận tiền lãi hàng năm.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>4. Hiệu Quả &amp; Vị Thế Ngành</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">25%</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">ROE, ROA, Thị phần trong rổ VN30</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">ROE &gt; 20% liên tục, Top 1-3 ngành</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Sử dụng vốn kinh doanh cực kỳ hiệu quả, tiền đẻ ra tiền vượt trội so với gửi ngân hàng.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### 5.4.5 Sơ Đồ Luồng Chuyển Đổi Người Dùng Chứng Khoán (Stock Conversion Flow)
+
+```mermaid
+graph TD
+    A["1. Nhu Cầu Tìm Kiếm Cổ Phiếu<br/>(Google: 'gia co phieu fpt', 'tich san hpg', 'co tuc vnm')"] --> B["2. Tiếp Cận Dynamic Profile<br/>(momo.vn/tai-chinh/chung-khoan/fpt)"]
+    B --> C["3. Tương Tác Công Cụ Độc Quyền<br/>(Xem Health Score & Kéo Máy Tính Tích Sản DCA)"]
+    C --> D["4. Nhận Diện Giá Trị & Đứng Trước Lựa Chọn<br/>(Thấy số lãi chênh lệch so với tiết kiệm & Thấu hiểu rủi ro)"]
+    D -->|Tự Tin Chọn Cổ Phiếu| E1["5A. Chuyển Đổi Mua Cổ Phiếu Lô Lẻ<br/>(CTA: Mua FPT từ 10.000đ)"]
+    D -->|Ngại Biến Động / Muốn An Toàn| E2["5B. Chuyển Đổi Sang Quỹ Mở Top Đầu<br/>(CTA: Xem Quỹ Mở Nắm FPT tại /chung-chi-quy)"]
+    E1 --> F1["6A. Deep-link App MoMo (CVS Engine)<br/>(Mở thẳng màn hình mua mã FPT, điền sẵn 10.000đ)"]
+    E2 --> F2["6B. Deep-link Quỹ Mở MoMo (SIP Engine)<br/>(Thiết lập lịch trích tiền tích sản định kỳ)"]
+    F1 --> G["7. Trở Thành Nhà Đầu Tư Định Danh (MTU Active)<br/>(Hoàn tất xác thực tài khoản & Khớp lệnh mua đầu tiên)"]
+    F2 --> G
+```
+
+#### 5.4.6 Bảng Phân Tích Kỹ Thuật Các Bước Trong Luồng Chuyển Đổi Chứng Khoán
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.85em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:center; font-weight:700;">Bước</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Tên Giai Đoạn</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Trải Nghiệm Người Dùng (UX)</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:left; font-weight:700;">Hạ Tầng / Cơ Chế Kỹ Thuật</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:center; font-weight:700;">Nền Tảng</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">1</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Tìm Kiếm & Khám Phá</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Tìm kiếm từ khóa mã cổ phiếu hoặc cổ tức VN30 trên Google và nhấp vào kết quả MoMo.</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Programmatic SEO Next.js ISR, Schema Corporation &amp; FinancialProduct.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Google ➔ Web</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">2</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Đánh Giá Sức Khỏe</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Xem điểm MoMo Stock Health Score 1-100, nắm bắt nhanh doanh nghiệp tốt hay yếu không cần đọc báo cáo tài chính dài.</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Client-side Visual Radial Score, Cached Financial Scoring API.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Web</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">3</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Giả Lập Tích Sản DCA</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Kéo thanh trượt chọn số tiền tích lũy mỗi tháng (ví dụ 1 triệu) để nhìn thấy số tiền tạo ra so với gửi tiết kiệm.</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">No-login Interactive Calculator, Historical Price Database with Dividend Adjustment.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Web</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">4</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Lựa Chọn Chuyển Đổi Kép</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Người dùng tự tin thì nhấp mua cổ phiếu lô lẻ; người dùng thận trọng nhấp chọn phương án ủy thác qua Quỹ Mở đa dạng hóa.</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Dual-Conversion Component, Intent Tracking, Contextual Deep-link Generator.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Web</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">5</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Mở App & Khớp Lệnh</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Ứng dụng MoMo mở thẳng màn hình đặt lệnh mua lô lẻ (CVS) hoặc màn hình đăng ký tích sản quỹ mở (SIP), điền sẵn thông tin.</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">AppsFlyer OneLink, In-App Stock Core CVS API / Mutual Fund Engine.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Web ➔ App MoMo</td>
+    </tr>
+  </tbody>
+</table>
+
+### 5.5 Sơ Đồ Luồng Trải Nghiệm Người Dùng Tổng Thể (Master Financial User Flow)
 
 ```mermaid
 graph TD
@@ -176,7 +347,7 @@ graph TD
     F --> G["7. Giao Dịch Tài Chính Đầu Tiên (1st Value Achieved)<br/>(Mở sổ tiết kiệm / Nhận lương ứng / Kích hoạt Ví Trả Sau)"]
 ```
 
-### 5.4 Bảng Phân Tích Chi Tiết Các Bước Trải Nghiệm
+### 5.6 Bảng Phân Tích Chi Tiết Các Bước Trải Nghiệm Tổng Thể
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.85em;">
   <thead>
@@ -688,10 +859,16 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
     </tr>
     <!-- PHASE 2 - THÁNG 10/2026 -->
     <tr style="background-color:#fefce8;">
-      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;" rowspan="3"><strong>Phase 2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700;" rowspan="4"><strong>Phase 2</strong></td>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 10/2026</td>
-      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Chứng Khoán & Quỹ Mở (/chung-khoan & /tai-chinh/chung-chi-quy)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px;">Đang review API dữ liệu giá NAV và tỷ suất sinh lời của quỹ mở (/tai-chinh/chung-chi-quy) từ BU CVS; chuẩn bị xây dựng bảng giá tra cứu và tool tích sản SIP. Bảng giá chỉ số chứng khoán (/chung-khoan).</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Cổng Chứng Khoán & 30 Dynamic Profiles VN30 (/tai-chinh/chung-khoan)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Xây dựng Cổng Master `/tai-chinh/chung-khoan` và 30 trang Dynamic Ticker Profile cho toàn bộ rổ VN30. Tích hợp máy tính Stock DCA Backtester và Thước đo Sức khỏe MoMo Stock Health Score 1-100, phục vụ chiến lược tích sản cổ phiếu lô lẻ từ 10.000đ kết nối đối tác CVS.</td>
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#b45309; background-color:#fef9c3;">In Progress</td>
+    </tr>
+    <tr style="background-color:#fefce8;">
+      <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Tháng 10/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><strong>Chứng Chỉ Quỹ (/tai-chinh/chung-chi-quy)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Đang review API dữ liệu giá NAV và tỷ suất sinh lời của 30 quỹ mở từ BU CVS; xây dựng bảng giá tra cứu và tool tích sản SIP từ 10.000đ/ngày. Tích hợp cơ chế Dual-conversion chuyển đổi chéo trực tiếp từ các trang mã cổ phiếu.</td>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center; font-weight:700; color:#b45309; background-color:#fef9c3;">In Progress</td>
     </tr>
     <tr style="background-color:#f8fafc;">

@@ -38,6 +38,18 @@
   1. Quét tự động file `*Web Performance Tracking*.xlsx` mới nhất trong thư mục `/Users/hienhv/Downloads/`.
   2. Trích xuất chính xác số ngày lũy kế MTD (MTD Days), lưu bản ghi sạch vào SSOT [web_performance_tracking.xlsx](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/web_performance_tracking.xlsx) và tạo JSON snapshot.
   3. Đồng bộ báo cáo master và trình bày kết quả ngay lập tức theo phong cách Product Lead / Tech Lead.
+- **Automated Hybrid Report Sync & Cross-Reconciliation Rule (Tự Động Đối Soát & Hợp Nhất 2 Nguồn):** Khi người dùng yêu cầu *"sync report"*, *"đồng bộ report"*, *"sync và đối chiếu report"*, AI Agent **BẮT BUỘC gọi ngay `./.venv/bin/python scripts/sync_hybrid_report.py`**. Script tự động:
+  1. Quét file Excel BigQuery mới nhất và truy vấn GA4 Data API song song.
+  2. Tự động đối chiếu chéo (Cross-Reconcile): Xác nhận độ khớp số cùng kỳ (100% Match) và tính toán phần bù tăng trưởng ngày mới (+Net Add) nếu Excel có độ trễ ngày so với GA4 API.
+  3. Tự động làm giàu (Enrichment): Gắn thêm W2A OneLink Clicks, URL Retention Matrix vào cơ cấu Hubs/Projects của Excel.
+  4. Cập nhật đồng bộ vào Hubs `/dashboard` ([`web-data.json`](file:///Users/hienhv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json) & [`summary.json`](file:///Users/hienhv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json)), Excel SSOT, Markdown SSOT và đẩy lên GitHub `main` qua REST API trong 8–10 giây.
+  5. Xuất bản bảng Báo cáo Đối Soát & Hợp Nhất hoàn chỉnh trong 1 lượt trả lời duy nhất.
+- **Automated GA4 MTD Master Sync Rule (Trọn Gói 1 Lệnh - Fast Path):** Khi người dùng yêu cầu *"cập nhật số GA4"*, *"cập nhật GA4 MTD"*, *"lấy số GA4"*, AI Agent **BẮT BUỘC gọi ngay `./.venv/bin/python scripts/sync_ga4_master.py` (kèm `--mtd <ngày>` nếu có)**. Script chạy trọn gói trong 6–10 giây:
+  1. Truy vấn trực tiếp GA4 Data API (Property 270743103) lấy số tổng thể, kênh Non-Paid vs. Paid, W2A OneLink clicks và phân rã các Hub.
+  2. Tự động tính toán Target Pacing, Forecast 31 ngày và tiến độ về đích.
+  3. Tự động ghi đồng bộ vào: Snapshot JSON, Hubs `/dashboard` ([`web-data.json`](file:///Users/hienhv/Klaus/Web-Idea/react-web-momo/lib/dashboard/web-data.json) & [`summary.json`](file:///Users/hienhv/Klaus/Web-Idea/react-web-momo/lib/dashboard/summary.json)), Excel SSOT và Markdown SSOT.
+  4. Tự động đẩy lên GitHub Hubs (`main`) qua REST API.
+  5. Trả về bảng kết quả hoàn chỉnh ngay lập tức trong 1 lượt trả lời duy nhất, tuyệt đối không chạy phân mảnh hay hỏi đi hỏi lại từng bước.
 - **Automated Paid Ads & UTM Trigger Rule:** Khi người dùng yêu cầu *"kiểm tra ads"*, *"web đang chạy ads gì"*, *"kênh media nào đang chạy ads"*, *"hiệu suất paid ads/UTM"*, AI Agent **BẮT BUỘC tự động chạy script `./.venv/bin/python scripts/sync_paid_ads.py`** để:
   1. Truy vấn trực tiếp GA4 Data API (Property 270743103) cho chu kỳ MTD.
   2. Tự động bóc tách landing pages, kênh media (`sessionSourceMedium`), chiến dịch và chuyển đổi Web-to-App.

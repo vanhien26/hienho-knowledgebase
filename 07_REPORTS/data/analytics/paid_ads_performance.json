@@ -1,83 +1,83 @@
 {
-  "updated_at": "2026-10-23 22:13:28",
+  "updated_at": "2026-10-24 07:17:49",
   "date_range": {
     "start_date": "2026-10-01",
-    "end_date": "today"
+    "end_date": "2026-10-23"
   },
   "summary": {
-    "total_paid_pageviews": 310108,
-    "total_paid_sessions": 260334,
-    "active_landing_pages_count": 500,
+    "total_paid_pageviews": 315582,
+    "total_paid_sessions": 265265,
+    "active_landing_pages_count": 492,
     "active_channels_count": 13
   },
   "channels": [
     {
       "channel": "google / cpc",
-      "pageviews": 270278,
-      "sessions": 228621,
-      "share_percent": 87.16,
-      "active_pages_count": 484
-    },
-    {
-      "channel": "Admicro / NativeAds",
-      "pageviews": 9554,
-      "sessions": 8576,
-      "share_percent": 3.08,
-      "active_pages_count": 11
+      "pageviews": 273655,
+      "sessions": 231642,
+      "share_percent": 86.71,
+      "active_pages_count": 476
     },
     {
       "channel": "tiktok / cpc",
-      "pageviews": 9324,
-      "sessions": 8955,
-      "share_percent": 3.01,
+      "pageviews": 10678,
+      "sessions": 10250,
+      "share_percent": 3.38,
       "active_pages_count": 5
     },
     {
-      "channel": "(data not available)",
-      "pageviews": 8438,
-      "sessions": 4180,
-      "share_percent": 2.72,
-      "active_pages_count": 68
+      "channel": "Admicro / NativeAds",
+      "pageviews": 9558,
+      "sessions": 8581,
+      "share_percent": 3.03,
+      "active_pages_count": 11
     },
     {
-      "channel": "an / cpc",
-      "pageviews": 5170,
-      "sessions": 3297,
-      "share_percent": 1.67,
-      "active_pages_count": 2
+      "channel": "(data not available)",
+      "pageviews": 8501,
+      "sessions": 4201,
+      "share_percent": 2.69,
+      "active_pages_count": 66
     },
     {
       "channel": "facebook / cpc",
-      "pageviews": 5063,
-      "sessions": 4764,
-      "share_percent": 1.63,
+      "pageviews": 5411,
+      "sessions": 5100,
+      "share_percent": 1.71,
       "active_pages_count": 8
     },
     {
+      "channel": "an / cpc",
+      "pageviews": 5296,
+      "sessions": 3370,
+      "share_percent": 1.68,
+      "active_pages_count": 2
+    },
+    {
       "channel": "fb / paid",
-      "pageviews": 1463,
-      "sessions": 1418,
-      "share_percent": 0.47,
+      "pageviews": 1610,
+      "sessions": 1558,
+      "share_percent": 0.51,
       "active_pages_count": 5
     },
     {
       "channel": "tiktok / paid",
-      "pageviews": 692,
-      "sessions": 426,
-      "share_percent": 0.22,
+      "pageviews": 719,
+      "sessions": 440,
+      "share_percent": 0.23,
+      "active_pages_count": 2
+    },
+    {
+      "channel": "th / paid",
+      "pageviews": 51,
+      "sessions": 50,
+      "share_percent": 0.02,
       "active_pages_count": 2
     },
     {
       "channel": "th / cpc",
-      "pageviews": 40,
-      "sessions": 37,
-      "share_percent": 0.01,
-      "active_pages_count": 1
-    },
-    {
-      "channel": "th / paid",
-      "pageviews": 28,
-      "sessions": 27,
+      "pageviews": 45,
+      "sessions": 40,
       "share_percent": 0.01,
       "active_pages_count": 1
     },
@@ -107,240 +107,240 @@
     {
       "page_path": "/nap-xu-tiktok",
       "hub": "Game & Telco",
-      "pageviews": 91126,
-      "sessions": 70775,
-      "users": 50141,
-      "w2a_conversions": 144857,
-      "cvr_percent": 204.67,
+      "pageviews": 93035,
+      "sessions": 72533,
+      "users": 51242,
+      "w2a_conversions": 147742,
+      "cvr_percent": 203.69,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 88407,
-        "(data not available)": 2378,
-        "facebook / cpc": 341
+        "google / cpc": 90201,
+        "(data not available)": 2439,
+        "facebook / cpc": 395
       },
       "campaigns": [
-        "TikTok.o2.c03.g03.a04.napxu.sem.ad01.TikTokCoin.20230503",
-        "120250760525420629",
-        "TikTok.o2.c03.g03.a04.napxu.sem-exact.ad03.TikTokCoin.20230503",
+        "TikTok.o2.c03.g03.a04.napxu.sem-exact.ad01.TikTokCoin.20250601",
+        "TikTok.o2.c03.g03.a04.napxu.sem.ad02.TikTokCoin.20230503",
+        "TikTok.o2.c03.g03.a04.napxu-momo.sem-exact.ad01.TikTokCoin.20250601",
         "(cross-network)",
-        "TikTok.o2.c03.g03.a04.napxu.sem-exact.ad01.TikTokCoin.20250601"
+        "TikTok.o2.c03.g03.a04.napxu-momo.sem.ad02.TikTokCoin.20230503"
       ],
       "creatives": [
-        "Ad02",
+        "Installment-Generic-Competitor",
         "Ad01",
-        "tiktokcoin.tra.na.c03.cpc.active.pp-na.llp.ad05.dls312.20261021",
-        "Installment-Generic-Competitor"
+        "Ad02",
+        "tiktokcoin.tra.na.c03.cpc.active.pp-na.llp.ad05.dls312.20261021"
       ]
     },
     {
       "page_path": "/diem-tin-dung",
       "hub": "Financial Hub",
-      "pageviews": 42176,
-      "sessions": 35482,
+      "pageviews": 42177,
+      "sessions": 35490,
       "users": 29630,
-      "w2a_conversions": 33479,
-      "cvr_percent": 94.35,
+      "w2a_conversions": 33480,
+      "cvr_percent": 94.34,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 41049,
+        "google / cpc": 41050,
         "(data not available)": 1127
       },
       "campaigns": [
-        "(cross-network)",
-        "zalo"
+        "zalo",
+        "(cross-network)"
       ],
       "creatives": [
-        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720",
-        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821"
+        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821",
+        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720"
       ]
     },
     {
       "page_path": "/tin-tuc/khuyen-mai/giam-20k-nang-cap-app-nap-game-app-store-khi-lan-8402",
       "hub": "Game & Telco",
-      "pageviews": 33687,
-      "sessions": 30699,
-      "users": 27115,
-      "w2a_conversions": 24988,
-      "cvr_percent": 81.4,
+      "pageviews": 33732,
+      "sessions": 30742,
+      "users": 27154,
+      "w2a_conversions": 25027,
+      "cvr_percent": 81.41,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 32132,
+        "google / cpc": 32177,
         "(data not available)": 1555
       },
       "campaigns": [
         "(cross-network)"
       ],
       "creatives": [
-        "global-appstore-a5-muaapp.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-2.20260515",
-        "global-appstore-a6-subscription.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-2.20260515",
-        "Installment-Generic-Competitor",
+        "global-appstore-a3-momoxappstore.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-2.20260515",
         "global-appstore-a4-topup.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-2.20260515",
-        "global-appstore-a3-momoxappstore.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-2.20260515"
+        "Installment-Generic-Competitor",
+        "global-appstore-a2-thanhtoan.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-2.20260515",
+        "global-appstore-a6-subscription.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-2.20260515"
       ]
     },
     {
       "page_path": "/game/mot-mua-quyt",
       "hub": "Game & Telco",
-      "pageviews": 22511,
-      "sessions": 20543,
-      "users": 18628,
-      "w2a_conversions": 2439,
-      "cvr_percent": 11.87,
+      "pageviews": 24279,
+      "sessions": 22212,
+      "users": 20204,
+      "w2a_conversions": 2524,
+      "cvr_percent": 11.36,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 10866,
-        "tiktok / cpc": 9024,
-        "facebook / cpc": 2482,
+        "google / cpc": 11195,
+        "tiktok / cpc": 10376,
+        "facebook / cpc": 2569,
         "(data not available)": 139
       },
       "campaigns": [
-        "(cross-network)",
         "120250515840950182",
-        "120250516075930182"
+        "120250516075930182",
+        "(cross-network)"
       ],
       "creatives": [
+        "ntmm-adhoc-1muaquyt.tra.na.c03.cpc.lal-game.img-na.llp.ad01.gmc301.20261015",
+        "ntmm-adhoc-1muaquyt.con.na.c03.cpc.lal-game.img-na.llp.ad03.gmc301.20261015",
+        "ntmm-adhoc-1muaquyt.con.na.c03.cpc.lal-game.img-na.llp.ad01.gmc301.20261015",
         "ntmm-adhoc-1muaquyt.tra.na.c03.cpc.mass.vv-na.llp.ad201.gmc301.20261015",
-        "ntmm-adhoc-1muaquyt.tra.na.c03.cpc.mass.vv-na.llp.ad200.gmc301.20261015",
-        "Installment-Generic-Competitor",
-        "{{ad.name}}",
         "ntmm-adhoc-1muaquyt.tra.na.c03.cpc.lal-game.vv-6s.llp.ad02.gmc301.20261015"
       ]
     },
     {
       "page_path": "/vi-tra-sau",
       "hub": "Financial Hub",
-      "pageviews": 14422,
-      "sessions": 12448,
-      "users": 11519,
-      "w2a_conversions": 6021,
-      "cvr_percent": 48.37,
+      "pageviews": 14585,
+      "sessions": 12578,
+      "users": 11648,
+      "w2a_conversions": 6048,
+      "cvr_percent": 48.08,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 14075,
+        "google / cpc": 14238,
         "(data not available)": 347
       },
       "campaigns": [
         "(cross-network)"
       ],
       "creatives": [
-        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821",
-        "VTS-Category-Info",
+        "Credit-Generic-Info",
         "Installment-Generic-Action",
-        "Installment-Generic-Feature",
-        "Installment-Generic-Competitor"
+        "Installment-Generic-Competitor",
+        "VTS-Branded-Info",
+        "VTS-Category-Info"
       ]
     },
     {
       "page_path": "/uu-dai-icloud",
       "hub": "Game & Telco",
-      "pageviews": 9932,
-      "sessions": 9043,
-      "users": 8578,
-      "w2a_conversions": 15526,
-      "cvr_percent": 171.69,
+      "pageviews": 9976,
+      "sessions": 9083,
+      "users": 8615,
+      "w2a_conversions": 15675,
+      "cvr_percent": 172.58,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 9715,
+        "google / cpc": 9759,
         "(data not available)": 200,
         "Admicro / NativeAds": 17
       },
       "campaigns": [
-        "(cross-network)",
-        "NativeAdsCampaign"
+        "NativeAdsCampaign",
+        "(cross-network)"
       ],
       "creatives": [
         "global-appstore-a3-momoxappstore.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-2.20260515",
-        "global-appstore-a1-icloudstorage.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-2.20260515",
-        "[admdomain]"
+        "[admdomain]",
+        "global-appstore-a1-icloudstorage.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-2.20260515"
       ]
     },
     {
       "page_path": "/tin-tuc/thong-cao-bao-chi/momo-co-cu-an-ba-tai-better-choice-awards-2026-9073",
       "hub": "Branding & PR",
-      "pageviews": 9138,
-      "sessions": 8249,
-      "users": 7504,
-      "w2a_conversions": 7412,
-      "cvr_percent": 89.85,
+      "pageviews": 9142,
+      "sessions": 8254,
+      "users": 7506,
+      "w2a_conversions": 7413,
+      "cvr_percent": 89.81,
       "primary_channel": "Admicro / NativeAds",
       "channels_breakdown": {
-        "Admicro / NativeAds": 9138
+        "Admicro / NativeAds": 9142
       },
       "campaigns": [
         "NativeAdsCampaign"
       ],
       "creatives": [
-        "m.cafebiz.vn",
-        "giadinh.suckhoedoisong.vn",
-        "m.gamek.vn",
-        "vietnamnet.vn",
-        "cafef.vn"
+        "kenh14.vn",
+        "cafebiz.vn",
+        "m.kenh14.vn",
+        "appKenh14.vn",
+        "m.cafebiz.vn"
       ]
     },
     {
       "page_path": "/blog/huong-dan-kiem-tra-diem-tin-dung-ca-nhan-c116dt1413",
       "hub": "Other / General",
-      "pageviews": 5760,
-      "sessions": 5245,
-      "users": 4886,
-      "w2a_conversions": 9203,
-      "cvr_percent": 175.46,
+      "pageviews": 5785,
+      "sessions": 5266,
+      "users": 4905,
+      "w2a_conversions": 9251,
+      "cvr_percent": 175.67,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 5588,
+        "google / cpc": 5613,
         "(data not available)": 172
       },
       "campaigns": [
         "(cross-network)"
       ],
       "creatives": [
-        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720",
-        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821"
+        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821",
+        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720"
       ]
     },
     {
       "page_path": "/tin-tuc/thong-bao/huong-dan-mo-tai-khoan-va-mua-ve-vietlott-sms-5667",
       "hub": "Lottery Hub",
-      "pageviews": 5650,
-      "sessions": 3772,
-      "users": 3367,
-      "w2a_conversions": 2400,
-      "cvr_percent": 63.63,
+      "pageviews": 5784,
+      "sessions": 3853,
+      "users": 3431,
+      "w2a_conversions": 2459,
+      "cvr_percent": 63.82,
       "primary_channel": "an / cpc",
       "channels_breakdown": {
-        "an / cpc": 5160,
-        "facebook / cpc": 302,
-        "google / cpc": 188
+        "an / cpc": 5286,
+        "facebook / cpc": 303,
+        "google / cpc": 195
       },
       "campaigns": [
-        "120250494856040629",
         "120250495014030629",
+        "120250494856040629",
         "120250121552530629"
       ],
       "creatives": [
+        "lottery-q4",
         "vietlottsms-202607.tra.na.c03.cpc.churn-vietlott.img-na-na.lol.ad05.dls312.20260716",
-        "vietlottsms-202607.tra.na.c03.cpc.potential-vietlott.img-na-na.lol.ad07.dls312.20260716",
         "vietlottsms-202607.tra.na.c03.cpc.potential-vietlott.img-na-na.lol.ad05.dls312.20260716",
-        "vietlottsms-202607.tra.na.c03.cpc.churn-vietlott.img-na-na.Igg.ad07dls312.20260716",
-        "vietlottsms-202607.tra.na.c03.cpc.churn-vietlott.img-na-na.Ias.ad07dls312.20260716"
+        "vietlottsms-202607.tra.na.c03.cpc.churn-vietlott.img-na-na.Ias.ad07dls312.20260716",
+        "vietlottsms-202607.tra.na.c03.cpc.churn-vietlott.img-na-na.Igg.ad07dls312.20260716"
       ]
     },
     {
       "page_path": "/bao-hiem-o-to/than-vo",
       "hub": "Vehicle & Insurtech",
-      "pageviews": 5284,
-      "sessions": 4057,
-      "users": 3591,
-      "w2a_conversions": 5869,
-      "cvr_percent": 144.66,
+      "pageviews": 5375,
+      "sessions": 4103,
+      "users": 3646,
+      "w2a_conversions": 5958,
+      "cvr_percent": 145.21,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 5108,
-        "(data not available)": 176
+        "google / cpc": 5195,
+        "(data not available)": 180
       },
       "campaigns": [
-        "(cross-network)",
-        "zalo"
+        "zalo",
+        "(cross-network)"
       ],
       "creatives": [
         "bhoto-q3-2026"
@@ -349,48 +349,48 @@
     {
       "page_path": "/",
       "hub": "Branding & PR",
-      "pageviews": 4962,
-      "sessions": 3763,
-      "users": 3193,
-      "w2a_conversions": 201353,
-      "cvr_percent": 5350.86,
+      "pageviews": 5040,
+      "sessions": 3816,
+      "users": 3241,
+      "w2a_conversions": 203818,
+      "cvr_percent": 5341.14,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 3514,
-        "tiktok / paid": 637,
-        "facebook / cpc": 347,
-        "tiktok / cpc": 221,
+        "google / cpc": 3563,
+        "tiktok / paid": 656,
+        "facebook / cpc": 355,
+        "tiktok / cpc": 223,
         "(data not available)": 110,
         "Admicro / NativeAds": 96,
         "an / paid": 27,
         "an / cpc": 10
       },
       "campaigns": [
-        "lottery.tra.c03.cpc.broad.vv.lun.ad10-0billions.@lottery.@20230301",
+        "lottery.tra.c03.cpc.broad.vv.lun.ad10-0billions.@lottery.@20230203",
         "1TR/ 5NGÀY - HUY MANG KÍNH",
-        "(cross-network)",
-        "120253635539850728",
-        "1TR/5 NGÀY - ĐỘI BÀN PHÍM"
+        "TikTok.o2.c03.g03.a04.napxu.sem-exact.ad01.TikTokCoin.20250601",
+        "NativeAdsCampaign",
+        "TikTok.o2.c03.g03.a04.napxu.sem.ad02.TikTokCoin.20230503"
       ],
       "creatives": [
-        "Installment-Generic-Action",
-        "trust-token.tra.na.c03.cpc.onlinetoken-a90-consent.pp-na.lol.ad18.dls300.20261016",
-        "cafef.vn",
-        "global-appstore-a1-icloudstorage.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-2.20260515",
-        "simchinhchu.sem.na.c03.cpc.mass.mix-na.lol.ad03-phrase.uti302.20250605"
+        "120253635539890728",
+        "bhxm-Q2-2026-brand-overview",
+        "m.kenh14.vn",
+        "global-googleplay-a4-branded.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-1.20260515",
+        "trust-thematic.tra.na.c03.cpc.low"
       ]
     },
     {
       "page_path": "/loa-thong-bao-chuyen-khoan",
       "hub": "Merchant Hub",
-      "pageviews": 4634,
-      "sessions": 3790,
-      "users": 3378,
-      "w2a_conversions": 900,
-      "cvr_percent": 23.75,
+      "pageviews": 4679,
+      "sessions": 3817,
+      "users": 3413,
+      "w2a_conversions": 911,
+      "cvr_percent": 23.87,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 4465,
+        "google / cpc": 4510,
         "(data not available)": 169
       },
       "campaigns": [
@@ -403,14 +403,14 @@
     {
       "page_path": "/huong-dan/huong-dan-mua-vietlott-sms-tren-momo",
       "hub": "Lottery Hub",
-      "pageviews": 4488,
-      "sessions": 3931,
-      "users": 3497,
-      "w2a_conversions": 4826,
-      "cvr_percent": 122.77,
+      "pageviews": 4536,
+      "sessions": 3985,
+      "users": 3531,
+      "w2a_conversions": 4882,
+      "cvr_percent": 122.51,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 4266,
+        "google / cpc": 4314,
         "(data not available)": 222
       },
       "campaigns": [
@@ -423,36 +423,36 @@
     {
       "page_path": "/blog/no-xau-la-gi-khi-nao-bi-xep-no-xau-va-anh-huong-ra-sao-c116dt2622",
       "hub": "Financial Hub",
-      "pageviews": 3119,
-      "sessions": 2888,
+      "pageviews": 3120,
+      "sessions": 2889,
       "users": 2720,
-      "w2a_conversions": 3838,
-      "cvr_percent": 132.89,
+      "w2a_conversions": 3839,
+      "cvr_percent": 132.88,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 3033,
+        "google / cpc": 3034,
         "(data not available)": 86
       },
       "campaigns": [
         "(cross-network)"
       ],
       "creatives": [
-        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720",
-        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821"
+        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821",
+        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720"
       ]
     },
     {
       "page_path": "/blog/cach-mua-vietlott-power-6-55-an-toan-c115dt1774",
       "hub": "Lottery Hub",
-      "pageviews": 2919,
-      "sessions": 2536,
-      "users": 2374,
-      "w2a_conversions": 3148,
-      "cvr_percent": 124.13,
+      "pageviews": 3007,
+      "sessions": 2613,
+      "users": 2442,
+      "w2a_conversions": 3232,
+      "cvr_percent": 123.69,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 2736,
-        "(data not available)": 183
+        "google / cpc": 2822,
+        "(data not available)": 185
       },
       "campaigns": [
         "(cross-network)"
@@ -464,37 +464,37 @@
     {
       "page_path": "/tin-tuc/khuyen-mai/uu-dai-he-giam-20k-cho-ban-nap-game-sieu-hoi-8927",
       "hub": "Game & Telco",
-      "pageviews": 2836,
-      "sessions": 2436,
-      "users": 2163,
-      "w2a_conversions": 2398,
-      "cvr_percent": 98.44,
+      "pageviews": 2879,
+      "sessions": 2474,
+      "users": 2199,
+      "w2a_conversions": 2434,
+      "cvr_percent": 98.38,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 2714,
+        "google / cpc": 2757,
         "(data not available)": 122
       },
       "campaigns": [
         "(cross-network)"
       ],
       "creatives": [
+        "global-googleplay-a4-branded.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-1.20260515",
         "global-googleplay-a1-paymentsetup.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-1.20260515",
         "global-googleplay-a3-muaapp.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-1.20260515",
-        "global-googleplay-a2-topup.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-1.20260515",
-        "global-googleplay-a4-branded.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-1.20260515"
+        "global-googleplay-a2-topup.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-1.20260515"
       ]
     },
     {
       "page_path": "/blog/huong-dan-cach-choi-vietlott-6-45-don-gian-de-hieu-c115dt1865",
       "hub": "Lottery Hub",
-      "pageviews": 2659,
-      "sessions": 2502,
-      "users": 2293,
-      "w2a_conversions": 3176,
-      "cvr_percent": 126.94,
+      "pageviews": 2758,
+      "sessions": 2597,
+      "users": 2373,
+      "w2a_conversions": 3242,
+      "cvr_percent": 124.84,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 2594,
+        "google / cpc": 2693,
         "(data not available)": 65
       },
       "campaigns": [
@@ -507,15 +507,15 @@
     {
       "page_path": "/bao-hiem-o-to/than-vo/xem-bao-gia",
       "hub": "Vehicle & Insurtech",
-      "pageviews": 2297,
-      "sessions": 1734,
-      "users": 1364,
-      "w2a_conversions": 3095,
-      "cvr_percent": 178.49,
+      "pageviews": 2351,
+      "sessions": 1768,
+      "users": 1391,
+      "w2a_conversions": 3155,
+      "cvr_percent": 178.45,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 2231,
-        "(data not available)": 66
+        "google / cpc": 2271,
+        "(data not available)": 80
       },
       "campaigns": [
         "(cross-network)"
@@ -527,61 +527,61 @@
     {
       "page_path": "/tin-tuc/khuyen-mai/tang-ban-moi-deal-google-play-lan-dau-nap-game-9076",
       "hub": "Game & Telco",
-      "pageviews": 1354,
-      "sessions": 1363,
-      "users": 1314,
-      "w2a_conversions": 929,
-      "cvr_percent": 68.16,
+      "pageviews": 1381,
+      "sessions": 1388,
+      "users": 1339,
+      "w2a_conversions": 947,
+      "cvr_percent": 68.23,
       "primary_channel": "facebook / cpc",
       "channels_breakdown": {
-        "facebook / cpc": 722,
+        "facebook / cpc": 744,
         "fb / paid": 577,
-        "th / cpc": 40,
+        "th / cpc": 45,
         "ig / cpc": 15
       },
       "campaigns": [
         "120250630395050629"
       ],
       "creatives": [
-        "120250630395100629",
-        "global-googleplay-promotion-2026Q4.rea.na.c03.cpc.googleplay-new.img-na.lol.ad02.dls311-1.20261006"
+        "global-googleplay-promotion-2026Q4.rea.na.c03.cpc.googleplay-new.img-na.lol.ad02.dls311-1.20261006",
+        "120250630395100629"
       ]
     },
     {
       "page_path": "/phat-nguoi",
       "hub": "Vehicle & Insurtech",
-      "pageviews": 1058,
-      "sessions": 922,
-      "users": 548,
-      "w2a_conversions": 8665,
-      "cvr_percent": 939.8,
+      "pageviews": 1063,
+      "sessions": 928,
+      "users": 549,
+      "w2a_conversions": 8731,
+      "cvr_percent": 940.84,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 836,
+        "google / cpc": 841,
         "(data not available)": 222
       },
       "campaigns": [
-        "(cross-network)",
-        "tracuuphatnguoi"
+        "tracuuphatnguoi",
+        "(cross-network)"
       ],
       "creatives": [
-        "X.23831254704_Y.195099786223_Z.{adid}",
-        "X.23831254704_Y.197885639473_Z.{adid}",
         "X.23831254704_Y.195099786223_Z",
+        "X.23831254704_Y.197885639473_Z.{adid}",
+        "X.23831254704_Y.195099786223_Z.{adid}",
         "bhoto-q3-2026"
       ]
     },
     {
       "page_path": "/blog/huong-dan-cach-choi-max-3d-vietlott-c115dt1907",
       "hub": "Lottery Hub",
-      "pageviews": 996,
-      "sessions": 853,
-      "users": 782,
-      "w2a_conversions": 1072,
-      "cvr_percent": 125.67,
+      "pageviews": 1050,
+      "sessions": 892,
+      "users": 817,
+      "w2a_conversions": 1105,
+      "cvr_percent": 123.88,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 964,
+        "google / cpc": 1018,
         "(data not available)": 32
       },
       "campaigns": [
@@ -594,14 +594,14 @@
     {
       "page_path": "/hoi-dap/cach-mua-ma-the-game-truc-tuyen",
       "hub": "Other / General",
-      "pageviews": 935,
-      "sessions": 812,
-      "users": 770,
-      "w2a_conversions": 6835,
-      "cvr_percent": 841.75,
+      "pageviews": 953,
+      "sessions": 828,
+      "users": 786,
+      "w2a_conversions": 6906,
+      "cvr_percent": 834.06,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 908,
+        "google / cpc": 926,
         "(data not available)": 27
       },
       "campaigns": [
@@ -612,14 +612,14 @@
     {
       "page_path": "/cinema/trai-buon-nguoi-24991",
       "hub": "Cinema Hub",
-      "pageviews": 882,
-      "sessions": 705,
-      "users": 636,
-      "w2a_conversions": 64993,
-      "cvr_percent": 9218.87,
+      "pageviews": 897,
+      "sessions": 718,
+      "users": 648,
+      "w2a_conversions": 65248,
+      "cvr_percent": 9087.47,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 817,
+        "google / cpc": 832,
         "(data not available)": 65
       },
       "campaigns": [
@@ -632,14 +632,14 @@
     {
       "page_path": "/blog/tra-cuu-bao-hiem-y-te-bang-cccd-c116dt2833",
       "hub": "Vehicle & Insurtech",
-      "pageviews": 880,
-      "sessions": 769,
-      "users": 701,
-      "w2a_conversions": 9416,
-      "cvr_percent": 1224.45,
+      "pageviews": 891,
+      "sessions": 776,
+      "users": 707,
+      "w2a_conversions": 9493,
+      "cvr_percent": 1223.32,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 851,
+        "google / cpc": 862,
         "(data not available)": 29
       },
       "campaigns": [
@@ -650,14 +650,14 @@
     {
       "page_path": "/blog/cach-choi-vietlott-chinh-thong-nhan-thuong-an-toan-c115dt1773",
       "hub": "Lottery Hub",
-      "pageviews": 842,
-      "sessions": 796,
-      "users": 726,
-      "w2a_conversions": 2292,
-      "cvr_percent": 287.94,
+      "pageviews": 876,
+      "sessions": 829,
+      "users": 754,
+      "w2a_conversions": 2333,
+      "cvr_percent": 281.42,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 825,
+        "google / cpc": 859,
         "(data not available)": 17
       },
       "campaigns": [
@@ -666,6 +666,42 @@
       "creatives": [
         "lottery-q4"
       ]
+    },
+    {
+      "page_path": "/nap-the-game",
+      "hub": "Game & Telco",
+      "pageviews": 746,
+      "sessions": 650,
+      "users": 607,
+      "w2a_conversions": 5969,
+      "cvr_percent": 918.31,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 695,
+        "(data not available)": 51
+      },
+      "campaigns": [
+        "(cross-network)"
+      ],
+      "creatives": []
+    },
+    {
+      "page_path": "/cinema/quy-an-tang-4-ho-tinh-25145",
+      "hub": "Cinema Hub",
+      "pageviews": 743,
+      "sessions": 626,
+      "users": 567,
+      "w2a_conversions": 22226,
+      "cvr_percent": 3550.48,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 697,
+        "(data not available)": 46
+      },
+      "campaigns": [
+        "(cross-network)"
+      ],
+      "creatives": []
     },
     {
       "page_path": "/tin-tuc/khuyen-mai/dinh-cao-lang-chay-ads-hoi-cang-them-hoi-momo-5912",
@@ -687,102 +723,44 @@
       ]
     },
     {
-      "page_path": "/nap-the-game",
-      "hub": "Game & Telco",
-      "pageviews": 740,
-      "sessions": 645,
-      "users": 601,
-      "w2a_conversions": 5907,
-      "cvr_percent": 915.81,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 689,
-        "(data not available)": 51
-      },
-      "campaigns": [
-        "(cross-network)"
-      ],
-      "creatives": []
-    },
-    {
-      "page_path": "/cinema/quy-an-tang-4-ho-tinh-25145",
-      "hub": "Cinema Hub",
-      "pageviews": 723,
-      "sessions": 613,
-      "users": 555,
-      "w2a_conversions": 22023,
-      "cvr_percent": 3592.66,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 677,
-        "(data not available)": 46
-      },
-      "campaigns": [
-        "(cross-network)"
-      ],
-      "creatives": []
-    },
-    {
       "page_path": "/tim-kiem",
       "hub": "Other / General",
-      "pageviews": 708,
-      "sessions": 457,
-      "users": 440,
-      "w2a_conversions": 8025,
-      "cvr_percent": 1756.02,
+      "pageviews": 715,
+      "sessions": 463,
+      "users": 446,
+      "w2a_conversions": 8087,
+      "cvr_percent": 1746.65,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 648,
+        "google / cpc": 655,
         "(data not available)": 45,
         "Admicro / NativeAds": 15
       },
       "campaigns": [
-        "(cross-network)",
         "TikTok.o2.c03.g03.a04.napxu.sem-exact.ad01.TikTokCoin.20250601",
         "NativeAdsCampaign",
-        "TikTok.o2.c03.g03.a04.napxu.sem.ad02.TikTokCoin.20230503"
+        "TikTok.o2.c03.g03.a04.napxu.sem.ad02.TikTokCoin.20230503",
+        "(cross-network)"
       ],
       "creatives": [
         "Installment-Generic-Competitor",
         "Ad01",
-        "[admdomain]",
+        "lottery-q4",
         "bhxm-Q2-2026-brand-overview",
-        "Ad02"
-      ]
-    },
-    {
-      "page_path": "/cinema/lich-chieu",
-      "hub": "Cinema Hub",
-      "pageviews": 678,
-      "sessions": 494,
-      "users": 402,
-      "w2a_conversions": 24194,
-      "cvr_percent": 4897.57,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 631,
-        "(data not available)": 47
-      },
-      "campaigns": [
-        "(cross-network)",
-        "TikTok.o2.c03.g03.a04.napxu.sem-exact.ad01.TikTokCoin.20250601"
-      ],
-      "creatives": [
-        "Ad01",
-        "Installment-Generic-Competitor"
+        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720"
       ]
     },
     {
       "page_path": "/thanh-toan-momo-vietlott-sms",
       "hub": "Lottery Hub",
-      "pageviews": 677,
-      "sessions": 599,
-      "users": 548,
-      "w2a_conversions": 1075,
-      "cvr_percent": 179.47,
+      "pageviews": 698,
+      "sessions": 617,
+      "users": 564,
+      "w2a_conversions": 1101,
+      "cvr_percent": 178.44,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 663,
+        "google / cpc": 684,
         "(data not available)": 14
       },
       "campaigns": [
@@ -793,16 +771,61 @@
       ]
     },
     {
-      "page_path": "/bao-hiem-o-to/vat-chat-xe",
-      "hub": "Vehicle & Insurtech",
-      "pageviews": 620,
-      "sessions": 531,
-      "users": 489,
-      "w2a_conversions": 568,
-      "cvr_percent": 106.97,
+      "page_path": "/cinema/lich-chieu",
+      "hub": "Cinema Hub",
+      "pageviews": 693,
+      "sessions": 504,
+      "users": 410,
+      "w2a_conversions": 24397,
+      "cvr_percent": 4840.67,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 597,
+        "google / cpc": 646,
+        "(data not available)": 47
+      },
+      "campaigns": [
+        "TikTok.o2.c03.g03.a04.napxu.sem-exact.ad01.TikTokCoin.20250601",
+        "(cross-network)"
+      ],
+      "creatives": [
+        "Installment-Generic-Competitor",
+        "Ad01"
+      ]
+    },
+    {
+      "page_path": "/cinema/bambi-lanh-dia-san-moi-25156",
+      "hub": "Cinema Hub",
+      "pageviews": 644,
+      "sessions": 602,
+      "users": 597,
+      "w2a_conversions": 776,
+      "cvr_percent": 128.9,
+      "primary_channel": "fb / paid",
+      "channels_breakdown": {
+        "fb / paid": 611,
+        "th / paid": 33
+      },
+      "campaigns": [
+        "120249300224110601"
+      ],
+      "creatives": [
+        "120249443629500601",
+        "120249443644500601",
+        "120249443667380601",
+        "120249443678370601"
+      ]
+    },
+    {
+      "page_path": "/bao-hiem-o-to/vat-chat-xe",
+      "hub": "Vehicle & Insurtech",
+      "pageviews": 623,
+      "sessions": 534,
+      "users": 492,
+      "w2a_conversions": 570,
+      "cvr_percent": 106.74,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 600,
         "(data not available)": 23
       },
       "campaigns": [
@@ -813,16 +836,40 @@
       ]
     },
     {
+      "page_path": "/tin-tuc/khuyen-mai/giam-ngay-20k-khi-lan-dau-thanh-toan-qua-momo-nap-9075",
+      "hub": "Other / General",
+      "pageviews": 613,
+      "sessions": 610,
+      "users": 594,
+      "w2a_conversions": 408,
+      "cvr_percent": 66.89,
+      "primary_channel": "fb / paid",
+      "channels_breakdown": {
+        "fb / paid": 375,
+        "facebook / cpc": 220,
+        "th / paid": 18
+      },
+      "campaigns": [
+        "120250630190140629",
+        "120250497613340629"
+      ],
+      "creatives": [
+        "global-appstore-promotion-2026Q4.rea.na.c03.cpc.appstore-new.pp-na.lol.ad03.dls311-2.20261006",
+        "global-appstore-promotion-2026q3.tra.na.c03.cpc.appstore-new.vv-na.lol.ad38.dls311-2.20260724",
+        "120250630190150629"
+      ]
+    },
+    {
       "page_path": "/cinema/rap/cgv/cgv-aeon-tan-phu-21",
       "hub": "Cinema Hub",
-      "pageviews": 560,
-      "sessions": 408,
-      "users": 333,
-      "w2a_conversions": 7500,
-      "cvr_percent": 1838.24,
+      "pageviews": 578,
+      "sessions": 424,
+      "users": 347,
+      "w2a_conversions": 7557,
+      "cvr_percent": 1782.31,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 530,
+        "google / cpc": 548,
         "(data not available)": 30
       },
       "campaigns": [
@@ -831,39 +878,16 @@
       "creatives": []
     },
     {
-      "page_path": "/cinema/bambi-lanh-dia-san-moi-25156",
-      "hub": "Cinema Hub",
-      "pageviews": 510,
-      "sessions": 475,
-      "users": 471,
-      "w2a_conversions": 580,
-      "cvr_percent": 122.11,
-      "primary_channel": "fb / paid",
-      "channels_breakdown": {
-        "fb / paid": 482,
-        "th / paid": 28
-      },
-      "campaigns": [
-        "120249300224110601"
-      ],
-      "creatives": [
-        "120249443629500601",
-        "120249443667380601",
-        "120249443678370601",
-        "120249443644500601"
-      ]
-    },
-    {
       "page_path": "/cinema/rap/cgv/cgv-aeon-mall-hai-phong-149",
       "hub": "Cinema Hub",
-      "pageviews": 507,
-      "sessions": 383,
-      "users": 280,
-      "w2a_conversions": 24579,
-      "cvr_percent": 6417.49,
+      "pageviews": 513,
+      "sessions": 390,
+      "users": 286,
+      "w2a_conversions": 24761,
+      "cvr_percent": 6348.97,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 480,
+        "google / cpc": 486,
         "(data not available)": 27
       },
       "campaigns": [
@@ -874,14 +898,14 @@
     {
       "page_path": "/blog/paypal-la-gi-huong-dan-su-dung-paypal-cuc-don-gian-c116dt1335",
       "hub": "Other / General",
-      "pageviews": 473,
-      "sessions": 430,
-      "users": 395,
-      "w2a_conversions": 1760,
-      "cvr_percent": 409.3,
+      "pageviews": 481,
+      "sessions": 438,
+      "users": 403,
+      "w2a_conversions": 1778,
+      "cvr_percent": 405.94,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 461,
+        "google / cpc": 469,
         "(data not available)": 12
       },
       "campaigns": [
@@ -892,14 +916,14 @@
     {
       "page_path": "/cinema/rap/cgv/cgv-aeon-binh-tan-23",
       "hub": "Cinema Hub",
-      "pageviews": 456,
-      "sessions": 368,
-      "users": 304,
-      "w2a_conversions": 4612,
-      "cvr_percent": 1253.26,
+      "pageviews": 462,
+      "sessions": 373,
+      "users": 309,
+      "w2a_conversions": 4645,
+      "cvr_percent": 1245.31,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 418,
+        "google / cpc": 424,
         "(data not available)": 38
       },
       "campaigns": [
@@ -910,59 +934,38 @@
     {
       "page_path": "/download",
       "hub": "Other / General",
-      "pageviews": 406,
-      "sessions": 299,
-      "users": 210,
+      "pageviews": 390,
+      "sessions": 290,
+      "users": 206,
       "w2a_conversions": 0,
       "cvr_percent": 0.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 406
+        "google / cpc": 390
       },
       "campaigns": [
         "TikTok.o2.c03.g03.a04.napxu.sem-exact.ad01.TikTokCoin.20250601",
         "TikTok.o2.c03.g03.a04.napxu.sem.ad02.TikTokCoin.20230503"
       ],
       "creatives": [
-        "simchinhchu.sem.na.c03.cpc.mass.mix-na.lol.ad03-phrase.uti302.20250605",
-        "Installment-Generic-Competitor",
         "Ad01",
-        "global-appstore-a2-thanhtoan.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-2.20260515",
+        "Installment-Generic-Competitor",
+        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720",
+        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821",
         "Ad02"
-      ]
-    },
-    {
-      "page_path": "/tin-tuc/khuyen-mai/giam-ngay-20k-khi-lan-dau-thanh-toan-qua-momo-nap-9075",
-      "hub": "Other / General",
-      "pageviews": 403,
-      "sessions": 401,
-      "users": 387,
-      "w2a_conversions": 228,
-      "cvr_percent": 56.86,
-      "primary_channel": "fb / paid",
-      "channels_breakdown": {
-        "fb / paid": 359,
-        "facebook / cpc": 44
-      },
-      "campaigns": [
-        "120250630190140629"
-      ],
-      "creatives": [
-        "global-appstore-promotion-2026Q4.rea.na.c03.cpc.appstore-new.pp-na.lol.ad03.dls311-2.20261006",
-        "120250630190150629"
       ]
     },
     {
       "page_path": "/cinema/rap/cgv",
       "hub": "Cinema Hub",
-      "pageviews": 380,
-      "sessions": 309,
-      "users": 257,
-      "w2a_conversions": 21328,
-      "cvr_percent": 6902.27,
+      "pageviews": 388,
+      "sessions": 316,
+      "users": 263,
+      "w2a_conversions": 21453,
+      "cvr_percent": 6788.92,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 368,
+        "google / cpc": 376,
         "(data not available)": 12
       },
       "campaigns": [
@@ -973,14 +976,14 @@
     {
       "page_path": "/cinema/rap/cgv/cgv-aeon-canary-binh-duong-16",
       "hub": "Cinema Hub",
-      "pageviews": 372,
-      "sessions": 304,
-      "users": 254,
-      "w2a_conversions": 4836,
-      "cvr_percent": 1590.79,
+      "pageviews": 379,
+      "sessions": 310,
+      "users": 258,
+      "w2a_conversions": 4883,
+      "cvr_percent": 1575.16,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 345,
+        "google / cpc": 352,
         "(data not available)": 27
       },
       "campaigns": [
@@ -989,13 +992,33 @@
       "creatives": []
     },
     {
+      "page_path": "/apple-services",
+      "hub": "Other / General",
+      "pageviews": 365,
+      "sessions": 337,
+      "users": 285,
+      "w2a_conversions": 919,
+      "cvr_percent": 272.7,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 365
+      },
+      "campaigns": [
+        "global.o5.c03.g03.a04.appphoto.gdn.ad01.@appstore.@20230312"
+      ],
+      "creatives": [
+        "_X.19862660869_Y.144067042541_Z.652000437998",
+        "global-appstore-a1-icloudstorage.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-2.20260515"
+      ]
+    },
+    {
       "page_path": "/cinema/an-mang-xem-hoan-hao-25098",
       "hub": "Cinema Hub",
       "pageviews": 362,
       "sessions": 298,
       "users": 274,
-      "w2a_conversions": 12460,
-      "cvr_percent": 4181.21,
+      "w2a_conversions": 12500,
+      "cvr_percent": 4194.63,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 346,
@@ -1007,51 +1030,16 @@
       "creatives": []
     },
     {
-      "page_path": "/apple-services",
-      "hub": "Other / General",
-      "pageviews": 360,
-      "sessions": 332,
-      "users": 280,
-      "w2a_conversions": 911,
-      "cvr_percent": 274.4,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 360
-      },
-      "campaigns": [
-        "global.o5.c03.g03.a04.appphoto.gdn.ad01.@appstore.@20230312"
-      ],
-      "creatives": [
-        "_X.19862660869_Y.144067042541_Z.652000437998",
-        "global-appstore-a1-icloudstorage.tra.na.c03.cpc.mass.mix-na.llp.ad01.dls311-2.20260515"
-      ]
-    },
-    {
-      "page_path": "/blog/esim-la-gi-huong-dan-dang-ky-va-kich-hoat-esim-nhanh-chong-c193dt2188",
-      "hub": "Other / General",
-      "pageviews": 352,
-      "sessions": 331,
-      "users": 281,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 352
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
       "page_path": "/cinema/an-mang-karaoke-25089",
       "hub": "Cinema Hub",
-      "pageviews": 337,
-      "sessions": 259,
-      "users": 237,
-      "w2a_conversions": 9731,
-      "cvr_percent": 3757.14,
+      "pageviews": 360,
+      "sessions": 281,
+      "users": 257,
+      "w2a_conversions": 10250,
+      "cvr_percent": 3647.69,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 325,
+        "google / cpc": 348,
         "(data not available)": 12
       },
       "campaigns": [
@@ -1060,16 +1048,46 @@
       "creatives": []
     },
     {
-      "page_path": "/blog/cach-chuyen-esim-sang-may-khac-de-dang-c193dt2259",
+      "page_path": "/blog/esim-la-gi-huong-dan-dang-ky-va-kich-hoat-esim-nhanh-chong-c193dt2188",
       "hub": "Other / General",
-      "pageviews": 326,
-      "sessions": 312,
-      "users": 251,
+      "pageviews": 357,
+      "sessions": 336,
+      "users": 286,
       "w2a_conversions": 0,
       "cvr_percent": 0.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 326
+        "google / cpc": 357
+      },
+      "campaigns": [],
+      "creatives": []
+    },
+    {
+      "page_path": "/blog/cach-chuyen-esim-sang-may-khac-de-dang-c193dt2259",
+      "hub": "Other / General",
+      "pageviews": 339,
+      "sessions": 324,
+      "users": 261,
+      "w2a_conversions": 0,
+      "cvr_percent": 0.0,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 339
+      },
+      "campaigns": [],
+      "creatives": []
+    },
+    {
+      "page_path": "/phat-nguoi/blog/muc-phat-loi-qua-toc-do-83",
+      "hub": "Vehicle & Insurtech",
+      "pageviews": 327,
+      "sessions": 301,
+      "users": 256,
+      "w2a_conversions": 1035,
+      "cvr_percent": 343.85,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 327
       },
       "campaigns": [],
       "creatives": []
@@ -1080,48 +1098,33 @@
       "pageviews": 321,
       "sessions": 254,
       "users": 195,
-      "w2a_conversions": 20707,
-      "cvr_percent": 8152.36,
+      "w2a_conversions": 20884,
+      "cvr_percent": 8222.05,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 310,
         "(data not available)": 11
       },
       "campaigns": [
-        "(cross-network)",
-        "TikTok.o2.c03.g03.a04.napxu.sem.ad02.TikTokCoin.20230503"
+        "TikTok.o2.c03.g03.a04.napxu.sem.ad02.TikTokCoin.20230503",
+        "(cross-network)"
       ],
       "creatives": [
-        "Ad02",
-        "Installment-Generic-Competitor"
+        "Installment-Generic-Competitor",
+        "Ad02"
       ]
-    },
-    {
-      "page_path": "/phat-nguoi/blog/muc-phat-loi-qua-toc-do-83",
-      "hub": "Vehicle & Insurtech",
-      "pageviews": 319,
-      "sessions": 294,
-      "users": 250,
-      "w2a_conversions": 1019,
-      "cvr_percent": 346.6,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 319
-      },
-      "campaigns": [],
-      "creatives": []
     },
     {
       "page_path": "/cinema/rap/lotte-cinema",
       "hub": "Cinema Hub",
-      "pageviews": 310,
-      "sessions": 260,
-      "users": 231,
-      "w2a_conversions": 12067,
-      "cvr_percent": 4641.15,
+      "pageviews": 307,
+      "sessions": 258,
+      "users": 229,
+      "w2a_conversions": 12126,
+      "cvr_percent": 4700.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 289,
+        "google / cpc": 286,
         "(data not available)": 21
       },
       "campaigns": [
@@ -1143,14 +1146,32 @@
         "(data not available)": 61
       },
       "campaigns": [
-        "(cross-network)",
-        "tracuuphatnguoi"
+        "tracuuphatnguoi",
+        "(cross-network)"
       ],
       "creatives": [
+        "X.23836658099_Y.194730543565_Z.{adid}",
         "X.23831254704_Y.197885639473_Z.{adid}",
-        "X.23836658099_Y.194730543525_Z.{adid}",
-        "X.23836658099_Y.194730543565_Z.{adid}"
+        "X.23836658099_Y.194730543525_Z.{adid}"
       ]
+    },
+    {
+      "page_path": "/cinema/rap/cgv/cgv-aeon-tan-phu-568",
+      "hub": "Cinema Hub",
+      "pageviews": 287,
+      "sessions": 230,
+      "users": 186,
+      "w2a_conversions": 819,
+      "cvr_percent": 356.09,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 274,
+        "(data not available)": 13
+      },
+      "campaigns": [
+        "(cross-network)"
+      ],
+      "creatives": []
     },
     {
       "page_path": "/cinema/rap/bhd-star/bhd-star-long-khanh-216",
@@ -1158,8 +1179,8 @@
       "pageviews": 278,
       "sessions": 191,
       "users": 149,
-      "w2a_conversions": 18478,
-      "cvr_percent": 9674.35,
+      "w2a_conversions": 18654,
+      "cvr_percent": 9766.49,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 251,
@@ -1171,17 +1192,17 @@
       "creatives": []
     },
     {
-      "page_path": "/cinema/rap/cgv/cgv-aeon-tan-phu-568",
+      "page_path": "/cinema/rap/cgv/cgv-giga-mall-thu-duc-50",
       "hub": "Cinema Hub",
-      "pageviews": 276,
-      "sessions": 220,
-      "users": 177,
-      "w2a_conversions": 811,
-      "cvr_percent": 368.64,
+      "pageviews": 268,
+      "sessions": 197,
+      "users": 164,
+      "w2a_conversions": 2792,
+      "cvr_percent": 1417.26,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 263,
-        "(data not available)": 13
+        "google / cpc": 246,
+        "(data not available)": 22
       },
       "campaigns": [
         "(cross-network)"
@@ -1191,30 +1212,30 @@
     {
       "page_path": "/blog/huong-dan-dang-ky-goi-mobifone-50k-thang-sieu-don-gian-c193dt1306",
       "hub": "Other / General",
-      "pageviews": 259,
-      "sessions": 238,
-      "users": 223,
+      "pageviews": 262,
+      "sessions": 241,
+      "users": 226,
       "w2a_conversions": 382,
-      "cvr_percent": 160.5,
+      "cvr_percent": 158.51,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 259
+        "google / cpc": 262
       },
       "campaigns": [],
       "creatives": []
     },
     {
-      "page_path": "/cinema/rap/cgv/cgv-giga-mall-thu-duc-50",
+      "page_path": "/cinema/rap/cgv/cgv-vincom-vinh-long-28",
       "hub": "Cinema Hub",
-      "pageviews": 257,
-      "sessions": 186,
-      "users": 153,
-      "w2a_conversions": 2773,
-      "cvr_percent": 1490.86,
+      "pageviews": 259,
+      "sessions": 203,
+      "users": 158,
+      "w2a_conversions": 6756,
+      "cvr_percent": 3328.08,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 235,
-        "(data not available)": 22
+        "google / cpc": 241,
+        "(data not available)": 18
       },
       "campaigns": [
         "(cross-network)"
@@ -1224,66 +1245,30 @@
     {
       "page_path": "/cinema/rap/bhd-star/bhd-star-le-van-viet-133",
       "hub": "Cinema Hub",
-      "pageviews": 247,
-      "sessions": 205,
-      "users": 158,
-      "w2a_conversions": 3879,
-      "cvr_percent": 1892.2,
+      "pageviews": 251,
+      "sessions": 208,
+      "users": 159,
+      "w2a_conversions": 3920,
+      "cvr_percent": 1884.62,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 247
+        "google / cpc": 251
       },
       "campaigns": [],
       "creatives": []
     },
     {
-      "page_path": "/cinema/rap/cgv/cgv-vincom-vinh-long-28",
-      "hub": "Cinema Hub",
-      "pageviews": 244,
-      "sessions": 191,
-      "users": 147,
-      "w2a_conversions": 6716,
-      "cvr_percent": 3516.23,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 226,
-        "(data not available)": 18
-      },
-      "campaigns": [
-        "(cross-network)"
-      ],
-      "creatives": []
-    },
-    {
       "page_path": "/blog/thu-tuc-sang-ten-xe-may-c116dt2685",
       "hub": "Vehicle & Insurtech",
-      "pageviews": 242,
-      "sessions": 225,
-      "users": 203,
+      "pageviews": 248,
+      "sessions": 230,
+      "users": 208,
       "w2a_conversions": 0,
       "cvr_percent": 0.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 222,
+        "google / cpc": 228,
         "(data not available)": 20
-      },
-      "campaigns": [
-        "(cross-network)"
-      ],
-      "creatives": []
-    },
-    {
-      "page_path": "/cinema/nguoi-me-khac-25149",
-      "hub": "Cinema Hub",
-      "pageviews": 221,
-      "sessions": 176,
-      "users": 146,
-      "w2a_conversions": 8256,
-      "cvr_percent": 4690.91,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 208,
-        "(data not available)": 13
       },
       "campaigns": [
         "(cross-network)"
@@ -1293,20 +1278,38 @@
     {
       "page_path": "/hoi-dap/cach-lien-he-voi-momo",
       "hub": "Other / General",
-      "pageviews": 221,
-      "sessions": 184,
-      "users": 155,
-      "w2a_conversions": 12029,
-      "cvr_percent": 6537.5,
+      "pageviews": 231,
+      "sessions": 188,
+      "users": 158,
+      "w2a_conversions": 12128,
+      "cvr_percent": 6451.06,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 221
+        "google / cpc": 231
       },
       "campaigns": [],
       "creatives": [
-        "bhxm-Q2-2026-brand-overview",
-        "Installment-Generic-Competitor"
+        "Installment-Generic-Competitor",
+        "bhxm-Q2-2026-brand-overview"
       ]
+    },
+    {
+      "page_path": "/cinema/nguoi-me-khac-25149",
+      "hub": "Cinema Hub",
+      "pageviews": 221,
+      "sessions": 176,
+      "users": 146,
+      "w2a_conversions": 8264,
+      "cvr_percent": 4695.45,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 208,
+        "(data not available)": 13
+      },
+      "campaigns": [
+        "(cross-network)"
+      ],
+      "creatives": []
     },
     {
       "page_path": "/tin-tuc/khuyen-mai/mua-sim-chinh-chu-de-nhu-tro-ban-tay-vao-momo-la-7460",
@@ -1329,33 +1332,33 @@
     {
       "page_path": "/tai-chinh",
       "hub": "Financial Hub",
-      "pageviews": 217,
-      "sessions": 172,
-      "users": 149,
+      "pageviews": 219,
+      "sessions": 174,
+      "users": 151,
       "w2a_conversions": 162,
-      "cvr_percent": 94.19,
+      "cvr_percent": 93.1,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 217
+        "google / cpc": 219
       },
       "campaigns": [],
       "creatives": [
+        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821",
         "Installment-Generic-Competitor",
-        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720",
-        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821"
+        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720"
       ]
     },
     {
       "page_path": "/vay-nhanh/blog/no-xau-la-gi-huong-dan-kiem-tra-va-xoa-no-xau-1122",
       "hub": "Financial Hub",
-      "pageviews": 211,
-      "sessions": 195,
-      "users": 178,
-      "w2a_conversions": 648,
-      "cvr_percent": 332.31,
+      "pageviews": 217,
+      "sessions": 201,
+      "users": 182,
+      "w2a_conversions": 655,
+      "cvr_percent": 325.87,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 211
+        "google / cpc": 217
       },
       "campaigns": [],
       "creatives": [
@@ -1365,14 +1368,14 @@
     {
       "page_path": "/cinema/rap/cgv/cgv-su-van-hanh-73",
       "hub": "Cinema Hub",
-      "pageviews": 208,
-      "sessions": 153,
-      "users": 120,
-      "w2a_conversions": 3245,
-      "cvr_percent": 2120.92,
+      "pageviews": 209,
+      "sessions": 154,
+      "users": 121,
+      "w2a_conversions": 3263,
+      "cvr_percent": 2118.83,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 208
+        "google / cpc": 209
       },
       "campaigns": [],
       "creatives": []
@@ -1383,8 +1386,8 @@
       "pageviews": 204,
       "sessions": 140,
       "users": 111,
-      "w2a_conversions": 4258,
-      "cvr_percent": 3041.43,
+      "w2a_conversions": 4282,
+      "cvr_percent": 3058.57,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 184,
@@ -1401,8 +1404,8 @@
       "pageviews": 201,
       "sessions": 157,
       "users": 132,
-      "w2a_conversions": 9672,
-      "cvr_percent": 6160.51,
+      "w2a_conversions": 9770,
+      "cvr_percent": 6222.93,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 190,
@@ -1418,21 +1421,36 @@
     {
       "page_path": "/blog/rut-tien-tu-vi-tra-sau-momo-co-duoc-khong-c116dt1843",
       "hub": "Other / General",
-      "pageviews": 199,
-      "sessions": 182,
-      "users": 182,
-      "w2a_conversions": 3245,
-      "cvr_percent": 1782.97,
+      "pageviews": 200,
+      "sessions": 183,
+      "users": 183,
+      "w2a_conversions": 3274,
+      "cvr_percent": 1789.07,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 199
+        "google / cpc": 200
       },
       "campaigns": [],
       "creatives": [
-        "VTS-Branded-Info",
         "VTS-Branded-Action",
-        "VTS-Category-Demand"
+        "VTS-Category-Demand",
+        "VTS-Branded-Info"
       ]
+    },
+    {
+      "page_path": "/blog/tao-tai-khoan-apple-id-dang-ky-icloud-mien-phi-c115dt246",
+      "hub": "Other / General",
+      "pageviews": 197,
+      "sessions": 185,
+      "users": 167,
+      "w2a_conversions": 194,
+      "cvr_percent": 104.86,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 197
+      },
+      "campaigns": [],
+      "creatives": []
     },
     {
       "page_path": "/tin-tuc/khuyen-mai/chuong-trinh-gioi-thieu-ban-be-chuyen-tien-nhan-8930",
@@ -1440,8 +1458,8 @@
       "pageviews": 196,
       "sessions": 131,
       "users": 97,
-      "w2a_conversions": 28012,
-      "cvr_percent": 21383.21,
+      "w2a_conversions": 28191,
+      "cvr_percent": 21519.85,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 196
@@ -1450,22 +1468,22 @@
         "TikTok.o2.c03.g03.a04.napxu.sem-exact.ad01.TikTokCoin.20250601"
       ],
       "creatives": [
-        "Ad01",
+        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821",
         "Installment-Generic-Competitor",
-        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821"
+        "Ad01"
       ]
     },
     {
-      "page_path": "/blog/tao-tai-khoan-apple-id-dang-ky-icloud-mien-phi-c115dt246",
+      "page_path": "/hoi-dap/cach-nap-tien-vao-momo",
       "hub": "Other / General",
-      "pageviews": 195,
-      "sessions": 183,
-      "users": 165,
-      "w2a_conversions": 192,
-      "cvr_percent": 104.92,
+      "pageviews": 194,
+      "sessions": 178,
+      "users": 160,
+      "w2a_conversions": 1087,
+      "cvr_percent": 610.67,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 195
+        "google / cpc": 194
       },
       "campaigns": [],
       "creatives": []
@@ -1473,16 +1491,69 @@
     {
       "page_path": "/blog/huong-dan-cach-su-dung-the-tin-dung-c116dt1410",
       "hub": "Financial Hub",
-      "pageviews": 187,
-      "sessions": 175,
-      "users": 162,
-      "w2a_conversions": 180,
-      "cvr_percent": 102.86,
+      "pageviews": 190,
+      "sessions": 178,
+      "users": 165,
+      "w2a_conversions": 183,
+      "cvr_percent": 102.81,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 187
+        "google / cpc": 190
       },
       "campaigns": [],
+      "creatives": []
+    },
+    {
+      "page_path": "/blog/kiem-tra-no-xau-c116dt2688",
+      "hub": "Financial Hub",
+      "pageviews": 190,
+      "sessions": 173,
+      "users": 163,
+      "w2a_conversions": 371,
+      "cvr_percent": 214.45,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 190
+      },
+      "campaigns": [],
+      "creatives": [
+        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720"
+      ]
+    },
+    {
+      "page_path": "/cinema/shaun-the-sheep-quai-la-ghe-nha-25151",
+      "hub": "Cinema Hub",
+      "pageviews": 188,
+      "sessions": 146,
+      "users": 137,
+      "w2a_conversions": 6691,
+      "cvr_percent": 4582.88,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 177,
+        "(data not available)": 11
+      },
+      "campaigns": [
+        "(cross-network)"
+      ],
+      "creatives": []
+    },
+    {
+      "page_path": "/cinema/rap/lotte-cinema/lotte-ninh-kieu-180",
+      "hub": "Cinema Hub",
+      "pageviews": 185,
+      "sessions": 143,
+      "users": 115,
+      "w2a_conversions": 3767,
+      "cvr_percent": 2634.27,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 174,
+        "(data not available)": 11
+      },
+      "campaigns": [
+        "(cross-network)"
+      ],
       "creatives": []
     },
     {
@@ -1501,21 +1572,19 @@
       "creatives": []
     },
     {
-      "page_path": "/blog/kiem-tra-no-xau-c116dt2688",
-      "hub": "Financial Hub",
-      "pageviews": 184,
-      "sessions": 167,
-      "users": 157,
-      "w2a_conversions": 353,
-      "cvr_percent": 211.38,
+      "page_path": "/blog/lai-suat-gui-tiet-kiem-ngan-hang-nao-cao-nhat-hien-nay-c181dt1622",
+      "hub": "Other / General",
+      "pageviews": 178,
+      "sessions": 173,
+      "users": 164,
+      "w2a_conversions": 177,
+      "cvr_percent": 102.31,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 184
+        "google / cpc": 178
       },
       "campaigns": [],
-      "creatives": [
-        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720"
-      ]
+      "creatives": []
     },
     {
       "page_path": "/cinema/rap/beta-cinemas/beta-quang-trung-209",
@@ -1523,8 +1592,8 @@
       "pageviews": 178,
       "sessions": 138,
       "users": 112,
-      "w2a_conversions": 4419,
-      "cvr_percent": 3202.17,
+      "w2a_conversions": 4491,
+      "cvr_percent": 3254.35,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 164,
@@ -1536,52 +1605,21 @@
       "creatives": []
     },
     {
-      "page_path": "/cinema/shaun-the-sheep-quai-la-ghe-nha-25151",
-      "hub": "Cinema Hub",
-      "pageviews": 176,
-      "sessions": 136,
-      "users": 127,
-      "w2a_conversions": 6640,
-      "cvr_percent": 4882.35,
+      "page_path": "/tin-tuc/thong-bao/huong-dan-cai-dat-3-dong-loa-thong-bao-chuyen-8869",
+      "hub": "Merchant Hub",
+      "pageviews": 173,
+      "sessions": 146,
+      "users": 144,
+      "w2a_conversions": 506,
+      "cvr_percent": 346.58,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 165,
-        "(data not available)": 11
-      },
-      "campaigns": [
-        "(cross-network)"
-      ],
-      "creatives": []
-    },
-    {
-      "page_path": "/blog/lai-suat-gui-tiet-kiem-ngan-hang-nao-cao-nhat-hien-nay-c181dt1622",
-      "hub": "Other / General",
-      "pageviews": 176,
-      "sessions": 171,
-      "users": 162,
-      "w2a_conversions": 175,
-      "cvr_percent": 102.34,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 176
+        "google / cpc": 173
       },
       "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/hoi-dap/cach-nap-tien-vao-momo",
-      "hub": "Other / General",
-      "pageviews": 176,
-      "sessions": 163,
-      "users": 145,
-      "w2a_conversions": 1071,
-      "cvr_percent": 657.06,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 176
-      },
-      "campaigns": [],
-      "creatives": []
+      "creatives": [
+        "bhxm-Q2-2026-brand-overview"
+      ]
     },
     {
       "page_path": "/an-toan-bao-mat",
@@ -1606,8 +1644,8 @@
       "pageviews": 172,
       "sessions": 158,
       "users": 142,
-      "w2a_conversions": 166,
-      "cvr_percent": 105.06,
+      "w2a_conversions": 168,
+      "cvr_percent": 106.33,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 172
@@ -1616,21 +1654,19 @@
       "creatives": []
     },
     {
-      "page_path": "/tin-tuc/thong-bao/huong-dan-cai-dat-3-dong-loa-thong-bao-chuyen-8869",
-      "hub": "Merchant Hub",
-      "pageviews": 171,
-      "sessions": 144,
-      "users": 142,
-      "w2a_conversions": 498,
-      "cvr_percent": 345.83,
+      "page_path": "/cinema/phim-chieu",
+      "hub": "Cinema Hub",
+      "pageviews": 172,
+      "sessions": 161,
+      "users": 146,
+      "w2a_conversions": 5853,
+      "cvr_percent": 3635.4,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 171
+        "google / cpc": 172
       },
       "campaigns": [],
-      "creatives": [
-        "bhxm-Q2-2026-brand-overview"
-      ]
+      "creatives": []
     },
     {
       "page_path": "/cinema/rap/cgv/cgv-aeon-ha-dong-128",
@@ -1638,45 +1674,12 @@
       "pageviews": 171,
       "sessions": 127,
       "users": 101,
-      "w2a_conversions": 6710,
-      "cvr_percent": 5283.46,
+      "w2a_conversions": 6746,
+      "cvr_percent": 5311.81,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 143,
         "(data not available)": 28
-      },
-      "campaigns": [
-        "(cross-network)"
-      ],
-      "creatives": []
-    },
-    {
-      "page_path": "/cinema/phim-chieu",
-      "hub": "Cinema Hub",
-      "pageviews": 170,
-      "sessions": 159,
-      "users": 144,
-      "w2a_conversions": 5810,
-      "cvr_percent": 3654.09,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 170
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/cinema/rap/lotte-cinema/lotte-ninh-kieu-180",
-      "hub": "Cinema Hub",
-      "pageviews": 170,
-      "sessions": 129,
-      "users": 104,
-      "w2a_conversions": 3743,
-      "cvr_percent": 2901.55,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 159,
-        "(data not available)": 11
       },
       "campaigns": [
         "(cross-network)"
@@ -1689,8 +1692,8 @@
       "pageviews": 168,
       "sessions": 153,
       "users": 124,
-      "w2a_conversions": 796,
-      "cvr_percent": 520.26,
+      "w2a_conversions": 804,
+      "cvr_percent": 525.49,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 168
@@ -1699,13 +1702,47 @@
       "creatives": []
     },
     {
+      "page_path": "/mo-tai-khoan-ngan-hang",
+      "hub": "Other / General",
+      "pageviews": 168,
+      "sessions": 152,
+      "users": 143,
+      "w2a_conversions": 1164,
+      "cvr_percent": 765.79,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 168
+      },
+      "campaigns": [],
+      "creatives": [
+        "Installment-Generic-Competitor"
+      ]
+    },
+    {
+      "page_path": "/huong-dan/huong-dan-tai-va-cai-dat-vi-momo",
+      "hub": "Other / General",
+      "pageviews": 168,
+      "sessions": 146,
+      "users": 140,
+      "w2a_conversions": 1923,
+      "cvr_percent": 1317.12,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 168
+      },
+      "campaigns": [],
+      "creatives": [
+        "Installment-Generic-Competitor"
+      ]
+    },
+    {
       "page_path": "/lienkettaikhoan",
       "hub": "Other / General",
       "pageviews": 168,
       "sessions": 110,
       "users": 101,
-      "w2a_conversions": 12382,
-      "cvr_percent": 11256.36,
+      "w2a_conversions": 12498,
+      "cvr_percent": 11361.82,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 157,
@@ -1718,23 +1755,6 @@
         "Installment-Generic-Competitor",
         "[admdomain]",
         "lottery-q4"
-      ]
-    },
-    {
-      "page_path": "/huong-dan/huong-dan-tai-va-cai-dat-vi-momo",
-      "hub": "Other / General",
-      "pageviews": 166,
-      "sessions": 143,
-      "users": 138,
-      "w2a_conversions": 1901,
-      "cvr_percent": 1329.37,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 166
-      },
-      "campaigns": [],
-      "creatives": [
-        "Installment-Generic-Competitor"
       ]
     },
     {
@@ -1761,37 +1781,38 @@
       "pageviews": 162,
       "sessions": 132,
       "users": 123,
-      "w2a_conversions": 13005,
-      "cvr_percent": 9852.27,
+      "w2a_conversions": 13089,
+      "cvr_percent": 9915.91,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 162
       },
       "campaigns": [],
       "creatives": [
-        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821",
         "Installment-Generic-Action",
         "Installment-Generic-Competitor",
+        "VTS-Branded-Info",
         "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720",
-        "VTS-Branded-Info"
+        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821"
       ]
     },
     {
-      "page_path": "/mo-tai-khoan-ngan-hang",
-      "hub": "Other / General",
-      "pageviews": 161,
-      "sessions": 146,
-      "users": 137,
-      "w2a_conversions": 1150,
-      "cvr_percent": 787.67,
+      "page_path": "/cinema/rap/galaxy-cinema/galaxy-aeon-tan-an-484",
+      "hub": "Cinema Hub",
+      "pageviews": 159,
+      "sessions": 117,
+      "users": 93,
+      "w2a_conversions": 367,
+      "cvr_percent": 313.68,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 161
+        "google / cpc": 141,
+        "(data not available)": 18
       },
-      "campaigns": [],
-      "creatives": [
-        "Installment-Generic-Competitor"
-      ]
+      "campaigns": [
+        "(cross-network)"
+      ],
+      "creatives": []
     },
     {
       "page_path": "/blog/cach-nang-han-muc-vi-tra-sau-momo-c116dt1868",
@@ -1799,16 +1820,33 @@
       "pageviews": 157,
       "sessions": 145,
       "users": 132,
-      "w2a_conversions": 1038,
-      "cvr_percent": 715.86,
+      "w2a_conversions": 1042,
+      "cvr_percent": 718.62,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 157
       },
       "campaigns": [],
       "creatives": [
-        "VTS-Category-Demand",
-        "VTS-Branded-Info"
+        "VTS-Branded-Info",
+        "VTS-Category-Demand"
+      ]
+    },
+    {
+      "page_path": "/blog/bingo-18-la-gi-huong-dan-cach-choi-bingo-18-de-hieu-c115dt1866",
+      "hub": "Other / General",
+      "pageviews": 155,
+      "sessions": 145,
+      "users": 131,
+      "w2a_conversions": 383,
+      "cvr_percent": 264.14,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 155
+      },
+      "campaigns": [],
+      "creatives": [
+        "lottery-q4"
       ]
     },
     {
@@ -1827,49 +1865,13 @@
       "creatives": []
     },
     {
-      "page_path": "/cinema/rap/galaxy-cinema/galaxy-cinex-aeon-mall-thanh-khe-569",
-      "hub": "Cinema Hub",
-      "pageviews": 154,
-      "sessions": 122,
-      "users": 107,
-      "w2a_conversions": 200,
-      "cvr_percent": 163.93,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 144,
-        "(data not available)": 10
-      },
-      "campaigns": [
-        "(cross-network)"
-      ],
-      "creatives": []
-    },
-    {
-      "page_path": "/cinema/rap/galaxy-cinema/galaxy-aeon-tan-an-484",
-      "hub": "Cinema Hub",
-      "pageviews": 153,
-      "sessions": 112,
-      "users": 90,
-      "w2a_conversions": 367,
-      "cvr_percent": 327.68,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 135,
-        "(data not available)": 18
-      },
-      "campaigns": [
-        "(cross-network)"
-      ],
-      "creatives": []
-    },
-    {
       "page_path": "/gioi-thieu-momo",
       "hub": "Other / General",
       "pageviews": 152,
       "sessions": 71,
       "users": 62,
-      "w2a_conversions": 16028,
-      "cvr_percent": 22574.65,
+      "w2a_conversions": 16202,
+      "cvr_percent": 22819.72,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 152
@@ -1878,41 +1880,6 @@
       "creatives": [
         "Installment-Generic-Competitor"
       ]
-    },
-    {
-      "page_path": "/blog/bingo-18-la-gi-huong-dan-cach-choi-bingo-18-de-hieu-c115dt1866",
-      "hub": "Other / General",
-      "pageviews": 149,
-      "sessions": 139,
-      "users": 125,
-      "w2a_conversions": 381,
-      "cvr_percent": 274.1,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 149
-      },
-      "campaigns": [],
-      "creatives": [
-        "lottery-q4"
-      ]
-    },
-    {
-      "page_path": "/cinema/street-fighter-25060",
-      "hub": "Cinema Hub",
-      "pageviews": 148,
-      "sessions": 127,
-      "users": 117,
-      "w2a_conversions": 3179,
-      "cvr_percent": 2503.15,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 139,
-        "(data not available)": 9
-      },
-      "campaigns": [
-        "(cross-network)"
-      ],
-      "creatives": []
     },
     {
       "page_path": "/vay-nhanh/50-trieu",
@@ -1935,8 +1902,8 @@
       "pageviews": 146,
       "sessions": 136,
       "users": 120,
-      "w2a_conversions": 581,
-      "cvr_percent": 427.21,
+      "w2a_conversions": 585,
+      "cvr_percent": 430.15,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 146
@@ -1947,13 +1914,48 @@
       ]
     },
     {
+      "page_path": "/tin-tuc/khuyen-mai/nhap-ma-chaomomo-ban-moi-nhan-ngay-qua-500000d-7834",
+      "hub": "Other / General",
+      "pageviews": 146,
+      "sessions": 106,
+      "users": 93,
+      "w2a_conversions": 5820,
+      "cvr_percent": 5490.57,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 146
+      },
+      "campaigns": [],
+      "creatives": [
+        "Installment-Generic-Competitor"
+      ]
+    },
+    {
+      "page_path": "/cinema/rap/galaxy-cinema/galaxy-cinex-aeon-mall-thanh-khe-569",
+      "hub": "Cinema Hub",
+      "pageviews": 145,
+      "sessions": 115,
+      "users": 102,
+      "w2a_conversions": 356,
+      "cvr_percent": 309.57,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 135,
+        "(data not available)": 10
+      },
+      "campaigns": [
+        "(cross-network)"
+      ],
+      "creatives": []
+    },
+    {
       "page_path": "/tin-tuc/thong-bao/dat-va-thanh-toan-ve-xe-phuong-trang-tren-momo-2846",
       "hub": "Other / General",
       "pageviews": 143,
       "sessions": 134,
       "users": 115,
-      "w2a_conversions": 217,
-      "cvr_percent": 161.94,
+      "w2a_conversions": 221,
+      "cvr_percent": 164.93,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 143
@@ -1964,11 +1966,26 @@
     {
       "page_path": "/cinema/rap/cgv/cgv-vincom-thu-duc-78",
       "hub": "Cinema Hub",
+      "pageviews": 143,
+      "sessions": 119,
+      "users": 102,
+      "w2a_conversions": 1865,
+      "cvr_percent": 1567.23,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 143
+      },
+      "campaigns": [],
+      "creatives": []
+    },
+    {
+      "page_path": "/cinema/street-fighter-25060",
+      "hub": "Cinema Hub",
       "pageviews": 140,
-      "sessions": 116,
-      "users": 100,
-      "w2a_conversions": 1845,
-      "cvr_percent": 1590.52,
+      "sessions": 120,
+      "users": 110,
+      "w2a_conversions": 3198,
+      "cvr_percent": 2665.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 140
@@ -1992,21 +2009,19 @@
       "creatives": []
     },
     {
-      "page_path": "/tin-tuc/khuyen-mai/nhap-ma-chaomomo-ban-moi-nhan-ngay-qua-500000d-7834",
-      "hub": "Other / General",
-      "pageviews": 135,
-      "sessions": 96,
-      "users": 83,
-      "w2a_conversions": 5816,
-      "cvr_percent": 6058.33,
+      "page_path": "/cinema/rap/cgv/cgv-vincom-xuan-khanh-14",
+      "hub": "Cinema Hub",
+      "pageviews": 134,
+      "sessions": 103,
+      "users": 82,
+      "w2a_conversions": 3857,
+      "cvr_percent": 3744.66,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 135
+        "google / cpc": 134
       },
       "campaigns": [],
-      "creatives": [
-        "Installment-Generic-Competitor"
-      ]
+      "creatives": []
     },
     {
       "page_path": "/tin-tuc/thong-cao-bao-chi",
@@ -2024,10 +2039,10 @@
         "NativeAdsCampaign"
       ],
       "creatives": [
-        "[admdomain]",
         "m.soha.vn",
-        "m.kenh14.vn",
-        "m.cafef.vn"
+        "[admdomain]",
+        "m.cafef.vn",
+        "m.kenh14.vn"
       ]
     },
     {
@@ -2036,8 +2051,8 @@
       "pageviews": 133,
       "sessions": 125,
       "users": 114,
-      "w2a_conversions": 415,
-      "cvr_percent": 332.0,
+      "w2a_conversions": 416,
+      "cvr_percent": 332.8,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 133
@@ -2051,8 +2066,8 @@
       "pageviews": 130,
       "sessions": 114,
       "users": 103,
-      "w2a_conversions": 153,
-      "cvr_percent": 134.21,
+      "w2a_conversions": 154,
+      "cvr_percent": 135.09,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 130
@@ -2061,34 +2076,16 @@
       "creatives": []
     },
     {
-      "page_path": "/cinema/rap/cgv/cgv-vincom-cao-lanh-39",
-      "hub": "Cinema Hub",
-      "pageviews": 130,
-      "sessions": 103,
-      "users": 92,
-      "w2a_conversions": 5677,
-      "cvr_percent": 5511.65,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 121,
-        "(data not available)": 9
-      },
-      "campaigns": [
-        "(cross-network)"
-      ],
-      "creatives": []
-    },
-    {
       "page_path": "/cinema/rap/cgv/cgv-vincom-go-vap-228",
       "hub": "Cinema Hub",
-      "pageviews": 129,
-      "sessions": 76,
-      "users": 63,
-      "w2a_conversions": 1226,
-      "cvr_percent": 1613.16,
+      "pageviews": 130,
+      "sessions": 77,
+      "users": 64,
+      "w2a_conversions": 1237,
+      "cvr_percent": 1606.49,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 113,
+        "google / cpc": 114,
         "(data not available)": 16
       },
       "campaigns": [
@@ -2099,14 +2096,14 @@
     {
       "page_path": "/bao-hiem-o-to/than-vo/tham-dinh-xe",
       "hub": "Vehicle & Insurtech",
-      "pageviews": 125,
-      "sessions": 103,
-      "users": 82,
+      "pageviews": 128,
+      "sessions": 106,
+      "users": 83,
       "w2a_conversions": 0,
       "cvr_percent": 0.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 125
+        "google / cpc": 128
       },
       "campaigns": [],
       "creatives": [
@@ -2114,16 +2111,46 @@
       ]
     },
     {
-      "page_path": "/cinema/rap/cgv/cgv-vincom-xuan-khanh-14",
+      "page_path": "/cinema/rap/lotte-cinema/lotte-go-vap-187",
       "hub": "Cinema Hub",
-      "pageviews": 119,
-      "sessions": 93,
-      "users": 72,
-      "w2a_conversions": 3817,
-      "cvr_percent": 4104.3,
+      "pageviews": 126,
+      "sessions": 92,
+      "users": 77,
+      "w2a_conversions": 2438,
+      "cvr_percent": 2650.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 119
+        "google / cpc": 126
+      },
+      "campaigns": [],
+      "creatives": []
+    },
+    {
+      "page_path": "/cinema/rap/beta-cinemas/beta-xuan-thuy-374",
+      "hub": "Cinema Hub",
+      "pageviews": 124,
+      "sessions": 79,
+      "users": 63,
+      "w2a_conversions": 3561,
+      "cvr_percent": 4507.59,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 124
+      },
+      "campaigns": [],
+      "creatives": []
+    },
+    {
+      "page_path": "/cinema/rap/cgv/cgv-vincom-cao-lanh-39",
+      "hub": "Cinema Hub",
+      "pageviews": 121,
+      "sessions": 99,
+      "users": 88,
+      "w2a_conversions": 5695,
+      "cvr_percent": 5752.53,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 121
       },
       "campaigns": [],
       "creatives": []
@@ -2134,17 +2161,17 @@
       "pageviews": 119,
       "sessions": 101,
       "users": 97,
-      "w2a_conversions": 3908,
-      "cvr_percent": 3869.31,
+      "w2a_conversions": 3943,
+      "cvr_percent": 3903.96,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 119
       },
       "campaigns": [],
       "creatives": [
-        "VTS-Branded-Action",
+        "VTS-Branded-Info",
         "VTS-Category-Demand",
-        "VTS-Branded-Info"
+        "VTS-Branded-Action"
       ]
     },
     {
@@ -2153,8 +2180,8 @@
       "pageviews": 119,
       "sessions": 90,
       "users": 82,
-      "w2a_conversions": 1679,
-      "cvr_percent": 1865.56,
+      "w2a_conversions": 1693,
+      "cvr_percent": 1881.11,
       "primary_channel": "Admicro / NativeAds",
       "channels_breakdown": {
         "Admicro / NativeAds": 78,
@@ -2165,9 +2192,9 @@
       ],
       "creatives": [
         "appKenh14.vn",
-        "m.kenh14.vn",
         "[admdomain]",
-        "m.cafef.vn"
+        "m.cafef.vn",
+        "m.kenh14.vn"
       ]
     },
     {
@@ -2184,12 +2211,44 @@
         "(data not available)": 14
       },
       "campaigns": [
-        "(cross-network)",
-        "tracuuphatnguoi"
+        "tracuuphatnguoi",
+        "(cross-network)"
       ],
       "creatives": [
         "X.23844634261_Y.195151243126_Z.{adid}"
       ]
+    },
+    {
+      "page_path": "/bao-hiem-o-to",
+      "hub": "Vehicle & Insurtech",
+      "pageviews": 115,
+      "sessions": 84,
+      "users": 76,
+      "w2a_conversions": 454,
+      "cvr_percent": 540.48,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 115
+      },
+      "campaigns": [],
+      "creatives": [
+        "bhoto-q3-2026"
+      ]
+    },
+    {
+      "page_path": "/blog/dang-ky-thi-bang-lai-xe-may-c116dt2684",
+      "hub": "Vehicle & Insurtech",
+      "pageviews": 115,
+      "sessions": 113,
+      "users": 104,
+      "w2a_conversions": 0,
+      "cvr_percent": 0.0,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 115
+      },
+      "campaigns": [],
+      "creatives": []
     },
     {
       "page_path": "/esim-du-lich",
@@ -2197,8 +2256,8 @@
       "pageviews": 115,
       "sessions": 98,
       "users": 79,
-      "w2a_conversions": 467,
-      "cvr_percent": 476.53,
+      "w2a_conversions": 475,
+      "cvr_percent": 484.69,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 115
@@ -2209,19 +2268,24 @@
       "creatives": []
     },
     {
-      "page_path": "/blog/dang-ky-thi-bang-lai-xe-may-c116dt2684",
+      "page_path": "/tin-tuc/thong-bao/co-hoi-trung-xe-may-vinfast-khi-nhan-tien-9079",
       "hub": "Vehicle & Insurtech",
-      "pageviews": 113,
-      "sessions": 111,
-      "users": 102,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
-      "primary_channel": "google / cpc",
+      "pageviews": 115,
+      "sessions": 54,
+      "users": 41,
+      "w2a_conversions": 1184,
+      "cvr_percent": 2192.59,
+      "primary_channel": "tiktok / paid",
       "channels_breakdown": {
-        "google / cpc": 113
+        "tiktok / paid": 63,
+        "tiktok / cpc": 52
       },
-      "campaigns": [],
-      "creatives": []
+      "campaigns": [
+        "TikTok_All_TRA_FS303_Total-WL_N.PayLater-Samsung-ExtraLimit_T.S5_C.20260813_PR.47308"
+      ],
+      "creatives": [
+        "trust-thematic.tra.na.c03.cpc.low"
+      ]
     },
     {
       "page_path": "/cinema/rap/beta-cinemas/beta-ung-van-khiem-370",
@@ -2229,8 +2293,8 @@
       "pageviews": 112,
       "sessions": 86,
       "users": 78,
-      "w2a_conversions": 1683,
-      "cvr_percent": 1956.98,
+      "w2a_conversions": 1710,
+      "cvr_percent": 1988.37,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 112
@@ -2239,34 +2303,21 @@
       "creatives": []
     },
     {
-      "page_path": "/cinema/rap/beta-cinemas/beta-xuan-thuy-374",
-      "hub": "Cinema Hub",
-      "pageviews": 112,
-      "sessions": 71,
-      "users": 56,
-      "w2a_conversions": 3533,
-      "cvr_percent": 4976.06,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 112
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/cinema/rap/lotte-cinema/lotte-go-vap-187",
-      "hub": "Cinema Hub",
+      "page_path": "/hoi-dap/khach-hang-trung-thuong-se-nhan-thuong-bang-cach-nao",
+      "hub": "Other / General",
       "pageviews": 111,
-      "sessions": 81,
-      "users": 68,
-      "w2a_conversions": 2393,
-      "cvr_percent": 2954.32,
+      "sessions": 104,
+      "users": 101,
+      "w2a_conversions": 520,
+      "cvr_percent": 500.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 111
       },
       "campaigns": [],
-      "creatives": []
+      "creatives": [
+        "lottery-q4"
+      ]
     },
     {
       "page_path": "/blog/dang-ky-xe-may-online-c116dt2725",
@@ -2289,8 +2340,8 @@
       "pageviews": 110,
       "sessions": 96,
       "users": 88,
-      "w2a_conversions": 4696,
-      "cvr_percent": 4891.67,
+      "w2a_conversions": 4739,
+      "cvr_percent": 4936.46,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 110
@@ -2299,58 +2350,19 @@
       "creatives": []
     },
     {
-      "page_path": "/bao-hiem-o-to",
+      "page_path": "/bao-hiem-y-te/12-thang",
       "hub": "Vehicle & Insurtech",
-      "pageviews": 108,
-      "sessions": 83,
-      "users": 75,
-      "w2a_conversions": 451,
-      "cvr_percent": 543.37,
+      "pageviews": 109,
+      "sessions": 97,
+      "users": 91,
+      "w2a_conversions": 0,
+      "cvr_percent": 0.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 108
+        "google / cpc": 109
       },
       "campaigns": [],
-      "creatives": [
-        "bhoto-q3-2026"
-      ]
-    },
-    {
-      "page_path": "/tin-tuc/thong-bao/co-hoi-trung-xe-may-vinfast-khi-nhan-tien-9079",
-      "hub": "Vehicle & Insurtech",
-      "pageviews": 107,
-      "sessions": 49,
-      "users": 37,
-      "w2a_conversions": 1043,
-      "cvr_percent": 2128.57,
-      "primary_channel": "tiktok / paid",
-      "channels_breakdown": {
-        "tiktok / paid": 55,
-        "tiktok / cpc": 52
-      },
-      "campaigns": [
-        "TikTok_All_TRA_FS303_Total-WL_N.PayLater-Samsung-ExtraLimit_T.S5_C.20260813_PR.47308"
-      ],
-      "creatives": [
-        "trust-thematic.tra.na.c03.cpc.low"
-      ]
-    },
-    {
-      "page_path": "/hoi-dap/khach-hang-trung-thuong-se-nhan-thuong-bang-cach-nao",
-      "hub": "Other / General",
-      "pageviews": 104,
-      "sessions": 99,
-      "users": 96,
-      "w2a_conversions": 512,
-      "cvr_percent": 517.17,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 104
-      },
-      "campaigns": [],
-      "creatives": [
-        "lottery-q4"
-      ]
+      "creatives": []
     },
     {
       "page_path": "/cinema/rap/beta-cinemas/beta-giai-phong-208",
@@ -2358,26 +2370,11 @@
       "pageviews": 101,
       "sessions": 88,
       "users": 69,
-      "w2a_conversions": 2175,
-      "cvr_percent": 2471.59,
+      "w2a_conversions": 2203,
+      "cvr_percent": 2503.41,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 101
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/bao-hiem-y-te/12-thang",
-      "hub": "Vehicle & Insurtech",
-      "pageviews": 100,
-      "sessions": 89,
-      "users": 83,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 100
       },
       "campaigns": [],
       "creatives": []
@@ -2388,8 +2385,8 @@
       "pageviews": 100,
       "sessions": 92,
       "users": 83,
-      "w2a_conversions": 268,
-      "cvr_percent": 291.3,
+      "w2a_conversions": 270,
+      "cvr_percent": 293.48,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 100
@@ -2403,8 +2400,8 @@
       "pageviews": 99,
       "sessions": 69,
       "users": 58,
-      "w2a_conversions": 9497,
-      "cvr_percent": 13763.77,
+      "w2a_conversions": 9561,
+      "cvr_percent": 13856.52,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 84,
@@ -2433,19 +2430,19 @@
     {
       "page_path": "/tin-tuc/khuyen-mai/thanh-toan-app-store-voi-momo-ngay-de-nhan-qua-4591",
       "hub": "Other / General",
-      "pageviews": 97,
-      "sessions": 97,
-      "users": 95,
+      "pageviews": 98,
+      "sessions": 99,
+      "users": 96,
       "w2a_conversions": 0,
       "cvr_percent": 0.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 97
+        "google / cpc": 98
       },
       "campaigns": [
-        "global.o5.c03.g03.a04.appphoto.gdn.ad03.appstore.20230312",
+        "global.o5.c03.g03.a04.appgame.gdn.ad03.appstore.20230312",
         "global.o5.c03.g03.a04.appentertainment.gdn.ad03.appstore.20230207",
-        "global.o5.c03.g03.a04.appgame.gdn.ad03.appstore.20230312"
+        "global.o5.c03.g03.a04.appphoto.gdn.ad03.appstore.20230312"
       ],
       "creatives": [
         "{{ad.name}}"
@@ -2457,16 +2454,16 @@
       "pageviews": 96,
       "sessions": 80,
       "users": 70,
-      "w2a_conversions": 6289,
-      "cvr_percent": 7861.25,
+      "w2a_conversions": 6354,
+      "cvr_percent": 7942.5,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 96
       },
       "campaigns": [],
       "creatives": [
-        "bhxm-Q2-2026-brand-overview",
         "Installment-Generic-Competitor",
+        "bhxm-Q2-2026-brand-overview",
         "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720"
       ]
     },
@@ -2474,7 +2471,7 @@
       "page_path": "/bao-hiem-o-to/doi-tac/pvi",
       "hub": "Vehicle & Insurtech",
       "pageviews": 94,
-      "sessions": 80,
+      "sessions": 81,
       "users": 76,
       "w2a_conversions": 0,
       "cvr_percent": 0.0,
@@ -2493,8 +2490,8 @@
       "pageviews": 94,
       "sessions": 81,
       "users": 67,
-      "w2a_conversions": 313,
-      "cvr_percent": 386.42,
+      "w2a_conversions": 317,
+      "cvr_percent": 391.36,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 94
@@ -2508,8 +2505,8 @@
       "pageviews": 92,
       "sessions": 76,
       "users": 68,
-      "w2a_conversions": 1573,
-      "cvr_percent": 2069.74,
+      "w2a_conversions": 1582,
+      "cvr_percent": 2081.58,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 82,
@@ -2526,8 +2523,8 @@
       "pageviews": 89,
       "sessions": 72,
       "users": 69,
-      "w2a_conversions": 1370,
-      "cvr_percent": 1902.78,
+      "w2a_conversions": 1378,
+      "cvr_percent": 1913.89,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 73,
@@ -2544,8 +2541,8 @@
       "pageviews": 89,
       "sessions": 63,
       "users": 58,
-      "w2a_conversions": 1982,
-      "cvr_percent": 3146.03,
+      "w2a_conversions": 1986,
+      "cvr_percent": 3152.38,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 79,
@@ -2594,8 +2591,8 @@
       "pageviews": 88,
       "sessions": 64,
       "users": 50,
-      "w2a_conversions": 5570,
-      "cvr_percent": 8703.12,
+      "w2a_conversions": 5596,
+      "cvr_percent": 8743.75,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 88
@@ -2609,8 +2606,8 @@
       "pageviews": 85,
       "sessions": 81,
       "users": 66,
-      "w2a_conversions": 1204,
-      "cvr_percent": 1486.42,
+      "w2a_conversions": 1215,
+      "cvr_percent": 1500.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 85
@@ -2624,8 +2621,8 @@
       "pageviews": 85,
       "sessions": 72,
       "users": 71,
-      "w2a_conversions": 2175,
-      "cvr_percent": 3020.83,
+      "w2a_conversions": 2194,
+      "cvr_percent": 3047.22,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 85
@@ -2658,11 +2655,26 @@
       "pageviews": 83,
       "sessions": 64,
       "users": 58,
-      "w2a_conversions": 6776,
-      "cvr_percent": 10587.5,
+      "w2a_conversions": 6786,
+      "cvr_percent": 10603.12,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 83
+      },
+      "campaigns": [],
+      "creatives": []
+    },
+    {
+      "page_path": "/cinema/rap/lotte-cinema/lotte-tay-ninh-176",
+      "hub": "Cinema Hub",
+      "pageviews": 82,
+      "sessions": 57,
+      "users": 52,
+      "w2a_conversions": 10483,
+      "cvr_percent": 18391.23,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 82
       },
       "campaigns": [],
       "creatives": []
@@ -2673,21 +2685,21 @@
       "pageviews": 82,
       "sessions": 146,
       "users": 144,
-      "w2a_conversions": 550,
-      "cvr_percent": 376.71,
+      "w2a_conversions": 553,
+      "cvr_percent": 378.77,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 72,
         "(data not available)": 10
       },
       "campaigns": [
-        "(cross-network)",
         "TikTok.o2.c03.g03.a04.napxu.sem-exact.ad01.TikTokCoin.20250601",
-        "TikTok.o2.c03.g03.a04.napxu.sem.ad02.TikTokCoin.20230503"
+        "TikTok.o2.c03.g03.a04.napxu.sem.ad02.TikTokCoin.20230503",
+        "(cross-network)"
       ],
       "creatives": [
-        "Ad02",
-        "Ad01"
+        "Ad01",
+        "Ad02"
       ]
     },
     {
@@ -2696,8 +2708,8 @@
       "pageviews": 81,
       "sessions": 65,
       "users": 51,
-      "w2a_conversions": 528,
-      "cvr_percent": 812.31,
+      "w2a_conversions": 531,
+      "cvr_percent": 816.92,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 67,
@@ -2714,8 +2726,8 @@
       "pageviews": 81,
       "sessions": 64,
       "users": 55,
-      "w2a_conversions": 544,
-      "cvr_percent": 850.0,
+      "w2a_conversions": 554,
+      "cvr_percent": 865.62,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 71,
@@ -2762,8 +2774,8 @@
       "pageviews": 77,
       "sessions": 66,
       "users": 59,
-      "w2a_conversions": 3763,
-      "cvr_percent": 5701.52,
+      "w2a_conversions": 3792,
+      "cvr_percent": 5745.45,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 77
@@ -2777,8 +2789,8 @@
       "pageviews": 76,
       "sessions": 69,
       "users": 66,
-      "w2a_conversions": 1828,
-      "cvr_percent": 2649.28,
+      "w2a_conversions": 1835,
+      "cvr_percent": 2659.42,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 76
@@ -2792,8 +2804,8 @@
       "pageviews": 76,
       "sessions": 56,
       "users": 43,
-      "w2a_conversions": 3930,
-      "cvr_percent": 7017.86,
+      "w2a_conversions": 3955,
+      "cvr_percent": 7062.5,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 76
@@ -2807,8 +2819,8 @@
       "pageviews": 74,
       "sessions": 66,
       "users": 49,
-      "w2a_conversions": 2208,
-      "cvr_percent": 3345.45,
+      "w2a_conversions": 2232,
+      "cvr_percent": 3381.82,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 74
@@ -2822,8 +2834,8 @@
       "pageviews": 74,
       "sessions": 64,
       "users": 56,
-      "w2a_conversions": 2955,
-      "cvr_percent": 4617.19,
+      "w2a_conversions": 2976,
+      "cvr_percent": 4650.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 74
@@ -2837,8 +2849,8 @@
       "pageviews": 74,
       "sessions": 66,
       "users": 63,
-      "w2a_conversions": 2841,
-      "cvr_percent": 4304.55,
+      "w2a_conversions": 2891,
+      "cvr_percent": 4380.3,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 74
@@ -2852,8 +2864,8 @@
       "pageviews": 73,
       "sessions": 66,
       "users": 52,
-      "w2a_conversions": 4188,
-      "cvr_percent": 6345.45,
+      "w2a_conversions": 4228,
+      "cvr_percent": 6406.06,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 73
@@ -2867,23 +2879,8 @@
       "pageviews": 72,
       "sessions": 69,
       "users": 62,
-      "w2a_conversions": 890,
-      "cvr_percent": 1289.86,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 72
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/blog/dia-diem-du-lich-da-nang-c101dt871",
-      "hub": "Other / General",
-      "pageviews": 72,
-      "sessions": 66,
-      "users": 61,
-      "w2a_conversions": 211,
-      "cvr_percent": 319.7,
+      "w2a_conversions": 894,
+      "cvr_percent": 1295.65,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 72
@@ -2897,23 +2894,8 @@
       "pageviews": 71,
       "sessions": 63,
       "users": 53,
-      "w2a_conversions": 2580,
-      "cvr_percent": 4095.24,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 71
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/cinema/rap/lotte-cinema/lotte-tay-ninh-176",
-      "hub": "Cinema Hub",
-      "pageviews": 71,
-      "sessions": 48,
-      "users": 44,
-      "w2a_conversions": 10410,
-      "cvr_percent": 21687.5,
+      "w2a_conversions": 2603,
+      "cvr_percent": 4131.75,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 71
@@ -2927,8 +2909,8 @@
       "pageviews": 69,
       "sessions": 57,
       "users": 45,
-      "w2a_conversions": 2284,
-      "cvr_percent": 4007.02,
+      "w2a_conversions": 2297,
+      "cvr_percent": 4029.82,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 69
@@ -2957,8 +2939,8 @@
       "pageviews": 66,
       "sessions": 59,
       "users": 55,
-      "w2a_conversions": 164,
-      "cvr_percent": 277.97,
+      "w2a_conversions": 165,
+      "cvr_percent": 279.66,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 66
@@ -2974,8 +2956,8 @@
       "pageviews": 66,
       "sessions": 57,
       "users": 52,
-      "w2a_conversions": 5678,
-      "cvr_percent": 9961.4,
+      "w2a_conversions": 5686,
+      "cvr_percent": 9975.44,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 66
@@ -2989,8 +2971,8 @@
       "pageviews": 66,
       "sessions": 44,
       "users": 40,
-      "w2a_conversions": 1413,
-      "cvr_percent": 3211.36,
+      "w2a_conversions": 1427,
+      "cvr_percent": 3243.18,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 52,
@@ -3007,11 +2989,26 @@
       "pageviews": 64,
       "sessions": 52,
       "users": 45,
-      "w2a_conversions": 270,
-      "cvr_percent": 519.23,
+      "w2a_conversions": 273,
+      "cvr_percent": 525.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 64
+      },
+      "campaigns": [],
+      "creatives": []
+    },
+    {
+      "page_path": "/blog/dia-diem-du-lich-da-nang-c101dt871",
+      "hub": "Other / General",
+      "pageviews": 63,
+      "sessions": 61,
+      "users": 56,
+      "w2a_conversions": 212,
+      "cvr_percent": 347.54,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 63
       },
       "campaigns": [],
       "creatives": []
@@ -3037,8 +3034,8 @@
       "pageviews": 63,
       "sessions": 34,
       "users": 24,
-      "w2a_conversions": 664,
-      "cvr_percent": 1952.94,
+      "w2a_conversions": 668,
+      "cvr_percent": 1964.71,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 63
@@ -3097,8 +3094,8 @@
       "pageviews": 61,
       "sessions": 40,
       "users": 37,
-      "w2a_conversions": 5186,
-      "cvr_percent": 12965.0,
+      "w2a_conversions": 5217,
+      "cvr_percent": 13042.5,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 61
@@ -3122,13 +3119,28 @@
       "creatives": []
     },
     {
+      "page_path": "/hoi-dap/dien-thoai-cua-toi-co-quet-duoc-nfc-khong-lam-sao-de-bat-tinh-nang-nfc-tren-dien-thoai",
+      "hub": "Other / General",
+      "pageviews": 61,
+      "sessions": 56,
+      "users": 55,
+      "w2a_conversions": 0,
+      "cvr_percent": 0.0,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 61
+      },
+      "campaigns": [],
+      "creatives": []
+    },
+    {
       "page_path": "/cinema/rap/galaxy-cinema",
       "hub": "Cinema Hub",
       "pageviews": 60,
       "sessions": 55,
       "users": 49,
-      "w2a_conversions": 2355,
-      "cvr_percent": 4281.82,
+      "w2a_conversions": 2376,
+      "cvr_percent": 4320.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 60
@@ -3152,31 +3164,13 @@
       "creatives": []
     },
     {
-      "page_path": "/blog/kiem-tra-no-xau-bang-so-dien-thoai-c116dt2689",
-      "hub": "Financial Hub",
-      "pageviews": 60,
-      "sessions": 53,
-      "users": 53,
-      "w2a_conversions": 417,
-      "cvr_percent": 786.79,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 60
-      },
-      "campaigns": [],
-      "creatives": [
-        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720",
-        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821"
-      ]
-    },
-    {
       "page_path": "/blog/huong-dan-nap-the-free-fire-nhanh-chong-qua-momo-c115dt830",
       "hub": "Other / General",
       "pageviews": 60,
       "sessions": 55,
       "users": 52,
-      "w2a_conversions": 202,
-      "cvr_percent": 367.27,
+      "w2a_conversions": 204,
+      "cvr_percent": 370.91,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 60
@@ -3190,8 +3184,8 @@
       "pageviews": 60,
       "sessions": 49,
       "users": 42,
-      "w2a_conversions": 3499,
-      "cvr_percent": 7140.82,
+      "w2a_conversions": 3533,
+      "cvr_percent": 7210.2,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 60
@@ -3207,21 +3201,6 @@
       "pageviews": 59,
       "sessions": 55,
       "users": 48,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 59
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/hoi-dap/dien-thoai-cua-toi-co-quet-duoc-nfc-khong-lam-sao-de-bat-tinh-nang-nfc-tren-dien-thoai",
-      "hub": "Other / General",
-      "pageviews": 59,
-      "sessions": 54,
-      "users": 53,
       "w2a_conversions": 0,
       "cvr_percent": 0.0,
       "primary_channel": "google / cpc",
@@ -3267,8 +3246,8 @@
       "pageviews": 56,
       "sessions": 46,
       "users": 37,
-      "w2a_conversions": 2611,
-      "cvr_percent": 5676.09,
+      "w2a_conversions": 2623,
+      "cvr_percent": 5702.17,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 56
@@ -3277,31 +3256,13 @@
       "creatives": []
     },
     {
-      "page_path": "/blog/cic-la-gi-tat-ca-nhung-gi-ban-can-biet-ve-ho-so-tin-dung-cic-c116dt2617",
-      "hub": "Financial Hub",
-      "pageviews": 56,
-      "sessions": 58,
-      "users": 54,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 56
-      },
-      "campaigns": [],
-      "creatives": [
-        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720",
-        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821"
-      ]
-    },
-    {
       "page_path": "/blog/top-3-cach-chuyen-tien-ra-nuoc-ngoai-don-gian-nhat-c116dt1151",
       "hub": "Other / General",
       "pageviews": 55,
       "sessions": 47,
       "users": 42,
-      "w2a_conversions": 286,
-      "cvr_percent": 608.51,
+      "w2a_conversions": 290,
+      "cvr_percent": 617.02,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 55
@@ -3315,8 +3276,8 @@
       "pageviews": 55,
       "sessions": 45,
       "users": 42,
-      "w2a_conversions": 4874,
-      "cvr_percent": 10831.11,
+      "w2a_conversions": 4940,
+      "cvr_percent": 10977.78,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 55
@@ -3345,8 +3306,8 @@
       "pageviews": 54,
       "sessions": 42,
       "users": 35,
-      "w2a_conversions": 2270,
-      "cvr_percent": 5404.76,
+      "w2a_conversions": 2281,
+      "cvr_percent": 5430.95,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 54
@@ -3360,8 +3321,8 @@
       "pageviews": 54,
       "sessions": 39,
       "users": 35,
-      "w2a_conversions": 2967,
-      "cvr_percent": 7607.69,
+      "w2a_conversions": 2986,
+      "cvr_percent": 7656.41,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 54
@@ -3375,14 +3336,32 @@
       "pageviews": 52,
       "sessions": 49,
       "users": 45,
-      "w2a_conversions": 2929,
-      "cvr_percent": 5977.55,
+      "w2a_conversions": 2938,
+      "cvr_percent": 5995.92,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 52
       },
       "campaigns": [],
       "creatives": []
+    },
+    {
+      "page_path": "/blog/game",
+      "hub": "Other / General",
+      "pageviews": 52,
+      "sessions": 43,
+      "users": 42,
+      "w2a_conversions": 1866,
+      "cvr_percent": 4339.53,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 52
+      },
+      "campaigns": [],
+      "creatives": [
+        "Installment-Generic-Competitor",
+        "lottery-q4"
+      ]
     },
     {
       "page_path": "/blog/cach-chia-se-4g-cho-dien-thoai-khac-c193dt1392",
@@ -3405,14 +3384,31 @@
       "pageviews": 51,
       "sessions": 46,
       "users": 40,
-      "w2a_conversions": 454,
-      "cvr_percent": 986.96,
+      "w2a_conversions": 457,
+      "cvr_percent": 993.48,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 51
       },
       "campaigns": [],
       "creatives": []
+    },
+    {
+      "page_path": "/blog/kiem-tra-no-xau-bang-so-dien-thoai-c116dt2689",
+      "hub": "Financial Hub",
+      "pageviews": 51,
+      "sessions": 44,
+      "users": 44,
+      "w2a_conversions": 431,
+      "cvr_percent": 979.55,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 51
+      },
+      "campaigns": [],
+      "creatives": [
+        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720"
+      ]
     },
     {
       "page_path": "/cinema/rap/cgv/cgv-vincom-bac-lieu-369",
@@ -3420,8 +3416,8 @@
       "pageviews": 51,
       "sessions": 42,
       "users": 32,
-      "w2a_conversions": 3214,
-      "cvr_percent": 7652.38,
+      "w2a_conversions": 3238,
+      "cvr_percent": 7709.52,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 51
@@ -3430,31 +3426,13 @@
       "creatives": []
     },
     {
-      "page_path": "/blog/game",
-      "hub": "Other / General",
-      "pageviews": 51,
-      "sessions": 42,
-      "users": 41,
-      "w2a_conversions": 1866,
-      "cvr_percent": 4442.86,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 51
-      },
-      "campaigns": [],
-      "creatives": [
-        "Installment-Generic-Competitor",
-        "lottery-q4"
-      ]
-    },
-    {
       "page_path": "/cinema/blue-lock-cuoc-chien-cua-nhung-tien-dao-25150",
       "hub": "Cinema Hub",
       "pageviews": 50,
       "sessions": 40,
       "users": 38,
-      "w2a_conversions": 1198,
-      "cvr_percent": 2995.0,
+      "w2a_conversions": 1206,
+      "cvr_percent": 3015.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 50
@@ -3468,8 +3446,8 @@
       "pageviews": 50,
       "sessions": 46,
       "users": 40,
-      "w2a_conversions": 4357,
-      "cvr_percent": 9471.74,
+      "w2a_conversions": 4380,
+      "cvr_percent": 9521.74,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 50
@@ -3493,39 +3471,21 @@
       "creatives": []
     },
     {
-      "page_path": "/blog/huong-dan-cach-thanh-toan-du-no-vi-tra-sau-tren-momo-c116dt1961",
-      "hub": "Other / General",
-      "pageviews": 50,
-      "sessions": 52,
-      "users": 46,
-      "w2a_conversions": 972,
-      "cvr_percent": 1869.23,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 50
-      },
-      "campaigns": [],
-      "creatives": [
-        "VTS-Branded-Action",
-        "VTS-Branded-Info"
-      ]
-    },
-    {
       "page_path": "/blog/lay-cmnd-nguoi-khac-vay-tien-duoc-khong-bi-nguoi-khac-lay-cmnd-vay-tien-phai-lam-gi-c116dt1089",
       "hub": "Financial Hub",
       "pageviews": 50,
       "sessions": 42,
       "users": 40,
-      "w2a_conversions": 1016,
-      "cvr_percent": 2419.05,
+      "w2a_conversions": 1024,
+      "cvr_percent": 2438.1,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 50
       },
       "campaigns": [],
       "creatives": [
-        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720",
-        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821"
+        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821",
+        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720"
       ]
     },
     {
@@ -3534,8 +3494,8 @@
       "pageviews": 49,
       "sessions": 40,
       "users": 32,
-      "w2a_conversions": 2630,
-      "cvr_percent": 6575.0,
+      "w2a_conversions": 2645,
+      "cvr_percent": 6612.5,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 49
@@ -3549,8 +3509,8 @@
       "pageviews": 49,
       "sessions": 38,
       "users": 32,
-      "w2a_conversions": 818,
-      "cvr_percent": 2152.63,
+      "w2a_conversions": 820,
+      "cvr_percent": 2157.89,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 49
@@ -3581,8 +3541,8 @@
       "pageviews": 48,
       "sessions": 36,
       "users": 31,
-      "w2a_conversions": 4035,
-      "cvr_percent": 11208.33,
+      "w2a_conversions": 4050,
+      "cvr_percent": 11250.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 48
@@ -3596,8 +3556,8 @@
       "pageviews": 48,
       "sessions": 23,
       "users": 12,
-      "w2a_conversions": 4300,
-      "cvr_percent": 18695.65,
+      "w2a_conversions": 4333,
+      "cvr_percent": 18839.13,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 48
@@ -3611,8 +3571,8 @@
       "pageviews": 48,
       "sessions": 43,
       "users": 38,
-      "w2a_conversions": 3319,
-      "cvr_percent": 7718.6,
+      "w2a_conversions": 3338,
+      "cvr_percent": 7762.79,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 48
@@ -3626,8 +3586,8 @@
       "pageviews": 48,
       "sessions": 37,
       "users": 35,
-      "w2a_conversions": 4142,
-      "cvr_percent": 11194.59,
+      "w2a_conversions": 3998,
+      "cvr_percent": 10805.41,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 37,
@@ -3654,13 +3614,30 @@
       "creatives": []
     },
     {
+      "page_path": "/blog/cic-la-gi-tat-ca-nhung-gi-ban-can-biet-ve-ho-so-tin-dung-cic-c116dt2617",
+      "hub": "Financial Hub",
+      "pageviews": 47,
+      "sessions": 49,
+      "users": 45,
+      "w2a_conversions": 0,
+      "cvr_percent": 0.0,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 47
+      },
+      "campaigns": [],
+      "creatives": [
+        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720"
+      ]
+    },
+    {
       "page_path": "/cinema/rap/cgv/cgv-vinh-centre-38",
       "hub": "Cinema Hub",
       "pageviews": 47,
       "sessions": 36,
       "users": 31,
-      "w2a_conversions": 780,
-      "cvr_percent": 2166.67,
+      "w2a_conversions": 792,
+      "cvr_percent": 2200.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 47
@@ -3689,8 +3666,23 @@
       "pageviews": 47,
       "sessions": 37,
       "users": 30,
-      "w2a_conversions": 4260,
-      "cvr_percent": 11513.51,
+      "w2a_conversions": 4290,
+      "cvr_percent": 11594.59,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 47
+      },
+      "campaigns": [],
+      "creatives": []
+    },
+    {
+      "page_path": "/cinema/chi-chi-em-em-3-25076",
+      "hub": "Cinema Hub",
+      "pageviews": 47,
+      "sessions": 37,
+      "users": 35,
+      "w2a_conversions": 3639,
+      "cvr_percent": 9835.14,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 47
@@ -3734,8 +3726,8 @@
       "pageviews": 46,
       "sessions": 41,
       "users": 36,
-      "w2a_conversions": 220,
-      "cvr_percent": 536.59,
+      "w2a_conversions": 221,
+      "cvr_percent": 539.02,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 46
@@ -3749,8 +3741,8 @@
       "pageviews": 46,
       "sessions": 45,
       "users": 33,
-      "w2a_conversions": 1368,
-      "cvr_percent": 3040.0,
+      "w2a_conversions": 1374,
+      "cvr_percent": 3053.33,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 46
@@ -3764,8 +3756,8 @@
       "pageviews": 46,
       "sessions": 41,
       "users": 33,
-      "w2a_conversions": 3303,
-      "cvr_percent": 8056.1,
+      "w2a_conversions": 3322,
+      "cvr_percent": 8102.44,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 46
@@ -3824,8 +3816,8 @@
       "pageviews": 45,
       "sessions": 40,
       "users": 34,
-      "w2a_conversions": 2143,
-      "cvr_percent": 5357.5,
+      "w2a_conversions": 2154,
+      "cvr_percent": 5385.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 45
@@ -3834,30 +3826,13 @@
       "creatives": []
     },
     {
-      "page_path": "/chinh-sach-quyen-rieng-tu",
-      "hub": "Other / General",
-      "pageviews": 45,
-      "sessions": 35,
-      "users": 30,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 45
-      },
-      "campaigns": [],
-      "creatives": [
-        "bhxm-Q2-2026-brand-overview"
-      ]
-    },
-    {
       "page_path": "/blog/cham-thanh-toan-vi-tra-sau-khong-tra-tien-vi-tra-sau-co-bi-sao-khong-c116dt1136",
       "hub": "Other / General",
       "pageviews": 44,
       "sessions": 40,
       "users": 35,
-      "w2a_conversions": 1358,
-      "cvr_percent": 3395.0,
+      "w2a_conversions": 1366,
+      "cvr_percent": 3415.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 44
@@ -3886,8 +3861,8 @@
       "pageviews": 43,
       "sessions": 29,
       "users": 28,
-      "w2a_conversions": 1728,
-      "cvr_percent": 5958.62,
+      "w2a_conversions": 1735,
+      "cvr_percent": 5982.76,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 28,
@@ -3906,16 +3881,16 @@
       "pageviews": 43,
       "sessions": 40,
       "users": 40,
-      "w2a_conversions": 5941,
-      "cvr_percent": 14852.5,
+      "w2a_conversions": 5991,
+      "cvr_percent": 14977.5,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 43
       },
       "campaigns": [],
       "creatives": [
-        "bhxm-Q2-2026-brand-overview",
-        "Installment-Generic-Competitor"
+        "Installment-Generic-Competitor",
+        "bhxm-Q2-2026-brand-overview"
       ]
     },
     {
@@ -3924,8 +3899,8 @@
       "pageviews": 42,
       "sessions": 40,
       "users": 36,
-      "w2a_conversions": 282,
-      "cvr_percent": 705.0,
+      "w2a_conversions": 287,
+      "cvr_percent": 717.5,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 42
@@ -3934,13 +3909,30 @@
       "creatives": []
     },
     {
+      "page_path": "/blog/huong-dan-cach-thanh-toan-du-no-vi-tra-sau-tren-momo-c116dt1961",
+      "hub": "Other / General",
+      "pageviews": 42,
+      "sessions": 44,
+      "users": 41,
+      "w2a_conversions": 980,
+      "cvr_percent": 2227.27,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 42
+      },
+      "campaigns": [],
+      "creatives": [
+        "VTS-Branded-Info"
+      ]
+    },
+    {
       "page_path": "/blog/vi-tra-sau-momo-co-lai-suat-khong-c116dt1343",
       "hub": "Financial Hub",
       "pageviews": 42,
       "sessions": 37,
       "users": 32,
-      "w2a_conversions": 351,
-      "cvr_percent": 948.65,
+      "w2a_conversions": 353,
+      "cvr_percent": 954.05,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 42
@@ -3956,8 +3948,8 @@
       "pageviews": 42,
       "sessions": 36,
       "users": 32,
-      "w2a_conversions": 3573,
-      "cvr_percent": 9925.0,
+      "w2a_conversions": 3590,
+      "cvr_percent": 9972.22,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 42
@@ -3971,8 +3963,8 @@
       "pageviews": 42,
       "sessions": 36,
       "users": 31,
-      "w2a_conversions": 3825,
-      "cvr_percent": 10625.0,
+      "w2a_conversions": 3850,
+      "cvr_percent": 10694.44,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 42
@@ -3986,8 +3978,8 @@
       "pageviews": 42,
       "sessions": 37,
       "users": 36,
-      "w2a_conversions": 5617,
-      "cvr_percent": 15181.08,
+      "w2a_conversions": 5651,
+      "cvr_percent": 15272.97,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 42
@@ -4031,8 +4023,8 @@
       "pageviews": 41,
       "sessions": 34,
       "users": 34,
-      "w2a_conversions": 224,
-      "cvr_percent": 658.82,
+      "w2a_conversions": 226,
+      "cvr_percent": 664.71,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 41
@@ -4042,8 +4034,8 @@
         "TikTok.o2.c03.g03.a04.napxu.sem.ad02.TikTokCoin.20230503"
       ],
       "creatives": [
-        "Ad02",
-        "Ad01"
+        "Ad01",
+        "Ad02"
       ]
     },
     {
@@ -4052,13 +4044,31 @@
       "pageviews": 40,
       "sessions": 33,
       "users": 28,
-      "w2a_conversions": 3689,
-      "cvr_percent": 11178.79,
+      "w2a_conversions": 3715,
+      "cvr_percent": 11257.58,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 40
       },
       "campaigns": [],
+      "creatives": []
+    },
+    {
+      "page_path": "/cinema/rap/galaxy-cinema/galaxy-cineo-vincom-dan-phuong-571",
+      "hub": "Cinema Hub",
+      "pageviews": 40,
+      "sessions": 15,
+      "users": 13,
+      "w2a_conversions": 2193,
+      "cvr_percent": 14620.0,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 30,
+        "(data not available)": 10
+      },
+      "campaigns": [
+        "(cross-network)"
+      ],
       "creatives": []
     },
     {
@@ -4082,8 +4092,8 @@
       "pageviews": 39,
       "sessions": 33,
       "users": 33,
-      "w2a_conversions": 1492,
-      "cvr_percent": 4521.21,
+      "w2a_conversions": 1493,
+      "cvr_percent": 4524.24,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 39
@@ -4159,8 +4169,8 @@
       "pageviews": 38,
       "sessions": 28,
       "users": 25,
-      "w2a_conversions": 1001,
-      "cvr_percent": 3575.0,
+      "w2a_conversions": 1006,
+      "cvr_percent": 3592.86,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 38
@@ -4189,14 +4199,33 @@
       "pageviews": 37,
       "sessions": 29,
       "users": 22,
-      "w2a_conversions": 377,
-      "cvr_percent": 1300.0,
+      "w2a_conversions": 379,
+      "cvr_percent": 1306.9,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 37
       },
       "campaigns": [],
       "creatives": []
+    },
+    {
+      "page_path": "/thanh-toan-google-play",
+      "hub": "Other / General",
+      "pageviews": 37,
+      "sessions": 34,
+      "users": 34,
+      "w2a_conversions": 0,
+      "cvr_percent": 0.0,
+      "primary_channel": "fb / paid",
+      "channels_breakdown": {
+        "fb / paid": 37
+      },
+      "campaigns": [
+        "120250630395050629"
+      ],
+      "creatives": [
+        "120250653733700629"
+      ]
     },
     {
       "page_path": "/blog/co-nen-huy-vi-tra-sau-momo-c116dt1036",
@@ -4219,8 +4248,8 @@
       "pageviews": 36,
       "sessions": 33,
       "users": 28,
-      "w2a_conversions": 3213,
-      "cvr_percent": 9736.36,
+      "w2a_conversions": 3233,
+      "cvr_percent": 9796.97,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 36
@@ -4234,8 +4263,8 @@
       "pageviews": 36,
       "sessions": 27,
       "users": 27,
-      "w2a_conversions": 1240,
-      "cvr_percent": 4592.59,
+      "w2a_conversions": 1251,
+      "cvr_percent": 4633.33,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 36
@@ -4249,8 +4278,23 @@
       "pageviews": 36,
       "sessions": 24,
       "users": 18,
-      "w2a_conversions": 2192,
-      "cvr_percent": 9133.33,
+      "w2a_conversions": 2203,
+      "cvr_percent": 9179.17,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 36
+      },
+      "campaigns": [],
+      "creatives": []
+    },
+    {
+      "page_path": "/chinh-sach-quyen-rieng-tu",
+      "hub": "Other / General",
+      "pageviews": 36,
+      "sessions": 28,
+      "users": 24,
+      "w2a_conversions": 0,
+      "cvr_percent": 0.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 36
@@ -4296,42 +4340,8 @@
       "pageviews": 35,
       "sessions": 25,
       "users": 18,
-      "w2a_conversions": 3963,
-      "cvr_percent": 15852.0,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 35
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/thanh-toan-google-play",
-      "hub": "Other / General",
-      "pageviews": 35,
-      "sessions": 32,
-      "users": 32,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
-      "primary_channel": "fb / paid",
-      "channels_breakdown": {
-        "fb / paid": 35
-      },
-      "campaigns": [
-        "120250630395050629"
-      ],
-      "creatives": [
-        "120250653733700629"
-      ]
-    },
-    {
-      "page_path": "/cinema/chi-chi-em-em-3-25076",
-      "hub": "Cinema Hub",
-      "pageviews": 35,
-      "sessions": 28,
-      "users": 26,
-      "w2a_conversions": 3366,
-      "cvr_percent": 12021.43,
+      "w2a_conversions": 3993,
+      "cvr_percent": 15972.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 35
@@ -4345,8 +4355,8 @@
       "pageviews": 34,
       "sessions": 24,
       "users": 23,
-      "w2a_conversions": 4315,
-      "cvr_percent": 17979.17,
+      "w2a_conversions": 4317,
+      "cvr_percent": 17987.5,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 34
@@ -4360,8 +4370,8 @@
       "pageviews": 34,
       "sessions": 29,
       "users": 25,
-      "w2a_conversions": 4106,
-      "cvr_percent": 14158.62,
+      "w2a_conversions": 4131,
+      "cvr_percent": 14244.83,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 34
@@ -4375,8 +4385,8 @@
       "pageviews": 34,
       "sessions": 25,
       "users": 20,
-      "w2a_conversions": 1343,
-      "cvr_percent": 5372.0,
+      "w2a_conversions": 1357,
+      "cvr_percent": 5428.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 34
@@ -4390,8 +4400,8 @@
       "pageviews": 34,
       "sessions": 15,
       "users": 13,
-      "w2a_conversions": 37534,
-      "cvr_percent": 250226.67,
+      "w2a_conversions": 37860,
+      "cvr_percent": 252400.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 34
@@ -4405,8 +4415,8 @@
       "pageviews": 33,
       "sessions": 33,
       "users": 30,
-      "w2a_conversions": 2272,
-      "cvr_percent": 6884.85,
+      "w2a_conversions": 2284,
+      "cvr_percent": 6921.21,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 33
@@ -4435,8 +4445,8 @@
       "pageviews": 32,
       "sessions": 26,
       "users": 17,
-      "w2a_conversions": 1855,
-      "cvr_percent": 7134.62,
+      "w2a_conversions": 1859,
+      "cvr_percent": 7150.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 32
@@ -4450,8 +4460,8 @@
       "pageviews": 32,
       "sessions": 26,
       "users": 23,
-      "w2a_conversions": 9900,
-      "cvr_percent": 38076.92,
+      "w2a_conversions": 9961,
+      "cvr_percent": 38311.54,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 32
@@ -4465,8 +4475,8 @@
       "pageviews": 32,
       "sessions": 28,
       "users": 27,
-      "w2a_conversions": 1137,
-      "cvr_percent": 4060.71,
+      "w2a_conversions": 1139,
+      "cvr_percent": 4067.86,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 32
@@ -4480,8 +4490,8 @@
       "pageviews": 32,
       "sessions": 32,
       "users": 27,
-      "w2a_conversions": 184,
-      "cvr_percent": 575.0,
+      "w2a_conversions": 189,
+      "cvr_percent": 590.62,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 32
@@ -4555,8 +4565,8 @@
       "pageviews": 31,
       "sessions": 26,
       "users": 25,
-      "w2a_conversions": 1528,
-      "cvr_percent": 5876.92,
+      "w2a_conversions": 1533,
+      "cvr_percent": 5896.15,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 31
@@ -4570,8 +4580,8 @@
       "pageviews": 31,
       "sessions": 23,
       "users": 23,
-      "w2a_conversions": 162171,
-      "cvr_percent": 705091.3,
+      "w2a_conversions": 164981,
+      "cvr_percent": 717308.7,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 31
@@ -4585,8 +4595,8 @@
       "pageviews": 30,
       "sessions": 29,
       "users": 26,
-      "w2a_conversions": 463,
-      "cvr_percent": 1596.55,
+      "w2a_conversions": 466,
+      "cvr_percent": 1606.9,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 30
@@ -4600,8 +4610,8 @@
       "pageviews": 30,
       "sessions": 29,
       "users": 28,
-      "w2a_conversions": 3547,
-      "cvr_percent": 12231.03,
+      "w2a_conversions": 3572,
+      "cvr_percent": 12317.24,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 30
@@ -4615,8 +4625,8 @@
       "pageviews": 30,
       "sessions": 26,
       "users": 22,
-      "w2a_conversions": 2761,
-      "cvr_percent": 10619.23,
+      "w2a_conversions": 2781,
+      "cvr_percent": 10696.15,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 30
@@ -4630,14 +4640,31 @@
       "pageviews": 30,
       "sessions": 27,
       "users": 26,
-      "w2a_conversions": 6733,
-      "cvr_percent": 24937.04,
+      "w2a_conversions": 6766,
+      "cvr_percent": 25059.26,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 30
       },
       "campaigns": [],
       "creatives": []
+    },
+    {
+      "page_path": "/huong-dan/huong-dan-chi-tiet-cach-tao-tai-khoan-va-lien-ket-vietlott-sms-tren-momo",
+      "hub": "Lottery Hub",
+      "pageviews": 30,
+      "sessions": 30,
+      "users": 29,
+      "w2a_conversions": 0,
+      "cvr_percent": 0.0,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 30
+      },
+      "campaigns": [],
+      "creatives": [
+        "lottery-q4"
+      ]
     },
     {
       "page_path": "/mo-the-tin-dung",
@@ -4692,8 +4719,8 @@
       "pageviews": 30,
       "sessions": 28,
       "users": 25,
-      "w2a_conversions": 3774,
-      "cvr_percent": 13478.57,
+      "w2a_conversions": 3789,
+      "cvr_percent": 13532.14,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 30
@@ -4726,8 +4753,8 @@
       "pageviews": 29,
       "sessions": 26,
       "users": 24,
-      "w2a_conversions": 223,
-      "cvr_percent": 857.69,
+      "w2a_conversions": 225,
+      "cvr_percent": 865.38,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 29
@@ -4771,8 +4798,8 @@
       "pageviews": 29,
       "sessions": 23,
       "users": 20,
-      "w2a_conversions": 3071,
-      "cvr_percent": 13352.17,
+      "w2a_conversions": 3088,
+      "cvr_percent": 13426.09,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 29
@@ -4786,8 +4813,8 @@
       "pageviews": 29,
       "sessions": 27,
       "users": 24,
-      "w2a_conversions": 822,
-      "cvr_percent": 3044.44,
+      "w2a_conversions": 834,
+      "cvr_percent": 3088.89,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 29
@@ -4801,31 +4828,14 @@
       "pageviews": 29,
       "sessions": 23,
       "users": 19,
-      "w2a_conversions": 7745,
-      "cvr_percent": 33673.91,
+      "w2a_conversions": 7784,
+      "cvr_percent": 33843.48,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 29
       },
       "campaigns": [],
       "creatives": []
-    },
-    {
-      "page_path": "/huong-dan/huong-dan-chi-tiet-cach-tao-tai-khoan-va-lien-ket-vietlott-sms-tren-momo",
-      "hub": "Lottery Hub",
-      "pageviews": 29,
-      "sessions": 29,
-      "users": 28,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 29
-      },
-      "campaigns": [],
-      "creatives": [
-        "lottery-q4"
-      ]
     },
     {
       "page_path": "/sim-so-dep/tim-kiem-sim",
@@ -4878,8 +4888,8 @@
       "pageviews": 28,
       "sessions": 25,
       "users": 25,
-      "w2a_conversions": 594,
-      "cvr_percent": 2376.0,
+      "w2a_conversions": 601,
+      "cvr_percent": 2404.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 28
@@ -4895,16 +4905,16 @@
       "pageviews": 28,
       "sessions": 27,
       "users": 26,
-      "w2a_conversions": 492,
-      "cvr_percent": 1822.22,
+      "w2a_conversions": 497,
+      "cvr_percent": 1840.74,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 28
       },
       "campaigns": [],
       "creatives": [
-        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720",
-        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821"
+        "paylater_reachbuilder.sem.na.c03.cpc.mass.img-na.lol.ad01.fs303.20260821",
+        "cic-q3-2026.sem.na.c03.cpc.mass.mix-na.llp.ad01.fs-investtech-wealthmanagement.20240720"
       ]
     },
     {
@@ -5008,8 +5018,8 @@
       "pageviews": 26,
       "sessions": 20,
       "users": 20,
-      "w2a_conversions": 367,
-      "cvr_percent": 1835.0,
+      "w2a_conversions": 369,
+      "cvr_percent": 1845.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 26
@@ -5023,8 +5033,8 @@
       "pageviews": 26,
       "sessions": 24,
       "users": 17,
-      "w2a_conversions": 1381,
-      "cvr_percent": 5754.17,
+      "w2a_conversions": 1390,
+      "cvr_percent": 5791.67,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 26
@@ -5038,8 +5048,8 @@
       "pageviews": 26,
       "sessions": 25,
       "users": 24,
-      "w2a_conversions": 1544,
-      "cvr_percent": 6176.0,
+      "w2a_conversions": 1559,
+      "cvr_percent": 6236.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 26
@@ -5068,8 +5078,8 @@
       "pageviews": 26,
       "sessions": 22,
       "users": 20,
-      "w2a_conversions": 571,
-      "cvr_percent": 2595.45,
+      "w2a_conversions": 574,
+      "cvr_percent": 2609.09,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 26
@@ -5128,8 +5138,8 @@
       "pageviews": 25,
       "sessions": 23,
       "users": 23,
-      "w2a_conversions": 357,
-      "cvr_percent": 1552.17,
+      "w2a_conversions": 359,
+      "cvr_percent": 1560.87,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 25
@@ -5143,8 +5153,8 @@
       "pageviews": 25,
       "sessions": 19,
       "users": 17,
-      "w2a_conversions": 974,
-      "cvr_percent": 5126.32,
+      "w2a_conversions": 981,
+      "cvr_percent": 5163.16,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 25
@@ -5158,8 +5168,8 @@
       "pageviews": 25,
       "sessions": 18,
       "users": 12,
-      "w2a_conversions": 2184,
-      "cvr_percent": 12133.33,
+      "w2a_conversions": 2205,
+      "cvr_percent": 12250.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 25
@@ -5185,21 +5195,18 @@
       ]
     },
     {
-      "page_path": "/cinema/rap/galaxy-cinema/galaxy-cineo-vincom-dan-phuong-571",
+      "page_path": "/cinema/ngu-mieu-pha-an-25159",
       "hub": "Cinema Hub",
       "pageviews": 25,
-      "sessions": 14,
-      "users": 12,
-      "w2a_conversions": 2177,
-      "cvr_percent": 15550.0,
+      "sessions": 18,
+      "users": 18,
+      "w2a_conversions": 212,
+      "cvr_percent": 1177.78,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
-        "google / cpc": 15,
-        "(data not available)": 10
+        "google / cpc": 25
       },
-      "campaigns": [
-        "(cross-network)"
-      ],
+      "campaigns": [],
       "creatives": []
     },
     {
@@ -5285,8 +5292,8 @@
       "pageviews": 24,
       "sessions": 21,
       "users": 18,
-      "w2a_conversions": 302,
-      "cvr_percent": 1438.1,
+      "w2a_conversions": 303,
+      "cvr_percent": 1442.86,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 24
@@ -5315,8 +5322,8 @@
       "pageviews": 24,
       "sessions": 16,
       "users": 16,
-      "w2a_conversions": 311,
-      "cvr_percent": 1943.75,
+      "w2a_conversions": 314,
+      "cvr_percent": 1962.5,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 24
@@ -5345,8 +5352,8 @@
       "pageviews": 23,
       "sessions": 22,
       "users": 18,
-      "w2a_conversions": 373,
-      "cvr_percent": 1695.45,
+      "w2a_conversions": 374,
+      "cvr_percent": 1700.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 23
@@ -5360,8 +5367,8 @@
       "pageviews": 23,
       "sessions": 20,
       "users": 18,
-      "w2a_conversions": 1776,
-      "cvr_percent": 8880.0,
+      "w2a_conversions": 1782,
+      "cvr_percent": 8910.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 23
@@ -5452,8 +5459,8 @@
       "pageviews": 22,
       "sessions": 19,
       "users": 15,
-      "w2a_conversions": 765,
-      "cvr_percent": 4026.32,
+      "w2a_conversions": 769,
+      "cvr_percent": 4047.37,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 22
@@ -5467,8 +5474,8 @@
       "pageviews": 22,
       "sessions": 19,
       "users": 18,
-      "w2a_conversions": 501,
-      "cvr_percent": 2636.84,
+      "w2a_conversions": 507,
+      "cvr_percent": 2668.42,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 22
@@ -5497,8 +5504,8 @@
       "pageviews": 21,
       "sessions": 19,
       "users": 17,
-      "w2a_conversions": 366,
-      "cvr_percent": 1926.32,
+      "w2a_conversions": 367,
+      "cvr_percent": 1931.58,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 21
@@ -5527,8 +5534,8 @@
       "pageviews": 21,
       "sessions": 15,
       "users": 15,
-      "w2a_conversions": 9202,
-      "cvr_percent": 61346.67,
+      "w2a_conversions": 9242,
+      "cvr_percent": 61613.33,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 21
@@ -5544,8 +5551,8 @@
       "pageviews": 21,
       "sessions": 17,
       "users": 14,
-      "w2a_conversions": 2856,
-      "cvr_percent": 16800.0,
+      "w2a_conversions": 2875,
+      "cvr_percent": 16911.76,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 21
@@ -5559,8 +5566,8 @@
       "pageviews": 21,
       "sessions": 21,
       "users": 21,
-      "w2a_conversions": 201,
-      "cvr_percent": 957.14,
+      "w2a_conversions": 203,
+      "cvr_percent": 966.67,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 21
@@ -5666,8 +5673,8 @@
       "pageviews": 20,
       "sessions": 16,
       "users": 16,
-      "w2a_conversions": 1764,
-      "cvr_percent": 11025.0,
+      "w2a_conversions": 1782,
+      "cvr_percent": 11137.5,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 20
@@ -5683,8 +5690,8 @@
       "pageviews": 20,
       "sessions": 15,
       "users": 15,
-      "w2a_conversions": 1366,
-      "cvr_percent": 9106.67,
+      "w2a_conversions": 1377,
+      "cvr_percent": 9180.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 20
@@ -5698,8 +5705,8 @@
       "pageviews": 20,
       "sessions": 17,
       "users": 15,
-      "w2a_conversions": 1232,
-      "cvr_percent": 7247.06,
+      "w2a_conversions": 1239,
+      "cvr_percent": 7288.24,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 20
@@ -5713,8 +5720,8 @@
       "pageviews": 20,
       "sessions": 20,
       "users": 17,
-      "w2a_conversions": 4589,
-      "cvr_percent": 22945.0,
+      "w2a_conversions": 4603,
+      "cvr_percent": 23015.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 20
@@ -5728,8 +5735,8 @@
       "pageviews": 20,
       "sessions": 20,
       "users": 15,
-      "w2a_conversions": 691,
-      "cvr_percent": 3455.0,
+      "w2a_conversions": 701,
+      "cvr_percent": 3505.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 20
@@ -5743,8 +5750,8 @@
       "pageviews": 20,
       "sessions": 18,
       "users": 18,
-      "w2a_conversions": 274,
-      "cvr_percent": 1522.22,
+      "w2a_conversions": 275,
+      "cvr_percent": 1527.78,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 20
@@ -5775,8 +5782,8 @@
       "pageviews": 20,
       "sessions": 22,
       "users": 18,
-      "w2a_conversions": 808,
-      "cvr_percent": 3672.73,
+      "w2a_conversions": 821,
+      "cvr_percent": 3731.82,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 20
@@ -5865,8 +5872,8 @@
       "pageviews": 19,
       "sessions": 17,
       "users": 17,
-      "w2a_conversions": 3858,
-      "cvr_percent": 22694.12,
+      "w2a_conversions": 3861,
+      "cvr_percent": 22711.76,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 19
@@ -5880,8 +5887,8 @@
       "pageviews": 19,
       "sessions": 13,
       "users": 8,
-      "w2a_conversions": 721,
-      "cvr_percent": 5546.15,
+      "w2a_conversions": 727,
+      "cvr_percent": 5592.31,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 19
@@ -5925,8 +5932,8 @@
       "pageviews": 19,
       "sessions": 18,
       "users": 17,
-      "w2a_conversions": 208,
-      "cvr_percent": 1155.56,
+      "w2a_conversions": 210,
+      "cvr_percent": 1166.67,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 19
@@ -5970,8 +5977,23 @@
       "pageviews": 18,
       "sessions": 14,
       "users": 14,
-      "w2a_conversions": 1284,
-      "cvr_percent": 9171.43,
+      "w2a_conversions": 1288,
+      "cvr_percent": 9200.0,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 18
+      },
+      "campaigns": [],
+      "creatives": []
+    },
+    {
+      "page_path": "/cinema/oan-linh-doi-mang-25160",
+      "hub": "Cinema Hub",
+      "pageviews": 18,
+      "sessions": 13,
+      "users": 13,
+      "w2a_conversions": 290,
+      "cvr_percent": 2230.77,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 18
@@ -5985,8 +6007,8 @@
       "pageviews": 18,
       "sessions": 9,
       "users": 9,
-      "w2a_conversions": 2407,
-      "cvr_percent": 26744.44,
+      "w2a_conversions": 2428,
+      "cvr_percent": 26977.78,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 18
@@ -6000,8 +6022,8 @@
       "pageviews": 18,
       "sessions": 18,
       "users": 15,
-      "w2a_conversions": 1608,
-      "cvr_percent": 8933.33,
+      "w2a_conversions": 1615,
+      "cvr_percent": 8972.22,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 18
@@ -6015,8 +6037,8 @@
       "pageviews": 18,
       "sessions": 16,
       "users": 13,
-      "w2a_conversions": 503,
-      "cvr_percent": 3143.75,
+      "w2a_conversions": 508,
+      "cvr_percent": 3175.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 18
@@ -6045,8 +6067,8 @@
       "pageviews": 18,
       "sessions": 16,
       "users": 13,
-      "w2a_conversions": 392,
-      "cvr_percent": 2450.0,
+      "w2a_conversions": 395,
+      "cvr_percent": 2468.75,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 18
@@ -6107,8 +6129,8 @@
       "pageviews": 17,
       "sessions": 16,
       "users": 16,
-      "w2a_conversions": 462,
-      "cvr_percent": 2887.5,
+      "w2a_conversions": 466,
+      "cvr_percent": 2912.5,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 17
@@ -6122,8 +6144,8 @@
       "pageviews": 17,
       "sessions": 15,
       "users": 12,
-      "w2a_conversions": 5560,
-      "cvr_percent": 37066.67,
+      "w2a_conversions": 5593,
+      "cvr_percent": 37286.67,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 17
@@ -6216,8 +6238,8 @@
       "pageviews": 16,
       "sessions": 15,
       "users": 14,
-      "w2a_conversions": 172,
-      "cvr_percent": 1146.67,
+      "w2a_conversions": 173,
+      "cvr_percent": 1153.33,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 16
@@ -6246,8 +6268,8 @@
       "pageviews": 16,
       "sessions": 15,
       "users": 13,
-      "w2a_conversions": 192,
-      "cvr_percent": 1280.0,
+      "w2a_conversions": 193,
+      "cvr_percent": 1286.67,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 16
@@ -6293,8 +6315,8 @@
       "pageviews": 16,
       "sessions": 13,
       "users": 12,
-      "w2a_conversions": 178,
-      "cvr_percent": 1369.23,
+      "w2a_conversions": 179,
+      "cvr_percent": 1376.92,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 16
@@ -6323,8 +6345,8 @@
       "pageviews": 16,
       "sessions": 11,
       "users": 11,
-      "w2a_conversions": 689,
-      "cvr_percent": 6263.64,
+      "w2a_conversions": 700,
+      "cvr_percent": 6363.64,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 16
@@ -6402,23 +6424,8 @@
       "pageviews": 15,
       "sessions": 16,
       "users": 15,
-      "w2a_conversions": 331,
-      "cvr_percent": 2068.75,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 15
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/cinema/oan-linh-doi-mang-25160",
-      "hub": "Cinema Hub",
-      "pageviews": 15,
-      "sessions": 10,
-      "users": 10,
-      "w2a_conversions": 238,
-      "cvr_percent": 2380.0,
+      "w2a_conversions": 335,
+      "cvr_percent": 2093.75,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 15
@@ -6432,8 +6439,8 @@
       "pageviews": 15,
       "sessions": 11,
       "users": 10,
-      "w2a_conversions": 756,
-      "cvr_percent": 6872.73,
+      "w2a_conversions": 763,
+      "cvr_percent": 6936.36,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 15
@@ -6447,8 +6454,8 @@
       "pageviews": 15,
       "sessions": 8,
       "users": 5,
-      "w2a_conversions": 1822,
-      "cvr_percent": 22775.0,
+      "w2a_conversions": 1840,
+      "cvr_percent": 23000.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 15
@@ -6462,8 +6469,8 @@
       "pageviews": 15,
       "sessions": 14,
       "users": 11,
-      "w2a_conversions": 3919,
-      "cvr_percent": 27992.86,
+      "w2a_conversions": 3938,
+      "cvr_percent": 28128.57,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 15
@@ -6477,8 +6484,8 @@
       "pageviews": 15,
       "sessions": 13,
       "users": 11,
-      "w2a_conversions": 730,
-      "cvr_percent": 5615.38,
+      "w2a_conversions": 735,
+      "cvr_percent": 5653.85,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 15
@@ -6616,8 +6623,8 @@
       "pageviews": 14,
       "sessions": 14,
       "users": 13,
-      "w2a_conversions": 661,
-      "cvr_percent": 4721.43,
+      "w2a_conversions": 675,
+      "cvr_percent": 4821.43,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 14
@@ -6631,8 +6638,8 @@
       "pageviews": 14,
       "sessions": 12,
       "users": 11,
-      "w2a_conversions": 679,
-      "cvr_percent": 5658.33,
+      "w2a_conversions": 687,
+      "cvr_percent": 5725.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 14
@@ -6646,8 +6653,8 @@
       "pageviews": 14,
       "sessions": 13,
       "users": 12,
-      "w2a_conversions": 206,
-      "cvr_percent": 1584.62,
+      "w2a_conversions": 208,
+      "cvr_percent": 1600.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 14
@@ -6661,8 +6668,8 @@
       "pageviews": 14,
       "sessions": 12,
       "users": 12,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
+      "w2a_conversions": 166,
+      "cvr_percent": 1383.33,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 14
@@ -6706,8 +6713,8 @@
       "pageviews": 14,
       "sessions": 11,
       "users": 11,
-      "w2a_conversions": 200,
-      "cvr_percent": 1818.18,
+      "w2a_conversions": 202,
+      "cvr_percent": 1836.36,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 14
@@ -6831,13 +6838,30 @@
       ]
     },
     {
+      "page_path": "/bao-hiem-o-to/doi-tac/pti",
+      "hub": "Vehicle & Insurtech",
+      "pageviews": 13,
+      "sessions": 12,
+      "users": 11,
+      "w2a_conversions": 0,
+      "cvr_percent": 0.0,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 13
+      },
+      "campaigns": [],
+      "creatives": [
+        "bhoto-q3-2026"
+      ]
+    },
+    {
       "page_path": "/blog/diem-tin-dung-cic-duoc-cham-khi-nao-cach-theo-doi-va-phan-biet-bao-cao-k40-vs-k11-c116dt2619",
       "hub": "Financial Hub",
       "pageviews": 13,
       "sessions": 12,
       "users": 10,
-      "w2a_conversions": 565,
-      "cvr_percent": 4708.33,
+      "w2a_conversions": 569,
+      "cvr_percent": 4741.67,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 13
@@ -6853,8 +6877,8 @@
       "pageviews": 13,
       "sessions": 14,
       "users": 13,
-      "w2a_conversions": 196,
-      "cvr_percent": 1400.0,
+      "w2a_conversions": 198,
+      "cvr_percent": 1414.29,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 13
@@ -6885,8 +6909,8 @@
       "pageviews": 13,
       "sessions": 12,
       "users": 12,
-      "w2a_conversions": 244,
-      "cvr_percent": 2033.33,
+      "w2a_conversions": 248,
+      "cvr_percent": 2066.67,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 13
@@ -6899,28 +6923,13 @@
       ]
     },
     {
-      "page_path": "/cinema/ngu-mieu-pha-an-25159",
-      "hub": "Cinema Hub",
-      "pageviews": 13,
-      "sessions": 11,
-      "users": 11,
-      "w2a_conversions": 175,
-      "cvr_percent": 1590.91,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 13
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
       "page_path": "/cinema/rap/aeon-beta/aeon-beta-central-premium-564",
       "hub": "Cinema Hub",
       "pageviews": 13,
       "sessions": 11,
       "users": 9,
-      "w2a_conversions": 940,
-      "cvr_percent": 8545.45,
+      "w2a_conversions": 944,
+      "cvr_percent": 8581.82,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 13
@@ -6934,8 +6943,8 @@
       "pageviews": 13,
       "sessions": 11,
       "users": 9,
-      "w2a_conversions": 2560,
-      "cvr_percent": 23272.73,
+      "w2a_conversions": 2568,
+      "cvr_percent": 23345.45,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 13
@@ -6949,8 +6958,8 @@
       "pageviews": 13,
       "sessions": 8,
       "users": 7,
-      "w2a_conversions": 717,
-      "cvr_percent": 8962.5,
+      "w2a_conversions": 728,
+      "cvr_percent": 9100.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 13
@@ -6964,8 +6973,8 @@
       "pageviews": 13,
       "sessions": 12,
       "users": 10,
-      "w2a_conversions": 1376,
-      "cvr_percent": 11466.67,
+      "w2a_conversions": 1395,
+      "cvr_percent": 11625.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 13
@@ -6979,8 +6988,8 @@
       "pageviews": 13,
       "sessions": 8,
       "users": 7,
-      "w2a_conversions": 347,
-      "cvr_percent": 4337.5,
+      "w2a_conversions": 352,
+      "cvr_percent": 4400.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 13
@@ -6994,8 +7003,8 @@
       "pageviews": 13,
       "sessions": 12,
       "users": 9,
-      "w2a_conversions": 3878,
-      "cvr_percent": 32316.67,
+      "w2a_conversions": 3904,
+      "cvr_percent": 32533.33,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 13
@@ -7039,8 +7048,8 @@
       "pageviews": 13,
       "sessions": 13,
       "users": 10,
-      "w2a_conversions": 930,
-      "cvr_percent": 7153.85,
+      "w2a_conversions": 940,
+      "cvr_percent": 7230.77,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 13
@@ -7103,31 +7112,14 @@
       "pageviews": 13,
       "sessions": 10,
       "users": 10,
-      "w2a_conversions": 1811,
-      "cvr_percent": 18110.0,
+      "w2a_conversions": 1827,
+      "cvr_percent": 18270.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 13
       },
       "campaigns": [],
       "creatives": []
-    },
-    {
-      "page_path": "/bao-hiem-o-to/doi-tac/pti",
-      "hub": "Vehicle & Insurtech",
-      "pageviews": 12,
-      "sessions": 11,
-      "users": 10,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 12
-      },
-      "campaigns": [],
-      "creatives": [
-        "bhoto-q3-2026"
-      ]
     },
     {
       "page_path": "/blog/bam-bien-so-online-c116dt2683",
@@ -7287,8 +7279,8 @@
       "pageviews": 12,
       "sessions": 11,
       "users": 11,
-      "w2a_conversions": 911,
-      "cvr_percent": 8281.82,
+      "w2a_conversions": 915,
+      "cvr_percent": 8318.18,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 12
@@ -7332,8 +7324,8 @@
       "pageviews": 12,
       "sessions": 11,
       "users": 11,
-      "w2a_conversions": 351,
-      "cvr_percent": 3190.91,
+      "w2a_conversions": 381,
+      "cvr_percent": 3463.64,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 12
@@ -7347,8 +7339,8 @@
       "pageviews": 12,
       "sessions": 13,
       "users": 11,
-      "w2a_conversions": 3805,
-      "cvr_percent": 29269.23,
+      "w2a_conversions": 3831,
+      "cvr_percent": 29469.23,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 12
@@ -7377,8 +7369,8 @@
       "pageviews": 12,
       "sessions": 12,
       "users": 9,
-      "w2a_conversions": 721,
-      "cvr_percent": 6008.33,
+      "w2a_conversions": 736,
+      "cvr_percent": 6133.33,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 12
@@ -7407,8 +7399,8 @@
       "pageviews": 12,
       "sessions": 12,
       "users": 9,
-      "w2a_conversions": 325,
-      "cvr_percent": 2708.33,
+      "w2a_conversions": 329,
+      "cvr_percent": 2741.67,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 12
@@ -7591,8 +7583,8 @@
       "pageviews": 11,
       "sessions": 12,
       "users": 11,
-      "w2a_conversions": 284,
-      "cvr_percent": 2366.67,
+      "w2a_conversions": 289,
+      "cvr_percent": 2408.33,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 11
@@ -7606,8 +7598,8 @@
       "pageviews": 11,
       "sessions": 11,
       "users": 11,
-      "w2a_conversions": 489,
-      "cvr_percent": 4445.45,
+      "w2a_conversions": 490,
+      "cvr_percent": 4454.55,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 11
@@ -7621,14 +7613,31 @@
       "pageviews": 11,
       "sessions": 2,
       "users": 2,
-      "w2a_conversions": 826,
-      "cvr_percent": 41300.0,
+      "w2a_conversions": 832,
+      "cvr_percent": 41600.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 11
       },
       "campaigns": [],
       "creatives": []
+    },
+    {
+      "page_path": "/doi-tac/giai-tri",
+      "hub": "Merchant Hub",
+      "pageviews": 11,
+      "sessions": 9,
+      "users": 10,
+      "w2a_conversions": 0,
+      "cvr_percent": 0.0,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 11
+      },
+      "campaigns": [],
+      "creatives": [
+        "lottery-q4"
+      ]
     },
     {
       "page_path": "/hoi-dap/tim-kiem",
@@ -7651,8 +7660,8 @@
       "pageviews": 11,
       "sessions": 9,
       "users": 8,
-      "w2a_conversions": 2939,
-      "cvr_percent": 32655.56,
+      "w2a_conversions": 2974,
+      "cvr_percent": 33044.44,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 11
@@ -7683,8 +7692,8 @@
       "pageviews": 11,
       "sessions": 9,
       "users": 9,
-      "w2a_conversions": 274,
-      "cvr_percent": 3044.44,
+      "w2a_conversions": 276,
+      "cvr_percent": 3066.67,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 11
@@ -7698,8 +7707,8 @@
       "pageviews": 11,
       "sessions": 5,
       "users": 5,
-      "w2a_conversions": 9036,
-      "cvr_percent": 180720.0,
+      "w2a_conversions": 9242,
+      "cvr_percent": 184840.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 11
@@ -7745,8 +7754,8 @@
       "pageviews": 11,
       "sessions": 6,
       "users": 2,
-      "w2a_conversions": 2243,
-      "cvr_percent": 37383.33,
+      "w2a_conversions": 2262,
+      "cvr_percent": 37700.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 11
@@ -7777,8 +7786,8 @@
       "pageviews": 10,
       "sessions": 10,
       "users": 10,
-      "w2a_conversions": 432,
-      "cvr_percent": 4320.0,
+      "w2a_conversions": 441,
+      "cvr_percent": 4410.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 10
@@ -7807,8 +7816,8 @@
       "pageviews": 10,
       "sessions": 11,
       "users": 7,
-      "w2a_conversions": 340,
-      "cvr_percent": 3090.91,
+      "w2a_conversions": 341,
+      "cvr_percent": 3100.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 10
@@ -7839,8 +7848,8 @@
       "pageviews": 10,
       "sessions": 7,
       "users": 7,
-      "w2a_conversions": 860,
-      "cvr_percent": 12285.71,
+      "w2a_conversions": 862,
+      "cvr_percent": 12314.29,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 10
@@ -7854,8 +7863,8 @@
       "pageviews": 10,
       "sessions": 9,
       "users": 9,
-      "w2a_conversions": 177,
-      "cvr_percent": 1966.67,
+      "w2a_conversions": 182,
+      "cvr_percent": 2022.22,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 10
@@ -7869,8 +7878,8 @@
       "pageviews": 10,
       "sessions": 10,
       "users": 9,
-      "w2a_conversions": 1451,
-      "cvr_percent": 14510.0,
+      "w2a_conversions": 1457,
+      "cvr_percent": 14570.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 10
@@ -7884,8 +7893,8 @@
       "pageviews": 10,
       "sessions": 8,
       "users": 7,
-      "w2a_conversions": 3777,
-      "cvr_percent": 47212.5,
+      "w2a_conversions": 3794,
+      "cvr_percent": 47425.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 10
@@ -7899,31 +7908,14 @@
       "pageviews": 10,
       "sessions": 8,
       "users": 7,
-      "w2a_conversions": 4552,
-      "cvr_percent": 56900.0,
+      "w2a_conversions": 4564,
+      "cvr_percent": 57050.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 10
       },
       "campaigns": [],
       "creatives": []
-    },
-    {
-      "page_path": "/doi-tac/giai-tri",
-      "hub": "Merchant Hub",
-      "pageviews": 10,
-      "sessions": 8,
-      "users": 9,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 10
-      },
-      "campaigns": [],
-      "creatives": [
-        "lottery-q4"
-      ]
     },
     {
       "page_path": "/esim-du-lich/khu-vuc/thai-lan",
@@ -7946,8 +7938,8 @@
       "pageviews": 10,
       "sessions": 5,
       "users": 4,
-      "w2a_conversions": 333,
-      "cvr_percent": 6660.0,
+      "w2a_conversions": 338,
+      "cvr_percent": 6760.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 10
@@ -7961,8 +7953,8 @@
       "pageviews": 10,
       "sessions": 7,
       "users": 7,
-      "w2a_conversions": 1352,
-      "cvr_percent": 19314.29,
+      "w2a_conversions": 1367,
+      "cvr_percent": 19528.57,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 10
@@ -8044,8 +8036,8 @@
       "pageviews": 10,
       "sessions": 10,
       "users": 10,
-      "w2a_conversions": 799,
-      "cvr_percent": 7990.0,
+      "w2a_conversions": 805,
+      "cvr_percent": 8050.0,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 10
@@ -8059,14 +8051,31 @@
       "pageviews": 10,
       "sessions": 7,
       "users": 7,
-      "w2a_conversions": 2478,
-      "cvr_percent": 35400.0,
+      "w2a_conversions": 2491,
+      "cvr_percent": 35585.71,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 10
       },
       "campaigns": [],
       "creatives": []
+    },
+    {
+      "page_path": "/bao-hiem-o-to/doi-tac/dbv",
+      "hub": "Vehicle & Insurtech",
+      "pageviews": 9,
+      "sessions": 9,
+      "users": 9,
+      "w2a_conversions": 0,
+      "cvr_percent": 0.0,
+      "primary_channel": "google / cpc",
+      "channels_breakdown": {
+        "google / cpc": 9
+      },
+      "campaigns": [],
+      "creatives": [
+        "bhoto-q3-2026"
+      ]
     },
     {
       "page_path": "/bao-hiem-xe-may/gic",
@@ -8104,143 +8113,8 @@
       "pageviews": 9,
       "sessions": 9,
       "users": 8,
-      "w2a_conversions": 160,
-      "cvr_percent": 1777.78,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 9
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/blog/7-trieu-chung-bao-hieu-ung-thu-som-ma-ban-can-biet-c116dt1095",
-      "hub": "Other / General",
-      "pageviews": 9,
-      "sessions": 9,
-      "users": 7,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 9
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/blog/dia-diem-song-ao-da-lat-c101dt359",
-      "hub": "Other / General",
-      "pageviews": 9,
-      "sessions": 6,
-      "users": 6,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 9
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/blog/gia-dien-sinh-hoat-moi-nhat-bao-nhieu-tien-1-so-c193dt1188",
-      "hub": "Other / General",
-      "pageviews": 9,
-      "sessions": 9,
-      "users": 9,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 9
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/blog/gia-tram-rang-bhyt-c116dt2835",
-      "hub": "Other / General",
-      "pageviews": 9,
-      "sessions": 8,
-      "users": 7,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 9
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/blog/tat-tan-tat-kinh-nghiem-du-lich-sapa-khong-the-bo-qua-c101dt152",
-      "hub": "Other / General",
-      "pageviews": 9,
-      "sessions": 10,
-      "users": 9,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 9
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/blog/the-tin-dung-hoan-tien-sieu-thi-c116dt2767",
-      "hub": "Financial Hub",
-      "pageviews": 9,
-      "sessions": 9,
-      "users": 9,
-      "w2a_conversions": 518,
-      "cvr_percent": 5755.56,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 9
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/blog/tu-vi-tuoi-mau-thin-1988-nu-mang-nam-2026-c117dt2397",
-      "hub": "Other / General",
-      "pageviews": 9,
-      "sessions": 7,
-      "users": 7,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 9
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/cinema/rap/lotte-cinema/lotte-ha-dong-151",
-      "hub": "Cinema Hub",
-      "pageviews": 9,
-      "sessions": 3,
-      "users": 2,
-      "w2a_conversions": 5867,
-      "cvr_percent": 195566.67,
-      "primary_channel": "google / cpc",
-      "channels_breakdown": {
-        "google / cpc": 9
-      },
-      "campaigns": [],
-      "creatives": []
-    },
-    {
-      "page_path": "/cinema/rap/ncc",
-      "hub": "Cinema Hub",
-      "pageviews": 9,
-      "sessions": 1,
-      "users": 1,
-      "w2a_conversions": 0,
-      "cvr_percent": 0.0,
+      "w2a_conversions": 161,
+      "cvr_percent": 1788.89,
       "primary_channel": "google / cpc",
       "channels_breakdown": {
         "google / cpc": 9

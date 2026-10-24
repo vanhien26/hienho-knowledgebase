@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T06:47:40",
+  "generated_at": "2026-10-23T23:09:19",
   "geo": "VN",
   "timeframe": "today 5-y",
   "themes": [
@@ -4928,6 +4928,270 @@
         87,
         84,
         89
+      ],
+      "insufficient_data": false
+    },
+    {
+      "theme_id": "vang",
+      "name": "Giá Vàng",
+      "sector": "Financial",
+      "pillar": "giá vàng",
+      "volume": 33546430,
+      "monthly": [
+        63,
+        85,
+        100,
+        76,
+        66,
+        62,
+        49,
+        49,
+        58,
+        70,
+        70,
+        55
+      ],
+      "insufficient_data": false
+    },
+    {
+      "theme_id": "viet-bank",
+      "name": "VietBank",
+      "sector": "Financial",
+      "pillar": "vietbank",
+      "volume": 1825910,
+      "monthly": [
+        88,
+        98,
+        100,
+        91,
+        92,
+        91,
+        100,
+        97,
+        97,
+        95,
+        88,
+        92
+      ],
+      "insufficient_data": false
+    },
+    {
+      "theme_id": "vcb",
+      "name": "VCB",
+      "sector": "Financial",
+      "pillar": "vcb",
+      "volume": 1594860,
+      "monthly": [
+        94,
+        90,
+        100,
+        92,
+        92,
+        95,
+        97,
+        100,
+        98,
+        99,
+        93,
+        95
+      ],
+      "insufficient_data": false
+    },
+    {
+      "theme_id": "bien-so",
+      "name": "Biển Số Xe",
+      "sector": "vehicle-hub",
+      "pillar": "biển số xe",
+      "volume": 670110,
+      "monthly": [
+        96,
+        89,
+        89,
+        87,
+        83,
+        86,
+        95,
+        100,
+        96,
+        93,
+        89,
+        90
+      ],
+      "insufficient_data": false
+    },
+    {
+      "theme_id": "bao-hiem",
+      "name": "Bảo Hiểm",
+      "sector": "insurtech",
+      "pillar": "bảo hiểm",
+      "volume": 644890,
+      "monthly": [
+        73,
+        78,
+        93,
+        88,
+        87,
+        88,
+        89,
+        90,
+        96,
+        100,
+        88,
+        84
+      ],
+      "insufficient_data": false
+    },
+    {
+      "theme_id": "viettinbank",
+      "name": "VietinBank",
+      "sector": "Financial",
+      "pillar": "viettinbank",
+      "volume": 538270,
+      "monthly": [
+        98,
+        88,
+        95,
+        86,
+        86,
+        92,
+        92,
+        95,
+        97,
+        94,
+        91,
+        100
+      ],
+      "insufficient_data": false
+    },
+    {
+      "theme_id": "tinh-bmi",
+      "name": "Tính BMI",
+      "sector": "hospital",
+      "pillar": "tính bmi",
+      "volume": 268130,
+      "monthly": [
+        53,
+        60,
+        79,
+        73,
+        83,
+        71,
+        71,
+        75,
+        100,
+        92,
+        83,
+        68
+      ],
+      "insufficient_data": false
+    },
+    {
+      "theme_id": "bao-hiem-y-te",
+      "name": "Bảo Hiểm Y Tế",
+      "sector": "insurtech",
+      "pillar": "bảo hiểm y tế",
+      "volume": 223200,
+      "monthly": [
+        61,
+        60,
+        71,
+        64,
+        68,
+        75,
+        74,
+        86,
+        100,
+        87,
+        80,
+        78
+      ],
+      "insufficient_data": false
+    },
+    {
+      "theme_id": "garage-o-to",
+      "name": "Garage Ô Tô",
+      "sector": "vehicle-hub",
+      "pillar": "garage ô tô",
+      "volume": 162530,
+      "monthly": [
+        38,
+        85,
+        87,
+        67,
+        85,
+        84,
+        75,
+        100,
+        87,
+        68,
+        67,
+        72
+      ],
+      "insufficient_data": false
+    },
+    {
+      "theme_id": "bao-hiem-xe",
+      "name": "Bảo Hiểm Xe",
+      "sector": "insurtech",
+      "pillar": "bảo hiểm xe",
+      "volume": 110640,
+      "monthly": [
+        100,
+        68,
+        72,
+        71,
+        65,
+        58,
+        61,
+        64,
+        73,
+        78,
+        76,
+        84
+      ],
+      "insufficient_data": false
+    },
+    {
+      "theme_id": "tiet-kiem",
+      "name": "Tiết Kiệm",
+      "sector": "Financial",
+      "pillar": "tiết kiệm",
+      "volume": 78140,
+      "monthly": [
+        79,
+        90,
+        100,
+        97,
+        86,
+        68,
+        69,
+        71,
+        74,
+        83,
+        77,
+        84
+      ],
+      "insufficient_data": false
+    },
+    {
+      "theme_id": "no",
+      "name": "Nợ & Quản Lý Dư Nợ",
+      "sector": "Financial",
+      "pillar": "nợ",
+      "volume": 12350,
+      "monthly": [
+        82,
+        83,
+        100,
+        89,
+        95,
+        98,
+        96,
+        91,
+        94,
+        96,
+        94,
+        91
       ],
       "insufficient_data": false
     }

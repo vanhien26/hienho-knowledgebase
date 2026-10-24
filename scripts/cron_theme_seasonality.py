@@ -56,6 +56,18 @@ PILLAR_OVERRIDES = {
     "dong-bao-hiem": ("đóng bảo hiểm xã hội", "Đóng Bảo Hiểm Xã Hội", "insurtech"),
     "thu-nhap": ("thuế thu nhập cá nhân", "Thu Nhập & Thuế TNCN", "Financial"),
     "ncb": ("ngân hàng ncb", "Ngân Hàng NCB", "Financial"),
+    "bao-hiem": ("bảo hiểm", "Bảo Hiểm", "insurtech"),
+    "bao-hiem-xe": ("bảo hiểm xe", "Bảo Hiểm Xe", "insurtech"),
+    "bao-hiem-y-te": ("bảo hiểm y tế", "Bảo Hiểm Y Tế", "insurtech"),
+    "bien-so": ("biển số xe", "Biển Số Xe", "vehicle-hub"),
+    "garage-o-to": ("garage ô tô", "Garage Ô Tô", "vehicle-hub"),
+    "no": ("nợ", "Nợ & Quản Lý Dư Nợ", "Financial"),
+    "tiet-kiem": ("tiết kiệm", "Tiết Kiệm", "Financial"),
+    "tinh-bmi": ("tính bmi", "Tính BMI", "hospital"),
+    "vang": ("giá vàng", "Giá Vàng", "Financial"),
+    "vcb": ("vcb", "VCB", "Financial"),
+    "viet-bank": ("vietbank", "VietBank", "Financial"),
+    "viettinbank": ("viettinbank", "VietinBank", "Financial"),
 }
 
 

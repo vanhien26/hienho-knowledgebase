@@ -1,0 +1,53 @@
+{
+  "reconciliation": {
+    "excel_days": 22,
+    "api_days": 23,
+    "excel_pv": 2624335,
+    "api_same_period_pv": 2624335,
+    "delta_pv": 0,
+    "delta_pct": 0.0,
+    "status": "KHỚP TUYỆT ĐỐI (100% MATCH)",
+    "latest_live_pv": 2735276,
+    "incremental_net_add": 110941
+  },
+  "file_source": "Hybrid Fusion (Excel: Web Performance Tracking.xlsx + GA4 Data API)",
+  "read_timestamp": "2026-10-24 08:50:22",
+  "days_elapsed": 23,
+  "days_in_month": 31,
+  "target_oct_pv": 3665607,
+  "actual_mtd_pv": 2735276,
+  "progress_pct": 74.62,
+  "daily_pace": 118925.04,
+  "forecast_31d": 3686676.24,
+  "forecast_pct": 100.57,
+  "users": 1353431,
+  "sessions": 1838201,
+  "total_w2a_clicks": 88104,
+  "w2a_cvr_pct": 3.22,
+  "channels": {
+    "organic": {
+      "pv": 1366847,
+      "pct": 49.97
+    },
+    "direct": {
+      "pv": 709997,
+      "pct": 25.96
+    },
+    "paid": {
+      "pv": 306109,
+      "pct": 11.19
+    },
+    "referral": {
+      "pv": 114546,
+      "pct": 4.19
+    },
+    "others": {
+      "pv": 237777,
+      "pct": 8.69
+    },
+    "non_paid_total": {
+      "pv": 2429167,
+      "pct": 88.81
+    }
+  }
+}

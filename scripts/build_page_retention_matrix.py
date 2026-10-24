@@ -31,9 +31,20 @@ def main():
     print(f"Property ID: {PROPERTY_ID}")
     print("=" * 70)
 
-    # Khung thời gian mặc định: MTD tháng 10 (2026-10-01 -> 2026-10-22)
-    start_date = "2026-10-01"
-    end_date = "2026-10-22"
+    # Khung thời gian: Hỗ trợ --mtd hoặc --start-date / --end-date (mặc định MTD 23)
+    import argparse
+    parser = argparse.ArgumentParser(description="Build Page Retention Matrix")
+    parser.add_argument("--start-date", default="2026-10-01", help="Start date (YYYY-MM-DD)")
+    parser.add_argument("--end-date", default="2026-10-23", help="End date (YYYY-MM-DD)")
+    parser.add_argument("--mtd", type=int, default=None, help="Số ngày lũy kế MTD (vd: 23)")
+    cli_args = parser.parse_args()
+
+    if cli_args.mtd:
+        start_date = "2026-10-01"
+        end_date = f"2026-10-{cli_args.mtd:02d}"
+    else:
+        start_date = cli_args.start_date
+        end_date = cli_args.end_date
     date_ranges = [{"startDate": start_date, "endDate": end_date}]
 
     print("[1/5] Khởi tạo xác thực Google Analytics 4...")

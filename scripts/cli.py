@@ -42,10 +42,14 @@ def main():
         target_dir = extra_args[0] if extra_args else str(ROOT_DIR)
         print(f"Processing markdown files in {target_dir}...")
         process_markdown_directory(target_dir, compress=True, remove_yaml=False)
+    elif command in ("sync-report", "report-sync", "hybrid", "sync-hybrid"):
+        sys.exit(subprocess.call([sys.executable, str(ROOT_DIR / "scripts" / "sync_hybrid_report.py")] + extra_args))
     elif command in ("sync", "sync-all"):
         sys.exit(subprocess.call([sys.executable, str(ROOT_DIR / "scripts" / "sync_all_data.py")] + extra_args))
     elif command in ("ads", "sync-ads", "paid"):
         sys.exit(subprocess.call([sys.executable, str(ROOT_DIR / "scripts" / "sync_paid_ads.py")] + extra_args))
+    elif command in ("ga4-sync", "ga4-mtd", "mtd", "sync-ga4"):
+        sys.exit(subprocess.call([sys.executable, str(ROOT_DIR / "scripts" / "sync_ga4_master.py")] + extra_args))
     elif command in ("ga4", "fetch-ga4"):
         ga4_script = ROOT_DIR / "scripts" / "fetch_ga4.js"
         if not ga4_script.exists():
