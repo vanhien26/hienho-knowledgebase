@@ -36,7 +36,6 @@ HUBS_ANALYTICS_SUMMARY = os.path.join(HUBS_REPO, "data/analytics/summary.json")
 HUBS_WEB_DATA = os.path.join(HUBS_REPO, "lib/dashboard/web-data.json")
 
 EXCEL_FILES = [
-    os.path.join(BASE_DIR, "07_REPORTS/web_platform_performance.xlsx"),
     os.path.join(BASE_DIR, "07_REPORTS/web_performance_tracking.xlsx")
 ]
 
@@ -370,9 +369,15 @@ def sync_all():
     # 3. Cập nhật trực tiếp web-data.json
     update_web_data_json()
 
-    # 4. Patch các file Excel SSOT
+    # 4. Patch file Excel SSOT BigQuery Connected Sheets
     for p in EXCEL_FILES:
         patch_excel(p)
+
+    # 5. Xuất bản lại file Excel Executive Presentation chuẩn 5 tabs
+    build_script = os.path.join(BASE_DIR, "scripts/build_web_platform_performance.py")
+    if os.path.exists(build_script):
+        import subprocess
+        subprocess.run([sys.executable, build_script], check=False)
 
     print("=" * 70)
     print(f"HOÀN THÀNH ĐỒNG BỘ DỮ LIỆU MTD {DAYS_ELAPSED}D SANG HUBS /dashboard!")

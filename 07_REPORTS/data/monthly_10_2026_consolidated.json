@@ -1,29 +1,18 @@
 {
-  "reconciliation": {
-    "excel_days": 22,
-    "api_days": 23,
-    "excel_pv": 2624335,
-    "api_same_period_pv": 2624335,
-    "delta_pv": 0,
-    "delta_pct": 0.0,
-    "status": "KHỚP TUYỆT ĐỐI (100% MATCH)",
-    "latest_live_pv": 2735276,
-    "incremental_net_add": 110941
-  },
-  "file_source": "Hybrid Fusion (Excel: Web Performance Tracking.xlsx + GA4 Data API)",
-  "read_timestamp": "2026-10-24 08:50:22",
+  "file_source": "GA4 Data API (Property 270743103)",
+  "read_timestamp": "2026-10-24 09:20:04",
+  "report_type": "MTD 23 Ngày (01/10 - 23/10/2026 - Lũy Kế 23 Ngày Tháng 10)",
   "days_elapsed": 23,
   "days_in_month": 31,
   "target_oct_pv": 3665607,
   "actual_mtd_pv": 2735276,
   "progress_pct": 74.62,
   "daily_pace": 118925.04,
+  "daily_needed": 116291.38,
   "forecast_31d": 3686676.24,
   "forecast_pct": 100.57,
   "users": 1353431,
   "sessions": 1838201,
-  "total_w2a_clicks": 88104,
-  "w2a_cvr_pct": 3.22,
   "channels": {
     "organic": {
       "pv": 1366847,
@@ -48,6 +37,70 @@
     "non_paid_total": {
       "pv": 2429167,
       "pct": 88.81
+    }
+  },
+  "hubs": {
+    "cinema": {
+      "pv": 889399,
+      "target": 1117378,
+      "pct": 79.6,
+      "forecast": 1198755.17
+    },
+    "financial": {
+      "pv": 163850,
+      "target": 450000,
+      "pct": 36.41,
+      "forecast": 220841.3
+    },
+    "new_user": {
+      "pv": 92150,
+      "target": 300000,
+      "pct": 30.72,
+      "forecast": 124202.17
+    },
+    "vehicle": {
+      "pv": 29740,
+      "target": 100000,
+      "pct": 29.74,
+      "forecast": 40084.35
+    },
+    "student": {
+      "pv": 1892,
+      "target": 100000,
+      "pct": 1.89,
+      "forecast": 2550.09
+    },
+    "others": {
+      "pv": 1558245,
+      "target": 0,
+      "pct": 0,
+      "forecast": 2100243.26
+    }
+  },
+  "cinema_breakdown": {
+    "Trang Rạp phim": {
+      "pv": 545468,
+      "pct_hub": 61.33
+    },
+    "Trang phim chi tiết": {
+      "pv": 297746,
+      "pct_hub": 33.48
+    },
+    "Cinema_Home Page": {
+      "pv": 26978,
+      "pct_hub": 3.03
+    },
+    "Cinema_Blog": {
+      "pv": 15002,
+      "pct_hub": 1.69
+    },
+    "Cinema_Landing Page": {
+      "pv": 2598,
+      "pct_hub": 0.29
+    },
+    "Tin tức": {
+      "pv": 1607,
+      "pct_hub": 0.18
     }
   }
 }

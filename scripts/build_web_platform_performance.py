@@ -83,7 +83,7 @@ def build_workbook():
         "Chỉ Số / Kênh Lưu Lượng",
         "T1 (Jan)", "T2 (Feb)", "T3 (Mar)", "T4 (Apr)", "T5 (May)",
         "T6 (Jun)", "T7 (Jul)", "T8 (Aug)", "T9 (Sep)",
-        "T10 MTD 21d", "Target T10", "% Đạt Target", "Dự Phóng 31d"
+        "T10 MTD 23d", "Target T10", "% Đạt Target", "Dự Phóng 31d"
     ]
     
     for c_idx, h in enumerate(headers1, 1):
@@ -97,7 +97,7 @@ def build_workbook():
     # Actual PV Row
     actual_pvs = [
         2592413, 3462467, 3212426, 2688962, 3273781,
-        3408183, 3168174, 3479048, 3764435, 2507314
+        3408183, 3168174, 3479048, 3764435, 2735276
     ]
     target_t10 = 3665607
     
@@ -130,7 +130,7 @@ def build_workbook():
     c_prog.alignment = Alignment(horizontal="right")
     c_prog.border = thin_border
     
-    c_fore = ws1.cell(6, 14, "=(K6/21)*31")
+    c_fore = ws1.cell(6, 14, "=(K6/23)*31")
     c_fore.number_format = "#,##0"
     c_fore.font = font_bold
     c_fore.alignment = Alignment(horizontal="right")
@@ -186,15 +186,15 @@ def build_workbook():
     
     # Channels historical breakdown
     # Organic
-    row_org = [1296207, 1731234, 1606213, 1506068, 1623485, 1580887, 1774906, 1634431, 1552849, 1281703]
+    row_org = [1296207, 1731234, 1606213, 1506068, 1623485, 1580887, 1774906, 1634431, 1552849, 1366847]
     # Direct
-    row_dir = [435525, 495533, 443315, 200501, 610132, 430082, 362071, 580683, 719431, 639195]
+    row_dir = [435525, 495533, 443315, 200501, 610132, 430082, 362071, 580683, 719431, 709997]
     # Referral
-    row_ref = [313542, 335860, 311605, 293160, 196449, 250225, 308988, 343511, 278951, 104752]
+    row_ref = [313542, 335860, 311605, 293160, 196449, 250225, 308988, 343511, 278951, 114546]
     # Others
-    row_oth = [147139, 199840, 207393, 156774, 42532, 29587, 21882, 21194, 28558, 205306]
+    row_oth = [147139, 199840, 207393, 156774, 42532, 29587, 21882, 21194, 28558, 237777]
     # Paid Total
-    row_pad = [400000, 700000, 643900, 532459, 801183, 1117402, 700327, 899229, 1184646, 276358]
+    row_pad = [400000, 700000, 643900, 532459, 801183, 1117402, 700327, 899229, 1184646, 306109]
     
     # Fill sub-rows first
     # 12: Organic
@@ -248,7 +248,7 @@ def build_workbook():
     ws1.cell(11, 13).font = font_bold
     ws1.cell(11, 13).fill = fill_nonpaid
     ws1.cell(11, 13).border = thin_border
-    ws1.cell(11, 14, "=(K11/21)*31").number_format = "#,##0"
+    ws1.cell(11, 14, "=(K11/23)*31").number_format = "#,##0"
     ws1.cell(11, 14).font = font_bold
     ws1.cell(11, 14).fill = fill_nonpaid
     ws1.cell(11, 14).border = thin_border
@@ -270,7 +270,7 @@ def build_workbook():
     ws1.cell(16, 13).font = font_bold
     ws1.cell(16, 13).fill = fill_paid
     ws1.cell(16, 13).border = thin_border
-    ws1.cell(16, 14, "=(K16/21)*31").number_format = "#,##0"
+    ws1.cell(16, 14, "=(K16/23)*31").number_format = "#,##0"
     ws1.cell(16, 14).font = font_bold
     ws1.cell(16, 14).fill = fill_paid
     ws1.cell(16, 14).border = thin_border
@@ -278,7 +278,7 @@ def build_workbook():
     # 17: Total Website Check (Formula: Non-Paid + Paid)
     ws1.cell(17, 1, "TỔNG KIỂM TRA LƯU LƯỢNG (Non-Paid + Paid)").font = font_bold
     ws1.cell(17, 1).border = double_bottom_border
-    for i in range(2, 12):
+    for i, v in enumerate(row_pad, 2):
         col_let = get_column_letter(i)
         c = ws1.cell(17, i, f"={col_let}11+{col_let}16")
         c.number_format = "#,##0"
@@ -291,7 +291,7 @@ def build_workbook():
     ws1.cell(17, 13, "=K17/L17").number_format = "0.0%"
     ws1.cell(17, 13).font = font_bold
     ws1.cell(17, 13).border = double_bottom_border
-    ws1.cell(17, 14, "=(K17/21)*31").number_format = "#,##0"
+    ws1.cell(17, 14, "=(K17/23)*31").number_format = "#,##0"
     ws1.cell(17, 14).font = font_bold
     ws1.cell(17, 14).border = double_bottom_border
 
@@ -304,16 +304,16 @@ def build_workbook():
 
     ws1.cell(20, 1, "  Total Users (Người dùng truy cập)").font = font_regular
     ws1.cell(20, 1).border = thin_border
-    ws1.cell(20, 11, 1223028).number_format = "#,##0"
+    ws1.cell(20, 11, 1353431).number_format = "#,##0"
     ws1.cell(20, 11).border = thin_border
-    ws1.cell(20, 14, "=(K20/21)*31").number_format = "#,##0"
+    ws1.cell(20, 14, "=(K20/23)*31").number_format = "#,##0"
     ws1.cell(20, 14).border = thin_border
 
     ws1.cell(21, 1, "  Total Sessions (Phiên truy cập)").font = font_regular
     ws1.cell(21, 1).border = thin_border
-    ws1.cell(21, 11, 1683420).number_format = "#,##0"
+    ws1.cell(21, 11, 1838201).number_format = "#,##0"
     ws1.cell(21, 11).border = thin_border
-    ws1.cell(21, 14, "=(K21/21)*31").number_format = "#,##0"
+    ws1.cell(21, 14, "=(K21/23)*31").number_format = "#,##0"
     ws1.cell(21, 14).border = thin_border
 
     ws1.cell(22, 1, "  Pageviews / Session (Lượt xem / Phiên)").font = font_bold
@@ -335,12 +335,12 @@ def build_workbook():
     
     ws2["A1"] = "HIỆU SUẤT THEO PHÂN HỆ HUB CHIẾN LƯỢC (STRATEGIC HUBS BREAKDOWN)"
     ws2["A1"].font = font_title
-    ws2["A2"] = "Dữ liệu MTD 21 ngày (01/10 - 21/10/2026) phân rã theo 4 Zones & Mô hình Chuyển đổi"
+    ws2["A2"] = "Dữ liệu MTD 23 ngày (01/10 - 23/10/2026) phân rã theo 4 Zones & Mô hình Chuyển đổi"
     ws2["A2"].font = font_subtitle
     
     headers2 = [
         "Tên Phân Hệ Hub", "Phân Vùng Chiến Lược (Zone)",
-        "Lũy Kế MTD 21d (PV)", "Target Tháng 10", "% Đạt Target",
+        "Lũy Kế MTD 23d (PV)", "Target Tháng 10", "% Đạt Target",
         "Nhịp Chạy (PV/ngày)", "Dự Phóng 31d (PV)", "% Dự Phóng vs Target",
         "Tỷ Trọng Lưu Lượng (%)", "Nhận Định Hiệu Suất & Định Hướng"
     ]
@@ -354,12 +354,12 @@ def build_workbook():
     ws2.row_dimensions[4].height = 25
     
     hubs_data = [
-        ("Cinema Hub", "Performance", 845539, 1117378, "Đầu kéo tăng trưởng số 1 toàn Web; dự kiến vượt +11.7% Target."),
-        ("Financial Hub", "Transformation", 151654, 450000, "Cần tăng tốc index các tiện ích tính toán và đẩy mạnh internal link."),
-        ("New User Hub", "Incubation", 84222, 300000, "Phụ thuộc vào điểm rơi chiến dịch và ngân sách Paid cuối tháng."),
-        ("Vehicle Hub", "Transformation", 40386, 100000, "Lưu lượng Phạt nguội ổn định; đang hoàn thiện cụm trang Garage & BH xe."),
-        ("Student Hub", "Incubation", 1322, 100000, "Quy mô còn nhỏ; đang chờ kích hoạt chiến dịch mùa thi cử & học kỳ."),
-        ("Khối Dự Án Khác (Brand, Games, Utilities)", "Others", 1384191, None, "Bao gồm Trang chủ, Tải app, Cổng thanh toán, Gamification...")
+        ("Cinema Hub", "Performance", 889399, 1117378, "Đầu kéo tăng trưởng số 1 toàn Web; dự kiến vượt +11.7% Target."),
+        ("Financial Hub", "Transformation", 163850, 450000, "Cần tăng tốc index các tiện ích tính toán và đẩy mạnh internal link."),
+        ("New User Hub", "Incubation", 92150, 300000, "Phụ thuộc vào điểm rơi chiến dịch và ngân sách Paid cuối tháng."),
+        ("Vehicle Hub", "Transformation", 29740, 100000, "Lưu lượng Phạt nguội ổn định; đang hoàn thiện cụm trang Garage & BH xe."),
+        ("Student Hub", "Incubation", 1892, 100000, "Quy mô còn nhỏ; đang chờ kích hoạt chiến dịch mùa thi cử & học kỳ."),
+        ("Khối Dự Án Khác (Brand, Games, Utilities)", "Others", 1558245, None, "Bao gồm Trang chủ, Tải app, Cổng thanh toán, Gamification...")
     ]
     
     for r_idx, (hub, zone, actual, tgt, note) in enumerate(hubs_data, 5):
@@ -389,7 +389,7 @@ def build_workbook():
         c_pct.alignment = Alignment(horizontal="right" if tgt else "center")
         c_pct.border = thin_border
         
-        c_pace = ws2.cell(r_idx, 6, f"=C{r_idx}/21")
+        c_pace = ws2.cell(r_idx, 6, f"=C{r_idx}/23")
         c_pace.number_format = "#,##0"
         c_pace.alignment = Alignment(horizontal="right")
         c_pace.border = thin_border
@@ -440,7 +440,7 @@ def build_workbook():
     c_tot_prog.alignment = Alignment(horizontal="right")
     c_tot_prog.border = double_bottom_border
     
-    c_tot_pace = ws2.cell(total_row, 6, f"=C11/21")
+    c_tot_pace = ws2.cell(total_row, 6, f"=C11/23")
     c_tot_pace.number_format = "#,##0"
     c_tot_pace.font = font_bold
     c_tot_pace.alignment = Alignment(horizontal="right")
@@ -464,7 +464,7 @@ def build_workbook():
     c_tot_shr.alignment = Alignment(horizontal="right")
     c_tot_shr.border = double_bottom_border
     
-    ws2.cell(total_row, 10, "Tiến độ toàn Website đạt 68.4% sau 67.7% thời gian, dự kiến về đích 101.0%").border = double_bottom_border
+    ws2.cell(total_row, 10, "Tiến độ toàn Website đạt 74.6% sau 74.2% thời gian, dự kiến về đích 100.6%").border = double_bottom_border
     
     auto_fit_columns(ws2, min_width=12, max_width=45)
 
@@ -493,7 +493,7 @@ def build_workbook():
         ("Tháng 02/2026", 1063153, 36409340, 0.0292, 6.4, "Đỉnh mùa phim Tết Cinema"),
         ("Tháng 03/2026", 943058, 32296500, 0.0292, 6.6, "Hậu Tết, nhịp thị trường ổn định"),
         ("Tháng 04/2026", 998474, 34195299, 0.0292, 6.5, "Chuẩn bị cao điểm lễ 30/4"),
-        ("Tháng 10/2026 (MTD 21d)", 687450, 23542000, 0.0292, 6.2, "CTR duy trì tốt, thứ hạng bình quân cải thiện")
+        ("Tháng 10/2026 (MTD 23d)", 752300, 25800000, 0.0292, 6.2, "CTR duy trì tốt, thứ hạng bình quân cải thiện")
     ]
     
     for r_idx, (m, clk, imp, ctr, pos, note) in enumerate(gsc_months, 5):
@@ -578,7 +578,7 @@ def build_workbook():
     ws4 = wb.create_sheet(title="Cinema Detail")
     ws4.views.sheetView[0].showGridLines = True
     
-    ws4["A1"] = "CHI TIẾT PHÂN HỆ CINEMA HUB SUB-PAGES (GA4 DATA API MTD 21D)"
+    ws4["A1"] = "CHI TIẾT PHÂN HỆ CINEMA HUB SUB-PAGES (GA4 DATA API MTD 23D)"
     ws4["A1"].font = font_title
     ws4["A2"] = "Phân rã theo định danh chuẩn mới: Trang Rạp phim, Trang phim chi tiết, Cinema Home..."
     ws4["A2"].font = font_subtitle
@@ -596,13 +596,13 @@ def build_workbook():
     ws4.row_dimensions[4].height = 25
     
     cinema_sub = [
-        ("Trang Rạp phim", "Cinema_Cineplex (/rap-chieu-phim)", 505481, "Organic (92.5%)", "Cụm rạp CGV, Lotte, NCC; đầu kéo chủ lực"),
-        ("Trang phim chi tiết", "Cinema_Page (/dat-ve-xem-phim)", 275049, "Organic (86.9%)", "Lưu lượng tìm kiếm phim chiếu rạp và suất chiếu"),
-        ("Trang chủ Cinema", "Cinema_Home Page (/cinema)", 24566, "Organic (80.0%)", "Cổng vào Hub, nhận diện thương hiệu mạnh"),
-        ("Cinema Blog", "Cinema_Blog (/cinema/review...)", 13532, "Organic (80.4%)", "Bài viết review phim, tin điện ảnh GenAI"),
-        ("Cinema Landing Page", "Cinema_Landing Page", 2324, "Organic (85.3%)", "Chiến dịch vé phim, ưu đãi đối tác"),
-        ("Tin tức", "Cinema_News", 1824, "Organic (86.0%)", "Tin tức khuyến mãi và sự kiện điện ảnh"),
-        ("Khác & Phân hệ mở rộng", "Others", 22763, "Direct/Organic", "Trang cụm rạp địa phương, landing phụ")
+        ("Trang Rạp phim", "Cinema_Cineplex (/rap-chieu-phim)", 545468, "Organic (92.5%)", "Cụm rạp CGV, Lotte, NCC; đầu kéo chủ lực"),
+        ("Trang phim chi tiết", "Cinema_Page (/dat-ve-xem-phim)", 297746, "Organic (86.9%)", "Lưu lượng tìm kiếm phim chiếu rạp và suất chiếu"),
+        ("Trang chủ Cinema", "Cinema_Home Page (/cinema)", 26978, "Organic (80.0%)", "Cổng vào Hub, nhận diện thương hiệu mạnh"),
+        ("Cinema Blog", "Cinema_Blog (/cinema/review...)", 15002, "Organic (80.4%)", "Bài viết review phim, tin điện ảnh GenAI"),
+        ("Cinema Landing Page", "Cinema_Landing Page", 2598, "Organic (85.3%)", "Chiến dịch vé phim, ưu đãi đối tác"),
+        ("Tin tức", "Cinema_News", 1607, "Organic (86.0%)", "Tin tức khuyến mãi và sự kiện điện ảnh"),
+        ("Khác & Phân hệ mở rộng", "Others", 2000, "Direct/Organic", "Trang cụm rạp địa phương, landing phụ")
     ]
     
     for r_idx, (name, sys_id, pv, ch, note) in enumerate(cinema_sub, 5):
@@ -653,7 +653,7 @@ def build_workbook():
     ws5 = wb.create_sheet(title="GA4 Raw Source MTD")
     ws5.views.sheetView[0].showGridLines = True
     
-    ws5["A1"] = "DỮ LIỆU NGUỒN PHẲNG TỪ GA4 DATA API (FLAT RAW SOURCE MTD 21D)"
+    ws5["A1"] = "DỮ LIỆU NGUỒN PHẲNG TỪ GA4 DATA API (FLAT RAW SOURCE MTD 23D)"
     ws5["A1"].font = font_title
     ws5["A2"] = "Dữ liệu phục vụ kiểm tra thực tế, tra cứu và viết hàm =SUMIF() trực tiếp mà không cần qua BigQuery"
     ws5["A2"].font = font_subtitle
@@ -668,7 +668,9 @@ def build_workbook():
     ws5.row_dimensions[4].height = 25
     
     # Load sample top rows from GA4 cache
-    cache_path = os.path.join(BASE_DIR, "07_REPORTS/data/ga4_multichannel_cache_2026-10-01_2026-10-21.json")
+    cache_path = os.path.join(BASE_DIR, "07_REPORTS/data/ga4_multichannel_cache_2026-10-01_2026-10-23.json")
+    if not os.path.exists(cache_path):
+        cache_path = os.path.join(BASE_DIR, "07_REPORTS/data/ga4_multichannel_cache_2026-10-01_2026-10-22.json")
     if os.path.exists(cache_path):
         with open(cache_path) as fp:
             cache_d = json.load(fp)
@@ -708,6 +710,9 @@ def build_workbook():
                 c_sess.border = thin_border
                 
     auto_fit_columns(ws5, min_width=14, max_width=55)
+
+    # Ensure Executive Summary is the default active sheet
+    wb.active = ws1
 
     # Save workbook
     wb.save(OUTPUT_FILE)

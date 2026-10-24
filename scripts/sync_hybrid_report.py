@@ -359,10 +359,24 @@ def run_hybrid_sync(force_mtd=None, no_push=False):
     with open(BASE_DIR / "07_REPORTS" / "data" / "monthly_10_2026_consolidated.json", "w", encoding="utf-8") as f:
         json.dump(snapshot_payload, f, ensure_ascii=False, indent=2)
 
-    # 4.4 Patch Excel
-    for xl_p in [BASE_DIR / "07_REPORTS" / "web_platform_performance.xlsx", BASE_DIR / "07_REPORTS" / "web_performance_tracking.xlsx"]:
-        if xl_p.exists():
-            patch_excel(str(xl_p))
+    # 4.4 Patch Excel Tracking SSOT (BigQuery Connected Sheets)
+    bq_excel = BASE_DIR / "07_REPORTS" / "web_performance_tracking.xlsx"
+    if bq_excel.exists():
+        patch_excel(str(bq_excel))
+
+    # 4.5 Xuất bản lại file Excel Executive Presentation chuẩn 5 tabs
+    build_script = BASE_DIR / "scripts" / "build_web_platform_performance.py"
+    if build_script.exists():
+        subprocess.run([sys.executable, str(build_script)], check=False)
+
+    # 4.6 Tự động đồng bộ lên Google Drive công ty
+    gdrive_script = BASE_DIR / "scripts" / "upload_to_gdrive.py"
+    if gdrive_script.exists():
+        try:
+            print("[Auto-Drive] Đang tự động cập nhật Google Drive công ty...")
+            subprocess.run([sys.executable, str(gdrive_script)], check=False)
+        except Exception as e:
+            print(f"[Auto-Drive] Lưu ý đồng bộ Drive: {e}")
 
     # 5. Push GitHub qua REST API
     if not no_push:
