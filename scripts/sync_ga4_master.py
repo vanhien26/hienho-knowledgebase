@@ -580,11 +580,29 @@ def main():
     if build_script.exists():
         subprocess.run([sys.executable, str(build_script)], check=False)
 
-    # 5.6 Tự động đồng bộ lên Google Drive công ty
+    # 5.6 Tự động đồng bộ lên Google Sheets Native SSOT qua Cloud Sheets API
+    try:
+        from scripts.sync_to_google_sheet_api import sync_google_sheet
+        sync_google_sheet(
+            days_elapsed=days_elapsed,
+            total_pv=total_pv,
+            organic_pv=organic_pv,
+            paid_pv=paid_pv,
+            direct_pv=direct_pv,
+            referral_pv=referral_pv,
+            others_pv=others_pv,
+            non_paid_pv=non_paid_pv,
+            hubs_pv=hubs_pv,
+            cinema_sub=cinema_sub
+        )
+    except Exception as e:
+        print(f"[Sheets-API] Lưu ý đồng bộ Sheets API: {e}")
+
+    # Đồng thời đồng bộ file Excel offline lên Google Drive Desktop
     gdrive_script = BASE_DIR / "scripts" / "upload_to_gdrive.py"
     if gdrive_script.exists():
         try:
-            print("[Auto-Drive] Đang tự động cập nhật Google Drive công ty...")
+            print("[Auto-Drive] Đang cập nhật bản sao tệp Excel lên Google Drive Desktop...")
             subprocess.run([sys.executable, str(gdrive_script)], check=False)
         except Exception as e:
             print(f"[Auto-Drive] Lưu ý đồng bộ Drive: {e}")
