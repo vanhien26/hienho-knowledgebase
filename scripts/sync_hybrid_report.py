@@ -34,7 +34,7 @@ DOWNLOADS_DIR = Path("/Users/hienhv/Downloads")
 sys.path.insert(0, str(BASE_DIR))
 from scripts.sync_ga4_to_hubs import get_access_token, PROPERTY_ID, run_ga4_report
 from scripts.build_full_funnel_matrix import build_theme_matcher
-from scripts.sync_mtd_23 import patch_excel
+from scripts.sync_ga4_master import patch_excel_dynamic
 
 TARGET_OCT = 3665607
 
@@ -362,7 +362,11 @@ def run_hybrid_sync(force_mtd=None, no_push=False):
     # 4.4 Patch Excel Tracking SSOT (BigQuery Connected Sheets)
     bq_excel = BASE_DIR / "07_REPORTS" / "web_performance_tracking.xlsx"
     if bq_excel.exists():
-        patch_excel(str(bq_excel))
+        patch_excel_dynamic(
+            str(bq_excel), days_elapsed, total_pv,
+            organic_pv, paid_pv, direct_pv, referral_pv, others_pv, non_paid_pv,
+            hubs_pv, {}
+        )
 
     # 4.5 Xuất bản lại file Excel Executive Presentation chuẩn 5 tabs
     build_script = BASE_DIR / "scripts" / "build_web_platform_performance.py"
