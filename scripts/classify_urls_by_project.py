@@ -53,13 +53,13 @@ def main():
     args = parser.parse_args()
 
     rules = load_rules(args.csv)
-    inferred = [] if args.no_infer else load_inferred_rules()
+    inferred = [] if args.no_infer else load_inferred_rules(rules)
     urls = load_urls(args.input)
     # Loại trùng lặp, giữ thứ tự
     urls = list(dict.fromkeys([u for u in urls if u]))
     print(f"Nạp {len(rules)} rule DIM + {len(inferred)} rule suy luận | {len(urls)} URL cần phân loại")
 
-    primary_counter = Counter()
+    primary_counter = Counter()   # mỗi URL chỉ cộng cho Project chính, không đếm trùng
     multi_counter = Counter()     # số project/URL
     source_counter = Counter()    # dim vs inferred
     mapping = []
@@ -68,21 +68,22 @@ def main():
     for u in urls:
         res = resolve(u, rules, inferred)
         if res["matched"]:
-            for p in res["projects"]:
-                primary_counter[p] += 1
+            primary_counter[res["primary"]] += 1
             multi_counter[len(res["projects"])] += 1
             source_counter[res["source"]] += 1
             mapping.append({"url": u, "projects": res["projects"],
+                            "primary": res["primary"], "ambiguous": res["ambiguous"],
                             "match_type": res.get("match_type"),
                             "source": res["source"]})
         else:
             unmatched.append(u)
-            mapping.append({"url": u, "projects": [], "match_type": None, "source": None})
+            mapping.append({"url": u, "projects": [], "primary": "", "ambiguous": False,
+                            "match_type": None, "source": None})
 
     total = len(urls)
     matched = total - len(unmatched)
 
-    print("\n=== TỔNG HỢP THEO PROJECT (đếm theo URL) ===")
+    print("\n=== TỔNG HỢP THEO PROJECT CHÍNH (đếm theo URL) ===")
     print(f"{'PROJECT':<28} | URL")
     print("-" * 45)
     for p, c in primary_counter.most_common():

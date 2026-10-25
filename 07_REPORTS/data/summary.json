@@ -15,33 +15,38 @@
     "dailyPace": 118706,
     "dailyNeeded": 116667,
     "forecast": 3679881,
-    "forecastPct": 100.39
+    "forecastPct": 100.4
   },
   "hubs": [
     {
       "id": "cinema",
       "name": "Cinema Hub",
-      "pv": 917209
+      "pv": 948176
+    },
+    {
+      "id": "home",
+      "name": "Home MoMo",
+      "pv": 425455
+    },
+    {
+      "id": "download",
+      "name": "Download",
+      "pv": 331199
     },
     {
       "id": "financial",
       "name": "Financial Hub",
-      "pv": 198968
+      "pv": 202834
     },
     {
-      "id": "new_user",
-      "name": "New User Hub",
-      "pv": 78408
+      "id": "payment",
+      "name": "Payment Hub",
+      "pv": 204593
     },
     {
-      "id": "vehicle",
-      "name": "Vehicle Hub",
-      "pv": 59534
-    },
-    {
-      "id": "student",
-      "name": "Student Hub",
-      "pv": 2204
+      "id": "game",
+      "name": "Game Hub",
+      "pv": 201919
     }
   ],
   "lastFullHubs": [
@@ -51,36 +56,36 @@
       "pv": 1220075
     },
     {
-      "id": "payment",
-      "name": "Payment Hub",
-      "pv": 520612
-    },
-    {
-      "id": "home",
-      "name": "Home MoMo",
-      "pv": 467476
-    },
-    {
       "id": "new_user",
       "name": "New User Hub",
       "pv": 462878
     },
     {
+      "id": "home",
+      "name": "Home MoMo",
+      "pv": 347734
+    },
+    {
+      "id": "game",
+      "name": "Game Hub",
+      "pv": 261902
+    },
+    {
+      "id": "payment",
+      "name": "Payment Hub",
+      "pv": 258710
+    },
+    {
       "id": "financial",
       "name": "Financial Hub",
       "pv": 249823
-    },
-    {
-      "id": "travel",
-      "name": "Travel Hub",
-      "pv": 114475
     }
   ],
   "channels": {
-    "organic": 1409074,
-    "direct": 743903,
-    "referral": 119113,
-    "paid": 327570,
-    "others": 249280
+    "organic": 1490957,
+    "paid": 321269,
+    "direct": 733183,
+    "referral": 260002,
+    "others": 43529
   }
 }

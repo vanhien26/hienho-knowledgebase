@@ -71,17 +71,32 @@ Nếu MoMo xây dựng **Financial Master Hub (`momo.vn/tai-chinh`)** làm cổn
 Financial Hub quy hoạch toàn bộ giải pháp tài chính MoMo thành 4 trụ cột chiến lược:
 
 1. **Trụ Cột Tín Dụng (Credit & Borrowing):**
-   * *Dịch vụ:* Chuyên trang Điểm Tín Dụng & Tra Cứu CIC (`momo.vn/diem-tin-dung`), Vay Tín Chấp (Vay Nhanh), Trả Góp (Ví Trả Sau), Vay Mua Nhà / Xe, Xóa Nợ Xấu.
+   * *Dịch vụ:* Chuyên trang Điểm Tín Dụng & Tra Cứu CIC (`momo.vn/diem-tin-dung`), Vay Nhanh (`momo.vn/vay-nhanh`), Ví Trả Sau (`momo.vn/vi-tra-sau`), Thẻ Tín Dụng Hoàn Tiền (`momo.vn/the-tin-dung`).
+   * *Nguyên tắc bất biến về URL:* Nhóm sản phẩm Tín Dụng này giữ nguyên URL root độc lập, tuyệt đối không di chuyển về under URL `/tai-chinh/*` để bảo toàn 100% thứ hạng SEO và lưu lượng chiến dịch hiện có. Financial Hub chỉ đóng vai trò Discovery Gateway điều hướng sang.
    * *Công cụ cốt lõi:* Máy tính lịch trả nợ giảm dần, Máy tính trả góp 0%, Widget tự đánh giá nhóm nợ 1-5, Bảng lãi suất vay ngân hàng.
 2. **Trụ Cột Tích Lũy (Savings & Accumulation):**
-   * *Dịch vụ:* Gửi Tiết Kiệm Online MoMo (Đối tác Bản Việt, VPBank với ưu đãi +0.2% lãi suất), Túi Thần Tài, Bảng So Sánh Lãi Suất 40 Ngân Hàng Toàn Cảnh (`momo.vn/tai-chinh/lai-suat`).
+   * *Dịch vụ:* Gửi Tiết Kiệm Online MoMo (Đối tác Bản Việt, VPBank với ưu đãi +0.2% lãi suất - `/tai-chinh/gui-tiet-kiem`), Bảng So Sánh Lãi Suất 40 Ngân Hàng Toàn Cảnh (`/tai-chinh/lai-suat`), Túi Sinh Lời (`/tai-chinh/tui-sinh-loi` - lộ trình chuyển đổi bảo toàn SEO từ `/tui-than-tai`).
    * *Công cụ cốt lõi:* Bảng tra cứu lãi suất 40 bank và Tool tính tiền lãi gửi tiết kiệm theo số tiền người dùng tự nhập (hiển thị ngân hàng tối ưu nhất), Bộ tính quỹ dự phòng khẩn cấp.
 3. **Trụ Cột Đầu Tư (Investment & Wealth Building):**
-   * *Dịch vụ:* Giá Vàng SJC/9999 Realtime (`momo.vn/tai-chinh/gia-vang`), Tỷ Giá Ngoại Tệ & Đổi Tiền (`momo.vn/tai-chinh/ty-gia`), Cổng Chứng Khoán Master & 30 Dynamic Ticker Profiles VN30 (`momo.vn/tai-chinh/chung-khoan` & `momo.vn/tai-chinh/chung-khoan/[ticker]`), Chứng Chỉ Quỹ SIP (`momo.vn/tai-chinh/chung-chi-quy`), Tự Do Tài Chính FIRE (`momo.vn/tai-chinh/tu-do-tai-chinh`).
-   * *Công cụ cốt lõi:* Bảng giá vàng realtime & công cụ quy đổi, Cổng tra cứu tỷ giá 30+ ngoại tệ và 5 sub-page cặp tiền, Máy tính Giả lập Tích sản Cổ phiếu Lịch sử (Stock DCA Backtester), Thước đo Sức khỏe Doanh nghiệp (MoMo Stock Health Score 1-100), Bảng giá NAV và Máy tính tích sản SIP từ 10.000đ/ngày, Bộ giả lập FIRE.
-4. **Trụ Cột Chi Tiêu (Spending & Cash Flow):**
-   * *Dịch vụ:* Tính Lương Gross - Net luật mới 2026 (`momo.vn/tai-chinh/tinh-luong`), Phân Bổ Lương 50/30/20 & Hũ Tài Chính (`momo.vn/tai-chinh/phan-bo-luong`), Lương Hưu & BHXH Một Lần (`momo.vn/tai-chinh/luong-huu`), Cổng Danh Bạ 34 Ngân Hàng (`momo.vn/tai-chinh/ngan-hang`).
-   * *Công cụ cốt lõi:* Máy tính Gross-Net 2026 tích hợp khấu trừ bảo hiểm 10.5% và thuế TNCN 7 bậc, Tool chia ngân sách 50/30/20 và 6 hũ tài chính kết nối Hũ Chi Tiêu in-app, Tool tính lương hưu luật mới.
+   * *Dịch vụ:* Giá Vàng SJC/9999 Realtime (`/tai-chinh/gia-vang`), Tỷ Giá Ngoại Tệ & Đổi Tiền (`/tai-chinh/ty-gia`), Cổng Chứng Khoán Master & 30 Dynamic Ticker Profiles VN30 (`/tai-chinh/chung-khoan` & `/tai-chinh/chung-khoan/[ticker]`), Chứng Chỉ Quỹ SIP (`/tai-chinh/chung-chi-quy` & `/tai-chinh/chung-chi-quy/[fund-slug]`), Tự Do Tài Chính FIRE (`/tai-chinh/tu-do-tai-chinh`).
+   * *Công cụ cốt lõi:* Bảng giá vàng realtime & công cụ quy đổi, Cổng tra cứu tỷ giá 30+ ngoại tệ và 8 sub-page cặp tiền, Máy tính Giả lập Tích sản Cổ phiếu Lịch sử (Stock DCA Backtester), Thước đo Sức khỏe Doanh nghiệp (MoMo Stock Health Score 1-100), Bảng giá NAV và Máy tính tích sản SIP từ 10.000đ/ngày, Bộ giả lập FIRE.
+4. **Trụ Cột Chi Tiêu & Dòng Tiền (Spending & Cash Flow):**
+   * *Dịch vụ:* Tính Lương Gross - Net luật mới 2026 (`/tai-chinh/tinh-luong`), Phân Bổ Lương 50/30/20 & Hũ Tài Chính (`/tai-chinh/phan-bo-luong`), Cổng Quản Lý Chi Tiêu Cá Nhân (`/tai-chinh/quan-ly-chi-tieu`), Quỹ Nhóm & Quản Lý Quỹ Chung (`/tai-chinh/quy-nhom`), Cổng Nhận Tiền Quốc Tế (`/tai-chinh/nhan-tien-quoc-te`), Thanh Toán Thẻ Tín Dụng Đa Ngân Hàng (`/tai-chinh/thanh-toan-the-tin-dung`), Dự Toán Lương Hưu (`/tai-chinh/luong-huu`), Cổng Danh Bạ 34 Ngân Hàng (`/tai-chinh/ngan-hang`).
+   * *Công cụ cốt lõi:* Máy tính Gross-Net 2026 tích hợp khấu trừ bảo hiểm 10.5% và thuế TNCN 7 bậc, Tool chia ngân sách 50/30/20 và 6 hũ tài chính kết nối Hũ Chi Tiêu in-app, Tool tính dòng tiền tự do FCF, Tool dự toán lương hưu và an sinh xã hội.
+
+### 5.1.1 Nguyên Tắc Phân Định Phạm Vi & Ranh Giới URL (Scope Boundaries & URL Exclusions)
+
+1. **Tách biệt hoàn toàn nhóm Bảo hiểm thương mại khỏi Financial Hub:**
+   - Financial Hub (`/tai-chinh`) hoàn toàn KHÔNG bao gồm các sản phẩm bảo hiểm thương mại (Bảo hiểm nhân thọ, phi nhân thọ, bảo hiểm xe máy, ô tô, sức khỏe, du lịch...).
+   - Toàn bộ dịch vụ Bảo hiểm thuộc thẩm quyền quản trị và lộ trình phát triển độc lập của **Insurtech Hub** (`05_HUBS/insurtech/`).
+   - Các khoản khấu trừ bảo hiểm bắt buộc (BHXH 8%, BHYT 1.5%, BHTN 1%) trên công cụ Tính Lương Gross-Net chỉ đóng vai trò là tham số khấu trừ thu nhập theo quy định pháp luật lao động; các tính toán về lương hưu và trợ cấp an sinh xã hội được tích hợp tập trung tại `/tai-chinh/luong-huu`, tuyệt đối không tạo URL riêng biệt về bảo hiểm trong Financial Hub.
+
+2. **Nguyên tắc bảo toàn URL Root cho 3 Sản Phẩm CreditTech Trọng Điểm:**
+   - Ví Trả Sau: Duy trì độc lập tại `momo.vn/vi-tra-sau`.
+   - Vay Nhanh: Duy trì độc lập tại `momo.vn/vay-nhanh`.
+   - Điểm Tín Dụng CIC: Duy trì độc lập tại `momo.vn/diem-tin-dung`.
+   - Thẻ Tín Dụng: Duy trì độc lập tại `momo.vn/the-tin-dung`.
+   - Cổng `momo.vn/tai-chinh` chỉ đóng vai trò là Cổng Khám Phá & Điều Hướng (Discovery & Decision Gateway) dẫn link sang các trang này qua Mega Menu Header và Động cơ Gợi ý (AI Proposal Engine). Tuyệt đối **KHÔNG đổi URL** thành `/tai-chinh/vi-tra-sau`, `/tai-chinh/vay-nhanh`, `/tai-chinh/diem-tin-dung`.
 
 ### 5.2 Cơ Chế Điều Hướng Trọng Tâm Đến 3 Sản Phẩm FinHub (Driven-Traffic Engine)
 

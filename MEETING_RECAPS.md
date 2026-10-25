@@ -7,26 +7,45 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 
 ## DANH SÁCH BẢN GHI RECAPS
 
-### Bản ghi ngày 22/10/2026: GPD Monthly BOM Review, Định Hướng 4 Trụ Cột Financial Hub, Tiến Độ Kỹ Thuật & Ngân Sách Off-page
-> **Thành phần:** Ban Giám Đốc (BOM) x Web Product Lead x Web Platform Team  
-> **Mục tiêu:** Đồng bộ định hướng chiến lược từ BOM cho Financial Hub, cơ chế tính Financial Score qua tương tác Gamification, phân bổ ngân sách Off-page Cinema & CIC, tiến độ Staging trang Tải App, luồng Tìm kiếm, giải pháp kỹ thuật Retargeting Onsite cho Bảo hiểm Ô tô và định hướng ứng dụng LLM nội bộ.
+### Bản ghi ngày 22/10/2026: GPD Monthly BOM Review Với CEO Anh Tường - Chiến Lược Web Platform, Target 30k Install Q4, Định Hướng Financial Hub, Micro Journey & Signal
+> **Thời gian:** 22/10/2026 (95 phút)  
+> **Thành phần tham dự:** Anh Tường (CEO/BOM), Anh Công, Chị Yên, Anh Bảo, Huy Lê, Tín, Tuyền.  
+> **Mục tiêu:** Đánh giá kết quả Tháng 9/2026 các nhánh (Web Platform, Gamification, Tab Me, User Growth), đồng bộ mục tiêu Q4/2026 và định hướng chiến lược 2026 - 2027 từ CEO.
 
-#### 1. Định Hướng Chiến Lược Financial Hub (BOM Guidance)
-- **Methodology 4 Trụ Cột Quản Lý Tài Chính Cá Nhân:**
-  - Định khung chuẩn hóa: **Earn More (Tăng thu nhập) — Spend Less (Kiểm soát chi tiêu) — Invest Wisely (Đầu tư hiệu quả) — Build Wealth (Tích lũy & Phát triển tài sản)** (kèm nhánh phụ Pay Off Debt - Quản lý nghĩa vụ nợ).
-  - Áp dụng vào cấu trúc Financial Hub trên Web: Định vị từng Theme tiện ích và bài viết vào đúng 4 trụ cột để người dùng dễ tiếp cận theo hành trình tài chính cá nhân.
-- **Financial Score qua Tương Tác Gamification:**
-  - Thu thập dữ liệu hành vi và dữ liệu tài chính người dùng thông qua Interactive Game / Quiz ngắn (thay vì khảo sát tĩnh).
-  - Tự động chấm điểm sức khỏe tài chính (Financial Score) và phân loại Persona, từ đó đề xuất lộ trình hành động (Action Plan) dẫn luồng chuyển đổi Web-to-App mở các tính năng tương ứng (Túi Thần Tài, Hũ Chi Tiêu, Vay Nhanh, CIC...).
+#### 1. Định Hướng & Mục Tiêu Trọng Yếu Dành Cho Web Platform
+- **Vị Thế Kênh Web & Mục Tiêu New User (BOM Mandate):**
+  - **Mục tiêu Q4/2026:** Nâng chỉ tiêu từ 20.000 lên **30.000 install ứng dụng từ nguồn Web**.
+  - **Tầm nhìn 2026 - 2027:** Tiếp tục xây nền cho mốc **4.000.000 traffic/tháng** và kiểm soát nguồn traffic từ Internet.
+  - **Trọng trách dài hạn:** Hiện kênh Web đóng góp chưa tới 10% tổng New User của MoMo. Khi đạt tỷ trọng tối thiểu 10% trên base ~500.000 New User/tháng (tương đương **30.000 - 50.000 New User/tháng**), Web sẽ chính thức trở thành một trục tăng trưởng độc lập, thuộc sở hữu bền vững (owned media), giảm phụ thuộc vào Paid Ads.
+  - **Action Item:** Lập kế hoạch Web cho năm sau (kết hợp Traffic từ đội Web và Conversion từ thử nghiệm nhánh New User); bám sát mục tiêu 30.000 install Q4 (Phụ trách: Anh Bảo + Huy Lê; Thời hạn: Cuối năm 2026).
+- **Chiến Lược 2 Dự Án Trọng Điểm:**
+  - **Cinema Hub:** Khai thác tối đa lưu lượng theo mùa vụ phim chiếu rạp, trọng tâm chiến dịch phim Tết 2027 để kéo đỉnh traffic.
+  - **Financial Hub (Xây dựng Financial Authority & Trust):**
+    - Nhận định: Traffic hiện tại của Web phần lớn đến từ mảng giải trí, trong khi mảng tài chính còn mỏng cả về nội dung và lượng truy cập.
+    - Hành động: Web Team phối hợp cùng BU Dịch vụ Tài chính xây dựng đồng bộ nội dung chuẩn chuyên gia và các tiện ích tính toán (utility tools), định hình lại navigation tổng thể để tạo dựng uy tín tài chính trên Web.
+    - Cơ chế chuyển đổi: Nhúng trực tiếp các tiện ích tính toán (utility) vào sâu trong bài viết content để tăng tương tác và chuyển đổi người dùng sang ứng dụng MoMo.
+- **Tiến Độ Kỹ Thuật Đang Triển Khai Tại Web Platform:**
+  - **Trang Tải App (`/tai-app`):** Đã hoàn thành Staging cơ chế Smart Fallback và nhận diện thiết bị (iOS/Android/Desktop QR). Đang chuẩn bị nghiệm thu tracking và test cross-browser.
+  - **Luồng Tìm Kiếm (`/tim-kiem`):** Đang hoàn tất Phase 1 (UI/UX thanh tìm kiếm, Instant Search Dropdown, Trending Keywords, Empty State).
+  - **Hợp Tác Ngân Sách Off-page (Cinema & CIC):** Cinema Hub tài trợ tối đa 100 triệu VNĐ, Web Platform đồng tài trợ phần còn lại cùng SEO Vendor.
+  - **Retargeting Onsite Bảo Hiểm Ô Tô (`/bao-hiem-o-to`):** Nhận diện người dùng quay lại đã xem báo giá để kích hoạt widget phục hồi giỏ hàng.
+  - **Hạ Tầng LLM API Nội Bộ:** Kỹ sư Backend phối hợp thử nghiệm API LLM công ty tự huấn luyện + Qwen 3.5 thay thế dần API bên thứ ba.
 
-#### 2. Tiến Độ Vận Hành & Hạ Tầng Kỹ Thuật Nền Tảng
-- **Luồng Tìm Kiếm (`/tim-kiem`):** Đã hoàn tất brief kế hoạch 3 phase cho kỹ sư frontend; hiện đang tập trung triển khai và cải tiến Phase 1 (tối ưu UI/UX khung tìm kiếm, Instant Search Dropdown, Trending Keywords và Empty State).
-- **Trang Tải Ứng Dụng (`/tai-app`):** Frontend Team đã hoàn thành môi trường Staging đúng cơ chế điều hướng ban đầu (nhận diện thiết bị iOS/Android/Desktop QR Code, Smart Fallback). Đang chuẩn bị nghiệm thu tracking và test cross-browser.
-- **Hợp Tác Ngân Sách Off-page (Cinema & CIC):** Đã thống nhất với SEO Vendor về việc chạy thử nghiệm Off-page cho Cinema Hub và Theme CIC. Cinema Hub sẵn sàng tài trợ ngân sách tối đa 100 triệu VNĐ, Web Platform sẽ đồng tài trợ (share cost) phần còn lại nhằm tối ưu hiệu quả tổng thể.
-- **Retargeting Onsite Cụm Bảo Hiểm Ô Tô (BHOTO):**
-  - Thảo luận cùng BU Bảo hiểm về việc triển khai Quiz sản phẩm.
-  - BU đề xuất tính năng nhận diện Return User đã từng vào trang `/bao-hiem-o-to/than-vo/xem-bao-gia`.
-  - Khi người dùng quay lại trang chủ BHOTO (`/bao-hiem-o-to`), hệ thống tự động kích hoạt Widget ngữ cảnh: *"Bạn đã cân nhắc gói bảo hiểm trước đó... [Mở ngay]"* để phục hồi giỏ hàng và tăng tỷ lệ hoàn tất phễu.
+#### 2. Các Chủ Đề Thảo Luận Chiến Lược Cấp Khối (Liên Đới Web Platform)
+- **Financial Health Score (FHS):**
+  - BOM định hướng FHS là sản phẩm của nền tảng (Platform), là cầu nối giữa Quản lý chi tiêu và Đầu tư.
+  - Chuẩn hóa theo các trụ cột hành vi: **Spend Smart (Chi tiêu thông minh), Earn More (Gia tăng thu nhập), Invest Wisely (Đầu tư khôn ngoan)** và tích lũy/trả nợ.
+  - Nguyên tắc cốt lõi: Đánh giá dựa trên hành vi thực tế thay vì con số tĩnh. Web Platform cần ứng dụng logic này vào các công cụ tính toán tài chính và bộ câu hỏi đánh giá nhanh (Quiz/Simulator) trên Web để phân loại nhu cầu và dẫn luồng vào app.
+- **Signal Intelligence (Tư Duy Định Hướng Dữ Liệu Mới):**
+  - Nguyên tắc từ CEO: Đi từ bài toán cần giải (Use Case kinh doanh) rồi mới truy ngược xem cần signal nào, tuyệt đối không đi từ dữ liệu đang có.
+  - Web Platform là điểm chạm đầu tiên tiếp cận người dùng chưa định danh; dữ liệu tìm kiếm và hành vi dùng utility trên Web là signal giá trị cao để dự đoán nhu cầu tài chính trước khi người dùng tải app.
+- **Micro Journey & Bài Toán Retention 93%:**
+  - Lạm dụng Push Notification là triệu chứng của việc thiếu năng lực tạo thói quen (Habit). Nền tảng chỉ đạt Habit thực sự khi duy trì tăng trưởng mà không phụ thuộc vào việc đẩy Push liên tục.
+  - Trọng tâm là tìm và tháo gỡ điểm nghẽn (bottleneck) tại các điểm rơi (drop-off points) trong hành trình người dùng (Connect -> Check -> Do).
+- **Ứng Dụng AI (AI Adoption):**
+  - Điểm nghẽn không nằm ở công nghệ mà ở thói quen sử dụng (xu hướng quay lại prompt rời rạc thay vì đi theo Agentic workflow).
+  - Yêu cầu xây dựng Context Engineering bài bản và duy trì cơ chế Human-in-the-loop để kiểm duyệt chất lượng.
+---
 
 #### 3. Định Hướng Hạ Tầng LLM API Nội Bộ (Free Tier)
 - **Tiến Độ:** Kỹ sư Backend và SEO Vendor đang phối hợp đồng bộ và kiểm thử API LLM nội bộ (Mô hình công ty tự huấn luyện + Qwen 3.5).

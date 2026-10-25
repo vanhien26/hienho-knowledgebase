@@ -24,6 +24,7 @@
 | Strategic Hub | Kỳ báo cáo | Tệp tin báo cáo | Trọng tâm phân tích |
 | :--- | :--- | :--- | :--- |
 | **Cinema Hub** | Tháng 09/2026 | [`report-cinema-hub-09-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-cinema-hub-09-2026.md) | Lưu lượng trang rạp phim, trang chi tiết phim, lịch chiếu và CTR đặt vé |
+| **Game Hub (Một Mùa Quýt)** | Tháng 10/2026 | [`report-game-mot-mua-quyt.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-game-mot-mua-quyt.md) | Hiệu suất gamification, thời gian onsite 65s, phễu W2A và phân tích kênh Ads |
 | **Financial Hub** | Tháng 09/2026 | [`report-financial-hub-09-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-financial-hub-09-2026.md) | Hiệu suất công cụ tính lãi suất, tra cứu CIC, tỷ giá ngoại tệ và vàng |
 | **Vehicle Hub** | Tháng 09/2026 | [`report-vehicle-hub-09-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-vehicle-hub-09-2026.md) | Lưu lượng tra cứu phạt nguội 0-CAPTCHA, đăng kiểm và showroom xe |
 | **Toàn bộ 10 Hubs** | Tổng kết quý | [`hubs-report.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/hubs-report.md) | Đánh giá tổng quan năng lực tăng trưởng theo ma trận 3+1 Zones |

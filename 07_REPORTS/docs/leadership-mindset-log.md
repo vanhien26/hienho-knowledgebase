@@ -296,13 +296,44 @@ Ban lãnh đạo nhận thấy tổ chức đang có xu hướng phức tạp h�
 BOM muốn toàn bộ đội ngũ thoát khỏi tư duy làm sản phẩm ngắn hạn/vụ lợi nhỏ lẻ, nâng tầm suy nghĩ để mỗi quyết định sản phẩm đều vừa đóng góp cho mốc **2030 Checkpoint (30% GDP)** và tầm nhìn **2045**, vừa giúp từng Leader xây dựng di sản chuyên môn thực sự.
 
 **Đúc kết cho Hiến:**
-- **Về sản phẩm Web:** Mọi Web Hubs (Merchant, Cinema, Vehicle, Utility) phải thiết kế theo tinh thần "Thâm canh" — giải quyết triệt me Jobs-to-be-Done chứ không làm nội dung mỏng kéo traffic rác.
+- **Về sản phẩm Web:** Mọi Web Hubs (Merchant, Cinema, Vehicle, Utility) phải thiết kế theo tinh thần "Thâm canh" — giải quyết triệt để Jobs-to-be-Done chứ không làm nội dung mỏng kéo traffic rác.
 - **Về Di sản Lãnh đạo:** Đóng gói toàn bộ quy trình MoSpark Platform (Workflow A/B, GenAI Prompting Engine, Dynamic Registry) thành di sản nền tảng dùng chung cho toàn bộ công ty.
+- **Áp dụng trực tiếp vào quản trị sản phẩm trên Web Platform:** Khi các BU/Cell Teams gửi yêu cầu làm Mini Web hoặc tính năng mới, Hiến phải là chốt chặn chất vấn (Stage 1) xem tính năng đó có thực sự cần thiết không, kiên quyết loại bỏ (Stage 2) các trường thông tin hoặc bước trung gian thừa thãi trước khi bắt đầu tối ưu UI/UX (Stage 3) hay tự động hóa qua GenAI (Stage 5).
+- **Quy trình SPA:** Luôn đi từ reSearch (chất vấn, lọc bớt) ➔ Pilot (tối giản hóa) ➔ Action (tự động hóa và scale).
 
+---
+
+### 22/10/2026 - A.Tường (CEO) & Ban Lãnh đạo GPD (GPD Monthly Review Tháng 10/2026) `[Relay - Bảo]`
+
+**Bối cảnh:** Cuộc họp định kỳ Tháng 10 của khối Growth Platform Division (GPD) với CEO Anh Tường. Đánh giá kết quả Tháng 9 (Web Platform, Gamification, Tab Me, User Growth) và thảo luận các định hướng chiến lược cho Quý 4/2026 và kế hoạch 2027.
+
+**Tư duy / Chỉ đạo cốt lõi:**
+*   **Web Platform - Nâng mục tiêu Q4 lên 30.000 Install & Trục New User chiến lược:**
+    - Hiện kênh Web chiếm chưa tới 10% tổng New User của MoMo. Khi đạt tối thiểu 10% trên base ~500.000 New User/tháng (tương đương 30.000 - 50.000 New User/tháng), Web mới trở thành một trục tăng trưởng độc lập, thuộc sở hữu bền vững (owned media).
+    - Mục tiêu Quý 4/2026 được nâng từ 20.000 lên **30.000 install ứng dụng từ nguồn Web**.
+    - Duy trì nền tảng vững chắc cho cột mốc **4.000.000 traffic/tháng** và kiểm soát nguồn traffic từ Internet cho giai đoạn 2026 - 2027.
+*   **Financial Hub - Xây dựng Financial Authority trên Web:**
+    - Lưu lượng của toàn Website hiện tại chủ yếu đến từ mảng giải trí; mảng tài chính còn mỏng cả về nội dung và lượng truy cập, các tiện ích còn rời rạc.
+    - Phối hợp với BU Dịch vụ Tài chính xây dựng nội dung chuyên sâu và công cụ tiện ích (utility tools), định hình lại navigation để tạo dựng niềm tin tài chính (financial trust).
+    - **Cơ chế chuyển đổi:** Nhúng tiện ích tính toán trực tiếp vào bài viết content để tăng tương tác và kích hoạt chuyển đổi vào app.
+*   **Cinema Hub - Khai thác mùa vụ phim Tết 2027:** Bám sát lịch chiếu phim rạp theo mùa vụ, tập trung dồn lực cho chiến dịch Tết 2027 để kéo đỉnh traffic.
+*   **Financial Health Score (FHS) - Sản phẩm Platform kết nối Chi tiêu và Đầu tư:**
+    - Định vị FHS là sản phẩm của nền tảng kết hợp nhiều component, là cầu nối giữa Quản lý chi tiêu và Đầu tư.
+    - Chuẩn hóa 3 trụ cột: **Spend Smart (Chi tiêu thông minh), Earn More (Gia tăng thu nhập), Invest Wisely (Đầu tư khôn ngoan)** kèm nhánh Quản lý nợ. Đánh giá dựa trên hành vi thực tế thay vì con số tĩnh.
+*   **Signal Intelligence - Đi từ bài toán cần giải:**
+    - Tuyệt đối không đi từ dữ liệu đang có, mà phải đi từ bài toán kinh doanh cần giải (Use Case) rồi mới truy ngược xem cần signal nào.
+    - Dữ liệu tìm kiếm và nhập liệu tiện ích trên Web là nguồn Signal sớm cực kỳ đắt giá cho app.
+*   **Micro Journey & Bài toán Retention 93% (Habit vs Push Notification):**
+    - Lạm dụng Push Notification là triệu chứng của việc thiếu năng lực tạo thói quen (Habit). Nền tảng chỉ đạt Habit thực sự khi duy trì tăng trưởng mà không phụ thuộc vào việc đẩy Push liên tục.
+    - Trọng tâm đạt Retention 93% là tìm và tháo gỡ điểm nghẽn (bottleneck) tại các điểm rơi trong hành trình (Connect -> Check -> Do).
+
+**Insight ẩn sau chỉ đạo:**
+CEO muốn Web Platform thoát khỏi định vị "kênh kéo traffic rác / giải trí ngắn hạn", định vị lại Web thành một kênh owned media chiến lược có khả năng tự sản sinh New User chất lượng cao (30k - 50k New/tháng) và tạo dựng vị thế uy tín tài chính (Financial Authority) cho toàn MoMo. Đồng thời, tư duy làm sản phẩm phải chuyển từ "ép tính năng / bắn push" sang "gỡ điểm nghẽn tạo thói quen tự nhiên".
 
 **Đúc kết cho Hiến:**
-*   **Áp dụng trực tiếp vào quản trị sản phẩm trên Web Platform:** Khi các BU/Cell Teams gửi yêu cầu làm Mini Web hoặc tính năng mới, Hiến phải là chốt chặn chất vấn (Stage 1) xem tính năng đó có thực sự cần thiết không, kiên quyết loại bỏ (Stage 2) các trường thông tin hoặc bước trung gian thừa thãi trước khi bắt đầu tối ưu UI/UX (Stage 3) hay tự động hóa qua GenAI (Stage 5).
-*   **Quy trình SPA:** Luôn đi từ reSearch (chất vấn, lọc bớt) ➔ Pilot (tối giản hóa) ➔ Action (tự động hóa và scale).
+*   **Về Target New User Q4 (30.000 Install):** Tối ưu ngay phễu chuyển đổi Web-to-App: hoàn thiện nghiệm thu trang `/tai-app` Smart Fallback, tối ưu Onelink CTR trên Smart Banner và nút CTA theo ngữ cảnh trong các công cụ tiện ích.
+*   **Về Financial Hub:** Kiên quyết không viết bài SEO tin tức rời rạc; chuyển dịch sang mô hình "Utility-led Content" - nhúng công cụ tính lãi suất, tỷ giá, phân bổ lương 50/30/20, kiểm tra CIC vào thẳng bài viết.
+*   **Về Cinema Hub:** Lập kế hoạch sớm ngay từ tháng 11/2026 cho cụm Topic Cluster phim chiếu rạp Tết 2027 để đón sóng tìm kiếm từ khóa mùa vụ.
 
 ---
 
@@ -573,6 +604,7 @@ BOM muốn toàn bộ đội ngũ thoát khỏi tư duy làm sản phẩm ngắn
 
 ## CHANGE LOG
 
+- **Tháng 10/2026 (v1.3):** Bổ sung chỉ đạo chiến lược từ CEO Anh Tường tại GPD Monthly Review (22/10/2026): Nâng target Q4 lên 30k install từ Web, định hướng New User 30k-50k/tháng (10% toàn MoMo), xây dựng Financial Authority và tư duy Signal/Micro Journey.
 - **Tháng 6/2026 (v1.2):** Bổ sung chỉ đạo từ Town Hall Tháng 6 (23/06/2026) về "Thuật toán 5 bước" tối ưu hóa quy trình kỹ thuật.
 - **Tháng 5/2026 (v1.1):** Fix context: Bảo là Direct Manager của Hiến, không phải Công. Các insights từ Business_Grow_Mindset.md là Bảo relay - đã cập nhật phân loại `[Direct]` / `[Relay - Bảo]` và sửa Leadership Profiles.
 - **Tháng 5/2026 (v1.0):** Khởi tạo. Extract từ report-thang-05-2026.md RECAP sections + Business_Grow_Mindset.md. Bao gồm 6 meetings: Tuyền (23/03), CEO (06/05), Công x2 (12/05, 19/05), Trang Phạm (19/05), Huy Lê (22/05).

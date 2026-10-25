@@ -1,5 +1,6 @@
 {
-  "total_rules": 3327,
+  "generated_at": "2026-10-25T12:44:00",
+  "rules_count": 3335,
   "rules": [
     {
       "project_name": "Cinema",
@@ -16466,7 +16467,7 @@
       "rule_url": "https://www.momo.vn/blog/huong-dan-chuyen-tien-nhan-tien-tu-dai-loan-ve-viet-nam-c116dt1252"
     },
     {
-      "project_name": "Home MoMo",
+      "project_name": "Trust",
       "page_type": "Landing Page",
       "rule_type": "Static",
       "rule_url": "https://www.momo.vn/ve-chung-toi"
@@ -17066,7 +17067,7 @@
       "rule_url": "https://www.momo.vn/tin-tuc/khuyen-mai/co-hoi-trung-xe-may-vinfast-khi-nhan-tien-tu-ngan-hang-8975"
     },
     {
-      "project_name": "Home MoMo",
+      "project_name": "Trust",
       "page_type": "Landing Page",
       "rule_type": "Static",
       "rule_url": "https://www.momo.vn/sieu-ung-dung-momo"
@@ -17288,7 +17289,7 @@
       "rule_url": "https://www.momo.vn/an-toan-bao-mat/bao-cao-lua-dao"
     },
     {
-      "project_name": "Home MoMo",
+      "project_name": "Others",
       "page_type": "Landing Page",
       "rule_type": "Static",
       "rule_url": "https://www.momo.vn/redirect-cta"
@@ -17798,7 +17799,7 @@
       "rule_url": "https://www.momo.vn/blog/huong-dan-cach-tinh-lai-suat-tiet-kiem-chinh-xac-nhat-c181dt1626"
     },
     {
-      "project_name": "Home MoMo",
+      "project_name": "Others",
       "page_type": "Landing Page",
       "rule_type": "Static",
       "rule_url": "https://www.momo.vn/auth"
@@ -18164,7 +18165,7 @@
       "rule_url": "https://www.momo.vn/trung-tam-tai-chinh"
     },
     {
-      "project_name": "Home MoMo",
+      "project_name": "Others",
       "page_type": "Landing Page",
       "rule_type": "Static",
       "rule_url": "https://www.momo.vn/auth/callback/google"
@@ -18854,7 +18855,7 @@
       "rule_url": "https://www.momo.vn/tin-tuc/khuyen-mai/hoan-thanh-nhiem-vu-tao-don-dau-tien-nhan-them-8825"
     },
     {
-      "project_name": "Home MoMo",
+      "project_name": "Tuyển Dụng",
       "page_type": "Landing Page",
       "rule_type": "Static",
       "rule_url": "https://www.momo.vn/careers"
@@ -19838,37 +19839,37 @@
       "rule_url": "https://www.momo.vn/bao-hiem-du-lich"
     },
     {
-      "project_name": "Home MoMo",
+      "project_name": "Merchant",
       "page_type": "Landing Page",
       "rule_type": "Static",
       "rule_url": "https://www.momo.vn/timdiemgiaodich"
     },
     {
-      "project_name": "Home MoMo",
+      "project_name": "Hỏi đáp",
       "page_type": "Landing Page",
       "rule_type": "Static",
       "rule_url": "https://www.momo.vn/lien-he"
     },
     {
-      "project_name": "Home MoMo",
+      "project_name": "Tuyển Dụng",
       "page_type": "Landing Page",
       "rule_type": "Static",
       "rule_url": "https://www.momo.vn/viec-lam"
     },
     {
-      "project_name": "Home MoMo",
+      "project_name": "Campaign",
       "page_type": "Landing Page",
       "rule_type": "Static",
       "rule_url": "https://www.momo.vn/chuyen-doi-so-quoc-gia"
     },
     {
-      "project_name": "Home MoMo",
+      "project_name": "Khuyến mãi",
       "page_type": "Landing Page",
       "rule_type": "Static",
       "rule_url": "https://www.momo.vn/add-momo"
     },
     {
-      "project_name": "Home MoMo",
+      "project_name": "Khuyến mãi",
       "page_type": "Landing Page",
       "rule_type": "Static",
       "rule_url": "https://www.momo.vn/top-dich-vu-yeu-thich"
@@ -19962,6 +19963,54 @@
       "page_type": "Landing Page",
       "rule_type": "Static",
       "rule_url": "https://www.momo.vn/10-tu-duy-tai-chinh"
+    },
+    {
+      "project_name": "Internet",
+      "page_type": "Landing Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/internet*"
+    },
+    {
+      "project_name": "Internet",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/internet"
+    },
+    {
+      "project_name": "Nạp tiền điện thoại",
+      "page_type": "Landing Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/nap-tien-dien-thoai*"
+    },
+    {
+      "project_name": "Nạp tiền điện thoại",
+      "page_type": "Landing Page",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/nap-tien-dien-thoai"
+    },
+    {
+      "project_name": "Airtime",
+      "page_type": "Landing Page",
+      "rule_type": "Dynamic",
+      "rule_url": "https://www.momo.vn/airtime*"
+    },
+    {
+      "project_name": "Trạm sạc",
+      "page_type": "Mini Web",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/tien-ich-giao-thong/tram-sac"
+    },
+    {
+      "project_name": "Cây xăng",
+      "page_type": "Mini Web",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/tien-ich-giao-thong/cay-xang"
+    },
+    {
+      "project_name": "Giá xăng",
+      "page_type": "Mini Web",
+      "rule_type": "Static",
+      "rule_url": "https://www.momo.vn/tien-ich-giao-thong/gia-xang"
     }
   ]
 }

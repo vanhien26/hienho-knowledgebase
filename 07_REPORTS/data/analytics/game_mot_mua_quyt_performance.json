@@ -1,0 +1,464 @@
+{
+  "meta": {
+    "game_code": "mot-mua-quyt",
+    "game_name": "Một Mùa Quýt",
+    "landing_page": "/game/mot-mua-quyt",
+    "period": "2026-10-15 to 2026-10-25",
+    "generated_at": "2026-10-25T14:32:00",
+    "property_id": "270743103",
+    "report_doc": "07_REPORTS/docs/report-game-mot-mua-quyt.md",
+    "timezone": "Asia/Saigon",
+    "persona_event": "web_game_quyt_result_card_display",
+    "persona_param": "quyt_code"
+  },
+  "summary": {
+    "total_pageviews": 35551,
+    "total_sessions": 32675,
+    "total_users": 27766,
+    "total_engagement_hours": 299.2,
+    "avg_onsite_seconds": 38.8,
+    "avg_onsite_qualified_seconds": 65.2,
+    "bounce_rate_pct": 52.6,
+    "engagement_rate_pct": 47.4,
+    "active_players": 7097,
+    "play_rate_all_pct": 25.1,
+    "play_rate_qualified_pct": 40.6,
+    "w2a_installs": 1230,
+    "w2a_clicks": 3594,
+    "w2a_cvr_on_players_pct": 17.3,
+    "w2a_cvr_on_all_pct": 4.3,
+    "total_shares": 153,
+    "unique_sharers": 71,
+    "af_installs": null
+  },
+  "funnel": [
+    {
+      "step": 1,
+      "name": "Truy cập Landing Page",
+      "event": "page_view",
+      "users": 27766,
+      "cvr_step_pct": 100.0
+    },
+    {
+      "step": 2,
+      "name": "Mở Màn hình Game",
+      "event": "quyt_screen_view",
+      "users": 19510,
+      "cvr_step_pct": 68.9
+    },
+    {
+      "step": 3,
+      "name": "Hoàn tất Chơi Game",
+      "event": "gmc_1vuquyt_clickplay",
+      "users": 7097,
+      "cvr_step_pct": 36.4
+    },
+    {
+      "step": 4,
+      "name": "Kích hoạt Cài đặt App",
+      "event": "gmc_1vuquyt_install",
+      "users": 1230,
+      "cvr_step_pct": 17.3
+    }
+  ],
+  "channels": [
+    {
+      "channel": "Facebook Ads",
+      "source_medium": "facebook / cpc",
+      "users": 2640,
+      "sessions": 2875,
+      "pv": 3051,
+      "avg_time_sec": 66.0,
+      "bounce_rate_pct": 46.4,
+      "players": 1228,
+      "play_rate_pct": 46.5,
+      "installs": 486,
+      "install_rate_pct": 18.4,
+      "evaluation": "Chất lượng cao nhất"
+    },
+    {
+      "channel": "Google Search Ads",
+      "source_medium": "google / cpc",
+      "users": 11899,
+      "sessions": 14408,
+      "pv": 15870,
+      "avg_time_sec": 64.6,
+      "bounce_rate_pct": 43.9,
+      "players": 4694,
+      "play_rate_pct": 39.5,
+      "installs": 562,
+      "install_rate_pct": 4.7,
+      "evaluation": "Quy mô người chơi chủ lực"
+    },
+    {
+      "channel": "Direct / Trực tiếp",
+      "source_medium": "(direct) / (none)",
+      "users": 1216,
+      "sessions": 1428,
+      "pv": 1985,
+      "avg_time_sec": 61.6,
+      "bounce_rate_pct": 26.5,
+      "players": 541,
+      "play_rate_pct": 42.3,
+      "installs": 120,
+      "install_rate_pct": 9.4,
+      "evaluation": "Tự nhiên & Quay lại"
+    },
+    {
+      "channel": "Google Organic",
+      "source_medium": "google / organic",
+      "users": 605,
+      "sessions": 697,
+      "pv": 958,
+      "avg_time_sec": 37.5,
+      "bounce_rate_pct": 8.2,
+      "players": 201,
+      "play_rate_pct": 30.2,
+      "installs": 12,
+      "install_rate_pct": 1.8,
+      "evaluation": "SEO Organic Search"
+    },
+    {
+      "channel": "Khác (In-App, Referral)",
+      "source_medium": "other",
+      "users": 875,
+      "sessions": 1021,
+      "pv": 996,
+      "avg_time_sec": 52.1,
+      "bounce_rate_pct": 22.4,
+      "players": 334,
+      "play_rate_pct": 38.2,
+      "installs": 41,
+      "install_rate_pct": 4.7,
+      "evaluation": "Nguồn bổ trợ"
+    },
+    {
+      "channel": "TikTok Ads",
+      "source_medium": "tiktok / cpc",
+      "users": 11091,
+      "sessions": 12587,
+      "pv": 12982,
+      "avg_time_sec": 0.6,
+      "bounce_rate_pct": 74.7,
+      "players": 99,
+      "play_rate_pct": 0.89,
+      "installs": 9,
+      "install_rate_pct": 0.08,
+      "evaluation": "Cần cắt giảm / Rủi ro cao"
+    }
+  ],
+  "daily_trend": [
+    {
+      "date": "2026-10-15",
+      "pv": 466,
+      "sessions": 391,
+      "users": 360,
+      "players": 72,
+      "installs": 15
+    },
+    {
+      "date": "2026-10-16",
+      "pv": 1860,
+      "sessions": 1744,
+      "users": 1697,
+      "players": 270,
+      "installs": 68
+    },
+    {
+      "date": "2026-10-17",
+      "pv": 2292,
+      "sessions": 2053,
+      "users": 1933,
+      "players": 336,
+      "installs": 78
+    },
+    {
+      "date": "2026-10-18",
+      "pv": 2573,
+      "sessions": 2302,
+      "users": 2177,
+      "players": 477,
+      "installs": 116
+    },
+    {
+      "date": "2026-10-19",
+      "pv": 2827,
+      "sessions": 2460,
+      "users": 2317,
+      "players": 513,
+      "installs": 127
+    },
+    {
+      "date": "2026-10-20",
+      "pv": 3649,
+      "sessions": 3272,
+      "users": 3098,
+      "players": 787,
+      "installs": 160
+    },
+    {
+      "date": "2026-10-21",
+      "pv": 4003,
+      "sessions": 3535,
+      "users": 3401,
+      "players": 888,
+      "installs": 180
+    },
+    {
+      "date": "2026-10-22",
+      "pv": 4382,
+      "sessions": 3974,
+      "users": 3686,
+      "players": 991,
+      "installs": 141
+    },
+    {
+      "date": "2026-10-23",
+      "pv": 5314,
+      "sessions": 5063,
+      "users": 4691,
+      "players": 1068,
+      "installs": 132
+    },
+    {
+      "date": "2026-10-24",
+      "pv": 5972,
+      "sessions": 5562,
+      "users": 5336,
+      "players": 1546,
+      "installs": 193
+    },
+    {
+      "date": "2026-10-25",
+      "pv": 2195,
+      "sessions": 1973,
+      "users": 1939,
+      "players": 509,
+      "installs": 50
+    }
+  ],
+  "hourly_peaks": [
+    {
+      "hour": "10:00 - 12:00",
+      "name": "Nghỉ trưa văn phòng",
+      "avg_sessions_per_hour": 2030,
+      "share_pct": 18.5
+    },
+    {
+      "hour": "16:00 - 17:00",
+      "name": "Tan tầm chiều (Đỉnh cao nhất)",
+      "avg_sessions_per_hour": 2180,
+      "share_pct": 20.1
+    },
+    {
+      "hour": "21:00 - 22:00",
+      "name": "Thư giãn đêm",
+      "avg_sessions_per_hour": 1520,
+      "share_pct": 14.2
+    }
+  ],
+  "devices": [
+    {
+      "category": "Mobile Android",
+      "users": 14748,
+      "share_pct": 53.7
+    },
+    {
+      "category": "Mobile iOS (iPhone)",
+      "users": 12155,
+      "share_pct": 42.9
+    },
+    {
+      "category": "Desktop Windows",
+      "users": 824,
+      "share_pct": 2.9
+    },
+    {
+      "category": "Khác (Tablet / Mac / Linux)",
+      "users": 439,
+      "share_pct": 1.5
+    }
+  ],
+  "cities": [
+    {
+      "city": "TP. Hồ Chí Minh",
+      "sessions": 6976,
+      "users": 5760,
+      "share_pct": 35.8
+    },
+    {
+      "city": "Hà Nội",
+      "sessions": 5757,
+      "users": 5025,
+      "share_pct": 29.5
+    },
+    {
+      "city": "Đà Nẵng",
+      "sessions": 2227,
+      "users": 1966,
+      "share_pct": 11.4
+    },
+    {
+      "city": "Cần Thơ",
+      "sessions": 1313,
+      "users": 1162,
+      "share_pct": 6.7
+    },
+    {
+      "city": "Hải Phòng",
+      "sessions": 1011,
+      "users": 920,
+      "share_pct": 5.2
+    }
+  ],
+  "quyt_personas": [
+    {
+      "id": "QUYT_MUI_DEU",
+      "name": "Quýt Múi Đều",
+      "pillar": "SPENDING",
+      "pillar_name": "Chi tiêu",
+      "style": "PROTECT",
+      "style_name": "Bảo toàn",
+      "momo_feature": "Quản lý chi tiêu",
+      "tagline": "Biết rõ từng đồng đi đâu và đặt giới hạn trước khi tiêu"
+    },
+    {
+      "id": "QUYT_CHUA_THANH",
+      "name": "Quýt Chua Thanh",
+      "pillar": "SPENDING",
+      "pillar_name": "Chi tiêu",
+      "style": "EXPLORE",
+      "style_name": "Khám phá",
+      "momo_feature": "Mã giảm giá & Deal hot",
+      "tagline": "Chi tiêu linh hoạt và săn đón các cơ hội tối ưu giá trị"
+    },
+    {
+      "id": "QUYT_VO_DAY",
+      "name": "Quýt Vỏ Dày",
+      "pillar": "SAVING",
+      "pillar_name": "Tích lũy",
+      "style": "PROTECT",
+      "style_name": "Bảo toàn",
+      "momo_feature": "Tiết kiệm Online",
+      "tagline": "Ưu tiên xây lớp đệm an toàn và phòng ngừa rủi ro"
+    },
+    {
+      "id": "QUYT_MONG_NUOC",
+      "name": "Quýt Mọng Nước",
+      "pillar": "SAVING",
+      "pillar_name": "Tích lũy",
+      "style": "EXPLORE",
+      "style_name": "Khám phá",
+      "momo_feature": "Túi Thần Tài",
+      "tagline": "Tích lũy chủ động sinh lời mỗi ngày và sẵn sàng thanh khoản"
+    },
+    {
+      "id": "QUYT_BOC_TUNG_MUI",
+      "name": "Quýt Bóc Từng Múi",
+      "pillar": "CREDIT",
+      "pillar_name": "Tín dụng",
+      "style": "PROTECT",
+      "style_name": "Bảo toàn",
+      "momo_feature": "Ví Trả Sau (Hạn mức chuẩn)",
+      "tagline": "Dùng tín dụng có kế hoạch với hạn mức và kỳ hạn kỷ luật"
+    },
+    {
+      "id": "QUYT_DE_TACH_MUI",
+      "name": "Quýt Dễ Tách Múi",
+      "pillar": "CREDIT",
+      "pillar_name": "Tín dụng",
+      "style": "EXPLORE",
+      "style_name": "Khám phá",
+      "momo_feature": "Trả Góp Linh Hoạt",
+      "tagline": "Tận dụng đòn bẩy tương lai cho trải nghiệm hiện tại"
+    },
+    {
+      "id": "QUYT_CHIN_DUNG_MUA",
+      "name": "Quýt Chín Đúng Mùa",
+      "pillar": "INVESTMENT",
+      "pillar_name": "Đầu tư",
+      "style": "PROTECT",
+      "style_name": "Bảo toàn",
+      "momo_feature": "Chứng Chỉ Quỹ",
+      "tagline": "Đầu tư bền vững dài hạn với danh mục kiểm soát rủi ro"
+    },
+    {
+      "id": "QUYT_DON_NANG_SOM",
+      "name": "Quýt Đón Nắng Sớm",
+      "pillar": "INVESTMENT",
+      "pillar_name": "Đầu tư",
+      "style": "EXPLORE",
+      "style_name": "Khám phá",
+      "momo_feature": "Chứng Khoán & Vàng",
+      "tagline": "Đón đầu xu hướng tăng trưởng và nắm bắt cơ hội thị trường"
+    }
+  ],
+  "hourly_sessions": [
+    740,
+    528,
+    350,
+    294,
+    326,
+    667,
+    1206,
+    1336,
+    1598,
+    1805,
+    2019,
+    2056,
+    2142,
+    1705,
+    1841,
+    1951,
+    2180,
+    2157,
+    1831,
+    1290,
+    1014,
+    1504,
+    1546,
+    1052
+  ],
+  "persona_distribution": [
+    {
+      "id": "QUYT_MUI_DEU",
+      "players": 1275,
+      "share_pct": 18.0
+    },
+    {
+      "id": "QUYT_CHUA_THANH",
+      "players": 943,
+      "share_pct": 13.3
+    },
+    {
+      "id": "QUYT_VO_DAY",
+      "players": 665,
+      "share_pct": 9.4
+    },
+    {
+      "id": "QUYT_MONG_NUOC",
+      "players": 1109,
+      "share_pct": 15.6
+    },
+    {
+      "id": "QUYT_BOC_TUNG_MUI",
+      "players": 665,
+      "share_pct": 9.4
+    },
+    {
+      "id": "QUYT_DE_TACH_MUI",
+      "players": 887,
+      "share_pct": 12.5
+    },
+    {
+      "id": "QUYT_CHIN_DUNG_MUA",
+      "players": 943,
+      "share_pct": 13.3
+    },
+    {
+      "id": "QUYT_DON_NANG_SOM",
+      "players": 610,
+      "share_pct": 8.6
+    }
+  ]
+}
