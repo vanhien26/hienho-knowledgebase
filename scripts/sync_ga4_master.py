@@ -22,16 +22,219 @@ import json
 import time
 import argparse
 import subprocess
+import zipfile
+import re
+import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 from pathlib import Path
 
+import openpyxl
+from openpyxl.worksheet.formula import ArrayFormula
+from openpyxl.workbook.views import BookView
+
 BASE_DIR = Path(__file__).resolve().parents[1]
 HUBS_REPO = Path("/Users/hienhv/HienHv/Klaus/Web-Idea/react-web-momo")
+if not HUBS_REPO.exists():
+    HUBS_REPO = Path("/Users/hienhv/Klaus/Web-Idea/react-web-momo")
 
 sys.path.insert(0, str(BASE_DIR))
 from scripts.sync_ga4_to_hubs import get_access_token, PROPERTY_ID, run_ga4_report
 from scripts.build_full_funnel_matrix import build_theme_matcher
-from scripts.sync_mtd_23 import patch_excel
+
+TARGET_OCT = 3665607
+
+NS_MAIN = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+ET.register_namespace("", NS_MAIN)
+
+def update_cell(root, coord, formula=None, val=None):
+    c = root.find(f".//{{{NS_MAIN}}}c[@r=\"{coord}\"]")
+    if c is None:
+        m = re.match(r"([A-Z]+)(\d+)", coord)
+        if not m:
+            return
+        col_str, row_str = m.groups()
+        row_el = root.find(f".//{{{NS_MAIN}}}row[@r=\"{row_str}\"]")
+        if row_el is None:
+            sheet_data = root.find(f".//{{{NS_MAIN}}}sheetData")
+            row_el = ET.SubElement(sheet_data, f"{{{NS_MAIN}}}row", {"r": row_str})
+        c = ET.SubElement(row_el, f"{{{NS_MAIN}}}c", {"r": coord})
+    
+    # Formula
+    f_el = c.find(f"{{{NS_MAIN}}}f")
+    if formula is not None:
+        if formula == "":
+            if f_el is not None:
+                c.remove(f_el)
+        else:
+            if f_el is None:
+                f_el = ET.Element(f"{{{NS_MAIN}}}f")
+                c.insert(0, f_el)
+            f_el.text = formula
+            f_el.attrib.pop("t", None)
+            f_el.attrib.pop("ref", None)
+            
+    # Value
+    v_el = c.find(f"{{{NS_MAIN}}}v")
+    if val is not None:
+        if v_el is None:
+            v_el = ET.SubElement(c, f"{{{NS_MAIN}}}v")
+        v_el.text = str(val)
+        val_str = str(val)
+        if not val_str.replace("-", "").replace(".", "").isdigit():
+            c.attrib["t"] = "str"
+        elif "t" in c.attrib:
+            del c.attrib["t"]
+
+def patch_excel_dynamic(file_path, days_elapsed, total_pv, organic_pv, paid_pv, direct_pv, referral_pv, others_pv, non_paid_pv, hubs_pv, cinema_sub):
+    if not os.path.exists(file_path):
+        print(f"Bỏ qua file không tồn tại: {file_path}")
+        return
+
+    # PHASE 1: Openpyxl updates for Pivots, ArrayFormula, and Active Tab
+    wb = openpyxl.load_workbook(file_path)
+    ws_mtd = wb["MTD Pivot"]
+    ws_full = wb["Full month Pivot"]
+    col_oct = 9
+
+    # Sum of Col 9 items excluding Grand Total
+    s_mtd = sum(
+        ws_mtd.cell(r, col_oct).value for r in range(3, ws_mtd.max_row + 1)
+        if isinstance(ws_mtd.cell(r, col_oct).value, (int, float)) and str(ws_mtd.cell(r, 1).value).strip().lower() != "grand total"
+    )
+    scale_mtd = total_pv / s_mtd if s_mtd > 0 else 1.0
+
+    new_s_mtd = 0
+    for r in range(3, ws_mtd.max_row + 1):
+        val = ws_mtd.cell(r, col_oct).value
+        pname = str(ws_mtd.cell(r, 1).value).strip()
+        if isinstance(val, (int, float)) and pname.lower() != "grand total":
+            new_val = round(val * scale_mtd)
+            ws_mtd.cell(r, col_oct, new_val)
+            new_s_mtd += new_val
+    diff_mtd = total_pv - new_s_mtd
+    for r in range(3, ws_mtd.max_row + 1):
+        if str(ws_mtd.cell(r, 1).value).strip() == "Others":
+            ws_mtd.cell(r, col_oct, ws_mtd.cell(r, col_oct).value + diff_mtd)
+            break
+    for r in range(3, ws_mtd.max_row + 1):
+        if str(ws_mtd.cell(r, 1).value).strip().lower() == "grand total":
+            ws_mtd.cell(r, col_oct, total_pv)
+            break
+
+    s_full = sum(
+        ws_full.cell(r, col_oct).value for r in range(3, ws_full.max_row + 1)
+        if isinstance(ws_full.cell(r, col_oct).value, (int, float)) and str(ws_full.cell(r, 1).value).strip().lower() != "grand total"
+    )
+    scale_full = total_pv / s_full if s_full > 0 else 1.0
+
+    new_s_full = 0
+    for r in range(3, ws_full.max_row + 1):
+        val = ws_full.cell(r, col_oct).value
+        pname = str(ws_full.cell(r, 1).value).strip()
+        if isinstance(val, (int, float)) and pname.lower() != "grand total":
+            new_val = round(val * scale_full)
+            ws_full.cell(r, col_oct, new_val)
+            new_s_full += new_val
+    diff_full = total_pv - new_s_full
+    for r in range(3, ws_full.max_row + 1):
+        if str(ws_full.cell(r, 1).value).strip() == "Others":
+            ws_full.cell(r, col_oct, ws_full.cell(r, col_oct).value + diff_full)
+            break
+    for r in range(3, ws_full.max_row + 1):
+        if str(ws_full.cell(r, 1).value).strip().lower() == "grand total":
+            ws_full.cell(r, col_oct, total_pv)
+            break
+
+    # Formula Array for Projects Detail Flow Q3
+    ws_proj = wb["Projects Detail Flow"]
+    q3_formula = "=INDEX('Full month Pivot'!$D$3:$K$400, MATCH(\"Grand Total\", 'Full month Pivot'!$A$3:$A$400, 0), MATCH(Q$2, 'Full month Pivot'!$D$2:$K$2, 0))"
+    ws_proj["Q3"] = ArrayFormula(ref="Q3", text=q3_formula)
+
+    # Active view
+    idx = wb.sheetnames.index("Overall Performance")
+    wb.active = idx
+    wb.views = [BookView(activeTab=idx)]
+    wb.save(file_path)
+
+    # PHASE 2: XML Zipfile updates for Sheet 3, 4, 5, 8
+    temp_path = str(file_path) + ".tmp"
+    cinema_tot = hubs_pv.get("cinema", 0)
+
+    with zipfile.ZipFile(file_path, "r") as z_in, zipfile.ZipFile(temp_path, "w", compression=zipfile.ZIP_DEFLATED) as z_out:
+        for item in z_in.infolist():
+            content = z_in.read(item.filename)
+            
+            # Sheet 3: Overall Performance
+            if item.filename == "xl/worksheets/sheet3.xml":
+                root = ET.fromstring(content)
+                update_cell(root, "A1", formula='"Update to: " & DAY(NOW())', val=f"Update to: {days_elapsed}")
+                update_cell(root, "K5", formula="SUM(K9:K13)", val=str(total_pv))
+                update_cell(root, "K6", formula="K5-J5", val=str(total_pv - 3764435))
+                update_cell(root, "K7", formula="IFERROR((K5/J5)-1, 0)", val=str(round((total_pv / 3764435) - 1, 10)))
+                update_cell(root, "K9", formula="", val=str(organic_pv))
+                update_cell(root, "K10", formula="", val=str(paid_pv))
+                update_cell(root, "K11", formula="", val=str(direct_pv))
+                update_cell(root, "K12", formula="", val=str(referral_pv))
+                update_cell(root, "K13", formula="", val=str(others_pv))
+                update_cell(root, "T5", formula="SUM(T9:T13)", val=str(total_pv))
+                update_cell(root, "T6", formula="T5-S5", val=str(total_pv - 2654786))
+                update_cell(root, "T7", formula="IFERROR((T5/S5)-1, 0)", val=str(round((total_pv / 2654786) - 1, 10)))
+                update_cell(root, "T9", formula="", val=str(organic_pv))
+                update_cell(root, "T10", formula="", val=str(paid_pv))
+                update_cell(root, "T11", formula="", val=str(direct_pv))
+                update_cell(root, "T12", formula="", val=str(referral_pv))
+                update_cell(root, "T13", formula="", val=str(others_pv))
+                content = ET.tostring(root, encoding="utf-8", xml_declaration=True)
+
+            # Sheet 4: PaidNonPaid
+            elif item.filename == "xl/worksheets/sheet4.xml":
+                root = ET.fromstring(content)
+                update_cell(root, "A1", formula='"Update to: " & DAY(NOW())', val=f"Update to: {days_elapsed}")
+                update_cell(root, "K5", formula="'Overall Performance'!K5", val=str(total_pv))
+                update_cell(root, "K6", formula="K5-J5", val=str(total_pv - 3764435))
+                update_cell(root, "K7", formula="IFERROR((K5/J5)-1, 0)", val=str(round((total_pv / 3764435) - 1, 10)))
+                update_cell(root, "K8", formula="SUM(K9:K12)", val=str(non_paid_pv))
+                update_cell(root, "K9", formula="", val=str(organic_pv))
+                update_cell(root, "K10", formula="", val=str(direct_pv))
+                update_cell(root, "K11", formula="", val=str(referral_pv))
+                update_cell(root, "K12", formula="", val=str(others_pv))
+                update_cell(root, "K13", formula="", val=str(paid_pv))
+                content = ET.tostring(root, encoding="utf-8", xml_declaration=True)
+
+            # Sheet 5: Target
+            elif item.filename == "xl/worksheets/sheet5.xml":
+                root = ET.fromstring(content)
+                update_cell(root, "A1", formula='"Update to: " & DAY(NOW())', val=f"Update to: {days_elapsed}")
+                update_cell(root, "K6", formula="'Overall Performance'!K5", val=str(total_pv))
+                update_cell(root, "K7", formula="K6-J6", val=str(total_pv - 3764435))
+                update_cell(root, "K8", formula="IFERROR((K6/J6)-1, 0)", val=str(round((total_pv / 3764435) - 1, 10)))
+                prog_pct = round((total_pv / TARGET_OCT) * 100)
+                update_cell(root, "K9", formula='IFERROR(REPT("█", ROUND(K6/K3*4,0)) & " " & TEXT(K6/K3,"0%"), "")', val=f"███ {prog_pct}%")
+                update_cell(root, "K10", formula="", val=str(organic_pv))
+                update_cell(root, "K11", formula="", val=str(paid_pv))
+                update_cell(root, "K12", formula="", val=str(direct_pv))
+                update_cell(root, "K13", formula="", val=str(referral_pv))
+                update_cell(root, "K14", formula="", val=str(others_pv))
+                content = ET.tostring(root, encoding="utf-8", xml_declaration=True)
+
+            # Sheet 8: Cinema
+            elif item.filename == "xl/worksheets/sheet8.xml":
+                root = ET.fromstring(content)
+                update_cell(root, "B1", formula='"Update to: " & DAY(NOW())', val=f"Update to: {days_elapsed}")
+                update_cell(root, "H3", formula="SUM(H9,H16,H23,H30,H37,H44)", val=str(cinema_tot))
+                update_cell(root, "H4", formula="H3-G3", val=str(cinema_tot - 863885))
+                update_cell(root, "H5", formula="(H3/G3)-1", val=str(round((cinema_tot / 863885) - 1, 6)))
+                update_cell(root, "H9", formula="", val=str(cinema_sub.get("Trang Rạp phim", 0)))
+                update_cell(root, "H16", formula="", val=str(cinema_sub.get("Trang phim chi tiết", 0)))
+                update_cell(root, "H23", formula="", val=str(cinema_sub.get("Cinema_Home Page", 0)))
+                update_cell(root, "H30", formula="", val=str(cinema_sub.get("Cinema_Blog", 0)))
+                update_cell(root, "H37", formula="", val=str(cinema_sub.get("Tin tức", 0)))
+                content = ET.tostring(root, encoding="utf-8", xml_declaration=True)
+
+            z_out.writestr(item, content)
+
+    os.replace(temp_path, file_path)
+    print(f"✓ Đã patch động Excel SSOT: {file_path}")
 
 TARGET_OCT = 3665607
 
@@ -173,6 +376,15 @@ def main():
         "student": 0,
         "others": 0
     }
+    cinema_sub = {
+        "Trang Rạp phim": 0,
+        "Trang phim chi tiết": 0,
+        "Cinema_Home Page": 0,
+        "Cinema_Blog": 0,
+        "Cinema_Landing Page": 0,
+        "Tin tức": 0,
+        "Others": 0
+    }
 
     for r in res_lp.get("rows", []):
         lp = r["dimensionValues"][0]["value"]
@@ -181,6 +393,21 @@ def main():
         h_name = t_info[4] if t_info else "Khác"
         if h_name == "Cinema":
             hubs_pv["cinema"] += pv
+            clean_lp = lp.split("?")[0].rstrip("/")
+            if clean_lp == "/cinema":
+                cinema_sub["Cinema_Home Page"] += pv
+            elif clean_lp.startswith("/cinema/rap"):
+                cinema_sub["Trang Rạp phim"] += pv
+            elif "/blog" in clean_lp or "/review" in clean_lp:
+                cinema_sub["Cinema_Blog"] += pv
+            elif "/tin-tuc" in clean_lp:
+                cinema_sub["Tin tức"] += pv
+            elif any(k in clean_lp for k in ["tang-", "ve-mien-phi", "uu-dai", "khuyen-mai", "landing"]):
+                cinema_sub["Cinema_Landing Page"] += pv
+            elif clean_lp.startswith("/cinema/"):
+                cinema_sub["Trang phim chi tiết"] += pv
+            else:
+                cinema_sub["Others"] += pv
         elif h_name in ["Ví Trả Sau", "Điểm Tín Dụng", "Vay Nhanh", "Tiết Kiệm Online", "Mở Thẻ Tín Dụng", "Trung Tâm Tài Chính", "Chứng Chỉ Quỹ", "Chứng Khoán"]:
             hubs_pv["financial"] += pv
         elif h_name in ["New User"]:
@@ -234,6 +461,15 @@ def main():
             "new_user": {"pv": hubs_pv["new_user"], "target": 300000, "pct": round(hubs_pv["new_user"] / 300000 * 100, 2)},
             "vehicle": {"pv": hubs_pv["vehicle"], "target": 100000, "pct": round(hubs_pv["vehicle"] / 100000 * 100, 2)},
             "student": {"pv": hubs_pv["student"], "target": 100000, "pct": round(hubs_pv["student"] / 100000 * 100, 2)}
+        },
+        "cinema_breakdown": {
+            "Trang Rạp phim": cinema_sub["Trang Rạp phim"],
+            "Trang phim chi tiết": cinema_sub["Trang phim chi tiết"],
+            "Cinema_Home Page": cinema_sub["Cinema_Home Page"],
+            "Cinema_Blog": cinema_sub["Cinema_Blog"],
+            "Cinema_Landing Page": cinema_sub["Cinema_Landing Page"],
+            "Tin tức": cinema_sub["Tin tức"],
+            "Others": cinema_sub["Others"]
         }
     }
     with open(snapshot_path, "w", encoding="utf-8") as f:
@@ -333,7 +569,11 @@ def main():
     # 5.4 Patch Excel Tracking SSOT (BigQuery Connected Sheets)
     bq_excel = BASE_DIR / "07_REPORTS" / "web_performance_tracking.xlsx"
     if bq_excel.exists():
-        patch_excel(str(bq_excel))
+        patch_excel_dynamic(
+            str(bq_excel), days_elapsed, total_pv,
+            organic_pv, paid_pv, direct_pv, referral_pv, others_pv, non_paid_pv,
+            hubs_pv, cinema_sub
+        )
 
     # 5.5 Xuất bản lại file Excel Executive Presentation chuẩn 5 tabs
     build_script = BASE_DIR / "scripts" / "build_web_platform_performance.py"

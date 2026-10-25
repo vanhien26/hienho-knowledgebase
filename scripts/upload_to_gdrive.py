@@ -28,7 +28,7 @@ CREDS_FILE = BASE_DIR / "07_REPORTS" / "data" / "credentials" / "ga4-credentials
 GDRIVE_TOKEN_FILE = BASE_DIR / "07_REPORTS" / "data" / "credentials" / "gdrive-token.json"
 GA4_TOKEN_FILE = BASE_DIR / "07_REPORTS" / "data" / "credentials" / "ga4-token.json"
 
-DEFAULT_TARGET_ID = "1UP2RTtKx-77obwGF_lJK7BUX38TiCvM-"
+DEFAULT_TARGET_ID = "1H_1RNCA1NBdZ9vJH5VLSw7D9aaYhx3XI"
 DEFAULT_FILE_PATH = BASE_DIR / "07_REPORTS" / "web_performance_tracking.xlsx"
 
 # Thư mục Google Drive for Desktop (macOS Native Sync)
@@ -115,23 +115,30 @@ def sync_to_google_drive(file_path=DEFAULT_FILE_PATH, target_id=DEFAULT_TARGET_I
     # PHƯƠNG ÁN 1 (ƯU TIÊN): Đồng bộ qua Google Drive for Desktop (macOS Native Sync)
     # Bỏ qua hoàn toàn rào cản Google Cloud API và quyền IAM doanh nghiệp
     if GDRIVE_DESKTOP_DIR.exists():
+        import subprocess
+        # Đảm bảo ứng dụng Google Drive Desktop luôn chạy để đẩy sync
+        check_proc = subprocess.run(["pgrep", "-f", "Google Drive.app"], capture_output=True)
+        if check_proc.returncode != 0:
+            print("[Drive-Client] Khởi động Google Drive Desktop...")
+            subprocess.run(["open", "-a", "Google Drive"], check=False)
+
         print("\n" + "=" * 70)
         print("ĐỒNG BỘ GOOGLE DRIVE QUA GOOGLE DRIVE FOR DESKTOP (NATIVE SYNC)")
         print("=" * 70)
         
         dest_file = GDRIVE_DESKTOP_DIR / file_path.name
-        shutil.copy2(file_path, dest_file)
+        subprocess.run(["cp", "-f", str(file_path), str(dest_file)], check=True)
         file_size_kb = dest_file.stat().st_size / 1024
         print(f"✓ Đã ghi đè tệp: {dest_file.name} ({file_size_kb:.1f} KB)")
         print(f"  Thư mục: WEB GROWTH 2026 / #4 - Tracking & Performance")
         
         exec_file = BASE_DIR / "07_REPORTS" / "web_platform_performance.xlsx"
         if exec_file.exists() and file_path.resolve() != exec_file.resolve():
-            shutil.copy2(exec_file, GDRIVE_DESKTOP_DIR / exec_file.name)
+            subprocess.run(["cp", "-f", str(exec_file), str(GDRIVE_DESKTOP_DIR / exec_file.name)], check=True)
             print(f"✓ Đã đồng bộ thêm tệp Executive: {exec_file.name}")
 
         print(f"✓ Google Drive Desktop Client đang tự động đồng bộ lên đám mây trong nền.")
-        print(f"  Liên kết Google Drive (ID {target_id}): https://drive.google.com/file/d/{target_id}/view")
+        print(f"  Liên kết Google Sheets (ID {target_id}): https://docs.google.com/spreadsheets/d/{target_id}/")
         print("=" * 70)
         return {"status": "success", "mode": "native_desktop_sync", "file": str(dest_file)}
 

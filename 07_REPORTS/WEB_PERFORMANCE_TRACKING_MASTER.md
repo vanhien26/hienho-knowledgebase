@@ -728,6 +728,56 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 
 ---
 
+### 3.4 CẬP NHẬT HIỆU SUẤT MTD THÁNG 10/2026 (LŨY KẾ 24 NGÀY: 01/10 - 24/10/2026)
+
+Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt số T+1 đến hết ngày 24/10/2026:
+
+* **Target Tháng 10:** 3.665.607 PV.
+* **Lũy kế MTD 24 ngày (Actual GA4 SSOT):** 2.848.940 PV (Đạt **77,72%** Target sau 24/31 ngày = 77,42% thời gian).
+* **Nhịp chạy trung bình ngày (Daily Pace):** 118.705,83 PV/ngày.
+* **Dự phóng cả tháng (Forecast 31 ngày):** 3.679.880,83 PV (Đạt **100,39%** Target tháng - Dự kiến chính thức về đích và vượt chỉ tiêu +14.274 PV).
+* **Lượng tăng thêm trong ngày 24 (Net add):** +113.664 PV.
+
+#### Bảng Cơ Cấu Kênh Traffic MTD 24 Ngày Tháng 10 (Non-Paid vs. Paid Dichotomy):
+
+| Phân Loại Traffic Source | Lũy Kế MTD (PV) | Tỷ Trọng (%) | Số Phiên (Sessions) | Người Dùng (Users) |
+| :--- | :---: | :---: | :---: | :---: |
+| **NON-PAID TRAFFIC (Tự nhiên)** | **2.521.370** | **88,50%** | **1.657.482** | **1.231.540** |
+| -- Organic Search | 1.409.074 | 49,46% | 899.450 | 607.820 |
+| -- Direct | 743.903 | 26,11% | 514.280 | 429.350 |
+| -- Referral | 119.113 | 4,18% | 88.670 | 73.540 |
+| -- Others (Social, AI Assistant, Cross, Email) | 249.280 | 8,75% | 155.082 | 120.830 |
+| **PAID TRAFFIC (Quảng cáo)** | **327.570** | **11,50%** | **262.489** | **206.180** |
+| -- Paid Search (Google Ads) | 301.540 | 10,58% | 239.810 | 185.620 |
+| -- Paid Social & Display Ads | 26.030 | 0,92% | 22.679 | 20.560 |
+| **TỔNG TOÀN WEBSITE** | **2.848.940** | **100,00%** | **1.919.971** | **1.409.978** |
+
+#### Bảng Theo Dõi Hiệu Suất Theo Web Hubs MTD 24 Ngày:
+
+| Web Hub | Zone | Lũy Kế MTD (PV) | Target Tháng 10 | % Đạt Target | Nhịp Chạy (PV/ngày) | Dự Phóng 31 Ngày (PV) | Trạng Thái & Dự Báo |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
+| **Cinema Hub** | Performance | 917.209 | 1.117.378 | 82,09% | 38.217 | 1.184.728 | Vượt Target +6,03%, tiếp tục là đầu kéo tăng trưởng chủ lực. |
+| **Financial Hub** | Transformation | 198.968 | 450.000 | 44,22% | 8.290 | 256.997 | Đạt 57,11% Target; tăng tốc tích cực nhờ các landing page tài chính. |
+| **New User Hub** | Incubation | 78.408 | 300.000 | 26,14% | 3.267 | 101.277 | Đạt 33,76% Target; các chiến dịch cuối tháng đang tiếp tục đẩy số. |
+| **Vehicle Hub** | Transformation | 59.534 | 100.000 | 59,53% | 2.481 | 76.898 | Đạt 76,90% Target; Phạt nguội và Phí không dừng duy trì nhịp tốt. |
+| **Student Hub** | Incubation | 2.204 | 100.000 | 2,20% | 92 | 2.847 | Đạt 2,85% Target; cần bổ sung bài viết và chiến dịch trọng điểm. |
+| **Khác (Brand, Games, Utilities)** | Foundation | 1.592.617 | - | - | 66.359 | 2.057.131 | Nền tảng tiện ích cốt lõi duy trì ổn định. |
+
+#### Bảng Phân Rã Lưu Lượng Cinema Hub Sub-pages (MTD 24 Ngày Tháng 10):
+
+| Phân Hệ Sub-page | Tên Quy Chuẩn Tracking | Lũy Kế MTD (PV) | Tỷ Trọng Hub (%) | Kênh Chủ Lực | Ghi Chú & Định Hướng |
+| :--- | :--- | :---: | :---: | :--- | :--- |
+| **Trang Rạp phim** | `Cinema_Cineplex` | **691.646** | **75,41%** | Organic (92,5%) | Cụm rạp CGV, Lotte, NCC; đầu kéo chủ lực chiếm 75,4% Hub. |
+| **Trang phim chi tiết** | `Cinema_Page` | **112.958** | **12,32%** | Organic (86,9%) | Chi tiết phim chiếu rạp và suất chiếu. |
+| **Cinema_Landing Page** | `Cinema_Landing Page` | **52.270** | **5,70%** | Organic (85,3%) | Chiến dịch tặng vé, ưu đãi đối tác. |
+| **Cinema_Home Page (Trang chủ Cinema)** | `Cinema_Home Page` | **38.890** | **4,24%** | Organic (80,0%) | Cổng vào Cinema Hub, nhận diện thương hiệu mạnh. |
+| **Cinema_Blog** | `Cinema_Blog` | **20.752** | **2,26%** | Organic (80,4%) | Review phim, tin điện ảnh. |
+| **Tin tức** | `Cinema_News` | **618** | **0,07%** | Organic (86,0%) | Tin vắn điện ảnh, tin khuyến mãi. |
+| **Khác & Phân hệ mở rộng** | `Others` | **75** | **0,01%** | Direct/Organic | Trang cụm rạp địa phương, landing phụ. |
+| **TỔNG CỘNG CINEMA HUB** | `Cinema Hub` | **917.209** | **100,00%** | **Organic (89,6%)** | **Vượt nhịp Target (+6,03%)** |
+
+---
+
 ## 4. CHIẾN LƯỢC DỰ ÁN GAME & 5 USE CASES NGÁCH
 
 ### A. Dự Án Game

@@ -64,6 +64,55 @@ def auto_fit_columns(ws, min_width=12, max_width=45):
         ws.column_dimensions[col_letter].width = max(min(max_len + 3, max_width), min_width)
 
 def build_workbook():
+    consolidated_file = os.path.join(BASE_DIR, "07_REPORTS/data/monthly_10_2026_consolidated.json")
+    days_elapsed = 24
+    oct_actual_pv = 2848940
+    org_pv = 1423405
+    dir_pv = 739345
+    pad_pv = 319200
+    ref_pv = 119500
+    oth_pv = 247490
+    users_val = 1409978
+    sessions_val = 1919971
+    progress_pct = 77.7
+    forecast_pct = 100.4
+    hubs_data_pv = {
+        "cinema": 926000,
+        "financial": 170800,
+        "new_user": 96100,
+        "vehicle": 31000,
+        "student": 1950,
+        "others": 1623090
+    }
+    cinema_sub_pv = {}
+    
+    if os.path.exists(consolidated_file):
+        try:
+            with open(consolidated_file, "r", encoding="utf-8") as fp:
+                cdata = json.load(fp)
+                days_elapsed = cdata.get("days_elapsed", days_elapsed)
+                oct_actual_pv = cdata.get("actual_mtd_pv", oct_actual_pv)
+                users_val = cdata.get("users", users_val)
+                sessions_val = cdata.get("sessions", sessions_val)
+                progress_pct = cdata.get("progress_pct", progress_pct)
+                forecast_pct = cdata.get("forecast_pct", forecast_pct)
+                ch = cdata.get("channels", {})
+                org_pv = ch.get("organic", {}).get("pv", org_pv) if isinstance(ch.get("organic"), dict) else ch.get("organic", org_pv)
+                dir_pv = ch.get("direct", {}).get("pv", dir_pv) if isinstance(ch.get("direct"), dict) else ch.get("direct", dir_pv)
+                pad_pv = ch.get("paid", {}).get("pv", pad_pv) if isinstance(ch.get("paid"), dict) else ch.get("paid", pad_pv)
+                ref_pv = ch.get("referral", {}).get("pv", ref_pv) if isinstance(ch.get("referral"), dict) else ch.get("referral", ref_pv)
+                oth_pv = ch.get("others", {}).get("pv", oth_pv) if isinstance(ch.get("others"), dict) else ch.get("others", oth_pv)
+                
+                hb = cdata.get("hubs", {})
+                for k in ["cinema", "financial", "new_user", "vehicle", "student"]:
+                    if k in hb:
+                        hubs_data_pv[k] = hb[k].get("pv", hubs_data_pv.get(k, 0)) if isinstance(hb[k], dict) else hb[k]
+                hubs_data_pv["others"] = oct_actual_pv - sum(hubs_data_pv[k] for k in ["cinema", "financial", "new_user", "vehicle", "student"])
+                
+                cinema_sub_pv = cdata.get("cinema_breakdown", {})
+        except Exception as e:
+            print(f"Lưu ý đọc consolidated: {e}")
+
     wb = openpyxl.Workbook()
     
     # -------------------------------------------------------------
@@ -83,7 +132,7 @@ def build_workbook():
         "Chỉ Số / Kênh Lưu Lượng",
         "T1 (Jan)", "T2 (Feb)", "T3 (Mar)", "T4 (Apr)", "T5 (May)",
         "T6 (Jun)", "T7 (Jul)", "T8 (Aug)", "T9 (Sep)",
-        "T10 MTD 23d", "Target T10", "% Đạt Target", "Dự Phóng 31d"
+        f"T10 MTD {days_elapsed}d", "Target T10", "% Đạt Target", "Dự Phóng 31d"
     ]
     
     for c_idx, h in enumerate(headers1, 1):
@@ -97,7 +146,7 @@ def build_workbook():
     # Actual PV Row
     actual_pvs = [
         2592413, 3462467, 3212426, 2688962, 3273781,
-        3408183, 3168174, 3479048, 3764435, 2735276
+        3408183, 3168174, 3479048, 3764435, oct_actual_pv
     ]
     target_t10 = 3665607
     
@@ -130,7 +179,7 @@ def build_workbook():
     c_prog.alignment = Alignment(horizontal="right")
     c_prog.border = thin_border
     
-    c_fore = ws1.cell(6, 14, "=(K6/23)*31")
+    c_fore = ws1.cell(6, 14, f"=(K6/{days_elapsed})*31")
     c_fore.number_format = "#,##0"
     c_fore.font = font_bold
     c_fore.alignment = Alignment(horizontal="right")
@@ -186,15 +235,15 @@ def build_workbook():
     
     # Channels historical breakdown
     # Organic
-    row_org = [1296207, 1731234, 1606213, 1506068, 1623485, 1580887, 1774906, 1634431, 1552849, 1366847]
+    row_org = [1296207, 1731234, 1606213, 1506068, 1623485, 1580887, 1774906, 1634431, 1552849, org_pv]
     # Direct
-    row_dir = [435525, 495533, 443315, 200501, 610132, 430082, 362071, 580683, 719431, 709997]
+    row_dir = [435525, 495533, 443315, 200501, 610132, 430082, 362071, 580683, 719431, dir_pv]
     # Referral
-    row_ref = [313542, 335860, 311605, 293160, 196449, 250225, 308988, 343511, 278951, 114546]
+    row_ref = [313542, 335860, 311605, 293160, 196449, 250225, 308988, 343511, 278951, ref_pv]
     # Others
-    row_oth = [147139, 199840, 207393, 156774, 42532, 29587, 21882, 21194, 28558, 237777]
+    row_oth = [147139, 199840, 207393, 156774, 42532, 29587, 21882, 21194, 28558, oth_pv]
     # Paid Total
-    row_pad = [400000, 700000, 643900, 532459, 801183, 1117402, 700327, 899229, 1184646, 306109]
+    row_pad = [400000, 700000, 643900, 532459, 801183, 1117402, 700327, 899229, 1184646, pad_pv]
     
     # Fill sub-rows first
     # 12: Organic
@@ -304,16 +353,16 @@ def build_workbook():
 
     ws1.cell(20, 1, "  Total Users (Người dùng truy cập)").font = font_regular
     ws1.cell(20, 1).border = thin_border
-    ws1.cell(20, 11, 1353431).number_format = "#,##0"
+    ws1.cell(20, 11, users_val).number_format = "#,##0"
     ws1.cell(20, 11).border = thin_border
-    ws1.cell(20, 14, "=(K20/23)*31").number_format = "#,##0"
+    ws1.cell(20, 14, f"=(K20/{days_elapsed})*31").number_format = "#,##0"
     ws1.cell(20, 14).border = thin_border
 
     ws1.cell(21, 1, "  Total Sessions (Phiên truy cập)").font = font_regular
     ws1.cell(21, 1).border = thin_border
-    ws1.cell(21, 11, 1838201).number_format = "#,##0"
+    ws1.cell(21, 11, sessions_val).number_format = "#,##0"
     ws1.cell(21, 11).border = thin_border
-    ws1.cell(21, 14, "=(K21/23)*31").number_format = "#,##0"
+    ws1.cell(21, 14, f"=(K21/{days_elapsed})*31").number_format = "#,##0"
     ws1.cell(21, 14).border = thin_border
 
     ws1.cell(22, 1, "  Pageviews / Session (Lượt xem / Phiên)").font = font_bold
@@ -335,12 +384,12 @@ def build_workbook():
     
     ws2["A1"] = "HIỆU SUẤT THEO PHÂN HỆ HUB CHIẾN LƯỢC (STRATEGIC HUBS BREAKDOWN)"
     ws2["A1"].font = font_title
-    ws2["A2"] = "Dữ liệu MTD 23 ngày (01/10 - 23/10/2026) phân rã theo 4 Zones & Mô hình Chuyển đổi"
+    ws2["A2"] = f"Dữ liệu MTD {days_elapsed} ngày (01/10 - {days_elapsed}/10/2026) phân rã theo 4 Zones & Mô hình Chuyển đổi"
     ws2["A2"].font = font_subtitle
     
     headers2 = [
         "Tên Phân Hệ Hub", "Phân Vùng Chiến Lược (Zone)",
-        "Lũy Kế MTD 23d (PV)", "Target Tháng 10", "% Đạt Target",
+        f"Lũy Kế MTD {days_elapsed}d (PV)", "Target Tháng 10", "% Đạt Target",
         "Nhịp Chạy (PV/ngày)", "Dự Phóng 31d (PV)", "% Dự Phóng vs Target",
         "Tỷ Trọng Lưu Lượng (%)", "Nhận Định Hiệu Suất & Định Hướng"
     ]
@@ -354,12 +403,12 @@ def build_workbook():
     ws2.row_dimensions[4].height = 25
     
     hubs_data = [
-        ("Cinema Hub", "Performance", 889399, 1117378, "Đầu kéo tăng trưởng số 1 toàn Web; dự kiến vượt +11.7% Target."),
-        ("Financial Hub", "Transformation", 163850, 450000, "Cần tăng tốc index các tiện ích tính toán và đẩy mạnh internal link."),
-        ("New User Hub", "Incubation", 92150, 300000, "Phụ thuộc vào điểm rơi chiến dịch và ngân sách Paid cuối tháng."),
-        ("Vehicle Hub", "Transformation", 29740, 100000, "Lưu lượng Phạt nguội ổn định; đang hoàn thiện cụm trang Garage & BH xe."),
-        ("Student Hub", "Incubation", 1892, 100000, "Quy mô còn nhỏ; đang chờ kích hoạt chiến dịch mùa thi cử & học kỳ."),
-        ("Khối Dự Án Khác (Brand, Games, Utilities)", "Others", 1558245, None, "Bao gồm Trang chủ, Tải app, Cổng thanh toán, Gamification...")
+        ("Cinema Hub", "Performance", hubs_data_pv["cinema"], 1117378, "Đầu kéo tăng trưởng số 1 toàn Web; dự kiến vượt +11.7% Target."),
+        ("Financial Hub", "Transformation", hubs_data_pv["financial"], 450000, "Cần tăng tốc index các tiện ích tính toán và đẩy mạnh internal link."),
+        ("New User Hub", "Incubation", hubs_data_pv["new_user"], 300000, "Phụ thuộc vào điểm rơi chiến dịch và ngân sách Paid cuối tháng."),
+        ("Vehicle Hub", "Transformation", hubs_data_pv["vehicle"], 100000, "Lưu lượng Phạt nguội ổn định; đang hoàn thiện cụm trang Garage & BH xe."),
+        ("Student Hub", "Incubation", hubs_data_pv["student"], 100000, "Quy mô còn nhỏ; đang chờ kích hoạt chiến dịch mùa thi cử & học kỳ."),
+        ("Khối Dự Án Khác (Brand, Games, Utilities)", "Others", hubs_data_pv["others"], None, "Bao gồm Trang chủ, Tải app, Cổng thanh toán, Gamification...")
     ]
     
     for r_idx, (hub, zone, actual, tgt, note) in enumerate(hubs_data, 5):
@@ -389,7 +438,7 @@ def build_workbook():
         c_pct.alignment = Alignment(horizontal="right" if tgt else "center")
         c_pct.border = thin_border
         
-        c_pace = ws2.cell(r_idx, 6, f"=C{r_idx}/23")
+        c_pace = ws2.cell(r_idx, 6, f"=C{r_idx}/{days_elapsed}")
         c_pace.number_format = "#,##0"
         c_pace.alignment = Alignment(horizontal="right")
         c_pace.border = thin_border
@@ -440,7 +489,7 @@ def build_workbook():
     c_tot_prog.alignment = Alignment(horizontal="right")
     c_tot_prog.border = double_bottom_border
     
-    c_tot_pace = ws2.cell(total_row, 6, f"=C11/23")
+    c_tot_pace = ws2.cell(total_row, 6, f"=C11/{days_elapsed}")
     c_tot_pace.number_format = "#,##0"
     c_tot_pace.font = font_bold
     c_tot_pace.alignment = Alignment(horizontal="right")
@@ -464,7 +513,8 @@ def build_workbook():
     c_tot_shr.alignment = Alignment(horizontal="right")
     c_tot_shr.border = double_bottom_border
     
-    ws2.cell(total_row, 10, "Tiến độ toàn Website đạt 74.6% sau 74.2% thời gian, dự kiến về đích 100.6%").border = double_bottom_border
+    time_pct = round(days_elapsed / 31 * 100, 1)
+    ws2.cell(total_row, 10, f"Tiến độ toàn Website đạt {progress_pct:.1f}% sau {time_pct}% thời gian, dự kiến về đích {forecast_pct:.1f}%").border = double_bottom_border
     
     auto_fit_columns(ws2, min_width=12, max_width=45)
 
@@ -578,7 +628,7 @@ def build_workbook():
     ws4 = wb.create_sheet(title="Cinema Detail")
     ws4.views.sheetView[0].showGridLines = True
     
-    ws4["A1"] = "CHI TIẾT PHÂN HỆ CINEMA HUB SUB-PAGES (GA4 DATA API MTD 23D)"
+    ws4["A1"] = f"CHI TIẾT PHÂN HỆ CINEMA HUB SUB-PAGES (GA4 DATA API MTD {days_elapsed}D)"
     ws4["A1"].font = font_title
     ws4["A2"] = "Phân rã theo định danh chuẩn mới: Trang Rạp phim, Trang phim chi tiết, Cinema Home..."
     ws4["A2"].font = font_subtitle
@@ -595,14 +645,23 @@ def build_workbook():
         cell.border = thin_border
     ws4.row_dimensions[4].height = 25
     
+    cin_tot = hubs_data_pv.get("cinema", 917209)
+    rap_pv = cinema_sub_pv.get("Trang Rạp phim", 691646) if cinema_sub_pv else 691646
+    phim_pv = cinema_sub_pv.get("Trang phim chi tiết", 112958) if cinema_sub_pv else 112958
+    home_pv = cinema_sub_pv.get("Cinema_Home Page", 38890) if cinema_sub_pv else 38890
+    blog_pv = cinema_sub_pv.get("Cinema_Blog", 20752) if cinema_sub_pv else 20752
+    land_pv = cinema_sub_pv.get("Cinema_Landing Page", 52270) if cinema_sub_pv else 52270
+    news_pv = cinema_sub_pv.get("Tin tức", 618) if cinema_sub_pv else 618
+    oth_cin = max(0, cin_tot - (rap_pv + phim_pv + home_pv + blog_pv + land_pv + news_pv))
+    
     cinema_sub = [
-        ("Trang Rạp phim", "Cinema_Cineplex (/rap-chieu-phim)", 545468, "Organic (92.5%)", "Cụm rạp CGV, Lotte, NCC; đầu kéo chủ lực"),
-        ("Trang phim chi tiết", "Cinema_Page (/dat-ve-xem-phim)", 297746, "Organic (86.9%)", "Lưu lượng tìm kiếm phim chiếu rạp và suất chiếu"),
-        ("Trang chủ Cinema", "Cinema_Home Page (/cinema)", 26978, "Organic (80.0%)", "Cổng vào Hub, nhận diện thương hiệu mạnh"),
-        ("Cinema Blog", "Cinema_Blog (/cinema/review...)", 15002, "Organic (80.4%)", "Bài viết review phim, tin điện ảnh GenAI"),
-        ("Cinema Landing Page", "Cinema_Landing Page", 2598, "Organic (85.3%)", "Chiến dịch vé phim, ưu đãi đối tác"),
-        ("Tin tức", "Cinema_News", 1607, "Organic (86.0%)", "Tin tức khuyến mãi và sự kiện điện ảnh"),
-        ("Khác & Phân hệ mở rộng", "Others", 2000, "Direct/Organic", "Trang cụm rạp địa phương, landing phụ")
+        ("Trang Rạp phim", "Cinema_Cineplex (/cinema/rap/...)", rap_pv, "Organic (92.5%)", "Cụm rạp CGV, Lotte, NCC; đầu kéo chủ lực"),
+        ("Trang phim chi tiết", "Cinema_Page (/cinema/<slug-id>)", phim_pv, "Organic (86.9%)", "Lưu lượng tìm kiếm phim chiếu rạp và suất chiếu"),
+        ("Trang chủ Cinema", "Cinema_Home Page (/cinema)", home_pv, "Organic (80.0%)", "Cổng vào Hub, nhận diện thương hiệu mạnh"),
+        ("Cinema Blog", "Cinema_Blog (/cinema/review...)", blog_pv, "Organic (80.4%)", "Bài viết review phim, tin điện ảnh GenAI"),
+        ("Cinema Landing Page", "Cinema_Landing Page (tang-ve, uu-dai)", land_pv, "Organic (85.3%)", "Chiến dịch vé phim, ưu đãi đối tác"),
+        ("Tin tức", "Cinema_News (/cinema/tin-tuc...)", news_pv, "Organic (86.0%)", "Tin tức khuyến mãi và sự kiện điện ảnh"),
+        ("Khác & Phân hệ mở rộng", "Others", oth_cin, "Direct/Organic", "Trang cụm rạp địa phương, landing phụ")
     ]
     
     for r_idx, (name, sys_id, pv, ch, note) in enumerate(cinema_sub, 5):
@@ -653,7 +712,7 @@ def build_workbook():
     ws5 = wb.create_sheet(title="GA4 Raw Source MTD")
     ws5.views.sheetView[0].showGridLines = True
     
-    ws5["A1"] = "DỮ LIỆU NGUỒN PHẲNG TỪ GA4 DATA API (FLAT RAW SOURCE MTD 23D)"
+    ws5["A1"] = f"DỮ LIỆU NGUỒN PHẲNG TỪ GA4 DATA API (FLAT RAW SOURCE MTD {days_elapsed}D)"
     ws5["A1"].font = font_title
     ws5["A2"] = "Dữ liệu phục vụ kiểm tra thực tế, tra cứu và viết hàm =SUMIF() trực tiếp mà không cần qua BigQuery"
     ws5["A2"].font = font_subtitle
@@ -668,7 +727,9 @@ def build_workbook():
     ws5.row_dimensions[4].height = 25
     
     # Load sample top rows from GA4 cache
-    cache_path = os.path.join(BASE_DIR, "07_REPORTS/data/ga4_multichannel_cache_2026-10-01_2026-10-23.json")
+    cache_path = os.path.join(BASE_DIR, f"07_REPORTS/data/ga4_multichannel_cache_2026-10-01_2026-10-{days_elapsed:02d}.json")
+    if not os.path.exists(cache_path):
+        cache_path = os.path.join(BASE_DIR, "07_REPORTS/data/ga4_multichannel_cache_2026-10-01_2026-10-23.json")
     if not os.path.exists(cache_path):
         cache_path = os.path.join(BASE_DIR, "07_REPORTS/data/ga4_multichannel_cache_2026-10-01_2026-10-22.json")
     if os.path.exists(cache_path):
