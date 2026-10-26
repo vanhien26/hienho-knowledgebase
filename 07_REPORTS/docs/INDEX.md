@@ -57,4 +57,14 @@
 | **BRD Hệ thống Tìm kiếm Thông minh** | [`../../01_STRATEGIC_PLAN/search-revamp-brd.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/01_STRATEGIC_PLAN/search-revamp-brd.md) | Tài liệu yêu cầu kinh doanh (BRD) chuẩn CEO Standard cho `/tim-kiem` theo lộ trình 3 Phase |
 | **Bản thuyết trình Tháng 08/2026** | [`presentations/Growth_Platform_Division_Aug_2026_Monthly_Report.pptx`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/presentations/Growth_Platform_Division_Aug_2026_Monthly_Report.pptx) | Slide báo cáo hoạt động khối Growth Platform Division tại cuộc họp định kỳ |
 | **Kiến trúc Hệ thống Báo cáo** | [`REPORT_SYSTEM_STRUCTURE.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/REPORT_SYSTEM_STRUCTURE.md) | Quy chuẩn thiết kế và vận hành hệ thống báo cáo hiệu suất Web Platform |
+| **Kiến trúc Công cụ Báo cáo Định kỳ & AI Agent** | [`monthly-reporting-tool-architecture.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/monthly-reporting-tool-architecture.md) | Chi tiết Tech Stack, Tích hợp AI Agent/MCP, Đối tượng sử dụng, Sứ mệnh & Lợi ích |
 | **Hiệu suất Tức thời** | [`PERFORMANCE_SNAPSHOT_LATEST.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md) | Snapshot dữ liệu vận hành cập nhật nhanh |
+
+---
+
+## 5. BÁO CÁO TUẦN (WEEKLY REPORTS)
+
+| Kỳ báo cáo | Phạm vi thời gian | Tệp tin báo cáo SSOT | Trạng thái | Điểm nhấn chính |
+| :--- | :--- | :--- | :---: | :--- |
+| **Tuần 21 - 27/10/2026** | 19/10/2026 – 26/10/2026 | [`weekly-report-2026-10-21-27.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/weekly-report-2026-10-21-27.md) | `Approved SSOT` | Báo cáo tuần tổng hợp chuẩn hóa phân định 2 nhóm Strategic Projects & Platform Projects |
+

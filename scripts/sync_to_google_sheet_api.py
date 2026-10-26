@@ -66,7 +66,7 @@ def sync_google_sheet(
     # 1. Chuẩn bị Batch Update cho các cell chính
     updates = []
 
-    # Overall Performance: A1, K9:K13, T9:T13
+    # Overall Performance: A1, K9:K13, K15:K20, T9:T13, T15:T19
     updates.append({
         "range": "'Overall Performance'!A1",
         "values": [[f"Update to: {days_elapsed}"]]
@@ -82,6 +82,17 @@ def sync_google_sheet(
         ]
     })
     updates.append({
+        "range": "'Overall Performance'!K15:K20",
+        "values": [
+            ["=K9/$K$5"],
+            ["=K10/$K$5"],
+            ["=K11/$K$5"],
+            ["=K12/$K$5"],
+            ["=K13/$K$5"],
+            ["=K15+K17+K18"]
+        ]
+    })
+    updates.append({
         "range": "'Overall Performance'!T9:T13",
         "values": [
             [organic_pv],
@@ -89,6 +100,16 @@ def sync_google_sheet(
             [direct_pv],
             [referral_pv],
             [others_pv]
+        ]
+    })
+    updates.append({
+        "range": "'Overall Performance'!T15:T19",
+        "values": [
+            ["=T9/$T$5"],
+            ["=T10/$T$5"],
+            ["=T11/$T$5"],
+            ["=T12/$T$5"],
+            ["=T13/$T$5"]
         ]
     })
 
@@ -149,8 +170,12 @@ def sync_google_sheet(
         "range": "'Cinema'!H37",
         "values": [[cinema_sub.get("Tin tức", 0)]]
     })
+    # Financial: B1
+    updates.append({
+        "range": "'Financial'!B1",
+        "values": [[f"Update to: {days_elapsed}"]]
+    })
 
-    # 2. Đọc và scale MTD Pivot & Full month Pivot (Cột I - Tháng 10)
     for pivot_sheet in ["MTD Pivot", "Full month Pivot"]:
         q_range = urllib.parse.quote(f"'{pivot_sheet}'!A:I")
         url_get = f"https://sheets.googleapis.com/v4/spreadsheets/{spreadsheet_id}/values/{q_range}?valueRenderOption=UNFORMATTED_VALUE"

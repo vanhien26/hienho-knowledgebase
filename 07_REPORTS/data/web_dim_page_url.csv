@@ -3335,3 +3335,21 @@ Airtime,Landing Page,Dynamic,https://www.momo.vn/airtime*
 Trạm sạc,Mini Web,Static,https://www.momo.vn/tien-ich-giao-thong/tram-sac
 Cây xăng,Mini Web,Static,https://www.momo.vn/tien-ich-giao-thong/cay-xang
 Giá xăng,Mini Web,Static,https://www.momo.vn/tien-ich-giao-thong/gia-xang
+Lãi Suất,Tool Page,Static,https://www.momo.vn/tai-chinh/lai-suat
+Lãi Suất,Page,Dynamic,https://www.momo.vn/tai-chinh/lai-suat/*
+Nhận Tiền Quốc Tế,Landing Page,Static,https://www.momo.vn/nhan-tien-quoc-te
+Nhận Tiền Quốc Tế,Landing Page,Dynamic,https://www.momo.vn/nhan-tien-quoc-te/*
+Quỹ Nhóm,Landing Page,Static,https://www.momo.vn/quy-nhom
+Quỹ Nhóm,Landing Page,Dynamic,https://www.momo.vn/quy-nhom/*
+Quản Lý Chi Tiêu,Landing Page,Static,https://www.momo.vn/quan-ly-chi-tieu
+Quản Lý Chi Tiêu,Landing Page,Dynamic,https://www.momo.vn/quan-ly-chi-tieu/*
+Giá Xăng,Tool Page,Dynamic,https://www.momo.vn/tien-ich-giao-thong/gia-xang*
+Giá Xăng,Tool Page,Static,https://www.momo.vn/tien-ich-giao-thong/gia-xang
+Garage,Tool Page,Dynamic,https://www.momo.vn/tien-ich-giao-thong/garage*
+Garage,Tool Page,Static,https://www.momo.vn/tien-ich-giao-thong/garage
+Cây Xăng,Tool Page,Dynamic,https://www.momo.vn/tien-ich-giao-thong/cay-xang*
+Cây Xăng,Tool Page,Static,https://www.momo.vn/tien-ich-giao-thong/cay-xang
+Trạm Sạc,Tool Page,Dynamic,https://www.momo.vn/tien-ich-giao-thong/tram-sac*
+Trạm Sạc,Tool Page,Static,https://www.momo.vn/tien-ich-giao-thong/tram-sac
+Hãng Xe,Tool Page,Dynamic,https://www.momo.vn/tien-ich-giao-thong/hang-xe*
+Hãng Xe,Tool Page,Static,https://www.momo.vn/tien-ich-giao-thong/hang-xe

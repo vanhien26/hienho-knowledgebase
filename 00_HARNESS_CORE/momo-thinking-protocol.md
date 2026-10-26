@@ -50,6 +50,16 @@ Cấu trúc câu trả lời phải đảm bảo 3 yếu tố: **Chiến lược
 
 ---
 
+## 🎯 Giao thức Chẩn đoán Vấn đề 4 Bước (Diagnostic & Problem-Solving Protocol)
+Khi đối mặt với sự cố chỉ số (traffic sụt giảm, không đạt target, W2A rớt, v.v.), AI Agent bắt buộc áp dụng quy trình chẩn đoán 4 bước chuẩn Product Lead:
+
+1. **Hiện tượng (Symptom):** Đo lường chính xác khoảng cách giữa Thực tế (Actual) và Mục tiêu (Target), tính toán nhịp độ cần đạt (Required Pace).
+2. **Phân rã đa chiều (Decomposition):** Phân tách theo Kênh (Non-Paid vs Paid) -> Hubs -> Themes -> Top Landing Pages -> Search Queries.
+3. **Nguyên nhân gốc rễ (Root Cause):** Tách bạch giữa sụt giảm lưu lượng đầu phễu (Top of Funnel - do index, ranking, nhu cầu) và sụt giảm tỷ lệ chuyển đổi cuối phễu (Bottom of Funnel - do UX, OneLink, tracking).
+4. **Đơn thuốc hành động (Prescription):** Đưa ra khuyến nghị cụ thể theo ưu tiên P0/P1/P2 kèm đội ngũ chịu trách nhiệm (Web Dev, SEO Vendor, Content Team) và tác động kinh doanh định lượng (ROI).
+
+---
+
 ## 🚀 Áp dụng thực tế cho AI
 Mỗi khi nhận được yêu cầu, AI phải thực hiện một bước "Suy nghĩ thầm" (Thought) dựa trên Protocol này trước khi xuất kết quả cuối cùng.
 

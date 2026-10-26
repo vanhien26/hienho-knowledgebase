@@ -176,6 +176,12 @@ def patch_excel_dynamic(file_path, days_elapsed, total_pv, organic_pv, paid_pv, 
                 update_cell(root, "K11", formula="", val=str(direct_pv))
                 update_cell(root, "K12", formula="", val=str(referral_pv))
                 update_cell(root, "K13", formula="", val=str(others_pv))
+                update_cell(root, "K15", formula="K9/$K$5", val=str(round(organic_pv / total_pv, 10)))
+                update_cell(root, "K16", formula="K10/$K$5", val=str(round(paid_pv / total_pv, 10)))
+                update_cell(root, "K17", formula="K11/$K$5", val=str(round(direct_pv / total_pv, 10)))
+                update_cell(root, "K18", formula="K12/$K$5", val=str(round(referral_pv / total_pv, 10)))
+                update_cell(root, "K19", formula="K13/$K$5", val=str(round(others_pv / total_pv, 10)))
+                update_cell(root, "K20", formula="K15+K17+K18", val=str(round((organic_pv + direct_pv + referral_pv) / total_pv, 10)))
                 update_cell(root, "T5", formula="SUM(T9:T13)", val=str(total_pv))
                 update_cell(root, "T6", formula="T5-S5", val=str(total_pv - 2654786))
                 update_cell(root, "T7", formula="IFERROR((T5/S5)-1, 0)", val=str(round((total_pv / 2654786) - 1, 10)))
@@ -184,6 +190,11 @@ def patch_excel_dynamic(file_path, days_elapsed, total_pv, organic_pv, paid_pv, 
                 update_cell(root, "T11", formula="", val=str(direct_pv))
                 update_cell(root, "T12", formula="", val=str(referral_pv))
                 update_cell(root, "T13", formula="", val=str(others_pv))
+                update_cell(root, "T15", formula="T9/$T$5", val=str(round(organic_pv / total_pv, 10)))
+                update_cell(root, "T16", formula="T10/$T$5", val=str(round(paid_pv / total_pv, 10)))
+                update_cell(root, "T17", formula="T11/$T$5", val=str(round(direct_pv / total_pv, 10)))
+                update_cell(root, "T18", formula="T12/$T$5", val=str(round(referral_pv / total_pv, 10)))
+                update_cell(root, "T19", formula="T13/$T$5", val=str(round(others_pv / total_pv, 10)))
                 content = ET.tostring(root, encoding="utf-8", xml_declaration=True)
 
             # Sheet 4: PaidNonPaid
@@ -391,7 +402,8 @@ def main():
         pv = int(r["metricValues"][0]["value"])
         t_info = matcher(lp)
         h_name = t_info[4] if t_info else "Khác"
-        if h_name == "Cinema":
+        sec = t_info[2] if t_info else ""
+        if h_name == "Cinema" or h_name.startswith("Cinema") or sec == "cinema":
             hubs_pv["cinema"] += pv
             clean_lp = lp.split("?")[0].rstrip("/")
             if clean_lp == "/cinema":
@@ -408,13 +420,13 @@ def main():
                 cinema_sub["Trang phim chi tiết"] += pv
             else:
                 cinema_sub["Others"] += pv
-        elif h_name in ["Ví Trả Sau", "Điểm Tín Dụng", "Vay Nhanh", "Tiết Kiệm Online", "Mở Thẻ Tín Dụng", "Trung Tâm Tài Chính", "Chứng Chỉ Quỹ", "Chứng Khoán"]:
+        elif h_name in ["Ví Trả Sau", "Điểm Tín Dụng", "Vay Nhanh", "Tiết Kiệm Online", "Mở Thẻ Tín Dụng", "Trung Tâm Tài Chính", "Chứng Chỉ Quỹ", "Chứng Khoán"] or sec == "Financial":
             hubs_pv["financial"] += pv
-        elif h_name in ["New User"]:
+        elif h_name in ["New User"] or sec == "Brand" and ("/tai-app" in lp or "/chao-ban-moi" in lp):
             hubs_pv["new_user"] += pv
-        elif h_name in ["Phạt Nguội", "Tiện Ích Giao Thông", "Phí Không Dừng", "Bảo Hiểm Ô Tô", "Bảo Hiểm Xe Máy"]:
+        elif h_name in ["Phạt Nguội", "Tiện Ích Giao Thông", "Phí Không Dừng", "Bảo Hiểm Ô Tô", "Bảo Hiểm Xe Máy"] or sec in ["vehicle-hub", "insurtech"]:
             hubs_pv["vehicle"] += pv
-        elif h_name in ["Student Hub"]:
+        elif h_name in ["Student Hub", "Student Pass"] or sec == "student":
             hubs_pv["student"] += pv
         else:
             hubs_pv["others"] += pv
@@ -429,8 +441,7 @@ def main():
     # 5. Cập nhật các đích dữ liệu (SSOT & Hubs)
     print("[5/6] Ghi dữ liệu đồng bộ vào SSOT Knowledge Base & Hubs /dashboard...")
     
-    # 5.1 Snapshot JSON
-    snapshot_path = BASE_DIR / "07_REPORTS" / "data" / f"monthly_10_2026_mtd_{days_elapsed}d.json"
+    # 5.1 Snapshot JSON (Chỉ duy nhất 1 file SSOT consolidated của tháng, không sinh file mtd_XXd lẻ)
     consolidated_path = BASE_DIR / "07_REPORTS" / "data" / "monthly_10_2026_consolidated.json"
     snapshot_payload = {
         "file_source": f"GA4 Data API (Property {PROPERTY_ID})",
@@ -472,8 +483,6 @@ def main():
             "Others": cinema_sub["Others"]
         }
     }
-    with open(snapshot_path, "w", encoding="utf-8") as f:
-        json.dump(snapshot_payload, f, ensure_ascii=False, indent=2)
     with open(consolidated_path, "w", encoding="utf-8") as f:
         json.dump(snapshot_payload, f, ensure_ascii=False, indent=2)
 
@@ -489,7 +498,7 @@ def main():
             "month": "2026-10",
             "daysElapsed": days_elapsed,
             "daysInMonth": days_in_month,
-            "report": f"monthly_10_2026_mtd_{days_elapsed}d.json",
+            "report": "monthly_10_2026_consolidated.json",
             "pv": total_pv,
             "target": TARGET_OCT,
             "dailyPace": round(daily_pace),
@@ -537,7 +546,7 @@ def main():
             "month": "2026-10",
             "daysElapsed": days_elapsed,
             "daysInMonth": days_in_month,
-            "report": f"monthly_10_2026_mtd_{days_elapsed}d.json"
+            "report": "monthly_10_2026_consolidated.json"
         }
         web_data["generatedAt"] = datetime.now().isoformat()
         oct_idx = web_data["months"].index("2026-10")

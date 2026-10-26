@@ -1,6 +1,8 @@
 # MOMO WEB PLATFORM — KNOWLEDGE BASE & TECH OPERATING SYSTEM
 
 > Hệ thống Tri thức Single Source of Truth (SSOT) và Bộ công cụ Tự động hóa Kỹ thuật dành cho **SEO / GEO & Product Lead** phục vụ toàn bộ chiến lược tăng trưởng, tối ưu hóa công cụ tìm kiếm thế hệ mới và phễu chuyển đổi Web-to-App của Kênh Web MoMo (`momo.vn`).
+> 
+> **MANDATORY SCAN FOR AI AGENTS & DEVELOPERS:** Bất kỳ AI Agent hoặc kỹ sư nào khi tiếp cận repository này bắt buộc phải quét file [`CODEBASE_MANIFEST.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/CODEBASE_MANIFEST.md) trước tiên để nắm toàn bộ kiến trúc hệ thống, SQLite Data Mart SSOT, danh mục lệnh CLI và các quy tắc vận hành cốt lõi.
 
 ---
 
