@@ -618,6 +618,13 @@ def main():
             hubs_pv=hubs_pv,
             cinema_sub=cinema_sub
         )
+
+        # Đồng bộ bảng Click to app by Project trong Projects Detail Flow
+        try:
+            from scripts.sync_projects_detail_flow_clicks import sync_google_sheet_clicks
+            sync_google_sheet_clicks()
+        except Exception as e:
+            print(f"[Sheets-API] Lưu ý đồng bộ Click to app Projects Detail Flow: {e}")
     except Exception as e:
         print(f"[Sheets-API] Lưu ý đồng bộ Sheets API: {e}")
 
