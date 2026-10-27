@@ -302,18 +302,24 @@ def main():
     print("[3/6] Kéo phân bổ kênh lưu lượng (Non-Paid vs. Paid)...")
     res_ch = run_ga4_report(token, {
         "dateRanges": date_ranges,
-        "dimensions": [{"name": "sessionDefaultChannelGroup"}],
+        "dimensions": [
+            {"name": "sessionDefaultChannelGroup"},
+            {"name": "sessionSource"}
+        ],
         "metrics": [
             {"name": "screenPageViews"},
             {"name": "sessions"},
             {"name": "totalUsers"}
         ],
-        "limit": 50
+        "limit": 10000
     })
 
     res_w2a = run_ga4_report(token, {
         "dateRanges": date_ranges,
-        "dimensions": [{"name": "sessionDefaultChannelGroup"}],
+        "dimensions": [
+            {"name": "sessionDefaultChannelGroup"},
+            {"name": "sessionSource"}
+        ],
         "dimensionFilter": {
             "andGroup": {
                 "expressions": [
@@ -330,12 +336,14 @@ def main():
             }
         },
         "metrics": [{"name": "eventCount"}],
-        "limit": 50
+        "limit": 10000
     })
 
     w2a_map = {}
     for r in res_w2a.get("rows", []):
-        w2a_map[r["dimensionValues"][0]["value"]] = int(r["metricValues"][0]["value"])
+        ch = r["dimensionValues"][0]["value"]
+        src = r["dimensionValues"][1]["value"]
+        w2a_map[(ch, src)] = int(r["metricValues"][0]["value"])
 
     channel_stats = {}
     organic_pv = 0
@@ -347,14 +355,20 @@ def main():
 
     for r in res_ch.get("rows", []):
         ch = r["dimensionValues"][0]["value"]
+        src = r["dimensionValues"][1]["value"]
         pv = int(r["metricValues"][0]["value"])
         sess = int(r["metricValues"][1]["value"])
         us = int(r["metricValues"][2]["value"])
-        w2a_cl = w2a_map.get(ch, 0)
-        channel_stats[ch] = {"pv": pv, "sessions": sess, "users": us, "w2a": w2a_cl}
+        w2a_cl = w2a_map.get((ch, src), 0)
+        channel_stats[f"{ch} | {src}"] = {"pv": pv, "sessions": sess, "users": us, "w2a": w2a_cl}
 
         cn = ch.lower()
-        if "organic search" in cn:
+        sn = src.lower()
+        # Quy tắc: sessionSource=in_app chuyển toàn bộ vào Referral
+        if sn == "in_app" or sn.startswith("in_app"):
+            referral_pv += pv
+            non_paid_pv += pv
+        elif "organic search" in cn:
             organic_pv += pv
             non_paid_pv += pv
         elif "direct" in cn:

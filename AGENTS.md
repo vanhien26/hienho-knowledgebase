@@ -164,3 +164,28 @@ Khi người dùng yêu cầu viết **Monthly Report cho Web Platform**, AI Age
    - Không lặp lại số liệu thô; tập trung diễn giải ý nghĩa kinh doanh, bài học và quyết định vận hành.
    - Đảm bảo quyền truy cập cho Ban Giám Đốc và các đầu mối tổng hợp (`tuong.nguyen`, `tram.phan1`, `nga.nguyen1`).
 
+
+
+---
+
+## 📑 QUY CHUẨN TỔNG HỢP BÁO CÁO TUẦN WEB PLATFORM (WEEKLY REPORT RULES)
+
+Khi người dùng ra lệnh tổng hợp Báo cáo Tuần (Weekly Report) từ thư mục thành viên trên Google Drive:
+
+1. **Quy trình vận hành:**
+   - Đọc toàn bộ các file báo cáo cá nhân của member trong thư mục tuần tương ứng (tại `/Users/hienhv/Library/CloudStorage/GoogleDrive-hien.ho@mservice.com.vn/My Drive/WEB GROWTH 2026/#6 - Report/Web Platform_Report (Markdown)/<tuần>/`).
+   - Đối chiếu và tổng hợp đầy đủ các hạng mục vào file báo cáo tổng hợp tuần của Web Platform (đồng bộ cả local repo và Google Drive Desktop).
+
+2. **Quy tắc Biên tập & Tinh chỉnh (Editing & Fine-tuning Rules):**
+   - **Không AI Slop:** Câu từ tự nhiên, gãy gọn, chuẩn văn phong Product/Tech thực chiến. Tuyệt đối không dùng từ sáo rỗng, hoa mỹ, văn mẫu AI (như *bứt phá ngoạn mục*, *bệ phóng*, *khẳng định vị thế*, *hành trình chuyển đổi*...).
+   - **Không ghi đội ngũ phụ trách:** Tuyệt đối không liệt kê cột hay thông tin đội ngũ phụ trách (không ghi Web Dev, Backend Team, Content Team, SEO Vendor, BU...).
+   - **Thuần text, không dùng Table hay Chart (trừ Report Số):** Ngoại trừ bảng số liệu hiệu suất đo lường (Report Số), toàn bộ các phần tóm tắt tổng quan, phối hợp liên phòng ban và kế hoạch hành động tiếp theo **bắt buộc trình bày dạng gạch đầu dòng (bullet points) thuần text**, không vẽ bảng (`Table`) hay biểu đồ.
+   - **Không đề xuất Priority:** Tuyệt đối không gắn nhãn độ ưu tiên dạng `[P0]`, `[P1]`, `[P2]`. Trình bày các đầu việc kế hoạch tuần tới tự nhiên dưới dạng danh sách gạch đầu dòng.
+   - **Loại bỏ các từ ngữ khó hiểu / cản trở người đọc:** Tuyệt đối không dùng các từ như "Phân hệ", "Động cơ", "Phân khối ngành", "Ươm tạo", "Vùng hiệu suất"... Thay bằng từ ngữ trực diện, dễ hiểu như "Mảng", "Nhóm tính năng", "Hệ thống", "Dịch vụ" hoặc gọi thẳng tên dự án/Hub.
+   - **Phân tách rõ ràng 2 Loại Dự Án:**
+     - **Nhóm Dự Án Dịch Vụ (Use Case / Hubs):** Cinema Hub, Financial Hub, Vehicle Hub, Insurtech Hub, New User & Web-to-App, Lottery Hub, Dịch Vụ Mới & Nạp Game.
+     - **Nhóm Dự Án Nền Tảng (Platform Enablers):** Hệ thống AI & MoSpark Core, Hệ thống Giao diện MoBase, CMS & Trình Soạn Thảo, Tìm Kiếm Website, Dữ Liệu Đo Lường & Tự Động Hóa Vận Hành.
+   - **Cấu trúc 3 thành tố trong từng dự án:**
+     - `Kết quả nổi bật`
+     - `Phối hợp`
+     - `Kế hoạch tuần tới`

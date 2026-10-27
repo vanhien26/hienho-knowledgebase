@@ -132,13 +132,19 @@ def fetch_ga4_mtd(days):
     # 2. Channels & W2A
     res_ch = run_ga4_report(token, {
         "dateRanges": date_ranges,
-        "dimensions": [{"name": "sessionDefaultChannelGroup"}],
+        "dimensions": [
+            {"name": "sessionDefaultChannelGroup"},
+            {"name": "sessionSource"}
+        ],
         "metrics": [{"name": "screenPageViews"}, {"name": "sessions"}, {"name": "totalUsers"}],
-        "limit": 50
+        "limit": 10000
     })
     res_w2a = run_ga4_report(token, {
         "dateRanges": date_ranges,
-        "dimensions": [{"name": "sessionDefaultChannelGroup"}],
+        "dimensions": [
+            {"name": "sessionDefaultChannelGroup"},
+            {"name": "sessionSource"}
+        ],
         "dimensionFilter": {
             "andGroup": {
                 "expressions": [
@@ -155,18 +161,19 @@ def fetch_ga4_mtd(days):
             }
         },
         "metrics": [{"name": "eventCount"}],
-        "limit": 50
+        "limit": 10000
     })
-    w2a_map = {r["dimensionValues"][0]["value"]: int(r["metricValues"][0]["value"]) for r in res_w2a.get("rows", [])}
+    w2a_map = {(r["dimensionValues"][0]["value"], r["dimensionValues"][1]["value"]): int(r["metricValues"][0]["value"]) for r in res_w2a.get("rows", [])}
 
     channels_data = {}
     for r in res_ch.get("rows", []):
         ch = r["dimensionValues"][0]["value"]
+        src = r["dimensionValues"][1]["value"]
         pv = int(r["metricValues"][0]["value"])
         sess = int(r["metricValues"][1]["value"])
         us = int(r["metricValues"][2]["value"])
-        cl = w2a_map.get(ch, 0)
-        channels_data[ch] = {"pv": pv, "sessions": sess, "users": us, "w2a": cl}
+        cl = w2a_map.get((ch, src), 0)
+        channels_data[(ch, src)] = {"pv": pv, "sessions": sess, "users": us, "w2a": cl}
 
     return {
         "days_elapsed": days,
@@ -228,11 +235,27 @@ def run_hybrid_sync(force_mtd=None, no_push=False):
     
     # Chuẩn bị số kênh MTD mới nhất
     ch_map = api_latest["channels"]
-    org_pv = sum(v["pv"] for k, v in ch_map.items() if "organic search" in k.lower())
-    dir_pv = sum(v["pv"] for k, v in ch_map.items() if "direct" in k.lower())
-    paid_pv = sum(v["pv"] for k, v in ch_map.items() if any(x in k.lower() for x in ["paid", "cpc", "display"]))
-    ref_pv = sum(v["pv"] for k, v in ch_map.items() if "referral" in k.lower())
-    oth_pv = api_latest["total_pv"] - (org_pv + dir_pv + paid_pv + ref_pv)
+    org_pv = 0
+    dir_pv = 0
+    paid_pv = 0
+    ref_pv = 0
+    oth_pv = 0
+    for (ch, src), v in ch_map.items():
+        cn = ch.lower()
+        sn = src.lower()
+        pv = v["pv"]
+        if sn == "in_app" or sn.startswith("in_app"):
+            ref_pv += pv
+        elif "organic search" in cn:
+            org_pv += pv
+        elif "direct" in cn:
+            dir_pv += pv
+        elif "referral" in cn:
+            ref_pv += pv
+        elif any(x in cn for x in ["paid", "cpc", "display"]):
+            paid_pv += pv
+        else:
+            oth_pv += pv
     non_paid_pv = org_pv + dir_pv + ref_pv + oth_pv
 
     daily_pace = round(api_latest["total_pv"] / target_api_days, 2)
