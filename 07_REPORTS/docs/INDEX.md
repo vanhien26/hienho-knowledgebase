@@ -66,5 +66,6 @@
 
 | Kỳ báo cáo | Phạm vi thời gian | Tệp tin báo cáo SSOT | Trạng thái | Điểm nhấn chính |
 | :--- | :--- | :--- | :---: | :--- |
-| **Tuần 21 - 27/10/2026** | 19/10/2026 – 26/10/2026 | [`weekly-report-2026-10-21-27.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/weekly-report-2026-10-21-27.md) | `Approved SSOT` | Báo cáo tuần tổng hợp chuẩn hóa phân định 2 nhóm Strategic Projects & Platform Projects |
+| **Tuần 26/10 - 01/11/2026** | 26/10/2026 – 01/11/2026 | [`weekly-report-2026-10-26-11-01.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/weekly-report-2026-10-26-11-01.md) | `Active SSOT` | Báo cáo tuần 44: Game Bò Sữa Bay, Quỹ Nhóm & Tách URL Thuế, Đóng gói Qwen 3.7 đa dự án |
+| **Tuần 21 - 27/10/2026** | 19/10/2026 – 26/10/2026 | [`weekly-report-2026-10-21-27.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/weekly-report-2026-10-21-27.md) | `Archive SSOT` | Báo cáo tuần 43 tổng hợp phân định 2 nhóm Strategic Projects & Platform Projects |
 
