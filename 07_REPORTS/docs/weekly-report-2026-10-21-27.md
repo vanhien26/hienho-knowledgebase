@@ -1,7 +1,7 @@
 # BÁO CÁO TIẾN ĐỘ TUẦN - WEB PLATFORM
 Tuần 43 (19/10/2026 – 26/10/2026)  
 Phạm vi: Kênh Web MoMo  
-Phân công: Hiến và Hoan follow toàn bộ dự án.
+Phân công: Web Product Lead & Engineering Team theo dõi toàn bộ dự án.
 
 ---
 
@@ -28,7 +28,7 @@ Phân công: Hiến và Hoan follow toàn bộ dự án.
 - Dịch vụ mới & Nạp game: Hoàn thành landing page giới thiệu ChatGPT kèm component Bảng giá mới. Duy trì cổng nạp thẻ game chạy ổn định qua 4 nhà cung cấp.
 
 **Nhóm Dự Án Nền Tảng (Platform Enablers):**
-- MoSpark Core & Hệ thống AI: Hoàn thành 24 commits lớn, cập nhật 6 bản DB. Tái cấu trúc không gian viết bài sang kiến trúc MVVM 4 lớp; tích hợp mô hình LLM nội bộ MoMo song song với Gemini, Claude, OpenAI qua chuẩn xác thực Bearer JWT; tự động đưa khung tiêu đề H1/H2/H3 vào prompt AI; hoàn thiện CMS adapter xuất bản đa kênh.
+- MoSpark Core & Hệ thống AI: Hoàn thành 24 commits lớn, cập nhật 6 bản DB. Tái cấu trúc không gian viết bài sang kiến trúc MVVM 4 lớp; hoàn tất đóng gói bộ thư viện API nội bộ công ty (Company LLM Gateway Client Package) tích hợp mô hình Qwen 3.7 dùng chung đa dự án (chuẩn xác thực Bearer JWT bảo mật cao, zero-cost token thương mại); mở rộng tích hợp trực tiếp vào MoMo AI (Trợ lý tư vấn tài chính / Proposal Engine) và MoSpark Growth Dashboard (tiêu thụ dữ liệu GA4/GSC được đồng bộ để tự động sinh tóm tắt insight, phân tích nguyên nhân gốc rễ RCA và cảnh báo dị biệt); hoàn thiện tự động trích xuất tiêu đề H1/H2/H3 vào prompt và CMS adapters xuất bản đa kênh.
 - MoBase Design System: Đưa menu điều hướng 2 tầng (Header Advance) lên chạy thực tế tại Financial Hub. Đóng gói component Bảng giá dùng chung cho các trang dịch vụ số.
 - CMS & Trình soạn thảo (Admin Tool Webview In-App & Out-App - BMC): Nâng cấp Admin Tool phục vụ Webview In-App và Out-App cho nhánh BMC; đóng gói Thẻ Coupon (momo-coupon-card) và Mockup điện thoại tương tác từng bước (cas-htu-popup) chèn linh hoạt qua CKEditor; hiển thị quy trình duyệt bài 4 cấp, tối ưu nạp trang danh mục lớn, thêm modal đọc bài và hỗ trợ tìm bài blog trên Puck Editor.
 - Tìm kiếm Website: Go-live Phase 1 trên Production (`/tim-kiem`) với Thẻ chuyển tiền qua SĐT (nhận diện client-side bảo mật kèm nút OneLink) và Banner Bạn Mới `CHAOMOMO` 500K; nâng cấp Backend Search V3 tích hợp Custom Search Pages và sửa thuật toán phân trang/đếm tổng chống nhảy trang.
@@ -235,14 +235,18 @@ Phân công: Hiến và Hoan follow toàn bộ dự án.
 
 ### 1. MoSpark Core & Hệ thống AI
 
-- **Key Owner:** Trần Công Hoàng Trọng
+- **Đội ngũ phụ trách:** AI Platform & Web Engineering Team
 - **Kết quả & Tác động số liệu:**
   - **Nâng cấp kiến trúc và độ ổn định:** Hoàn thành 24 commits lớn và ban hành 6 bản cập nhật cơ sở dữ liệu. Tái cấu trúc khu vực viết bài sang mô hình MVVM 4 lớp độc lập (tách biệt dịch vụ dữ liệu, xử lý nghiệp vụ, lưu trữ trạng thái và giao diện) giúp cô lập lỗi và kiểm soát chặt quy trình từ chọn chủ đề, duyệt dàn ý đến xuất bản.
-  - **Tích hợp mô hình AI nội bộ:** Kết nối mô hình LLM nội bộ MoMo song song với Google Gemini, Claude, OpenAI qua chuẩn xác thực an toàn Bearer JWT.
-  - **Tự động hóa sinh nội dung theo cấu trúc:** Tự động trích xuất khung tiêu đề (H1/H2/H3) đưa vào prompt sinh nội dung của AI; hoàn thiện hệ thống adapter (`cms-adapters/`) để xuất bản nội dung đa kênh.
+  - **Hoàn thiện đóng gói API công ty đa dự án (Model Qwen 3.7):** Hoàn tất đóng gói bộ thư viện API nội bộ công ty (Company LLM Gateway SDK / Client Package) tích hợp mô hình chủ lực **Qwen 3.7** qua chuẩn xác thực Bearer JWT bảo mật cao, zero-cost token thương mại và loại bỏ rủi ro rò rỉ dữ liệu. Bộ API đóng gói này sẵn sàng cho phép đa dự án Web Platform tích hợp trực tiếp:
+    - **Tích hợp MoMo AI (Financial Proposal Engine & RAG):** Cung cấp năng lực suy luận ngôn ngữ tự nhiên chuyên sâu, phản hồi ngữ cảnh tài chính cá nhân kết hợp cùng bộ quy tắc tức thì (Rule Engine) có sẵn.
+    - **Tích hợp MoSpark Growth Dashboard (GA4 & GSC Ingestion):** Khai thác nguồn dữ liệu hiệu suất GA4 và Google Search Console đã được đồng bộ tự động về MoSpark để phân tích nguyên nhân gốc rễ (Root Cause Analysis - RCA), phát hiện dị biệt (Anomaly Detection) và tự động sinh bản tin tóm tắt điều hành (Executive Summary) cho toàn Website.
+    - **Tự động hóa sinh nội dung theo cấu trúc:** Tự động trích xuất khung tiêu đề (H1/H2/H3) đưa vào prompt sinh nội dung của AI; hoàn thiện hệ thống adapter (`cms-adapters/`) để xuất bản nội dung đa kênh song song với các mô hình Gemini, Claude, OpenAI khi cần đối chiếu chéo.
 - **Phối hợp & Điểm nghẽn cần chốt:**
-  - **Legal:** Hoàn thiện quy chuẩn tuân thủ và bản quyền cho nội dung được tạo tự động bởi mô hình AI nội bộ.
+  - **Legal & Data Governance:** Hoàn thiện quy chuẩn tuân thủ, bản quyền nội dung và thiết lập bộ lọc kiểm duyệt an toàn (Safety Guardrails) cho dữ liệu đầu ra từ mô hình Qwen 3.7 trước khi mở rộng ra MoMo AI và Dashboard.
 - **Kế hoạch tuần tới:**
+  - Triển khai endpoint tích hợp Qwen 3.7 vào module MoMo AI trên Financial Hub và các công cụ tính toán tài chính.
+  - Kết nối pipeline dữ liệu GA4/GSC của MoSpark Dashboard với Qwen 3.7 để kích hoạt tính năng tự động sinh báo cáo tuần/tháng và giải trình biến động traffic.
   - Đưa tính năng phân loại bài viết, hạn mức xuất bản và giao diện duyệt dàn ý (`ReviewOutlineDrawer`) lên Production.
   - Triển khai các cổng xuất bản tự động ra các trang chiến dịch và đối tác.
 

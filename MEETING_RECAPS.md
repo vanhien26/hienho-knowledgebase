@@ -7,6 +7,41 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 
 ## DANH SÁCH BẢN GHI RECAPS
 
+### Bản ghi ngày 28/10/2026: Hoàn Tất Đóng Gói API Công Ty (Model Qwen 3.7) Dùng Chung Đa Dự Án - Tích Hợp MoMo AI & MoSpark Growth Dashboard (GA4 & GSC Ingestion)
+> **Thành phần:** AI Platform Team x Web Product Lead x Web Engineering Team x Data Team  
+> **Mục tiêu:** Đồng bộ tiến độ đóng gói thư viện API nội bộ công ty (Company LLM Gateway SDK) với mô hình chủ lực Qwen 3.7; thống nhất kiến trúc tích hợp đa dự án Web Platform gồm MoMo AI (Proposal Engine) và MoSpark Growth Dashboard (kết nối dữ liệu GA4/GSC được đồng bộ tự động để phân tích RCA).
+
+#### 1. Đóng Gói API Nội Bộ Công Ty (Company LLM Gateway SDK - Model Qwen 3.7)
+- **Hạ Tầng & Xác Thực:**
+  - Hoàn tất đóng gói SDK client (`@momo/llm-gateway-client`) kết nối trực tiếp vào cụm máy chủ LLM nội bộ của MoMo.
+  - Chuẩn xác thực: Bearer JWT bảo mật cao, phân quyền theo mã dự án (`X-Project-Id`).
+  - Lợi thế vượt trội: Không phát sinh chi phí token bên ngoài (zero commercial cost), bảo mật thông tin nội bộ 100%, kiểm soát độ trễ và không bị phụ thuộc vào hạn ngạch (rate limit) của các nhà cung cấp ngoại.
+- **Mô Hình Chủ Lực:** Triển khai chính thức model **Qwen 3.7** (Instruct & Reasoning) tối ưu cho việc hiểu tiếng Việt, trích xuất dữ liệu có cấu trúc và lập luận logic.
+
+#### 2. Kế Hoạch Tích Hợp Đa Dự Án Trên Web Platform
+- **Dự Án 1: MoMo AI / Proposal Engine (Financial Hub & Công Cụ Tính Toán):**
+  - Chuyển dịch từ mô hình thuần Rule-based sang **Kiến trúc Lai Đa Tầng (Hybrid Dual-Engine Architecture)**.
+  - Tầng 1 (Client-Side Instant Heuristics, <10ms): Xử lý phản hồi tức thì khi người dùng kéo thanh trượt (slider) hoặc nhập số liệu cơ bản, hiển thị ngay nhận xét hóm hỉnh (Gentle / Roast Mode) và CTA tương ứng.
+  - Tầng 2 (Deep Contextual Reasoning qua Qwen 3.7): Kích hoạt bất đồng bộ khi người dùng yêu cầu phân tích sâu hoặc đặt câu hỏi phức tạp. Qwen 3.7 phân tích cơ cấu tài chính, đối chiếu thu nhập - nợ và đưa ra phương án tối ưu hóa dòng tiền.
+  - Cơ chế Graceful Fallback: Nếu API phản hồi chậm quá 2.5s hoặc mất kết nối, UI tự động giữ nguyên kết quả Tầng 1, không gián đoạn trải nghiệm.
+- **Dự Án 2: MoSpark Growth Dashboard (Tiêu Thụ Dữ Liệu GA4 & GSC Đã Đồng Bộ):**
+  - Khai thác nguồn dữ liệu hiệu suất Google Analytics 4 và Google Search Console đã được pipeline kỹ thuật đồng bộ tự động về MoSpark Datamart.
+  - Qwen 3.7 được kết nối để tự động:
+    1. Sinh bản tin tóm tắt điều hành định kỳ (Executive Summaries) cho WBR/MBR.
+    2. Chẩn đoán nguyên nhân gốc rễ (Root Cause Analysis - RCA) khi phát hiện biến động traffic hoặc sụt giảm kênh Non-Paid / Paid.
+    3. Tự động cảnh báo dị biệt (Anomaly Detection) về đứt gãy luồng chuyển đổi Onelink Web-to-App.
+    4. Tự động đề xuất danh mục hành động P0/P1/P2 cho các Squad chuyên môn.
+- **Dự Án 3: MoSpark Content Studio (Sinh Nội Dung Theo Cấu Trúc):**
+  - Cung cấp tiêu đề H1/H2/H3 và ngữ cảnh thực tế của sản phẩm cho Qwen 3.7 để tạo dàn ý và bài viết E-E-A-T chuẩn SEO/GEO.
+
+#### 3. Action Items & Kế Hoạch Bàn Giao
+- **AI Platform Team:** Triển khai API gateway endpoint và cấp phát JWT token môi trường Staging/Production cho nhánh Web Platform trước ngày 30/10/2026.
+- **Web Frontend Team:** Tích hợp module `@momo/llm-gateway-client` vào component MoMo AI trên Financial Hub; gắn đầy đủ 6 sự kiện Umami tracking.
+- **Data & Web Engineering Team:** Hoàn thiện pipeline cấp dữ liệu GA4/GSC từ MoSpark Datamart vào prompt template của Qwen 3.7 trên Growth Dashboard.
+- **Legal Team:** Hoàn thiện văn bản rà soát tuân thủ và bộ lọc an toàn thông tin (Safety Guardrails) cho nội dung tài chính tự động.
+
+---
+
 ### Bản ghi ngày 28/10/2026: Chiến Dịch Game Bò Sữa Bay (Cinema Hub) - Kế Hoạch Seeding, TVC Rạp & Điều Chỉnh Game Rules
 > **Thành phần:** Web Product Lead x Cinema Team x Web Dev Team  
 > **Mục tiêu:** Đồng bộ yêu cầu chiến dịch phát hành Game Bò Sữa Bay trên Cinema Hub, kế hoạch quảng bá đa kênh (Seeding, TVC rạp, Video diễn viên trải nghiệm) và quy chuẩn bộ Game Rules mới để kịp tiến độ bàn giao testing trước thứ Sáu (31/10/2026).

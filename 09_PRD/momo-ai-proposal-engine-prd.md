@@ -1,5 +1,5 @@
-# ĐẶC TẢ SẢN PHẨM & KỸ THUẬT: MOMO AI PROPOSAL ENGINE (RULE-BASED DYNAMIC RECOMMENDATION)
-## BỘ MÁY GỢI Ý & PHẢN HỒI THÔNG MINH CHO CÔNG CỤ TÍNH TOÁN WEB PLATFORM
+# ĐẶC TẢ SẢN PHẨM & KỸ THUẬT: MOMO AI PROPOSAL ENGINE (HYBRID DUAL-ENGINE ARCHITECTURE)
+## BỘ MÁY GỢI Ý & PHẢN HỒI THÔNG MINH KẾT HỢP CLIENT-SIDE RULE ENGINE & CỔNG API QWEN 3.7 NỘI BỘ CHO WEB PLATFORM
 
 ---
 
@@ -15,15 +15,15 @@
   <tbody>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tên Tính Năng / Engine</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MoMo AI Proposal Engine (Client-Side Dynamic Rule Engine)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MoMo AI Proposal Engine (Hybrid Architecture: Client-Side Rule Matrix + Company Qwen 3.7 Gateway)</strong></td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Mã Tài Liệu</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>PRD-WEB-AI-PROPOSAL-2026-V1</code></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code>PRD-WEB-AI-PROPOSAL-2026-V2</code></td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phạm Vi Áp Dụng</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Toàn bộ 26 công cụ tài chính & tiện ích tính toán trực thuộc Kênh Web MoMo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Toàn bộ 26 công cụ tài chính &amp; tiện ích tính toán trực thuộc Kênh Web MoMo</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trọng Tâm Triển Khai (Wave 1)</strong></td>
@@ -31,16 +31,17 @@
         1. Tính Lương Gross - Net (<code>/tai-chinh/tinh-luong</code>)<br/>
         2. Chia Hóa Đơn Du Lịch (<code>/tai-chinh/cong-cu/chia-tien-du-lich</code>)<br/>
         3. Phân Bổ Lương 50/30/20 (<code>/tai-chinh/phan-bo-luong</code>)<br/>
-        4. Dự Toán Đám Cưới &amp; Thuê Nhà (Dòng Tiền Cột Mốc)
+        4. Dự Toán Đám Cưới &amp; Thuê Nhà (Dòng Tiền Cột Mốc)<br/>
+        5. Cổng Tỷ Giá &amp; Giá Vàng (<code>/tai-chinh/ty-gia</code>, <code>/tai-chinh/gia-vang</code>)
       </td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trạng Thái</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>APPROVED &amp; READY FOR DEV BUILD</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>APPROVED &amp; INTEGRATING COMPANY QWEN 3.7 API</strong></td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Đội Ngũ Triển Khai</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Frontend Team (Lead), Content/Copywriting Team, QA Team</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Frontend Team, AI Platform Team, Content/Copywriting Team, QA Team</td>
     </tr>
   </tbody>
 </table>
@@ -51,16 +52,35 @@
 
 ### 1.1 Vấn Đề Thực Tế (Problem Statement)
 - Các công cụ tính toán tài chính trên Web thường cho ra kết quả số liệu rất chính xác nhưng **khô cứng và thiếu cảm xúc**.
-- Thành phần *"Trợ lý MoMo AI"* hiện tại trên trang Tính Lương đang sử dụng mẫu câu tĩnh rập khuôn (*"Lương thực nhận chiếm 89% tổng Gross. Bạn có thể trích từ 2.670.000đ/tháng..."*), khiến người dùng có cảm giác đọc tài liệu ngân hàng hơn là một người bạn trợ lý tài chính thông minh.
-- Việc gọi API LLM thực thụ (OpenAI / Claude / Gemini) để sinh câu thoại theo thời gian thực gặp 3 rào cản chí mạng:
-  1. **Độ trễ cao (1.5s - 3s):** Phá vỡ trải nghiệm tính toán tức thì (Zero-Latency UI).
-  2. **Chi phí token tích lũy:** Hàng triệu lượt tính toán mỗi tháng sẽ phát sinh chi phí hạ tầng lớn.
-  3. **Rủi ro sai lệch số liệu tài chính (Hallucination):** Khó kiểm soát tuyệt đối tính chuẩn xác của các khuyến nghị tài chính cá nhân.
+- Thành phần *"Trợ lý MoMo AI"* trước đây trên các trang tính toán sử dụng mẫu câu tĩnh rập khuôn (*"Lương thực nhận chiếm 89% tổng Gross. Bạn có thể trích từ 2.670.000đ/tháng..."*), khiến người dùng có cảm giác đọc tài liệu kỹ thuật hơn là một người bạn trợ lý tài chính thông minh.
+- Trước đây, việc gọi API LLM thương mại bên ngoài (OpenAI / Claude / Gemini) để sinh câu thoại theo thời gian thực gặp 3 rào cản lớn:
+  1. **Độ trễ cao (1.5s - 3s):** Phá vỡ trải nghiệm tính toán tức thì (Zero-Latency UI) khi người dùng kéo thanh trượt (slider).
+  2. **Chi phí token tích lũy:** Hàng triệu lượt tính toán mỗi tháng sẽ phát sinh chi phí thương mại rất lớn.
+  3. **Rủi ro rò rỉ dữ liệu và bảo mật:** Không được đưa số liệu tài chính nhạy cảm của người dùng ra các API bên thứ ba không thuộc hạ tầng kiểm soát của MoMo.
 
-### 1.2 Giải Pháp: Client-Side Pseudo-AI Engine
-- Thay thế hoàn toàn backend LLM bằng **Bộ máy ma trận điều kiện chạy 100% tại Client (Client-Side Rule Matrix)**.
-- Kết hợp công thức toán học nội suy với kho câu từ **catchy, nhẹ nhàng, hài hước, mang hơi thở đời thường và văn hóa mạng xã hội (Gen Z / Dân văn phòng)**.
-- Đảm bảo thời gian phản hồi là **0ms**, chi phí vận hành bằng **0đ**, 100% an toàn thương hiệu và tối đa hóa tỷ lệ nhấp chuyển đổi (CTR) vào ứng dụng MoMo.
+### 1.2 Giải Pháp: Kiến Trúc Lai Đa Tầng (Hybrid Dual-Engine Architecture)
+Với việc Đội ngũ Nền tảng AI hoàn thành đóng gói thành công **Bộ thư viện API nội bộ công ty (Company LLM Gateway SDK)** tích hợp mô hình **Qwen 3.7** chạy trên hạ tầng máy chủ của MoMo:
+- **Tầng 1 (Client-Side Instant Heuristics - Zero-Latency Engine):** Vận hành bộ máy ma trận điều kiện chạy 100% tại Client. Đảm bảo thời gian phản hồi tức thì **< 10ms**, chi phí vận hành bằng **0đ**, 100% an toàn thương hiệu và tối đa hóa tỷ lệ nhấp chuyển đổi (CTR) vào ứng dụng MoMo ngay khi người dùng thao tác nhập liệu.
+- **Tầng 2 (Deep Contextual Reasoning - Company Qwen 3.7 Gateway):** Kích hoạt bất đồng bộ (streaming hoặc on-demand qua nút "Phân Tích Sâu MoMo AI" hoặc khi người dùng đặt câu hỏi tài chính phức tạp). Mô hình **Qwen 3.7** cung cấp năng lực suy luận ngữ cảnh vượt trội, phân tích chi tiết dòng tiền cá nhân và đưa ra lời khuyên tài chính cá nhân hóa mà không phát sinh chi phí token bên ngoài và bảo mật 100% dữ liệu nội bộ.
+- **Cơ chế Dự phòng (Graceful Degradation):** Khi mạng chậm hoặc API Qwen 3.7 vượt ngưỡng timeout 2.5s, hệ thống tự động giữ nguyên kết quả Tầng 1 mà không làm gián đoạn trải nghiệm người dùng.
+
+```mermaid
+flowchart TD
+    UserAction["Người dùng thao tác (Nhập số / Kéo Slider)"] --> Step1["Tầng 1: Client-Side Rule Engine (< 10ms)"]
+    Step1 --> DisplayInstant["Hiển thị ngay lập tức Nhận định Catchy + Nút CTA Động"]
+    
+    UserAction -. "Bấm 'Phân tích sâu' hoặc Câu hỏi phức tạp" .-> Step2["Tầng 2: Company LLM Gateway (Qwen 3.7)"]
+    
+    subgraph Company_Infrastructure ["Hạ Tầng Nội Bộ MoMo (Secure LLM Gateway)"]
+        Step2 --> CheckAuth["Bearer JWT Authentication"]
+        CheckAuth --> ModelQwen["Mô hình Qwen 3.7 MoMo Platform"]
+        ModelQwen --> StreamResponse["Streaming Response (SSE / JSON)"]
+    end
+    
+    StreamResponse --> UpdateRichUI["Cập nhật Lời khuyên Chuyên sâu & Phương án Hành động"]
+    
+    Step2 -. "Timeout > 2.5s hoặc Lỗi mạng" .-> FallbackRule["Graceful Fallback: Giữ nguyên Tầng 1"]
+```
 
 ---
 
@@ -588,11 +608,102 @@ export const AiProposalBox: React.FC<SalaryParams> = (props) => {
 };
 ```
 
+### File 3: Module Kết Nối Company LLM Gateway (Model Qwen 3.7) (`src/services/companyLlmService.ts`)
+
+```typescript
+// src/services/companyLlmService.ts
+/**
+ * Module kết nối Cổng API LLM Nội Bộ Công Ty (Company LLM Gateway)
+ * Tích hợp mô hình Qwen 3.7 dùng chung đa dự án (Web Platform, MoMo AI, MoSpark)
+ */
+
+export interface QwenAnalysisRequest {
+  toolId: string;
+  financialMetrics: Record<string, number | string>;
+  userIntent?: string;
+  toneMode?: 'GENTLE' | 'ROAST';
+}
+
+export interface QwenAnalysisResponse {
+  tag: string;
+  deepAnalysis: string;
+  recommendedActions: string[];
+  suggestedProducts: {
+    productName: string;
+    actionLabel: string;
+    deeplink: string;
+  }[];
+  isAiGenerated: boolean;
+}
+
+export const fetchQwenFinancialInsight = async (
+  payload: QwenAnalysisRequest,
+  timeoutMs: number = 2500
+): Promise<QwenAnalysisResponse | null> => {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+
+  try {
+    const response = await fetch('/api/internal/llm-gateway/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Project-Id': 'momo-web-ai-financial',
+        'Authorization': `Bearer ${process.env.INTERNAL_MOMO_LLM_JWT || ''}`,
+      },
+      body: JSON.stringify({
+        model: 'qwen-3.7-instruct',
+        temperature: 0.3,
+        max_tokens: 350,
+        messages: [
+          {
+            role: 'system',
+            content: `Bạn là Trợ lý Tài chính MoMo AI (Model Qwen 3.7 nội bộ). 
+Nhiệm vụ: Đưa ra nhận xét tài chính sâu sắc, thực tế, ngắn gọn (dưới 120 từ), chuẩn văn phong ${payload.toneMode === 'ROAST' ? 'hóm hỉnh, cà khịa nhẹ nhàng văn phòng Gen Z' : 'ấm áp, đồng hành, tích cực'}. 
+Tuyệt đối không bịa số liệu, bám sát các chỉ số đầu vào và đề xuất đúng giải pháp sản phẩm MoMo.`
+          },
+          {
+            role: 'user',
+            content: JSON.stringify({
+              tool: payload.toolId,
+              metrics: payload.financialMetrics,
+              intent: payload.userIntent || 'general_financial_health'
+            })
+          }
+        ]
+      }),
+      signal: controller.signal
+    });
+
+    clearTimeout(timer);
+
+    if (!response.ok) {
+      console.warn(`[Qwen Gateway] Server error: ${response.status}`);
+      return null;
+    }
+
+    const data = await response.json();
+    return {
+      tag: payload.toneMode === 'ROAST' ? 'MOMO AI CÀ KHỊA (QWEN 3.7)' : 'MOMO AI CHUYÊN GIA (QWEN 3.7)',
+      deepAnalysis: data.choices?.[0]?.message?.content || '',
+      recommendedActions: data.recommendations || [],
+      suggestedProducts: data.products || [],
+      isAiGenerated: true
+    };
+  } catch (error: any) {
+    clearTimeout(timer);
+    // Graceful fallback to client-side rule engine
+    console.info('[Qwen Gateway] Timeout or network failure, falling back to client-side rule matrix.');
+    return null;
+  }
+};
+```
+
 ---
 
 ## 5. BỘ CHỈ SỐ ĐO LƯỜNG & SỰ KIỆN UMAMI TRACKING
 
-Đội ngũ kỹ thuật đảm bảo gắn 4 sự kiện chuẩn vào Umami để đo lường hiệu quả chuyển đổi thực tế:
+Đội ngũ kỹ thuật đảm bảo gắn 6 sự kiện chuẩn vào Umami để đo lường hiệu quả chuyển đổi thực tế:
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.85em;">
   <thead>
@@ -604,7 +715,7 @@ export const AiProposalBox: React.FC<SalaryParams> = (props) => {
   </thead>
   <tbody>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:6px;">Hiển thị khung AI Proposal</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Hiển thị khung AI Proposal (Tầng 1)</td>
       <td style="border:1px solid #94a3b8; padding:6px;"><code>ai_proposal_impression</code></td>
       <td style="border:1px solid #94a3b8; padding:6px;"><code>{ tool: string, mode: 'GENTLE'|'ROAST', logic_tier: string }</code></td>
     </tr>
@@ -623,6 +734,16 @@ export const AiProposalBox: React.FC<SalaryParams> = (props) => {
       <td style="border:1px solid #94a3b8; padding:6px;"><code>ai_proposal_click_cta</code></td>
       <td style="border:1px solid #94a3b8; padding:6px;"><code>{ tool: string, cta_text: string, deeplink: string }</code></td>
     </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px;">Kích hoạt phân tích chuyên sâu Qwen 3.7 (Tầng 2)</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><code>ai_proposal_qwen_call</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><code>{ tool: string, model: 'qwen-3.7-instruct' }</code></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px;">Nhận kết quả hoặc kích hoạt Fallback</td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><code>ai_proposal_qwen_result</code></td>
+      <td style="border:1px solid #94a3b8; padding:6px;"><code>{ tool: string, status: 'SUCCESS'|'FALLBACK', latency_ms: number }</code></td>
+    </tr>
   </tbody>
 </table>
 
@@ -630,7 +751,9 @@ export const AiProposalBox: React.FC<SalaryParams> = (props) => {
 
 ## 6. KẾ HOẠCH BÀN GIAO & TIÊU CHÍ NGHIỆM THU (ACCEPTANCE CRITERIA)
 
-- **Tiêu chí 1 (Zero-Latency):** Mọi sự thay đổi về số liệu nhập (lương Gross, bảo hiểm, người phụ thuộc) phải cập nhật ngay lập tức nội dung gợi ý AI trong vòng `< 10ms`, không có hiện tượng giật/lag.
+- **Tiêu chí 1 (Zero-Latency Tầng 1):** Mọi sự thay đổi về số liệu nhập (lương Gross, bảo hiểm, người phụ thuộc) phải cập nhật ngay lập tức nội dung gợi ý AI trong vòng `< 10ms`, không có hiện tượng giật/lag.
 - **Tiêu chí 2 (Dynamic Deep Link):** Nhãn nút CTA và URL Deep Link phải thay đổi tương ứng theo từng ngữ cảnh số liệu (không dùng hardcode tĩnh).
 - **Tiêu chí 3 (Cross-Browser LocalStorage):** Chế độ chọn `Cà khịa` hoặc `Nhẹ nhàng` phải được lưu vào `localStorage` để khi người dùng reload trang hoặc chuyển sang công cụ khác không bị mất tùy chọn.
-- **Tiêu chí 4 (Tracking Validation):** Đầy đủ 4 sự kiện Umami bắn thành công trong tab Network của DevTools.
+- **Tiêu chí 4 (Tracking Validation):** Đầy đủ 6 sự kiện Umami bắn thành công trong tab Network của DevTools.
+- **Tiêu chí 5 (Hybrid Dual-Engine Graceful Fallback):** Khi kích hoạt phân tích Tầng 2 qua Company LLM Gateway (Qwen 3.7), nếu gặp lỗi mạng hoặc thời gian phản hồi vượt quá 2.5s, hệ thống phải tự động fallback 100% về Tầng 1 mà không hiển thị màn hình lỗi, bảo toàn trải nghiệm người dùng liền mạch.
+- **Tiêu chí 6 (Zero-PII Compliance):** Dữ liệu truyền tải qua Company LLM Gateway tuyệt đối không chứa thông tin định danh cá nhân (PII như SĐT, Họ tên, CCCD); chỉ gửi các biến số tài chính dạng số.

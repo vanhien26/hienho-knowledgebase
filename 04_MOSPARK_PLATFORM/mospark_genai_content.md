@@ -842,7 +842,7 @@ Việc xác định rõ đơn giá cố định trên từng bài viết giúp P
 
 **Kế hoạch Nâng cấp Tính năng trong H2/2026:**
 
-1. **Enterprise Multi-Model Hub:** Tích hợp cổng API gateway tập trung của công ty hỗ trợ đa dạng model (Gemini, Claude, GPT) tùy theo nhu cầu và tính chất của từng dự án Cell Team.
+1. **Enterprise Multi-Model Hub (Company Qwen 3.7 Gateway):** Hoàn tất đóng gói bộ thư viện SDK API Gateway nội bộ công ty với mô hình chủ lực **Qwen 3.7** (chuẩn xác thực Bearer JWT, zero-cost token thương mại, bảo mật nội bộ 100%), hỗ trợ song song các mô hình Gemini, Claude, GPT khi cần đối chiếu chéo. Sẵn sàng tích hợp dùng chung đa dự án (MoMo AI Proposal Engine, MoSpark Growth Dashboard kết nối dữ liệu GA4/GSC, và CMS Content Studio).
 2. **GenAI Billing & Chargeback System:** Tự động tổng hợp chi phí tạo bài viết từ GenAI (dựa trên token tiêu thụ thực tế) để xuất "hóa đơn ảo" khấu trừ trực tiếp vào ngân sách (Budgets) của từng Cell Team.
 3. **Custom Use-Case Prompts (Content Writer Agent):** Cho phép cấu hình các Prompts chuyên biệt viết Outline/Detail cho từng Use Case cụ thể. Mỗi dự án được gán một "Content Writer" riêng biệt được tối ưu hóa để đảm bảo chất lượng văn phong, kiểm soát chi phí, và định hướng chính xác theo Business Context.
 4. **Creative GenAI Suite (Image & Video):** Tích hợp tính năng tự động tạo hình ảnh minh họa (theo template chuẩn Mobase) và video ngắn từ prompt trực tiếp trong luồng sản xuất content.
@@ -903,6 +903,7 @@ Hệ thống được thiết kế mở rộng dựa trên việc học hỏi c�
 *   **Dữ liệu Thị trường:** MoSpark SEO Keyword Inventory
 
 ## 14. Change Log
+- **v4.14 (2026-10-28):** Hoàn tất đóng gói Company LLM Gateway SDK (Model Qwen 3.7) dùng chung đa dự án: tích hợp MoMo AI Proposal Engine, MoSpark Growth Dashboard (kết nối dữ liệu GA4/GSC) và Content Studio tự động hóa theo cấu trúc H1/H2/H3.
 - **v4.13 (2026-06-14):** Bổ dung mục 6.8 đặc tả riêng quy trình sản xuất Long Content Section (SEO Text) cho trang Microsite địa phương và Merchant Page, đồng bộ hóa vị trí hiển thị và cơ chế grounding. (Hiến).
 - **v4.12 (2026-06-14):** Tích hợp định hướng chiến lược học hỏi từ HubSpot Content Hub: Thêm mục 11 về Brand Voice Presets, Content Remix Engine và Visual Cluster Map. Cập nhật lộ trình triển khai Giai đoạn 2 & 3. (Hiến).
 - **v4.11 (2026-06-14):** Loại bỏ hoàn toàn các đề cập và lộ trình liên quan đến Widget ra khỏi tài liệu thiết kế của GenAI Content Engine, vì tính năng này thuộc phạm vi quản lý của Ads Manager (phân phối Widget) và Thư viện Widget độc lập. (Hiến).

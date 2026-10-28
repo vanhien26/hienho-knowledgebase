@@ -15,6 +15,7 @@ flowchart TD
         GSC["Google Search Console (Crawl & Backlinks)"]
         Clarity["Microsoft Clarity (UX & Heatmaps)"]
         Trends["Google Trends (5-Year Seasonality)"]
+        MoSpark_Data["MoSpark Synced Datamart (GA4 & GSC Ingested)"]
     end
 
     subgraph Core_Engine ["2. Lớp Xử Lý & Phân Tích (Python 3.12 Engine)"]
@@ -25,8 +26,9 @@ flowchart TD
         NLP["vi_nlp.py (Underthesea / Pyvi NLP)"]
     end
 
-    subgraph Agent_MCP ["3. Lớp Trí Tuệ Nhân Tạo & MCP"]
+    subgraph Agent_MCP ["3. Lớp Trí Tuệ Nhân Tạo, MCP & Company LLM Gateway"]
         Antigravity["Antigravity AI Agent Core (Gemini 2.5/3.8)"]
+        QwenGateway["Company LLM Gateway (Model Qwen 3.7 - Bearer JWT)"]
         GTM_MCP["GTM MCP Server (Tags, Triggers, GA4 Config)"]
         Vercel_MCP["Vercel MCP Server (Deployments & Observability)"]
         DevTools_MCP["Chrome DevTools MCP (CWV, LCP, Network)"]
@@ -36,18 +38,21 @@ flowchart TD
         GSheets["Google Sheets Cloud SSOT (1JaaYv2MnDy-...)"]
         LocalSnapshots["JSON Snapshots & Excel SSOT"]
         MarkdownSSOT["WEB_PERFORMANCE_TRACKING_MASTER.md"]
-        DashboardRepo["react-web-momo (/dashboard JSONs via GitHub API)"]
+        DashboardRepo["react-web-momo & MoSpark Growth Dashboard"]
     end
 
     subgraph Stakeholders ["5. Đối Tượng Thụ Hưởng"]
-        Board["Ban Giám Đốc (Anh Tường, Anh Công) - MBR"]
+        Board["Ban Giám Đốc (BOM) - MBR"]
         Exec["Executive Leadership - WBR"]
         Product["Product Lead / Tech Lead"]
         Squads["Dev, SEO, Media, BU Teams"]
     end
 
     Data_Sources --> Core_Engine
+    Data_Sources -.-> MoSpark_Data
+    MoSpark_Data --> QwenGateway
     Core_Engine <--> Agent_MCP
+    QwenGateway --> DashboardRepo
     Core_Engine --> Storage_SSOT
     Storage_SSOT --> Stakeholders
 ```
@@ -128,6 +133,15 @@ Hệ thống được thiết kế theo kiến trúc **Agentic AI Native**, kế
 | **`chrome-devtools`** | Điều khiển trình duyệt qua Chrome DevTools Protocol | Tự động đo lường Core Web Vitals (CWV), Largest Contentful Paint (LCP), phát hiện memory leaks và kiểm tra chuyển hướng của link Onelink trên mobile. |
 | **`gdrive` (Google Drive)** | Quản lý tệp và thư mục trên Google Drive | Tự động tìm kiếm, đồng bộ và lưu trữ các tệp báo cáo, slide trình diễn trên Google Workspace của công ty. |
 | **`gemini-api_gemini-api-docs`** | Tra cứu tài liệu chính thống của Gemini API/SDK | Cập nhật nhanh các chuẩn tích hợp LLM mới nhất cho pipeline phân tích. |
+
+### 3.3. Tầng Trí Tuệ Tăng Trưởng Nội Bộ (Company Qwen 3.7 AI Growth Layer)
+
+Sau khi bộ thư viện Company LLM Gateway SDK được đóng gói hoàn thiện với mô hình chủ lực **Qwen 3.7** (chuẩn xác thực Bearer JWT trên hạ tầng nội bộ MoMo), hệ thống báo cáo và MoSpark Growth Dashboard được tăng cường thêm một lớp trí tuệ nhân tạo tăng trưởng tự động hóa:
+- **Tiêu thụ Dữ liệu GA4 & GSC Đã Đồng Bộ Về MoSpark:** Nguồn dữ liệu từ Google Analytics 4 (Sessions, Pageviews, Non-Paid vs Paid, Onelink Clicks) và Google Search Console (Impressions, Clicks, Average Position, Crawl Stats) đã được pipeline kỹ thuật đồng bộ về lưu trữ trực tiếp tại MoSpark Datamart.
+- **Tự Động Sinh Bản Tin Tóm Tắt Điều Hành (Automated Executive Summaries):** Model Qwen 3.7 tổng hợp dữ liệu đa nguồn theo các khung báo cáo WBR/MBR, tự động rút trích các điểm sáng (Big Wins), điểm nghẽn (Blockers) và dự báo tiến độ về đích mà không cần biên soạn thủ công.
+- **Phân Tích Nguyên Nhân Gốc Rễ Tự Động (Automated RCA):** Khi phát hiện độ lệch tiến độ (Pacing Gap) hoặc sụt giảm lưu lượng trên một Hub/Theme cụ thể, Qwen 3.7 đối chiếu ma trận Nguồn x Phễu x Từ khóa để giải trình nguyên nhân (ví dụ: do cắt giảm ngân sách Paid Ads, biến động thứ hạng tìm kiếm, hay lỗi kỹ thuật bot crawl).
+- **Đề Xuất Hành Động Chuẩn P0/P1/P2:** Hệ thống tự động phân loại nhiệm vụ cho từng Squad chuyên môn (Web Dev sửa lỗi 404/Onelink, SEO tối ưu Quick Wins, Media điều chỉnh chiến dịch), gắn liền với dự phóng ROI kinh doanh.
+- **Bảo Mật Tuyệt Đối & Chi Phí Vận Hành Tối Ưu:** Do chạy trên máy chủ nội bộ MoMo qua Bearer JWT, toàn bộ dữ liệu kinh doanh được giữ kín 100%, không phát sinh phí API bên ngoài khi chạy định kỳ hàng ngày.
 
 ---
 
