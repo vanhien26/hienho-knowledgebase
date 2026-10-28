@@ -30,9 +30,9 @@ Phân công: Web Product Lead & Engineering Team theo dõi toàn bộ dự án.
 **Nhóm Dự Án Nền Tảng (Platform Enablers):**
 - MoSpark Core & Hệ thống AI: Hoàn thành 24 commits lớn, cập nhật 6 bản DB. Tái cấu trúc không gian viết bài sang kiến trúc MVVM 4 lớp; hoàn tất đóng gói bộ thư viện API nội bộ công ty (Company LLM Gateway Client Package) tích hợp mô hình Qwen 3.7 dùng chung đa dự án (chuẩn xác thực Bearer JWT bảo mật cao, zero-cost token thương mại); mở rộng tích hợp trực tiếp vào MoMo AI (Trợ lý tư vấn tài chính / Proposal Engine) và MoSpark Growth Dashboard (tiêu thụ dữ liệu GA4/GSC được đồng bộ để tự động sinh tóm tắt insight, phân tích nguyên nhân gốc rễ RCA và cảnh báo dị biệt); hoàn thiện tự động trích xuất tiêu đề H1/H2/H3 vào prompt và CMS adapters xuất bản đa kênh.
 - MoBase Design System: Đưa menu điều hướng 2 tầng (Header Advance) lên chạy thực tế tại Financial Hub. Đóng gói component Bảng giá dùng chung cho các trang dịch vụ số.
-- CMS & Trình soạn thảo (Admin Tool Webview In-App & Out-App - BMC): Nâng cấp Admin Tool phục vụ Webview In-App và Out-App cho nhánh BMC; đóng gói Thẻ Coupon (momo-coupon-card) và Mockup điện thoại tương tác từng bước (cas-htu-popup) chèn linh hoạt qua CKEditor; hiển thị quy trình duyệt bài 4 cấp, tối ưu nạp trang danh mục lớn, thêm modal đọc bài và hỗ trợ tìm bài blog trên Puck Editor.
+- CMS & Trình soạn thảo: Nâng cấp Admin Tool phục vụ Webview In-App và Out-App cho nhánh BMC; đóng gói Thẻ Coupon (momo-coupon-card) và Mockup điện thoại tương tác từng bước (cas-htu-popup) chèn linh hoạt qua CKEditor; hiển thị quy trình duyệt bài 4 cấp, tối ưu nạp trang danh mục lớn, thêm modal đọc bài và hỗ trợ tìm bài blog trên Puck Editor.
 - Tìm kiếm Website: Go-live Phase 1 trên Production (`/tim-kiem`) với Thẻ chuyển tiền qua SĐT (nhận diện client-side bảo mật kèm nút OneLink) và Banner Bạn Mới `CHAOMOMO` 500K; nâng cấp Backend Search V3 tích hợp Custom Search Pages và sửa thuật toán phân trang/đếm tổng chống nhảy trang.
-- Dữ liệu & Kiến trúc URL Catalog: Thiết kế kiến trúc Hồ Dữ Liệu Danh Mục URL Website (MoMo URL Knowledge Lake Architecture) quản lý SSOT toàn bộ URL `momo.vn`, phân loại 2 trục (PageType x ProjectIds) phục vụ Search V2, Sitemap SEO đa tầng, AI Feed cho Knowledge Base/RAG và quản trị liên kết mồ côi; hoàn thành kịch bản CSDL `tblWebsiteUrlCatalog`.
+- Kiến trúc URL Catalog: Thiết kế kiến trúc Hồ Dữ Liệu Danh Mục URL Website (MoMo URL Knowledge Lake Architecture) quản lý SSOT toàn bộ URL `momo.vn`, phân loại 2 trục (PageType x ProjectIds) phục vụ Search V2, Sitemap SEO đa tầng, AI Feed cho Knowledge Base/RAG và quản trị liên kết mồ côi; hoàn thành kịch bản CSDL `tblWebsiteUrlCatalog`.
 - Blog Editor & PLG (MoSpark): Nâng cấp Blog Editor (quản lý hình ảnh, chỉnh keyword, unlink, Key Takeaway, sửa 2 lỗi); nâng cấp dashboard pipeline PLG có lượt view, quản lý cluster trên MoSpark, landing page, tải report và sắp xếp theo trạng thái.
 
 ---
@@ -267,9 +267,9 @@ Phân công: Web Product Lead & Engineering Team theo dõi toàn bộ dự án.
 
 ---
 
-### 3. CMS & Trình soạn thảo (Admin Tool Webview In-App & Out-App - BMC)
+### 3. CMS & Trình soạn thảo
 
-- **Key Owner:** Duy Trần & Nguyễn Lý Chí Hiếu
+- **Đội ngũ phụ trách:** CMS & Web Engineering Team
 - **Kết quả & Tác động số liệu:**
   - **Đóng gói component nội dung cho Webview In-App (CKEditor):** Xây dựng khối Thẻ Coupon nhập mã (`momo-coupon-card`) và Mockup điện thoại 540x1168 tương tác từng bước dạng Popup (`cas-htu-popup`) cho phép chèn linh hoạt qua trình soạn thảo CKEditor phục vụ các chiến dịch của nhánh BMC.
   - **Minh bạch quy trình phê duyệt In-App:** Phân quyền truy cập an toàn, lưu vết tự động và hiển thị trực tiếp thông tin 4 cấp phê duyệt (Người yêu cầu, Nội dung, Thiết kế, Pháp lý) trên giao diện quản trị bài viết; giữ nguyên vị trí màn hình sau khi tải bài lên thành công.
@@ -288,7 +288,7 @@ Phân công: Web Product Lead & Engineering Team theo dõi toàn bộ dự án.
 
 ### 4. Tìm kiếm Website (`/tim-kiem`)
 
-- **Key Owner:** Nguyễn Lý Chí Hiếu
+- **Đội ngũ phụ trách:** Search & Web Engineering Team
 - **Kết quả & Tác động số liệu:**
   - **Nâng cấp Backend Tìm kiếm MoMo Search V3 (`SearchService`):** Tích hợp `CustomSearchPages.json` cho phép ghim linh hoạt các trang đích (Landing Pages) và công cụ tiện ích lên đầu danh sách kết quả theo từ khóa cấu hình; chuẩn hóa dữ liệu hiển thị đa thực thể (QA, Blog, Dịch vụ).
   - **Xử lý dứt điểm lỗi phân trang & nhảy trang:** Tự động tính gộp bản ghi ưu tiên vào tổng số (`Total`), tính toán lại `PageCount` và chỉ mục `LastIdx`, ngăn chặn hoàn toàn tình trạng trùng lặp kết quả hoặc nhảy trang khi người dùng cuộn xem thêm.
@@ -302,9 +302,9 @@ Phân công: Web Product Lead & Engineering Team theo dõi toàn bộ dự án.
 
 ---
 
-### 5. Dữ liệu & Kiến trúc URL Catalog
+### 5. Kiến trúc URL Catalog
 
-- **Key Owner:** Nguyễn Lý Chí Hiếu
+- **Đội ngũ phụ trách:** Data & Web Platform Team
 - **Kết quả & Tác động số liệu:**
   - **Thiết kế Kiến trúc Hồ Dữ Liệu Danh Mục URL Website (MoMo URL Knowledge Lake Architecture):** Thiết lập giải pháp Master URL Catalog tập trung (Single Source of Truth) quản lý toàn bộ URL, metadata, cấu trúc phân cấp và thuộc tính nghiệp vụ của toàn bộ website `momo.vn`.
   - **Phục vụ đồng bộ 4 mục tiêu chiến lược của Web Platform:**
