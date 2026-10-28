@@ -29,7 +29,7 @@
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trọng Tâm Triển Khai (Wave 1 &amp; Wave 2)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">
         <strong>Wave 1 - Financial Utilities:</strong> Tính Lương Gross - Net (<code>/tai-chinh/tinh-luong</code>), Chia Hóa Đơn Du Lịch (<code>/tai-chinh/cong-cu/chia-tien-du-lich</code>), Phân Bổ Lương 50/30/20, Tỷ Giá &amp; Giá Vàng.<br/>
-        <strong>Wave 2 - Vehicle Utilities:</strong> Tra Cứu Phạt Nguội (<code>/xe/phat-nguoi</code>), Dự Toán Giá Lăn Bánh Xe, Biến Động Giá Xăng Dầu (<code>/xe/gia-xang</code>), Nhắc Lịch Đăng Kiểm.<br/>
+        <strong>Wave 2 - Vehicle Utilities:</strong> Tra Cứu Phạt Nguội (<code>/phat-nguoi</code>), Dự Toán Giá Lăn Bánh Xe (<code>/tien-ich-giao-thong/du-toan-lan-banh</code>), Biến Động Giá Xăng Dầu (<code>/tien-ich-giao-thong/gia-xang</code>), Nhắc Lịch Đăng Kiểm.<br/>
         <strong>Universal Adapter:</strong> Thiết kế chuẩn cắm rút (Plug-and-play) cho mọi tiện ích mới phát sinh thuộc các Hubs khác.
       </td>
     </tr>
@@ -377,7 +377,7 @@ $$\text{Output Data} \longrightarrow \text{Condition Evaluator} \longrightarrow 
 
 ---
 
-### 2.15 Công Cụ 15: Tra Cứu Phạt Nguội & Cảnh Báo Vi Phạm (`/xe/phat-nguoi`)
+### 2.15 Công Cụ 15: Tra Cứu Phạt Nguội & Cảnh Báo Vi Phạm (`/phat-nguoi`)
 
 #### Biến Số Đầu Vào
 - `violation_count`: Số lỗi vi phạm chưa nộp phạt.
@@ -396,7 +396,7 @@ $$\text{Output Data} \longrightarrow \text{Condition Evaluator} \longrightarrow 
 
 ---
 
-### 2.16 Công Cụ 16: Dự Toán Chi Phí Lăn Bánh Ô Tô / Xe Máy (`/xe/du-toan-lan-banh`)
+### 2.16 Công Cụ 16: Dự Toán Chi Phí Lăn Bánh Ô Tô / Xe Máy (`/tien-ich-giao-thong/du-toan-lan-banh`)
 
 #### Biến Số Đầu Vào
 - `car_price`: Giá niêm yết của xe (VND).
@@ -411,7 +411,7 @@ $$\text{Output Data} \longrightarrow \text{Condition Evaluator} \longrightarrow 
 
 ---
 
-### 2.17 Công Cụ 17: Biến Động & Dự Báo Giá Xăng Dầu (`/xe/gia-xang`)
+### 2.17 Công Cụ 17: Biến Động & Dự Báo Giá Xăng Dầu (`/tien-ich-giao-thong/gia-xang`)
 
 #### Biến Số Đầu Vào
 - `gas_price`: Giá bán lẻ hiện hành (VND/lít).
