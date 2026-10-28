@@ -327,6 +327,7 @@ def run_hybrid_sync(force_mtd=None, no_push=False):
             {"id": "financial", "name": "Financial Hub", "pv": 163850},
             {"id": "new_user", "name": "New User Hub", "pv": 92150},
             {"id": "vehicle", "name": "Vehicle Hub", "pv": 29740},
+            {"id": "insurance", "name": "Insurance Hub", "pv": 27937},
             {"id": "student", "name": "Student Hub", "pv": 1892}
         ],
         "lastFullHubs": [

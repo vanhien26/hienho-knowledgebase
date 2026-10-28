@@ -1,0 +1,1092 @@
+{
+  "$schema": "./quiz_schema.json",
+  "version": "1.0.0",
+  "updated_at": "2026-10-28T07:50:00Z",
+  "description": "Single Source of Truth (SSOT) cho toàn bộ Interactive Quiz Flows trên MoMo Web Platform. Hỗ trợ 2 dạng: One-flow (tuyến tính) và Branching (rẽ nhánh / đồ thị có hướng).",
+  "quizzes": [
+    {
+      "id": "quiz-vi-tra-sau",
+      "name": "Kiểm tra điều kiện mở Ví Trả Sau",
+      "type": "one_flow",
+      "theme": "vi-tra-sau",
+      "badge": "0% Lãi suất 45 ngày",
+      "description": "Ước tính hạn mức chi tiêu trước trả sau ban đầu dựa trên thói quen thanh toán.",
+      "total_steps_estimate": "3 câu hỏi",
+      "root_question_id": "vts_q1",
+      "nodes": {
+        "vts_q1": {
+          "type": "question",
+          "id": "vts_q1",
+          "title": "Bạn thường chi tiêu nhiều nhất cho nhu cầu nào hàng tháng?",
+          "step_index": 1,
+          "options": [
+            { "id": "vts_q1_a", "label": "Đi siêu thị, cửa hàng tiện lợi", "next_node_id": "vts_q2" },
+            { "id": "vts_q1_b", "label": "Nạp tiền điện thoại, thanh toán hóa đơn", "next_node_id": "vts_q2" },
+            { "id": "vts_q1_c", "label": "Mua sắm online, đặt đồ ăn", "next_node_id": "vts_q2" },
+            { "id": "vts_q1_d", "label": "Đi ăn uống, cafe, xem phim cuối tuần", "next_node_id": "vts_q2" }
+          ]
+        },
+        "vts_q2": {
+          "type": "question",
+          "id": "vts_q2",
+          "title": "Mỗi tháng bạn chi tiêu không dùng tiền mặt khoảng bao nhiêu?",
+          "step_index": 2,
+          "options": [
+            { "id": "vts_q2_a", "label": "Dưới 1 triệu", "next_node_id": "vts_q3" },
+            { "id": "vts_q2_b", "label": "Từ 1 – 3 triệu", "next_node_id": "vts_q3" },
+            { "id": "vts_q2_c", "label": "Từ 3 – 5 triệu", "next_node_id": "vts_q3" },
+            { "id": "vts_q2_d", "label": "Trên 5 triệu", "next_node_id": "vts_q3" }
+          ]
+        },
+        "vts_q3": {
+          "type": "question",
+          "id": "vts_q3",
+          "title": "Bạn đã có tài khoản MoMo và liên kết ngân hàng chưa?",
+          "step_index": 3,
+          "options": [
+            { "id": "vts_q3_a", "label": "Đã có và dùng thường xuyên", "next_node_id": "vts_result_ready" },
+            { "id": "vts_q3_b", "label": "Có tài khoản nhưng ít dùng", "next_node_id": "vts_result_ready" },
+            { "id": "vts_q3_c", "label": "Chưa có tài khoản MoMo", "next_node_id": "vts_result_new_user" }
+          ]
+        },
+        "vts_result_ready": {
+          "type": "result",
+          "id": "vts_result_ready",
+          "tier": "high_potential",
+          "title": "Hồ sơ của bạn đạt 92% tỷ lệ mở Ví Trả Sau thành công",
+          "summary": "Bạn đủ điều kiện kích hoạt hạn mức tiêu dùng trước trả sau, miễn lãi lên đến 45 ngày.",
+          "reveal_60": {
+            "estimate_value": "1.000.000đ – 3.000.000đ",
+            "highlights": [
+              "Hạn mức ban đầu ước tính: 1 – 3 triệu (nâng tối đa 10 triệu)",
+              "0% lãi suất lên đến 45 ngày",
+              "Thanh toán hơn 50.000 điểm chấp nhận trên toàn quốc"
+            ],
+            "tips": [
+              "Chi tiêu thường xuyên bằng Ví Trả Sau để được hệ thống tự động tăng hạn mức sau 3 tháng"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Hạn mức chính xác của số điện thoại của bạn",
+            "locked_items": [
+              "Hạn mức duyệt cụ thể trên App",
+              "Bộ voucher giảm 50.000đ cho lần chi tiêu đầu tiên"
+            ],
+            "cta_label": "Kích hoạt hạn mức trên App MoMo",
+            "deeplink_url": "momo://payment/postpaid?source=web_quiz_vts",
+            "subtext": "Xác thực 100% online trong 1 phút"
+          }
+        },
+        "vts_result_new_user": {
+          "type": "result",
+          "id": "vts_result_new_user",
+          "tier": "new_registration",
+          "title": "Cơ hội nhận gói quà kích hoạt Ví Trả Sau dành cho bạn mới",
+          "summary": "Chỉ cần đăng ký tài khoản MoMo và liên kết ngân hàng để kích hoạt Ví Trả Sau tức thì.",
+          "reveal_60": {
+            "estimate_value": "Gói quà 1.000.000đ",
+            "highlights": [
+              "Được cấp hạn mức chi tiêu trước ngay sau khi KYC",
+              "Gói quà tân thủ trị giá đến 1.000.000đ"
+            ],
+            "tips": [
+              "Liên kết tài khoản ngân hàng chính chủ để tăng điểm phê duyệt"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Mở quà tân thủ & Kích hoạt hạn mức",
+            "locked_items": [
+              "Gói voucher ưu đãi tân thủ",
+              "Hạn mức cấp ngay lần đầu"
+            ],
+            "cta_label": "Tải App & Kích hoạt trên MoMo",
+            "deeplink_url": "https://momo.vn/download?source=web_quiz_vts_new",
+            "subtext": "Miễn phí cài đặt và duy trì tài khoản"
+          }
+        }
+      }
+    },
+    {
+      "id": "quiz-tiet-kiem",
+      "name": "Kế hoạch Tiền Nhàn Rỗi & Sinh Lời Mỗi Ngày",
+      "type": "one_flow",
+      "theme": "tiet-kiem-dau-tu",
+      "badge": "Lãi nhận mỗi ngày",
+      "description": "Lập kế hoạch tối ưu tiền nhàn rỗi hàng tháng, không để tiền nằm yên trong tài khoản không có lãi.",
+      "total_steps_estimate": "3 câu hỏi",
+      "root_question_id": "tk_q1",
+      "nodes": {
+        "tk_q1": {
+          "type": "question",
+          "id": "tk_q1",
+          "title": "Mỗi tháng bạn có khoản tiền nhàn rỗi chưa dùng đến khoảng bao nhiêu?",
+          "step_index": 1,
+          "options": [
+            { "id": "tk_q1_a", "label": "Từ 500.000đ – 3.000.000đ (Tiền tiêu vặt dư)", "next_node_id": "tk_q2" },
+            { "id": "tk_q1_b", "label": "Từ 5.000.000đ – 20.000.000đ (Tiền dự phòng)", "next_node_id": "tk_q2" },
+            { "id": "tk_q1_c", "label": "Trên 20.000.000đ (Tích lũy dài hạn)", "next_node_id": "tk_q2" }
+          ]
+        },
+        "tk_q2": {
+          "type": "question",
+          "id": "tk_q2",
+          "title": "Bạn mong muốn tính linh hoạt khi rút tiền ra thế nào?",
+          "step_index": 2,
+          "options": [
+            { "id": "tk_q2_a", "label": "Rút bất cứ lúc nào cần mà không bị mất tiền lãi", "next_node_id": "tk_q3" },
+            { "id": "tk_q2_b", "label": "Có thể để cố định 1 – 3 tháng để nhận lãi cao hơn", "next_node_id": "tk_q3" },
+            { "id": "tk_q2_c", "label": "Gửi dài hạn 6 – 12 tháng lấy lãi tối đa", "next_node_id": "tk_q3" }
+          ]
+        },
+        "tk_q3": {
+          "type": "question",
+          "id": "tk_q3",
+          "title": "Điều gì làm bạn e ngại nhất khi đem tiền đi gửi tiết kiệm?",
+          "step_index": 3,
+          "options": [
+            { "id": "tk_q3_a", "label": "Lãi suất tài khoản thông thường quá thấp (0.1%/năm)", "next_node_id": "tk_result_tuithantai" },
+            { "id": "tk_q3_b", "label": "Rút trước hạn bị mất sạch toàn bộ tiền lãi", "next_node_id": "tk_result_tuithantai" },
+            { "id": "tk_q3_c", "label": "Thủ tục mở sổ ở quầy rườm rà, ngại đi lại", "next_node_id": "tk_result_bank_saving" }
+          ]
+        },
+        "tk_result_tuithantai": {
+          "type": "result",
+          "id": "tk_result_tuithantai",
+          "tier": "tui_than_tai",
+          "title": "Giải pháp khuyến nghị: TÚI THẦN TÀI (Tiền đẻ ra tiền mỗi ngày)",
+          "summary": "Phù hợp hoàn hảo với người muốn sinh lời từ tiền nhàn rỗi nhưng vẫn cần rút chi tiêu bất kỳ lúc nào.",
+          "reveal_60": {
+            "estimate_value": "Lãi suất đến ~5%/năm",
+            "highlights": [
+              "Tiền lời cộng dồn vào ví mỗi ngày",
+              "Rút tiền chi tiêu tức thì 24/7 mà không mất tiền lãi đã nhận",
+              "Nạp rút miễn phí, chỉ từ 10.000đ"
+            ],
+            "tips": [
+              "Bật tính năng Tự động chuyển tiền nhàn rỗi cuối ngày vào Túi Thần Tài"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Kích hoạt tính năng sinh lời mỗi ngày",
+            "locked_items": [
+              "Quà tặng 20.000đ nạp đầu",
+              "Công cụ tự động chuyển tiền lãi vào số dư chi tiêu"
+            ],
+            "cta_label": "Mở Túi Thần Tài trên App MoMo",
+            "deeplink_url": "momo://wealth/tuithantai?source=web_quiz_tk",
+            "subtext": "Sản phẩm hợp tác với Fmarket & Vietcombank"
+          }
+        },
+        "tk_result_bank_saving": {
+          "type": "result",
+          "id": "tk_result_bank_saving",
+          "tier": "bank_saving",
+          "title": "Giải pháp khuyến nghị: TIẾT KIỆM NGÂN HÀNG ONLINE",
+          "summary": "Gửi tiết kiệm trực tuyến tại các ngân hàng đối tác uy tín với lãi suất cao hơn tại quầy.",
+          "reveal_60": {
+            "estimate_value": "Lãi suất cao hơn quầy 0.3% - 0.5%",
+            "highlights": [
+              "Mở sổ tiết kiệm 100% online trong 2 phút",
+              "Bảo chứng an toàn bởi các Ngân hàng đối tác lớn (Bản Việt, VPBank...)",
+              "Kỳ hạn đa dạng từ 1 tháng đến 36 tháng"
+            ],
+            "tips": [
+              "Chia nhỏ số tiền thành nhiều sổ để linh hoạt rút khi cần việc gấp"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Bảng so sánh lãi suất các ngân hàng trên MoMo",
+            "locked_items": [
+              "Bảng lãi suất chi tiết từng ngân hàng",
+              "Voucher ưu đãi cộng thêm lãi suất"
+            ],
+            "cta_label": "Xem bảng lãi suất trên App MoMo",
+            "deeplink_url": "momo://wealth/saving?source=web_quiz_tk",
+            "subtext": "Bảo hiểm tiền gửi theo quy định Ngân hàng Nhà nước"
+          }
+        }
+      }
+    },
+    {
+      "id": "quiz-vay-nhanh",
+      "name": "Đánh giá khả năng phê duyệt Vay Nhanh",
+      "type": "one_flow",
+      "theme": "vay-nhanh",
+      "badge": "Giải ngân 1 phút",
+      "description": "Ước tính tỷ lệ duyệt hồ sơ và gợi ý hạn mức vay khả thi 100% online, không cần chứng minh thu nhập phức tạp.",
+      "total_steps_estimate": "4 câu hỏi",
+      "root_question_id": "vn_q1",
+      "nodes": {
+        "vn_q1": {
+          "type": "question",
+          "id": "vn_q1",
+          "title": "Khoản tài chính bạn đang muốn được hỗ trợ là bao nhiêu?",
+          "step_index": 1,
+          "options": [
+            { "id": "vn_q1_a", "label": "Từ 2.000.000đ – 5.000.000đ", "score": 2, "next_node_id": "vn_q2" },
+            { "id": "vn_q1_b", "label": "Từ 6.000.000đ – 15.000.000đ", "score": 2, "next_node_id": "vn_q2" },
+            { "id": "vn_q1_c", "label": "Từ 16.000.000đ – 30.000.000đ", "score": 1, "next_node_id": "vn_q2" },
+            { "id": "vn_q1_d", "label": "Trên 30.000.000đ", "score": 0, "next_node_id": "vn_q2" }
+          ]
+        },
+        "vn_q2": {
+          "type": "question",
+          "id": "vn_q2",
+          "title": "Bạn đang cần khoản tiền này gấp trong bao lâu?",
+          "step_index": 2,
+          "options": [
+            { "id": "vn_q2_a", "label": "Cần gấp trong ngày hôm nay", "next_node_id": "vn_q3" },
+            { "id": "vn_q2_b", "label": "Trong vài ngày tới", "next_node_id": "vn_q3" },
+            { "id": "vn_q2_c", "label": "Đang khảo sát chuẩn bị dự phòng", "next_node_id": "vn_q3" }
+          ]
+        },
+        "vn_q3": {
+          "type": "question",
+          "id": "vn_q3",
+          "title": "Nguồn thu nhập hàng tháng của bạn đến từ đâu?",
+          "step_index": 3,
+          "options": [
+            { "id": "vn_q3_a", "label": "Lương nhận qua chuyển khoản ngân hàng", "score": 2, "next_node_id": "vn_q4" },
+            { "id": "vn_q3_b", "label": "Kinh doanh tự do / Bán hàng / Freelance", "score": 1, "next_node_id": "vn_q4" },
+            { "id": "vn_q3_c", "label": "Lương tiền mặt / Thu nhập khác", "score": 0, "next_node_id": "vn_q4" }
+          ]
+        },
+        "vn_q4": {
+          "type": "question",
+          "id": "vn_q4",
+          "title": "Lịch sử tín dụng và trả nợ các khoản vay trước đây?",
+          "step_index": 4,
+          "options": [
+            { "id": "vn_q4_a", "label": "Luôn trả đúng hạn / Chưa từng vay ai", "score": 2, "next_node_id": "vn_result_tier_a" },
+            { "id": "vn_q4_b", "label": "Thỉnh thoảng trễ hạn 1–3 ngày nhưng đã trả đủ", "score": 1, "next_node_id": "vn_result_tier_b" },
+            { "id": "vn_q4_c", "label": "Đang có khoản vay ở nơi khác", "score": 0, "next_node_id": "vn_result_tier_c" }
+          ]
+        },
+        "vn_result_tier_a": {
+          "type": "result",
+          "id": "vn_result_tier_a",
+          "tier": "tier_a_approved",
+          "title": "Khả năng duyệt hồ sơ của bạn đạt 95% (Hồ sơ tiêu chuẩn)",
+          "summary": "Bạn đủ điều kiện nhận gói vay theo đúng số tiền mong muốn với thời gian giải ngân trong 1 phút.",
+          "reveal_60": {
+            "estimate_value": "Duyệt nhanh 1 phút",
+            "highlights": [
+              "Tỷ lệ duyệt hồ sơ: 95%",
+              "Hạn mức duyệt sơ bộ: Đạt mức yêu cầu",
+              "Trả góp linh hoạt từ 6 – 12 tháng, chỉ từ ~350.000đ/tháng"
+            ],
+            "tips": [
+              "Hồ sơ giải ngân trực tiếp vào tài khoản MoMo, không cần thẩm định người thân"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Mở khóa hạn mức chính thức và gói trả góp",
+            "locked_items": [
+              "Lãi suất ưu đãi riêng cho hồ sơ của bạn",
+              "Lịch trả góp cụ thể từng tháng"
+            ],
+            "cta_label": "Nhận khoản vay trên App MoMo",
+            "deeplink_url": "momo://loan/quick_loan?source=web_quiz_vn",
+            "subtext": "Đối tác tài chính: EVNFinance, TPBank, Mirae Asset"
+          }
+        },
+        "vn_result_tier_b": {
+          "type": "result",
+          "id": "vn_result_tier_b",
+          "tier": "tier_b_alternative",
+          "title": "Đề xuất gói giải ngân nhanh khả thi: 5.000.000đ – 10.000.000đ",
+          "summary": "Khoản vay lớn cần bổ sung giấy tờ thu nhập, nhưng bạn đủ điều kiện nhận ngay gói giải ngân nhanh 100% online.",
+          "reveal_60": {
+            "estimate_value": "5.000.000đ – 10.000.000đ",
+            "highlights": [
+              "Duyệt ngay không cần chứng minh thu nhập phức tạp",
+              "Giải ngân tức thì trong 3 phút",
+              "Thủ tục 100% trên điện thoại"
+            ],
+            "tips": [
+              "Thanh toán đúng hạn 2 kỳ đầu tiên để được đối tác tự động nâng hạn mức lên mức tối đa"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Kiểm tra gói vay khả thi",
+            "locked_items": [
+              "Hạn mức duyệt trước của đối tác",
+              "Ưu đãi giảm 30% phí dịch vụ kỳ đầu"
+            ],
+            "cta_label": "Xem gói vay khả thi trên App MoMo",
+            "deeplink_url": "momo://loan/quick_loan?tier=b&source=web_quiz_vn",
+            "subtext": "Không thế chấp tài sản"
+          }
+        },
+        "vn_result_tier_c": {
+          "type": "result",
+          "id": "vn_result_tier_c",
+          "tier": "tier_c_assist",
+          "title": "Đề xuất giải pháp: Kích hoạt Ví Trả Sau 1–3 triệu",
+          "summary": "Để tối ưu lịch sử tín dụng, hệ thống gợi ý bạn kích hoạt giải pháp chi tiêu trước - trả sau miễn lãi 45 ngày.",
+          "reveal_60": {
+            "estimate_value": "Hạn mức 1.000.000đ – 3.000.000đ",
+            "highlights": [
+              "Miễn lãi 45 ngày cho mọi chi tiêu hóa đơn, siêu thị",
+              "Xây dựng lại lịch sử tín dụng tốt để dễ vay khoản lớn sau này"
+            ],
+            "tips": [
+              "Dùng Ví Trả Sau trả tiền điện nước đều đặn là cách nhanh nhất để tăng điểm tín dụng"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Kích hoạt giải pháp tài chính thay thế",
+            "locked_items": [
+              "Hạn mức Ví Trả Sau được cấp ngay",
+              "Mã ưu đãi thanh toán hóa đơn"
+            ],
+            "cta_label": "Kích hoạt giải pháp trên App MoMo",
+            "deeplink_url": "momo://payment/postpaid?source=web_quiz_vn_assist",
+            "subtext": "Thủ tục nhanh chóng trong 1 phút"
+          }
+        }
+      }
+    },
+    {
+      "id": "quiz-diem-tin-dung",
+      "name": "Ước tính khoảng điểm CIC của bạn",
+      "type": "branching",
+      "theme": "diem-tin-dung",
+      "badge": "Đã Go-Live",
+      "description": "Ước tính khoảng điểm CIC dựa trên lịch sử vay và thẻ tín dụng chỉ trong 1 phút.",
+      "total_steps_estimate": "1–4 câu hỏi (tuỳ câu trả lời)",
+      "root_question_id": "cic_q1",
+      "nodes": {
+        "cic_q1": {
+          "type": "question",
+          "id": "cic_q1",
+          "title": "Lịch sử vay/thẻ của bạn thuộc trường hợp nào?",
+          "step_index": 1,
+          "options": [
+            { "id": "cic_q1_clean", "label": "Chưa từng vay hoặc luôn trả đúng hạn", "next_node_id": "cic_q_loans" },
+            { "id": "cic_q1_late", "label": "Đã từng trễ hạn thanh toán", "next_node_id": "cic_q_late_days" }
+          ]
+        },
+        "cic_q_late_days": {
+          "type": "question",
+          "id": "cic_q_late_days",
+          "title": "Bạn từng trễ thanh toán khoản vay/thẻ lâu nhất bao nhiêu ngày?",
+          "step_index": 2,
+          "options": [
+            { "id": "cic_q_late_sub10", "label": "Dưới 10 ngày (Nhóm 1)", "next_node_id": "cic_q_paid_status" },
+            { "id": "cic_q_late_10_90", "label": "Từ 10 – 90 ngày (Nhóm 2)", "next_node_id": "cic_q_paid_status" },
+            { "id": "cic_q_late_above90", "label": "Trên 90 ngày (Nợ xấu nhóm 3–5)", "next_node_id": "cic_q_paid_status" }
+          ]
+        },
+        "cic_q_paid_status": {
+          "type": "question",
+          "id": "cic_q_paid_status",
+          "title": "Bạn đã thanh toán hết phần nợ trễ hạn đó chưa?",
+          "step_index": 3,
+          "options": [
+            { "id": "cic_q_paid_yes", "label": "Đã thanh toán hết toàn bộ", "next_node_id": "cic_q_paid_time" },
+            { "id": "cic_q_paid_no", "label": "Vẫn còn đang nợ chưa thanh toán", "next_node_id": "cic_result_bad" }
+          ]
+        },
+        "cic_q_paid_time": {
+          "type": "question",
+          "id": "cic_q_paid_time",
+          "title": "Bạn đã tất toán toàn bộ khoản nợ đó bao lâu rồi?",
+          "step_index": 4,
+          "options": [
+            { "id": "cic_q_time_sub12m", "label": "Dưới 12 tháng gần đây", "next_node_id": "cic_result_fair" },
+            { "id": "cic_q_time_above12m", "label": "Đã trên 1 năm (hoặc trên 5 năm)", "next_node_id": "cic_q_loans" }
+          ]
+        },
+        "cic_q_loans": {
+          "type": "question",
+          "id": "cic_q_loans",
+          "title": "Bạn đang có tổng cộng bao nhiêu khoản vay và thẻ tín dụng?",
+          "step_index": 2,
+          "options": [
+            { "id": "cic_q_loans_none", "label": "Chưa có khoản nào", "next_node_id": "cic_result_good" },
+            { "id": "cic_q_loans_1_2", "label": "Từ 1 – 2 khoản đang hoạt động tốt", "next_node_id": "cic_result_excellent" },
+            { "id": "cic_q_loans_above3", "label": "Từ 3 khoản trở lên", "next_node_id": "cic_result_fair" }
+          ]
+        },
+        "cic_result_excellent": {
+          "type": "result",
+          "id": "cic_result_excellent",
+          "tier": "excellent",
+          "title": "Khoảng điểm ước tính: HẠNG 1 – 2 (Rất Tốt: 680 – 750 điểm)",
+          "summary": "Lịch sử tín dụng của bạn rất uy tín, khả năng được phê duyệt các gói vay lãi suất ưu đãi lên tới 98%.",
+          "reveal_60": {
+            "estimate_value": "680 – 750 điểm",
+            "highlights": [
+              "Nhóm rủi ro: Rất thấp",
+              "Khả năng mở thẻ tín dụng & vay tiêu dùng: Tối đa",
+              "Hạn mức duyệt dự kiến cao nhất"
+            ],
+            "tips": [
+              "Duy trì tỷ lệ sử dụng hạn mức dưới 50% để giữ vững điểm tín dụng Hạng 1"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Báo cáo chi tiết & Tra cứu điểm CIC chính thức",
+            "locked_items": [
+              "Điểm CIC chính thức do Trung tâm Thông tin Tín dụng Quốc gia cấp",
+              "Danh sách tổ chức tín dụng đang lưu trữ thông tin của bạn"
+            ],
+            "cta_label": "Kiểm tra điểm CIC chính thức trên MoMo",
+            "deeplink_url": "momo://credit/cic_score?source=web_quiz_cic",
+            "subtext": "Báo cáo chính thức có giá trị pháp lý"
+          }
+        },
+        "cic_result_good": {
+          "type": "result",
+          "id": "cic_result_good",
+          "tier": "good",
+          "title": "Khoảng điểm ước tính: HẠNG 3 – 4 (Khá: 620 – 679 điểm)",
+          "summary": "Bạn có điểm tín dụng tốt hoặc chưa có nhiều lịch sử vay (hồ sơ trắng).",
+          "reveal_60": {
+            "estimate_value": "620 – 679 điểm",
+            "highlights": [
+              "Hồ sơ đủ điều kiện mở Ví Trả Sau và Vay Nhanh",
+              "Chưa ghi nhận nợ xấu trên hệ thống"
+            ],
+            "tips": [
+              "Kích hoạt Ví Trả Sau để xây dựng lịch sử tín dụng tích cực đầu tiên"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Xem gợi ý nâng hạng tín dụng",
+            "locked_items": [
+              "Điểm tín dụng chính thức",
+              "Lộ trình tăng điểm lên Hạng 1"
+            ],
+            "cta_label": "Xem điểm chi tiết trên App MoMo",
+            "deeplink_url": "momo://credit/cic_score?source=web_quiz_cic_good",
+            "subtext": "Kiểm tra nhanh trong 1 phút"
+          }
+        },
+        "cic_result_fair": {
+          "type": "result",
+          "id": "cic_result_fair",
+          "tier": "fair",
+          "title": "Khoảng điểm ước tính: HẠNG 5 – 6 (Trung bình: 550 – 619 điểm)",
+          "summary": "Khoản trễ hạn trong quá khứ đã được xử lý nhưng vẫn còn lưu vết cần thời gian để xóa mờ.",
+          "reveal_60": {
+            "estimate_value": "550 – 619 điểm",
+            "highlights": [
+              "Hồ sơ cần thời gian phục hồi lịch sử",
+              "Vẫn có thể tiếp cận các gói giải pháp tài chính vi mô"
+            ],
+            "tips": [
+              "Không nộp hồ sơ vay dồn dập tại nhiều nơi để tránh bị hạ điểm tín nhiệm"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Kiểm tra thời gian xóa vết nợ chú ý",
+            "locked_items": [
+              "Thời gian cụ thể vết nợ biến mất khỏi CIC",
+              "Giải pháp hỗ trợ tài chính phù hợp"
+            ],
+            "cta_label": "Tra cứu chi tiết trên App MoMo",
+            "deeplink_url": "momo://credit/cic_score?tier=fair&source=web_quiz_cic",
+            "subtext": "Đối soát trực tiếp dữ liệu CIC"
+          }
+        },
+        "cic_result_bad": {
+          "type": "result",
+          "id": "cic_result_bad",
+          "tier": "bad",
+          "title": "Cảnh báo: Hồ sơ có nguy cơ nợ xấu đang hoạt động",
+          "summary": "Khoản nợ chưa tất toán sẽ bị ghi nhận trên hệ thống liên ngân hàng và ảnh hưởng lớn đến việc mở thẻ/vay vốn.",
+          "reveal_60": {
+            "estimate_value": "Dưới 550 điểm",
+            "highlights": [
+              "Hệ thống ghi nhận nợ quá hạn chưa thanh toán",
+              "Khó tiếp cận các khoản vay ngân hàng truyền thống"
+            ],
+            "tips": [
+              "Ưu tiên tất toán dứt điểm khoản nợ gốc và liên hệ tổ chức tín dụng để cập nhật trạng thái xóa nợ"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Kiểm tra chính xác tổ chức đang báo nợ",
+            "locked_items": [
+              "Tên tổ chức tín dụng đang báo quá hạn",
+              "Số tiền nợ gốc và tiền lãi phạt tồn đọng"
+            ],
+            "cta_label": "Kiểm tra báo cáo trên App MoMo",
+            "deeplink_url": "momo://credit/cic_score?tier=bad&source=web_quiz_cic",
+            "subtext": "Xác thực danh tính an toàn"
+          }
+        }
+      }
+    },
+    {
+      "id": "quiz-bao-hiem-than-vo",
+      "name": "Bắt bệnh Bảo hiểm thân vỏ ô tô",
+      "type": "branching",
+      "theme": "bao-hiem-oto",
+      "badge": "Mua đúng - Không bị hớ",
+      "description": "Tư vấn gói bảo hiểm thân vỏ chuẩn xác theo thói quen chạy xe và chỗ đỗ xe, cắt bỏ điều khoản thừa để tiết kiệm tiền.",
+      "total_steps_estimate": "2–4 câu hỏi (tuỳ câu trả lời)",
+      "root_question_id": "car_q1",
+      "nodes": {
+        "car_q1": {
+          "type": "question",
+          "id": "car_q1",
+          "title": "Chiếc xe của bạn hiện đang thuộc trường hợp nào dưới đây?",
+          "step_index": 1,
+          "options": [
+            { "id": "car_q1_new", "label": "Xe mới mua hoặc lăn bánh dưới 3 năm (Gia đình)", "next_node_id": "car_q_new_parking" },
+            { "id": "car_q1_old", "label": "Xe đã đi trên 3 năm (Hết bảo hành hãng)", "next_node_id": "car_q_old_claims" },
+            { "id": "car_q1_comm", "label": "Xe có chạy dịch vụ / Chạy khách / Cho thuê tự lái", "next_node_id": "car_q_comm_plate" }
+          ]
+        },
+        "car_q_new_parking": {
+          "type": "question",
+          "id": "car_q_new_parking",
+          "title": "Chỗ đỗ xe quen thuộc qua đêm của bạn thường ở đâu?",
+          "step_index": 2,
+          "options": [
+            { "id": "car_q_park_basement", "label": "Hầm chung cư / Bãi đỗ có mái che, bảo vệ", "next_node_id": "car_q_new_repair" },
+            { "id": "car_q_park_street", "label": "Đỗ ngoài vỉa hè / Trước cửa nhà lộ thiên", "next_node_id": "car_q_new_repair" },
+            { "id": "car_q_park_flood", "label": "Khu vực cứ mưa to là ngập đường", "next_node_id": "car_q_new_flood_depth" }
+          ]
+        },
+        "car_q_new_flood_depth": {
+          "type": "question",
+          "id": "car_q_new_flood_depth",
+          "title": "Đoạn đường ngập thường sâu đến mức nào khi bạn phải lái qua?",
+          "step_index": 3,
+          "options": [
+            { "id": "car_q_depth_deep", "label": "Ngập sâu quá nửa bánh xe (Nguy cơ thủy kích cực cao)", "next_node_id": "car_result_pack_flood_heavy" },
+            { "id": "car_q_depth_shallow", "label": "Chỉ mấp mé mép bánh xe", "next_node_id": "car_q_new_repair" }
+          ]
+        },
+        "car_q_new_repair": {
+          "type": "question",
+          "id": "car_q_new_repair",
+          "title": "Nếu chẳng may xe bị móp méo trầy xước, bạn muốn sửa ở đâu?",
+          "step_index": 3,
+          "options": [
+            { "id": "car_q_repair_official", "label": "Nhất định phải vào đúng Xưởng chính hãng (Tránh lệch màu)", "next_node_id": "car_result_pack_new_vip" },
+            { "id": "car_q_repair_near", "label": "Gara ngoài uy tín cũng được, miễn gần nhà lấy xe nhanh", "next_node_id": "car_result_pack_new_flex" }
+          ]
+        },
+        "car_q_old_claims": {
+          "type": "question",
+          "id": "car_q_old_claims",
+          "title": "Trong 1 năm vừa qua, bạn có từng gọi bảo hiểm làm vụ nào không?",
+          "step_index": 2,
+          "options": [
+            { "id": "car_q_claim_none", "label": "Không lần nào, tay lái cẩn thận chỉ đi làm", "next_node_id": "car_q_old_deductible" },
+            { "id": "car_q_claim_scratch", "label": "Có vài vết xước nhẹ nhưng tự bỏ tiền ra sơn cho nhanh", "next_node_id": "car_q_old_deductible" },
+            { "id": "car_q_claim_heavy", "label": "Đã từng va chạm nặng hoặc ngập nước phải làm bảo hiểm lớn", "next_node_id": "car_result_pack_comprehensive" }
+          ]
+        },
+        "car_q_old_deductible": {
+          "type": "question",
+          "id": "car_q_old_deductible",
+          "title": "Bạn sẵn sàng tự trả 500k vết xước nhỏ để đổi lại giảm ngay 20%–30% phí cả năm?",
+          "step_index": 3,
+          "options": [
+            { "id": "car_q_deduct_yes", "label": "Rất sẵn sàng, vì cả năm hiếm khi quẹt, chỉ sợ đâm đụng lớn", "next_node_id": "car_result_pack_smart_saving" },
+            { "id": "car_q_deduct_no", "label": "Không, xước nhỏ nhất mình cũng muốn bảo hiểm lo hết từ A-Z", "next_node_id": "car_result_pack_comprehensive" }
+          ]
+        },
+        "car_q_comm_plate": {
+          "type": "question",
+          "id": "car_q_comm_plate",
+          "title": "Chiếc xe của bạn đang đăng ký biển màu gì?",
+          "step_index": 2,
+          "options": [
+            { "id": "car_q_plate_yellow", "label": "Biển số vàng (Đăng ký kinh doanh vận tải chính thức)", "next_node_id": "car_q_comm_pain" },
+            { "id": "car_q_plate_white", "label": "Biển số trắng nhưng có chạy khách ngoài / Chở tour", "next_node_id": "car_q_comm_pain" }
+          ]
+        },
+        "car_q_comm_pain": {
+          "type": "question",
+          "id": "car_q_comm_pain",
+          "title": "Khi xe phải vào xưởng làm bảo hiểm, điều gì khiến bạn đau đầu nhất?",
+          "step_index": 3,
+          "options": [
+            { "id": "car_q_pain_time", "label": "Bị giam xe quá lâu, mất doanh thu mỗi ngày 500k–1tr", "next_node_id": "car_result_pack_commercial_fast" },
+            { "id": "car_q_pain_paper", "label": "Thủ tục giấy tờ hành xác, bắt đi lại bổ sung biên bản", "next_node_id": "car_result_pack_commercial_fast" }
+          ]
+        },
+        "car_result_pack_new_vip": {
+          "type": "result",
+          "id": "car_result_pack_new_vip",
+          "tier": "new_car_vip",
+          "title": "Khuyến nghị: GÓI TOÀN DIỆN GIỮ ZIN XE CHÍNH HÃNG",
+          "summary": "Được thiết kế bảo vệ tối đa cho xe mới lăn bánh, giữ nguyên giá trị thẩm mỹ và giá trị bán lại.",
+          "reveal_60": {
+            "estimate_value": "Khoảng 8.500.000đ – 10.200.000đ / năm",
+            "highlights": [
+              "Điều khoản bắt buộc 1: Sửa chữa tại Garage chính hãng",
+              "Điều khoản bắt buộc 2: Thay mới phụ tùng không khấu hao",
+              "Điều khoản bắt buộc 3: Bảo hiểm Thủy kích ngập nước"
+            ],
+            "tips": [
+              "Nếu đỗ hầm chung cư an toàn: Cắt bỏ gói mất cắp bộ phận, tiết kiệm ngay 1.200.000đ"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Bảng so sánh giá 4 hãng lớn & Ưu đãi",
+            "locked_items": [
+              "Biểu phí chi tiết Bảo Việt, PVI, PTI, MIC (chỉ từ 6.xxx.000đ)",
+              "Voucher quà tặng xăng xe hoặc hoàn tiền 1.500.000đ vào MoMo"
+            ],
+            "cta_label": "Xem giá 4 Hãng trên App MoMo",
+            "deeplink_url": "momo://insurance/car_damage?pack=vip&source=web_quiz_car",
+            "subtext": "Bồi thường online không cần chờ giám định viên"
+          }
+        },
+        "car_result_pack_smart_saving": {
+          "type": "result",
+          "id": "car_result_pack_smart_saving",
+          "tier": "smart_saving",
+          "title": "Khuyến nghị: GÓI TIẾT KIỆM THÔNG MINH (Cắt giảm chi phí thừa)",
+          "summary": "Tối ưu chi phí cho xe đã đi trên 3 năm bằng cách áp dụng mức khấu trừ để tiết kiệm đến 30% tiền mua.",
+          "reveal_60": {
+            "estimate_value": "Chỉ từ 5.500.000đ – 6.800.000đ / năm",
+            "highlights": [
+              "Áp dụng mức khấu trừ 500k: Giảm ngay 2.000.000đ tiền phí hàng năm",
+              "Vẫn giữ nguyên 100% quyền lợi khi đâm đụng lớn hoặc ngập nước",
+              "Sửa chữa tại xưởng liên kết chuẩn chất lượng gần nhà"
+            ],
+            "tips": [
+              "Xe trên 3 năm không nhất thiết phải vào hãng lớn nếu gara liên kết cam kết bảo hành sơn 12 tháng"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Xem gói tiết kiệm của 4 nhà bảo hiểm",
+            "locked_items": [
+              "Giá sau chiết khấu của PVI & MIC",
+              "Danh sách garage liên kết gần vị trí của bạn"
+            ],
+            "cta_label": "Mở khóa bảng giá trên App MoMo",
+            "deeplink_url": "momo://insurance/car_damage?pack=saving&source=web_quiz_car",
+            "subtext": "Tự chủ 100% online, không bị telesale làm phiền"
+          }
+        },
+        "car_result_pack_commercial_fast": {
+          "type": "result",
+          "id": "car_result_pack_commercial_fast",
+          "tier": "commercial_fast",
+          "title": "Khuyến nghị: GÓI XE KINH DOANH - BỒI THƯỜNG SIÊU TỐC",
+          "summary": "Đảm bảo 100% tính pháp lý bồi thường cho xe có kinh doanh và ưu tiên giải ngân sửa chữa nhanh.",
+          "reveal_60": {
+            "estimate_value": "Báo giá chuẩn xe kinh doanh",
+            "highlights": [
+              "Bắt buộc tích chọn điều khoản 'Xe có kinh doanh vận tải' để không bị từ chối đền",
+              "Hãng có mạng lưới bảo lãnh garage rộng nhất để lấy xe ra chạy sớm",
+              "Giám định qua ảnh chụp trên điện thoại"
+            ],
+            "tips": [
+              "Biển trắng chạy dịch vụ bắt buộc phải khai báo mục đích kinh doanh khi mua bảo hiểm"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Bảng giá dành riêng cho xe kinh doanh",
+            "locked_items": [
+              "Gói hỗ trợ tài xế công nghệ",
+              "Bảo hiểm TNDS bắt buộc giá ưu đãi"
+            ],
+            "cta_label": "Xem giá xe kinh doanh trên App MoMo",
+            "deeplink_url": "momo://insurance/car_damage?pack=comm&source=web_quiz_car",
+            "subtext": "Cấp giấy chứng nhận điện tử tức thì"
+          }
+        },
+        "car_result_pack_flood_heavy": {
+          "type": "result",
+          "id": "car_result_pack_flood_heavy",
+          "tier": "flood_priority",
+          "title": "Khuyến nghị: GÓI BẢO VỆ CHUYÊN BIỆT MÙA MƯA NGẬP (Thủy kích 100%)",
+          "summary": "Khu vực đỗ xe ngập sâu bắt buộc phải trang bị điều khoản Thủy kích không giới hạn mức khấu trừ.",
+          "reveal_60": {
+            "estimate_value": "Bảo vệ động cơ đến hàng trăm triệu",
+            "highlights": [
+              "Điều khoản Thủy kích mở rộng: Đền 100% chi phí đại tu máy khi ngập nước",
+              "Dịch vụ cứu hộ kéo xe ngập nước 24/7 miễn phí",
+              "Chi trả chi phí vệ sinh nội thất khoang lái"
+            ],
+            "tips": [
+              "Khi xe chết máy trong vũng ngập: Tuyệt đối không đề nổ máy lại để đảm bảo quyền lợi bảo hiểm"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Xem các hãng có điều khoản Thủy kích tốt nhất",
+            "locked_items": [
+              "So sánh điều khoản bồi thường thủy kích của Bảo Việt vs PVI",
+              "Số hotline cứu hộ khẩn cấp 24/7"
+            ],
+            "cta_label": "Xem chi tiết gói Thủy kích trên App MoMo",
+            "deeplink_url": "momo://insurance/car_damage?pack=flood&source=web_quiz_car",
+            "subtext": "An tâm tuyệt đối trong mùa mưa bão"
+          }
+        },
+        "car_result_pack_new_flex": {
+          "type": "result",
+          "id": "car_result_pack_new_flex",
+          "tier": "new_car_flex",
+          "title": "Khuyến nghị: GÓI TOÀN DIỆN LINH HOẠT",
+          "summary": "Cân bằng hoàn hảo giữa chất lượng sửa chữa và tốc độ hoàn thiện xe nhanh chóng.",
+          "reveal_60": {
+            "estimate_value": "Khoảng 7.200.000đ – 8.800.000đ / năm",
+            "highlights": [
+              "Đầy đủ quyền lợi Thủy kích và Tai nạn lớn",
+              "Tự do lựa chọn xưởng sửa chữa uy tín gần nhà"
+            ],
+            "tips": [
+              "Lựa chọn xưởng có liên kết thanh toán trực tiếp với bảo hiểm để không cần ứng tiền túi"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Bảng giá và danh sách garage liên kết",
+            "locked_items": [
+              "Bảng giá cạnh tranh 4 hãng",
+              "Voucher bảo dưỡng định kỳ"
+            ],
+            "cta_label": "Mở bảng giá trên App MoMo",
+            "deeplink_url": "momo://insurance/car_damage?pack=flex&source=web_quiz_car",
+            "subtext": "Xem ngay trong 1 phút"
+          }
+        },
+        "car_result_pack_comprehensive": {
+          "type": "result",
+          "id": "car_result_pack_comprehensive",
+          "tier": "comprehensive_standard",
+          "title": "Khuyến nghị: GÓI BẢO HIỂM THÂN VỎ CƠ BẢN TOÀN DIỆN",
+          "summary": "Bảo vệ toàn diện cho xe đã từng có lịch sử va quẹt với mức miễn thường 0 đồng.",
+          "reveal_60": {
+            "estimate_value": "Khoảng 6.500.000đ – 8.000.000đ / năm",
+            "highlights": [
+              "Miễn thường 0 đồng: Xước xát nhỏ bảo hiểm lo từ A-Z",
+              "Bảo hiểm đâm va, lật đổ, ngập nước",
+              "Cứu hộ giao thông 24/7"
+            ],
+            "tips": [
+              "Gom các vết xước nhỏ lại làm bảo hiểm 1 lần trước khi hợp đồng hết hạn để tiết kiệm thời gian"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "So sánh biểu phí cơ bản của 4 hãng",
+            "locked_items": [
+              "Biểu phí chi tiết từng hãng",
+              "Mã giảm giá trực tiếp vào hợp đồng"
+            ],
+            "cta_label": "Xem giá trên App MoMo",
+            "deeplink_url": "momo://insurance/car_damage?pack=standard&source=web_quiz_car",
+            "subtext": "Thủ tục nộp hồ sơ online 100%"
+          }
+        }
+      }
+    },
+    {
+      "id": "quiz-tinh-luong-thue-tncn",
+      "name": "Chẩn đoán Lương Gross sang Net & Săn Hoàn Thuế TNCN",
+      "type": "branching",
+      "theme": "luong-thue-tncn",
+      "badge": "Săn Hoàn Thuế",
+      "description": "Bóc tách thu nhập thực nhận (Net), kiểm tra khả năng được hoàn tiền thuế TNCN từ cơ quan thuế và mẹo đăng ký người phụ thuộc.",
+      "total_steps_estimate": "2–4 câu hỏi (tuỳ câu trả lời)",
+      "root_question_id": "tax_q1",
+      "nodes": {
+        "tax_q1": {
+          "type": "question",
+          "id": "tax_q1",
+          "title": "Vấn đề nào về tiền lương và thuế đang khiến bạn bận tâm nhất?",
+          "step_index": 1,
+          "options": [
+            { "id": "tax_q1_gross_net", "label": "Đang deal lương mới, muốn biết lương Gross này về tay thực nhận (Net) bao nhiêu?", "next_node_id": "tax_q_gross_range" },
+            { "id": "tax_q1_refund", "label": "Bị trừ thuế nhiều, muốn kiểm tra xem có được HOÀN LẠI TIỀN THUẾ không?", "next_node_id": "tax_q_job_status" },
+            { "id": "tax_q1_freelance", "label": "Làm Freelance / Làm nhiều nơi bị trừ mất 10% tiền công tại nguồn", "next_node_id": "tax_q_freelance_cert" }
+          ]
+        },
+        "tax_q_gross_range": {
+          "type": "question",
+          "id": "tax_q_gross_range",
+          "title": "Mức lương Gross bạn đang deal hoặc đang nhận nằm trong khoảng nào?",
+          "step_index": 2,
+          "options": [
+            { "id": "tax_q_gross_sub11m", "label": "Dưới 11.000.000đ / tháng", "next_node_id": "tax_result_sub11m_exit" },
+            { "id": "tax_q_gross_11_25m", "label": "Từ 11.000.000đ – 25.000.000đ / tháng", "next_node_id": "tax_q_dependents" },
+            { "id": "tax_q_gross_25_50m", "label": "Từ 25.000.000đ – 50.000.000đ / tháng", "next_node_id": "tax_q_dependents" },
+            { "id": "tax_q_gross_above50m", "label": "Trên 50.000.000đ / tháng", "next_node_id": "tax_q_dependents" }
+          ]
+        },
+        "tax_q_dependents": {
+          "type": "question",
+          "id": "tax_q_dependents",
+          "title": "Bạn đã đăng ký giảm trừ cho người phụ thuộc nào chưa (con nhỏ, bố mẹ già)?",
+          "step_index": 3,
+          "options": [
+            { "id": "tax_q_dep_none", "label": "Chưa đăng ký ai (Chỉ giảm trừ bản thân 11 triệu)", "next_node_id": "tax_result_gross_no_dep" },
+            { "id": "tax_q_dep_one", "label": "Đã đăng ký 1 người phụ thuộc (Giảm thêm 4.4tr/tháng)", "next_node_id": "tax_result_gross_has_dep" },
+            { "id": "tax_q_dep_multi", "label": "Đã đăng ký từ 2 người phụ thuộc trở lên", "next_node_id": "tax_result_gross_has_dep" }
+          ]
+        },
+        "tax_q_job_status": {
+          "type": "question",
+          "id": "tax_q_job_status",
+          "title": "Trong năm vừa qua, tình trạng công việc của bạn diễn ra như thế nào?",
+          "step_index": 2,
+          "options": [
+            { "id": "tax_q_job_stable", "label": "Đi làm ổn định đủ 12 tháng tại 1 công ty duy nhất", "next_node_id": "tax_result_stable_exit" },
+            { "id": "tax_q_job_switch", "label": "Có chuyển việc / Nhảy việc giữa các công ty trong năm", "next_node_id": "tax_q_tax_experience" },
+            { "id": "tax_q_job_gap", "label": "Có vài tháng nghỉ việc ngắt quãng không đi làm", "next_node_id": "tax_q_tax_experience" }
+          ]
+        },
+        "tax_q_tax_experience": {
+          "type": "question",
+          "id": "tax_q_tax_experience",
+          "title": "Bạn đã từng tự nộp hồ sơ Quyết toán Thuế online bao giờ chưa?",
+          "step_index": 3,
+          "options": [
+            { "id": "tax_q_exp_no", "label": "Chưa từng làm, thấy thủ tục rườm rà và sợ bị phạt", "next_node_id": "tax_result_refund_eligible" },
+            { "id": "tax_q_exp_yes", "label": "Đã từng tự làm nhưng thấy đối soát chứng từ lâu", "next_node_id": "tax_result_refund_eligible" }
+          ]
+        },
+        "tax_q_freelance_cert": {
+          "type": "question",
+          "id": "tax_q_freelance_cert",
+          "title": "Các bên chi trả tiền có cấp 'Chứng từ khấu trừ thuế 10%' cho bạn không?",
+          "step_index": 2,
+          "options": [
+            { "id": "tax_q_cert_yes", "label": "Có cấp đầy đủ hoặc có thể liên hệ xin lại được", "next_node_id": "tax_q_freelance_total" },
+            { "id": "tax_q_cert_no", "label": "Không cấp, bên thuê trừ 10% rồi thôi", "next_node_id": "tax_result_freelance_warning" }
+          ]
+        },
+        "tax_q_freelance_total": {
+          "type": "question",
+          "id": "tax_q_freelance_total",
+          "title": "Tổng thu nhập từ mọi nguồn trong cả năm của bạn ước tính khoảng bao nhiêu?",
+          "step_index": 3,
+          "options": [
+            { "id": "tax_q_total_sub132m", "label": "Dưới 132 triệu/năm (Bình quân dưới 11 triệu/tháng)", "next_node_id": "tax_result_freelance_full_refund" },
+            { "id": "tax_q_total_above132m", "label": "Trên 132 triệu/năm", "next_node_id": "tax_result_freelance_partial" }
+          ]
+        },
+        "tax_result_sub11m_exit": {
+          "type": "result",
+          "id": "tax_result_sub11m_exit",
+          "tier": "sub_11m",
+          "title": "Mức lương dưới 11 triệu: MIỄN 100% THUẾ TNCN",
+          "summary": "Bạn không phải đóng bất kỳ đồng thuế TNCN nào, chỉ trích đóng 10.5% bảo hiểm bắt buộc theo luật lao động.",
+          "reveal_60": {
+            "estimate_value": "Thực nhận Net ~ 89.5% Gross",
+            "highlights": [
+              "Tiền thuế TNCN: 0 đồng",
+              "BHXH (8%) + BHYT (1.5%) + BHTN (1%): Trừ đúng 10.5%",
+              "Doanh nghiệp phải đóng thêm 21.5% bảo hiểm cho bạn"
+            ],
+            "tips": [
+              "Cài đặt tự động trích 10% lương mỗi tháng vào Túi Thần Tài để xây dựng quỹ khẩn cấp"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Kế hoạch phân bổ chi tiêu lương thông minh",
+            "locked_items": [
+              "Công cụ phân bổ lương theo quy tắc 6 chiếc lọ",
+              "Tính năng tự động sinh lời mỗi ngày từ lương"
+            ],
+            "cta_label": "Quản lý lương trên App MoMo",
+            "deeplink_url": "momo://wealth/tuithantai?source=web_quiz_tax_sub11m",
+            "subtext": "Miễn phí công cụ tính toán"
+          }
+        },
+        "tax_result_gross_no_dep": {
+          "type": "result",
+          "id": "tax_result_gross_no_dep",
+          "tier": "has_tax_no_dep",
+          "title": "Bóc tách Lương Net & Cơ hội Tiết Kiệm Đến 8 Triệu Tiền Thuế/Năm",
+          "summary": "Lương thực nhận của bạn chiếm khoảng 83%–86% Gross. Bạn đang có dư địa giảm thuế rất lớn nhờ người phụ thuộc.",
+          "reveal_60": {
+            "estimate_value": "Thực nhận ~ 84% Gross",
+            "highlights": [
+              "Bị trừ 10.5% BHXH bắt buộc",
+              "Bị trừ thuế TNCN lũy tiến từng phần",
+              "Mẹo vàng: Đăng ký ngay 1 người phụ thuộc (con nhỏ hoặc bố mẹ hết tuổi lao động) giúp bạn giữ lại từ 440.000đ – 1.500.000đ tiền thuế/tháng"
+            ],
+            "tips": [
+              "Thủ tục đăng ký người phụ thuộc chỉ cần nộp giấy khai sinh/CCCD cho phòng kế toán công ty"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Bảng tính chi tiết 7 bậc thuế & Hướng dẫn",
+            "locked_items": [
+              "Bảng bóc tách số tiền bị trừ từng bậc",
+              "Mẫu hồ sơ đăng ký người phụ thuộc chuẩn cơ quan thuế"
+            ],
+            "cta_label": "Xem bảng bóc tách thuế trên App MoMo",
+            "deeplink_url": "momo://tool/salary_calculator?source=web_quiz_tax",
+            "subtext": "Cập nhật theo biểu thuế lũy tiến mới nhất"
+          }
+        },
+        "tax_result_gross_has_dep": {
+          "type": "result",
+          "id": "tax_result_gross_has_dep",
+          "tier": "has_tax_with_dep",
+          "title": "Tối ưu hóa Lương Net thành công nhờ Giảm Trừ Gia Cảnh",
+          "summary": "Hồ sơ của bạn đã được tối ưu một phần tiền thuế nhờ các suất giảm trừ người phụ thuộc.",
+          "reveal_60": {
+            "estimate_value": "Thực nhận tối ưu ~ 88% Gross",
+            "highlights": [
+              "Tiết kiệm hàng triệu đồng tiền thuế mỗi tháng nhờ đăng ký người phụ thuộc",
+              "Chỉ nộp thuế trên phần thu nhập vượt quá mức giảm trừ gia cảnh"
+            ],
+            "tips": [
+              "Cuối năm nhớ kiểm tra công ty đã tính đủ các tháng giảm trừ gia cảnh cho người phụ thuộc chưa"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Kế hoạch sinh lời từ tiền lương tối ưu",
+            "locked_items": [
+              "Tính năng Lương về tự động sinh lãi",
+              "Checklist đối soát bảng lương cuối năm"
+            ],
+            "cta_label": "Mở App MoMo nhận quyền lợi",
+            "deeplink_url": "momo://wealth/tuithantai?source=web_quiz_tax_dep",
+            "subtext": "Tự động sinh lãi mỗi ngày đến 5%/năm"
+          }
+        },
+        "tax_result_stable_exit": {
+          "type": "result",
+          "id": "tax_result_stable_exit",
+          "tier": "stable_company",
+          "title": "Hồ sơ của bạn: ĐƯỢC CÔNG TY ỦY QUYỀN QUYẾT TOÁN THAY",
+          "summary": "Làm đủ 12 tháng tại 1 nơi giúp bạn không cần tự đi làm thủ tục quyết toán thuế phức tạp.",
+          "reveal_60": {
+            "estimate_value": "Không lo thủ tục thuế",
+            "highlights": [
+              "Công ty có trách nhiệm quyết toán thay cho bạn vào tháng 3–4 hàng năm",
+              "Nếu nộp thừa thuế trong năm, công ty sẽ hoàn trả trực tiếp vào kỳ lương tiếp theo"
+            ],
+            "tips": [
+              "Chỉ cần ký vào Giấy ủy quyền quyết toán thuế (Mẫu 08) do nhân sự công ty gửi"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Kiểm tra mã số thuế & Lịch sử nộp thuế",
+            "locked_items": [
+              "Tra cứu tình trạng Mã số thuế cá nhân",
+              "Dịch vụ nộp thuế trực tuyến trên MoMo"
+            ],
+            "cta_label": "Kiểm tra MST trên App MoMo",
+            "deeplink_url": "momo://gov/tax_lookup?source=web_quiz_tax_stable",
+            "subtext": "Kết nối dữ liệu Thuế điện tử"
+          }
+        },
+        "tax_result_refund_eligible": {
+          "type": "result",
+          "id": "tax_result_refund_eligible",
+          "tier": "refund_high_prob",
+          "title": "DỰ BÁO: BẠN CÓ KHẢ NĂNG ĐƯỢC HOÀN LẠI TIỀN THUẾ!",
+          "summary": "Nhảy việc hoặc có tháng ngắt quãng khiến bạn bị khấu trừ thừa thuế tạm tính. Bạn có quyền làm thủ tục đòi lại tiền thừa từ nhà nước.",
+          "reveal_60": {
+            "estimate_value": "Ước tính hoàn: 1.500.000đ – 8.000.000đ",
+            "highlights": [
+              "Cơ quan thuế đang giữ thừa tiền của bạn do tính biểu lũy tiến từng tháng lẻ",
+              "Bạn BẮT BUỘC phải tự làm hồ sơ quyết toán (công ty không làm thay khi có 2 nguồn thu nhập)",
+              "Cảnh báo: Nếu có số thuế nộp thiếu mà không quyết toán, bạn sẽ bị phạt chậm nộp"
+            ],
+            "tips": [
+              "Gom ngay 'Chứng từ khấu trừ thuế TNCN điện tử' từ các công ty cũ trước tháng 3"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Checklist Hoàn Thuế 1-Chạm & Hỗ trợ",
+            "locked_items": [
+              "Các bước nộp hồ sơ online trên eTax Mobile không cần đến chi cục thuế",
+              "Dịch vụ hỗ trợ quyết toán thuế nhanh chóng"
+            ],
+            "cta_label": "Xem Checklist Hoàn Thuế trên App MoMo",
+            "deeplink_url": "momo://gov/etax_guide?source=web_quiz_tax_refund",
+            "subtext": "Lấy lại tiền thừa hợp pháp từ cơ quan thuế"
+          }
+        },
+        "tax_result_freelance_full_refund": {
+          "type": "result",
+          "id": "tax_result_freelance_full_refund",
+          "tier": "freelance_full_refund",
+          "title": "Cơ hội: ĐÒI LẠI TOÀN BỘ 100% TIỀN THUẾ 10% ĐÃ BỊ TRỪ",
+          "summary": "Tổng thu nhập năm dưới 132 triệu đồng (bình quân dưới 11tr/tháng) đồng nghĩa bạn thuộc diện MIỄN THUẾ hoàn toàn.",
+          "reveal_60": {
+            "estimate_value": "Được hoàn lại 100% tiền bị trừ 10%",
+            "highlights": [
+              "Mọi khoản tiền công bị bên thuê trừ 10% tại nguồn đều được cơ quan thuế hoàn trả đủ",
+              "Chỉ cần tập hợp đủ chứng từ khấu trừ thuế từ các bên trả tiền"
+            ],
+            "tips": [
+              "Yêu cầu các bên thuê xuất Chứng từ khấu trừ thuế TNCN điện tử gửi về email của bạn"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Hướng dẫn thủ tục nhận lại tiền thuế freelance",
+            "locked_items": [
+              "Mẫu tờ khai quyết toán thuế dành cho lao động tự do",
+              "Tài khoản nhận tiền hoàn thuế trực tiếp về Ví MoMo"
+            ],
+            "cta_label": "Xem hướng dẫn trên App MoMo",
+            "deeplink_url": "momo://gov/etax_freelance?source=web_quiz_tax_free",
+            "subtext": "Quyền lợi hợp pháp của người lao động tự do"
+          }
+        },
+        "tax_result_freelance_warning": {
+          "type": "result",
+          "id": "tax_result_freelance_warning",
+          "tier": "freelance_no_cert",
+          "title": "Cảnh báo: BẠN CÓ NGUY CƠ MẤT TRẮNG TIỀN THUẾ NẾU KHÔNG CÓ CHỨNG TỪ",
+          "summary": "Không có chứng từ khấu trừ thuế đồng nghĩa cơ quan thuế không có căn cứ hoàn lại tiền cho bạn.",
+          "reveal_60": {
+            "estimate_value": "Cần xin lại chứng từ ngay",
+            "highlights": [
+              "Theo quy định pháp luật, bên trả thu nhập từ 2 triệu đồng/lần trở lên có nghĩa vụ cấp chứng từ khấu trừ cho bạn",
+              "Liên hệ ngay phòng kế toán bên thuê để xin cấp chứng từ điện tử"
+            ],
+            "tips": [
+              "Kể từ năm 2023, toàn bộ chứng từ khấu trừ thuế TNCN đều là hóa đơn điện tử, chỉ mất 1 phút để bên thuê gửi qua email"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Mẫu thư yêu cầu bên thuê cấp chứng từ",
+            "locked_items": [
+              "Mẫu email yêu cầu xuất chứng từ chuẩn luật",
+              "Hướng dẫn kiểm tra chứng từ hợp lệ"
+            ],
+            "cta_label": "Tải mẫu yêu cầu trên App MoMo",
+            "deeplink_url": "momo://gov/tax_template?source=web_quiz_tax_warn",
+            "subtext": "Bảo vệ quyền lợi tiền bạc của chính bạn"
+          }
+        },
+        "tax_result_freelance_partial": {
+          "type": "result",
+          "id": "tax_result_freelance_partial",
+          "tier": "freelance_partial",
+          "title": "Thu nhập trên 132 triệu: CẦN QUYẾT TOÁN THEO BIỂU LŨY TIẾN",
+          "summary": "Thu nhập tự do kết hợp nhiều nguồn cần được tổng hợp để xác định chính xác bạn được hoàn thuế hay phải nộp thêm.",
+          "reveal_60": {
+            "estimate_value": "Cần đối soát tổng thu nhập",
+            "highlights": [
+              "10% tạm trừ tại nguồn có thể cao hơn hoặc thấp hơn nghĩa vụ thuế thực tế của bạn",
+              "Chủ động quyết toán trước thời hạn 30/4 để tránh bị phạt nợ thuế"
+            ],
+            "tips": [
+              "Cộng dồn toàn bộ thu nhập từ các hợp đồng để biết chính xác bậc thuế của mình"
+            ]
+          },
+          "gated_40": {
+            "locked_title": "Công cụ tính thuế đa nguồn trên MoMo",
+            "locked_items": [
+              "Bảng tính thuế đa nguồn tự động",
+              "Cổng nộp thuế trực tuyến không cần ra kho bạc"
+            ],
+            "cta_label": "Tính thuế đa nguồn trên App MoMo",
+            "deeplink_url": "momo://tool/multi_income_tax?source=web_quiz_tax_multi",
+            "subtext": "Chính xác và tuân thủ pháp luật"
+          }
+        }
+      }
+    }
+  ]
+}

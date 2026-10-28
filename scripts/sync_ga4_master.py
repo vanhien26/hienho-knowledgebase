@@ -398,6 +398,7 @@ def main():
         "financial": 0,
         "new_user": 0,
         "vehicle": 0,
+        "insurance": 0,
         "student": 0,
         "others": 0
     }
@@ -438,8 +439,10 @@ def main():
             hubs_pv["financial"] += pv
         elif h_name in ["New User"] or sec == "Brand" and ("/tai-app" in lp or "/chao-ban-moi" in lp):
             hubs_pv["new_user"] += pv
-        elif h_name in ["Phạt Nguội", "Tiện Ích Giao Thông", "Phí Không Dừng", "Bảo Hiểm Ô Tô", "Bảo Hiểm Xe Máy"] or sec in ["vehicle-hub", "insurtech"]:
+        elif h_name in ["Phạt Nguội", "Tiện Ích Giao Thông", "Phí Không Dừng", "Bảo Hiểm Ô Tô", "Bảo Hiểm Xe Máy", "Giá xăng", "Cây xăng", "Trạm sạc"] or sec == "vehicle-hub" or ("ô tô" in h_name.lower() or "xe máy" in h_name.lower()):
             hubs_pv["vehicle"] += pv
+        elif h_name in ["Bảo Hiểm", "Bảo Hiểm Y Tế", "Bảo Hiểm Sức Khỏe", "Bảo Hiểm Xã Hội"] or sec == "insurtech" or "bảo hiểm" in h_name.lower():
+            hubs_pv["insurance"] += pv
         elif h_name in ["Student Hub", "Student Pass"] or sec == "student":
             hubs_pv["student"] += pv
         else:
@@ -485,6 +488,7 @@ def main():
             "financial": {"pv": hubs_pv["financial"], "target": 450000, "pct": round(hubs_pv["financial"] / 450000 * 100, 2)},
             "new_user": {"pv": hubs_pv["new_user"], "target": 300000, "pct": round(hubs_pv["new_user"] / 300000 * 100, 2)},
             "vehicle": {"pv": hubs_pv["vehicle"], "target": 100000, "pct": round(hubs_pv["vehicle"] / 100000 * 100, 2)},
+            "insurance": {"pv": hubs_pv["insurance"], "target": 50000, "pct": round(hubs_pv["insurance"] / 50000 * 100, 2)},
             "student": {"pv": hubs_pv["student"], "target": 100000, "pct": round(hubs_pv["student"] / 100000 * 100, 2)}
         },
         "cinema_breakdown": {
@@ -525,6 +529,7 @@ def main():
             {"id": "financial", "name": "Financial Hub", "pv": hubs_pv["financial"]},
             {"id": "new_user", "name": "New User Hub", "pv": hubs_pv["new_user"]},
             {"id": "vehicle", "name": "Vehicle Hub", "pv": hubs_pv["vehicle"]},
+            {"id": "insurance", "name": "Insurance Hub", "pv": hubs_pv["insurance"]},
             {"id": "student", "name": "Student Hub", "pv": hubs_pv["student"]}
         ],
         "lastFullHubs": [

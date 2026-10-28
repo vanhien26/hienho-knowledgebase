@@ -807,8 +807,9 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
 | **Cinema Hub** | Performance | 966.833 | 1.117.378 | 86,53% | 37.186 | 1.152.763 | Vượt Target +3,17%, tiếp tục giữ vững vị trí đầu tàu tăng trưởng. |
 | **Financial Hub** | Transformation | 269.552 | 450.000 | 59,90% | 10.367 | 321.389 | Đạt 71,42% Target; nhịp tăng tốc cải thiện tốt nhờ các landing page tài chính. |
-| **Vehicle Hub** | Transformation | 94.180 | 100.000 | 94,18% | 3.622 | 112.291 | Vượt Target +12,29%; Phạt nguội, Giá xăng, Cây xăng về đích sớm. |
 | **New User Hub** | Incubation | 84.269 | 300.000 | 28,09% | 3.241 | 100.474 | Đạt 33,49% Target; cần gia tăng tiện ích evergreen thu hút user mới. |
+| **Vehicle Hub** | Transformation | 66.243 | 100.000 | 66,24% | 2.548 | 78.982 | Gồm Phạt nguội, Tiện ích giao thông, Giá xăng & Bảo hiểm ô tô/xe máy. |
+| **Insurance Hub** | Incubation | 27.937 | 50.000 | 55,87% | 1.075 | 33.310 | Gồm BHYT, BH Sức khỏe, BHXH, Bảo hiểm tổng hợp (trừ BH ô tô/xe máy). |
 | **Student Hub** | Incubation | 2.929 | 100.000 | 2,93% | 113 | 3.492 | Đạt 3,49% Target; cần bổ sung bài viết và chiến dịch trọng điểm. |
 | **Khác (Brand, Games, Utilities)** | Foundation | 1.659.028 | - | - | 63.809 | 1.978.073 | Nền tảng tiện ích cốt lõi duy trì ổn định. |
 

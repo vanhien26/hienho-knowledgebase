@@ -12,19 +12,36 @@ Thumbs.db
 *.tmp
 *.swp
 *.log
+*.zip
 .claude/
 scratch/
 __pycache__/
 *.pyc
 .venv/
 
-# Secrets & Credentials
+# Secrets, Keys & API Credentials (BẢO MẬT TUYỆT ĐỐI - KHÔNG BAO GIỜ COMMIT)
 .env
 .env.*
 *.env
+!.env.example
+*.pem
+*.key
+*.pkcs12
+*.p12
 07_REPORTS/data/credentials/
+**/credentials/
+**/secrets/
 *credentials*.json
 *secret*.json
+*token*.json
+*service_account*.json
+*service-account*.json
+*sa-key*.json
+*serviceaccount*.json
+*gsc-credentials*.json
+*ga4-credentials*.json
+*gdrive-token*.json
+*gtm-token*.json
 
 # Intermediate API cache & Raw Dumps
 07_REPORTS/data/cache/

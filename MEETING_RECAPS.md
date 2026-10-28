@@ -7,6 +7,47 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 
 ## DANH SÁCH BẢN GHI RECAPS
 
+### Bản ghi ngày 28/10/2026: Chiến Dịch Game Bò Sữa Bay (Cinema Hub) - Kế Hoạch Seeding, TVC Rạp & Điều Chỉnh Game Rules
+> **Thành phần:** Web Product Lead x Cinema Team x Web Dev Team  
+> **Mục tiêu:** Đồng bộ yêu cầu chiến dịch phát hành Game Bò Sữa Bay trên Cinema Hub, kế hoạch quảng bá đa kênh (Seeding, TVC rạp, Video diễn viên trải nghiệm) và quy chuẩn bộ Game Rules mới để kịp tiến độ bàn giao testing trước thứ Sáu (31/10/2026).
+
+#### 1. Kế Hoạch Phát Hành & Chiến Dịch Truyền Thông (Marketing & Media)
+- **Tiến Độ Bắt Buộc:** Phải hoàn thành và đẩy game lên môi trường Testing trước thứ Sáu (31/10/2026).
+- **Kênh Quảng Bá & Phân Phối:**
+  - Triển khai seeding trên các cộng đồng mạng xã hội.
+  - Video Game sẽ được chiếu TVC tại các cụm rạp chiếu phim đối tác.
+  - Sản xuất clip diễn viên/KOLs chơi thử game để tạo hiệu ứng lan tỏa (viral).
+
+#### 2. Quy Chuẩn Bộ Game Rules Mới (Product & Logic Specs)
+- **Cơ Chế Sinh Tồn (Survival / Endless Mode):**
+  - **Máu (Lives):** Giảm số lượng máu xuống còn **2 mạng** (tối đa 2 lần va chạm chướng ngại vật).
+  - **Thời Gian Chơi:** Bỏ giới hạn thời gian (Endless mode). Người dùng chơi liên tục cho đến khi hết 2 mạng thì Game Over.
+  - **Cơ Chế Điểm Số:** Mỗi bình sữa thu thập được tính **1 điểm**.
+  - **Độ Khó Thích Ứng (Dynamic Difficulty):** Càng chơi lâu, tốc độ di chuyển càng gia tăng và mật độ chướng ngại vật xuất hiện càng dày đặc để khống chế thời gian trung bình 1 session (khoảng 60 - 90 giây).
+- **Cơ Chế Người Dùng & Bảng Xếp Hạng (Leaderboard):**
+  - Cho phép người dùng chơi lại (Replay) không giới hạn số lần.
+  - Mỗi người dùng được định danh bằng một mã code cố định hoặc Email/Gmail.
+  - Bảng xếp hạng (Leaderboard) ghi nhận **Điểm số cao nhất (High Score)** của người dùng thay vì ghi đè điểm lần chơi cuối.
+  - **Cơ chế trao quà:** Backend sẽ trực tiếp tổng hợp dữ liệu và xuất danh sách (Export Report) thứ hạng điểm cao nhất theo Gmail để team vận hành/Marketing tiến hành trao giải; Frontend không bắt buộc phải dựng giao diện Leaderboard công khai phức tạp.
+
+#### 3. Điều Chỉnh Giao Diện & Vị Trí Hiển Thị (UI / Placements)
+- **Vị Trí Nhúng Game:** Đặt trực tiếp ngay dưới Hero Section của trang bài viết/landing page `https://www.momo.vn/cinema/bo-sua-bay-25058`.
+- **Kênh Kéo Traffic Nội Bộ:** Gắn Balloon Ads (Banner bóng bay nổi) trên trang chủ Cinema Hub (`/cinema`) trỏ thẳng về URL chơi game.
+- **Chuẩn Hóa Nhãn Giao Diện (Copywriting):**
+  - Màn hình kết quả: Đổi nhãn "Cỡ Bò" thành **"Điểm"** (hoặc "Số Điểm").
+  - Màn hình thông tin/xác nhận: Đổi trường nhập "Tên Bò Của Bạn" thành **"Gmail / Email"** để phục vụ định danh và trao thưởng.
+
+#### 4. Kế Hoạch Triển Khai Tiện Ích Financial Hub
+- **Trang Quỹ Nhóm (`/tai-chinh/quy` - Phase 1):**
+  - Triển khai Phase 1 tích hợp **Content chuẩn hóa** (nguyên tắc vận hành, minh bạch thu chi, E-E-A-T) kết hợp **Simulator Quỹ Nhóm** (công cụ mô phỏng phân bổ chi phí, tính tiền nộp định kỳ theo số lượng thành viên).
+  - Phễu chuyển đổi Web-to-App: Dẫn luồng người dùng mở tính năng Quỹ Nhóm in-app trên MoMo (quản lý số dư, tự động nhắc nợ thành viên, sao kê minh bạch).
+- **Phân Tách 2 URL Độc Lập Cho Cụm Công Cụ Tính Thuế:**
+  - **Trang Tính Thuế TNCN (`/tai-chinh/thue-tncn`):** Phục vụ quyết toán thuế thu nhập cá nhân đa nguồn (lương công ty, vãng lai 10%, freelance), cập nhật biểu thuế lũy tiến hiện hành và đề xuất luật mới.
+  - **Trang Tính Thuế Hộ Kinh Doanh (`/tai-chinh/thue-ho-kinh-doanh`):** Phục vụ hộ kinh doanh, cá nhân bán hàng online sàn TMĐT (Shopee, TikTok Shop), cho thuê tài sản theo Thông tư 40/2021 và Luật Thuế GTGT mới (ngưỡng 200 triệu đồng).
+  - Định hướng kiến trúc: Tách biệt hoàn toàn 2 URL để tối ưu SEO Intent, chống cannibalization từ khóa, liên kết chéo qua thanh điều hướng chuyên biệt `TaxHubNav`.
+
+---
+
 ### Bản ghi ngày 22/10/2026: GPD Monthly BOM Review Với CEO Anh Tường - Chiến Lược Web Platform, Target 30k Install Q4, Định Hướng Financial Hub, Micro Journey & Signal
 > **Thời gian:** 22/10/2026 (95 phút)  
 > **Thành phần tham dự:** Anh Tường (CEO/BOM), Anh Công, Chị Yên, Anh Bảo, Huy Lê, Tín, Tuyền.  
