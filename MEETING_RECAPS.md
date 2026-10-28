@@ -7,6 +7,34 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 
 ## DANH SÁCH BẢN GHI RECAPS
 
+### Bản ghi ngày 28/10/2026: Định Hướng Trọng Tâm Hành Động Tuần 44 - Cinema (Bò Sữa Bay TVC & Trang Diễn Viên), Financial (Thuế, CCQ Phase 1, CIC Duolingo), Vehicle (Nộp Phạt CSGT) & Platform (Security API Public, PLG UI/UX Viết Bài)
+> **Thành phần:** Web Product Lead x Cell Team Leads x Web Engineering Team  
+> **Mục tiêu:** Chốt danh mục hành động ưu tiên cao nhất (P0/P1) cho Tuần 44 trên các mặt trận Cinema, Financial, Vehicle và Nền tảng Platform (Security, PLG).
+
+#### 1. Cinema Hub
+- **Game Bò Sữa Bay (`/cinema/bo-sua-bay-25058`):** Yêu cầu kỹ thuật cao nhất: game phải tuyệt đối ổn định, zero-crash, tối ưu bundle và chịu tải cao vì có kế hoạch phát sóng TVC tại các cụm rạp đối tác kèm mã QR Code cho khán giả quét chơi trực tiếp trên mobile.
+- **Chiến dịch Seeding:** Đẩy mạnh seeding đa kênh trên mạng xã hội và cộng đồng yêu phim.
+- **Go-Live Trang Diễn Viên:** Đưa cụm trang hồ sơ Diễn Viên (`/cinema/dien-vien/...`) lên Production chuẩn E-E-A-T.
+- **Thúc đẩy Ranking Phim Hot Tháng 11:** Sản xuất nội dung và tối ưu SEO đón đầu loạt phim bom tấn chiếu rạp tháng 11/2026.
+
+#### 2. Financial Hub
+- **Xây dựng 2 Trang Cụm Thuế:** Tập trung hoàn thiện và đưa lên Production trang Tính Thuế TNCN (`/tai-chinh/thue-tncn`) và Thuế Hộ Kinh Doanh (`/tai-chinh/thue-ho-kinh-doanh`).
+- **Chốt Trang Chứng Chỉ Quỹ (SIP) & Go-Live Phase 1:** Do hiện tại chưa có kết nối API NAV thời gian thực từ các Quỹ mở đối tác, chốt giải pháp Go-live Phase 1 sử dụng dữ liệu tĩnh/bán tự động (danh mục quỹ, tỷ suất sinh lời quá khứ, cơ chế đầu tư từ 10.000đ) kết nối phễu mở tài khoản in-app.
+- **Build Blog Content (Always-on):** Duy trì và đẩy mạnh cỗ máy sản xuất bài viết tài chính E-E-A-T theo nhịp Always-on hàng tuần.
+- **Nghiên Cứu UI Education Gamification Về CIC (Mô hình Duolingo):** Thiết kế ý tưởng/giao diện Gamification giáo dục tài chính về điểm tín dụng CIC dạng bài học tương tác mini (chia lộ trình từng cấp độ, câu hỏi tình huống trắc nghiệm, giữ chuỗi streak học tập hàng ngày, nhận huy hiệu/voucher), biến kiến thức tín dụng khô khan thành hành trình học tập lôi cuốn.
+
+#### 3. Vehicle Hub
+- **Go-Live Trang Nộp Phạt CSGT:** Đưa trang Nộp Phạt Giao Thông / CSGT lên Production kết nối trực tiếp từ cổng tra cứu phạt nguội (`/phat-nguoi`) sang thanh toán MoMo.
+
+#### 4. Dự Án Platform (Security & PLG)
+- **Security (An Toàn & Bảo Mật Nền Tảng):**
+  - Rà soát toàn bộ các API Public của Web Platform.
+  - Chuẩn hóa các sản phẩm/tiện ích đang dùng API Public trả dữ liệu về Client-Side: đánh giá rủi ro lộ dữ liệu, triển khai rate-limiting, xác thực CORS nghiêm ngặt hoặc chuyển đổi các dữ liệu nhạy cảm sang Server-Side API Proxy (BFF).
+- **PLG (Product-Led Growth):**
+  - Tái thiết kế toàn diện UI/UX giao diện Viết bài (Blog Editor / Content Creation Interface) trên MoSpark CMS: tinh gọn không gian viết, bố cục trực quan thanh công cụ, các khối SEO metadata, keyword cluster, hình ảnh và khối Key Takeaway, hỗ trợ xem trước đa thiết bị.
+
+---
+
 ### Bản ghi ngày 28/10/2026: Hoàn Tất Đóng Gói API Công Ty (Model Qwen 3.7) Dùng Chung Đa Dự Án - Tích Hợp MoMo AI & MoSpark Growth Dashboard (GA4 & GSC Ingestion)
 > **Thành phần:** AI Platform Team x Web Product Lead x Web Engineering Team x Data Team  
 > **Mục tiêu:** Đồng bộ tiến độ đóng gói thư viện API nội bộ công ty (Company LLM Gateway SDK) với mô hình chủ lực Qwen 3.7; thống nhất kiến trúc tích hợp đa dự án Web Platform gồm MoMo AI (Proposal Engine) và MoSpark Growth Dashboard (kết nối dữ liệu GA4/GSC được đồng bộ tự động để phân tích RCA).
