@@ -176,3 +176,23 @@ Bản đặc tả để đội ngũ Web React Hub (`react-web-momo`) triển kha
 1. **Điều chuyển Ngân sách Media:** Dừng 70% chi phí TikTok Ads, tập trung toàn lực vào Facebook Ads tệp Lookalike `lal-game` để tối ưu chi phí trên mỗi lượt cài đặt thực tế.
 2. **Nâng cấp Cơ chế Lan truyền (Viral Loop):** Hiện tại tỷ lệ chia sẻ chỉ đạt 0.25%. Cần bổ sung tính năng *"Mở khóa thêm ưu đãi khi share kết quả lên Zalo/Facebook"* và nút *"Tải ảnh thẻ hệ Quýt chuẩn Story 9:16"* để kích hoạt lan truyền miễn phí.
 3. **Mở rộng sang các Hub khác:** Thành công về độ giữ chân (65s) và tỷ lệ chuyển đổi (17.3%) của Một Mùa Quýt chứng minh mô hình **Interactive Quiz & Tool** có hiệu suất vượt trội so với bài viết tĩnh. Cần nhân bản mô hình này sang các mảng trọng điểm như: Trắc nghiệm Sức khỏe Tài chính cá nhân, Trắc nghiệm Đọc vị Chi tiêu, Trắc nghiệm Khẩu vị Đầu tư.
+
+---
+
+## 7. KẾT QUẢ USER TEST VÒNG 1 (ĐỊNH HƯỚNG TRẢI NGHIỆM)
+
+> **Lưu ý phương pháp:** Khảo sát thử nghiệm nhanh được thực hiện trên cỡ mẫu **12 người dùng** ($n = 12$). Dữ liệu nhằm mục đích định hướng cải tiến trải nghiệm người dùng (UX/UI) và tinh chỉnh nội dung, không mang ý nghĩa đại diện thống kê diện rộng.
+
+### 7.1. Điểm số Thang đo Trải nghiệm (SUS Score)
+- **Điểm SUS Trung bình:** **73.1 / 100 điểm** — Đạt mức **Tốt (Good / Grade B)** theo thang chuẩn System Usability Scale (mức trung bình ngành benchmark là 68.0 điểm).
+- **Đánh giá Nội dung (Content & Tone of Voice):** Điểm trung bình **8.2 / 10**. Người dùng đánh giá cao giọng văn dí dỏm, thông điệp tích cực, các câu hỏi tài chính được lồng ghép tự nhiên không gây cảm giác nặng nề hay phán xét.
+- **Đánh giá Trang Kết Quả (Result Screen):** Điểm trung bình **7.8 / 10**. Thẻ hệ Quýt được đón nhận tốt về mặt thị giác, tính cách miêu tả trúng tâm lý, tuy nhiên phần điều hướng chuyển tiếp sang sản phẩm tài chính trên App cần trực diện và rõ ràng hơn.
+
+### 7.2. Nhận định Chung về Trải nghiệm Người Dùng
+- **Điểm chạm mượt mà:** Luồng chơi liền mạch từ câu hỏi 1 đến câu hỏi 5, không gặp gián đoạn kỹ thuật hay lỗi hiển thị trên các dòng máy iPhone và Android phổ biến.
+- **Rào cản hành động cuối phễu:** Người dùng thích thú đọc mô tả tính cách tài chính của hệ Quýt, nhưng động lực bấm nút mở App MoMo còn phụ thuộc nhiều vào độ hấp dẫn của gói voucher/quà tặng đi kèm.
+
+### 7.3. Ba Đề xuất Cải tiến từ Đội ngũ User Growth
+1. **Cá nhân hóa quà tặng theo hệ Quýt:** Thay vì nút CTA chung chung, hiển thị trực tiếp gói quà tặng riêng tương ứng với từng hệ Quýt (ví dụ: Hệ Múi Đều nhận voucher Túi Thần Tài, Hệ Đón Nắng Sớm nhận ưu đãi Chứng chỉ quỹ).
+2. **Tối ưu nút Chia sẻ kết quả (Viral Sharing):** Bổ sung nút lưu ảnh thẻ kết quả định dạng 9:16 (chuẩn Story Facebook/Instagram/Zalo) kèm QR Code mời bạn bè cùng trắc nghiệm.
+3. **Giảm độ trễ chuyển màn:** Tinh gọn hiệu ứng chuyển cảnh giữa các câu hỏi để người dùng tập trung hoàn thành trò chơi nhanh hơn, giảm nguy cơ rơi rụng ở câu số 3 và số 4.
