@@ -23,16 +23,14 @@
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phạm Vi Áp Dụng</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Toàn bộ 26 công cụ tài chính &amp; tiện ích tính toán trực thuộc Kênh Web MoMo</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Toàn bộ tiện ích tính toán và công cụ hỗ trợ người dùng (Utility Tools) trên Kênh Web MoMo: <strong>Financial Hub</strong> (26 công cụ tài chính), <strong>Vehicle Hub</strong> (Phạt Nguội, Giá Xăng, Dự Toán Lăn Bánh, Đăng Kiểm, Trạm Sạc/Cây Xăng) và <strong>mọi Utility Tool được phát triển mới</strong> trên toàn Web Platform.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trọng Tâm Triển Khai (Wave 1)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trọng Tâm Triển Khai (Wave 1 &amp; Wave 2)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">
-        1. Tính Lương Gross - Net (<code>/tai-chinh/tinh-luong</code>)<br/>
-        2. Chia Hóa Đơn Du Lịch (<code>/tai-chinh/cong-cu/chia-tien-du-lich</code>)<br/>
-        3. Phân Bổ Lương 50/30/20 (<code>/tai-chinh/phan-bo-luong</code>)<br/>
-        4. Dự Toán Đám Cưới &amp; Thuê Nhà (Dòng Tiền Cột Mốc)<br/>
-        5. Cổng Tỷ Giá &amp; Giá Vàng (<code>/tai-chinh/ty-gia</code>, <code>/tai-chinh/gia-vang</code>)
+        <strong>Wave 1 - Financial Utilities:</strong> Tính Lương Gross - Net (<code>/tai-chinh/tinh-luong</code>), Chia Hóa Đơn Du Lịch (<code>/tai-chinh/cong-cu/chia-tien-du-lich</code>), Phân Bổ Lương 50/30/20, Tỷ Giá &amp; Giá Vàng.<br/>
+        <strong>Wave 2 - Vehicle Utilities:</strong> Tra Cứu Phạt Nguội (<code>/xe/phat-nguoi</code>), Dự Toán Giá Lăn Bánh Xe, Biến Động Giá Xăng Dầu (<code>/xe/gia-xang</code>), Nhắc Lịch Đăng Kiểm.<br/>
+        <strong>Universal Adapter:</strong> Thiết kế chuẩn cắm rút (Plug-and-play) cho mọi tiện ích mới phát sinh thuộc các Hubs khác.
       </td>
     </tr>
     <tr>
@@ -376,6 +374,68 @@ $$\text{Output Data} \longrightarrow \text{Condition Evaluator} \longrightarrow 
   - *Gentle:* "Chi phí nhà ở vượt quá ngưỡng an toàn tài chính (30%). Nên tìm bạn ở ghép hoặc lựa chọn khu vực có chi phí tối ưu hơn."
   - *Roast:* "Căn phòng có ban công chill thật đấy, nhưng tiền thuê ngốn gần nửa tháng lương thì tối về chỉ có nước ngắm trăng uống nước lọc. Đi làm cả tháng chỉ để nuôi chủ nhà thôi bạn ơi!"
   - *CTA:* **Lập Kế Hoạch Ngân Sách Thuê Nhà** (`momo://app?action=spending_jar`)
+
+---
+
+### 2.15 Công Cụ 15: Tra Cứu Phạt Nguội & Cảnh Báo Vi Phạm (`/xe/phat-nguoi`)
+
+#### Biến Số Đầu Vào
+- `violation_count`: Số lỗi vi phạm chưa nộp phạt.
+- `total_fine`: Tổng số tiền phạt ước tính (VND).
+- `vehicle_type`: Loại phương tiện (Ô tô hoặc Xe máy).
+
+#### Ma Trận Quy Tắc & Kho Nội Dung
+- **Điều kiện 1: Phát hiện có lỗi vi phạm phạt nguội (`violation_count > 0`):**
+  - *Gentle:* "Phương tiện của bạn ghi nhận {violation_count} lỗi vi phạm giao thông chưa xử lý với tổng tiền phạt {total_fine}đ. Hãy nộp phạt trực tuyến nhanh chóng qua MoMo để đảm bảo đủ điều kiện đăng kiểm."
+  - *Roast:* "Phóng nhanh một phút, nộp phạt cả tháng lương! Xe bạn đang 'nợ nước' {total_fine}đ tiền phạt nguội kìa. Nộp phạt ngay qua MoMo trong 1 phút kẻo đến ngày đi đăng kiểm lại bị từ chối rồi mất công quay xe về nhé!"
+  - *CTA:* **Nộp Phạt Nguội Trực Tuyến Qua MoMo** (`momo://app?action=traffic_fine`)
+- **Điều kiện 2: Xe sạch lỗi vi phạm (`violation_count === 0`):**
+  - *Gentle:* "Chúc mừng bạn! Phương tiện không có lỗi vi phạm phạt nguội nào trên hệ thống. Tiếp tục duy trì thói quen lái xe an toàn và tra cứu định kỳ."
+  - *Roast:* "Hồ sơ sạch bóng không một vết gợn, xứng danh tay lái vàng trong làng tuân thủ luật! Cài đặt ngay tính năng Nhắc Lịch Đăng Kiểm tự động trên MoMo để xe luôn sẵn sàng lăn bánh."
+  - *CTA:* **Cài Đặt Tự Động Nhắc Phạt Nguội & Đăng Kiểm** (`momo://app?action=vehicle_registry_reminder`)
+
+---
+
+### 2.16 Công Cụ 16: Dự Toán Chi Phí Lăn Bánh Ô Tô / Xe Máy (`/xe/du-toan-lan-banh`)
+
+#### Biến Số Đầu Vào
+- `car_price`: Giá niêm yết của xe (VND).
+- `rolling_cost`: Tổng chi phí lăn bánh thực tế (VND).
+- `tax_fee`: Tổng phí bắt buộc (Thuế trước bạ, biển số, bảo hiểm TNDS, bảo trì đường bộ).
+
+#### Ma Trận Quy Tắc & Kho Nội Dung
+- **Điều kiện: Chi phí lăn bánh chênh lệch lớn so với giá niêm yết (`tax_fee >= 50.000.000đ`):**
+  - *Gentle:* "Tổng chi phí lăn bánh dự kiến là {rolling_cost}đ (thuế phí bắt buộc {tax_fee}đ). Bạn có thể lựa chọn gói vay mua xe liên kết ngân hàng qua MoMo để dàn trải dòng tiền."
+  - *Roast:* "Nhìn giá xe niêm yết thì vừa túi, cộng thêm thuế phí {tax_fee}đ thì muốn 'xỉu ngang'! Đừng để giấc mơ bốn bánh bị kẹt giữa đường, mở MoMo tham khảo ngay gói vay mua xe lãi suất tốt từ các ngân hàng đối tác nào."
+  - *CTA:* **Dự Toán Gói Vay Mua Xe Lãi Suất Tốt** (`momo://app?action=car_loan`)
+
+---
+
+### 2.17 Công Cụ 17: Biến Động & Dự Báo Giá Xăng Dầu (`/xe/gia-xang`)
+
+#### Biến Số Đầu Vào
+- `gas_price`: Giá bán lẻ hiện hành (VND/lít).
+- `forecast_trend`: Xu hướng kỳ tới (`TĂNG` hoặc `GIẢM`).
+- `predicted_delta`: Mức điều chỉnh dự kiến (VND/lít).
+
+#### Ma Trận Quy Tắc & Kho Nội Dung
+- **Điều kiện: Giá xăng dự báo tăng mạnh (`forecast_trend === 'TĂNG'`):**
+  - *Gentle:* "Giá xăng dầu dự báo tăng khoảng {predicted_delta}đ/lít trong kỳ điều chỉnh tới. Đổ đầy bình sớm và quét mã MoMo tại các cây xăng PVOIL/Comeco để tích lũy hoàn tiền."
+  - *Roast:* "Xăng lại sắp tăng giá rồi bạn ơi! Đừng để ví tiền bị 'đốt cháy' theo từng lít xăng. Mở MoMo quét QR đổ xăng PVOIL nhận ngay voucher hoàn tiền để ví đỡ xót!"
+  - *CTA:* **Nhận Voucher Đổ Xăng PVOIL Trên MoMo** (`momo://app?action=pvoil_gas`)
+
+---
+
+### 2.18 Chuẩn Mở Rộng Tiện Ích Đa Nền Tảng (Universal Utility Extensibility Contract)
+
+MoMo AI được thiết kế theo kiến trúc **Mô-đun cắm rút dùng chung (Plug-and-Play Universal Engine)** cho **bất kỳ tiện ích tính toán nào (Utility Tool) thuộc mọi Hub**:
+- Mỗi Utility Tool khi được phát triển mới chỉ cần cung cấp:
+  1. `toolId`: Định danh tiện ích (ví dụ: `vehicle-fine`, `vehicle-gas`, `finance-salary`, `insurtech-quote`...).
+  2. `hub`: Phân khối (`FINANCIAL`, `VEHICLE`, `INSURTECH`, `OTA`, `OTHER`).
+  3. `metrics`: Dữ liệu số liệu đầu ra của phép tính.
+- **Tự động thừa hưởng 2 tầng AI:**
+  - *Tầng 1:* Chạy qua hàm đánh giá điều kiện nội bộ để xuất ngay nhận định dí dỏm + CTA deep link thích hợp (< 10ms).
+  - *Tầng 2:* Chuyển tải `metrics` sang Company LLM Gateway (Model Qwen 3.7) kèm prompt ngữ cảnh của Utility tương ứng khi người dùng cần tư vấn sâu.
 
 ---
 
