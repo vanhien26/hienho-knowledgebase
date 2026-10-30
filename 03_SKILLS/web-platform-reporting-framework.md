@@ -13,10 +13,11 @@ Theo chỉ dẫn tại `AGENTS.md`, mọi báo cáo của Web Platform bắt bu�
 
 1. **Tuyệt đối không sử dụng Emoji / Icon:** Không dùng bất kỳ biểu tượng cảm xúc hay icon trang trí nào trong toàn bộ tiêu đề, bảng biểu và danh sách của bài báo cáo.
 2. **Không đề cập tên riêng cá nhân / PIC:** Thay thế toàn bộ tên riêng bằng tên đội ngũ chuyên môn tương ứng (`Web Dev`, `Backend Team`, `Content Team`, `SEO Vendor`, `Media Team`, `Risk Team`, `AI/ML Team`, `CX Team`, `BU Movies`, `VTTI BU`, `FS Team`...).
-3. **Cấu trúc 3 khối chuẩn mực:**
-   - Khối 1: `Key Highlights & Business Impact` (Trọng tâm & Tác động kinh doanh)
-   - Khối 2: `Cross-team Collaboration & Support Needed` (Phối hợp liên phòng ban)
-   - Khối 3: `Priorities for the Next 7/30 Days` (Ưu tiên cho giai đoạn tiếp theo)
+3. **Cấu trúc 3 khối chuẩn mực** (áp dụng cho báo cáo Tuần, và cho phần thân báo cáo Tháng):
+   - Khối 1: `Điểm nổi bật & Tác động kinh doanh`
+   - Khối 2: `Phối hợp liên phòng ban & Việc cần hỗ trợ`
+   - Khối 3: `Ưu tiên 7/30 ngày tới`
+   - Riêng slide `Executive Summary` của báo cáo Tháng dùng cấu trúc 2 khối theo quy chuẩn công ty: `Điểm nổi bật` và `Vấn đề cần cải thiện`. Khối thứ hai bắt buộc có nội dung; một báo cáo chỉ có tin tốt là lỗi về độ tin cậy.
 4. **Hệ thống 2 tầng chỉ số song song:** Luôn đo lường đồng thời **Tầng Web Metrics** (Pageviews, Sessions, MEU, CTR) và **Tầng App Business Impact** (Login App, New Installs, Transactions, Saved Profiles).
 5. **Định dạng biểu diễn trực quan:**
    - Luồng người dùng / Hành trình trải nghiệm: Bắt buộc dùng sơ đồ Mermaid (`graph TD` hoặc `graph LR`) kèm theo Bảng phân tích chi tiết các bước (Step Breakdown Table).
@@ -228,7 +229,21 @@ Mọi bài báo cáo Weekly cho Executive Leadership và Monthly cho Ban Giám �
 
 ## 8. DANH MỤC KIỂM TRA CHẤT LƯỢNG BÁO CÁO (QUALITY CHECKLIST)
 
-Trước khi gửi báo cáo Weekly cho Executive Leadership hoặc Monthly cho Ban Giám Đốc, bắt buộc rà soát 8 điểm:
+Trước khi gửi báo cáo Weekly cho Executive Leadership hoặc Monthly cho Ban Giám Đốc, bắt buộc rà soát hai nhóm.
+
+### Nhóm A: Quy chuẩn công ty (theo [`03_SKILLS/momo-reporting-guidelines.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-guidelines.md))
+
+1. **Mục đích:** Mỗi slide/mục có dòng `Mục đích` nói được trong một câu slide này giúp ai hiểu hoặc quyết định điều gì chưa?
+2. **Title:** Chỉ đọc lần lượt các tiêu đề có nắm được toàn bộ câu chuyện báo cáo chưa? Tiêu đề là kết luận kèm số, không phải tên chủ đề, và viết sentence case?
+3. **Số ý chính:** Mỗi slide 1-2 ý, tối đa 3 ý chưa? Nhiều hơn thì đã tách slide chưa?
+4. **Tag:** Đã gắn `[R]` / `[D]` / `[F]` cho mọi slide chưa? Slide `[D]` có thật sự cần quyết định không?
+5. **Độ tin cậy:** Mỗi số liệu có mốc so sánh (Target, kỳ trước), có việc tiếp theo, có nguồn và owner chưa?
+6. **Thứ tự deck:** Discussion Topics đứng đầu, có slide Follow-up, Executive Summary có khối `Vấn đề cần cải thiện` chưa?
+7. **Ngôn ngữ và cỡ chữ:** Toàn bộ báo cáo một ngôn ngữ, mọi tiêu đề cùng cỡ, mọi nội dung chính cùng cỡ chưa?
+8. **Màu số liệu:** Đã tô theo mức đạt Target (xanh >= 100%, cam 90-99%, đỏ < 90%) chứ không tô theo biến động MoM chưa?
+
+### Nhóm B: Đặc thù Web Platform
+
 1. Đã xóa bỏ 100% Emoji / Icon trong toàn bộ tiêu đề, bảng biểu và danh sách chưa?
 2. Đã thay thế toàn bộ tên riêng cá nhân/PIC bằng tên đội ngũ chuyên môn chưa?
 3. Đã có đầy đủ 3 khối chuẩn: `Key Highlights & Business Impact`, `Collaboration`, `Priority` chưa?

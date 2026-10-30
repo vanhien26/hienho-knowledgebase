@@ -1,6 +1,6 @@
 ---
 name: web-platform-reporting
-description: Quy chuẩn và công cụ tạo báo cáo định kỳ (Weekly cho anh Công, Monthly cho anh Tường) cho các dự án Web Platform theo chuẩn Key Highlights & Business Impact, Collaboration, Priority.
+description: Quy chuẩn và công cụ tạo báo cáo định kỳ (Weekly cho anh Công, Monthly cho anh Tường) cho các dự án Web Platform. Áp dụng quy chuẩn trình bày cấp công ty tại 03_SKILLS/momo-reporting-guidelines.md, cộng phần đặc thù Web Platform về cấu trúc khối, thuật ngữ và định vị kênh.
 ---
 
 # WEB PLATFORM REPORTING SKILL
@@ -15,22 +15,27 @@ Skill này cung cấp bộ khung chuẩn hóa, phương pháp luận bóc tách 
 
 ## 2. QUY TẮC BẮT BUỘC TUÂN THỦ (NON-NEGOTIABLES)
 
+**Quy chuẩn gốc:** Trước khi dựng bất kỳ báo cáo nào, đọc [`03_SKILLS/momo-reporting-guidelines.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-guidelines.md). Đó là quy chuẩn cấp công ty, hiệu lực cao hơn skill này. Các quy tắc dưới đây là phần đặc thù của Web Platform, đặt trên nền quy chuẩn đó.
+
+0. **Sáu nguyên tắc của guidelines áp dụng cho mọi slide:** dòng `Mục đích` đầu slide; action title viết sentence case; tối đa 3 ý chính; tag `[R]`/`[D]`/`[F]`; mỗi số liệu có so sánh và việc tiếp theo; Discussion Topics đứng đầu deck.
 1. **Tuyệt đối không sử dụng Emoji / Icon** trong tiêu đề, bảng biểu và danh sách của bài báo cáo.
 2. **Quy tắc thuật ngữ (Terminology Rule):** TUYỆT ĐỐI KHÔNG dùng từ "sàn Web". Bắt buộc chỉ sử dụng **"nền tảng Web"**, **"Kênh Web"**, **"Web Platform"** hoặc **"Web"**.
 3. **Không đề cập tên riêng cá nhân / PIC** (như Hiến, Bảo, Trọng, Thuận...). Bắt buộc thay thế bằng tên đội ngũ chuyên môn (`Web Dev`, `Backend Team`, `Content Team`, `SEO Vendor`, `Media Team`, `Risk Team`, `AI/ML Team`, `CX Team`, `BU Movies`, `VTTI BU`, `FS Team`...).
-4. **Agenda Báo Cáo Tháng (Monthly Business Review Agenda):** Cấu trúc 4 phần chuẩn mực cho Web Platform:
-   - `[R]` **Phần 1: Product & Business Performance:** Bảng Target vs. Actual chuẩn 6 dòng chỉ số; áp dụng nguyên tắc "So What?" (tuyệt đối không đọc lại số liệu, chỉ tập trung phân tích bản chất dịch chuyển, nguyên nhân gốc rễ và định hướng hành động).
-   - `[R]` **Phần 2: Cinema / Financial:** Chi tiết hiệu suất 2 dự án trọng điểm, Key Highlights và Next Actions.
-   - `[R]` **Phần 3: New User:** Mô tả luồng Ads (Paid Search, Ads Campaigns) và phễu Web-to-App (Installs, New Reg, Mapbank, MAU theo AppsFlyer GPD).
-   - `[D]` **Phần 4: Discussion Topics:** Tối đa 0–2 chủ đề trọng tâm thảo luận trong cuộc họp (Problem Statement ➔ Status/Issues ➔ Recommendations).
-5. **Quy tắc gắn nhãn slide (Tagging):** Mọi slide/mục bắt buộc gắn mã `[R]` (Reporting - pre-read), `[D]` (Discussion - trọng tâm cuộc họp).
+4. **Agenda Báo Cáo Tháng (Monthly Business Review Agenda):** Thứ tự chuẩn cho Web Platform, Discussion Topics đứng đầu:
+   - `[D]` **Discussion Topics:** Bảng tổng một dòng mỗi chủ đề (3-5 chủ đề), kèm slide deep-dive riêng cho từng chủ đề theo cấu trúc Problem Statement -> Bối cảnh -> Tác động -> Phương án -> Đề nghị với BOM -> Nếu không quyết định.
+   - `[R]` **Follow-up:** Bảng action từ meeting minutes kỳ trước (Action | Owner | Hạn | Trạng thái | Cập nhật). Bắt buộc có.
+   - `[R]` **Executive Summary:** Hai khối `Điểm nổi bật` và `Vấn đề cần cải thiện`. Khối thứ hai bắt buộc có nội dung.
+   - `[R]` **Product & Business Performance:** Bảng Target vs. Actual chuẩn 6 dòng chỉ số; áp dụng nguyên tắc "So What?" (tuyệt đối không đọc lại số liệu, chỉ tập trung phân tích bản chất dịch chuyển, nguyên nhân gốc rễ và định hướng hành động).
+   - `[R]` **Key Projects (Cinema / Financial Hub):** Chi tiết hiệu suất 2 dự án trọng điểm, điểm nổi bật, việc trọng tâm tháng tới, việc cần hỗ trợ.
+   - `[R]` **New User:** Mô tả luồng Ads (Paid Search, Ads Campaigns) và phễu Web-to-App (Installs, New Reg, Mapbank, MAU theo AppsFlyer GPD).
+5. **Quy tắc gắn nhãn slide (Tagging):** Mọi slide/mục bắt buộc gắn mã `[R]` (Reporting - pre-read), `[D]` (Discussion - trọng tâm cuộc họp) hoặc `[F]` (FYI - tham khảo, không thảo luận).
 6. **Quy định nội dung:** 
    - Tuyệt đối không đưa CX, không đưa CWV/P90, không đưa Ticket tồn đọng. Không tính New User vào nhóm Hubs. 
    - Tuyệt đối không liệt kê lại các con số đã có trên bảng.
    - **Định vị kênh:** Organic là kênh chủ lực của Web Platform. Tuyệt đối không tô điểm cho Paid. Paid tăng mà Organic giảm là cảnh báo rủi ro về chất lượng tăng trưởng.
    - **Phân loại Traffic Source SSOT (Non-Paid vs Paid):** BẮT BUỘC phân rã thành 2 nhóm lớn rõ rệt: **Non-Paid Traffic** (tất cả trừ Paid Traffic: Organic, Direct, Referral, Others...) và **Paid Traffic** (Paid). Khi trình bày bảng hoặc danh sách, gom rõ 2 dòng lớn Non-Paid vs Paid, các kênh con đặt thụt dòng dưới Non-Paid, tuyệt đối không để Paid xen kẽ ngang hàng.
-   - **Bullet Lead-ins:** Sử dụng thuật ngữ tiếng Anh ngắn gọn, chuẩn Product Lead (`Target Overachievement:`, `Direct Traffic & Brand Strength:`, `SEO to GEO Transition:`, `Key Highlights:`, `Next Actions:`...).
-7. **Mật độ thông điệp & bảng biểu:** Giới hạn 3-5 key takeaways/slide, tối đa 2-3 bảng/biểu đồ, không copy dashboard thô.
+   - **Bullet Lead-ins:** Viết tiếng Việt ngắn gọn (`Vượt target:`, `Lưu lượng trực tiếp & sức mạnh thương hiệu:`, `Chuyển dịch SEO sang GEO:`, `Điểm nổi bật:`, `Việc tiếp theo:`). Chỉ giữ tiếng Anh cho thuật ngữ chỉ số: Target, Budget, Actual, MAU, MEU, CVR, Map Bank, OneLink, Installs, New Reg. Toàn bộ báo cáo dùng một ngôn ngữ.
+7. **Mật độ thông điệp & bảng biểu:** Tối đa 3 ý chính dưới mỗi tiêu đề, tốt nhất 1-2. Nhiều hơn thì tách slide. Tối đa 2-3 bảng/biểu đồ, không copy dashboard thô.
 8. **Trực quan hóa:**
    - Luồng người dùng / Conversion Funnel: Dùng sơ đồ Mermaid (`graph TD` hoặc `graph LR`) + Bảng phân tích chi tiết các bước (Step Breakdown Table).
    - Lộ trình: Dùng Bảng Markdown (`Table`).
@@ -39,6 +44,7 @@ Skill này cung cấp bộ khung chuẩn hóa, phương pháp luận bóc tách 
 
 ## 3. THAM CHIẾU TÀI LIỆU CHI TIẾT
 
+- **Quy chuẩn gốc cấp công ty:** [`03_SKILLS/momo-reporting-guidelines.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-guidelines.md)
 - **Tài liệu Master Framework:** [`03_SKILLS/web-platform-reporting-framework.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/web-platform-reporting-framework.md)
 - **Nhật ký Họp & Chỉ đạo Chiến lược:** [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md)
 - **Quy tắc Kiến trúc Hệ thống:** [`AGENTS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/AGENTS.md)

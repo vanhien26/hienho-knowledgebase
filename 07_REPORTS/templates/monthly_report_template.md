@@ -1,13 +1,83 @@
 # BÁO CÁO KINH DOANH & HIỆU SUẤT THÁNG [MM/YYYY] - WEB PLATFORM
 
-> **Phân loại:** Monthly Business Review (Pre-read: `[R]`, Thảo luận: `[D]`)  
+> **Phân loại:** Monthly Business Review (Pre-read: `[R]`, Thảo luận: `[D]`, Tham khảo: `[F]`)  
 > **Nguyên tắc:** Report để cung cấp thông tin, Meeting để thảo luận và ra quyết định.  
-> **Thời gian dữ liệu:** [01/MM] – [DD/MM/YYYY] (MTD [X] ngày)  
+> **Quy chuẩn áp dụng:** `03_SKILLS/momo-reporting-guidelines.md`  
+> **Thời gian dữ liệu:** [01/MM] - [DD/MM/YYYY] (MTD [X] ngày)  
+> **Tháng báo cáo:** Xác định theo kỳ dữ liệu, không theo thời điểm gửi.  
 > **Nguồn SSOT:** `07_REPORTS/data/summary.json` & `07_REPORTS/web_performance_tracking.xlsx` (Sync với hubs-momo)  
+> **Nguồn | Owner | Chốt số liệu:** [BU] | [tên] | [dd/mm/yyyy]  
 
 ---
 
-## 1. TỔNG QUAN HIỆU SUẤT NỀN TẢNG (PLATFORM SUMMARY) `[R]`
+## 1. CHỦ ĐỀ THẢO LUẬN BAN GIÁM ĐỐC (DISCUSSION TOPICS) `[D]`
+
+> **Mục đích:** Nội dung cần thảo luận hoặc phê duyệt trong cuộc họp, và cần quyết định gì.
+
+**Tiêu đề:** [n] chủ đề: [x] Discuss, [y] Approve
+
+| # | Chủ đề | Loại | Cần CEO/BOM quyết định hoặc hỗ trợ gì | Tác động lượng hóa | Hạn | Ưu tiên | Chi tiết |
+| :---: | :--- | :---: | :--- | :--- | :---: | :---: | :---: |
+| 1 | [Chủ đề 1, một dòng] | Approve | [Duyệt ngân sách/chính sách/nhân sự X] | [x] tỷ revenue | [dd/mm] | CAO | Mục 1.1 |
+| 2 | [Chủ đề 2, một dòng] | Discuss | [Thống nhất hướng đi giữa A và B] | [x]% KPI | [dd/mm] | TRUNG BINH | Mục 1.2 |
+
+Tối đa 3-5 chủ đề. Chủ đề không cần quyết định thì chuyển sang `[R]` hoặc `[F]`.
+
+### 1.1. [Chủ đề 1]: [vấn đề một câu kèm số liệu] - cần [Discuss/Approve] về [nội dung] `[D]`
+
+> **Mục đích:** Trình bày vấn đề cần xin phê duyệt hoặc ý kiến.
+
+- **Problem Statement:** [Vấn đề là gì, xảy ra ở đâu, quy mô bao nhiêu]
+- **Bối cảnh:** [Vì sao xảy ra, đã thử gì, số liệu minh chứng]
+- **Tác động:** [Revenue / cost / KPI / rủi ro, có lượng hóa]
+
+| Phương án | Nội dung | Ưu điểm | Rủi ro / chi phí |
+| :--- | :--- | :--- | :--- |
+| A - [tên] | [mô tả ngắn] | [...] | [...] |
+| B - [tên] | [mô tả ngắn] | [...] | [...] |
+
+- **Đề nghị với CEO/BOM:** [nội dung cần thảo luận hoặc phê duyệt]
+- **Khuyến nghị của BU:** Phương án [X] vì [lý do chính]
+- **Nếu không quyết định:** [Hệ quả lượng hóa] nếu chậm quyết định sau [dd/mm]
+
+---
+
+## 2. THEO DÕI ACTION KỲ TRƯỚC (FOLLOW-UP) `[R]`
+
+> **Mục đích:** Theo dõi kết quả xử lý các action từ cuộc họp trước để đảm bảo đóng vòng.
+
+**Tiêu đề:** [x/y] action từ meeting minutes trước đã hoàn thành; [action trễ] cần hỗ trợ
+
+| Action / quyết định kỳ trước | Owner | Hạn | Trạng thái | Cập nhật mới nhất |
+| :--- | :--- | :---: | :---: | :--- |
+| [Action 1] | [Đội ngũ] | [dd/mm] | Hoàn thành | [Kết quả + số liệu] |
+| [Action 2] | [Đội ngũ] | [dd/mm] | Đang làm | [Tiến độ, vướng mắc] |
+| [Action 3] | [Đội ngũ] | [dd/mm] | Trễ | [Nguyên nhân, hạn mới] |
+
+Action còn mở mà cần quyết định thì đưa lên mục 1.
+
+---
+
+## 3. TÓM TẮT ĐIỀU HÀNH (EXECUTIVE SUMMARY) `[R]`
+
+> **Mục đích:** Cho Ban Giám Đốc nắm kết quả tháng và vấn đề trọng yếu trong một trang.
+
+**Điểm nổi bật**
+- [Ý 1: số liệu + driver + tác động + việc tiếp theo]
+- [Ý 2]
+- [Ý 3]
+
+**Vấn đề cần cải thiện**
+- [Vấn đề 1: số liệu so Target + nguyên nhân + hướng xử lý + owner + hạn]
+- [Vấn đề 2]
+
+Khối thứ hai bắt buộc có nội dung.
+
+---
+
+## 4. TỔNG QUAN HIỆU SUẤT NỀN TẢNG (PLATFORM SUMMARY) `[R]`
+
+> **Mục đích:** Cho thấy nền tảng Web đạt bao nhiêu phần trăm Target tháng và phần chênh lệch đến từ đâu.
 
 | Chỉ số Cốt lõi | Tháng Trước (Full) | Tháng Này (Target) | Lũy Kế MTD ([X]d) | Forecast Cuối Tháng | Đánh Giá Tỷ Lệ Đạt |
 | :--- | :---: | :---: | :---: | :---: | :---: |
@@ -24,7 +94,9 @@
 
 ---
 
-## 2. HIỆU SUẤT THEO 4 ZONES CHIẾN LƯỢC (HUBS-MOMO MAPPING) `[R]`
+## 5. HIỆU SUẤT THEO 4 ZONES CHIẾN LƯỢC (HUBS-MOMO MAPPING) `[R]`
+
+> **Mục đích:** Cho thấy hub nào đang kéo tăng trưởng, hub nào hụt Target và vì sao.
 
 ### A. Performance Zone: Cinema Hub
 - **Lưu lượng MTD:** [pv_cinema] PVs / Target [target_cinema] PVs (Forecast: [fc_cinema] PVs - **[%_cinema]%**)
@@ -48,21 +120,17 @@
 
 ---
 
-## 3. TÍN HIỆU KỸ THUẬT & TÊN MIỀN (TECHNICAL SIGNALS) `[R]`
+## 6. TÍN HIỆU KỸ THUẬT & TÊN MIỀN (TECHNICAL SIGNALS) `[F]`
+
+> **Mục đích:** Tham khảo, không thảo luận trong họp. Nêu rủi ro nền tảng có thể ảnh hưởng lưu lượng các tháng tới.
 
 - **GSC Crawl Budget:** [req_per_day] req/ngày (Biến động: [delta_vs_last_month]%). Mã 200 OK đạt [pct_200]%; lãng phí 404 là [pct_404]% (~[wasted_req]/ngày). Tỷ lệ Discovery: [pct_discovery]%.
 - **Backlink Authority:** [total_linking_pages] pages từ [total_ref_domains] domains. Nồng độ Top 2 site: [pct_top2]%. Danh mục toxic link cần disavow: [total_disavow_candidates] domains.
 
 ---
 
-## 4. CHỦ ĐỀ THẢO LUẬN BAN GIÁM ĐỐC (DISCUSSION TOPICS) `[D]`
+## 7. KIỂM TRA TRƯỚC KHI GỬI
 
-### Chủ Đề 1: [Vấn Đề Trọng Yếu 1 - Crawl / Technical / Gap Target]
-- **Problem Statement:** [Mô tả ngắn gọn bản chất vấn đề]
-- **Data Points:** [Số liệu minh chứng cụ thể]
-- **Recommendations:** [Đề xuất giải pháp và quyết định cần BOM phê duyệt]
+Rà theo checklist tại `03_SKILLS/web-platform-reporting-framework.md` mục 8, nhóm A trước nhóm B.
 
-### Chủ Đề 2: [Vấn Đề Trọng Yếu 2 - Action Priorities Tuần Tới]
-- **Problem Statement:** [Mô tả ngắn gọn]
-- **Data Points:** [Số liệu minh chứng]
-- **Recommendations:** [Đề xuất hành động]
+Các chủ đề cần Ban Giám Đốc quyết định nằm ở mục 1, đầu báo cáo, không đặt ở cuối.

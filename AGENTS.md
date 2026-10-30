@@ -31,6 +31,7 @@
 | **Paid Ads, Kênh Media, UTM Campaigns** | [`07_REPORTS/data/analytics/paid_ads_performance.json`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data/analytics/paid_ads_performance.json) | Đọc file JSON SSOT hoặc chạy `./.venv/bin/python scripts/sync_paid_ads.py`. |
 | **Lịch mùa vụ, Phân tích Google Trends** | [`07_REPORTS/data/theme_seasonality.json`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data/theme_seasonality.json) | Đọc file JSON đã xuất bản hoặc chạy script cron. |
 | **Báo cáo Tuần/Tháng, Hiệu suất MTD, Target** | [`07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md) | Chỉ đọc khi người dùng yêu cầu làm báo cáo/phân tích số liệu. |
+| **Quy chuẩn trình bày báo cáo, slide, agenda, tag R/D/F** | [`03_SKILLS/momo-reporting-guidelines.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-guidelines.md) | Đọc bắt buộc trước khi dựng hoặc review bất kỳ báo cáo/slide nào. Hiệu lực cao hơn mọi quy chuẩn nội bộ. |
 | **Tra cứu Báo cáo Lịch sử (T1 -> T10, Hubs)** | [`07_REPORTS/docs/INDEX.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/INDEX.md) | Đọc index để mở đúng file báo cáo tháng hoặc chuyên đề cần tìm. |
 | **Chỉ đạo Lãnh đạo, Quyết định chiến lược** | [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md) | Chỉ đọc section gần nhất khi lập kế hoạch chiến lược mới. |
 | **Cinema Hub Roadmap, BU Movies Collab, Minigames** | [`scripts/sync_cinema_roadmap_sheet.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/sync_cinema_roadmap_sheet.py) | Chạy `./.venv/bin/python scripts/sync_cinema_roadmap_sheet.py`. SSOT Sheet ID: `1YT2sdU-O4smoy6TUKBic6PTFBxUXNUVkd_S-tmjiplg`. |
@@ -139,30 +140,47 @@
 
 ## 📊 QUY CHUẨN AGENDA BÁO CÁO THÁNG WEB PLATFORM (MONTHLY BUSINESS REVIEW STANDARD)
 
-Khi người dùng yêu cầu viết **Monthly Report cho Web Platform**, AI Agent **BẮT BUỘC** áp dụng chính xác **Agenda 4 phần chuẩn** sau:
+Khi người dùng yêu cầu viết **Monthly Report cho Web Platform**, AI Agent **BẮT BUỘC** đọc trước [`03_SKILLS/momo-reporting-guidelines.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-guidelines.md) (quy chuẩn cấp công ty, hiệu lực cao hơn mục này) rồi áp dụng agenda sau:
 
 1. **Nguyên tắc vận hành:** *Report để cung cấp thông tin, Meeting để thảo luận và ra quyết định.* Phục vụ CEO và BOM nhận diện nhanh rủi ro trọng yếu và ra quyết định điều hành.
-2. **Gắn nhãn phân loại:** 
-   - `[R] – Reporting`: Cung cấp thông tin & kết quả hoạt động; dùng cho pre-read, không trình bày lại trong cuộc họp.
-   - `[D] – Discussion`: Nội dung có vấn đề cần thảo luận, xin ý kiến alignment, cần hỗ trợ hoặc ra quyết định (trọng tâm cuộc họp).
-3. **Agenda 4 phần chuẩn mực cho Web Platform:**
-   - **Phần 1: Product & Business Performance `[R]`:** 
+2. **Dòng Mục đích:** Mỗi slide/mục mở đầu bằng một dòng `Mục đích:` nêu slide này giúp ai hiểu điều gì hoặc quyết định điều gì. Không viết được thành một câu thì gộp hoặc bỏ slide.
+3. **Action title:** Tiêu đề nêu kết luận kèm chỉ số và lý do, không ghi tên chủ đề. Viết sentence case. Đọc lần lượt các tiêu đề phải nắm được toàn bộ câu chuyện báo cáo.
+4. **Tối đa 3 ý chính dưới mỗi tiêu đề:** Tốt nhất 1-2 ý. Nhiều hơn 3 thì tách slide. Phần còn lại là bằng chứng.
+5. **Mỗi số liệu có so sánh và việc tiếp theo:** Con số luôn kèm mốc so sánh (Target, kỳ trước) và hành động cần làm. Số đứng trần là lỗi.
+6. **Gắn nhãn phân loại:** 
+   - `[R] - Reporting`: Cung cấp thông tin & kết quả hoạt động; dùng cho pre-read, không trình bày lại trong cuộc họp.
+   - `[D] - Discussion`: Nội dung có vấn đề cần thảo luận, xin ý kiến alignment, cần hỗ trợ hoặc ra quyết định (trọng tâm cuộc họp).
+   - `[F] - FYI`: Thông tin tham khảo, không thảo luận.
+7. **Thứ tự deck chuẩn (Discussion Topics đứng ĐẦU, không phải cuối):**
+   ```
+   Bìa -> Agenda -> [D] Discussion Topics -> [D] Deep-dive từng chủ đề -> [R] Follow-up
+    -> [R] Executive Summary -> [R] Product & Business Performance -> [R] Key Projects -> [R] New User
+   ```
+8. **Phần Follow-up `[R]` là bắt buộc:** Bảng theo dõi action từ meeting minutes kỳ trước (`Action` | `Owner` | `Hạn` | `Trạng thái` | `Cập nhật mới nhất`). Action còn mở mà cần quyết định thì đưa lên Discussion Topics.
+9. **Nội dung các phần `[R]` của Web Platform:**
+   - **Executive Summary `[R]`:** Hai khối `Điểm nổi bật` và `Vấn đề cần cải thiện`. Khối thứ hai là bắt buộc; deck chỉ có tin tốt là lỗi về độ tin cậy.
+   - **Product & Business Performance `[R]`:** 
      - Bảng theo dõi mục tiêu và thực tế (Target vs. Actual) chuẩn 6 dòng chỉ số: `Total page views (target)`, `% Growth Rate (target)`, `Total page views (Actual)`, `Net add`, `% Growth Rate`, `% Target Rate`.
      - **Nguyên tắc "So What?" (Không đọc lại số liệu):** Tuyệt đối không diễn giải lại các con số người đọc đã nhìn thấy trong bảng. Phần phân tích bắt buộc tập trung vào kết quả thực chất: bản chất sự dịch chuyển lưu lượng, nguyên nhân cốt lõi đằng sau sự tăng/giảm, rủi ro đánh đổi và hành động điều chỉnh chiến lược.
-   - **Phần 2: Cinema / Financial `[R]`:** 
+   - **Key Projects `[R]`:** 
      - Chi tiết hiệu suất của 2 dự án trọng điểm lớn nhất (Cinema Hub và Financial Hub).
-     - Với từng dự án: Chi tiết số liệu hiệu suất, Key Highlights đạt được trong tháng, Next Actions cho tháng tới.
-   - **Phần 3: New User `[R]`:** 
+     - Với từng dự án: Chi tiết số liệu hiệu suất, điểm nổi bật đạt được trong tháng, việc trọng tâm tháng tới, và việc cần hỗ trợ.
+     - `Financial Hub` ở đây là một hub sản phẩm (tỷ giá, giá vàng, CIC, Ví Trả Sau), không phải slide `Financial` theo nghĩa kết quả tài chính do Finance cung cấp.
+   - **New User `[R]`:** 
      - Mô tả luồng Ads (Paid Search, Ads Campaigns) và phễu Web-to-App.
      - Số lượng Installs, New Registered Users (New Reg), Mapbank, MAU bóc tách theo từng chiến dịch (dữ liệu AppsFlyer GPD).
-   - **Phần 4: Discussion Topics `[D]`:** 
-     - Các chủ đề trọng tâm cần đưa ra thảo luận trong cuộc họp (tối đa 0–2 topics).
-     - Cấu trúc chuẩn 3 phần: `Problem Statement` ➔ `Status / Issues` (kèm số liệu data points) ➔ `Recommendations`.
-4. **Quy định trình bày:**
+10. **Discussion Topics `[D]`:** 
+    - Slide tổng: bảng một dòng mỗi chủ đề, 8 cột `#` | `Chủ đề` | `Loại` (Discuss/Approve) | `Cần CEO/BOM quyết định hoặc hỗ trợ gì` | `Tác động` (lượng hóa) | `Hạn` | `Ưu tiên` | `Chi tiết`. Tối đa 3-5 chủ đề.
+    - Slide deep-dive cho từng chủ đề: `Problem Statement` -> `Bối cảnh` -> `Tác động` (lượng hóa) -> bảng `Phương án` tối thiểu 2 lựa chọn -> `Đề nghị với CEO/BOM` -> `Khuyến nghị của BU` -> `Nếu không quyết định` (hệ quả lượng hóa kèm mốc ngày).
+11. **Quy định trình bày:**
    - Tuyệt đối không dùng Emoji/Icon; không dùng tên riêng cá nhân/PIC (thay bằng tên đội ngũ chuyên môn).
    - Không đưa phần CX, không đưa chỉ số kỹ thuật sâu (CWV, P90, 4xx/5xx), không đưa Ticket tồn đọng.
    - **Định vị kênh cốt lõi:** **Organic là kênh chủ lực và mang lại giá trị thực chất nhất của Web Platform**. Tuyệt đối **không tô điểm cho Paid**, không xem việc đốt tiền Paid là thành tích tăng trưởng. Paid tăng mà Organic giảm là tín hiệu cảnh báo rủi ro về độ lành mạnh của nền tảng Web.
-   - **Tiêu đề gạch đầu dòng (Bullet Lead-ins):** Sử dụng thuật ngữ tiếng Anh ngắn gọn, chuẩn Product Lead (ví dụ: `Target Overachievement:`, `Direct Traffic & Brand Strength:`, `SEO to GEO Transition:`, `Key Highlights:`, `Next Actions:`...) để thay thế cho các câu mở đầu tiếng Việt dài dòng.
+   - **Thống nhất ngôn ngữ:** Toàn bộ báo cáo dùng một ngôn ngữ. Tiêu đề khối, nhãn cột và tiêu đề gạch đầu dòng viết tiếng Việt ngắn gọn (`Vượt target:`, `Lưu lượng trực tiếp & sức mạnh thương hiệu:`, `Chuyển dịch SEO sang GEO:`, `Điểm nổi bật:`, `Việc tiếp theo:`). Chỉ giữ nguyên thuật ngữ chỉ số đã quen thuộc: Target, Budget, Actual, MAU, MEU, CVR, EBITDA, Map Bank, OneLink, Installs, New Reg.
+   - **Màu số liệu:** Tô màu cột mức đạt so với Target hoặc Budget: xanh khi từ 100% trở lên, cam khi 90-99%, đỏ khi dưới 90%. Quy tắc này áp dụng cho mức đạt Target, không áp dụng cho biến động MoM. Chỉ số giảm MoM nhưng vẫn đạt Target thì không tô đỏ.
+   - **Đồng bộ cỡ chữ:** Mọi tiêu đề cùng một cỡ, mọi nội dung chính cùng một cỡ, mọi chú thích cùng một cỡ, xuyên suốt tất cả slide.
+   - **Chân slide:** Mỗi slide ghi `Nguồn | Owner | Chốt số liệu (dd/mm/yyyy)`.
+   - **Tháng báo cáo:** Xác định theo kỳ dữ liệu được báo cáo, không phải thời điểm gửi hay tháng diễn ra cuộc họp.
    - Không lặp lại số liệu thô; tập trung diễn giải ý nghĩa kinh doanh, bài học và quyết định vận hành.
    - Đảm bảo quyền truy cập cho Ban Giám Đốc và các đầu mối tổng hợp (`tuong.nguyen`, `tram.phan1`, `nga.nguyen1`).
 
