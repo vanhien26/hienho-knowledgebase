@@ -1,0 +1,97 @@
+[
+  [
+    "Phim",
+    "",
+    "Deadline",
+    "Publish_date",
+    "Thông tin",
+    "Status",
+    "Kết quả",
+    "Note",
+    "TnC",
+    "Quà tặng",
+    "Link post",
+    "QR_code"
+  ],
+  [
+    "Nghỉ Hè Sợ Nghỉ Hưu",
+    "",
+    "23/08/2026 15:30",
+    "24/08/2026 15:30",
+    "Hình thức game: Random mã Code",
+    "Đã publish",
+    "- 2.4k like, 6.6k reach (post game)\n- 797 comment\n- 114 Click to app\n- 70 user tham gia game",
+    "",
+    "Tìm “Nghỉ Hè Sợ Nghỉ Hưu MoMo” trên Google \nBấm vào web MoMo - phim Nghỉ Hè Sợ Nghỉ Hưu \nKéo đến phần cào thẻ → Bấm “Cào thẻ nào” để tham gia minigame\nĐể lại cmt mã cào thẻ kèm ảnh chụp màn hình web MoMo phim Nghỉ Hè Sợ Nghỉ Hưu",
+    "01 Mascot MoMo Movies\nRandom 30 user tham gia nhận quà",
+    "https://onelink.momo.vn/WZPv/1ClBrW9W",
+    "unnamed.webp"
+  ],
+  [
+    "Lên Hương",
+    "",
+    "16/09",
+    "18/09",
+    "Hình thức game: Random mã Code\nQuy trình: Tương tự Nghỉ Hè Sợ Nghỉ Hưu\nDemo: https://claude.ai/code/artifact/a9b9f904-4c3e-44af-89af-85e07af62adc",
+    "Đã publish"
+  ],
+  [
+    "",
+    "Anh Hùng (Web)",
+    "16/09",
+    "",
+    "Dựng luồng technical cho game ",
+    "Đang triển khai"
+  ],
+  [
+    "",
+    "Thức (Design Cinema)",
+    "16/09",
+    "",
+    "Dựng UI cho game",
+    "Đang triển khai"
+  ],
+  [
+    "",
+    "Hoan (Web)",
+    "16/09",
+    "",
+    "Chuẩn bị content hiển thị trên game",
+    "Đang triển khai",
+    "Len_Huong_Cau_May_Content.docx - Google Tài liệu"
+  ],
+  [
+    "",
+    "Bình (Cinema)",
+    "16/09",
+    "",
+    "Cung cấp số lượng quà tặng + TnC",
+    "Đang triển khai"
+  ],
+  [
+    "",
+    "Bình (Cinema)",
+    "17/09",
+    "",
+    "Liên hệ đối tác để đẩy thông tin minigame lên social",
+    "Đang triển khai"
+  ],
+  [
+    "",
+    "(Cinema)",
+    "18/09",
+    "",
+    "Đăng post minigame",
+    "Đang triển khai",
+    "",
+    "Cần cung cấp link post trước 60' để sync thời gian lauch game"
+  ],
+  [
+    "",
+    "Anh hùng (Web)",
+    "18/09",
+    "",
+    "Lauch game trên web",
+    "Đang triển khai"
+  ]
+]

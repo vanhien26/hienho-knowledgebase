@@ -1,0 +1,92 @@
+[
+  [
+    "PRODUCT ROADMAP - [Website Cinema Hub]"
+  ],
+  [
+    "Phase",
+    "Module",
+    "Initiative / Tên Công Việc",
+    "Scope Chi Tiết (Nhiệm Vụ Kỹ Thuật & Vai Trò Sản Phẩm)",
+    "Status"
+  ],
+  [
+    "Phase 1 (Foundation & Utility Launch - T7-T8/2026)",
+    "Nền tảng MoSpark",
+    "Migration Cinema Hub sang MoSpark CMS",
+    "1. Chuyển dịch toàn bộ hạ tầng Cinema Hub sang MoSpark Web Platform\n 2. Rà soát & noindex các bài viết rác zero-traffic để bảo toàn Crawl Budget\n Vai trò: Nhóm nền tảng; chịu tải lớn, bảo toàn điểm uy tín domain trên Google Search",
+    "Done"
+  ],
+  [
+    "",
+    "Revamp Film Detail",
+    "Revamp UI/UX cho 2 Film Detail ",
+    "1. Re-design giao diện Trang Chi Tiết Phim (/cinema/{film-detail-ID}) & Tab Review (/cinema/{film-detail-ID}/review)\n 2. Design cho Mini Game phần UI để Pilot\n",
+    "In Progress"
+  ],
+  [
+    "",
+    "Review Phim ",
+    "Migration Trang Review Phim sang + MoSpark",
+    "1. Migration toàn bộ bài viết Blog, Review phim và Cẩm nang điện ảnh cũ sang MoSpark mới\n 2. Vận hành GenAI Content Pipeline tự động tạo bài viết review & thông tin diễn viên\n Vai trò: Nhóm 2 Traffic Magnet; giữ vững điểm Topical Authority",
+    "In Progress"
+  ],
+  [
+    "Phase 2 (T8 - T9/2026)",
+    "Strategic Co-Promotion",
+    "Thúc đẩy 2 Phim Hợp Tác MoMo (T8/2026)",
+    "1. SEM/Media cho 2 Films\n2. Trang Review chuyên sâu (/cinema/ho-linh-trang-si-10452/review)\n3. SEO cụm 'Hộ Linh Tráng Sĩ / Nghỉ Hè Sợ Nghỉ Hưu' (450K volume)\n Vai trò: Nhóm 1 Strategic Co-Promotion; thúc đẩy doanh số bán vé bom tấn Việt Tháng 8/2026",
+    "Done"
+  ],
+  [
+    "",
+    "Theater/Theater Detail\nFilm Detail",
+    "Triển khai Revamp UI/UX cho trang Rạp/Rạp Chi Tiết ",
+    "1. Tối ưu và enhance content cho các trang Rạp/Rạp Chi tiết trên nền tảng MoSpark\n",
+    "In Progress"
+  ],
+  [
+    "",
+    "Native Payment & Booking Flow",
+    "Native Web QR Payment, thêm tùy chọn quét QR đa ngân hàng (All-in-one QR)",
+    "1. Thanh toán trực tiếp trên Web bằng Ví MoMo hoặc All-in-One QR Code cho khách hàng Non-App\n2. Cải tiến luồng đặt vé cho từng Film\n",
+    "In Progress"
+  ],
+  [
+    "",
+    "Content Production",
+    "Sản xuất tối thiểu 150-200 bài viết/tháng\nSản xuất review cho các phim chính",
+    "1. Web cấp quyền truy cập PLG Project cho Cell Team. Cell Team sẽ vào điều chỉnh outline + hoàn thiện bài viết. Phía Web sẽ qc và publish.\n2. Cell Team cung cấp thông tin về phim để phía Web lên bài review phim cho website.",
+    "In Progress"
+  ],
+  [
+    "",
+    "Gamification",
+    "Triển khai các hoạt động Gamification cho các Strategic Movies",
+    "1. Web phụ trách phát triển các Mini Game.\n2. Cinema phụ trách vận hành Mini Game",
+    "In Progress"
+  ],
+  [
+    "T10/2026",
+    "SEO Movie Page",
+    "Tối ưu SEO và ranking các phim chiếu rạp",
+    "1. Cell Team chủ động tối ưu SEO onpage các phim sắp ra rạp\n2. Cell Team chủ động enrich content cho các phim nổi bật của tháng"
+  ],
+  [
+    "",
+    "Blog Production",
+    "Sản xuất tối thiểu 280 bài viết/tháng\nSản xuất review cho các phim chính",
+    "1. Cell Team chốt số lượng và nhân sự để viết bài. Web hỗ trợ sản xuất 80% số bài viết.\n2. Web tối ưu prompt và viết bài review cho các phim hot."
+  ],
+  [
+    "",
+    "Gamification",
+    "Triển khai hoạt động Gamification cho Tee Yod 4",
+    "1. Web hỗ trợ phát triển minigame theo demo https://claude.ai/artifact/ASHirbrSvcZnPDjm8FJLha. Định hướng tạo ra game có thể tái sử dụng cho toàn trang web trong tương lai.\n2. Cell Team chuẩn bị quà, TnC, và quy trình tặng quà.\nMinigame dự kiến hoàn thiện demo 14/10 và lauch vào 14h ngày 16/10."
+  ],
+  [
+    "",
+    "Theater/Theater Detail\nFilm Detail",
+    "",
+    "1. Tiếp tục tối ưu và enhance content cho các trang Rạp/Rạp Chi tiết trên nền tảng MoSpark - triển khai cho các cụm rạp Touch, Metiz, Starlight, Rio\n"
+  ]
+]

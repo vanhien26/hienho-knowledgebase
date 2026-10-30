@@ -8,7 +8,8 @@
 
 | Kỳ báo cáo | Phạm vi dữ liệu | Tệp tin báo cáo SSOT | Trạng thái | Điểm nhấn chính |
 | :--- | :--- | :--- | :---: | :--- |
-| **Tháng 10/2026** | MTD Lũy kế đến ngày 22/10 | [`report-thang-10-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-10-2026.md) | `Active MTD 22d` | Cinema Hub đạt 865k PV; Toàn Web đạt 2.624k PV (71.6% Target) |
+| **Tháng 10/2026 (Board MBR)** | MTD 28 ngày & Forecast 31 ngày | [`report-thang-10-2026-board.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-10-2026-board.md) | `Active MBR Board` | Forecast 3.64M - 3.68M PVs (~100% Target); Non-Paid tăng vững chắc 87.2%; Phễu W2A và tối ưu ngân sách Ads |
+| **Tháng 10/2026 (Operational)** | Lũy kế MTD 28 ngày | [`report-thang-10-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-10-2026.md) | `Active MBR SSOT` | Báo cáo chi tiết hiệu suất toàn diện Tháng 10 dành cho Web Platform |
 | **Tháng 09/2026** | Trọn tháng (01/09 - 30/09) | [`report-thang-09-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-09-2026.md) | `Full Month` | Hoàn thành mục tiêu quý 3; mở rộng cụm rạp và tiện ích tài chính |
 | **Tháng 08/2026** | MTD 28 ngày chính thức | [`report-thang-08-2026.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-08-2026.md) | `Full Month` | Triển khai luồng Mobile Balloon Ads; đối soát phễu cài đặt Ads |
 | **Tháng 08/2026 (Giữa kỳ)** | Tiến độ thực thi đến 24/08 | [`report-thang-08-2026-midmonth.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-08-2026-midmonth.md) | `Archive` | Chi tiết tiến độ On-track của 5 Strategic Hubs và phối hợp phòng ban |
@@ -66,6 +67,6 @@
 
 | Kỳ báo cáo | Phạm vi thời gian | Tệp tin báo cáo SSOT | Trạng thái | Điểm nhấn chính |
 | :--- | :--- | :--- | :---: | :--- |
-| **Tuần 26/10 - 01/11/2026** | 26/10/2026 – 01/11/2026 | [`weekly-report-2026-10-26-11-01.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/weekly-report-2026-10-26-11-01.md) | `Active SSOT` | Báo cáo tuần 44: Game Bò Sữa Bay, Quỹ Nhóm & Tách URL Thuế, Đóng gói Qwen 3.7 đa dự án |
-| **Tuần 21 - 27/10/2026** | 19/10/2026 – 26/10/2026 | [`weekly-report-2026-10-21-27.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/weekly-report-2026-10-21-27.md) | `Archive SSOT` | Báo cáo tuần 43 tổng hợp phân định 2 nhóm Strategic Projects & Platform Projects |
+| **Tuần 26/10 - 01/11/2026** | 26/10/2026 - 01/11/2026 | [`weekly-report-2026-10-26-11-01.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/weekly-report-2026-10-26-11-01.md) | `Active SSOT` | Báo cáo tuần 44: Game Bò Sữa Bay, Quỹ Nhóm & Tách URL Thuế, Đóng gói Qwen 3.5 đa dự án |
+| **Tuần 21 - 27/10/2026** | 19/10/2026 - 26/10/2026 | [`weekly-report-2026-10-21-27.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/weekly-report-2026-10-21-27.md) | `Archive SSOT` | Báo cáo tuần 43 tổng hợp phân định 2 nhóm Strategic Projects & Platform Projects |
 

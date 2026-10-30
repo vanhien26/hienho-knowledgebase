@@ -9,7 +9,7 @@
 
 ## 1. TỔNG QUAN HIỆU SUẤT NỀN TẢNG (PLATFORM SUMMARY) `[R]`
 
-| Chỉ số Cốt lõi | Tháng Trước (Full) | Tháng Này (Target) | Lũy Kế MTD ([X]d) | Dự Phóng Cuối Tháng | Đánh Giá Tỷ Lệ Đạt |
+| Chỉ số Cốt lõi | Tháng Trước (Full) | Tháng Này (Target) | Lũy Kế MTD ([X]d) | Forecast Cuối Tháng | Đánh Giá Tỷ Lệ Đạt |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **Total Pageviews** | [pv_prev] | [target_month] | [actual_mtd] | [forecast_month] | **[%_target]** |
 | **Tốc Độ Ngày (Pace)** | [pace_prev]/ngày | [req_pace]/ngày | [daily_pace]/ngày | - | [pace_status] |
@@ -27,16 +27,16 @@
 ## 2. HIỆU SUẤT THEO 4 ZONES CHIẾN LƯỢC (HUBS-MOMO MAPPING) `[R]`
 
 ### A. Performance Zone: Cinema Hub
-- **Lưu lượng MTD:** [pv_cinema] PVs / Target [target_cinema] PVs (Dự phóng: [fc_cinema] PVs - **[%_cinema]%**)
+- **Lưu lượng MTD:** [pv_cinema] PVs / Target [target_cinema] PVs (Forecast: [fc_cinema] PVs - **[%_cinema]%**)
 - **Key Highlights:** [Tối ưu CWV LCP, Mini Game tương tác, tiến độ migration rạp]
 - **Next Shipments:** [Đầu việc cam kết ship trong tuần kế tiếp]
 
 ### B. Transformation Zone: Financial, Vehicle & New User Hubs
-- **Financial Hub:** [pv_fin] PVs / Target [target_fin] PVs (Dự phóng: [fc_fin] PVs - **[%_fin]%**)
+- **Financial Hub:** [pv_fin] PVs / Target [target_fin] PVs (Forecast: [fc_fin] PVs - **[%_fin]%**)
   * *Tiến độ công cụ:* [Trang chủ /tai-chinh, sub-pages tỷ giá, giá vàng, tích hợp API CCQ & tiết kiệm]
-- **Vehicle Hub:** [pv_veh] PVs / Target [target_veh] PVs (Dự phóng: [fc_veh] PVs - **[%_veh]%**)
+- **Vehicle Hub:** [pv_veh] PVs / Target [target_veh] PVs (Forecast: [fc_veh] PVs - **[%_veh]%**)
   * *Tiến độ:* [Trang Model xe Vinfast, API Phạt Nguội, Database Garage Cell Team]
-- **New User Hub:** [pv_nu] PVs / Target [target_nu] PVs (Dự phóng: [fc_nu] PVs - **[%_nu]%**)
+- **New User Hub:** [pv_nu] PVs / Target [target_nu] PVs (Forecast: [fc_nu] PVs - **[%_nu]%**)
   * *Phễu Web-to-App:* [Game Quýt 2D/3D, cải tiến trang Download & Bonbon]
 
 ### C. Foundation Zone: Payment Hub

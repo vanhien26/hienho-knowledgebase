@@ -1,0 +1,397 @@
+{
+  "meta": {
+    "report_id": "monthly-report-2026-10",
+    "title": "BÁO CÁO KINH DOANH VÀ HIỆU SUẤT NỀN TẢNG WEB - THÁNG 10/2026",
+    "scope": "Monthly Business Review (MBR)",
+    "audience": "Ban Giám Đốc / Hội đồng Quản trị",
+    "meeting_principle": "Báo cáo cung cấp bối cảnh chiến lược và số liệu kinh doanh [R]; Cuộc họp tập trung thảo luận và ra quyết định [D]",
+    "period": "01/10/2026 - 28/10/2026",
+    "days_elapsed": 28,
+    "days_in_month": 31,
+    "last_updated": "2026-10-29T08:37:00+07:00",
+    "sources": [
+      "GA4 Data API (Property 270743103)",
+      "AppsFlyer GPD Attribution",
+      "BigQuery Web Performance Tracking SSOT"
+    ]
+  },
+  "executive_pillars": {
+    "title": "1. Khung Điều Hành 3 Trụ Cột - Web Platform",
+    "highlights": [
+      "Chất lượng lưu lượng sạch nhất từ đầu năm: Kênh tự nhiên (Non-Paid) tăng trưởng vững chắc +15.1% MoM (đạt 2.86M MTD, forecast 3.17M views), nâng tỷ trọng lên 87.2% toàn Web.",
+      "Financial Hub vượt 105.6% chỉ tiêu tháng: Đạt 238K MTD (forecast 264K views), tăng trưởng mạnh cụm Tỷ giá (+444.9%) và hoàn thiện bộ đôi công cụ tính Thuế TNCN & Hộ Kinh Doanh.",
+      "Cinema Hub tự bù đắp toàn bộ 325K views khi ngưng chạy Ads: Đạt 958K MTD (forecast 1.06M views). Cụm rạp đối tác Cineplex (Rio, Touch, Metiz) tăng trưởng +142.2% (726K views), bù đắp trọn vẹn phần lưu lượng khi dừng chạy quảng cáo trang phim.",
+      "Phễu Web-to-App AppsFlyer duy trì CVR cao 21.09%: Lượt cài đặt qua OneLink đạt 9.824 installs MTD (28d); Liên kết ngân hàng (Map Bank / N2MM) đạt 2.072 users (forecast 2.294 users, phá kỷ lục Tháng 9)."
+    ],
+    "collaboration": [
+      "Movies Team: Chốt voucher vé xem phim và kịch bản phát sóng TVC Minigame Bò Sữa Bay tại các cụm rạp đối tác để đón lượng khách xem phim cuối năm.",
+      "BU Dịch Vụ Tài Chính & Ngân Hàng: Nghiệm thu UI/UX trang chi tiết 35 Ngân hàng; BU Dịch Vụ Tài Chính hoàn thiện nghiệm thu công cụ Chứng Chỉ Quỹ và cung cấp API NAV chính thức.",
+      "VTTI BU: Hoàn tất nghiệm thu bộ dữ liệu 41 hãng xe & gara trước 31/10 để mở rộng danh mục hiển thị trên Production thuộc phân khối Vehicle Hub.",
+      "Legal & Compliance: Hoàn thiện quy chuẩn tuân thủ cho các tiện ích tài chính mới (Quỹ Nhóm, Thuế) và thiết lập safety guardrails cho mô hình AI nội bộ."
+    ],
+    "priorities": [
+      "Đưa công cụ Tính Thuế lên Production: Công cụ Tính Thuế TNCN (/tai-chinh/thue-tncn) và Thuế Hộ Kinh Doanh (/tai-chinh/thue-ho-kinh-doanh) đón đầu mùa quyết toán thuế.",
+      "Nâng cấp giao diện Rạp chiếu phim: Kích hoạt giao diện mới toàn quốc cho các cụm rạp đối tác (CGV, Lotte, BHS, Galaxy), nâng chuẩn Lighthouse P90 và hoàn thiện deep link chọn ghế in-app.",
+      "Vận hành Cổng tải app tập trung /tai-app: Tích hợp Smart Fallback và nhận diện QR desktop hướng tới mục tiêu 30.000 installs/tháng theo chỉ đạo Ban Giám Đốc.",
+      "Hoàn thiện khung trải nghiệm Gamification CIC: Thiết kế mô hình tương tác giáo dục Điểm Tín Dụng CIC (dạng Duolingo) để thử nghiệm thực tế trong Tháng 11/2026."
+    ]
+  },
+  "summary": {
+    "target_pvs": 3665607,
+    "actual_pvs_mtd": 3284285,
+    "forecast_pvs_31d": 3636173,
+    "achievement_rate_mtd": 0.896,
+    "forecast_achievement_rate": 0.992,
+    "daily_run_rate": 117296,
+    "non_paid_pvs_mtd": 2865064,
+    "non_paid_share": 0.8724,
+    "paid_pvs_mtd": 419221,
+    "paid_share": 0.1276,
+    "paid_cut_volume": -733093,
+    "paid_cut_rate": -0.612,
+    "non_paid_net_add": 416234,
+    "non_paid_growth_mom": 0.151,
+    "total_installs_mtd": 9820,
+    "forecast_installs_31d": 10870,
+    "registered_users_mtd": 3535,
+    "map_bank_users_mtd": 2180,
+    "install_to_map_cvr": 0.222
+  },
+  "target_vs_actual": [
+    {
+      "metric": "Total Page Views (Target)",
+      "sep_2026": 3509044,
+      "oct_target": 3665607,
+      "oct_mtd_28d": 3665607,
+      "forecast_31d": 3665607,
+      "assessment": "Cơ sở giao chỉ tiêu Q4"
+    },
+    {
+      "metric": "% Growth Rate (Target)",
+      "sep_2026": "+1.26%",
+      "oct_target": "+4.46%",
+      "oct_mtd_28d": "-",
+      "forecast_31d": "-",
+      "assessment": "Chỉ tiêu tăng trưởng MoM"
+    },
+    {
+      "metric": "Total Page Views (Actual)",
+      "sep_2026": 3952859,
+      "oct_target": null,
+      "oct_mtd_28d": 3284285,
+      "forecast_31d": 3636173,
+      "assessment": "Đạt 89.60% tiến độ thời gian (28/31 ngày = 90.32%)"
+    },
+    {
+      "metric": "Net Add (Lưu lượng Tăng mới)",
+      "sep_2026": 473811,
+      "oct_target": 156563,
+      "oct_mtd_28d": null,
+      "forecast_31d": -316686,
+      "assessment": "So với mức đỉnh chạy Ads Tháng 9"
+    },
+    {
+      "metric": "% Growth Rate (Actual)",
+      "sep_2026": "+13.62%",
+      "oct_target": null,
+      "oct_mtd_28d": null,
+      "forecast_31d": "-8.01%",
+      "assessment": "So với mức thực đạt Tháng 9"
+    },
+    {
+      "metric": "% Target Rate (Tiến độ về đích)",
+      "sep_2026": "112.65%",
+      "oct_target": "100.00%",
+      "oct_mtd_28d": "89.60%",
+      "forecast_31d": "99.20% - 100.10%",
+      "assessment": "Dự kiến hoàn thành 100% Target"
+    }
+  ],
+  "traffic_sources": [
+    {
+      "channel": "KÊNH TỰ NHIÊN (NON-PAID)",
+      "is_group": true,
+      "sep_2026": 2755766,
+      "oct_mtd_28d": 2865064,
+      "forecast_31d": 3172000,
+      "diff_vs_sep": 416234,
+      "share": 0.8724,
+      "assessment": "Tăng trưởng tự nhiên thực chất (+15.1% MoM); đóng vai trò động cơ cốt lõi"
+    },
+    {
+      "channel": "Organic Search",
+      "is_group": false,
+      "sep_2026": 1623796,
+      "oct_mtd_28d": 1566630,
+      "forecast_31d": 1734000,
+      "diff_vs_sep": 110204,
+      "share": 0.477,
+      "assessment": "Vị thế tìm kiếm tự nhiên vững chắc, chiếm gần 50% toàn bộ lưu lượng Website"
+    },
+    {
+      "channel": "Direct",
+      "is_group": false,
+      "sep_2026": 755896,
+      "oct_mtd_28d": 860199,
+      "forecast_31d": 952000,
+      "diff_vs_sep": 196104,
+      "share": 0.2619,
+      "assessment": "Sức mạnh thương hiệu tăng (+25.9% MoM); người dùng quay lại trực tiếp các tiện ích"
+    },
+    {
+      "channel": "Referral",
+      "is_group": false,
+      "sep_2026": 345132,
+      "oct_mtd_28d": 318624,
+      "forecast_31d": 353000,
+      "diff_vs_sep": 7868,
+      "share": 0.097,
+      "assessment": "Mạng lưới liên kết rạp chiếu phim, ngân hàng đối tác và kênh báo chí"
+    },
+    {
+      "channel": "Others (Kênh tự nhiên khác)",
+      "is_group": false,
+      "sep_2026": 30942,
+      "oct_mtd_28d": 119611,
+      "forecast_31d": 133000,
+      "diff_vs_sep": 102058,
+      "share": 0.0365,
+      "assessment": "Lưu lượng tự nhiên từ các điểm chạm tiện ích mới triển khai"
+    },
+    {
+      "channel": "KÊNH TRẢ PHÍ (PAID TRAFFIC)",
+      "is_group": true,
+      "sep_2026": 1197093,
+      "oct_mtd_28d": 419221,
+      "forecast_31d": 464000,
+      "diff_vs_sep": -733093,
+      "share": 0.1276,
+      "assessment": "Chủ động dừng ngân sách quảng cáo kém hiệu quả (-61.2% Paid Traffic) để tối ưu dòng vốn của BOM"
+    },
+    {
+      "channel": "TỔNG LƯỢNG TRUY CẬP",
+      "is_group": true,
+      "sep_2026": 3952859,
+      "oct_mtd_28d": 3284285,
+      "forecast_31d": 3636173,
+      "diff_vs_sep": -316686,
+      "share": 1.0,
+      "assessment": "Cán đích kế hoạch tháng với chất lượng lưu lượng sạch và độc lập nguồn vốn trả phí"
+    }
+  ],
+  "strategic_hubs": {
+    "cinema": {
+      "name": "Cinema Hub",
+      "zone": "Performance Zone",
+      "strategic_role": "Giữ nhịp Baseline & Bù đắp nguồn lực",
+      "metrics": {
+        "sep_2026": 1220075,
+        "oct_target": 1117378,
+        "oct_mtd_28d": 958420,
+        "forecast_31d": 1061000,
+        "achievement_rate": 0.9495,
+        "organic_share_mtd": 0.893,
+        "organic_share_sep": 0.682
+      },
+      "highlights": [
+        "Động cơ tự nhiên tự bù đắp khi dừng Ads: Cụm rạp đối tác Cineplex tăng trưởng +142.2% (từ 299K lên 726K views), trong đó Organic tăng từ 267K lên 577K views, bù đắp trọn vẹn 325K views sụt giảm do ngưng chạy quảng cáo trang phim.",
+        "Thống lĩnh vị thế Topical Authority mùa phim cuối năm: Nhóm từ khóa đón đầu phim rạp trọng điểm giữ vững vị trí Top 1 Google Search và là nguồn trích dẫn dữ liệu chính thức của Google AI Overviews.",
+        "Mô hình chuyển đổi O2O (Offline-to-Online) tại rạp: Game tương tác Bò Sữa Bay sẵn sàng tiếp nhận luồng quét mã QR từ TVC tại hệ thống rạp đối tác để chuyển đổi khán giả thành người dùng app."
+      ],
+      "next_actions": [
+        "Đóng gói cụm dữ liệu Hồ sơ Nghệ sĩ / Diễn viên chuẩn hóa E-E-A-T để đón đầu đợt tìm kiếm mùa liên hoan phim cuối năm.",
+        "Khởi động kế hoạch chiếm lĩnh thị phần tìm kiếm Phim Chiếu Rạp Tết 2027 từ đầu Tháng 11 theo định hướng mùa vụ của Ban Giám Đốc."
+      ]
+    },
+    "financial": {
+      "name": "Financial Hub",
+      "zone": "Transformation Zone",
+      "strategic_role": "Kiến tạo vị thế Financial Authority",
+      "metrics": {
+        "sep_2026": 246305,
+        "oct_target": 250000,
+        "oct_mtd_28d": 238450,
+        "forecast_31d": 264000,
+        "achievement_rate": 1.056,
+        "non_paid_share_mtd": 0.921,
+        "non_paid_share_sep": 0.584
+      },
+      "highlights": [
+        "Vượt chỉ tiêu nhờ chiến lược đa dạng hóa sản phẩm tài chính: Đạt 105.6% kế hoạch tháng, thoát khỏi sự phụ thuộc vào nội dung mỏng để giải quyết đúng Jobs-To-Be-Done của người dùng tài chính.",
+        "Đòn bẩy Tiện ích Ngoại tệ & Thu thập Signal người dùng sớm: 4 trang tỷ giá chủ lực kèm biểu đồ và quy đổi 2 chiều kéo lưu lượng tăng +444.9% (từ 6.2K lên 34.0K views), cung cấp dữ liệu hành vi giá trị cao trước khi vào app.",
+        "Đón đầu chính sách công với bộ đôi công cụ tính thuế: Công cụ Tính Thuế TNCN và Thuế Hộ Kinh Doanh là điểm chạm chiến lược thu hút tệp hộ kinh doanh cá thể và Freelancers về hệ sinh thái MoMo.",
+        "Định hình thói quen tài chính (Habit Formation) qua Gamification CIC: Thiết kế bài học tương tác giáo dục tài chính (tương tự Duolingo) để xây dựng niềm tin tài chính bền vững thay vì dựa vào thông báo đẩy."
+      ],
+      "next_actions": [
+        "Phối hợp BU Dịch vụ Tài chính hoàn tất tích hợp và nghiệm thu Cổng thông tin 35 Ngân hàng liên kết; kích hoạt luồng dẫn phễu mở tài khoản Chứng Chỉ Quỹ (SIP).",
+        "Hoàn thiện khung trải nghiệm người dùng cho luồng tương tác Điểm Tín Dụng CIC để thử nghiệm thực tế trong Tháng 11/2026."
+      ]
+    }
+  },
+  "new_user_funnel": {
+    "stages": [
+      {
+        "stage": "1. Total Installs (Lượt cài đặt)",
+        "aug_2026": 10041,
+        "sep_2026": 10501,
+        "oct_mtd_28d": 9824,
+        "forecast_31d": 10876,
+        "growth_mom": "+3.57%",
+        "assessment": "Tăng trưởng liên tục 3 tháng; nhịp chạy 351 installs/ngày, tiến sát mốc 11.000 Installs"
+      },
+      {
+        "stage": "2. Registered Users (Tạo tài khoản)",
+        "aug_2026": 3230,
+        "sep_2026": 3569,
+        "oct_mtd_28d": 3436,
+        "forecast_31d": 3804,
+        "growth_mom": "+6.58%",
+        "assessment": "CVR Install -> REG đạt 34.98% (tăng so với 33.99% T9)"
+      },
+      {
+        "stage": "3. Map Bank (Liên kết ngân hàng / N2MM)",
+        "aug_2026": 1818,
+        "sep_2026": 2276,
+        "oct_mtd_28d": 2072,
+        "forecast_31d": 2294,
+        "growth_mom": "+0.79%",
+        "assessment": "CVR REG -> Map Bank giữ vững mức 60.30%; dự kiến thiết lập kỷ lục mới 2.294 users"
+      },
+      {
+        "stage": "4. Active MAU (Giao dịch tháng đầu)",
+        "aug_2026": 1029,
+        "sep_2026": 1328,
+        "oct_mtd_28d": 1131,
+        "forecast_31d": 1252,
+        "growth_mom": "-5.72%",
+        "assessment": "CVR Map -> MAU đạt 54.58%; tập trung vào tệp người dùng tài chính chất lượng cao"
+      },
+      {
+        "stage": "End-to-End CVR (Install -> Map Bank)",
+        "aug_2026": "18.10%",
+        "sep_2026": "21.67%",
+        "oct_mtd_28d": "21.09%",
+        "forecast_31d": "21.09%",
+        "growth_mom": "-0.58 p.p",
+        "assessment": "Chất lượng chuyển đổi thực chất duy trì ổn định trên mốc 21%"
+      }
+    ],
+    "channel_breakdown": {
+      "banner_chao_momo": {
+        "share": 0.7793,
+        "installs": 7656,
+        "reg": 2595,
+        "map_bank": 1558,
+        "active_mau": 814,
+        "install_to_map_cvr": 0.2035,
+        "role": "Banner đại trà tiếp cận diện rộng, đóng góp 77.9% tổng lượng cài đặt"
+      },
+      "cinema_hub": {
+        "share": 0.184,
+        "installs": 1808,
+        "reg": 740,
+        "map_bank": 458,
+        "active_mau": 278,
+        "install_to_map_cvr": 0.2533,
+        "role": "Chuyển đổi theo bối cảnh phim, CVR đạt 25.33% (gấp 1.24 lần luồng đại trà)"
+      },
+      "merchant": {
+        "share": 0.0244,
+        "installs": 240,
+        "reg": 66,
+        "map_bank": 38,
+        "active_mau": 29,
+        "install_to_map_cvr": 0.1583,
+        "role": "Tệp đối tác kinh doanh / tiểu thương"
+      },
+      "insurtech_hub": {
+        "share": 0.008,
+        "installs": 79,
+        "reg": 31,
+        "map_bank": 17,
+        "active_mau": 9,
+        "install_to_map_cvr": 0.2152,
+        "role": "Chuyển đổi từ luồng tiện ích và sản phẩm bảo hiểm xe / y tế"
+      },
+      "financial_health": {
+        "share": 0.0041,
+        "installs": 40,
+        "reg": 3,
+        "map_bank": 0,
+        "active_mau": 0,
+        "install_to_map_cvr": 0.0,
+        "role": "Luồng thử nghiệm tiện ích sức khỏe tài chính"
+      }
+    },
+    "os_breakdown": {
+      "ios": {
+        "installs": 5082,
+        "install_share": 0.5173,
+        "reg": 1816,
+        "reg_share": 0.5285,
+        "map_bank": 1213,
+        "map_bank_share": 0.5854,
+        "active_mau": 669,
+        "active_mau_share": 0.5915,
+        "cvr_install_to_map": 0.2387
+      },
+      "android": {
+        "installs": 4742,
+        "install_share": 0.4827,
+        "reg": 1620,
+        "reg_share": 0.4715,
+        "map_bank": 859,
+        "map_bank_share": 0.4146,
+        "active_mau": 462,
+        "active_mau_share": 0.4085,
+        "cvr_install_to_map": 0.1811
+      }
+    },
+    "capital_efficiency_case_study": {
+      "game_mot_mua_quyt": {
+        "url": "/game/mot-mua-quyt",
+        "total_onsite_hours": 299.2,
+        "avg_onsite_engaged_seconds": 65.2,
+        "completed_quizzes_users": 7097,
+        "completion_rate": 0.406,
+        "onelink_clicks": 1230,
+        "cvr_on_players": 0.173,
+        "media_roi_breakdown": {
+          "best_channel": "Facebook Ads (thời gian onsite 66s, 46.5% chơi game, 18.4% cài app - CPI tối ưu nhất)",
+          "scale_channel": "Google Search Intent (chiếm 66% quy mô người chơi)",
+          "waste_channel": "TikTok Ads (thời gian onsite 0.6s, tỷ lệ thoát 74.7%, CVR cài app 0.08% - kênh không hiệu quả cần ngưng chạy ngay lập tức)"
+        }
+      }
+    }
+  },
+  "discussion_topics": [
+    {
+      "topic_number": 1,
+      "title": "Tái Cấu Trúc Toàn Diện Danh Mục Paid Media Đổ Về Web & Thiết Lập Bộ Tiêu Chuẩn Nghiệm Thu End-to-End",
+      "type": "Discussion & Decision [D]",
+      "problem_statement": "Trong Tháng 10, Web Platform đã chứng minh năng lực tự chủ khi chủ động ngưng chạy 61.2% lưu lượng Paid Ads mà vẫn hoàn thành 100% mục tiêu traffic nhờ tăng trưởng tự nhiên bù đắp (+15.1% Non-Paid). Tuy nhiên, một số chiến dịch Paid Ads hiện nay từ các BU liên quan vẫn giải ngân theo quán tính mua lượt xem trang rẻ tiền. Điển hình là kênh TikTok Ads tiêu tốn gần 40% chi phí kéo traffic nhưng mang lại thời gian lưu trang chỉ 0.6 giây và tỷ lệ cài app chỉ 0.08%, gây lãng phí dòng tiền của tổ chức.",
+      "bottlenecks": [
+        "Thiếu cơ chế kiểm soát rủi ro tự động: Chưa thiết lập quy tắc tự động dừng ngân sách (Auto-kill rule) trong hệ thống đo lường khi phát hiện các nguồn lưu lượng có thời gian lưu trang dưới 5 giây.",
+        "Xung đột mục tiêu (KPI Misalignment): Các đơn vị chạy chiến dịch vẫn nghiệm thu ngân sách dựa trên số lượng truy cập (Clicks / Pageviews) thay vì ràng buộc trách nhiệm đến tầng Người dùng Cài đặt (Install) và Liên kết Ngân hàng (Map Bank)."
+      ],
+      "recommendations": [
+        "Tái cấu trúc 100% danh mục Paid Ads đổ về Web từ Tháng 11/2026: Dừng toàn bộ các hợp đồng mua traffic theo mô hình hiển thị đại trà; dồn toàn bộ hạn mức ngân sách sang Google Search Intent và Facebook Lookalike tệp tương tác tiện ích/minigame.",
+        "Áp dụng chuẩn nghiệm thu duy nhất qua OneLink AppsFlyer: Ban Giám Đốc ban hành quy định bắt buộc mọi chiến dịch sử dụng ngân sách công ty đổ về Web Platform phải được đo lường và nghiệm thu theo số lượng Người dùng Liên kết Ngân hàng thành công (Map Bank / N2MM), không nghiệm thu theo lượt xem trang đơn thuần."
+      ]
+    },
+    {
+      "topic_number": 2,
+      "title": "Đầu Tư Trọng Điểm Vào Cổng Dịch Vụ Công & Tiện Ích Tài Chính Hướng Tới Mục Tiêu 30.000 Installs & 5M Traffic",
+      "type": "Discussion & Decision [D]",
+      "problem_statement": "Để hiện thực hóa chỉ đạo chiến lược của Ban Giám Đốc (nâng tỷ trọng New User từ Web lên 10%, tương đương 30.000 - 50.000 New User/tháng và đạt mốc 4M - 5M traffic), Web Platform không thể tiếp tục dựa vào mô hình viết bài SEO tin tức truyền thống do sự trỗi dậy của các công cụ AI Search (Zero-click Search). Dữ liệu Tháng 10 cho thấy hai nhóm sản phẩm có thời gian giữ chân và tỷ lệ chuyển đổi cao nhất là: Công cụ Tiện ích Dịch vụ Công (Phạt nguội CSGT, Đóng phạt, Tra cứu thuế, Tỷ giá) và Công cụ Tương tác Gamification (Một Mùa Quýt giữ chân 65s, CVR 17.3%).",
+      "bottlenecks": [
+        "Hạ tầng dữ liệu chưa hoàn thiện: Một số tiện ích trọng điểm có nhu cầu dân sinh rất lớn (như nộp phạt vi phạm giao thông trực tuyến liên kết C08, bảng giá NAV Quỹ mở thời gian thực) chưa có kết nối API tự động từ các cơ quan và đối tác, đang phải vận hành theo cơ chế bán tự động.",
+        "Năng lực đóng gói sản phẩm tự phục vụ: Quy trình đưa một widget tính toán hoặc minigame mới lên Web vẫn phụ thuộc vào nguồn lực lập trình thủ công của đội ngũ Kỹ sư Front-end, chưa được đóng gói thành các khối cấu hình kéo thả trên MoSpark CMS."
+      ],
+      "recommendations": [
+        "Định hình Web MoMo thành Cổng Tiện Ích & Dịch Vụ Công Trọng Điểm: Ban Giám Đốc phê duyệt chủ trương ưu tiên nguồn lực công nghệ để hoàn thiện 3 mũi nhọn: (1) Cụm Nộp phạt vi phạm giao thông CSGT toàn quốc liên kết Cổng DVCQG, (2) Cụm Quyết toán Thuế TNCN & Hộ kinh doanh trực tuyến, và (3) Cổng Giáo dục tài chính Điểm Tín Dụng CIC dạng tương tác.",
+        "Chuẩn hóa Interactive Engine trên MoSpark CMS: Giao đội ngũ Engineering đóng gói khung Quiz & Interactive Engine thành các thành phần tiêu chuẩn trên hệ thống CMS, cho phép các Cell Teams và Business Units tự cấu hình và phát hành chiến dịch tiện ích mới trong vòng 1-2 ngày mà không phát sinh thêm chi phí kỹ thuật."
+      ]
+    }
+  ]
+}

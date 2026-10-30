@@ -337,6 +337,49 @@ CEO muốn Web Platform thoát khỏi định vị "kênh kéo traffic rác / gi
 
 ---
 
+### 29/10/2026 - A.Công (VP / Ban Giám Đốc) `[Direct - Bi-Weekly Review]`
+
+**Bối cảnh:** Họp Bi-Weekly định kỳ giữa A.Công và Đội ngũ Web Platform. Rà soát hiệu suất các Hubs Tháng 10 (Cinema Hub, Financial Hub), thẩm định đề xuất dự án Pilot Off-Page SEO và chấn chỉnh tư duy trình bày dữ liệu, phương pháp làm báo cáo lên Ban Giám Đốc.
+
+**Tư duy / Chỉ đạo cốt lõi:**
+
+*   **Tư duy báo cáo Minto Pyramid (Kim tự tháp) & Action Title:**
+    - Người làm kỹ thuật thường đi xuôi: *Bối cảnh -> Vấn đề -> Giải pháp -> Kết quả*. Lãnh đạo/CEO chỉ tiếp nhận theo chiều ngược lại: **Impact là gì? -> Làm cái gì để ra kết quả đó? -> Kế hoạch tiếp theo (Next Step)?**
+    - Tiêu đề slide (Action Title) phải là một kết luận chốt chặn mang tính đóng khung tư duy (*Frame the mindset*). Ví dụ: *"Financial Hub: Đã bắt đầu đầu tư các trang mới, ghi nhận kết quả ban đầu tích cực, traffic organic x4 lần đạt 27k"*. Phần thân slide bên dưới chỉ là bằng chứng (*evidence*) đối soát.
+    - Không bắt lãnh đạo phải gánh tải tâm lý (*mental load*), tự suy nghĩ tìm hiểu xem team làm tốt hay xấu; điều này rất dễ khiến lãnh đạo phán đoán lệch hoặc đưa ra giải pháp ngắn hạn 2-3 phút thiếu chuẩn xác.
+
+*   **Kỷ luật ngôn ngữ & Độ chuẩn xác của số liệu:**
+    - Cấm tuyệt đối các từ định tính cảm tính: *"tăng trưởng tốt"*, *"vẫn bình thường"*, *"ổn định"*.
+    - Định lượng ranh giới rõ ràng: Tăng 1% là **đi ngang**; tăng 10% là **bình thường**; tăng từ 20% trở lên mới được xem là **tốt**.
+    - Tuyệt đối không dùng từ *"tăng trưởng"* khi mức cơ sở ban đầu bằng 0 (như FinHub trước đó chưa làm gì, nay mới làm lên 27k). Phải nói chính xác: *"Bắt đầu triển khai và ghi nhận kết quả ban đầu tích cực"*.
+
+*   **Đo lường tác động biên & Phản thực tế (Counterfactual Thinking):**
+    - Luôn phải tự trả lời 2 câu hỏi: *(1) Nếu mình không làm gì thì số liệu sẽ tụt bao nhiêu? (2) Những hành động cụ thể đã làm đóng góp thêm chính xác bao nhiêu so với mức cơ sở đó?*
+    - Phải bóc tách (breakdown) dữ liệu sâu: Ví dụ tháng này ít phim hot hơn tháng trước (chỉ 2-3 phim so với 5-6 phim tháng trước), volume toàn ngành giảm một nửa nhưng traffic vẫn giữ được hoặc tăng nhẹ là do những trang mới nào bù đắp, mỗi trang đóng góp bao nhiêu clicks.
+    - Chấm dứt làm việc theo cảm tính (*gut feeling*). Doanh nghiệp tồn tại để tạo ra giá trị kinh tế; giải quyết vấn đề của khách hàng là phương tiện để tạo ra doanh thu và KPI.
+
+*   **Phê duyệt Pilot Off-Page SEO & Tách bạch Mục tiêu BU vs Platform:**
+    - Duyệt ngân sách thử nghiệm 125 triệu VNĐ cho Cinema Hub (3 tháng đến hết tháng 01/2027) và chuẩn bị mở rộng sang Financial Services (Thẻ tín dụng / CAC) với ngân sách 80 - 100 triệu VNĐ do BU tài trợ.
+    - **Primary Target (Mục tiêu cốt lõi):** Phải đi theo mục tiêu của bên bỏ tiền (BU Cinema). BU không cần traffic vì traffic in-app đã khổng lồ; mục tiêu chính của họ là **Search Ranking (Top 5.5)** và **Độ phủ thương hiệu ngoài app trên AI Overview / GEO**.
+    - **Secondary Target (Mục tiêu nền tảng):** Organic traffic và Domain Authority giữ làm chỉ số vệ sinh (*hygiene metrics*) để giám sát sức khỏe Web Platform.
+    - **Nguyên tắc thử nghiệm:** Điểm tối thiểu là **không được lỗ** (ít nhất phải đạt điểm hòa vốn - Break-even). Phải xác định trước ngưỡng số liệu nào thì cho phép nhân rộng (scale), ngưỡng nào thì phải dừng lại (pause).
+
+*   **Phát triển năng lực đội ngũ & Trực tiếp dấn thân (Skin in the game):**
+    - Duyệt tuyển nhanh Cộng tác viên triển khai Off-page trong 2 - 3 tháng.
+    - Đội ngũ Web Platform không được có tâm lý né tránh: *"đây không phải năng lực lõi (Core Competency) của team rồi khoán trắng cho người khác hoặc agency"*.
+    - Phải tự mình nhúng tay vào làm cùng: học quy trình, thẩm định chất lượng bài viết, làm việc với đối tác để trở thành chuyên gia (*expert*), từ đó mới có năng lực quản lý và nhân rộng.
+    - Chia sẻ bài học cá nhân: Người làm kỹ thuật khi bị đẩy vào tình thế bắt buộc phải đi đàm phán bán hàng triệu đô, làm việc với đối tác quốc tế lớn (Google, Apple) mới bứt phá và nhận ra năng lực thực sự của bản thân.
+
+**Insight ẩn sau chỉ đạo:**
+A.Công muốn nâng tầm đội ngũ Web Platform từ tư duy "kỹ sư thuần túy / thợ làm tính năng theo cảm tính" trở thành "Product Lead / Business Owner thực thụ". Nghĩa là phải: (1) Nói chuyện bằng ngôn ngữ kinh doanh và số liệu chính xác; (2) Trình bày báo cáo theo chuẩn tư vấn chiến lược (Minto Pyramid); (3) Dám dấn thân làm những việc vượt ngoài phạm vi an toàn kỹ thuật (đàm phán thương mại, quản lý ngân sách, cam kết outcome kinh doanh).
+
+**Đúc kết cho Hiến:**
+*   **Về Slide & Báo cáo:** Cấu trúc lại toàn bộ các slide báo cáo MBR/WBR theo Minto Pyramid. Viết lại tất cả tiêu đề slide thành Action Titles chốt kết luận kèm số liệu cụ thể, đưa bằng chứng xuống bên dưới.
+*   **Về Dự án Pilot Off-Page:** Thống nhất ngay với Cinema Team bộ KPI đo lường: Primary = Ranking Google Top 5.5 + AI Overview; Secondary = Organic Traffic. Xây dựng ngưỡng chốt chặn: thế nào là thành công để scale, thế nào là không đạt để review.
+*   **Về Tuyển dụng & Vận hành:** Tuyển CTV ngay trong tuần. Bản thân Hiến và team phải trực tiếp tham gia xây dựng tiêu chuẩn nghiệm thu bài guest post/backlink, không khoán trắng cho CTV hay đối tác.
+
+---
+
 ## LEADERSHIP PROFILES - Quick Reference
 
 > Xây dựng từ relay của Bảo. Hiến không direct với CEO/Công/Huy. Dùng để: (1) viết material đúng ngôn ngữ từng người, (2) hiểu định hướng org để align công việc, (3) brief Bảo đúng format trước khi Bảo present lên trên.
@@ -589,6 +632,21 @@ CEO muốn Web Platform thoát khỏi định vị "kênh kéo traffic rác / gi
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Là hard gate cho Pillar 1 (Tài chính) - không launch nếu chưa có</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Unblock với legal/content team</td>
     </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Minto Pyramid & Action Title</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tiêu đề slide phải là câu kết luận chốt chặn (Action Title kèm số); thân slide chỉ chứa dữ liệu chứng minh</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Áp dụng cho mọi slide báo cáo MBR/WBR</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Counterfactual & Marginal Impact</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mọi hành động kỹ thuật phải lượng hóa: "Nếu không làm gì thì số tụt bao nhiêu? Hành động này bù đắp thêm bao nhiêu?"</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Áp dụng ngay khi báo cáo hiệu suất Hubs</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Skin in the Game (Pilot)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tự làm chủ quy trình, trực tiếp học hỏi và chịu trách nhiệm outcome; không khoán trắng việc mới cho CTV/Agency</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Áp dụng vào Pilot Off-Page Cinema & FS</td>
+    </tr>
   </tbody>
 </table>
 
@@ -596,14 +654,17 @@ CEO muốn Web Platform thoát khỏi định vị "kênh kéo traffic rác / gi
 
 1. **Elegant test:** Vấn đề được phát biểu có đủ đơn giản để ai cũng thấy đúng ngay không?
 2. **Bữa tối test:** User có lý do gì để kể về giải pháp này với người thân không?
-3. **Tracking test:** Tracking event schema và AB hypothesis đã có trong spec chưa?
-4. **Scope test:** Section "Dự án này KHÔNG phải" có đủ rõ và đủ nghiêm túc không?
-5. **Business Owner test:** KPI cuối cùng trace về được New User / MAU / Revenue chưa?
+3. **Action Title & Pyramid test:** Tiêu đề slide đã đóng khung kết luận và lượng hóa impact chưa? Bằng chứng bên dưới có rõ ràng không?
+4. **Counterfactual test:** Đã trả lời được câu hỏi "Nếu không làm thì số tụt bao nhiêu và việc này mang lại giá trị gia tăng cụ thể bao nhiêu?" chưa?
+5. **Tracking test:** Tracking event schema và AB hypothesis đã có trong spec chưa?
+6. **Scope test:** Section "Dự án này KHÔNG phải" có đủ rõ và đủ nghiêm túc không?
+7. **Business Owner test:** KPI cuối cùng trace về được New User / MAU / Revenue chưa?
 
 ---
 
 ## CHANGE LOG
 
+- **Tháng 10/2026 (v1.4):** Bổ sung chỉ đạo chiến lược từ A.Công (VP) tại Bi-Weekly Meeting (29/10/2026): Chuẩn hóa tư duy báo cáo Minto Pyramid Principle & Action Title, tư duy định lượng tác động biên (Counterfactual Impact), nguyên tắc làm chủ năng lực (Skin in the Game) và phê duyệt Pilot Off-Page SEO 125 triệu VNĐ cho Cinema Hub & Financial Services.
 - **Tháng 10/2026 (v1.3):** Bổ sung chỉ đạo chiến lược từ CEO Anh Tường tại GPD Monthly Review (22/10/2026): Nâng target Q4 lên 30k install từ Web, định hướng New User 30k-50k/tháng (10% toàn MoMo), xây dựng Financial Authority và tư duy Signal/Micro Journey.
 - **Tháng 6/2026 (v1.2):** Bổ sung chỉ đạo từ Town Hall Tháng 6 (23/06/2026) về "Thuật toán 5 bước" tối ưu hóa quy trình kỹ thuật.
 - **Tháng 5/2026 (v1.1):** Fix context: Bảo là Direct Manager của Hiến, không phải Công. Các insights từ Business_Grow_Mindset.md là Bảo relay - đã cập nhật phân loại `[Direct]` / `[Relay - Bảo]` và sửa Leadership Profiles.

@@ -28,7 +28,7 @@ flowchart TD
 
     subgraph Agent_MCP ["3. Lớp Trí Tuệ Nhân Tạo, MCP & Company LLM Gateway"]
         Antigravity["Antigravity AI Agent Core (Gemini 2.5/3.8)"]
-        QwenGateway["Company LLM Gateway (Model Qwen 3.7 - Bearer JWT)"]
+        QwenGateway["Company LLM Gateway (Model Qwen 3.5 - Bearer JWT)"]
         GTM_MCP["GTM MCP Server (Tags, Triggers, GA4 Config)"]
         Vercel_MCP["Vercel MCP Server (Deployments & Observability)"]
         DevTools_MCP["Chrome DevTools MCP (CWV, LCP, Network)"]
@@ -134,12 +134,12 @@ Hệ thống được thiết kế theo kiến trúc **Agentic AI Native**, kế
 | **`gdrive` (Google Drive)** | Quản lý tệp và thư mục trên Google Drive | Tự động tìm kiếm, đồng bộ và lưu trữ các tệp báo cáo, slide trình diễn trên Google Workspace của công ty. |
 | **`gemini-api_gemini-api-docs`** | Tra cứu tài liệu chính thống của Gemini API/SDK | Cập nhật nhanh các chuẩn tích hợp LLM mới nhất cho pipeline phân tích. |
 
-### 3.3. Tầng Trí Tuệ Tăng Trưởng Nội Bộ (Company Qwen 3.7 AI Growth Layer)
+### 3.3. Tầng Trí Tuệ Tăng Trưởng Nội Bộ (Company Qwen 3.5 AI Growth Layer)
 
-Sau khi bộ thư viện Company LLM Gateway SDK được đóng gói hoàn thiện với mô hình chủ lực **Qwen 3.7** (chuẩn xác thực Bearer JWT trên hạ tầng nội bộ MoMo), hệ thống báo cáo và MoSpark Growth Dashboard được tăng cường thêm một lớp trí tuệ nhân tạo tăng trưởng tự động hóa:
+Sau khi bộ thư viện Company LLM Gateway SDK được đóng gói hoàn thiện với mô hình chủ lực **Qwen 3.5** (chuẩn xác thực Bearer JWT trên hạ tầng nội bộ MoMo), hệ thống báo cáo và MoSpark Growth Dashboard được tăng cường thêm một lớp trí tuệ nhân tạo tăng trưởng tự động hóa:
 - **Tiêu thụ Dữ liệu GA4 & GSC Đã Đồng Bộ Về MoSpark:** Nguồn dữ liệu từ Google Analytics 4 (Sessions, Pageviews, Non-Paid vs Paid, Onelink Clicks) và Google Search Console (Impressions, Clicks, Average Position, Crawl Stats) đã được pipeline kỹ thuật đồng bộ về lưu trữ trực tiếp tại MoSpark Datamart.
-- **Tự Động Sinh Bản Tin Tóm Tắt Điều Hành (Automated Executive Summaries):** Model Qwen 3.7 tổng hợp dữ liệu đa nguồn theo các khung báo cáo WBR/MBR, tự động rút trích các điểm sáng (Big Wins), điểm nghẽn (Blockers) và dự báo tiến độ về đích mà không cần biên soạn thủ công.
-- **Phân Tích Nguyên Nhân Gốc Rễ Tự Động (Automated RCA):** Khi phát hiện độ lệch tiến độ (Pacing Gap) hoặc sụt giảm lưu lượng trên một Hub/Theme cụ thể, Qwen 3.7 đối chiếu ma trận Nguồn x Phễu x Từ khóa để giải trình nguyên nhân (ví dụ: do cắt giảm ngân sách Paid Ads, biến động thứ hạng tìm kiếm, hay lỗi kỹ thuật bot crawl).
+- **Tự Động Sinh Bản Tin Tóm Tắt Điều Hành (Automated Executive Summaries):** Model Qwen 3.5 tổng hợp dữ liệu đa nguồn theo các khung báo cáo WBR/MBR, tự động rút trích các điểm sáng (Big Wins), điểm nghẽn (Blockers) và dự báo tiến độ về đích mà không cần biên soạn thủ công.
+- **Phân Tích Nguyên Nhân Gốc Rễ Tự Động (Automated RCA):** Khi phát hiện độ lệch tiến độ (Pacing Gap) hoặc sụt giảm lưu lượng trên một Hub/Theme cụ thể, Qwen 3.5 đối chiếu ma trận Nguồn x Phễu x Từ khóa để giải trình nguyên nhân (ví dụ: do cắt giảm ngân sách Paid Ads, biến động thứ hạng tìm kiếm, hay lỗi kỹ thuật bot crawl).
 - **Đề Xuất Hành Động Chuẩn P0/P1/P2:** Hệ thống tự động phân loại nhiệm vụ cho từng Squad chuyên môn (Web Dev sửa lỗi 404/Onelink, SEO tối ưu Quick Wins, Media điều chỉnh chiến dịch), gắn liền với dự phóng ROI kinh doanh.
 - **Bảo Mật Tuyệt Đối & Chi Phí Vận Hành Tối Ưu:** Do chạy trên máy chủ nội bộ MoMo qua Bearer JWT, toàn bộ dữ liệu kinh doanh được giữ kín 100%, không phát sinh phí API bên ngoài khi chạy định kỳ hàng ngày.
 

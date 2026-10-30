@@ -69,9 +69,9 @@ Tài liệu này hợp nhất toàn bộ tư duy sản phẩm của CEO, định
 
 ---
 
-## 4. BẢY MÔ HÌNH TƯ DUY CHIẾN LƯỢC CỦA BAN GIÁM ĐỐC (7 EXECUTIVE MENTAL MODELS)
+## 4. MƯỜI MÔ HÌNH TƯ DUY CHIẾN LƯỢC CỦA BAN GIÁM ĐỐC (10 EXECUTIVE MENTAL MODELS)
 
-Từ các buổi họp chiến lược và chỉ đạo thực tế (đặc biệt từ phiên định hướng 25/08/2026), lối tư duy của Lãnh đạo Ban Giám Đốc được đúc kết thành **7 mô hình nhận thức (Mental Models)** chuẩn mực:
+Từ các buổi họp chiến lược và chỉ đạo thực tế (các phiên định hướng chiến lược và buổi họp Bi-Weekly 29/10/2026), lối tư duy của Lãnh đạo Ban Giám Đốc được đúc kết thành **10 mô hình nhận thức (Mental Models)** chuẩn mực:
 
 ### 1. Tư Duy Xác Suất & Thống Kê Thực Dụng (Probabilistic / Portfolio Thinking & Quick Wins)
 * **Bản chất tư duy:** Không kỳ vọng 100% sáng kiến đều thành công. Nhìn bài toán tăng trưởng như một bài toán xác suất thống kê (Pipeline / Hit rate).
@@ -114,24 +114,52 @@ Từ các buổi họp chiến lược và chỉ đạo thực tế (đặc bi�
 * **Ứng dụng thực thi:**
   * Vận hành thử nghiệm thủ công 1-2 phiên (Manual Testing) để đo lường độ hào hứng và biến động CSAT của người dùng trước khi quyết định viết code sản phẩm.
 
+### 8. Tư Duy Kim Tự Tháp Minto & Đóng Khung Nhận Thức (Pyramid Principle & Mindset Framing)
+* **Bản chất tư duy:** Đảo ngược hoàn toàn luồng giao tiếp thông thường của dân kỹ thuật. Lãnh đạo cấp cao không tiếp nhận theo chuỗi *Bối cảnh -> Vấn đề -> Giải pháp -> Tác động*. Lãnh đạo tư duy: **Tác động (Impact) là gì? -> Đã làm gì để ra kết quả đó? -> Bước tiếp theo (Next Step)?**
+* **Ứng dụng thực thi:**
+  * **Action Title (Tiêu đề hành động):** Tiêu đề slide không đặt tên chung chung (như "Financial Hub"), mà phải là một câu kết luận chốt chặn định hình tư duy (*Frame the mindset* kèm số liệu định lượng). Phần thân slide chỉ đóng vai trò cung cấp bằng chứng (*evidence*) đối soát.
+  * Giảm tải tâm lý (*mental load*) cho người nghe: Khi kết quả tốt đã được khẳng định ngay từ tiêu đề, sếp sẽ an tâm lướt nhanh bằng chứng và chỉ tập trung thảo luận về việc làm sao để nhân rộng (scale).
+
+### 9. Tư Duy Định Lượng Tác Động Biên & Phản Thực Tế (Marginal Impact & Counterfactual Thinking)
+* **Bản chất tư duy:** Chấm dứt làm việc theo cảm tính (*gut feeling*). Doanh nghiệp tồn tại để tạo ra giá trị kinh tế và lợi nhuận. Mọi hành động kỹ thuật đều phải chứng minh được giá trị gia tăng thực chất.
+* **Ứng dụng thực thi:**
+  * Luôn tự chất vấn 2 câu hỏi cốt lõi: *(1) Nếu mình không làm gì cả thì chỉ số sẽ tụt bao nhiêu? (2) Những hành động cụ thể đã làm đóng góp thêm chính xác bao nhiêu kết quả so với mức cơ sở đó?*
+  * Bóc tách phân rã đa chiều (Breakdown): Khi thị trường suy giảm (ví dụ ít phim hot, volume tìm kiếm giảm 50%), việc giữ vững hoặc tăng nhẹ traffic phải được chứng minh bằng từng trang mới làm thêm đóng góp bao nhiêu clicks.
+
+### 10. Tư Duy Trực Tiếp Dấn Thân & Mở Rộng Vùng Năng Lực (Skin in the Game & Boundary Expansion)
+* **Bản chất tư duy:** Không bao giờ tự giới hạn bản thân bằng tư duy *"đây không phải năng lực lõi (Core Competency) của tôi/team tôi nên tôi không làm hoặc tuyển người khác làm thay"*.
+* **Ứng dụng thực thi:**
+  * Khi bước vào lĩnh vực mới (như quan hệ đối tác, deal giá, duyệt bài guest post, cam kết outcome kinh doanh), đội ngũ phải trực tiếp "nhúng tay vào làm" để học quy trình và trở thành chuyên gia (*expert*). Tuyển dụng hay thuê ngoài chỉ để hỗ trợ chân tay thực thi, không được khoán trắng trách nhiệm.
+  * Dám chấp nhận rủi ro trong các dự án thử nghiệm (Pilot) quy mô nhỏ để bứt phá giới hạn năng lực của bản thân và tổ chức.
+
 ---
 
 ## 5. CẨM NANG GIAO TIẾP & QUY TRÌNH BÁO CÁO CẤP QUẢN LÝ
 
 ### 1. Phong cách giao tiếp theo vị trí lãnh đạo
 * **Executive Leadership / CEO:** Giao tiếp bằng câu hỏi JTBD, Elegant Problem, 1-2-3 click, PLG, "bữa tối gia đình", First Principles, Media Value. Trình bày báo cáo 1-2-3 gạch đầu dòng ngắn gọn: xanh (on track) / vàng (cần quyết định), ai làm gì và đề xuất cụ thể.
-* **Vice President / Executive Management:** Giao tiếp bằng ngôn ngữ Content Authority, Under-served market, 4 Zone Portfolio, SPA Framework, Fragmented Market Moat. Trình bày báo cáo bằng slide kết hợp biểu đồ 3 chỉ số cốt lõi bên trái và tác động thực thi bên phải.
+* **Vice President / Executive Management:** Giao tiếp bằng ngôn ngữ Minto Pyramid (Impact-driven), Content Authority, Under-served market, 4 Zone Portfolio, SPA Framework, Fragmented Market Moat. Báo cáo bắt buộc có Action Title chốt kết luận, biểu đồ đối soát và đo lường tác động biên.
 * **Growth Leadership:** Giao tiếp bằng ngôn ngữ Tracking event schema, AB test hypothesis, CAC, W2A Conversion, Token Economy, Quick Wins Pipeline. Báo cáo bắt buộc có kế hoạch đo lường và phạm vi KHÔNG LÀM.
 
-### 2. Quy Chế Phối Hợp & Trách Nhiệm Giải Trình (Accountability & Escalation Playbook)
+### 2. Kỷ luật ngôn ngữ & Độ chuẩn xác của số liệu (Numeric Discipline)
+* **Cấm tuyệt đối từ ngữ cảm tính:** Không dùng các từ *"tăng trưởng tốt"*, *"vẫn bình thường"*, *"ổn định"*.
+* **Quy chuẩn ngưỡng tăng trưởng:**
+  * Tăng 1%: **Đi ngang**.
+  * Tăng 10%: **Bình thường**.
+  * Tăng $\ge$ 20%: **Tốt**.
+* **Phân định rõ bản chất tăng trưởng:** Khi mức cơ sở (baseline) ban đầu bằng 0 (chưa làm gì), việc đạt được số liệu mới phải gọi là *"bắt đầu đầu tư và ghi nhận kết quả ban đầu tích cực"*, tuyệt đối không dùng từ *"tăng trưởng"*.
+
+### 3. Quy Chế Phối Hợp & Trách Nhiệm Giải Trình (Accountability & Escalation Playbook)
 1. **Nhịp độ kiểm soát (Cadence):** Họp rà soát tiến độ định kỳ mỗi 2 tuần; vận hành theo Sprint 1 tháng.
 2. **Quản trị Run-rate giữa tháng:** Nếu giữa tháng run-rate thấp hơn cam kết, kích hoạt Action khẩn cấp ngay trong tuần, không để dồn đến cuối tháng.
 3. **Báo cáo minh bạch cuối tháng (Transparent Reporting):** Nêu rõ mục tiêu đạt/không đạt, nguyên nhân cốt lõi, phần việc Web Platform làm nhanh/chậm, phần việc BU phối hợp như thế nào để gửi lên Lãnh đạo cấp cao.
 4. **Cơ chế rút lui chủ động (Offboarding):** Nếu sau 1-2 tháng phối hợp mà BU không tập trung, Web Platform chủ động báo cáo xin rút tài nguyên để chuyển sang hỗ trợ BU khác đang xếp hàng. Web Platform giữ vị thế đối tác chủ động, không chạy theo năn nỉ.
 
-### 3. Checklist 5 câu hỏi kiểm tra trước khi submit tài liệu / báo cáo
+### 4. Checklist 7 câu hỏi kiểm tra trước khi submit tài liệu / báo cáo
 1. **Elegant Test:** Vấn đề được phát biểu có đủ đơn giản để ai nghe xong cũng thấy đúng ngay không?
 2. **Family Dinner Test:** Người dùng có lý do để kể về giải pháp này với người thân trong bữa ăn tối không?
-3. **Measurement Test:** Đã có đầy đủ khung chỉ số tracking, Media Value và giả định A/B test chưa?
-4. **Scope Constraint Test:** Phần "Dự án này KHÔNG LÀM" có đủ rõ ràng để tránh ôm đồm không?
-5. **Business Owner Test:** KPI cuối cùng có trace trực tiếp về W2A Login / MEU / Transactions / Doanh thu chưa?
+3. **Action Title & Pyramid Test:** Tiêu đề slide đã đóng khung kết luận (kèm số) chưa? Bằng chứng bên dưới có rõ ràng không?
+4. **Counterfactual Test:** Đã trả lời được câu hỏi "Nếu không làm thì số tụt bao nhiêu và việc này mang lại giá trị gia tăng cụ thể bao nhiêu?" chưa?
+5. **Measurement Test:** Đã có đầy đủ khung chỉ số tracking, Media Value và giả định A/B test chưa?
+6. **Scope Constraint Test:** Phần "Dự án này KHÔNG LÀM" có đủ rõ ràng để tránh ôm đồm không?
+7. **Business Owner Test:** KPI cuối cùng có trace trực tiếp về W2A Login / MEU / Transactions / Doanh thu chưa?

@@ -13,7 +13,7 @@
 | **Target Tháng 10** | 3.665.607 PVs | Chỉ tiêu giao đầu tháng |
 | **Thực tế Lũy kế MTD 9 ngày** | **903.977 PVs** | Đạt **24.66%** Target (sau 29.0% thời gian) |
 | **Nhịp vận hành ngày (Daily Pace)** | **100.442 PVs/ngày** | Cần 125.529 PVs/ngày ở 22 ngày còn lại (+25%) |
-| **Dự phóng cuối tháng (Forecast 31d)** | **3.113.699 PVs** | Dự kiến đạt **84.94%** Target (thiếu hụt -551.908 PVs) |
+| **Forecast cuối tháng (Forecast 31d)** | **3.113.699 PVs** | Dự kiến đạt **84.94%** Target (thiếu hụt -551.908 PVs) |
 | **Tháng 9 gần nhất (Last Full)** | 3.952.859 PVs | Hoàn thành 112.6% Target Tháng 9 (3.509.044 PVs) |
 
 ---
@@ -33,7 +33,7 @@
 
 ## 3. CƠ CẤU THEO 4 ZONES & HUBS (HUBS-MOMO MAPPING)
 
-| Zone Phân loại | Hub | Lũy kế MTD 9d (PVs) | Target Tháng 10 | Dự phóng 31d | Tỷ lệ Đạt |
+| Zone Phân loại | Hub | Lũy kế MTD 9d (PVs) | Target Tháng 10 | Forecast 31d | Tỷ lệ Đạt |
 | :--- | :--- | :---: | :---: | :---: | :---: |
 | **Performance** | **Cinema Hub** | 391.925 | 1.117.378 | 1.349.964 | **120.8%** |
 | **Transformation** | **Financial Hub** | 43.309 | 450.000 | 149.175 | **33.1%** |

@@ -347,11 +347,11 @@ def run():
     sheets_token = get_sheets_token()
     print("[4/5] Đang ghi dữ liệu và công thức vào Google Sheets...")
 
-    # Ghi Row 3
-    url_r3 = f"https://sheets.googleapis.com/v4/spreadsheets/{TARGET_SHEET_ID}/values/{urllib.parse.quote(SHEET_TITLE + '!B3:T3')}?valueInputOption=USER_ENTERED"
+    # Ghi Row 3 (A3:T3)
+    url_r3 = f"https://sheets.googleapis.com/v4/spreadsheets/{TARGET_SHEET_ID}/values/{urllib.parse.quote(SHEET_TITLE + '!A3:T3')}?valueInputOption=USER_ENTERED"
     req_r3 = urllib.request.Request(
         url_r3,
-        data=json.dumps({"range": f"{SHEET_TITLE}!B3:T3", "majorDimension": "ROWS", "values": [row3_formulas]}).encode("utf-8"),
+        data=json.dumps({"range": f"{SHEET_TITLE}!A3:T3", "majorDimension": "ROWS", "values": [["Page views (Actual)"] + row3_formulas]}).encode("utf-8"),
         headers={"Authorization": f"Bearer {sheets_token}", "Content-Type": "application/json"},
         method="PUT"
     )
@@ -405,11 +405,82 @@ def run():
             }
         })
 
-    # 2. Number format cho các cột Clicks: #,##0 cho cols 1..9 và 11..18
-    # CVR %: 0.0% cho col 10 (K) và col 19 (T)
+    # 2. Number format cho các hàng PV và Clicks
     for i in range(len(raw_projects)):
+        r_p_0indexed = pv_rows[i] - 1
         r_c_0indexed = click_rows[i] - 1
-        # Number #,##0
+
+        # PV Rows: Number #,##0 cho cols 1..9 (B..I) và 11..19 (L..S), diff cho J và T
+        requests.append({
+            "repeatCell": {
+                "range": {
+                    "sheetId": SHEET_ID,
+                    "startRowIndex": r_p_0indexed,
+                    "endRowIndex": r_p_0indexed + 1,
+                    "startColumnIndex": 1,
+                    "endColumnIndex": 9
+                },
+                "cell": {
+                    "userEnteredFormat": {
+                        "numberFormat": {"type": "NUMBER", "pattern": "#,##0"}
+                    }
+                },
+                "fields": "userEnteredFormat.numberFormat"
+            }
+        })
+        requests.append({
+            "repeatCell": {
+                "range": {
+                    "sheetId": SHEET_ID,
+                    "startRowIndex": r_p_0indexed,
+                    "endRowIndex": r_p_0indexed + 1,
+                    "startColumnIndex": 9,
+                    "endColumnIndex": 10
+                },
+                "cell": {
+                    "userEnteredFormat": {
+                        "numberFormat": {"type": "NUMBER", "pattern": "+#,##0;-#,##0;0"}
+                    }
+                },
+                "fields": "userEnteredFormat.numberFormat"
+            }
+        })
+        requests.append({
+            "repeatCell": {
+                "range": {
+                    "sheetId": SHEET_ID,
+                    "startRowIndex": r_p_0indexed,
+                    "endRowIndex": r_p_0indexed + 1,
+                    "startColumnIndex": 11,
+                    "endColumnIndex": 19
+                },
+                "cell": {
+                    "userEnteredFormat": {
+                        "numberFormat": {"type": "NUMBER", "pattern": "#,##0"}
+                    }
+                },
+                "fields": "userEnteredFormat.numberFormat"
+            }
+        })
+        requests.append({
+            "repeatCell": {
+                "range": {
+                    "sheetId": SHEET_ID,
+                    "startRowIndex": r_p_0indexed,
+                    "endRowIndex": r_p_0indexed + 1,
+                    "startColumnIndex": 19,
+                    "endColumnIndex": 20
+                },
+                "cell": {
+                    "userEnteredFormat": {
+                        "numberFormat": {"type": "NUMBER", "pattern": "+#,##0;-#,##0;0"}
+                    }
+                },
+                "fields": "userEnteredFormat.numberFormat"
+            }
+        })
+
+        # Click Rows: Number #,##0 cho cols 1..9 và 11..19, diff cho J và T, CVR % cho K
         requests.append({
             "repeatCell": {
                 "range": {
@@ -417,11 +488,28 @@ def run():
                     "startRowIndex": r_c_0indexed,
                     "endRowIndex": r_c_0indexed + 1,
                     "startColumnIndex": 1,
-                    "endColumnIndex": 10
+                    "endColumnIndex": 9
                 },
                 "cell": {
                     "userEnteredFormat": {
                         "numberFormat": {"type": "NUMBER", "pattern": "#,##0"}
+                    }
+                },
+                "fields": "userEnteredFormat.numberFormat"
+            }
+        })
+        requests.append({
+            "repeatCell": {
+                "range": {
+                    "sheetId": SHEET_ID,
+                    "startRowIndex": r_c_0indexed,
+                    "endRowIndex": r_c_0indexed + 1,
+                    "startColumnIndex": 9,
+                    "endColumnIndex": 10
+                },
+                "cell": {
+                    "userEnteredFormat": {
+                        "numberFormat": {"type": "NUMBER", "pattern": "+#,##0;-#,##0;0"}
                     }
                 },
                 "fields": "userEnteredFormat.numberFormat"
@@ -439,6 +527,23 @@ def run():
                 "cell": {
                     "userEnteredFormat": {
                         "numberFormat": {"type": "NUMBER", "pattern": "#,##0"}
+                    }
+                },
+                "fields": "userEnteredFormat.numberFormat"
+            }
+        })
+        requests.append({
+            "repeatCell": {
+                "range": {
+                    "sheetId": SHEET_ID,
+                    "startRowIndex": r_c_0indexed,
+                    "endRowIndex": r_c_0indexed + 1,
+                    "startColumnIndex": 19,
+                    "endColumnIndex": 20
+                },
+                "cell": {
+                    "userEnteredFormat": {
+                        "numberFormat": {"type": "NUMBER", "pattern": "+#,##0;-#,##0;0"}
                     }
                 },
                 "fields": "userEnteredFormat.numberFormat"

@@ -276,7 +276,7 @@ $$\text{Output Data} \longrightarrow \text{Condition Evaluator} \longrightarrow 
   - *CTA:* **Gửi Tiết Kiệm Làm Quỹ Hưu Trí** (`momo://app?action=saving_online`)
 - **Điều kiện 2: Lương hưu dự kiến thấp (`monthly_pension < 5.000.000đ`):**
   - *Gentle:* "Lương hưu dự kiến {monthly_pension}đ/tháng có thể chịu áp lực lớn từ lạm phát. Hãy chủ động lập quỹ hưu trí bổ sung ngay từ hôm nay."
-  - *Roast:* "Nghỉ hưu với {monthly_pension}đ/tháng sau 20 năm nữa thì chỉ đủ tiền ăn bánh mì uống nước lọc. Bắt đầu tích sản SIP từ 10.000đ/ngày để khi về hưu được an nhàn đi du lịch!"
+  - *Roast:* "Nghỉ hưu với {monthly_pension}đ/tháng sau 20 năm nữa thì chỉ đủ tiền ăn bánh mì uống nước lọc. Bắt đầu tích sản Chứng Chỉ Quỹ từ 10.000đ/ngày để khi về hưu được an nhàn đi du lịch!"
   - *CTA:* **Lập Kế Hoạch Tự Do Tài Chính FIRE** (`momo://app?action=fire_simulator`)
 
 ---
@@ -341,8 +341,8 @@ $$\text{Output Data} \longrightarrow \text{Condition Evaluator} \longrightarrow 
 #### Ma Trận Quy Tắc & Kho Nội Dung
 - **Điều kiện: Muốn nghỉ hưu sớm trước 40 tuổi (`retire_age <= 40`):**
   - *Gentle:* "Để nghỉ hưu ở tuổi {retire_age}, bạn cần xây dựng danh mục tài sản sinh lời ròng {target_asset}đ. Bắt đầu phân bổ định kỳ vào chứng chỉ quỹ tăng trưởng ngay hôm nay."
-  - *Roast:* "Muốn 35 tuổi đã thảnh thơi đi câu cá ngắm hoàng hôn? Với tốc độ tiêu tiền hiện tại thì 65 tuổi bạn vẫn đang cày deadline đấy! Bắt tay vào tích sản SIP ngay hôm nay."
-  - *CTA:* **Bắt Đầu Tích Sản SIP Với Quỹ Mở** (`momo://app?action=mutual_fund_sip`)
+  - *Roast:* "Muốn 35 tuổi đã thảnh thơi đi câu cá ngắm hoàng hôn? Với tốc độ tiêu tiền hiện tại thì 65 tuổi bạn vẫn đang cày deadline đấy! Bắt tay vào tích sản Chứng Chỉ Quỹ ngay hôm nay."
+  - *CTA:* **Bắt Đầu Tích Sản Chứng Chỉ Quỹ Với Quỹ Mở** (`momo://app?action=mutual_fund_sip`)
 
 ---
 

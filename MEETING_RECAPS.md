@@ -7,6 +7,94 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 
 ## DANH SÁCH BẢN GHI RECAPS
 
+### Bản ghi ngày 30/10/2026: Cập Nhật Vận Hành Đa Dự Án - Staging Game Bò Sữa Bay & Legal TnC, Thuế TNCN & Content Financial, Tool Khấu Trừ & Quiz BH Thân Vỏ, Xử Lý Sự Cố Bảo Mật Merchant Page
+> **Thành phần:** Web Product Lead x Strategic Project Teams (Cinema, Financial, Vehicle) x Platform Security Team  
+> **Mục tiêu:** Cập nhật tiến độ Staging và yêu cầu pháp lý (Legal TnC) cho Game Bò Sữa Bay, tiến độ triển khai trang Thuế TNCN và nhịp Always-on Content mảng Tài chính, nghiên cứu Quiz và Tool Khấu Trừ cho Xe / Bảo hiểm Thân vỏ, cùng phương án ứng phó sự cố rò rỉ dữ liệu Merchant.
+
+#### 1. Strategic Projects
+- **Cinema Hub:**
+  - **Game Bò Sữa Bay:** Đã chính thức đẩy lên môi trường Staging; hoàn tất tích hợp API từ `m.momo.vn/cinema` phụ trách việc quản lý Gmail và tự động cấp mã code định danh cho người chơi để phục vụ xuất danh sách Leaderboard.
+  - **Rà Soát Pháp Lý (Legal & Compliance):** Điều khoản và Điều kiện (TnC) cần được Legal review gấp, làm rõ mục đích thu thập và sử dụng Gmail (Data User) nhằm phục vụ các hoạt động hợp lệ: xác thực người chơi, đối soát trao thưởng, gửi mã ưu đãi/vé xem phim và truyền thông hợp lệ.
+  - **Go-Live Chính Thức Cụm Trang Diễn Viên (`/cinema/person`):** Đã chính thức Go-live Production trang danh mục Diễn Viên & Đạo Diễn tại URL `/cinema/person` (kèm các trang hồ sơ chi tiết `/cinema/person/[slug]`). Cấu trúc trang hỗ trợ bộ lọc Diễn viên / Đạo diễn, liên kết mạng lưới phim tham gia, tiểu sử và tối ưu Schema thực thể `Person` chuẩn E-E-A-T để đón đầu các đợt tìm kiếm dàn cast phim chiếu rạp.
+- **Financial Hub:**
+  - **Công Cụ & Trang Tính Thuế Thu Nhập Cá Nhân (`/tai-chinh/thue-thu-nhap-ca-nhan`):**
+    - Quy chuẩn URL: **Tuyệt đối không viết tắt URL**, chuẩn hóa thành `/tai-chinh/thue-thu-nhap-ca-nhan` (thay vì `/tai-chinh/thue-tncn`, đồng bộ đối xứng với `/tai-chinh/thue-ho-kinh-doanh`).
+    - Tiến độ: Kỹ sư Frontend đang hoàn thiện giao diện trang và tiện ích tính toán theo biểu lũy tiến hiện hành và đề xuất luật mới. Cần cấu hình redirect 301 từ URL cũ nếu đã từng phát sinh link.
+  - **Cỗ Máy Nội Dung (Content Engine):** Duy trì nhịp sản xuất và xuất bản Blog Content đều đặn với tốc độ 5 bài/ngày chuẩn E-E-A-T.
+- **Vehicle Hub (Bảo Hiểm & Tiện Ích Xe):**
+  - **Tool Khấu Trừ Bảo Hiểm:** Bắt đầu khởi động xây dựng công cụ tính mức khấu trừ và khấu hao vật chất xe.
+  - **Nghiên Cứu Quiz Bảo Hiểm Thân Vỏ Ô Tô (VCX):**
+    - Nghiên cứu mô hình Gamification Quiz tương tự mô hình CIC theo tài liệu thiết kế prototype `/Users/hienhv/Downloads/Bước Khó Nhất BH Thân Vỏ.html`.
+    - Concept: "Thử thách dự đoán bước ngốn thời gian nhất khi mua bảo hiểm thân vỏ" (3 câu hỏi ngắn gọn, định vị kim đồng hồ xe hơi sang trọng, so sánh trực diện quy trình Ngoài kia vs. Trên MoMo, kết quả dự báo thời gian hoàn tất cá nhân hóa và mở khóa Voucher ưu đãi lần đầu dẫn deeplink về app).
+
+#### 2. Platform & Core Operations
+- **Go-Live Chính Thức Trang Tải Ứng Dụng (`/tai-app`):**
+  - Kỹ sư Thuận đã hoàn thành nghiệm thu và chính thức đưa trang `/tai-app` lên Production.
+  - Vận hành trọn vẹn cơ chế Smart Device Routing: tự động nhận diện thiết bị (iOS mở trực tiếp Apple App Store, Android mở Google Play Store, Desktop hiển thị QR Code động để quét tải app ngay lập tức) kèm Smart Fallback và gắn attribution OneLink AppsFlyer chuẩn xác.
+  - Đây là trạm chuyển đổi Web-to-App tối quan trọng hỗ trợ trực tiếp cho mục tiêu **30.000 install trong Quý 4/2026** từ kênh Web theo chỉ đạo của CEO anh Tường.
+- **Xử Lý Sự Cố An Toàn Thông Tin (Security Vulnerability):**
+  - Đội ngũ Kỹ sư Nền tảng (Platform Security) đang khẩn trương điều tra và xử lý triệt để lỗ hổng rò rỉ dữ liệu tên Merchant trên hệ thống trang Đối tác/Merchant Page.
+  - Hướng xử lý: Thu hồi API public bộc lộ thông tin nhạy cảm, thiết lập lại phân quyền và che chắn dữ liệu (masking/BFF proxy) để ngăn chặn hành vi scraping hàng loạt từ bên ngoài.
+
+---
+
+### Bản ghi ngày 29/10/2026: Họp Định Kỳ Bi-Weekly Với Lãnh Đạo - Chuẩn Hóa Tư Duy Trình Bày Số Liệu (Pyramid Principle), Phê Duyệt Pilot Off-Page Cinema & Định Hướng Năng Lực Đội Ngũ
+> **Thành phần:** Ban Giám Đốc x Web Product Lead x Web Engineering Team  
+> **Mục tiêu:** Rút kinh nghiệm phương pháp báo cáo và tư duy dữ liệu theo chuẩn Minto Pyramid; định nghĩa rõ ràng mục tiêu thành công (Definition of Success) cho dự án Pilot Off-Page; phê duyệt cơ chế triển khai thử nghiệm Cinema Hub và Financial Hub.
+
+#### 1. Chuẩn Hóa Tư Duy Lập Luận Dữ Liệu & Báo Cáo Cấp Quản Lý (Minto Pyramid Principle)
+- **Tư Duy Báo Cáo Hướng Tác Động (Impact-Driven & Action Title):**
+  - Mạch suy nghĩ của người làm kỹ thuật thường đi xuôi: Bối cảnh -> Vấn đề -> Giải pháp -> Kết quả. Mạch tiếp nhận của Lãnh đạo đi ngược lại: **Tác động (Impact) là gì? -> Làm cái gì để ra được tác động đó? -> Bước tiếp theo (Next Steps) là gì?**
+  - Tiêu đề từng slide (Action Title) phải là kết luận chốt chặn mang tính đóng khung (Frame the mindset), ví dụ: *"Financial Hub: Đã bắt đầu triển khai, ghi nhận tín hiệu ban đầu tích cực, traffic organic x4 lần đạt 27.000 clicks"*. Phần thân slide chỉ đóng vai trò làm bằng chứng (Evidence) đối soát.
+  - Tránh tuyệt đối việc đẩy người nghe vào quá trình tự phán đoán hay giải quyết vấn đề khi chưa đưa ra kết luận.
+- **Kỷ Luật Ngôn Ngữ & Độ Chính Xác Của Số Liệu:**
+  - Tuyệt đối không dùng các từ cảm tính, mơ hồ vô giá trị trong báo cáo: *"tăng trưởng tốt"*, *"ổn định"*, *"bình thường"*.
+  - Định lượng rõ ràng: Tăng 1% là đi ngang; tăng 10% là bình thường; tăng từ 20% trở lên mới được xem là tốt.
+  - Phân định rõ bản chất tăng trưởng: Khi base ban đầu bằng 0 hoặc chưa triển khai gì (như Financial Hub giai đoạn đầu), việc đạt 27.000 traffic là do *"bắt đầu đầu tư và ghi nhận kết quả ban đầu"*, không dùng từ *"tăng trưởng"* để tránh ngộ nhận.
+- **Đo Lường Giá Trị Biên (Counterfactual & Marginal Impact):**
+  - Mọi sáng kiến triển khai phải trả lời được bài toán phản thực tế: *"Nếu không làm gì thì chỉ số sẽ tụt bao nhiêu?"* và *"Hành động này đóng góp thêm chính xác bao nhiêu kết quả so với mức cơ sở (baseline)?"*.
+  - Chấm dứt thói quen làm theo trực giác (gut feeling). Mọi nỗ lực giải quyết vấn đề của người dùng phải quy đổi được ra giá trị kinh doanh cụ thể.
+
+#### 2. Phê Duyệt Dự Án Pilot Off-Page SEO (Cinema Hub & Financial Hub)
+- **Khung Dự Án:** Thử nghiệm trong 3 tháng (đến hết tháng 01/2027) với ngân sách 125 triệu VNĐ cho Cinema Hub; tiếp nối mở rộng cho mảng Financial Services (Thẻ tín dụng / CAC) với ngân sách BU tài trợ dự kiến 80 - 100 triệu VNĐ.
+- **Định Nghĩa Thành Công (Definition of Success):**
+  - **Mục Tiêu Cốt Lõi (Primary Target - Theo Tiêu Chí Của BU):** Tập trung vào **Thứ hạng Từ khóa (Search Ranking)** đưa các trang cụm phim chiếu rạp đạt mức trung bình Top 5.5 trên Google Search và tối đa hóa hiện diện trên Generative Engine Optimization (GEO / AI Overview). Đây là tiêu chí BU ưu tiên vì năng lực traffic in-app của BU đã rất lớn và nhu cầu chính là xây dựng thương hiệu (Branding) ngoài app.
+  - **Mục Tiêu Nền Tảng (Secondary / Platform Target):** Đóng vai trò là chỉ số vệ sinh (Hygiene metric) theo dõi độ uy tín (Authority / Trust) và lưu lượng Organic Traffic của toàn Website.
+- **Hiệu Quả Kinh Tế So Với Thuê Ngoài (In-House Direct vs. Agency):**
+  - Triển khai trực tiếp với mạng lưới đối tác giúp tiết kiệm chi phí trung gian (agency thường đội giá từ 175 - 200 triệu VNĐ cho cùng khối lượng).
+  - Khác với Paid Ads (ngừng chi tiền là mất toàn bộ traffic), giá trị của Off-Page xây dựng uy tín bền vững (Evergreen Authority) cho các trang trụ cột, duy trì giá trị tích lũy dài hạn.
+
+#### 3. Phát Triển Năng Lực Đội Ngũ & Kế Hoạch Tuyển Dụng
+- **Phê Duyệt Tuyển Dụng:** Đồng ý tuyển dụng Cộng tác viên / Nhân sự triển khai Off-Page trong 2 - 3 tháng. Yêu cầu tuyển nhanh để kịp nhịp phim bom tấn và mùa phim Tết.
+- **Nguyên Tắc Trực Tiếp Làm Chủ Năng Lực (Skin In The Game):**
+  - Đội ngũ Web Platform không được có tâm lý né tránh hoặc tự giới hạn đây không phải năng lực cốt lõi (Core Competency) để đẩy việc cho người khác.
+  - Phải trực tiếp tham gia cùng nhân sự mới: tự học quy trình, trực tiếp thẩm định bài viết, kiểm soát tiêu chuẩn chất lượng và chịu trách nhiệm đến cùng về kết quả kinh doanh.
+  - Coi khoản ngân sách thử nghiệm là chi phí đầu tư mở rộng vùng năng lực, rèn luyện sự tự tin và tư duy làm chủ (Ownership) cho đội ngũ.
+
+---
+
+### Bản ghi ngày 29/10/2026: Hoàn Tất Đồng Bộ GA4 & GSC Về MoSpark Datamart - Nền Tảng Cho Chuỗi Tasks Phân Tích & AI
+> **Thành phần:** Fullstack/Data Engineering Team x Web Product Lead  
+> **Mục tiêu:** Ghi nhận mốc hoàn tất việc kết nối và đồng bộ tự động dữ liệu Google Analytics 4 (GA4) và Google Search Console (GSC) về MoSpark Datamart; chuẩn bị triển khai chuỗi nhiệm vụ khai thác dữ liệu, Growth Dashboard và AI.
+
+#### 1. Hiện Trạng Hạ Tầng Dữ Liệu Đã Hoàn Thành
+- Toàn bộ pipeline kỹ thuật đồng bộ dữ liệu GA4 (Sessions, Non-Paid vs. Paid, Engagement, OneLink W2A) và GSC (Impressions, Clicks, Average Position, CTR, Search Queries) đã được tích hợp thành công vào MoSpark Datamart.
+- MoSpark chính thức trở thành Single Source of Truth (SSOT) cho toàn bộ bức tranh tăng trưởng Web Platform, chấm dứt việc đối soát và kéo số thủ công.
+
+#### 2. Định Hướng Chuỗi Nhiệm Vụ Tiếp Theo (Upcoming Tasks Pipeline)
+- **Tích Hợp LLM Nội Bộ (Qwen 3.5):**
+  - Cắm trực tiếp Qwen 3.5 vào MoSpark Datamart để chạy tính năng tự động phân tích nguyên nhân gốc rễ (Root Cause Analysis - RCA Engine) cho các báo cáo WBR/MBR.
+  - Tự động sinh báo cáo điều hành (Executive Summary) định kỳ.
+- **Hệ Thống Cảnh Báo Dị Biệt (Automated Anomaly Detection):**
+  - Xây dựng module tự động phát hiện sớm đứt gãy phễu chuyển đổi Web-to-App, sụt giảm traffic đột biến hoặc hiện tượng ăn thịt từ khóa (Cannibalization).
+- **Phát Triển MoSpark Growth Dashboard Cho PM/PO:**
+  - Thiết kế các widget trực quan hóa dữ liệu hiệu suất MTD theo từng Hub/Theme.
+  - Xây dựng tính năng Self-Service cho PM/PO tra cứu Quick Wins (Impressions cao, CTR thấp) và cơ cấu nguồn lưu lượng.
+- **Tối Ưu Hóa Content Studio:**
+  - Đẩy dữ liệu search query thực tế từ GSC vào gợi ý dàn ý bài viết và tự động đề xuất tối ưu Title/Meta Description cho các bài viết chuẩn SEO/GEO.
+
+---
+
 ### Bản ghi ngày 28/10/2026: Định Hướng Trọng Tâm Hành Động Tuần 44 - Cinema (Bò Sữa Bay TVC & Trang Diễn Viên), Financial (Thuế, CCQ Phase 1, CIC Duolingo), Vehicle (Nộp Phạt CSGT) & Platform (Security API Public, PLG UI/UX Viết Bài)
 > **Thành phần:** Web Product Lead x Cell Team Leads x Web Engineering Team  
 > **Mục tiêu:** Chốt danh mục hành động ưu tiên cao nhất (P0/P1) cho Tuần 44 trên các mặt trận Cinema, Financial, Vehicle và Nền tảng Platform (Security, PLG).
@@ -35,37 +123,37 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 
 ---
 
-### Bản ghi ngày 28/10/2026: Hoàn Tất Đóng Gói API Công Ty (Model Qwen 3.7) Dùng Chung Đa Dự Án - Tích Hợp MoMo AI & MoSpark Growth Dashboard (GA4 & GSC Ingestion)
+### Bản ghi ngày 28/10/2026: Hoàn Tất Đóng Gói API Công Ty (Model Qwen 3.5) Dùng Chung Đa Dự Án - Tích Hợp MoMo AI & MoSpark Growth Dashboard (GA4 & GSC Ingestion)
 > **Thành phần:** AI Platform Team x Web Product Lead x Web Engineering Team x Data Team  
-> **Mục tiêu:** Đồng bộ tiến độ đóng gói thư viện API nội bộ công ty (Company LLM Gateway SDK) với mô hình chủ lực Qwen 3.7; thống nhất kiến trúc tích hợp đa dự án Web Platform gồm MoMo AI (Proposal Engine) và MoSpark Growth Dashboard (kết nối dữ liệu GA4/GSC được đồng bộ tự động để phân tích RCA).
+> **Mục tiêu:** Đồng bộ tiến độ đóng gói thư viện API nội bộ công ty (Company LLM Gateway SDK) với mô hình chủ lực Qwen 3.5; thống nhất kiến trúc tích hợp đa dự án Web Platform gồm MoMo AI (Proposal Engine) và MoSpark Growth Dashboard (kết nối dữ liệu GA4/GSC được đồng bộ tự động để phân tích RCA).
 
-#### 1. Đóng Gói API Nội Bộ Công Ty (Company LLM Gateway SDK - Model Qwen 3.7)
+#### 1. Đóng Gói API Nội Bộ Công Ty (Company LLM Gateway SDK - Model Qwen 3.5)
 - **Hạ Tầng & Xác Thực:**
   - Hoàn tất đóng gói SDK client (`@momo/llm-gateway-client`) kết nối trực tiếp vào cụm máy chủ LLM nội bộ của MoMo.
   - Chuẩn xác thực: Bearer JWT bảo mật cao, phân quyền theo mã dự án (`X-Project-Id`).
   - Lợi thế vượt trội: Không phát sinh chi phí token bên ngoài (zero commercial cost), bảo mật thông tin nội bộ 100%, kiểm soát độ trễ và không bị phụ thuộc vào hạn ngạch (rate limit) của các nhà cung cấp ngoại.
-- **Mô Hình Chủ Lực:** Triển khai chính thức model **Qwen 3.7** (Instruct & Reasoning) tối ưu cho việc hiểu tiếng Việt, trích xuất dữ liệu có cấu trúc và lập luận logic.
+- **Mô Hình Chủ Lực:** Triển khai chính thức model **Qwen 3.5** (Instruct & Reasoning) tối ưu cho việc hiểu tiếng Việt, trích xuất dữ liệu có cấu trúc và lập luận logic.
 
 #### 2. Kế Hoạch Tích Hợp Đa Dự Án Trên Web Platform
 - **Dự Án 1: MoMo AI / Proposal Engine (Financial Hub & Công Cụ Tính Toán):**
   - Chuyển dịch từ mô hình thuần Rule-based sang **Kiến trúc Lai Đa Tầng (Hybrid Dual-Engine Architecture)**.
   - Tầng 1 (Client-Side Instant Heuristics, <10ms): Xử lý phản hồi tức thì khi người dùng kéo thanh trượt (slider) hoặc nhập số liệu cơ bản, hiển thị ngay nhận xét hóm hỉnh (Gentle / Roast Mode) và CTA tương ứng.
-  - Tầng 2 (Deep Contextual Reasoning qua Qwen 3.7): Kích hoạt bất đồng bộ khi người dùng yêu cầu phân tích sâu hoặc đặt câu hỏi phức tạp. Qwen 3.7 phân tích cơ cấu tài chính, đối chiếu thu nhập - nợ và đưa ra phương án tối ưu hóa dòng tiền.
+  - Tầng 2 (Deep Contextual Reasoning qua Qwen 3.5): Kích hoạt bất đồng bộ khi người dùng yêu cầu phân tích sâu hoặc đặt câu hỏi phức tạp. Qwen 3.5 phân tích cơ cấu tài chính, đối chiếu thu nhập - nợ và đưa ra phương án tối ưu hóa dòng tiền.
   - Cơ chế Graceful Fallback: Nếu API phản hồi chậm quá 2.5s hoặc mất kết nối, UI tự động giữ nguyên kết quả Tầng 1, không gián đoạn trải nghiệm.
 - **Dự Án 2: MoSpark Growth Dashboard (Tiêu Thụ Dữ Liệu GA4 & GSC Đã Đồng Bộ):**
   - Khai thác nguồn dữ liệu hiệu suất Google Analytics 4 và Google Search Console đã được pipeline kỹ thuật đồng bộ tự động về MoSpark Datamart.
-  - Qwen 3.7 được kết nối để tự động:
+  - Qwen 3.5 được kết nối để tự động:
     1. Sinh bản tin tóm tắt điều hành định kỳ (Executive Summaries) cho WBR/MBR.
     2. Chẩn đoán nguyên nhân gốc rễ (Root Cause Analysis - RCA) khi phát hiện biến động traffic hoặc sụt giảm kênh Non-Paid / Paid.
     3. Tự động cảnh báo dị biệt (Anomaly Detection) về đứt gãy luồng chuyển đổi Onelink Web-to-App.
     4. Tự động đề xuất danh mục hành động P0/P1/P2 cho các Squad chuyên môn.
 - **Dự Án 3: MoSpark Content Studio (Sinh Nội Dung Theo Cấu Trúc):**
-  - Cung cấp tiêu đề H1/H2/H3 và ngữ cảnh thực tế của sản phẩm cho Qwen 3.7 để tạo dàn ý và bài viết E-E-A-T chuẩn SEO/GEO.
+  - Cung cấp tiêu đề H1/H2/H3 và ngữ cảnh thực tế của sản phẩm cho Qwen 3.5 để tạo dàn ý và bài viết E-E-A-T chuẩn SEO/GEO.
 
 #### 3. Action Items & Kế Hoạch Bàn Giao
 - **AI Platform Team:** Triển khai API gateway endpoint và cấp phát JWT token môi trường Staging/Production cho nhánh Web Platform trước ngày 30/10/2026.
 - **Web Frontend Team:** Tích hợp module `@momo/llm-gateway-client` vào component MoMo AI trên Financial Hub; gắn đầy đủ 6 sự kiện Umami tracking.
-- **Data & Web Engineering Team:** Hoàn thiện pipeline cấp dữ liệu GA4/GSC từ MoSpark Datamart vào prompt template của Qwen 3.7 trên Growth Dashboard.
+- **Data & Web Engineering Team:** Hoàn thiện pipeline cấp dữ liệu GA4/GSC từ MoSpark Datamart vào prompt template của Qwen 3.5 trên Growth Dashboard.
 - **Legal Team:** Hoàn thiện văn bản rà soát tuân thủ và bộ lọc an toàn thông tin (Safety Guardrails) cho nội dung tài chính tự động.
 
 ---

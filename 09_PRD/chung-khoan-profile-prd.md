@@ -147,7 +147,7 @@ graph TD
     D -->|Tự Tin Chọn Cổ Phiếu| E1["5A. Chuyển Đổi Mua Cổ Phiếu Lô Lẻ<br/>(CTA: Mua FPT từ 10.000đ)"]
     D -->|Ngại Biến Động / Muốn An Toàn| E2["5B. Chuyển Đổi Sang Quỹ Mở Top Đầu<br/>(CTA: Xem Quỹ Mở Nắm FPT tại /chung-chi-quy)"]
     E1 --> F1["6A. Deep-link App MoMo (CVS Engine)<br/>(Mở thẳng màn hình mua mã FPT, điền sẵn 10.000đ)"]
-    E2 --> F2["6B. Deep-link Quỹ Mở MoMo (SIP Engine)<br/>(Thiết lập lịch trích tiền tích sản định kỳ)"]
+    E2 --> F2["6B. Deep-link Quỹ Mở MoMo (Đầu Tư Định Kỳ)<br/>(Thiết lập lịch trích tiền tích sản định kỳ)"]
     F1 --> G["7. Trở Thành Nhà Đầu Tư Định Danh (MTU Active)<br/>(Hoàn tất xác thực tài khoản & Khớp lệnh mua đầu tiên)"]
     F2 --> G
 ```
@@ -196,7 +196,7 @@ graph TD
     <tr>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">5</td>
       <td style="border:1px solid #94a3b8; padding:6px;"><strong>Mở App & Khớp Lệnh</strong></td>
-      <td style="border:1px solid #94a3b8; padding:6px;">Ứng dụng MoMo mở thẳng màn hình đặt lệnh mua lô lẻ (CVS) hoặc màn hình đăng ký tích sản quỹ mở (SIP), điền sẵn thông tin.</td>
+      <td style="border:1px solid #94a3b8; padding:6px;">Ứng dụng MoMo mở thẳng màn hình đặt lệnh mua lô lẻ (CVS) hoặc màn hình đăng ký tích sản Chứng Chỉ Quỹ, điền sẵn thông tin.</td>
       <td style="border:1px solid #94a3b8; padding:6px;">AppsFlyer OneLink, In-App Stock Core CVS API / Mutual Fund Engine.</td>
       <td style="border:1px solid #94a3b8; padding:6px; text-align:center;">Web ➔ App MoMo</td>
     </tr>

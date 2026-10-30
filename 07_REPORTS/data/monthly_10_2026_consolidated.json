@@ -1,83 +1,83 @@
 {
   "file_source": "GA4 Data API (Property 270743103)",
-  "read_timestamp": "2026-10-28 07:15:38",
-  "report_type": "MTD 27 Ngày (01/10 - 27/10/2026)",
-  "days_elapsed": 27,
+  "read_timestamp": "2026-10-30 08:07:13",
+  "report_type": "MTD 29 Ngày (01/10 - 29/10/2026)",
+  "days_elapsed": 29,
   "days_in_month": 31,
   "target_oct_pv": 3665607,
-  "actual_mtd_pv": 3181254,
-  "progress_pct": 86.79,
-  "daily_pace": 117824.22,
-  "daily_needed": 121088.25,
-  "forecast_31d": 3652550.82,
-  "forecast_pct": 99.64,
-  "users": 1572522,
-  "sessions": 2152800,
+  "actual_mtd_pv": 3385322,
+  "progress_pct": 92.35,
+  "daily_pace": 116735.24,
+  "daily_needed": 140142.5,
+  "forecast_31d": 3618792.44,
+  "forecast_pct": 98.72,
+  "users": 1669722,
+  "sessions": 2301306,
   "channels": {
     "organic": {
-      "pv": 1526388,
-      "pct": 47.98
+      "pv": 1613449,
+      "pct": 47.66
     },
     "direct": {
-      "pv": 835002,
-      "pct": 26.25
+      "pv": 883499,
+      "pct": 26.1
     },
     "paid": {
-      "pv": 396948,
-      "pct": 12.48
+      "pv": 438185,
+      "pct": 12.94
     },
     "referral": {
-      "pv": 307590,
+      "pv": 327288,
       "pct": 9.67
     },
     "others": {
-      "pv": 115326,
+      "pv": 122901,
       "pct": 3.63
     },
     "non_paid_total": {
-      "pv": 2784306,
-      "pct": 87.52
+      "pv": 2947137,
+      "pct": 87.06
     }
   },
   "hubs": {
     "cinema": {
-      "pv": 987461,
+      "pv": 1034539,
       "target": 1117378,
-      "pct": 88.37
+      "pct": 92.59
     },
     "financial": {
-      "pv": 277081,
+      "pv": 291995,
       "target": 450000,
-      "pct": 61.57
+      "pct": 64.89
     },
     "new_user": {
-      "pv": 86656,
+      "pv": 91487,
       "target": 300000,
-      "pct": 28.89
+      "pct": 30.5
     },
     "vehicle": {
-      "pv": 69750,
+      "pv": 76593,
       "target": 100000,
-      "pct": 69.75
+      "pct": 76.59
     },
     "insurance": {
-      "pv": 29631,
+      "pv": 32874,
       "target": 50000,
-      "pct": 59.26
+      "pct": 65.75
     },
     "student": {
-      "pv": 3064,
+      "pv": 3307,
       "target": 100000,
-      "pct": 3.06
+      "pct": 3.31
     }
   },
   "cinema_breakdown": {
-    "Trang Rạp phim": 739598,
-    "Trang phim chi tiết": 125802,
-    "Cinema_Home Page": 45622,
-    "Cinema_Blog": 22812,
-    "Cinema_Landing Page": 52903,
-    "Tin tức": 649,
+    "Trang Rạp phim": 772328,
+    "Trang phim chi tiết": 134320,
+    "Cinema_Home Page": 49672,
+    "Cinema_Blog": 24170,
+    "Cinema_Landing Page": 53297,
+    "Tin tức": 677,
     "Others": 75
   }
 }

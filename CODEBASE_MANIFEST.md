@@ -83,6 +83,7 @@ Mọi thao tác phân tích, chẩn đoán và dự báo đều được tự đ
 | **`scripts/lib/forecast_engine.py`** | Dự báo kết tháng đa kịch bản (Linear, Seasonality Weighted, Conservative) dựa trên trọng số mùa vụ 5 năm. | `./.venv/bin/python scripts/lib/forecast_engine.py --forecast` |
 | **`scripts/track_decisions.py`** | Sổ cái theo dõi quyết định chiến lược, tự động đối soát kết quả thực tế sau 14 - 30 ngày (Closed-Loop). | `./.venv/bin/python scripts/track_decisions.py --list`<br>`./.venv/bin/python scripts/track_decisions.py --audit` |
 | **`scripts/sync_ga4_master.py`** | Kéo số liệu GA4 MTD trực tiếp từ API, cập nhật Excel, Markdown, Hubs `/dashboard` và Google Sheets SSOT. | `./.venv/bin/python scripts/sync_ga4_master.py` |
+| **`scripts/sync_cinema_roadmap_sheet.py`** | Đồng bộ hai chiều Google Sheet Roadmap Cinema Hub (ID `1YT2sdU-O4smoy6TUKBic6PTFBxUXNUVkd_S-tmjiplg`) và Google Drive Desktop. | `./.venv/bin/python scripts/sync_cinema_roadmap_sheet.py` |
 | **`scripts/sync_data_mart.py`** | Nạp và đồng bộ lại toàn bộ dữ liệu 28k URLs, 236 theme mùa vụ và snapshots vào SQLite Data Mart. | `./.venv/bin/python scripts/sync_data_mart.py` |
 
 ---
@@ -126,5 +127,6 @@ Bất kỳ AI Agent nào khi đọc hiểu và làm việc trong repo này **B�
 | **Đánh giá kết quả A/B Test hoặc tính cỡ mẫu** | Chạy ngay: `./.venv/bin/python scripts/lib/ab_test_evaluator.py [tham số]` |
 | **Kiểm tra sổ cái quyết định và tiến độ thực tế** | Chạy ngay: `./.venv/bin/python scripts/track_decisions.py --list` |
 | **Đồng bộ số liệu GA4 MTD mới nhất** | Chạy ngay: `./.venv/bin/python scripts/sync_ga4_master.py` |
+| **Đồng bộ / Kiểm tra Roadmap & Minigame Cinema Hub (Google Drive)** | Chạy ngay: `./.venv/bin/python scripts/sync_cinema_roadmap_sheet.py` |
 | **Kiểm tra tình hình chiến dịch Paid Ads / UTM** | Chạy ngay: `./.venv/bin/python scripts/sync_paid_ads.py` |
 | **Hỏi kỹ thuật, code review, debug, logic thông thường** | **Zero context file load**. Trả lời trực tiếp vào trọng tâm, không nạp file bối cảnh lớn. |
