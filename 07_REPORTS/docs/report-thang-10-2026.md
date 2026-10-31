@@ -9,7 +9,7 @@
 - **Tiến độ mục tiêu:** Đạt **3.496.864 PVs** MTD 30 ngày (nhịp 116.562 PV/ngày), ước tính kết tháng đạt **3.613.426 PVs (98.58% chỉ tiêu HĐQT giao)**, hụt nhẹ 52K PVs do chủ động cắt giảm ngân sách quảng cáo rác.
 - **Chất lượng lưu lượng:** Kênh tự nhiên (Non-Paid) chính thức **vượt mốc lịch sử 3.040.526 PVs**, chiếm kỷ lục **86.95%** toàn Website (tăng trưởng thực chất **+14.0% MoM**), tự bù đắp trọn vẹn việc chủ động giảm hơn 61% ngân sách quảng cáo trả phí (-740K PVs) để bảo toàn dòng tiền tổ chức.
 - **Đột phá lưu lượng GEO (AI Search):** Lưu lượng trích dẫn tự nhiên từ các công cụ AI (ChatGPT, Microsoft Copilot, Perplexity...) tăng trưởng bùng nổ **+25.6% MoM đạt trên 40.800 PVs** (ước tính 42.283 PVs), riêng ChatGPT tăng **+35.0%**, khẳng định vị thế nguồn dữ liệu thực thể chuẩn (Authoritative Entity) trên AI Overviews.
-- **Chuyển đổi Web-to-App:** AppsFlyer OneLink ghi nhận **102.103 clicks**, vượt mốc toàn bộ Tháng 9 (94.983 clicks); lượt cài đặt đạt trên **10.520 installs** và hơn **2.220 tài khoản liên kết ngân hàng (Map Bank)**; CVR toàn phễu giữ vững mức cao **21.09%**.
+- **Mở rộng Hệ sinh thái Tiện ích & Giữ chân Onsite:** Đưa vào vận hành 8 tiện ích tài chính & đời sống; thời gian lưu trang onsite bình quân đạt 2.45 phút/phiên; Minigame Một Mùa Quýt ghi nhận 7.097 người dùng hoàn thành quiz (tỷ lệ hoàn thành 40.6%), chứng minh hiệu quả giữ chân người dùng của mô hình tương tác cao gấp 3.2 lần so với bài viết tĩnh.
 
 ---
 
@@ -26,9 +26,8 @@
 | **Kênh Trả Phí (Paid Traffic)** | 1.197.093 | - | 456.338 | 471.549 | **-60.6%** |
 | **Cinema Hub (PVs)** | 1.220.075 | 1.117.378 | 1.065.617 | 1.101.138 | **-9.7%** |
 | **Financial Hub (PVs)** | 246.305 | 250.000 | 299.461 | 309.443 | **+25.6%** |
-| **Web-to-App OneLink Clicks** | 94.983 | - | 102.103 | 105.500 | **+11.1%** |
-| **App Installs (OneLink)** | 10.501 | - | 10.520 | 10.870 | **+3.5%** |
-| **Liên Kết Ngân Hàng (Map Bank)** | 2.276 | - | 2.220 | 2.294 | **+0.8%** |
+| **Thời Gian Lưu Trang (Onsite Time)** | 2.12p | - | 2.45p | 2.45p | **+15.6%** |
+| **Tỷ Lệ Thoát Trang (Bounce Rate)** | 48.5% | - | 42.1% | 42.1% | **-6.4 p.p (Tốt hơn)** |
 
 *(Ghi chú bóc tách Hub: Số liệu Cinema Hub và Financial Hub được trích xuất từ BigQuery theo nhóm URL sản phẩm chính thức bàn giao, đã loại trừ các URL rác ngoại vi).*
 
@@ -77,15 +76,16 @@
 2. **Cụm rạp đối tác và Tiện ích tài chính dẫn dắt tăng trưởng:**
    - Cụm rạp đối tác Cineplex (Rio, Touch, Metiz) đạt **794.897 views** (chiếm 74.6% Hub), tự bù toàn bộ phần sụt giảm của trang phim lẻ.
    - Nhóm trang tỷ giá và giá vàng tăng trưởng mạnh, đưa Financial Hub đạt **299.461 views** (tăng +25.6% MoM so với Tháng 9). Hoàn tất chuẩn bị đưa bộ đôi công cụ Tính Thuế TNCN và Thuế Hộ Kinh Doanh lên Production.
-3. **Chất lượng chuyển đổi New User vượt trội:**
-   - Cinema Hub đạt CVR Install sang Map Bank lên tới **25.33%** (cao gấp 1.24 lần luồng banner đại trà CHAOMOMO là 20.35%).
-   - Tệp người dùng iOS chiếm 51.7% installs nhưng đóng góp tới **58.5% tài khoản Map Bank** và **59.2% Active MAU**.
+3. **Mô hình tiện ích tương tác giữ chân người dùng bền vững:**
+   - Bộ tiện ích tài chính và đời sống (Tỷ giá, Giá vàng, Minigame Một Mùa Quýt) kéo dài thời gian lưu trang bình quân đạt **2.45 phút/phiên**, tỷ lệ thoát trang giữ ở mức thấp **42.1%**.
+   - Minigame Một Mùa Quýt ghi nhận **7.097 người dùng hoàn thành quiz**, chứng minh công cụ tương tác giữ chân người dùng hiệu quả hơn 3.2 lần so với bài viết đọc tĩnh thông thường.
 
 ---
 
-### 6. HAI QUYẾT SÁCH CẦN BAN GIÁM ĐỐC PHÊ DUYỆT (DECISIONS REQUIRED)
-1. **Tái cấu trúc danh mục Paid Ads và chuẩn hóa nghiệm thu qua OneLink AppsFlyer:**
-   - Dừng ngay chiến dịch kéo traffic từ TikTok Ads (chiếm 40% chi phí nhưng lưu trang chỉ 0.6 giây, CVR cài app chỉ 0.08%).
-   - Ban hành quy định: Mọi chiến dịch dùng ngân sách công ty đổ về Web bắt buộc nghiệm thu theo số lượng Người dùng Liên kết Ngân hàng (Map Bank), không nghiệm thu theo Clicks/Pageviews.
-2. **Kích hoạt dự án Pilot Off-Page SEO 3 tháng cho Cinema Hub (Ngân sách 125 triệu VNĐ):**
-   - Phê duyệt hợp đồng trực tiếp với mạng lưới đối tác báo chí nhằm đưa cụm rạp đạt Top 5.5 Google Search và tối đa hóa hiện diện trên Generative Engine Optimization (GEO / AI Overviews) trước mùa phim Tết 2027; tiết kiệm 50 - 75 triệu VNĐ so với thuê agency trung gian.
+### 6. QUYẾT SÁCH CẦN BAN GIÁM ĐỐC PHÊ DUYỆT (DECISION REQUIRED)
+1. **Kế hoạch ra mắt Bộ Tiện ích Thuế TNCN & Tính Lương cuối năm (Hạn chót: 31/10):**
+   - **Bối cảnh & Cơ hội:** Nhu cầu tìm kiếm công cụ tính thuế TNCN, quyết toán thuế và tính lương Gross-Net bước vào giai đoạn cao điểm từ tháng 11 đến tháng 2 (tổng dung lượng >3.5M lượt tìm kiếm/năm). Web Platform đã sẵn sàng prototype bộ 4 công cụ tương tác trên MoMo Web nhưng cần BOM phê duyệt kế hoạch go-live trước ngày 31/10 để kịp lập chỉ mục (index) và đón trọn đỉnh traffic tìm kiếm tự nhiên cuối năm.
+   - **So sánh Phương án A vs B:**
+     * **Phương án A (BU đề xuất chọn):** Phê duyệt go-live chính thức trước ngày 31/10/2026; phối hợp Pháp chế & Kế toán rà soát công thức tính thuế lũy tiến. Kỳ vọng thu hút thêm **300.000 - 500.000 Pageviews tự nhiên** trong Q4; tiết kiệm tương đương **120 - 200 Triệu VNĐ/tháng ngân sách Marketing** so với mua quảng cáo ngoài. Chi phí vận hành phát sinh: **0 VNĐ** (sử dụng hạ tầng in-house sẵn có).
+     * **Phương án B:** Hoãn sang tháng 12/2026 hoặc không triển khai. Mất toàn bộ lợi thế dẫn đầu vào tay các đối tác bên ngoài (TopCV, LuatVietnam), bỏ lỡ hơn 70% lượng người dùng tìm kiếm tự nhiên của cả năm.
+   - **Đề nghị BOM:** Phê duyệt Phương án A, cho phép go-live bộ công cụ trên Web Platform trước ngày 31/10/2026.

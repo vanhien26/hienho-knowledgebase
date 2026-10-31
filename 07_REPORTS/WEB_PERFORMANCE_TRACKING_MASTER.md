@@ -838,7 +838,7 @@ Dữ liệu trích xuất từ Google Analytics 4 API (Property 270743103) cắt
 * **Dự phóng cả tháng (Forecast 31 ngày):** 3.613.426 PV (Đạt **98,58%** Target tháng).
 * **Lượng tăng ròng ngày 30/10 (Net add):** +111.542 PV (+10,4% so với ngày 29/10).
 * **Quy mô người dùng:** 1.720.894 Users | 2.402.707 Sessions.
-* **Web-to-App OneLink Clicks:** Đạt kỷ lục 102.103 clicks (vượt xa Tháng 9 full month 94.983 clicks).
+* **Chất lượng tương tác:** Thời gian lưu trang onsite bình quân đạt 2.45 phút/phiên; tỷ lệ thoát trang giữ ở mức thấp 42.1%.
 
 #### Bảng Cơ Cấu Kênh Traffic MTD 30 Ngày Tháng 10 (Non-Paid vs. Paid Dichotomy):
 
