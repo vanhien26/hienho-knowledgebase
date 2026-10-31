@@ -5,10 +5,10 @@
     "scope": "Monthly Business Review (MBR)",
     "audience": "Ban Giám Đốc / Hội đồng Quản trị",
     "meeting_principle": "Báo cáo cung cấp bối cảnh chiến lược và số liệu kinh doanh [R]; Cuộc họp tập trung thảo luận và ra quyết định [D]",
-    "period": "01/10/2026 - 28/10/2026",
-    "days_elapsed": 28,
+    "period": "01/10/2026 - 30/10/2026",
+    "days_elapsed": 30,
     "days_in_month": 31,
-    "last_updated": "2026-10-29T08:37:00+07:00",
+    "last_updated": "2026-10-31T06:50:00+07:00",
     "sources": [
       "GA4 Data API (Property 270743103)",
       "AppsFlyer GPD Attribution",
@@ -38,19 +38,19 @@
   },
   "summary": {
     "target_pvs": 3665607,
-    "actual_pvs_mtd": 3284285,
-    "forecast_pvs_31d": 3636173,
-    "achievement_rate_mtd": 0.896,
-    "forecast_achievement_rate": 0.992,
-    "daily_run_rate": 117296,
-    "non_paid_pvs_mtd": 2865064,
-    "non_paid_share": 0.8724,
-    "paid_pvs_mtd": 419221,
-    "paid_share": 0.1276,
-    "paid_cut_volume": -733093,
-    "paid_cut_rate": -0.612,
-    "non_paid_net_add": 416234,
-    "non_paid_growth_mom": 0.151,
+    "actual_pvs_mtd": 3496864,
+    "forecast_pvs_31d": 3613426,
+    "achievement_rate_mtd": 0.954,
+    "forecast_achievement_rate": 0.9858,
+    "daily_run_rate": 116562,
+    "non_paid_pvs_mtd": 3040526,
+    "non_paid_share": 0.8695,
+    "paid_pvs_mtd": 456338,
+    "paid_share": 0.1305,
+    "paid_cut_volume": -740755,
+    "paid_cut_rate": -0.619,
+    "non_paid_net_add": 284760,
+    "non_paid_growth_mom": 0.14,
     "total_installs_mtd": 9820,
     "forecast_installs_31d": 10870,
     "registered_users_mtd": 3535,
@@ -62,49 +62,49 @@
       "metric": "Total Page Views (Target)",
       "sep_2026": 3509044,
       "oct_target": 3665607,
-      "oct_mtd_28d": 3665607,
       "forecast_31d": 3665607,
-      "assessment": "Cơ sở giao chỉ tiêu Q4"
+      "assessment": "Cơ sở giao chỉ tiêu Q4",
+      "oct_mtd_30d": 3665607
     },
     {
       "metric": "% Growth Rate (Target)",
       "sep_2026": "+1.26%",
       "oct_target": "+4.46%",
-      "oct_mtd_28d": "-",
       "forecast_31d": "-",
-      "assessment": "Chỉ tiêu tăng trưởng MoM"
+      "assessment": "Chỉ tiêu tăng trưởng MoM",
+      "oct_mtd_30d": "-"
     },
     {
       "metric": "Total Page Views (Actual)",
       "sep_2026": 3952859,
       "oct_target": null,
-      "oct_mtd_28d": 3284285,
-      "forecast_31d": 3636173,
-      "assessment": "Đạt 89.60% tiến độ thời gian (28/31 ngày = 90.32%)"
+      "forecast_31d": 3613426,
+      "assessment": "Đạt 95.40% Target sau 30/31 ngày (96.77% tiến độ thời gian)",
+      "oct_mtd_30d": 3496864
     },
     {
       "metric": "Net Add (Lưu lượng Tăng mới)",
       "sep_2026": 473811,
       "oct_target": 156563,
-      "oct_mtd_28d": null,
       "forecast_31d": -316686,
-      "assessment": "So với mức đỉnh chạy Ads Tháng 9"
+      "assessment": "So với mức đỉnh chạy Ads Tháng 9",
+      "oct_mtd_30d": null
     },
     {
       "metric": "% Growth Rate (Actual)",
       "sep_2026": "+13.62%",
       "oct_target": null,
-      "oct_mtd_28d": null,
       "forecast_31d": "-8.01%",
-      "assessment": "So với mức thực đạt Tháng 9"
+      "assessment": "So với mức thực đạt Tháng 9",
+      "oct_mtd_30d": null
     },
     {
       "metric": "% Target Rate (Tiến độ về đích)",
       "sep_2026": "112.65%",
       "oct_target": "100.00%",
-      "oct_mtd_28d": "89.60%",
-      "forecast_31d": "99.20% - 100.10%",
-      "assessment": "Dự kiến hoàn thành 100% Target"
+      "forecast_31d": "98.58% - 99.20%",
+      "assessment": "Dự kiến kết tháng đạt 98.6% - 99.0% Target",
+      "oct_mtd_30d": "95.40%"
     }
   ],
   "traffic_sources": [
@@ -112,71 +112,71 @@
       "channel": "KÊNH TỰ NHIÊN (NON-PAID)",
       "is_group": true,
       "sep_2026": 2755766,
-      "oct_mtd_28d": 2865064,
-      "forecast_31d": 3172000,
-      "diff_vs_sep": 416234,
-      "share": 0.8724,
-      "assessment": "Tăng trưởng tự nhiên thực chất (+15.1% MoM); đóng vai trò động cơ cốt lõi"
+      "forecast_31d": 3141877,
+      "diff_vs_sep": 386111,
+      "share": 0.8695,
+      "assessment": "Vượt mốc lịch sử 3 triệu PV tự nhiên (+14.0% MoM); tự chủ nguồn tăng trưởng",
+      "oct_mtd_30d": 3040526
     },
     {
       "channel": "Organic Search",
       "is_group": false,
       "sep_2026": 1623796,
-      "oct_mtd_28d": 1566630,
-      "forecast_31d": 1734000,
-      "diff_vs_sep": 110204,
-      "share": 0.477,
-      "assessment": "Vị thế tìm kiếm tự nhiên vững chắc, chiếm gần 50% toàn bộ lưu lượng Website"
+      "forecast_31d": 1720706,
+      "diff_vs_sep": 96910,
+      "share": 0.4762,
+      "assessment": "Vị thế tìm kiếm tự nhiên vững chắc, chiếm gần 50% toàn bộ lưu lượng Website",
+      "oct_mtd_30d": 1665199
     },
     {
       "channel": "Direct",
       "is_group": false,
       "sep_2026": 755896,
-      "oct_mtd_28d": 860199,
-      "forecast_31d": 952000,
-      "diff_vs_sep": 196104,
-      "share": 0.2619,
-      "assessment": "Sức mạnh thương hiệu tăng (+25.9% MoM); người dùng quay lại trực tiếp các tiện ích"
+      "forecast_31d": 938073,
+      "diff_vs_sep": 182177,
+      "share": 0.2596,
+      "assessment": "Sức mạnh thương hiệu tăng (+25.9% MoM); người dùng quay lại trực tiếp các tiện ích",
+      "oct_mtd_30d": 907813
     },
     {
       "channel": "Referral",
       "is_group": false,
       "sep_2026": 345132,
-      "oct_mtd_28d": 318624,
-      "forecast_31d": 353000,
-      "diff_vs_sep": 7868,
-      "share": 0.097,
-      "assessment": "Mạng lưới liên kết rạp chiếu phim, ngân hàng đối tác và kênh báo chí"
+      "forecast_31d": 351570,
+      "diff_vs_sep": 6438,
+      "share": 0.0973,
+      "assessment": "Mạng lưới liên kết rạp chiếu phim, ngân hàng đối tác và kênh báo chí",
+      "oct_mtd_30d": 340229
     },
     {
       "channel": "Others (Kênh tự nhiên khác)",
       "is_group": false,
       "sep_2026": 30942,
-      "oct_mtd_28d": 119611,
-      "forecast_31d": 133000,
-      "diff_vs_sep": 102058,
-      "share": 0.0365,
-      "assessment": "Lưu lượng tự nhiên từ các điểm chạm tiện ích mới triển khai"
+      "forecast_31d": 131528,
+      "diff_vs_sep": 100586,
+      "share": 0.0364,
+      "assessment": "Lưu lượng tự nhiên từ các điểm chạm tiện ích mới triển khai",
+      "oct_mtd_30d": 127285
     },
     {
       "channel": "KÊNH TRẢ PHÍ (PAID TRAFFIC)",
       "is_group": true,
       "sep_2026": 1197093,
-      "oct_mtd_28d": 419221,
-      "forecast_31d": 464000,
-      "diff_vs_sep": -733093,
-      "share": 0.1276,
-      "assessment": "Chủ động dừng ngân sách quảng cáo kém hiệu quả (-61.2% Paid Traffic) để tối ưu dòng vốn của BOM"
+      "forecast_31d": 471549,
+      "diff_vs_sep": -725544,
+      "share": 0.1305,
+      "assessment": "Chủ động dừng ngân sách quảng cáo kém hiệu quả (-61.2% Paid Traffic) để tối ưu dòng vốn của BOM",
+      "oct_mtd_30d": 456338
     },
     {
       "channel": "TỔNG LƯỢNG TRUY CẬP",
       "is_group": true,
       "sep_2026": 3952859,
-      "oct_mtd_28d": 3284285,
-      "forecast_31d": 3636173,
-      "diff_vs_sep": -316686,
+      "forecast_31d": 3613426,
+      "diff_vs_sep": -339433,
       "share": 1.0,
-      "assessment": "Cán đích kế hoạch tháng với chất lượng lưu lượng sạch và độc lập nguồn vốn trả phí"
+      "assessment": "Cán đích kế hoạch tháng với chất lượng lưu lượng sạch và độc lập nguồn vốn trả phí",
+      "oct_mtd_30d": 3496864
     }
   ],
   "strategic_hubs": {
@@ -187,11 +187,11 @@
       "metrics": {
         "sep_2026": 1220075,
         "oct_target": 1117378,
-        "oct_mtd_28d": 958420,
-        "forecast_31d": 1061000,
-        "achievement_rate": 0.9495,
+        "forecast_31d": 1101138,
+        "achievement_rate": 0.9537,
         "organic_share_mtd": 0.893,
-        "organic_share_sep": 0.682
+        "organic_share_sep": 0.682,
+        "oct_mtd_30d": 1065617
       },
       "highlights": [
         "Động cơ tự nhiên tự bù đắp khi dừng Ads: Cụm rạp đối tác Cineplex tăng trưởng +142.2% (từ 299K lên 726K views), trong đó Organic tăng từ 267K lên 577K views, bù đắp trọn vẹn 325K views sụt giảm do ngưng chạy quảng cáo trang phim.",
@@ -210,11 +210,11 @@
       "metrics": {
         "sep_2026": 246305,
         "oct_target": 250000,
-        "oct_mtd_28d": 238450,
-        "forecast_31d": 264000,
-        "achievement_rate": 1.056,
+        "forecast_31d": 309443,
+        "achievement_rate": 0.6655,
         "non_paid_share_mtd": 0.921,
-        "non_paid_share_sep": 0.584
+        "non_paid_share_sep": 0.584,
+        "oct_mtd_30d": 299461
       },
       "highlights": [
         "Vượt chỉ tiêu nhờ chiến lược đa dạng hóa sản phẩm tài chính: Đạt 105.6% kế hoạch tháng, thoát khỏi sự phụ thuộc vào nội dung mỏng để giải quyết đúng Jobs-To-Be-Done của người dùng tài chính.",
