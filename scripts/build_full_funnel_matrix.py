@@ -1144,6 +1144,7 @@ def main():
             projects_agg[proj] = {
                 "project_name": proj,
                 "pages_count": len(p_info["pages"]),
+                "all_channel_pageviews": 0,
                 "organic_pageviews": 0,
                 "gsc_clicks": 0,
                 "gsc_impressions": 0,
@@ -1363,7 +1364,7 @@ def main():
     print("BẢNG ĐỐI SOÁT ALL_CHANNEL_PAGEVIEWS GIỮA MA TRẬN VÀ WEB-DATA.JSON")
     print("=" * 80)
     reconcile_rows = []
-    matrix_proj_pv = {pa["project_name"]: pa["all_channel_pageviews"] for pa in projects_list}
+    matrix_proj_pv = {pa["project_name"]: pa.get("all_channel_pageviews", 0) for pa in projects_list}
     for proj_name, target_pv in sorted(web_data_pvs.items(), key=lambda x: -x[1]):
         m_pv = matrix_proj_pv.get(proj_name, 0)
         diff = m_pv - target_pv
