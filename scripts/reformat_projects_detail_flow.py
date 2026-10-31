@@ -13,6 +13,7 @@ Triển khai cấu trúc thị giác phân cấp 3 tầng (3-Tier Visual Hierarc
 - Header Banners: Đồng bộ chuẩn MTD (Cols B..K) vs Full Month (Cols L..T), highlight cột Tháng 10 hiện hành.
 """
 
+import re
 import json
 import urllib.request
 import urllib.parse
@@ -211,28 +212,31 @@ def main():
             new_row = row1
         elif row_num == 2:
             new_row = row2
-        elif row_num in hub_parent_rows:
-            # Hub Parent PV Row
-            hname = hub_parent_rows[row_num]
-            new_row[0] = hname
-        elif (row_num - 1) in hub_parent_rows:
-            # Hub Parent Click Row
-            p_name = hub_parent_rows[row_num - 1]
-            new_row[0] = f"  ↳ Click to app: {p_name}"
-        elif row_num in subproject_rows:
-            # Subproject PV Row
-            sname = subproject_rows[row_num]
-            new_row[0] = f"    {sname}"
-        elif (row_num - 1) in subproject_rows:
-            # Subproject Click Row
-            p_name = subproject_rows[row_num - 1]
-            new_row[0] = f"        ↳ Click: {p_name}"
-        elif row_num == 139:
-            new_row[0] = "Tỷ Trọng % Pageview Theo Dự Án (PV Dự án / Tổng PV)"
-        elif row_num >= 140 and row_num <= 173:
-            # Khối tỷ trọng
-            cur_name = str(new_row[0]).strip().lstrip("%")
-            new_row[0] = f"    {cur_name}"
+        else:
+            # Xử lý Col A label
+            if row_num in hub_parent_rows:
+                hname = hub_parent_rows[row_num]
+                new_row[0] = hname
+            elif (row_num - 1) in hub_parent_rows:
+                p_name = hub_parent_rows[row_num - 1]
+                new_row[0] = f"  ↳ Click to app: {p_name}"
+            elif row_num in subproject_rows:
+                sname = subproject_rows[row_num]
+                new_row[0] = f"    {sname}"
+            elif (row_num - 1) in subproject_rows:
+                p_name = subproject_rows[row_num - 1]
+                new_row[0] = f"        ↳ Click: {p_name}"
+            elif row_num == 139:
+                new_row[0] = "Tỷ Trọng % Pageview Theo Dự Án (PV Dự án / Tổng PV)"
+            elif row_num >= 140 and row_num <= 173:
+                cur_name = str(new_row[0]).strip().lstrip("%")
+                new_row[0] = f"    {cur_name}"
+
+            # Xử lý các cell SUMPRODUCT để bọc TRIM($A{row_num}) tránh lỗi khi Col A có khoảng trắng thụt lề
+            for c_idx in range(1, len(new_row)):
+                cell_val = new_row[c_idx]
+                if isinstance(cell_val, str) and "SUMPRODUCT" in cell_val and "$A$" in cell_val:
+                    new_row[c_idx] = re.sub(r'=\s*(\$A\$\d+)', r'=TRIM(\1)', cell_val)
 
         cleaned_rows.append(new_row)
 
