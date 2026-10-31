@@ -500,6 +500,10 @@ def main():
     })
 
     # 8. Loop format cho từng cặp hàng từ hàng 8 đến 137:
+    # BẢNG MÀU PHÂN ĐỊNH TUYỆT ĐỐI GIỮA PAGEVIEWS VÀ CLICKS:
+    # - PAGEVIEWS: Tông Xanh Dương / Trắng tinh khôi (Traffic, Volume)
+    # - CLICKS: Tông Hồng MoMo / Rose (Conversion, Action, Web-to-App)
+    # - CVR %: Xanh Bạc Hà Emerald (#DCFCE7) với số liệu xanh đậm #15803D
     for r_num in range(8, 138, 2):
         r_pv_0 = r_num - 1
         r_cl_0 = r_num
@@ -509,46 +513,47 @@ def main():
 
         if is_hub:
             # TẦNG 1: PARENT HUB
-            # Row PV (Pageviews)
+            # Row PV (Pageviews) -> TÔNG XANH DƯƠNG RÕ RỆT (#DBEAFE / #1E3A8A)
             requests.append({
                 "repeatCell": {
                     "range": {"sheetId": SHEET_ID, "startRowIndex": r_pv_0, "endRowIndex": r_pv_0 + 1, "startColumnIndex": 0, "endColumnIndex": 20},
                     "cell": {
                         "userEnteredFormat": {
-                            "backgroundColor": {"red": 0.945, "green": 0.96, "blue": 0.976}, # #F1F5F9 Cool Gray/Blue
-                            "textFormat": {"foregroundColor": {"red": 0.06, "green": 0.09, "blue": 0.16}, "bold": True, "fontSize": 10},
+                            "backgroundColor": {"red": 0.86, "green": 0.92, "blue": 0.99}, # #DBEAFE Soft Ice Blue
+                            "textFormat": {"foregroundColor": {"red": 0.12, "green": 0.23, "blue": 0.54}, "bold": True, "fontSize": 10}, # #1E3A8A Dark Navy
                             "borders": {
-                                "top": {"style": "SOLID", "width": 2, "color": {"red": 0.71, "green": 0.77, "blue": 0.84}} # Phân cách rõ giữa các Hub
+                                "top": {"style": "SOLID", "width": 2, "color": {"red": 0.23, "green": 0.51, "blue": 0.96}}, # #3B82F6 Blue Accent Border
+                                "bottom": {"style": "SOLID", "width": 1, "color": {"red": 0.58, "green": 0.77, "blue": 0.99}}
                             }
                         }
                     },
                     "fields": "userEnteredFormat(backgroundColor,textFormat,borders)"
                 }
             })
-            # Row Click (to app)
+            # Row Click (to app) -> TÔNG HỒNG MOMO RÕ RỆT (#FCE7F3 / #9D174D)
             requests.append({
                 "repeatCell": {
                     "range": {"sheetId": SHEET_ID, "startRowIndex": r_cl_0, "endRowIndex": r_cl_0 + 1, "startColumnIndex": 0, "endColumnIndex": 20},
                     "cell": {
                         "userEnteredFormat": {
-                            "backgroundColor": {"red": 0.973, "green": 0.98, "blue": 0.988}, # #F8FAFC
-                            "textFormat": {"foregroundColor": {"red": 0.28, "green": 0.33, "blue": 0.41}, "italic": True, "fontSize": 9},
+                            "backgroundColor": {"red": 0.988, "green": 0.906, "blue": 0.953}, # #FCE7F3 MoMo Soft Rose
+                            "textFormat": {"foregroundColor": {"red": 0.616, "green": 0.090, "blue": 0.302}, "bold": True, "fontSize": 9}, # #9D174D MoMo Magenta
                             "borders": {
-                                "bottom": {"style": "SOLID", "width": 1, "color": {"red": 0.88, "green": 0.91, "blue": 0.94}}
+                                "bottom": {"style": "SOLID", "width": 1, "color": {"red": 0.957, "green": 0.447, "blue": 0.714}} # #F472B6
                             }
                         }
                     },
                     "fields": "userEnteredFormat(backgroundColor,textFormat,borders)"
                 }
             })
-            # CVR % (Col K - index 10) nổi bật nhẹ
+            # CVR % (Col K - index 10) nổi bật xanh bạc hà
             requests.append({
                 "repeatCell": {
                     "range": {"sheetId": SHEET_ID, "startRowIndex": r_cl_0, "endRowIndex": r_cl_0 + 1, "startColumnIndex": 10, "endColumnIndex": 11},
                     "cell": {
                         "userEnteredFormat": {
-                            "backgroundColor": {"red": 0.94, "green": 0.99, "blue": 0.96}, # Mint Green #F0FDF4
-                            "textFormat": {"foregroundColor": {"red": 0.08, "green": 0.50, "blue": 0.24}, "bold": True, "fontSize": 9}
+                            "backgroundColor": {"red": 0.863, "green": 0.988, "blue": 0.906}, # #DCFCE7 Emerald 100
+                            "textFormat": {"foregroundColor": {"red": 0.082, "green": 0.502, "blue": 0.239}, "bold": True, "fontSize": 10} # #15803D
                         }
                     },
                     "fields": "userEnteredFormat(backgroundColor,textFormat)"
@@ -557,27 +562,46 @@ def main():
 
         elif is_sub:
             # TẦNG 2: SUB-PROJECT
-            # Row PV
+            # Row PV -> TRẮNG TINH KHÔI (#FFFFFF)
             requests.append({
                 "repeatCell": {
                     "range": {"sheetId": SHEET_ID, "startRowIndex": r_pv_0, "endRowIndex": r_pv_0 + 1, "startColumnIndex": 0, "endColumnIndex": 20},
                     "cell": {
                         "userEnteredFormat": {
-                            "backgroundColor": {"red": 1.0, "green": 1.0, "blue": 1.0}, # White
-                            "textFormat": {"foregroundColor": {"red": 0.20, "green": 0.25, "blue": 0.33}, "bold": False, "fontSize": 9}
+                            "backgroundColor": {"red": 1.0, "green": 1.0, "blue": 1.0}, # Pure White
+                            "textFormat": {"foregroundColor": {"red": 0.12, "green": 0.16, "blue": 0.23}, "bold": False, "fontSize": 9}, # Charcoal
+                            "borders": {
+                                "bottom": {"style": "SOLID", "width": 1, "color": {"red": 0.93, "green": 0.94, "blue": 0.96}}
+                            }
                         }
                     },
-                    "fields": "userEnteredFormat(backgroundColor,textFormat)"
+                    "fields": "userEnteredFormat(backgroundColor,textFormat,borders)"
                 }
             })
-            # Row Click
+            # Row Click -> HỒNG PHẤN NHẸ (#FDF2F8 / #BE185D)
             requests.append({
                 "repeatCell": {
                     "range": {"sheetId": SHEET_ID, "startRowIndex": r_cl_0, "endRowIndex": r_cl_0 + 1, "startColumnIndex": 0, "endColumnIndex": 20},
                     "cell": {
                         "userEnteredFormat": {
-                            "backgroundColor": {"red": 0.98, "green": 0.98, "blue": 0.98}, # #FAFAFA
-                            "textFormat": {"foregroundColor": {"red": 0.39, "green": 0.45, "blue": 0.55}, "italic": True, "fontSize": 9}
+                            "backgroundColor": {"red": 0.992, "green": 0.949, "blue": 0.973}, # #FDF2F8 Pale Rose
+                            "textFormat": {"foregroundColor": {"red": 0.745, "green": 0.094, "blue": 0.365}, "italic": True, "fontSize": 9}, # Dark Rose
+                            "borders": {
+                                "bottom": {"style": "SOLID", "width": 1, "color": {"red": 0.98, "green": 0.86, "blue": 0.92}} # Soft pink border
+                            }
+                        }
+                    },
+                    "fields": "userEnteredFormat(backgroundColor,textFormat,borders)"
+                }
+            })
+            # CVR % (Col K - index 10) nổi bật xanh bạc hà
+            requests.append({
+                "repeatCell": {
+                    "range": {"sheetId": SHEET_ID, "startRowIndex": r_cl_0, "endRowIndex": r_cl_0 + 1, "startColumnIndex": 10, "endColumnIndex": 11},
+                    "cell": {
+                        "userEnteredFormat": {
+                            "backgroundColor": {"red": 0.863, "green": 0.988, "blue": 0.906}, # #DCFCE7 Emerald 100
+                            "textFormat": {"foregroundColor": {"red": 0.082, "green": 0.502, "blue": 0.239}, "bold": True, "fontSize": 9}
                         }
                     },
                     "fields": "userEnteredFormat(backgroundColor,textFormat)"
@@ -585,32 +609,82 @@ def main():
             })
 
         else:
-            # Standalone project (không có con nhưng cũng là độc lập)
+            # Standalone project (độc lập, không có subpage con)
+            # Row PV -> XANH BĂNG NHẸ (#F0F7FF / #1E3A8A)
             requests.append({
                 "repeatCell": {
                     "range": {"sheetId": SHEET_ID, "startRowIndex": r_pv_0, "endRowIndex": r_pv_0 + 1, "startColumnIndex": 0, "endColumnIndex": 20},
                     "cell": {
                         "userEnteredFormat": {
-                            "backgroundColor": {"red": 0.965, "green": 0.973, "blue": 0.984},
-                            "textFormat": {"foregroundColor": {"red": 0.12, "green": 0.16, "blue": 0.23}, "bold": True, "fontSize": 9},
+                            "backgroundColor": {"red": 0.94, "green": 0.968, "blue": 1.0}, # #F0F7FF Ice Blue
+                            "textFormat": {"foregroundColor": {"red": 0.12, "green": 0.23, "blue": 0.54}, "bold": True, "fontSize": 9},
                             "borders": {
-                                "top": {"style": "SOLID", "width": 1, "color": {"red": 0.8, "green": 0.83, "blue": 0.88}}
+                                "top": {"style": "SOLID", "width": 1, "color": {"red": 0.58, "green": 0.77, "blue": 0.99}},
+                                "bottom": {"style": "SOLID", "width": 1, "color": {"red": 0.88, "green": 0.91, "blue": 0.94}}
                             }
                         }
                     },
                     "fields": "userEnteredFormat(backgroundColor,textFormat,borders)"
                 }
             })
+            # Row Click -> HỒNG MOMO ROSE (#FCE7F3 / #9D174D)
             requests.append({
                 "repeatCell": {
                     "range": {"sheetId": SHEET_ID, "startRowIndex": r_cl_0, "endRowIndex": r_cl_0 + 1, "startColumnIndex": 0, "endColumnIndex": 20},
                     "cell": {
                         "userEnteredFormat": {
-                            "backgroundColor": {"red": 0.98, "green": 0.98, "blue": 0.98},
-                            "textFormat": {"foregroundColor": {"red": 0.39, "green": 0.45, "blue": 0.55}, "italic": True, "fontSize": 9}
+                            "backgroundColor": {"red": 0.988, "green": 0.906, "blue": 0.953}, # #FCE7F3 Rose
+                            "textFormat": {"foregroundColor": {"red": 0.616, "green": 0.090, "blue": 0.302}, "bold": True, "fontSize": 9},
+                            "borders": {
+                                "bottom": {"style": "SOLID", "width": 1, "color": {"red": 0.957, "green": 0.447, "blue": 0.714}}
+                            }
+                        }
+                    },
+                    "fields": "userEnteredFormat(backgroundColor,textFormat,borders)"
+                }
+            })
+            # CVR % (Col K - index 10)
+            requests.append({
+                "repeatCell": {
+                    "range": {"sheetId": SHEET_ID, "startRowIndex": r_cl_0, "endRowIndex": r_cl_0 + 1, "startColumnIndex": 10, "endColumnIndex": 11},
+                    "cell": {
+                        "userEnteredFormat": {
+                            "backgroundColor": {"red": 0.863, "green": 0.988, "blue": 0.906}, # #DCFCE7 Emerald 100
+                            "textFormat": {"foregroundColor": {"red": 0.082, "green": 0.502, "blue": 0.239}, "bold": True, "fontSize": 9}
                         }
                     },
                     "fields": "userEnteredFormat(backgroundColor,textFormat)"
+                }
+            })
+
+    # Highlight Cột G (Oct 26 MTD - col index 6) và Cột Q (Oct 26 Full Month - col index 16)
+    # Tô màu nhấn riêng biệt: Ô Pageview tô xanh nhấn, Ô Click tô hồng nhấn!
+    for r_num in range(8, 138, 2):
+        r_pv_0 = r_num - 1
+        r_cl_0 = r_num
+        for c_idx in [6, 16]:
+            # PV Oct highlight -> Xanh đậm hơn (#BFDBFE)
+            requests.append({
+                "repeatCell": {
+                    "range": {"sheetId": SHEET_ID, "startRowIndex": r_pv_0, "endRowIndex": r_pv_0 + 1, "startColumnIndex": c_idx, "endColumnIndex": c_idx + 1},
+                    "cell": {
+                        "userEnteredFormat": {
+                            "backgroundColor": {"red": 0.75, "green": 0.86, "blue": 0.99} # #BFDBFE Accent Blue
+                        }
+                    },
+                    "fields": "userEnteredFormat.backgroundColor"
+                }
+            })
+            # Click Oct highlight -> Hồng đậm hơn (#FBCFE8)
+            requests.append({
+                "repeatCell": {
+                    "range": {"sheetId": SHEET_ID, "startRowIndex": r_cl_0, "endRowIndex": r_cl_0 + 1, "startColumnIndex": c_idx, "endColumnIndex": c_idx + 1},
+                    "cell": {
+                        "userEnteredFormat": {
+                            "backgroundColor": {"red": 0.984, "green": 0.812, "blue": 0.910} # #FBCFE8 Accent Rose
+                        }
+                    },
+                    "fields": "userEnteredFormat.backgroundColor"
                 }
             })
 
@@ -806,15 +880,20 @@ def sync_to_local_excel(token):
                 cell.fill = PatternFill(fill_type=None)
                 cell.border = Border()
 
-    # Định nghĩa styles
+    # Định nghĩa styles phân cấp màu sắc rực rỡ và đối lập hoàn toàn:
+    # PAGEVIEWS: Tông Xanh Dương / Trắng tinh khôi
+    # CLICKS: Tông Hồng MoMo / Rose rực rỡ
+    # CVR %: Xanh Bạc Hà Emerald (#DCFCE7) với chữ xanh đậm #15803D
     f_header1 = Font(name="Arial", size=10, bold=True, color="FFFFFF")
     f_header2 = Font(name="Arial", size=9, bold=True, color="1E293B")
-    f_header2_oct = Font(name="Arial", size=9, bold=True, color="1E40AF")
+    f_header2_oct = Font(name="Arial", size=9, bold=True, color="1E3A8A")
     f_total_r3 = Font(name="Arial", size=10, bold=True, color="1E3A8A")
-    f_hub = Font(name="Arial", size=10, bold=True, color="0F172A")
-    f_sub = Font(name="Arial", size=9, bold=False, color="334155")
-    f_click = Font(name="Arial", size=9, italic=True, color="475569")
-    f_cvr = Font(name="Arial", size=9, bold=True, color="15803D")
+    f_hub_pv = Font(name="Arial", size=10, bold=True, color="1E3A8A")
+    f_sub_pv = Font(name="Arial", size=9, bold=False, color="1E293B")
+    f_standalone_pv = Font(name="Arial", size=9, bold=True, color="1E3A8A")
+    f_hub_click = Font(name="Arial", size=9, bold=True, color="9D174D")
+    f_sub_click = Font(name="Arial", size=9, italic=True, color="BE185D")
+    f_cvr = Font(name="Arial", size=10, bold=True, color="15803D")
 
     fill_mtd_banner = PatternFill(start_color="1E3A8A", end_color="1E3A8A", fill_type="solid")
     fill_full_banner = PatternFill(start_color="334155", end_color="334155", fill_type="solid")
@@ -822,22 +901,33 @@ def sync_to_local_excel(token):
     fill_teal_banner = PatternFill(start_color="0D9488", end_color="0D9488", fill_type="solid")
     fill_slate_banner = PatternFill(start_color="475569", end_color="475569", fill_type="solid")
     fill_h2 = PatternFill(start_color="F1F5F9", end_color="F1F5F9", fill_type="solid")
-    fill_h2_oct = PatternFill(start_color="DBEAFE", end_color="DBEAFE", fill_type="solid")
-    fill_r3 = PatternFill(start_color="EFF6FF", end_color="EFF6FF", fill_type="solid")
-    fill_hub = PatternFill(start_color="F1F5F9", end_color="F1F5F9", fill_type="solid")
-    fill_click = PatternFill(start_color="F8FAFC", end_color="F8FAFC", fill_type="solid")
-    fill_sub = PatternFill(start_color="FFFFFF", end_color="FFFFFF", fill_type="solid")
-    fill_cvr = PatternFill(start_color="F0FDF4", end_color="F0FDF4", fill_type="solid")
+    fill_h2_oct = PatternFill(start_color="93C5FD", end_color="93C5FD", fill_type="solid")
+    fill_r3 = PatternFill(start_color="BFDBFE", end_color="BFDBFE", fill_type="solid")
 
-    border_hub_top = Border(top=Side(style="medium", color="717784"), bottom=Side(style="thin", color="E2E8F0"))
-    border_click_bottom = Border(bottom=Side(style="thin", color="E2E8F0"))
-    border_r3 = Border(top=Side(style="thin", color="BFDBFE"), bottom=Side(style="thin", color="BFDBFE"))
+    # MÀU CHO PAGEVIEWS
+    fill_hub_pv = PatternFill(start_color="DBEAFE", end_color="DBEAFE", fill_type="solid") # Xanh dương 100
+    fill_sub_pv = PatternFill(start_color="FFFFFF", end_color="FFFFFF", fill_type="solid") # Trắng tinh
+    fill_standalone_pv = PatternFill(start_color="F0F7FF", end_color="F0F7FF", fill_type="solid") # Xanh băng nhạt
+    fill_pv_oct = PatternFill(start_color="BFDBFE", end_color="BFDBFE", fill_type="solid") # Nhấn tháng 10 cho PV
+
+    # MÀU CHO CLICKS
+    fill_hub_click = PatternFill(start_color="FCE7F3", end_color="FCE7F3", fill_type="solid") # Hồng MoMo 100
+    fill_sub_click = PatternFill(start_color="FDF2F8", end_color="FDF2F8", fill_type="solid") # Hồng phấn 50
+    fill_click_oct = PatternFill(start_color="FBCFE8", end_color="FBCFE8", fill_type="solid") # Nhấn tháng 10 cho Click
+    fill_cvr = PatternFill(start_color="DCFCE7", end_color="DCFCE7", fill_type="solid") # Xanh bạc hà 100
+
+    border_hub_top = Border(top=Side(style="medium", color="3B82F6"), bottom=Side(style="thin", color="93C5FD"))
+    border_sub_pv = Border(bottom=Side(style="thin", color="EEF2F6"))
+    border_standalone_top = Border(top=Side(style="thin", color="93C5FD"), bottom=Side(style="thin", color="E2E8F0"))
+    border_click_bottom = Border(bottom=Side(style="thin", color="F472B6"))
+    border_r3 = Border(top=Side(style="thin", color="3B82F6"), bottom=Side(style="thin", color="3B82F6"))
 
     align_center = Alignment(horizontal="center", vertical="center")
     align_left = Alignment(horizontal="left", vertical="center")
     align_right = Alignment(horizontal="right", vertical="center")
 
     hub_parent_row_nums = {8, 22, 24, 26, 28, 58, 68, 70, 72, 74, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98, 100, 102, 104, 106, 108, 110, 112, 114, 116, 118, 124, 126, 128, 130, 132, 134, 136}
+    subproject_pv_row_nums = {10, 12, 14, 16, 18, 20, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 60, 62, 64, 66, 76, 78, 120, 122}
 
     # Ghi từng hàng
     for r_idx, row in enumerate(sheet_data):
@@ -902,30 +992,70 @@ def sync_to_local_excel(token):
                 cell.font = f_total_r3
                 cell.border = border_r3
             elif row_num in hub_parent_row_nums:
-                cell.fill = fill_hub
-                cell.font = f_hub
+                # DÒNG HUB PAGEVIEWS -> NỀN XANH DƯƠNG
+                if col_num in [7, 17]:
+                    cell.fill = fill_pv_oct
+                else:
+                    cell.fill = fill_hub_pv
+                cell.font = f_hub_pv
                 cell.border = border_hub_top
             elif (row_num - 1) in hub_parent_row_nums:
+                # DÒNG HUB CLICK -> NỀN HỒNG MOMO
                 if col_num == 11:
                     cell.fill = fill_cvr
                     cell.font = f_cvr
+                elif col_num in [7, 17]:
+                    cell.fill = fill_click_oct
+                    cell.font = f_hub_click
                 else:
-                    cell.fill = fill_click
-                    cell.font = f_click
+                    cell.fill = fill_hub_click
+                    cell.font = f_hub_click
                 cell.border = border_click_bottom
-            elif row_num % 2 == 0 and row_num >= 10 and row_num <= 136:
-                # Sub-project PV
-                cell.fill = fill_sub
-                cell.font = f_sub
-            elif row_num % 2 == 1 and row_num >= 11 and row_num <= 137:
-                # Sub-project Click
-                cell.fill = fill_click
-                cell.font = f_click
+            elif row_num in subproject_pv_row_nums:
+                # DÒNG SUBPROJECT PAGEVIEWS -> TRẮNG TINH
+                if col_num in [7, 17]:
+                    cell.fill = fill_hub_pv
+                else:
+                    cell.fill = fill_sub_pv
+                cell.font = f_sub_pv
+                cell.border = border_sub_pv
+            elif (row_num - 1) in subproject_pv_row_nums:
+                # DÒNG SUBPROJECT CLICK -> HỒNG PHẤN
+                if col_num == 11:
+                    cell.fill = fill_cvr
+                    cell.font = f_cvr
+                elif col_num in [7, 17]:
+                    cell.fill = fill_click_oct
+                    cell.font = f_sub_click
+                else:
+                    cell.fill = fill_sub_click
+                    cell.font = f_sub_click
+                cell.border = border_click_bottom
+            elif row_num % 2 == 0 and row_num >= 8 and row_num <= 136:
+                # Standalone PV -> XANH BĂNG
+                if col_num in [7, 17]:
+                    cell.fill = fill_pv_oct
+                else:
+                    cell.fill = fill_standalone_pv
+                cell.font = f_standalone_pv
+                cell.border = border_standalone_top
+            elif row_num % 2 == 1 and row_num >= 9 and row_num <= 137:
+                # Standalone Click -> HỒNG MOMO
+                if col_num == 11:
+                    cell.fill = fill_cvr
+                    cell.font = f_cvr
+                elif col_num in [7, 17]:
+                    cell.fill = fill_click_oct
+                    cell.font = f_hub_click
+                else:
+                    cell.fill = fill_hub_click
+                    cell.font = f_hub_click
+                cell.border = border_click_bottom
             elif row_num == 139:
-                cell.fill = fill_hub
-                cell.font = f_hub
+                cell.fill = fill_h2
+                cell.font = f_header2
             elif row_num >= 140 and row_num <= 173:
-                cell.font = f_sub
+                cell.font = f_sub_pv
 
     # Cố định tiêu đề
     ws.freeze_panes = "B3"
