@@ -434,6 +434,19 @@ def main():
             "fields": "userEnteredFormat(backgroundColor,textFormat,horizontalAlignment,verticalAlignment,borders)"
         }
     })
+    # Date number format "mmm yy" cho các cột tháng ở Row 2
+    for c_start, c_end in [(1, 9), (11, 19)]:
+        requests.append({
+            "repeatCell": {
+                "range": {"sheetId": SHEET_ID, "startRowIndex": 1, "endRowIndex": 2, "startColumnIndex": c_start, "endColumnIndex": c_end},
+                "cell": {
+                    "userEnteredFormat": {
+                        "numberFormat": {"type": "DATE", "pattern": "mmm yy"}
+                    }
+                },
+                "fields": "userEnteredFormat.numberFormat"
+            }
+        })
     # Highlight Cột G (Oct 26 MTD - col index 6) và Cột Q (Oct 26 Full Month - col index 16) ở Header
     for c_idx in [6, 16]:
         requests.append({
@@ -735,13 +748,218 @@ def main():
                 }
             }
         })
+        # Thiết lập thu gọn (collapsed: True) mặc định để người dùng nhìn thấy tổng quan gọn gàng
+        requests.append({
+            "updateDimensionGroup": {
+                "dimensionGroup": {
+                    "range": {
+                        "sheetId": SHEET_ID,
+                        "dimension": "ROWS",
+                        "startIndex": g["start"],
+                        "endIndex": g["end"]
+                    },
+                    "depth": 1,
+                    "collapsed": True
+                },
+                "fields": "collapsed"
+            }
+        })
 
     print(f"  ✓ Đã sinh {len(requests)} lệnh batchUpdate định dạng & row grouping.")
     api_batch_update(token, requests)
     print("  ✓ Đã cập nhật thành công cấu trúc thị giác lên Google Sheets!")
 
-    print("[5/5] Hoàn tất reformat 'Projects Detail Flow'!")
+    print("[5/5] Hoàn tất reformat 'Projects Detail Flow' trên Google Sheets!")
+
+    print("[6/6] Đồng bộ sang Local Excel & Google Drive Desktop...")
+    sync_to_local_excel(token)
     print("=" * 60)
+
+
+def sync_to_local_excel(token):
+    import shutil
+    import openpyxl
+    from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+    from openpyxl.utils import get_column_letter
+
+    excel_path = BASE_DIR / "07_REPORTS" / "web_performance_tracking.xlsx"
+    drive_path = Path("/Users/hienhv/Library/CloudStorage/GoogleDrive-hien.ho@mservice.com.vn/My Drive/WEB GROWTH 2026/#4 - Tracking & Performance/web_performance_tracking.xlsx")
+
+    # Kéo toàn bộ dữ liệu sạch vừa ghi từ Google Sheets
+    sheet_data = api_get_values(token, f"{SHEET_TITLE}!A1:T175")
+
+    wb = openpyxl.load_workbook(excel_path)
+    if SHEET_TITLE in wb.sheetnames:
+        ws = wb[SHEET_TITLE]
+    else:
+        ws = wb.create_sheet(SHEET_TITLE)
+
+    # Unmerge toàn bộ merged cells cũ trong ws
+    for m in list(ws.merged_cells.ranges):
+        ws.unmerge_cells(range_string=str(m))
+
+    # Xóa dữ liệu cũ trong ws
+    for row in ws.iter_rows(min_row=1, max_row=min(ws.max_row, 300), min_col=1, max_col=min(ws.max_column, 26)):
+        for cell in row:
+            if not isinstance(cell, openpyxl.cell.cell.MergedCell):
+                cell.value = None
+                cell.fill = PatternFill(fill_type=None)
+                cell.border = Border()
+
+    # Định nghĩa styles
+    f_header1 = Font(name="Arial", size=10, bold=True, color="FFFFFF")
+    f_header2 = Font(name="Arial", size=9, bold=True, color="1E293B")
+    f_header2_oct = Font(name="Arial", size=9, bold=True, color="1E40AF")
+    f_total_r3 = Font(name="Arial", size=10, bold=True, color="1E3A8A")
+    f_hub = Font(name="Arial", size=10, bold=True, color="0F172A")
+    f_sub = Font(name="Arial", size=9, bold=False, color="334155")
+    f_click = Font(name="Arial", size=9, italic=True, color="475569")
+    f_cvr = Font(name="Arial", size=9, bold=True, color="15803D")
+
+    fill_mtd_banner = PatternFill(start_color="1E3A8A", end_color="1E3A8A", fill_type="solid")
+    fill_full_banner = PatternFill(start_color="334155", end_color="334155", fill_type="solid")
+    fill_blue_banner = PatternFill(start_color="2563EB", end_color="2563EB", fill_type="solid")
+    fill_teal_banner = PatternFill(start_color="0D9488", end_color="0D9488", fill_type="solid")
+    fill_slate_banner = PatternFill(start_color="475569", end_color="475569", fill_type="solid")
+    fill_h2 = PatternFill(start_color="F1F5F9", end_color="F1F5F9", fill_type="solid")
+    fill_h2_oct = PatternFill(start_color="DBEAFE", end_color="DBEAFE", fill_type="solid")
+    fill_r3 = PatternFill(start_color="EFF6FF", end_color="EFF6FF", fill_type="solid")
+    fill_hub = PatternFill(start_color="F1F5F9", end_color="F1F5F9", fill_type="solid")
+    fill_click = PatternFill(start_color="F8FAFC", end_color="F8FAFC", fill_type="solid")
+    fill_sub = PatternFill(start_color="FFFFFF", end_color="FFFFFF", fill_type="solid")
+    fill_cvr = PatternFill(start_color="F0FDF4", end_color="F0FDF4", fill_type="solid")
+
+    border_hub_top = Border(top=Side(style="medium", color="717784"), bottom=Side(style="thin", color="E2E8F0"))
+    border_click_bottom = Border(bottom=Side(style="thin", color="E2E8F0"))
+    border_r3 = Border(top=Side(style="thin", color="BFDBFE"), bottom=Side(style="thin", color="BFDBFE"))
+
+    align_center = Alignment(horizontal="center", vertical="center")
+    align_left = Alignment(horizontal="left", vertical="center")
+    align_right = Alignment(horizontal="right", vertical="center")
+
+    hub_parent_row_nums = {8, 22, 24, 26, 28, 58, 68, 70, 72, 74, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98, 100, 102, 104, 106, 108, 110, 112, 114, 116, 118, 124, 126, 128, 130, 132, 134, 136}
+
+    # Ghi từng hàng
+    for r_idx, row in enumerate(sheet_data):
+        row_num = r_idx + 1
+        for c_idx, val in enumerate(row):
+            col_num = c_idx + 1
+            cell = ws.cell(row=row_num, column=col_num)
+
+            # Xử lý kiểu dữ liệu
+            if isinstance(val, str) and val.startswith("="):
+                cell.value = val
+            elif isinstance(val, str) and val.replace("-", "").isdigit():
+                cell.value = int(val)
+            elif isinstance(val, int) or isinstance(val, float):
+                cell.value = val
+            elif val != "":
+                cell.value = val
+
+            # Áp dụng Alignment
+            if col_num == 1:
+                cell.alignment = align_left
+            elif row_num <= 2:
+                cell.alignment = align_center
+            else:
+                cell.alignment = align_right
+
+            # Áp dụng Number Format
+            if row_num == 2 and col_num in list(range(2, 10)) + list(range(12, 20)):
+                cell.number_format = "mmm yy"
+            elif row_num >= 3:
+                if col_num in [10, 20]:
+                    cell.number_format = "+#,##0;-#,##0;0"
+                elif col_num == 11 or row_num == 5 or (row_num >= 140 and row_num <= 173):
+                    cell.number_format = "0.0%"
+                elif col_num in list(range(2, 10)) + list(range(12, 20)):
+                    cell.number_format = "#,##0"
+
+            # Áp dụng Styling theo phân tầng
+            if row_num == 1:
+                if col_num == 1:
+                    cell.fill = fill_mtd_banner
+                elif col_num in range(2, 10):
+                    cell.fill = fill_mtd_banner
+                elif col_num == 10:
+                    cell.fill = fill_blue_banner
+                elif col_num == 11:
+                    cell.fill = fill_teal_banner
+                elif col_num in range(12, 20):
+                    cell.fill = fill_full_banner
+                elif col_num == 20:
+                    cell.fill = fill_slate_banner
+                cell.font = f_header1
+            elif row_num == 2:
+                if col_num in [7, 17]:
+                    cell.fill = fill_h2_oct
+                    cell.font = f_header2_oct
+                else:
+                    cell.fill = fill_h2
+                    cell.font = f_header2
+            elif row_num == 3:
+                cell.fill = fill_r3
+                cell.font = f_total_r3
+                cell.border = border_r3
+            elif row_num in hub_parent_row_nums:
+                cell.fill = fill_hub
+                cell.font = f_hub
+                cell.border = border_hub_top
+            elif (row_num - 1) in hub_parent_row_nums:
+                if col_num == 11:
+                    cell.fill = fill_cvr
+                    cell.font = f_cvr
+                else:
+                    cell.fill = fill_click
+                    cell.font = f_click
+                cell.border = border_click_bottom
+            elif row_num % 2 == 0 and row_num >= 10 and row_num <= 136:
+                # Sub-project PV
+                cell.fill = fill_sub
+                cell.font = f_sub
+            elif row_num % 2 == 1 and row_num >= 11 and row_num <= 137:
+                # Sub-project Click
+                cell.fill = fill_click
+                cell.font = f_click
+            elif row_num == 139:
+                cell.fill = fill_hub
+                cell.font = f_hub
+            elif row_num >= 140 and row_num <= 173:
+                cell.font = f_sub
+
+    # Cố định tiêu đề
+    ws.freeze_panes = "B3"
+
+    # Merge Row 1 banners
+    ws.merge_cells("B1:I1")
+    ws.merge_cells("L1:S1")
+
+    # Thiết lập Outline Level (Group thu gọn) trong Excel
+    outline_ranges = [
+        (10, 21),   # Cinema
+        (30, 57),   # Financial
+        (60, 67),   # Vehicle
+        (76, 79),   # Sim
+        (120, 123), # Student
+        (140, 173)  # Tỷ trọng %
+    ]
+    for start_r, end_r in outline_ranges:
+        for r in range(start_r, end_r + 1):
+            ws.row_dimensions[r].outline_level = 1
+
+    # Điều chỉnh độ rộng cột
+    ws.column_dimensions["A"].width = 36
+    for col_idx in range(2, 21):
+        col_letter = get_column_letter(col_idx)
+        ws.column_dimensions[col_letter].width = 12
+
+    wb.save(excel_path)
+    print(f"  ✓ Đã lưu Excel SSOT: {excel_path}")
+
+    # Copy sang Google Drive Desktop nếu thư mục tồn tại
+    if drive_path.parent.exists():
+        shutil.copy2(excel_path, drive_path)
+        print(f"  ✓ Đã đồng bộ sang Google Drive Desktop: {drive_path}")
 
 
 if __name__ == "__main__":
