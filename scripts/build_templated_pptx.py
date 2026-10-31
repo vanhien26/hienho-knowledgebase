@@ -30,6 +30,7 @@ from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN
+from pptx.enum.shapes import MSO_SHAPE
 
 TEMPLATE_PATH = "/Users/hienhv/Downloads/MoMo Reporting Guidelines & Templates.pptx .pptx"
 OUT_PATHS = [
@@ -91,9 +92,7 @@ def set_cell(cell, text, font_size=8.5, bold=False, color=None, align=PP_ALIGN.L
 def clean_instruction_shapes(slide):
     to_remove = []
     for s in slide.shapes:
-        if s.has_text_frame and s.text_frame.text.strip().startswith("Mục đích:"):
-            to_remove.append(s)
-        elif s.has_text_frame and "Finance cung cấp — BU dán nguyên bảng" in s.text_frame.text:
+        if s.has_text_frame and "Finance cung cấp — BU dán nguyên bảng" in s.text_frame.text:
             to_remove.append(s)
     for s in to_remove:
         remove_shape(s)
@@ -122,7 +121,9 @@ def main():
         if not s.has_text_frame:
             continue
         txt = s.text_frame.text.strip()
-        if "[Tên BU/Division/Project]" in txt:
+        if txt.startswith("Mục đích:"):
+            remove_shape(s)
+        elif "[Tên BU/Division/Project]" in txt:
             set_text(s, "Web Platform — Báo Cáo Tháng 10/2026", font_size=28, bold=True, color=COLOR_TEXT_MAIN)
         elif "Report để cung cấp thông tin" in txt:
             set_text(s, "Report để cung cấp thông tin  •  Meeting để thảo luận và ra quyết định", font_size=13, color=COLOR_TEXT_MUTED)
@@ -137,7 +138,9 @@ def main():
     for s in s2.shapes:
         if s.has_text_frame:
             txt = s.text_frame.text.strip()
-            if "Discussion Topics —" in txt:
+            if txt.startswith("Mục đích:"):
+                set_text(s, "Mục đích: Thống nhất danh mục 1 chủ đề cần BOM phê duyệt và thứ tự thảo luận trong cuộc họp.", font_size=8.5, color=COLOR_TEXT_MUTED)
+            elif "Discussion Topics —" in txt:
                 set_text(s, "Discussion Topics — 1 Chủ Đề Trọng Tâm: 0 Discuss, 1 Approve", font_size=18, bold=True, color=COLOR_TEXT_MAIN)
             elif "Nguồn:" in txt:
                 set_text(s, "Nguồn: GA4 (Property 270743103)   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
@@ -215,42 +218,37 @@ def main():
     # SLIDE 3: Đề Xuất 1 Deep-Dive [D] (Bộ Tiện Ích Thuế & Tính Lương)
     # =========================================================================
     s3 = prs.slides[2]
-    for s in s3.shapes:
-        if s.has_text_frame:
-            txt = s.text_frame.text.strip()
-            if txt.startswith("[Chủ đề]:") or "Chi Tiết Đề Xuất:" in txt or "Đề Xuất 1:" in txt:
-                set_text(s, "Đề Xuất 1: Phát Hành Bộ Tiện Ích Thuế Thu Nhập Cá Nhân & Tính Lương Gross-Net", font_size=18, bold=True, color=COLOR_TEXT_MAIN)
-            elif "Nguồn:" in txt:
-                set_text(s, "Nguồn: Google Search Trends & Web Platform   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
-            elif txt in ["3", "3 / 7", "3 / 8"]:
-                set_text(s, "3 / 7", font_size=9, color=COLOR_TEXT_MUTED)
-            elif "[Vấn đề là gì" in txt or "Chiến dịch TikTok Ads" in txt or "Nhiều landing page" in txt:
-                set_text(s, "Nhu cầu tìm kiếm về quyết toán thuế TNCN và tính lương thưởng Tết tăng mạnh từ tháng 11 đến tháng 1 hàng năm (tổng volume toàn thị trường >1.2M lượt tìm kiếm/tháng). Nền tảng Web cần bộ công cụ tính toán tự động chuẩn xác để giữ chân người dùng và tạo lưu lượng tự nhiên chất lượng cao.", font_size=9.5, color=COLOR_TEXT_MAIN)
-            elif "[Vì sao xảy ra" in txt or "Tháng 10 chủ động" in txt or "Kỹ sư Platform" in txt:
-                set_text(s, "Đội ngũ kỹ thuật đã hoàn thành bản thử nghiệm (Staging) cho công cụ Tính Thuế TNCN và Tính Lương Gross-Net theo biểu thuế lũy tiến từng phần và quy định giảm trừ gia cảnh mới nhất. Tiện ích dự kiến thu hút 300K - 500K Pageviews tự nhiên mỗi tháng, nâng thời gian lưu trang trung bình lên trên 2.5 phút.", font_size=9.5, color=COLOR_TEXT_MAIN)
-            elif "[Revenue / cost" in txt or "Bảo toàn ~40%" in txt or "Bảo toàn 100%" in txt:
-                set_text(s, "Thu hút 300K - 500K Pageviews tự nhiên bền vững không tốn chi phí quảng cáo; mở rộng điểm chạm sản phẩm tài chính cá nhân; tăng thời gian tương tác onsite lên gấp 3 lần so với bài viết tĩnh.", font_size=9.5, color=COLOR_TEXT_MAIN)
-            elif "Discuss / Approve:" in txt or "Khuyến nghị của BU" in txt or "Nội dung xin phê duyệt" in txt:
-                set_text(s, "Nội dung xin phê duyệt (Approve): Phê duyệt kế hoạch go-live bộ công cụ Thuế TNCN & Lương Gross-Net trong tháng 11/2026; phối hợp Finhub chuẩn hóa công thức tính thuế.\nKhuyến nghị của BU: Thông qua Phương án A để đón trọn làn sóng tìm kiếm thuế và lương thưởng cuối năm, mở rộng danh mục sản phẩm tiện ích Web.", font_size=10.0, color=COLOR_TEXT_MAIN)
-            elif txt == "Nếu không quyết định":
-                set_text(s, "Rủi ro khi chậm quyết định", font_size=8.5, bold=True, color=COLOR_WHITE)
-            elif "[Hệ quả lượng hóa]" in txt or "Rủi ro khi chậm" in txt or "Lãng phí thêm 50" in txt or "Dữ liệu cài đặt" in txt:
-                set_text(s, "Rủi ro khi chậm phê duyệt (sau 31/10): Không kịp kiểm thử công thức và triển khai trước kỳ lương tháng 11, bỏ lỡ điểm rơi nhu cầu cao điểm vào tay các website công cụ đối thủ.", font_size=9.5, color=COLOR_TEXT_MAIN)
-        elif s.has_table:
-            tbl = s.table
-            headers = ["Phương Án", "Nội Dung Triển Khai", "Tác Động Lượng Hóa", "Đánh Giá Rủi Ro"]
-            for c, h in enumerate(headers):
-                set_cell(tbl.cell(0, c), h, font_size=9.0, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER if c == 0 else PP_ALIGN.LEFT)
+    # Header & Purpose
+    set_text(s3.shapes[0], "Mục đích: Xin CEO/BOM phê duyệt kế hoạch go-live bộ công cụ Thuế & Lương trước 31/10 để đón đỉnh tìm kiếm cuối năm.", font_size=8.5, color=COLOR_TEXT_MUTED)
+    set_text(s3.shapes[1], "Đề Xuất 1: Phát Hành Bộ Tiện Ích Thuế Thu Nhập Cá Nhân & Tính Lương Gross-Net", font_size=18, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s3.shapes[5], "Nguồn: Google Search Trends & Web Platform   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
+    set_text(s3.shapes[6], "3 / 7", font_size=9, color=COLOR_TEXT_MUTED)
 
-            set_cell(tbl.cell(1, 0), "Phương Án A\n(Khuyến nghị)", font_size=8.5, bold=True, color=COLOR_GREEN, align=PP_ALIGN.CENTER)
-            set_cell(tbl.cell(1, 1), "Phát hành bộ tiện ích chuẩn UX MoMo, tích hợp biểu mẫu thuế mới nhất, tự động tính giảm trừ gia cảnh và xuất bảng chi tiết.", font_size=8.5)
-            set_cell(tbl.cell(1, 2), "Đạt 300K - 500K Pageviews tự nhiên; tối ưu thời gian lưu trang >2.5 phút.", font_size=8.5, color=COLOR_GREEN)
-            set_cell(tbl.cell(1, 3), "Rủi ro thấp: Hạ tầng kỹ thuật đã hoàn thành trên môi trường Staging.", font_size=8.5)
+    # Problem Statement, Bối cảnh, Tác động
+    set_text(s3.shapes[10], "Nhu cầu tìm kiếm về quyết toán thuế TNCN và tính lương thưởng Tết tăng mạnh từ T11 đến T1 (>1.2M search/tháng). Web Platform cần bộ công cụ tự động chuẩn xác để giữ chân người dùng và tạo lưu lượng tự nhiên chất lượng cao.", font_size=8.5, color=COLOR_TEXT_MAIN)
+    set_text(s3.shapes[14], "Kỹ thuật đã hoàn thành Staging cho bộ đôi công cụ Tính Thuế TNCN & Lương Gross-Net theo biểu thuế lũy tiến và giảm trừ gia cảnh mới nhất. Tiện ích dự kiến thu hút 300K - 500K PVs/tháng, nâng thời gian lưu trang lên >2.5 phút.", font_size=8.5, color=COLOR_TEXT_MAIN)
+    set_text(s3.shapes[18], "Hiệu quả kinh tế & ROI (cho CEO):\n• Thu hút 300K - 500K PVs tự nhiên/tháng; tăng tương tác onsite gấp 3 lần.\n• Quy đổi Media Value: Tiết kiệm ~120 - 200 Triệu VNĐ/tháng ngân sách Ads.\n• Chi phí phát sinh: 0 VNĐ (tận dụng 100% hạ tầng server hiện hữu).", font_size=8.0, color=COLOR_TEXT_MAIN)
 
-            set_cell(tbl.cell(2, 0), "Phương Án B\n(Hiện trạng)", font_size=8.5, bold=True, align=PP_ALIGN.CENTER)
-            set_cell(tbl.cell(2, 1), "Giữ các bài viết nội dung tĩnh thông thường không kèm công cụ tính toán tương tác.", font_size=8.5)
-            set_cell(tbl.cell(2, 2), "Tỷ lệ thoát trang cao (>75%), bỏ lỡ nhu cầu tìm kiếm tiện ích công cụ của người dùng.", font_size=8.5, color=COLOR_ROSE)
-            set_cell(tbl.cell(2, 3), "Rủi ro cao: Mất vị thế cạnh tranh trên Google Search vào tay các nền tảng tính lương ngoài.", font_size=8.5)
+    # Table
+    tbl = s3.shapes[20].table
+    headers = ["Phương Án", "Nội Dung Triển Khai", "Tác Động Lượng Hóa & ROI", "Đánh Giá Rủi Ro"]
+    for c, h in enumerate(headers):
+        set_cell(tbl.cell(0, c), h, font_size=9.0, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER if c == 0 else PP_ALIGN.LEFT)
+
+    set_cell(tbl.cell(1, 0), "Phương Án A\n(Khuyến nghị)", font_size=8.5, bold=True, color=COLOR_GREEN, align=PP_ALIGN.CENTER)
+    set_cell(tbl.cell(1, 1), "Phát hành bộ tiện ích chuẩn UX MoMo, tích hợp biểu mẫu thuế mới nhất, tự động tính giảm trừ gia cảnh và xuất bảng chi tiết.", font_size=8.0)
+    set_cell(tbl.cell(1, 2), "Đạt 300K - 500K PVs tự nhiên; tiết kiệm 120 - 200 Tr VNĐ/tháng tiền Ads; chi phí phát sinh 0 VNĐ.", font_size=8.0, color=COLOR_GREEN)
+    set_cell(tbl.cell(1, 3), "Rủi ro thấp: Hạ tầng kỹ thuật đã hoàn thành trên môi trường Staging.", font_size=8.0)
+
+    set_cell(tbl.cell(2, 0), "Phương Án B\n(Hiện trạng)", font_size=8.5, bold=True, align=PP_ALIGN.CENTER)
+    set_cell(tbl.cell(2, 1), "Giữ các bài viết nội dung tĩnh thông thường không kèm công cụ tính toán tương tác.", font_size=8.0)
+    set_cell(tbl.cell(2, 2), "Tỷ lệ thoát trang cao (>75%); muốn đạt cùng lượng truy cập phải chi 120 - 200 Tr VNĐ tiền Ads ngoài.", font_size=8.0, color=COLOR_ROSE)
+    set_cell(tbl.cell(2, 3), "Rủi ro cao: Mất vị thế cạnh tranh trên Google Search vào tay các nền tảng tính lương ngoài.", font_size=8.0)
+
+    # Right column
+    set_text(s3.shapes[25], "Nội dung xin phê duyệt (Approve): Phê duyệt kế hoạch go-live bộ công cụ Thuế TNCN & Lương Gross-Net trong tháng 11/2026; phối hợp Finhub chuẩn hóa công thức tính thuế.\nKhuyến nghị của BU & ROI: Thông qua Phương án A. ROI vượt trội: Thu hồi giá trị thương hiệu và lưu lượng tự nhiên ngay trong tháng đầu; tiết kiệm 120 - 200 Tr VNĐ/tháng chi phí quảng cáo với 0 đồng chi phí ngoài.", font_size=9.5, color=COLOR_TEXT_MAIN)
+    set_text(s3.shapes[27], "Rủi ro khi chậm quyết định", font_size=8.5, bold=True, color=COLOR_WHITE)
+    set_text(s3.shapes[28], "Rủi ro khi chậm phê duyệt (sau 31/10): Không kịp kiểm thử công thức và triển khai trước kỳ lương tháng 11, bỏ lỡ điểm rơi nhu cầu cao điểm vào tay các website công cụ đối thủ.", font_size=9.5, color=COLOR_TEXT_MAIN)
 
     # =========================================================================
     # SLIDE 4: Overall Performance & Non-Paid vs Paid [R] (Original Slide 14)
@@ -259,7 +257,9 @@ def main():
     for s in s4.shapes:
         if s.has_text_frame:
             txt = s.text_frame.text.strip()
-            if "Doanh thu [±x]% MoM" in txt or "Kênh Tự Nhiên Đạt" in txt or "Kênh Tự Nhiên Vượt" in txt:
+            if txt.startswith("Mục đích:"):
+                set_text(s, "Mục đích: Báo cáo kết quả lưu lượng tháng 10, chứng minh kênh tự nhiên (Non-Paid) tăng trưởng tự bù đắp phần Paid Ads cắt giảm.", font_size=8.5, color=COLOR_TEXT_MUTED)
+            elif "Doanh thu [±x]% MoM" in txt or "Kênh Tự Nhiên Đạt" in txt or "Kênh Tự Nhiên Vượt" in txt:
                 set_text(s, "Kênh Tự Nhiên Vượt Mốc 3.04M Lượt Xem (+14.0% MoM), Tự Bù Đắp 725K Ads Cắt Giảm Và Đạt 98.6% Dự Báo", font_size=17, bold=True, color=COLOR_TEXT_MAIN)
             elif "Nguồn:" in txt:
                 set_text(s, "Nguồn: GA4 (Property 270743103)   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
@@ -315,44 +315,77 @@ def main():
                     set_cell(tbl.cell(r_idx, c_idx), val, font_size=8.5, bold=(r_idx in [1, 2]), align=PP_ALIGN.CENTER if c_idx in [1, 2, 3, 4, 5, 6] else PP_ALIGN.LEFT)
 
     # =========================================================================
-    # SLIDE 5: Hubs & Category Breakdown [R] (Original Slide 15)
+    # SLIDE 5: Hubs & Category Breakdown [R] (Original Slide 15 - Fixed Format)
     # =========================================================================
     s5 = prs.slides[4]
-    for s in s5.shapes:
-        if s.has_text_frame:
-            txt = s.text_frame.text.strip()
-            if "[Category] [vượt/hụt]" in txt or "Cinema Hub Dẫn Đầu" in txt:
-                set_text(s, "Cinema Hub Dẫn Đầu Tăng Trưởng (+142.2% Cụm Rạp); Financial Hub Tăng Trưởng Cụm Tỷ Giá (+444.9% MoM)", font_size=17, bold=True, color=COLOR_TEXT_MAIN)
-            elif "Nguồn:" in txt:
-                set_text(s, "Nguồn: GA4 & BigQuery   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
-            elif txt in ["7", "5 / 7", "6 / 8"]:
-                set_text(s, "5 / 7", font_size=9, color=COLOR_TEXT_MUTED)
-            elif "Ý chính 1:" in txt:
-                content = (
-                    "• Ý chính 1: Cinema Hub đạt 1.07M views (cụm rạp 795K views +142.2%), ra mắt cụm trang Diễn Viên và Minigame Bò Sữa Bay (85K lượt chơi).\n"
-                    "• Ý chính 2: Financial Hub đạt 299K views (+25.6%), riêng cụm Tỷ giá tăng +444.9% (34K views), bù đắp phần giảm của Vay Nhanh do cắt Ads.\n"
-                    "• Ý chính 3: Mở rộng cụm tiện ích tài chính (Thuế TNCN, Lương Gross-Net) chuẩn bị phục vụ cao điểm tra cứu cuối năm."
-                )
-                set_text(s, content, font_size=9.5, color=COLOR_TEXT_MAIN)
-            elif txt == "x.xM":
-                set_text(s, "1.07M", font_size=20, bold=True, color=COLOR_TEXT_MAIN)
-            elif txt == "▲ +x% MoM":
-                set_text(s, "▲ +142.2% MoM", font_size=10, bold=True, color=COLOR_GREEN)
-            elif txt == "xx% vs Budget":
-                set_text(s, "102% vs Kế hoạch", font_size=9, color=COLOR_TEXT_MUTED)
-            elif txt == "xx.xB":
-                set_text(s, "299.5K", font_size=20, bold=True, color=COLOR_TEXT_MAIN)
-            elif txt == "MAU đạt [x]M":
-                content = (
-                    "• Cinema Hub: Tăng mạnh nhờ mở rộng mạng lưới rạp đối tác (795K views); cụm trang Diễn Viên (/cinema/person) mở rộng thêm 150K lượt tìm kiếm mới.\n"
-                    "• Financial Hub: Cụm Tỷ giá USD, EUR, Vàng tăng mạnh (+27.8K views); Tra cứu Phạt nguội duy trì 245K views ổn định."
-                )
-                set_text(s, content, font_size=9.5, color=COLOR_TEXT_MAIN)
-            elif "[Chỉ số] đi ngang" in txt:
-                content = (
-                    "• Vay Nhanh giảm -31.2K views do cắt Paid Ads -> Cần đẩy mạnh SEO On-Page và liên kết nội bộ từ các tiện ích tài chính."
-                )
-                set_text(s, content, font_size=9.5, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[0], "Mục đích: Theo dõi nhanh hiệu suất các Hubs trọng điểm (Cinema, Financial) và các chỉ số tương tác chất lượng trang.", font_size=8.5, color=COLOR_TEXT_MUTED)
+    set_text(s5.shapes[1], "Cinema Hub Dẫn Đầu Tăng Trưởng (+142.2% Cụm Rạp); Financial Hub Tăng Trưởng Cụm Tỷ Giá (+444.9% MoM)", font_size=17, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[5], "Nguồn: GA4 & BigQuery   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
+    set_text(s5.shapes[6], "5 / 7", font_size=9, color=COLOR_TEXT_MUTED)
+
+    content_s5_takeaway = (
+        "• Ý chính 1: Cinema Hub đạt 1.07M views (cụm rạp 795K views +142.2%), ra mắt cụm trang Diễn Viên và Minigame Bò Sữa Bay (85K lượt chơi).\n"
+        "• Ý chính 2: Financial Hub đạt 299.5K views (+25.6%), riêng cụm Tỷ giá tăng +444.9% (34.0K views), bù đắp phần giảm của Vay Nhanh do cắt Ads.\n"
+        "• Ý chính 3: Mở rộng cụm tiện ích tài chính (Thuế TNCN, Lương Gross-Net) chuẩn bị phục vụ cao điểm tra cứu cuối năm."
+    )
+    set_text(s5.shapes[8], content_s5_takeaway, font_size=9.5, color=COLOR_TEXT_MAIN)
+
+    # Header 1: Key Hubs Performance
+    set_text(s5.shapes[9], "HIỆU SUẤT CÁC HUBS TRỌNG ĐIỂM (KEY HUBS PERFORMANCE)", font_size=11, bold=True, color=COLOR_PINK)
+
+    # Card 1: Cinema Hub
+    set_text(s5.shapes[12], "Cinema Hub (Lưu lượng MTD)", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[13], "1.07M", font_size=20, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[14], "▲ +31.8% MoM (Rạp: +142%)", font_size=9.0, bold=True, color=COLOR_GREEN)
+    set_text(s5.shapes[16], "Cụm rạp: 795K views", font_size=8.5, bold=True, color=COLOR_WHITE)
+
+    # Card 2: Financial Hub
+    set_text(s5.shapes[18], "Financial Hub (Lưu lượng MTD)", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[19], "299.5K", font_size=20, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[20], "▲ +25.6% MoM", font_size=9.0, bold=True, color=COLOR_GREEN)
+    set_text(s5.shapes[22], "98.5% Kế hoạch MTD", font_size=8.5, bold=True, color=COLOR_WHITE)
+
+    # Card 3: Cụm Tỷ Giá Ngoại Tệ
+    set_text(s5.shapes[24], "Cụm Tỷ Giá Ngoại Tệ", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[25], "34.0K", font_size=20, bold=True, color=COLOR_INDIGO)
+    set_text(s5.shapes[26], "▲ +444.9% MoM", font_size=9.0, bold=True, color=COLOR_GREEN)
+    set_text(s5.shapes[28], "100% Kênh tự nhiên", font_size=8.5, bold=True, color=COLOR_WHITE)
+
+    # Card 4: Tra Cứu Phạt Nguội CSGT
+    set_text(s5.shapes[30], "Tra Cứu Phạt Nguội CSGT", font_size=10.5, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[31], "245.0K", font_size=20, bold=True, color=COLOR_PINK)
+    set_text(s5.shapes[32], "▲ Ổn định MoM", font_size=9.0, bold=True, color=COLOR_GREEN)
+    set_text(s5.shapes[34], "Top 1 Tiện ích Web", font_size=8.5, bold=True, color=COLOR_WHITE)
+
+    # Header 2: Engagement & Quality Metrics
+    set_text(s5.shapes[35], "CHỈ SỐ TƯƠNG TÁC & CHẤT LƯỢNG (ENGAGEMENT & QUALITY)", font_size=10, bold=True, color=COLOR_PINK)
+
+    # Sub-metric 1: Thời gian lưu trang
+    set_text(s5.shapes[38], "Thời gian lưu trang", font_size=9, color=COLOR_TEXT_MUTED)
+    set_text(s5.shapes[39], "2.45p", font_size=16, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[40], "▲ +45s (nhóm tool)", font_size=8.5, bold=True, color=COLOR_GREEN)
+
+    # Sub-metric 2: Tỷ lệ thoát trang
+    set_text(s5.shapes[42], "Tỷ lệ thoát trang", font_size=9, color=COLOR_TEXT_MUTED)
+    set_text(s5.shapes[43], "42.1%", font_size=16, bold=True, color=COLOR_GREEN)
+    set_text(s5.shapes[44], "▼ -18.5 pp (sạch Ads)", font_size=8.5, bold=True, color=COLOR_GREEN)
+
+    # Sub-metric 3: Hồ sơ Diễn viên
+    set_text(s5.shapes[46], "Hồ sơ Diễn viên", font_size=9, color=COLOR_TEXT_MUTED)
+    set_text(s5.shapes[47], "1.200+", font_size=16, bold=True, color=COLOR_TEXT_MAIN)
+    set_text(s5.shapes[48], "▲ Mới go-live T10", font_size=8.5, bold=True, color=COLOR_INDIGO)
+
+    # Right Commentary
+    content_s5_perf = (
+        "• Cinema Hub: Đạt 1.07M views (+31.8% MoM), cụm rạp đối tác bứt phá 795K views (+142.2%), chiếm 74.6% lưu lượng; đã go-live 1.200 hồ sơ diễn viên.\n"
+        "• Financial Hub: Đạt 299.5K views (+25.6%), cụm Tỷ giá tăng đột phá +444.9% (34.0K views) nhờ cập nhật real-time 20+ ngân hàng."
+    )
+    set_text(s5.shapes[53], content_s5_perf, font_size=9.5, color=COLOR_TEXT_MAIN)
+
+    content_s5_other = (
+        "• Vay Nhanh giảm -31.2K views do cắt 61% Paid Ads -> Cần đẩy mạnh SEO On-Page và chèn liên kết nội bộ từ các tiện ích tài chính để bù đắp tự nhiên."
+    )
+    set_text(s5.shapes[56], content_s5_other, font_size=9.5, color=COLOR_TEXT_MAIN)
 
     # =========================================================================
     # SLIDE 6: New Products & Financial Utilities Ecosystem [R] (Original Slide 20)
@@ -361,7 +394,9 @@ def main():
     for s in s6.shapes:
         if s.has_text_frame:
             txt = s.text_frame.text.strip()
-            if "[Vấn đề trọng yếu]" in txt or "Phễu AppsFlyer Đạt" in txt or "Hệ Sinh Thái Sản Phẩm" in txt:
+            if txt.startswith("Mục đích:"):
+                set_text(s, "Mục đích: Cập nhật tiến độ 8 sản phẩm/tiện ích mới và chứng minh hiệu quả giữ chân người dùng của mô hình công cụ tương tác.", font_size=8.5, color=COLOR_TEXT_MUTED)
+            elif "[Vấn đề trọng yếu]" in txt or "Phễu AppsFlyer Đạt" in txt or "Hệ Sinh Thái Sản Phẩm" in txt:
                 set_text(s, "Hệ Sinh Thái Sản Phẩm & Tiện Ích Mới: 8 Công Cụ Đời Sống & Tài Chính Thúc Đẩy Lưu Lượng Tự Nhiên", font_size=17, bold=True, color=COLOR_TEXT_MAIN)
             elif "Nguồn:" in txt:
                 set_text(s, "Nguồn: GA4 & Web Platform Utilities   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
@@ -373,13 +408,13 @@ def main():
                     "• Ý chính 2: Cụm tiện ích Tỷ giá (+445% MoM) và Diễn viên chứng minh mô hình công cụ tương tác giữ chân người dùng hiệu quả hơn 3.2 lần so với bài viết tĩnh."
                 )
                 set_text(s, content, font_size=9.5, color=COLOR_TEXT_MAIN)
-            elif "Chỉ số product chính [x]% MoM" in txt or txt.startswith("Chỉ số product"):
+            elif "Chỉ số product chính [x]% MoM" in txt or txt.startswith("Chỉ số product") or "Nhóm công cụ tra cứu" in txt:
                 content = (
                     "• Nhóm công cụ tra cứu (Tỷ giá, Giá vàng, Phạt nguội) ghi nhận thời gian tương tác trung bình >2.0 phút, cao hơn đáng kể so với bài tin tức.\n"
                     "• Cụm trang Diễn viên (/cinema/person) mở rộng thêm 1.200 hồ sơ nghệ sĩ, đón đầu xu hướng SEO thực thể (Entity SEO)."
                 )
                 set_text(s, content, font_size=9.5, color=COLOR_TEXT_MAIN)
-            elif "Vấn đề cần quyết định/hỗ trợ" in txt:
+            elif "Vấn đề cần quyết định/hỗ trợ" in txt or "Tập trung nguồn lực" in txt:
                 content = (
                     "• Tập trung nguồn lực đưa bộ đôi công cụ Thuế TNCN & Tính Lương Gross-Net lên Production trong tháng 11/2026 để đón đỉnh tìm kiếm quyết toán cuối năm."
                 )
@@ -407,7 +442,9 @@ def main():
     for s in s7.shapes:
         if s.has_text_frame:
             txt = s.text_frame.text.strip()
-            if "Dự án C chậm 2 tuần" in txt or "Lộ Trình Quý 4:" in txt:
+            if txt.startswith("Mục đích:"):
+                set_text(s, "Mục đích: Cho người đọc hiểu tiến độ các mốc dự án Q4/2026 và các đề xuất hỗ trợ liên phòng ban cần chốt.", font_size=8.5, color=COLOR_TEXT_MUTED)
+            elif "Dự án C chậm 2 tuần" in txt or "Lộ Trình Quý 4:" in txt:
                 set_text(s, "Lộ Trình Quý 4: Đưa 4 Tiện Ích Thuế & Tính Lương Lên Production, Chuẩn Bị Toàn Diện Cho Cao Điểm Tết 2027", font_size=17, bold=True, color=COLOR_TEXT_MAIN)
             elif "Nguồn:" in txt:
                 set_text(s, "Nguồn: Jira & Web Platform Roadmap   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
@@ -424,7 +461,7 @@ def main():
                 set_text(s, "80%", font_size=11, bold=True, color=COLOR_TEXT_MAIN)
             elif txt in ["55%", "85%"]:
                 set_text(s, "85%", font_size=11, bold=True, color=COLOR_GREEN)
-            elif "Việc đầu tiên quyết định" in txt:
+            elif "Việc đầu tiên quyết định" in txt or "Lưu ý:" in txt:
                 set_text(s, "Lưu ý: Việc phê duyệt kế hoạch ra mắt tiện ích thuế trước 31/10 quyết định khả năng kịp tiến độ kiểm thử và go-live đón mùa quyết toán cuối năm.", font_size=9.5, color=COLOR_TEXT_MUTED)
         elif s.has_table:
             tbl = s.table
@@ -440,6 +477,25 @@ def main():
             for r_idx, r_data in enumerate(rows_data, 1):
                 for c_idx, val in enumerate(r_data):
                     set_cell(tbl.cell(r_idx, c_idx), val, font_size=8.5, bold=(c_idx == 0), align=PP_ALIGN.CENTER if c_idx == 2 else PP_ALIGN.LEFT)
+
+    # Add Tag [R] circle and 'Reporting' label to Slide 7 header
+    circle = s7.shapes.add_shape(MSO_SHAPE.OVAL, Inches(9.18), Inches(0.16), Inches(0.42), Inches(0.42))
+    circle.fill.solid()
+    circle.fill.fore_color.rgb = RGBColor(0x99, 0x1B, 0x1B)  # deep red wine matching R
+    circle.line.color.rgb = RGBColor(0x99, 0x1B, 0x1B)
+    p = circle.text_frame.paragraphs[0]
+    p.text = "R"
+    p.font.size = Pt(14)
+    p.font.bold = True
+    p.font.color.rgb = COLOR_WHITE
+    p.alignment = PP_ALIGN.CENTER
+
+    txBox = s7.shapes.add_textbox(Inches(8.88), Inches(0.60), Inches(1.02), Inches(0.18))
+    p2 = txBox.text_frame.paragraphs[0]
+    p2.text = "Reporting"
+    p2.font.size = Pt(8.5)
+    p2.font.color.rgb = RGBColor(0x99, 0x1B, 0x1B)
+    p2.alignment = PP_ALIGN.CENTER
 
     # Save to all destination paths
     for p in OUT_PATHS:
