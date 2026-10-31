@@ -388,52 +388,52 @@ def main():
     set_text(s5.shapes[56], content_s5_other, font_size=9.5, color=COLOR_TEXT_MAIN)
 
     # =========================================================================
-    # SLIDE 6: New Products & Financial Utilities Ecosystem [R] (Original Slide 20)
+    # SLIDE 6: Product & Feature Roadmap Tracker [R] (Original Slide 20)
     # =========================================================================
     s6 = prs.slides[5]
     for s in s6.shapes:
         if s.has_text_frame:
             txt = s.text_frame.text.strip()
             if txt.startswith("Mục đích:"):
-                set_text(s, "Mục đích: Cập nhật tiến độ 8 sản phẩm/tiện ích mới và chứng minh hiệu quả giữ chân người dùng của mô hình công cụ tương tác.", font_size=8.5, color=COLOR_TEXT_MUTED)
+                set_text(s, "Mục đích: Cập nhật tiến độ thực thi các dự án sản phẩm trọng yếu, kết quả mới trong tháng và trọng tâm tháng tới.", font_size=8.5, color=COLOR_TEXT_MUTED)
             elif "[Vấn đề trọng yếu]" in txt or "Phễu AppsFlyer Đạt" in txt or "Hệ Sinh Thái Sản Phẩm" in txt:
-                set_text(s, "Hệ Sinh Thái Sản Phẩm & Tiện Ích Mới: 8 Công Cụ Đời Sống & Tài Chính Thúc Đẩy Lưu Lượng Tự Nhiên", font_size=17, bold=True, color=COLOR_TEXT_MAIN)
+                set_text(s, "Tiến Độ Dự Án & Tiện Ích Mới: Go-Live Cụm Diễn Viên (30/10), Tỷ Giá Tăng Vọt (+445%) & Đang Hoàn Thiện Thuế TNCN", font_size=17, bold=True, color=COLOR_TEXT_MAIN)
             elif "Nguồn:" in txt:
-                set_text(s, "Nguồn: GA4 & Web Platform Utilities   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
+                set_text(s, "Nguồn: Jira & Web Platform Roadmap   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
             elif txt in ["9", "6 / 7", "7 / 8"]:
                 set_text(s, "6 / 7", font_size=9, color=COLOR_TEXT_MUTED)
             elif "Ý chính 1:" in txt:
                 content = (
-                    "• Ý chính 1: Đã và đang triển khai 8 tiện ích sản phẩm mới nhằm mở rộng điểm chạm tìm kiếm tự nhiên ngoài bài viết nội dung truyền thống.\n"
-                    "• Ý chính 2: Cụm tiện ích Tỷ giá (+445% MoM) và Diễn viên chứng minh mô hình công cụ tương tác giữ chân người dùng hiệu quả hơn 3.2 lần so với bài viết tĩnh."
+                    "• Ý chính 1: Hoàn tất go-live cụm trang Diễn viên & Đạo diễn (/cinema/person) ngày 30/10 với 1.200+ hồ sơ nghệ sĩ, tối ưu Schema thực thể E-E-A-T.\n"
+                    "• Ý chính 2: Cụm tra cứu Tỷ giá ngoại tệ tăng trưởng thực tế +444.9% MoM (34.0K views), khẳng định hiệu quả của nhóm công cụ tra cứu thường nhật."
                 )
                 set_text(s, content, font_size=9.5, color=COLOR_TEXT_MAIN)
             elif "Chỉ số product chính [x]% MoM" in txt or txt.startswith("Chỉ số product") or "Nhóm công cụ tra cứu" in txt:
                 content = (
-                    "• Nhóm công cụ tra cứu (Tỷ giá, Giá vàng, Phạt nguội) ghi nhận thời gian tương tác trung bình >2.0 phút, cao hơn đáng kể so với bài tin tức.\n"
-                    "• Cụm trang Diễn viên (/cinema/person) mở rộng thêm 1.200 hồ sơ nghệ sĩ, đón đầu xu hướng SEO thực thể (Entity SEO)."
+                    "• Tiện ích Tỷ giá (/tai-chinh/ty-gia) tăng bứt phá từ 6.2K lên 34.0K views (+444.9% MoM) nhờ cập nhật tự động 4 cặp ngoại tệ chủ lực.\n"
+                    "• Minigame Một Mùa Quýt ghi nhận 7.097 user hoàn thành quiz; Game Bò Sữa Bay đã lên Staging, sẵn sàng go-live tại các cụm rạp đối tác."
                 )
                 set_text(s, content, font_size=9.5, color=COLOR_TEXT_MAIN)
             elif "Vấn đề cần quyết định/hỗ trợ" in txt or "Tập trung nguồn lực" in txt:
                 content = (
-                    "• Tập trung nguồn lực đưa bộ đôi công cụ Thuế TNCN & Tính Lương Gross-Net lên Production trong tháng 11/2026 để đón đỉnh tìm kiếm quyết toán cuối năm."
+                    "• Cần Pháp chế và Kế toán hỗ trợ rà soát chuẩn hóa công thức thuế TNCN trước 10/11 để kịp tiến độ go-live đón mùa quyết toán thuế cuối năm."
                 )
                 set_text(s, content, font_size=9.5, color=COLOR_TEXT_MAIN)
         elif s.has_table:
             tbl = s.table
 
-            headers = ["Sản phẩm / Tiện ích mới", "Trạng thái", "Lưu lượng MTD", "Điểm nổi bật & Vai trò", "Kế hoạch T11"]
+            headers = ["Projects / Products", "Status (% complete, delay/..)", "New activities in last month", "Key focus next month", "Support needed?"]
             for c, h in enumerate(headers):
-                set_cell(tbl.cell(0, c), h, font_size=8.5, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER if c in [1, 2, 4] else PP_ALIGN.LEFT)
+                set_cell(tbl.cell(0, c), h, font_size=8.5, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER if c in [1, 4] else PP_ALIGN.LEFT)
 
             rows_data = [
-                ["1. Cụm Trang Diễn Viên (/cinema/person)", "Go-live", "150K PVs", "1.200+ hồ sơ nghệ sĩ, tối ưu SEO thực thể diễn viên", "Mở rộng hồ sơ phim Tết"],
-                ["2. Tiện Ích Tỷ Giá (/tai-chinh/ty-gia)", "Hoạt động", "34.0K (+445%)", "Tự động cập nhật 20+ ngân hàng thương mại", "Tích hợp biểu đồ tỷ giá"],
-                ["3. Bộ Đôi Công Cụ Thuế & Lương", "Staging", "Kỳ vọng 300K+", "Tính thuế TNCN & Lương Gross-Net chuẩn mới nhất", "Go-live đón quyết toán"],
+                ["1. Cụm Trang Diễn Viên (/cinema/person)", "Hoàn thành 100% · Go-live 30/10", "Go-live danh mục & 1.200+ hồ sơ nghệ sĩ; tối ưu Schema Person chuẩn E-E-A-T", "Theo dõi lập chỉ mục Google; mở rộng dàn cast các dự án phim Tết 2027", "Không (BU Movies đã nghiệm thu)"],
+                ["2. Cụm Tiện Ích Tỷ Giá (/tai-chinh/ty-gia)", "Hoạt động · Tăng +444.9% MoM", "Vận hành tự động 4 cặp ngoại tệ (USD, EUR, GBP, AUD); đạt 34.0K views", "Tích hợp biểu đồ biến động lịch sử và trang tỷ giá theo từng ngân hàng", "Không"],
+                ["3. Tiện Ích Tính Thuế TNCN (/tai-chinh/thue-thu-nhap-ca-nhan)", "Đang phát triển (80%) · Chuẩn bị Staging", "Chuẩn hóa quy chuẩn URL; hoàn thiện UI/UX và logic tính thuế lũy tiến", "Hoàn tất kiểm thử và go-live Production đón mùa quyết toán thuế cuối năm", "Pháp chế & Kế toán hỗ trợ rà soát công thức tính trước 10/11"],
             ]
             for r_idx, r_data in enumerate(rows_data, 1):
                 for c_idx, val in enumerate(r_data):
-                    set_cell(tbl.cell(r_idx, c_idx), val, font_size=8.0, bold=(c_idx == 0), align=PP_ALIGN.CENTER if c_idx in [1, 2, 4] else PP_ALIGN.LEFT)
+                    set_cell(tbl.cell(r_idx, c_idx), val, font_size=8.0, bold=(c_idx == 0), align=PP_ALIGN.CENTER if c_idx in [1, 4] else PP_ALIGN.LEFT)
 
     # =========================================================================
     # SLIDE 7: Project Milestones & Support Tracker [R] (Original Slide 21)
@@ -445,16 +445,16 @@ def main():
             if txt.startswith("Mục đích:"):
                 set_text(s, "Mục đích: Cho người đọc hiểu tiến độ các mốc dự án Q4/2026 và các đề xuất hỗ trợ liên phòng ban cần chốt.", font_size=8.5, color=COLOR_TEXT_MUTED)
             elif "Dự án C chậm 2 tuần" in txt or "Lộ Trình Quý 4:" in txt:
-                set_text(s, "Lộ Trình Quý 4: Đưa 4 Tiện Ích Thuế & Tính Lương Lên Production, Chuẩn Bị Toàn Diện Cho Cao Điểm Tết 2027", font_size=17, bold=True, color=COLOR_TEXT_MAIN)
+                set_text(s, "Lộ Trình Quý 4: Đưa Tiện Ích Thuế TNCN Lên Production, Chuẩn Bị Toàn Diện Cho Cao Điểm Tết 2027", font_size=17, bold=True, color=COLOR_TEXT_MAIN)
             elif "Nguồn:" in txt:
                 set_text(s, "Nguồn: Jira & Web Platform Roadmap   |   Owner: Web Platform   |   Chốt số liệu: 30/10/2026", font_size=9, color=COLOR_TEXT_MUTED)
             elif txt in ["7", "8", "8 / 8", "7 / 7", "7 / 8"]:
                 set_text(s, "7 / 7", font_size=9, color=COLOR_TEXT_MUTED)
             elif "Ý chính 1:" in txt:
                 content = (
-                    "• Ý chính 1: Hoàn thành 100% mốc Dev cho 4 tiện ích tài chính (Thuế TNCN, Lương Gross-Net, BHXH, Tính SIP).\n"
-                    "• Ý chính 2: Mốc UAT dự kiến hoàn tất trước 12/11; go-live Production chính thức trước 20/11 để phục vụ nhu cầu quyết toán cuối năm.\n"
-                    "• Ý chính 3: Cần 3 nội dung hỗ trợ từ BOM, HR và Pháp chế để bảo đảm tiến độ triển khai."
+                    "• Ý chính 1: Hoàn thành 100% go-live cụm Diễn viên (30/10) và trang Tải App (/tai-app); hoàn tất Staging minigame Bò Sữa Bay.\n"
+                    "• Ý chính 2: Tiện ích tính Thuế TNCN đang hoàn thiện UI/UX và logic tính toán, dự kiến go-live Production trong tháng 11/2026.\n"
+                    "• Ý chính 3: Cần 3 nội dung hỗ trợ từ BOM, Pháp chế và Kế toán để bảo đảm đúng hạn mốc triển khai."
                 )
                 set_text(s, content, font_size=9.5, color=COLOR_TEXT_MAIN)
             elif txt in ["75%", "80%"]:
@@ -470,9 +470,9 @@ def main():
                 set_cell(tbl.cell(0, c), h, font_size=9.0, bold=True, color=COLOR_WHITE, align=PP_ALIGN.CENTER if c == 2 else PP_ALIGN.LEFT)
 
             rows_data = [
-                ["Phê duyệt kế hoạch ra mắt bộ tiện ích Thuế TNCN & Tính Lương", "BOM / Finhub", "31/10"],
-                ["Hỗ trợ thủ tục hợp đồng đối tác báo chí phục vụ Cinema Hub", "Pháp chế & Mua hàng", "08/11"],
-                ["Hoàn tất tuyển dụng 1 nhân sự Senior SEO Technical in-house", "HR Talent Acquisition", "15/11"],
+                ["Phê duyệt kế hoạch go-live bộ công cụ Thuế TNCN & Tính Lương", "CEO / BOM", "31/10"],
+                ["Rà soát chuẩn hóa công thức thuế TNCN và biểu lũy tiến", "Pháp chế & Kế toán", "10/11"],
+                ["Thẩm định Điều khoản & Điều kiện (TnC) và bảo mật data người chơi Game Bò Sữa Bay", "Pháp chế & Security", "05/11"],
             ]
             for r_idx, r_data in enumerate(rows_data, 1):
                 for c_idx, val in enumerate(r_data):

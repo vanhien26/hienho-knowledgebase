@@ -18,6 +18,8 @@ scratch/
 __pycache__/
 *.pyc
 .venv/
+graphify-out/
+**/graphify-out/
 
 # Secrets, Keys & API Credentials (BẢO MẬT TUYỆT ĐỐI - KHÔNG BAO GIỜ COMMIT)
 .env
