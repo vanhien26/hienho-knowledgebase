@@ -21,22 +21,22 @@
     {
       "id": "cinema",
       "name": "Cinema Hub",
-      "pv": 1065617
+      "pv": 1065604
     },
     {
       "id": "financial",
       "name": "Financial Hub",
-      "pv": 299461
+      "pv": 299470
     },
     {
       "id": "new_user",
       "name": "New User Hub",
-      "pv": 93891
+      "pv": 93895
     },
     {
       "id": "vehicle",
       "name": "Vehicle Hub",
-      "pv": 79810
+      "pv": 79815
     },
     {
       "id": "insurance",
@@ -82,10 +82,10 @@
     }
   ],
   "channels": {
-    "organic": 1665199,
-    "direct": 907813,
-    "referral": 340229,
-    "paid": 456338,
-    "others": 127285
+    "organic": 1665361,
+    "direct": 907878,
+    "referral": 340299,
+    "paid": 456431,
+    "others": 126895
   }
 }
