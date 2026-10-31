@@ -165,62 +165,76 @@ def update_weekly_markdown(report_file, data):
     r_start, r_end = meta["recent_period"]
     p_start, p_end = meta["prior_period"]
     
-    md_section = f"""### 3. Biến Động 7 Ngày: Các Trang Vụt Sáng Đột Phá & Tăng Trưởng Clicks (7-Day Breakout Stars)
+    md_section = f"""### 3. Biến Động 7 Ngày: Các Trang Vụt Sáng Đột Phá & Tăng Trưởng Clicks Từ SERP (7-Day Breakout Stars)
 
-Trong chu kỳ 7 ngày gần nhất ({r_start} đến {r_end} so với {p_start} đến {p_end}), toàn Website ghi nhận **{meta['total_urls_growing']:,} URLs** có tín hiệu tăng trưởng dương về hiển thị hoặc lượt nhấp. Đáng chú ý, có **{meta['total_breakout_stars']} URL vụt sáng mới (Breakout Stars)** với mức hiển thị vọt từ 0 lên hàng chục nghìn lượt/tuần.
+Trong chu kỳ 7 ngày gần nhất ({r_start} đến {r_end} so với {p_start} đến {p_end}), toàn Website ghi nhận **{meta['total_urls_growing']:,} URLs** có tín hiệu tăng trưởng dương về hiển thị hoặc lượt nhấp trực tiếp từ kết quả tìm kiếm Google (SERP). Đáng chú ý, có **{meta['total_breakout_stars']} URL vụt sáng mới (Breakout Stars)** với mức hiển thị trên SERP vọt từ dưới 50 lên hàng chục nghìn đến hơn 100.000 lượt/tuần.
 
-#### a. Bảng Top Ngôi Sao Vụt Sáng Mới Xuất Hiện (Breakout Stars: Từ 0 vọt lên >10.000 Impressions)
+#### a. Bảng Top Ngôi Sao Vụt Sáng Mới Xuất Hiện Trên SERP (Breakout Stars: Từ 0 vọt lên >10.000 Impressions)
 
-| Dự án / Phân khối | URL Trang Web | Hiển Thị Tuần Trước | Hiển Thị Tuần Này | Tăng Ròng (+Net Imp) | Clicks Tuần Này | CTR (%) | Vị Trí TB | Nhận Định & Cơ Hội Tăng Trưởng |
+| Dự án / Phân khối | URL Trang Web | Hiển Thị Tuần Trước | Hiển Thị Tuần Này | Tăng Ròng (+Net Imp) | Clicks SERP | CTR SERP | Vị Trí SERP | Cơ Hội Bứt Phá Click Từ SERP |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
 """
     for b in data["breakout_stars"][:8]:
         url_short = b["url"].replace("https://www.momo.vn", "")
-        # Phân loại nhận định
-        if "ty-gia" in b["url"]:
-            rec = "Nhu cầu đổi tiền tệ tăng mạnh. Cần gắn Sticky OneLink chuyển tiền quốc tế / thanh toán."
+        # Phân loại nhận định thuần SERP Click
+        if "ty-gia/cny" in b["url"]:
+            rec = "Keywords: `1 nhân dân tệ vnd`, `tỷ giá cny`. Đang đứng Top 6.6-8.2. Cần tối ưu Snippet/FAQ đẩy lên Top 3 để biến 115K imp thành ~3K-5K clicks/tuần."
+        elif "ty-gia/krw" in b["url"]:
+            rec = "Keywords: `tỉ giá won`, `won to vnd`. Đang đứng Top 5.2-5.6 với 103K imp. Tối ưu Title thẻ giá live để nâng CTR từ 0.17% lên 3% (+3K clicks/tuần)."
+        elif "ty-gia/jpy" in b["url"]:
+            rec = "Keywords: `tỷ giá yên nhật`, `jpy sang vnd`. Đang đứng Top 7.6 với 20K imp. Tối ưu thẻ meta để gom trọn search intent tỷ giá Nhật."
         elif "cinema" in b["url"]:
-            rec = "Phim rạp mới ra mắt hút search lớn. Tận dụng phễu đặt vé giữ chỗ ngay."
+            rec = "Keywords: Tên phim + lịch chiếu/review. Xuất hiện sớm trên SERP ngay tuần đầu công chiếu, giữ vững Top 6.1 để hút clicks trước các trang vé khác."
         elif "gia-vang" in b["url"]:
-            rec = "Biến động vàng thế giới. Đặt widget cập nhật real-time và CTA mở Túi Thần Tài."
+            rec = "Keywords: `giá vàng hôm nay`, `bảng giá vàng`. Đang ở Top 10.7 với 13.9K imp. Cần cập nhật Timestamp real-time để leo vào Top 3 SERP."
         elif "vay" in b["url"] or "no-xau" in b["url"]:
-            rec = "Search vay cấp thiết. Kiểm soát chặt rủi ro, điều hướng về Vay Nhanh / Ví Trả Sau chính thống."
+            rec = "Keywords: `vay tiền online 24/24`, `ngân hàng cho vay nợ xấu`. Search volume lớn, leo lên Top 9.2 SERP. Cần tối ưu H2/FAQ để tăng CTR."
         else:
-            rec = "Lưu lượng tự nhiên bật tăng mạnh. Tối ưu trải nghiệm mobile và gắn widget hành động."
+            rec = "Lưu lượng hiển thị SERP bật tăng mạnh. Cần tối ưu tiêu đề Title Tag và Search Snippet để kích thích tỷ lệ nhấp."
             
         md_section += f"| **{b['project']}** | [{url_short}]({b['url']}) | {b['prev_imp']:,} | **{b['curr_imp']:,}** | **+{b['diff_imp']:,}** | {b['curr_clk']:,} | {b['curr_ctr']}% | Top {b['curr_pos']} | {rec} |\n"
 
     md_section += f"""
-#### b. Bảng Top Trang Bứt Phá Lượt Nhấp Tự Nhiên Mạnh Nhất (+Net Clicks WoW)
+#### b. Bảng Top Trang Bứt Phá Lượt Nhấp Tự Nhiên Từ Google SERP (+Net Clicks WoW)
 
-| Dự án / Phân khối | URL Trang Web | Clicks Tuần Trước | Clicks Tuần Này | Tăng Ròng (+Net Clicks) | % Tăng WoW | Hiển Thị (Imp) | CTR (%) | Ý Nghĩa Chuyển Đổi Web-to-App |
+| Dự án / Phân khối | URL Trang Web | Clicks SERP Tuần Trước | Clicks SERP Tuần Này | Tăng Ròng (+Net Clicks) | % Tăng WoW | Hiển Thị SERP | CTR SERP | Động Lực SERP & Từ Khóa Chủ Lực |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
 """
     for c in data["click_surges"][:8]:
         url_short = c["url"].replace("https://www.momo.vn", "")
         pct_str = f"+{c['pct_clk']}%" if c['pct_clk'] < 900 else "Mới"
         if "bonbon" in c["url"]:
-            impact = "Game Bonbon viral trở lại, tăng +2.3K clicks. Đòn bẩy giữ chân người dùng cực tốt."
+            impact = "Keywords: `mmoo` (2.9K clicks, Top 2.4 SERP), `momo no hu` (421 clicks, Top 2.0). CTR cao 8.13%, gom sạch clicks tìm kiếm game."
         elif "chi-chi-em-em" in c["url"]:
-            impact = "Phim hot kích hoạt +1.6K clicks. Tỷ lệ chuyển đổi mua vé xem phim rạp tăng vọt."
+            impact = "Keywords: `chị chị em em 3` (1.2K clicks, Top 3.3 SERP), `phim chị chị em em 3`. Chiếm lĩnh Top 3 SERP trước ngày chiếu, clicks tăng +160%."
         elif "bao-hiem-y-te" in c["url"]:
-            impact = "Nhu cầu tra cứu BHYT CCCD tăng cao (+951 clicks). Phễu vàng kéo install app MoMo."
+            impact = "Keywords: `tra cứu bảo hiểm y tế bằng cccd` (1.2K clicks, Top 2.7 SERP), `tra cứu bhyt` (52K imp, Top 5.3). Đạt đỉnh 3.6K clicks SERP."
         elif "an-mang-karaoke" in c["url"]:
-            impact = "Phim chiếu rạp thu hút người xem dịp cuối tuần, tăng ròng +585 clicks."
+            impact = "Keywords: `án mạng karaoke`, `lịch chiếu án mạng karaoke`. Vị trí Top 3.5 SERP giúp tăng ròng +585 clicks trong tuần."
         elif c["url"] == "https://www.momo.vn/":
-            impact = "Trang chủ tăng trưởng vững chắc +438 clicks tự nhiên từ nhu cầu thương hiệu MoMo."
+            impact = "Keywords thương hiệu: `momo`, `ví momo`. Vị trí Top 1.0 SERP duy trì ổn định, tăng thêm +438 clicks tự nhiên."
         elif "diem-tin-dung" in c["url"]:
-            impact = "Trang Điểm Tín Dụng duy trì đà tăng +227 clicks, chuẩn bị kết nối Quiz CIC."
+            impact = "Keywords: `kiểm tra điểm tín dụng`, `cic momo`. Giữ vững vị trí Top 2.1 SERP, tăng ròng +227 clicks tuần qua."
+        elif "kiem-tien-online" in c["url"]:
+            impact = "Keywords: `kiếm tiền online`, `cách kiếm tiền trên mạng`. CTR đạt 3.33%, leo lên Top 4.8 SERP, tăng ròng +306 clicks."
+        elif "no-xau" in c["url"]:
+            impact = "Keywords: `ngân hàng cho vay nợ xấu`. Trang mới index nhưng CTR đạt tới 10.93% trên SERP, đem về 301 clicks."
         else:
-            impact = "Tăng trưởng click tự nhiên rõ rệt, thúc đẩy tăng trưởng toàn Website."
+            impact = "Tăng trưởng click SERP tự nhiên rõ rệt, thúc đẩy lưu lượng tìm kiếm toàn Website."
             
         md_section += f"| **{c['project']}** | [{url_short}]({c['url']}) | {c['prev_clk']:,} | **{c['curr_clk']:,}** | **+{c['diff_clk']:,}** | {pct_str} | {c['curr_imp']:,} | {c['curr_ctr']}% | {impact} |\n"
 
     md_section += """
-#### c. Đánh Giá Bản Chất & Hành Động Trọng Tâm Cho Đội Ngũ Tăng Trưởng
-- **Động lực bùng nổ Cụm Tỷ Giá Ngoại Tệ (`/tai-chinh/ty-gia/*`):** Cụm tiền tệ (Nhân dân tệ `cny`, Won Hàn `krw`, Euro `eur`) đồng loạt bùng nổ hơn 300.000 lượt hiển thị chỉ trong 7 ngày do nhu cầu tỷ giá biến động. Tỷ lệ CTR hiện tại còn ở mức 0.1% - 0.3% vì trang mới leo lên trang 1–2 Google. **Hành động:** Bổ sung ngay bảng so sánh tỷ giá theo giờ và nút CTA *"Chuyển tiền quốc tế / Thanh toán dịch vụ quốc tế trên MoMo"* để vợt trọn lượng intent này sang Web-to-App.
-- **Sức hút phim rạp Cinema Hub:** Trang phim *Chị Chị Em Em 3* (`/cinema/chi-chi-em-em-3-25076`) tăng vọt +1.655 clicks và +51.000 imp; *Án Mạng Karaoke* (`/cinema/an-mang-karaoke-25089`) tăng +585 clicks. Việc xuất bản sớm hồ sơ phim và suất chiếu chuẩn E-E-A-T giúp MoMo đánh chiếm trọn cụm từ khóa phim rạp cuối năm trước đối thủ.
-- **Tiện ích an sinh xã hội Insurtech:** Trang tra cứu BHYT bằng CCCD (`/blog/tra-cuu-bao-hiem-y-te-bang-cccd-c116dt2833`) đạt đỉnh mới với 3.634 clicks (+951 clicks) và 209K impressions. Đây là bài viết dẫn đầu toàn Website về lưu lượng organic search hàng tuần, cần bảo đảm widget tra cứu BHYT luôn vận hành mượt mà với OneLink sâu.
+#### c. Đánh Giá Bản Chất Cơ Hội & Đòn Bẩy Chiếm Lĩnh Clicks Từ Google SERP
+
+- **Đòn bẩy 1: Khai phá "Mỏ vàng Impressions" Cụm Tỷ Giá (`/tai-chinh/ty-gia/*`):** 
+  Toàn bộ cụm tiền tệ (`cny-sang-vnd`, `krw-sang-vnd`, `eur-sang-vnd`, `usd-sang-vnd`, `jpy-sang-vnd`) bùng nổ hơn **300.000 lượt hiển thị trên SERP** chỉ trong 7 ngày. Tuy nhiên, CTR hiện tại rất thấp (chỉ 0.07% - 0.39%) do Google đang xếp hạng thử nghiệm ở trang 1-2 (Vị trí Top 5.2 - 8.2).
+  - *Tiềm năng bứt phá:* Với 300K impressions/tuần, chỉ cần tối ưu Title Tag (chèn tỷ giá cập nhật từng phút, ví dụ: `Tỷ giá Won hôm nay 1 KRW = ... VND [Cập nhật Live]`) và bổ sung Schema FAQ / Rich Snippet để đẩy thứ hạng từ Top 6 lên **Top 1-3 SERP**, CTR sẽ tăng từ 0.15% lên 3% - 5%, mang về thêm **9.000 - 15.000 organic clicks/tuần** hoàn toàn miễn phí từ Google SERP!
+- **Đòn bẩy 2: Chiếm lĩnh SERP từ khóa Phim rạp (Cinema Hub):**
+  Hai trang phim *Chị Chị Em Em 3* (`/cinema/chi-chi-em-em-3-25076`) và *Án Mạng Karaoke* (`/cinema/an-mang-karaoke-25089`) chứng minh công thức thành công: Xuất bản trang phim sớm trước ngày công chiếu để Google index và rank Top 3 SERP (`chị chị em em 3` đạt Top 3.3). Khi phim bước vào tuần lễ truyền thông cao điểm, MoMo đứng sẵn ở Top 3 SERP để hốt trọn 3.791 clicks tìm kiếm của khán giả. Cần nhân bản công thức này cho toàn bộ danh mục phim tháng 11 & mùa phim Tết.
+- **Đòn bẩy 3: Khai thác khoảng trống SERP của bài BHYT (`/blog/tra-cuu-bao-hiem-y-te-bang-cccd-c116dt2833`):**
+  Trang này đang đem về 3.634 clicks/tuần nhờ từ khóa `tra cứu bảo hiểm y tế bằng cccd` (đạt Top 2.7 SERP, CTR 5.65%). Tuy nhiên, từ khóa chung volume khổng lồ là `tra cứu bảo hiểm y tế` (52.044 imp/tuần) hiện chỉ xếp hạng **Top 5.3 (CTR 0.81%)** và `tra cứu bhyt` (46.420 imp/tuần) xếp hạng **Top 6.9 (CTR 0.50%)**.
+  - *Hành động kỹ thuật SEO:* Tối ưu lại cấu trúc H2 và internal link để đẩy 2 query này từ Top 5-7 lên Top 3 SERP. Khi đó, lượng click thu về từ SERP riêng cho bài này sẽ tăng thêm **+2.000 - 3.500 clicks/tuần**.
 """
 
     # Check if section already exists
