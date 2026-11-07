@@ -33,7 +33,7 @@ Skill này cung cấp bộ khung chuẩn hóa, phương pháp luận bóc tách 
    - Tuyệt đối không đưa CX, không đưa CWV/P90, không đưa Ticket tồn đọng. Không tính New User vào nhóm Hubs. 
    - Tuyệt đối không liệt kê lại các con số đã có trên bảng.
    - **Định vị kênh:** Organic là kênh chủ lực của Web Platform. Tuyệt đối không tô điểm cho Paid. Paid tăng mà Organic giảm là cảnh báo rủi ro về chất lượng tăng trưởng.
-   - **Phân loại Traffic Source SSOT (Non-Paid vs Paid):** BẮT BUỘC phân rã thành 2 nhóm lớn rõ rệt: **Non-Paid Traffic** (tất cả trừ Paid Traffic: Organic, Direct, Referral, Others...) và **Paid Traffic** (Paid). Khi trình bày bảng hoặc danh sách, gom rõ 2 dòng lớn Non-Paid vs Paid, các kênh con đặt thụt dòng dưới Non-Paid, tuyệt đối không để Paid xen kẽ ngang hàng.
+   - **Phân loại Traffic Source SSOT (Non-Paid vs Paid):** BẮT BUỘC cơ cấu thành 2 nhóm lớn rõ rệt: **Kênh Tự Nhiên (Non-Paid)** chỉ gồm đúng 4 kênh con (Organic, Direct, AI Traffic (GEO), Referral) và **Kênh Trả Phí (Paid Ads)**. Khi trình bày bảng hoặc danh sách, gom rõ 2 dòng lớn Non-Paid vs Paid, 4 kênh con đặt thụt dòng dưới Non-Paid, tuyệt đối không tách thêm dòng Others rời rạc và không để Paid xen kẽ ngang hàng.
    - **Bullet Lead-ins:** Viết tiếng Việt ngắn gọn (`Vượt target:`, `Lưu lượng trực tiếp & sức mạnh thương hiệu:`, `Chuyển dịch SEO sang GEO:`, `Điểm nổi bật:`, `Việc tiếp theo:`). Chỉ giữ tiếng Anh cho thuật ngữ chỉ số: Target, Budget, Actual, MAU, MEU, CVR, Map Bank, OneLink, Installs, New Reg. Toàn bộ báo cáo dùng một ngôn ngữ.
 7. **Mật độ thông điệp & bảng biểu:** Tối đa 3 ý chính dưới mỗi tiêu đề, tốt nhất 1-2. Nhiều hơn thì tách slide. Tối đa 2-3 bảng/biểu đồ, không copy dashboard thô.
 8. **Trực quan hóa:**
@@ -42,8 +42,55 @@ Skill này cung cấp bộ khung chuẩn hóa, phương pháp luận bóc tách 
 
 ---
 
-## 3. THAM CHIẾU TÀI LIỆU CHI TIẾT
+## 3. TIÊU CHUẨN BÁO CÁO THÁNG ĐIỀU HÀNH WEB PLATFORM (EXECUTIVE 6 STREAMS ARCHITECTURE SSOT)
 
+Đây là chuẩn mực báo cáo tháng chính thức (Monthly Executive Standard) được thống nhất cho Kênh Web MoMo, bảo đảm tính nhất quán 100% giữa văn bản Board Markdown (`report-thang-XX-YYYY-board.md`), Web Dashboard Hubs (`MonthlyReportApp.tsx`, `MonthlySlideDeck.tsx`) và Bộ Slide Trình Chiếu PowerPoint (`Web_Platform_Thang_XX_YYYY_Pyramid.pptx`):
+
+### 6 Luồng Điều Hành Bắt Buộc (6 Executive Streams)
+
+1. **Stream 1: Khung Điều Hành 3 Trụ Cột (Pillars) [R]:**
+   - Phân bổ thành 3 khối chiến lược: Điểm nổi bật (Highlights), Hợp tác liên phòng ban (Collaboration), và Ưu tiên hành động (Priorities).
+   - Tóm tắt cô đọng tình hình chuyển dịch tăng trưởng tự nhiên của Kênh Web.
+
+2. **Stream 2: Hiệu Suất Kinh Doanh & Quan Sát Chiến Lược [R]:**
+   - Bảng tổng thể Full Month 31 ngày kèm so sánh Target và MoM.
+   - Bóc tách rõ ràng cơ cấu Non-Paid Traffic vs Paid Traffic.
+   - 3 nhận định điều hành "So What?": Bản chất chuyển dịch, động lực tăng trưởng cốt lõi và cảnh báo rủi ro.
+
+3. **Stream 3: Hai Dự Án Trọng Điểm: Cinema Hub & Financial Hub [R]:**
+   - **Cinema Hub:** Quy mô lưu lượng, tỷ trọng cụm rạp, chuyển đổi W2A (Installs, Map Bank, CVR) và tiến độ kỹ thuật cụm Diễn viên.
+   - **Financial Hub:** Quy mô lưu lượng, tỷ trọng Non-Paid, mức độ tập trung sản phẩm tín chấp và tín hiệu nhóm Tiện ích Tỷ giá.
+   - **Khối đối trọng PLG:** Bắt buộc có khối 3 thẻ so sánh hiệu suất tương tác: Bảng biểu tĩnh (0,0% CTR) vs Tool Tính Lương (33,7% CTR) vs Tool Vay & CIC (38,6% - 43,8% CTR).
+
+4. **Stream 4: Dự Án New User & Phễu Chuyển Đổi Web-to-App [R]:**
+   - Phễu chuyển đổi 4 tầng AppsFlyer GPD: Installs -> Registered -> Map Bank -> Active MAU.
+   - Phân tích hiệu quả theo hệ điều hành (iOS vs Android) và tỷ lệ KYC/Map Bank.
+   - Bóc tách hiệu quả 4 kênh: Banner chào MoMo, Bối cảnh Cinema Hub, Interactive Gamification (Minigame) và Cổng tải app tập trung (`/tai-app`).
+
+5. **Stream 5: Hiệu Suất Công Cụ Tài Chính Tương Tác (Interactive Tools Performance) [R]:**
+   - **Quy chuẩn bảng 5 cột tinh gọn duy nhất:**
+     `STT | Tên Công Cụ / Tiện Ích | Lượt hiển thị (Imp) | Lượt tương tác (Clicks) | Tỷ lệ tương tác (CTR)`
+   - **Quy tắc hiển thị:** Tuyệt đối KHÔNG đưa cột URL kỹ thuật, cột hành động W2A, hay cột đánh giá nhận xét dài dòng vào bảng.
+   - **Số liệu MoSpark CMS:** Thống kê đầy đủ các công cụ tương tác thực tế và đối lập với nhóm bảng biểu tĩnh (0% CTR, onsite 48s).
+   - **Nhận định điều hành:** 3 gạch đầu dòng phân tích dưới bảng làm rõ công cụ dẫn dắt và cơ sở go-live cho các công cụ tháng kế tiếp.
+
+6. **Stream 6: Trọng Tâm Thảo Luận & Quyết Nghị Ban Giám Đốc [D]:**
+   - Mỗi đề xuất cấu trúc chặt chẽ 6 phần: Vấn đề -> Bối cảnh -> Tác động tăng trưởng -> Bảng so sánh các phương án (A vs B) -> Đề nghị với CEO/BOM -> Rủi ro nếu không quyết định.
+
+---
+
+## 4. QUY TẮC ĐỒNG BỘ TAM GIÁC (THREE-WAY SSOT SYNC)
+
+Mọi cập nhật số liệu báo cáo tháng bắt buộc đồng bộ song song 3 thực thể:
+1. **Markdown Board Report:** `07_REPORTS/docs/report-thang-XX-YYYY-board.md` và `data/reports/report-thang-XX-YYYY-board.md`.
+2. **Web Hubs Dashboard & Slide Deck:** `lib/report/monthly-report-server.ts`, `data/deck/monthly-deck-XX-YYYY.json`, `components/report/monthly/*`.
+3. **PowerPoint Deck Template:** `scripts/build_official_templated_pptx.py` -> sinh file `Web_Platform_Thang_XX_YYYY_Pyramid.pptx` đồng bộ Drive và Web Public.
+
+---
+
+## 5. THAM CHIẾU TÀI LIỆU CHI TIẾT
+
+- **Từ điển thuật ngữ báo cáo (SSOT):** [`03_SKILLS/momo-reporting-glossary.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-glossary.md)
 - **Quy chuẩn gốc cấp công ty:** [`03_SKILLS/momo-reporting-guidelines.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-guidelines.md)
 - **Tài liệu Master Framework:** [`03_SKILLS/web-platform-reporting-framework.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/web-platform-reporting-framework.md)
 - **Nhật ký Họp & Chỉ đạo Chiến lược:** [`MEETING_RECAPS.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/MEETING_RECAPS.md)
