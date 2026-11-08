@@ -1,3 +1,7 @@
+"""Audit các URL actionable (top URLs cần kiểm tra index/ranking) từ dữ liệu GSC/GA4.
+
+Usage: ./.venv/bin/python scripts/audit_actionable_urls.py"""
+
 import json, urllib.request, urllib.error, concurrent.futures, os, sys
 from collections import defaultdict
 

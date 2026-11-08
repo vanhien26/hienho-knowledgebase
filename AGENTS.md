@@ -67,6 +67,12 @@
 | **Pipeline Tác vụ Agent, Giao việc Hiến sang Hub /agent** | [`scripts/sync_agent_tasks.py`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/scripts/sync_agent_tasks.py) | Chạy `./.venv/bin/python scripts/sync_agent_tasks.py`. |
 | **Kiến trúc Codebase, Phụ thuộc Module/Hàm, Luồng Call Flow, Tác động thay đổi** | [`graphify-out/graph.json`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/graphify-out/graph.json) | **Tự động kích hoạt Graphify**: Tự chạy `graphify explain / path / query` thay vì đọc file thô hoặc grep mù. |
 | **Quy chuẩn viết, Văn phong, Format** | Trực tiếp trong `AGENTS.md` | Có sẵn trong bộ nhớ hệ thống, không đọc thêm file. |
+| **BRD/PRD Use Case (Vay Nhanh, VTS, BHYT, Phạt Nguội, eSIM...)** | [`06_USE_CASE_MOMO/<use-case>-brd.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO/) | Chỉ đọc đúng file BRD của use case được hỏi; không quét cả thư mục. |
+| **Tài liệu Hub (Strategy, Navigation, Performance Hub)** | [`05_HUBS/<hub-name>/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/) | Chỉ đọc đúng thư mục Hub tương ứng (vehicle, insurtech, cinema, financial...). |
+| **Tin tức ngành, SEO News, xu hướng thị trường** | [`11_NEWS_FEED/`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/11_NEWS_FEED/) | Đọc file `*_daily_report.md` mới nhất liên quan chủ đề; không đọc toàn bộ lịch sử. |
+| **Kiểm tra độ mới tri thức, Xung đột Knowledge, Registry** | [`00_HARNESS_CORE/knowledge_freshness.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/knowledge_freshness.md) | Chạy `./.venv/bin/python scripts/check_knowledge_freshness.py` hoặc đọc report đã sinh gần nhất. |
+| **Đường dẫn tham chiếu lỗi, Link gãy trong repo** | [`00_HARNESS_CORE/knowledge_conflicts.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/00_HARNESS_CORE/knowledge_conflicts.md) | Chạy `./.venv/bin/python scripts/detect_knowledge_conflicts.py` để tái tạo báo cáo mới nhất. |
+| **Tiếp nhận yêu cầu mới, Intake, Phân loại task** | [`13_INTAKE/README.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/13_INTAKE/README.md) | Đọc README để biết pipeline intake trước khi xử lý yêu cầu mới. |
 
 ---
 

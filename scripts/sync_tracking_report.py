@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+"""Đọc file Web Performance Tracking.xlsx mới nhất trong ~/Downloads, trích xuất số MTD và đồng bộ SSOT Excel/JSON/Markdown.
+
+Usage: ./.venv/bin/python scripts/sync_tracking_report.py"""
+
 import os
 import sys
 import glob
