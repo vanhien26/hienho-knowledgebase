@@ -75,7 +75,7 @@ Thay vì chờ việc, Web Platform chủ động mang cơ hội đi "bán" cho 
 
 ## 6. Framework Phản biện (4D Framework)
 
-Khi Pitching với BU, sử dụng 4 bước để làm nổi bật "nỗi đau":
+Khi Pitching với BU, sử dụng 4 bước để làm nổi bật "điểm nghẽn":
 1. **Demand (Cầu):** Volume tìm kiếm khổng lồ của use case.
 2. **Deficit (Thiếu hụt):** MoMo đang vắng bóng (SoV = 0.6%).
 3. **Dominance (Đối thủ):** Đối thủ đang ăn trọn traffic này (SoV = 70-80%).

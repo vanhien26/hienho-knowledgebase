@@ -68,7 +68,7 @@ Build sub-pages use-case và **PLG Interactive Tool** để intercept adjacent i
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Sub-pages use-case</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">/vi-tra-sau/nap-game, /tra-gop, /mua-sam, ...</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chưa build</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">P1 deliverable H1 2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đợt 1, bàn giao H1 2026</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Merchant pages</td>
@@ -1115,7 +1115,7 @@ SEO channel cần đóng góp ~87% total search traffic. Model này dùng W2A CR
   * **Business Metric:** Tổng số lượng giao dịch hoàn tất (Conversion Trans) đạt **2.000 lượt chuyển đổi (2.000 CR)** qua phễu Web-to-App & QR Code tại cửa hàng.
 
 ### 9.2 Cấu Trúc Phân Khúc Khách Hàng Whitelist (1.52M Users Active Sizing)
-Hệ thống cấp hạn mức ghi nhận tổng tệp **1.522.821 Users Active** được phê duyệt sẵn Hạn Mức Đặc Biệt (Extra Limit 50M), phân rã chi tiết thành 4 nhóm mục tiêu:
+Hệ thống cấp hạn mức ghi nhận tổng tệp **1.522.821 Users Active** được phê duyệt sẵn Hạn Mức Đặc Biệt (Extra Limit 50M), bóc tách chi tiết thành 4 nhóm mục tiêu:
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>
@@ -1155,7 +1155,7 @@ Hệ thống cấp hạn mức ghi nhận tổng tệp **1.522.821 Users Active*
 </table>
 
 ### 9.3 Khung Thông Điệp Truyền Thông (Communication Strategy)
-* **Key Message chính (Primary):** *"Ví Trả Sau MoMo — Hạn mức 50M sẵn trong ví, đủ rinh Galaxy A, trả trước 0đ"*.
+* **Key Message chính (Primary):** *"Ví Trả Sau MoMo - Hạn mức 50M sẵn trong ví, đủ rinh Galaxy A, trả trước 0đ"*.
 * **Secondary Message:** *"Lên đời Samsung với VTS, trả trước 0đ, lãi từ 1%/tháng, chỉ cần CCCD"* (Umbrella Tagline: *"Để tâm để bạn an tâm"*).
 * **Tone & Manner:** Tự tin, hiện đại, gần gũi, tạo cảm giác "chắc ăn". Tôn vinh tinh thần đổi mới sáng tạo dòng điện thoại gập (Foldable Innovation), tránh văn phong tài chính khô cứng.
 * **4 Trụ cột giá trị (Value Propositions):**

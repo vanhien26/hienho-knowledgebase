@@ -480,7 +480,7 @@ Trang đã tồn tại có thể cập nhật theo 2 cách:
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>4</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Keyword Apply</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bấm nút <strong>"Apply / Write Outline"</strong> trực tiếp cạnh Keyword đã phân cụm</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhấp vào nút <strong>"Apply / Write Outline"</strong> trực tiếp cạnh Keyword đã phân cụm</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Keyword vào Master Registry, Unique ID Check tự động</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">PM / Content Team</td>
     </tr>
@@ -722,7 +722,7 @@ Dưới đây là mẫu chuẩn để mô tả trọn vẹn một Business Model
 [Mô tả cách sản phẩm tạo ra giá trị kinh tế. Ví dụ: Hoa hồng trên mỗi giao dịch thành công (Commission), phí dịch vụ hàng tháng (Subscription), hay doanh thu từ quảng cáo/đối tác]
 
 ### 3. Giá trị cốt lõi (Value Propositions)
-[Danh sách các điểm giá trị (USPs) giải quyết nỗi đau của khách hàng mà đối thủ không có hoặc làm chưa tốt]
+[Danh sách các điểm giá trị (USPs) giải quyết điểm nghẽn của khách hàng mà đối thủ không có hoặc làm chưa tốt]
 
 ### 4. Phân khúc khách hàng (Customer Segments)
 [Persona chính: Họ là ai? Đang gặp vấn đề (Pain points) gì? Mong muốn (Gains) gì?]
@@ -773,12 +773,12 @@ Dự án GenAI Content được chia làm 3 giai đoạn chính để đảm b�
 
 ### Giai đoạn 2: Share of Voice (SoV) & Visibility Tracking (June 2026+)
 **Trọng tâm:** Đo lường hiệu quả, tự động hóa chất lượng & tracking.
-- **P0:** Nâng cấp hệ thống trong tháng 6/2026 để hỗ trợ sản xuất Content bên trong một Microsite có Long Content Section (Phạt Nguội) và Merchant.
-- **P0:** Triển khai **AI Query Generator & Citation Tracking** (sinh và lưu trữ 20 query prompts, truy vấn tự động đo lường định kỳ).
-- **P0:** Tích hợp quy chuẩn tự động sinh và nén dữ liệu `llms.txt` từ nội dung thực tế của bài viết.
-- **P0:** Phát triển **YMYL & Legal Compliance Agent** để chốt chặn tự động an toàn pháp lý cho sản phẩm tài chính.
-- **P0 (Đề xuất HubSpot):** Tích hợp **MoMom Brand Voice Presets** (Tone Expert, Friendly, Informative) vào Lớp Business Context.
-- **P0 (Đề xuất HubSpot):** Nâng cấp **Smart Internal Linker Agent** để tự động chèn liên kết ngữ cảnh khi viết bài.
+- **Đợt 1:** Nâng cấp hệ thống trong tháng 6/2026 để hỗ trợ sản xuất Content bên trong một Microsite có Long Content Section (Phạt Nguội) và Merchant.
+- **Đợt 1:** Triển khai **AI Query Generator & Citation Tracking** (sinh và lưu trữ 20 query prompts, truy vấn tự động đo lường định kỳ).
+- **Đợt 1:** Tích hợp quy chuẩn tự động sinh và nén dữ liệu `llms.txt` từ nội dung thực tế của bài viết.
+- **Đợt 1:** Phát triển **YMYL & Legal Compliance Agent** để chốt chặn tự động an toàn pháp lý cho sản phẩm tài chính.
+- **Đợt 1 (Đề xuất HubSpot):** Tích hợp **MoMom Brand Voice Presets** (Tone Expert, Friendly, Informative) vào Lớp Business Context.
+- **Đợt 1 (Đề xuất HubSpot):** Nâng cấp **Smart Internal Linker Agent** để tự động chèn liên kết ngữ cảnh khi viết bài.
 - Tích hợp Dashboard đo lường **SoV (Share of Voice)** theo từng Use Case.
 - Theo dõi **Visibility Index** của các bài viết GenAI trên Google Search & AI Search.
 - **GSC + BigQuery Feedback Loop & Content Decay Auto-Refresh:** Hệ thống cảnh báo nội dung giảm hiệu suất và gợi ý bản nháp tối ưu bài viết.
@@ -786,10 +786,10 @@ Dự án GenAI Content được chia làm 3 giai đoạn chính để đảm b�
 
 ### Giai đoạn 3: Multi-format Scale & Engagement Optimization (Q4/2026)
 **Trọng tâm:** Tối ưu hóa chuyển đổi Web-to-App & mở rộng đa định dạng.
-- **P0:** Mở rộng năng lực GenAI để sản xuất content trên Web với **đa dạng page type và đa dạng format** (không chỉ giới hạn ở Blog Articles mà bao gồm cả Landing Page, FAQ, Merchant Page, v.v.).
-- **P1:** Triển khai **Programmatic Bulk Generator** (pSEO) để hỗ trợ scale hàng loạt trang vệ tinh qua CSV.
-- **P1 (Đề xuất HubSpot):** Tích hợp **Content Remix Engine** để tự động chuyển đổi bài viết chất lượng cao sang các định dạng Ads, Push App, và FAQ.
-- **P1 (Đề xuất HubSpot):** Phát triển giao diện **Visual Topic Cluster Map** để hiển thị trực quan các mối quan hệ liên kết và tình trạng sức khỏe liên kết.
+- **Đợt 1:** Mở rộng năng lực GenAI để sản xuất content trên Web với **đa dạng page type và đa dạng format** (không chỉ giới hạn ở Blog Articles mà bao gồm cả Landing Page, FAQ, Merchant Page, v.v.).
+- **Đợt 2:** Triển khai **Programmatic Bulk Generator** (pSEO) để hỗ trợ scale hàng loạt trang vệ tinh qua CSV.
+- **Đợt 2 (Đề xuất HubSpot):** Tích hợp **Content Remix Engine** để tự động chuyển đổi bài viết chất lượng cao sang các định dạng Ads, Push App, và FAQ.
+- **Đợt 2 (Đề xuất HubSpot):** Phát triển giao diện **Visual Topic Cluster Map** để hiển thị trực quan các mối quan hệ liên kết và tình trạng sức khỏe liên kết.
 
 ---
 

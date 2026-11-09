@@ -253,7 +253,7 @@ entries:
     type: tracking_ssot
     authority: primary
     status: active
-    owner: SE Team / Thuận
+    owner: SE Team
     system_of_record: "Umami Analytics Cloud Instance & MoSpark Tracking Specification"
     generator_script: "manual_authoring"
     used_for: [event_tracking, utility_tracking]
@@ -297,6 +297,30 @@ entries:
     used_for: [vehicle_strategy, traffic_tools, garage_directory, penalty_lookup]
     cross_check_with: [team_scope_of_work]
 
+  - id: vehicle_partner_garages
+    path: 05_HUBS/vehicle/datasets/partner-garages.json
+    domain: hubs_vehicle
+    type: garage_directory_dataset
+    authority: primary
+    status: active
+    owner: Vehicle Hub Team
+    system_of_record: "Danh bạ garage đối tác đã làm sạch (chuẩn hóa tên, khử trùng, có garage_id và search_volume)"
+    generator_script: "manual_authoring"
+    used_for: [garage_directory, vehicle_programmatic_pages]
+    supersedes: [vehicle_partner_garages_raw]
+    cross_check_with: [vehicle_hub_brd]
+
+  - id: vehicle_partner_garages_raw
+    path: 05_HUBS/inventory/vehicle-hub/partner-garages.json
+    domain: hubs_vehicle
+    type: garage_directory_dataset
+    authority: reference
+    status: legacy
+    owner: Vehicle Hub Team
+    system_of_record: "Bản thô danh bạ garage đối tác trước khi làm sạch. Chỉ dùng để đối soát nguồn, không dùng làm số liệu."
+    generator_script: "manual_authoring"
+    used_for: [source_reconciliation]
+
   - id: financial_hub_brd
     path: 05_HUBS/financial/financial-hub-brd.md
     domain: hubs_financial
@@ -318,7 +342,7 @@ entries:
     type: platform_architecture
     authority: primary
     status: active
-    owner: SE Team / Duy
+    owner: SE Team
     system_of_record: "MoSpark Platform Architecture & Knowledge Base"
     generator_script: "manual_authoring"
     used_for: [rag_knowledge_base, smart_search, platform_architecture]

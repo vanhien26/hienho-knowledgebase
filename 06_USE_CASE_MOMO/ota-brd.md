@@ -225,4 +225,4 @@ Trang DPH sẽ hiển thị các block module hóa theo thứ tự từ trên xu
 
 ## Change Log
 
-- **Tháng 7/2026 (v1.1):** Đồng bộ định hướng từ PRD MoMo Destination Hub: Xác lập vai trò dự án do Media Team chủ trì triển khai chính, dưới sự phối hợp, theo dõi và kiểm soát hạ tầng kỹ thuật của Web Platform; định hình bộ chỉ số đo lường chi tiết (Traffic > 250k views, W2A > 12%, Cross-sell > 15% eSIM/Khách sạn) và tích hợp thêm widget tỷ giá ngoại tệ, QR thanh toán quốc tế (PromptPay, NETS).
+- **Tháng 7/2026 (v1.1):** Đồng bộ định hướng từ PRD MoMo Destination Hub: Xác lập vai trò dự án do Media Team điều phối triển khai chính, dưới sự phối hợp, theo dõi và kiểm soát hạ tầng kỹ thuật của Web Platform; định hình bộ chỉ số đo lường chi tiết (Traffic > 250k views, W2A > 12%, Cross-sell > 15% eSIM/Khách sạn) và tích hợp thêm widget tỷ giá ngoại tệ, QR thanh toán quốc tế (PromptPay, NETS).

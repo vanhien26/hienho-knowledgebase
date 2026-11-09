@@ -216,7 +216,7 @@ Mọi bài báo cáo Weekly cho Executive Leadership và Monthly cho Ban Giám �
 | | **3. PV / User (Độ Sâu Tương Tác)** | `= Tổng Page Views / Total Users` | Mức độ tương tác trung bình (healthy: 1.5 - 2.5 trang/người). |
 | | **4. Net Add (Lưu Lượng Mới)** | `Current Month PV - Previous Month PV` | Chỉ báo nỗ lực tạo ra giá trị tăng trưởng mới. |
 | | **5. Growth Rate (%)** | `Net Add / Previous Month PV` | Tốc độ tăng trưởng MoM/WoW. |
-| | **6. Phân Bổ Kênh (Source Breakdown)** | Tỷ trọng 6 nhóm kênh: Organic, Paid, Direct, Cross, Referral Domain, Others. | Phân định kênh sức mạnh chủ lực và kênh suy giảm. |
+| | **6. Phân Bổ Kênh (Source Breakdown)** | Tỷ trọng các nhóm kênh: Non-Paid (Organic Search, Direct, Referral, AI Traffic) và Paid Ads. | Phân định kênh sức mạnh chủ lực và kênh suy giảm. |
 | | **7. Cơ Cấu Theo Dự Án / Use Case** | Phân bổ theo Cinema Hub, Financial Hub, Vehicle Hub, Home Page, TikTok... | Xác định use case tạo lực đẩy và use case cần tối ưu. |
 | **Giữa Phễu (Intent & CTA)** | **8. Click-to-App** | Tổng lượt nhấp vào các nút CTA mở App MoMo. | Đo lường ý định chuyển đổi sang ứng dụng. |
 | | **9. Tỷ Lệ %CTR** | `= Click-to-App / Tổng Page Views` | Hiệu quả của thông điệp và vị trí nút bấm CTA. |
@@ -253,7 +253,7 @@ Trước khi gửi báo cáo Weekly cho Executive Leadership hoặc Monthly cho 
 2. Đã thay thế toàn bộ tên riêng cá nhân/PIC bằng tên đội ngũ chuyên môn chưa?
 3. Đã có đầy đủ 3 khối chuẩn: `Key Highlights & Business Impact`, `Collaboration`, `Priority` chưa?
 4. Đã áp dụng Bộ Chỉ Số Phễu 3 Tầng (`Total PV`, `Total Users`, `PV/User`, `Click-to-App`, `Login`, `Install`, `New Registered Users`) chưa?
-5. Đã bóc tách rõ kênh `Referral Domain` (Báo chí PR & Đối tác) khỏi nhóm `Others` chưa?
+5. Đã tuân thủ chuẩn 4 kênh Non-Paid (Organic Search, Direct, Referral, AI Traffic) và gộp toàn bộ nguồn vãng lai vào Referral mà không tách dòng `Others` chưa?
 6. Đã đối chiếu số liệu theo 2 tầng: Kênh Web và Tác động App chưa?
 7. Các bảng số liệu lớn đã có 2 khối `Observation` và `Problem Statement` ở chân trang chưa?
 8. Kế hoạch hành động đã được phân loại theo đúng nhóm phân vùng (Performance / Transformation / Incubator) chưa?

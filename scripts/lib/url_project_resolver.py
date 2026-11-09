@@ -62,7 +62,7 @@ _AUTO_CANONICAL = {}
 
 def _canonical_project(name: str, page_type: str = "") -> str:
     n = name.strip()
-    # Dự án Cinema: Phân rã theo page_type thành Cinema_Cineplex Page, Cinema_Page, ...
+    # Dự án Cinema: Bóc tách theo page_type thành Cinema_Cineplex Page, Cinema_Page, ...
     if n.lower() == "cinema":
         pt = (page_type or "").strip()
         if pt in ("Cineplex Page", "Page", "Home Page", "Blog", "News", "Landing Page"):

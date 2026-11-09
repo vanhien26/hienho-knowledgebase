@@ -11,6 +11,8 @@ Sử dụng:
     ./.venv/bin/python scripts/guard_vocabulary.py --staged          # Quét các file đang stage git
     ./.venv/bin/python scripts/guard_vocabulary.py --changed         # Quét các file mới/sửa đổi
     ./.venv/bin/python scripts/guard_vocabulary.py --check [files]   # Quét file/thư mục cụ thể
+    ./.venv/bin/python scripts/guard_vocabulary.py --all             # Quét toàn bộ .md được git theo dõi
+    ./.venv/bin/python scripts/guard_vocabulary.py --all --rule EN_EM_DASH  # Chỉ một rule
     ./.venv/bin/python scripts/guard_vocabulary.py --install-hook    # Cài đặt git pre-commit hook
     ./.venv/bin/python scripts/guard_vocabulary.py --fix [files]     # Tự động thay thế các từ cấm
 """
@@ -38,6 +40,8 @@ IGNORE_DIRS = {
     "graphify-out",
     "archive",
     "scratch",
+    "_archive",
+    "frontend-slides",  # skill bên thứ ba (vendored, có LICENSE riêng)
 }
 
 # Định nghĩa các quy tắc kiểm tra (Rules)
@@ -53,7 +57,8 @@ RULES = [
     },
     {
         "id": "PRIORITY_TAG",
-        "pattern": r"(?i)\b(P0|P1|P2|P3|Priority\s*[0-3])\b",
+        # "Priority 0.9" (sitemap priority) không phải nhãn ưu tiên -> loại bằng (?![.,]\d)
+        "pattern": r"(?i)\b(P0|P1|P2|P3|Priority\s*[0-3](?![.,]\d))\b",
         "flags": 0,
         "desc": "Nhãn mức độ ưu tiên P0/P1/P2/P3 bị cấm",
         "replacement": "Trình bày theo thứ tự triển khai logic, gạch đầu dòng tự nhiên hoặc nhóm chuyên môn",
@@ -277,11 +282,32 @@ RULES = [
     },
 ]
 
+
+# Các file dùng P1-P4 làm mã trụ cột MoSpark (P1 Tài chính & Tín dụng, P2 Bảo hiểm, P3 Dịch vụ Công & Tiện ích,
+# P4 Đời sống & Merchant). Đây là định danh Pillar, không phải nhãn ưu tiên.
+PILLAR_CODE_FILES = {
+    "01_STRATEGIC_PLAN/product-lead.md",
+    "03_SKILLS/mospark-glossary.md",
+    "04_MOSPARK_PLATFORM/mospark_master.md",
+    "04_MOSPARK_PLATFORM/mospark_microsite_management.md",
+}
+
 class VocabularyGuard:
     def __init__(self, workspace_root: Optional[Path] = None):
         if workspace_root is None:
             workspace_root = Path(__file__).resolve().parent.parent
         self.workspace_root = workspace_root
+
+    rule_filter: Optional[set] = None
+
+    def get_all_tracked_files(self) -> List[Path]:
+        """Toàn bộ file markdown đang được git theo dõi (quét cả vi phạm cũ, không chỉ file đang sửa)."""
+        try:
+            out = subprocess.run(["git", "ls-files", "-z", "*.md"], cwd=self.workspace_root,
+                                 capture_output=True, text=True, check=True).stdout
+        except Exception:
+            return []
+        return [self.workspace_root / f for f in out.split("\0") if f and not self.is_ignored(self.workspace_root / f)]
 
     def is_ignored(self, file_path: Path) -> bool:
         """Kiểm tra file hoặc đường dẫn có nằm trong danh sách bỏ qua không."""
@@ -304,15 +330,34 @@ class VocabularyGuard:
         except Exception as e:
             return violations
 
+        rel_path = file_path.relative_to(self.workspace_root).as_posix() if file_path.is_relative_to(self.workspace_root) else str(file_path)
+        active_rules = [r for r in RULES if not self.rule_filter or r["id"] in self.rule_filter]
+        in_fence = False
         for line_num, line in enumerate(lines, start=1):
-            for rule in RULES:
+            if line.lstrip().startswith(("```", "~~~")):
+                in_fence = not in_fence
+            for rule in active_rules:
+                # P0-P3 trong code fence (Mermaid node/subgraph ID, sơ đồ ASCII) là định danh, không phải nhãn ưu tiên
+                if rule["id"] == "PRIORITY_TAG" and in_fence:
+                    continue
                 pattern = rule["pattern"]
                 matches = list(re.finditer(pattern, line, flags=rule["flags"]))
                 for match in matches:
                     matched_text = match.group(0)
-                    # Ngoại lệ hợp lý: nếu là En-dash nằm trong link url hoặc mã code
+                    # Ngoại lệ hợp lý: ký tự được trích dẫn trong backtick (`–`) để định nghĩa luật,
+                    # hoặc nằm bên trong một URL. Không bỏ qua cả dòng chỉ vì dòng có chứa link.
+                    if rule["id"] == "PRIORITY_TAG":
+                        # Mã giai đoạn / điều kiện / Pillar (P1-P4 trụ cột MoSpark) là định danh, không phải nhãn ưu tiên
+                        if re.search(r"(?i)(giai\s+đoạn|phase|pre-condition|pillar|trụ\s+cột)\s*$", line[: match.start()]):
+                            continue
+                        # File MoSpark dùng P1-P4 làm mã 4 trụ cột (Pillar). P0 vẫn bị chặn vì không phải mã Pillar.
+                        if rel_path in PILLAR_CODE_FILES and matched_text.upper() in ("P1", "P2", "P3"):
+                            continue
                     if rule["id"] == "EN_EM_DASH":
-                        if "http" in line or "file://" in line:
+                        st, en = match.start(), match.end()
+                        if st > 0 and en < len(line) and line[st - 1] == "`" and line[en] == "`":
+                            continue
+                        if any(u.start() <= st < u.end() for u in re.finditer(r"(?:https?|file)://\S+", line)):
                             continue
 
                     violations.append({
@@ -456,16 +501,22 @@ def main():
     parser.add_argument("--install-hook", action="store_true", help="Cài đặt git pre-commit hook")
     parser.add_argument("--fix", action="store_true", help="Tự động sửa các lỗi từ ngữ an toàn")
     parser.add_argument("--check", nargs="*", help="Kiểm tra các file hoặc thư mục chỉ định")
+    parser.add_argument("--all", action="store_true", help="Kiểm tra toàn bộ file markdown được git theo dõi (bắt cả vi phạm cũ)")
+    parser.add_argument("--rule", action="append", help="Chỉ áp dụng rule ID chỉ định (lặp lại được), ví dụ --rule EN_EM_DASH")
 
     args = parser.parse_args()
     guard = VocabularyGuard()
+    if args.rule:
+        guard.rule_filter = set(args.rule)
 
     if args.install_hook:
         guard.install_git_hook()
         sys.exit(0)
 
     files_to_check = []
-    if args.staged:
+    if args.all:
+        files_to_check = guard.get_all_tracked_files()
+    elif args.staged:
         files_to_check = guard.get_staged_files()
         if not files_to_check:
             print("ℹ️ Không có file markdown nào đang staged trong git.")

@@ -31,7 +31,7 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 - **Go-Live Chính Thức Trang Tải Ứng Dụng (`/tai-app`):**
   - Kỹ sư Thuận đã hoàn thành nghiệm thu và chính thức đưa trang `/tai-app` lên Production.
   - Vận hành trọn vẹn cơ chế Smart Device Routing: tự động nhận diện thiết bị (iOS mở trực tiếp Apple App Store, Android mở Google Play Store, Desktop hiển thị QR Code động để quét tải app ngay lập tức) kèm Smart Fallback và gắn attribution OneLink AppsFlyer chuẩn xác.
-  - Đây là trạm chuyển đổi Web-to-App tối quan trọng hỗ trợ trực tiếp cho mục tiêu **30.000 install trong Quý 4/2026** từ kênh Web theo chỉ đạo của CEO anh Tường.
+  - Đây là cổng chuyển đổi tập trung Web-to-App tối quan trọng hỗ trợ trực tiếp cho mục tiêu **30.000 install trong Quý 4/2026** từ kênh Web theo chỉ đạo của CEO anh Tường.
 - **Xử Lý Sự Cố An Toàn Thông Tin (Security Vulnerability):**
   - Đội ngũ Kỹ sư Nền tảng (Platform Security) đang khẩn trương điều tra và xử lý triệt để lỗ hổng rò rỉ dữ liệu tên Merchant trên hệ thống trang Đối tác/Merchant Page.
   - Hướng xử lý: Thu hồi API public bộc lộ thông tin nhạy cảm, thiết lập lại phân quyền và che chắn dữ liệu (masking/BFF proxy) để ngăn chặn hành vi scraping hàng loạt từ bên ngoài.
@@ -97,7 +97,7 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 
 ### Bản ghi ngày 28/10/2026: Định Hướng Trọng Tâm Hành Động Tuần 44 - Cinema (Bò Sữa Bay TVC & Trang Diễn Viên), Financial (Thuế, CCQ Phase 1, CIC Duolingo), Vehicle (Nộp Phạt CSGT) & Platform (Security API Public, PLG UI/UX Viết Bài)
 > **Thành phần:** Web Product Lead x Cell Team Leads x Web Engineering Team  
-> **Mục tiêu:** Chốt danh mục hành động ưu tiên cao nhất (P0/P1) cho Tuần 44 trên các mặt trận Cinema, Financial, Vehicle và Nền tảng Platform (Security, PLG).
+> **Mục tiêu:** Chốt danh mục hành động cần làm trước cho Tuần 44 trên các mặt trận Cinema, Financial, Vehicle và Nền tảng Platform (Security, PLG).
 
 #### 1. Cinema Hub
 - **Game Bò Sữa Bay (`/cinema/bo-sua-bay-25058`):** Yêu cầu kỹ thuật cao nhất: game phải tuyệt đối ổn định, zero-crash, tối ưu bundle và chịu tải cao vì có kế hoạch phát sóng TVC tại các cụm rạp đối tác kèm mã QR Code cho khán giả quét chơi trực tiếp trên mobile.
@@ -146,7 +146,7 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
     1. Sinh bản tin tóm tắt điều hành định kỳ (Executive Summaries) cho WBR/MBR.
     2. Chẩn đoán nguyên nhân gốc rễ (Root Cause Analysis - RCA) khi phát hiện biến động traffic hoặc sụt giảm kênh Non-Paid / Paid.
     3. Tự động cảnh báo dị biệt (Anomaly Detection) về đứt gãy luồng chuyển đổi Onelink Web-to-App.
-    4. Tự động đề xuất danh mục hành động P0/P1/P2 cho các Squad chuyên môn.
+    4. Tự động đề xuất danh mục hành động theo thứ tự triển khai cho các Squad chuyên môn.
 - **Dự Án 3: MoSpark Content Studio (Sinh Nội Dung Theo Cấu Trúc):**
   - Cung cấp tiêu đề H1/H2/H3 và ngữ cảnh thực tế của sản phẩm cho Qwen 3.5 để tạo dàn ý và bài viết E-E-A-T chuẩn SEO/GEO.
 
@@ -162,7 +162,7 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 > **Thành phần:** Web Product Lead x Cinema Team x Web Dev Team  
 > **Mục tiêu:** Đồng bộ yêu cầu chiến dịch phát hành Game Bò Sữa Bay trên Cinema Hub, kế hoạch quảng bá đa kênh (Seeding, TVC rạp, Video diễn viên trải nghiệm) và quy chuẩn bộ Game Rules mới để kịp tiến độ bàn giao testing trước thứ Sáu (31/10/2026).
 
-#### 1. Kế Hoạch Phát Hành & Chiến Dịch Truyền Thông (Marketing & Media)
+#### 1. Kế Hoạch Go-live & Chiến Dịch Truyền Thông (Marketing & Media)
 - **Tiến Độ Bắt Buộc:** Phải hoàn thành và đẩy game lên môi trường Testing trước thứ Sáu (31/10/2026).
 - **Kênh Quảng Bá & Phân Phối:**
   - Triển khai seeding trên các cộng đồng mạng xã hội.
@@ -294,12 +294,12 @@ AI Agent (Antigravity) sẽ **luôn đọc file này** trước khi thực hiệ
 | Target Tháng 10 | 3.665.607 PV |
 | Lũy kế MTD 9 ngày | 903.977 PV (24,66% Target / 29,03% thời gian) |
 | Daily pace hiện tại | 100.442 PV/ngày |
-| Dự phóng 31 ngày | 3.113.699 PV = **84,94% Target** (thiếu ~552K PV) |
+| Dự báo 31 ngày | 3.113.699 PV = **84,94% Target** (thiếu ~552K PV) |
 | Pace yêu cầu 22 ngày còn lại | **125.529 PV/ngày (+25% so với pace hiện tại)** |
 | So với pace Tháng 9 (131.692/ngày) | Thấp hơn 23,7% |
 
 - **Nguyên nhân Gap là 2 kênh:** Paid co về 89,9% (39.903 -> 4.037 PV/ngày so với T9) và Referral -26%. Organic ngược lại **tăng +20,4%** (54.127 -> 65.181 PV/ngày), chiếm 64,89% traffic MTD.
-- **Gap tập trung ở Hub:** Financial dự phóng chỉ 33% Target (-301K), New User 25,5% (-223K), Student 1,6% (-98K), Vehicle 33,4% (-67K). Chỉ Cinema vượt (+232K).
+- **Gap tập trung ở Hub:** Financial dự báo chỉ 33% Target (-301K), New User 25,5% (-223K), Student 1,6% (-98K), Vehicle 33,4% (-67K). Chỉ Cinema vượt (+232K).
 - **3 Kịch bản:** Base (giữ pace) 84,9% / Target hit ~102% (cần Paid về 18-20K PV/ngày + Financial utilities bứt tốc) / Best ~110% (Paid full mức T9 + campaign 20/10, 11.11).
 
 #### 2. Crawl Budget (GSC Crawl Stats: 12/07 - 06/10/2026 - 1.810.416 requests, Host "No problems")
@@ -716,8 +716,8 @@ Dự án muốn đưa vào danh mục Strategic Project của Web Platform bắt
 * **Cảnh báo giao BU tự dựng Mini Web ("Nát hết"):**
   * **Cảnh báo nghiêm túc:** Nếu giao hoàn toàn khâu dựng Mini Web cho BU tự làm sẽ gây "nát hết" trải nghiệm và chất lượng.
   * **Lý do:** Dựng web (dù dùng Template) vẫn đòi hỏi kỹ năng chuyên môn (UI/UX, tiêu chuẩn hình ảnh, cấu hình tính năng, tốc độ tải trang, tiêu chuẩn Google Ad/SEO). BU không có năng lực kỹ thuật này.
-* **Phân định Chủ trì & Trách nhiệm (Ownership):**
-  * **BMC (Inbound) BẮT BUỘC giữ vai trò chủ trì và chịu trách nhiệm 100% về chất lượng chung**, quản lý phân quyền và phê duyệt nội dung xuất bản.
+* **Phân định Điều phối & Trách nhiệm (Ownership):**
+  * **BMC (Inbound) BẮT BUỘC giữ vai trò điều phối và chịu trách nhiệm 100% về chất lượng chung**, quản lý phân quyền và phê duyệt nội dung xuất bản.
   * **Web Platform không có nhân sự và chuyên môn về content**, chỉ đóng vai trò hỗ trợ kỹ thuật, xây dựng công cụ tự động hóa template theo yêu cầu từ BMC.
 
 #### 3. Tái Cấu Trúc Nhân Sự & Phân Định Scope Công Việc
@@ -759,8 +759,8 @@ Dự án muốn đưa vào danh mục Strategic Project của Web Platform bắt
 #### Khung Chỉ Số Align Chính Thức (Alignment Framework):
 
 1. **WEB METRICS (Nhóm Chỉ Số Kênh Web):**
-   * **MPV (Monthly Page Views):** Total Monthly Page Views — Tổng lượt xem trang hàng tháng trên Kênh Web (`momo.vn`). Đo lường quy mô lưu lượng và số cơ hội hiển thị tiện ích.
-   * **CTR (Click-Through Rate):** $\text{Total Click} / \text{Total Views}$ (hoặc $\text{Click-to-App} / \text{MPV}$) — Tỷ lệ nhấp chuyển đổi từ Web sang App trên tổng lượt xem trang. Đo lường hiệu quả dẫn dắt và chất lượng điểm chạm CTA.
+   * **MPV (Monthly Page Views):** Total Monthly Page Views - Tổng lượt xem trang hàng tháng trên Kênh Web (`momo.vn`). Đo lường quy mô lưu lượng và số cơ hội hiển thị tiện ích.
+   * **CTR (Click-Through Rate):** $\text{Total Click} / \text{Total Views}$ (hoặc $\text{Click-to-App} / \text{MPV}$) - Tỷ lệ nhấp chuyển đổi từ Web sang App trên tổng lượt xem trang. Đo lường hiệu quả dẫn dắt và chất lượng điểm chạm CTA.
 
 2. **BUSINESS METRICS (Nhóm Chỉ Số Tác Động Kinh Doanh):**
    * **MEU (Monthly Engaged Users from Web):** Số người dùng mở/đăng nhập App hàng tháng từ Web. *Lưu ý:* MEU có định nghĩa riêng chi tiết theo từng Use Case của BU.
@@ -775,7 +775,7 @@ Dự án muốn đưa vào danh mục Strategic Project của Web Platform bắt
   * **Best Case:** **6.000.000 MUV/tháng** (6M MUV) - Kịch bản tối đa khi các Strategic Hubs (Vehicle, Financial, Cinema) bùng nổ cùng các chiến dịch media của BUs.
   * **Base Case:** **5.000.000 MUV/tháng** (5M MUV) - Kịch bản kỳ vọng tiêu chuẩn khi hoàn thành đúng lộ trình triển khai các Master Pages & Finhub Utilities.
   * **Worst Case:** **4.000.000 MUV/tháng** (4M MUV) - Kịch bản cơ sở tối thiểu bảo vệ hiệu quả phễu Web-to-App trong bối cảnh AI Search làm giảm CTR tìm kiếm tự nhiên.
-* **Nguyên nhân phân rã 3 kịch bản:** 
+* **Nguyên nhân bóc tách 3 kịch bản:** 
   * Xu hướng lưu lượng truy cập tổng thể của các website thị trường biến động.
   * Tác động của công nghệ AI (Search Generative Experience / AI Overview) làm giảm tỷ lệ nhấp (CTR) vào các kết quả tìm kiếm hàng đầu (Top Search).
   * Đảm bảo tính linh hoạt khi align KPI với Ban Giám Đốc và các Business Units.
@@ -889,7 +889,7 @@ graph LR
 * **Cinema Hub:** Nhắm vào nhóm Movie Holics. Hai luồng Use Case cốt lõi sinh traffic và doanh thu: Bán vé phim (Movie Ticket) và Truyền phát trực tuyến (OTT Streaming).
 
 #### 5. Cơ Cấu Tổ Chức & Vận Hành Bộ Máy Kỹ Thuật
-* **Phân rã 2 nhánh vận hành:**
+* **Bóc tách 2 nhánh vận hành:**
   1. **Nhánh Platform (Vận hành Hệ thống & Hạ tầng Nền tảng):** Chuyên trách hạ tầng, tối ưu công nghệ MoSpark CMS, bảo mật và hỗ trợ các tính năng nền tảng.
   2. **Nhánh Business Projects (Vận hành Dự án Tăng trưởng):** Phân bổ nhân sự kỹ thuật chuyên trách (Dedicated Resources) phối hợp trực tiếp với từng Business Unit (BU) để phát triển và tối ưu cho từng Strategic Hub (Cinema, Vehicle, Financial...).
 * **Phân bổ Nguồn lực Kỹ thuật:**
@@ -1024,7 +1024,7 @@ graph LR
 4. Output & Capability: Sản phẩm thực tế (Web UI, Content) và cập nhật năng lực nền tảng (What's new trên MPK, năng suất, chất lượng).
 
 #### 3. Chuẩn hóa & Phân tầng Hệ thống Chỉ số Đo lường (Metrics)
-Thống nhất tính theo số tuyệt đối (Absolute Number), phân rã chi tiết thành 2 tầng Web và App:
+Thống nhất tính theo số tuyệt đối (Absolute Number), bóc tách chi tiết thành 2 tầng Web và App:
 * **Tầng Web (Mục tiêu trên Web):**
   * Total Traffic & Organic Traffic: Tổng và lượng truy cập tự nhiên.
   * CTR (Click-Through Rate): Tỷ lệ/lượt nhấp vào các nút hành động (CTA).
@@ -1115,7 +1115,7 @@ Thống nhất tính theo số tuyệt đối (Absolute Number), phân rã chi t
 #### 4. Thách thức Nguồn lực & Tinh thần Thực thi
 *   **Nguồn lực SEO/Media Team:** Chuyển giao phần việc vận hành SEO (SEO operation) cho bên khác; giữ lại "Limited SEO" cho các dự án trọng điểm cần đẩy media để tự trực tiếp thực thi.
 *   **Đề cao sự Hợp tác (Cross-team Collaboration):** Ban Giám Đốc chú trọng năng lực hợp tác giữa các bên hơn là tài năng cá nhân riêng lẻ. Cần highlight rõ sự phối hợp giữa các team.
-*   **Tâm lý giảm áp lực số má:** Tập trung làm tốt sản phẩm, giải quyết đúng nỗi đau của người dùng thay vì tự tạo áp lực thái quá về con số khi vừa mới bắt đầu có đủ nguồn lực.
+*   **Tâm lý giảm áp lực số má:** Tập trung làm tốt sản phẩm, giải quyết đúng điểm nghẽn của người dùng thay vì tự tạo áp lực thái quá về con số khi vừa mới bắt đầu có đủ nguồn lực.
 
 ---
 

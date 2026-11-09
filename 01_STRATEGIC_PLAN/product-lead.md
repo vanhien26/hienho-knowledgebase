@@ -79,25 +79,25 @@ momo.vn không tổ chức theo BU mà theo Product/Search Ecosystem. 4 Pillars 
   </thead>
   <tbody>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P1 - Tài chính & Tín dụng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trụ cột 1 - Tài chính & Tín dụng</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">CIC Score, Ví Trả Sau, Vay Nhanh</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hub-Spoke kết hợp các Interactive Tools (Tính lãi, Mô phỏng CIC)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Named Author Policy</strong> - Gate kiểm duyệt cứng bắt buộc trước khi launch</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P2 - Bảo hiểm Công nghệ</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trụ cột 2 - Bảo hiểm Công nghệ</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảo hiểm xe máy, BHYT, BHXH, Bảo hiểm ô tô</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Neutral Aggregator - Cổng so sánh trung lập</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Không dùng geo-based URL</strong> cho bảo hiểm</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P3 - Dịch vụ Công & Tiện ích</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trụ cột 3 - Dịch vụ Công & Tiện ích</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phạt Nguội, Thanh toán Hóa đơn</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">API real-time kết hợp programmatic SEO (pSEO) cho 63 tỉnh</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GEO Optimization ready</strong> trước khi rollout</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>P4 - Đời sống & Merchant</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trụ cột 4 - Đời sống & Merchant</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cinema, OTA, eSIM, Merchant</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Intent-first, trang chi tiết Merchant (Merchant Detail Page)</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Noindex mandatory</strong> cho các URL hết hạn</td>

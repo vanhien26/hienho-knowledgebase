@@ -1,7 +1,7 @@
 # BRD: Financial Master Hub (momo.vn/tai-chinh)
 
 > - **Tên Dự Án:** Financial Master Hub (Cổng Khám Phá & Ra Quyết Định Dịch Vụ Tài Chính MoMo)
-> - **Phân Khối Phụ Trách:** Growth Platform Division x Financial Services Division (CreditTech)
+> - **Khối Phụ Trách:** Growth Platform Division x Financial Services Division (CreditTech)
 > - **Đội Ngũ Triển Khai:** Web Development Team, Backend Team, SEO & Content Team, Product Growth Team
 > - **Phiên Bản:** v3.1 - Tháng 8/2026
 > - **Trạng Thái:** Aligned & Production Ready (`momo.vn/tai-chinh`)
@@ -16,7 +16,7 @@
 
 1. **Người dùng không nhận diện được hệ sinh thái tài chính toàn diện của MoMo để giải quyết JTBD (Jobs-To-Be-Done):** Trước đây, các sản phẩm tài chính trên Web tồn tại dưới dạng 11 trang đích độc lập nằm rời rạc (`/tiet-kiem-online`, `/vay-nhanh`, `/vi-tra-sau`, `/the-tin-dung`...). Khi người dùng có nhu cầu tài chính tổng thể (như tính toán thu nhập ròng, tìm kênh tiết kiệm sinh lời, kiểm tra lịch sử tín dụng CIC để vay vốn, hay quản lý thuế), họ chỉ tiếp cận một trang đơn lẻ từ Google rồi rời đi, hoàn toàn không biết MoMo có đầy đủ giải pháp từ Tín Dụng, Tiết Kiệm, Đầu Tư đến Ngân Hàng.
 2. **Khoảng cách lớn giữa Tra cứu thông tin và Kích hoạt giao dịch đầu tiên (Time-to-First-Value):** Người dùng bị đẩy quá nhanh sang bước tải app hoặc yêu cầu định danh (eKYC) phức tạp trong khi chưa được trải nghiệm giá trị cụ thể của sản phẩm trên Web, dẫn đến tỷ lệ bỏ cuộc (drop-off) cao sau khi cài đặt.
-3. **Chưa khai thác tối đa dung lượng tìm kiếm toàn ngành 101.89 triệu lượt/tháng:** Nhu cầu tìm kiếm tài chính tại Việt Nam rất lớn nhưng phân tán. Thiếu một Cổng Trung Tâm (Master Hub) có năng lực kết nối chuyên đề để thâu tóm các từ khóa có lượng truy cập cao và chuyển đổi thành người dùng định danh.
+3. **Chưa khai thác tối đa dung lượng tìm kiếm toàn ngành 101.89 triệu lượt/tháng:** Nhu cầu tìm kiếm tài chính tại Việt Nam rất lớn nhưng phân tán. Thiếu một Cổng Trung Tâm (Master Hub) có năng lực kết nối chuyên đề để bao phủ các từ khóa có lượng truy cập cao và chuyển đổi thành người dùng định danh.
 
 ---
 
@@ -31,12 +31,12 @@ Nếu MoMo xây dựng **Financial Master Hub (`momo.vn/tai-chinh`)** làm cổn
 
 ## 3. MỤC TIÊU KINH DOANH & BÁO CÁO HIỆU SUẤT MTD (BUSINESS OBJECTIVES & PERFORMANCE)
 
-1. **Xây dựng Cổng Dịch Vụ Tài Chính Toàn Diện (Master Financial Gateway):** Thiết lập `momo.vn/tai-chinh` thành trung tâm điều hướng và thâu tóm nhu cầu tìm kiếm cho toàn bộ 5 khối dịch vụ tài chính (101.89M lượt tìm kiếm/tháng).
+1. **Xây dựng Cổng Dịch Vụ Tài Chính Toàn Diện (Master Financial Gateway):** Thiết lập `momo.vn/tai-chinh` thành trung tâm điều hướng và bao phủ nhu cầu tìm kiếm cho toàn bộ 5 khối dịch vụ tài chính (101.89M lượt tìm kiếm/tháng).
 2. **Báo Cáo Hiệu Suất Vận Hành Chốt Sổ Tháng 9/2026 (Full Month 30d):**
    * **Total Full Month Traffic:** Đạt **246.305 Pageviews** (chiếm 6.23% tổng lưu lượng Kênh Web).
    * **Daily Pace:** Đạt **8.210 PV/ngày**.
    * **Tỷ lệ hoàn thành Target:** Đạt **98,52% Target Tháng 9** (250.000 PVs) - **TIỆM CẬN HOÀN THÀNH 98,5% TARGET THÁNG 9**.
-   * **Phân rã Top Verticals Full Month T9:** Vay Nhanh **108.614 PVs** (44.1% Hub), Tra cứu CIC **80.354 PVs** (32.6% Hub), Ví Trả Sau **42.245 PVs** (17.2% Hub), Bổ trợ **15.092 PVs** (6.1% Hub).
+   * **Bóc tách Top Verticals Full Month T9:** Vay Nhanh **108.614 PVs** (44.1% Hub), Tra cứu CIC **80.354 PVs** (32.6% Hub), Ví Trả Sau **42.245 PVs** (17.2% Hub), Bổ trợ **15.092 PVs** (6.1% Hub).
 3. **Cột Mốc Tiến Độ Sản Phẩm & Content Mới (Cập nhật 13/10/2026):**
    * **Đã Go-Live Chính Thức:**
      - **Bảng Lãi Suất 40 Ngân Hàng & Tool Tính Tiền Lãi (`/tai-chinh/lai-suat`):** Cung cấp bảng tra cứu lãi suất 40 bank toàn cảnh thị trường và công cụ tính lãi gửi tiết kiệm theo số tiền nhập vào, tự động gợi ý ngân hàng có lãi suất tối ưu nhất.
@@ -202,7 +202,7 @@ Toàn bộ các công cụ tính toán (Tools) và trang đích trên Kênh Web 
   - Đóng vai trò trang tổng quan thị trường, bảng phân loại cổ phiếu VN30 theo khẩu vị đầu tư (Tích sản an toàn, Cổ tức tiền mặt cao, Tăng trưởng công nghệ), và cẩm nang giáo dục F0.
 - **Dynamic Ticker Profile (Programmatic SEO 30 Mã VN30):** `momo.vn/tai-chinh/chung-khoan/[ticker]`
   - URL chuẩn hóa viết thường (ví dụ: `/tai-chinh/chung-khoan/fpt`, `/tai-chinh/chung-khoan/vnm`, `/tai-chinh/chung-khoan/hpg`, `/tai-chinh/chung-khoan/vcb`, `/tai-chinh/chung-khoan/mwg`...).
-  - Triển khai toàn diện 30 mã thuộc rổ chỉ số VN30 nhằm thâu tóm toàn bộ lượng tìm kiếm thương hiệu và mã chứng khoán (quy mô hơn 4.1 triệu lượt tìm kiếm/tháng).
+  - Triển khai toàn diện 30 mã thuộc rổ chỉ số VN30 nhằm bao phủ toàn bộ lượng tìm kiếm thương hiệu và mã chứng khoán (quy mô hơn 4.1 triệu lượt tìm kiếm/tháng).
 
 #### 5.4.3 Wireframe Nội Dung 7 Tầng Chuẩn Hóa Cho Dynamic Ticker Profile
 
@@ -493,7 +493,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <th style="border:1.5px solid #64748b; padding:6px; text-align:center; font-weight:700;">Xếp Loại Độ Khó</th>
       <th style="border:1.5px solid #64748b; padding:6px; text-align:center; font-weight:700;">Điểm QW Index</th>
       <th style="border:1.5px solid #64748b; padding:6px; text-align:center; font-weight:700;">Phân Nhóm Chiến Lược</th>
-      <th style="border:1.5px solid #64748b; padding:6px; text-align:center; font-weight:700;">Mức Độ Ưu Tiên</th>
+      <th style="border:1.5px solid #64748b; padding:6px; text-align:center; font-weight:700;">Đợt Triển Khai</th>
     </tr>
   </thead>
   <tbody>
@@ -506,7 +506,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Rất Khó</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">10.6</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Big Bet</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Đợt 2</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">2</td>
@@ -517,7 +517,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Rất Khó</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">10.3</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Big Bet</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Đợt 2</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">3</td>
@@ -528,7 +528,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Trung Bình</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">14.8</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Big Bet (Programmatic)</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Đợt 2</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">4</td>
@@ -539,7 +539,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Khó</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">11.8</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Big Bet</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Đợt 2</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">5</td>
@@ -550,7 +550,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Khó</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">12.7</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Big Bet</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Đợt 2</td>
     </tr>
     <tr style="background-color:#eff6ff;">
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">6</td>
@@ -561,7 +561,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Trung Bình</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#1e40af;">13.8</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#15803d;">High-Impact Quick Win</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">P0</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">Đợt 1</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">7</td>
@@ -572,7 +572,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Khó</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">11.2</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Big Bet</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Đợt 2</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">8</td>
@@ -583,7 +583,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Khó</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">11.1</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Standard Feature</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Đợt 3</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">9</td>
@@ -594,7 +594,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Trung Bình</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">6.4</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Low Priority</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Đợt 3</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">10</td>
@@ -605,7 +605,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Khó</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">12.9</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Big Bet</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Đợt 2</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">11</td>
@@ -616,7 +616,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Khó</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">12.3</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Big Bet</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Đợt 2</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">12</td>
@@ -627,7 +627,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Trung Bình</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">13.5</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Core Driver</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Đợt 2</td>
     </tr>
     <tr style="background-color:#eff6ff;">
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">13</td>
@@ -638,7 +638,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Trung Bình</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#1e40af;">14.5</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#15803d;">High-Impact Quick Win</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">P0</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">Đợt 1</td>
     </tr>
     <tr style="background-color:#eff6ff;">
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">14</td>
@@ -649,7 +649,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Trung Bình</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#1e40af;">13.1</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#15803d;">Top Quick Win</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">P0</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">Đợt 1</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">15</td>
@@ -660,7 +660,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Trung Bình</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">11.2</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Core Driver</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Đợt 2</td>
     </tr>
     <tr style="background-color:#eff6ff;">
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">16</td>
@@ -671,7 +671,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Trung Bình</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#1e40af;">13.8</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#15803d;">Top Quick Win</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">P0</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">Đợt 1</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">17</td>
@@ -682,7 +682,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Trung Bình</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">6.0</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Low Priority</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Đợt 3</td>
     </tr>
     <tr style="background-color:#eff6ff;">
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">18</td>
@@ -693,7 +693,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#15803d;">Dễ (Low)</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#1e40af;">14.6</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#15803d;">Top Quick Win</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">P0</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">Đợt 1</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">19</td>
@@ -704,7 +704,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Trung Bình</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">9.0</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Standard Feature</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">P2</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Đợt 3</td>
     </tr>
     <tr style="background-color:#eff6ff;">
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">20</td>
@@ -715,7 +715,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#15803d;">Dễ (Low)</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#1e40af;">13.8</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#15803d;">Top Quick Win</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">P0</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">Đợt 1</td>
     </tr>
     <tr style="background-color:#eff6ff;">
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">21</td>
@@ -726,7 +726,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#15803d;">Dễ (Low)</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#1e40af;">12.7</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#15803d;">Top Quick Win</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">P0</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">Đợt 1</td>
     </tr>
     <tr style="background-color:#eff6ff;">
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">22</td>
@@ -737,7 +737,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#15803d;">Dễ (Low)</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#1e40af;">14.3</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#15803d;">Top Quick Win</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">P0</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">Đợt 1</td>
     </tr>
     <tr style="background-color:#eff6ff;">
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">23</td>
@@ -748,7 +748,7 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Trung Bình</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#1e40af;">12.6</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#15803d;">Top Quick Win</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">P0</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#b91c1c;">Đợt 1</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">24</td>
@@ -759,14 +759,14 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center; font-weight:700; color:#15803d;">Dễ (Low)</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">10.9</td>
       <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Core Driver</td>
-      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">P1</td>
+      <td style="border:1px solid #94a3b8; padding:5px; text-align:center;">Đợt 2</td>
     </tr>
     <tr style="background-color:#f1f5f9; font-weight:700;">
       <td style="border:1.5px solid #64748b; padding:6px; text-align:center;" colspan="3">TỔNG CREDITTECH (DEDUPLICATED)</td>
       <td style="border:1.5px solid #64748b; padding:6px; text-align:right;"><strong>102,140,030</strong></td>
-      <td style="border:1.5px solid #64748b; padding:6px; text-align:center;">—</td>
-      <td style="border:1.5px solid #64748b; padding:6px; text-align:center;">—</td>
-      <td style="border:1.5px solid #64748b; padding:6px; text-align:center;">—</td>
+      <td style="border:1.5px solid #64748b; padding:6px; text-align:center;">-</td>
+      <td style="border:1.5px solid #64748b; padding:6px; text-align:center;">-</td>
+      <td style="border:1.5px solid #64748b; padding:6px; text-align:center;">-</td>
       <td style="border:1.5px solid #64748b; padding:6px; text-align:center;">58,164 Unique Keywords</td>
       <td style="border:1.5px solid #64748b; padding:6px; text-align:center;">Master SSOT</td>
     </tr>

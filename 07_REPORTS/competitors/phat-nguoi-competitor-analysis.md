@@ -122,7 +122,7 @@ Qua đối soát cấu trúc On-Page của các đối thủ dẫn đầu, hệ 
 
 - `trả lời n nguyễn tiến dũng 23`
 - `59 px 0 px`
-- `h 6.000.000 – 8.000.000 đ`
+- `h 6.000.000-8.000.000 đ`
 - `... 13 th 10 xe`
 - `… tra cứu phạt nguội trực tuyến`
 - `trả lời t trương hữu hoà 09`
@@ -170,7 +170,7 @@ Qua đối soát cấu trúc On-Page của các đối thủ dẫn đầu, hệ 
 | :---: | :--- | :---: | :---: | :---: |
 | 1 | `trả lời n nguyễn tiến dũng 23` | 1 | 20.0% | - |
 | 2 | `59 px 0 px` | 1 | 20.0% | - |
-| 3 | `h 6.000.000 – 8.000.000 đ` | 1 | 20.0% | - |
+| 3 | `h 6.000.000-8.000.000 đ` | 1 | 20.0% | - |
 | 4 | `... 13 th 10 xe` | 1 | 20.0% | - |
 | 5 | `… tra cứu phạt nguội trực tuyến` | 1 | 20.0% | - |
 | 6 | `giáo dục pháp luật trật tự an toàn giao thông` | 1 | 20.0% | - |

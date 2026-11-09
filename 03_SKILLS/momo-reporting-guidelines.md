@@ -173,7 +173,7 @@ Số do Finance cung cấp. BU dán nguyên bảng, không sửa số, chỉ vi�
 
 Bảng 3 nhóm cột: `MoM performance` (M-1, M, MoM) | `Monthly vs. Target` (Actual, Target, %A/B) | `YTD vs. YTD Target` (Actual, Target, %A/B).
 
-Dòng chỉ số: MAU, Revenue, SnM, EBITDA, EBITDA Margin; mỗi chỉ số phân rã theo use case.
+Dòng chỉ số: MAU, Revenue, SnM, EBITDA, EBITDA Margin; mỗi chỉ số bóc tách theo use case.
 
 Commentary bên phải chia hai khối: `Performance` và `Lowlights / Rủi ro`.
 
@@ -213,9 +213,9 @@ Bìa -> Agenda -> [D] Discussion Topics -> [D] Deep-dive từng chủ đề -> [
 **Cấu trúc 6 Luồng Báo Cáo Tháng Điều Hành (Executive 6 Streams SSOT):**
 Mọi báo cáo tháng của Web Platform trên cả 3 giao diện (Markdown Board, Web Dashboard/Slides, PowerPoint Template) bắt buộc tuân thủ 6 luồng sau:
 1. `Stream 1: Khung Điều Hành 3 Trụ Cột (Pillars) [R]` - Highlights, Collaboration, Priorities.
-2. `Stream 2: Hiệu Suất Kinh Doanh & Quan Sát Chiến Lược [R]` - Phân rã Non-Paid vs Paid, So What insights.
+2. `Stream 2: Hiệu Suất Kinh Doanh & Quan Sát Chiến Lược [R]` - Bóc tách Non-Paid vs Paid, So What insights.
 3. `Stream 3: Hai Dự Án Trọng Điểm: Cinema Hub & Financial Hub [R]` - Kèm khối 3 thẻ so sánh đòn bẩy PLG Tools (0,0% vs 33,7% vs 38,6% - 43,8% CTR).
-4. `Stream 4: Dự Án New User & Phễu Chuyển Đổi Web-to-App [R]` - AppsFlyer GPD Funnel 4 tầng và phân rã 4 kênh.
+4. `Stream 4: Dự Án New User & Phễu Chuyển Đổi Web-to-App [R]` - AppsFlyer GPD Funnel 4 tầng và bóc tách 4 kênh.
 5. `Stream 5: Hiệu Suất Công Cụ Tài Chính Tương Tác [R]` - Bảng 5 cột tinh gọn duy nhất: `STT | Tên Công Cụ / Tiện Ích | Lượt hiển thị (Imp) | Lượt tương tác (Clicks) | Tỷ lệ tương tác (CTR)`; tuyệt đối không đưa URL kỹ thuật, hành động W2A, hay đánh giá nhận xét vào bảng.
 6. `Stream 6: Trọng Tâm Thảo Luận & Quyết Nghị Ban Giám Đốc [D]` - Cấu trúc 6 phần cho mỗi đề xuất: Problem -> Context -> Impact -> Options -> Proposal -> Risk.
 

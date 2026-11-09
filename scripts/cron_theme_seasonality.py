@@ -24,7 +24,7 @@ import argparse
 from datetime import datetime
 import warnings
 
-# Tắt warning phân rã dataframe không cần thiết của pandas/pytrends
+# Tắt warning phân tách dataframe không cần thiết của pandas/pytrends
 warnings.filterwarnings("ignore")
 
 try:

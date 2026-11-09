@@ -505,6 +505,7 @@ def sync_7d_performance(push_hubs: bool = False, json_only: bool = False) -> dic
 def main():
     parser = argparse.ArgumentParser(description="Đồng bộ hiệu suất biến động 7 ngày GSC lên /report và /dashboard.")
     parser.add_argument("--push-hubs", action="store_true", default=False, help="Cho phép commit và đẩy lên GitHub Hubs")
+    parser.add_argument("--no-push", action="store_true", default=True, help="Không commit và đẩy lên GitHub Hubs (mặc định)")
     parser.add_argument("--json-only", action="store_true", help="Chỉ xuất JSON SSOT, không sửa markdown/dashboard")
     args = parser.parse_args()
 

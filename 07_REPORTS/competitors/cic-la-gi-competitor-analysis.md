@@ -203,7 +203,7 @@ Qua đối soát cấu trúc On-Page của các đối thủ dẫn đầu, hệ 
 - `đơn vị trực thuộc tổ chức tín dụng` (khớp: `công ty tài chính cung cấp báo cáo tín dụng`, sim: 0.747)
 - `4 ihw 4 u svg` (khớp: `điểm cic 4`, sim: 0.859)
 - `thực hiện hoạt động thông tin tín dụng` (khớp: `hỗ trợ tra cứu thông tin tín dụng trực tiếp`, sim: 0.863)
-- `cic – kết nối nhu cầu vay` (khớp: `khả năng vay`, sim: 0.86)
+- `cic - kết nối nhu cầu vay` (khớp: `khả năng vay`, sim: 0.86)
 - `sđt chính chủbáo cáo tín dụng đầy đủ` (khớp: `xác định chính xác hồ sơ tín dụng`, sim: 0.74)
 - `kiểm tra lịch sử tín dụng` (khớp: `hồ sơ tín dụng cictrước`, sim: 0.75)
 - `4.1 xác minh thông tin cá nhân` (khớp: `thông tin cá nhân bao gồm`, sim: 0.755)

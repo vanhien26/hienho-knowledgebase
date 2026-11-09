@@ -373,13 +373,13 @@ graph TD
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gói Quà Tân Thủ 1.000.000đ</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chốt danh mục voucher và ngân sách tặng quà cho New User từ Kênh Web.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có (P1)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Growth Marketing / Campaign Team</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">AppsFlyer OneLink Onboarding Routing</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Cấu hình tham số deep link dẫn thẳng vào luồng nhận quà và KYC trên App.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có (P1)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Dev & Tracking Analytics Team</td>
     </tr>
     <tr>
@@ -391,7 +391,7 @@ graph TD
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Duyệt Nội Dung Pháp Lý & YMYL</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Rà soát toàn bộ thông tin giấy phép NHNN, các chứng chỉ bảo mật và điều khoản.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có (P1)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Có</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Legal & Compliance Team</td>
     </tr>
   </tbody>

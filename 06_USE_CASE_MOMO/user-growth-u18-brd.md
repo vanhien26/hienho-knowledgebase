@@ -33,7 +33,7 @@ Hoàn thiện và Go-live trang Landing Page [momo.vn/phi-xet-tuyen](file:///Use
 ## 2. Business Context (Bối cảnh doanh nghiệp)
 *   **Chiến dịch chuyển tiếp:** Học sinh cấp 3 chuẩn bị bước vào Đại học có các nhu cầu tài chính độc lập lần đầu tiên.
 *   **Hành vi người dùng:** Phụ thuộc nhiều vào thiết bị di động, nhạy bén với mạng xã hội (TikTok, Facebook Group), hay tìm kiếm thông tin trên công cụ tìm kiếm và các trang tin tuyển sinh.
-*   **Tính thời điểm:** Chiến dịch tập trung mạnh từ đầu tháng 7 và đạt đỉnh trong giai đoạn đóng phí xét tuyển từ **15/07/2026 đến 21/07/2026**.
+*   **Tính thời điểm:** Chiến dịch tập trung mạnh từ đầu tháng 7 và chạm mức cao nhất trong giai đoạn đóng phí xét tuyển từ **15/07/2026 đến 21/07/2026**.
 
 ---
 

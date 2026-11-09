@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 REBUILD PROJECTS DETAIL FLOW V3 - FULL DETAILED BREAKDOWN
-- Phân rã chi tiết 100% tất cả 65 Use Cases / Sản phẩm của Web Platform:
+- Bóc tách chi tiết 100% tất cả 65 Use Cases / Sản phẩm của Web Platform:
   + 8 Hubs lớn (Cinema Hub, Financial Hub, Vehicle Hub, Bảo Hiểm, Telco & Data, Student Hub, Utilities & Billpay, Entertainment & Travel)
   + 40 Sub-projects chi tiết (Vay Nhanh, Ví Trả Sau, Túi Thần Tài, Cineplex, Phạt Nguội, BH Ô tô, BH Xe máy...)
   + 25 Dự án / Tiện ích độc lập (Home MoMo, Download, New User, Tìm Kiếm, OTA, Vé Xe, Game...)

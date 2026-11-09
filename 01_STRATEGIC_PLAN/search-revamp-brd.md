@@ -37,7 +37,7 @@ Tái định vị `/tim-kiem` từ một thanh tra cứu từ điển tĩnh thà
 ## 2. Khung Năng Lực Product-Led Growth (PLG Hooks)
 
 * **Trao Giá Trị Trước Rào Cản (Value Before Gate):** Người dùng tìm kiếm tiện ích (tính lãi vay, tra cứu phạt nguội, xem giá vàng) nhận được kết quả tính toán ngay trên Web trong 2 giây mà không bị ép buộc phải tải app hay đăng nhập.
-* **Triệt Tiêu Ma Sát Chuyển Đổi (Zero Search Friction):** Khi người dùng gõ sai hoặc gõ tắt, hệ thống tự động nhận diện ý định gốc và gợi ý đúng dịch vụ mong muốn, duy trì mạch chuyển đổi liền mạch.
+* **Giảm Rào Cản Thao Tác Chuyển Đổi (Zero Search Friction):** Khi người dùng gõ sai hoặc gõ tắt, hệ thống tự động nhận diện ý định gốc và gợi ý đúng dịch vụ mong muốn, duy trì mạch chuyển đổi liền mạch.
 * **Cơ Chế Bắt Nhịp Tân Thủ (New User Onboarding Hook):** Khai thác lượng truy cập gõ số điện thoại và tìm kiếm rác để phân phối Thẻ quà chào bạn mới 500K (`CHAOMOMO`), biến traffic vãng lai thành lượt cài đặt ứng dụng thực tế.
 
 ---

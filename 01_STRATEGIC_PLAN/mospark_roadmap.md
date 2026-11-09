@@ -2,7 +2,7 @@
 ## Lộ trình Năng lực Nền tảng Tăng trưởng (Growth OS) momo.vn
 
 > **Product Owners:** Văn Hiến (Web Product Lead) & Anh Bảo (Head of Web Platform)
-> **Timeline:** H1/2026 (Đã hoàn thành) – H2/2026 (Hiện tại) – 2027+ (Tầm nhìn)
+> **Timeline:** H1/2026 (Đã hoàn thành) - H2/2026 (Hiện tại) - 2027+ (Tầm nhìn)
 > **Status:** Active
 > **Version:** v3.6 (Cập nhật định hướng hạ tầng truyền thông và phân biệt dự án PLG)
 

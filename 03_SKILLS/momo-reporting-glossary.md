@@ -92,8 +92,8 @@ Tuyệt đối không dùng chung từ "khách hàng", "người dùng", "traffi
 | :--- | :--- | :--- | :--- | :--- |
 | **Pageviews** | **PV** | Tổng số lượt trang web được tải hoặc tải lại trên trình duyệt. | GA4: `screenPageViews` | Đo lường dung lượng tiêu thụ nội dung tổng thể. 1 người xem 5 trang = 5 PV. |
 | **Sessions** | **Sessions** | Tổng số phiên truy cập web (kết thúc sau 30 phút không hoạt động). | GA4: `sessions` | Đo lường số lượt ghé thăm của người dùng. |
-| **MUA** | **MUA** | **Monthly Unique Audience** — Lượng độc giả/người dùng duy nhất truy cập Web trong tháng. | GA4: `totalUsers` (khung tháng) | Chỉ số North Star quy mô bao phủ thị trường của Web. |
-| **MEU** | **MEU** | **Monthly Engaged Users** — Người dùng có phiên tương tác thực chất (trên 10s hoặc xem $\ge 2$ trang hoặc có tương tác). | GA4: `activeUsers` | Đo lường người dùng chất lượng thực, loại bỏ bot và click tặc. |
+| **MUA** | **MUA** | **Monthly Unique Audience** - Lượng độc giả/người dùng duy nhất truy cập Web trong tháng. | GA4: `totalUsers` (khung tháng) | Chỉ số North Star quy mô bao phủ thị trường của Web. |
+| **MEU** | **MEU** | **Monthly Engaged Users** - Người dùng có phiên tương tác thực chất (trên 10s hoặc xem $\ge 2$ trang hoặc có tương tác). | GA4: `activeUsers` | Đo lường người dùng chất lượng thực, loại bỏ bot và click tặc. |
 | **Engagement Rate** | **ER** | Tỷ lệ phiên tương tác trên tổng số phiên truy cập. | $\text{Engaged Sessions} / \text{Sessions}$ | Thay thế Bounce Rate cũ của Universal Analytics. Đo lường độ hấp dẫn của nội dung. |
 | **Avg. Engagement Time** | **Duration** | Thời gian tương tác trung bình của người dùng trên trang. | GA4: `userEngagementDuration / activeUsers` | Đo lường độ sâu khi đọc bài viết hoặc thao tác tiện ích (Widget/Calculator). |
 
@@ -148,13 +148,12 @@ Quy định cấu trúc phân loại bắt buộc trong mọi bảng số liệu
 
 ```
 TỔNG LƯU LƯỢNG (TOTAL TRAFFIC)
-├── 1. NON-PAID TRAFFIC (Chủ lực — Lưu lượng Tự nhiên & Thương hiệu)
-│   ├── Organic Search (Tìm kiếm Google, Bing tự nhiên)
+├── 1. NON-PAID TRAFFIC (Chủ lực - Lưu lượng Tự nhiên & Thương hiệu)
+│   ├── Organic (Tìm kiếm Google, Bing tự nhiên)
 │   ├── Direct (Truy cập trực tiếp momo.vn, bookmark, thương hiệu)
-│   ├── Referral (Giới thiệu từ báo chí, trang đối tác, blog uy tín)
-│   ├── GEO / AI Citations (Trích dẫn từ Perplexity, ChatGPT, Gemini, Copilot)
-│   └── Organic Social & Others (Mạng xã hội tự nhiên, lưu lượng nội bộ)
-└── 2. PAID TRAFFIC (Bổ trợ — Ngân sách Tiếp thị trả tiền)
+│   ├── AI Traffic (GEO) (Trích dẫn từ Perplexity, ChatGPT, Gemini, Copilot)
+│   └── Referral (Đối tác, báo chí, ngân hàng và toàn bộ phần còn lại; không tách dòng Others)
+└── 2. PAID TRAFFIC (Bổ trợ - Ngân sách Tiếp thị trả tiền)
     ├── Paid Search (Google Ads Search)
     ├── Paid Social (TikTok Ads, Facebook Ads)
     ├── Display / Programmatic (Mạng quảng cáo hiển thị, Admicro, GDN)
@@ -228,7 +227,7 @@ Các từ viết tắt này được phép sử dụng trong deck báo cáo, v�
 | **RICE** | Reach - Impact - Confidence - Effort | Khung chấm điểm ưu tiên tính năng dựa trên Phạm vi, Tác động, Độ tin cậy và Công sức. |
 | **SERP** | Search Engine Results Page | Trang hiển thị kết quả tìm kiếm của Google. |
 | **SoV** | Share of Voice | Thị phần tiếng nói / tỷ lệ hiển thị thương hiệu so với toàn ngành. |
-| **SSOT** | Single Source of Truth | Nguồn chân lý duy nhất — tệp dữ liệu được công nhận làm chuẩn đối soát. |
+| **SSOT** | Single Source of Truth | Nguồn chân lý duy nhất - tệp dữ liệu được công nhận làm chuẩn đối soát. |
 | **UIC** | Urgency - Impact - Confidence | Khung chấm điểm ưu tiên theo Độ cấp bách, Tác động và Độ tin cậy. |
 | **UTM** | Urchin Tracking Module | Bộ tham số gắn vào URL để phân loại nguồn chiến dịch tiếp thị. |
 | **W2A** | Web-to-App | Luồng điều hướng và chuyển đổi người dùng từ Website vào ứng dụng MoMo. |
@@ -291,7 +290,7 @@ Khi trình bày các gạch đầu dòng phân tích dưới Action Title, bắt
 ### 7.4. Cấu trúc Mẫu Slide Điều hành Kênh Lưu lượng (Executive Scorecard Pattern)
 Khi xây dựng slide tổng quan hiệu suất kênh (`Scorecard` / `Executive Summary`), chuẩn hóa bố cục 2 khối đối xứng:
 - **Khối bên trái (Chiếm 62% chiều rộng slide):**
-  1. **Bảng phân rã 6 cột:** `Kênh lưu lượng | Tháng 7 | Tháng 8 | Tháng 9 | Tháng 10 | % MoM` (chia 2 tầng rành mạch `KÊNH TỰ NHIÊN (NON-PAID)` gồm Organic, AI Traffic (GEO), Direct, Referral và `KÊNH TRẢ PHÍ (PAID ADS)`, kèm các dòng tổng hợp `TỔNG LƯỢNG TRUY CẬP (ACTUAL)`, `MỤC TIÊU THÁNG (TARGET)`, `TỶ LỆ ĐẠT TARGET`).
+  1. **Bảng cơ cấu 6 cột:** `Kênh lưu lượng | Tháng 7 | Tháng 8 | Tháng 9 | Tháng 10 | % MoM` (chia 2 tầng rành mạch `KÊNH TỰ NHIÊN (NON-PAID)` gồm Organic, AI Traffic (GEO), Direct, Referral và `KÊNH TRẢ PHÍ (PAID ADS)`, kèm các dòng tổng hợp `TỔNG LƯỢNG TRUY CẬP (ACTUAL)`, `MỤC TIÊU THÁNG (TARGET)`, `TỶ LỆ ĐẠT TARGET`).
   2. **Hộp Key Highlights (Chân bảng):** Phân tích 3 gạch đầu dòng cốt lõi:
      - *Kênh tự nhiên:* Đạt đỉnh, tỷ trọng chi phối (% share), đảo chiều tăng trở lại của Organic Search.
      - *Kênh trực tiếp & AI Search:* Tăng trưởng liên tục [n] tháng của Direct Traffic (thói quen vào thẳng momo.vn) và tốc độ bứt phá của AI Search (GEO).

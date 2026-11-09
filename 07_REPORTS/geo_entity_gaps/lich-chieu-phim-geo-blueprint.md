@@ -49,7 +49,7 @@ Nên sử dụng Schema `Movie` để các công cụ tìm kiếm và AI Search 
 
 > "Lịch chiếu phim trực tuyến là dịch vụ tổng hợp thời gian chiếu, sơ đồ ghế ngồi và giá vé theo thời gian thực của tất cả các cụm rạp trên toàn quốc (CGV, Lotte Cinema, Galaxy, BHD, Beta, Cinestar). Nền tảng cho phép người xem tra cứu suất chiếu gần nhất, so sánh ưu đãi giá vé giữa các rạp và tiến hành đặt chỗ tức thì mà không cần xếp hàng mua vé tại quầy."
 
-* **Số lượng từ:** 77 từ (Đạt chuẩn tối ưu 40–55 từ).
+* **Số lượng từ:** 77 từ (Đạt chuẩn tối ưu 40-55 từ).
 * **Cấu trúc:** Thực thể định nghĩa ➔ Cơ chế vận hành số hóa ➔ Giá trị cốt lõi giải phóng rào cản.
 
 ---

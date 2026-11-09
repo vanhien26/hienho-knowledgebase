@@ -204,7 +204,7 @@ Qua đối soát cấu trúc On-Page của các đối thủ dẫn đầu, hệ 
 - `chủ xe đối với bên thứ` (khớp: `họ tên chủ xe`, sim: 0.741)
 - `bảng giá bảo hiểm ô tô chia sẻ` (khớp: `quản lý hợp đồng bảo hiểm xe ô tô`, sim: 0.778)
 - `sửa chữa xe lái phụ xe` (khớp: `thiệt hại do chủ xe gây`, sim: 0.774)
-- `lựa chọn nhà cung cấp dịch vụ bảo hiểm` (khớp: `chọn mục tài chính – bảo hiểm`, sim: 0.793)
+- `lựa chọn nhà cung cấp dịch vụ bảo hiểm` (khớp: `chọn mục tài chính - bảo hiểm`, sim: 0.793)
 - `mua bảo hiểm trách nhiệm dân sự bắt buộc` (khớp: `bảo hiểm trách nhiệm dân sự ô tô`, sim: 0.794)
 - `tổng đài bảo hiểm bảo việt tin tức` (khớp: `hãng bảo hiểm`, sim: 0.867)
 - `bảo hiểm pvi thương hiệu uy tín 30` (khớp: `bảo hiểm bản`, sim: 0.79)

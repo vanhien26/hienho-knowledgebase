@@ -21,7 +21,7 @@
 
 ### 1.1 Elegant Problem Framing
 - **Vấn đề cốt lõi:** Người dùng cần mua sim phong thủy, mua data gấp hoặc tìm eSIM đi du lịch, nhưng trải nghiệm mua online từ nhà mạng thì rời rạc, ra đại lý thì mất thời gian.
-- **Giải pháp (The "What"):** Gom toàn bộ nhu cầu viễn thông vào 1 Hub duy nhất trên MoMo Web. Sử dụng AI Giải luận phong thủy để tạo "Aha moment" (Bữa tối gia đình test của CEO) và cho phép thanh toán trọn vẹn hành trình (Full Journey).
+- **Giải pháp (The "What"):** Gom toàn bộ nhu cầu viễn thông vào 1 Hub duy nhất trên MoMo Web. Sử dụng AI Giải luận phong thủy để tạo "Aha moment" (Tiêu chuẩn trải nghiệm đột phá của CEO) và cho phép thanh toán trọn vẹn hành trình (Full Journey).
 
 ### 1.2 Situation & Complication
 Mỗi ngày, hàng triệu người Việt search "sim số đẹp hợp tuổi", "gói data Viettel tháng này", "esim du lịch Nhật". Thị trường ước tính 500K-800K searches/tháng, intent rõ ràng, CAC = 0. Nhưng MoMo rank yếu hoặc không rank cho các nhóm từ khóa volume cao này, nhường sân chơi cho TGDD và các bên bán sim trung gian.

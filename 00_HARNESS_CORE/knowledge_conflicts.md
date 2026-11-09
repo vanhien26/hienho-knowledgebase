@@ -1,14 +1,14 @@
 # Báo Cáo Xung Đột & Kiểm Tra Đường Dẫn Kho Tri Thức (Knowledge Conflict Report)
 
-- Thời điểm xuất bản: 2026-11-08T15:17:10.262591+00:00
+- Thời điểm xuất bản: 2026-11-09T06:28:04.628167+00:00
 - Chế độ vận hành: observe (Không tự ý sửa đổi mã nguồn)
-- Tổng số điểm phát hiện: 60
+- Tổng số điểm phát hiện: 59
 
 ## 1. Bảng Tổng Hợp Phân Loại
 
 | Phân loại | Số lượng | Ý nghĩa & Mô tả |
 | :--- | ---: | :--- |
-| `broken_reference` | 1 | Đường dẫn nội bộ không tìm thấy tệp đích |
+| `broken_reference` | 0 | Đường dẫn nội bộ không tìm thấy tệp đích |
 | `external_reference` | 50 | Tham chiếu sang repo khác, thư mục Downloads hoặc Obsidian |
 | `code_path_reference` | 8 | Đường dẫn trong mã nguồn; có thể là tệp sinh runtime |
 | `skill_asset_reference` | 1 | Tài nguyên thuộc các gói Agent Skill |
@@ -79,12 +79,6 @@
 - **Dòng 312:** `/Users/hienhv/Documents/Obsidian_Vault/hovanhien_knowledgebase_momo/04_MOSPARK_PLATFORM/mospark_genai_content.md`
   * Phân loại: `external_reference` | Mã lý do: `historical_vault_reference`
   * Chi tiết: Tham chiếu lịch sử từ kho ghi chép cá nhân cũ (Obsidian Vault).
-
-### `05_HUBS/vehicle/vehicle-hub-brd.md`
-
-- **Dòng 1006:** `05_HUBS/vehicle-hub-navigation.md`
-  * Phân loại: `broken_reference` | Mã lý do: `unresolved_internal_path`
-  * Chi tiết: Đường dẫn nội bộ không tìm thấy tệp đích trong repository.
 
 ### `06_USE_CASE_MOMO/trust-brd.md`
 
@@ -295,7 +289,7 @@
 
 ### `scripts/sync_inventory_to_hubs.py`
 
-- **Dòng 1271:** `data/seo-clusters/index.json`
+- **Dòng 1273:** `data/seo-clusters/index.json`
   * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
   * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
 

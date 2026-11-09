@@ -163,11 +163,11 @@ $$\text{Hypothesis (Vấn đề & Giả định)} \longrightarrow \text{Solution
 
 ### B. Kế Hoạch Hành Động Tiếp Theo
 
-| Mức Độ Ưu Tiên | Hạng Mục Công Việc | Đội Ngũ Phụ Trách | Thời Hạn | Trạng Thái (Status) |
+| Thứ Tự Triển Khai | Hạng Mục Công Việc | Đội Ngũ Phụ Trách | Thời Hạn | Trạng Thái (Status) |
 | --- | --- | --- | --- | --- |
-| P0 (Cấp bách) | [Hành động cần làm ngay] | [Tên đội ngũ chuyên môn] | [Thời hạn] | Chưa bắt đầu |
-| P1 (Quan trọng) | [Hành động hoàn thiện/mở rộng] | [Tên đội ngũ chuyên môn] | [Thời hạn] | Chưa bắt đầu |
-| P2 (Nâng cao) | [Hành động tối ưu dài hạn] | [Tên đội ngũ chuyên môn] | [Thời hạn] | Chưa bắt đầu |
+| 1. Làm ngay | [Hành động cần làm ngay] | [Tên đội ngũ chuyên môn] | [Thời hạn] | Chưa bắt đầu |
+| 2. Làm tiếp theo | [Hành động hoàn thiện/mở rộng] | [Tên đội ngũ chuyên môn] | [Thời hạn] | Chưa bắt đầu |
+| 3. Tối ưu dài hạn | [Hành động tối ưu dài hạn] | [Tên đội ngũ chuyên môn] | [Thời hạn] | Chưa bắt đầu |
 ```
 
 ---
@@ -231,11 +231,11 @@ $$\text{Hypothesis (Vấn đề & Giả định)} \longrightarrow \text{Solution
 
 ## 6. KẾ HOẠCH TRỌNG TÂM 7 NGÀY TỚI (PRIORITIES FOR NEXT 7 DAYS)
 
-| Mức Độ Ưu Tiên | Hạng Mục Công Việc Cần Triển Khai | Đội Ngũ Phụ Trách | Mục Tiêu Đầu Ra | Trạng Thái (Status) |
+| Thứ Tự Triển Khai | Hạng Mục Công Việc Cần Triển Khai | Đội Ngũ Phụ Trách | Mục Tiêu Đầu Ra | Trạng Thái (Status) |
 | --- | --- | --- | --- | --- |
-| P0 (Cấp bách) | [Nhiệm vụ trọng điểm 1 - Bugfix/Delivery] | [Tên đội ngũ chuyên môn] | [Deliverable cụ thể] | Đang chuẩn bị |
-| P1 (Quan trọng) | [Nhiệm vụ trọng điểm 2 - Feature/Testing] | [Tên đội ngũ chuyên môn] | [Deliverable cụ thể] | Chưa bắt đầu |
-| P2 (Nâng cao) | [Nhiệm vụ tối ưu hóa / Refactor kiến trúc] | [Tên đội ngũ chuyên môn] | [Deliverable cụ thể] | Chưa bắt đầu |
+| 1. Làm ngay | [Nhiệm vụ trọng điểm 1 - Bugfix/Delivery] | [Tên đội ngũ chuyên môn] | [Deliverable cụ thể] | Đang chuẩn bị |
+| 2. Làm tiếp theo | [Nhiệm vụ trọng điểm 2 - Feature/Testing] | [Tên đội ngũ chuyên môn] | [Deliverable cụ thể] | Chưa bắt đầu |
+| 3. Tối ưu dài hạn | [Nhiệm vụ tối ưu hóa / Refactor kiến trúc] | [Tên đội ngũ chuyên môn] | [Deliverable cụ thể] | Chưa bắt đầu |
 ```
 
 ---

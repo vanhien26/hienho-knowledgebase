@@ -1,6 +1,6 @@
 # BÁO CÁO KIỂM SOÁT ĐỘ MỚI NGUỒN TRI THỨC (KNOWLEDGE FRESHNESS SSOT)
 
-> **Thời điểm đối chiếu:** 2026-11-08 | **Chế độ:** observe | **Tổng số nguồn:** 27 | **Nguồn có hạn định:** 5
+> **Thời điểm đối chiếu:** 2026-11-09 | **Chế độ:** observe | **Tổng số nguồn:** 29 | **Nguồn có hạn định:** 5
 
 ---
 
@@ -15,9 +15,9 @@
 
 | ID Nguồn | Đường dẫn | Kỳ dữ liệu | Data As Of | Ngày sửa tệp | Tuổi DL | Lệch mtime | Ngưỡng | Trạng thái |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| `performance_tracking_master` | [WEB_PERFORMANCE_TRACKING_MASTER.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md) | GSC Export 2026-10-10 | 2026-10-10 | 2026-11-06 | 29 ngày | 27 ngày | 7 ngày | 🔴 Đã cũ (Stale) |
-| `performance_data_mart` | [performance.sqlite](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data/cache/performance.sqlite) | MTD 2026-11 (cắt ngày 2026-11-04) | 2026-11-04 | 2026-11-05 | 4 ngày | 1 ngày | 7 ngày | 🟢 Đạt chuẩn (Fresh) |
-| `performance_snapshot_latest` | [PERFORMANCE_SNAPSHOT_LATEST.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md) | Tháng 11/2026 (MTD 7 ngày: 01/11 - 07/11/2026, GA4 Data API) | 2026-11-08 | 2026-11-08 | 0 ngày | 0 | 7 ngày | 🟢 Đạt chuẩn (Fresh) |
+| `performance_tracking_master` | [WEB_PERFORMANCE_TRACKING_MASTER.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md) | GSC Export 2026-10-10 | 2026-10-10 | 2026-11-09 | 30 ngày | 30 ngày | 7 ngày | 🔴 Đã cũ (Stale) |
+| `performance_data_mart` | [performance.sqlite](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data/cache/performance.sqlite) | MTD 2026-11 (cắt ngày 2026-11-04) | 2026-11-04 | 2026-11-05 | 5 ngày | 1 ngày | 7 ngày | 🟢 Đạt chuẩn (Fresh) |
+| `performance_snapshot_latest` | [PERFORMANCE_SNAPSHOT_LATEST.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md) | Tháng 11/2026 (MTD 7 ngày: 01/11 - 07/11/2026, GA4 Data API) | 2026-11-08 | 2026-11-08 | 1 ngày | 0 | 7 ngày | 🟢 Đạt chuẩn (Fresh) |
 | `paid_ads_performance` | [paid_ads_performance.json](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data/analytics/paid_ads_performance.json) | Không xác định | N/A | 2026-10-25 | N/A | 0 | 7 ngày | ⚪ Chưa rõ |
 | `theme_seasonality` | [theme_seasonality.json](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/data/theme_seasonality.json) | Không xác định | N/A | 2026-10-23 | N/A | 0 | 30 ngày | ⚪ Chưa rõ |
 
@@ -39,12 +39,14 @@
 | `vocabulary_glossary` | `language_governance` | Web Product Lead | primary | active | Không xác định |
 | `decision_log` | `decisions` | Web Product Lead | primary | active | Quyết định gần nhất (2026-10-14) |
 | `roadmap_releases` | `roadmap` | Web Platform | primary | active | Bản ghi gần nhất (2026-10-30) |
-| `utility_tracking` | `tracking` | SE Team / Thuận | primary | active | Không xác định |
+| `utility_tracking` | `tracking` | SE Team | primary | active | Không xác định |
 | `cinema_hub_brd` | `hubs_cinema` | Cinema Hub Team | primary | active | Không xác định |
 | `cinema_funnel_architecture` | `hubs_cinema` | Cinema Hub Team | primary | active | Không xác định |
 | `vehicle_hub_brd` | `hubs_vehicle` | Vehicle Hub Team | primary | active | Không xác định |
+| `vehicle_partner_garages` | `hubs_vehicle` | Vehicle Hub Team | primary | active | Không xác định |
+| `vehicle_partner_garages_raw` | `hubs_vehicle` | Vehicle Hub Team | reference | legacy | Không xác định |
 | `financial_hub_brd` | `hubs_financial` | Financial Hub Team | primary | active | Không xác định |
-| `mospark_rag_knowledge_base` | `mospark_platform` | SE Team / Duy | primary | active | Không xác định |
+| `mospark_rag_knowledge_base` | `mospark_platform` | SE Team | primary | active | Không xác định |
 | `seo_execution_sop` | `frameworks_seo` | SEO Team | primary | active | Không xác định |
 | `web_growth_strategy_historical` | `strategic_plan` | Web Product Lead | reference | historical | Dữ liệu đối chiếu lịch sử |
 

@@ -416,7 +416,7 @@ Nhằm tối ưu hóa đồng thời tốc độ chuyển đổi của quảng c
 
 1. **Luồng 1 - Performance Fast Track (Dành cho Paid Ads qua URL Parameter):**
    * **Cơ chế:** Khi người dùng nhấp từ quảng cáo có đính kèm tham số nhu cầu (ví dụ: `momo.vn/welcome?intent=cinema`), MoSpark Edge Node đọc tham số trong < 15ms và hiển thị **ngay lập tức** bộ Thẻ quà khớp với nội dung quảng cáo trong 0 giây chờ, không bắt làm khảo sát.
-   * **Mục tiêu:** Triệt tiêu ma sát ở Upper Funnel, giảm tối đa tỷ lệ thoát trang (Bounce Rate) và thúc đẩy hành động bấm nút "Tải App Nhận Quà".
+   * **Mục tiêu:** Giảm rào cản thao tác ở Upper Funnel, giảm tối đa tỷ lệ thoát trang (Bounce Rate) và thúc đẩy hành động nhấp vào nút "Tải App Nhận Quà".
 
 2. **Luồng 2 - Interactive Survey Track (Dành cho Direct / Organic Traffic):**
    * **Cơ chế:** Khi người dùng tự gõ địa chỉ `momo.vn/welcome` (hoặc vào từ Google không có tham số), trang Web hiển thị Bộ quà Mặc định (Best-Seller Pack) đính kèm **Khung trắc nghiệm Vibe Quiz 1-Click** (*"Cuối tuần có tiền, gu của bạn là gì?"* với 4 lựa chọn: Xem phim, Game & Data, F&B Mua sắm, Học tập).

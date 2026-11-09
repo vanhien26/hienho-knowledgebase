@@ -29,7 +29,8 @@
 | Keyword inventory theo Hub (CSV SSOT) | `05_HUBS/inventory/<hub>/` |
 | Tài liệu Hub (strategy, BRD hub) | `05_HUBS/<hub>/` |
 | BRD/PRD use case (Vay Nhanh, VTS, BHYT, Phạt Nguội...) | `06_USE_CASE_MOMO/<use-case>-brd.md` |
-| Báo cáo hiệu suất MTD, snapshot | `07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md` + `07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md` |
+| Báo cáo hiệu suất MTD (kỳ hiện tại) | `07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md` (kiểm tra `00_HARNESS_CORE/knowledge_freshness.md` trước) |
+| Số liệu lịch sử các tháng đã đóng | `07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md` |
 | Index báo cáo lịch sử | `07_REPORTS/docs/INDEX.md` |
 | Paid Ads performance | `07_REPORTS/data/analytics/paid_ads_performance.json` |
 | Theme seasonality (Google Trends) | `07_REPORTS/data/theme_seasonality.json` |

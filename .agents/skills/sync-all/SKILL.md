@@ -15,7 +15,7 @@ Kích hoạt khi người dùng gõ `/sync-all`, `/sync` hoặc đưa ra các y�
 
 Khi nhận lệnh, AI Agent tự động thực thi script điều phối Master:
 ```bash
-python3 scripts/sync_all_data.py
+./.venv/bin/python scripts/sync_all_data.py
 ```
 
 ### Các Luồng Dữ Liệu Được Đồng Bộ:

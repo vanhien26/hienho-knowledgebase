@@ -40,7 +40,7 @@ Báo cáo Web Platform không chỉ dừng lại ở số liệu Pageviews bề 
 - **Chỉ số trọng yếu:**
   - Tổng Pageviews lũy kế (Actual MTD), Số ngày MTD (MTD Days).
   - Tốc độ vận hành ngày (Daily Pace) và dự báo cuối tháng (Run-rate Forecast 31d).
-  - Phân bổ Kênh: Organic, Direct, Referral, Paid, Others.
+  - Phân bổ Kênh theo Traffic Dichotomy SSOT: Non-Paid (Organic Search, Direct, Referral, AI Traffic) và Paid Ads.
   - Phân bổ 5 Strategic Hubs: Cinema Hub, Financial Hub, Vehicle Hub, New User Hub, Student Hub.
 
 ### Trụ Cột 2: Sức Khỏe Kỹ Thuật & Crawl Budget (Technical Health & GSC Crawl Stats)
@@ -109,7 +109,7 @@ Báo cáo Web Platform không chỉ dừng lại ở số liệu Pageviews bề 
 
 ## 4. QUY TRÌNH ĐÓNG GÓI BÁO CÁO TỰ ĐỘNG (PACKAGING PIPELINE)
 
-1. **Bước 1: Đồng bộ dữ liệu Excel:** Chạy `python3 scripts/sync_tracking_report.py` để quét file mới nhất trong `/Users/hienhv/Downloads/` và cập nhật SSOT Excel cùng JSON tracking.
+1. **Bước 1: Đồng bộ dữ liệu Excel:** Chạy `./.venv/bin/python scripts/sync_tracking_report.py` để quét file mới nhất trong `/Users/hienhv/Downloads/` và cập nhật SSOT Excel cùng JSON tracking.
 2. **Bước 2: Hợp nhất Dữ liệu Kỹ thuật:** Script tự động nạp `gsc_crawl_stats_latest.json` và `backlink_profile_latest.json` để tạo file snapshot hợp nhất `monthly_10_2026_consolidated.json`.
 3. **Bước 3: Cập nhật Master Document:** Đồng bộ các số liệu mới nhất vào [WEB_PERFORMANCE_TRACKING_MASTER.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md).
 4. **Bước 4: Xuất bản Executive Report:** Đóng gói bản báo cáo hoàn chỉnh vào `07_REPORTS/packages/monthly/` theo chuẩn văn phong Product Lead / Tech Lead:

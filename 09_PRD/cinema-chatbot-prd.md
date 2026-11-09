@@ -596,7 +596,7 @@ Toàn bộ tương tác của người dùng với Chatbot được gắn mã th
 Dự án được phân chia thành 2 giai đoạn chiến lược, cam kết đưa toàn bộ nhóm tính năng Cơ bản lên môi trường Production ngay trong tháng 11/2026:
 
 #### A. Giai Đoạn 1 (Tháng 11/2026): Cinema Chatbot Cơ Bản (Informational & Knowledge Grounding MVP)
-- **Mục tiêu then chốt:** Hoàn thiện trọn vẹn nhóm tính năng hỏi đáp Cơ bản và phát hành chính thức lên Production trước ngày **30/11/2026**.
+- **Mục tiêu then chốt:** Hoàn thiện trọn vẹn nhóm tính năng hỏi đáp Cơ bản và triển khai chính thức lên Production trước ngày **30/11/2026**.
 - **Phạm vi triển khai (Scope Phase 1):**
   - Khởi tạo dự án con `Cinema` trên hệ thống Chatbot Admin (`adminweb.momocdn.net/chatbot-admin/grounding_document`).
   - Nạp và chuẩn hóa 3 nguồn dữ liệu Grounding Documents: Kho bài viết Blog MoSpark (review, after-credit, easter eggs), Danh mục toàn bộ phim đang và sắp chiếu (thời lượng, đạo diễn, diễn viên, tóm tắt, độ tuổi P/K/T13/T16/T18, điểm đánh giá MoMo), và Danh mục toàn bộ các cụm rạp đối tác (địa chỉ, số tầng, quận huyện, tiện ích bãi xe, phòng chiếu).
@@ -789,7 +789,7 @@ Xây dựng một bộ đề kiểm thử chuẩn hóa gồm 100 cặp câu hỏ
   - Cố tình đặt các câu hỏi khó, câu hỏi mập mờ, câu hỏi tiếng lóng ("phim này coi có sợ té ghế không", "có suất khuya k", "bồ tèo coi phim j") để kiểm tra phản xạ của Chatbot.
 - **Quản lý lỗi và phản hồi tập trung:** Sử dụng bảng đối soát trực tuyến (tương tự bảng Feedback Sheet của dự án Vé số) để ghi nhận các câu trả lời chưa chuẩn, phân loại lỗi (Lỗi thiếu dữ liệu / Lỗi hiểu sai ý định / Lỗi giao diện) và khắc phục 100% trước khi phát hành.
 
-### 10.5 Tầng 5: Giám Sát Vận Hành Sau Phát Hành (Production Realtime Monitoring)
+### 10.5 Tầng 5: Giám Sát Vận Hành Sau Go-live (Production Realtime Monitoring)
 Sau khi đưa lên Production, hệ thống tiếp tục duy trì cơ chế đánh giá vòng lặp khép kín (Closed-Loop Feedback):
 - **Theo dõi tỷ lệ câu hỏi không trả lời được (Fallback Rate):** Đo lường tần suất Chatbot phải trả lời câu mặc định "Hiện tại hệ thống chưa có thông tin...". Nếu tỷ lệ này vượt quá 5%, hệ thống tự động xuất danh sách các câu hỏi chưa đáp ứng để bổ sung tài liệu vào Grounding Documents.
 - **Tín hiệu đánh giá của người dùng (Feedback Signals):** Tích hợp nút đánh giá nhanh Hữu ích (Thumbs Up) / Chưa hữu ích (Thumbs Down) bên dưới mỗi câu trả lời.
