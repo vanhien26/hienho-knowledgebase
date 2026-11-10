@@ -28,7 +28,7 @@
 | -- Organic Traffic | 336.127 | 49.47% | Kênh chủ lực tự nhiên |
 | -- Direct Traffic | 174.629 | 25.70% | Sức mạnh nhận diện thương hiệu |
 | -- AI Traffic (GEO) | 5.822 | 0.86% | Tăng trưởng bứt phá từ ChatGPT, Gemini, Perplexity |
-| -- Referral (còn lại) | 57.781 | 8.50% | Hấp thu đối tác/backlink, in-app và các nguồn tự nhiên còn lại |
+| -- Referral | 57.781 | 8.50% | Hấp thu đối tác/backlink, in-app và các nguồn tự nhiên còn lại |
 | **PAID TRAFFIC** | **105.111** | **15.47%** | Duy trì ngân sách Ads thiết yếu phục vụ chuyển đổi trọng điểm |
 
 ---

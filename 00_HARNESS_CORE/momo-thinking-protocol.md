@@ -50,7 +50,7 @@ Khi đối mặt với sự cố chỉ số (traffic sụt giảm, không đạt
 1. **Hiện tượng (Symptom):** Đo lường chính xác khoảng cách giữa Thực tế (Actual) và Mục tiêu (Target), tính toán nhịp độ cần đạt (Required Pace).
 2. **Bóc tách chi tiết đa chiều (Decomposition):** Phân tách theo Kênh (Non-Paid vs Paid) -> Hubs -> Themes -> Top Landing Pages -> Search Queries.
    - **Quy chuẩn phân loại Kênh Lưu Lượng (Harness SSOT Channel Breakdown):**
-     - **Kênh Tự Nhiên (Non-Paid):** Gồm đúng 4 nhánh: `Organic`, `Direct`, `AI Traffic (GEO)`, `Referral (còn lại)`. Toàn bộ nguồn đối tác, in-app webview, unassigned, social, video được hấp thu trọn vẹn vào `Referral (còn lại)`; tuyệt đối không tách dòng `Others` hay `Kênh khác` rời rạc.
+     - **Kênh Tự Nhiên (Non-Paid):** Gồm đúng 4 nhánh: `Organic`, `Direct`, `AI Traffic (GEO)`, `Referral`. Toàn bộ nguồn đối tác, in-app webview, unassigned, social, video được hấp thu trọn vẹn vào `Referral`; tuyệt đối không tách dòng `Others` hay `Kênh khác` rời rạc.
      - **Kênh Trả Phí (Paid Ads):** Gom toàn bộ các nguồn quảng cáo trả phí (`Paid Search`, `Paid Social`, `Paid Other`, `Cross-network`, `Display`).
 3. **Nguyên nhân gốc rễ (Root Cause):** Tách bạch giữa sụt giảm lưu lượng đầu phễu (Top of Funnel - do index, ranking, nhu cầu) và sụt giảm tỷ lệ chuyển đổi cuối phễu (Bottom of Funnel - do UX, OneLink, tracking).
 4. **Kế hoạch xử lý trọng tâm (Prescription):** Đưa ra giải pháp cụ thể theo thứ tự triển khai logic kèm đội ngũ chịu trách nhiệm (Web Dev, SEO Vendor, Content Team) và tác động kinh doanh định lượng (ROI).

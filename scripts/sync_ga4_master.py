@@ -414,7 +414,7 @@ def main():
     organic_pv = 0
     direct_pv = 0
     ai_pv = 0
-    referral_remaining_pv = 0
+    referral_pv = 0
     paid_pv = 0
     non_paid_pv = 0
 
@@ -430,7 +430,7 @@ def main():
         cn = ch.lower()
         sn = src.lower()
         
-        # Harness Rule SSOT: Non-Paid gồm Organic, Direct, AI Traffic, Referral (còn lại); Paid Ads
+        # Harness Rule SSOT: Non-Paid gồm Organic, Direct, AI Traffic, Referral; Paid Ads
         if any(ai in sn for ai in ai_sources) or cn == "ai assistant":
             ai_pv += pv
             non_paid_pv += pv
@@ -442,8 +442,8 @@ def main():
             non_paid_pv += pv
         elif any(k in cn for k in ["paid", "cpc", "display", "cross-network"]):
             paid_pv += pv
-        else: # Referral (còn lại: hấp thu toàn bộ referral, in_app, unassigned, social, video...)
-            referral_remaining_pv += pv
+        else: # Referral (hấp thu toàn bộ referral, in_app, unassigned, social, video...)
+            referral_pv += pv
             non_paid_pv += pv
 
     # 4. Kéo phân bổ Hubs
@@ -545,7 +545,7 @@ def main():
             "organic": {"pv": organic_pv, "pct": round(organic_pv / total_pv * 100, 2)},
             "direct": {"pv": direct_pv, "pct": round(direct_pv / total_pv * 100, 2)},
             "ai_traffic": {"pv": ai_pv, "pct": round(ai_pv / total_pv * 100, 2)},
-            "referral_remaining": {"pv": referral_remaining_pv, "pct": round(referral_remaining_pv / total_pv * 100, 2)},
+            "referral": {"pv": referral_pv, "pct": round(referral_pv / total_pv * 100, 2)},
             "paid": {"pv": paid_pv, "pct": round(paid_pv / total_pv * 100, 2)},
             "non_paid_total": {"pv": non_paid_pv, "pct": round(non_paid_pv / total_pv * 100, 2)}
         },
