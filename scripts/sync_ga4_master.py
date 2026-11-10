@@ -404,12 +404,18 @@ def main():
         src = r["dimensionValues"][1]["value"]
         w2a_map[(ch, src)] = int(r["metricValues"][0]["value"])
 
+    ai_sources = [
+        "chatgpt.com", "perplexity.ai", "gemini.google.com", 
+        "copilot.microsoft.com", "android-app://com.openai.chatgpt",
+        "claude.ai", "duck.ai", "deepseek"
+    ]
+
     channel_stats = {}
     organic_pv = 0
     direct_pv = 0
+    ai_pv = 0
+    referral_remaining_pv = 0
     paid_pv = 0
-    referral_pv = 0
-    others_pv = 0
     non_paid_pv = 0
 
     for r in res_ch.get("rows", []):
@@ -423,9 +429,10 @@ def main():
 
         cn = ch.lower()
         sn = src.lower()
-        # Quy tắc: sessionSource=in_app chuyển toàn bộ vào Referral
-        if sn == "in_app" or sn.startswith("in_app"):
-            referral_pv += pv
+        
+        # Harness Rule SSOT: Non-Paid gồm Organic, Direct, AI Traffic, Referral (còn lại); Paid Ads
+        if any(ai in sn for ai in ai_sources) or cn == "ai assistant":
+            ai_pv += pv
             non_paid_pv += pv
         elif "organic search" in cn:
             organic_pv += pv
@@ -433,13 +440,10 @@ def main():
         elif "direct" in cn:
             direct_pv += pv
             non_paid_pv += pv
-        elif "referral" in cn:
-            referral_pv += pv
-            non_paid_pv += pv
-        elif any(k in cn for k in ["paid", "cpc", "display"]):
+        elif any(k in cn for k in ["paid", "cpc", "display", "cross-network"]):
             paid_pv += pv
-        else:
-            others_pv += pv
+        else: # Referral (còn lại: hấp thu toàn bộ referral, in_app, unassigned, social, video...)
+            referral_remaining_pv += pv
             non_paid_pv += pv
 
     # 4. Kéo phân bổ Hubs
@@ -540,9 +544,9 @@ def main():
         "channels": {
             "organic": {"pv": organic_pv, "pct": round(organic_pv / total_pv * 100, 2)},
             "direct": {"pv": direct_pv, "pct": round(direct_pv / total_pv * 100, 2)},
+            "ai_traffic": {"pv": ai_pv, "pct": round(ai_pv / total_pv * 100, 2)},
+            "referral_remaining": {"pv": referral_remaining_pv, "pct": round(referral_remaining_pv / total_pv * 100, 2)},
             "paid": {"pv": paid_pv, "pct": round(paid_pv / total_pv * 100, 2)},
-            "referral": {"pv": referral_pv, "pct": round(referral_pv / total_pv * 100, 2)},
-            "others": {"pv": others_pv, "pct": round(others_pv / total_pv * 100, 2)},
             "non_paid_total": {"pv": non_paid_pv, "pct": round(non_paid_pv / total_pv * 100, 2)}
         },
         "hubs": {

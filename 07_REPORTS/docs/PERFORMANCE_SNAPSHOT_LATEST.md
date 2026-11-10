@@ -27,9 +27,9 @@
 | **NON-PAID TRAFFIC** | **574.359** | **84.53%** | Động cơ tăng trưởng tự nhiên cốt lõi |
 | -- Organic Traffic | 336.127 | 49.47% | Kênh chủ lực tự nhiên |
 | -- Direct Traffic | 174.629 | 25.70% | Sức mạnh nhận diện thương hiệu |
-| -- Referral Traffic | 37.498 | 5.52% | Lưu lượng từ đối tác/backlink |
-| -- Others | 26.105 | 3.84% | Chiến dịch thử nghiệm quy mô nhỏ |
-| **PAID TRAFFIC** | **105.111** | **15.47%** | Tỷ trọng Paid tăng vọt so với T10 (4.02% MTD9d) - cần đối chiếu lại chiến dịch Ads |
+| -- AI Traffic (GEO) | 5.822 | 0.86% | Tăng trưởng bứt phá từ ChatGPT, Gemini, Perplexity |
+| -- Referral (còn lại) | 57.781 | 8.50% | Hấp thu đối tác/backlink, in-app và các nguồn tự nhiên còn lại |
+| **PAID TRAFFIC** | **105.111** | **15.47%** | Duy trì ngân sách Ads thiết yếu phục vụ chuyển đổi trọng điểm |
 
 ---
 

@@ -22,17 +22,17 @@
       "pv": 174629,
       "pct": 25.7
     },
+    "ai_traffic": {
+      "pv": 5822,
+      "pct": 0.86
+    },
+    "referral_remaining": {
+      "pv": 57781,
+      "pct": 8.5
+    },
     "paid": {
       "pv": 105111,
       "pct": 15.47
-    },
-    "referral": {
-      "pv": 37498,
-      "pct": 5.52
-    },
-    "others": {
-      "pv": 26105,
-      "pct": 3.84
     },
     "non_paid_total": {
       "pv": 574359,
