@@ -280,6 +280,14 @@ RULES = [
         "replacement": "kịch bản kết thúc sớm, hoặc mô phỏng rủi ro đột ngột",
         "auto_fix": "kịch bản kết thúc sớm",
     },
+    {
+        "id": "SAN_LUONG_TRAFFIC",
+        "pattern": r"(?i)\bsản\s+lượng\s+(truy\s+cập|thất\s+thoát|chuyển\s+đổi|traffic|pv|pageview|người\s+dùng|khách\s+hàng)\b",
+        "flags": 0,
+        "desc": "Dùng từ sản lượng cho traffic / chuyển đổi web (thuật ngữ cơ khí / sản xuất công nghiệp)",
+        "replacement": "lưu lượng truy cập, lượt truy cập (Pageviews/Sessions), hoặc mục tiêu chuyển đổi Web-to-App",
+        "auto_fix": "lưu lượng",
+    },
 ]
 
 
