@@ -1,0 +1,87 @@
+{
+  "file_source": "GA4 Data API (Property 270743103)",
+  "read_timestamp": "2026-11-11 07:49:29",
+  "report_type": "MTD 10 Ngày (01/11 - 10/11/2026)",
+  "days_elapsed": 10,
+  "days_in_month": 30,
+  "target_pv": 3829155,
+  "actual_mtd_pv": 1381401,
+  "progress_pct": 36.08,
+  "daily_pace": 138140.1,
+  "daily_needed": 122387.7,
+  "forecast_31d": 4144203.0,
+  "forecast_pct": 108.23,
+  "users": 504202,
+  "sessions": 655615,
+  "channels": {
+    "organic": {
+      "pv": 582271,
+      "pct": 42.15
+    },
+    "direct": {
+      "pv": 355060,
+      "pct": 25.7
+    },
+    "paid": {
+      "pv": 284056,
+      "pct": 20.56
+    },
+    "referral": {
+      "pv": 64514,
+      "pct": 4.67
+    },
+    "others": {
+      "pv": 95500,
+      "pct": 6.91
+    },
+    "ai_traffic": {
+      "pv": 9694,
+      "pct": 0.7
+    },
+    "non_paid_total": {
+      "pv": 1097345,
+      "pct": 79.44
+    }
+  },
+  "hubs": {
+    "cinema": {
+      "pv": 310088,
+      "target": 1294630,
+      "pct": 23.95
+    },
+    "financial": {
+      "pv": 122239,
+      "target": 700000,
+      "pct": 17.46
+    },
+    "new_user": {
+      "pv": 34769,
+      "target": 300000,
+      "pct": 11.59
+    },
+    "vehicle": {
+      "pv": 49094,
+      "target": 100000,
+      "pct": 49.09
+    },
+    "insurance": {
+      "pv": 19110,
+      "target": 50000,
+      "pct": 38.22
+    },
+    "student": {
+      "pv": 1026,
+      "target": 100000,
+      "pct": 1.03
+    }
+  },
+  "cinema_breakdown": {
+    "Trang Rạp phim": 214269,
+    "Trang phim chi tiết": 64171,
+    "Cinema_Home Page": 21463,
+    "Cinema_Blog": 8745,
+    "Cinema_Landing Page": 1244,
+    "Tin tức": 196,
+    "Others": 0
+  }
+}
