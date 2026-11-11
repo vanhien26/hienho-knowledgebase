@@ -1,10 +1,10 @@
 # BRD: Cinema Hub - Cổng Giải Trí & Điện Ảnh MoMo
 
-> - **Project:** Cinema Hub (Web Platform & Cinema Ecosystem Strategy Q2-Q4/2026)
-> - **Division:** Marketing Distribution Services (MDS) / Web Platform
+> - **Dự án:** Cinema
+> - **Khối phụ trách:** Marketing Distribution Services (MDS) / Web Platform
 > - **Owner:** Web Platform Team x BU Movies
-> - **Version:** v4.0 - Tháng 9/2026
-> - **Status:** Active & Production Pilot Ready (`momo.vn/cinema`)
+> - **Phiên bản:** v4.0 - Tháng 9/2026
+> - **Trạng thái:** Active & Production Pilot Ready (`momo.vn/cinema`)
 
 ## I. Executive Summary
 
@@ -1286,71 +1286,6 @@ Do đó, Cinema Hub áp dụng **3 Cơ Chế Kiểm Soát Kỹ Thuật Nghiêm N
 #### 3. Chống Trang Rác & Tự Động Hóa Quản Lý Index (Thin Content Defense Matrix)
 * **Dynamic Noindex Rule:** Đối với bất kỳ trang địa điểm hay chuyên mục nào có số lượng suất chiếu rạp active **< 2 phim** hoặc không có thông tin suất chiếu realtime, hệ thống tự động chèn `<meta name="robots" content="noindex, follow">`.
 * **Crawl Budget Protection:** Đảm bảo Googlebot chỉ dành năng lực thu thập dữ liệu cho các trang chất lượng cao (`/cinema/{movie-slug}` và `/cinema/rap/{ten-rap}`), loại bỏ hoàn toàn các trang rác / trang trống dữ liệu.
-
-#### 5.1.3 Chuẩn Cấu Trúc Bố Cục Trang Bài Viết Review Phim Chi Tiết (Editorial Movie Review Page Architecture)
-
-Để tối ưu hóa trải nghiệm đọc, đảm bảo uy tín SEO (Topical Authority) và chuyển đổi tối đa lượng truy cập Informational sang giao dịch mua vé rạp (CVR ≥ 4.5% - 8%), trang Review Phim Chi Tiết (`/cinema/{film-detail-ID}/review`) tuân thủ **Cấu Trúc Bố Cục 8 Khu Vực (8-Zone Page Architecture)**:
-
-<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
-  <thead>
-    <tr style="background-color:#f1f5f9;">
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Zone</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Khu Vực Giao Diện</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thành Phần Cốt Lõi & Tính Năng Kỹ Thuật</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục Tiêu UX & Tối Ưu Chuyển Đổi (CVR)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Zone 1</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Header & Breadcrumb Navigation</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thẻ Breadcrumb Schema: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Trang chủ > Điện Ảnh > Review Phim > {Tên Phim}</code>. Canonical URL trỏ về đường dẫn chuẩn.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khai báo cấu trúc phân cấp chuẩn Google Crawler & hỗ trợ navigation.</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Zone 2</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hero Article Header & Rating Badge</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tiêu đề H1 dạng: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Review Phim {Tên Phim}: [Slogan/Nhận xét 1 câu]</code>. Metadata (Tác giả, Ngày đăng, Thời gian đọc ~3 phút) + Thẻ <strong>MoMo Rating Badge (8.8/10 ⭐)</strong>.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gây ấn tượng thị giác mạnh mẽ & khẳng định uy tín nội dung biên tập.</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Zone 3</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Verdict Box (Tóm Tắt 1 Phút)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khối tóm tắt nhanh: <strong>Điểm cộng (Pros)</strong>, <strong>Điểm trừ (Cons)</strong>, <strong>Đánh giá chung (Verdict)</strong> + Nút CTA Mua Vé Nhanh: <i>"Đặt Vé Rạp Gần Bạn (Đồng Giá 79K)"</i>.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phục vụ 40% người đọc lười, chốt đơn mua vé ngẫu hứng ngay mốc 30s đầu.</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Zone 4</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Smart Intent Interception Widget</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhúng trực tiếp Widget Tra cứu suất chiếu 13 rạp realtime ngay dưới Verdict Box (Bộ lọc Tỉnh/Thành ➔ Ngày chiếu ➔ Suất chiếu + Nút Giữ Ghế 1-Click).</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Biến lưu lượng truy cập bài viết Informational thành giao dịch bán vé trực tiếp.</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Zone 5</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Editorial Content (Phân Tích Chi Tiết)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nội dung bài viết chuẩn hóa theo các thẻ H2/H3:<br/>• H2. Cốt truyện & Thông điệp (No Spoiler Alert)<br/>• H2. Diễn xuất & Điểm sáng nhân vật (đính kèm link diễn viên)<br/>• H2. Hình ảnh, Âm thanh & Trải nghiệm phòng chiếu (IMAX/3D/4DX)<br/>• H2. Cảnh After-Credit & Quy định độ tuổi ra rạp (P/T13/T16/T18)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giải đáp triệt để tất cả thắc mắc của người đọc, kéo dài Time-on-Site (3-5 phút).</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Zone 6</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MoMo Verified Community Rating</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảng thống kê tỷ lệ % Đánh giá + Danh sách bài nhận xét từ người dùng có Badge xác thực <strong>"Đã Mua Vé Trên MoMo"</strong> + Bộ lọc <i>[Không Spoiler] / [Có Spoiler]</i> + Nút Upvote/Thả tim.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tạo nguồn dữ liệu UGC Content thật 100%, nâng cao độ tin cậy Social Proof.</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Zone 7</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Related Topic Clusters (Bài Viết Liên Quan)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Carousel/Grid bài viết liên quan: Bài viết Giải thích Kết thúc Phim (Ending Explained), Thứ tự xem phim (Watch Order), Top Phim cùng thể loại.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng số trang xem (Pages per Session từ 1.2 ➔ 3.5+ trang) & tối ưu Internal Linking.</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Zone 8</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sticky Bottom Intent Bar (Mobile Web)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thanh Sticky Bar nổi dưới chân màn hình Mobile khi cuộn trang: Hiển thị <i>[Điểm MoMo Rating: 8.8/10]</i> + Nút <strong>"Đặt Vé Ngay - Giữ Ghế Đẹp"</strong>.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giữ nút CTA mua vé luôn xuất hiện trong tầm mắt người dùng trên giao diện di động.</td>
-    </tr>
-  </tbody>
-</table>
 
 #### Phân Tích Khoảng Trống & Lộ Trình Nâng Cấp (Gap Analysis: As-Is vs To-Be Architecture)
 

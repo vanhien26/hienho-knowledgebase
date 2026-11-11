@@ -1,15 +1,15 @@
 # Web Product Lead - Strategic & OKRs H2 2026
 
-> - **Document:** Web Product Lead - Strategic & OKRs H2 2026
-> - **Division:** Growth Platform Division (GPD)
-> - **Unit:** Web Platform
-> - **Team:** Out-App Traffic Team
-> - **Role:** Web Product Lead
+> - **Tài liệu:** Web Product Lead - Strategic & OKRs H2 2026
+> - **Khối phụ trách:** Growth Platform Division (GPD)
+> - **Đơn vị:** Web Platform
+> - **Nhóm:** Out-App Traffic Team
+> - **Vai trò:** Web Product Lead
 > - **Owner:** Văn Hiến
-> - **Direct Manager:** Head of Web Platform
-> - **Version:** 1.1 · July 2026
-> - **Status:** Active
-> - **Last updated:** 2026-07-13
+> - **Quản lý trực tiếp:** Head of Web Platform
+> - **Phiên bản:** 1.1 · July 2026
+> - **Trạng thái:** Active
+> - **Cập nhật:** 2026-07-13
 
 ---
 

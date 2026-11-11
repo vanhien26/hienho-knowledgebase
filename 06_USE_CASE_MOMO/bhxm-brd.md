@@ -1,13 +1,13 @@
 # BRD: Bảo Hiểm Xe Máy
 
-> - **Project:** Bảo Hiểm Xe Máy Web Growth
-> - **Main URL:** momo.vn/bao-hiem-xe-may
-> - **Division:** FS (Financial Services)
+> - **Dự án:** Bảo Hiểm Xe Máy Web Growth
+> - **URL chính:** momo.vn/bao-hiem-xe-may
+> - **Khối phụ trách:** FS (Financial Services)
 > - **Use Case:** InsurTech
 > - **Owner:** Web Platform
-> - **Governance:** Web Product Lead (Hiến)
-> - **Version:** 1.2 - Tháng 7/2026
-> - **Status:** Draft (Updated Media Team Plan)
+> - **Phê duyệt:** Web Product Lead (Hiến)
+> - **Phiên bản:** 1.2 - Tháng 7/2026
+> - **Trạng thái:** Draft (Updated Media Team Plan)
 > - **SEO Score:** 65/100 | **Traffic:** 15K sessions/tháng | **W2A:** 8.5%
 
 ---

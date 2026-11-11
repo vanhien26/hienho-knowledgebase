@@ -1,11 +1,11 @@
 # PRD: Dynamic Stock Ticker Profiles & Cổng Chứng Khoán Master Hub
 
-> - **Tên Sản Phẩm:** Dynamic Stock Ticker Profiles & Cổng Chứng Khoán Master Hub
-> - **URL Chuẩn:** `/tai-chinh/chung-khoan` (Cổng Tổng Quan) & `/tai-chinh/chung-khoan/[ticker]` (Dynamic Ticker Profile)
-> - **Khối Phụ Trách:** Growth Platform Division x Financial Services Division (CreditTech x CVS Partnership)
-> - **Đội Ngũ Triển Khai:** Web Development Team, Backend Team, SEO & Content Team, Product Growth Team
-> - **Phiên Bản:** v1.0 - Tháng 10/2026
-> - **Trạng Thái:** Production Blueprint & Technical Specification
+> - **Sản phẩm:** Dynamic Stock Ticker Profiles & Cổng Chứng Khoán Master Hub
+> - **URL chính:** `/tai-chinh/chung-khoan` (Cổng Tổng Quan) & `/tai-chinh/chung-khoan/[ticker]` (Dynamic Ticker Profile)
+> - **Khối phụ trách:** Growth Platform Division x Financial Services Division (CreditTech x CVS Partnership)
+> - **Đội ngũ triển khai:** Web Development Team, Backend Team, SEO & Content Team, Product Growth Team
+> - **Phiên bản:** v1.0 - Tháng 10/2026
+> - **Trạng thái:** Production Blueprint & Technical Specification
 
 ---
 

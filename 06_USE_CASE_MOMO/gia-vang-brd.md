@@ -1,11 +1,11 @@
 # BRD: Giá Vàng
 
 > - **Market:** Gold
-> - **Division:** Web Platform
+> - **Khối phụ trách:** Web Platform
 > - **Owner:** Web Platform
-> - **Governance:** Web Product Lead (Hiến)
-> - **Version:** v1.2 - 2026-05-23
-> - **Status:** Draft - Chờ 3 pre-conditions (xem Section 3.3)
+> - **Phê duyệt:** Web Product Lead (Hiến)
+> - **Phiên bản:** v1.2 - 2026-05-23
+> - **Trạng thái:** Draft - Chờ 3 pre-conditions (xem Section 3.3)
 > - **Business Model:** Financial Utility + PLG Activation (không có sản phẩm mua/bán vàng)
 
 ---

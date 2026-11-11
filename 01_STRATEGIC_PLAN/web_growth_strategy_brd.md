@@ -1,10 +1,10 @@
 # BRD: Chiến lược Tăng trưởng Web Growth & Content Authority
 ## Tư duy Nền tảng (Platform Owner) & Khung thực thi SPA
 
-> - **Phụ trách:** Web Platform Manager & Web Product Lead, Growth Platform Division
+> - **Owner:** Web Platform Manager & Web Product Lead, Growth Platform Division
 > - **Phê duyệt:** VP - Growth Platform Division
-> - **Version:** 2.0 · May 2026
-> - **Status:** Active
+> - **Phiên bản:** 2.0 · May 2026
+> - **Trạng thái:** Active
 
 ---
 

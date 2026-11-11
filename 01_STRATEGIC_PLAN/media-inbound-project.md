@@ -1,9 +1,9 @@
 # Khung Chiến Lược Tái Cấu Trúc Vận Hành, Tự Động Hóa & Align Scope Dự Án BMC - Media Inbound
 
 > - **Tài liệu:** Media Inbound Project - Executive Operational Restructuring, Automation & Scope Framework
-> - **Bộ phận:** Growth Platform Division (GPD) x Web Platform x Division BMC - Media (Inbound)
+> - **Khối phụ trách:** Growth Platform Division (GPD) x Web Platform x Division BMC - Media (Inbound)
 > - **Phiên bản:** 3.1
-> - **Ngày cập nhật:** 2026-08-13
+> - **Cập nhật:** 2026-08-13
 > - **Trạng thái:** APPROVED - Khung chiến lược tái cấu trúc vận hành chính thức thống nhất giữa Executive Leadership, BMC (Inbound) x Web Platform
 
 ---

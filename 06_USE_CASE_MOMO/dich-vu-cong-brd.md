@@ -1,9 +1,9 @@
 # BRD: Dịch Vụ Công MoMo
 
-> - **Project:** Dịch Vụ Công MoMo (DVC) - Governance Hub
-> - **Main URL:** `momo.vn/dich-vu-cong` (Governance Hub) + kênh Web chiến lược (Phạt Nguội, ePass)
-> - **Version:** 2.5 · Tháng 5/2026
-> - **Status:** **DVC Chung** (Info hub - đề án Bộ Công An) | **Phạt Nguội** (BRD riêng, Phase 1 LIVE) | **ePass** (Build Foundation)
+> - **Dự án:** Dịch Vụ Công MoMo (DVC) - Governance Hub
+> - **URL chính:** `momo.vn/dich-vu-cong` (Governance Hub) + kênh Web chiến lược (Phạt Nguội, ePass)
+> - **Phiên bản:** 2.5 · Tháng 5/2026
+> - **Trạng thái:** **DVC Chung:** (Info hub - đề án Bộ Công An) | **Phạt Nguội:** (BRD riêng, Phase 1 LIVE) | **ePass:** (Build Foundation)
 
 ---
 

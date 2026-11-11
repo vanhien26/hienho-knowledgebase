@@ -1,10 +1,10 @@
 # Master BRD: Web-to-App New User Acquisition & Pre-install Personalization Engine
 
-> - **Project:** New User Hub & Web-to-App Personalization Journey
-> - **Division:** Growth Platform Division (GPD)
-> - **Owners:** Web Platform Team x User Growth Team
-> - **Version:** 2.0 · Tháng 8/2026
-> - **Status:** Active (Strategic Alignment & Execution)
+> - **Dự án:** New User Hub & Web-to-App Personalization Journey
+> - **Khối phụ trách:** Growth Platform Division (GPD)
+> - **Owner:** Web Platform Team x User Growth Team
+> - **Phiên bản:** 2.0 · Tháng 8/2026
+> - **Trạng thái:** Active (Strategic Alignment & Execution)
 
 ---
 

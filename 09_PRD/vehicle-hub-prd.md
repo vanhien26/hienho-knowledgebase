@@ -1,6 +1,6 @@
 # ĐẶC TẢ YÊU CẦU SẢN PHẨM (PRD) - VEHICLE HUB (KÊNH WEB & HỒ SƠ PHƯƠNG TIỆN)
 
-> **Mục đích:** Tài liệu Đặc tả Yêu cầu Sản phẩm Kênh Web (Web Product PRD) chính thức dành cho dự án **Vehicle Hub - Tiện Ích Giao Thông**, xây dựng theo chuẩn 4 Phần Tiêu Chuẩn: Overview, Market Research, Product Structure (Site, Content & Umami Touchpoints) và SEO/GEO On-Page.
+> **Mục đích:** Tài liệu Đặc tả Yêu cầu Sản phẩm Kênh Web (Web Product PRD) chính thức dành cho dự án **Vehicle Hub - Tiện Ích Giao Thông:**, xây dựng theo chuẩn 4 Phần Tiêu Chuẩn: Overview, Market Research, Product Structure (Site, Content & Umami Touchpoints) và SEO/GEO On-Page.
 
 ## THÔNG TIN TỔNG QUAN (METADATA)
 

@@ -1,8 +1,8 @@
 # PRD: Trang Chi Tiết Dòng Xe & Báo Giá Bảo Hiểm Ô Tô (/hang-xe/[brand]/[model])
 
 > - **Dự án:** Vehicle Hub - Web Platform
-> - **Đơn vị phụ trách:** Web Platform Team x InsurTech BU
-> - **Đường dẫn chuẩn (URL Schema):** `momo.vn/tien-ich-giao-thong/hang-xe/[brand]/[model]` (VD: `momo.vn/tien-ich-giao-thong/hang-xe/vinfast/vf3`)
+> - **Khối phụ trách:** Web Platform Team x InsurTech BU
+> - **URL chính:** `momo.vn/tien-ich-giao-thong/hang-xe/[brand]/[model]` (VD: `momo.vn/tien-ich-giao-thong/hang-xe/vinfast/vf3`)
 > - **Trạng thái:** Hạng mục trọng tâm Sprint (Hoàn thành trước 05/10/2026)
 
 ---

@@ -1,13 +1,13 @@
 # BRD: Tra Cứu Phạt Nguội
 
-> - **Project:** Tra Cứu Phạt Nguội Web Growth
-> - **Main URL:** momo.vn/phat-nguoi
-> - **Division:** PS (Payment Services)
+> - **Dự án:** Tra Cứu Phạt Nguội Web Growth
+> - **URL chính:** momo.vn/phat-nguoi
+> - **Khối phụ trách:** PS (Payment Services)
 > - **Use Case:** Phạt Nguội
 > - **Owner:** Web Platform
-> - **Governance:** Web Product Lead
-> - **Version:** 5.0 - 2026-08-19
-> - **Status:** Aligned 19/08/2026 - Tái cấu trúc luồng kết quả tra cứu (Single Page Inline Section), phân 2 nhánh trả kết quả (Có vi phạm: Nộp phạt In-App + Content Block cẩm nang; Không vi phạm: Cross-sell Bảo hiểm & Gói đăng ký thông báo Phạt nguội tự động), áp dụng GenAI Content QC & mapping tự động.
+> - **Phê duyệt:** Web Product Lead
+> - **Phiên bản:** 5.0 - 2026-08-19
+> - **Trạng thái:** Aligned 19/08/2026 - Tái cấu trúc luồng kết quả tra cứu (Single Page Inline Section), phân 2 nhánh trả kết quả (Có vi phạm: Nộp phạt In-App + Content Block cẩm nang; Không vi phạm: Cross-sell Bảo hiểm & Gói đăng ký thông báo Phạt nguội tự động), áp dụng GenAI Content QC & mapping tự động.
 
 ---
 

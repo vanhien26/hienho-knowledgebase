@@ -1,12 +1,12 @@
 # BRD: Revamp Trang Chủ MoMo (MoMo Homepage Revamp 2026)
 ## Định Vị Uy Tín Tài Chính (Financial Authority), Xây Dựng Niềm Tin Số & Trung Tâm Chào Đón Người Dùng Mới (New User Welcome Hub)
 
-> - **Project:** Revamp Trang Chủ MoMo (MoMo Homepage Revamp)
-> - **Main URL:** momo.vn
-> - **Division:** Growth Platform Division (Web Platform)
-> - **Governance:** Web Product Lead
-> - **Version:** 2.0 · Tháng 08/2026
-> - **Status:** Active
+> - **Dự án:** Revamp Trang Chủ MoMo (MoMo Homepage Revamp)
+> - **URL chính:** momo.vn
+> - **Khối phụ trách:** Growth Platform Division (Web Platform)
+> - **Phê duyệt:** Web Product Lead
+> - **Phiên bản:** 2.0 · Tháng 08/2026
+> - **Trạng thái:** Active
 
 ---
 
@@ -200,44 +200,6 @@ Tái cấu trúc toàn diện Trang chủ `momo.vn` thành **Trung Tâm Định 
 ---
 
 ## 5. Kiến Trúc Trang Chủ Mới (6-Zone Pure Fintech Architecture)
-
-```
-+-------------------------------------------------------------------------+
-| [HEADER NAVBAR] Logo | Dịch Vụ Tài Chính | An Toàn Bảo Mật | Về MoMo   |
-|                 CTA Nổi Bật: "Nhận Gói Quà Tân Thủ 1.000.000đ"          |
-+-------------------------------------------------------------------------+
-| ZONE 1: HERO SECTION - FINANCIAL POWERHOUSE & NEW USER PROMISE          |
-| • Headline: "Trợ Lý Tài Chính Thông Minh & Nền Tảng Thanh Toán An Toàn" |
-| • Welcome Hook: Chào bạn mới - Nhận gói quà 1.000.000đ khi mở tài khoản|
-| • Dual CTA: Dynamic QR Code tải App (Desktop) / Nút OneLink (Mobile)   |
-+-------------------------------------------------------------------------+
-| ZONE 2: NEW USER WELCOME CENTER (3 BƯỚC BẮT ĐẦU DỄ DÀNG)                |
-| • Bước 1: 1 Chạm Thanh Toán & Nạp Rút Mọi Lúc Mọi Nơi                   |
-| • Bước 2: Tích Lũy Sinh Lời Tự Động Mỗi Ngày với Túi Thần Tài           |
-| • Bước 3: Tận Dụng Đòn Bẩy Tiêu Dùng 0% Lãi với Ví Trả Sau              |
-+-------------------------------------------------------------------------+
-| ZONE 3: FINANCIAL AUTHORITY SHOWCASE (BỘ GIẢI PHÁP TÀI CHÍNH TOÀN DIỆN) |
-| • Trụ cột 1: Tích Lũy Sinh Lời (Túi Thần Tài + Mini-Calculator tính lãi)|
-| • Trụ cột 2: Tín Dụng & Tiêu Dùng (Ví Trả Sau 0% lãi, Vay Nhanh Ngân Hàng)|
-| • Trụ cột 3: Bảo Hiểm Toàn Diện (InsurTech Ô tô, Xe máy, Sức khỏe)     |
-| • Trụ cột 4: Đầu Tư & Quản Trị (Chứng Khoán Online, Tra Cứu Điểm CIC)   |
-+-------------------------------------------------------------------------+
-| ZONE 4: TRUST FORTRESS (PHÁO ĐÀI AN TOÀN & BẢO CHỨNG MINH BẠCH)         |
-| • 3 Tầng Bảo Chứng: Giấy phép NHNN, PCI-DSS Level 1, ISO 27001          |
-| • Mạng Lưới Ngân Hàng Đối Tác: Dải logo các ngân hàng lớn nhất Việt Nam |
-| • Active Anti-Fraud Card: Cổng Báo Cáo Lừa Đảo (/an-toan-bao-mat/bao-cao)|
-| • Security Newsletter: Bản Tin An Toàn Bảo Mật (/an-toan-bao-mat/ban-tin)|
-+-------------------------------------------------------------------------+
-| ZONE 5: SMART MONEY ASSISTANT & BRAND LOVE                              |
-| • Quản Lý Chi Tiêu Tự Động: Phân loại thông minh, kiểm soát dòng tiền   |
-| • Đặc Quyền Thành Viên MoMo Rewards: Tích điểm đổi ngàn ưu đãi          |
-| • Social Proof: Câu chuyện người thật việc thật tối ưu tài chính        |
-+-------------------------------------------------------------------------+
-| ZONE 6: STICKY NEW USER BAR & MASTER FINANCIAL FOOTER                   |
-| • Sticky Welcome Bar: Nhắc nhở gói quà tân thủ 1.000.000đ ở đáy trang   |
-| • Master Footer: Cấu trúc liên kết chuẩn mực tập trung Tài chính & Pháp lý|
-+-------------------------------------------------------------------------+
-```
 
 ### 5.1 Sơ Đồ Luồng Chuyển Đổi Người Dùng (User Flow)
 

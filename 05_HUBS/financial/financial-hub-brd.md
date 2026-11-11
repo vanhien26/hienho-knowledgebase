@@ -1,10 +1,10 @@
 # BRD: Financial Master Hub (momo.vn/tai-chinh)
 
-> - **Tên Dự Án:** Financial Master Hub (Cổng Khám Phá & Ra Quyết Định Dịch Vụ Tài Chính MoMo)
-> - **Khối Phụ Trách:** Growth Platform Division x Financial Services Division (CreditTech)
-> - **Đội Ngũ Triển Khai:** Web Development Team, Backend Team, SEO & Content Team, Product Growth Team
-> - **Phiên Bản:** v3.1 - Tháng 8/2026
-> - **Trạng Thái:** Aligned & Production Ready (`momo.vn/tai-chinh`)
+> - **Dự án:** Financial Master Hub (Cổng Khám Phá & Ra Quyết Định Dịch Vụ Tài Chính MoMo)
+> - **Khối phụ trách:** Growth Platform Division x Financial Services Division (CreditTech)
+> - **Đội ngũ triển khai:** Web Development Team, Backend Team, SEO & Content Team, Product Growth Team
+> - **Phiên bản:** v3.1 - Tháng 8/2026
+> - **Trạng thái:** Aligned & Production Ready (`momo.vn/tai-chinh`)
 
 ---
 
@@ -124,7 +124,6 @@ Khối **MoMo Gợi Ý** tuyệt đối không sử dụng câu chữ tĩnh (Sta
 > Toàn bộ logic công thức, cơ chế Toggle Cà Khịa (Roast Mode), nút Lắc Quẻ Re-roll, mã nguồn TypeScript (`src/utils/aiProposalEngine.ts`) và mã Umami Tracking chuẩn hóa được tổng hợp độc lập tại:
 > [momo-ai-proposal-engine-prd.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/09_PRD/momo-ai-proposal-engine-prd.md).
 
-
 #### Quy Chuẩn Đề Xuất Trợ Lý MoMo AI Cho Utility Tính Lãi Tiết Kiệm (Công Thức Bù Đắp Chênh Lệch Lãi Ròng - Net Yield Gap):
 
 Thay vì hiển thị câu chữ đếm số lượng ngân hàng hình thức gây trùng lặp với bảng so sánh, khối Trợ lý MoMo AI vận hành theo kịch bản chung duy nhất: **Bù đắp chênh lệch lãi ròng giữa phương án người dùng chọn và giải pháp tối ưu trên MoMo**.
@@ -203,30 +202,6 @@ Toàn bộ các công cụ tính toán (Tools) và trang đích trên Kênh Web 
 - **Dynamic Ticker Profile (Programmatic SEO 30 Mã VN30):** `momo.vn/tai-chinh/chung-khoan/[ticker]`
   - URL chuẩn hóa viết thường (ví dụ: `/tai-chinh/chung-khoan/fpt`, `/tai-chinh/chung-khoan/vnm`, `/tai-chinh/chung-khoan/hpg`, `/tai-chinh/chung-khoan/vcb`, `/tai-chinh/chung-khoan/mwg`...).
   - Triển khai toàn diện 30 mã thuộc rổ chỉ số VN30 nhằm bao phủ toàn bộ lượng tìm kiếm thương hiệu và mã chứng khoán (quy mô hơn 4.1 triệu lượt tìm kiếm/tháng).
-
-#### 5.4.3 Wireframe Nội Dung 7 Tầng Chuẩn Hóa Cho Dynamic Ticker Profile
-
-Mỗi trang `/tai-chinh/chung-khoan/[ticker]` được chuẩn hóa thành 7 tầng nội dung logic phục vụ hành trình khám phá và ra quyết định chuyển đổi:
-
-- **Tầng 1: Hero & Price Action No-Jargon:**
-  - Ticker, Logo doanh nghiệp, Tên công ty đầy đủ, Ngành nghề chính, Sàn niêm yết (HOSE).
-  - Giá đóng cửa gần nhất, Biến động phiên (% và VND), Vốn hóa thị trường.
-  - Hộp Định Giá Bình Dân: Tự động đánh giá cổ phiếu đang ở vùng giá Hợp lý / Hơi cao / Hấp dẫn dựa trên P/E lịch sử 5 năm.
-  - Primary CTA: Nút nhấp mở App *"Mua Cổ Phiếu [Mã] Từ 10.000đ Trên MoMo"* kèm mã QR trên Desktop.
-- **Tầng 2: Thước Đo Sức Khỏe Doanh Nghiệp (MoMo Stock Health Score 1-100):**
-  - Thang điểm 1-100 trực quan phân tầng 4 mức (Xuất Sắc, Tốt, Trung Bình, Cần Thận Trọng).
-  - Tách bạch 4 trụ cột đánh giá: Sức mạnh tài chính (25%), Tăng trưởng kinh doanh (25%), Lịch sử cổ tức (25%), Hiệu quả & Vị thế ngành (25%).
-- **Tầng 3: Mô Hình Kinh Doanh Dễ Hiểu Cho F0 (Business Model Breakdown):**
-  - Giải thích cụ thể doanh nghiệp kiếm tiền từ đâu, lợi thế cạnh tranh bền vững (Moat), và rủi ro lớn nhất cần lưu ý bằng 3-4 gạch đầu dòng súc tích.
-- **Tầng 4: Máy Tính Giả Lập Tích Sản Lịch Sử (Stock DCA Backtester Tool):**
-  - Tiện ích tương tác không cần đăng nhập cho phép kiểm chứng kết quả đầu tư định kỳ hàng tháng (1 năm, 3 năm, 5 năm) so sánh trực tiếp với gửi tiết kiệm ngân hàng 6%/năm.
-- **Tầng 5: Lịch Trả Cổ Tức Tiền Mặt & Dòng Tiền Thụ Động (Dividend Tracker):**
-  - Bảng lịch sử trả cổ tức tiền mặt 3-5 năm gần nhất, tỷ suất cổ tức bình quân (Dividend Yield) so với lãi suất tiền gửi 12 tháng.
-- **Tầng 6: Cơ Chế Chuyển Đổi Kép Độc Quyền (Dual-Conversion Hook):**
-  - Cánh cửa 1: Tự mua cổ phiếu lô lẻ mã này từ 10.000đ qua CVS in-app.
-  - Cánh cửa 2: Ủy thác qua Quỹ Mở (`/tai-chinh/chung-chi-quy`) sở hữu trọn rổ cổ phiếu đầu ngành cho người dùng ngại rủi ro chọn mã.
-- **Tầng 7: Câu Hỏi Thường Gặp (FAQ Schema JSON-LD) Chuẩn SEO/GEO:**
-  - 5-6 câu hỏi giải tỏa rào cản pháp lý, cơ chế lô lẻ, cách nhận cổ tức, tính thanh khoản và biểu phí giao dịch.
 
 #### 5.4.4 Chi Tiết Kỹ Thuật Hai Công Cụ Tương Tác Cốt Lõi
 
@@ -967,6 +942,4 @@ Tổng hợp toàn bộ 24 thị trường dịch vụ của Phân khối Credit
     </tr>
   </tbody>
 </table>
-
-
 

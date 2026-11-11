@@ -1,12 +1,12 @@
 # BRD: Tra Cứu Điểm Tín Dụng (CIC)
 
-> - **Project:** Điểm Tín Dụng (CIC) Web Growth
-> - **Main URL:** `momo.vn/diem-tin-dung`
-> - **Division:** Financial Services (FS Division)
+> - **Dự án:** Điểm Tín Dụng (CIC) Web Growth
+> - **URL chính:** `momo.vn/diem-tin-dung`
+> - **Khối phụ trách:** Financial Services (FS Division)
 > - **Use Case:** Điểm Tín Dụng (CIC Score & Alert)
 > - **Owner:** Web Platform Team x BU Financial Hub
-> - **Version:** v2.0 - Month 8/2026
-> - **Status:** Aligned & Content Strategy Execution Phase
+> - **Phiên bản:** v2.0 - Month 8/2026
+> - **Trạng thái:** Aligned & Content Strategy Execution Phase
 
 ---
 

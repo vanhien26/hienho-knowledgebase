@@ -1,11 +1,11 @@
 # MoMo.vn Web Strategic Thesis & Governance Framework (2026)
 
-> - **Document:** MoMo.vn Web Strategic Thesis & Governance Framework (Thesis & BRD)
-> - **Main Domain:** momo.vn
-> - **Division:** Growth Platform Division (GPD)
-> - **Version:** 6.1 · May 2026
-> - **Status:** Active - Master Strategy & Quality Gate for momo.vn
-> - **Last updated:** 2026-05-23
+> - **Tài liệu:** MoMo.vn Web Strategic Thesis & Governance Framework (Thesis & BRD)
+> - **URL chính:** momo.vn
+> - **Khối phụ trách:** Growth Platform Division (GPD)
+> - **Phiên bản:** 6.1 · May 2026
+> - **Trạng thái:** Active - Master Strategy & Quality Gate for momo.vn
+> - **Cập nhật:** 2026-05-23
 
 > **Executive narrative (deck):** MoSpark Strategic Deck - đọc như proposal 15-25 phút cho C-Level và Cell Team.
 

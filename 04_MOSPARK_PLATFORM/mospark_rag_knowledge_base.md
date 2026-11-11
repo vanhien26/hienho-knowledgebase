@@ -1,12 +1,12 @@
 # MoSpark - RAG Knowledge Base Architecture
 Hệ thống Quản trị Tri thức Tập trung & Truy xuất Cơ sở Dữ liệu MoMo
 
-> - **Project:** MoSpark Web Platform
-> - **Division:** GPD (Growth Product Division)
-> - **Product:** Web Growth Platform
-> - **Governance:** Văn Hiến (Web Product Lead)
-> - **Version:** 1.0 · June 2026
-> - **Status:** Proposal - Core Knowledge Engine
+> - **Dự án:** MoSpark Web Platform
+> - **Khối phụ trách:** GPD (Growth Product Division)
+> - **Sản phẩm:** Web Growth Platform
+> - **Phê duyệt:** Văn Hiến (Web Product Lead)
+> - **Phiên bản:** 1.0 · June 2026
+> - **Trạng thái:** Proposal - Core Knowledge Engine
 
 ---
 

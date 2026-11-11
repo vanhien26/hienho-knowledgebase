@@ -1,7 +1,7 @@
 # BRD: Merchant Hub - Cổng Thông Tin & Nền Tảng Đối Tác Merchant MoMo
 
-> - **Project:** Merchant Hub (Web Platform & Merchant Profile Identity)
-> - **Division:** Growth Platform Division (GPD)
+> - **Dự án:** Merchant Hub (Web Platform & Merchant Profile Identity)
+> - **Khối phụ trách:** Growth Platform Division (GPD)
 > - **Owner:** Web Platform Team (GPD)
 
 ## I. Executive Summary

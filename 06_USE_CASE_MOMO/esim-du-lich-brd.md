@@ -1,10 +1,10 @@
 # BRD: eSIM Du Lịch
 
-> - **Project:** eSIM Du Lịch - Web Growth & SEO/GEO
-> - **Main URL:** momo.vn/esim-du-lich
-> - **Division:** PS (Payment Services) - Telco
-> - **Version:** 1.4 · Tháng 6/2026
-> - **Status:** Active (Scope: Outbound & Media Team eSIM - Migration to MoSpark)
+> - **Dự án:** eSIM Du Lịch - Web Growth & SEO/GEO
+> - **URL chính:** momo.vn/esim-du-lich
+> - **Khối phụ trách:** PS (Payment Services) - Telco
+> - **Phiên bản:** 1.4 · Tháng 6/2026
+> - **Trạng thái:** Active (Scope: Outbound & Media Team eSIM - Migration to MoSpark)
 
 ---
 

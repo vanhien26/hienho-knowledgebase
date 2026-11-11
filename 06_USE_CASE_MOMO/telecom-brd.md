@@ -1,13 +1,13 @@
 # BRD: Viễn Thông
 
-> - **Project:** MoMo Telecom Growth - Sim Số Đẹp - Nạp Data - eSIM Du Lịch - Nạp Tiền ĐT
-> - **Main URL:** momo.vn/vien-thong (hub) - /sim-so-dep - /nap-data - /esim-du-lich - /nap-tien-dien-thoai
-> - **Division:** PS (Payment Services)
+> - **Dự án:** MoMo Telecom Growth - Sim Số Đẹp - Nạp Data - eSIM Du Lịch - Nạp Tiền ĐT
+> - **URL chính:** momo.vn/vien-thong (hub) - /sim-so-dep - /nap-data - /esim-du-lich - /nap-tien-dien-thoai
+> - **Khối phụ trách:** PS (Payment Services)
 > - **Use Case:** Telco
 > - **Owner:** Web Platform
-> - **Governance:** Web Product Lead (Hiến)
-> - **Version:** 2.1 - 2026-05-24
-> - **Status:** Active (Approved)
+> - **Phê duyệt:** Web Product Lead (Hiến)
+> - **Phiên bản:** 2.1 - 2026-05-24
+> - **Trạng thái:** Active (Approved)
 
 ---
 

@@ -1,10 +1,10 @@
 # BRD: Destination Promotion Hub (MoMo Travel)
 
-> - **Project:** Destination Promotion Hub (DPH) - MoMo Travel (Vé máy bay quốc tế)
-> - **Main URL:** momo.vn/ve-may-bay/uu-dai-diem-den
-> - **Division:** OTA (Online Travel Agent) - MDS
-> - **Version:** 1.1 · Tháng 7/2026
-> - **Status:** Draft / Review (Updated to align with Destination Hub PRD)
+> - **Dự án:** Destination Promotion Hub (DPH) - MoMo Travel (Vé máy bay quốc tế)
+> - **URL chính:** momo.vn/ve-may-bay/uu-dai-diem-den
+> - **Khối phụ trách:** OTA (Online Travel Agent) - MDS
+> - **Phiên bản:** 1.1 · Tháng 7/2026
+> - **Trạng thái:** Draft / Review (Updated to align with Destination Hub PRD)
 > - **Business Model:** OTA Marketplace (Flight, Hotel, Experience, Visa, Insurance)
 
 ---

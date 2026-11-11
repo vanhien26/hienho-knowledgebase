@@ -1,10 +1,10 @@
-> - **Project:** OTA - BUS (Đặt vé xe khách)
-> - **Main URL:** momo.vn/ve-xe
-> - **Division:** GPD - OTA (Non-Air)
+> - **Dự án:** OTA - BUS (Đặt vé xe khách)
+> - **URL chính:** momo.vn/ve-xe
+> - **Khối phụ trách:** GPD - OTA (Non-Air)
 > - **Owner:** Web Platform
-> - **Governance:** Web Product Lead (Hiến)
-> - **Version:** 2.0 - Tháng 05/2026
-> - **Status:** Draft
+> - **Phê duyệt:** Web Product Lead (Hiến)
+> - **Phiên bản:** 2.0 - Tháng 05/2026
+> - **Trạng thái:** Draft
 > - **Business Model:** Marketplace - MoMo là nền tảng tra cứu, đặt và thanh toán vé xe khách; thu phí từ nhà xe đối tác
 
 ---

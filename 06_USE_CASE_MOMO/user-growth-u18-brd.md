@@ -1,10 +1,10 @@
 # BRD: U18 User Growth (Phí Xét Tuyển Đại Học 2026)
 
-> - **Project:** U18 New User Acquisition - Phí Xét Tuyển Đại Học & Back to School 2026
-> - **Main URL:** `momo.vn/phi-xet-tuyen` (Trang Landing Page chính thức)
-> - **Division:** User Growth - GPD
-> - **Version:** 1.0 · Tháng 7/2026
-> - **Status:** Active (Campaign Launching)
+> - **Dự án:** U18 New User Acquisition - Phí Xét Tuyển Đại Học & Back to School 2026
+> - **URL chính:** `momo.vn/phi-xet-tuyen` (Trang Landing Page chính thức)
+> - **Khối phụ trách:** User Growth - GPD
+> - **Phiên bản:** 1.0 · Tháng 7/2026
+> - **Trạng thái:** Active (Campaign Launching)
 
 ---
 

@@ -1,7 +1,7 @@
 # Khung Quản Trị & Vận Hành Nhóm Dự Án Hỗ Trợ Vận Hành & Phối Hợp Nền Tảng Chưa Chốt High-Level Strategic
 
 > - **Tài liệu:** Operational & Platform Support Projects Framework
-> - **Bộ phận:** Growth Platform Division (GPD) x Web Platform
+> - **Khối phụ trách:** Growth Platform Division (GPD) x Web Platform
 > - **Phiên bản:** 1.0
 > - **Ngày phát hành:** 2026-08-12
 > - **Trạng thái:** DRAFT - Đang chờ phê duyệt từ Executive Leadership

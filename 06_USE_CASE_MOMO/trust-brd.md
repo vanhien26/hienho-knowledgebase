@@ -1,10 +1,10 @@
 # BRD: Báo Cáo Lừa Đảo & Bản Tin An Toàn Bảo Mật (Trust - Report Scam & Security Newsletter)
 
-> - **Project:** Use Case Báo Cáo Lừa Đảo (Trust) - Web Growth & Media Team Web Platform
-> - **Main URL:** momo.vn/report-scam & momo.vn/atbm/ban-tin/{quy-nam}
-> - **Division:** Risk & Security (GPD Web Platform)
-> - **Version:** 1.3 · Tháng 6/2026
-> - **Status:** Active (Scope: Landing Page báo cáo, Form nhập tay tĩnh & Bản tin ATBM Quý - S-P-A Framework)
+> - **Dự án:** Use Case Báo Cáo Lừa Đảo (Trust) - Web Growth & Media Team Web Platform
+> - **URL chính:** momo.vn/report-scam & momo.vn/atbm/ban-tin/{quy-nam}
+> - **Khối phụ trách:** Risk & Security (GPD Web Platform)
+> - **Phiên bản:** 1.3 · Tháng 6/2026
+> - **Trạng thái:** Active (Scope: Landing Page báo cáo, Form nhập tay tĩnh & Bản tin ATBM Quý - S-P-A Framework)
 > - **PRD Specs (Report Scam):** [09_PRD/trust-prd.md](../09_PRD/trust-prd.md)
 > - **PRD Specs (Bản tin ATBM):** [09_PRD/ban-tin-atbm-prd.md](../09_PRD/ban-tin-atbm-prd.md)
 

@@ -1,12 +1,12 @@
 # BRD: TÁI CẤU TRÚC HỆ THỐNG TÌM KIẾM THÔNG MINH MOSPARK SEARCH (/TIM-KIEM)
 ## Định Vị Cửa Ngõ Tìm Kiếm Thông Minh, Phân Tầng Chuyển Đổi & Trợ Lý Tác Vụ Web-to-App
 
-> - **Project:** Tái Cấu Trúc Hệ Thống Tìm Kiếm (MoSpark Search Revamp)
-> - **Main URL:** momo.vn/tim-kiem
-> - **Division:** Growth Platform Division (Web Platform)
-> - **Governance:** Web Product Lead
-> - **Version:** 1.0 · Tháng 10/2026
-> - **Status:** Proposal - Sẵn sàng cho Business Alignment
+> - **Dự án:** Tái Cấu Trúc Hệ Thống Tìm Kiếm (MoSpark Search Revamp)
+> - **URL chính:** momo.vn/tim-kiem
+> - **Khối phụ trách:** Growth Platform Division (Web Platform)
+> - **Phê duyệt:** Web Product Lead
+> - **Phiên bản:** 1.0 · Tháng 10/2026
+> - **Trạng thái:** Proposal - Sẵn sàng cho Business Alignment
 
 ---
 
