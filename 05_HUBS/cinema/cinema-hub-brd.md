@@ -199,10 +199,10 @@ Căn cứ dữ liệu đối soát chính thức từ tệp [`MOVIES DATA SUMMAR
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tháng</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">2026 W2A MAU</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">2026 W2A MEU</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">GMV W2A 2026 (VND)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">GMV W2A 2026</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">2025 W2A MAU</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">GMV W2A 2025 (VND)</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Tăng Trưởng YoY GMV (%)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">GMV W2A 2025</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Tăng Trưởng YoY GMV</th>
     </tr>
   </thead>
   <tbody>
@@ -216,7 +216,7 @@ Căn cứ dữ liệu đối soát chính thức từ tệp [`MOVIES DATA SUMMAR
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+99.6%</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 2 (Tết)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 2</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">10,922</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">27,595</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">2,239,010,000 đ</td>
@@ -316,18 +316,18 @@ Dữ liệu ghi nhận từ hệ thống vận hành bán vé in-app (`SUCCESS I
   <thead>
     <tr style="background-color:#f1f5f9;">
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Kỳ Báo Cáo</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Transacting Users (MAU)</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Lượt tương tác (MEU)</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Transactions (Đơn)</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Tickets (Vé)</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">GMV Thực Thu (VND)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">MAU</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">MEU</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Đơn</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Vé</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">GMV Thực Thu</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Tăng Trưởng MoM</th>
       <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Vé / Đơn</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Năm 2025 (Cả năm)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Năm 2025</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">93,758</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">264,178</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">52,311</td>
@@ -337,77 +337,77 @@ Dữ liệu ghi nhận từ hệ thống vận hành bán vé in-app (`SUCCESS I
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.13</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 1/2026 (Thực tế)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 1/2026</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,362</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">20,258</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,889</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">12,643</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,207,245,000 đ</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-47.4% đơn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-47.4%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.15</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 2/2026 (Thực tế - Tết)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 2/2026</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">10,922</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">27,595</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">12,432</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">28,379</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">2,548,560,000 đ</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+182.5% đơn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+182.5%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.28</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 3/2026 (Thực tế)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 3/2026</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">8,728</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">23,839</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">9,881</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">20,600</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">2,025,605,000 đ</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-23.0% đơn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-23.0%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.08</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 4/2026 (Thực tế)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 4/2026</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">7,300</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">20,020</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">8,221</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">18,730</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,685,305,000 đ</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-11.7% đơn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-11.7%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.28</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 5/2026 (Thực tế)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 5/2026</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,141</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">15,823</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,777</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">12,561</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,184,285,000 đ</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-30.9% đơn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-30.9%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.17</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 6/2026 (Thực tế)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 6/2026</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">7,871</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">16,046</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">9,055</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">19,444</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,856,275,000 đ</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+56.7% đơn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+56.7%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.15</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 7/2026 (Thực tế)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 7/2026</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2,263</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">7,806</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2,425</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,211</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">497,125,000 đ</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-64.6% đơn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-64.6%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.15</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 8/2026 (Thực tế)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 8/2026</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">3,757</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">12,962</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">4,016</td>
@@ -417,27 +417,27 @@ Dữ liệu ghi nhận từ hệ thống vận hành bán vé in-app (`SUCCESS I
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.18</td>
     </tr>
     <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 9/2026 (Thực tế)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 9/2026</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">8,927</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">26,698</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">9,807</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">20,983</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">2,010,435,000 đ</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+144.2% đơn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+144.2%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.14</td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 10/2026 (Thực tế)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 10/2026</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">11,457</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">30,470</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">12,547</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">26,789</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">2,572,135,000 đ</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+20.1% đơn</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+20.1%</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.13</td>
     </tr>
     <tr style="background-color:#e2e8f0;">
-      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:left;"><strong>Tổng 9 tháng trực tiếp Dashboard (T1-T7, T9, T10)</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:left;"><strong>Tổng 9 tháng trực tiếp Dashboard</strong></td>
       <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>67,971</strong></td>
       <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>188,555</strong></td>
       <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>76,034</strong></td>
@@ -447,7 +447,7 @@ Dữ liệu ghi nhận từ hệ thống vận hành bán vé in-app (`SUCCESS I
       <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>2.17</strong></td>
     </tr>
     <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Toàn bộ 10 tháng năm 2026 (T1 - T10)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Toàn bộ 10 tháng năm 2026</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>71,728</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>201,517</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>80,050</strong></td>
