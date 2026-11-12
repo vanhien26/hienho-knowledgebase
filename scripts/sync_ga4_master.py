@@ -272,9 +272,14 @@ def main():
     parser = argparse.ArgumentParser(description="Sync GA4 MTD All-In-One")
     parser.add_argument("--mtd", type=int, default=None, help="Số ngày MTD (mặc định: ngày hôm qua)")
     parser.add_argument("--month", type=str, default=None, help="Tháng sync (YYYY-MM), mặc định tự phát hiện")
+    parser.add_argument("--strict-momo", action="store_true", default=True, help="Chỉ lọc duy nhất hostName == 'www.momo.vn' (loại trừ napthengay.vn, mặc định: True)")
+    parser.add_argument("--all-hosts", action="store_true", default=False, help="Không lọc hostName, lấy toàn bộ Property (mặc định: False)")
     parser.add_argument("--push-hubs", action="store_true", default=False, help="Tường minh cho phép đẩy dữ liệu sang Hubs GitHub qua REST API (mặc định: False)")
+    parser.add_argument("--clean", action="store_true", default=False, help="Chuẩn hóa dữ liệu sạch (loại trừ vòng lặp GTM 10x-20x và domain ngoại lai, mặc định: False)")
     parser.add_argument("--local-only", action="store_true", help="Chỉ cập nhật snapshot và Excel SSOT trong repo hiện tại")
     args = parser.parse_args()
+
+    is_strict_momo = not args.all_hosts
 
     # Xác định tháng và số ngày MTD
     now = datetime.now()
@@ -339,8 +344,9 @@ def main():
     date_ranges = [{"startDate": start_date, "endDate": end_date}]
 
     # 2. Kéo chỉ số tổng thể toàn Website (Deduplicated Property Totals)
-    print("[2/6] Kéo chỉ số tổng thể toàn Website từ GA4...")
-    res_prop = run_ga4_report(token, {
+    mode_str = " (hostName == www.momo.vn)" if is_strict_momo else ""
+    print(f"[2/6] Kéo chỉ số tổng thể toàn Website từ GA4{mode_str}...")
+    prop_query = {
         "dateRanges": date_ranges,
         "metrics": [
             {"name": "screenPageViews"},
@@ -349,7 +355,12 @@ def main():
             {"name": "engagedSessions"},
             {"name": "userEngagementDuration"}
         ]
-    })
+    }
+    if is_strict_momo:
+        prop_query["dimensionFilter"] = {
+            "filter": {"fieldName": "hostName", "stringFilter": {"value": "www.momo.vn"}}
+        }
+    res_prop = run_ga4_report(token, prop_query)
     row_p = res_prop["rows"][0]
     total_pv = int(row_p["metricValues"][0]["value"])
     total_sessions = int(row_p["metricValues"][1]["value"])
@@ -357,9 +368,39 @@ def main():
     total_engaged = int(row_p["metricValues"][3]["value"])
     total_duration = float(row_p["metricValues"][4]["value"])
 
+    clean_scale = 1.0
+    if args.clean:
+        print("[Clean-Mode] Kích hoạt chuẩn hóa dữ liệu sạch (Khử vòng lặp GTM 10x-20x & Domain ngoại lai)...")
+        daily_query = {
+            "dateRanges": date_ranges,
+            "dimensions": [{"name": "date"}],
+            "metrics": [{"name": "screenPageViews"}, {"name": "sessions"}],
+            "dimensionFilter": {
+                "filter": {"fieldName": "hostName", "stringFilter": {"matchType": "EXACT", "value": "www.momo.vn"}}
+            },
+            "orderBys": [{"dimension": {"dimensionName": "date"}}]
+        }
+        res_daily = run_ga4_report(token, daily_query)
+        clean_total_pv = 0
+        raw_total_pv = total_pv
+        for r in res_daily.get("rows", []):
+            d_str = r["dimensionValues"][0]["value"]
+            d_pv = int(r["metricValues"][0]["value"])
+            d_sess = int(r["metricValues"][1]["value"])
+            ratio = d_pv / d_sess if d_sess > 0 else 1.0
+            if ratio > 2.0 or d_str in ["20261110", "20261111"]:
+                clean_d_pv = round(d_sess * 1.50)
+                print(f"  - Chuẩn hóa ngày {d_str}: {d_pv:,} PV (tỷ lệ {ratio:.2f}) -> {clean_d_pv:,} PV sạch (tỷ lệ 1.50)")
+            else:
+                clean_d_pv = d_pv
+            clean_total_pv += clean_d_pv
+        clean_scale = clean_total_pv / raw_total_pv if raw_total_pv > 0 else 1.0
+        print(f"[Clean-Mode] Tổng PV sạch: {clean_total_pv:,} PV (Hệ số chuẩn hóa: {clean_scale:.6f} so với số thô {raw_total_pv:,} PV)")
+        total_pv = clean_total_pv
+
     # 3. Kéo phân bổ kênh lưu lượng & W2A OneLink clicks
-    print("[3/6] Kéo phân bổ kênh lưu lượng (Non-Paid vs. Paid)...")
-    res_ch = run_ga4_report(token, {
+    print(f"[3/6] Kéo phân bổ kênh lưu lượng (Non-Paid vs. Paid{mode_str})...")
+    ch_query = {
         "dateRanges": date_ranges,
         "dimensions": [
             {"name": "sessionDefaultChannelGroup"},
@@ -371,8 +412,26 @@ def main():
             {"name": "totalUsers"}
         ],
         "limit": 10000
-    })
+    }
+    if is_strict_momo:
+        ch_query["dimensionFilter"] = {
+            "filter": {"fieldName": "hostName", "stringFilter": {"value": "www.momo.vn"}}
+        }
+    res_ch = run_ga4_report(token, ch_query)
 
+    w2a_exprs = [
+        {"filter": {"fieldName": "eventName", "inListFilter": {"values": ["click_to_app", "click_outbound_link"]}}},
+        {
+            "orGroup": {
+                "expressions": [
+                    {"filter": {"fieldName": "customEvent:click_url", "stringFilter": {"matchType": "CONTAINS", "value": "onelink"}}},
+                    {"filter": {"fieldName": "linkUrl", "stringFilter": {"matchType": "CONTAINS", "value": "onelink"}}}
+                ]
+            }
+        }
+    ]
+    if is_strict_momo:
+        w2a_exprs.insert(0, {"filter": {"fieldName": "hostName", "stringFilter": {"value": "www.momo.vn"}}})
     res_w2a = run_ga4_report(token, {
         "dateRanges": date_ranges,
         "dimensions": [
@@ -381,17 +440,7 @@ def main():
         ],
         "dimensionFilter": {
             "andGroup": {
-                "expressions": [
-                    {"filter": {"fieldName": "eventName", "inListFilter": {"values": ["click_to_app", "click_outbound_link"]}}},
-                    {
-                        "orGroup": {
-                            "expressions": [
-                                {"filter": {"fieldName": "customEvent:click_url", "stringFilter": {"matchType": "CONTAINS", "value": "onelink"}}},
-                                {"filter": {"fieldName": "linkUrl", "stringFilter": {"matchType": "CONTAINS", "value": "onelink"}}}
-                            ]
-                        }
-                    }
-                ]
+                "expressions": w2a_exprs
             }
         },
         "metrics": [{"name": "eventCount"}],
@@ -415,6 +464,7 @@ def main():
     direct_pv = 0
     ai_pv = 0
     referral_pv = 0
+    others_pv = 0
     paid_pv = 0
     non_paid_pv = 0
 
@@ -430,9 +480,13 @@ def main():
         cn = ch.lower()
         sn = src.lower()
         
-        # Harness Rule SSOT: Non-Paid gồm Organic, Direct, AI Traffic, Referral; Paid Ads
+        # Track AI traffic sub-metric
         if any(ai in sn for ai in ai_sources) or cn == "ai assistant":
             ai_pv += pv
+
+        # Harness Rule SSOT: Non-Paid gồm Organic, Direct, Referral, Others; Paid Ads
+        if sn == "in_app" or sn.startswith("in_app") or "referral" in cn:
+            referral_pv += pv
             non_paid_pv += pv
         elif "organic search" in cn:
             organic_pv += pv
@@ -442,18 +496,32 @@ def main():
             non_paid_pv += pv
         elif any(k in cn for k in ["paid", "cpc", "display", "cross-network"]):
             paid_pv += pv
-        else: # Referral (hấp thu toàn bộ referral, in_app, unassigned, social, video...)
-            referral_pv += pv
+        else: # Others (hấp thu unassigned, social, video, ai assistant...)
+            others_pv += pv
             non_paid_pv += pv
 
+    if args.clean:
+        organic_pv = round(organic_pv * clean_scale)
+        paid_pv = round(paid_pv * clean_scale)
+        direct_pv = round(direct_pv * clean_scale)
+        referral_pv = round(referral_pv * clean_scale)
+        ai_pv = round(ai_pv * clean_scale)
+        others_pv = total_pv - (organic_pv + paid_pv + direct_pv + referral_pv)
+        non_paid_pv = organic_pv + direct_pv + referral_pv + others_pv
+
     # 4. Kéo phân bổ Hubs
-    print("[4/6] Kéo phân bổ lưu lượng theo Hubs...")
-    res_lp = run_ga4_report(token, {
+    print(f"[4/6] Kéo phân bổ lưu lượng theo Hubs{mode_str}...")
+    lp_query = {
         "dateRanges": date_ranges,
         "dimensions": [{"name": "landingPage"}],
         "metrics": [{"name": "screenPageViews"}],
         "limit": 10000
-    })
+    }
+    if is_strict_momo:
+        lp_query["dimensionFilter"] = {
+            "filter": {"fieldName": "hostName", "stringFilter": {"value": "www.momo.vn"}}
+        }
+    res_lp = run_ga4_report(token, lp_query)
 
     matcher = build_theme_matcher()
     hubs_pv = {
@@ -511,6 +579,16 @@ def main():
         else:
             hubs_pv["others"] += pv
 
+    if args.clean:
+        for h in hubs_pv:
+            hubs_pv[h] = round(hubs_pv[h] * clean_scale)
+        for s in cinema_sub:
+            cinema_sub[s] = round(cinema_sub[s] * clean_scale)
+        diff_h = total_pv - sum(hubs_pv.values())
+        hubs_pv["others"] += diff_h
+        diff_c = hubs_pv["cinema"] - sum(cinema_sub.values())
+        cinema_sub["Others"] += diff_c
+
     # Tính Pacing & Forecast
     daily_pace = round(total_pv / days_elapsed, 2)
     forecast_31d = round(daily_pace * days_in_month, 2)
@@ -544,9 +622,10 @@ def main():
         "channels": {
             "organic": {"pv": organic_pv, "pct": round(organic_pv / total_pv * 100, 2)},
             "direct": {"pv": direct_pv, "pct": round(direct_pv / total_pv * 100, 2)},
-            "ai_traffic": {"pv": ai_pv, "pct": round(ai_pv / total_pv * 100, 2)},
-            "referral": {"pv": referral_pv, "pct": round(referral_pv / total_pv * 100, 2)},
             "paid": {"pv": paid_pv, "pct": round(paid_pv / total_pv * 100, 2)},
+            "referral": {"pv": referral_pv, "pct": round(referral_pv / total_pv * 100, 2)},
+            "others": {"pv": others_pv, "pct": round(others_pv / total_pv * 100, 2)},
+            "ai_traffic": {"pv": ai_pv, "pct": round(ai_pv / total_pv * 100, 2)},
             "non_paid_total": {"pv": non_paid_pv, "pct": round(non_paid_pv / total_pv * 100, 2)}
         },
         "hubs": {

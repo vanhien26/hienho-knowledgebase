@@ -24,9 +24,10 @@ sys.path.insert(0, str(BASE_DIR))
 from scripts.sync_ga4_to_hubs import get_access_token, PROPERTY_ID, run_ga4_report
 from scripts.sync_to_google_sheet_api import get_sheets_token, TARGET_SHEET_ID
 
-def sync_all_mtd(days_elapsed=2):
+def sync_all_mtd(days_elapsed=2, strict_momo=True):
     print("=" * 75)
-    print(f"KHỞI CHẠY ĐỒNG BỘ MTD {days_elapsed} NGÀY CHO TOÀN BỘ CÁC THÁNG (T5 -> T11)")
+    mode_str = " (hostName == www.momo.vn)" if strict_momo else ""
+    print(f"KHỞI CHẠY ĐỒNG BỘ MTD {days_elapsed} NGÀY CHO TOÀN BỘ CÁC THÁNG (T5 -> T11){mode_str}")
     print(f"Spreadsheet ID: {TARGET_SHEET_ID}")
     print("=" * 75)
 
@@ -48,24 +49,30 @@ def sync_all_mtd(days_elapsed=2):
     ]
 
     # 1. Truy vấn GA4 lấy số liệu chuẩn từng tháng
-    print(f"[1/5] Kéo dữ liệu GA4 MTD {days_elapsed} ngày cho 7 tháng...")
+    print(f"[1/5] Kéo dữ liệu GA4 MTD {days_elapsed} ngày cho 7 tháng{mode_str}...")
     month_metrics = {}
     for m_str, s_date, e_date in months:
-        res_prop = run_ga4_report(ga4_token, {
+        prop_q = {
             "dateRanges": [{"startDate": s_date, "endDate": e_date}],
             "metrics": [{"name": "screenPageViews"}, {"name": "totalUsers"}, {"name": "sessions"}]
-        })
+        }
+        if strict_momo:
+            prop_q["dimensionFilter"] = {"filter": {"fieldName": "hostName", "stringFilter": {"value": "www.momo.vn"}}}
+        res_prop = run_ga4_report(ga4_token, prop_q)
         row = res_prop.get("rows", [{}])[0].get("metricValues", [])
         tot_pv = int(row[0]["value"]) if row else 0
         tot_users = int(row[1]["value"]) if len(row) > 1 else 0
         tot_sess = int(row[2]["value"]) if len(row) > 2 else 0
 
-        res_ch = run_ga4_report(ga4_token, {
+        ch_q = {
             "dateRanges": [{"startDate": s_date, "endDate": e_date}],
             "dimensions": [{"name": "sessionDefaultChannelGroup"}, {"name": "sessionSource"}],
             "metrics": [{"name": "screenPageViews"}],
             "limit": 10000
-        })
+        }
+        if strict_momo:
+            ch_q["dimensionFilter"] = {"filter": {"fieldName": "hostName", "stringFilter": {"value": "www.momo.vn"}}}
+        res_ch = run_ga4_report(ga4_token, ch_q)
 
         org_pv = 0
         dir_pv = 0
@@ -93,6 +100,29 @@ def sync_all_mtd(days_elapsed=2):
                 paid_pv += pv
             else:
                 oth_pv += pv
+
+        # Tự động chuẩn hóa sạch nếu phát hiện tỷ lệ PV/Session bất thường (vòng lặp GTM)
+        if tot_sess > 0 and (tot_pv / tot_sess > 2.0):
+            daily_q = {
+                "dateRanges": [{"startDate": s_date, "endDate": e_date}],
+                "dimensions": [{"name": "date"}],
+                "metrics": [{"name": "screenPageViews"}, {"name": "sessions"}],
+                "dimensionFilter": {"filter": {"fieldName": "hostName", "stringFilter": {"value": "www.momo.vn"}}}
+            }
+            res_d = run_ga4_report(ga4_token, daily_q)
+            clean_tot = 0
+            for dr in res_d.get("rows", []):
+                dpv = int(dr["metricValues"][0]["value"])
+                dsess = int(dr["metricValues"][1]["value"])
+                clean_tot += round(dsess * 1.50) if (dsess > 0 and dpv / dsess > 2.0) else dpv
+            scale = clean_tot / tot_pv if tot_pv > 0 else 1.0
+            print(f"  [Clean-Mode] {m_str}: Chuẩn hóa {tot_pv:,} PV (tỷ lệ {tot_pv/tot_sess:.2f}) -> {clean_tot:,} PV sạch (scale {scale:.6f})")
+            tot_pv = clean_tot
+            org_pv = round(org_pv * scale)
+            paid_pv = round(paid_pv * scale)
+            dir_pv = round(dir_pv * scale)
+            ref_pv = round(ref_pv * scale)
+            oth_pv = round(oth_pv * scale)
 
         s_ch = org_pv + dir_pv + paid_pv + ref_pv + oth_pv
         if tot_pv != s_ch:
@@ -421,4 +451,5 @@ def sync_all_mtd(days_elapsed=2):
     print("=" * 75)
 
 if __name__ == "__main__":
-    sync_all_mtd(days_elapsed=2)
+    d = int(sys.argv[1]) if len(sys.argv) > 1 else 10
+    sync_all_mtd(days_elapsed=d)
