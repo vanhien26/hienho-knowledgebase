@@ -5,7 +5,7 @@
 
 ## 1. TỔNG QUAN VỀ HỆ THỐNG (SYSTEM OVERVIEW)
 
-Hệ thống báo cáo định kỳ Web Platform là một **nền tảng tự động hóa phân tích dữ liệu và ra quyết định tăng trưởng (Automated Analytics & Growth Decision Engine)**. Hệ thống hợp nhất toàn bộ dữ liệu từ các nguồn Realtime (GA4 API, Clarity), Data Warehouse (BigQuery), Technical SEO (Google Search Console), Paid Media và Dữ liệu hành vi thị trường (Google Trends) về một nguồn sự thật duy nhất (**Single Source of Truth - SSOT**), phục vụ các cấp quản trị từ Ban Giám Đốc đến Đội ngũ Kỹ sư và Tăng trưởng.
+Hệ thống báo cáo định kỳ Web Platform là một **nền tảng tự động hóa phân tích dữ liệu và ra quyết định tăng trưởng (Automated Analytics & Growth Decision Engine)**. Hệ thống hợp nhất toàn bộ dữ liệu từ các nguồn Realtime (GA4 API, Clarity), Data Warehouse (BigQuery), Technical SEO (Google Search Console), Paid Media và Dữ liệu hành vi thị trường (Google Trends) về một nguồn dữ liệu chuẩn mực hợp nhất, phục vụ các cấp quản trị từ Ban Giám Đốc đến Đội ngũ Kỹ sư và Tăng trưởng.
 
 ```mermaid
 flowchart TD
@@ -34,10 +34,10 @@ flowchart TD
         DevTools_MCP["Chrome DevTools MCP (CWV, LCP, Network)"]
     end
 
-    subgraph Storage_SSOT ["4. Lớp Lưu Trữ & Đồng Bộ SSOT"]
-        GSheets["Google Sheets Cloud SSOT (1JaaYv2MnDy-...)"]
-        LocalSnapshots["JSON Snapshots & Excel SSOT"]
-        MarkdownSSOT["WEB_PERFORMANCE_TRACKING_MASTER.md"]
+    subgraph Storage_Layer ["4. Lớp Lưu Trữ & Đồng Bộ Tập Trung"]
+        GSheets["Google Sheets Cloud (1JaaYv2MnDy-...)"]
+        LocalSnapshots["JSON Snapshots & Excel Đối Soát"]
+        MarkdownMaster["WEB_PERFORMANCE_TRACKING_MASTER.md"]
         DashboardRepo["react-web-momo & MoSpark Growth Dashboard"]
     end
 
@@ -53,8 +53,8 @@ flowchart TD
     MoSpark_Data --> QwenGateway
     Core_Engine <--> Agent_MCP
     QwenGateway --> DashboardRepo
-    Core_Engine --> Storage_SSOT
-    Storage_SSOT --> Stakeholders
+    Core_Engine --> Storage_Layer
+    Storage_Layer --> Stakeholders
 ```
 
 ---
@@ -98,7 +98,7 @@ flowchart TD
   - Chuẩn hóa lỗi gõ Telex, teencode và trích xuất Entity thương hiệu qua Flashtext.
 
 ### 2.4. Lớp Lưu trữ & Đồng bộ Đa Nền tảng (Storage & Distribution Layer)
-- **Google Sheets Cloud-Native SSOT:**
+- **Google Sheets Cloud-Native:**
   - Ghi trực tiếp Cloud-to-Cloud qua Google Sheets API vào Spreadsheet ID **`1JaaYv2MnDy-dfBdC3P-GMB6SFgjez2VowdjX9PjmPYU`**.
   - Tự động duy trì 100% lịch sử sửa đổi (Version History), tự động tính toán lại công thức `SUM`, `INDEX MATCH`.
 - **Local & Cloud Drive Backup:** Lưu bản ghi Excel `.xlsx` tại Google Drive Desktop (`07_REPORTS/web_performance_tracking.xlsx`).
@@ -115,7 +115,7 @@ Hệ thống được thiết kế theo kiến trúc **Agentic AI Native**, kế
 - **Mô hình Nền tảng (Foundation Models):** Vận hành trên các mô hình tiên tiến nhất của Google DeepMind (Gemini 2.5 / 3.8 Flash và Pro) với khả năng suy luận dài (Extended Thinking) và phân tích dữ liệu đa bước.
 - **Cơ chế Vận hành Reactive & Lazy Routing:**
   - Hệ thống không chạy vòng lặp Polling gây tốn tài nguyên. Khi có lệnh hoặc sự kiện mới, cơ chế **Reactive Wakeup** tự động kích hoạt Agent.
-  - Agent sử dụng bảng **Fast Routing Index** tại `AGENTS.md` để xác định đúng 1 file SSOT đích, tuyệt đối không nạp bừa bãi tài liệu lớn vào context window.
+  - Agent sử dụng bảng **Fast Routing Index** tại `AGENTS.md` để xác định đúng 1 file đích, tuyệt đối không nạp bừa bãi tài liệu lớn vào context window.
 - **Custom Skills Chuyên biệt:**
   - `web-platform-reporting`: Đóng gói logic phân tích theo phong cách Product Lead / Tech Lead, chuẩn hóa cấu trúc 4 phần của MBR và 3 khối của WBR.
   - `read-latest-tracking-report`: Tự động nhận diện và nạp tệp Excel mới nhất.
@@ -191,9 +191,9 @@ Hệ thống được thiết kế theo mô hình **Đa tầng Độc giả (Mul
 | :--- | :--- | :--- | :--- |
 | **Thời gian tổng hợp số liệu** | 2 - 4 giờ làm việc thủ công mỗi tuần | **6 - 10 giây (1 lệnh duy nhất)** | **Giảm >98% thời gian** |
 | **Độ chính xác dữ liệu** | Dễ sai sót công thức, lệch số giữa GA4 và Data Warehouse | **100% đối soát chéo tự động (Hybrid Reconciliation)** | **Loại bỏ hoàn toàn sai số thủ công** |
-| **Tính đa kênh & đồng bộ** | Phải copy paste qua từng file Excel, Google Sheets, Slide | **Cập nhật đồng thời Google Sheets Cloud, Git Dashboard, Markdown SSOT** | **Đồng bộ thời gian thực** |
+| **Tính đa kênh & đồng bộ** | Phải copy paste qua từng file Excel, Google Sheets, Slide | **Cập nhật đồng thời Google Sheets Cloud, Git Dashboard, Markdown Master** | **Đồng bộ thời gian thực** |
 | **Khả năng chẩn đoán (RCA)** | Họp bàn nhiều ngày để tìm nguyên nhân traffic sụt giảm | **Tự động bóc tách Nguồn/Phễu/Từ khóa trong 15 giây** | **Hành động khắc phục ngay trong ngày** |
-| **Định vị nguồn lưu lượng** | Số liệu Paid bị gộp chung, khó đánh giá chất lượng SEO | **Phân tách nghiêm ngặt Non-Paid vs Paid theo SSOT** | **Minh bạch hóa hiệu quả đầu tư** |
+| **Định vị nguồn lưu lượng** | Số liệu Paid bị gộp chung, khó đánh giá chất lượng SEO | **Phân tách nghiêm ngặt Non-Paid vs Paid theo chuẩn mực** | **Minh bạch hóa hiệu quả đầu tư** |
 | **Khả năng dự báo** | Ngoại suy tuyến tính đơn giản | **Dự báo 3 kịch bản kết hợp chu kỳ mùa vụ 5 năm** | **Độ chính xác dự báo cao** |
 
 ---
@@ -203,7 +203,7 @@ Hệ thống được thiết kế theo mô hình **Đa tầng Độc giả (Mul
 Các lệnh vận hành nhanh đã được đóng gói thành các trigger tự động trong môi trường:
 
 ```bash
-# 1. Đồng bộ số liệu GA4 MTD thời gian thực và đẩy đa kênh (Google Sheets, Dashboard, SSOT):
+# 1. Đồng bộ số liệu GA4 MTD thời gian thực và đẩy đa kênh (Google Sheets, Dashboard, Markdown):
 ./.venv/bin/python scripts/sync_ga4_master.py
 
 # 2. Đối soát chéo giữa BigQuery Excel và GA4 Realtime API:

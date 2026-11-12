@@ -15,6 +15,7 @@ Thumbs.db
 *.zip
 .claude/
 scratch/
+scripts/scratch_*.json
 __pycache__/
 *.pyc
 .venv/

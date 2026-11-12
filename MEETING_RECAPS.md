@@ -1198,3 +1198,43 @@ Thống nhất tính theo số tuyệt đối (Absolute Number), bóc tách chi 
 #### 3. Tài Liệu Quản Trị Chi Tiết (SSOT Master Reference)
 * Toàn bộ dữ liệu lịch sử chi tiết (Full Month & MTD) theo từng dự án x từng kênh, breakdown chỉ số và bộ công thức SUMIFS cho Google Sheets được quản lý tập trung tại file:
   👉 **[](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md)**
+
+---
+
+### Bản ghi ngày 11/11/2026: Chuẩn Hóa Cấu Trúc Kênh Lưu Lượng Sheet Overall Performance & Hệ Thống Báo Cáo
+> **Thành phần:** Web Product Lead x Senior Engineering Lead x AI Agent (Antigravity)
+> **Mục tiêu:** Thống nhất chuẩn hóa cấu trúc bóc tách kênh lưu lượng (Rows 9-22) trên Google Sheets SSOT (`Overall Performance`), file Excel nội bộ (`web_performance_tracking.xlsx`) và toàn bộ tài liệu báo cáo điều hành.
+
+#### 1. Bối Cảnh & Quyết Định Tái Cấu Trúc Kênh
+* **Hiện trạng cũ:** Kênh Paid bị kẹp giữa Organic và Direct ở dòng 10; dòng 20 chỉ tính tỷ trọng Non-Paid mà không có khối lượng; kênh truy cập từ các công cụ AI (GEO) bị gom lẫn trong nhóm Others.
+* **Quyết định chuẩn hóa mới:**
+  * **Tách riêng 2 khối độc lập:** **Paid** (Lưu lượng trả phí Marketing) và **Non-Paid** (Lưu lượng tự nhiên cốt lõi).
+  * **Nhóm Non-Paid gồm 4 kênh chính:**
+    1. **Organic:** Tìm kiếm tự nhiên Google / Cốc Cốc.
+    2. **Direct:** Người dùng gõ trực tiếp URL / Bookmark / quay lại trực tiếp.
+    3. **AI Traffic:** Khai mở kênh lưu lượng tìm kiếm AI (ChatGPT, Perplexity, Gemini, Claude, Copilot) trích xuất trực tiếp từ GA4 API.
+    4. **Referral:** Gộp toàn bộ "Phần còn lại" (đối tác PR, liên kết ngoài, mạng xã hội tự nhiên, Unassigned) vào Referral để bảng gọn gàng, mạch lạc.
+  * **Cân bằng toán học 100.0%:**
+    * Dòng 5 (`Total page views Actual`) tính bằng `=Paid + Non-Paid` (`=K9+K10`, `=L9+L10`, `=U9+U10`...), tuyệt đối không cộng trùng.
+    * Tổng `%Paid + %Non-Paid = 100.0%`; tổng 4 kênh con Non-Paid khớp 100% với dòng Non-Paid.
+
+#### 2. Dữ Liệu Thực Tế Sau Khi Chuẩn Hóa (Tháng 10 Full & Tháng 11 MTD 10 Ngày)
+* **Tháng 10/2026 (Full 31 Ngày - 3.602.023 PVs):**
+  * **Paid:** 473.481 PVs (13.1%)
+  * **Non-Paid:** 3.128.542 PVs (86.9%)
+    * Organic: 1.715.771 PVs (47.6%)
+    * Direct: 931.731 PVs (25.9%)
+    * AI Traffic: 18.164 PVs (0.5%)
+    * Referral *(gộp Phần còn lại)*: 462.876 PVs (12.9%)
+* **Tháng 11/2026 (MTD 10 Ngày - 1.189.033 PVs):**
+  * **Paid:** 210.398 PVs (17.7%)
+  * **Non-Paid:** 978.635 PVs (82.3%)
+    * Organic: 566.163 PVs (47.6%)
+    * Direct: 298.140 PVs (25.1%)
+    * AI Traffic: 9.212 PVs (0.8%)
+    * Referral *(gộp Phần còn lại)*: 105.120 PVs (8.8%)
+
+#### 3. Trạng Thái Triển Khai & Kiểm Tra An Toàn
+* **Google Sheets SSOT:** Sheet `Overall Performance` đã cập nhật cấu trúc dòng 9-22, dòng Notes chuyển về dòng 23. Quét tự động dải cột B-V: **0 lỗi `#REF!`, `#VALUE!`, `#NAME?`, `#DIV/0!`**.
+* **Excel SSOT:** Tệp [`07_REPORTS/web_performance_tracking.xlsx`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/web_performance_tracking.xlsx) đã đồng bộ 100% công thức và dữ liệu.
+* **Tài liệu điều hành:** Đã cập nhật snapshot tại [`07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/PERFORMANCE_SNAPSHOT_LATEST.md) và [`07_REPORTS/docs/report-thang-11-2026-board.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/docs/report-thang-11-2026-board.md).

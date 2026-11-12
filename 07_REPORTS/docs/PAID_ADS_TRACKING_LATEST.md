@@ -60,7 +60,7 @@
 ---
 
 ## 3. ĐÁNH GIÁ CHẤT LƯỢNG & RỦI RO
-- **Phân định tên miền SSOT:** GA4 Property 270743103 ghi nhận đồng thời cả `www.momo.vn` và cổng nạp `napthengay.vn`. Các đường dẫn phễu thanh toán như `/order/first-buy/`, `/confirmorder`, `/payments` thuộc về `napthengay.vn` (không phải `www.momo.vn`).
+- **Phân định tên miền:** GA4 Property 270743103 ghi nhận đồng thời cả `www.momo.vn` và cổng nạp `napthengay.vn`. Các đường dẫn phễu thanh toán như `/order/first-buy/`, `/confirmorder`, `/payments` thuộc về `napthengay.vn` (không phải `www.momo.vn`).
 - **Kênh Google Search Ads:** Chiếm phần lớn ngân sách, phục vụ các trang có ý định chuyển đổi trực tiếp (Nạp xu, Điểm tín dụng, Mở ví, Mua bảo hiểm).
 - **TikTok Ads & Affiliate Entercode:** Lưu ý kiểm tra tỷ lệ cài đặt/chuyển đổi thực tế trên các trang game/quảng bá để tránh lãng phí ngân sách.
 - **Admicro Native Ads:** Phục vụ chủ đạo bài truyền thông PR thương hiệu.

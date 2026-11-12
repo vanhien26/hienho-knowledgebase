@@ -5,7 +5,7 @@
 > - **URL chính:** momo.vn
 > - **Khối phụ trách:** Growth Platform Division (Web Platform)
 > - **Phê duyệt:** Web Product Lead
-> - **Phiên bản:** 2.0 · Tháng 08/2026
+> - **Phiên bản:** 2.1 · Tháng 11/2026
 > - **Trạng thái:** Active
 
 ---
@@ -263,6 +263,150 @@ graph TD
   </tbody>
 </table>
 
+### 5.3 Chi Tiết Kiến Trúc Mặt Tiền Trang Chủ (6-Zone Pure Financial Authority Architecture)
+
+Mặt tiền Trang chủ `momo.vn` được thiết kế theo đúng nguyên tắc "Financial Authority & New User Welcome Hub", tập trung 100% không gian cho uy tín tài chính và chào đón người dùng mới qua 6 Zone chuyên biệt:
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Zone</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Khu Vực</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục Tiêu Trải Nghiệm (UX Goal)</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thành Phần UI Component & Nội Dung Cốt Lõi</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Cơ Chế Chuyển Đổi (CTA / W2A)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Zone 1</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Financial Authority Hero & Welcome Header</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khẳng định vị thế Trợ lý tài chính thông minh số 1 Việt Nam; tạo ấn tượng uy tín mạnh mẽ và chào đón người dùng mới ngay màn hình đầu tiên.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">• Thông điệp định vị: Trợ thủ tài chính với AI của hơn 30 triệu người Việt.<br>• Huy hiệu bảo chứng quy mô và mạng lưới đối tác ngân hàng hàng đầu.<br>• Nổi bật gói quà tân thủ 1.000.000đ dành cho khách hàng mới tải app.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Desktop: Dynamic QR Code quét cài app tức thì.<br>Mobile: Nút OneLink chạm mở luồng nhận quà và KYC (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">utm_source=web_home_hero</code>).</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Zone 2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Interactive Financial Simulator (Mini-Calculator)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiện thực hóa nguyên tắc Value Before Gate; cho phép khách hàng tự tính toán lợi ích tài chính trước khi có rào cản đăng ký tài khoản.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">• Thanh kéo trượt số tiền tích lũy Túi Thần Tài (hiển thị số tiền sinh lời thực nhận theo ngày, tháng, năm).<br>• Tab chuyển đổi ước tính hạn mức chi tiêu trước trả sau 0% lãi suất của Ví Trả Sau.<br>• Chú thích pháp lý minh bạch về chính sách sinh lời theo từng thời kỳ.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nút "Mở Túi Nhận Tiền Lời Ngay" chuyển tiếp deep link vào App MoMo để kích hoạt sinh lời.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Zone 3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Core Financial Solutions Suite</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trình diễn chiều sâu năng lực tài chính toàn diện, xóa bỏ định kiến MoMo chỉ là ví chuyển tiền.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">4 Khối giải pháp chuyên sâu:<br>1. Tín Dụng & Nguồn Vốn: Ví Trả Sau, Vay Nhanh tiêu dùng, Thẻ tín dụng, Điểm CIC.<br>2. Tích Lũy & Sinh Lời: Túi Thần Tài, Gửi Tiết Kiệm ngân hàng, Lãi suất tiết kiệm.<br>3. Đầu Tư: Chứng Chỉ Quỹ mở, Chứng Khoán CVS trực tuyến.<br>4. Quản Lý Tiền Bạc: Quản Lý Chi Tiêu tự động, Quỹ Nhóm minh bạch.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thẻ liên kết dẫn vào Trung Tâm Tài Chính (`/tai-chinh`) và các trang chi tiết sản phẩm.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Zone 4</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Trust Fortress & Active Defense (Pháo Đài An Toàn)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Xây dựng sự an tâm tuyệt đối, biến an toàn thành lợi thế cạnh tranh chủ động; xóa bỏ e ngại lừa đảo trên mạng.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">• Huy hiệu chứng nhận bảo mật quốc tế PCI DSS Level 1 và chuẩn mã hóa đầu cuối.<br>• Giấy phép hoạt động trung gian thanh toán do Ngân hàng Nhà nước cấp.<br>• Khối tiếp nhận phản ánh: Cổng Báo Cáo Lừa Đảo trực tuyến 24/7 (`/an-toan-bao-mat/bao-cao-lua-dao`).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nút "Báo Cáo Lừa Đảo Ngay" dẫn vào form tiếp nhận xử lý rủi ro ẩn danh trong 2 phút.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Zone 5</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>New User Welcome Hub (Trung Tâm Hướng Dẫn Tân Thủ)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giảm thiểu rào cản thao tác cho người dùng lần đầu; tạo lộ trình bắt đầu rõ ràng và cảm giác được chào đón nồng hậu.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">• Lộ trình 3 bước trực quan: 1. Tải app & Đăng ký số điện thoại ➔ 2. Liên kết tài khoản ngân hàng ➔ 3. Kích hoạt gói quà 1.000.000đ & bắt đầu tích lũy.<br>• Danh mục voucher quà tặng thiết thực (nạp tiền điện thoại, thanh toán hóa đơn, ưu đãi tích lũy).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mã QR động và nút OneLink kích hoạt tài khoản nhận trọn bộ quà tân thủ.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Zone 6</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Regulatory Compliance & Deep Footer (Chân Trang Pháp Lý)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tuân thủ nghiêm ngặt tiêu chuẩn pháp lý YMYL và củng cố cấu trúc liên kết nội bộ toàn trang.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">• Thông tin pháp nhân Công ty Cổ phần Dịch vụ Di động Trực tuyến (M_Service).<br>• Danh mục liên kết điều khoản dịch vụ, chính sách bảo vệ dữ liệu cá nhân, Tuyển Dụng (MoMo Careers) và Thông tin Liên Hệ trụ sở/hotline.<br>• Hệ thống điều hướng phân tầng đến toàn bộ các Web Hubs chuyên sâu (Vehicle, Cinema, Travel, Student).</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Liên kết nội bộ chuẩn SEO, trang Liên Hệ (/lienhe) và trang Tuyển Dụng (momo.careers).</td>
+    </tr>
+  </tbody>
+</table>
+
+### 5.4 Kiến Trúc Hệ Thống Điều Hướng Toàn Trang (Global Header & Megamenu Architecture)
+
+Để đảm bảo định vị Financial Authority đồng bộ trên toàn bộ website mà không làm mất đi các tiện ích đời sống và giao dịch hàng ngày, hệ thống thanh điều hướng Header chính trên toàn trang được quy hoạch chuẩn mực về đúng **4 Item Menu Cấp 1**:
+
+```
+[MoMo Logo]   |   1. Tài Chính   |   2. Thanh Toán   |   3. Tiện Ích Đời Sống   |   4. Về MoMo   |   [Tìm Kiếm]  [CTA: Tải App]
+```
+
+#### Bóc tách chi tiết từng mục trong hệ thống điều hướng:
+
+#### 1. Item "Tài Chính" (Mega Menu 4 Cột - Trọng Tâm Định Vị Số 1)
+* **Cửa ngõ tổng quan (Ưu tiên cao nhất):**
+  * **Trung Tâm Tài Chính MoMo (`/tai-chinh`):** Đầu mục độc lập, dẫn thẳng vào Master Hub quy tụ toàn bộ giải pháp tài chính số của MoMo.
+* **Cột 1: Tín Dụng (Credit & Lending):**
+  * *Ví Trả Sau:* Hạn mức chi tiêu trước, trả sau 0% lãi suất (`/vi-tra-sau`).
+  * *Vay Nhanh:* Vay tiêu dùng minh bạch, giải ngân trực tiếp từ đối tác tài chính uy tín (`/vay-nhanh`).
+  * *Mở Thẻ Tín Dụng:* Đăng ký phát hành thẻ tín dụng trực tuyến 100% không cần chứng minh thu nhập phức tạp.
+  * *Điểm Tín Dụng CIC:* Tự kiểm tra điểm tín dụng cá nhân và theo dõi nhóm nợ theo chuẩn Trung tâm Thông tin Tín dụng Quốc gia (`/diem-tin-dung`).
+* **Cột 2: Đầu Tư (Investments & Wealth):**
+  * *Chứng Chỉ Quỹ:* Tích lũy quỹ mở chỉ từ 10.000đ cùng các công ty quản lý quỹ hàng đầu (Dragon Capital, VinaCapital, SSIAM...) (`/tai-chinh/chung-chi-quy`).
+  * *Chứng Khoán CVS:* Mở tài khoản và giao dịch cổ phiếu trực tuyến nhanh gọn ngay trên MoMo (`/chung-khoan`).
+  * *Tiện ích theo dõi thị trường (2 trang công cụ dữ liệu độc lập, tách riêng ở cuối cột):*
+    * **Giá Vàng (`/tai-chinh/gia-vang`):** Cập nhật biểu đồ biến động giá vàng miếng SJC, vàng nhẫn 9999 theo thời gian thực.
+    * **Tỷ Giá (`/tai-chinh/ty-gia`):** Tra cứu và so sánh tỷ giá ngoại tệ ngân hàng hôm nay.
+* **Cột 3: Tích Lũy (Savings & Daily Yield):**
+  * *Túi Thần Tài:* Kênh sinh lời mỗi ngày từ tiền nhàn rỗi, nạp rút thanh toán linh hoạt 24/7 (`/tui-than-tai`).
+  * *Gửi Tiết Kiệm:* Mở sổ tiết kiệm có kỳ hạn an toàn cùng các ngân hàng đối tác lớn trên MoMo.
+  * *So Sánh Lãi Suất Tiết Kiệm:* Bảng tra cứu và so sánh lãi suất tiền gửi của hơn 30 ngân hàng thương mại (`/tai-chinh/lai-suat`).
+* **Cột 4: Chi Tiêu (Cash Flow & Financial Tools):**
+  * *Quản Lý Chi Tiêu:* Trợ thủ tự động ghi chép giao dịch, phân loại thu chi và theo dõi ngân sách (`/quan-ly-chi-tieu`).
+  * *Quỹ Nhóm:* Két tiền chung cho gia đình và hội nhóm bạn bè, sao kê thu chi minh bạch (`/quy-nhom`).
+  * *Tính Lương Gross - Net:* Công cụ tính lương thực nhận chuẩn quy định thuế TNCN và mức đóng BHXH mới nhất (`/tai-chinh/tinh-luong`).
+  * *Quyết Toán Thuế TNCN:* Công cụ dự toán số tiền thuế nộp thêm hoặc được hoàn cả năm.
+
+#### 2. Item "Thanh Toán" (Mega Menu 4 Cột - Giao Dịch Thiết Yếu Hàng Ngày)
+* **Cột 1: Thanh Toán Hóa Đơn:**
+  * *Điện, Nước, Internet:* Thanh toán hóa đơn sinh hoạt định kỳ toàn quốc.
+  * *Truyền Hình Cáp:* Cước K+, VTVCab, FPT Play.
+  * *Phí Quản Lý Chung Cư:* Đóng phí dịch vụ tòa nhà qua các đối tác ban quản lý.
+  * *Đóng Học Phí:* Thanh toán học phí các cấp trường học từ mầm non đến đại học (SSCM, VnEdu).
+* **Cột 2: Viễn Thông & Dữ Liệu Di Động:**
+  * *Nạp Tiền Điện Thoại:* Nạp tiền trả trước, thanh toán cước trả sau Viettel, VinaPhone, MobiFone.
+  * *Mua Data 4G/5G:* Gói data dung lượng cao theo ngày, tuần, tháng với chiết khấu trực tiếp.
+  * *Sim Chính Chủ & eSIM:* Đăng ký sim số đẹp, hòa mạng gói cước chính chủ trực tuyến.
+* **Cột 3: Dịch Vụ Công & Phạt Nguội:**
+  * *Tra Cứu Phạt Nguội:* Tra cứu biển số xe, kiểm tra lỗi vi phạm từ dữ liệu Cục CSGT (`/phat-nguoi`).
+  * *Nộp Phạt Giao Thông:* Tra cứu quyết định và nộp phạt vi phạm trực tuyến vào Kho bạc Nhà nước.
+* **Cột 4: Chuyển Nhận Tiền:**
+  * *Chuyển Tiền 24/7 Miễn Phí:* Chuyển tiền liên ngân hàng tức thì qua Napas.
+  * *Quét Mã QR Đa Năng:* Thanh toán chuẩn VietQR tại hàng triệu cửa hàng trên cả nước.
+  * *Thanh Toán Quốc Tế:* Mua ứng dụng, nạp game trên App Store và Google Play.
+
+#### 3. Item "Tiện Ích Đời Sống" (Mega Menu 4 Cột - Cổng Vào Hệ Thống Web Hubs)
+* **Cột 1: Giao Thông & Bảo Hiểm Xe (Vehicle Hub):**
+  * *Tra Cứu Phạt Nguội:* Kiểm tra biển số xe trực tiếp từ dữ liệu Cục CSGT (`/phat-nguoi`).
+  * *Nạp ETC / ePass:* Nạp tiền tài khoản thu phí tự động đường bộ không dừng (`/tien-ich-giao-thong/etc-epass`).
+  * *Giá Xăng Hôm Nay:* Cập nhật giá xăng dầu trong nước và tìm trạm xăng gần nhất (`/tien-ich-giao-thong/gia-xang`).
+  * *Đăng Kiểm & Bảo Dưỡng:* Lịch đăng kiểm, sổ theo dõi bảo dưỡng xe định kỳ (`/tien-ich-giao-thong/dang-kiem`).
+  * *Bảo Hiểm Xe Máy & Ô Tô:* Bảo hiểm bắt buộc TNDS và bảo hiểm vật chất xe máy, ô tô (`/bao-hiem-xe-may`, `/bao-hiem-o-to`).
+* **Cột 2: Du Lịch & Đi Lại (Travel Hub):**
+  * *Vé Máy Bay & Tàu Hỏa:* Săn vé máy bay giá tốt, vé tàu đường sắt Việt Nam (`/ve-may-bay`, `/ve-tau-hoa`).
+  * *Vé Xe Khách:* Đặt vé xe liên tỉnh từ các nhà xe uy tín toàn quốc (`/ve-xe`).
+  * *Khách Sạn:* Đặt phòng khách sạn trong nước và quốc tế, tích điểm hoàn tiền (`/dat-khach-san`).
+  * *eSIM Du Lịch:* Mua sim data dung lượng cao sử dụng tại hơn 200 quốc gia (`/esim-du-lich`).
+* **Cột 3: Giải Trí & Số Hóa (Cinema Hub & Games):**
+  * *Vé Xem Phim:* Tra cứu lịch chiếu và đặt vé các cụm rạp CGV, Lotte Cinema, Galaxy, BHD, NCC (`/cinema`). *(Gộp chung lịch chiếu và đặt vé)*
+  * *Vé Số Vietlott:* Dò kết quả xổ số kiến thiết, mua vé số điện toán Vietlott Mega, Power (`/ve-so`).
+  * *Thẻ Nạp Game:* Mua thẻ Garena, Zing, Steam, Razer Gold chiết khấu hấp dẫn (`/nap-the-game`).
+* **Cột 4: Khám Phá & Học Đường:**
+  * *Ưu Đãi Gần Bạn:* Săn deal ăn uống, voucher ẩm thực quanh vị trí của bạn (`/qua-cho-ban`).
+  * *Góc Sinh Viên:* Gói đặc quyền sinh viên Student Pass, tiện ích trường học (`/sinh-vien`).
+  * *BHYT & BHXH Gia Đình:* Gia hạn thẻ Bảo hiểm Y tế hộ gia đình và nộp tiếp BHXH tự nguyện (`/bao-hiem-y-te`).
+
+#### 4. Item "Về MoMo" (Dropdown Danh Sách Đơn - 1 Cột Tinh Gọn)
+Mục này không chia cột nhằm giữ giao diện thoáng đãng, hiển thị dưới dạng menu dọc gồm 8 đầu mục uy tín, an toàn, hỗ trợ và thương hiệu:
+* *Báo Cáo Lừa Đảo:* Cổng tiếp nhận và hỗ trợ xử lý rủi ro gian lận, lừa đảo trực tuyến 24/7 (`/an-toan-bao-mat/bao-cao-lua-dao`).
+* *An Toàn & Bảo Mật:* Trung tâm bảo mật, chứng chỉ quốc tế PCI DSS Level 1 và giấy phép trung gian thanh toán từ Ngân hàng Nhà nước (`/an-toan-bao-mat`).
+* *Hỏi Đáp & Trợ Giúp:* Trung tâm trợ giúp khách hàng 24/7, bộ câu hỏi thường gặp FAQ và hướng dẫn liên kết ngân hàng/KYC (`/hoi-dap`).
+* *Khách Hàng Doanh Nghiệp:* Giải pháp Loa MoMo (Soundbox cho chủ quán), cổng thanh toán POS/Online, QR thu ngân đối soát và tài liệu kết nối API/SDK (`/doi-tac`).
+* *Giới Thiệu MoMo:* Sứ mệnh bình dân hóa dịch vụ tài chính cho người Việt, ban lãnh đạo và giá trị văn hóa (`/ve-chung-toi`).
+* *Tuyển Dụng:* Cổng việc làm MoMo Careers, môi trường công nghệ và cơ hội phát triển nghề nghiệp (`https://momo.careers/`).
+* *Liên Hệ:* Kênh tổng đài hỗ trợ 1900 5454 41, email tiếp nhận và địa chỉ văn phòng đại diện TP.HCM, Hà Nội (`/lienhe`).
+* *Tin Tức & Blog:* Thông cáo báo chí, tin tức hoạt động và cẩm nang quản lý chi tiêu (`/tai-chinh/blog`).
+
 ---
 
 ## 6. Success Metrics (Chỉ Số Thành Công)
@@ -408,5 +552,6 @@ graph TD
 ---
 
 ## Change Log
+- **Tháng 11/2026 (v2.1):** Hoàn thiện tầng đặc tả chi tiết 6 Zone mặt tiền trang chủ; chuẩn hóa toàn diện Hệ thống Header Megamenu 4 mục (Tài Chính, Thanh Toán, Tiện Ích Đời Sống, Về MoMo); cơ cấu mục Tài Chính thành 4 trụ cột nghiệp vụ (Tín Dụng, Đầu Tư, Tích Lũy, Chi Tiêu); tách bạch độc lập Giá Vàng và Tỷ Giá thành 2 trang tiện ích thị trường riêng biệt; tinh gọn mục Về MoMo thành dropdown đơn 1 cột.
 - **Tháng 08/2026 (v2.0):** Tái định vị toàn diện Trang chủ MoMo theo chỉ đạo chiến lược: Loại bỏ hoàn toàn phần quảng bá các Hub tiện ích đời sống (Vehicle, Cinema, Student, Merchant) trên trang chủ; tập trung 100% không gian xây dựng **Financial Authority**, **Pháo đài An toàn (Trust Fortress)** và **Trung tâm Chào đón Người dùng Mới (New User Welcome Center)**.
 - **Tháng 08/2026 (v1.0):** Khởi tạo bản thảo BRD đầu tiên.

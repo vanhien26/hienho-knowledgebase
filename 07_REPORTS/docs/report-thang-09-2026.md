@@ -1,7 +1,7 @@
-# BÁO CÁO PHÂN TÍCH CHUYÊN SÂU & DỰ BÁO CHIẾN LƯỢC - WEB PLATFORM (THÁNG 09/2026 - MTD 27/09/2026 SSOT)
+# BÁO CÁO PHÂN TÍCH CHUYÊN SÂU & DỰ BÁO CHIẾN LƯỢC - WEB PLATFORM (THÁNG 09/2026 - MTD 27/09/2026)
 
 > **Đơn vị thực hiện:** Web Platform Team (Growth Platform Division)  
-> **Nguồn dữ liệu SSOT:** [WEB_PERFORMANCE_TRACKING_MASTER.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md) (Cập nhật 27/09/2026)  
+> **Nguồn dữ liệu:** [WEB_PERFORMANCE_TRACKING_MASTER.md](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/WEB_PERFORMANCE_TRACKING_MASTER.md) (Cập nhật 27/09/2026)  
 > **Khung mục tiêu năm 2026:** Target Tháng 09: 3.509.044 PVs (North Star Dec 2026: 4.000.000 PVs/tháng)  
 > **Đánh giá tổng thể:** CÁN ĐÍCH VƯỢT TARGET CHÍNH THỨC TRƯỚC HẠN 3 NGÀY (MTD 27d đạt 3.513.717 PVs - 100.13% Target, Forecast 30d đạt 3.90M PVs - vượt Target +11.26%)
 

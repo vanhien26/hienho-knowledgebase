@@ -239,10 +239,10 @@ Nền tảng Web duy trì nhịp vận hành ổn định trong tuần 43 với 
   - Hiển thị Banner Chào Bạn Mới với mã quà tặng `CHAOMOMO` 500K khi tra cứu SĐT hoặc khi từ khóa không có kết quả tìm kiếm (Zero-Result).
 - **Bước tiếp theo:** Theo dõi hiệu năng, tỷ lệ CTR vào Thẻ chuyển tiền và hành vi tìm kiếm thực tế của người dùng sau khi go-live.
 
-### 5. Kiến Trúc URL Catalog: Thiết Kế Hồ Dữ Liệu URL Website (MoMo URL Knowledge Lake SSOT) & Ban Hành Kịch Bản DDL `tblWebsiteUrlCatalog`
+### 5. Kiến Trúc URL Catalog: Thiết Kế Hồ Dữ Liệu URL Website (MoMo URL Knowledge Lake) & Ban Hành Kịch Bản DDL `tblWebsiteUrlCatalog`
 - **Đội ngũ phụ trách:** Data & Web Platform Team  
 - **Tác động & Kỹ thuật:**
-  - Thiết lập giải pháp Master URL Catalog tập trung (SSOT) quản lý toàn bộ URL, metadata, cấu trúc phân cấp và thuộc tính nghiệp vụ của toàn bộ website `momo.vn`.
+  - Thiết lập giải pháp Master URL Catalog tập trung quản lý toàn bộ URL, metadata, cấu trúc phân cấp và thuộc tính nghiệp vụ của toàn bộ website `momo.vn`.
   - Phục vụ 4 mục tiêu chiến lược: Cung cấp nguồn URL sạch cho `SearchService V2`; tự động hóa sinh Sitemap SEO đa tầng; cung cấp URL Directory Feed cho AI Knowledge Base / RAG; kiểm soát trang mồ côi (orphan pages) và giám sát link hỏng.
   - Hoàn thành hệ thống phân loại Taxonomy 2 trục: theo loại trang (`PageType`) và theo dự án (`ProjectIds`); viết xong kịch bản DDL `tblWebsiteUrlCatalog` với Full-text/Trigram Index và URL Unique Index.
 - **Bước tiếp theo:** Triển khai kịch bản tạo bảng trên môi trường Staging và kết nối thử nghiệm nguồn dữ liệu từ CMS.

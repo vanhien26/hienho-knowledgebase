@@ -6,7 +6,7 @@ Tài liệu này xác lập ranh giới trách nhiệm, phạm vi đảm nhiệm
 
 ## 1. TỔNG QUAN PHÂN BỔ BÀN LÀM VIỆC & NHÂN SỰ
 
-*   **Quy mô:** 12 nhân sự (11 nhân sự đang làm việc + 1 nhân sự sắp gia nhập).
+*   **Quy mô:** 12 nhân sự, toàn bộ đang làm việc (Tữ onboard tháng 11/2026).
 *   **Bàn 01 (8/8 ghế · Cụm Kỹ sư Lập trình & Vận hành Kỹ thuật):** Hoài Anh, Hiếu, Duy, Lộc, Hùng, Nhật, Thuận, Trọng.
 *   **Bàn 02 (4/8 ghế có người · Bàn Điều phối, Quản lý & Tăng trưởng):** Hiến, Bảo (đối diện Hiến), Hoan (ngồi cạnh Hiến), Tữ (đối diện Hoan) và 4 ghế trống dự phòng.
 
@@ -155,7 +155,7 @@ Tài liệu này xác lập ranh giới trách nhiệm, phạm vi đảm nhiệm
 
 ---
 
-### 11. Tữ (Senior Product Designer · Nhân sự sắp gia nhập)
+### 11. Tữ (Senior Product Designer · Đã onboard tháng 11/2026)
 *   **Vị trí bàn:** Bàn 02 (Đối diện Hoan)
 *   **Dự án sở hữu:** UI/UX Web Design & MoBase Design System
 *   **Phạm vi đảm nhiệm (In-scope):**
@@ -194,7 +194,7 @@ Tài liệu này xác lập ranh giới trách nhiệm, phạm vi đảm nhiệm
     *   *Gate 2 (Tracking & Dữ liệu):* Hiếu / Thuận kiểm tra OneLink và sự kiện Umami.
     *   *Gate 3 (Nội dung & Sản phẩm):* Hoan hoàn thiện Long Content/SEO; Hiến ký duyệt Product Sign-off trước khi chuyển từ Staging lên Production.
 4.  **Luồng Sản Phẩm Trực Tiếp (Direct Routing · Tuyến Bỏ Qua Product Design):**
-    *   Đối với các luồng sản phẩm, tính năng hoặc công cụ tiện ích triển khai trực tiếp mà không thông qua Product Design (do Tữ sắp gia nhập hoặc các tính năng kế thừa Design System / Component có sẵn):
+    *   Đối với các luồng sản phẩm, tính năng hoặc công cụ tiện ích triển khai trực tiếp mà không thông qua Product Design (chỉ áp dụng khi tính năng kế thừa nguyên Design System / Component MoBase có sẵn; giao diện hoặc luồng UX mới phải qua Tữ thiết kế trước khi giao Key Owner):
     *   Yêu cầu sản phẩm từ Hiến sẽ đi thẳng trực tiếp đến các Key Owner chính của dự án:
         *   **Thuận Võ**: Key Owner Vehicle Hub & Mini Tools / Quiz (công cụ định giá xe, tra cứu phạt nguội, chi phí xe, giá xăng dầu...).
         *   **Hùng Nguyễn**: Key Owner Cinema Hub & BMC Front-end (lịch chiếu phim, mua vé, minigame tương tác...).

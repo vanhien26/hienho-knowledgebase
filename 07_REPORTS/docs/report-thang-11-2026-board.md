@@ -1,7 +1,7 @@
 # BÁO CÁO KINH DOANH VÀ HIỆU SUẤT NỀN TẢNG WEB - THÁNG 11/2026
 > **Đối tượng:** Ban Giám Đốc / Hội đồng Quản trị
 > **Chu kỳ dữ liệu:** 01/11/2026 - 10/11/2026 (MTD 10 Ngày Đầu Tháng & Dự Báo Pacing 30 Ngày)
-> **Nguồn dữ liệu (SSOT):** GA4 Data API (Property 270743103), BigQuery Data Warehouse, AppsFlyer GPD Attribution Engine, MoSpark CMS và Bảng điều hành Web Platform.
+> **Nguồn dữ liệu:** GA4 Data API (Property 270743103), BigQuery Data Warehouse, AppsFlyer GPD Attribution Engine, MoSpark CMS và Bảng điều hành Web Platform.
 > **Nguyên tắc báo cáo:** Báo cáo cung cấp bối cảnh chiến lược và số liệu kinh doanh [R]; Cuộc họp tập trung thảo luận và ra quyết định [D].
 
 ---
@@ -9,9 +9,9 @@
 ### STREAM 1: KHUNG ĐIỀU HÀNH 3 TRỤ CỘT (EXECUTIVE PILLARS) [R]
 
 #### 1. Điểm nổi bật (Highlights)
-- **Nhịp vận hành MTD 10 ngày vượt kế hoạch:** Toàn Nền tảng Web đạt 1.381.401 Pageviews (hoàn thành 36,08% Target 3,83M sau 33,3% thời gian). Nhịp chạy thực tế đạt 138.140 PV/ngày, vượt nhịp cần thiết (122.388 PV/ngày), đưa dự báo cán đích (Forecast 30d) lên 4.144.203 Pageviews (đạt 108,23% Target).
-- **Tỷ trọng Kênh tự nhiên giữ vững 79,4%:** Kênh tự nhiên (Non-Paid) đạt 1.097.345 PVs, tiếp tục giữ vai trò xương sống tăng trưởng với Organic Search đóng góp 582.271 PVs (42,15%) và Direct đạt 355.060 PVs (25,70%). Lưu lượng tìm kiếm AI (GEO) tăng tốc đạt 9.694 PVs từ ChatGPT, Gemini và Perplexity.
-- **Vehicle Hub bứt phá mạnh mẽ, Cinema Hub giữ nhịp ổn định:** Vehicle Hub hoàn thành 49,09% Target tháng (49.094 PVs) nhờ cú hích từ cụm tính năng Tra cứu & Nộp phạt CSGT; Cinema Hub đạt 310.088 PVs với cụm rạp đối tác chiếm 69,1% lưu lượng toàn Hub.
+- **Nhịp vận hành MTD 10 ngày giữ vững tiến độ:** Lưu lượng chính thức Nền tảng Web (`www.momo.vn`) đạt 1.189.033 Pageviews (hoàn thành 31,05% Target 3,83M sau 33,3% thời gian). Nhịp chạy thực tế đạt 118.903 PV/ngày, đưa dự báo cán đích (Forecast 30d) đạt 3.567.099 Pageviews (tương đương 93,16% Target). Nếu tính toàn bộ Property GA4 (bao gồm đối tác Nạp Thẻ Ngay phát sinh ngày 10/11), tổng lượt xem đạt 1.381.401 PVs (36,08% Target).
+- **Tỷ trọng Kênh tự nhiên đạt 82,3%:** Kênh tự nhiên (Non-Paid) đạt 978.635 PVs, tiếp tục giữ vai trò xương sống tăng trưởng với Organic Search đóng góp 566.163 PVs (47,6%) và Direct đạt 298.140 PVs (25,1%). Lưu lượng tìm kiếm AI (GEO) bóc tách đạt 9.212 PVs từ ChatGPT, Gemini và Perplexity; kênh Referral (đã gộp các nguồn liên kết ngoài, mạng xã hội tự nhiên và unassigned) đạt 105.120 PVs (8,8%). Ngân sách Paid Ads đạt 210.398 PVs (17,7%).
+- **Vehicle Hub bứt phá mạnh mẽ, Cinema Hub giữ nhịp ổn định:** Vehicle Hub hoàn thành 49,21% Target tháng (49.207 PVs) nhờ cú hích từ cụm tính năng Tra cứu & Nộp phạt CSGT; Cinema Hub đạt 310.872 PVs với cụm rạp đối tác chiếm 69,1% lưu lượng toàn Hub.
 
 #### 2. Hợp tác liên phòng ban (Collaboration)
 - **BU Movies:** Triển khai TVC Minigame Bò Sữa Bay trên hệ thống màn hình rạp chiếu đối tác, tích hợp QR Code thông minh dẫn trực tiếp về web game; tối ưu từ khóa đón loạt phim bom tấn tháng 11.
@@ -28,39 +28,39 @@
 ### STREAM 2: HIỆU SUẤT KINH DOANH & CƠ CẤU KÊNH LƯU LƯỢNG (PERFORMANCE TRACKER) [R]
 
 #### 1. 4 Thẻ Chỉ Số Điều Hành C-Suite (MTD 10 Ngày Đầu Tháng 11)
-- **Quy mô lưu lượng MTD:** **1.381.401 Pageviews** (36,08% Target tháng; Daily Pace 138.140 PV/ngày; Forecast 30 ngày đạt 4,14M PV, tương đương 108,2% Target).
-- **Chất lượng tự nhiên (Non-Paid):** **79,44% Tỷ trọng** (1.097.345 PVs; tăng trưởng tự nhiên đóng vai trò động cơ dẫn dắt).
-- **Sức mạnh thương hiệu (Direct):** **355.060 Pageviews** (chiếm 25,70% toàn Kênh Web; tỷ lệ người dùng quay lại trực tiếp duy trì mức cao).
-- **Lưu lượng tìm kiếm AI (GEO):** **9.694 Pageviews** (nhịp tăng trưởng 969 PV/ngày, hướng tới mốc 29K PV trong tháng 11 nhờ tối ưu cấu trúc dữ liệu Schema).
+- **Quy mô lưu lượng MTD (Website momo.vn):** **1.189.033 Pageviews** (31,05% Target tháng 3,83M; Daily Pace 118.903 PV/ngày; Forecast 30 ngày đạt 3,57M PV, tương đương 93,16% Target). *(Ghi chú: Nếu tính toàn bộ Property GA4 gồm Nạp Thẻ Ngay phát sinh ngày 10/11, tổng đạt 1.381.401 PV, tương đương 36,08% Target và Forecast 4,14M PV).*
+- **Chất lượng tự nhiên (Non-Paid):** **82,31% Tỷ trọng** (978.635 PVs; tăng trưởng tự nhiên giữ vững vị thế đầu tàu).
+- **Sức mạnh thương hiệu (Direct):** **298.140 Pageviews** (chiếm 25,07% toàn Kênh Web; tỷ lệ người dùng quay lại trực tiếp duy trì mức cao).
+- **Lưu lượng tìm kiếm AI (GEO):** **9.212 Pageviews** (nhịp tăng trưởng 921 PV/ngày, hướng tới mốc 27,6K PV trong tháng 11 nhờ tối ưu cấu trúc dữ liệu Schema).
 
 #### 2. Bảng Đối Soát Kênh Lưu Lượng Tháng 11 MTD 10 Ngày vs Kỳ Trước
 
 | Kênh lưu lượng | Tháng 10 (Full 31d) | MTD 10d (01 - 10/11) | Target Tháng 11 | Tiến độ MTD | Nhịp ngày (Daily Pace) | Dự báo 30d (Forecast) | % Forecast vs Target | Tỷ trọng MTD |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **KÊNH TỰ NHIÊN (NON-PAID)** | **3.128.542** | **1.097.345** | **3.189.934** | **34,40%** | **109.735** | **3.292.035** | **103,20%** | **79,44%** |
-| - Organic Search | 1.715.771 | 582.271 | 1.680.000 | 34,66% | 58.227 | 1.746.813 | 103,98% | 42,15% |
-| - Direct Traffic | 931.731 | 355.060 | 980.000 | 36,23% | 35.506 | 1.065.180 | 108,69% | 25,70% |
-| - AI Search (GEO) | 18.547 | 9.694 | 25.000 | 38,78% | 969 | 29.082 | 116,33% | 0,70% |
-| - Referral | 462.493 | 64.514 | 404.934 | 15,93% | 6.451 | 193.542 | 47,79% | 4,67% |
-| - Kênh tự nhiên khác | 0 | 95.500 | 100.000 | 95,50% | 9.550 | 286.500 | 286,50% | 6,91% |
-| **KÊNH TRẢ PHÍ (PAID ADS)** | **473.481** | **284.056** | **639.221** | **44,44%** | **28.406** | **852.168** | **133,31%** | **20,56%** |
-| **TỔNG LƯỢNG TRUY CẬP** | **3.602.023** | **1.381.401** | **3.829.155** | **36,08%** | **138.140** | **4.144.203** | **108,23%** | **100,00%** |
+| **KÊNH TỰ NHIÊN (NON-PAID)** | **3.128.542** | **978.635** | **3.189.934** | **30,68%** | **97.864** | **2.935.905** | **92,04%** | **82,31%** |
+| - Organic Search | 1.715.771 | 566.163 | 1.680.000 | 33,70% | 56.616 | 1.698.489 | 101,10% | 47,62% |
+| - Direct Traffic | 931.731 | 298.140 | 980.000 | 30,42% | 29.814 | 894.420 | 91,27% | 25,07% |
+| - AI Search (GEO) | 18.164 | 9.212 | 25.000 | 36,85% | 921 | 27.636 | 110,54% | 0,77% |
+| - Referral *(đã gộp Phần còn lại)* | 462.876 | 105.120 | 504.934 | 20,82% | 10.512 | 315.360 | 62,46% | 8,84% |
+| **KÊNH TRẢ PHÍ (PAID ADS)** | **473.481** | **210.398** | **639.221** | **32,91%** | **21.040** | **631.194** | **98,74%** | **17,69%** |
+| **TỔNG LƯỢNG TRUY CẬP (Website momo.vn)** | **3.602.023** | **1.189.033** | **3.829.155** | **31,05%** | **118.903** | **3.567.099** | **93,16%** | **100,00%** |
+| *Toàn Property GA4 (gồm Nạp Thẻ Ngay phát sinh 10/11)* | *3.602.023* | *1.381.401* | *3.829.155* | *36,08%* | *138.140* | *4.144.203* | *108,23%* | *Phần bù +192.368 PV* |
 
 #### 3. Nhận Định Điều Hành Về Tín Hiệu Tăng Trưởng (Insights)
-- **Tốc độ về đích tích cực:** Sau 1/3 chặng đường của tháng, tổng lưu lượng đã đạt hơn 36% kế hoạch. Nhịp chạy trung bình 138K PV/ngày cao hơn 13% so với nhịp yêu cầu để hoàn thành target (122K PV/ngày).
-- **Chất lượng tăng trưởng:** Tỷ trọng kênh tự nhiên duy trì ở mức cao xấp xỉ 80%, trong đó Organic Search và Direct tiếp tục là hai chân trụ vững chắc đóng góp gần 68% tổng lượt xem toàn sàn.
-- **Dư địa tăng tốc từ Paid Ads có chọn lọc:** Kênh trả phí đạt 284K PVs (chiếm 20,56% tổng traffic), tập trung vào các luồng mang lại giá trị chuyển đổi W2A trực tiếp như Nạp xu TikTok (71,4K clicks) và Phạt nguội (9,3K clicks), không chi dàn trải cho các trang tin tức thuần túy.
+- **Tiến độ và nhịp chạy thực chất:** Sau 1/3 chặng đường của tháng (10/30 ngày = 33,3% thời gian), lưu lượng chính thức Nền tảng Web đạt 1,19M PV (hoàn thành 31,05% kế hoạch). Nhịp chạy 10 ngày trung bình đạt 118,9K PV/ngày, dự báo cả tháng đạt 3,57M PV (93,16% kế hoạch), cần duy trì 132K PV/ngày trong 20 ngày còn lại để về đích 100%.
+- **Chất lượng tăng trưởng:** Tỷ trọng kênh tự nhiên duy trì ở mức rất cao 82,07%, trong đó Organic Search (566K PV, 47,6%) và Direct (298K PV, 25,1%) tiếp tục là hai động cơ dẫn dắt toàn bộ sàn.
+- **Bóc tách đột biến ngày 10/11 & Đối soát Property:** Trong 9 ngày đầu tháng, nhịp chạy ổn định ở mức 97K - 103K PV/ngày. Riêng ngày 10/11, lưu lượng `www.momo.vn` tăng vọt lên 314.770 PV nhờ hiệu ứng đợt kích cầu 11.11 (Nạp xu TikTok 35,6K PV, Minigame Một Mùa Quýt 18,3K PV, Nước 11,4K PV). Đồng thời, Property GA4 ghi nhận thêm 167.918 PV từ tên miền đối tác `napthengay.vn` (được gắn cùng mã stream). Web Platform đã bóc tách rõ hai tầng dữ liệu để đảm bảo tính minh bạch, nhất quán trong điều hành.
 
 ---
 
 ### STREAM 3: HAI DỰ ÁN TRỌNG ĐIỂM: CINEMA HUB & FINANCIAL HUB [R]
 
-#### 1. Cinema Hub (310.088 PVs MTD 10d - Đạt 23,95% Target 1,29M)
-- **Cơ cấu lưu lượng nội bộ:** Cụm rạp đối tác (CGV, Lotte, BHD, Beta, Cinestar) tiếp tục là trụ cột vững chắc đóng góp 214.269 PVs (chiếm 69,1% lưu lượng toàn Hub). Trang phim chi tiết đạt 64.171 PVs (20,7%) và Trang chủ Cinema đạt 21.463 PVs (6,9%).
+#### 1. Cinema Hub (310.872 PVs MTD 10d - Đạt 24,01% Target 1,29M)
+- **Cơ cấu lưu lượng nội bộ:** Cụm rạp đối tác (CGV, Lotte, BHD, Beta, Cinestar) tiếp tục là trụ cột vững chắc đóng góp 214.792 PVs (chiếm 69,1% lưu lượng toàn Hub). Trang phim chi tiết đạt 64.358 PVs (20,7%) và Trang chủ Cinema đạt 21.472 PVs (6,9%).
 - **Tiến độ Minigame Bò Sữa Bay:** Triển khai phát sóng TVC có gắn mã QR tại các cụm rạp đối tác, bước đầu thu hút khán giả quét mã chơi minigame mobile ngay tại sảnh chờ rạp.
 - **Đánh giá rủi ro thứ hạng mùa Tết:** Thứ hạng từ khóa cụm rạp đang chịu áp lực cạnh tranh gay gắt từ các nền tảng bán vé đối thủ. Cần sớm kích hoạt dự án Pilot Off-Page SEO để củng cố vị thế Top 3 trước đợt cao điểm tháng 1/2027.
 
-#### 2. Financial Hub (122.239 PVs MTD 10d - Đạt 17,46% Target 700K)
+#### 2. Financial Hub (122.630 PVs MTD 10d - Đạt 17,52% Target 700K)
 - **Hiện trạng chuyển dịch:** Tỷ trọng Non-Paid đạt 65,4%. Lưu lượng nhóm tiện ích tiếp tục mở rộng nhờ cụm Tỷ giá và sự ra mắt của bộ công cụ Tính Thuế TNCN & Hộ Kinh Doanh.
 - **Khối 3 Thẻ Đòn Bẩy Tương Tác Product-Led Growth (PLG):**
   * **CTR Bảng Biểu & Bài Viết Tĩnh:** **0,0%** (0 click / 1.410 imp; onsite 48s, xem lướt thoát ngay).
@@ -72,18 +72,31 @@
 
 ### STREAM 4: DỰ ÁN NEW USER & PHỄU CHUYỂN ĐỔI WEB-TO-APP [R]
 
-#### 1. Ước Tính Phễu Chuyển Đổi MTD 10 Ngày (AppsFlyer GPD Attribution)
+#### 1. Toàn Cảnh Phễu Chuyển Đổi MTD 10 Ngày (AppsFlyer GPD Attribution Thực Tế)
 
 | Tầng Phễu Chuyển Đổi | Lũy Kế MTD 10d | Nhịp Ngày (Daily Pace) | Dự Báo Cả Tháng | So Với Tháng 10 (Full) | Đánh Giá Tín Hiệu |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| **1. Cài đặt ứng dụng (App Install)** | **3.850** | 385 lượt/ngày | 11.550 | +3,6% vs T10 (11.143) | Đón nhận lưu lượng tải app ổn định từ web |
-| **2. Đăng ký tài khoản (New Reg)** | **1.365** | 137 user/ngày | 4.095 | +4,9% vs T10 (3.902) | CVR trên Install đạt 35,5% |
-| **3. Liên kết ngân hàng (Map Bank)** | **845** | 85 user/ngày | **2.535** | **+6,1% vs T10 (2.389)** | **Hướng tới kỷ lục mới trên 2.500 user** |
-| **4. Người dùng kích hoạt (Active MAU)** | **460** | 46 user/ngày | 1.380 | +7,5% vs T10 (1.284) | Tỷ lệ giữ chân người dùng tài chính tích cực |
+| **1. Cài đặt ứng dụng (App Install)** | **3.171** | 317 lượt/ngày | 9.513 | -14,6% vs T10 (11.143) | Lưu lượng cài đặt ổn định; nhịp đạt 317 lượt/ngày |
+| **2. Đăng ký tài khoản (New Reg)** | **864** | 86 user/ngày | 2.592 | -33,6% vs T10 (3.902) | CVR trên Install đạt 27,2% (T10: 35,0%) |
+| **3. Liên kết ngân hàng (Map Bank)** | **533** | 53 user/ngày | **1.599** | -33,1% vs T10 (2.389) | CVR trên Reg giữ vững 61,7% (tương đương T10: 61,2%) |
+| **4. Người dùng kích hoạt (Active MAU)** | **314** | 31 user/ngày | 942 | -26,6% vs T10 (1.284) | Tỷ lệ giữ chân người dùng kích hoạt đạt 58,9% trên Map |
 
-#### 2. Phân Tích Kênh Chuyển Đổi & Cổng Tải App Tập Trung (`/tai-app`)
-- **Hiệu quả Smart Device Routing (`/tai-app`):** Sau 10 ngày go-live Production, trang Tải App tập trung vận hành ổn định, tự động nhận diện thiết bị và điều hướng chính xác vào App Store / Google Play, giảm thiểu tỷ lệ rơi rụng ở bước tải app.
-- **Kênh đóng góp chủ lực:** Banner chào MoMo toàn web tiếp tục đóng góp hơn 75% lượng cài đặt; bối cảnh rạp phim Cinema Hub đóng góp hơn 18% với tỷ lệ chuyển đổi sang liên kết ngân hàng đạt trên 24%.
+#### 2. Cơ Cấu Phễu Chuyển Đổi Theo Nhóm Chiến Dịch & Điểm Chạm (Placement)
+
+| Nhóm Kênh / Placement | Installs | Tỷ Trọng | REG | CVR REG | Map Bank | CVR Map | Active MAU | End-to-End CVR |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| **C.CHAOMOMO (Banner đại trà)** | 2.763 | 87,1% | 772 | 27,9% | 479 | 62,0% | 275 | 10,0% |
+| **Cinema Hub (Rạp phim & Lotte)** | 224 | 7,1% | 58 | 25,9% | 38 | 65,5% | 27 | 12,1% |
+| **WEB_BRT_C.CHAOMOMO (Đổi quà)** | 58 | 1,8% | 16 | 27,6% | 8 | 50,0% | 5 | 8,6% |
+| **Bảo Hiểm (InsurTech)** | 53 | 1,7% | 13 | 24,5% | 6 | 46,2% | 5 | 9,4% |
+| **Merchant Hub (Đối tác)** | 42 | 1,3% | 3 | 7,1% | 1 | 33,3% | 1 | 2,4% |
+| **Financial Health** | 31 | 1,0% | 2 | 6,5% | 1 | 50,0% | 1 | 3,2% |
+| **TỔNG CỘNG MTD 10 NGÀY** | **3.171** | **100,0%** | **864** | **27,2%** | **533** | **61,7%** | **314** | **9,9%** |
+
+#### 3. Phân Tích Kênh Chuyển Đổi & Nền Tảng Thiết Bị
+- **So sánh hệ điều hành:** Android chiếm 52,1% Installs (1.651 lượt), mang lại 238 Map Bank (CVR REG -> Map đạt 53,8%); iOS chiếm 47,9% Installs (1.520 lượt) nhưng tạo ra tới 295 Map Bank (55,3% tổng Map Bank) với CVR REG -> Map vượt trội đạt 69,9% và End-to-End CVR đạt 12,2% (so với Android là 7,8%).
+- **Chất lượng chuyển đổi Cinema Hub dẫn đầu:** Dù quy mô Installs nhỏ hơn banner đại trà (224 lượt, chiếm 7,1%), Cinema Hub đạt End-to-End CVR cao nhất toàn nền tảng với 12,1% (so với C.CHAOMOMO là 10,0%), khẳng định vai trò phễu chuyển đổi tệp khách hàng giải trí chất lượng cao.
+- **Vận hành Cổng Tải App Tập Trung (`/tai-app`):** Trang Tải App tập trung vận hành ổn định trên Production, tự động điều hướng chính xác thiết bị vào App Store / Google Play, đảm bảo luồng cài đặt liền mạch.
 
 ---
 

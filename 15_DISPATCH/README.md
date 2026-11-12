@@ -22,7 +22,7 @@ Công cụ: `node scripts/agent-queue.mjs` trong repo Hub (`react-web-momo`).
 4. Bắt buộc đọc `00_HARNESS_CORE/team_scope_of_work.md`. Cần thêm bối cảnh dự án thì đọc theo `00_HARNESS_CORE/KNOWLEDGE_ROUTING.md`, chỉ file liên quan.
 5. Soạn bảng phân công:
    - Chỉ giao cho: Bảo, Hoài Anh, Hiếu, Duy, Lộc, Hùng, Nhật, Thuận, Trọng, Hoan, Tữ. Không giao cho Hiến. Giao ít người nhất đủ để làm xong, không giao việc nằm trong mục "Không phụ trách" của người đó.
-   - **Luồng sản phẩm trực tiếp (không thông qua Product Design · Tữ sắp vào):** Định tuyến đi thẳng đến Key Owner tương ứng:
+   - **Luồng sản phẩm trực tiếp (không thông qua Product Design):** Chỉ áp dụng khi tính năng dùng lại nguyên component MoBase có sẵn. Giao diện hoặc luồng UX mới thì giao Tữ thiết kế trước, mốc của Key Owner nằm sau mốc giao Figma của Tữ. Định tuyến đi thẳng đến Key Owner tương ứng:
      * Thuận: Vehicle Hub, công cụ xe (định giá xe, tra cứu phạt nguội, chi phí xe...).
      * Hùng: Cinema Hub, lịch chiếu phim, minigame tương tác.
      * Nhật: Financial Hub, công cụ tiện ích tài chính (tính thuế, lãi vay, tỷ giá...).

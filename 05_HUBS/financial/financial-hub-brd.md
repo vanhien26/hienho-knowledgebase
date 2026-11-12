@@ -22,34 +22,419 @@
 
 ## 2. GIẢ THUYẾT GIẢI PHÁP (SOLUTION HYPOTHESIS)
 
-Nếu MoMo xây dựng **Financial Master Hub (`momo.vn/tai-chinh`)** làm cổng khám phá tập trung, bao phủ toàn diện 5 trụ cột dịch vụ tài chính (*Tín Dụng & Vay, Tiết Kiệm & Lãi Suất, Đầu Tư & Tích Sản, Ngân Hàng & Thẻ, Thu Nhập & Thuế*), đồng thời cung cấp **Bộ Công Cụ Tiện Ích Tương Tác Trực Tiếp (Interactive Tools & Calculators)** không cần đăng nhập cho từng bài toán thực tế:
+Nếu MoMo xây dựng **Financial Master Hub (`momo.vn/tai-chinh`)** làm cổng khám phá tập trung, bao phủ toàn diện 4 trụ cột dịch vụ tài chính (*Tín Dụng & Vay, Tích Lũy & Lãi Suất, Đầu Tư & Tích Sản, Chi Tiêu & Dòng Tiền*), đồng thời cung cấp **Bộ Công Cụ Tiện Ích Tương Tác Trực Tiếp (Interactive Tools & Calculators)** không cần đăng nhập cho từng bài toán thực tế:
 * Người dùng sẽ tự nhận diện nhu cầu và trải nghiệm giá trị tính toán ngay lập tức trên Web (Instant Value).
 * Hiểu rõ sản phẩm tài chính của MoMo giải quyết bài toán của mình như thế nào trước khi tải app.
 * Tạo động lực rõ ràng để mở App, hoàn tất eKYC và kích hoạt Giao dịch Tài chính Đầu tiên (1st Financial Transaction).
 
 ---
 
-## 3. MỤC TIÊU KINH DOANH & BÁO CÁO HIỆU SUẤT MTD (BUSINESS OBJECTIVES & PERFORMANCE)
+## 3. MỤC TIÊU KINH DOANH & BÁO CÁO HIỆU SUẤT TỪ ĐẦU NĂM ĐẾN GIỜ (BUSINESS OBJECTIVES & YTD PERFORMANCE AUDIT)
 
-1. **Xây dựng Cổng Dịch Vụ Tài Chính Toàn Diện (Master Financial Gateway):** Thiết lập `momo.vn/tai-chinh` thành trung tâm điều hướng và bao phủ nhu cầu tìm kiếm cho toàn bộ 5 khối dịch vụ tài chính (101.89M lượt tìm kiếm/tháng).
-2. **Báo Cáo Hiệu Suất Vận Hành Chốt Sổ Tháng 9/2026 (Full Month 30d):**
-   * **Total Full Month Traffic:** Đạt **246.305 Pageviews** (chiếm 6.23% tổng lưu lượng Kênh Web).
-   * **Daily Pace:** Đạt **8.210 PV/ngày**.
-   * **Tỷ lệ hoàn thành Target:** Đạt **98,52% Target Tháng 9** (250.000 PVs) - **TIỆM CẬN HOÀN THÀNH 98,5% TARGET THÁNG 9**.
-   * **Bóc tách Top Verticals Full Month T9:** Vay Nhanh **108.614 PVs** (44.1% Hub), Tra cứu CIC **80.354 PVs** (32.6% Hub), Ví Trả Sau **42.245 PVs** (17.2% Hub), Bổ trợ **15.092 PVs** (6.1% Hub).
-3. **Cột Mốc Tiến Độ Sản Phẩm & Content Mới (Cập nhật 13/10/2026):**
-   * **Đã Go-Live Chính Thức:**
-     - **Bảng Lãi Suất 40 Ngân Hàng & Tool Tính Tiền Lãi (`/tai-chinh/lai-suat`):** Cung cấp bảng tra cứu lãi suất 40 bank toàn cảnh thị trường và công cụ tính lãi gửi tiết kiệm theo số tiền nhập vào, tự động gợi ý ngân hàng có lãi suất tối ưu nhất.
-     - **Phân Bổ Lương 50/30/20 & Hũ Tài Chính (`/tai-chinh/phan-bo-luong`):** Chính thức Go-live phục vụ chia ngân sách tự động và kết nối Hũ Chi Tiêu in-app.
-     - **Bộ 3 Cổng Tiện Ích Đã Go-Live Trước Đó:** Tính Lương (`/tai-chinh/tinh-luong`), Tỷ Giá (`/tai-chinh/ty-gia`), Giá Vàng (`/tai-chinh/gia-vang`).
-   * **Đang On UAT (Dự Kiến Go-Live Trong Tuần Này):**
-     - **Sub-pages Tỷ Giá (5 Cặp Tiền Tệ Phổ Biến):** Hệ thống trang con chi tiết theo cặp tiền (USD, EUR, JPY, GBP, CNY...) kèm tool đổi tiền trực tiếp và biểu đồ so sánh.
-     - **Mega Menu Header Mới Trên `/tai-chinh`:** Điều hướng 4 trụ cột tài chính. Khi click sang trang con có menu riêng, Mega Menu chính sẽ tự động đóng vai trò Top Menu toàn cục cố định.
-   * **Đang Review Kỹ Thuật (API Review):**
-     - **API Lãi Suất Gửi Tiết Kiệm MoMo (`/tai-chinh/gui-tiet-kiem`):** Thẩm định tích hợp API lãi suất tiền gửi ưu đãi đối tác (Bản Việt +0.2% lãi suất, VPBank).
-     - **API Dữ Liệu Chứng Chỉ Quỹ (`/tai-chinh/chung-chi-quy`):** Thẩm định API giá NAV và tỷ suất sinh lời quỹ mở phục vụ bảng giá tra cứu và công cụ đầu tư Chứng Chỉ Quỹ.
-     - **Cổng Chứng Khoán & Dynamic Ticker Profiles (`/tai-chinh/chung-khoan` & `/tai-chinh/chung-khoan/[ticker]`):** Hoàn thiện kiến trúc Programmatic SEO 30 mã VN30, bộ máy tính Stock DCA Backtester và Thước đo Sức khỏe Doanh nghiệp (MoMo Stock Health Score 1-100) phục vụ chiến lược tích sản cổ phiếu lô lẻ từ 10.000đ kết nối đối tác CVS.
-4. **Hạ tầng Công cụ Tiện ích Dùng chung (Embeddable Widgets):** Chuẩn hóa các bộ công cụ tính toán để nhúng linh hoạt vào mọi điểm chạm trên toàn bộ Kênh Web MoMo.
+### 3.1 Dual North Star Metrics & Web Platform Metric Tree
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Platform Layer</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">North Star Metric</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Định Nghĩa Chỉ Số</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Target H2/2026</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Vai Trò Chiến Lược</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Web Platform</strong> <em>(Primary Goal)</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Total Organic Financial Traffic</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng số lượt truy cập tự nhiên từ Google Search và AI Search vào Financial Hub và các trang tài chính MoMo mỗi tháng.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>>800.000 Visits/H2</strong> <em>(Tăng trưởng +100% vs H1)</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mục tiêu cốt lõi: Thu hút trọn vẹn nhu cầu tìm kiếm tài chính ngoài Open Web, mở rộng tệp Acquisition người dùng mới.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>In-App Activation</strong> <em>(Secondary Layer)</em></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Total Financial Activations (W2A)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng số hồ sơ vay được duyệt, tài khoản Ví Trả Sau kích hoạt, sổ tiết kiệm mở mới và tài khoản chứng chỉ quỹ đăng ký thành công qua luồng Web-to-App.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>>50.000 Activations/H2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Đo lường hiệu quả chuyển đổi kinh doanh thực chất cho Khối Dịch Vụ Tài Chính (CreditTech & Wealth).</td>
+    </tr>
+  </tbody>
+</table>
+
+### 3.2 Báo Cáo Hiệu Suất Lưu Lượng Chuỗi 2026 (Bóc Tách Non-Paid vs. Paid Chuẩn Master Sheet & GA4)
+
+Căn cứ dữ liệu đối soát chuẩn hóa từ Master Performance Sheet (sheet  trong  và Google Sheets SSOT tab ) kết hợp dữ liệu kênh chi tiết từ Google Analytics 4 (Property 270743103, đồng bộ tại file SSOT [financial_monthly_pv_ga4.json](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/05_HUBS/financial/data/financial_monthly_pv_ga4.json)), toàn bộ lưu lượng của Financial Hub từ Tháng 1/2026 đến nay được ghi nhận chuẩn mực theo định nghĩa dịch vụ tài chính thống nhất toàn chuỗi, bao gồm cổng Master Hub , 18 use cases tài chính và toàn bộ bài viết, cẩm nang nghiệp vụ tài chính vệ tinh:
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.88em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:left; font-weight:700;">Kỳ Báo Cáo</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:right; font-weight:700;">Tổng Traffic (PV)</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:center; font-weight:700;">Tăng Trưởng MoM</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:right; font-weight:700;">Non-Paid (PV)</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:right; font-weight:700;">Trong Đó: Organic</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:right; font-weight:700;">Direct / Ref / Khác</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:center; font-weight:700;">Tỷ Trọng Non-Paid</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:right; font-weight:700;">Paid Ads (PV)</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:center; font-weight:700;">Tỷ Trọng Paid</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:right; font-weight:700;">Target Tháng</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:center; font-weight:700;">Tỷ Lệ Đạt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Tháng 1/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">330.429</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">-</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">93.660</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">74.747</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">18.913</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">28.3%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">236.769</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center; color:#be123c; font-weight:600;">71.7%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">-</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">-</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Tháng 2/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">379.594</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">+14.9%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">80.615</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">57.163</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">23.452</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">21.2%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">298.979</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center; color:#be123c; font-weight:600;">78.8%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">-</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">-</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Tháng 3/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">233.227</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">-38.6%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">86.668</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">69.272</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">17.396</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">37.2%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">146.559</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center; color:#be123c; font-weight:600;">62.8%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">-</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">-</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Tháng 4/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">202.714</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">-13.1%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">80.023</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">53.930</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">26.093</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">39.5%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">122.691</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">60.5%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">-</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">-</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Tháng 5/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">164.829</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">-18.7%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">72.043</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">59.966</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">12.077</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">43.7%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">92.786</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">56.3%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">-</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">-</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Tháng 6/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">140.683</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">-14.6%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">70.456</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">58.716</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">11.740</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">50.1%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">70.227</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">49.9%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">-</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">-</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Tháng 7/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">142.660</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">+1.4%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">107.426</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">77.628</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">29.798</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center; color:#15803d; font-weight:700;">75.3%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">35.234</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">24.7%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">-</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">-</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Tháng 8/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">250.620</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">+75.7%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">149.462</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">70.285</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">79.177</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center; color:#15803d; font-weight:700;">59.6%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">101.158</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">40.4%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">250.000</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center; color:#15803d; font-weight:600;">100.2%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Tháng 9/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">254.281</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">+1.5%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">156.783</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">77.057</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">79.726</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center; color:#15803d; font-weight:700;">61.7%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">97.498</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">38.3%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">250.000</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center; color:#15803d; font-weight:600;">101.7%</td>
+    </tr>
+    <tr style="background-color:#f0fdf4;">
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Tháng 10/2026</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right; font-weight:700;">260.381</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center; color:#15803d; font-weight:700;">+2.4%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right; font-weight:700; color:#15803d;">172.857</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right; font-weight:700;">132.891</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">39.966</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center; color:#15803d; font-weight:700;">66.4%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">87.524</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">33.6%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">450.000</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center; font-weight:600;">57.9%</td>
+    </tr>
+    <tr style="background-color:#fefce8;">
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Tháng 11/2026 (MTD 9N)</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">41.504</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">-</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">34.927</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">25.408</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">9.519</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center; color:#15803d; font-weight:700;">84.2%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">6.577</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">15.8%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">700.000</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">5.9%</td>
+    </tr>
+    <tr style="background-color:#e2e8f0;">
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:left;"><strong>Lũy Kế 10 Tháng (YTD T1-T10)</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:right;"><strong>2.359.418</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:center;"><strong>-</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:right;"><strong>1.069.993</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:right;"><strong>731.655</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:right;"><strong>338.338</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:center;"><strong>45.3%</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:right;"><strong>1.289.425</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:center;"><strong>54.7%</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:right;"><strong>950.000</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:center; color:#15803d; font-weight:700;"><strong>248.4%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+*Ghi chú nguồn dữ liệu:* Số liệu đối soát chuẩn hóa 100% với Master Performance Sheet ( sheet , Google Sheets SSOT tab ) và Bảng 3.3 bóc tách chi tiết. Số liệu Tháng 11/2026 hiển thị theo lũy kế 9 ngày sạch (01-09/11/2026, loại trừ dữ liệu nhiễu vòng lặp GTM ngày 10-11/11); số ghi nhận thô 11 ngày trên Master Sheet là 65.172 PV (Paid: 21.464, Non-Paid: 43.708). Định nghĩa kênh trả phí: Paid = Paid Search + Paid Social + Paid Other + Cross-network. Toàn bộ các tháng đều đảm bảo tính toàn vẹn: Paid + Non-Paid = Tổng Traffic và Tổng các kênh = Tổng Traffic.
+
+### 3.3 Bảng Phân Bổ Lưu Lượng Theo Cụm Sản Phẩm & Trụ Cột Tài Chính (H2/2026)
+
+Bảng đối soát cơ cấu lưu lượng 6 tháng liên tiếp (Tháng 5 đến Tháng 10/2026) phản ánh sự hình thành và trỗi dậy của Cổng Financial Master Hub:
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.88em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:left; font-weight:700;">Cụm Dịch Vụ / Use Case</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:right; font-weight:700;">T5/2026</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:right; font-weight:700;">T6/2026</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:right; font-weight:700;">T7/2026</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:right; font-weight:700;">T8/2026</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:right; font-weight:700;">T9/2026</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:right; font-weight:700;">T10/2026</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:center; font-weight:700;">Tăng Trưởng MoM</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:center; font-weight:700;">Tỷ Trọng T10</th>
+      <th style="border:1.5px solid #64748b; padding:6px 10px; text-align:left; font-weight:700;">Kênh Chủ Lực</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;"><strong>Điểm Tín Dụng (CIC)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">12.059</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">12.097</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">34.678</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">91.484</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">79.092</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right; font-weight:700;">79.987</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">+1.1%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">30.7%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Paid (70.6K) & Organic (8.0K)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;"><strong>Vay Nhanh</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">127.284</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">76.228</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">65.899</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">112.353</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">109.955</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right; font-weight:700;">64.210</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center; color:#be123c;">-41.6%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">24.7%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Organic (49.0K) & Referral (9.6K)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;"><strong>Ví Trả Sau</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">10.440</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">38.053</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">23.582</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">20.633</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">42.174</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right; font-weight:700; color:#15803d;">59.537</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center; color:#15803d; font-weight:700;">+41.2%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">22.9%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Organic (43.8K, +73.3% MoM)</td>
+    </tr>
+    <tr style="background-color:#f0fdf4;">
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;"><strong>Tài Chính (Master Hub)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">5.430</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">5.568</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">6.701</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">9.107</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">8.025</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right; font-weight:700; color:#15803d;">39.872</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center; color:#15803d; font-weight:700;">+396.8%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">15.3%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Organic (19.2K) & Paid (9.2K)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;"><strong>Mở Thẻ Tín Dụng</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">1.637</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">1.429</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">1.646</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">1.432</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">1.464</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">3.397</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">+132.0%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">1.3%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Organic (2.6K) & Paid (461)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;"><strong>Túi Thần Tài / Túi Sinh Lời</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">1.131</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">1.029</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">2.339</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">2.332</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">2.077</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">2.135</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">+2.8%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">0.8%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Organic (1.8K) & Direct (179)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;"><strong>Chứng Khoán</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">693</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">672</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">705</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">622</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">470</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">1.927</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">+310.0%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">0.7%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Organic (1.4K) & Paid (231)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;"><strong>Tiết Kiệm Online</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">431</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">408</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">550</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">520</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">481</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">1.579</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">+228.3%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">0.6%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Organic (1.0K) & Paid (268)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;"><strong>Tỷ Giá (FX Rates)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">0</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">0</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">0</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">0</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">101</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">963</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">+853.5%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">0.4%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Organic (856 PV - Mới go-live)</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;"><strong>Lãi Suất (Interest Rates)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">0</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">0</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">0</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">0</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">77</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">809</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">+950.6%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">0.3%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Organic (605 PV - Mới go-live)</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;"><strong>Nhóm Bổ Trợ (9 SP Còn Lại)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">5.924</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">1.191</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">6.760</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">12.237</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">9.541</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:right;">6.775</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">-29.0%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:center;">2.6%</td>
+      <td style="border:1px solid #94a3b8; padding:6px 10px; text-align:left;">Quỹ Nhóm, Nhận Tiền QT, Vàng...</td>
+    </tr>
+    <tr style="background-color:#e2e8f0;">
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:left;"><strong>Tổng Cộng Toàn Hub</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:right;"><strong>164.829</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:right;"><strong>140.683</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:right;"><strong>142.660</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:right;"><strong>250.620</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:right;"><strong>254.281</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:right;"><strong>260.381</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:center;"><strong>+2.4%</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:center;"><strong>100.0%</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 10px; text-align:left;"><strong>Non-Paid 66.4% / Paid 33.6%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+### 3.4 Đánh Giá Chuyển Dịch Cơ Cấu & Chất Lượng Tăng Trưởng (Executive Growth Quality Audit)
+
+1. **Chuyển dịch cơ cấu vững chắc từ phụ thuộc Paid sang tự lực Non-Paid:**
+   * Trong giai đoạn Q1/2026 (Tháng 1 đến Tháng 4), các landing page tài chính hoạt động rời rạc phụ thuộc tới **72.8%** vào quảng cáo trả phí (Paid Ads bình quân ~189K PV/tháng).
+   * Kể từ khi khởi động Financial Hub (Tháng 7/2026) và ra mắt Gateway tập trung (Tháng 8/2026), tỷ trọng Non-Paid đã tăng vọt từ 27.2% lên **66.4%** vào Tháng 10/2026 (172.857 PVs), trong đó lưu lượng tìm kiếm tự nhiên (Organic Search) đạt kỷ lục **132.891 PVs** (chiếm 51.0% toàn Hub, tăng hơn gấp đôi so với 59.966 PVs của Tháng 5).
+2. **Sự trỗi dậy của Cổng Điều Hướng Master Hub và Bộ Công Cụ Tiện Ích (Utilities):**
+   * Trang Cổng Trung Tâm (`/tai-chinh`) tăng trưởng đột biến từ 8.025 PVs (Tháng 9) lên **39.872 PVs** (Tháng 10, tăng **+396.8% MoM**), chứng minh năng lực điều hướng và sức hút của Mega Menu mới.
+   * Các trang tiện ích mới go-live cuối Tháng 9 bắt đầu phát huy hiệu quả kéo traffic tự nhiên trong Tháng 10: Tỷ Giá đạt 963 PVs (+853.5%), Bảng Lãi Suất 40 Ngân Hàng đạt 809 PVs (+950.6%), Giá Vàng đạt 387 PVs (+555.9%).
+3. **Phân tích rủi ro & Sức bền bù đắp lưu lượng (Lowlights & Buffer Analysis):**
+   * *Điểm nghẽn:* Sản phẩm Vay Nhanh sụt giảm -41.6% lưu lượng (từ 109.955 PVs xuống 64.210 PVs) khi dừng các chiến dịch quảng cáo trả phí.
+   * *Khả năng tự bù đắp:* Thay vì làm sụt giảm tổng lưu lượng của Hub, sự tăng trưởng mạnh mẽ của Ví Trả Sau (+41.2% lên 59.537 PVs, trong đó Organic tăng +73.3% đạt 43.795 PVs) cùng với sự bứt phá của Master Hub (+31.8K PVs) đã tự động hấp thu và bù đắp hoàn toàn lượng suy giảm của Vay Nhanh, giúp toàn Hub vẫn duy trì tăng trưởng dương **+2.4% MoM**.
+
+### 3.5 Cột Mốc Tiến Độ Sản Phẩm & Lộ Trình Triển Khai Thực Tế
+
+1. **Đã Go-Live Chính Thức (Production Live):**
+   * **Bảng Lãi Suất 40 Ngân Hàng & Tool Tính Tiền Lãi (`/tai-chinh/lai-suat`):** Cung cấp bảng tra cứu lãi suất 40 bank toàn cảnh thị trường và công cụ tính lãi gửi tiết kiệm theo số tiền nhập vào, tự động gợi ý ngân hàng có lãi suất tối ưu nhất.
+   * **Phân Bổ Lương 50/30/20 & Hũ Tài Chính (`/tai-chinh/phan-bo-luong`):** Chính thức Go-live phục vụ chia ngân sách tự động và kết nối Hũ Chi Tiêu in-app.
+   * **Bộ 3 Cổng Tiện Ích Lương - Tỷ Giá - Vàng:** Tính Lương Gross-Net (`/tai-chinh/tinh-luong`), Tỷ Giá (`/tai-chinh/ty-gia`), Giá Vàng SJC/9999 (`/tai-chinh/gia-vang`).
+   * **Cỗ Máy Content Engine Always-on Blog:** Cụm Blog Hub (`/tai-chinh/blog`) và bài viết chi tiết (`/tai-chinh/blog/[slug]`) chuẩn SEO E-E-A-T nuôi dưỡng traffic tự nhiên dài hạn.
+2. **Đang Triển Khai Trong Sprint Tháng 11/2026 (Phase 3 Focus):**
+   * **Cổng Chứng Chỉ Quỹ (`/tai-chinh/chung-chi-quy` - In Progress):** Go-live Phase 1 với dữ liệu danh mục tĩnh/bán tự động của 30 quỹ mở đối tác CVS, công cụ đầu tư định kỳ từ 10.000đ/ngày kết nối phễu mở tài khoản in-app.
+   * **Tiện Ích Thuế TNCN (`/tai-chinh/thue-thu-nhap-ca-nhan` - Planned):** Tool tính thuế TNCN lũy tiến 7 bậc, cập nhật mức giảm trừ gia cảnh mới 2026 và luồng hoàn thuế cuối năm.
+   * **Tiện Ích Thuế Hộ Kinh Doanh (`/tai-chinh/thue-ho-kinh-doanh` - Planned):** Tool tính thuế khoán theo Thông tư 40/2021/TT-BTC, kết nối giải pháp MoMo QR kinh doanh.
+   * **Di Chuyển & 301 Redirect 7 Trang Standalone (Not Started):** Lập bảng ánh xạ và rule Edge CDN chuyển các trang standalone về cấu trúc chuẩn `/tai-chinh/*`.
+3. **Hạ Tầng Công Cụ Tiện Ích Dùng Chung (Embeddable Widgets):** Chuẩn hóa các bộ công cụ tính toán để nhúng linh hoạt vào mọi điểm chạm trên toàn bộ Kênh Web MoMo.
 
 ---
 
@@ -176,7 +561,7 @@ Toàn bộ các công cụ tính toán (Tools) và trang đích trên Kênh Web 
 
 Để bảo vệ 100% thứ hạng SEO và lượng truy cập hiện có của các trang sản phẩm độc lập (`/tiet-kiem-online`, `/vay-nhanh`, `/vi-tra-sau`, `/the-tin-dung`...), hệ thống giữ nguyên cấu trúc URL gốc và thực hiện hợp nhất trải nghiệm qua **3 Cơ Chế**:
 * **Trang Cổng Trung Tâm (`momo.vn/tai-chinh`):** Đóng vai trò là mặt tiền tổng hợp Dashboard thị trường và điều hướng phân luồng theo đúng JTBD.
-* **Thanh Điều Hướng Thống Nhất (Global Financial Navigation Bar):** Xuất hiện đồng bộ trên tất cả các trang sản phẩm, kết nối liền mạch 5 trụ cột dịch vụ.
+* **Thanh Điều Hướng Thống Nhất (Global Financial Navigation Bar):** Xuất hiện đồng bộ trên tất cả các trang sản phẩm, kết nối liền mạch 4 trụ cột dịch vụ.
 * **Cơ Chế Bán Chéo Theo Ngữ Cảnh (Contextual Cross-Sell Engine):** Nhúng đề xuất giải pháp liên quan ngay sau khi người dùng nhận kết quả tính toán trên công cụ.
 
 ### 5.4 Chiến Lược Cổng Chứng Khoán & Dynamic Ticker Profiles (/tai-chinh/chung-khoan)

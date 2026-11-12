@@ -17,7 +17,7 @@
 Trong 10 tháng năm 2026, kênh Web-to-App (người dùng từ Website MoMo chuyển tiếp sang ứng dụng hoặc quét mã QR thanh toán trên Web) đã đóng góp:
 * **Tổng số người dùng hoạt động (W2A MAU):** **69,666 MAU** (so với 76,012 MAU cùng kỳ 2025, thu hẹp khoảng cách chỉ còn giảm -8.3% YoY).
 * **Tổng lượt tương tác chuyển đổi (W2A MEU):** **201,517 MEU** (chính thức vượt mốc 200,000 lượt tương tác, so với 213,601 MEU cùng kỳ 2025, chỉ còn giảm -5.7% YoY).
-* **Tổng giá trị giao dịch quy đổi tiềm năng (GMV Web-to-App):** **14,281,530,000 đồng (14.28 tỷ đồng)**, mang lại nguồn doanh số bán vé tự nhiên (Inbound) khổng lồ cho BU Movies.
+* **Tổng giá trị giao dịch quy đổi tiềm năng (GMV Web-to-App):** **14,281,530,000 đồng (14.28 tỷ đồng)**, mang lại nguồn doanh số bán vé từ kênh Web-to-App khổng lồ cho BU Movies.
 
 ### Bảng hiệu suất chi tiết 10 tháng năm 2026 so với cùng kỳ 2025
 
@@ -165,7 +165,7 @@ Dữ liệu ghi nhận trực tiếp từ hệ thống Dashboard vận hành bá
 
 | Kỳ Báo Cáo | Transacting Users (MAU) | Lượt tương tác (MEU) | Transactions (Đơn) | Tickets (Vé) | GMV Thực Thu (VND) | Tăng trưởng MoM | Vé / Đơn | Nguồn Dữ Liệu |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Năm 2025 (Cả năm)** | 93,758 | 264,178 | 52,311 | 111,422 | 10,723,755,000 đ | - | 2.13 | Sheet REPORT 2025 (Inbound) |
+| **Năm 2025 (Cả năm)** | 93,758 | 264,178 | 52,311 | 111,422 | 10,723,755,000 đ | - | 2.13 | Sheet REPORT 2025 (Web-to-App) |
 | **Tháng 1/2026 (Thực tế)** | 5,362 | 20,258 | 5,889 | 12,643 | 1,207,245,000 đ | -47.4% đơn | 2.15 | Dashboard In-App (Đã xác thực) |
 | **Tháng 2/2026 (Thực tế - Tết)** | 10,922 | 27,595 | 12,432 | 28,379 | 2,548,560,000 đ | +182.5% đơn | 2.28 | Dashboard In-App (Đã xác thực) |
 | **Tháng 3/2026 (Thực tế)** | 8,728 | 23,839 | 9,881 | 20,600 | 2,025,605,000 đ | -23.0% đơn | 2.08 | Dashboard In-App (Đã xác thực) |
@@ -205,9 +205,9 @@ Trong năm 2025, Kênh Web-to-App đã chứng minh là một kênh phân phối
 
 ---
 
-## 4. PHỄU CHUYỂN ĐỔI INBOUND & ĐIỂM NGHẼN RÒ RỈ LƯU LƯỢNG
+## 4. PHỄU CHUYỂN ĐỔI WEB-TO-APP & ĐIỂM NGHẼN RÒ RỈ LƯU LƯỢNG
 
-Phễu chuyển đổi 4 tầng từ Kênh Inbound (Google Search -> Web MoMo Cinema -> App MoMo -> Đơn hàng) cho thấy hai đặc điểm đối lập:
+Phễu chuyển đổi 4 tầng từ Kênh Web-to-App (Google Search -> Web MoMo Cinema -> App MoMo -> Đơn hàng) cho thấy hai đặc điểm đối lập:
 
 ```
 [Google SERP Impressions] (282.9M)
@@ -306,4 +306,4 @@ Nếu Web Platform phối hợp cùng BU Movies xử lý triệt để nút th�
 2. **Triển khai Bridge Page & QR Động:**
    * Thay thế link tĩnh bằng cầu nối thông minh: Với mobile mở thẳng App; với desktop hiển thị mã QR động chứa thông tin rạp và suất chiếu đã chọn để quét thanh toán tức thì.
 3. **Kích hoạt Cinema Chatbot theo PRD:**
-   * Đưa nút CTA đặt vé gắn Deeplink trực tiếp vào các câu trả lời tư vấn suất chiếu, rạp gần nhất và giá vé, tận dụng tỷ lệ chốt đơn 66.4% của tệp người dùng Inbound.
+   * Đưa nút CTA đặt vé gắn Deeplink trực tiếp vào các câu trả lời tư vấn suất chiếu, rạp gần nhất và giá vé, tận dụng tỷ lệ chốt đơn 66.4% của tệp người dùng từ kênh Web.

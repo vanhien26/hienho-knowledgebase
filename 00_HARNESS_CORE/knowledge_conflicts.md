@@ -1,15 +1,15 @@
 # Báo Cáo Xung Đột & Kiểm Tra Đường Dẫn Kho Tri Thức (Knowledge Conflict Report)
 
-- Thời điểm xuất bản: 2026-11-09T06:28:04.628167+00:00
+- Thời điểm xuất bản: 2026-11-11T08:51:01.183605+00:00
 - Chế độ vận hành: observe (Không tự ý sửa đổi mã nguồn)
-- Tổng số điểm phát hiện: 59
+- Tổng số điểm phát hiện: 62
 
 ## 1. Bảng Tổng Hợp Phân Loại
 
 | Phân loại | Số lượng | Ý nghĩa & Mô tả |
 | :--- | ---: | :--- |
-| `broken_reference` | 0 | Đường dẫn nội bộ không tìm thấy tệp đích |
-| `external_reference` | 50 | Tham chiếu sang repo khác, thư mục Downloads hoặc Obsidian |
+| `broken_reference` | 2 | Đường dẫn nội bộ không tìm thấy tệp đích |
+| `external_reference` | 51 | Tham chiếu sang repo khác, thư mục Downloads hoặc Obsidian |
 | `code_path_reference` | 8 | Đường dẫn trong mã nguồn; có thể là tệp sinh runtime |
 | `skill_asset_reference` | 1 | Tài nguyên thuộc các gói Agent Skill |
 
@@ -103,6 +103,15 @@
 - **Dòng 106:** `lib/dashboard/web-data.json`
   * Phân loại: `external_reference` | Mã lý do: `cross_repository_data_dependency`
   * Chi tiết: Đường dẫn trỏ tới data artifact trong repository Hubs (react-web-momo); phụ thuộc liên repo, không phải lỗi nội bộ.
+
+### `07_REPORTS/docs/weekly-report-2026-11-02-11-08.md`
+
+- **Dòng 297:** `docs/Spec_Driven-Graph_Matrix-Development/README-V1.md`
+  * Phân loại: `broken_reference` | Mã lý do: `unresolved_internal_path`
+  * Chi tiết: Đường dẫn nội bộ không tìm thấy tệp đích trong repository.
+- **Dòng 298:** `momo.cms/docs/features/FEAT-MOMATRIX-CORE-AND-DOCS-API.md`
+  * Phân loại: `broken_reference` | Mã lý do: `unresolved_internal_path`
+  * Chi tiết: Đường dẫn nội bộ không tìm thấy tệp đích trong repository.
 
 ### `13_INTAKE/README.md`
 
@@ -199,6 +208,12 @@
 - **Dòng 152:** `cache/performance.sqlite`
   * Phân loại: `code_path_reference` | Mã lý do: `code_runtime_or_generated_path`
   * Chi tiết: Đường dẫn trong mã nguồn kỹ thuật; có thể là tệp sinh ra khi chạy (runtime output).
+
+### `scripts/export_3m_urls_to_sheet.py`
+
+- **Dòng 175:** `Idea/react-web-momo/lib/dashboard/hub-map.json`
+  * Phân loại: `external_reference` | Mã lý do: `cross_repository_reference`
+  * Chi tiết: Tham chiếu liên kết sang repository Front-end Hub (react-web-momo).
 
 ### `scripts/intake.py`
 

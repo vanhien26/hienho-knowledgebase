@@ -270,20 +270,8 @@ entries:
     owner: Cinema Hub Team
     system_of_record: "Cinema Hub Business Requirement Document"
     generator_script: "manual_authoring"
-    used_for: [cinema_strategy, movie_features, cinema_roadmap]
-    cross_check_with: [cinema_funnel_architecture, team_scope_of_work]
-
-  - id: cinema_funnel_architecture
-    path: 05_HUBS/cinema/CINEMA_FUNNEL_ARCHITECTURE.md
-    domain: hubs_cinema
-    type: funnel_architecture
-    authority: primary
-    status: active
-    owner: Cinema Hub Team
-    system_of_record: "Cinema Hub Web-to-App Funnel Architecture"
-    generator_script: "manual_authoring"
-    used_for: [cinema_conversion, web_to_app_funnel, onelink_tracking]
-    cross_check_with: [cinema_hub_brd]
+    used_for: [cinema_strategy, movie_features, cinema_roadmap, cinema_conversion, web_to_app_funnel, onelink_tracking]
+    cross_check_with: [team_scope_of_work]
 
   - id: vehicle_hub_brd
     path: 05_HUBS/vehicle/vehicle-hub-brd.md
