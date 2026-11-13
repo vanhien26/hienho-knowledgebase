@@ -24,7 +24,7 @@ sys.path.insert(0, str(BASE_DIR))
 from scripts.sync_ga4_to_hubs import get_access_token, PROPERTY_ID, run_ga4_report
 from scripts.sync_to_google_sheet_api import get_sheets_token, TARGET_SHEET_ID
 
-def sync_all_mtd(days_elapsed=2, strict_momo=True):
+def sync_all_mtd(days_elapsed=2, strict_momo=True, clean_incident=False):
     print("=" * 75)
     mode_str = " (hostName == www.momo.vn)" if strict_momo else ""
     print(f"KHỞI CHẠY ĐỒNG BỘ MTD {days_elapsed} NGÀY CHO TOÀN BỘ CÁC THÁNG (T5 -> T11){mode_str}")
@@ -101,8 +101,8 @@ def sync_all_mtd(days_elapsed=2, strict_momo=True):
             else:
                 oth_pv += pv
 
-        # Tự động chuẩn hóa sạch nếu phát hiện tỷ lệ PV/Session bất thường (vòng lặp GTM)
-        if tot_sess > 0 and (tot_pv / tot_sess > 2.0):
+        # Chuẩn hóa sạch nếu có cờ clean_incident (mặc định giữ nguyên số đo lường www.momo.vn theo chỉ đạo người dùng)
+        if clean_incident and tot_sess > 0 and (tot_pv / tot_sess > 2.0):
             daily_q = {
                 "dateRanges": [{"startDate": s_date, "endDate": e_date}],
                 "dimensions": [{"name": "date"}],
@@ -146,7 +146,7 @@ def sync_all_mtd(days_elapsed=2, strict_momo=True):
     q_range = urllib.parse.quote("MTD Pivot!A1:J359")
     url_get = f"https://sheets.googleapis.com/v4/spreadsheets/{TARGET_SHEET_ID}/values/{q_range}?valueRenderOption=UNFORMATTED_VALUE"
     req_get = urllib.request.Request(url_get, headers=sheets_headers)
-    with urllib.request.urlopen(req_get) as resp:
+    with urllib.request.urlopen(req_get, timeout=60) as resp:
         pivot_rows = json.loads(resp.read().decode()).get("values", [])
 
     grand_total_row_idx = None
@@ -427,7 +427,7 @@ def sync_all_mtd(days_elapsed=2, strict_momo=True):
         headers=sheets_headers,
         method="POST"
     )
-    with urllib.request.urlopen(req_batch) as resp:
+    with urllib.request.urlopen(req_batch, timeout=60) as resp:
         res_data = json.loads(resp.read().decode())
         print(f"  ✓ Đã cập nhật thành công {res_data.get('totalUpdatedCells', 0)} ô trên Google Sheets!")
 

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-11-13T07:17:20.870207",
+    "generated_at": "2026-11-13T07:41:09.227860",
     "recent_period": [
       "2026-11-04",
       "2026-11-10"
@@ -2464,17 +2464,6 @@
         "prev_ctr": 1.82
       },
       {
-        "query": "phim chiếu rạp chị chị em em 3",
-        "curr_imp": 176,
-        "prev_imp": 478,
-        "curr_clk": 2,
-        "prev_clk": 39,
-        "curr_pos": 6.1,
-        "prev_pos": 4.0,
-        "curr_ctr": 1.14,
-        "prev_ctr": 8.16
-      },
-      {
         "query": "vé phim chị chị em em 3",
         "curr_imp": 47,
         "prev_imp": 195,
@@ -2484,6 +2473,17 @@
         "prev_pos": 1.5,
         "curr_ctr": 19.15,
         "prev_ctr": 20.0
+      },
+      {
+        "query": "phim chiếu rạp chị chị em em 3",
+        "curr_imp": 176,
+        "prev_imp": 478,
+        "curr_clk": 2,
+        "prev_clk": 39,
+        "curr_pos": 6.1,
+        "prev_pos": 4.0,
+        "curr_ctr": 1.14,
+        "prev_ctr": 8.16
       },
       {
         "query": "đặt vé xem phim chị chị em em 3",
@@ -3551,15 +3551,15 @@
         "prev_ctr": 0.68
       },
       {
-        "query": "tỷ giá baht thái hôm nay",
-        "curr_imp": 293,
-        "prev_imp": 396,
-        "curr_clk": 5,
-        "prev_clk": 2,
-        "curr_pos": 8.4,
-        "prev_pos": 8.4,
-        "curr_ctr": 1.71,
-        "prev_ctr": 0.51
+        "query": "đổi bath thái",
+        "curr_imp": 0,
+        "prev_imp": 87,
+        "curr_clk": 0,
+        "prev_clk": 5,
+        "curr_pos": null,
+        "prev_pos": 5.4,
+        "curr_ctr": 0,
+        "prev_ctr": 5.75
       },
       {
         "query": "1 bath vnd hôm nay",
@@ -3573,15 +3573,15 @@
         "prev_ctr": 1.31
       },
       {
-        "query": "đổi bath thái",
-        "curr_imp": 0,
-        "prev_imp": 87,
-        "curr_clk": 0,
-        "prev_clk": 5,
-        "curr_pos": null,
-        "prev_pos": 5.4,
-        "curr_ctr": 0,
-        "prev_ctr": 5.75
+        "query": "tỷ giá baht thái hôm nay",
+        "curr_imp": 293,
+        "prev_imp": 396,
+        "curr_clk": 5,
+        "prev_clk": 2,
+        "curr_pos": 8.4,
+        "prev_pos": 8.4,
+        "curr_ctr": 1.71,
+        "prev_ctr": 0.51
       },
       {
         "query": "bath to vnd",
@@ -3595,17 +3595,6 @@
         "prev_ctr": 0.63
       },
       {
-        "query": "tỷ giá bath",
-        "curr_imp": 191,
-        "prev_imp": 328,
-        "curr_clk": 4,
-        "prev_clk": 3,
-        "curr_pos": 6.8,
-        "prev_pos": 6.3,
-        "curr_ctr": 2.09,
-        "prev_ctr": 0.91
-      },
-      {
         "query": "đổi bath qua vnd",
         "curr_imp": 190,
         "prev_imp": 209,
@@ -3615,6 +3604,17 @@
         "prev_pos": 4.8,
         "curr_ctr": 2.11,
         "prev_ctr": 1.91
+      },
+      {
+        "query": "tỷ giá bath",
+        "curr_imp": 191,
+        "prev_imp": 328,
+        "curr_clk": 4,
+        "prev_clk": 3,
+        "curr_pos": 6.8,
+        "prev_pos": 6.3,
+        "curr_ctr": 2.09,
+        "prev_ctr": 0.91
       }
     ],
     "https://www.momo.vn/cinema/clayface-25059": [
@@ -3786,26 +3786,15 @@
         "prev_ctr": 0
       },
       {
-        "query": "cách tính tiền điện hiện nay",
+        "query": "700 số điện là bao nhiêu tiền",
         "curr_imp": 0,
-        "prev_imp": 67,
+        "prev_imp": 3,
         "curr_clk": 0,
         "prev_clk": 1,
         "curr_pos": null,
-        "prev_pos": 9.6,
+        "prev_pos": 6.3,
         "curr_ctr": 0,
-        "prev_ctr": 1.49
-      },
-      {
-        "query": "cach tinh gia dien",
-        "curr_imp": 1,
-        "prev_imp": 0,
-        "curr_clk": 1,
-        "prev_clk": 0,
-        "curr_pos": 9,
-        "prev_pos": null,
-        "curr_ctr": 100,
-        "prev_ctr": 0
+        "prev_ctr": 33.33
       },
       {
         "query": "1kg điện bằng bao nhiêu tiền",
@@ -3819,15 +3808,15 @@
         "prev_ctr": 100
       },
       {
-        "query": "700 số điện là bao nhiêu tiền",
+        "query": "cách tính tiền điện hiện nay",
         "curr_imp": 0,
-        "prev_imp": 3,
+        "prev_imp": 67,
         "curr_clk": 0,
         "prev_clk": 1,
         "curr_pos": null,
-        "prev_pos": 6.3,
+        "prev_pos": 9.6,
         "curr_ctr": 0,
-        "prev_ctr": 33.33
+        "prev_ctr": 1.49
       },
       {
         "query": "công thức tính tiền điện tiêu thụ",
@@ -3839,6 +3828,17 @@
         "prev_pos": 9.6,
         "curr_ctr": 0,
         "prev_ctr": 4.76
+      },
+      {
+        "query": "cach tinh gia dien",
+        "curr_imp": 1,
+        "prev_imp": 0,
+        "curr_clk": 1,
+        "prev_clk": 0,
+        "curr_pos": 9,
+        "prev_pos": null,
+        "curr_ctr": 100,
+        "prev_ctr": 0
       }
     ],
     "https://www.momo.vn/tai-chinh/ty-gia/gbp-sang-vnd": [
@@ -4054,13 +4054,13 @@
         "prev_ctr": 40.0
       },
       {
-        "query": "án mạng karaoke suất chiếu",
-        "curr_imp": 4,
+        "query": "án mạng karaoke đặt vé",
+        "curr_imp": 2,
         "prev_imp": 6,
-        "curr_clk": 2,
+        "curr_clk": 1,
         "prev_clk": 4,
-        "curr_pos": 3.2,
-        "prev_pos": 1.8,
+        "curr_pos": 2,
+        "prev_pos": 1.2,
         "curr_ctr": 50.0,
         "prev_ctr": 66.67
       }
@@ -4278,15 +4278,15 @@
         "prev_ctr": 0.32
       },
       {
-        "query": "trại giam hạnh phúc t mấy",
-        "curr_imp": 7,
-        "prev_imp": 43,
-        "curr_clk": 1,
+        "query": "xem trại giam hạnh phúc",
+        "curr_imp": 0,
+        "prev_imp": 37,
+        "curr_clk": 0,
         "prev_clk": 3,
-        "curr_pos": 5,
-        "prev_pos": 5.6,
-        "curr_ctr": 14.29,
-        "prev_ctr": 6.98
+        "curr_pos": null,
+        "prev_pos": 5,
+        "curr_ctr": 0,
+        "prev_ctr": 8.11
       }
     ],
     "https://www.momo.vn/cinema/person/steven-nguyen": [
@@ -4368,17 +4368,6 @@
         "prev_ctr": 0
       },
       {
-        "query": "steven nguyễn là ai",
-        "curr_imp": 0,
-        "prev_imp": 6,
-        "curr_clk": 0,
-        "prev_clk": 1,
-        "curr_pos": null,
-        "prev_pos": 7,
-        "curr_ctr": 0,
-        "prev_ctr": 16.67
-      },
-      {
         "query": "diễn viên steven",
         "curr_imp": 8,
         "prev_imp": 8,
@@ -4399,6 +4388,17 @@
         "prev_pos": 9,
         "curr_ctr": 0,
         "prev_ctr": 100
+      },
+      {
+        "query": "diễn viên chị chị em em 3",
+        "curr_imp": 2,
+        "prev_imp": 0,
+        "curr_clk": 1,
+        "prev_clk": 0,
+        "curr_pos": 1,
+        "prev_pos": null,
+        "curr_ctr": 50.0,
+        "prev_ctr": 0
       }
     ],
     "https://www.momo.vn/blog/tra-cuu-gia-tri-su-dung-the-bhyt-c116dt2711": [
@@ -4715,17 +4715,6 @@
         "prev_ctr": 75.0
       },
       {
-        "query": "giới thiệu momo có được tiền không",
-        "curr_imp": 3,
-        "prev_imp": 7,
-        "curr_clk": 1,
-        "prev_clk": 5,
-        "curr_pos": 1,
-        "prev_pos": 1.1,
-        "curr_ctr": 33.33,
-        "prev_ctr": 71.43
-      },
-      {
         "query": "momo giới thiệu bạn bè",
         "curr_imp": 11,
         "prev_imp": 2,
@@ -4735,6 +4724,17 @@
         "prev_pos": 1,
         "curr_ctr": 45.45,
         "prev_ctr": 100
+      },
+      {
+        "query": "giới thiệu momo có được tiền không",
+        "curr_imp": 3,
+        "prev_imp": 7,
+        "curr_clk": 1,
+        "prev_clk": 5,
+        "curr_pos": 1,
+        "prev_pos": 1.1,
+        "curr_ctr": 33.33,
+        "prev_ctr": 71.43
       }
     ],
     "https://www.momo.vn/cinema/rap/cinestar/cinestar-quoc-thanh-201": [
@@ -4838,15 +4838,15 @@
         "prev_ctr": 3.33
       },
       {
-        "query": "lịch chiếu phim nguyễn trãi",
-        "curr_imp": 57,
-        "prev_imp": 89,
-        "curr_clk": 2,
-        "prev_clk": 6,
-        "curr_pos": 3.2,
-        "prev_pos": 3.4,
-        "curr_ctr": 3.51,
-        "prev_ctr": 6.74
+        "query": "rạp phim quốc thanh",
+        "curr_imp": 82,
+        "prev_imp": 0,
+        "curr_clk": 6,
+        "prev_clk": 0,
+        "curr_pos": 3.6,
+        "prev_pos": null,
+        "curr_ctr": 7.32,
+        "prev_ctr": 0
       }
     ],
     "https://www.momo.vn/cinema/rap/cgv/cgv-saigonres-nguyen-xi-24": [
@@ -4884,17 +4884,6 @@
         "prev_ctr": 6.25
       },
       {
-        "query": "cgv nguyễn xí",
-        "curr_imp": 65,
-        "prev_imp": 41,
-        "curr_clk": 3,
-        "prev_clk": 4,
-        "curr_pos": 4.9,
-        "prev_pos": 4.4,
-        "curr_ctr": 4.62,
-        "prev_ctr": 9.76
-      },
-      {
         "query": "lịch chiếu phim cgv nguyễn xí",
         "curr_imp": 11,
         "prev_imp": 45,
@@ -4906,6 +4895,17 @@
         "prev_ctr": 8.89
       },
       {
+        "query": "cgv nguyễn xí",
+        "curr_imp": 65,
+        "prev_imp": 41,
+        "curr_clk": 3,
+        "prev_clk": 4,
+        "curr_pos": 4.9,
+        "prev_pos": 4.4,
+        "curr_ctr": 4.62,
+        "prev_ctr": 9.76
+      },
+      {
         "query": "vé xem phim cgv",
         "curr_imp": 0,
         "prev_imp": 133,
@@ -4913,17 +4913,6 @@
         "prev_clk": 0,
         "curr_pos": null,
         "prev_pos": 6.0,
-        "curr_ctr": 0,
-        "prev_ctr": 0
-      },
-      {
-        "query": "lịch chiếu cgv",
-        "curr_imp": 0,
-        "prev_imp": 101,
-        "curr_clk": 0,
-        "prev_clk": 0,
-        "curr_pos": null,
-        "prev_pos": 9.0,
         "curr_ctr": 0,
         "prev_ctr": 0
       },
@@ -4939,26 +4928,37 @@
         "prev_ctr": 0
       },
       {
-        "query": "rạp nguyễn xí",
+        "query": "lịch chiếu cgv",
         "curr_imp": 0,
-        "prev_imp": 4,
+        "prev_imp": 101,
+        "curr_clk": 0,
+        "prev_clk": 0,
+        "curr_pos": null,
+        "prev_pos": 9.0,
+        "curr_ctr": 0,
+        "prev_ctr": 0
+      },
+      {
+        "query": "cinema bình thạnh",
+        "curr_imp": 0,
+        "prev_imp": 2,
         "curr_clk": 0,
         "prev_clk": 1,
         "curr_pos": null,
-        "prev_pos": 3,
+        "prev_pos": 1,
         "curr_ctr": 0,
-        "prev_ctr": 25.0
+        "prev_ctr": 50.0
       },
       {
-        "query": "cgv nguyễn xí lịch chiếu",
-        "curr_imp": 9,
-        "prev_imp": 0,
-        "curr_clk": 1,
-        "prev_clk": 0,
-        "curr_pos": 2.4,
-        "prev_pos": null,
-        "curr_ctr": 11.11,
-        "prev_ctr": 0
+        "query": "rạp chiếu phim gần đây",
+        "curr_imp": 0,
+        "prev_imp": 6,
+        "curr_clk": 0,
+        "prev_clk": 1,
+        "curr_pos": null,
+        "prev_pos": 2,
+        "curr_ctr": 0,
+        "prev_ctr": 16.67
       }
     ],
     "https://www.momo.vn/blog/xu-tiktok-de-lam-gi-huong-dan-tu-a-den-z-ve-xu-tiktok-c115dt1696": [
@@ -5018,17 +5018,6 @@
         "prev_ctr": 0.34
       },
       {
-        "query": "xu tiktok dùng để làm gì",
-        "curr_imp": 15,
-        "prev_imp": 5,
-        "curr_clk": 4,
-        "prev_clk": 2,
-        "curr_pos": 1.3,
-        "prev_pos": 1.4,
-        "curr_ctr": 26.67,
-        "prev_ctr": 40.0
-      },
-      {
         "query": "cách nạp tiền vào tiktok",
         "curr_imp": 4,
         "prev_imp": 1,
@@ -5038,6 +5027,17 @@
         "prev_pos": 3,
         "curr_ctr": 100,
         "prev_ctr": 100
+      },
+      {
+        "query": "xu tiktok dùng để làm gì",
+        "curr_imp": 15,
+        "prev_imp": 5,
+        "curr_clk": 4,
+        "prev_clk": 2,
+        "curr_pos": 1.3,
+        "prev_pos": 1.4,
+        "curr_ctr": 26.67,
+        "prev_ctr": 40.0
       },
       {
         "query": "nạp xu momo",
@@ -5062,15 +5062,15 @@
         "prev_ctr": 5.0
       },
       {
-        "query": "cách kiếm xu trên tiktok",
-        "curr_imp": 42,
-        "prev_imp": 43,
-        "curr_clk": 2,
-        "prev_clk": 1,
-        "curr_pos": 8.4,
-        "prev_pos": 6.7,
-        "curr_ctr": 4.76,
-        "prev_ctr": 2.33
+        "query": "nạp xu tiktok bằng momo",
+        "curr_imp": 108,
+        "prev_imp": 114,
+        "curr_clk": 1,
+        "prev_clk": 2,
+        "curr_pos": 3.7,
+        "prev_pos": 3.5,
+        "curr_ctr": 0.93,
+        "prev_ctr": 1.75
       }
     ],
     "https://www.momo.vn/blog/fo4-cac-mua-the-dang-su-dung-nhat-trong-fifa-online-4-c115dt846": [
@@ -5242,37 +5242,37 @@
         "prev_ctr": 100
       },
       {
-        "query": "thần số học số 10",
-        "curr_imp": 2,
-        "prev_imp": 0,
+        "query": "than so hoc",
+        "curr_imp": 38,
+        "prev_imp": 198,
         "curr_clk": 2,
         "prev_clk": 0,
-        "curr_pos": 6,
-        "prev_pos": null,
-        "curr_ctr": 100,
+        "curr_pos": 5.5,
+        "prev_pos": 7.9,
+        "curr_ctr": 5.26,
         "prev_ctr": 0
       },
       {
-        "query": "cách xem số chủ đạo",
-        "curr_imp": 2,
-        "prev_imp": 0,
-        "curr_clk": 2,
-        "prev_clk": 0,
-        "curr_pos": 4,
-        "prev_pos": null,
-        "curr_ctr": 100,
-        "prev_ctr": 0
+        "query": "thần số học số 9",
+        "curr_imp": 0,
+        "prev_imp": 2,
+        "curr_clk": 0,
+        "prev_clk": 2,
+        "curr_pos": null,
+        "prev_pos": 6.5,
+        "curr_ctr": 0,
+        "prev_ctr": 100
       },
       {
-        "query": "tần số học là gì",
-        "curr_imp": 6,
-        "prev_imp": 14,
-        "curr_clk": 2,
-        "prev_clk": 1,
-        "curr_pos": 1.2,
-        "prev_pos": 1.6,
-        "curr_ctr": 33.33,
-        "prev_ctr": 7.14
+        "query": "thần số học số 2",
+        "curr_imp": 0,
+        "prev_imp": 2,
+        "curr_clk": 0,
+        "prev_clk": 2,
+        "curr_pos": null,
+        "prev_pos": 2,
+        "curr_ctr": 0,
+        "prev_ctr": 100
       }
     ],
     "https://www.momo.vn/tai-chinh/blog/vay-tien-online-24-24-5197": [
@@ -5477,26 +5477,26 @@
         "prev_ctr": 100
       },
       {
-        "query": "sky88 trangchu",
-        "curr_imp": 0,
-        "prev_imp": 10,
-        "curr_clk": 0,
-        "prev_clk": 1,
-        "curr_pos": null,
-        "prev_pos": 2.8,
-        "curr_ctr": 0,
-        "prev_ctr": 10.0
-      },
-      {
-        "query": "sky88'",
+        "query": "sky88.com ngay",
         "curr_imp": 0,
         "prev_imp": 3,
         "curr_clk": 0,
         "prev_clk": 1,
         "curr_pos": null,
-        "prev_pos": 3.3,
+        "prev_pos": 2,
         "curr_ctr": 0,
         "prev_ctr": 33.33
+      },
+      {
+        "query": "sky88.k",
+        "curr_imp": 0,
+        "prev_imp": 4,
+        "curr_clk": 0,
+        "prev_clk": 1,
+        "curr_pos": null,
+        "prev_pos": 3,
+        "curr_ctr": 0,
+        "prev_ctr": 25.0
       }
     ],
     "https://www.momo.vn/blog/cach-kiem-tra-bao-hiem-y-te-con-han-hay-het-han-c116dt2712": [
@@ -5600,15 +5600,15 @@
         "prev_ctr": 0
       },
       {
-        "query": "cách kiểm tra bảo hiểm y tế còn hạn không",
-        "curr_imp": 124,
-        "prev_imp": 106,
-        "curr_clk": 5,
+        "query": "check bảo hiểm y tế",
+        "curr_imp": 192,
+        "prev_imp": 324,
+        "curr_clk": 2,
         "prev_clk": 5,
-        "curr_pos": 3.0,
-        "prev_pos": 3.4,
-        "curr_ctr": 4.03,
-        "prev_ctr": 4.72
+        "curr_pos": 6.3,
+        "prev_pos": 6.3,
+        "curr_ctr": 1.04,
+        "prev_ctr": 1.54
       }
     ],
     "https://www.momo.vn/tai-chinh/blog/kiem-tien-online-5168": [
@@ -5982,17 +5982,6 @@
         "prev_ctr": 56.25
       },
       {
-        "query": "momo đăng nhập game nổ hũ",
-        "curr_imp": 13,
-        "prev_imp": 392,
-        "curr_clk": 6,
-        "prev_clk": 81,
-        "curr_pos": 2.5,
-        "prev_pos": 4.5,
-        "curr_ctr": 46.15,
-        "prev_ctr": 20.66
-      },
-      {
         "query": "momo no hu",
         "curr_imp": 3598,
         "prev_imp": 3709,
@@ -6002,6 +5991,17 @@
         "prev_pos": 5.5,
         "curr_ctr": 1.42,
         "prev_ctr": 2.18
+      },
+      {
+        "query": "momo đăng nhập game nổ hũ",
+        "curr_imp": 13,
+        "prev_imp": 392,
+        "curr_clk": 6,
+        "prev_clk": 81,
+        "curr_pos": 2.5,
+        "prev_pos": 4.5,
+        "curr_ctr": 46.15,
+        "prev_ctr": 20.66
       },
       {
         "query": "chơi game trên momo",
@@ -6105,17 +6105,6 @@
         "prev_ctr": 32.69
       },
       {
-        "query": "mua thẻ game qua momo",
-        "curr_imp": 52,
-        "prev_imp": 113,
-        "curr_clk": 9,
-        "prev_clk": 30,
-        "curr_pos": 1.3,
-        "prev_pos": 1.5,
-        "curr_ctr": 17.31,
-        "prev_ctr": 26.55
-      },
-      {
         "query": "mua thẻ game momo",
         "curr_imp": 23,
         "prev_imp": 67,
@@ -6125,6 +6114,17 @@
         "prev_pos": 1.1,
         "curr_ctr": 52.17,
         "prev_ctr": 44.78
+      },
+      {
+        "query": "mua thẻ game qua momo",
+        "curr_imp": 52,
+        "prev_imp": 113,
+        "curr_clk": 9,
+        "prev_clk": 30,
+        "curr_pos": 1.3,
+        "prev_pos": 1.5,
+        "curr_ctr": 17.31,
+        "prev_ctr": 26.55
       },
       {
         "query": "mua thẻ momo",
@@ -6384,15 +6384,15 @@
         "prev_ctr": 51.85
       },
       {
-        "query": "lich chieu phim lotte tay ninh",
-        "curr_imp": 27,
-        "prev_imp": 25,
-        "curr_clk": 13,
-        "prev_clk": 11,
-        "curr_pos": 1.3,
-        "prev_pos": 1.3,
-        "curr_ctr": 48.15,
-        "prev_ctr": 44.0
+        "query": "lịch chiếu phim tây ninh",
+        "curr_imp": 82,
+        "prev_imp": 92,
+        "curr_clk": 8,
+        "prev_clk": 13,
+        "curr_pos": 3.3,
+        "prev_pos": 3.0,
+        "curr_ctr": 9.76,
+        "prev_ctr": 14.13
       }
     ],
     "https://www.momo.vn/cinema/rap/lotte-cinema/lotte-ninh-kieu-180": [
@@ -6709,17 +6709,6 @@
         "prev_ctr": 44.74
       },
       {
-        "query": "cgv eon bình dương",
-        "curr_imp": 112,
-        "prev_imp": 156,
-        "curr_clk": 8,
-        "prev_clk": 15,
-        "curr_pos": 3.2,
-        "prev_pos": 3.2,
-        "curr_ctr": 7.14,
-        "prev_ctr": 9.62
-      },
-      {
         "query": "rạp chiếu phim eon bình dương",
         "curr_imp": 52,
         "prev_imp": 75,
@@ -6729,6 +6718,17 @@
         "prev_pos": 2.5,
         "curr_ctr": 28.85,
         "prev_ctr": 12.0
+      },
+      {
+        "query": "cgv eon bình dương",
+        "curr_imp": 112,
+        "prev_imp": 156,
+        "curr_clk": 8,
+        "prev_clk": 15,
+        "curr_pos": 3.2,
+        "prev_pos": 3.2,
+        "curr_ctr": 7.14,
+        "prev_ctr": 9.62
       }
     ],
     "https://www.momo.vn/cinema/rap/lotte-cinema/lotte-nam-dinh-161": [
@@ -6856,6 +6856,17 @@
         "prev_ctr": 17.65
       },
       {
+        "query": "điểm thanh toán momo",
+        "curr_imp": 0,
+        "prev_imp": 2,
+        "curr_clk": 0,
+        "prev_clk": 2,
+        "curr_pos": null,
+        "prev_pos": 1,
+        "curr_ctr": 0,
+        "prev_ctr": 100
+      },
+      {
         "query": "cửa hàng momo",
         "curr_imp": 0,
         "prev_imp": 3,
@@ -6867,17 +6878,6 @@
         "prev_ctr": 66.67
       },
       {
-        "query": "đối tác momo ví trả sau",
-        "curr_imp": 0,
-        "prev_imp": 3,
-        "curr_clk": 0,
-        "prev_clk": 2,
-        "curr_pos": null,
-        "prev_pos": 2.7,
-        "curr_ctr": 0,
-        "prev_ctr": 66.67
-      },
-      {
         "query": "rút ví trả sau momo gần đây",
         "curr_imp": 0,
         "prev_imp": 3,
@@ -6885,6 +6885,17 @@
         "prev_clk": 2,
         "curr_pos": null,
         "prev_pos": 1.3,
+        "curr_ctr": 0,
+        "prev_ctr": 66.67
+      },
+      {
+        "query": "đối tác momo ví trả sau",
+        "curr_imp": 0,
+        "prev_imp": 3,
+        "curr_clk": 0,
+        "prev_clk": 2,
+        "curr_pos": null,
+        "prev_pos": 2.7,
         "curr_ctr": 0,
         "prev_ctr": 66.67
       },
@@ -6911,17 +6922,6 @@
         "prev_ctr": 66.67
       },
       {
-        "query": "điểm thanh toán momo",
-        "curr_imp": 0,
-        "prev_imp": 2,
-        "curr_clk": 0,
-        "prev_clk": 2,
-        "curr_pos": null,
-        "prev_pos": 1,
-        "curr_ctr": 0,
-        "prev_ctr": 100
-      },
-      {
         "query": "rút ví trả sau momo",
         "curr_imp": 0,
         "prev_imp": 2,
@@ -6933,26 +6933,26 @@
         "prev_ctr": 50.0
       },
       {
-        "query": "ví trả sau momo thanh toán bách hóa xanh được không",
+        "query": "ví trả sau momo dùng được ở đâu",
+        "curr_imp": 0,
+        "prev_imp": 13,
+        "curr_clk": 0,
+        "prev_clk": 1,
+        "curr_pos": null,
+        "prev_pos": 2,
+        "curr_ctr": 0,
+        "prev_ctr": 7.69
+      },
+      {
+        "query": "rút ví trả sau momo thủ đức",
         "curr_imp": 0,
         "prev_imp": 3,
         "curr_clk": 0,
         "prev_clk": 1,
         "curr_pos": null,
-        "prev_pos": 10.7,
+        "prev_pos": 3.7,
         "curr_ctr": 0,
         "prev_ctr": 33.33
-      },
-      {
-        "query": "cửa hàng momo gần đây",
-        "curr_imp": 0,
-        "prev_imp": 6,
-        "curr_clk": 0,
-        "prev_clk": 1,
-        "curr_pos": null,
-        "prev_pos": 1.8,
-        "curr_ctr": 0,
-        "prev_ctr": 16.67
       }
     ],
     "https://www.momo.vn/cinema/rap/beta-cinemas/beta-xuan-thuy-374": [
@@ -7258,17 +7258,6 @@
         "prev_ctr": 23.81
       },
       {
-        "query": "momogem",
-        "curr_imp": 6,
-        "prev_imp": 1,
-        "curr_clk": 3,
-        "prev_clk": 1,
-        "curr_pos": 1,
-        "prev_pos": 1,
-        "curr_ctr": 50.0,
-        "prev_ctr": 100
-      },
-      {
         "query": "chơi game nhận tiền qua momo",
         "curr_imp": 0,
         "prev_imp": 6,
@@ -7280,15 +7269,26 @@
         "prev_ctr": 50.0
       },
       {
-        "query": "game momo app",
+        "query": "momogem",
         "curr_imp": 6,
-        "prev_imp": 2,
-        "curr_clk": 1,
+        "prev_imp": 1,
+        "curr_clk": 3,
         "prev_clk": 1,
-        "curr_pos": 14.5,
-        "prev_pos": 24.5,
-        "curr_ctr": 16.67,
-        "prev_ctr": 50.0
+        "curr_pos": 1,
+        "prev_pos": 1,
+        "curr_ctr": 50.0,
+        "prev_ctr": 100
+      },
+      {
+        "query": "momo gem",
+        "curr_imp": 1,
+        "prev_imp": 0,
+        "curr_clk": 1,
+        "prev_clk": 0,
+        "curr_pos": 11,
+        "prev_pos": null,
+        "curr_ctr": 100,
+        "prev_ctr": 0
       }
     ],
     "https://www.momo.vn/cinema/rap/lotte-cinema/lotte-ninh-binh-162": [
@@ -7381,17 +7381,6 @@
         "prev_ctr": 56.25
       },
       {
-        "query": "lịch chiếu phim ở ninh bình",
-        "curr_imp": 6,
-        "prev_imp": 5,
-        "curr_clk": 6,
-        "prev_clk": 3,
-        "curr_pos": 1,
-        "prev_pos": 1,
-        "curr_ctr": 100,
-        "prev_ctr": 60.0
-      },
-      {
         "query": "lịch chiếu phim lotte",
         "curr_imp": 158,
         "prev_imp": 248,
@@ -7401,6 +7390,17 @@
         "prev_pos": 5.9,
         "curr_ctr": 3.16,
         "prev_ctr": 2.42
+      },
+      {
+        "query": "lịch chiếu phim ở ninh bình",
+        "curr_imp": 6,
+        "prev_imp": 5,
+        "curr_clk": 6,
+        "prev_clk": 3,
+        "curr_pos": 1,
+        "prev_pos": 1,
+        "curr_ctr": 100,
+        "prev_ctr": 60.0
       }
     ],
     "https://www.momo.vn/cinema/rap/beta-cinemas/beta-thanh-xuan-203": [
@@ -8222,17 +8222,6 @@
         "prev_ctr": 50.0
       },
       {
-        "query": "trả chậm ví trả sau momo",
-        "curr_imp": 38,
-        "prev_imp": 11,
-        "curr_clk": 6,
-        "prev_clk": 2,
-        "curr_pos": 1.1,
-        "prev_pos": 1.3,
-        "curr_ctr": 15.79,
-        "prev_ctr": 18.18
-      },
-      {
         "query": "trả chậm ví trả sau momo 5 ngày",
         "curr_imp": 34,
         "prev_imp": 8,
@@ -8242,6 +8231,17 @@
         "prev_pos": 1.4,
         "curr_ctr": 17.65,
         "prev_ctr": 25.0
+      },
+      {
+        "query": "trả chậm ví trả sau momo",
+        "curr_imp": 38,
+        "prev_imp": 11,
+        "curr_clk": 6,
+        "prev_clk": 2,
+        "curr_pos": 1.1,
+        "prev_pos": 1.3,
+        "curr_ctr": 15.79,
+        "prev_ctr": 18.18
       },
       {
         "query": "nợ ví trả sau momo có bị đến nhà không",
@@ -8255,28 +8255,6 @@
         "prev_ctr": 7.32
       },
       {
-        "query": "quá hạn ví trả sau momo",
-        "curr_imp": 21,
-        "prev_imp": 3,
-        "curr_clk": 5,
-        "prev_clk": 2,
-        "curr_pos": 1.2,
-        "prev_pos": 1,
-        "curr_ctr": 23.81,
-        "prev_ctr": 66.67
-      },
-      {
-        "query": "nếu trả chậm ví trả sau momo",
-        "curr_imp": 14,
-        "prev_imp": 0,
-        "curr_clk": 5,
-        "prev_clk": 0,
-        "curr_pos": 1,
-        "prev_pos": null,
-        "curr_ctr": 35.71,
-        "prev_ctr": 0
-      },
-      {
         "query": "chậm ví trả sau momo 10 ngày có sao không",
         "curr_imp": 13,
         "prev_imp": 2,
@@ -8288,6 +8266,17 @@
         "prev_ctr": 50.0
       },
       {
+        "query": "quá hạn ví trả sau momo",
+        "curr_imp": 21,
+        "prev_imp": 3,
+        "curr_clk": 5,
+        "prev_clk": 2,
+        "curr_pos": 1.2,
+        "prev_pos": 1,
+        "curr_ctr": 23.81,
+        "prev_ctr": 66.67
+      },
+      {
         "query": "trả chậm ví trả sau momo có sao không",
         "curr_imp": 100,
         "prev_imp": 64,
@@ -8297,6 +8286,17 @@
         "prev_pos": 1.2,
         "curr_ctr": 5.0,
         "prev_ctr": 7.81
+      },
+      {
+        "query": "nếu trả chậm ví trả sau momo",
+        "curr_imp": 14,
+        "prev_imp": 0,
+        "curr_clk": 5,
+        "prev_clk": 0,
+        "curr_pos": 1,
+        "prev_pos": null,
+        "curr_ctr": 35.71,
+        "prev_ctr": 0
       }
     ],
     "https://www.momo.vn/cinema/ngay-con-con-me-25093": [
@@ -8378,17 +8378,6 @@
         "prev_ctr": 0
       },
       {
-        "query": "xem phim ngày con còn mẹ",
-        "curr_imp": 34,
-        "prev_imp": 0,
-        "curr_clk": 5,
-        "prev_clk": 0,
-        "curr_pos": 6.5,
-        "prev_pos": null,
-        "curr_ctr": 14.71,
-        "prev_ctr": 0
-      },
-      {
         "query": "lịch chiếu phim ngày con còn mẹ",
         "curr_imp": 84,
         "prev_imp": 14,
@@ -8400,15 +8389,26 @@
         "prev_ctr": 14.29
       },
       {
-        "query": "ngày con còn mẹ độ tuổi",
+        "query": "xem phim ngày con còn mẹ",
+        "curr_imp": 34,
+        "prev_imp": 0,
+        "curr_clk": 5,
+        "prev_clk": 0,
+        "curr_pos": 6.5,
+        "prev_pos": null,
+        "curr_ctr": 14.71,
+        "prev_ctr": 0
+      },
+      {
+        "query": "phim ngay con con me",
         "curr_imp": 55,
-        "prev_imp": 29,
+        "prev_imp": 0,
         "curr_clk": 3,
-        "prev_clk": 2,
-        "curr_pos": 1.6,
-        "prev_pos": 5,
+        "prev_clk": 0,
+        "curr_pos": 6.3,
+        "prev_pos": null,
         "curr_ctr": 5.45,
-        "prev_ctr": 6.9
+        "prev_ctr": 0
       }
     ],
     "https://www.momo.vn/diem-tin-dung": [
@@ -8580,17 +8580,6 @@
         "prev_ctr": 33.33
       },
       {
-        "query": "bò sữa bay lịch chiếu",
-        "curr_imp": 345,
-        "prev_imp": 256,
-        "curr_clk": 7,
-        "prev_clk": 9,
-        "curr_pos": 1.6,
-        "prev_pos": 2.0,
-        "curr_ctr": 2.03,
-        "prev_ctr": 3.52
-      },
-      {
         "query": "lịch chiếu bò sữa bay",
         "curr_imp": 229,
         "prev_imp": 140,
@@ -8602,17 +8591,6 @@
         "prev_ctr": 6.43
       },
       {
-        "query": "bò sữa bay khi nào chiếu",
-        "curr_imp": 383,
-        "prev_imp": 338,
-        "curr_clk": 9,
-        "prev_clk": 3,
-        "curr_pos": 4.0,
-        "prev_pos": 3.3,
-        "curr_ctr": 2.35,
-        "prev_ctr": 0.89
-      },
-      {
         "query": "lịch chiếu phim bò sữa bay",
         "curr_imp": 224,
         "prev_imp": 81,
@@ -8622,6 +8600,28 @@
         "prev_pos": 2.7,
         "curr_ctr": 4.02,
         "prev_ctr": 4.94
+      },
+      {
+        "query": "bò sữa bay lịch chiếu",
+        "curr_imp": 345,
+        "prev_imp": 256,
+        "curr_clk": 7,
+        "prev_clk": 9,
+        "curr_pos": 1.6,
+        "prev_pos": 2.0,
+        "curr_ctr": 2.03,
+        "prev_ctr": 3.52
+      },
+      {
+        "query": "bò sữa bay khi nào chiếu",
+        "curr_imp": 383,
+        "prev_imp": 338,
+        "curr_clk": 9,
+        "prev_clk": 3,
+        "curr_pos": 4.0,
+        "prev_pos": 3.3,
+        "curr_ctr": 2.35,
+        "prev_ctr": 0.89
       },
       {
         "query": "bo sua bay",
@@ -8637,17 +8637,6 @@
     ],
     "https://www.momo.vn/hoi-dap/khi-chuyen-tien-neu-gap-su-co-va-nguoi-nhan-khong-nhan-duoc-toi-phai-lam-sao": [
       {
-        "query": "momo bị lỗi không chuyển tiền được",
-        "curr_imp": 143,
-        "prev_imp": 46,
-        "curr_clk": 8,
-        "prev_clk": 3,
-        "curr_pos": 2.1,
-        "prev_pos": 2.2,
-        "curr_ctr": 5.59,
-        "prev_ctr": 6.52
-      },
-      {
         "query": "momo không nhận được tiền",
         "curr_imp": 27,
         "prev_imp": 0,
@@ -8657,6 +8646,17 @@
         "prev_pos": null,
         "curr_ctr": 29.63,
         "prev_ctr": 0
+      },
+      {
+        "query": "momo bị lỗi không chuyển tiền được",
+        "curr_imp": 143,
+        "prev_imp": 46,
+        "curr_clk": 8,
+        "prev_clk": 3,
+        "curr_pos": 2.1,
+        "prev_pos": 2.2,
+        "curr_ctr": 5.59,
+        "prev_ctr": 6.52
       },
       {
         "query": "momo bị lỗi",
@@ -8681,6 +8681,17 @@
         "prev_ctr": 6.67
       },
       {
+        "query": "tại sao momo không chuyển tiền được",
+        "curr_imp": 3,
+        "prev_imp": 12,
+        "curr_clk": 3,
+        "prev_clk": 1,
+        "curr_pos": 1,
+        "prev_pos": 1.3,
+        "curr_ctr": 100,
+        "prev_ctr": 8.33
+      },
+      {
         "query": "momo lỗi giao dịch",
         "curr_imp": 41,
         "prev_imp": 4,
@@ -8692,15 +8703,15 @@
         "prev_ctr": 0
       },
       {
-        "query": "chuyển tiền từ ngân hàng qua momo bị lỗi",
-        "curr_imp": 40,
-        "prev_imp": 3,
-        "curr_clk": 2,
-        "prev_clk": 3,
-        "curr_pos": 2.4,
-        "prev_pos": 2,
-        "curr_ctr": 5.0,
-        "prev_ctr": 100
+        "query": "hotro@momo.vn",
+        "curr_imp": 77,
+        "prev_imp": 0,
+        "curr_clk": 3,
+        "prev_clk": 0,
+        "curr_pos": 6.4,
+        "prev_pos": null,
+        "curr_ctr": 3.9,
+        "prev_ctr": 0
       },
       {
         "query": "chuyển tiền qua momo nhưng không nhận được",
@@ -8714,37 +8725,26 @@
         "prev_ctr": 40.0
       },
       {
-        "query": "sao momo không chuyển tiền được",
-        "curr_imp": 22,
-        "prev_imp": 11,
-        "curr_clk": 3,
-        "prev_clk": 2,
-        "curr_pos": 1.2,
-        "prev_pos": 1.5,
-        "curr_ctr": 13.64,
-        "prev_ctr": 18.18
-      },
-      {
-        "query": "momo bị lỗi không nhận được tiền",
-        "curr_imp": 24,
+        "query": "momo bảo trì chuyển tiền",
+        "curr_imp": 3,
         "prev_imp": 0,
         "curr_clk": 3,
         "prev_clk": 0,
-        "curr_pos": 1.4,
+        "curr_pos": 7.7,
         "prev_pos": null,
-        "curr_ctr": 12.5,
+        "curr_ctr": 100,
         "prev_ctr": 0
       },
       {
-        "query": "momo lỗi",
-        "curr_imp": 197,
-        "prev_imp": 0,
-        "curr_clk": 3,
-        "prev_clk": 0,
-        "curr_pos": 6.2,
-        "prev_pos": null,
-        "curr_ctr": 1.52,
-        "prev_ctr": 0
+        "query": "chuyển tiền từ ngân hàng qua momo bị lỗi",
+        "curr_imp": 40,
+        "prev_imp": 3,
+        "curr_clk": 2,
+        "prev_clk": 3,
+        "curr_pos": 2.4,
+        "prev_pos": 2,
+        "curr_ctr": 5.0,
+        "prev_ctr": 100
       }
     ],
     "https://www.momo.vn/phat-nguoi/blog/loi-vuot-den-do-xe-may-o-to-bi-phat-bao-nhieu-tien-3": [
@@ -8883,6 +8883,17 @@
         "prev_ctr": 0
       },
       {
+        "query": "momo không nhận được tiền",
+        "curr_imp": 26,
+        "prev_imp": 0,
+        "curr_clk": 2,
+        "prev_clk": 0,
+        "curr_pos": 2.7,
+        "prev_pos": null,
+        "curr_ctr": 7.69,
+        "prev_ctr": 0
+      },
+      {
         "query": "chuyển tiền qua momo nhưng không nhận được",
         "curr_imp": 11,
         "prev_imp": 5,
@@ -8905,14 +8916,36 @@
         "prev_ctr": 100
       },
       {
-        "query": "momo không nhận được tiền",
-        "curr_imp": 26,
+        "query": "momo không chuyển tiền ngân hàng được",
+        "curr_imp": 5,
         "prev_imp": 0,
-        "curr_clk": 2,
+        "curr_clk": 1,
         "prev_clk": 0,
-        "curr_pos": 2.7,
+        "curr_pos": 1,
         "prev_pos": null,
-        "curr_ctr": 7.69,
+        "curr_ctr": 20.0,
+        "prev_ctr": 0
+      },
+      {
+        "query": "chuyển tiền momo thành công nhưng không nhận được",
+        "curr_imp": 23,
+        "prev_imp": 14,
+        "curr_clk": 1,
+        "prev_clk": 0,
+        "curr_pos": 1.8,
+        "prev_pos": 1.6,
+        "curr_ctr": 4.35,
+        "prev_ctr": 0
+      },
+      {
+        "query": "chuyển tiền từ ngân hàng qua momo nhưng không nhận được",
+        "curr_imp": 22,
+        "prev_imp": 0,
+        "curr_clk": 1,
+        "prev_clk": 0,
+        "curr_pos": 1.9,
+        "prev_pos": null,
+        "curr_ctr": 4.55,
         "prev_ctr": 0
       },
       {
@@ -8927,28 +8960,6 @@
         "prev_ctr": 0
       },
       {
-        "query": "momo cashin trừ tiền nhưng không nhận được",
-        "curr_imp": 2,
-        "prev_imp": 0,
-        "curr_clk": 1,
-        "prev_clk": 0,
-        "curr_pos": 2,
-        "prev_pos": null,
-        "curr_ctr": 50.0,
-        "prev_ctr": 0
-      },
-      {
-        "query": "momo không chuyển tiền ngân hàng được",
-        "curr_imp": 5,
-        "prev_imp": 0,
-        "curr_clk": 1,
-        "prev_clk": 0,
-        "curr_pos": 1,
-        "prev_pos": null,
-        "curr_ctr": 20.0,
-        "prev_ctr": 0
-      },
-      {
         "query": "rút tiền từ momo về ngân hàng bị lỗi",
         "curr_imp": 1,
         "prev_imp": 0,
@@ -8957,17 +8968,6 @@
         "curr_pos": 1,
         "prev_pos": null,
         "curr_ctr": 100,
-        "prev_ctr": 0
-      },
-      {
-        "query": "chuyển tiền từ ngân hàng qua momo nhưng không nhận được",
-        "curr_imp": 22,
-        "prev_imp": 0,
-        "curr_clk": 1,
-        "prev_clk": 0,
-        "curr_pos": 1.9,
-        "prev_pos": null,
-        "curr_ctr": 4.55,
         "prev_ctr": 0
       }
     ],
@@ -9039,17 +9039,6 @@
         "prev_ctr": 0
       },
       {
-        "query": "phim chiếu rạp",
-        "curr_imp": 20,
-        "prev_imp": 0,
-        "curr_clk": 3,
-        "prev_clk": 0,
-        "curr_pos": 1,
-        "prev_pos": null,
-        "curr_ctr": 15.0,
-        "prev_ctr": 0
-      },
-      {
         "query": "thần chết đổ chuông",
         "curr_imp": 40,
         "prev_imp": 0,
@@ -9058,6 +9047,17 @@
         "curr_pos": 3.1,
         "prev_pos": null,
         "curr_ctr": 7.5,
+        "prev_ctr": 0
+      },
+      {
+        "query": "phim chiếu rạp",
+        "curr_imp": 20,
+        "prev_imp": 0,
+        "curr_clk": 3,
+        "prev_clk": 0,
+        "curr_pos": 1,
+        "prev_pos": null,
+        "curr_ctr": 15.0,
         "prev_ctr": 0
       },
       {
@@ -9274,17 +9274,6 @@
         "prev_ctr": 100
       },
       {
-        "query": "momo apk mới nhất",
-        "curr_imp": 17,
-        "prev_imp": 10,
-        "curr_clk": 8,
-        "prev_clk": 1,
-        "curr_pos": 2.1,
-        "prev_pos": 7.9,
-        "curr_ctr": 47.06,
-        "prev_ctr": 10.0
-      },
-      {
         "query": "tải app momo",
         "curr_imp": 47,
         "prev_imp": 41,
@@ -9296,15 +9285,26 @@
         "prev_ctr": 19.51
       },
       {
-        "query": "app momo",
-        "curr_imp": 121,
-        "prev_imp": 76,
+        "query": "momo apk mới nhất",
+        "curr_imp": 17,
+        "prev_imp": 10,
+        "curr_clk": 8,
+        "prev_clk": 1,
+        "curr_pos": 2.1,
+        "prev_pos": 7.9,
+        "curr_ctr": 47.06,
+        "prev_ctr": 10.0
+      },
+      {
+        "query": "tải momo cho android",
+        "curr_imp": 45,
+        "prev_imp": 36,
         "curr_clk": 7,
-        "prev_clk": 4,
-        "curr_pos": 2.7,
-        "prev_pos": 4.3,
-        "curr_ctr": 5.79,
-        "prev_ctr": 5.26
+        "prev_clk": 0,
+        "curr_pos": 4.3,
+        "prev_pos": 5.1,
+        "curr_ctr": 15.56,
+        "prev_ctr": 0
       }
     ],
     "https://www.momo.vn/hoi-dap": [
@@ -9520,15 +9520,15 @@
         "prev_ctr": 55.56
       },
       {
-        "query": "momo đang bảo trì",
-        "curr_imp": 33,
-        "prev_imp": 10,
-        "curr_clk": 1,
-        "prev_clk": 4,
-        "curr_pos": 5.4,
-        "prev_pos": 1.9,
-        "curr_ctr": 3.03,
-        "prev_ctr": 40.0
+        "query": "momo bao tri",
+        "curr_imp": 12,
+        "prev_imp": 0,
+        "curr_clk": 4,
+        "prev_clk": 0,
+        "curr_pos": 2.2,
+        "prev_pos": null,
+        "curr_ctr": 33.33,
+        "prev_ctr": 0
       }
     ],
     "https://www.momo.vn/blog/khong-dong-tien-dien-bao-lau-thi-bi-cat-cap-nhat-2023-c193dt1187": [
@@ -9577,17 +9577,6 @@
         "prev_ctr": 0
       },
       {
-        "query": "chậm tiền điện bao lâu thì bị cắt",
-        "curr_imp": 23,
-        "prev_imp": 2,
-        "curr_clk": 5,
-        "prev_clk": 1,
-        "curr_pos": 1.6,
-        "prev_pos": 2,
-        "curr_ctr": 21.74,
-        "prev_ctr": 50.0
-      },
-      {
         "query": "tiền điện đóng trễ bao lâu thì bị cắt",
         "curr_imp": 34,
         "prev_imp": 22,
@@ -9599,15 +9588,15 @@
         "prev_ctr": 4.55
       },
       {
-        "query": "đóng tiền điện trễ bao lâu bị cắt",
-        "curr_imp": 38,
-        "prev_imp": 8,
-        "curr_clk": 4,
+        "query": "chậm tiền điện bao lâu thì bị cắt",
+        "curr_imp": 23,
+        "prev_imp": 2,
+        "curr_clk": 5,
         "prev_clk": 1,
         "curr_pos": 1.6,
-        "prev_pos": 1.2,
-        "curr_ctr": 10.53,
-        "prev_ctr": 12.5
+        "prev_pos": 2,
+        "curr_ctr": 21.74,
+        "prev_ctr": 50.0
       },
       {
         "query": "thông báo tiền điện bao lâu thì bị cắt",
@@ -9621,6 +9610,17 @@
         "prev_ctr": 20.0
       },
       {
+        "query": "trễ tiền điện bao lâu thì bị cắt điện",
+        "curr_imp": 47,
+        "prev_imp": 7,
+        "curr_clk": 4,
+        "prev_clk": 1,
+        "curr_pos": 1.5,
+        "prev_pos": 2.1,
+        "curr_ctr": 8.51,
+        "prev_ctr": 14.29
+      },
+      {
         "query": "trễ tiền điện bao lâu thì bị cắt",
         "curr_imp": 64,
         "prev_imp": 11,
@@ -9632,15 +9632,15 @@
         "prev_ctr": 9.09
       },
       {
-        "query": "đóng trễ tiền điện bao lâu thì bị cắt",
-        "curr_imp": 32,
-        "prev_imp": 4,
+        "query": "nếu không đóng tiền điện bao lâu bị cắt",
+        "curr_imp": 28,
+        "prev_imp": 0,
         "curr_clk": 4,
-        "prev_clk": 1,
+        "prev_clk": 0,
         "curr_pos": 1.7,
-        "prev_pos": 1.2,
-        "curr_ctr": 12.5,
-        "prev_ctr": 25.0
+        "prev_pos": null,
+        "curr_ctr": 14.29,
+        "prev_ctr": 0
       }
     ],
     "https://www.momo.vn/blog/rut-tien-tu-vi-tra-sau-momo-co-duoc-khong-c116dt1843": [
@@ -9834,17 +9834,6 @@
         "prev_ctr": 0
       },
       {
-        "query": "cine tour chị chị em em",
-        "curr_imp": 10,
-        "prev_imp": 0,
-        "curr_clk": 1,
-        "prev_clk": 0,
-        "curr_pos": 2.2,
-        "prev_pos": null,
-        "curr_ctr": 10.0,
-        "prev_ctr": 0
-      },
-      {
         "query": "chị chị em em 3 cgv",
         "curr_imp": 1,
         "prev_imp": 0,
@@ -9856,14 +9845,25 @@
         "prev_ctr": 0
       },
       {
-        "query": "phim chiếu rạp chị chị em em 3",
-        "curr_imp": 1,
+        "query": "cinetour chị chị em em 3 cần thơ",
+        "curr_imp": 2,
         "prev_imp": 0,
         "curr_clk": 1,
         "prev_clk": 0,
-        "curr_pos": 31,
+        "curr_pos": 3,
         "prev_pos": null,
-        "curr_ctr": 100,
+        "curr_ctr": 50.0,
+        "prev_ctr": 0
+      },
+      {
+        "query": "chị chị em em 3 momo",
+        "curr_imp": 21,
+        "prev_imp": 0,
+        "curr_clk": 1,
+        "prev_clk": 0,
+        "curr_pos": 2.2,
+        "prev_pos": null,
+        "curr_ctr": 4.76,
         "prev_ctr": 0
       }
     ],
@@ -9935,17 +9935,6 @@
         "prev_ctr": 0
       },
       {
-        "query": "momo bảo trì",
-        "curr_imp": 81,
-        "prev_imp": 44,
-        "curr_clk": 4,
-        "prev_clk": 2,
-        "curr_pos": 7.3,
-        "prev_pos": 5.2,
-        "curr_ctr": 4.94,
-        "prev_ctr": 4.55
-      },
-      {
         "query": "lỗi momo",
         "curr_imp": 26,
         "prev_imp": 6,
@@ -9955,6 +9944,17 @@
         "prev_pos": 1.2,
         "curr_ctr": 15.38,
         "prev_ctr": 33.33
+      },
+      {
+        "query": "momo bảo trì",
+        "curr_imp": 81,
+        "prev_imp": 44,
+        "curr_clk": 4,
+        "prev_clk": 2,
+        "curr_pos": 7.3,
+        "prev_pos": 5.2,
+        "curr_ctr": 4.94,
+        "prev_ctr": 4.55
       },
       {
         "query": "khiếu nại momo",
@@ -10014,6 +10014,17 @@
         "prev_ctr": 0
       },
       {
+        "query": "phí trả chậm momo là bao nhiêu",
+        "curr_imp": 20,
+        "prev_imp": 1,
+        "curr_clk": 5,
+        "prev_clk": 1,
+        "curr_pos": 1.1,
+        "prev_pos": 1,
+        "curr_ctr": 25.0,
+        "prev_ctr": 100
+      },
+      {
         "query": "phí chậm trả momo",
         "curr_imp": 34,
         "prev_imp": 4,
@@ -10036,15 +10047,15 @@
         "prev_ctr": 25.0
       },
       {
-        "query": "phí trả chậm momo là bao nhiêu",
-        "curr_imp": 20,
-        "prev_imp": 1,
-        "curr_clk": 5,
+        "query": "phí trả chậm momo ví trả sau",
+        "curr_imp": 13,
+        "prev_imp": 4,
+        "curr_clk": 3,
         "prev_clk": 1,
-        "curr_pos": 1.1,
+        "curr_pos": 1.2,
         "prev_pos": 1,
-        "curr_ctr": 25.0,
-        "prev_ctr": 100
+        "curr_ctr": 23.08,
+        "prev_ctr": 25.0
       },
       {
         "query": "phí trả chậm ví trả sau momo",
@@ -10069,26 +10080,15 @@
         "prev_ctr": 100
       },
       {
-        "query": "phí trả chậm momo ví trả sau",
-        "curr_imp": 13,
-        "prev_imp": 4,
-        "curr_clk": 3,
-        "prev_clk": 1,
-        "curr_pos": 1.2,
-        "prev_pos": 1,
-        "curr_ctr": 23.08,
-        "prev_ctr": 25.0
-      },
-      {
-        "query": "ví trả sau momo trả chậm 1 ngày có sao không",
-        "curr_imp": 0,
-        "prev_imp": 10,
-        "curr_clk": 0,
-        "prev_clk": 2,
-        "curr_pos": null,
-        "prev_pos": 3.6,
-        "curr_ctr": 0,
-        "prev_ctr": 20.0
+        "query": "quá hạn ví trả sau momo",
+        "curr_imp": 20,
+        "prev_imp": 0,
+        "curr_clk": 2,
+        "prev_clk": 0,
+        "curr_pos": 1.1,
+        "prev_pos": null,
+        "curr_ctr": 10.0,
+        "prev_ctr": 0
       }
     ],
     "https://www.momo.vn/hoi-dap/quy-trinh-khieu-nai-voi-bo-phan-cskh": [
@@ -10271,6 +10271,17 @@
         "prev_ctr": 0
       },
       {
+        "query": "tại sao momo không nhận được tiền",
+        "curr_imp": 8,
+        "prev_imp": 0,
+        "curr_clk": 1,
+        "prev_clk": 0,
+        "curr_pos": 1,
+        "prev_pos": null,
+        "curr_ctr": 12.5,
+        "prev_ctr": 0
+      },
+      {
         "query": "momo lỗi",
         "curr_imp": 8,
         "prev_imp": 0,
@@ -10282,6 +10293,17 @@
         "prev_ctr": 0
       },
       {
+        "query": "momo cashin trừ tiền nhưng không nhận được",
+        "curr_imp": 1,
+        "prev_imp": 0,
+        "curr_clk": 1,
+        "prev_clk": 0,
+        "curr_pos": 1,
+        "prev_pos": null,
+        "curr_ctr": 100,
+        "prev_ctr": 0
+      },
+      {
         "query": "momo bị lỗi",
         "curr_imp": 40,
         "prev_imp": 0,
@@ -10290,28 +10312,6 @@
         "curr_pos": 5.7,
         "prev_pos": null,
         "curr_ctr": 2.5,
-        "prev_ctr": 0
-      },
-      {
-        "query": "chuyển tiền qua momo nhưng không nhận được",
-        "curr_imp": 13,
-        "prev_imp": 3,
-        "curr_clk": 1,
-        "prev_clk": 0,
-        "curr_pos": 1.3,
-        "prev_pos": 1,
-        "curr_ctr": 7.69,
-        "prev_ctr": 0
-      },
-      {
-        "query": "tại sao momo không nhận được tiền",
-        "curr_imp": 8,
-        "prev_imp": 0,
-        "curr_clk": 1,
-        "prev_clk": 0,
-        "curr_pos": 1,
-        "prev_pos": null,
-        "curr_ctr": 12.5,
         "prev_ctr": 0
       }
     ],
@@ -10440,17 +10440,6 @@
         "prev_ctr": 10.34
       },
       {
-        "query": "doi tac momo",
-        "curr_imp": 7,
-        "prev_imp": 12,
-        "curr_clk": 5,
-        "prev_clk": 3,
-        "curr_pos": 1.3,
-        "prev_pos": 4.1,
-        "curr_ctr": 71.43,
-        "prev_ctr": 25.0
-      },
-      {
         "query": "đối tác ví trả sau momo",
         "curr_imp": 1,
         "prev_imp": 5,
@@ -10460,6 +10449,17 @@
         "prev_pos": 1,
         "curr_ctr": 100,
         "prev_ctr": 100
+      },
+      {
+        "query": "doi tac momo",
+        "curr_imp": 7,
+        "prev_imp": 12,
+        "curr_clk": 5,
+        "prev_clk": 3,
+        "curr_pos": 1.3,
+        "prev_pos": 4.1,
+        "curr_ctr": 71.43,
+        "prev_ctr": 25.0
       },
       {
         "query": "mì cay seoul có thanh toán ví trả sau momo không",
@@ -10484,6 +10484,28 @@
         "prev_ctr": 57.14
       },
       {
+        "query": "momo đối tác",
+        "curr_imp": 12,
+        "prev_imp": 9,
+        "curr_clk": 3,
+        "prev_clk": 0,
+        "curr_pos": 1.9,
+        "prev_pos": 2.2,
+        "curr_ctr": 25.0,
+        "prev_ctr": 0
+      },
+      {
+        "query": "uniqlo có thanh toán momo ví trả sau không",
+        "curr_imp": 10,
+        "prev_imp": 16,
+        "curr_clk": 3,
+        "prev_clk": 0,
+        "curr_pos": 5.8,
+        "prev_pos": 7.1,
+        "curr_ctr": 30.0,
+        "prev_ctr": 0
+      },
+      {
         "query": "uniqlo có thanh toán momo không",
         "curr_imp": 11,
         "prev_imp": 0,
@@ -10504,28 +10526,6 @@
         "prev_pos": 2,
         "curr_ctr": 0,
         "prev_ctr": 33.33
-      },
-      {
-        "query": "đối tác momo ví trả sau",
-        "curr_imp": 14,
-        "prev_imp": 9,
-        "curr_clk": 3,
-        "prev_clk": 3,
-        "curr_pos": 1.6,
-        "prev_pos": 1.6,
-        "curr_ctr": 21.43,
-        "prev_ctr": 33.33
-      },
-      {
-        "query": "uniqlo có thanh toán momo ví trả sau không",
-        "curr_imp": 10,
-        "prev_imp": 16,
-        "curr_clk": 3,
-        "prev_clk": 0,
-        "curr_pos": 5.8,
-        "prev_pos": 7.1,
-        "curr_ctr": 30.0,
-        "prev_ctr": 0
       },
       {
         "query": "poseidon có thanh toán ví trả sau momo không",
@@ -11101,29 +11101,18 @@
         "prev_ctr": 25.0
       },
       {
-        "query": "vtv go plus",
-        "curr_imp": 13,
-        "prev_imp": 0,
-        "curr_clk": 2,
-        "prev_clk": 0,
-        "curr_pos": 4.6,
-        "prev_pos": null,
-        "curr_ctr": 15.38,
-        "prev_ctr": 0
+        "query": "vtvgo web",
+        "curr_imp": 0,
+        "prev_imp": 120,
+        "curr_clk": 0,
+        "prev_clk": 2,
+        "curr_pos": null,
+        "prev_pos": 4.9,
+        "curr_ctr": 0,
+        "prev_ctr": 1.67
       }
     ],
     "https://www.momo.vn/tai-chinh/ty-gia/vnd-sang-usd": [
-      {
-        "query": "25 đô to vnd",
-        "curr_imp": 1,
-        "prev_imp": 0,
-        "curr_clk": 1,
-        "prev_clk": 0,
-        "curr_pos": 10,
-        "prev_pos": null,
-        "curr_ctr": 100,
-        "prev_ctr": 0
-      },
       {
         "query": "đổi vnd qua usd",
         "curr_imp": 13,
@@ -11133,6 +11122,17 @@
         "curr_pos": 4.9,
         "prev_pos": null,
         "curr_ctr": 7.69,
+        "prev_ctr": 0
+      },
+      {
+        "query": "25 đô to vnd",
+        "curr_imp": 1,
+        "prev_imp": 0,
+        "curr_clk": 1,
+        "prev_clk": 0,
+        "curr_pos": 10,
+        "prev_pos": null,
+        "curr_ctr": 100,
         "prev_ctr": 0
       },
       {
@@ -11237,14 +11237,25 @@
         "prev_ctr": 0
       },
       {
-        "query": "đổi tiền việt sang won",
-        "curr_imp": 7,
+        "query": "100.000.000 won bằng bao nhiêu tiền việt",
+        "curr_imp": 1,
         "prev_imp": 0,
         "curr_clk": 1,
         "prev_clk": 0,
-        "curr_pos": 4.6,
+        "curr_pos": 7,
         "prev_pos": null,
-        "curr_ctr": 14.29,
+        "curr_ctr": 100,
+        "prev_ctr": 0
+      },
+      {
+        "query": "2 triệu vnd bằng bao nhiêu won",
+        "curr_imp": 1,
+        "prev_imp": 0,
+        "curr_clk": 1,
+        "prev_clk": 0,
+        "curr_pos": 6,
+        "prev_pos": null,
+        "curr_ctr": 100,
         "prev_ctr": 0
       },
       {
@@ -11270,47 +11281,14 @@
         "prev_ctr": 0
       },
       {
-        "query": "giá won hiện tại",
-        "curr_imp": 97,
+        "query": "tỷ giá tiền won hàn quốc hôm nay",
+        "curr_imp": 5,
         "prev_imp": 0,
         "curr_clk": 1,
         "prev_clk": 0,
-        "curr_pos": 8.5,
+        "curr_pos": 5.2,
         "prev_pos": null,
-        "curr_ctr": 1.03,
-        "prev_ctr": 0
-      },
-      {
-        "query": "giá tiền hàn quốc",
-        "curr_imp": 40,
-        "prev_imp": 0,
-        "curr_clk": 1,
-        "prev_clk": 0,
-        "curr_pos": 5.5,
-        "prev_pos": null,
-        "curr_ctr": 2.5,
-        "prev_ctr": 0
-      },
-      {
-        "query": "đổi vnd sang krw",
-        "curr_imp": 1,
-        "prev_imp": 0,
-        "curr_clk": 1,
-        "prev_clk": 0,
-        "curr_pos": 5,
-        "prev_pos": null,
-        "curr_ctr": 100,
-        "prev_ctr": 0
-      },
-      {
-        "query": "2 triệu vnd bằng bao nhiêu won",
-        "curr_imp": 1,
-        "prev_imp": 0,
-        "curr_clk": 1,
-        "prev_clk": 0,
-        "curr_pos": 6,
-        "prev_pos": null,
-        "curr_ctr": 100,
+        "curr_ctr": 20.0,
         "prev_ctr": 0
       },
       {
@@ -11322,6 +11300,28 @@
         "curr_pos": 9.8,
         "prev_pos": null,
         "curr_ctr": 20.0,
+        "prev_ctr": 0
+      },
+      {
+        "query": "đổi tiền việt sang won",
+        "curr_imp": 7,
+        "prev_imp": 0,
+        "curr_clk": 1,
+        "prev_clk": 0,
+        "curr_pos": 4.6,
+        "prev_pos": null,
+        "curr_ctr": 14.29,
+        "prev_ctr": 0
+      },
+      {
+        "query": "đổi vnd sang krw",
+        "curr_imp": 1,
+        "prev_imp": 0,
+        "curr_clk": 1,
+        "prev_clk": 0,
+        "curr_pos": 5,
+        "prev_pos": null,
+        "curr_ctr": 100,
         "prev_ctr": 0
       },
       {
@@ -11360,36 +11360,14 @@
         "prev_ctr": 0
       },
       {
-        "query": "tiền việt sang trung",
-        "curr_imp": 16,
+        "query": "tỷ giá trung quốc",
+        "curr_imp": 3,
         "prev_imp": 0,
         "curr_clk": 1,
         "prev_clk": 0,
-        "curr_pos": 4.6,
+        "curr_pos": 10,
         "prev_pos": null,
-        "curr_ctr": 6.25,
-        "prev_ctr": 0
-      },
-      {
-        "query": "đổi vnd sang tệ",
-        "curr_imp": 29,
-        "prev_imp": 0,
-        "curr_clk": 1,
-        "prev_clk": 0,
-        "curr_pos": 7.5,
-        "prev_pos": null,
-        "curr_ctr": 3.45,
-        "prev_ctr": 0
-      },
-      {
-        "query": "vnd sang rmb",
-        "curr_imp": 10,
-        "prev_imp": 0,
-        "curr_clk": 1,
-        "prev_clk": 0,
-        "curr_pos": 5.9,
-        "prev_pos": null,
-        "curr_ctr": 10.0,
+        "curr_ctr": 33.33,
         "prev_ctr": 0
       },
       {
@@ -11404,14 +11382,25 @@
         "prev_ctr": 0
       },
       {
-        "query": "tỷ giá trung quốc",
-        "curr_imp": 3,
+        "query": "vnd sang rmb",
+        "curr_imp": 10,
         "prev_imp": 0,
         "curr_clk": 1,
         "prev_clk": 0,
-        "curr_pos": 10,
+        "curr_pos": 5.9,
         "prev_pos": null,
-        "curr_ctr": 33.33,
+        "curr_ctr": 10.0,
+        "prev_ctr": 0
+      },
+      {
+        "query": "đổi vnd sang tệ",
+        "curr_imp": 29,
+        "prev_imp": 0,
+        "curr_clk": 1,
+        "prev_clk": 0,
+        "curr_pos": 7.5,
+        "prev_pos": null,
+        "curr_ctr": 3.45,
         "prev_ctr": 0
       },
       {
@@ -11423,6 +11412,17 @@
         "curr_pos": 6,
         "prev_pos": null,
         "curr_ctr": 100,
+        "prev_ctr": 0
+      },
+      {
+        "query": "tiền việt sang trung",
+        "curr_imp": 16,
+        "prev_imp": 0,
+        "curr_clk": 1,
+        "prev_clk": 0,
+        "curr_pos": 4.6,
+        "prev_pos": null,
+        "curr_ctr": 6.25,
         "prev_ctr": 0
       },
       {
@@ -11617,48 +11617,15 @@
         "prev_ctr": 33.33
       },
       {
-        "query": "dịch ý nghĩa sim",
-        "curr_imp": 15,
+        "query": "xem số điện thoại đẹp hay xấu",
+        "curr_imp": 77,
         "prev_imp": 0,
         "curr_clk": 2,
         "prev_clk": 0,
-        "curr_pos": 9.4,
+        "curr_pos": 7.4,
         "prev_pos": null,
-        "curr_ctr": 13.33,
+        "curr_ctr": 2.6,
         "prev_ctr": 0
-      },
-      {
-        "query": "dịch sdt",
-        "curr_imp": 12,
-        "prev_imp": 0,
-        "curr_clk": 2,
-        "prev_clk": 0,
-        "curr_pos": 10.5,
-        "prev_pos": null,
-        "curr_ctr": 16.67,
-        "prev_ctr": 0
-      },
-      {
-        "query": "xem số điện thoại của mình đẹp hay xấu",
-        "curr_imp": 3,
-        "prev_imp": 2,
-        "curr_clk": 1,
-        "prev_clk": 2,
-        "curr_pos": 5,
-        "prev_pos": 7.5,
-        "curr_ctr": 33.33,
-        "prev_ctr": 100
-      },
-      {
-        "query": "ý nghĩa sim điện thoại",
-        "curr_imp": 0,
-        "prev_imp": 19,
-        "curr_clk": 0,
-        "prev_clk": 2,
-        "curr_pos": null,
-        "prev_pos": 9.6,
-        "curr_ctr": 0,
-        "prev_ctr": 10.53
       },
       {
         "query": "y nghia sim",
@@ -11670,6 +11637,39 @@
         "prev_pos": null,
         "curr_ctr": 100,
         "prev_ctr": 0
+      },
+      {
+        "query": "ý nghĩa dãy số",
+        "curr_imp": 2,
+        "prev_imp": 0,
+        "curr_clk": 2,
+        "prev_clk": 0,
+        "curr_pos": 5,
+        "prev_pos": null,
+        "curr_ctr": 100,
+        "prev_ctr": 0
+      },
+      {
+        "query": "ý nghĩa số 34",
+        "curr_imp": 2,
+        "prev_imp": 1,
+        "curr_clk": 2,
+        "prev_clk": 1,
+        "curr_pos": 7,
+        "prev_pos": 10,
+        "curr_ctr": 100,
+        "prev_ctr": 100
+      },
+      {
+        "query": "ý nghĩa số 979",
+        "curr_imp": 2,
+        "prev_imp": 2,
+        "curr_clk": 2,
+        "prev_clk": 2,
+        "curr_pos": 8,
+        "prev_pos": 7.5,
+        "curr_ctr": 100,
+        "prev_ctr": 100
       }
     ],
     "https://www.momo.vn/tai-chinh/blog/1-do-bang-bao-nhieu-tien-viet-5214": [
@@ -11885,15 +11885,15 @@
         "prev_ctr": 0
       },
       {
-        "query": "028 5555555",
-        "curr_imp": 7,
-        "prev_imp": 0,
-        "curr_clk": 3,
-        "prev_clk": 0,
-        "curr_pos": 1.4,
-        "prev_pos": null,
-        "curr_ctr": 42.86,
-        "prev_ctr": 0
+        "query": "02855555555 số của ai",
+        "curr_imp": 6,
+        "prev_imp": 22,
+        "curr_clk": 0,
+        "prev_clk": 3,
+        "curr_pos": 1,
+        "prev_pos": 1.4,
+        "curr_ctr": 0,
+        "prev_ctr": 13.64
       }
     ],
     "https://www.momo.vn/cinema/rap/lotte-cinema": [
@@ -11931,17 +11931,6 @@
         "prev_ctr": 22.81
       },
       {
-        "query": "lotte cinema giá vé",
-        "curr_imp": 31,
-        "prev_imp": 44,
-        "curr_clk": 11,
-        "prev_clk": 12,
-        "curr_pos": 1.7,
-        "prev_pos": 1.7,
-        "curr_ctr": 35.48,
-        "prev_ctr": 27.27
-      },
-      {
         "query": "rạp lotte cinema",
         "curr_imp": 134,
         "prev_imp": 116,
@@ -11962,6 +11951,17 @@
         "prev_pos": 2.6,
         "curr_ctr": 50.0,
         "prev_ctr": 7.41
+      },
+      {
+        "query": "lotte cinema giá vé",
+        "curr_imp": 31,
+        "prev_imp": 44,
+        "curr_clk": 11,
+        "prev_clk": 12,
+        "curr_pos": 1.7,
+        "prev_pos": 1.7,
+        "curr_ctr": 35.48,
+        "prev_ctr": 27.27
       },
       {
         "query": "lotte cinema momo",
@@ -11986,26 +11986,26 @@
         "prev_ctr": 6.62
       },
       {
-        "query": "rạp lotte",
-        "curr_imp": 334,
-        "prev_imp": 264,
+        "query": "phim chiếu rạp lotte",
+        "curr_imp": 241,
+        "prev_imp": 194,
         "curr_clk": 9,
-        "prev_clk": 9,
-        "curr_pos": 6.2,
-        "prev_pos": 6.5,
-        "curr_ctr": 2.69,
-        "prev_ctr": 3.41
+        "prev_clk": 8,
+        "curr_pos": 5.7,
+        "prev_pos": 6.4,
+        "curr_ctr": 3.73,
+        "prev_ctr": 4.12
       },
       {
-        "query": "rạp chiếu phim lotte",
-        "curr_imp": 158,
-        "prev_imp": 166,
-        "curr_clk": 7,
+        "query": "đặt vé xem phim lotte",
+        "curr_imp": 86,
+        "prev_imp": 79,
+        "curr_clk": 4,
         "prev_clk": 9,
-        "curr_pos": 6.8,
-        "prev_pos": 6.2,
-        "curr_ctr": 4.43,
-        "prev_ctr": 5.42
+        "curr_pos": 3.7,
+        "prev_pos": 3.3,
+        "curr_ctr": 4.65,
+        "prev_ctr": 11.39
       }
     ],
     "https://www.momo.vn/blog/tong-hop-cac-goi-cuoc-3g-4g-cua-nha-mang-viettel-mobifone-va-vinaphone-c193dt146": [
@@ -12065,17 +12065,6 @@
         "prev_ctr": 0.87
       },
       {
-        "query": "các gói cước 4g mobifone",
-        "curr_imp": 11,
-        "prev_imp": 1,
-        "curr_clk": 3,
-        "prev_clk": 1,
-        "curr_pos": 8.6,
-        "prev_pos": 9,
-        "curr_ctr": 27.27,
-        "prev_ctr": 100
-      },
-      {
         "query": "sim 4g mạng nào rẻ nhất",
         "curr_imp": 3,
         "prev_imp": 1,
@@ -12084,6 +12073,17 @@
         "curr_pos": 2,
         "prev_pos": 3,
         "curr_ctr": 100,
+        "prev_ctr": 100
+      },
+      {
+        "query": "các gói cước 4g mobifone",
+        "curr_imp": 11,
+        "prev_imp": 1,
+        "curr_clk": 3,
+        "prev_clk": 1,
+        "curr_pos": 8.6,
+        "prev_pos": 9,
+        "curr_ctr": 27.27,
         "prev_ctr": 100
       },
       {
@@ -12098,25 +12098,25 @@
         "prev_ctr": 0
       },
       {
-        "query": "mobile 4g",
+        "query": "các gói mạng 4g mobifone",
         "curr_imp": 2,
-        "prev_imp": 0,
+        "prev_imp": 1,
         "curr_clk": 2,
-        "prev_clk": 0,
-        "curr_pos": 6,
-        "prev_pos": null,
+        "prev_clk": 1,
+        "curr_pos": 5.5,
+        "prev_pos": 10,
         "curr_ctr": 100,
-        "prev_ctr": 0
+        "prev_ctr": 100
       },
       {
-        "query": "mạng di động",
-        "curr_imp": 0,
+        "query": "các gói mạng 4g viettel",
+        "curr_imp": 1,
         "prev_imp": 2,
-        "curr_clk": 0,
+        "curr_clk": 1,
         "prev_clk": 2,
-        "curr_pos": null,
-        "prev_pos": 7,
-        "curr_ctr": 0,
+        "curr_pos": 10,
+        "prev_pos": 7.5,
+        "curr_ctr": 100,
         "prev_ctr": 100
       }
     ]

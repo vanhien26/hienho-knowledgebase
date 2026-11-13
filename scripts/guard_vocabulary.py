@@ -288,6 +288,14 @@ RULES = [
         "replacement": "lưu lượng truy cập, lượt truy cập (Pageviews/Sessions), hoặc mục tiêu chuyển đổi Web-to-App",
         "auto_fix": "lưu lượng",
     },
+    {
+        "id": "GOI_QUA_TAN_THU",
+        "pattern": r"(?i)\b((gói\s+)?quà\s+(tặng\s+)?tân\s+thủ|tân\s+thủ)\b",
+        "flags": 0,
+        "desc": "Từ 'gói quà tân thủ / quà tân thủ / tân thủ' bị cấm (từ lóng game), thay bằng 'Gói quà CHAOMOMO' hoặc 'người dùng mới'",
+        "replacement": "Gói quà CHAOMOMO (cho gói quà) hoặc người dùng mới (cho user)",
+        "auto_fix": "Gói quà CHAOMOMO",
+    },
 ]
 
 

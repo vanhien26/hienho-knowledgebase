@@ -41,7 +41,7 @@ def get_sheets_token():
     }).encode("utf-8")
 
     req = urllib.request.Request("https://oauth2.googleapis.com/token", data=data)
-    with urllib.request.urlopen(req) as resp:
+    with urllib.request.urlopen(req, timeout=60) as resp:
         res = json.loads(resp.read().decode())
         return res["access_token"]
 
@@ -231,7 +231,7 @@ def sync_google_sheet(
         q_range = urllib.parse.quote(f"'{pivot_sheet}'!A:{col_pivot}")
         url_get = f"https://sheets.googleapis.com/v4/spreadsheets/{spreadsheet_id}/values/{q_range}?valueRenderOption=UNFORMATTED_VALUE"
         req_get = urllib.request.Request(url_get, headers=headers)
-        with urllib.request.urlopen(req_get) as resp:
+        with urllib.request.urlopen(req_get, timeout=60) as resp:
             rows = json.loads(resp.read().decode()).get("values", [])
 
         if not rows or len(rows) < 3:
@@ -303,7 +303,7 @@ def sync_google_sheet(
     }).encode("utf-8")
 
     req_batch = urllib.request.Request(batch_url, data=payload, method="POST", headers=headers)
-    with urllib.request.urlopen(req_batch) as resp:
+    with urllib.request.urlopen(req_batch, timeout=60) as resp:
         res = json.loads(resp.read().decode())
         print(f"✓ Cập nhật thành công {res.get('totalUpdatedCells', 0)} ô trên {len(updates)} dải ô!")
         print(f"✓ Liên kết trực tiếp: https://docs.google.com/spreadsheets/d/{spreadsheet_id}/edit?gid=1273714888#gid=1273714888")
