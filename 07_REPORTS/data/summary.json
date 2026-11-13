@@ -7,46 +7,46 @@
   },
   "running": {
     "month": "2026-11",
-    "daysElapsed": 11,
+    "daysElapsed": 12,
     "daysInMonth": 30,
-    "report": "monthly_11_2026_mtd_11d.json",
-    "pv": 862872,
+    "report": "monthly_11_2026_mtd_12d.json",
+    "pv": 866188,
     "target": 3829155,
-    "dailyPace": 78443,
-    "dailyNeeded": 156120,
-    "forecast": 2353287,
-    "forecastPct": 61.46
+    "dailyPace": 72182,
+    "dailyNeeded": 164609,
+    "forecast": 2165470,
+    "forecastPct": 56.55
   },
   "hubs": [
     {
       "id": "cinema",
       "name": "Cinema Hub",
-      "pv": 204474
+      "pv": 199113
     },
     {
       "id": "financial",
       "name": "Financial Hub",
-      "pv": 85065
+      "pv": 85522
     },
     {
       "id": "new_user",
       "name": "New User Hub",
-      "pv": 22822
+      "pv": 24068
     },
     {
       "id": "vehicle",
       "name": "Vehicle Hub",
-      "pv": 45201
+      "pv": 54329
     },
     {
       "id": "insurance",
       "name": "Insurance Hub",
-      "pv": 17727
+      "pv": 20863
     },
     {
       "id": "student",
       "name": "Student Hub",
-      "pv": 740
+      "pv": 756
     }
   ],
   "lastFullHubs": [
@@ -82,10 +82,10 @@
     }
   ],
   "channels": {
-    "organic": 389220,
-    "direct": 200326,
-    "referral": 35464,
-    "paid": 148576,
-    "others": 89286
+    "organic": 386730,
+    "direct": 201603,
+    "referral": 34308,
+    "paid": 163175,
+    "others": 80372
   }
 }
