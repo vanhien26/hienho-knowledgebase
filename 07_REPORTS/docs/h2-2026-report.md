@@ -71,7 +71,7 @@ Chuyển đổi người dùng tự nhiên (Web-to-App W2A MAU / New Users)
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Tháng 7/2026</strong></td>
       <td style="border:1px solid #94a3b8### 1.5. Bảng Quy Hoạch KPI 5 Strategic Web Hubs H2/2026 (Bảng Final)
 
-Bảng ma trận quy hoạch 5 Strategic Web Hubs chính thức (Đồng bộ 100% với Slide Matrix Final):
+Bảng tổng hợp quy hoạch 5 Strategic Web Hubs chính thức (Đồng bộ 100% với Slide Matrix Final):
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>

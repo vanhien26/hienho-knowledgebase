@@ -296,6 +296,22 @@ RULES = [
         "replacement": "Gói quà CHAOMOMO (cho gói quà) hoặc người dùng mới (cho user)",
         "auto_fix": "Gói quà CHAOMOMO",
     },
+    {
+        "id": "MA_TRAN_LAM_DUNG",
+        "pattern": r"(?i)\b((bảng\s+)?ma\s+trận\s+(tóm\s+tắt|chi\s+tiết|liên\s+kết|phân\s+bổ|kế\s+hoạch|kpis?|ngân\s+sách|quy\s+hoạch|hành\s+động)|bảng\s+ma\s+trận)\b",
+        "flags": 0,
+        "desc": "Lạm dụng chữ 'ma trận' cho bảng biểu, kế hoạch thông thường (AI buzzword sáo rỗng)",
+        "replacement": "bảng tổng hợp, bảng phân bổ, bảng liên kết, khung kế hoạch, hoặc bảng chi tiết",
+        "auto_fix": "bảng tổng hợp",
+    },
+    {
+        "id": "THI_CONG_LAM_DUNG",
+        "pattern": r"(?i)\b((nguyên\s+tắc\s+)?thi\s+công(\s+(dự\s+án|tính\s+năng|web|hub|ui|frontend|backend|hệ\s+thống|ban\s+đêm|kỹ\s+thuật|nền\s+tảng))?)\b",
+        "flags": 0,
+        "desc": "Dùng từ 'thi công' (ngành xây dựng, công trình) cho phần mềm / sản phẩm số; thay bằng 'triển khai', 'thực thi' hoặc 'phát triển'",
+        "replacement": "nguyên tắc triển khai, phương thức thực thi, phát triển, hoặc triển khai kỹ thuật",
+        "auto_fix": "triển khai",
+    },
 ]
 
 
