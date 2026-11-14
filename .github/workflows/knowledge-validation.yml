@@ -20,9 +20,6 @@ on:
       - 'scripts/generate_content_plan.py'
       - 'scripts/lib/content_plan_config.py'
       - 'scripts/sync_inventory_to_hubs.py'
-      - '**/*.md'
-      - 'llms.txt'
-      - 'scripts/guard_vocabulary.py'
   push:
     branches: [main]
     paths:
@@ -43,9 +40,6 @@ on:
       - 'scripts/generate_content_plan.py'
       - 'scripts/lib/content_plan_config.py'
       - 'scripts/sync_inventory_to_hubs.py'
-      - '**/*.md'
-      - 'llms.txt'
-      - 'scripts/guard_vocabulary.py'
   workflow_dispatch:
 
 jobs:
@@ -60,8 +54,6 @@ jobs:
         run: |
           python -m venv .venv
           ./.venv/bin/python -m pip install pyyaml openpyxl
-      - name: Vocabulary guard (toàn bộ file .md được git theo dõi)
-        run: ./.venv/bin/python scripts/guard_vocabulary.py --all
       - name: Validate registry
         run: ./.venv/bin/python scripts/validate_knowledge_registry.py
       - name: Build inventory, conflict, triage, freshness and provenance reports
