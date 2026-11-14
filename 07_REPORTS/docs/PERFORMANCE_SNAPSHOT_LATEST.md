@@ -1,8 +1,8 @@
 # BẢN GHI TÓM TẮT HIỆU SUẤT MỚI NHẤT (PERFORMANCE SNAPSHOT)
 
-> **Cập nhật:** 13/11/2026 | **Kỳ dữ liệu:** Tháng 11/2026 (MTD 12 ngày: 01/11 - 12/11/2026, GA4 Data API, lọc chuẩn hostName == 'www.momo.vn')
+> **Cập nhật:** 14/11/2026 | **Kỳ dữ liệu:** Tháng 11/2026 (MTD 13 ngày: 01/11 - 13/11/2026, GA4 Data API, lọc chuẩn hostName == 'www.momo.vn')
 > **Chính sách dữ liệu:** Đã loại bỏ hoàn toàn domain đối tác napthengay.vn (bao gồm toàn bộ các trang /order); giữ nguyên số liệu hiển thị thực tế trên website momo.vn.
-> **Nguồn:** `07_REPORTS/data/monthly_11_2026_mtd_12d.json` & `07_REPORTS/data/summary.json`
+> **Nguồn:** `07_REPORTS/data/monthly_11_2026_mtd_13d.json` & `07_REPORTS/data/summary.json`
 > **Mục đích:** Bản ghi tinh gọn (Low-token) giúp AI Agents và quy trình tự động đọc số liệu nhanh mà không cần tải toàn bộ tài liệu lịch sử.
 
 ---
@@ -12,11 +12,11 @@
 | Chỉ số | Giá trị | Ghi chú & Đánh giá |
 | :--- | :---: | :--- |
 | **Target Tháng 11** | 3.829.155 PVs | Chỉ tiêu giao đầu tháng |
-| **Thực tế Lũy kế MTD 12 ngày (Website momo.vn)** | **2.857.615 PVs** | Đạt **74.63%** Target (sau 40.0% thời gian) |
-| **Nhịp vận hành ngày (Daily Pace)** | **238.135 PV/ngày** | Vượt tốc độ hoàn thành kế hoạch tháng |
-| **Forecast cuối tháng (Forecast 30d)** | **7.144.037 PVs** | Dự báo đạt **186.57%** Target |
+| **Thực tế Lũy kế MTD 13 ngày (Website momo.vn)** | **3.083.024 PVs** | Đạt **80.51%** Target (sau 43.3% thời gian) |
+| **Nhịp vận hành ngày (Daily Pace)** | **237.156 PV/ngày** | Vượt tốc độ hoàn thành kế hoạch tháng |
+| **Forecast cuối tháng (Forecast 30d)** | **7.114.671 PVs** | Dự báo đạt **185.80%** Target |
 | **Tháng 10 gần nhất (Last Full)** | 3.602.023 PVs | Hoàn thành ~98.3% Target Tháng 10 (3.665.607 PVs) |
-| **Users / Sessions MTD 12d (www.momo.vn)** | 442.205 / 580.883 | Tỷ lệ sessions/user ~1.31 |
+| **Users / Sessions MTD 13d (www.momo.vn)** | 665.881 / 881.738 | Tỷ lệ sessions/user ~1.32 |
 
 ---
 
@@ -24,36 +24,36 @@
 
 > **Quy chuẩn chuẩn hóa:** Tách riêng 2 khối độc lập **Paid** (Marketing trả phí) và **Non-Paid** (Lưu lượng tự nhiên); trong đó Non-Paid gồm 4 kênh cốt lõi: Organic, Direct, AI Traffic (bóc tách từ GA4 AI Assistant) và Referral (đã gộp toàn bộ mạng xã hội tự nhiên, đối tác PR, Unassigned).
 
-| Phân Loại Traffic Source | Lũy kế MTD 12d (PVs) | Tỷ trọng (%) | Xu hướng & Đánh giá Tín hiệu |
+| Phân Loại Traffic Source | Lũy kế MTD 13d (PVs) | Tỷ trọng (%) | Xu hướng & Đánh giá Tín hiệu |
 | :--- | :---: | :---: | :--- |
-| **NON-PAID TRAFFIC** | **2.127.462** | **74.45%** | Động cơ tăng trưởng cốt lõi trên website momo.vn |
-| -- Organic Traffic | 1.275.856 | 44.65% | Kênh tìm kiếm tự nhiên chủ lực |
-| -- Direct Traffic | 665.104 | 23.27% | Lượng truy cập trực tiếp |
-| -- Referral *(đã gộp Phần còn lại)* | 186.502 | 6.53% | Đối tác/backlink, in-app, PR, Organic Social (113.183 Ref + 73.319 Others) |
-| -- AI Traffic (GEO, tính trong Non-Paid) | 20.884 | 0.73% | Lượng truy cập từ các nền tảng AI |
-| **PAID TRAFFIC** | **538.327** | **18.84%** | Ngân sách Ads trên website momo.vn |
-| **TỔNG LƯU LƯỢNG (momo.vn)** | **2.857.615** | **100.00%** | Đã loại trừ hoàn toàn napthengay.vn |
+| **NON-PAID TRAFFIC** | **2.418.079** | **78.43%** | Động cơ tăng trưởng cốt lõi trên website momo.vn |
+| -- Organic Traffic | 1.433.257 | 46.49% | Kênh tìm kiếm tự nhiên chủ lực |
+| -- Direct Traffic | 775.066 | 25.14% | Lượng truy cập trực tiếp |
+| -- Referral *(đã gộp Phần còn lại)* | 209.756 | 6.80% | Đối tác/backlink, in-app, PR, Organic Social (128.288 Ref + 81.468 Others) |
+| -- AI Traffic (GEO, tính trong Non-Paid) | 23.139 | 0.75% | Lượng truy cập từ các nền tảng AI |
+| **PAID TRAFFIC** | **659.848** | **21.40%** | Ngân sách Ads trên website momo.vn |
+| **TỔNG LƯU LƯỢNG (momo.vn)** | **3.083.024** | **100.00%** | Đã loại trừ hoàn toàn napthengay.vn |
 
 ---
 
 ## 3. CƠ CẤU THEO 4 ZONES & HUBS (HUBS-MOMO MAPPING)
 
-| Zone Phân loại | Hub | Lũy kế MTD 12d (PVs) | Target Tháng 11 | % Đạt Target |
+| Zone Phân loại | Hub | Lũy kế MTD 13d (PVs) | Target Tháng 11 | % Đạt Target |
 | :--- | :--- | :---: | :---: | :---: |
-| **Performance** | **Cinema Hub** | 656.888 | 1.294.630 | **50.74%** |
-| **Transformation** | **Financial Hub** | 282.143 | 700.000 | **40.31%** |
-| **Transformation** | **Vehicle Hub** | 179.235 | 100.000 | **179.24%** |
-| **Transformation** | **New User Hub** | 79.401 | 300.000 | **26.47%** |
-| **Incubator** | **Insurance Hub** | 68.827 | 50.000 | **137.65%** |
-| **Incubator** | **Student Hub** | 2.494 | 100.000 | **2.49%** |
+| **Performance** | **Cinema Hub** | 745.200 | 1.294.630 | **57.56%** |
+| **Transformation** | **Financial Hub** | 328.170 | 700.000 | **46.88%** |
+| **Transformation** | **Vehicle Hub** | 229.148 | 100.000 | **229.15%** |
+| **Transformation** | **New User Hub** | 96.738 | 300.000 | **32.25%** |
+| **Incubator** | **Insurance Hub** | 79.506 | 50.000 | **159.01%** |
+| **Incubator** | **Student Hub** | 2.699 | 100.000 | **2.70%** |
 
 ### Cơ Cấu Sub-pages Cinema Hub (Quy Chuẩn Tracking Mới):
-- **Trang Rạp phim (`Cinema_Cineplex`):** **336.496 PVs** (68.1% Hub)
-- **Trang phim chi tiết (`Cinema_Page`):** **110.190 PVs** (22.3% Hub)
-- **Cinema_Home Page (Trang chủ Cinema):** **31.387 PVs** (6.4% Hub)
-- **Cinema_Blog:** **13.709 PVs** (2.8% Hub)
-- **Cinema_Landing Page:** **1.963 PVs** (0.4% Hub)
-- **Tin tức (`Cinema_News`):** **339 PVs** (0.1% Hub)
+- **Trang Rạp phim (`Cinema_Cineplex`):** **506.133 PVs** (67.9% Hub)
+- **Trang phim chi tiết (`Cinema_Page`):** **167.540 PVs** (22.5% Hub)
+- **Cinema_Home Page (Trang chủ Cinema):** **47.094 PVs** (6.3% Hub)
+- **Cinema_Blog:** **21.243 PVs** (2.9% Hub)
+- **Cinema_Landing Page:** **2.629 PVs** (0.4% Hub)
+- **Tin tức (`Cinema_News`):** **561 PVs** (0.1% Hub)
 
 ---
 

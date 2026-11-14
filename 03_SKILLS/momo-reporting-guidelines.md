@@ -237,7 +237,8 @@ Ngoài ra bổ sung bốn yêu cầu trước đây không có trong quy tắc n
 
 ## 7. THAM CHIẾU
 
-- Từ điển thuật ngữ báo cáo (SSOT): [`03_SKILLS/momo-reporting-glossary.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-glossary.md)
+- Cẩm nang soạn thảo slide điều hành chuẩn C-Suite (Mô hình InsurTech 2026): [`03_SKILLS/executive-presentation-playbook.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/executive-presentation-playbook.md)
+- Từ điển thuật ngữ báo cáo: [`03_SKILLS/momo-reporting-glossary.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/momo-reporting-glossary.md)
 - Skill vận hành: [`.agents/skills/web-platform-reporting/SKILL.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/.agents/skills/web-platform-reporting/SKILL.md)
 - Công thức hành văn và mẫu Weekly/Monthly: [`03_SKILLS/web-platform-reporting-framework.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/03_SKILLS/web-platform-reporting-framework.md)
 - Template markdown báo cáo tháng: [`07_REPORTS/templates/monthly_report_template.md`](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/templates/monthly_report_template.md)
