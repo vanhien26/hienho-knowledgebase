@@ -25,7 +25,7 @@ MoMo hiện đang sở hữu giải pháp thanh toán tiện lợi nhưng chưa 
 ### Resolution
 Hoàn thiện và Go-live trang Landing Page [momo.vn/phi-xet-tuyen](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/06_USE_CASE_MOMO/user-growth-u18-brd.md) làm Hub thông tin trung tâm. Thiết kế phễu chuyển đổi thông minh:
 1. **Giá trị tiện ích:** Hướng dẫn thanh toán 100% tự động bằng cách quét mã QR, không cần nhập thủ công thông tin ngân hàng giúp tránh sai sót 100%. Hỗ trợ tính năng "thanh toán hộ" cho phụ huynh/người thân.
-2. **Động lực đăng ký (Hook):** Tặng mã khuyến mãi đặc quyền **`EMCHUA18`** và gói quà tân thủ trị giá **20.000đ** (thẻ quà giảm giá ăn uống, mua sắm, nạp data 4G/5G tiếp sức mùa nhập học).
+2. **Động lực đăng ký (Hook):** Tặng mã khuyến mãi đặc quyền **`EMCHUA18`** và gói quà người dùng mới trị giá **20.000đ** (thẻ quà giảm giá ăn uống, mua sắm, nạp data 4G/5G tiếp sức mùa nhập học).
 3. **Phân phối đa kênh:** Phối hợp cùng các kênh truyền thông tuyển sinh và chạy chiến dịch Digital Ads (Google UAC, TikTok Ads) với ngân sách **300.000.000đ**.
 
 ---

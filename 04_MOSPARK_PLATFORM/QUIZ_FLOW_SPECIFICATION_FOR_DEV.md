@@ -118,7 +118,7 @@ graph LR
     vts_q1["Q1: Nhu cầu chi tiêu chính?"] -->|Chọn bất kỳ| vts_q2["Q2: Mức chi tiêu tháng?"]
     vts_q2 -->|Chọn bất kỳ| vts_q3["Q3: Đã có tài khoản MoMo?"]
     vts_q3 -->|Đã có MoMo| vts_res_ready["Result: 92% tỷ lệ duyệt (Hạn mức 1-3tr)"]
-    vts_q3 -->|Chưa có MoMo| vts_res_new["Result: Gói quà kích hoạt 1tr tân thủ"]
+    vts_q3 -->|Chưa có MoMo| vts_res_new["Result: Gói quà kích hoạt 1tr cho người dùng mới"]
 ```
 
 #### B. Quiz Tiết Kiệm & Tích Lũy (`quiz-tiet-kiem`)

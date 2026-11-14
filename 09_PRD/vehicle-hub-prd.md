@@ -47,7 +47,7 @@ Hàng triệu chủ xe ô tô và xe máy tại Việt Nam đang bị phân mả
 
 ### 1.2 Product Vision, Flywheel & Strategic Model
 
-#### A. Bảng Ma Trận Phân Định Ranh Giới: Kênh Web (Web Vehicle Hub) vs In-App Mini App (In-App Vehicle Hub)
+#### A. Bảng Phân Định Ranh Giới: Kênh Web (Web Vehicle Hub) vs In-App Mini App (In-App Vehicle Hub)
 
 <table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
   <thead>

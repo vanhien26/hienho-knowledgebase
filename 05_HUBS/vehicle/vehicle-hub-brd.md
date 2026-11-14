@@ -630,7 +630,7 @@ Khi người dùng chọn **[ VF 5 ]** ➔ Bấm **[ Sạc 20% - 80% tại trụ
 
 Nhằm tránh nhầm lẫn giữa các đội ngũ Dev, Product và Content trong quá trình triển khai thực tế, toàn bộ hệ thống tuân thủ nghiêm ngặt **Khung kiểm soát ranh giới URL và phòng chống trùng lặp**:
 
-#### A. Ma Trận Quy Hoạch URL Theo Đặc Thù Quản Lý & Search Volume
+#### A. Bảng Quy Hoạch URL Theo Đặc Thù Quản Lý & Search Volume
 * **Nhóm Tuyệt Đối Không Sinh Trang Con (Chỉ 1 Trang Đơn Lẻ):**
   * **Giá Xăng (`/gia-xang`):** 1 Trang duy nhất. Không chia theo tỉnh/thành vì xăng dầu niêm yết theo Vùng 1 và Vùng 2 toàn quốc.
   * **Đăng Kiểm (`/dang-kiem`):** 1 Trang duy nhất. Dữ liệu từ khóa cho thấy Volume tìm kiếm theo địa phương bằng 0. Toàn bộ tiện ích tra hạn, chu kỳ Thông tư mới và bản đồ trạm đăng kiểm 63 tỉnh được gom gọn trong 1 trang duy nhất để dồn sức mạnh SEO.

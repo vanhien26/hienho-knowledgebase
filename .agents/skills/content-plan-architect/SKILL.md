@@ -37,7 +37,7 @@ Mọi tệp Content Plan lưu tại `06_USE_CASE_MOMO/content-plans/<sector>/<id
 Bảng quy hoạch 1 Pillar Hub Page + 3-5 Cluster Pages gồm 11 cột chuẩn:
 `STT` | `URL Slug` | `Tiêu Đề Bài Viết / Trang Đích` | `Primary Keyword` | `Secondary Synonyms (Đã Gom Chống Ăn Thịt)` | `Search Volume` | `Search Intent` | `Định Dạng Nội Dung` | `Phễu` | `Ưu Tiên` | `Điểm Chạm Web-to-App (CTA Hook)`
 
-### Khối 2: Ma Trận Phân Bổ Intent & Phễu Chuyển Đổi
+### Khối 2: Bảng Phân Bổ Intent & Phễu Chuyển Đổi
 Bảng thống kê tỷ lệ phần trăm phân bổ theo Intent (`Informational`, `Commercial`, `Transactional`, `Tool/Calculator`, `Navigational`) và Phễu chuyển đổi (`TOFU`, `MOFU`, `BOFU`) gắn với JTBD của người dùng.
 
 ### Khối 3: Chiến Lược Điều Hướng & Trải Nghiệm Người Dùng (UX Flow)

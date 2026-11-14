@@ -38,7 +38,7 @@ Tái định vị `/tim-kiem` từ một thanh tra cứu từ điển tĩnh thà
 
 * **Trao Giá Trị Trước Rào Cản (Value Before Gate):** Người dùng tìm kiếm tiện ích (tính lãi vay, tra cứu phạt nguội, xem giá vàng) nhận được kết quả tính toán ngay trên Web trong 2 giây mà không bị ép buộc phải tải app hay đăng nhập.
 * **Giảm Rào Cản Thao Tác Chuyển Đổi (Zero Search Friction):** Khi người dùng gõ sai hoặc gõ tắt, hệ thống tự động nhận diện ý định gốc và gợi ý đúng dịch vụ mong muốn, duy trì mạch chuyển đổi liền mạch.
-* **Cơ Chế Bắt Nhịp Tân Thủ (New User Onboarding Hook):** Khai thác lượng truy cập gõ số điện thoại và tìm kiếm rác để phân phối Thẻ quà chào bạn mới 500K (`CHAOMOMO`), biến traffic vãng lai thành lượt cài đặt ứng dụng thực tế.
+* **Cơ Chế Bắt Nhịp Người Dùng Mới (New User Onboarding Hook):** Khai thác lượng truy cập gõ số điện thoại và tìm kiếm rác để phân phối Thẻ quà chào bạn mới 500K (`CHAOMOMO`), biến traffic vãng lai thành lượt cài đặt ứng dụng thực tế.
 
 ---
 
@@ -211,5 +211,5 @@ Giai đoạn này tập trung 100% vào việc hiển thị **Top List kết qu�
 ### 7.2. Chỉ Số Đo Lường Thành Công (Business KPIs)
 * **Tỷ Lệ Tìm Kiếm Hữu Ích (Useful Search Rate):** Đạt **≥ 92%** trên tổng số lượt truy vấn (giảm tỷ lệ Zero Results xuống dưới 8%).
 * **Tỷ Lệ Chuyển Đổi Web-to-App (Search W2A CR):** Đạt mốc **≥ 12.00%** (so với mức trung bình 4.37% hiện tại).
-* **Lượt Cài Đặt Mới (New App Installs):** Thu hút **2.000 - 3.000 lượt tải app mới/tháng** thông qua phễu tiếp nhận số điện thoại và thẻ quà tân thủ 500K.
+* **Lượt Cài Đặt Mới (New App Installs):** Thu hút **2.000 - 3.000 lượt tải app mới/tháng** thông qua phễu tiếp nhận số điện thoại và thẻ quà CHAOMOMO 500K.
 * **Tỷ Lệ Tương Tác Tiện Ích (Utility Engagement Rate - Phase 2):** Đạt trên **35%** người dùng nhấp thao tác tính toán khi nhìn thấy tiện ích tại vị trí số 0.
