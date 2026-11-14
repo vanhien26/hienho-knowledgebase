@@ -1,12 +1,12 @@
 # MoSpark - RAG Knowledge Base Architecture
 Hệ thống Quản trị Tri thức Tập trung & Truy xuất Cơ sở Dữ liệu MoMo
 
-> - **Project:** MoSpark Web Platform
-> - **Division:** GPD (Growth Product Division)
-> - **Product:** Web Growth Platform
-> - **Governance:** Văn Hiến (Web Product Lead)
-> - **Version:** 1.0 · June 2026
-> - **Status:** Proposal - Core Knowledge Engine
+> - **Dự án:** MoSpark Web Platform
+> - **Khối phụ trách:** GPD (Growth Product Division)
+> - **Sản phẩm:** Web Growth Platform
+> - **Phê duyệt:** Văn Hiến (Web Product Lead)
+> - **Phiên bản:** 1.0 · June 2026
+> - **Trạng thái:** Proposal - Core Knowledge Engine
 
 ---
 
@@ -260,7 +260,7 @@ Khi viết một bài mới (ví dụ: *Cách đăng ký phạt nguội qua momo
 
 ## 5. Yêu Cầu Giao Diện Quản Trị RAG trên Web (UI/UX Specification)
 
-Nằm trong phân hệ cấu hình nâng cao của Admin Panel MoSpark:
+Nằm trong khu vực cấu hình nâng cao của Admin Panel MoSpark:
 
 ### 5.1. Màn hình Quản lý Nguồn Tri thức (Knowledge Center Dashboard)
 *   **Trình tải lên tài liệu (Ingestion Panel):**

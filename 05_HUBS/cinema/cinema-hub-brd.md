@@ -1,10 +1,10 @@
-# BRD: Cinema Hub - Cổng Giải Trí & Điện Ảnh MoMo
+# Cinema Hub
 
-> - **Project:** Cinema Hub (Web Platform & Cinema Ecosystem Strategy Q2-Q4/2026)
-> - **Division:** Marketing Distribution Services (MDS) / Web Platform
+> - **Dự án:** Cinema
+> - **Khối phụ trách:** Marketing Distribution Services (MDS) / Web Platform
 > - **Owner:** Web Platform Team x BU Movies
-> - **Version:** v4.0 - Tháng 9/2026
-> - **Status:** Active & Production Pilot Ready (`momo.vn/cinema`)
+> - **Phiên bản:** v4.0 - Tháng 9/2026
+> - **Trạng thái:** Active & Production Pilot Ready (`momo.vn/cinema`)
 
 ## I. Executive Summary
 
@@ -15,14 +15,15 @@
   * **Total Traffic:** Đạt **>8.070.000 visits/H2** (so với 4.03M H1).
   * **Booking Clicks:** Đạt **>1.740.000 clicks/H2** (so với 870K H1).
   * **Tickets Sold (Số vé bán):** Đạt **>214.292 vé/H2** (so với 107K H1).
-  * **Target Conversion Rate (% W2A):** Khôi phục và nâng CR đạt **≥ 4.50%** nhờ triển khai luồng Native Web Payment.
+  * **Web Purchase Conversion:** Đặt mục tiêu tăng tỷ lệ hoàn tất đơn hàng trên Web lên **≥ 4.50%** nhờ triển khai luồng Native Web Payment.
+  * **W2A Conversion:** Theo dõi riêng tỷ lệ người dùng Web nhấp và mở App; chỉ áp dụng cho các luồng chuyển tiếp sang App.
 * **Triết lý cốt lõi:** **"Một bộ phim - Trọn vẹn hành trình điện ảnh"**, biến Web `momo.vn/cinema` thành trung tâm kết nối tự động:
   1. **Tìm kiếm 0-Click, giữ chỗ realtime:** Search Google  ➔  Thấy ngay lịch chiếu rạp gần nhất trên Web MoMo mà không cần chuyển app hay nhập lại địa điểm.
   2. **Thanh toán liền mạch Native Web Payment:** Người dùng Non-App có thể hoàn tất mua vé và thanh toán trực tiếp trên Web hoặc chuyển tiếp sang App 1-click.
   3. **Vòng đời nội dung tự động (Lifecycle Automation):** Phim đang chiếu  ➔  Phim hết suất chiếu rạp tự động chuyển hướng sang các nền tảng xem phim OTT đối tác, đảm bảo không lãng phí bất kỳ lượt Traffic nào.
 
 ### 1.2 Situation - Complication - Resolution
-* **Situation (Bối cảnh & Vị thế):** Cinema là Use Case trưởng thành và có tiềm năng giao dịch lớn nhất của Khối Web Platform (~1M organic/3 tháng Q1/2026, chiếm giữ Top 1 SERP cho từ khóa "vé xem phim"). Website đóng vai trò là **"cửa ngõ hứng nhu cầu và cổng dẫn dắt chuyển đổi"** cho hệ sinh thái vé xem phim MoMo.
+* **Situation (Bối cảnh & Vị thế):** Cinema là Use Case trưởng thành và có tiềm năng giao dịch lớn nhất của Khối Web Platform (~1M organic/3 tháng Q1/2026, chiếm giữ Top 1 SERP cho từ khóa "vé xem phim"). Website đóng vai trò là **"cửa ngõ đón nhận nhu cầu và cổng dẫn dắt chuyển đổi"** cho hệ sinh thái vé xem phim MoMo.
 * **Complication (Khó khăn & Thách thức):** Tỷ lệ chuyển đổi suy giảm do 4 vấn đề cốt lõi:
   1. *Drop-off ở luồng thanh toán:* Khách hàng Non-App bị chặn lại do bắt buộc tải App mới mua được vé.
   2. *Keyword Gap lớn:* Chưa phủ sóng hết tệp từ khóa ngành với tổng quy mô nhu cầu tìm kiếm **20.850.490 search volume/tháng** trên 12.067 từ khóa (bao gồm head-terms lớn như "phimmoi" 1M, "phim" 1M, "cgv" 450K, "phim chiếu rạp" 301K, "lotte cinema" 165K...).
@@ -31,9 +32,9 @@
 * **Resolution (Giải pháp H2/2026):** Tái cấu trúc toàn diện và chuyển dịch hạ tầng sang nền tảng **MoSpark**, xây dựng **Cinema Hub** theo mô hình Product-Led Growth (PLG) & Hub-and-Spoke. Triển khai **Native Web Payment**, ứng dụng **GenAI Content** tự động hóa vòng đời phim và điều hướng sang các dịch vụ xem phim OTT.
 
 ### 1.3 Product-Led Growth (PLG) Drivers
-Cơ chế PLG của Cinema Hub dựa trên 5 Phễu Mồi Câu (Acquisition & Engagement Hooks) giải quyết tức thời nhu cầu tìm kiếm trên Open Web:
+Cơ chế PLG của Cinema Hub dựa trên 5 Điểm Chạm Kích Hoạt (Acquisition & Engagement Hooks) giải quyết tức thời nhu cầu tìm kiếm trên Open Web:
 
-1. **Phễu Tra Cứu Lịch Chiếu Realtime (Acquisition Gate):** Hứng nhu cầu tìm "lịch chiếu phim [tên phim] [tỉnh thành]"  ➔  Hiển thị suất chiếu của 13 chuỗi rạp đối tác (CGV, Lotte Cinema, Galaxy Cinema, BHD Star, Beta Cinemas, Cinestar, Mega GS, Cinemax, DCINE, Starlight, Rio Cinemas, Trung Tâm Chiếu Phim Quốc Gia, AEON Beta) theo vị trí GPS realtime.
+1. **Phễu Tra Cứu Lịch Chiếu Realtime (Acquisition Gate):** Đón nhận nhu cầu tìm "lịch chiếu phim [tên phim] [tỉnh thành]"  ➔  Hiển thị suất chiếu của 13 chuỗi rạp đối tác (CGV, Lotte Cinema, Galaxy Cinema, BHD Star, Beta Cinemas, Cinestar, Mega GS, Cinemax, DCINE, Starlight, Rio Cinemas, Trung Tâm Chiếu Phim Quốc Gia, AEON Beta) theo vị trí GPS realtime.
 2. **Phễu Báo Giá & Ưu Đãi Cụm Rạp (Retention Magnet):** Tra cứu bảng giá vé, chương trình khuyến mãi theo từng rạp  ➔  Gợi ý Combo Bỏng Nước & Thẻ quà tặng ưu đãi độc quyền MoMo.
 3. **Phễu Bách Khoa Toàn Thư Điện Ảnh & Review (Topical Authority Hook):** Đón đầu nhu cầu tìm trailer, diễn viên, đạo diễn, điểm IMDb/Rotten Tomatoes  ➔  Kích hoạt tính năng đánh giá/review từ cộng đồng người xem MoMo.
 4. **Phễu Native Web Payment (Conversion Hook):** Cho phép đặt ghế và thanh toán trực tiếp trên Web không cần mở App đối với khách hàng mới/Non-App.
@@ -59,7 +60,7 @@ Cơ chế PLG của Cinema Hub dựa trên 5 Phễu Mồi Câu (Acquisition & En
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Total Organic Web Traffic</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tổng số lượt truy cập tự nhiên từ Google Search và AI Search vào Cinema Hub trên Kênh Web mỗi tháng.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>>4.020.082 Visits/H2</strong> <em>(Uplift 100%)</em></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mục tiêu cốt lõi: Hứng trọn nhu cầu tìm kiếm điện ảnh ngoài Open Web, mở rộng tệp Acquisition.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Mục tiêu cốt lõi: Đón nhận trọn vẹn nhu cầu tìm kiếm điện ảnh ngoài Open Web, mở rộng tệp Acquisition.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>In-App & Web Booking</strong> <em>(Secondary Layer)</em></td>
@@ -133,26 +134,392 @@ Cơ chế PLG của Cinema Hub dựa trên 5 Phễu Mồi Câu (Acquisition & En
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>4.37%</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>≥ 4.50%+</strong></td>
     </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">W2A MAU (Web in App)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">93,758</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">25,012</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">43,262</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>>60,000</strong></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">W2A MEU (Web in App)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">264,178</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">71,692</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">123,581</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>>180,000</strong></td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>GMV Quy Đổi Web-to-App (MAU x 205.000đ)</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>19.22 tỷ đ</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>5.13 tỷ đ</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>8.87 tỷ đ</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>>12.30 tỷ đ</strong></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">GMV Theo Giao Dịch Thực Thu (Txn x 205.000đ)</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">10.72 tỷ đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">1.89 tỷ đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">10.01 tỷ đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>>20.00 tỷ đ</strong></td>
+    </tr>
   </tbody>
 </table>
 
-### 1.5 Báo Cáo Hiệu Suất Chốt Sổ Tháng 9/2026 (Full Month 30d) & Tiến Độ Thực Thi Sản Phẩm
+### 1.5 Phễu Chuyển Đổi Web-to-App & Báo Cáo Quy Đổi Doanh Thu GMV (Chuỗi 2025 - 2026 MTD 10T)
 
-#### A. Dữ Liệu Hiệu Suất Vận Hành Trọn Tháng 9/2026 (01/09 - 30/09/2026)
-* **Lưu lượng Chốt Sổ Trọn Tháng 9:** Đạt **1.220.075 Pageviews** (chiếm **30,88% tổng lưu lượng Kênh Web**), giữ vững vị thế động cơ kéo traffic số 1 toàn sàn.
-* **Tỷ lệ hoàn thành Target:** Đạt **126,51% Target Tháng 9** (964.394 PVs) - **VƯỢT TARGET HUB CHÍNH THỨC +26,5% ~ +255.681 PVs** (Cán mốc kỷ lục lịch sử >1.22 triệu PVs).
-* **Tốc độ vận hành (Daily Pace):** Đạt **40.669 PV/ngày**.
-* **Phân rã theo Sub-pages Full Month T9 (Quy chuẩn Tracking mới):**
-  - Trang phim chi tiết (`Cinema_Page`): **670.360 PVs** (54,9% Hub)
-  - Trang Rạp phim (`Cinema_Cineplex`): **448.653 PVs** (36,8% Hub)
-  - `Cinema_Blog`: **46.732 PVs** (3,8% Hub)
-  - `Cinema_Home Page (Trang chủ Cinema)` & `Tin tức`: Lần lượt đạt **29.742 PVs** và **2.016 PVs**
-* **Paid Traffic Full Month T9:** Đạt **374.701 Pageviews** (chiếm 31,3% tổng Paid toàn Kênh Web).
+Căn cứ dữ liệu đối soát chính thức tiếp nhận từ BU Movies và số liệu giao dịch in-app thực tế từ hệ thống Dashboard vận hành bán vé, hiệu suất chuyển đổi từ Kênh Web sang ứng dụng MoMo (Web-to-App) và doanh thu được xác lập theo hai công thức chuẩn hóa:
+* **GMV Thực Thu (Actual GMV - Tiêu chuẩn tài chính SSOT):**
+  $$\text{GMV Thực Thu} = \text{Success Transactions} \times \text{AoV (205,000 VND)}$$
+* **GMV Tiềm Năng Quy Đổi (Potential Reach GMV):**
+  $$\text{GMV Tiềm Năng} = \text{W2A MAU} \times \text{AoV (205,000 VND)}$$
+*(Quy chuẩn AoV: 205,000 đồng/đơn hàng, trung bình 2.13 vé/giao dịch, tương đương ~96,000 đồng/vé).*
 
-#### B. Cột Mốc Sản Phẩm & Chiến Lược Vận Hành Mới
-* **Tự Chủ Sản Xuất Content:** Web Platform Team chủ động 100% quy trình sản xuất nội dung review/tin tức điện ảnh qua MoSpark GenAI Pipeline, tự chủ vận hành không lệ thuộc vào nguồn lực Cell Team.
-* **Thử Nghiệm UI/UX Trang Rạp Mới (NCC Pilot):** Đã Go-live giao diện UI/UX trang rạp mới, đang áp dụng thử nghiệm tại **Trung Tâm Chiếu Phim Quốc Gia (NCC)** để đo lường hiệu suất Impression/Click CTR trước khi roll-out toàn bộ, bảo vệ lưu lượng của các cụm rạp best-performing (CGV, Lotte, Galaxy, BHD).
-* **Reusable Mini Game Framework:** Hoạch định xây dựng 1 mô-đun Mini Game đơn giản áp dụng đồng loạt cho tất cả các đầu phim chiếu rạp để bứt phá CVR ngoài Web.
+#### A. Bảng Theo Dõi GMV Web-to-App 10 Tháng Năm 2026 So Với Cùng Kỳ 2025
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tháng</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">2026 W2A MAU</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">2026 W2A MEU</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">GMV W2A 2026</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">2025 W2A MAU</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">GMV W2A 2025</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Tăng Trưởng YoY GMV</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 1</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,362</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">20,258</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,099,210,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2,687</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">550,835,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+99.6%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 2</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">10,922</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">27,595</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">2,239,010,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">9,090</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,863,450,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+20.2%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 3</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">8,728</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">23,839</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,789,240,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">4,963</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,017,415,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+75.9%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 4</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">7,300</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">20,020</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,496,500,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">8,855</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,815,275,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-17.6%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 5</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,141</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">15,823</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,053,905,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,285</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,083,425,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-2.7%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 6</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,809</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">16,046</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,190,845,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2,667</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">546,735,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+117.8%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 7</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2,263</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">7,806</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">463,915,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">4,880</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,000,400,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-53.6%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 8</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">3,757</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">12,962</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">770,185,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">16,541</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">3,390,905,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-77.3%</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 9</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">8,927</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">26,698</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,830,035,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">14,952</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">3,065,160,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-40.3%</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 10</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">11,457</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">30,470</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">2,348,685,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">6,092</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,248,860,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>+88.1%</strong></td>
+    </tr>
+    <tr style="background-color:#e2e8f0;">
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:left;"><strong>Lũy kế 10 Tháng</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>69,666</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>201,517</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:right;"><strong>14,281,530,000 đ</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>76,012</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:right;"><strong>15,582,460,000 đ</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>-8.3%</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+#### B. Báo Cáo Giao Dịch Thực Thu 10 Tháng Năm 2026 (Realtime In-App Dashboard)
+
+Dữ liệu ghi nhận từ hệ thống vận hành bán vé in-app (`SUCCESS IN-APP TRANSACTIONS`) phản ánh số lượng đơn hàng chốt thành công và doanh thu thực tế từ Kênh Web-to-App:
+
+<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
+  <thead>
+    <tr style="background-color:#f1f5f9;">
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Kỳ Báo Cáo</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">MAU</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">MEU</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Đơn</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Vé</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:right; font-weight:700;">GMV Thực Thu</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Tăng Trưởng MoM</th>
+      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Vé / Đơn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Năm 2025</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">93,758</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">264,178</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">52,311</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">111,422</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">10,723,755,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.13</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 1/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,362</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">20,258</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,889</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">12,643</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,207,245,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-47.4%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.15</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 2/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">10,922</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">27,595</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">12,432</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">28,379</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">2,548,560,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+182.5%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.28</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 3/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">8,728</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">23,839</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">9,881</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">20,600</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">2,025,605,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-23.0%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.08</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 4/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">7,300</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">20,020</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">8,221</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">18,730</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,685,305,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-11.7%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.28</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 5/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,141</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">15,823</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,777</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">12,561</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,184,285,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-30.9%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.17</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 6/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">7,871</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">16,046</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">9,055</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">19,444</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">1,856,275,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+56.7%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.15</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 7/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2,263</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">7,806</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2,425</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">5,211</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">497,125,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-64.6%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.15</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 8/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">3,757</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">12,962</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">4,016</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">8,754</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">823,280,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">-</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.18</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 9/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">8,927</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">26,698</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">9,807</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">20,983</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">2,010,435,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+144.2%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.14</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tháng 10/2026</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">11,457</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">30,470</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">12,547</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">26,789</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;">2,572,135,000 đ</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">+20.1%</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">2.13</td>
+    </tr>
+    <tr style="background-color:#e2e8f0;">
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:left;"><strong>Tổng 9 tháng trực tiếp Dashboard</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>67,971</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>188,555</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>76,034</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>165,340</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:right;"><strong>15,586,970,000 đ</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>-</strong></td>
+      <td style="border:1.5px solid #64748b; padding:8px 12px; text-align:center;"><strong>2.17</strong></td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Toàn bộ 10 tháng năm 2026</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>71,728</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>201,517</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>80,050</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>174,094</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:right;"><strong>16,410,250,000 đ</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>-</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>2.17</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+* **Đánh giá tăng trưởng thực tế:** Toàn bộ 10 tháng năm 2026 đã được xác thực chính thức từ dữ liệu vận hành bán vé in-app. Kênh Web-to-App đã mang về tổng cộng **80,050 đơn hàng thành công**, bán ra **174,094 vé xem phim** và đóng góp **16.41 tỷ đồng GMV thực thu** cho BU Movies (vượt toàn bộ năm 2025 tới **+53.0% về số đơn hàng**, **+56.2% về số vé bán ra** và **+53.0% về GMV thực thu**).
+
+#### C. Phễu Chuyển Đổi Web-to-App Toàn Diện & Phân Tích Điểm Nghẽn OneLink (Cinema Growth Funnel)
+
+Hành trình chuyển đổi từ tìm kiếm tự nhiên ngoài Open Web vào App và tạo ra doanh thu thực tế được chuẩn hóa qua mô hình Phễu Chuyển Đổi Toàn Diện 6 tầng (End-to-End Cinema Growth Funnel):
+
+##### 1. Sơ Đồ Dòng Chảy Phễu Cinema Hub (Flowchart TD)
+
+```mermaid
+flowchart TD
+    subgraph T1 ["TẦNG 1: SEARCH ENGINE & KHÁM PHÁ (AWARENESS)"]
+        A1["Google SERP Impressions<br/>282.9M lượt hiển thị/năm<br/>(Lịch chiếu, Cụm rạp, Review, Giá vé)"]
+    end
+
+    subgraph T2 ["TẦNG 2: THU HÚT & DUYỆT THÔNG TIN TRÊN WEB (ACQUISITION)"]
+        B1["Tổng Lưu Lượng Web MoMo Cinema<br/>12.4M Pageviews/năm (~1.1M PV/tháng)"]
+        B2["Trang Cụm Rạp & Lịch Chiếu: 61.3% PV<br/>(CGV, Lotte, BHD, Galaxy, Beta, NCC)"]
+        B3["Trang Chi Tiết Phim & Trailer: 33.5% PV<br/>(Nội dung phim, Diễn viên, Suất chiếu)"]
+        B4["Review Hub, Box Office & Blog: 5.2% PV<br/>(Đánh giá phim, BXH Doanh thu, Cẩm nang)"]
+        B5["Trợ Lý AI Phòng Vé & Minigame Tương Tác<br/>(Giải tỏa băn khoăn & Thẻ gợi ý 1-chạm)"]
+    end
+
+    subgraph T3 ["TẦNG 3: KÍCH HOẠT Ý ĐỊNH ĐẶT VÉ (CONSIDERATION & INTENT)"]
+        C1["Nhấp Nút Đặt Vé / Giữ Chỗ (Booking Clicks)<br/>266,258 Clicks/năm (CTR: 2.14% trên PV)"]
+    end
+
+    subgraph T4 ["TẦNG 4: CẦU NỐI CHUYỂN TIẾP WEB-TO-APP (ONELINK & BRIDGE)"]
+        D1["Hệ Thống Cầu Nối Chuyển Tiếp Web-to-App<br/>(Contextual OneLink + Dynamic QR Desktop)"]
+        D2["Điểm Nghẽn Rò Rỉ Kỹ Thuật (Rơi rớt 70.4%)<br/>(Trình duyệt chặn mở App, Desktop thiếu QR)"]
+        D3["Mở App MoMo Thành Công (Tỷ lệ W2A: 29.57%)<br/>78,735 lượt vào App / 93.8K W2A MAU"]
+    end
+
+    subgraph T5 ["TẦNG 5: THANH TOÁN & DOANH THU GMV TRÊN APP (CONVERSION & REVENUE)"]
+        E1["Chốt Đơn Bán Vé In-App Thành Công (CR: 66.44%)<br/>80,050 đơn hàng / 174,094 vé (Lũy kế 10T 2026)<br/>(52,311 đơn cả năm 2025)"]
+        E2["Doanh Thu Thực Thu Kênh Web-to-App<br/>16.41 tỷ đồng GMV (Lũy kế 10T 2026)<br/>(Đóng góp 10.72 tỷ đồng năm 2025)"]
+        E3["Bàn Giao Khách Hàng Mới Cho BU Movies<br/>(Chuyển tiếp vào phễu Loyalty & Nuôi dưỡng của BU)"]
+    end
+
+    A1 -->|"SERP CTR: 4.39%"| B1
+    B1 --> B2 & B3 & B4
+    B2 & B3 & B4 -.->|"Tư vấn ngữ cảnh"| B5
+    B2 & B3 & B4 -->|"Nhấp Đặt Vé trên trang"| C1
+    B5 -->|"Chạm thẻ gợi ý 1-chạm"| C1
+    C1 -->|"Kích hoạt OneLink điều hướng"| D1
+    D1 -.->|"Rò rỉ chuyển giao (70.43%)"| D2
+    D1 -->|"Chuyển tiếp thành công (29.57%)"| D3
+    D3 -->|"Chọn ghế & Thanh toán In-App"| E1
+    E1 --> E2
+    E1 --> E3
+```
+
+##### 2. Bảng Bóc Tách Chỉ Số Theo Từng Tầng Phễu Web-to-App (Funnel Metrics Table)
+
+| Tầng Phễu | Chỉ số chính | Giá trị chuẩn (Benchmark 2025) | Giá trị 8 Tháng 2026 | Tỷ lệ chuyển đổi tầng (%CR) | Điểm nghẽn chính | Giải pháp tối ưu hóa |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Tầng 1: Search Demand** | Google Search Impressions | 282,940,000 | ~190,000,000 | 4.39% (SERP CTR) | Thứ hạng từ khóa chưa đều ở top 1-3 | Mở rộng SEO cụm rạp địa phương và lịch chiếu |
+| **Tầng 2: Web Acquisition** | Total Web Traffic (PV) | 12,425,040 | ~9,200,000 | 100% | Trang tĩnh, thiếu tương tác tư vấn | Tích hợp Cinema Chatbot và Minigame giữ chân |
+| **Tầng 3: Intent Activation** | Booking Clicks | 266,258 | ~185,000 | 2.14% (CTR trên PV) | Nút CTA đặt vé chưa nổi bật, thiếu preview rạp | Bổ sung Floating CTA và bảng chọn suất chiếu nhanh |
+| **Tầng 4: Web-to-App Bridge** | Traffic inApp (W2A MAU) | 78,735 (93,758 MAU) | 49,282 MAU | **29.57% (%W2A)** | **Rơi rớt 70.4% ở bước OneLink** | Smart Bridge Page, Dynamic QR trên Desktop |
+| **Tầng 5: Purchase & GMV** | Transactions / GMV | 52,311 đơn / 10.72 tỷ đ thực thu | 12,547 đơn / 2.57 tỷ đ (T10) | **66.44% (In-App CR)** | Thời gian giữ ghế ngắn, hết suất đẹp | Giữ nguyên ngữ cảnh rạp/suất chiếu từ Web sang App |
+
+* **Phân định ranh giới đo lường (Measurement & Ownership Boundary):** Phễu chuyển đổi Web-to-App kết thúc tại **Tầng 5** khi đơn hàng và doanh thu GMV được ghi nhận thành công trên App MoMo. Toàn bộ các chỉ số về tỷ lệ quay lại mua vé sau đó (In-App MAU Retention 17% - 47%) thuộc hệ thống đo lường hành vi người dùng trong ứng dụng do **BU Movies** độc lập quản trị, Web Platform không đo lường và không nhận sở hữu chỉ số này để tránh gây hiểu nhầm về phạm vi dữ liệu.
+
+##### 3. Phân Tích Hai Nút Thắt Quan Trọng Nhất Của Phễu Web-to-App
+
+* **Nút thắt 1: Rò rỉ lớn nhất ở bước chuyển Web sang App (Tầng 3 sang Tầng 4)**
+  * **Hiện tượng:** Có 266,258 người dùng nhấp vào nút "Đặt vé" trên Web, nhưng chỉ có 78,735 lượt vào được App MoMo. Tỷ lệ rơi rớt lên tới 70.43%.
+  * **Nguyên nhân cốt lõi:** Trình duyệt Safari chặn deeplink tự động; người dùng truy cập bằng máy tính (Desktop) không có cơ chế chuyển giao tức thì; trang đệm (Bridge Page) tải chậm.
+  * **Đòn bẩy kinh tế:** Cải thiện tỷ lệ này từ 29.57% lên 45.0% giúp mang về thêm **+10.03 tỷ đồng GMV/năm** cho BU Movies.
+
+* **Nút thắt 2: Tỷ lệ kích hoạt ý định mua vé trên Web còn thấp (Tầng 2 sang Tầng 3)**
+  * **Hiện tượng:** Tỷ lệ nhấp đặt vé mới đạt 2.14% trên tổng lưu lượng 12.4 triệu lượt xem trang.
+  * **Nguyên nhân cốt lõi:** Người dùng vào đọc tin tức, review hoặc xem thông tin diễn viên rồi rời đi mà không thấy đường dẫn đặt vé phù hợp với nhu cầu.
+  * **Giải pháp:** Chatbot AI đóng vai trò "Trợ lý phòng vé", chủ động gợi ý suất chiếu đẹp và đưa ra thẻ lựa chọn 1-chạm kết nối thẳng vào App MoMo.
+
+* **Cơ Chế Bàn Giao Khách Hàng Cho BU Movies (Post-Conversion Handoff):** Sau khi hoàn tất mua vé tại Tầng 5, khách hàng được bàn giao trọn vẹn cho BU Movies để tiếp tục kích hoạt các chương trình chăm sóc khách hàng in-app (chương trình Loyalty, Tiệm Sưu Tầm, ưu đãi độc quyền) nhằm tối ưu tỷ lệ mua lại cho các bom tấn tiếp theo.
+
+* **Định lượng cơ hội tổng thể (Opportunity Sizing):** Nếu nâng tỷ lệ chuyển tiếp %W2A từ 29.57% lên **45.0%** thông qua Smart Bridge Page và QR động, doanh thu GMV quy đổi sẽ tăng từ 19.22 tỷ đồng lên **29.25 tỷ đồng/năm** (tăng thêm **+10.03 tỷ đồng GMV/năm** cho BU Movies mà không tốn thêm chi phí kéo traffic).
 
 ## II. Market Context & Strategy
 
@@ -568,7 +935,7 @@ Thị trường thông tin và đặt vé xem phim điện ảnh trực tuyến 
 3. **Hạ Tầng Công Nghệ Web Platform:** Đánh giá năng lực hạ tầng Web trong việc đáp ứng tốc độ tải trang, tối ưu hóa các chỉ số kỹ thuật Core Web Vitals và khả năng mở rộng trang địa điểm rạp (pSEO).
 4. **Hệ Sinh Thái Phương Thức Thanh Toán:** Khai thác các phương thức thanh toán linh hoạt hiện có như Ví Trả Sau và chương trình ưu đãi MoMo Rewards để hỗ trợ kích cầu giao dịch.
 
- 
+## III. System Design & Product Solution
 
 ### 3.1 Multi-sided Value Proposition
 * **Cho Người Xem Phim (Consumers):** Tìm kiếm suất chiếu của tất cả các rạp xung quanh trên 1 bản đồ duy nhất, đặt vé không cần tải app, nhận ưu đãi độc quyền combo bỏng nước.
@@ -624,7 +991,7 @@ graph LR
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>4</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Chọn Ghế & Modal Bắp Nước (Seat & F&B Modal)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chọn ghế trên sơ đồ phòng chiếu ➔ Bấm "Tiếp tục" ➔ Bật Popup Modal / Bottom Sheet chọn combo bắp nước ➔ Sang Checkout.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Chọn ghế trên sơ đồ phòng chiếu ➔ Nhấp "Tiếp tục" ➔ Bật Popup Modal / Bottom Sheet chọn combo bắp nước ➔ Sang Checkout.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Realtime Seat Map Lock API + Dynamic Modal Component (Client State).</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">MoSpark Web Platform</td>
     </tr>
@@ -677,7 +1044,7 @@ Bảng chuẩn hóa các Nhóm Trải Nghiệm Sản Phẩm Cốt Lõi (Product 
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phễu Tra Cứu Lịch Chiếu & Đặt Vé Rạp</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra cứu suất chiếu realtime 13 chuỗi rạp, sơ đồ giữ ghế, mua combo bắp nước & thanh toán Native Web Checkout.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tra cứu suất chiếu & mua vé rạp gần bạn nhất.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>>214.292 Vé bán ra</strong>; Tỷ lệ chuyển đổi <strong>CR ≥ 4.50%</strong>.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>>214.292 Vé bán ra</strong>; Tỷ lệ chuyển đổi <strong>CR ≥ 4.50%</strong>; <strong>GMV Web-to-App >15.0 tỷ đ/H2</strong>.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>2</strong></td>
@@ -691,7 +1058,7 @@ Bảng chuẩn hóa các Nhóm Trải Nghiệm Sản Phẩm Cốt Lõi (Product 
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Phễu Khám Phá Rạp Chi Tiết & Local GEO</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang thông tin 13 chuỗi rạp đối tác (CGV, Galaxy, Lotte...) và pSEO 120+ chi nhánh rạp local kèm chỉ đường Google Maps.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tìm vị trí rạp gần nhà, bảng giá vé & ưu đãi rạp.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Thâu tóm tệp từ khóa Rạp Local (4.63M volume)</strong>; phủ 120+ chi nhánh rạp.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Bao phủ tệp từ khóa Rạp Local (4.63M volume)</strong>; phủ 120+ chi nhánh rạp.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>4</strong></td>
@@ -717,7 +1084,58 @@ Bảng chuẩn hóa các Nhóm Trải Nghiệm Sản Phẩm Cốt Lõi (Product 
   </tbody>
 </table>
 
-### 3.5 Out of Scope
+### 3.5 Định Hướng Trợ Lý AI Phòng Vé: Mô Hình Chuyển Hóa Ý Định Người Dùng (MoMo Cinema AI Concierge)
+
+Nhằm khắc phục triệt để điểm nghẽn tại Tầng 2 sang Tầng 3 của phễu chuyển đổi (người dùng đọc bài đánh giá, tra cứu thông tin nhưng thoát trang do lười tìm rạp hoặc chưa chọn được phim phù hợp), Cinema Hub đưa vào hoạt động **Trợ Lý AI Phòng Vé (MoMo Cinema AI Concierge)** trực tiếp trên nền tảng Web với định hướng chuyển hóa trọn vẹn ý định của khách hàng thành hành động mua vé.
+
+#### 3.5.1 Ý Định Sản Phẩm & Định Vị Trải Nghiệm (Product Intent & Mission)
+* **Từ Tra Cứu Thụ Động Sang Dẫn Dắt Tương Tác:** Thay vì để khách hàng phải tự bơi giữa hàng chục danh sách phim và cụm rạp, Trợ lý AI đóng vai trò như một **Tiếp Tân Phòng Vé Thông Minh** 24/7, chủ động lắng nghe, thấu cảm và đưa ra gợi ý chuẩn xác theo từng ngữ cảnh cá nhân.
+* **Rút Ngắn Khoảng Cách Đến Quyết Định Mua Vé:** Thấu hiểu những băn khoăn thường gặp của khán giả để đưa ra câu trả lời trực diện, loại bỏ sự do dự và dẫn dắt người dùng đến bước đặt vé trên App MoMo chỉ sau một chạm.
+
+#### 3.5.2 4 Nhóm Ý Định Người Dùng Trọng Tâm (4 Core User Intents)
+
+```mermaid
+graph TD
+    User["Khách Hàng Truy Cập Web Cinema"] --> Intake["Tiếp Nhận Ý Định Khách Hàng"]
+    
+    Intake --> I1["1. Ý Định Khám Phá & Gợi Ý<br/>('Chưa biết xem gì, cần tư vấn theo gu')"]
+    Intake --> I2["2. Ý Định Khớp Lịch & Địa Điểm<br/>('Tìm suất chiếu gần nhất, giờ đẹp tối nay')"]
+    Intake --> I3["3. Ý Định Tối Ưu Chi Phí<br/>('Tìm ưu đãi, mã giảm giá vé & combo bắp nước')"]
+    Intake --> I4["4. Ý Định Xác Thực Thông Tin<br/>('Hỏi nhanh độ tuổi, after-credit, review')"]
+    
+    I1 --> Sol1["Gợi ý 1-2 phim xuất sắc nhất kèm lý do phù hợp"]
+    I2 --> Sol2["Tổng hợp suất chiếu đẹp tại rạp gần nhất"]
+    I3 --> Sol3["Cung cấp quyền lợi hoàn tiền & mã giảm giá MoMo"]
+    I4 --> Sol4["Giải đáp súc tích, gỡ bỏ hoàn toàn phân vân"]
+    
+    Sol1 & Sol2 & Sol3 & Sol4 --> Bridge["Cung Cấp Thẻ Lựa Chọn Trực Quan 1-Chạm"]
+    Bridge --> Action["Chuyển Tiếp Thẳng Vào Luồng Chọn Ghế Trên App MoMo"]
+```
+
+* **1. Ý Định Khám Phá & Gợi Ý Phim (Discovery & Recommendation Intent - "Chưa biết xem gì"):**
+  * *Tâm lý & Rào cản:* Khách hàng có nhu cầu giải trí cuối tuần hoặc xả stress nhưng bị choáng ngợp trước quá nhiều tựa phim đang chiếu; chưa rõ phim nào thực sự đáng tiền, phim nào hợp sở thích.
+  * *Ý định đáp ứng của Trợ lý:* Lắng nghe tâm trạng, thể loại ưa thích hoặc đối tượng đi cùng (hẹn hò lãng mạn, gia đình có con nhỏ, nhóm bạn đi chơi) để đề xuất 1-2 phương án tối ưu nhất kèm tóm tắt sức hút của phim, giúp người dùng ra quyết định nhanh chóng mà không cần đọc quá nhiều bài viết dài.
+* **2. Ý Định Khớp Lịch Chiếu & Rạp Tiện Lợi (Convenience & Logistics Intent - "Xem ở đâu, khi nào thuận tiện nhất"):**
+  * *Tâm lý & Rào cản:* Khách hàng đã chọn được phim nhưng ngần ngại việc phải mở từng trang web của 13 chuỗi rạp để dò tìm khung giờ và địa điểm phù hợp.
+  * *Ý định đáp ứng của Trợ lý:* Tiếp nhận nhu cầu về thời gian (sau giờ làm, tối muộn) và khu vực sinh sống, tự động tổng hợp những suất chiếu đẹp nhất tại các cụm rạp gần nhất để khách hàng lựa chọn ngay trong tích tắc.
+* **3. Ý Định Tối Ưu Chi Phí & Săn Ưu Đãi (Value & Promotion Intent - "Làm sao mua vé tiết kiệm nhất"):**
+  * *Tâm lý & Rào cản:* Khán giả trẻ, học sinh sinh viên luôn tìm kiếm các mã giảm giá, chương trình hoàn tiền hoặc combo bắp nước giá tốt trước khi quyết định chi tiền.
+  * *Ý định đáp ứng của Trợ lý:* Chủ động giới thiệu các đặc quyền thanh toán trên MoMo (ưu đãi khi thanh toán qua Ví Trả Sau, quyền lợi tích điểm, quà tặng độc quyền theo từng bom tấn), khơi gợi sự hào hứng và cung cấp nút nhận ưu đãi dẫn thẳng vào ứng dụng.
+* **4. Ý Định Xác Thực Thông Tin Nhanh (Validation & Assurance Intent - "Hỏi nhanh để an tâm chốt"):**
+  * *Tâm lý & Rào cản:* Cần kiểm chứng gấp các chi tiết quan trọng trước khi mua: Phim có phù hợp với trẻ em không? Phim có đoạn phim bổ sung sau phần kết (after-credit) không? Rạp có phòng chiếu đặc biệt hay ghế đôi không?
+  * *Ý định đáp ứng của Trợ lý:* Giải đáp ngắn gọn, trọng tâm từng băn khoăn cụ thể để người dùng hoàn toàn tự tin chuyển sang bước đặt vé.
+
+#### 3.5.3 Hành Trình Chuyển Hóa Ý Định Thành Hành Động (Intent-to-Action Experience)
+* **Bước 1: Tiếp Nhận Ý Định Tự Nhiên:** Khách hàng trò chuyện bằng câu từ tự nhiên hoặc nhấp chọn các câu hỏi gợi ý sẵn có trên giao diện web.
+* **Bước 2: Giải Tỏa Băn Khoăn & Đề Xuất Trực Quan:** Trợ lý phản hồi đúng trọng tâm, hiển thị thẻ thông tin súc tích gồm tên phim, rạp chiếu, khung giờ phù hợp và quyền lợi ưu đãi đi kèm.
+* **Bước 3: Chuyển Tiếp Liền Mạch Lên Ứng Dụng:** Khách hàng chỉ cần chạm nhẹ vào thẻ đề xuất là được đưa thẳng tới màn hình chọn ghế và thanh toán trên App MoMo mà không phải thao tác tìm kiếm lại từ đầu.
+
+#### 3.5.4 Kết Quả Kinh Doanh & Trải Nghiệm Hướng Tới
+* **Gia Tăng Mức Độ Tương Tác:** Biến người đọc bài thụ động thành người dùng chủ động tương tác, nâng tỷ lệ người dùng tham gia tư vấn.
+* **Thúc Đẩy Chuyển Đổi Thực Chất:** Chuyển hóa lưu lượng truy cập tìm kiếm tự nhiên trên Web thành đơn đặt vé và doanh thu giao dịch thực tế trên App MoMo.
+* **Xây Dựng Thói Quen Nhận Diện:** Định vị Web Cinema MoMo không chỉ là nơi xem giờ chiếu, mà là người bạn đồng hành tin cậy mỗi khi có ý định ra rạp thưởng thức điện ảnh.
+
+### 3.6 Out of Scope
 * Không tự vận hành cụm rạp chiếu phim vật lý.
 * Không tự sản xuất phim điện ảnh thương mại.
 * Không ôm kho vé cứng (chỉ kết nối API giữ vé realtime với các hệ thống Rạp đối tác).
@@ -757,7 +1175,7 @@ Bảng chuẩn hóa các Nhóm Trải Nghiệm Sản Phẩm Cốt Lõi (Product 
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Chuỗi Rạp Đối Tác (Cinemas)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><em>"Giúp rạp của tôi tiếp cận lượng lớn khách hàng tìm kiếm tự nhiên trên Google để lấp đầy các suất chiếu còn trống."</em></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Phụ thuộc vào kênh traffic tự có của app rạp.<br>- Chi phí quảng cáo tìm khách hàng mới trên Open Web đắt đỏ.<br>- Tỷ lệ hủy vé cao nếu luồng đặt vé rườm rà.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Hứng hàng triệu lượt search tự nhiên từ MoMo Web.<br>- Đồng bộ ghế và bán vé tự động 24/7.<br>- Đẩy mạnh bán kèm Combo Bỏng nước tăng ARPU.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">- Thu hút hàng triệu lượt tìm kiếm tự nhiên từ MoMo Web.<br>- Đồng bộ ghế và bán vé tự động 24/7.<br>- Đẩy mạnh bán kèm Combo Bỏng nước tăng ARPU.</td>
     </tr>
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Nền tảng (MoMo Platform)</strong></td>
@@ -913,7 +1331,7 @@ Bảng tổng hợp các trang và tuyến đường dẫn sản phẩm đang v�
     <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Bách Khoa Diễn Viên / Đạo Diễn (Production URL)</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">/cinema/person/{tên-diễn-viên}</code></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang Profile Diễn viên chuẩn Production. Chỉ cho phép Index khi trang qua Quality Gate: ≥3 bộ phim tham gia + Có điểm MoMo Rating + Có Widget phim đang chiếu. Hồ sơ mỏng tự động cắm thẻ <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">noindex, follow</code>.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Trang Profile Diễn viên chuẩn Production (hiện vận hành chính thức 55 trang hồ sơ chất lượng cao). Chỉ cho phép Index khi trang qua Quality Gate: ≥3 bộ phim tham gia + Có điểm MoMo Rating + Có Widget phim đang chiếu. Hồ sơ mỏng tự động cắm thẻ <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">noindex, follow</code>.</td>
     </tr>
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Bảng Xếp Hạng Doanh Thu Phòng Vé</strong></td>
@@ -923,11 +1341,11 @@ Bảng tổng hợp các trang và tuyến đường dẫn sản phẩm đang v�
   </tbody>
 </table>
 
-### 5.1.1 Đề Xuất Tối Ưu Cấu Trúc Website & Giải Pháp Chống Duplicate / Thin Content
+#### 5.1.3 Đề Xuất Tối Ưu Cấu Trúc Website & Giải Pháp Chống Duplicate / Thin Content
 
 Dựa trên phản biện chuyên sâu về Kỹ thuật SEO (Technical SEO), việc lạm dụng pSEO tạo hàng loạt URL con tĩnh (Location Pages / Format Pages) sẽ dẫn tới rủi ro nghiêm trọng về **Duplicate Content, Thin Content và Lãng phí Crawl Budget**. 
 
-Do đó, Cinema Hub áp dụng **3 Cơ Chế Kiểm Soát Kỹ Thuật Nghiêm Ngặt** để vừa hứng traffic vừa bảo vệ chất lượng chỉ mục Google:
+Do đó, Cinema Hub áp dụng **3 Cơ Chế Kiểm Soát Kỹ Thuật Nghiêm Ngặt** để vừa thu hút lưu lượng vừa bảo vệ chất lượng chỉ mục Google:
 
 #### 1. Luồng Lịch Chiếu Local GEO: Dynamic Client-Side Filter & Canonical Consolidation
 * **Vấn đề:** Các trang `/cinema/lich-chieu-phim/tphcm/quan-1` hay `/cinema/lich-chieu-phim/lam-dong/da-lat` nếu tạo URL tĩnh riêng lẻ sẽ bị trùng lặp 90% nội dung danh sách phim với trang lịch chiếu chung.
@@ -950,71 +1368,6 @@ Do đó, Cinema Hub áp dụng **3 Cơ Chế Kiểm Soát Kỹ Thuật Nghiêm N
 #### 3. Chống Trang Rác & Tự Động Hóa Quản Lý Index (Thin Content Defense Matrix)
 * **Dynamic Noindex Rule:** Đối với bất kỳ trang địa điểm hay chuyên mục nào có số lượng suất chiếu rạp active **< 2 phim** hoặc không có thông tin suất chiếu realtime, hệ thống tự động chèn `<meta name="robots" content="noindex, follow">`.
 * **Crawl Budget Protection:** Đảm bảo Googlebot chỉ dành năng lực thu thập dữ liệu cho các trang chất lượng cao (`/cinema/{movie-slug}` và `/cinema/rap/{ten-rap}`), loại bỏ hoàn toàn các trang rác / trang trống dữ liệu.
-
-#### 5.1.3 Chuẩn Cấu Trúc Bố Cục Trang Bài Viết Review Phim Chi Tiết (Editorial Movie Review Page Architecture)
-
-Để tối ưu hóa trải nghiệm đọc, đảm bảo uy tín SEO (Topical Authority) và chuyển đổi tối đa lượng truy cập Informational sang giao dịch mua vé rạp (CVR ≥ 4.5% - 8%), trang Review Phim Chi Tiết (`/cinema/{film-detail-ID}/review`) tuân thủ **Cấu Trúc Bố Cục 8 Khu Vực (8-Zone Page Architecture)**:
-
-<table style="width:100%; border-collapse:collapse; border:1.5px solid #64748b; margin:1em 0; font-size:0.9em;">
-  <thead>
-    <tr style="background-color:#f1f5f9;">
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:center; font-weight:700;">Zone</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Tên Khu Vực Giao Diện</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Thành Phần Cốt Lõi & Tính Năng Kỹ Thuật</th>
-      <th style="border:1.5px solid #64748b; padding:8px 12px; text-align:left; font-weight:700;">Mục Tiêu UX & Tối Ưu Chuyển Đổi (CVR)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Zone 1</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Header & Breadcrumb Navigation</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thẻ Breadcrumb Schema: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Trang chủ > Điện Ảnh > Review Phim > {Tên Phim}</code>. Canonical URL trỏ về đường dẫn chuẩn.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khai báo cấu trúc phân cấp chuẩn Google Crawler & hỗ trợ navigation.</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Zone 2</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Hero Article Header & Rating Badge</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tiêu đề H1 dạng: <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">Review Phim {Tên Phim}: [Slogan/Nhận xét 1 câu]</code>. Metadata (Tác giả, Ngày đăng, Thời gian đọc ~3 phút) + Thẻ <strong>MoMo Rating Badge (8.8/10 ⭐)</strong>.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Gây ấn tượng thị giác mạnh mẽ & khẳng định uy tín nội dung biên tập.</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Zone 3</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Verdict Box (Tóm Tắt 1 Phút)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Khối tóm tắt nhanh: <strong>Điểm cộng (Pros)</strong>, <strong>Điểm trừ (Cons)</strong>, <strong>Đánh giá chung (Verdict)</strong> + Nút CTA Mua Vé Nhanh: <i>"Đặt Vé Rạp Gần Bạn (Đồng Giá 79K)"</i>.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Phục vụ 40% người đọc lười, chốt đơn mua vé ngẫu hứng ngay mốc 30s đầu.</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Zone 4</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Smart Intent Interception Widget</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nhúng trực tiếp Widget Tra cứu suất chiếu 13 rạp realtime ngay dưới Verdict Box (Bộ lọc Tỉnh/Thành ➔ Ngày chiếu ➔ Suất chiếu + Nút Giữ Ghế 1-Click).</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Biến lưu lượng truy cập bài viết Informational thành giao dịch bán vé trực tiếp.</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Zone 5</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Editorial Content (Phân Tích Chi Tiết)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Nội dung bài viết chuẩn hóa theo các thẻ H2/H3:<br/>• H2. Cốt truyện & Thông điệp (No Spoiler Alert)<br/>• H2. Diễn xuất & Điểm sáng nhân vật (đính kèm link diễn viên)<br/>• H2. Hình ảnh, Âm thanh & Trải nghiệm phòng chiếu (IMAX/3D/4DX)<br/>• H2. Cảnh After-Credit & Quy định độ tuổi ra rạp (P/T13/T16/T18)</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giải đáp triệt để tất cả thắc mắc của người đọc, kéo dài Time-on-Site (3-5 phút).</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Zone 6</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>MoMo Verified Community Rating</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Bảng thống kê tỷ lệ % Đánh giá + Danh sách bài nhận xét từ người dùng có Badge xác thực <strong>"Đã Mua Vé Trên MoMo"</strong> + Bộ lọc <i>[Không Spoiler] / [Có Spoiler]</i> + Nút Upvote/Thả tim.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tạo nguồn dữ liệu UGC Content thật 100%, nâng cao độ tin cậy Social Proof.</td>
-    </tr>
-    <tr>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Zone 7</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Related Topic Clusters (Bài Viết Liên Quan)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Carousel/Grid bài viết liên quan: Bài viết Giải thích Kết thúc Phim (Ending Explained), Thứ tự xem phim (Watch Order), Top Phim cùng thể loại.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Tăng số trang xem (Pages per Session từ 1.2 ➔ 3.5+ trang) & tối ưu Internal Linking.</td>
-    </tr>
-    <tr style="background-color:#f8fafc;">
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;"><strong>Zone 8</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Sticky Bottom Intent Bar (Mobile Web)</strong></td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Thanh Sticky Bar nổi dưới chân màn hình Mobile khi cuộn trang: Hiển thị <i>[Điểm MoMo Rating: 8.8/10]</i> + Nút <strong>"Đặt Vé Ngay - Giữ Ghế Đẹp"</strong>.</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Giữ nút CTA mua vé luôn xuất hiện trong tầm mắt người dùng trên giao diện di động.</td>
-    </tr>
-  </tbody>
-</table>
 
 #### Phân Tích Khoảng Trống & Lộ Trình Nâng Cấp (Gap Analysis: As-Is vs To-Be Architecture)
 
@@ -1083,10 +1436,8 @@ Chiến lược Local GEO tối ưu hóa cho các từ khóa tìm kiếm rạp t
 * **Cấu Trúc Mạng Lưới Liên Kết Nội Bộ (Hub-and-Spoke Internal Link Building):** Tạo luồng liên kết tự nhiên từ Trang Danh Mục ➔ Trang Chi Tiết Phim ➔ Trang Diễn Viên/Đạo Diễn ➔ Trang Địa Điểm Rạp.
 
 #### 4. Đầu Tư Truyền Thông & Sức Mạnh Liên Kết Off-Page (Media & Authority Building)
-* **Chiến Lược Off-Page Investment của BU Movies:** Thực hiện chiến dịch PR báo chí chính thống (VnExpress, Tuổi Trẻ, Thanh Niên, Kenh14) về các sự kiện công chiếu phim bom tấn, đính kèm liên kết uy tín về .
+* **Chiến Lược Off-Page Investment của BU Movies:** Thực hiện chiến dịch PR báo chí chính thống (VnExpress, Tuổi Trẻ, Thanh Niên, Kenh14) về các sự kiện công chiếu phim bom tấn, đính kèm liên kết uy tín về https://momo.vn/cinema.
 * **Xác Thực Thực Thể Thương Hiệu (Entity Verification):** Khai báo thực thể thương hiệu MoMo Cinema trên IMDb, Wikipedia và Google Knowledge Panel.
-
-## VI. Gamification & Promotions
 
 ## VI. Gamification, User Engagement & Retention Tactics
 
@@ -1155,8 +1506,8 @@ Cập nhật kết quả đo lường dữ liệu thực tế từ hệ thống 
 * **`cinema_game_click_start` (Kích hoạt cào vé):** **130 lượt** *(CVR từ Traffic: 42.76%)*
 * **`cinema_game_scratch_completed` (Cào hoàn tất):** **97 lượt** *(CVR từ Start: **74.61%**)*
 * **`cinema_game_click_copy_code` (Sao chép code):** **115 lượt**
-* **`cinema_game_click_to_app` (Bấm Mở App MoMo):** **104 lượt** *(CVR từ Cào Done: 107.2%)*
-* **`cinema_game_click_download_app` (Bấm Tải App):** **4 lượt**
+* **`cinema_game_click_to_app` (Nhấp Mở App MoMo):** **104 lượt** *(CVR từ Cào Done: 107.2%)*
+* **`cinema_game_click_download_app` (Nhấp Tải App):** **4 lượt**
 * **User chơi game trong App HỢP LỆ (Valid In-App Users):** **70 users** *(CVR từ Cào Done: **72.16%** | End-to-End CVR: **23.03%**)*
 
 #### 2. Đánh Giá Hiệu Năng & Phương Án Tối Ưu Cho Production:
@@ -1194,7 +1545,7 @@ Cập nhật kết quả đo lường dữ liệu thực tế từ hệ thống 
     <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Người dùng hủy vé / Muốn đổi suất chiếu</strong> sau khi thanh toán trên Web.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:center;">Trung bình</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiển thị rõ quy định hủy vé của từng chuỗi rạp trước khi bấm thanh toán.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Hiển thị rõ quy định hủy vé của từng chuỗi rạp trước khi nhấp thanh toán.</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Product Team & Operations</td>
     </tr>
     <tr>
@@ -1208,74 +1559,43 @@ Cập nhật kết quả đo lường dữ liệu thực tế từ hệ thống 
 
 ## VIII. Growth Roadmap & Changelog
 
-### 8.1 Accelerated Sprint Roadmap (Actual August Scope & September 30, 2026 Full Product Completion)
+### 8.1 Lộ Trình Phát Triển Sản Phẩm & Kế Hoạch Trọng Tâm Q4/2026 (Roadmap & Deliverables)
 
-Để đảm bảo hoàn thiện 100% tính năng sản phẩm Cinema Hub trước mốc **30/09/2026**, kế hoạch phát triển được phân bổ chính xác theo tình hình thực tế Tháng 8/2026 và nén tiến độ thực thi trong Tháng 9/2026:
+Kế hoạch phát triển sản phẩm Cinema Hub được phân bổ theo các giai đoạn thực tế và tiến độ thực thi:
 
-* **Thực Tế Tháng 8/2026 (Actual August Scope - Đang Triển Khai):**
-  * **Revamp Film Detail UI/UX:** Thiết kế lại toàn bộ giao diện Trang Chi Tiết Phim (`/cinema/{film-detail-ID}`) & Trang Review Phim (`/cinema/{film-detail-ID}/review`), nhúng Widget Tra cứu suất chiếu rạp realtime 13 chuỗi rạp.
-  * **Minigame Platform cho Cinema:** Xây dựng Nền tảng Minigame Platform (Google OAuth 1-tap, Thẻ Cào Scratch Card, Săn Mã Số May Mắn) húc Organic Search CTR từ từ khóa *'Tên Phim + MoMo'* trên Google SERP, kết nối In-App Social Feed Comment với đội MDS-Movies.
+* **Giai Đoạn Nền Tảng & Triển Khai (Tháng 8 - Tháng 9/2026 - Hoàn Thành):**
+  * **Revamp Film Detail UI/UX:** Thiết kế lại toàn bộ giao diện Trang Chi Tiết Phim (`/cinema/{film-detail-ID}`) và Trang Review Phim (`/cinema/{film-detail-ID}/review`), nhúng Widget Tra cứu suất chiếu rạp realtime 13 chuỗi rạp.
+  * **Minigame Platform cho Cinema:** Xây dựng Nền tảng Minigame Platform (Google OAuth 1-tap, Thẻ Cào Scratch Card, Săn Mã Số May Mắn) thúc đẩy Organic Search CTR từ từ khóa *'Tên Phim + MoMo'* trên Google SERP, kết nối In-App Social Feed Comment với đội MDS-Movies.
   * **Blog Migration sang MoSpark CMS:** Chuyển dịch toàn bộ kho bài viết Blog, Review phim và Cẩm nang điện ảnh cũ sang hạ tầng MoSpark CMS mới.
-  * **Co-Promotion 2 Phim Hợp Tác:** Thúc đẩy *Hộ Linh Tráng Sĩ* & *Nghỉ Hè Sợ Nghỉ Hưu* (Hero Banner Slot #1 & #2 + Review Hub + Smart Intent Interception).
-* **Sprint 3 (01/09 - 15/09/2026): Native Web Payment, Data Hub & Zero-Friction UX:**
-  * **Native Web QR Payment:** Chuẩn hóa phễu checkout 7 bước (tích hợp Modal F&B inline) + Native QR Payment (Ví MoMo / All-in-One QR) kèm Instant Refund Service 5m.
-  * **Data-Driven Box Office Leaderboard:** Ra mắt trang Doanh Thu Phòng Vé (`/cinema/doanh-thu-phong-ve` & alias `/doanh-thu-phong-ve`) kết nối Box Office Vietnam Live Feed + Schema `Dataset` & `ItemList` cho Google AI Overview.
-  * **Automated Post-Theater Lifecycle:** Tự động hóa chuyển đổi phim hết suất chiếu sang OTT (VieON, FPT Play, Netflix).
-  * **pSEO Local GEO & Zero-Friction UX:** Trang rạp địa phương Top 5 Tỉnh/Thành lớn & Khung trải nghiệm Zero-Friction Discovery (Short Reels 15s + Micro-Pills + GeoIP Hero Card).
-* **Sprint 4 (16/09 - 30/09/2026): RAG AI Engine, UGC Community & Full Product Go-Live (Mục Tiêu 30/09):**
-  * **RAG AI Knowledge Base Chatbot Engine:** Tích hợp Vector DB (`pgvector` trên PostgreSQL) đồng bộ kho bài viết MoSpark CMS + Function Calling `get_showtimes()` trả về Widget UI Chọn Ghế 1-Click.
-  * **MoMo Verified User Rating:** Ra mắt hệ thống chấm điểm 10 sao & Schema `Review` sao vàng trên kết quả tìm kiếm Google SERP.
-  * **Full Product Sign-off & Grand Launch:** Tối ưu hạ tầng tracking Umami, kiểm định PCI-DSS Security & Nghiệm thu hoàn thiện 100% sản phẩm với Ban Giám Đốc (VP/CEO) mốc 30/09/2026 (Target Baseline 4M MUV, W2A CTR ≥ 4.5% - 8%).
+  * **Data-Driven Box Office Leaderboard:** Ra mắt trang Doanh Thu Phòng Vé (`/cinema/doanh-thu-phong-ve` và alias `/doanh-thu-phong-ve`) kết nối Box Office Vietnam Live Feed + Schema `Dataset` & `ItemList` cho Google AI Overview.
+  * **Trợ Lý Tư Vấn Phòng Vé AI:** Xây dựng kịch bản trợ lý ảo tư vấn phim, tra cứu lịch chiếu và kết nối luồng đặt vé nhanh 1-chạm sang App MoMo.
 
-### 8.2 Detailed Action Items for August 2026 (Kế Hoạch Hoạt Động Trọng Tâm Tháng 8/2026)
+* **Giai Đoạn Tối Ưu Hóa & Tăng Trưởng Bền Vững (Tháng 10/2026 - Đã Chốt Sổ Thành Công):**
+  * **Duy Trì Vị Thế Dẫn Đầu Lưu Lượng:** Đạt 1.13M PVs (101.4% Target Tháng 10), lượng tìm kiếm tự nhiên tăng +21.7% MoM bù đắp -92.9% cắt giảm ngân sách Paid Ads.
+  * **Chốt Đơn Bán Vé In-App Kỷ Lục:** Đạt 12,547 đơn hàng và 2.57 tỷ đồng GMV thực thu in-app (+20.1% MoM).
+  * **Thử Nghiệm Giao Diện Cụm Rạp Mới (NCC Pilot):** Đã Go-live thử nghiệm tại Trung Tâm Chiếu Phim Quốc Gia (NCC) bảo toàn chất lượng trước khi mở rộng.
 
-Dựa trên biên bản thống nhất nội bộ giữa `Web Product Lead`, `Software Engineering Team` và `Out-App Traffic Team`, các hoạt động trọng tâm cho Cinema Hub trong tháng 08/2026 được phân loại theo 2 trụ cột thực thi:
+* **Giai Đoạn Trọng Tâm Q4/2026 (Tháng 11 - Tháng 12/2026 - Đang Triển Khai):**
+  * **1. Hạ Tầng Lịch Chiếu Theo Tỉnh Thành Sau Sáp Nhập (Local GEO Screening Architecture):**
+    * *Mục tiêu:* Phục vụ nhu cầu tìm kiếm lịch chiếu địa phương sau khi sáp nhập các đơn vị hành chính tỉnh thành, tránh đứt gãy luồng tra cứu của người dùng.
+    * *Kiến trúc URL Chuyên biệt:* Triển khai các URL độc lập dạng `/cinema/{film-slug}-{id}/lich-chieu-{tinh-thanh}` (ví dụ: `/cinema/ngay-con-con-me-25093/lich-chieu-tp-ho-chi-minh`).
+    * *Chuẩn Hóa Schema ScreeningEvent Độc Lập:* Tích hợp bộ Schema chuẩn hóa kết hợp `ScreeningEvent`, `Movie`, `MovieTheater`, `Offer` cho từng suất chiếu cụ thể nhằm tối ưu hiển thị Rich Results và Google AI Overview.
+    * *Cơ chế Crawl Budget & Anti-Spam Control:* Áp dụng Dynamic Noindex cho các tỉnh thành có ít hơn 2 rạp hoạt động để bảo vệ chất lượng chỉ mục Google.
+  * **2. Chiến Dịch Hợp Tác Bom Tấn Cuối Năm: Avengers: Doomsday (Disney x MoMo x CGV):**
+    * *Mục tiêu:* Khai thác tối đa sự kiện điện ảnh lớn nhất năm 2026 để bứt phá lưu lượng tìm kiếm tự nhiên ngoài web (Organic Web Traffic) và đạt mốc doanh số bán vé kỷ lục.
+    * *Pillar Page Doomsday:* Xây dựng Website phim đặc biệt với visual hiệu ứng Marvel, đếm ngược ngày chiếu và widget giữ ghế 1-click.
+    * *Cụm Nội Dung Tri Thức & Topic Cluster:* Trang Chủ đề 3 Phase Marvel, Timeline *"Xem gì trước Doomsday"* (kết nối Secret Wars 2027), Wiki thẻ nhân vật *"X là ai"* đón đầu câu trả lời trực tiếp của Google AI Overview và AI Search.
+    * *Gamification & Engagement Hook:* Interactive Quiz *"Bạn là Avenger nào?"* lồng ghép Easter Egg, tặng voucher vé / combo bắp nước và cơ hội nhận Mặt nạ Dr. Doom (10 mặt nạ từ Disney).
+    * *Khai Thác Merchandise Độc Quyền MoMo:* Triển khai cơ chế tích điểm/tích vé đổi **40 Avengers Backpacks** (độc quyền Disney dành riêng cho khách hàng MoMo, không cung cấp cho bất kỳ đơn vị rạp hay bán vé nào khác).
+    * *Suất Chiếu Fan Screening Độc Quyền CGV x MoMo:* Mở các suất chiếu đặc biệt chỉ bán duy nhất trên MoMo Web/App (phối hợp CGV lock suất chiếu).
+    * *Chuỗi Trải Nghiệm O2O & Sự Kiện Premiere:* Đồng hành khu trải nghiệm Avengers: Doomsday tại Royal City (Hà Nội, 14-27/12/2026 - Premiere 15/12) và Landmark 81 (TP.HCM, 14-17/12/2026 - Premiere 16/12).
+    * *Brand Takeover:* Khoác giao diện theme Doomsday lên toàn bộ trang chủ `momo.vn/cinema` trước và trong tuần công chiếu.
+  * **3. Trợ Lý AI Phòng Vé (MoMo Cinema AI Concierge):**
+    * *Mục tiêu:* Đưa vào hoạt động trợ lý thông minh lắng nghe và chuyển hóa trọn vẹn 4 nhóm ý định của người dùng (Khám phá phim, Khớp lịch chiếu/vị trí gần nhất, Tối ưu ưu đãi chi phí, Xác thực thông tin nhanh) thành quyết định mua vé tức thì.
+    * *Trải Nghiệm Dẫn Dắt:* Chuyển đổi từ trải nghiệm tra cứu tĩnh sang tương tác tự nhiên, phản hồi đúng trọng tâm và cung cấp thẻ lựa chọn 1-chạm kết nối thẳng vào màn hình giữ chỗ trên App MoMo.
+    * *Thử Nghiệm & Đánh Giá:* Triển khai thử nghiệm giao diện tư vấn tại Trang Chi Tiết Phim và Trang Cụm Rạp trong Tháng 12/2026, đo lường mức độ tương tác và tỷ lệ chuyển đổi mua vé thực tế.
 
-#### 1. Software Engineering (Technical Workstream)
-* **Tối ưu hóa Luồng Đặt Vé (Booking Flow):**
-  * Triển khai giao diện UI step-by-step để tăng tính thân thiện và giảm đứt gãy trải nghiệm.
-  * Xây dựng Deep Linking cho Lịch chiếu: Tạo đường dẫn URL độc lập cho từng suất chiếu cụ thể (ví dụ: suất 14:00), giúp Google Crawlers & AI dễ dàng cào dữ liệu và hiển thị suất chiếu trực tiếp trên trang kết quả tìm kiếm Google.
-* **Tích hợp Thanh toán QR Trực tiếp trên Web (Native Web Payment):**
-  * Xây dựng cơ chế thanh toán 1-on-1 QR trực tiếp trên Web không bắt buộc tải App hoặc đăng nhập rườm rà cho khách hàng Non-App, nhằm khôi phục CVR Web-to-App ≥ 4.50%.
-* **Quản trị Slot Quảng cáo qua MoSpark:**
-  * Phân hoạch các zone quảng cáo trên Trang chủ, Trang Rạp và Trang Phim.
-  * Cho phép team vận hành chủ động đăng tải và quản lý banner khuyến mãi trên MoSpark và đo lường CTR.
-
-#### 2. Out-App Traffic (Research & Content Strategy Workstream)
-* **Audit & Migrate Kho Nội dung sang MoSpark:**
-  * Rà soát kho bài viết blog, review phim và thông tin cụm rạp cũ.
-  * Kiên quyết loại bỏ/noindex các bài viết kém chất lượng hoặc zero-traffic để tránh làm ảnh hưởng đến Crawl Budget và điểm uy tín domain trên Google.
-  * Tối ưu hóa các trang chi tiết rạp và phim đang có lưu lượng truy cập tự nhiên lớn.
-* **Vận hành Quy trình GenAI Content Pipeline:**
-  * Phân tích nhu cầu tìm kiếm  ➔  Quy hoạch Topic Cluster  ➔  Sinh Outline  ➔  Sản xuất bài viết chi tiết bằng GenAI trên MoSpark.
-  * Ưu tiên các định dạng nội dung: Blog phim, review phim và bài viết xếp hạng Top phim.
-* **Chuẩn hóa Nền tảng Dữ liệu, Vector DB & RAG Chatbot Engine:**
-  * Xây dựng hạ tầng tracking (Umami, Analytics Dashboard) bóc tách phễu chuyển đổi W2A.
-  * Tích hợp **RAG Knowledge Base Chatbot Engine** (Retrieval-Augmented Generation): Đồng bộ toàn bộ kho bài viết MoSpark CMS (Blog, Review, Watch Order, FAQ rạp) vào Vector Database (`pgvector`). Chatbot tự động trả lời các thắc mắc điện ảnh (có/không After-credit, thứ tự xem phim, quy định rạp) và **đính kèm Clickable Link trỏ về URL bài viết trên Web** + Widget Đặt Vé 1-Click.
-
-#### 3. Strategic Movie Co-Promotion Workstream (Chiến Dịch Thúc Đẩy Phim Hợp Tác Tháng 8/2026 - Top 1 & Top 2 Dominance)
-Tập trung toàn bộ nguồn lực Web Platform & Out-App Traffic để thúc đẩy bộ đôi phim hợp tác chiến lược MoMo đồng hành trong Tháng 8/2026: **Hộ Linh Tráng Sĩ** và **Nghỉ Hè Sợ Nghỉ Hưu** đạt vị trí Top 1 & Top 2 Google SERP và tối đa hóa số lượng vé bán ra:
-
-* **Trụ Cột 1: Kiến Trúc URL & Schema Topic Cluster (Entity SEO Dominance):**
-  * Thiết lập cấu trúc URL Siloted:
-    * *Hộ Linh Tráng Sĩ:* Entity Page `/cinema/ho-linh-trang-si-10452` & Review Page `/cinema/ho-linh-trang-si-10452/review`.
-    * *Nghỉ Hè Sợ Nghỉ Hưu:* Entity Page `/cinema/nghi-he-so-nghi-huu-10453` & Review Page `/cinema/nghi-he-so-nghi-huu-10453/review`.
-  * Tối ưu Schema.org `Movie`, `ScreeningEvent`, `Review`, `AggregateRating` kết nối Wikidata/IMDb để đạt điểm Entity Authority tối đa trên Google.
-* **Trụ Cột 2: MoSpark Ads Manager & Hero Placement (Ghim Vị Trí Kim Cương):**
-  * Ghim 2 bộ phim lên vị trí **Hero Carousel Slot #1 & Slot #2** trên Trang chủ Cinema Hub (`/cinema`) và Trang Lịch chiếu (`/cinema/lich-chieu-phim`).
-  * Đặt Spotlight Banner trên trang Bảng Xếp Hạng Doanh Thu Phòng Vé (`/doanh-thu-phong-ve` / `/doanh-thu-phong-ve`).
-  * Tự động nhúng Floating Sticky Widget Tra cứu suất chiếu rạp 1-Click vào 62.46% các bài viết điện ảnh liên quan.
-* **Trụ Cột 3: Ưu Đãi Thanh Toán Độc Quyền & Phễu Checkout 1-Click:**
-  * Đính kèm gói ưu đãi: Vé đồng giá 79k, Tặng Voucher Combo Bắp Nước 0đ (Popup Modal F&B) hoặc Giảm 20% khi thanh toán bằng Ví MoMo / Ví Trả Sau.
-  * Phễu 7 bước tối ưu: Giữ ghế realtime ➔ Modal Popup F&B ➔ Native Web QR Code Payment (Ví MoMo / All-in-One QR Code).
-* **Trụ Cột 4: Off-Page PR Media & Backlink Authority (Đòn Bẩy Truyền Thông BU Movies):**
-  * BU Movies tài trợ bài viết PR trên VnExpress, Tuổi Trẻ, Thanh Niên, Kenh14, Zing News về 2 phim bom tấn, đính kèm DoFollow Backlinks về URL trang phim MoMo.
-  * Kết nối KOC/Reviewer TikTok & Facebook Cinema Groups gắn link mua vé MoMo Web.
-* **Trụ Cột 5: Realtime Data Tracking & A/B Testing (Umami Analytics):**
-  * Bóc tách W2A CTR, CVR checkout và Session Time của 2 trang phim realtime trên Umami Dashboard.
-  * A/B Testing mẫu nút CTA: *"Mua Vé Đồng Giá 79K"* vs *"Đặt Vé Ngay - Giữ Ghế Đẹp"*.
-
-#### 4. Quy Trình Phối Hợp & Đề Xuất (Proposal Standard)
+### 8.2 Quy Trình Phối Hợp & Đề Xuất (Proposal Standard)
 * Mọi đề xuất tính năng PO bắt buộc phải chuẩn bị slide gồm 4 phần: Vấn đề/Thách thức  ➔  Giải pháp đề xuất  ➔  Tác động kinh doanh dự kiến  ➔  UI Mockup phác thảo.
 * Cập nhật báo cáo định kỳ cho Ban Giám Đốc (VP/CEO) về tiến độ thực thi và điều chỉnh kế hoạch vận hành.
 
@@ -1292,18 +1612,42 @@ Tập trung toàn bộ nguồn lực Web Platform & Out-App Traffic để thúc 
   </thead>
   <tbody>
     <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v3.5</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-11-11</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Bổ sung Định hướng Trợ Lý AI Phòng Vé (MoMo Cinema AI Concierge):</strong> Mô tả toàn diện 4 nhóm ý định cốt lõi của người dùng (Khám phá phim, Khớp lịch chiếu/vị trí tiện lợi, Tối ưu ưu đãi chi phí, Xác thực thông tin nhanh) và hành trình chuyển hóa ý định thành hành động đặt vé mượt mà sang App MoMo tại Mục 3.5.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v3.4</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-11-11</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Rà soát toàn diện BRD Cinema Hub:</strong> Chuẩn hóa phân cấp tiêu đề (Section III, 5.1.3, 5.1.4, Section VI), loại bỏ các liên kết tệp phân mảnh để tối ưu tính độc lập sạch gọn, hợp nhất Kiến trúc Phễu Chuyển Đổi 6 tầng, cập nhật số liệu vận hành chốt sổ Tháng 10/2026 (16.41 tỷ GMV in-app, 174K vé), bổ sung kiến trúc Schema Lịch chiếu Tỉnh thành và kế hoạch Chiến dịch Bom tấn Disney - Avengers: Doomsday Q4/2026.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v3.3</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-11-02</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cập nhật Báo cáo Hiệu suất Chốt sổ Tháng 10/2026:</strong> Xác nhận số liệu 10 tháng chính thức từ in-app Dashboard (80,050 đơn hàng, 174,094 vé, 16.41 tỷ GMV thực thu), đánh giá chuyển dịch bền vững sang Organic Traffic (+21.7% MoM) khi cắt giảm 92.9% Paid Ads.</td>
+    </tr>
+    <tr>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v3.2</strong></td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-10-02</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cập nhật Báo cáo Hiệu suất Chốt sổ Tháng 9/2026:</strong> Đạt kỷ lục 1.22M PVs (vượt +26.5% Target), bóc tách lưu lượng theo từng Sub-page và đánh giá thử nghiệm giao diện rạp mới NCC.</td>
+    </tr>
+    <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v3.1</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-08-05</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Cập nhật Kế hoạch Hoạt động Trọng tâm Tháng 8/2026:</strong> Bổ sung phân loại hoạt động theo 2 trụ cột Software Engineering & Out-App Traffic Strategy, quy định chuẩn slide Proposal và chuyển đổi MoSpark.</td>
     </tr>
-    <tr style="background-color:#f8fafc;">
+    <tr>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v3.0</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-07-30</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead</td>
-      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Chuyển đổi sang Cinema Hub Master BRD:</strong> Tái cấu trúc toàn bộ nội dung từ <code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">06_USE_CASE_MOMO/cinema-alignment.md</code> theo định dạng Hub chuẩn (<code style="background:#f1f5f9;padding:2px 4px;border-radius:4px;font-family:monospace;">05_HUBS</code>). Bổ sung 5 Phễu PLG, Native Web Payment Flow, Hub-and-Spoke Sitemap, Schema.org Matrix và 5-Phase Roadmap H2/2026.</td>
+      <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>Chuyển đổi sang Cinema Hub Master BRD:</strong> Tái cấu trúc toàn diện tài liệu theo quy chuẩn kiến trúc Hub độc lập. Bổ sung 5 Phễu PLG, Native Web Payment Flow, Hub-and-Spoke Sitemap, Schema.org Matrix và Lộ trình phát triển H2/2026.</td>
     </tr>
-    <tr>
+    <tr style="background-color:#f8fafc;">
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;"><strong>v2.6</strong></td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">2026-07-22</td>
       <td style="border:1px solid #94a3b8; padding:8px 12px; text-align:left;">Web Product Lead x BU Movies</td>

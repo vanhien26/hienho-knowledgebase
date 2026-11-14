@@ -56,7 +56,7 @@ def main():
     parser.add_argument("--skip-hubs", action="store_true", help="Bỏ qua sync sang Web Hubs (react-web-momo)")
     parser.add_argument("--skip-seo-news", action="store_true", help="Bỏ qua sync tin SEO/GEO News")
     parser.add_argument("--skip-ga4", action="store_true", help="Bỏ qua sync GA4 thực tế sang Web Hubs")
-    parser.add_argument("--skip-funnel", action="store_true", help="Bỏ qua phân rã ma trận phễu GSC + GA4")
+    parser.add_argument("--skip-funnel", action="store_true", help="Bỏ qua bóc tách ma trận phễu GSC + GA4")
     parser.add_argument("--push-hubs", action="store_true", help="Tự động đẩy commit lên GitHub Hubs qua REST API (vượt qua firewall)")
     args = parser.parse_args()
 
@@ -164,7 +164,7 @@ def main():
         results["GA4 API Direct Fetch"] = ("SKIPPED (User flag)", 0)
         results["GA4 Real Data (Hubs)"] = ("SKIPPED (User flag)", 0)
 
-    # 8. Luồng Phân rã Ma trận Phễu Hợp nhất (GSC + GA4 Full-Funnel)
+    # 8. Luồng Bóc tách Ma trận Phễu Hợp nhất (GSC + GA4 Full-Funnel)
     if not args.skip_funnel:
         funnel_script = SCRIPTS_DIR / "build_full_funnel_matrix.py"
         if funnel_script.exists():

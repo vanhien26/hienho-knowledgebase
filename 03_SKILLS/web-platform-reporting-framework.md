@@ -31,7 +31,7 @@ Theo chỉ dẫn tại `AGENTS.md`, mọi báo cáo của Web Platform bắt bu�
 | :--- | :--- | :--- |
 | **Nhịp độ & Khung thời gian** | 7 ngày (Tuần hiện tại & 7 ngày tới) | 30 ngày (Tháng hiện tại & 30-90 ngày tới) |
 | **Trọng tâm quản trị** | Vận hành thực thi, tiến độ tính năng, tháo gỡ điểm nghẽn kỹ thuật, quản trị ngân sách và A/B testing. | Sức khỏe động cơ tăng trưởng, danh mục 4 Zone, phân tích Cohort giữ chân, thị phần và chiến lược điểm đến Web Destination. |
-| **Mức độ chi tiết số liệu** | Biến động tuần (WoW), số lượng ticket CS, tốc độ tải P90, CVR từng biến thể A/B, tiến độ rollout tính năng. | Chuỗi thời gian 6-12 tháng, Cohort Retention (M0-M11), phân rã First-service 15+ dịch vụ, tiến độ 3 kịch bản Traffic (4M-5M-6M). |
+| **Mức độ chi tiết số liệu** | Biến động tuần (WoW), số lượng ticket CS, tốc độ tải P90, CVR từng biến thể A/B, tiến độ rollout tính năng. | Chuỗi thời gian 6-12 tháng, Cohort Retention (M0-M11), cơ cấu First-service 15+ dịch vụ, tiến độ 3 kịch bản Traffic (4M-5M-6M). |
 | **Cấu trúc Ưu tiên (Priorities)** | 1. Sửa lỗi & Phát hành (Hotfix & Delivery)<br/>2. Đánh giá A/B Testing<br/>3. Phối hợp liên đội ngũ (Sync) | 1. Vùng Hiệu suất (Performance Scaling)<br/>2. Vùng Chuyển đổi & Ươm tạo (Transformation/Incubation)<br/>3. Nền tảng & AI (Platform & AI Adoption) |
 
 ---
@@ -39,6 +39,11 @@ Theo chỉ dẫn tại `AGENTS.md`, mọi báo cáo của Web Platform bắt bu�
 ## 3. CÔNG THỨC HÀNH VĂN & MÔ TẢ (TEXTING & COPYWRITING FORMULA)
 
 ### 3.1. Công thức viết khối "Key Highlights & Business Impact"
+**Giới hạn bắt buộc:** tối đa 5 ý, mỗi ý 1 dòng, mở đầu bằng con số (PV, % target, Install, ngày go-live) và kết bằng chỉ dẫn mục chi tiết ("Chi tiết mục III.2"). Khối này là bản tóm tắt cho cấp quản lý, không lặp lại phần mô tả của mục II-IV.
+- Không đưa chi tiết build (tên tính năng con, URL, kiến trúc, quy trình nội bộ) vào đây; các chi tiết đó nằm ở mục Hub/Platform tương ứng.
+- Nhiều việc go-live trong tuần gom chung vào một ý "Lên Production".
+- Không kết luận vượt quá số liệu (ví dụ: tỷ trọng Non-Paid cao không có nghĩa "độc lập hoàn toàn với Paid").
+
 Áp dụng công thức 4 thành tố liên kết:
 $$\text{Số liệu đạt được (Biên độ WoW/MoM)} \longrightarrow \text{Nguyên nhân cốt lõi (Driver)} \longrightarrow \text{Tác động hệ sinh thái (Impact)} \longrightarrow \text{Hành động tiếp theo (Next Action)}$$
 
@@ -57,7 +62,7 @@ $$\text{Số liệu đạt được (Biên độ WoW/MoM)} \longrightarrow \text
 ---
 
 ### 3.2. Công thức viết khối "Cross-team Collaboration & Support Needed"
-Phân rã rõ ràng theo từng đội ngũ đối tác kèm yêu cầu định lượng:
+Bóc tách chi tiết rõ ràng theo từng đội ngũ đối tác kèm yêu cầu định lượng:
 
 - **Đội ngũ Business Units (Cinema, VTTI, FS, SPS, Student Pass):**
   - "Phối hợp với BU tương ứng để chốt bộ quy tắc nghiệp vụ (Domain Knowledge), tích hợp API sản phẩm và thống nhất ngân sách truyền thông Off-page."
@@ -86,40 +91,89 @@ Phân rã rõ ràng theo từng đội ngũ đối tác kèm yêu cầu định 
 
 ---
 
-## 4. MẪU BÁO CÁO TUẦN DÀNH CHO ANH CÔNG (WEEKLY TEMPLATE)
+## 4. MẪU BÁO CÁO TUẦN CHUẨN INSURTECH DÀNH CHO ANH CÔNG (WEEKLY TEMPLATE)
+
+> **Cập nhật quy chuẩn:** Áp dụng nguyên mẫu kiến trúc từ `[InsurTech] Web 2026 Performance.pptx` kết hợp cẩm nang `03_SKILLS/executive-presentation-playbook.md`:
+> 1. Mỗi mục đều có Tiêu đề hành động mang kết luận trọn vẹn (Insight-Led Action Title).
+> 2. Thẻ số liệu 3 tầng (Big Stat + Delta WoW/Baseline + Ý nghĩa kinh doanh).
+> 3. Phễu chuyển đổi 4 bước (Traffic -> Giao dịch/W2A -> Leads -> Đơn/User mới).
+> 4. Chỉ rõ Điểm nghẽn và rủi ro thực tế (Radical Candor / Lowlights).
+> 5. Ma trận kết luận 3 cột: BÀI HỌC | BẰNG CHỨNG | NEXT ACTION.
+> 6. Không En/Em dash, không gán nhãn mức độ ưu tiên, không chữ "SSOT", không tên riêng cá nhân.
 
 ```markdown
-# BÁO CÁO TIẾN ĐỘ TUẦN - WEB PLATFORM
-**Tuần:** [Số tuần] | **Thời gian:** [Từ ngày] - [Đến ngày]
+# BÁO CÁO TIẾN ĐỘ TUẦN [Số tuần] ([Từ ngày] - [Đến ngày]): WEB PLATFORM
 
-## 1. BẢNG CHỈ SỐ VẬN HÀNH TUẦN (WEEKLY PERFORMANCE)
+> **Kỳ báo cáo:** Tuần [Số tuần] ([Từ ngày] - [Đến ngày]) | **Cập nhật:** [Ngày/Tháng/Năm]
+> **Đội ngũ thực hiện:** Web Platform
+> **Nguồn dữ liệu:** GA4 Data API (Property 270743103), BigQuery Data Warehouse, AppsFlyer GPD Attribution Engine, MoSpark CMS.
 
-| Nhóm Chỉ Số | Tuần Trước | Tuần Này | Biến Động (WoW) | Mục Tiêu Tuần | Trạng Thái |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| Page Views (Lượt xem) | 750.000 | 820.000 | +9.3% | 800.000 | Đạt |
-| Sessions (Phiên truy cập) | 580.000 | 630.000 | +8.6% | 600.000 | Đạt |
-| MEU (Người dùng Web) | 410.000 | 445.000 | +8.5% | 420.000 | Đạt |
-| Tỷ lệ nhấp CTA (% CTR) | 12.4% | 14.1% | +1.7pp | 13.0% | Đạt |
-| Login App từ Web (W2A) | 52.000 | 58.500 | +12.5% | 55.000 | Đạt |
-| Lượt cài đặt mới (Install) | 1.100 | 1.350 | +22.7% | 1.200 | Đạt |
+---
 
-## 2. TIẾN ĐỘ & TÁC ĐỘNG KINH DOANH (KEY HIGHLIGHTS & BUSINESS IMPACT)
+## I. TỔNG QUAN HIỆU SUẤT TUẦN & TÁC ĐỘNG KINH DOANH
 
-- **Phễu Chuyển Đổi Web-to-App:** Lượt cài đặt mới tăng trưởng +22.7% WoW nhờ triển khai tối ưu nội dung banner gói quà CHAOMOMO trên các trang có lưu lượng cao. Tỷ lệ chuyển đổi CTA sang Login App duy trì ở mức 14.1%.
-- **Vận Hành MoSpark Platform:** Phát hành thành công [Số] bài viết chuẩn SEO/GEO qua GenAI Pipeline, kiểm duyệt hoàn tất trong 20 phút/bài; ghi nhận [Số] từ khóa lọt Top 5 Google Search.
-- **Tối Ưu Trải Nghiệm Kỹ Thuật:** Triển khai cơ chế 0-CAPTCHA cho công cụ Tra cứu Phạt nguội, nâng tỷ lệ hoàn tất tra cứu từ 75.0% lên 78.2%, giảm 45% thời gian phản hồi máy chủ.
+### [ACTION TITLE]: [Chủ thể Kênh Web] + [Số liệu tuần & Tăng trưởng WoW/YoY] + [Ý nghĩa kinh doanh cốt lõi]
+*(Ví dụ: Tuần 46: Kênh Web chạm mốc 1.18M PV lũy kế MTD, bứt phá nhờ đợt kích cầu 11.11 và bộ đôi tiện ích Thuế mới lên Production)*
 
-## 3. PHỐI HỢP LIÊN ĐỘI NGŨ (CROSS-TEAM COLLABORATION & SUPPORT NEEDED)
+#### 1. Bốn Thẻ Chỉ Số Trọng Tâm 3 Tầng (Key Performance Cards)
+- **Quy mô lưu lượng (Pageviews):** **[Số PVs]** | `↑ [X]% vs Tuần trước: [Số PV cũ]` (hoặc `↑ [X]x`) | `[Ý nghĩa: % hoàn thành kế hoạch tháng / Đóng góp toàn sàn]`
+- **Người dùng thực tế (Users):** **[Số Users]** | `↑ [X]% vs Tuần trước: [Số User cũ]` | `[+Số lượng user mới tăng thêm so với tuần trước]`
+- **Chuyển tiếp Web-to-App (W2A Clicks):** **[Số Clicks]** | `[X]% CVR trên lượt truy cập` | `[Kênh đóng góp chính: Banner, Nút tương tác, OneLink]`
+- **Khách hàng mới ngoài App MoMo:** **[Tỷ lệ % hoặc Số lượng]** | `[X]% người dùng chưa từng có ví/app MoMo` | `[Bảo chứng giá trị gia tăng độc quyền của Kênh Web]`
 
-- **VTTI BU:** Cần thống nhất luồng liên kết đối tác ePass/Đăng kiểm trước ngày [Ngày/Tháng] để kịp tích hợp vào Master Page Tiện Ích Giao Thông.
-- **Risk Team:** Cần phê duyệt bộ tiêu chí Guardrails tự động cho module CMS trước khi mở rộng phân quyền Self-service cho BU.
-- **Media Team:** Đề xuất bổ sung ngân sách Paid Search cho nhóm từ khóa vé xem phim dịp cuối tuần.
+#### 2. Bảng Cơ Cấu Kênh Lưu Lượng Tuần (Non-Paid vs. Paid)
 
-## 4. KẾ HOẠCH TRỌNG TÂM 7 NGÀY TỚI (PRIORITIES FOR NEXT 7 DAYS)
+| Kênh lưu lượng | Tuần trước | Tuần này | Tỷ trọng tuần (%) | Biến động WoW (%) | Nhận định & Tín hiệu điều hành |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **KÊNH TỰ NHIÊN (NON-PAID)** | **[Số]** | **[Số]** | **[Tỷ trọng]%** | **[+/-]%** | Động cơ tăng trưởng tự nhiên cốt lõi |
+| - Organic Search | [Số] | [Số] | [Tỷ trọng]% | [+/-]% | Lưu lượng tìm kiếm tự nhiên chủ lực |
+| - Direct Traffic | [Số] | [Số] | [Tỷ trọng]% | [+/-]% | Nhận diện thương hiệu và thói quen quay lại |
+| - Referral | [Số] | [Số] | [Tỷ trọng]% | [+/-]% | Liên kết đối tác, in-app và mạng xã hội |
+| - AI Search (GEO) | [Số] | [Số] | [Tỷ trọng]% | [+/-]% | Tăng trưởng từ ChatGPT, Gemini, Perplexity |
+| **KÊNH TRẢ PHÍ (PAID ADS)** | **[Số]** | **[Số]** | **[Tỷ trọng]%** | **[+/-]%** | Ngân sách quảng cáo có chọn lọc dẫn dòng chuyển đổi |
+| **TỔNG LƯỢNG TRUY CẬP** | **[Số]** | **[Số]** | **100,0%** | **[+/-]%** | Nhịp ngày bình quân đạt [Số] PV/ngày |
 
-- **Hotfix & Delivery:** Bàn giao giao diện Master Page `/tien-ich-giao-thong` cho đội phát triển Front-end; hoàn thành kiểm thử trên môi trường Staging.
-- **A/B Testing:** Chạy thử nghiệm 2 biến thể nút CTA (Đặt vé ngay vs. Nhận ưu đãi vé) trên Cinema Hub để đo lường CVR.
-- **Cross-team Alignment:** Họp chi tiết với Inbound Team (BMC) để chuyển giao quy trình kiểm duyệt nội dung tự động.
+---
+
+## II. TIẾN ĐỘ THỰC TẾ CÁC DỰ ÁN CHIẾN LƯỢC (USE CASES DEEP-DIVE)
+
+### 1. [Tên Dự Án / Hub Trọng Điểm 1] (Ví dụ: Cinema Hub)
+> **[ACTION TITLE]:** [Câu kết luận về kết quả đạt được của Hub trong tuần]
+
+#### a. Phễu Chuyển Đổi 4 Bước (4-Stage Funnel Grid)
+- **Bước 1 (Traffic Web):** **[Số] PVs** | `↑ [X]% vs Tuần trước: [Số]` | `[Thị phần/Đóng góp toàn Hub]`
+- **Bước 2 (Trang giao dịch/Lịch chiếu):** **[Số] PVs** | `[X]% traffic đi tiếp vào bước giao dịch` | `[So sánh với tuần trước]`
+- **Bước 3 (Click đặt vé/W2A):** **[Số] Clicks** | `[X]% CTR trên trang giao dịch` | `[Số lượng chuyển tiếp sang app]`
+- **Bước 4 (Đơn hàng/Chốt đơn):** **[Số] Đơn** | `[Tăng trưởng/Doanh thu GMV tạo ra]` | `[Khách hàng mới]`
+
+#### b. 3 Thẻ Đánh Giá Chiến Lược & Điểm Nghẽn (Insights & Bottlenecks)
+- **Thứ hạng tìm kiếm (Ranking SEO):** [Số lượng] từ khóa Top 1 - 3 Google Search; độ phủ từ khóa [ngành hàng].
+- **Mức độ nhận diện mới (Awareness Lift):** [X]% người dùng tương tác là khách hàng chưa từng dùng dịch vụ trên app.
+- **Điểm nghẽn cần tháo gỡ (Lowlights):** [Nêu thẳng thắn tỷ lệ rơi rớt, lỗi kỹ thuật, hoặc độ hụt traffic so với kỳ vọng kèm nguyên nhân gốc rễ].
+
+---
+
+### 2. [Tên Dự Án / Hub Trọng Điểm 2] (Ví dụ: Financial Hub / Vehicle Hub)
+*(Áp dụng đồng nhất cấu trúc Phễu 4 bước và 3 Thẻ đánh giá như trên)*
+
+---
+
+## III. MA TRẬN KẾT LUẬN & KẾ HOẠCH HÀNH ĐỘNG TUẦN TỚI (ACTION MATRIX)
+
+Thay thế danh sách gạch đầu dòng truyền thống bằng ma trận 3 cột khép kín quan hệ nhân quả:
+
+| BÀI HỌC (Insight Vận Hành Tuần) | BẰNG CHỨNG (Data Proof Dữ Liệu Sạch) | NEXT ACTION (Hành Động Trọng Tâm 7 Ngày Tới) |
+| :--- | :--- | :--- |
+| **[Đúc kết nguyên lý 1]** | [Con số, tỷ lệ % thực chứng từ dữ liệu tuần] | **[Việc làm cụ thể của đội ngũ chuyên môn]** |
+| **[Đúc kết nguyên lý 2]** | [Con số, tỷ lệ % thực chứng từ dữ liệu tuần] | **[Việc làm cụ thể của đội ngũ chuyên môn]** |
+| **[Đúc kết nguyên lý 3 (Điểm nghẽn)]** | [Con số phản ánh sự sụt giảm hoặc tỷ lệ rơi rớt] | **[Giải pháp khắc phục, A/B test hoặc tối ưu kỹ thuật]** |
+
+---
+
+## IV. PHỐI HỢP LIÊN ĐỘI NGŨ & CHÂN TRANG ĐẦU TƯ (COLLABORATION & FOOTNOTE)
+
+- **BU Movies / Financial Services / Đối tác:** [Nội dung cần thống nhất hoặc phê duyệt trong tuần tới].
+- **Chân trang đầu tư (Footer):** Chi phí vận hành tuần (SEO/SEM nếu có) | Khung thời gian chốt số liệu: [Từ ngày] - [Đến ngày].
 ```
 
 ---
@@ -177,7 +231,7 @@ Phân rã rõ ràng theo từng đội ngũ đối tác kèm yêu cầu định 
 ## 4. PHỐI HỢP LIÊN PHÒNG BAN & HỖ TRỢ CHIẾN LƯỢC (CROSS-TEAM COLLABORATION)
 
 - **Executive Leadership / Ban Giám Đốc:** Định hướng phê duyệt chủ trương liên kết dữ liệu với C08 và Cổng Dịch vụ công Quốc gia để xử lý luồng nộp phạt vi phạm giao thông và xuất biên lai điện tử.
-- **Inbound Team (BMC):** Tiếp nhận vai trò chủ trì và chịu trách nhiệm toàn diện về chất lượng nội dung, phê duyệt xuất bản theo mô hình Agency nội bộ.
+- **Inbound Team (BMC):** Tiếp nhận vai trò điều phối và chịu trách nhiệm toàn diện về chất lượng nội dung, phê duyệt xuất bản theo mô hình Agency nội bộ.
 - **Các Business Units (BUs):** Đăng ký chỉ tiêu kinh doanh cụ thể (Single Ownership KPI) trước khi yêu cầu triển khai các dự án Custom Landing Page.
 
 ---
@@ -198,7 +252,7 @@ Phân rã rõ ràng theo từng đội ngũ đối tác kèm yêu cầu định 
 ## 7. BỘ FRAMEWORK QUẢN TRỊ KỊCH BẢN 4M PAGE VIEWS & BỘ CHỈ SỐ QUẢN TRỊ
 
 > **Mục tiêu North Star:** Kịch bản bứt phá tổng lưu lượng Web Platform về mốc **4.000.000 Page Views vào Tháng 12/2026**.
-> **Tài liệu SSOT Bảng tính:** [web_performance_tracking_framework.xlsx](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/sheets/web_performance_tracking_framework.xlsx) & [full_month_performance_template.csv](file:///Users/hienhv/HienHv/Klaus/Hienho_MoMo-Base/07_REPORTS/sheets/full_month_performance_template.csv).
+> **Mẫu bảng tính tham khảo:** [full_month_performance_template.csv](../07_REPORTS/templates/sheets/full_month_performance_template.csv). Workbook framework cũ đã được loại bỏ, không còn là nguồn bắt buộc.
 
 Mọi bài báo cáo Weekly cho Executive Leadership và Monthly cho Ban Giám Đốc **BẮT BUỘC phải áp dụng bộ chỉ số phễu 3 tầng hoàn chỉnh**:
 
@@ -211,8 +265,8 @@ Mọi bài báo cáo Weekly cho Executive Leadership và Monthly cho Ban Giám �
 | | **3. PV / User (Độ Sâu Tương Tác)** | `= Tổng Page Views / Total Users` | Mức độ tương tác trung bình (healthy: 1.5 - 2.5 trang/người). |
 | | **4. Net Add (Lưu Lượng Mới)** | `Current Month PV - Previous Month PV` | Chỉ báo nỗ lực tạo ra giá trị tăng trưởng mới. |
 | | **5. Growth Rate (%)** | `Net Add / Previous Month PV` | Tốc độ tăng trưởng MoM/WoW. |
-| | **6. Phân Bổ Kênh (Source Breakdown)** | Tỷ trọng 6 nhóm kênh: Organic, Paid, Direct, Cross, Referral Domain, Others. | Phân định kênh sức mạnh chủ lực và kênh suy giảm. |
-| | **7. Phân Rã Theo Dự Án / Use Case** | Phân bổ theo Cinema Hub, Financial Hub, Vehicle Hub, Home Page, TikTok... | Xác định use case tạo lực đẩy và use case cần tối ưu. |
+| | **6. Phân Bổ Kênh (Source Breakdown)** | Tỷ trọng các nhóm kênh: Non-Paid (Organic Search, Direct, Referral, AI Traffic) và Paid Ads. | Phân định kênh sức mạnh chủ lực và kênh suy giảm. |
+| | **7. Cơ Cấu Theo Dự Án / Use Case** | Phân bổ theo Cinema Hub, Financial Hub, Vehicle Hub, Home Page, TikTok... | Xác định use case tạo lực đẩy và use case cần tối ưu. |
 | **Giữa Phễu (Intent & CTA)** | **8. Click-to-App** | Tổng lượt nhấp vào các nút CTA mở App MoMo. | Đo lường ý định chuyển đổi sang ứng dụng. |
 | | **9. Tỷ Lệ %CTR** | `= Click-to-App / Tổng Page Views` | Hiệu quả của thông điệp và vị trí nút bấm CTA. |
 | **Cuối Phễu (App Conversion & Growth)** | **10. Login App (Khách Cũ)** | Sự kiện xác thực mở App thành công từ Web. | Mức độ tái kích hoạt người dùng hiện hữu. |
@@ -248,7 +302,7 @@ Trước khi gửi báo cáo Weekly cho Executive Leadership hoặc Monthly cho 
 2. Đã thay thế toàn bộ tên riêng cá nhân/PIC bằng tên đội ngũ chuyên môn chưa?
 3. Đã có đầy đủ 3 khối chuẩn: `Key Highlights & Business Impact`, `Collaboration`, `Priority` chưa?
 4. Đã áp dụng Bộ Chỉ Số Phễu 3 Tầng (`Total PV`, `Total Users`, `PV/User`, `Click-to-App`, `Login`, `Install`, `New Registered Users`) chưa?
-5. Đã bóc tách rõ kênh `Referral Domain` (Báo chí PR & Đối tác) khỏi nhóm `Others` chưa?
+5. Đã tuân thủ chuẩn 4 kênh Non-Paid (Organic Search, Direct, Referral, AI Traffic) và gộp toàn bộ nguồn vãng lai vào Referral mà không tách dòng `Others` chưa?
 6. Đã đối chiếu số liệu theo 2 tầng: Kênh Web và Tác động App chưa?
 7. Các bảng số liệu lớn đã có 2 khối `Observation` và `Problem Statement` ở chân trang chưa?
 8. Kế hoạch hành động đã được phân loại theo đúng nhóm phân vùng (Performance / Transformation / Incubator) chưa?

@@ -239,10 +239,10 @@ Nền tảng Web duy trì nhịp vận hành ổn định trong tuần 43 với 
   - Hiển thị Banner Chào Bạn Mới với mã quà tặng `CHAOMOMO` 500K khi tra cứu SĐT hoặc khi từ khóa không có kết quả tìm kiếm (Zero-Result).
 - **Bước tiếp theo:** Theo dõi hiệu năng, tỷ lệ CTR vào Thẻ chuyển tiền và hành vi tìm kiếm thực tế của người dùng sau khi go-live.
 
-### 5. Kiến Trúc URL Catalog: Thiết Kế Hồ Dữ Liệu URL Website (MoMo URL Knowledge Lake SSOT) & Ban Hành Kịch Bản DDL `tblWebsiteUrlCatalog`
+### 5. Kiến Trúc URL Catalog: Thiết Kế Hồ Dữ Liệu URL Website (MoMo URL Knowledge Lake) & Ban Hành Kịch Bản DDL `tblWebsiteUrlCatalog`
 - **Đội ngũ phụ trách:** Data & Web Platform Team  
 - **Tác động & Kỹ thuật:**
-  - Thiết lập giải pháp Master URL Catalog tập trung (SSOT) quản lý toàn bộ URL, metadata, cấu trúc phân cấp và thuộc tính nghiệp vụ của toàn bộ website `momo.vn`.
+  - Thiết lập giải pháp Master URL Catalog tập trung quản lý toàn bộ URL, metadata, cấu trúc phân cấp và thuộc tính nghiệp vụ của toàn bộ website `momo.vn`.
   - Phục vụ 4 mục tiêu chiến lược: Cung cấp nguồn URL sạch cho `SearchService V2`; tự động hóa sinh Sitemap SEO đa tầng; cung cấp URL Directory Feed cho AI Knowledge Base / RAG; kiểm soát trang mồ côi (orphan pages) và giám sát link hỏng.
   - Hoàn thành hệ thống phân loại Taxonomy 2 trục: theo loại trang (`PageType`) và theo dự án (`ProjectIds`); viết xong kịch bản DDL `tblWebsiteUrlCatalog` với Full-text/Trigram Index và URL Unique Index.
 - **Bước tiếp theo:** Triển khai kịch bản tạo bảng trên môi trường Staging và kết nối thử nghiệm nguồn dữ liệu từ CMS.
@@ -275,24 +275,24 @@ Nền tảng Web duy trì nhịp vận hành ổn định trong tuần 43 với 
 ## VI. KẾ HOẠCH HÀNH ĐỘNG TRỌNG TÂM TUẦN TỚI (ACTION ITEMS & PRIORITIES)
 
 ### 1. Strategic Projects
-- **[P0] Cinema Hub:** Vận hành bộ nhớ đệm tĩnh (static cache) cho lịch chiếu rạp tại Cinema Hub để bảo vệ thứ hạng khi API ngoài bị nghẽn.
-- **[P0] Cinema Hub:** Kích hoạt ký kết đối tác triển khai Pilot Off-Page SEO và tuyển dụng nhân sự CTV đồng hành.
-- **[P0] Financial Hub:** BU Bank nghiệm thu UI/UX trang chi tiết 35 Ngân hàng trước ngày 30/10; Finhub cung cấp API NAV Quỹ mở.
-- **[P0] Vehicle Hub:** Thẩm định bộ dữ liệu 41 hãng xe, hoàn thiện trang Nộp Phạt CSGT trực tuyến và tích hợp danh sách Trụ sở Công an.
-- **[P0] Insurtech Hub:** Đưa Trang chủ Bảo hiểm mới (`/bao-hiem`) và công cụ tra cứu BHYT lên Production.
-- **[P0] New User Hub:** Đưa trang tải App `/tai-app` go-live chính thức; cấu hình `/download` để điều hướng Desktop sang `/tai-app`.
-- **[P1] Cinema Hub:** Ra mắt mini game phim *Bò Sữa Bay* bổ sung bảng xếp hạng tích điểm.
-- **[P1] Financial Hub:** Nhúng Quiz CIC vào 10 bài blog tài chính có traffic cao nhất để dẫn luồng kiểm tra điểm tín dụng về App.
-- **[P1] Financial Hub:** Duy trì tiến độ sản xuất nội dung chuyên sâu Financial Hub đạt 5 bài/ngày.
-- **[P1] Vehicle Hub:** Xây dựng công cụ Tính khấu chi cho chủ sở hữu ô tô và Mega Menu điều hướng cho toàn bộ Vehicle Hub.
-- **[P1] Lottery Hub:** Giám sát hệ thống cập nhật kết quả xổ số vào hai khung giờ cao điểm (16h30 và 18h00).
-- **[P1] Digital Services:** Hoàn thiện kịch bản thanh toán cho dịch vụ ChatGPT và tối ưu giao diện nạp thẻ game trên mobile.
+- **Cinema Hub:** Vận hành bộ nhớ đệm tĩnh (static cache) cho lịch chiếu rạp tại Cinema Hub để bảo vệ thứ hạng khi API ngoài bị nghẽn.
+- **Cinema Hub:** Kích hoạt ký kết đối tác triển khai Pilot Off-Page SEO và tuyển dụng nhân sự CTV đồng hành.
+- **Financial Hub:** BU Bank nghiệm thu UI/UX trang chi tiết 35 Ngân hàng trước ngày 30/10; Finhub cung cấp API NAV Quỹ mở.
+- **Vehicle Hub:** Thẩm định bộ dữ liệu 41 hãng xe, hoàn thiện trang Nộp Phạt CSGT trực tuyến và tích hợp danh sách Trụ sở Công an.
+- **Insurtech Hub:** Đưa Trang chủ Bảo hiểm mới (`/bao-hiem`) và công cụ tra cứu BHYT lên Production.
+- **New User Hub:** Đưa trang tải App `/tai-app` go-live chính thức; cấu hình `/download` để điều hướng Desktop sang `/tai-app`.
+- **Cinema Hub:** Ra mắt mini game phim *Bò Sữa Bay* bổ sung bảng xếp hạng tích điểm.
+- **Financial Hub:** Nhúng Quiz CIC vào 10 bài blog tài chính có traffic cao nhất để dẫn luồng kiểm tra điểm tín dụng về App.
+- **Financial Hub:** Duy trì tiến độ sản xuất nội dung chuyên sâu Financial Hub đạt 5 bài/ngày.
+- **Vehicle Hub:** Xây dựng công cụ Tính khấu chi cho chủ sở hữu ô tô và Mega Menu điều hướng cho toàn bộ Vehicle Hub.
+- **Lottery Hub:** Giám sát hệ thống cập nhật kết quả xổ số vào hai khung giờ cao điểm (16h30 và 18h00).
+- **Digital Services:** Hoàn thiện kịch bản thanh toán cho dịch vụ ChatGPT và tối ưu giao diện nạp thẻ game trên mobile.
 
 ### 2. Platform Projects
-- **[P0] AI Platform:** Tích hợp mô hình Qwen 3.5 vào module MoMo AI trên Financial Hub và pipeline dữ liệu phân tích biến động tự động.
-- **[P0] Data & Platform:** Triển khai kịch bản tạo bảng `tblWebsiteUrlCatalog` trên Staging và kết nối thử nghiệm nguồn dữ liệu từ CMS.
-- **[P0] CMS Platform:** Đưa các component Thẻ Coupon và Mockup hướng dẫn từng bước vào vận hành bài viết Webview In-App cho nhánh BMC.
-- **[P1] MoSpark Core:** Đưa tính năng phân loại bài viết, hạn mức xuất bản và giao diện duyệt dàn ý của MoSpark lên Production.
-- **[P1] MoBase:** Mở rộng thanh điều hướng 2 tầng sang Cinema Hub và Vehicle Hub; đóng gói tài liệu component Bảng giá.
-- **[P1] Search Platform:** Theo dõi hiệu năng, tỷ lệ CTR vào Thẻ chuyển tiền và hành vi tìm kiếm thực tế trên `/tim-kiem` sau đợt go-live Phase 1.
-- **[P1] Content Platform:** Triển khai các tính năng mới của Blog Editor (Key Takeaway, quản lý keyword, hình ảnh) và luồng PLG trên MoSpark.
+- **AI Platform:** Tích hợp mô hình Qwen 3.5 vào module MoMo AI trên Financial Hub và pipeline dữ liệu phân tích biến động tự động.
+- **Data & Platform:** Triển khai kịch bản tạo bảng `tblWebsiteUrlCatalog` trên Staging và kết nối thử nghiệm nguồn dữ liệu từ CMS.
+- **CMS Platform:** Đưa các component Thẻ Coupon và Mockup hướng dẫn từng bước vào vận hành bài viết Webview In-App cho nhánh BMC.
+- **MoSpark Core:** Đưa tính năng phân loại bài viết, hạn mức xuất bản và giao diện duyệt dàn ý của MoSpark lên Production.
+- **MoBase:** Mở rộng thanh điều hướng 2 tầng sang Cinema Hub và Vehicle Hub; đóng gói tài liệu component Bảng giá.
+- **Search Platform:** Theo dõi hiệu năng, tỷ lệ CTR vào Thẻ chuyển tiền và hành vi tìm kiếm thực tế trên `/tim-kiem` sau đợt go-live Phase 1.
+- **Content Platform:** Triển khai các tính năng mới của Blog Editor (Key Takeaway, quản lý keyword, hình ảnh) và luồng PLG trên MoSpark.

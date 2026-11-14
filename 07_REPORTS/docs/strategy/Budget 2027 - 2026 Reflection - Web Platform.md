@@ -1,174 +1,312 @@
-# BÁO CÁO KẾ HOẠCH NĂM 2027 & 2026 REFLECTION - WEB PLATFORM
-**Đơn Vị Quản Trị:** Web Platform & Nhóm Out-App Traffic (Khối Tăng Trưởng Sản Phẩm - GPD)
+# 2026 REFLECTION & 2027 DIRECTION - WEB PLATFORM
+
+**Đơn vị thực hiện:** Web Platform & Out-App Traffic Team
+**Thời điểm:** Tháng 11/2026
+**Nguồn số liệu:** Reflection 2026 & 2027 Direction (bản gốc), Budget Plan Web Platform (Tab `2027_Proposal`, `2027_Target`), GA4 (Property 270743103), báo cáo BU 10 tháng 2026
+**Quy ước số:** Dấu chấm phân cách hàng nghìn, dấu phẩy phân cách thập phân (ví dụ: 1.995.800.000 đ = 1,996 tỷ đ; 40,69M PV = 40,69 triệu PV)
 
 ---
 
-## PHẦN 1: REFLECTION 2026 (ĐÁNH GIÁ HIỆU QUẢ, SÁNG KIẾN & BÀI HỌC KINH NGHIỆM)
+## TÓM TẮT ĐIỀU HÀNH
 
-### 1. Đánh Giá Hiệu Quả Hoạt Động Năm 2026
+### Web Platform đã chuyển từ đội kỹ thuật thực thi sang Growth Unit dùng chung; 2027 cần đầu tư 1,996 tỷ đ để biến lưu lượng Organic thành kết quả kinh doanh đo được
 
-- **Bối cảnh của Web Platform (Cơ cấu nhân sự, Nhiệm vụ & Phạm vi trách nhiệm):**
-  - *Cơ cấu nhân sự (Headcount & Phân bổ hỗ trợ):* Đội ngũ gồm 8 - 9 nhân sự kỹ thuật chuyên trách, phân bổ theo hai phạm vi hỗ trợ song song: nhóm Nền tảng nội bộ (xây dựng công cụ quản trị, vận hành hệ thống phục vụ các đơn vị kinh doanh) và nhóm phối hợp phát triển các cổng tiện ích để tăng trưởng lưu lượng ngoài ứng dụng.
-  - *Nhiệm vụ cốt lõi (Core Tasks):*
-    1. *Cung cấp nền tảng tự phục vụ cho các khối kinh doanh:* Xây dựng hệ thống quản trị nội dung và bộ công cụ mẫu chuẩn hóa, giúp các Cell Teams trên toàn công ty chủ động tạo lập và vận hành trang nghiệp vụ mà không cần phụ thuộc đội ngũ kỹ thuật; đã hỗ trợ thành công 6 Cell Teams tự phát triển và trực tiếp đưa 13 Cell Teams lên Web ở nhiều mảng nghiệp vụ (Vé máy bay, Sim chính chủ, Bảo hiểm, Vé xe...).
-    2. *Kênh truyền thông & thông tin chính thức:* Đóng vai trò là cổng thông tin chính thức của MoMo trên không gian mạng mở, truyền tải thông tin sản phẩm, chính sách khuyến mãi và hướng dẫn sử dụng đáng tin cậy cho người dùng khi tìm kiếm ngoài ứng dụng.
-    3. *Chủ động phát triển các cổng tiện ích thu hút người dùng mới:* Trực tiếp xây dựng các chuyên trang tiện ích thường nhật (tra cứu giao thông, lịch chiếu rạp, tiện ích tài chính) nhằm đón đầu nhu cầu tìm kiếm của tệp khách hàng chưa cài đặt ứng dụng.
-    4. *Bảo đảm hạ tầng và quy chuẩn vận hành:* Chịu trách nhiệm về tính liên tục, an toàn hệ thống và hoàn thành chuyển đổi toàn bộ hạ tầng lên đám mây nội địa theo quy chuẩn chung của công ty mà không làm gián đoạn dịch vụ.
-    5. *Thiết lập phễu đo lường và chuyển tiếp Web to App:* Triển khai hệ thống theo dõi lưu lượng truy cập và tối ưu luồng dẫn dắt người dùng từ Web mở ứng dụng MoMo để giao dịch.
-  - *Phạm vi trách nhiệm & Giới hạn vai trò (Responsibilities & Role Boundaries):* Đội ngũ chịu trách nhiệm chính về tính sẵn sàng, an toàn và năng lực phục vụ của nền tảng Web cho toàn bộ các khối kinh doanh. Giới hạn xuất phát điểm là đội ngũ tập trung vào vai trò hỗ trợ và cung cấp nền tảng; chưa có vai trò Product Owner chuyên trách để chủ động nghiên cứu Search Intent của thị trường, tối ưu hóa phễu tăng trưởng kinh doanh hay chịu trách nhiệm về chỉ số P&L của từng ngành hàng.
-
-- **Vai trò và Tiềm Năng của Kênh Web (Out-App Gateway):**
-  - *Tiềm năng thu hút người dùng từ dòng tìm kiếm tự nhiên:* Không gian mạng mở ngoài Google sở hữu dung lượng tìm kiếm hàng chục triệu truy vấn mỗi tháng ở các ngành hàng trọng yếu của MoMo (tài chính, giải trí, giao thông, nạp thẻ, du lịch). Đây là nguồn thu hút người dùng mới chất lượng cao với chi phí tối ưu (Zero Paid CAC từ Organic Traffic), giúp công ty giảm phụ thuộc vào các kênh quảng cáo trả phí (Paid SEM / Install Ads) ngày càng đắt đỏ.
-  - *Lý do Kênh Web được các Khối Kinh Doanh (BUs) chủ động tìm đến:*
-    - *Vượt qua giới hạn tăng trưởng In-App:* Khi các sản phẩm trong ứng dụng dần chạm trần tăng trưởng từ tệp người dùng hiện hữu, việc mở rộng ra ngoài Web là con đường cần thiết để các BU tiếp cận tệp khách hàng hoàn toàn mới (Incremental Users).
-    - *Thừa hưởng sức mạnh tên miền `momo.vn` (Domain Authority):* Thay vì tốn kém chi phí, nhân lực kỹ thuật và mất nhiều tháng để tự làm website riêng, các BU kết nối vào `momo.vn` để ngay lập tức tận dụng uy tín thương hiệu và thứ hạng SEO cao có sẵn nhằm chiếm lĩnh vị trí tìm kiếm trên Google.
-    - *Sàng lọc khách hàng chất lượng trước khi vào App (Lead Qualification):* Công cụ tính toán và dùng thử ngoài Web giúp người dùng tự lượng định nhu cầu trước khi nộp hồ sơ (như tính lãi suất vay, dự toán hạn mức, kiểm tra lỗi vi phạm), từ đó nâng cao tỷ lệ duyệt và giảm thiểu tỷ lệ rớt phễu In-App cho các BU.
-  - *Cơ chế chuyển đổi tự nhiên sang App (Web to App):* Người dùng sau khi giải quyết xong bước tra cứu hoặc tính toán ban đầu trên trình duyệt sẽ được dẫn dắt chuyển tiếp vào ứng dụng để hoàn tất giao dịch với chi phí thu hút tối ưu.
-
-- **Định vị Horizon Platform: Trục diện ngang phục vụ đa Khối Kinh Doanh (thay vì Vertical BU):**
-  - Khác biệt căn bản với các Khối Kinh Doanh ngành dọc (Vertical BUs như Tài Chính, Điện Ảnh, Giao Thông, Bảo Hiểm, Du Lịch... vốn chỉ tập trung vào một dải sản phẩm chuyên biệt và tối ưu doanh thu riêng của ngành), Web Platform là nền tảng diện ngang (Horizon Platform) duy nhất của MoMo trên không gian mạng mở.
-  - Web Platform đóng vai trò là trục hạ tầng và chuẩn hóa công nghệ tập trung. Các BU cần tạo nhanh landing page hoặc mini web phục vụ chiến dịch Comm có thể xuất bản trên `momo.vn` trong **24 - 48 giờ** thông qua MoSpark CMS mà không cần duy trì đội kỹ thuật riêng.
-
-- **Sự dịch chuyển chiến lược năm 2026: Chuyển hóa tư duy từ Kỹ thuật sang Tăng trưởng (Tech to Growth) & Định hướng PLG:**
-  - *Chuyển hóa tư duy đội ngũ từ Kỹ thuật sang Tăng trưởng (From Tech to Growth Mindset):* Đội ngũ Web Platform chuyển dịch từ vai trò kỹ thuật thụ động (chỉ nhận ticket dựng trang, bảo trì hệ thống) sang chủ động làm chủ bài toán tăng trưởng kinh doanh. Mọi nỗ lực công nghệ và hạ tầng đều gắn chặt với các chỉ số hiệu quả rõ ràng: Search Intent của thị trường, tỷ lệ chuyển tiếp Web to App (W2A CR), số lượng cài đặt mới (New Installs) và đóng góp chuyển đổi thực chất cho từng BU.
-  - *Tích hợp năng lực Sản phẩm & Chuyển dịch sang mô hình PLG (Product-Led Growth):* Tháng 6/2026, với sự bổ sung 2 nhân sự sản phẩm (1 Web Product Lead và 1 Product Marketing) trực thuộc GPD, Web Platform thay đổi bản chất sản phẩm: dừng sản xuất bài viết cẩm nang tĩnh, chuyển sang đóng gói Use Cases thành các bộ công cụ tiện ích tương tác trực tiếp trên trình duyệt (tính lịch trả nợ vay, mô phỏng tài chính, lịch chiếu rạp, kiểm tra vi phạm). Người dùng nhận được giá trị giải quyết nhu cầu ngay trên Web trước khi quyết định tải App.
-  - *Bản chất kinh doanh (Out-App Top-of-Funnel Engine):* Web không vận hành mô hình doanh thu độc lập (không thu phí thuê bao, không bán quảng cáo); 100% giá trị kinh tế (eKYC, liên kết ngân hàng, giải ngân vay, phát hành bảo hiểm, thanh toán vé rạp) đều hoàn tất In-App. Kênh Web đóng vai trò là động cơ mở rộng phễu: tiếp nhận nhu cầu ngoài Google -> lọc và tạo giá trị tương tác -> chuyển tiếp người dùng vào App để các BU chốt giao dịch.
-
-- **Kết quả kinh doanh và dữ liệu chứng minh hiệu quả thực tế (T1 - T8/2026):**
-  - *Quy mô lưu lượng (Top-of-Funnel):* Lũy kế 8 tháng đạt **25.308.310 Pageviews (PV)**, bình quân ~3.16M PV/tháng (T8 đạt đỉnh 3.465.363 PV); mục tiêu cả năm đạt **40.297.057 PV**. Cơ cấu nguồn truy cập: **Organic Search chiếm 50% (~20.2M PV)**; Direct chiếm 20% (~8.0M PV); Referral & AI Citations chiếm 10% (~4.0M PV); Social chiếm 8% (~3.2M PV); Paid SEM chiếm 12% (~4.9M PV). Lượng tìm kiếm tự nhiên bền vững giúp MoMo bao phủ các vị trí tìm kiếm trọng yếu và tiết kiệm trực tiếp ngân sách Paid SEM.
-
-#### Bảng Theo Dõi Hiệu Suất Lưu Lượng Web T1 - T12 & Lộ Trình Mục Tiêu Năm 2026
-
-| Chỉ Số Đo Lường | T1 | T2 | T3 | T4 | T5 | T6 | T7 | T8 (Chốt) | T9 (Hiện Tại) | T10 (Target) | T11 (Target) | T12 (Target) | Tổng Cả Năm 2026 |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Phân Loại** | Thực tế | Thực tế | Thực tế | Thực tế | Thực tế | Thực tế | Thực tế | Thực tế | **MTD / Kế Hoạch** | Kế hoạch | Kế hoạch | Kế hoạch | **Full Year Target** |
-| **Lưu Lượng (Pageviews)** | 2.601.280 | 3.470.470 | 3.221.705 | 2.699.883 | 3.273.610 | 3.408.178 | 3.167.821 | 3.465.363 | **300k / 3.51M** | 3.665.607 | 3.829.155 | 4.000.000 | **40.297.057** |
-| **Biến Động (Net Add)** | Baseline | +869.190 | -248.765 | -521.822 | +573.727 | +134.568 | -240.357 | +297.542 | **+149.876** | +156.563 | +163.548 | +170.845 | **TB: 3.358.088 / th** |
-| **Tốc Độ Tăng Trưởng (MoM %)** | - | +33.41% | -7.17% | -16.20% | +21.22% | +4.11% | -7.05% | +9.39% | **+4.46%** | +4.46% | +4.46% | +4.46% | **Kịch bản 4M** |
-
-  - *Đột phá thu hút người dùng mới (New User Acquisition):* Lượng cài đặt mới (New Installs) tăng trưởng gấp gần 6 lần từ 1.737 (T5) lên **10.058 Installs trong Tháng 8** (gói chào mừng CHAOMOMO đóng góp 86.55%). Phễu chuyển đổi Tháng 8 ghi nhận: **3.228 lượt đăng ký tài khoản (REG - CR 34.71%)** -> **1.806 lượt liên kết ngân hàng (Map Bank - CR 55.95%)** -> **1.012 MAU phát sinh giao dịch thực tế**. Đáng chú ý, chất lượng tệp người dùng Web rất cao với tỷ lệ Map Bank/Reg trên iOS đạt **70.94%**.
-  - *Kích hoạt người dùng hiện hữu (App Re-engagement):* Tạo ra trung bình **220.000 - 251.800 lượt đăng nhập lại ứng dụng mỗi tháng** (Tháng 8 đạt 251.800 Login App qua Agent ID) thông qua các tiện ích tra cứu thường nhật, kéo người dùng cũ quay lại App khi phát sinh nhu cầu ngoài trình duyệt.
-
-- **Đóng góp giá trị thương mại cụ thể cho các Khối Kinh Doanh (BUs):**
-  - *Movies BU (Cinema Hub):* Chiếm 23% - 24% tổng lưu lượng toàn Web. H1/2026 đạt **4.035.028 PV**, ghi nhận **870.467 Booking Clicks**, chuyển tiếp **38.079 W2A Users**, phát sinh **48.830 giao dịch** và trực tiếp bán **107.146 vé xem phim**; tỷ lệ chuyển tiếp Web to App (W2A CR) đạt **4.37%**. Q3 duy trì ổn định 810.000 - 840.000 PV/tháng.
-  - *Financial Services BU (FinHub):* Hoàn thiện Foundation tích hợp bộ công cụ tài chính (tính lịch trả nợ Vay Nhanh, mô phỏng điểm CIC, tính lãi tiết kiệm, theo dõi tỷ giá và giá vàng). Lưu lượng toàn hub đạt **125.000 - 160.000 PV/tháng** (T8 đạt 159.027 PV). Điểm sáng là công cụ Mô phỏng CIC tăng gấp 7 lần từ 7.894 (T5) lên **55.110 PV (T8)**; Vay Nhanh duy trì **65.000 - 85.000 PV/tháng**, đóng vai trò phễu sàng lọc nhu cầu trước khi người dùng nộp hồ sơ In-App.
-  - *VTTI & InsurTech BU (Vehicle Hub):* Thiết lập cổng tiện ích toàn diện cho phương tiện (giá xăng, trạm sạc EV, garage cứu hộ, tài khoản thu phí ePass, bảo hiểm ô tô và xe máy); trong đó tiện ích tra cứu vi phạm giao thông đóng vai trò động lực thu hút lưu lượng bước đầu, đạt **155.000 - 214.000 PV/tháng** tự nhiên (T6 đạt đỉnh 573.611 PV khi có SEM). Phân luồng sang Bảo hiểm ô tô đạt ~13.000 PV/tháng và Bảo hiểm xe máy đạt ~7.000 PV/tháng; hoàn thiện nền tảng dữ liệu phục vụ quản lý toàn diện vòng đời phương tiện.
-  - *Telco & Utilities BU:* Cụm trang Nạp Xu TikTok đạt Top 2 Google Search (**45.000 - 52.000 PV/tháng**), điều hướng người dùng mở App MoMo để hoàn tất thanh toán với chi phí Paid SEM bằng 0.
-  - *Travel & OTA BU:* Tiếp nhận nhu cầu tra cứu tuyến đường và vé xe liên tỉnh ngoài Web, điều hướng vào phễu đặt vé xe khách In-App.
-  - *Student Hub & Division BMC:* Student Hub hoàn thành nền tảng phủ 75+ trường đại học (~45.000 PV đợt Back to School); MoSpark CMS và Widget Ví Trả Sau hỗ trợ Media Team duy trì **54% Share of Voice** mảng Trả Sau và bảo đảm hạ tầng cho các chiến dịch thương hiệu lớn toàn công ty (Lắc Xì, Mega Summer).
-
-### 2. Các Sáng Kiến Trọng Tâm Đã Triển Khai
-- **Xây dựng bộ công cụ tiện ích tài chính (Financial Utilities - FinHub):**
-  - Đóng gói Use Cases tài chính thành các công cụ tương tác trực tiếp trên trình duyệt: bộ tính lịch trả nợ vay tiêu dùng (Vay Nhanh), công cụ mô phỏng điểm tín dụng cá nhân CIC, công cụ tính lãi tiết kiệm, bảng theo dõi tỷ giá ngoại tệ và giá vàng thời gian thực.
-  - Tạo cơ chế trải nghiệm trước cài đặt (Try-Before-Install) và minh bạch biểu phí, giúp người dùng tự sàng lọc điều kiện trước khi nộp hồ sơ. Đưa lưu lượng toàn hub đạt gần **160.000 PV/tháng (T8)**; trong đó công cụ mô phỏng CIC tăng trưởng gấp 7 lần (từ 7.894 lên **55.110 PV**), tạo tiền đề vững chắc cho chiến lược PLG mảng tài chính.
-- **Chuỗi sản xuất nội dung GenAI & Nền tảng tự phục vụ MoSpark (GenAI Content Pipeline & MoSpark CMS):**
-  - Tự động hóa tới 80% quy trình sản xuất nội dung chuẩn SEO/GEO (từ nghiên cứu từ khóa, xây dựng cấu trúc dàn ý E-E-A-T, đến xuất bản bài viết có tự động nhúng widget tương tác).
-  - Chuẩn hóa quy trình vận hành tự phục vụ (Self-serve) cho Media Team, Content Team và Out-App Traffic; rút ngắn thời gian đưa sản phẩm và nội dung chuẩn SEO lên Web từ hàng tuần xuống chỉ còn **1 - 2 ngày**, giải phóng tối đa sự phụ thuộc vào đội ngũ kỹ sư.
-- **MoLanding - Xây dựng Landing Page chỉ với vài bước thiết lập (Fast Landing Page Builder):**
-  - Phát triển giải pháp tạo trang đích tự phục vụ cho các BU và Marketing Team. Cho phép xuất bản nhanh các landing page, mini web phục vụ các chiến dịch truyền thông lớn (Mega Summer, Lắc Xì, Trust Campaign) trên tên miền `momo.vn`.
-  - Tích hợp sẵn thư viện giao diện chuẩn hóa MoBase, rút ngắn thời gian triển khai xuống chỉ còn **24 - 48 giờ** chỉ qua vài bước cấu hình mà không cần can thiệp kỹ thuật thủ công, đồng thời bảo đảm 100% chuẩn nhận diện thương hiệu và đo lường chuyển đổi Web to App.
-- **Thiết lập nhanh chóng hạ tầng nền tảng (Foundation) cho các Hub chuyên ngành:**
-  - *Vehicle Hub:* Xây dựng Master Gateway Cổng Tiện Ích Giao Thông (`momo.vn/tien-ich-giao-thong`) tích hợp hệ sinh thái dịch vụ đa tầng cho chủ xe (tra cứu giá xăng dầu, bản đồ trạm sạc EV, mạng lưới garage cứu hộ, dịch vụ thu phí ePass, bảo hiểm xe máy và ô tô); trong đó phễu tra cứu vi phạm giao thông bước đầu đạt lưu lượng tự nhiên **155.000 - 214.000 PV/tháng** (đỉnh 573.611 PV), thiết lập hoàn chỉnh hạ tầng kết nối dữ liệu phục vụ định danh Thẻ Xe Số và quản trị vòng đời phương tiện trên ứng dụng.
-  - *Student Hub:* Xây dựng chuyên trang Student Pass liên kết hơn **75 trường đại học** trên toàn quốc, phục vụ đợt cao điểm Back to School (~45.000 PV trong Tháng 8) và tạo phễu tiếp cận thế hệ người dùng trẻ.
-  - *Merchant Hub:* Hoàn thiện cổng thông tin giải pháp dành cho đối tác doanh nghiệp; đồng thời cung cấp cơ chế tự phục vụ (Self-serve) trên MoSpark CMS để đội ngũ Bán hàng (Salesforce) chủ động tạo các trang đối tác (Merchant Pages) hỗ trợ nhân viên kinh doanh (Salesmen) tiếp cận và ký kết với nhà bán hàng nhanh chóng mà không cần can thiệp kỹ thuật.
-- **Tối ưu hóa phễu chuyển đổi Web to App (W2A Funnel):** Thử nghiệm thành công hệ thống hiển thị banner ngữ cảnh (Contextual Ads) trên di động, kết hợp cơ chế liên kết đo lường AppsFlyer OneLink để theo dõi và tối ưu tỷ lệ chuyển tiếp từ người đọc trên Web thành người dùng cài đặt ứng dụng mới (New User Installs).
-
-### 3. Đúc Kết Bài Học Kinh Nghiệm (Cơ Sở Cho Kế Hoạch 2027)
-- **Bài học về trả giá cho sự phân mảnh hệ thống và gánh nặng nội dung rác (Bảo vệ sức khỏe Web & Tối ưu Crawl Budget):**
-  - *Thực trạng phân mảnh và lãng phí tài nguyên thu thập:* Đây là bài học quan trọng nhất để bảo vệ sức khỏe tổng thể của website `momo.vn`. Trước đây, các dịch vụ tài chính tồn tại dưới dạng hơn 11 landing page độc lập (`/tiet-kiem-online`, `/vay-nhanh`, `/vi-tra-sau`...), làm phân tán sức mạnh chỉ số uy tín tên miền (Domain Authority) và thiếu tính liên kết; đồng thời mảng Phim từng tích tụ tới 959 URL rác (các trang review phim hết hạn chiếu, không còn lưu lượng) gây lãng phí nghiêm trọng ngân sách thu thập dữ liệu (Crawl Budget) của Google và làm suy giảm thứ hạng tổng thể.
-  - *Đúc kết:* Bắt buộc chuyển dịch toàn diện sang mô hình Master Hubs tập trung (FinHub, Vehicle Hub, Cinema Hub) trên hạ tầng MoSpark; thiết lập quy chế kỹ thuật tự động hóa để rà soát vòng đời nội dung (tự động áp dụng thẻ Noindex cho các trang phim và lịch chiếu hết hạn, chuẩn hóa cấu trúc canonical) nhằm giữ gìn độ tinh gọn, tập trung sức mạnh SEO và bảo vệ tối đa sức khỏe website.
-- **Bài học về điểm nghẽn đồng bộ tiến độ và phối hợp liên phòng ban (End-to-End Handshake giữa Web Platform và Cell Teams):**
-  - *Thực trạng chậm trễ thông tin từ các dự án phối hợp:* Tại các dự án Web Platform tham gia hỗ trợ cùng Cell Teams của các Khối Kinh Doanh (Cinema, FinHub, InsurTech), kênh Web thường xuyên rơi vào thế bị động do thiếu sự chia sẻ kế hoạch từ sớm. Điển hình như: Web Platform chưa được thông báo trước danh mục các bộ phim bom tấn sắp ra mắt để kịp thời nghiên cứu từ khóa, xây dựng kế hoạch nội dung SEO và xuất bản landing page đón đầu điểm rơi tìm kiếm tự nhiên trước ngày công chiếu; hoặc khi các sản phẩm tài chính (Vay Nhanh, Tiết Kiệm, Ví Trả Sau) có sự thay đổi chính sách từ ngân hàng và đối tác, Web không được cập nhật trước để kịp thời tinh chỉnh công cụ tính toán và nội dung hướng dẫn tương ứng, gây lỡ nhịp tiếp cận người dùng.
-  - *Đúc kết:* Không thể vận hành kênh Web độc lập với lộ trình sản phẩm In-App. Cần thiết lập cơ chế phối hợp chủ động và cam kết tiến độ liên phòng ban (Check-in định kỳ ngày 15 và 30 hàng tháng); yêu cầu Cell Teams chia sẻ lộ trình phát hành phim mới và kế hoạch cập nhật tính năng, chính sách tài chính trước tối thiểu 2 - 4 tuần để Web Platform chủ động lên kế hoạch nội dung, tối ưu SEO On-page/Off-page và chuẩn bị hạ tầng đón trọn điểm rơi lưu lượng.
-- **Bài học về rào cản rớt phễu (>90%) do bắt buộc cài App:**
-  - Người dùng trên Web tìm kiếm giải pháp xử lý nhanh. Việc yêu cầu bắt buộc cài đặt ứng dụng MoMo ngay khi chọn mua vé rạp hoặc dịch vụ bảo hiểm khiến tỷ lệ bỏ dở phễu lên tới trên 90%.
-  - *Đúc kết:* Cần đa dạng hóa giải pháp chuyển đổi linh hoạt ngoài trình duyệt, đặc biệt là cơ chế thanh toán quét mã QR trực tiếp ngoài Web không ép tải App, tạo trải nghiệm mượt mà trước khi chuyển hóa thành khách hàng trung thành In-App.
-- **Bài học ứng phó với làn sóng tìm kiếm AI (Zero-Click Searches):**
-  - Google AI Overviews và các công cụ AI (ChatGPT, Perplexity) tự trích xuất câu trả lời trực tiếp trên trang tìm kiếm, làm sụt giảm 15% - 20% lượng click vào các bài viết cẩm nang lý thuyết tĩnh thông thường.
-  - *Đúc kết:* Web Platform bắt buộc phải chấm dứt việc sản xuất nội dung bài viết chung chung; chuyển toàn bộ nguồn lực sang phát triển công cụ tính toán tương tác và cơ sở dữ liệu thời gian thực mà AI không thể thay thế.
+- **Năm 2026:** Hạ tầng, CMS và tracking đã vận hành ổn định. Cinema Hub, Financial Hub và Vehicle Hub đã tạo lưu lượng thực tế. Cinema ghi nhận 174.094 vé và khoảng 16,41 tỷ đ GMV trong 10 tháng.
+- **Vấn đề lớn nhất:** Organic giảm 7,8% trong T8/2026 trong khi Paid và Direct tăng. Tăng trưởng chưa bền vững, và Financial Hub chưa đo được chuyển đổi đầu cuối.
+- **Đề nghị 2027:** Phê duyệt 1,996 tỷ đ cho 3 dự án. Financial Hub giải ngân 2 đợt theo KPI. Mục tiêu 63,49M PV toàn Website, tương đương +56% so với 2026.
 
 ---
 
-## PHẦN 2: DIRECTION 2027 (NHẬN ĐỊNH CỐT LÕI, ĐỊNH HƯỚNG & KẾ HOẠCH HÀNH ĐỘNG)
+## PHẦN 1: REFLECTION 2026
 
-### 1. Mô Hình Vận Hành & Trọng Tâm Thực Thi Năm 2027
-- **Phân công trách nhiệm 3 bên:**
-  - *Out-App Traffic (Đầu não tăng trưởng):* Dẫn dắt chiến lược tăng trưởng ngoài App; nghiên cứu Search Intent, quy hoạch sitemap tập trung vào 4 Master Hubs, phân bổ tài nguyên nền tảng và thiết kế phễu chuyển đổi phù hợp cho từng Use Case.
-  - *Web Platform (Nền tảng và sản phẩm):* Xây dựng hạ tầng kỹ thuật, CMS MoSpark, thư viện MoBase và phát triển các tiện ích tương tác theo định hướng của Out-App Traffic; bảo đảm tốc độ tải trang di động siêu tốc và an ninh hệ thống.
-  - *Cell Teams / BUs (Khối kinh doanh):* Làm chủ mô hình kinh doanh (P&L), bảo đảm tuân thủ pháp lý và xử lý giao dịch chuyên sâu In-App.
+### 1.1. Vai trò và 3 tầng giá trị
 
-- **3 Tiền đề cốt lõi kế thừa từ thực tế 2026:**
-  1. *Thu hút người dùng mới thực chất:* Kênh Web trực tiếp chuyển đổi tệp người dùng mới chất lượng cao ngoài App (T8 đạt 10.058 Installs, tỷ lệ liên kết ngân hàng trên iOS đạt 70.94%).
-  2. *Nội dung động kết hợp tiện ích tương tác:* Thay thế bài viết tĩnh bằng công cụ tính toán và cơ sở dữ liệu thời gian thực, giúp người dùng giải quyết nhu cầu ngay trên Web trước khi tải App.
-  3. *Bảo vệ sức khỏe website tập trung:* Tự động dọn rác, noindex nội dung hết hạn, kiểm soát Crawl Budget và tập trung toàn bộ Domain Authority vào 4 Master Hubs để chống phân tán.
+Web Platform phụ trách nền tảng công nghệ dùng chung (Shared Platform) cho Web MoMo. Đội ngũ phối hợp với ITC để cung cấp hạ tầng, thư viện, công cụ và quy trình, phục vụ các Mini Web trên momo.vn của Cell Teams, BUs và Division.
 
-- **Nguyên tắc điều phối Use Cases chống phân tán:**
-  - *Tiện ích nhanh (Vé rạp, nạp thẻ, giá xăng):* Tối ưu SEO/GEO, hỗ trợ thanh toán QR trực tiếp ngoài Web không ép tải app để giảm rớt phễu.
-  - *Dịch vụ phức tạp (Tài chính, bảo hiểm):* Cung cấp công cụ tính toán dùng thử giúp người dùng minh bạch chi phí trước khi nộp hồ sơ In-App.
-  - *Bán chéo hệ sinh thái:* Điều phối dòng chảy tự nhiên giữa các Hub (xe sang bảo hiểm, rạp sang phim trực tuyến) nhằm tối đa hóa giá trị vòng đời khách hàng (LTV).
+Web Platform tạo giá trị ở 3 tầng:
 
-### 2. Các Trụ Cột Chiến Lược Năm 2027
+- **Tầng MoMo:** Xây dựng Content Authority cho các Theme theo User Journey, để Google Search và AI Chatbot (ChatGPT, Gemini, Perplexity) trích dẫn MoMo là nguồn uy tín. Từ đó chuyển thị trường chưa được phục vụ thành lưu lượng chất lượng cao vào các Mini Web.
+- **Tầng User:** Thay vì nội dung tĩnh, Web Platform xây dựng Utility Tools giải quyết nhu cầu cụ thể trong quá trình tìm kiếm, tạo giá trị thực để tăng tỷ lệ chuyển đổi sang App.
+- **Tầng BUs:** Web Platform đóng vai trò Platform-as-a-Service nội bộ: tư vấn giải pháp, cung cấp nền tảng, đồng hành phát triển các dự án chiến lược theo chuẩn Product-Led Growth.
 
-1. **Dịch Vụ Tài Chính (FinHub):**
-   - *Định vị 2027:* Cổng tài chính cá nhân ngoài ứng dụng vận hành theo mô hình dùng thử trước cài đặt và minh bạch biểu phí, phá vỡ rào cản e ngại của người dùng trước khi chuyển tiếp vào App.
-   - *Trọng tâm thực thi:*
-     - *Tập trung hóa cổng tài chính:* Hợp nhất toàn bộ các chuyên trang tài chính về `momo.vn/tai-chinh` để tối đa hóa uy tín tên miền; chuẩn hóa nội dung theo quy chuẩn kiểm duyệt tài chính khắt khe nhằm giành lại thị phần tìm kiếm từ đối thủ.
-     - *Công cụ tính toán và mô phỏng:* Thay thế bài viết lý thuyết bằng các công cụ tính toán thời gian thực (ước tính lịch trả nợ, mô phỏng hạn mức tín dụng cá nhân, so sánh lãi suất tiền gửi và cập nhật giá vàng 24/7); giúp người dùng lượng hóa phương án tài chính trước khi nộp hồ sơ.
-     - *Sàng lọc hồ sơ từ đầu phễu:* Cho phép người dùng tự kiểm tra điều kiện ngoài Web trước khi mở App, giúp FS BU nâng cao tỷ lệ duyệt hồ sơ thực tế của đối tác, giảm thiểu tỷ lệ rớt hồ sơ và thúc đẩy giao dịch đầu tiên.
+**Hai mô hình phục vụ:**
 
-2. **Điện Ảnh & Giải Trí (Cinema & OTT):**
-   - *Định vị 2027:* Mở rộng từ rạp phim sang cổng giải trí màn hình toàn diện (phim rạp và phim trực tuyến), chiếm lĩnh vị thế tìm kiếm nội dung giải trí tại Việt Nam.
-   - *Trọng tâm thực thi:*
-     - *Thống lĩnh mảng phim rạp:* Duy trì thứ hạng Top đầu tìm kiếm tự nhiên cho các phim chiếu rạp và mở rộng định dạng lịch chiếu rạp theo từng địa phương.
-     - *Mở rộng sang phim trực tuyến:* Xây dựng phễu tìm kiếm nội dung cho các nền tảng OTT lớn (Netflix, Galaxy Play, FPT Play), dẫn dắt đăng ký và gia hạn gói qua MoMo.
-     - *Tự động hóa sản xuất nội dung:* Tự động hóa sản xuất nội dung đánh giá phim, lịch chiếu và trailer thông qua chuỗi sản xuất trên MoSpark.
+- **Mô hình 1, CMS tự phục vụ (BUs Self-serve):** Phối hợp với BMC xây dựng công cụ Admin Panel cho BU tự tạo, chỉnh sửa và xuất bản Web Page. Mục tiêu H2/2026 là giảm việc thủ công lặp lại của cả hai bên.
+- **Mô hình 2, Phát triển trực tiếp (Dedicated Build):** Đồng hành với Cell Teams phát triển các Web Product có UI/UX và nghiệp vụ riêng, tuân thủ Mobase Design System. Tùy năng lực từng Cell Team, Web Platform tham gia theo 3 hình thức: tư vấn, đồng hành phát triển, hoặc chuyển giao để Cell Team tự vận hành. Điển hình là Cinema Hub, Vehicle Hub, Financial Hub và Student Hub.
 
-3. **Tiện Ích Giao Thông (Vehicle Hub):**
-   - *Định vị 2027:* Dẫn dắt toàn bộ nhu cầu tra cứu và giao dịch phương tiện ngoài Web, chuyển tiếp người dùng vào App để giao dịch và kích hoạt tính năng Thêm Phương Tiện.
-   - *Trọng tâm thực thi:*
-     - *Tăng trưởng lưu lượng tự nhiên:* Bao phủ nhu cầu thường nhật của chủ xe (giá xăng, trạm sạc điện, tra cứu biển số, tìm garage) để tăng lượt xem và tỷ lệ quay lại.
-     - *Phân phối bảo hiểm theo ngữ cảnh:* Gợi ý bảo hiểm bắt buộc xe máy và ô tô gắn liền với vòng đời xe (hết hạn, đăng kiểm, nộp phạt).
-     - *Thúc đẩy nộp phạt và thu phí tự động:* Chuyển tiếp nhu cầu tra cứu vi phạm sang luồng nộp phạt In-App; khai thác dịch vụ thu phí không dừng ePass và Vietmap để tạo giao dịch định kỳ.
-     - *Kích hoạt hồ sơ xe trong App:* Dẫn dắt người dùng sau khi tra cứu trên Web mở App để thêm xe, tạo dữ liệu phục vụ gợi ý dịch vụ cá nhân hóa.
+**Giá trị kinh tế:** Thay vì mỗi Cell Team tự duy trì đội kỹ thuật Web và tên miền riêng, tất cả kết nối vào momo.vn để thừa hưởng uy tín thương hiệu, Domain Authority và hạ tầng đã chuẩn hóa.
 
-4. **Thanh Toán Số & Tiện Ích Đời Sống:**
-   - *Định vị 2027:* Nhân rộng bài học thành công từ Nạp Xu TikTok (chiếm Top đầu tìm kiếm tự nhiên -> đón lưu lượng đại chúng -> chuyển tiếp thanh toán) sang 4 nhóm sản phẩm tương đương.
-   - *Trọng tâm thực thi:*
-     - *Nạp game và thẻ giải trí:* Tệp người chơi game có nhu cầu nạp định kỳ, tần suất cao, chuyển tiếp giao dịch nhanh.
-     - *Xổ số Vietlott:* Khai thác dung lượng tìm kiếm kết quả xổ số hàng ngày, dẫn dắt vào luồng mua vé số hợp pháp In-App.
-     - *Dịch vụ công và thuế:* Tra cứu mã số thuế cá nhân, hỗ trợ quyết toán thuế TNCN và nộp phạt hành chính cho tệp người dùng có thu nhập.
-     - *Vé xe và du lịch:* Xây dựng phễu tìm kiếm vé xe khách, vé tàu và tour ngắn ngày, chuyển tiếp đặt vé qua MoMo.
+**Chuyển dịch chiến lược 2026:** Từ đội kỹ thuật nhận yêu cầu và thực thi, Web Platform trở thành Platform-powered Growth Unit: vận hành nền tảng dùng chung, phối hợp Out-App Traffic Team thiết kế giải pháp PLG, và cùng Cell Teams tạo tác động kinh doanh đo được trên kênh Web.
 
-5. **Nền Tảng Kích Hoạt, Cá Nhân Hóa & Đeo Bám Ý Định (Phantom Engine):**
-   - *Định vị:* Trục công nghệ diện ngang kết nối trải nghiệm Web-to-App cho toàn bộ các Hubs; chuyển đổi trang chủ thành cổng điều phối thông minh và bám sát khách hàng theo từng nhu cầu cụ thể.
-   - *Trọng tâm thực thi:*
-     - *Cá nhân hóa trang chủ:* Tự động hiển thị banner, cụm tiện ích và dịch vụ theo ý định tìm kiếm gần nhất (vừa xem xe cộ ưu tiên hệ sinh thái chủ xe; vừa tìm phim ưu tiên lịch chiếu rạp gần nhất) kết hợp định vị địa phương.
-     - *Định danh một chạm:* Xác thực nhanh qua Gmail hoặc mạng xã hội để lưu hồ sơ phân khúc, nhận gói quyền lợi ban đầu và triệt tiêu nguy cơ spam bot.
-     - *Cơ chế Phantom đeo bám theo ý định:* Khi người dùng phát sinh nhu cầu tìm kiếm cụ thể trên Web (tính lãi vay, tra cứu vi phạm, xem thông tin phim), hệ thống tự động đeo bám đa kênh (banner ngữ cảnh, remarketing và thông báo ngay khi mở App) cho đến khi chuyển hóa thành công giao dịch.
-     - *Chuỗi nhiệm vụ kích hoạt In-App:* Thiết kế các mốc tương tác theo phân khúc trên Web, dẫn dắt người dùng mở App để nhận thưởng và hoàn tất giao dịch đầu tiên.
+**Out-App Traffic Team:** Năng lực mở rộng của Web Platform, tập trung vào tư vấn và phối hợp có chọn lọc do nguồn lực còn mỏng.
 
-6. **Nền Tảng Tự Phục Vụ Cho Khối Kinh Doanh:**
-   - *Định vị:* Giải phóng kỹ sư khỏi việc dựng trang thủ công; trao quyền cho các BU tự sản xuất trang giáo dục và chiến dịch truyền thông trên MoSpark CMS trong 24 - 48 giờ.
-   - *Trọng tâm thực thi:*
-     - *Mẫu trang tự phục vụ:* Cung cấp sẵn các mẫu trang giáo dục sản phẩm, cẩm nang hướng dẫn và trang chiến dịch tích hợp AI để BU tự xuất bản.
-     - *Kiểm soát chuẩn xuất bản:* Thiết lập rào kiểm soát bắt buộc về tốc độ tải trang di động dưới 2 giây, chuẩn SEO và gắn mã đo lường chuyển tiếp Web-to-App.
-     - *Tự dọn trang hết hạn:* Tự động ẩn hoặc chuyển hướng các trang chiến dịch cũ về cổng chính sau khi kết thúc chương trình để bảo vệ uy tín website.
-     - *Bảo đảm chịu tải cao điểm:* Tập trung kỹ sư tối ưu bộ đệm dữ liệu và hạ tầng đám mây, bảo đảm hệ thống vận hành thông suốt khi BU chạy chiến dịch lớn.
+### 1.2. Kết quả theo Objective (đến 08/2026)
 
-### 3. Khung Mục Tiêu Tăng Trưởng Năm 2027
+**Objective 1, Strategic Themes Dominance:** Phân tích thị trường, tư vấn và hợp tác Cell Teams xây dựng Web Product theo PLG. Từ hơn 30 Theme được rà soát, Web Platform đã triển khai PLG Solution cho các dự án chiến lược trong H2/2026.
 
-| Trụ Cột Chỉ Số | Hiện Trạng 2026 | Mục Tiêu 2027 | Cơ Chế Đảm Bảo |
+**Cinema Hub.** Baseline lưu lượng lớn nhất trong 5 Strategic Hubs, và là dự án có vấn đề chuyển đổi cần xử lý sớm nhất.
+
+| Tháng | PV Cinema Hub | Vé | Đơn hàng | GMV thực thu (tỷ đ) |
+| :--- | :---: | :---: | :---: | :---: |
+| T1/2026 | 581.349 | 12.643 | 5.889 | 1,21 |
+| T2/2026 (Tết) | 1.044.429 | 28.379 | 12.432 | 2,55 |
+| T3/2026 | 759.142 | 20.600 | 9.881 | 2,03 |
+| T4/2026 | 851.919 | 18.730 | 8.221 | 1,69 |
+| T5/2026 | 994.719 | 12.561 | 5.777 | 1,18 |
+| T6/2026 | 859.183 | 19.444 | 9.055 | 1,86 |
+| T7/2026 | 822.859 | 5.211 | 2.425 | 0,50 |
+| T8/2026 | 832.460 | 8.754 | 4.016 | 0,82 |
+| T9/2026 | 1.117.378 | 20.983 | 9.807 | 2,01 |
+| T10/2026 | 1.132.721 | 26.789 | 12.547 | 2,57 |
+| **Lũy kế 10 tháng** | **8.996.159** | **174.094** | **80.050** | **16,41** |
+
+- Nguồn: PV T1-T4 từ Báo cáo tháng 01-04/2026; PV T5-T8 từ bảng Traffic của file gốc; PV T9-T10 từ Báo cáo tháng 10/2026 (T9 trong báo cáo tháng 09 ghi 1.086.874, T10 đối soát giữa Excel pivot 1.132.721 và GA4 breakdown 1.095.633). Vé, đơn hàng và GMV từ Dashboard In-App và số liệu BU Movies (GMV = đơn hàng × 205.000 đ).
+- Mục tiêu T9 1,12M và T11 1,5M lấy từ file gốc. T9 đạt 1.117.378 PV, khớp mục tiêu.
+- Tổng PV 10 tháng khoảng 9,0M, thấp hơn 10,42M đang dùng để tính tỷ lệ vé trên PV (xem Phụ lục C).
+
+**Financial Hub.** Hiện thực hóa tầm nhìn "Scale Web MoMo to Vietnam's #1 Financial Content Hub through PLG". Thị trường tài chính khoảng 117,2 triệu lượt tìm kiếm mỗi tháng. Giá vàng chiếm 67,3% (78,9 triệu), Chứng khoán 10,7% (12,5 triệu), Tỷ giá 7,3% (8,5 triệu). Gần như toàn bộ là khoảng trống chưa được khai thác.
+
+- Kết quả T8/2026: tăng trưởng cao nhất toàn Web, +68,76% MoM, đạt 216.000 PV. Vay Nhanh đạt 112.000 PV (+70,5%), CIC Điểm Tín Dụng đạt 74.000 PV (+148,88%).
+- Lộ trình sản phẩm: T7 Ví Trả Sau và Vay Nhanh; T8 Financial Hub Master Gateway, CIC Simulator, Giá Vàng realtime, Tính Lương Gross/Net, BHXH, Lương Hưu (tổng 8 Utility Tools); T9 Tỷ Giá, Phân Bổ Lương 50/30/20, Lãi Suất 30+ ngân hàng; T10 Chứng Khoán và CCQ, FIRE Simulator, Quản Lý Dòng Tiền.
+- Phân chia KPI với Financial Services BU: Web Platform chịu trách nhiệm lưu lượng 1M PV trở lên mỗi tháng và W2A CTR 5-10%. Cell Team chịu trách nhiệm doanh thu, MAU và giao dịch tài chính đầu tiên tăng 25% MoM.
+- Khoảng cách: đạt 1M PV mỗi tháng vào cuối 2026 cần tăng khoảng 4,6 lần so với mức 216.000 PV của T8 trong 4 tháng còn lại (file gốc ghi 6,3 lần, cần thống nhất mốc tính).
+
+**Vehicle Hub.** Dự án Phạt Nguội là Pioneer Project đã được xác nhận trong H1/2026, làm nền tảng để khởi động Vehicle Hub với sự đồng hành của VTTI và Insurtech.
+
+- Tổng thị trường 23,2 triệu lượt tìm kiếm mỗi tháng. Giá xăng 10,52 triệu, Phạt Nguội 6,58 triệu, ETC 1,31 triệu, Trạm sạc EV 1,24 triệu.
+
+| Tháng | Tổng | Phạt Nguội | Bảo hiểm ô tô | Bảo hiểm xe máy |
+| :--- | :---: | :---: | :---: | :---: |
+| T5/2026 | 311.592 | 294.668 | 12.014 | 4.910 |
+| T6/2026 | 588.459 | 573.611 | 10.943 | 3.905 |
+| T7/2026 | 172.586 | 154.889 | 12.417 | 5.280 |
+| T8/2026 | 234.359 | 213.826 | 13.266 | 7.267 |
+
+- Lưu ý: T6 đạt mức cao nhất nhờ SEM. T7 và T8 là lưu lượng tự nhiên thuần (không có SEM), đạt 172.586 và 234.359 PV.
+
+**New Users.** Lượt cài đặt mới tăng liên tiếp trong 3 tháng, từ 1.737 (T5) lên 10.058 (T8), tăng gấp khoảng 6 lần.
+
+- Phễu T8: 3.228 đăng ký (CR 34,71%), 1.806 liên kết ngân hàng (CR 55,95%), 1.012 MAU.
+- Chất lượng người dùng từ iOS đạt 70,94% tỷ lệ liên kết ngân hàng trên đăng ký.
+
+**Objective 2, AI-Powered CMS Self-serve:** Phát triển nền tảng CMS để Cell Teams tự tạo và xuất bản Web Page chuẩn SEO/GEO.
+
+- MoSpark đưa vào vận hành thực tế từ Q2/2026, với các Module: Landing Page Builder, GenAI Content Pipeline, PLG Project Engine, Ads Manager, Chatbot và Knowledge Base.
+- Landing Page Builder rút thời gian từ 1-2 tuần xuống 1-2 ngày. Cell Team tự xuất bản, không cần Dev. Đang thử nghiệm với GMC, BMC và MDS.
+- GenAI Content Pipeline tự động hóa khoảng 80% quy trình sản xuất nội dung chuẩn SEO/GEO, rút từ nhiều ngày xuống vài giờ.
+- 6 Cell Teams tự vận hành Mini Web. 13 Cell Teams được hỗ trợ trực tiếp.
+- Phối hợp với BMC: BMC phụ trách Brand Guideline và quy trình duyệt Creative/Legal. Web Platform cung cấp MoSpark CMS và hạ tầng.
+
+**Objective 3, Full Funnel Tracking Pipeline:** Chuẩn hóa tracking và báo cáo chuyển đổi Web-to-App.
+
+- Các hạng mục đã triển khai: GA4 và GTM vào BigQuery; Google Search Console vào BigQuery để theo dõi theo URL; chuẩn hóa 100% liên kết sang OneLink; Identity Platform (Edge Cookie) nhận diện và kết nối hành vi người dùng từ Web sang App; Dashboard Web Performance live từ T5/2026.
+- Ý nghĩa: từ T5/2026, Web Platform có baseline để theo dõi toàn bộ hành trình từ điểm tiếp xúc đầu tiên trên Web đến hành động trong App. Đây là căn cứ để đặt mục tiêu theo tuần và tháng, xác định điểm nghẽn và phân bổ nguồn lực giữa các Hub.
+
+**Objective 4, Stable Infrastructure Operations:** Vận hành hạ tầng ổn định, bảo mật và tuân thủ tiêu chuẩn ITC.
+
+- Chuyển AWS sang FPT Cloud hoàn tất 100%: 36/36 Frontend, 11/11 Backend, 3/3 Database và 137 endpoint, không rollback, không downtime. Chuyển đổi diễn ra ngày 21-22/07/2026.
+- Mobase V2 là Design System chuẩn thương hiệu MoMo, là Single Source of Truth cho toàn bộ Web Product. Đang mở rộng sang AI-Legible Design System.
+- Quản lý 69 dự án GitLab, hoàn thiện bản vá Clickjacking, đảm bảo tuân thủ ITC.
+- Boilerplate Source Code V1 chuẩn hóa quy trình phát triển Mini Web, rút ngắn thời gian khởi tạo dự án mới.
+- Technical SEO: xử lý khoảng 8.600 URL giá trị thấp hoặc không có lưu lượng, tối ưu Crawl Budget, bổ sung sameAs Schema cho Organization để tăng nhận diện thực thể trên AI engine.
+
+### 1.3. Thách thức và bài học
+
+**Thách thức 1: Chuyển dịch từ Engineer Team sang Growth Unit.**
+- Bài học: chuyển đổi vai trò phải đi kèm chuyển đổi KPI. Khi team được đánh giá bằng lưu lượng, lượt cài đặt và MAU thay vì số tính năng đã giao, tư duy thay đổi theo. Cần milestone rõ ràng và kết quả thực tế để team thấy giá trị của hướng đi mới.
+
+**Thách thức 2: Organic chưa bền vững.**
+- Số liệu: tăng trưởng lưu lượng T8/2026 đạt +9,4% MoM nhưng phụ thuộc vào Paid và Direct, trong khi Organic giảm 7,8%. Tăng trưởng dựa vào Paid không bền vững về chi phí dài hạn, trong khi Organic mới là lợi thế cốt lõi của Web Platform.
+- Bài học: SEO/GEO cần đầu tư sớm và liên tục, không phải khi lưu lượng đã giảm. Phạt Nguội là case study thuyết phục nhất: 28 ngày đầu với đúng chiến lược từ khóa đã tạo lưu lượng Organic bền vững và 660 trích dẫn từ AI. Đây là playbook cần nhân rộng cho các Hub.
+
+**Thách thức 3: Phối hợp với BUs chưa chuẩn hóa.**
+- Số liệu: trong H1/2026, mỗi dự án có cách làm khác nhau. Điểm nghẽn nằm ở khâu bàn giao dữ liệu nghiệp vụ, API, duyệt nội dung và pháp chế từ phía BU.
+- Bài học: SOW và RACI rõ ràng từ đầu là điều kiện tiên quyết. Vehicle Hub và Cinema Hub áp dụng bảng RACI chi tiết và Sprint Planning 2 tuần, phối hợp tốt hơn rõ rệt. Đây sẽ là chuẩn bắt buộc cho các dự án chiến lược trong H2/2026.
+
+**Thách thức 4: AI Search và xu hướng Zero-Click.**
+- Số liệu: AI Search (ChatGPT, Gemini, Perplexity) trả lời trực tiếp nhiều câu hỏi mà không cần người dùng nhấp vào website. Nội dung tĩnh, thiếu chiều sâu ngày càng mất lưu lượng. Ước tính nội bộ cho thấy AI Search làm giảm 15-20% lượt nhấp vào bài viết kiến thức chung [cần verify nguồn].
+- Bài học: GEO đã là thực tế. 660 trích dẫn từ AI và lưu lượng từ ChatGPT của Phạt Nguội là bằng chứng. llms.txt, Schema markup và Topical Authority là 3 trụ cột cần đầu tư xuyên suốt H2/2026.
+
+---
+
+## PHẦN 2: DETAIL REVIEW
+
+| Initiative | Nhóm | Mục tiêu | Kết quả 2026 | Yếu tố thành công / thất bại | Khuyến nghị |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Cloud Migration (AWS sang FPT Cloud) | Productivity | Chuẩn hóa hạ tầng theo chuẩn MoMo, tối ưu chi phí, tuân thủ data residency | Go-Live 21-22/07/2026; 36/36 FE, 11/11 BE, 3/3 DB; 137 endpoint; 0 rollback | Kế hoạch cutover chi tiết, Smoke Test trước và sau cutover, cutover ban đêm | Scale và tiếp tục: chuyển sang vận hành ổn định trên FPT Cloud |
+| MoSpark / Admin Panel | Transformation | Nền tảng CMS thế hệ mới, hỗ trợ AI trong sản xuất nội dung và ứng dụng | Ra mắt trên Production; module GenAI sinh nội dung theo chuẩn brand | Đầu tư Next.js, Supabase, Refine; nhu cầu tự tạo Landing Page của PM/PO rõ ràng | Scale: định hướng thành CMS duy nhất cho nội dung, quảng cáo và analytics |
+| Identity Platform (Authen, Deep-link, ROI Tracking) | Transformation | Định danh người dùng trên Web (SSO) và đo ROI Web-to-App | Hoàn thiện spec kỹ thuật; đưa core định danh đa nền tảng lên Production | Phụ thuộc phối hợp với User Growth và ITC để thống nhất kiến trúc | Tiếp tục: phân tích hành vi người dùng đa nền tảng |
+| Umami Internal Tracking và Dashboard | Productivity | Tracking nội bộ độc lập với GA4, đối chiếu chéo và dashboard theo từng Project | Vận hành song song với GA4; dashboard theo Project phục vụ SEO Inventory | Chủ động dữ liệu, real-time hơn; đổi lại cần vận hành và bảo trì hạ tầng | Tiếp tục: mở rộng dashboard cho toàn bộ Mini Web, làm nguồn đối chiếu chính với GA4 |
+| Utility Tools và Boilerplate (UI Kit, Component Library) | Productivity | Chuẩn hóa component dùng chung, rút ngắn thời gian phát triển Mini Web | Payment Component, Lead Form, JSON Form Builder, Boilerplate, UI Kit cho hàng chục Mini Web | Đồng bộ Tech Stack ITC; áp dụng JTBD trước khi xây module | Tiếp tục: mở rộng thư viện theo nhu cầu Cell Team |
+| Hub mới (Phạt Nguội, Merchant, Cinema, Financial, Vehicle, Student) | Incubator | Tăng lưu lượng Out-App bằng tiện ích và nội dung ngách theo nhu cầu tìm kiếm thực tế | Ra mắt thêm nhiều Mini Web ngách trong 2026 | Bám sát nhu cầu tìm kiếm của người dùng chưa dùng MoMo | Scale các Hub có lưu lượng tốt; tiếp tục thử nghiệm các Hub còn lại |
+| Chatbot AI và RAG Knowledge Base | Incubator | Trợ lý AI tra cứu thông tin dịch vụ, giảm bounce rate, tăng chuyển đổi | Module Chatbot và RAG Pipeline triển khai giới hạn trên Production | Chất lượng dữ liệu huấn luyện từ nội dung Web; giảm tải hỗ trợ thủ công | Tiếp tục thử nghiệm, đánh giá mở rộng phạm vi 2027 |
+| Vận hành Mini Web hiện hữu (Vé máy bay, Vay nhanh, BHOT, Bus, Travel, Sim, CVS, Soundbox...) | Performance | Duy trì ổn định, đảm bảo uptime, hỗ trợ Cell Team | Toàn bộ Mini Web trong phạm vi Go-Live đạt 100% Smoke Test trên Production | Quy trình bảo trì định kỳ, SLA hỗ trợ rõ ràng | Tiếp tục hỗ trợ Cell Team theo tiêu chuẩn chất lượng ITC |
+
+**Câu hỏi thảo luận:**
+- Initiative nào tạo chuyển đổi Traffic và New User đo được và tối ưu liên tục, initiative nào chỉ dừng ở vận hành ổn định?
+- Nên đầu tư mở rộng bao nhiêu Traffic Hub mới trong 2027, và dựa trên tiêu chí nào để quyết định Scale hay Stop?
+- Identity Platform và Chatbot/RAG có nên được đưa lên thành hạng mục Transformation chính thức của 2027, hay tiếp tục thử nghiệm?
+
+---
+
+## PHẦN 3: 2027 DIRECTION
+
+### 3.1. Thị trường và cơ hội
+
+Thị trường tìm kiếm đang chuyển từ keyword-based search sang intent-based AI discovery. Web Platform cần đồng thời chinh phục hai xu hướng:
+
+- **Tìm kiếm truyền thống (Google):** Vẫn chiếm phần lớn lưu lượng. SEO Inventory theo dõi 179,3 triệu lượt tìm kiếm mỗi tháng, với SoV gần 0% ở nhiều nhóm lớn: Giá vàng (65,8 triệu), Tỷ giá (11 triệu), Vay tiêu dùng (3 triệu trở lên).
+- **AI Search (ChatGPT, Gemini, Perplexity):** Tăng trưởng nhanh. Người dùng ngày càng hỏi AI thay vì Google với các câu hỏi về tư vấn tài chính, so sánh dịch vụ và tra cứu thông tin.
+
+**Ba khoảng trống lớn nhất MoMo chưa khai thác** (quy mô theo SEO Inventory, khác với phạm vi 117,2 triệu lượt ở mục 1.2):
+
+| Nhóm | Lượt tìm kiếm mỗi tháng | SoV MoMo hiện tại |
+| :--- | :---: | :---: |
+| Giá vàng và đầu tư | 65,8 triệu | Gần 0% |
+| Tỷ giá và ngoại tệ | 11 triệu | Gần 0% |
+| Vay tiêu dùng và tín dụng | Hơn 3 triệu | Thấp |
+| Giao thông và phương tiện | 23,2 triệu | Khoảng 1-2% |
+| Điện ảnh và giải trí | Hơn 9 triệu | Khoảng 4% |
+
+**Chiến lược theo 3 tầng ý định:**
+- **Tầng 1, lưu lượng Evergreen (đầu phễu):** Khai thác nhu cầu tra cứu thường nhật (giá vàng, tỷ giá, giá xăng, lịch chiếu rạp) để tiếp cận người dùng với chi phí lưu lượng bằng 0, tạo thói quen quay lại hằng ngày.
+- **Tầng 2, công cụ tương tác (giữa phễu, PLG):** Thay bài viết tĩnh bằng công cụ tính lịch trả nợ, mô phỏng hạn mức tín dụng, tra cứu phạt nguội. Người dùng tự đánh giá điều kiện trước khi nộp hồ sơ, tăng tỷ lệ duyệt và giảm rớt phễu trong App.
+- **Tầng 3, kêu gọi hành động (cuối phễu, Web-to-App):** Đưa nút mở App và điều hướng sâu vào trang giao dịch trong App. Mục tiêu W2A CTR từ 4,5% trở lên (mục KPI Financial Hub trong file gốc ghi 5-10%; xem Phụ lục C).
+
+### 3.2. Tiền đề kế thừa từ 2026
+
+- **Web tạo người dùng chất lượng cao:** Lượt cài đặt từ Web tăng trưởng liên tục trong 3 tháng gần nhất. Đây là nền tảng để 2027 Web Platform cam kết Business Metrics thay vì chỉ Web Metrics.
+- **Utility Tools hơn Static Content:** CIC Simulator tăng 7 lần trong 3 tháng, Phạt Nguội đạt CTR 24,3%, trong khi các trang blog tĩnh giảm đều. 2027 là năm của cách tiếp cận Utility-first trên toàn bộ Hub.
+- **GEO là kênh lưu lượng mới không thể bỏ qua:** 660 trích dẫn từ AI và lưu lượng thực từ ChatGPT, lần đầu tiên MoMo xuất hiện trên AI Chatbot. Web Platform đã có playbook, 2027 là năm để mở rộng.
+
+### 3.3. Bốn trụ cột chiến lược 2027
+
+**Trụ cột 1, MoSpark Platform: từ công cụ nội bộ thành nền tảng phục vụ BU**
+- MoSpark đã được kiểm chứng với các use case nội bộ. 2027 cần chuyển từ "Web Platform dùng MoSpark để xây dựng" sang "Cell Teams dùng MoSpark để tự xây dựng".
+- Điều kiện: hoàn thiện Permission System, mô hình self-serve giữa BMC và Web Platform, và Quality Gate tự động.
+
+**Trụ cột 2, 3 Master Hubs: từ MVP sang dẫn đầu thị trường**
+- **Cinema Hub:** Tái cấu trúc hoàn toàn sang MoSpark, Native Web Payment, mở rộng sang OTT. Mục tiêu Top 1 SERP cho toàn bộ từ khóa điện ảnh.
+- **Financial Hub:** Xây dựng công cụ quản lý tài sản, phễu CIC → VTS → Vay Nhanh, GEO cho nhóm tài chính. Mục tiêu Top 3 cho các từ khóa tài chính cá nhân trọng điểm.
+- **Vehicle Hub:** Mở rộng pSEO theo nhu cầu tìm kiếm, hoàn thiện hệ sinh thái hồ sơ phương tiện, bán chéo bảo hiểm. Mục tiêu chiếm 5% SoV trên thị trường 23,2 triệu lượt tìm kiếm.
+
+**Trụ cột 3, New User Engine: từ thử nghiệm sang tăng trưởng có hệ thống**
+- Balloon Ads 2026 đã kiểm chứng giả thuyết. 2027 cần xây dựng thành hệ thống:
+  - Personalized Promotion Schema theo từng Hub và phân khúc người dùng.
+  - Full Funnel Attribution hoàn chỉnh, mở khóa luồng Appsflyer sang BigQuery.
+  - Web Product "thử trước, cài sau": cho người dùng trải nghiệm 50-60% giá trị MoMo ngay trên Web.
+
+**Trụ cột 4, AI-Native Infrastructure: GEO, Identity và Automation**
+- **GEO at Scale:** llms.txt, Schema markup và Topical Authority cho toàn bộ Hub. Mục tiêu 5.000 trích dẫn từ AI trở lên vào cuối 2027.
+- **Identity Platform:** Hoàn thiện kết nối người dùng từ Web sang App, phục vụ cá nhân hóa và attribution.
+- **AI-Powered Production:** GenAI Content Pipeline giảm thời gian sản xuất từ vài giờ xuống vài phút, tự động hóa toàn bộ quy trình nội dung.
+
+### 3.4. Mô hình vận hành 2027
+
+- **Web Platform (Platform Owner):** Phụ trách MoSpark, momo.vn và Web Analytics. Đồng hành phát triển trực tiếp cho 2-3 Hub ưu tiên cao. Tư vấn kiến trúc cho Cell Teams tự xây dựng.
+- **Out-App Traffic Team:**
+  - Base Case: tư vấn Content Strategy và SEO/GEO cho tất cả Hub.
+  - Growth Case: cấp nguồn lực chuyên trách cho Hub đủ điều kiện. Điều kiện: BU cam kết KPI, ngân sách và RACI rõ ràng.
+- **BMC x Web Platform:** Mô hình self-serve hoàn chỉnh. BMC xuất bản Landing Page không cần Dev. Quality Gate tự động chấm điểm nội dung bằng AI trước khi xuất bản.
+
+### 3.5. Đầu tư 2027 và cơ chế giải ngân
+
+**Ngân sách đề xuất:** 1.995.800.000 đ, khoảng 166,3 triệu đ mỗi tháng, gồm 1,95 tỷ đ cho 3 dự án và 45,8 triệu đ bản quyền công cụ. Web Platform không đề xuất ngân sách Paid.
+
+| Dự án | Ngân sách | PV 2026 | PV 2027 | PV tăng thêm | Kết quả kinh doanh kỳ vọng | Chi phí đơn vị |
+| :--- | :---: | :---: | :---: | :---: | :--- | :--- |
+| **Cinema Hub** | 620 triệu đ | 11,2M | 12,6 - 14,0M | 1,4 - 2,8M | Thêm 23 - 47 nghìn vé; 2,2 - 4,4 tỷ đ GMV | 220 - 440 đ/PV; 1 đồng chi phí tạo 3,6 - 7,1 đồng GMV |
+| **Financial Hub, CIC và Tín dụng** | 480 triệu đ | 0,5M | 2,2 - 2,5M | 1,7 - 2,0M | 50 - 59 nghìn lượt chuyển tiếp vào kiểm tra CIC, Vay Nhanh trên App | 240 - 280 đ/PV; 8.100 - 9.600 đ/lượt chuyển tiếp |
+| **Financial Hub, Tích lũy và Đầu tư** | 850 triệu đ | 0,2M | 1,0 - 1,5M | 0,8 - 1,3M | 32 - 52 nghìn lượt chuyển tiếp vào Túi Sinh Lời, Tiết kiệm, Chứng chỉ quỹ | 650 - 1.060 đ/PV; 16.300 - 26.600 đ/lượt chuyển tiếp |
+| **Bản quyền công cụ** | 45,8 triệu đ | | | | Figma Professional 9,8 triệu đ (2 người dùng); Semrush Pro 36 triệu đ (1 người dùng) | Phục vụ vận hành |
+| **Tổng** | **1,996 tỷ đ** | **11,9M** | **15,8 - 18,0M** | **3,9 - 6,1M** | **2,2 - 4,4 tỷ đ GMV Cinema; 82 - 111 nghìn lượt chuyển tiếp Financial** | **320 - 500 đ/PV; 520 - 810 đ/phiên** (Paid SEM: 2.000 - 8.000 đ/click) |
+
+**Cách triển khai từng dự án:**
+- **Cinema Hub** (400 triệu đ bài viết chuyên đề cho 150-180 phim; 180 triệu đ tạo thảo luận cộng đồng hỗ trợ GEO; 40 triệu đ dự phòng): chuẩn hóa lịch chiếu và giá vé theo thời gian thực để AI trích dẫn; đặt nút xem suất chiếu trong nội dung, dẫn thẳng vào bước chọn ghế trên App. Nâng vị trí trung bình từ 7-9 lên Top 1-3 cho các cụm mua vé, rạp phim và phim mới.
+- **CIC và Tín dụng** (270 triệu đ bài viết chuyên ngành; 160 triệu đ tạo thảo luận cộng đồng; 50 triệu đ dự phòng): trang giải đáp tín dụng gồm kiểm tra CIC, phân loại nợ nhóm 1-5, cảnh báo lừa đảo; dùng OneLink dẫn vào màn hình kiểm tra CIC hoặc Vay Nhanh. Nâng `/diem-tin-dung` từ vị trí 5-6 lên Top 3-5.
+- **Tích lũy và Đầu tư** (500 triệu đ bài viết chuyên sâu; 250 triệu đ tạo thảo luận cộng đồng; 100 triệu đ dự phòng): bảng so sánh lãi suất và kênh tích lũy, đặt nút mở tài khoản ngay dưới bảng. Nâng vị trí từ 12-25 lên Top 3-5.
+
+**Điểm cần cân nhắc:** Tích lũy và Đầu tư chiếm 43,6% ngân sách dự án nhưng chỉ tạo khoảng 21% PV tăng thêm. Chi phí mỗi lượt chuyển tiếp cao hơn CIC và Tín dụng khoảng 1,7-3,3 lần (16.300-26.600 đ so với 8.100-9.600 đ). Khoản đầu tư này chỉ hợp lý nếu giá trị mỗi người dùng tích lũy (số dư, tài sản quản lý) cao hơn đáng kể so với người mua vé [cần số liệu từ BU].
+
+**Giả định tính toán:**
+- Cinema dùng tỷ lệ 10 tháng 2026 trên baseline 10,42M PV (đã chốt): 1.000 PV tạo 16,7 vé và khoảng 1,58 triệu đ GMV. Tổng PV theo bảng mục 1.2 là 9,0M, chưa đối chiếu được với 10,42M. Chưa tính phần tăng thêm nếu triển khai thanh toán QR trên Web.
+- Financial dùng tỷ lệ chuyển tiếp sang App thực tế 10 tháng 2026 theo GA4: CIC và Tín dụng 2,9%, Tích lũy và Đầu tư 4,0% (đối chiếu: Cinema 6,0%, toàn Website 5,0%). Cần Financial Services BU cung cấp tỷ lệ từ lượt chuyển tiếp sang hồ sơ vay hoặc tài khoản tích lũy để quy ra GMV.
+- Quy đổi sang phiên theo tỷ lệ Organic 1,62 PV/phiên (GA4 10 tháng 2026), để so sánh cùng đơn vị với giá thầu Paid SEM tính theo lượt nhấp.
+- GMV chưa phải doanh thu; cần tỷ lệ phí (take rate) của từng BU để quy ra doanh thu.
+
+**Không đầu tư và có đầu tư:**
+
+| Chỉ số (3 dự án) | Không đầu tư (giữ mức 2026) | Có đầu tư 1,996 tỷ đ | Chênh lệch |
+| :--- | :---: | :---: | :---: |
+| PV | 11,9M | 15,8 - 18,0M | +3,9 - 6,1M |
+| Vé Cinema | Khoảng 187 nghìn | 210 - 234 nghìn | +23 - 47 nghìn |
+| GMV Cinema | Khoảng 17,6 tỷ đ | 19,8 - 22,1 tỷ đ | +2,2 - 4,4 tỷ đ |
+| Lượt chuyển tiếp Financial sang App | Khoảng 23 nghìn | 105 - 134 nghìn | +82 - 111 nghìn |
+| Chi phí nếu mua lượng truy cập tăng thêm qua Paid SEM | | | 4,8 - 7,5 tỷ đ (giá thầu thấp nhất 2.000 đ/click) |
+
+- Kịch bản không đầu tư giả định 3 cụm giữ nguyên lưu lượng 2026. Thực tế lưu lượng dễ giảm do AI Search, nên chênh lệch thực có thể lớn hơn.
+- Cùng lượng truy cập tăng thêm, mua qua Paid SEM tốn 4,8-7,5 tỷ đ mỗi năm và mất ngay khi dừng chi tiêu. Đầu tư nội dung tốn 1,95 tỷ đ và lưu lượng tiếp tục ở lại các năm sau.
+
+**Financial Hub giải ngân 2 đợt (tổng 1,33 tỷ đ):**
+- **Đợt 1 (Q1-Q2/2027), 540 triệu đ:** CIC và Tín dụng 240 triệu đ; Tích lũy và Đầu tư 300 triệu đ. Mục tiêu chứng minh chuyển đổi trước khi mở rộng.
+- **Đợt 2 (Q3-Q4/2027), 790 triệu đ:** chỉ giải ngân khi cuối Q2 đạt đủ 3 ngưỡng:
+  - PV đạt ít nhất 80% KPI của 2 quý.
+  - Tỷ lệ chuyển tiếp sang App không thấp hơn mức 2026 (CIC và Tín dụng 2,9%; Tích lũy và Đầu tư 4,0%).
+  - Financial Services BU đã cung cấp tỷ lệ từ lượt chuyển tiếp sang hồ sơ vay hoặc tài khoản tích lũy.
+- **Không đạt ngưỡng:** dừng đợt 2 của dự án không đạt, chuyển ngân sách sang Cinema Hub (đã chứng minh được GMV) hoặc hoàn lại.
+
+**Cơ chế giải ngân chung:** giải ngân theo quý. Dự án đạt dưới 80% KPI PV và lượt chuyển tiếp của quý sẽ được điều chỉnh hoặc chuyển ngân sách sang dự án khác.
+
+### 3.6. Targets 2027
+
+| Chỉ số | 2026 (T8 hoặc 10 tháng) | Mục tiêu 2027 | Ghi chú |
 | :--- | :---: | :---: | :--- |
-| **Tổng Lưu Lượng (Pageviews)** | 3.46M PV/tháng (T8) | **3.8M - 4.2M PV/tháng** | Đẩy mạnh 4 Master Hubs kết hợp nền tảng Cá nhân hóa & Đeo bám ý định (Phantom Engine). |
-| **Cài Đặt Mới (New Installs)** | 10.058 Installs (T8) | **12.000 - 15.000 Installs/tháng** | Tối ưu hiển thị banner theo ngữ cảnh (Contextual Ads), gói quà chào mừng và chuỗi nhiệm vụ kích hoạt In-App. |
+| Tổng lưu lượng | 3,46M mỗi tháng (T8) | 6M mỗi tháng (Vision) | Mục tiêu ngân sách: 63,49M PV mỗi năm, trung bình 5,29M mỗi tháng; từ 4,12M (T1) lên 7,00M (T12) |
+| Lưu lượng Financial Hub | 216.000 PV (T8) | 1M mỗi tháng (Vision) | Xem mục Cần thống nhất |
+| Tỷ trọng Organic | 50% (T8) | Từ 60% trở lên | Tỷ trọng Non-Paid 80,5% cả năm 2026 |
+| Lượt cài đặt mới mỗi tháng | 10.058 (T8) | 20.000 - 30.000 | |
+| MAU từ Web mỗi tháng | 1.029 (T8) | 5.000 - 10.000 | |
+| Trích dẫn từ AI (GEO) | 660 | 5.000 trở lên | Tổng cả năm 2027 |
+| Cell Teams tự vận hành | 6 | 15 trở lên | Qua MoSpark CMS |
+| Strategic Hubs đang hoạt động | 3 (Cinema, Vehicle, Financial) | 5 trở lên | |
 
-### 4. Đề Xuất Hành Động & Phân Bổ Nguồn Lực Năm 2027
-- **Phân định phạm vi trách nhiệm theo mô hình vận hành:**
-  - *Web Platform & Nhóm Out-App (2 nhân sự sản phẩm + 9 kỹ sư):* Đảm bảo nền tảng triển khai đúng định hướng, thúc đẩy tăng trưởng qua phát triển công cụ tương tác (PLG) và tự động hóa chuỗi sản xuất nội dung (Content Production quy mô lớn qua MoSpark CMS + GenAI). Nhóm chịu trách nhiệm về chỉ số đầu phễu (SEO/GEO Share of Voice, Lưu lượng Web, New Installs và trải nghiệm người dùng ngoài Web).
-  - *Các Khối Kinh Doanh (BUs):* Đóng vai trò Business Owner, chịu trách nhiệm về mô hình kinh doanh, mục tiêu P&L và kết quả chuyển hóa doanh thu cuối phễu In-App.
-- **Phân định hai kịch bản mục tiêu tương ứng với nguồn lực:**
-  - *Kịch bản Cơ sở (Base Case - Nguồn lực hiện tại):* Với 2 nhân sự sản phẩm, nhóm tập trung giữ vững định hướng nền tảng, vận hành ổn định các phễu PLG chủ lực, tự động hóa Content Production hỗ trợ các BU và bảo toàn thứ hạng SEO trước biến động AI Search; đảm bảo mục tiêu 12.000 - 15.000 New Installs/tháng.
-  - *Kịch bản Tăng tốc (Growth Case - Bổ sung nguồn lực chuyên môn):* Để Web Platform có thể tham gia sâu hơn vào việc giải các bài toán tăng trưởng chuyên sâu hoặc cam kết mục tiêu challenge theo từng BU (như tối ưu tỷ lệ duyệt hồ sơ tài chính, đo lường Attribution liên nền tảng), đề xuất cơ chế biệt phái 2 nhân sự chuyên môn theo dự án:
-    1. *Chuyên viên Tối ưu Chuyển đổi và Giao diện (Product Designer / CRO Specialist):* Phụ trách thiết kế giao diện Web, luồng quét mã thanh toán và thực hiện các thử nghiệm A/B testing để nâng tỷ lệ chuyển tiếp vào App.
-    2. *Chuyên viên Phân tích Dữ liệu (Growth Data Analyst):* Phụ trách thiết lập hệ thống đo lường dữ liệu từ Web sang App, đánh giá hành vi người dùng và đo lường chính xác đóng góp chuyển đổi cho từng BU.
-- **Mở rộng mô hình tự phục vụ qua MoSpark CMS & GenAI Content Pipeline:** Tiếp tục nâng cấp MoSpark CMS và mở rộng chuỗi sản xuất GenAI Content Pipeline cho các Cell Teams/BUs tự sản xuất trang chiến dịch và nội dung chuẩn SEO/GEO. Giúp các BU chủ động đưa sản phẩm lên Web nhanh chóng, đồng thời giải phóng đội ngũ kỹ sư tập trung vào tối ưu tốc độ tải trang, năng lực chịu tải và độ ổn định hệ thống trong các đợt cao điểm.
+**Rủi ro:**
+- **Lưu lượng không có ngân sách:** để đạt 63,49M PV, phần Website không có ngân sách phải tăng từ 28,8M lên 45,5-47,7M PV (+58% đến +66%), chiếm 73-83% phần tăng toàn Website. Đây là giả định lớn nhất và chưa có kế hoạch riêng.
+- **Lưu lượng Direct dự kiến tăng 112,9%** (từ 7,46M lên 15,88M). Đây là kênh khó kiểm soát nhất và có thể giảm khi cắt Paid.
+- **AI Search:** tiếp tục làm giảm lượt nhấp vào bài viết kiến thức chung. Cần bù bằng công cụ tương tác và dữ liệu thời gian thực.
+
+**Điều kiện từ BU:**
+- Movies BU và Financial Services BU chia sẻ lịch phim, lộ trình sản phẩm và thay đổi chính sách trước 2-4 tuần.
+- Financial Services BU cung cấp tỷ lệ chuyển đổi trên App (hồ sơ vay, tài khoản tích lũy) và đối soát qua Dashboard dùng chung.
+- Movies BU thống nhất lộ trình thanh toán QR ngay trên Web trong 6 tháng đầu năm 2027, để giảm tỷ lệ bỏ dở trên 90%.
+
+---
+
+## PHỤ LỤC
+
+### A. Lưu lượng 2026 theo quý
+
+| Quý | Tổng PV | Tỷ trọng Non-Paid | Ghi chú |
+| :--- | :---: | :---: | :--- |
+| Q1/2026 | 9,29M | 77,4% | T2 cao điểm Tết 3,47M |
+| Q2/2026 | 9,38M | 80,0% | T4 cắt giảm quảng cáo |
+| Q3/2026 | 10,59M | 77,9% | T9 cao nhất năm 3,95M |
+| Q4/2026 (ước tính) | 11,43M | 86,0% | T10 3,60M; T11 ước 3,83M; T12 ước 4,00M |
+| **Cả năm** | **40,69M** | **80,5%** | Non-Paid 32,77M (Organic 20,15M, Direct 7,46M, AI Traffic và Referral 5,16M); Paid 7,92M |
+
+- Giá trị thay thế quảng cáo: 20,15M PV Organic, nếu mua qua Paid SEM với giá thầu thấp nhất 2.000 đ/click, tương đương khoảng 25 tỷ đ (GA4 10 tháng 2026: Organic đạt 1,62 PV/phiên, tức khoảng 12,4 triệu phiên). Đây là lưu lượng Web tự sở hữu, không mất khi dừng chi tiêu.
+
+### B. Quy mô thị trường tìm kiếm
+
+- 214,4 triệu lượt tìm kiếm mỗi tháng ở 5 nhóm ngành (Google Keyword Planner, Semrush): Tài chính 122,97 triệu (giá vàng 73,59 triệu, ngân hàng và lãi suất 21,62 triệu, tỷ giá 9,47 triệu), Giao thông 35,63 triệu, Giải trí và Cinema 18,68 triệu, Tiện ích đời sống 15,91 triệu, Du lịch 6,50 triệu.
+- Ngân sách 2027 tập trung vào CIC, vay và tích lũy (khoảng 9,4 triệu lượt mỗi tháng) thay vì giá vàng và tỷ giá, vì đây là các Theme gắn trực tiếp với sản phẩm tài chính tạo doanh thu của MoMo.
+
+### C. Số liệu cần thống nhất trước khi trình
+
+- **W2A CTR Financial Hub:** file định hướng đặt mục tiêu 5-10%. Thực tế 10 tháng 2026 theo GA4 là 2,9% (CIC và Tín dụng) và 4,0% (Tích lũy và Đầu tư). Cần chốt đây là mục tiêu hay giả định.
+- **Tổng lưu lượng 2027:** file định hướng đặt 6M mỗi tháng (Vision), trong khi Budget Plan đặt 63,49M mỗi năm, trung bình 5,29M mỗi tháng. Cần chốt mốc nào được trình cho CEO.
+- **Lưu lượng Financial Hub 2027:** file định hướng đặt 1M PV mỗi tháng. Budget Plan chỉ tính 3,2-4,0M PV mỗi năm cho hai phần CIC và Tích lũy, tương đương khoảng 0,3M mỗi tháng. Budget Plan cũng ghi nhận Financial 2026 chỉ 0,7M PV mỗi năm, trong khi T8/2026 đã đạt 216.000 PV mỗi tháng. Baseline của Budget Plan cần được rà soát lại.
+- **Quy mô thị trường tài chính:** 117,2 triệu (mục 1.2), 179,3 triệu SEO Inventory (mục 3.1), 122,97 triệu (Phụ lục B). Giá vàng ghi 78,9 triệu, 65,8 triệu và 73,59 triệu ở ba nguồn. Cần thống nhất một nguồn duy nhất trước khi trình.
+- **MAU từ Web 2027:** file định hướng đặt 5.000-10.000 mỗi tháng; bản Budget trước đó ghi 3.000-5.000. Bản này dùng mốc của file định hướng.
+- **Cinema 2026:** Baseline PV dùng để tính kịch bản là 10,42M (đã chốt). Tổng PV 10 tháng trong bảng mục 1.2 là khoảng 9,0M, và chưa tìm được nguồn xác minh cho 10,42M. Nếu dùng 9,0M, tỷ lệ là khoảng 19,3 vé trên 1.000 PV và kịch bản Cinema 2027 sẽ thay đổi. Budget Plan ghi 11,2M PV cả năm.
+- **Budget sheet bug:** dòng Grand total (2) chỉ tính Semrush, nên ô TỔNG hiển thị 1.986.000.000 thay vì 1.995.800.000 đ. Cần sửa công thức trong sheet.

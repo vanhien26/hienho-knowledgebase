@@ -11,7 +11,7 @@
 
 *   **Định hình Chiến lược Trust-led Growth:** Áp dụng toàn diện khung chiến lược "Tăng trưởng bằng Niềm Tin" vào toàn bộ sản phẩm Out-App, lấy việc củng cố niềm tin số làm bệ phóng phát triển tự nhiên (User Trust Index Q1 đạt kỷ lục 4.18/5).
 *   **Mở rộng Phân khúc eSIM Du Lịch:** Hoàn thành BRD v1.4 mở rộng phạm vi Media Team eSIM đón đầu 50.8K volume search/tháng từ khách quốc tế vào Việt Nam.
-*   **Tái cấu trúc Quy trình Phát triển Widget:** Thực hiện phân rã 2 Workflow phát triển Widget chuyên biệt cho Hiếu (Prototype & Logic) và Thuận (Design Standards & Packaging chuẩn MoBase).
+*   **Tái cấu trúc Quy trình Phát triển Widget:** Thực hiện bóc tách 2 Workflow phát triển Widget chuyên biệt cho Hiếu (Prototype & Logic) và Thuận (Design Standards & Packaging chuẩn MoBase).
 
 ---
 
@@ -20,7 +20,7 @@
 #### 1. Vehicle Hub (Tiện ích Giao thông & Hồ sơ Phương tiện) - [Dự án mới triển khai]
 * **Định hướng chiến lược:** Nối tiếp, mở rộng và tận dụng tối đa nền tảng cùng hiệu suất bứt phá từ dự án Phạt Nguội (Total Traffic 267.3K Views, Tỷ lệ tra cứu 78.16%, 14.886 lượt Login App và 9.825 người dùng giao dịch chéo) để phát triển thành Vehicle Hub với định hướng "Một chiếc xe - Một tài khoản dịch vụ".
 * **Challenge:** Giải quyết rào cản phân mảnh thông tin của chủ phương tiện khi phải sử dụng 5-7 ứng dụng/website độc lập (phạt nguội, nạp ETC, bảo hiểm, đăng kiểm, giá xăng), đồng thời chuyển đổi tệp tìm kiếm ngoài Open Web thành tài khoản định danh xe (Vehicle Profile) trên MoMo.
-* **Solution & Scope:** Tận dụng phễu mồi câu Phạt Nguội làm điểm chạm đầu tiên để khởi tạo Hồ sơ xe, mở rộng hệ sinh thái tiện ích giao thông (bảng giá xăng, trạm sạc EV, nạp tiền ETC, nhắc lịch đăng kiểm) và tích hợp các gói dịch vụ gia tăng (Subscription cảnh báo tự động 9k/năm, Bảo hiểm Ô tô).
+* **Solution & Scope:** Tận dụng phễu tiện ích thu hút Phạt Nguội làm điểm chạm đầu tiên để khởi tạo Hồ sơ xe, mở rộng hệ sinh thái tiện ích giao thông (bảng giá xăng, trạm sạc EV, nạp tiền ETC, nhắc lịch đăng kiểm) và tích hợp các gói dịch vụ gia tăng (Subscription cảnh báo tự động 9k/năm, Bảo hiểm Ô tô).
 * **Trạng thái hiện tại:** Dự án mới khởi tạo trong tháng, đang tập trung xây dựng hạ tầng Hồ sơ xe (Vehicle Profile) từ nền tảng Phạt Nguội và kết nối API tích hợp dữ liệu với các đối tác (ePass, TTDK, Bảo hiểm). Các chỉ số hiệu suất kinh doanh tổng thể sẽ được ghi nhận khi đi vào vận hành chính thức.
 
 #### 2. Cinema Hub (Cổng Giải Trí & Điện Ảnh) - [Dự án Tái đầu tư & Tái kích hoạt]
